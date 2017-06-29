@@ -2,7 +2,7 @@
 set -e
 
 # Parse app name from manifest to ensure it matches up
-APP_NAME=$(ruby -e "require 'yaml'; config = YAML.load_file('manifest.yaml'); puts config['applications'][0]['name']")
+APP_NAME=$(ruby -e "require 'yaml'; config = YAML.load_file('manifest.yml'); puts config['applications'][0]['name']")
 
 echo "Deploying ${APP_NAME} to ${CF_ORG}/${CF_SPACE}..."
 
