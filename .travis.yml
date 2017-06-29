@@ -19,7 +19,8 @@ before_deploy:
   - travis_retry cf install-plugin autopilot -f -r CF-Community
 
 deploy:
-  script: "./bin/deploy-travis"
+  provider: script
+  script: ./bin/deploy-travis
   skip_cleanup: true
   on:
     branch: auto-deploy-to-paas
