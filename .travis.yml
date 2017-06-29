@@ -16,3 +16,5 @@ before_deploy:
 deploy:
   script: "./bin/deploy-travis"
   skip_cleanup: true
+  on:
+    branch: auto-deploy-to-paas
