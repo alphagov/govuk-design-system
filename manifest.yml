@@ -2,5 +2,5 @@
 applications:
 - name: govuk-design-system-production
   memory: 64M
-  path: ./build
+  path: ./deploy
   buildpack: staticfile_buildpack
