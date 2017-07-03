@@ -7,7 +7,7 @@ APP_NAME=$(ruby -e "require 'yaml'; config = YAML.load_file('manifest.yml'); put
 echo "Deploying ${APP_NAME} to ${CF_ORG}/${CF_SPACE}..."
 
 # CF_USERNAME and CF_PASSWORD are provided as encrypted Travis variables
-cf login --a $CF_API --u $CF_USERNAME --p $CF_PASSWORD --o $CF_ORG -s $CF_SPACE
+cf login -a $CF_API -u $CF_USERNAME -p $CF_PASSWORD -o $CF_ORG -s $CF_SPACE
 
 # Zero downtime push comes from "Autopilot" which is installed in before_deploy
 # step in Travis
