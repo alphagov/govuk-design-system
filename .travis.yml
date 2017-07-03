@@ -1,2 +1,26 @@
 language: ruby
 script: bundle exec middleman build
+
+env:
+  global:
+  - CF_API="https://api.cloud.service.gov.uk"
+  - CF_ORG="govuk-design-system"
+  - CF_SPACE="production"
+  - CF_USERNAME="govuk-design-system-deploy-production@digital.cabinet-office.gov.uk"
+  # CF_PASSWORD
+  - secure: kyCYOisfZhZUYgg7XqOydUObKgxxwZkc5JCA+lzgrCY8d71hyX8uSh2jEnSE4A7Tq+4BR6oFg2C9kKSyq6G3wkKkRQKroWvQD5ylNWn2vdhyCRcUKqOu4VStNq6th/1FVZHlSf5MumLtULVsWgvkDt7pwEHAJawKISMpVnM5RGO3VHlF40UfVfM9GQN5T/yEXm0FbdZ8k0wFQ0VHE0vskW8BgWi/U13GyqQB9pl/fr3I6Fbhk0u++UksSrEZhwfz/oXezcJ4wuSwYtBnLFHFIJiZas5Cwy1uJTvsP6bzYl4llDvhWwCojJtlumBIq0EYti66CQRytUQU0wbNyzhdFe33cWwodPOs2nrb44QYWhEbXLDqaZ2tVDaIMFugKWuWru+jwbIQfng6irIS7vbewpW83l7tg5BfSS4Br4KKS+/xNQpbJ6lm5PUuE7pgnGPFLI8/SEcwkhjNv9A0NEr3pmVI+LNUkdDcrz1t62x35GNkJ4B0OoOXjNmEEshI7oWKvGKFhQZoYdgTRYp9aFkeShgu+JLbhSoaJLDsxkHAmfyRLbxyy4miLDx7XqiAcWOz9qSZYxG5BrAmwf4xMihNuVQFjGe5VY/GYQXBgXPfP1GeD6JaaYRLf7WXbL53hzWS/xQqinbeL+EcXX9rLCTUnVLr5xzK3IvEygy+uoHIIKE=
+
+before_deploy:
+  - export PATH=$HOME:$PATH
+  # Install CloudFoundry
+  - travis_retry curl -L -o $HOME/cf.tgz "https://cli.run.pivotal.io/stable?release=linux64-binary&source=github"
+  - tar xzvf $HOME/cf.tgz -C $HOME
+  # Install Autopilot plugin for zero-downtime-push
+  - travis_retry cf install-plugin autopilot -f -r CF-Community
+
+deploy:
+  provider: script
+  script: ./bin/deploy-travis
+  skip_cleanup: true
+  on:
+    branch: master
