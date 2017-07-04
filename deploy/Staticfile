@@ -1,0 +1,6 @@
+# We upload the entire deploy directory which includes the build directory and
+# config, but only want to serve the build directory (deploy/public)
+root: public
+
+# Include e.g. custom error page config within the nginx location block
+location_include: includes/*.conf

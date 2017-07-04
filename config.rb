@@ -1,3 +1,5 @@
+set :build_dir, 'deploy/public'
+
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
