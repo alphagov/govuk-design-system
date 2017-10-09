@@ -4,8 +4,12 @@
     <meta charset="utf-8">
     <meta name="robots" content="noindex, nofollow">
     <title>GOV.UK Design System</title>
+    <!--[if gt IE 8]><!--><%= stylesheet_link_tag :screen, media: 'screen' %><!--<![endif]-->
   </head>
   <body>
     <%= yield %>
+    <footer class="app-c-footer app-c-footer--full-width">
+      <%= partial "layouts/footer" %>
+    </footer>
   </body>
 </html>

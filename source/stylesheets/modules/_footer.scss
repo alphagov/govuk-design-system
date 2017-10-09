@@ -1,0 +1,144 @@
+/**
+ * Footer Component
+ *
+ * Based on the existing GOV.UK footer in GOV.UK Template, built with flexbox
+ * and with tweaked behaviour for the OGL logo for the smaller viewport (when
+ * allowing for the table of contents)
+ *
+ * Example Usage:
+ *
+ * <footer class="footer">
+ *   <div class="footer__licence">
+ *     <a class="footer__licence-logo" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence</a>
+ *     <p class="footer__licence-description">All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated</p>
+ *   </div>
+ *
+ *   <div class="footer__copyright">
+ *     <a class="footer__copyright-logo" href="http://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/">© Crown copyright</a>
+ *   </div>
+ * </footer>
+ */
+
+// Copied from govuk_template
+$footer-background: $grey-3;
+$footer-border-top: #a1acb2;
+$footer-link: #454a4c;
+$footer-link-hover: #171819;
+$footer-text: $footer-link;
+
+.appc-c-footer {
+  display: block;
+  margin-top: $gutter * 2;
+  border-top: 1px solid $footer-border-top;
+  background: $footer-background;
+  color: $footer-text;
+
+  a:link, a:visited {
+    color: $footer-link;
+  }
+
+  a:hover, a:active {
+    color: $footer-link-hover;
+  }
+}
+
+.appc-c-footer-container {
+  @extend %site-width-container;
+
+  padding: $gutter $gutter-half ($gutter * 2);
+
+  @include media(tablet) {
+    padding: $gutter;
+    display: flex;
+    flex-shrink: 0;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+}
+
+.appc-c-footer--full-width {
+
+  .appc-c-footer-container {
+    max-width: inherit;
+    width: auto;
+    margin: auto;
+  }
+}
+
+.appc-c-footer__licence {
+  line-height: 1;
+  margin-bottom: -1em;
+}
+
+.appc-c-footer__licence-logo {
+  margin-top: -2px; // Align baseline with paragraph
+  margin-bottom: 1em;
+  display: block;
+  width: 41px;
+  height: 17px;
+  overflow: hidden;
+  text-indent: -999em;
+
+  background-image: file-url("/images/open-government-licence.png");
+  background-repeat: no-repeat;
+  background-size: 41px 17px;
+
+  @include device-pixel-ratio() {
+    background-image: file-url("/images/open-government-licence_2x.png");
+  }
+
+  @include media(tablet) {
+    float: left;
+    margin-right: 12px;
+  }
+}
+
+.appc-c-footer__licence-description {
+  @include core-16;
+  margin: 0 0 1em;
+  display: inline-block;
+}
+
+.appc-c-footer__copyright {
+  @include core-16;
+  margin-top: 30px;
+}
+
+.appc-c-footer__copyright-logo {
+  display: block;
+  white-space: nowrap;
+
+  padding: 115px 0 0 0;
+  min-width: 125px;
+
+  background-image: file-url("/images/govuk-crest.png");
+  background-size: 125px 102px;
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+
+  text-align: center;
+  text-decoration: none;
+
+  @include device-pixel-ratio() {
+    background-image: file-url("/images/govuk-crest-2x.png");
+  }
+}
+
+.flexbox, .flexboxtweener {
+  @include media(tablet) {
+
+    .appc-c-footer__license {
+      flex-shrink: 1;
+    }
+
+    .appc-c-footer__copyright {
+      margin-top: 0;
+      display: inline-block;
+      margin-left: $gutter;
+    }
+
+    .appc-c-footer__copyright-logo {
+      text-align: right;
+    }
+  }
+}
