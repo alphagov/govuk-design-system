@@ -1,5 +1,7 @@
 language: ruby
-script: bundle exec middleman build
+script:
+  - bundle exec rspec
+  - bundle exec middleman build
 
 env:
   global:
