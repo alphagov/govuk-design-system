@@ -12,6 +12,12 @@ env:
   # CF_PASSWORD
   - secure: UYvRRq3/WSAF5udIroJRoN0i4ha04K9tWf5ozXAidP9oF1o3kAdz7dMlb/UWE10KCki8WwYSKufsJknSC7yygg6BgkajpUFWZc36XWUgyIlXEti3kxjq8GhHUtVQpdH/Mp702DgzJCgA4Bwj9TlfkyP+PIYW4PfljRllJtPzqgxSur++23Q+kMmvA8T/GOEyab72ZjEMQmonl0Vxf6UWx/y7/4+XLj34OTzoYQ18utWfH9o9i1KUA8dYFCT3oCauGXF8Ra6iOPmNhBjvKrT9+foyYvfbwtL+o+tcbyBQM+p2toWUC2E5e+gIyed+woNnUMFGjGzkwzRe5evhH7RbssGMnkAHn19EGht+Ycdo5Wqh06kmb6sGVFa5EfvuX8AUHaOJrjBjS4ojHA9rmrkCrLvXpKECJi/NK2if5mk39ULtmtUzBBAjgPY3ZY34wweKrRgKz1Q2+Z59nJuX4/UM/KP3lrG0IWKIqdcrnoRaXsWADmf512zFw699+3rre6Bv7h08cyJZWAPWFhZiFibFOQXpT7uVeGyF2VcNrDjVzOiUFOWb7+5IRLi3Volp9o5OHuH1aOw3vNb2KqbIvJAFcQJF4l7c8Jopp6obeyBtXsupAVOTKZQnc9rokwDvyLbCNfseXXWNPekRD9+Ey8asSM+NauWLASFIWxNrRj6M5m0=
 
+before_install:
+  - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > .npmrc
+
+install:
+  - npm install
+
 before_deploy:
   - export PATH=$HOME:$PATH
   # Install CloudFoundry
