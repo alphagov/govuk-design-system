@@ -20,6 +20,19 @@ bundle exec rspec
 
 [rspec]: https://relishapp.com/rspec  
 
+## GOV.UK Frontend packages
+
+Design System consumes [GOV.UK Frontend](https://github.com/alphagov/govuk-frontend) packages via [NPM](https://www.npmjs.com/).
+These are defined in the [package.json](package.json) file.
+
+---------------------
+**NOTE:**
+For the time being we are consuming private packages. To access private packages, you will first need to log in to NPM with
+
+`npm login`
+
+--------------------
+
 ## Automated Checks
 
 When changes are pushed to GitHub [Travis][travis] will:

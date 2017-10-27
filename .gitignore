@@ -1,1 +1,4 @@
 deploy/public
+/node_modules
+.npmrc
+.sass-cache

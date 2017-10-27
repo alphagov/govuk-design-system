@@ -1,4 +1,9 @@
+
+::Sass.load_paths << File.join(root, "node_modules")
+
 set :build_dir, 'deploy/public'
+set :css_dir,   '/stylesheets'
+set :js_dir,    '/javascripts'
 
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
