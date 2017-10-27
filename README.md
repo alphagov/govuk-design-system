@@ -18,7 +18,18 @@ tests from command line by running:
 bundle exec rspec
 ```
 
-[rspec]: https://relishapp.com/rspec  
+[rspec]: https://relishapp.com/rspec
+
+## Running the Sass linter
+
+We are using the [sass-lint][sass-lint] plugin to lint the Sass files in
+`source/stylesheets`. You can run the linter from command line by running:
+
+```
+npm run lint
+```
+
+[sass-lint]: https://github.com/juanfran/gulp-scss-lint
 
 ## GOV.UK Frontend packages
 
@@ -38,6 +49,7 @@ For the time being we are consuming private packages. To access private packages
 When changes are pushed to GitHub [Travis][travis] will:
 
 - run the tests
+- lint the Sass stylesheets in `source/stylesheets`
 - run the `middleman build` command to ensure that the site can be generated
 
 If any of these fail, this will be reported in the GitHub status checks
