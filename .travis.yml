@@ -2,7 +2,6 @@ language: ruby
 script:
   - bundle exec rspec
   - bundle exec middleman build
-cache: bundler
 
 env:
   global:
@@ -14,16 +13,22 @@ env:
   - secure: UYvRRq3/WSAF5udIroJRoN0i4ha04K9tWf5ozXAidP9oF1o3kAdz7dMlb/UWE10KCki8WwYSKufsJknSC7yygg6BgkajpUFWZc36XWUgyIlXEti3kxjq8GhHUtVQpdH/Mp702DgzJCgA4Bwj9TlfkyP+PIYW4PfljRllJtPzqgxSur++23Q+kMmvA8T/GOEyab72ZjEMQmonl0Vxf6UWx/y7/4+XLj34OTzoYQ18utWfH9o9i1KUA8dYFCT3oCauGXF8Ra6iOPmNhBjvKrT9+foyYvfbwtL+o+tcbyBQM+p2toWUC2E5e+gIyed+woNnUMFGjGzkwzRe5evhH7RbssGMnkAHn19EGht+Ycdo5Wqh06kmb6sGVFa5EfvuX8AUHaOJrjBjS4ojHA9rmrkCrLvXpKECJi/NK2if5mk39ULtmtUzBBAjgPY3ZY34wweKrRgKz1Q2+Z59nJuX4/UM/KP3lrG0IWKIqdcrnoRaXsWADmf512zFw699+3rre6Bv7h08cyJZWAPWFhZiFibFOQXpT7uVeGyF2VcNrDjVzOiUFOWb7+5IRLi3Volp9o5OHuH1aOw3vNb2KqbIvJAFcQJF4l7c8Jopp6obeyBtXsupAVOTKZQnc9rokwDvyLbCNfseXXWNPekRD9+Ey8asSM+NauWLASFIWxNrRj6M5m0=
   # NPM_TOKEN
   - secure: UjlOHWUc2dM0IQMngQKjsuBGCg+CvnRLS+VOGf8EcKY2RUZupmFea/PVGmTAlCmP8tsK80BNTdkKP7tfQD1fYNwv9Ppbbp8c8Ukcm2z3Xaa4CYIiCGj4VZO5/VEQycklMFkiw4lwCAaGulesKAu5UHEdGGXtr9HyZmgvSgEY+DEWjvHe112jZGF7+pkZ3v/WgtBtcmEAwumA97yqq5YlAiGgyktFf0oq/dtompMgA6MtTH93ZyGK0mCqrn1zzknVnlf7UYYnsIuYJ9D//+GVU7ASDD6wSb/QaF8Wy3rzFQgSbh2Mm0lFMFFqrCejBT7TXXanEFObvOd65sn2rwNvYe6XRFPqyKsSiQGBF/K9HIXqXCR19+inqN4Ip27gPlf0Y64Lw4IL69Xbak0SkhVEYyzKMAmEdZnPwLiTuF8Vex7pzxMABwHfR4Xt9BHSY0A8LMB5539UCwEsN62RB2mckuHEPbilyCo/7A42yy45YfnSadxC0h8BV1ylwWWnyCkwjGYC7GXsSEFuWzjp6Kp+NkkU9NvD3BgXJn2sgK312wgltzdNo3gZUFuedBviqnSSlVxluS9F3B23st51jdZWfreHpoFpfwiVuHF1IS//0y8yB6sfBrAj4c10Qhrrks/VWohBEI3cDhRfMMEITTb7bb9/8SkeVp4RFNKj0i+XZmE=
+
 before_install:
-- npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+  - npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+
 install:
-- bundle install --jobs=3 --retry=3
-- npm install
+  - bundle install --jobs=3 --retry=3
+  - npm install
+
 before_deploy:
-- export PATH=$HOME:$PATH
-- travis_retry curl -L -o $HOME/cf.tgz "https://cli.run.pivotal.io/stable?release=linux64-binary&source=github"
-- tar xzvf $HOME/cf.tgz -C $HOME
-- travis_retry cf install-plugin autopilot -f -r CF-Community
+  - export PATH=$HOME:$PATH
+  # Install CloudFoundry
+  - travis_retry curl -L -o $HOME/cf.tgz "https://cli.run.pivotal.io/stable?release=linux64-binary&source=github"
+  - tar xzvf $HOME/cf.tgz -C $HOME
+  # Install Autopilot plugin for zero-downtime-push
+  - travis_retry cf install-plugin autopilot -f -r CF-Community
+
 deploy:
   provider: script
   script: "./bin/deploy-travis"
