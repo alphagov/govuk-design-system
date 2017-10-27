@@ -12,6 +12,9 @@
     "url": "https://github.com/alphagov/govuk-design-system/issues"
   },
   "homepage": "https://github.com/alphagov/govuk-design-system#readme",
+  "scripts": {
+    "lint": "gulp scss:lint"
+  },
   "dependencies": {
     "@govuk-frontend/all": "0.0.11-alpha"
   },

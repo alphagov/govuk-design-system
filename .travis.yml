@@ -1,6 +1,7 @@
 language: ruby
 script:
   - bundle exec rspec
+  - npm run lint
   - bundle exec middleman build
 
 env:
