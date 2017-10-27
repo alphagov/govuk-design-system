@@ -7,7 +7,9 @@ const sasslint = require('gulp-sass-lint')
 // ---------------------------------------
 gulp.task('scss:lint', () => {
   return gulp.src('source/stylesheets/**/*.scss')
-    .pipe(sasslint())
+    .pipe(sasslint({
+      configFile: 'config/.sass-lint.yml'
+    }))
     .pipe(sasslint.format())
     .pipe(sasslint.failOnError())
 })
