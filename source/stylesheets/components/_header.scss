@@ -67,6 +67,7 @@
     }
 
     &:focus {
+      border-bottom-color: $govuk-black;
       color: $govuk-black;
     }
   }
