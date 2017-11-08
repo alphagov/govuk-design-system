@@ -1,9 +1,6 @@
-
-::Sass.load_paths << File.join(root, "node_modules")
-
 set :build_dir, 'deploy/public'
-set :css_dir,   '/stylesheets'
-set :js_dir,    '/javascripts'
+set :css_dir,   'stylesheets'
+set :js_dir,    'javascripts'
 
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
@@ -11,6 +8,9 @@ set :js_dir,    '/javascripts'
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
+
+activate :sprockets
+sprockets.append_path File.join(root, 'node_modules')
 
 # Layouts
 # https://middlemanapp.com/basics/layouts/
