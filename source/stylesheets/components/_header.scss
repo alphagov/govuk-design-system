@@ -56,18 +56,18 @@
 
     &:link,
     &:visited {
+      margin-bottom: -1px; // Negate transparent bottom border
+      border-bottom: 1px solid transparent;
       color: $govuk-white;
       text-decoration: none;
     }
 
     &:hover,
     &:active {
-      margin-bottom: -1px;
-      border-bottom: 1px solid $govuk-white;
+      border-bottom-color: currentColor;
     }
 
     &:focus {
-      border-bottom-color: $govuk-black;
       color: $govuk-black;
     }
   }
