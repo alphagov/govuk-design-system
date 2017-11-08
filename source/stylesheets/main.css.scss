@@ -1,1 +1,8 @@
 @import "@govuk-frontend/all/all";
+
+// App-specific components
+@import "components/header";
+
+body {
+  margin: 0;
+}
