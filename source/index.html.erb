@@ -1,1 +1,31 @@
-<h1 class="heading-large">GOV.UK Design System</h1>
+<main id="content" role="main">
+  <%= partial 'components/masthead' %>
+  <div class="govuk-mb-5 govuk-u-core-19">
+    <div class="govuk-o-site-width-container app-c-site-width-container">
+        <div class="govuk-o-grid">
+          <div class="govuk-o-grid__item govuk-o-grid__item--one-third govuk-u-mb-5">
+            <h2 class="heading-large">Styles</h2>
+            <p>The core styles that will make your service look and feel like GOV.UK.  This includes <a href="/design-patterns/patterns/styles/colour/">Colour</a>, <a href="/design-patterns/patterns/styles/typography/">Typography</a> and <a href="/design-patterns/patterns/styles/layout/">Layout</a>.</p>
+            <p class="govuk-u-mb-0"><a href="/design-patterns/patterns/styles">See all styles</a></p>
+          </div>
+          <div class="govuk-o-grid__item govuk-o-grid__item--one-third govuk-u-mb-5">
+            <h2 class="heading-large">Components</h2>
+            <p>Re-usable parts of the user interface. From small form elements like <a href="/design-patterns/patterns/components/radio-buttons/">Radio buttons</a> to larger ones such as <a href="/design-patterns/patterns/components/autocomplete/">Autocomplete</a>.</p>
+            <p class="govuk-u-mb-0"><a href="/design-patterns/patterns/components">See all components</a></p>
+          </div>
+          <div class="govuk-o-grid__item govuk-o-grid__item--one-third govuk-u-mb-5">
+            <h2 class="heading-large">Patterns</h2>
+            <p>Best practice design solutions for specific user-focused tasks and scenarios such as <a href="/design-patterns/patterns/patterns/asking-for/addresses/">asking for addresses</a> or <a href="/design-patterns/patterns/patterns/helping-users/feedback-pages/">getting user feedback</a>.</p>
+            <p class="govuk-u-mb-0"><a href="/design-patterns/patterns/patterns">See all patterns</a></p>
+          </div>
+          <div class="govuk-o-grid__item govuk-o-grid__item--full">
+            <%= partial 'components/divider' %>
+          </div>
+          <div class="govuk-o-grid__item govuk-o-grid__item--two-thirds">
+            <h2 class="heading-large">Get in touch</h2>
+            <p>If you’ve got a question, idea or suggestion share it in <a href="https://ukgovernmentdigital.slack.com/messages/govuk-design-system">#govuk-design-system</a>, on cross-government Slack (<a href="slack://channel?team=T04V6EBTR&id=C6DMEH5R6">open in app</a>) or <a href="#">email the Design System team</a></p>
+          </div>
+        </div>
+    </div>
+  </div>
+</main>
