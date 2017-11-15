@@ -2,7 +2,39 @@
 
 // App-specific components
 @import "components/header";
+@import "components/divider";
+@import "components/masthead";
 
 body {
   margin: 0;
+}
+
+// Mirrors Bootstrap 4 - open for discussion
+$mq-breakpoint-widescreen: 1200px;
+
+// This will be coming to FE later but making it app specific for now
+.app-c-site-width-container {
+  @media (min-width: $mq-breakpoint-widescreen) {
+    max-width: 1100px;
+  }
+}
+
+// This is consistent with Elements - will be changed in FE
+.govuk-o-grid__item {
+  @include mq($until: desktop) {
+    padding: 0 $govuk-gutter-half;
+  }
+}
+
+// This is consistent with Elements - will be changed in FE
+.govuk-o-grid__item--one-third,
+.govuk-o-grid__item--two-thirds {
+  @include mq($until: desktop) {
+    width: 100%;
+  }
+}
+
+// Note: on Elements this is included on the body - we will review in FE how to best add font smoothing
+.govuk-u-font-smoothing {
+  @include font-smoothing;
 }
