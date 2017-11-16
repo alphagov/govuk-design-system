@@ -17,29 +17,29 @@
     background: $govuk-black;
   }
 
-  .app-c-header--logotype {
+  .app-c-header__logotype {
     margin-right: $govuk-spacing-scale-1;
   }
 
-  .app-c-header--logotype--crown {
+  .app-c-header__logotype-crown {
     margin-right: 1px;
     fill: currentColor;
     vertical-align: middle;
   }
 
-  .app-c-header--logotype--crown--fallback-image {
+  .app-c-header__logotype-crown-fallback-image {
     width: 36px;
     height: 32px;
     border: 0;
     vertical-align: middle;
   }
 
-  .app-c-header--title {
+  .app-c-header__title {
     @include govuk-core-24;
     @include font-smoothing;
   }
 
-  .app-c-header--link {
+  .app-c-header__link {
     // Font size needs to be set on the link so that the box sizing is correct
     // in Firefox 
     @include _core-font-generator(
@@ -80,11 +80,11 @@
     }
 
     // Hide the inverted crown when printing in browsers that don't support SVG.
-    .app-c-header--logotype--crown--fallback-image {
+    .app-c-header__logotype-crown-fallback-image {
       display: none;
     }
 
-    .app-c-header--link {
+    .app-c-header__link {
       &:link,
       &:visited {
         color: $govuk-black;
@@ -99,8 +99,8 @@
 
   // Begin adjustments for font baseline offset
   // These should be removed when the font is updated with the correct baseline
-  .app-c-header--logotype--crown,
-  .app-c-header--logotype--crown--fallback-image {
+  .app-c-header__logotype-crown,
+  .app-c-header__logotype-crown-fallback-image {
     position: relative;
     top: -4px;
   }
