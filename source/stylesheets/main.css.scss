@@ -38,3 +38,8 @@ $mq-breakpoint-widescreen: 1200px;
 .govuk-u-font-smoothing {
   @include font-smoothing;
 }
+
+.govuk-c-phase-banner {
+  padding-right: em($govuk-spacing-scale-2, 16px);
+  padding-left: em($govuk-spacing-scale-2, 16px);
+}
