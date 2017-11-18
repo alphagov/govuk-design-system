@@ -7,7 +7,7 @@
     <title>GOV.UK Design System</title>
     <%= stylesheet_link_tag :main, media: 'all' %>
     <!--[if lt IE 9]><%= javascript_include_tag "ie.js" %><![endif]-->
-    <%= javascript_include_tag :application %>
+    <%= javascript_include_tag "application.js" %>
   </head>
   <body class="govuk-u-font-smoothing">
     <a href="#content" class="govuk-c-skip-link">Skip to main content</a>
@@ -15,11 +15,15 @@
       <div class="app-o-pane__header">
         <%= partial 'components/header' %>
       </div>
-      <div class="app-o-pane__content">
-        <%= yield %>
-        <%= partial 'components/footer' %>
+      <div class="app-o-pane__body">
+        <div class="app-o-pane__toc">
+          <%= partial 'components/toc' %>
+        </div>
+        <div class="app-o-pane__content">
+          <%= yield %>
+          <%= partial 'components/footer' %>
+        </div>
       </div>
     </div>
   </body>
-
 </html>

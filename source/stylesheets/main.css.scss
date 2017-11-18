@@ -1,10 +1,15 @@
 @import "@govuk-frontend/all/all";
 
+// App-specific variables
+$app-light-grey: #f3f3f3;
+
 // App-specific components
 @import "components/header";
 @import "components/divider";
 @import "components/masthead";
 @import "components/footer";
+@import "components/toc";
+@import "components/pane";
 
 body {
   margin: 0;
@@ -18,6 +23,11 @@ $mq-breakpoint-widescreen: 1200px;
   @media (min-width: $mq-breakpoint-widescreen) {
     max-width: 1100px;
   }
+}
+
+// This layout is currently used on error pages like 404
+.app-c-site-width-container--constraint {
+  max-width: 960px;
 }
 
 // This is consistent with Elements - will be changed in FE
@@ -39,4 +49,25 @@ $mq-breakpoint-widescreen: 1200px;
 // Note: on Elements this is included on the body - we will review in FE how to best add font smoothing
 .govuk-u-font-smoothing {
   @include font-smoothing;
+}
+
+.app-c-content {
+  padding: $govuk-gutter;
+  @include govuk-core-19;
+}
+
+.app-c-content__header {
+  @include govuk-core-24;
+}
+
+.app-c-content__heading {
+  margin-top: 0;
+  margin-bottom: $govuk-gutter;
+}
+
+.app-c-content__section-heading {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: $govuk-secondary-text-colour;
+  text-transform: capitalize;
 }
