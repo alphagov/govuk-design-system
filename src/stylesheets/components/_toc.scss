@@ -1,0 +1,39 @@
+@include exports("toc") {
+
+  .app-c-toc {
+    padding: 0 $govuk-gutter-half;
+    @include govuk-core-16;
+  }
+
+  .app-c-toc__section {
+    margin: $govuk-gutter-half 0;
+    padding: 0;
+    list-style-type: none;
+
+    a,
+    a:link,
+    a:visited {
+      display: block;
+      padding: 8px ($govuk-gutter * 2) 8px $gutter-one-third;
+      border-left: 4px solid transparent;
+      color: $govuk-link-colour;
+      background: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      border-left-color: $govuk-link-hover-colour;
+    }
+  }
+
+  .app-c-toc__section-item--current {
+    a,
+    a:link,
+    a:visited {
+      border-left-color: $govuk-link-colour;
+      background: $app-light-grey;
+      font-weight: bold;
+    }
+  }
+
+}
