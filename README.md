@@ -9,7 +9,33 @@ for production use.**
 **One place for service teams to find styles, components and patterns for
 designing government services.**
 
-## Running tests
+## Run locally
+
+Make sure you have [Node.js](https://nodejs.org/en/) installed.
+
+### Clone repository
+```
+git clone git@github.com:alphagov/govuk-design-system.git # or clone your own fork
+```
+
+### Install dependencies
+```
+npm install
+```
+
+### Start a local server 
+This will build sources, serve pages and watch for changes.
+```
+npm start
+```
+
+## Build
+Build `./src` to `./deploy/public`
+```
+npm run build
+```
+
+## Run tests
 
 We are using [RSpec][rspec] for our unit and integration tests. You can run the
 tests from command line by running:
@@ -20,7 +46,7 @@ bundle exec rspec
 
 [rspec]: https://relishapp.com/rspec
 
-## Running the Sass linter
+## Run the Sass linter
 
 We are using the [sass-lint][sass-lint] plugin to lint the Sass files in
 `source/stylesheets`. You can run the linter from command line by running:
