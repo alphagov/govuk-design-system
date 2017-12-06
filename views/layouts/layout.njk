@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }}</title>
+    <link href="/stylesheets/main.css" rel="stylesheet" media="all" />
+    <!--[if lt IE 9]><script src="/javascripts/ie.js"></script><![endif]-->
+    <script src="/javascripts/application.js"></script>
+  </head>
+  <body class="govuk-u-font-smoothing">
+    <a href="#content" class="govuk-c-skip-link">Skip to main content</a>
+    <div class="app-o-pane">
+      <div class="app-o-pane__header">
+        {% include "../partials/_header.njk" %}
+      </div>
+      <div class="app-o-pane__content">
+        <main id="content" role="main">
+        {% block body %}
+          {{ contents | safe }}
+        {% endblock %}
+        </main>
+      {% include "../partials/_footer.njk" %}
+      </div>
+    </div>
+  </body>
+
+</html>
