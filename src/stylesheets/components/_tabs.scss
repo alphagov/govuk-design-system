@@ -1,0 +1,91 @@
+// Tabs styles
+.app-c-tabs {
+  margin: -1px auto;
+  padding: 0;
+  overflow: visible;
+  list-style-type: none;
+  border: 1px solid $govuk-border-colour;
+
+  @include mq($until: desktop) {
+    display: none;
+  }
+}
+
+.app-c-tabs__item {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  margin: 0;
+
+  a {
+    display: block;
+    margin-top: -1px;
+    padding: $govuk-gutter-half;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    color: $govuk-link-colour;
+    background: inherit;
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
+
+.app-c-tabs__item--current {
+  a {
+    border-top-color: $govuk-blue;
+    border-bottom-color: $govuk-blue;
+    background-color: darken($govuk-grey-4, 3%);
+  }
+}
+
+// Tab drawer heading for accordion look on mobile
+.app-c-tabs__heading {
+  a {
+    display: none;
+    position: relative;
+    z-index: 2;
+    padding: $govuk-gutter-half;
+    border: 1px solid $govuk-border-colour;
+    border-top: 0;
+    color: $govuk-link-colour;
+    background: inherit;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:visited {
+      color: $govuk-link-colour;
+    }
+
+    @include mq($until: desktop) {
+      display: block;
+    }
+  }
+}
+
+.app-c-tabs__heading--current {
+  background-color: darken($govuk-grey-4, 3%);
+}
+
+// Tab containers
+.app-c-tabs__container {
+  position: relative;
+  margin-top: -2px;
+  border: 1px solid $govuk-border-colour;
+
+  @include mq($until: desktop) {
+    border-top: 0;
+  }
+}
+
+.app-c-tabs__container pre {
+  padding-bottom: $govuk-gutter;
+  border: 0;
+}
+
+// Close container button
+.app-c-link--close {
+  position: absolute;
+  right: $govuk-gutter-half;
+  bottom: $govuk-gutter-half / 2;
+  text-decoration: none;
+}

@@ -1,0 +1,50 @@
+// Example styles
+.app-c-example {
+  position: relative;
+  margin: $govuk-gutter 0;
+  border: 1px solid $govuk-border-colour;
+  background: $govuk-grey-3;
+}
+
+.app-c-example--tabs {
+  margin-bottom: 0;
+  @include mq($from: desktop) {
+    margin-bottom: -1px;
+  }
+}
+
+.app-c-example__new-window {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px $govuk-gutter / 2;
+  @include govuk-core-14;
+  background: $govuk-grey-3;
+
+  a {
+    color: $govuk-link-colour;
+    text-decoration: none;
+  }
+
+  &:before {
+    @include govuk-core-14;
+    content: "EXAMPLE";
+    margin-right: 10px;
+  }
+}
+
+.app-c-example__frame {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  border: 0;
+  border-right: 1px solid $govuk-border-colour;
+  background: $govuk-white;
+}
+
+.app-c-example__frame--resizable {
+  min-width: 230px;
+  min-height: $govuk-gutter * 2;
+  overflow: auto;
+  resize: both;
+}

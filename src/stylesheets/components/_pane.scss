@@ -12,7 +12,7 @@
 
     @supports (display: grid) {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(100%, 1fr);
       grid-template-rows: repeat(3, auto);
 
       @include mq($from: tablet) {
