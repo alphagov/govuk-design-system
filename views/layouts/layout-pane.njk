@@ -13,11 +13,11 @@
     <a href="#content" class="govuk-c-skip-link">Skip to main content</a>
     <div class="app-o-pane">
       <div class="app-o-pane__header">
-        {% include "../partials/_header.njk" %}
+        {% include "_header.njk" %}
       </div>
       <div class="app-o-pane__body">
         <div class="app-o-pane__toc">
-          {% include "../partials/_toc.njk" %}
+          {% include "_toc.njk" %}
         </div>
         <div class="app-o-pane__content">
           <main id="content" class="app-c-content" role="main">
@@ -29,7 +29,7 @@
               {{ contents | safe }}
             {% endblock %}
           </main>
-          {% include "../partials/_footer.njk" %}
+          {% include "_footer.njk" %}
         </div>
       </div>
     </div>
