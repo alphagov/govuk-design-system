@@ -1,0 +1,36 @@
+---
+title: National Insurance numbers
+description: Ask users to provide their National Insurance number.
+section: Patterns
+theme: Ask users for...
+aliases:
+layout: layout-pane.njk
+---
+
+Ask users to provide their National Insurance number.
+
+[example or link]
+
+## When to use this pattern
+
+Follow this pattern whenever you need to ask for a National Insurance number.
+
+## When not to use this pattern
+
+You shouldn’t use National Insurance numbers to verify a user’s identity.
+
+Find out how to [protect your service against fraud](https://www.gov.uk/service-manual/technology/protecting-your-service-against-fraud#avoid-using-national-insurance-numbers-to-verify-identity) if you currently use National Insurance numbers to verify identity.
+
+## How it works
+
+Use a single text field labelled ‘National Insurance number’. Write it out in full and don’t use abbreviations such as ‘NINO’ or ‘NI Number’.
+
+You should:
+
+- allow for 13 characters as National Insurance numbers are spaced in pairs followed by a single letter
+- allow upper and lower case letters and strip out spaces before validating
+- avoid using ‘AB 12 34 56 C’ as an example - it belongs to a real person - use ‘QQ 12 34 56 C’ instead
+
+## Research on this pattern
+
+If you’ve used this pattern, [get in touch](Anchor link to Get in touch panel at bottom of page) to share your user research findings.

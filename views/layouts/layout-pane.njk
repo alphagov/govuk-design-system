@@ -30,7 +30,13 @@
         <div class="app-o-pane__content">
           <main id="content" class="app-c-content" role="main">
             <div class="app-c-content__header">
-              <p class="app-c-content__section-heading">{{ section }}</p>
+              <p class="app-c-content__section-heading">
+                {% if theme %}
+                    {{ theme }}
+                  {% else %}
+                    {{ section }}
+                {% endif %}
+              </p>
               <h1 class="app-c-content__heading heading-xlarge">{{ title }}</h1>
             </div>
             {% block body %}
