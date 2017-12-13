@@ -23,7 +23,7 @@ git clone git@github.com:alphagov/govuk-design-system.git # or clone your own fo
 npm install
 ```
 
-### Start a local server 
+### Start a local server
 This will build sources, serve pages and watch for changes.
 ```
 npm start
@@ -34,17 +34,6 @@ Build `./src` to `./deploy/public`
 ```
 npm run build
 ```
-
-## Run tests
-
-We are using [RSpec][rspec] for our unit and integration tests. You can run the
-tests from command line by running:
-
-```
-bundle exec rspec
-```
-
-[rspec]: https://relishapp.com/rspec
 
 ## Run the Sass linter
 
@@ -76,7 +65,7 @@ When changes are pushed to GitHub [Travis][travis] will:
 
 - run the tests
 - lint the Sass stylesheets in `source/stylesheets`
-- run the `middleman build` command to ensure that the site can be generated
+- run the `npm run build` command to ensure that the site can be generated
 
 If any of these fail, this will be reported in the GitHub status checks
 interface.
