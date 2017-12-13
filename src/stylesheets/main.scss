@@ -1,7 +1,7 @@
 @import "@govuk-frontend/all/all";
 
 // App-specific variables
-$app-light-grey: #f3f3f3;
+$app-light-grey: #f8f8f8;
 
 // App-specific components
 @import "components/header";
@@ -14,6 +14,7 @@ $app-light-grey: #f3f3f3;
 @import "components/pane";
 @import "components/example";
 @import "components/tabs";
+@import "components/highlight";
 
 body {
   margin: 0;
