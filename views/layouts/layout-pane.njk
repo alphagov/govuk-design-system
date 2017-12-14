@@ -1,13 +1,15 @@
 <!doctype html>
-<html>
+<html class="no-js">
   <head>
     <meta charset="utf-8">
     <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ title }}</title>
     <link href="/stylesheets/main.css" rel="stylesheet" media="all" />
-    <!--[if lt IE 9]><script src="/javascripts/ie.js"></script><![endif]-->
-    <script src="/javascripts/application.js"></script>
+    <!--[if lt IE 9]>
+      <script src="/javascripts/ie.js"></script>
+    <![endif]-->
+    <script src="/javascripts/vendor/modernizr.js"></script>
   </head>
   <body class="govuk-u-font-smoothing">
     <a href="#content" class="govuk-c-skip-link">Skip to main content</a>
@@ -15,8 +17,14 @@
       <div class="app-o-pane__header">
         {% include "_header.njk" %}
       </div>
+      <div class="app-o-pane__nav">
+        {% include "../partials/_navigation.njk" %}
+      </div>
+      <div class="app-o-pane__mobile-nav">
+        {% include "../partials/_mobile-navigation.njk" %}
+      </div>
       <div class="app-o-pane__body">
-        <div class="app-o-pane__toc">
+        <div class="app-o-pane__toc app-u-hide-mobile">
           {% include "_toc.njk" %}
         </div>
         <div class="app-o-pane__content">
@@ -29,9 +37,14 @@
               {{ contents | safe }}
             {% endblock %}
           </main>
+          {# No JS fallback to show overview #}
+          <div class="app-o-pane__toc-mobile-overview app-u-hide-desktop">
+            {% include "../partials/_toc.njk" %}
+          </div>
           {% include "_footer.njk" %}
         </div>
       </div>
     </div>
+    <script src="/javascripts/application.js"></script>
   </body>
 </html>

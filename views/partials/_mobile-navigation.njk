@@ -1,0 +1,70 @@
+{% from "breadcrumb/macro.njk" import govukBreadcrumb %}
+
+<nav id="app-c-mobile-nav" class="app-c-mobile-nav js-app-mobile-nav" role="navigation">
+  <ul class="app-c-mobile-nav__list">
+    <li>
+      <a href="/about" class="js-mobile-nav-subnav-toggler">About</a>
+    </li>
+    <li>
+      <a href="/styles" class="js-mobile-nav-subnav-toggler">Styles</a>
+      <ul class="app-c-mobile-nav__subnav js-app-mobile-nav-subnav app-c-mobile-nav__subnav--hidden">
+        <li>
+          <a href="styles">Styles overview</a>
+        </li>
+        <li>
+          <a href="#">Colour</a>
+        </li>
+        <li>
+          <a href="#">Icons</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="/components" class="js-mobile-nav-subnav-toggler">Components</a>
+      <ul class="app-c-mobile-nav__subnav js-app-mobile-nav-subnav app-c-mobile-nav__subnav--hidden">
+        <li>
+          <a href="/components">Components overview</a>
+        </li>
+        <li>
+          <a href="/back-link">Back link</a>
+        </li>
+        <li>
+          <a href="/breadcrumb">Breadcrumb</a>
+        </li>
+        <li>
+          <a href="/button">Button</a>
+        </li>
+        <li>
+          <a href="/button">Checkbox</a>
+        </li>
+        <li>
+          <a href="/cookie-banner">Cookie banner</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="/patterns" class="js-mobile-nav-subnav-toggler">Patterns</a>
+      <ul class="app-c-mobile-nav__subnav">
+        <li class="app-c-mobile-nav__current-page"><a href="/patterns">Patterns overview</a></li>
+        <li>
+          <h4 class="app-c-mobile-nav__theme">ASK USERS FOR...</h4>
+          <ul class="app-c-mobile-nav__theme-nav">
+            <li><a href="#">Addresses</a></li>
+            <li><a href="#">Dates</a></li>
+            <li><a href="#">Email addresses</a></li>
+            <li><a href="#">Names</a></li>
+            <li><a href="#">National Insurance Numbers</a></li>
+            <li><a href="#">Passwords</a></li>
+          </ul>
+        </li>
+        <li>
+          <h4 class="app-c-mobile-nav__theme">ASK USERS FOR...</h4>
+          <ul class="app-c-mobile-nav__theme-nav">
+            <li><a href="#">Addresses</a></li>
+            <li><a href="#">Dates</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>

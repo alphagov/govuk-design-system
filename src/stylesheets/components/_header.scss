@@ -41,7 +41,7 @@
 
   .app-c-header__link {
     // Font size needs to be set on the link so that the box sizing is correct
-    // in Firefox 
+    // in Firefox
     @include _core-font-generator(
       $font-size: 30px,
       $font-size-640: 30px,
@@ -94,6 +94,36 @@
       &:after {
         display: none;
       }
+    }
+  }
+
+  .app-c-header-mobile-nav-toggler-wrapper {
+    display: block;
+    text-align: right;
+  }
+
+  .app-c-header-mobile-nav-toggler {
+    width: 100px;
+    margin-top: $govuk-spacing-scale-2;
+    margin-bottom: $govuk-spacing-scale-2;
+    border: 1px solid $govuk-white;
+    background-color: $govuk-black;
+    box-shadow: 0 0 0 $govuk-black;
+
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: $govuk-black; // Override the button default green
+      box-shadow: 0 0 0 $govuk-black; // Override the button default green
+    }
+
+    &--active.app-c-header-mobile-nav-toggler {
+      background-color: $govuk-blue;
+      box-shadow: 0 0 0 $govuk-blue;
+    }
+
+    @include mq($from: tablet) {
+      display: none;
     }
   }
 

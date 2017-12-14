@@ -5,6 +5,8 @@ $app-light-grey: #f3f3f3;
 
 // App-specific components
 @import "components/header";
+@import "components/navigation";
+@import "components/mobile-navigation";
 @import "components/divider";
 @import "components/masthead";
 @import "components/footer";
@@ -13,6 +15,24 @@ $app-light-grey: #f3f3f3;
 
 body {
   margin: 0;
+}
+
+.app-u-hide-mobile {
+  @include mq($until: tablet) {
+    display: none;
+  }
+}
+
+.app-u-hide-tablet {
+  @include mq($from: tablet) {
+    display: none;
+  }
+}
+
+.app-u-hide-desktop {
+  @include mq($from: desktop) {
+    display: none;
+  }
 }
 
 // Mirrors Bootstrap 4 - open for discussion
@@ -70,4 +90,14 @@ $mq-breakpoint-widescreen: 1200px;
   margin-bottom: 0;
   color: $govuk-secondary-text-colour;
   text-transform: capitalize;
+}
+
+.no-js {
+  // Adjustments in app-o-pane layout as it has toc below
+  .app-o-pane__content .app-c-content {
+
+    @include mq($until: tablet) {
+      padding-bottom: 10px;
+    }
+  }
 }

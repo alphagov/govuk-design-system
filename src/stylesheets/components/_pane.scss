@@ -81,6 +81,10 @@
     }
   }
 
+  .app-o-pane__toc-mobile-overview {
+    display: none; // No JS fallback for overview links
+  }
+
   .app-o-pane__content {
     @include mq($from: tablet) {
       display: flex;
@@ -102,6 +106,13 @@
       }
     }
 
+  }
+
+  .no-js {
+
+    .app-o-pane__toc-mobile-overview {
+      display: block; // No JS fallback for overview links
+    }
   }
 
   .no-flexbox {
