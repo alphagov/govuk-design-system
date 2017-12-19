@@ -1,0 +1,34 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }}</title>
+    <link href="/stylesheets/main.css" rel="stylesheet" media="all" />
+    <!--[if lt IE 9]>
+      <script src="/javascripts/ie.js"></script>
+    <![endif]-->
+    <script src="/javascripts/vendor/modernizr.js"></script>
+  </head>
+  <body class="govuk-u-font-smoothing">
+    <a href="#content" class="govuk-c-skip-link">Skip to main content</a>
+    <div class="app-o-pane">
+      <div class="app-o-pane__header">
+        {% include "_header.njk" %}
+      </div>
+      <div class="app-o-pane__nav">
+        {% include "../partials/_navigation.njk" %}
+      </div>
+      <div class="app-o-pane__mobile-nav">
+        {% include "../partials/_mobile-navigation.njk" %}
+      </div>
+
+      {% block body %}
+        {{ contents | safe }}
+      {% endblock %}
+
+    </div>
+    <script src="/javascripts/application.js"></script>
+  </body>
+</html>

@@ -1,56 +1,28 @@
-<!doctype html>
-<html class="no-js">
-  <head>
-    <meta charset="utf-8">
-    <meta name="robots" content="noindex, nofollow">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ title }}</title>
-    <link href="/stylesheets/main.css" rel="stylesheet" media="all" />
-    <!--[if lt IE 9]>
-      <script src="/javascripts/ie.js"></script>
-    <![endif]-->
-    <script src="/javascripts/vendor/modernizr.js"></script>
-  </head>
-  <body class="govuk-u-font-smoothing">
-    <a href="#content" class="govuk-c-skip-link">Skip to main content</a>
-    <div class="app-o-pane">
-      <div class="app-o-pane__header">
-        {% include "_header.njk" %}
+{% extends "_generic.njk" %}
+
+{% block body %}
+<div class="app-o-pane__body">
+  <div class="app-o-pane__toc app-u-hide-mobile">
+    {% include "../partials/_toc.njk" %}
+  </div>
+  <div class="app-o-pane__content">
+    <main id="content" class="app-c-content" role="main">
+      <div class="app-c-content__header">
+        <p class="app-c-content__section-heading">
+          {% if theme %}
+              {{ theme }}
+            {% else %}
+              {{ section }}
+          {% endif %}
+        </p>
+        <h1 class="app-c-content__heading heading-xlarge">{{ title }}</h1>
       </div>
-      <div class="app-o-pane__nav">
-        {% include "../partials/_navigation.njk" %}
-      </div>
-      <div class="app-o-pane__mobile-nav">
-        {% include "../partials/_mobile-navigation.njk" %}
-      </div>
-      <div class="app-o-pane__body">
-        <div class="app-o-pane__toc app-u-hide-mobile">
-          {% include "_toc.njk" %}
-        </div>
-        <div class="app-o-pane__content">
-          <main id="content" class="app-c-content" role="main">
-            <div class="app-c-content__header">
-              <p class="app-c-content__section-heading">
-                {% if theme %}
-                    {{ theme }}
-                  {% else %}
-                    {{ section }}
-                {% endif %}
-              </p>
-              <h1 class="app-c-content__heading heading-xlarge">{{ title }}</h1>
-            </div>
-            {% block body %}
-              {{ contents | safe }}
-            {% endblock %}
-          </main>
-          {# No JS fallback to show overview #}
-          <div class="app-o-pane__toc-mobile-overview app-u-hide-desktop">
-            {% include "../partials/_toc.njk" %}
-          </div>
-          {% include "_footer.njk" %}
-        </div>
-      </div>
+      {{ contents | safe }}
+    </main>
+    {# No JS fallback to show overview #}
+    <div class="app-o-pane__toc-mobile-overview app-u-hide-desktop">
+      {% include "../partials/_toc.njk" %}
     </div>
-    <script src="/javascripts/application.js"></script>
-  </body>
-</html>
+    {% include "_footer.njk" %}
+  </div>
+{% endblock %}
