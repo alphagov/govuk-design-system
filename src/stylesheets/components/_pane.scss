@@ -17,7 +17,8 @@
 
       @include mq($from: tablet) {
         height: $pane-height;
-        grid-template-rows: repeat(2, auto);
+        grid-template-rows: min-content  // Header
+                            max-content; // Body (incl. footer)
       }
     }
   }

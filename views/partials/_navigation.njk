@@ -1,15 +1,15 @@
 <nav class="app-c-navigation govuk-u-clearfix">
   <ul class="app-c-navigation__list">
-    <li>
-      <a href="/about">About</a>
+    <li{% if path == '' %}  class="app-c-navigation--current-page"{% endif %}>
+      <a href="/">About</a>
     </li>
-    <li>
+    <li{% if 'styles' in path %}  class="app-c-navigation--current-page"{% endif %}>
       <a href="/styles">Styles</a>
     </li>
-    <li class="app-c-navigation--current-page">
+    <li{% if 'components' in path %}  class="app-c-navigation--current-page"{% endif %}>
       <a href="/components">Components</a>
     </li>
-    <li>
+    <li{% if 'patterns' in path %}  class="app-c-navigation--current-page"{% endif %}>
       <a href="/patterns">Patterns</a>
     </li>
   </ul>
