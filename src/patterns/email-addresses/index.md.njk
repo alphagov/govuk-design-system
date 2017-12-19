@@ -7,7 +7,9 @@ aliases:
 layout: layout-patterns.njk
 ---
 
-[Live example of an email input field]
+{% from "_example.njk" import example %}
+
+{{ example({group: 'patterns', item: 'email-addresses', example: 'default'}) }}
 
 ## When to use this pattern
 
@@ -22,6 +24,8 @@ When asking users for their email address, you must:
 - help users to enter a valid email address
 
 You may also need to check that users have access to the email account they give you.
+
+{{ example({group: 'patterns', item: 'email-addresses', example: 'default', html: true, nunjucks: true, open: true}) }}
 
 ### Make the field long enough
 

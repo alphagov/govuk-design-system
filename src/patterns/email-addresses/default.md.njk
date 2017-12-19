@@ -1,0 +1,15 @@
+---
+layout: layout-example.njk
+---
+
+{% from "input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    "text": "Email address",
+    "hintText": "We'll only use this to send you a receipt"
+  },
+  id: "input-1",
+  name: "test-name"
+}) }}
+

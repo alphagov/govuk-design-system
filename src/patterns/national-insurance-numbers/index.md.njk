@@ -7,9 +7,11 @@ aliases:
 layout: layout-patterns.njk
 ---
 
+{% from "_example.njk" import example %}
+
 Ask users to provide their National Insurance number.
 
-[example or link]
+{{ example({group: 'patterns', item: 'national-insurance-numbers', example: 'default'}) }}
 
 ## When to use this pattern
 
@@ -30,6 +32,8 @@ You should:
 - allow for 13 characters as National Insurance numbers are spaced in pairs followed by a single letter
 - allow upper and lower case letters and strip out spaces before validating
 - avoid using ‘AB 12 34 56 C’ as an example - it belongs to a real person - use ‘QQ 12 34 56 C’ instead
+
+{{ example({group: 'patterns', item: 'national-insurance-numbers', example: 'default', html: true, nunjucks: true, open: true}) }}
 
 ## Research on this pattern
 
