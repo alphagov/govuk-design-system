@@ -12,6 +12,8 @@ $app-light-grey: #f3f3f3;
 @import "components/footer";
 @import "components/toc";
 @import "components/pane";
+@import "components/example";
+@import "components/tabs";
 
 body {
   margin: 0;
@@ -90,6 +92,70 @@ $mq-breakpoint-widescreen: 1200px;
   margin-bottom: 0;
   color: $govuk-secondary-text-colour;
   text-transform: capitalize;
+}
+
+.app-o-example-page {
+  padding: $govuk-gutter * 2 $govuk-gutter $govuk-gutter;
+
+  &:before {
+    content: "Resize";
+    position: absolute;
+    z-index: 2;
+    right: $govuk-gutter-half;
+    bottom: 0;
+    color: $govuk-secondary-text-colour;
+    @include govuk-core-16;
+  }
+}
+
+.app-o-example-page--full-page {
+  padding: 0;
+}
+
+// Generic chevron
+// can be rotated for --right --bottom --left versions
+.app-o-chevron--top::before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: .15em;
+  left: .15em;
+  width: .45em;
+  height: .45em;
+  margin-top: .25em;
+  margin-right: .5em;
+  transform: rotate(-45deg);
+  border-width: .15em .15em 0 0;
+  border-style: solid;
+  vertical-align: top;
+}
+
+// Copy button
+.app-c-link--copy {
+  &:link,
+  &:active,
+  &:visited,
+  &:hover {
+    position: absolute;
+    z-index: 1;
+    top: $govuk-gutter-half;
+    right: $govuk-gutter-half;
+    padding: 4px 10px 0;
+    border: 1px solid $govuk-button-colour;
+    color: $govuk-button-colour;
+    background-color: $govuk-white;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+
+pre {
+  position: relative;
+  margin: 0;
+  padding: $govuk-gutter-half;
+  overflow: auto;
+  border: 1px solid $govuk-border-colour;
+  background-color: $app-light-grey;
 }
 
 .no-js {

@@ -10,7 +10,11 @@ copy: done
 layout: layout-pane.njk
 ---
 
+{% from "_example.njk" import example %}
+
 The Breadcrumbs component helps users to understand where they are within a website’s structure and move between levels.
+
+{{ example({group: 'components', item: 'breadcrumbs', example: 'default'}) }}
 
 ## When to use this component
 
@@ -27,6 +31,8 @@ If you’re using other navigational devices on the page, such as a sidebar, con
 The Breadcrumbs component should include the user’s current page, which should be visually different from the other pages linked to in the breadcrumb.
 
 There are two ways to use the Breadcrumbs component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the GOV.UK Prototype Kit, you can use the Breadcrumbs macro.
+
+{{ example({group: 'components', item: 'breadcrumbs', example: 'default', html: true, nunjucks: true, open: true}) }}
 
 ## Dependencies
 

@@ -1,0 +1,20 @@
+---
+layout: layout-example.njk
+---
+{% from "breadcrumb/macro.njk" import govukBreadcrumb %}
+
+{{ govukBreadcrumb({
+  "items": [
+    {
+      "text": "Home",
+      "href": "/"
+    },
+    {
+      "text": "Passports, travel and living abroad",
+      "href": "/browse/abroad"
+    },
+    {
+      "text": "Travel abroad"
+    }
+  ]
+}) }}
