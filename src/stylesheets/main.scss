@@ -1,7 +1,7 @@
 @import "@govuk-frontend/all/all";
 
 // App-specific variables
-$app-light-grey: #f3f3f3;
+$app-light-grey: #f8f8f8;
 
 // App-specific components
 @import "components/header";
@@ -14,6 +14,7 @@ $app-light-grey: #f3f3f3;
 @import "components/pane";
 @import "components/example";
 @import "components/tabs";
+@import "components/highlight";
 
 body {
   margin: 0;
@@ -76,6 +77,19 @@ $mq-breakpoint-widescreen: 1200px;
 .app-c-content {
   padding: $govuk-gutter;
   @include govuk-core-19;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul:not(.app-c-tabs),
+  ol,
+  img {
+    max-width: 38em;
+  }
 }
 
 .app-c-content__header {
