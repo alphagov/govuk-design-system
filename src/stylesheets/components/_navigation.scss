@@ -1,0 +1,57 @@
+.app-c-navigation {
+  $navigation-height: 53px;
+  padding-right: $govuk-spacing-scale-3;
+  padding-left: $govuk-spacing-scale-3;
+  background-color: $app-light-grey;
+  font-family: $govuk-font-stack;
+  @include font-smoothing;
+  @include govuk-bold-19;
+
+  @include mq($until: desktop) {
+    display: none;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    & > li {
+      box-sizing: border-box;
+      height: $navigation-height;
+      float: left;
+      line-height: $navigation-height;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+
+      &:hover {
+        border-bottom: 4px solid $govuk-light-blue;
+      }
+
+      &.app-c-navigation--current-page {
+        border-bottom: 4px solid $govuk-blue !important;
+
+        a:hover {
+          color: $govuk-link-colour;
+        }
+      }
+
+      a {
+        display: block;
+        padding: 0 20px;
+        color: $govuk-link-colour;
+        text-decoration: none;
+
+        &:visited {
+          color: $govuk-link-colour;
+        }
+
+        &:hover,
+        &:focus {
+          color: $govuk-link-hover-colour;
+          background-color: inherit;
+        }
+      }
+    }
+  }
+}
