@@ -1,11 +1,12 @@
 {% macro example(params) %}
 
 {% set examplePath = "src/" + params.group + "/" + params.item + "/" + params.example + ".md.njk" %}
+{% set exampleURL = "/" + params.group + "/" + params.item + "/" + params.example + "/index.html" %}
 {% set examplePrefix = params.item + "-" + params.example + "-" %}
 
 <div class="app-c-example app-c-example--tabs">
-  <span class="app-c-example__new-window"><a href="{{ params.example }}" target="_blank">(open in new window)</a></span>
-  <iframe class="app-c-example__frame app-c-example__frame--resizable js-example__frame" src="{{ params.example }}"></iframe>
+  <span class="app-c-example__new-window"><a href="{{ exampleURL }}" target="_blank">(open in new window)</a></span>
+  <iframe class="app-c-example__frame app-c-example__frame--resizable js-example__frame" src="{{ exampleURL }}"></iframe>
 </div>
 
 {% if (params.html and params.nunjucks) %}
