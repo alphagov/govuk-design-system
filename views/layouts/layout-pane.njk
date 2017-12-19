@@ -3,7 +3,8 @@
 {% block body %}
 <div class="app-o-pane__body">
   <div class="app-o-pane__toc app-u-hide-mobile">
-    {% include "../partials/_toc.njk" %}
+    {% block toc %}
+    {% endblock %}
   </div>
   <div class="app-o-pane__content">
     <main id="content" class="app-c-content" role="main">
@@ -21,7 +22,8 @@
     </main>
     {# No JS fallback to show overview #}
     <div class="app-o-pane__toc-mobile-overview app-u-hide-desktop">
-      {% include "../partials/_toc.njk" %}
+      {% block endtoc %}
+      {% endblock %}
     </div>
     {% include "_footer.njk" %}
   </div>
