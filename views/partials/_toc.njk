@@ -1,82 +1,76 @@
 <nav class="app-c-toc">
+  <h2 style="color: #666; font-size: 16px; margin-top: 20px;">Temporary nav</h2>
+  <h2>Components</h2>
   <ul class="app-c-toc__section">
-    <li class="app-c-toc__section-item">
-      <a href="#">Back link</a>
-    </li>
-    <li class="app-c-toc__section-item--current">
+    <li class="app-c-toc__section-item{% if path == 'components/breadcrumbs' %} app-c-toc__section-item--current{% endif %}">
       <a href="/components/breadcrumbs/">Breadcrumbs</a>
     </li>
-    <li class="app-c-toc__section-item">
-      <a href="#">Button</a>
+    <li class="app-c-toc__section-item{% if path == 'components/checkboxes' %} app-c-toc__section-item--current{% endif %}">
+      <a href="/components/checkboxes/">Checkboxes</a>
     </li>
-    <li class="app-c-toc__section-item">
-      <a href="#">Checkbox</a>
+    <li class="app-c-toc__section-item{% if path == 'components/date-input' %} app-c-toc__section-item--current{% endif %}">
+      <a href="/components/date-input/">Date input</a>
     </li>
-    <li class="app-c-toc__section-item">
-      <a href="#">Cookie banner</a>
+    <li class="app-c-toc__section-item{% if path == 'components/file-upload' %} app-c-toc__section-item--current{% endif %}">
+      <a href="/components/file-upload/">File upload</a>
     </li>
-    <li class="app-c-toc__section-item">
-      <a href="#">Date input</a>
+    <li class="app-c-toc__section-item{% if path == 'components/panel' %} app-c-toc__section-item--current{% endif %}">
+      <a href="/components/panel/">Panel</a>
     </li>
-    <li class="app-c-toc__section-item">
-      <a href="#">Download links</a>
+    <li class="app-c-toc__section-item{% if path == 'components/phase-banner' %} app-c-toc__section-item--current{% endif %}">
+      <a href="/components/phase-banner/">Phase banner</a>
     </li>
-    <li class="app-c-toc__section-item">
-      <a href="#">Error message</a>
+    <li class="app-c-toc__section-item{% if path == 'components/radios' %} app-c-toc__section-item--current{% endif %}">
+      <a href="/components/radios/">Radios</a>
     </li>
-    <li class="app-c-toc__section-item">
-      <a href="#">Error summary</a>
+    <li class="app-c-toc__section-item{% if path == 'components/select' %} app-c-toc__section-item--current{% endif %}">
+      <a href="/components/select/">Select</a>
     </li>
-    <li class="app-c-toc__section-item">
-      <a href="#">Feedback link</a>
+    <li class="app-c-toc__section-item{% if path == 'components/tag' %} app-c-toc__section-item--current{% endif %}">
+      <a href="/components/tag/">Tag</a>
     </li>
-    <li class="app-c-toc__section-item">
-      <a href="#">Fieldset</a>
+  </ul>
+
+  <h2>Patterns</h2>
+  <ul class="app-c-toc__section">
+    <li class="app-c-toc__section-item{% if path == 'patterns/addresses' %} app-c-toc__section-item--current{% endif %}">
+      <a href="/patterns/addresses/">Addresses</a>
     </li>
-    <li class="app-c-toc__section-item">
-      <a href="#">File upload</a>
+    <li class="app-c-toc__section-item{% if path == 'patterns/check-a-service-is-suitable' %} app-c-toc__section-item--current{% endif %}">
+      <a href="/patterns/check-a-service-is-suitable/">Check a service is suitable</a>
     </li>
-    <li class="app-c-toc__section-item">
-      <a href="#">Input</a>
+    <li class="app-c-toc__section-item{% if path == 'patterns/check-answers' %} app-c-toc__section-item--current{% endif %}">
+      <a href="/patterns/check-answers/">Check answers</a>
     </li>
-    <li class="app-c-toc__section-item">
-      <a href="#">Inset text</a>
+    <li class="app-c-toc__section-item{% if path == 'patterns/confirm-an-email-address' %} app-c-toc__section-item--current{% endif %}">
+      <a href="/patterns/confirm-an-email-address/">Confirm an email address</a>
     </li>
-    <li class="app-c-toc__section-item">
-      <a href="#">Label</a>
+    <li class="app-c-toc__section-item{% if path == 'patterns/confirmation-pages' %} app-c-toc__section-item--current{% endif %}">
+      <a href="/patterns/confirmation-pages/">Confirmation pages</a>
     </li>
-    <li class="app-c-toc__section-item">
-      <a href="#">Legal text</a>
+    <li class="app-c-toc__section-item{% if path == 'patterns/create-a-username' %} app-c-toc__section-item--current{% endif %}">
+      <a href="/patterns/create-a-username/">Create a username</a>
     </li>
-    <li class="app-c-toc__section-item">
-      <a href="#">List</a>
+    <li class="app-c-toc__section-item{% if path == 'patterns/create-accounts' %} app-c-toc__section-item--current{% endif %}">
+      <a href="/patterns/create-accounts/">Create accounts</a>
     </li>
-    <li class="app-c-toc__section-item">
-      <a href="#">Panel</a>
+    <li class="app-c-toc__section-item{% if path == 'patterns/email-addresses' %} app-c-toc__section-item--current{% endif %}">
+      <a href="/patterns/email-addresses/">Email addresses</a>
     </li>
-    <li class="app-c-toc__section-item">
-      <a href="#">Phase banner</a>
+    <li class="app-c-toc__section-item{% if path == 'patterns/fill-in-a-form' %} app-c-toc__section-item--current{% endif %}">
+      <a href="/patterns/fill-in-a-form/">Fill in a form</a>
     </li>
-    <li class="app-c-toc__section-item">
-      <a href="#">Previous next</a>
+    <li class="app-c-toc__section-item{% if path == 'patterns/names' %} app-c-toc__section-item--current{% endif %}">
+      <a href="/patterns/names/">Names</a>
     </li>
-    <li class="app-c-toc__section-item">
-      <a href="#">Radio</a>
+    <li class="app-c-toc__section-item{% if path == 'patterns/national-insurance-numbers' %} app-c-toc__section-item--current{% endif %}">
+      <a href="/patterns/national-insurance-numbers/">National Insurance numbers</a>
     </li>
-    <li class="app-c-toc__section-item">
-      <a href="#">Select</a>
+    <li class="app-c-toc__section-item{% if path == 'patterns/passwords' %} app-c-toc__section-item--current{% endif %}">
+      <a href="/patterns/passwords/">Passwords</a>
     </li>
-    <li class="app-c-toc__section-item">
-      <a href="#">Skip link</a>
-    </li>
-    <li class="app-c-toc__section-item">
-      <a href="#">Table</a>
-    </li>
-    <li class="app-c-toc__section-item">
-      <a href="#">Tag</a>
-    </li>
-    <li class="app-c-toc__section-item">
-      <a href="#">Textarea</a>
+    <li class="app-c-toc__section-item{% if path == 'patterns/question-pages' %} app-c-toc__section-item--current{% endif %}">
+      <a href="/patterns/question-pages/">Question pages</a>
     </li>
   </ul>
 </nav>

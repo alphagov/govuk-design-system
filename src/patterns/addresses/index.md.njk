@@ -1,0 +1,94 @@
+---
+title: Addresses
+description: Help users provide an address.
+section: Patterns
+theme: Ask users for...
+aliases:
+layout: layout-pane.njk
+---
+
+
+Help users provide an address using one of the following:
+
+- Address lookup
+- Multiple text inputs
+- Textarea
+
+## Address lookups
+
+Example
+[live example]
+
+### When to use an address lookup
+
+Use an address lookup when you’re asking users for a UK address.
+
+### When not to use an address lookup
+
+Address lookups generally only work for UK addresses. Use a manual option such as  multiple text inputs or a textarea when you are collecting mostly or only international addresses
+
+### How address lookups work
+
+An address lookup lets users specify a UK address by entering their postcode and selecting their address from a list. There is also an option to enter a street name or number.
+
+When using an address lookup, you should:
+
+- make it clear that it will only work for UK addresses
+- provide a manual option for people with international addresses or addresses that are missing or not properly listed in the address lookup
+- let people enter their postcodes in upper or lower case and with or without spaces
+
+## Multiple text inputs
+
+[Live example of multiple text inputs]
+
+### When to use multiple text inputs
+
+Only use multiple text inputs when you know which countries the addresses will come from and can find a format that supports them all. This can be difficult to know if you’re asking for addresses outside of the UK.
+
+### How multiple text inputs work
+
+Using multiple text inputs means:
+
+- you can easily extract and use specific parts of an address
+- you can give help for individual text inputs
+- you can validate each part of the address separately
+- users can complete the form using their browser’s auto-complete function
+
+The disadvantages of using multiple text inputs are that:
+
+- it’s hard to find a single format that works for all addresses
+- there’s no guarantee that users will use the text inputs the way you think they will
+- users can’t easily paste addresses from their clipboards
+
+If you use multiple text inputs, you should:
+
+- only make individual text inputs mandatory if you really need the information
+- make the text inputs the appropriate length for the content - it helps people understand the form, for example, make postcode text inputs shorter than street text inputs
+- let people enter their postcodes in upper or lower case and with or without spaces
+
+Make sure there are enough text inputs to accommodate longer addresses if you know your users will need them. For example, allow users to include a company name or flat number.
+
+Royal Mail doesn’t need a county as long as the town and postcode are included. You should include an optional county text input so that people who don’t know their postcode can give a valid address.
+
+## Text areas
+
+[Live example text area]
+
+### When to use text areas
+
+Use a text area if you expect a broad range of address formats and you don’t need to format the address for print or use specific sub-parts of the address (for example, street or postcode).
+
+### When not to use textareas
+
+You shouldn’t use a textarea if you:
+
+- need to separate an address into accurate sub-parts (for example, street or postcode)
+- need to help users look up an address
+
+### How textareas work
+
+Textareas let users enter an address in any format and make it easy to copy and paste addresses from their clipboard.
+
+## Research on this pattern
+
+If you’ve used this pattern, [get in touch](Anchor link to Get in touch panel at bottom of page) to share your user research findings.
