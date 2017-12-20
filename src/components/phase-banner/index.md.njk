@@ -6,10 +6,11 @@ aliases:
 layout: layout-components.njk
 ---
 
+{% from "_example.njk" import example %}
 
 Use the Phase banner component to show users your service is still being worked on.
 
-[Live example of alpha or beta phase banner]
+{{ example({group: 'components', item: 'phase-banner', example: 'default'}) }}
 
 ## When to use this component
 
@@ -20,9 +21,9 @@ Use an alpha banner when your service is in alpha, and a beta banner if your ser
 Your banner must be directly under the black GOV.UK header and colour bar.
 There are two ways to use the Phase banner component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](Insert prototype kit URL), you can use the Phase banner macro.
 
-[Example & codeblock for alpha banner]
+{{ example({group: 'components', item: 'phase-banner', example: 'default', html: true, nunjucks: true, open: true}) }}
 
-[Example & codeblock for beta banner]
+{{ example({group: 'components', item: 'phase-banner', example: 'beta', html: true, nunjucks: true, open: false}) }}
 
 ### Add a feedback link
 

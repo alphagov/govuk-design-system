@@ -6,8 +6,11 @@ aliases:
 layout: layout-components.njk
 ---
 
+{% from "_example.njk" import example %}
 
 The Panel component is a visible container used on confirmation or results pages to highlight important content.
+
+{{ example({group: 'components', item: 'panel', example: 'default'}) }}
 
 ## When to use this component
 
@@ -31,7 +34,7 @@ Don’t use the Panel component to highlight important information within body c
 
 There are two ways to use the Panel component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the GOV.UK Prototype Kit, you can use the Panel macro.
 
-(Tabbed codeblock goes here)
+{{ example({group: 'components', item: 'panel', example: 'default', html: true, nunjucks: true, open: true}) }}
 
 ## Research on this component
 

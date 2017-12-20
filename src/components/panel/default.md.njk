@@ -1,0 +1,11 @@
+---
+layout: layout-example.njk
+---
+
+{% from "panel/macro.njk" import govukPanel %}
+
+{{ govukPanel({
+  "titleText": "Application complete",
+  "html": "Your reference number<br><strong>HDJ2123F</strong>"
+})
+}}

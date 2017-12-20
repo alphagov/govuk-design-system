@@ -6,7 +6,9 @@ aliases:
 layout: layout-components.njk
 ---
 
-[Example of Tag component]
+{% from "_example.njk" import example %}
+
+{{ example({group: 'components', item: 'tag', example: 'default'}) }}
 
 # When to use this component
 
@@ -16,7 +18,7 @@ Use the Tag component to indicate the status of something, such as an item on a 
 
 There are two ways to implement the Tag component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](Insert prototype kit URL), you can use the Tag macro.
 
-[Example & codeblock for Tag component]
+{{ example({group: 'components', item: 'tag', example: 'default', html: true, nunjucks: true, open: true}) }}
 
 ## Research on this component
 

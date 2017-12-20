@@ -6,8 +6,9 @@ aliases:
 layout: layout-components.njk
 ---
 
+{% from "_example.njk" import example %}
 
-[Live example]
+{{ example({group: 'components', item: 'select', example: 'default'}) }}
 
 ## When to use this component
 
@@ -23,7 +24,7 @@ If you’re unable to shorten the list, consider using the [Autocomplete](Insert
 
 There are two ways to use the Select component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](Insert URL),  you can use the Select macro.
 
-[Live example with codeblock]
+{{ example({group: 'components', item: 'select', example: 'default', html: true, nunjucks: true, open: true}) }}
 
 ## Research on this component
 
