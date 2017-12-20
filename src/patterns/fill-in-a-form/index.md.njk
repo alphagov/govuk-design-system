@@ -7,6 +7,7 @@ aliases:
 layout: layout-patterns.njk
 ---
 
+{% from "_example.njk" import example %}
 
 Help users complete a form by only asking for critical information, and designing it to be as easy as possible to fill in.
 
@@ -45,7 +46,7 @@ If you do need to ask for any optional information, mark the labels of optional 
 Once you have a question protocol, you can decide how to order your questions.
 Start with questions that will let users know if they’re not eligible for the service, so you don’t waste people’s time.
 
-If there are complicated eligibility requirements, follow the pattern to help users [Check a service is suitable](Insert link to Check a service is suitable).
+If there are complicated eligibility requirements, follow the pattern to help users [Check a service is suitable](../check-a-service-is-suitable/).
 Use ‘branching’ questions so people only have to answer questions that are relevant to them.
 Make sure you know the relative size of your different user groups and how your decisions will affect them.
 
@@ -75,7 +76,7 @@ It also helps you to:
 
 Try the Register to vote service on GOV.UK to see an example of this approach.
 
-Read more about designing [Question pages](Insert link to Question pages pattern).
+Read more about designing [Question pages](../question-pages).
 
 ### Providing help text
 You should do everything you can to make sure your form is simple and doesn’t need further explaining.
@@ -98,13 +99,13 @@ When writing help text, you should:
 
 Hint text is short, clear text positioned immediately next to the part of the page it relates to. You can use hint text for help that’s relevant to the majority of your users, for example:
 
-[Example of hint text & codeblock]
+{{ example({group: 'patterns', item: 'fill-in-a-form', example: 'hint', html: true, nunjucks: true, open: false}) }}
 
 You should place inline help for form fields between the label and the field so sighted users and screenreaders can read it before they get to the field itself.
 
 If you need to provide information that only some users will need, you can use the Details component. This is a short link that expands into more detailed help when a user clicks on it, for example:
 
-[Example of Details component]
+{{ example({group: 'patterns', item: 'fill-in-a-form', example: 'details', html: true, nunjucks: true, open: false}) }}
 
 Use the Details component to make your page easier to scan, but don’t hide help if a majority of users will need it.
 

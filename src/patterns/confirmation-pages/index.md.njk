@@ -1,5 +1,5 @@
 ---
-title: Confirmations pages
+title: Confirmation pages
 description: Let users know they’ve completed a transaction.
 section: Patterns
 theme: Pages
@@ -7,10 +7,12 @@ aliases:
 layout: layout-patterns.njk
 ---
 
+{% from "_example.njk" import example %}
+
 
 Let users know they’ve completed a transaction.
 
-[Screenshot of a confirmation page]
+{{ example({group: 'patterns', item: 'confirmation-pages', example: 'default'}) }}
 
 See an [example of this page](https://govuk-prototype-kit.herokuapp.com/docs/examples/confirmation-page) in the [GOV.UK prototype kit](https://govuk-prototype-kit.herokuapp.com/docs).
 
@@ -28,6 +30,8 @@ Your confirmation page must include:
 - links to information or services that users are likely to need next
 - a link to your feedback page
 - a way for users to save a record of the transaction, for example, as a PDF
+
+{{ example({group: 'patterns', item: 'confirmation-pages', example: 'default', html: true, nunjucks: true, open: true}) }}
 
 ### Help users who bookmark the page
 
