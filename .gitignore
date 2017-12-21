@@ -2,3 +2,4 @@ deploy/public
 /node_modules
 .npmrc
 .sass-cache
+package-lock.json
