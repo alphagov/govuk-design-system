@@ -7,8 +7,9 @@ aliases:
 layout: layout-patterns.njk
 ---
 
+{% from "_example.njk" import example %}
 
-[Live example of name input field]
+{{ example({group: 'patterns', item: 'names', example: 'default'}) }}
 
 ## When to use this pattern
 
@@ -18,6 +19,8 @@ Only ask for people’s names if you need that information to deliver a service.
 ## How it works
 
 Make it as easy as possible for a user to enter their name.
+
+{{ example({group: 'patterns', item: 'names', example: 'default', html: true, nunjucks: true, open: true}) }}
 
 ### Make sure the fields work for most of your users
 

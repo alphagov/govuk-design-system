@@ -7,7 +7,9 @@ aliases:
 layout: layout-patterns.njk
 ---
 
-[Live example of an email input field]
+{% from "_example.njk" import example %}
+
+{{ example({group: 'patterns', item: 'email-addresses', example: 'default'}) }}
 
 ## When to use this pattern
 
@@ -22,6 +24,8 @@ When asking users for their email address, you must:
 - help users to enter a valid email address
 
 You may also need to check that users have access to the email account they give you.
+
+{{ example({group: 'patterns', item: 'email-addresses', example: 'default', html: true, nunjucks: true, open: true}) }}
 
 ### Make the field long enough
 
@@ -53,7 +57,7 @@ Only ask users to repeat their email if your user research shows it to be effect
 
 ### Check the user has access to their email account
 
-If email is an essential part of your service - for example to send a password reset - you can confirm whether the user has access to the email address they give you using an [email confirmation loop](link to email confirmation loops pattern).
+If email is an essential part of your service - for example to send a password reset - you can confirm whether the user has access to the email address they give you using an [email confirmation loop](../confirm-an-email-address).
 
 However, these are disruptive and should be avoided as far as possible.
 

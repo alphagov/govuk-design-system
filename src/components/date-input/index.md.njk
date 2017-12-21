@@ -6,10 +6,11 @@ aliases:
 layout: layout-components.njk
 ---
 
+{% from "_example.njk" import example %}
 
 Use the Date input component to help users enter a memorable date.
 
-[Live example]
+{{ example({group: 'components', item: 'date-input', example: 'default'}) }}
 
 ## When to use this component
 
@@ -27,7 +28,8 @@ The Date input component consists of 3 fields to let users enter a day, month an
 
 There are two ways to use the Date input component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](Insert URL), you can use the Date input macro.
 
-[Live example with codeblock]
+{{ example({group: 'components', item: 'date-input', example: 'default', html: true, nunjucks: true, open: true}) }}
+
 
 Don’t automatically tab users between the fields of the Date input because this can be confusing, and may clash with normal keyboard controls.
 
@@ -35,7 +37,7 @@ Don’t automatically tab users between the fields of the Date input because thi
 
 Check that a valid date is entered by the user. Invalid dates should be shown to the user like this:
 
-[Live error-state example with codeblock]
+{{ example({group: 'components', item: 'date-input', example: 'error', html: true, nunjucks: true, open: false}) }}
 
 ## Research on this pattern
 

@@ -1,0 +1,29 @@
+---
+layout: layout-example.njk
+---
+
+{% from "date-input/macro.njk" import govukDateInput %}
+
+{{- govukDateInput({
+  fieldset: {
+    legendText: 'What is your date of birth?',
+    legendHintText: 'For example, 31 3 1980'
+  },
+    "errorMessage": {
+    "text": "Error message goes here"
+  },
+  id: 'dob',
+  name: 'dob',
+  items:[
+    {
+      name: 'day'
+    },
+    {
+      name: 'month'
+    },
+    {
+      name: 'year'
+    }
+  ]
+  })
+-}}

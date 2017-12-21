@@ -6,10 +6,11 @@ aliases:
 layout: layout-components.njk
 ---
 
+{% from "_example.njk" import example %}
 
 Help users select and upload a file.
 
-[Example of file upload]
+{{ example({group: 'components', item: 'file-upload', example: 'default'}) }}
 
 ## When to use this component
 
@@ -21,7 +22,7 @@ You should only ask users to upload something if it’s critical to the delivery
 
 There are two ways to use the File upload component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the GOV.UK Prototype Kit, you can use the File upload macro.
 
-[Live example of File upload with codeblock]
+{{ example({group: 'components', item: 'file-upload', example: 'default', html: true, nunjucks: true, open: true}) }}
 
 ## Research on this component
 
