@@ -20,7 +20,7 @@
   a {
     display: block;
     margin-top: -1px;
-    padding: $govuk-gutter-half;
+    padding: $govuk-spacing-scale-3;
     border-top: 2px solid transparent;
     border-bottom: 2px solid transparent;
     color: $govuk-link-colour;
@@ -44,7 +44,7 @@
     display: none;
     position: relative;
     z-index: 2;
-    padding: $govuk-gutter-half;
+    padding: $govuk-spacing-scale-3;
     border: 1px solid $govuk-border-colour;
     border-top: 0;
     color: $govuk-link-colour;
@@ -78,14 +78,14 @@
 }
 
 .app-c-tabs__container pre {
-  padding-bottom: $govuk-gutter;
+  padding-bottom: $govuk-spacing-scale-6;
   border: 0;
 }
 
 // Close container button
 .app-c-link--close {
   position: absolute;
-  right: $govuk-gutter-half;
-  bottom: $govuk-gutter-half / 2;
+  right: $govuk-spacing-scale-3;
+  bottom: $govuk-spacing-scale-3 / 2;
   text-decoration: none;
 }

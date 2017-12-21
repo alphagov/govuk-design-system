@@ -3,9 +3,7 @@
   padding-right: $govuk-spacing-scale-3;
   padding-left: $govuk-spacing-scale-3;
   background-color: $app-light-grey;
-  font-family: $govuk-font-stack;
-  @include font-smoothing;
-  @include govuk-bold-19;
+  @include govuk-font-bold-19;
 
   @include mq($until: desktop) {
     display: none;

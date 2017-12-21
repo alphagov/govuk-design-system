@@ -24,9 +24,8 @@
 
 
   & > li {
-    @include govuk-bold-19;
-    @include font-smoothing;
-    font-family: $govuk-font-stack;
+    @include govuk-typography-common;
+    @include govuk-typography-weight-bold;
     font-size: 19px; // We don't have a font mixin that produces 19px on mobile
 
     & > a {
@@ -59,7 +58,7 @@
 
   & > li {
     & > a {
-      @include govuk-core-19;
+      @include govuk-font-regular-19;
       display: block;
       padding: $govuk-spacing-scale-2 $govuk-spacing-scale-4;
 
@@ -80,7 +79,7 @@
   margin: 0;
   padding: $govuk-spacing-scale-4 $govuk-spacing-scale-4 $govuk-spacing-scale-1 $govuk-spacing-scale-4;
   color: $govuk-grey-1;
-  @include govuk-core-19;
+  @include govuk-font-regular-19;
   text-transform: uppercase;
 }
 
@@ -91,7 +90,7 @@
   background-color: $govuk-white;
 
   & > li {
-    @include govuk-core-19;
+    @include govuk-font-regular-19;
 
     & > a {
       display: block;
