@@ -169,6 +169,76 @@ $mq-breakpoint-widescreen: 1200px;
   }
 }
 
+$colour-list-breakpoint: 980px;
+
+.app-c-colour-list {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.app-c-colour-list-row {
+  display: block;
+  position: relative;
+  margin-bottom: $govuk-spacing-scale-2;
+  @include mq($from: $colour-list-breakpoint) {
+    display: table-row;
+    margin: auto;
+  }
+}
+
+.app-c-colour-list-column {
+  display: block;
+  padding-left: 50px;
+  @include mq($from: $colour-list-breakpoint) {
+    padding-left: 0;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.app-c-swatch {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid transparent; // only light colours need a border
+  border-radius: 50%;
+  @include mq($from: $colour-list-breakpoint) {
+    position: static;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    margin-top: 6px;
+    margin-bottom: 7px; // odd number so the text lines up vertically
+  }
+}
+
+.app-c-swatch-border {
+  border-color: $govuk-grey-2;
+}
+
+.app-c-colour-list-column--name {
+  text-align: left;
+  font-weight: normal;
+  @include mq($from: $colour-list-breakpoint) {
+    width: 50%;
+  }
+}
+
+.app-c-colour-list-column--colour {
+  @include mq($from: $colour-list-breakpoint) {
+    width: 15%;
+  }
+}
+
+.app-c-colour-list-column--notes {
+  @include mq($from: $colour-list-breakpoint) {
+    width: 35%;
+  }
+}
+
 pre {
   position: relative;
   margin: 0;
