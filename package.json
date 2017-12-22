@@ -18,7 +18,8 @@
     "lint": "gulp scss:lint"
   },
   "dependencies": {
-    "@govuk-frontend/all": "^0.0.18-alpha"
+    "@govuk-frontend/all": "^0.0.18-alpha",
+    "node-github-graphql": "^0.2.6"
   },
   "devDependencies": {
     "gulp": "^3.9.1",

@@ -1,23 +1,41 @@
 
 
+
+
+
+
 <div class="govuk-mb-5 govuk-u-core-19">
   <div class="govuk-o-site-width-container app-c-site-width-container">
 
     <h2 class="heading-large">Backlog</h2>
 
       <div class="govuk-o-grid">
+
+        {% set columns = backlog.data.repository.project.columns.nodes %}
+
+        {% for column in columns %}
+
         <div class="govuk-o-grid__item govuk-o-grid__item--one-third govuk-u-mb-5">
-          <h2 class="heading-medium">Proposed</h2>
+          <h2 class="heading-medium">{{ column.name }}</h2>
+
+          {% set cards = column.cards.edges %}
+
+          <ul>
+
+          {% for card in cards %}
+          {% if card.node.content.title %}
+
+            <li><a href="{{ card.node.content.url }}">{{ card.node.content.title }}</a>
+
+          {% endif %}
+          {% endfor %}
+
+          </ul>
           
         </div>
-        <div class="govuk-o-grid__item govuk-o-grid__item--one-third govuk-u-mb-5">
-          <h2 class="heading-medium">Approved</h2>
-          
-        </div>
-        <div class="govuk-o-grid__item govuk-o-grid__item--one-third govuk-u-mb-5">
-          <h2 class="heading-medium">In progress</h2>
-         
-        </div>
+
+        {% endfor %}
+
       </div>
   </div>
 </div>
