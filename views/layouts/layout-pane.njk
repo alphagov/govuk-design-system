@@ -9,15 +9,18 @@
   <div class="app-o-pane__content">
     <main id="content" class="app-c-content" role="main">
       <div class="app-c-content__header">
-        <p class="app-c-content__section-heading">
+        <h1 class="govuk-heading-xl">
+          <span class="govuk-caption-xl">
           {% if theme %}
               {{ theme }}
             {% else %}
               {{ section }}
           {% endif %}
-        </p>
-        <h1 class="app-c-content__heading heading-xlarge">{{ title }}</h1>
+          </span>
+          {{ title }}
+        </h1>
       </div>
+
       {{ contents | safe }}
     </main>
     {# No JS fallback to show overview #}

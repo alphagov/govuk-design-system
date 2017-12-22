@@ -35,24 +35,18 @@
   }
 
   .app-c-header__title {
-    @include govuk-core-24;
-    @include font-smoothing;
+    @include govuk-font-regular-24;
   }
 
   .app-c-header__link {
     // Font size needs to be set on the link so that the box sizing is correct
     // in Firefox
-    @include _core-font-generator(
-      $font-size: 30px,
-      $font-size-640: 30px,
-      $font-size-print: 30px,
-      $line-height: 30px,
-      $line-height-640: 30px,
-      $font-weight: 700
-    );
-    @include font-smoothing;
-
+    @include govuk-typography-common;
+    @include govuk-typography-weight-bold;
     display: inline-block;
+
+    font-size: 30px; // We don't have a mixin that produces 30px font size\
+    line-height: 30px;
 
     &:link,
     &:visited {

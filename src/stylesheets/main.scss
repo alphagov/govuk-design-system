@@ -69,14 +69,10 @@ $mq-breakpoint-widescreen: 1200px;
   }
 }
 
-// Note: on Elements this is included on the body - we will review in FE how to best add font smoothing
-.govuk-u-font-smoothing {
-  @include font-smoothing;
-}
-
 .app-c-content {
-  padding: $govuk-gutter;
-  @include govuk-core-19;
+  @include govuk-font-regular-19;
+
+  @include govuk-responsive-padding($govuk-spacing-responsive-6);
 
   h1,
   h2,
@@ -90,15 +86,16 @@ $mq-breakpoint-widescreen: 1200px;
   img {
     max-width: 38em;
   }
+
 }
 
 .app-c-content__header {
-  @include govuk-core-24;
+  @include govuk-font-regular-24;
 }
 
 .app-c-content__heading {
   margin-top: 0;
-  margin-bottom: $govuk-gutter;
+  margin-bottom: $govuk-spacing-scale-6;
 }
 
 .app-c-content__section-heading {
@@ -108,16 +105,16 @@ $mq-breakpoint-widescreen: 1200px;
 }
 
 .app-o-example-page {
-  padding: $govuk-gutter * 2 $govuk-gutter $govuk-gutter;
+  padding: $govuk-spacing-scale-6 * 2 $govuk-spacing-scale-6 $govuk-spacing-scale-6;
 
   &:before {
     content: "Resize";
     position: absolute;
     z-index: 2;
-    right: $govuk-gutter-half;
+    right: $govuk-spacing-scale-3;
     bottom: 0;
     color: $govuk-secondary-text-colour;
-    @include govuk-core-16;
+    @include govuk-font-regular-16;
   }
 }
 
@@ -151,8 +148,8 @@ $mq-breakpoint-widescreen: 1200px;
   &:hover {
     position: absolute;
     z-index: 1;
-    top: $govuk-gutter-half;
-    right: $govuk-gutter-half;
+    top: $govuk-spacing-scale-3;
+    right: $govuk-spacing-scale-3;
     padding: 4px 10px 0;
     border: 1px solid $govuk-button-colour;
     color: $govuk-button-colour;
@@ -165,7 +162,7 @@ $mq-breakpoint-widescreen: 1200px;
 pre {
   position: relative;
   margin: 0;
-  padding: $govuk-gutter-half;
+  padding: $govuk-spacing-scale-3;
   overflow: auto;
   border: 1px solid $govuk-border-colour;
   background-color: $app-light-grey;
