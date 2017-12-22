@@ -10,4 +10,10 @@ layout: layout-styles.njk
 
 Always use the GOV.UK colour palette.
 
+{% for colour in colours %}
+
+  {{colour}}
+
+{% endfor %}
+
 {{ example({group: 'styles', item: 'colour', example: 'default'}) }}

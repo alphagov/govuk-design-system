@@ -1,0 +1,44 @@
+{
+  "Main":{
+    "Text": [
+      {
+        "name":"$govuk-text-colour"
+      },
+      {
+        "name":"$govuk-secondary-text-colour"
+      }
+    ],
+    "Links": [
+      {
+        "name":"$govuk-link-colour"
+      },
+      {
+        "name":"$govuk-link-hover-colour"
+      },
+      {
+        "name":"$govuk-link-visited-colour"
+      }
+    ],
+    "Backgrounds": [
+      {
+        "name":"$govuk-border-colour"
+      },
+      {
+        "name":"$govuk-panel-colour"
+      },
+      {
+        "name":"$govuk-highlight-colour"
+      },
+      {
+        "name":"$govuk-page-colour"
+      }
+    ]
+  },
+
+  "Status":{
+
+  },
+  "Extended":{
+
+  }
+}
