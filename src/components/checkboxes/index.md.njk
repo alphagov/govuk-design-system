@@ -6,6 +6,10 @@ aliases:
 layout: layout-components.njk
 ---
 
+{% from "_example.njk" import example %}
+
+{{ example({group: 'components', item: 'checkboxes', example: 'default'}) }}
+
 Let users select one or more options by using the Checkboxes component.
 
 ## When to use this component
@@ -23,7 +27,7 @@ Don’t use the Checkboxes component if users can only choose one option from a 
 
 There are two ways to use the Checkboxes component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](Insert URL), you can use the Checkboxes macro.
 
-[Live example with codeblock]
+{{ example({group: 'components', item: 'checkboxes', example: 'default', html: true, nunjucks: true, open: true}) }}
 
 ## Research on this component
 
