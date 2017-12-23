@@ -7,7 +7,9 @@ layout: layout-components.njk
 ---
 
 
-[Example of radios]
+{% from "_example.njk" import example %}
+
+{{ example({group: 'components', item: 'radios', example: 'default'}) }}
 
 ## When to use this component
 
@@ -25,13 +27,13 @@ There are two ways to use the Radios component. You can use HTML or, if you are 
 
 When there are more than two options, radios should be stacked, like so:
 
-[Example of stacked radios]
+{{ example({group: 'components', item: 'radios', example: 'default', html: true, nunjucks: true, open: true}) }}
 
-### Inline radios
+<!-- ### Inline radios
 
 If there are only two options, you can either stack the radios or display them inline, like so:
 
-[Example of inline radios]
+[Example of inline radios] -->
 
 ## Research on this component
 
