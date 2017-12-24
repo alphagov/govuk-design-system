@@ -1,0 +1,51 @@
+---
+layout: layout-example.njk
+---
+
+{% from "back-link/macro.njk" import govukBackLink %}
+{% from "input/macro.njk" import govukInput %}
+{% from "date-input/macro.njk" import govukDateInput %}
+{% from "button/macro.njk" import govukButton %}
+
+{{ govukBackLink({
+  "text": "Back"
+}) }}
+
+<div class="govuk-o-main-wrapper">
+
+  <h1 class="govuk-heading-xl">Passport details</h1>
+
+  {{ govukInput({
+    label: {
+      "html": '<h3 class="govuk-heading-m govuk-!-mb-r1">Passport number</h3>',
+      "hintText": "For example, 502135326"
+    },
+    id: "input-1",
+    name: "test-name"
+  }) }}
+
+
+  {{ govukDateInput({
+    fieldset: {
+      legendHtml: '<h3 class=\govuk-heading-m\>Expiry date</h3>',
+      legendHintText: 'For example, 08 2014'
+    },
+    id: 'dob',
+    name: 'dob',
+    items:[
+      {
+        name: 'month'
+      },
+      {
+        name: 'year'
+      }
+    ]
+    })
+  }}
+
+  {{ govukButton({
+    "text": "Continue",
+    "classes": "example-class"
+  }) }}
+
+</div>
