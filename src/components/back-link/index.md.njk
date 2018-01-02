@@ -1,0 +1,40 @@
+---
+title: Back link
+description: Use the Back link component to help users go back to the previous page in a multi-page transaction.
+section: Components
+aliases:
+layout: layout-components.njk
+---
+
+{% from "_example.njk" import example %}
+
+{{ example({group: 'components', item: 'back-link', example: 'default'}) }}
+
+Use the Back link component to help users go back to the previous page in a multi-page transaction.
+
+## When to use this component
+
+Always include the Back link component on GOV.UK [Question pages](../../patterns/question-pages).
+
+You can include a back link on other pages within a multi-page transaction, if it makes sense to do so.
+
+### When not to use this component
+
+Don’t use the Back link component together with [Breadcrumbs](../breadcrumbs). If necessary, you should do research with your users to find out which they find more helpful in your service.
+
+## How it works
+
+Back links must always go at the top of a page.
+
+Make sure the link takes users to the previous page, and that it works even when JavaScript isn’t available.
+
+There are two ways to use the Back link component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](Insert prototype kit URL), you can use the Back link macro.
+
+{{ example({group: 'components', item: 'back-link', example: 'default', html: true, nunjucks: true, open: true}) }}
+
+## Research on this component
+
+If you’ve used this component, [get in touch](Anchor link to Get in touch panel at bottom of page) to share your user research findings.
+
+
+
