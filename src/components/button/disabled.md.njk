@@ -1,0 +1,28 @@
+---
+layout: layout-example.njk
+---
+{% from "button/macro.njk" import govukButton %}
+
+<h3 class="govuk-heading-m">Input button</h3>
+
+{{ govukButton({
+  "text": "Disabled button",
+  "disabled": true
+}) }}
+
+<h3 class="govuk-heading-m">Link button</h3>
+
+{{ govukButton({
+  "text": "Disabled link button",
+  "href": "/",
+  "disabled": true
+}) }}
+
+<h3 class="govuk-heading-m">HTML5 button</h3>
+
+{{ govukButton({
+  "text": "Disabled HTML5 button",
+  "href": "/",
+  "element": "button",
+  "disabled": true
+}) }}

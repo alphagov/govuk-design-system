@@ -1,0 +1,45 @@
+---
+title: Button
+description: GOV.UK Button
+section: Components
+aliases:
+layout: layout-components.njk
+---
+
+{% from "_example.njk" import example %}
+
+{{ example({group: 'components', item: 'button', example: 'default'}) }}
+
+# When to use this component
+
+Use the Button component to help users carry out an action on a GOV.UK page like starting an application or saving their progress.
+
+## How it works
+
+Write button text in sentence case, describing the action it performs. For example ‘Save and continue’ or ‘Start now’.
+
+Align the primary action button to the left edge of your form, like so:
+
+{{ example({group: 'components', item: 'button', example: 'primary', html: true, nunjucks: true, open: true}) }}
+
+
+## Start buttons
+
+Use a start button as the main call to action on your service’s start page.
+
+{{ example({group: 'components', item: 'button', example: 'start', html: true, nunjucks: true, open: false}) }}
+
+### Disabled buttons
+
+Disabled buttons have poor contrast and can confuse some users, so avoid them if possible.
+
+Only use disabled buttons if research shows it makes the user interface easier to understand.
+
+{{ example({group: 'components', item: 'button', example: 'disabled', html: true, nunjucks: true, open: false}) }}
+
+## Research on this component
+
+If you’ve used this component, [get in touch](Anchor link to Get in touch panel at bottom of page) to share your user research findings.
+
+
+
