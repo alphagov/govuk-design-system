@@ -1,0 +1,46 @@
+---
+title: Text input
+description: Help users enter information with the Text input component.
+section: Components
+aliases:
+layout: layout-components.njk
+---
+
+{% from "_example.njk" import example %}
+
+{{ example({group: 'components', item: 'text-input', example: 'default'}) }}
+
+
+## When to use this component
+
+Use the Text input component when you need to let users enter text that’s no longer than a single line, such as their name or phone number.
+
+### When not to use this component
+
+Don’t use the Text input component if you need to let users enter longer answers that might span multiple lines. In this case, you should use the [Textarea component](Insert link for Textarea component.
+
+## How it works
+
+There are two ways to use the Text input component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the GOV.UK Prototype Kit, you can use the Text input macro.
+
+{{ example({group: 'components', item: 'text-input', example: 'default', html: true, nunjucks: true, open: true}) }}
+
+### Label text inputs
+
+All text inputs, must have visible labels; placeholder text is not an acceptable replacement for a label as it vanishes when users click on the text input.
+
+Labels should be aligned above the text input they refer to. They should be short, direct and written in sentence case. Don’t use colons at the end of labels.
+
+### Use appropriately-sized text inputs
+
+Make text inputs the right size for the content they’re intended for. Postcode inputs should be postode-sized, telephone number inputs should be telephone number-sized.
+
+Ensure that users can still easily enter the information they need on smaller screens by snapping text inputs to 100% width at smaller screen sizes.
+
+### Don’t disable copy and paste
+
+Users often need to copy and paste information into a text input, so you shouldn’t prevent them from doing this.
+
+## Research on this component
+
+If you’ve used this component, [get in touch](Anchor link to Get in touch panel at bottom of page) to share your user research findings.
