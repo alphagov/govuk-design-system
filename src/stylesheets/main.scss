@@ -168,6 +168,13 @@ $mq-breakpoint-widescreen: 1200px;
   }
 }
 
+.app-c-swatch{
+  display:inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
 pre {
   position: relative;
   margin: 0;
