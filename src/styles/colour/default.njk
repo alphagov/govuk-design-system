@@ -2,9 +2,11 @@
 layout: layout-example.njk
 ---
 
+<h2>Main colours</h2>
+
 {% for groupName, group in colours.Main %}
 
-  <h2>{{groupName}}</h2>
+  <h3>{{groupName}}</h3>
 
   <table width="100%">
 
@@ -12,14 +14,17 @@ layout: layout-example.njk
 
       <tr>
 
-        <td>
+        <td width="10%">
           <span style="display:inline-block; background:{{colour.colour}}; width: 40px; height: 40px;"></span>
         </td>
-        <td width="40%">
+        <td width="30%">
           {{colour.name}}
         </td>
-        <td width="40%">
+        <td width="20%">
           {{colour.colour}}
+        </td>
+        <td width="40%">
+          {{colour.notes}}
         </td>
 
       </tr>
@@ -29,3 +34,36 @@ layout: layout-example.njk
   </table>
 
 {% endfor %}
+
+<h2>Extended colours</h2>
+
+<ul>
+  <li>used for graphs and supporting material</li>
+  <li>for tints of the extended palette use 50% or 25%</li>
+  <li>you can find the departmental colours in the GOV.UK Frontend _colours-organisations file</li>
+</ul>
+
+<table width="100%">
+
+  {% for colour in colours.Extended %}
+
+    <tr>
+
+      <td width="10%">
+        <span style="display:inline-block; background:{{colour.colour}}; width: 40px; height: 40px;"></span>
+      </td>
+      <td width="30%">
+        {{colour.name}}
+      </td>
+      <td width="20%">
+        {{colour.colour}}
+      </td>
+      <td width="40%">
+        {{colour.notes}}
+      </td>
+
+    </tr>
+
+  {% endfor %}
+
+</table>
