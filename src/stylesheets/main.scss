@@ -175,6 +175,61 @@ $mq-breakpoint-widescreen: 1200px;
   border-radius: 50%;
 }
 
+.app-c-colour-list{
+  width: 100%;
+  border-collapse: collapse;
+  @include mq($from: tablet) {
+    border-collapse: separate;
+  }
+}
+
+.app-c-colour-list-row{
+  display: block;
+  margin-bottom: $govuk-spacing-scale-2;
+  @include mq($from: tablet) {
+    display: table-row;
+    margin: auto;
+  }
+}
+
+.app-c-colour-list-column{
+  width: 100%;
+  display: block;
+  @include mq($from: tablet) {
+    display: table-cell;
+  }
+}
+
+.app-c-colour-list-column--swatch{
+  width: 50px;
+  float: left;
+  margin-right: -50px;
+  @include mq($from: tablet) {
+    width: 10%;
+  }
+}
+
+.app-c-colour-list-column--name{
+  margin-left: 50px;
+  @include mq($from: tablet) {
+    width: 40%;
+  }
+}
+
+.app-c-colour-list-column--colour{
+  margin-left: 50px;
+  @include mq($from: tablet) {
+    width: 15%;
+  }
+}
+
+.app-c-colour-list-column--notes{
+  margin-left: 50px;
+  @include mq($from: tablet) {
+    width: 35%;
+  }
+}
+
 pre {
   position: relative;
   margin: 0;

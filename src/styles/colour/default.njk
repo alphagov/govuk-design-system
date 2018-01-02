@@ -8,22 +8,22 @@ layout: layout-example.njk
 
   <h3 class="govuk-heading-s">{{groupName}}</h3>
 
-  <table width="100%" class="govuk-body">
+  <table class="govuk-body app-c-colour-list">
 
     {% for colour in group %}
 
-      <tr>
+      <tr class="app-c-colour-list-row">
 
-        <td width="10%">
+        <td class="app-c-colour-list-column app-c-colour-list-column--swatch">
           <span class="app-c-swatch" style="background-color:{{colour.colour}}"></span>
         </td>
-        <td width="35%">
+        <td class="app-c-colour-list-column app-c-colour-list-column--name">
           {{colour.name}}
         </td>
-        <td width="15%">
+        <td class="app-c-colour-list-column app-c-colour-list-column--colour">
           {{colour.colour}}
         </td>
-        <td width="40%">
+        <td class="app-c-colour-list-column app-c-colour-list-column--notes">
           {{colour.notes}}
         </td>
 
@@ -43,22 +43,22 @@ layout: layout-example.njk
   <li>you can find the departmental colours in the GOV.UK Frontend _colours-organisations file</li>
 </ul>
 
-<table width="100%" class="govuk-body">
+<table class="govuk-body app-c-colour-list">
 
   {% for colour in colours.Extended %}
 
-    <tr>
+    <tr class="app-c-colour-list-row">
 
-      <td width="10%">
+      <td class="app-c-colour-list-column app-c-colour-list-column--swatch">
         <span class="app-c-swatch" style="background-color:{{colour.colour}}"></span>
       </td>
-      <td width="35%">
+      <td class="app-c-colour-list-column app-c-colour-list-column--name">
         {{colour.name}}
       </td>
-      <td width="15%">
+      <td class="app-c-colour-list-column app-c-colour-list-column--colour">
         {{colour.colour}}
       </td>
-      <td width="40%">
+      <td class="app-c-colour-list-column app-c-colour-list-column--notes">
         {{colour.notes}}
       </td>
 
