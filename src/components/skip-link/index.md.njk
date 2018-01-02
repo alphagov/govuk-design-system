@@ -1,0 +1,38 @@
+---
+title: Skip link
+description: Use the Skip link component to help keyboard-only users skip to the main content on a page.
+section: Components
+aliases:
+layout: layout-components.njk
+---
+
+{% from "_example.njk" import example %}
+
+{{ example({group: 'components', item: 'skip-link', example: 'default'}) }}
+
+Use the Skip link component to help keyboard-only users skip to the main content on a page.
+
+## When to use this component
+
+All GOV.UK pages must have include a Skip link in the header.
+
+## How it works
+
+Some people use the tab key on their keyboard to navigate through the links and form elements on a web page.
+
+Including the Skip link component gives users the option to bypass the top-level navigation links and jump to the main content on a page.
+
+The Skip link component is visually hidden until a keyboard press activates it.
+
+There are two ways to use the Skip link component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](Insert prototype kit URL), you can use the Skip link macro.
+
+{{ example({group: 'components', item: 'skip-link', example: 'default', html: true, nunjucks: true, open: true}) }}
+
+## Research on this component
+
+If you’ve used this component, [get in touch](Anchor link to Get in touch panel at bottom of page) to share your user research findings.
+
+
+
+
+
