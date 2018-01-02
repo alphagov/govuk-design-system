@@ -1,0 +1,31 @@
+---
+layout: layout-example.njk
+---
+
+{% for groupName, group in colours.Main %}
+
+  <h2>{{groupName}}</h2>
+
+  <table width="100%">
+
+    {% for colour in group %}
+
+      <tr>
+
+        <td>
+          <span style="display:inline-block; background:{{colour.colour}}; width: 40px; height: 40px;"></span>
+        </td>
+        <td width="40%">
+          {{colour.name}}
+        </td>
+        <td width="40%">
+          {{colour.colour}}
+        </td>
+
+      </tr>
+
+    {% endfor %}
+
+  </table>
+
+{% endfor %}
