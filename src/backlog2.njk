@@ -1,57 +1,51 @@
 
-
-
-
-
-
 <div class="govuk-mb-5 govuk-u-core-19">
   <div class="govuk-o-site-width-container app-c-site-width-container">
-
-
 
       <div class="govuk-o-grid">
 
         <div class="govuk-o-grid__item govuk-o-grid__item--two-thirds govuk-u-mb-5">
           
-          <h2 class="heading-large">Backlog</h2>
+          <h2 class="heading-large">Design System backlog</h2>
 
           <p>This is the backlog of styles, components and patterns that the GOV.UK design community has proposed or is working on.</p>
 
           <p>The backlog is managed on GitHub. Select an item to see what work has been done, give feedback or offer help.</p>
 
-        </div>
-
-      </div>
-      
-      <div class="govuk-o-grid">
 
         {% set columns = backlog.data.repository.project.columns.nodes %}
 
-        {% for column in columns %}
+        {% for column in columns | reverse %}
 
-       <div class="govuk-o-grid__item govuk-o-grid__item--one-third govuk-u-mb-5">
-          <h2 class="heading-medium">{{ column.name }}</h2>
+        <h2 class="heading-medium">{{ column.name }}</h2>
+        
+        {% set cards = column.cards.edges %}
 
-          {% set cards = column.cards.edges %}
+        <p>{{ cards[0].node.note }}</p>
 
-          <p>{{ cards[0].node.note }}</p>
-
-          <ul class="govuk-c-list govuk-c-list--bullet">
+        <table class="govuk-c-table">
 
           {% for card in cards %}
 
+          <tr>
+
           {% if card.node.content.title %}
 
-            <li><a href="{{ card.node.content.url }}">{{ card.node.content.title }}</a>
+            <td class="govuk-c-table__cell">
+              <a href="{{ card.node.content.url }}">{{ card.node.content.title }}</a>
+            </td>
 
           {% endif %}
-          {% endfor %}
 
-          </ul>
+          </tr>
+
+          {% endfor %}
           
-        </div>
+        </table>
 
         {% endfor %}
+
+        </div>
 
       </div>
   </div>

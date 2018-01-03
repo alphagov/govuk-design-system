@@ -1,0 +1,81 @@
+
+<div class="govuk-mb-5 govuk-u-core-19">
+  <div class="govuk-o-site-width-container app-c-site-width-container">
+
+      <div class="govuk-o-grid">
+
+        <div class="govuk-o-grid__item govuk-o-grid__item--two-thirds govuk-u-mb-5">
+          
+          <h2 class="heading-large">Design System Backlog</h2>
+
+          <p>This is the backlog of styles, components and patterns that the government design community is currently working on. Select an item to find out more on GitHub.</p>
+
+
+        {% set columns = backlog.data.repository.project.columns.nodes %}
+        {% set inProgress = columns[2].cards.edges %}
+        {% set agreed = columns[1].cards.edges %}
+        {% set proposed = columns[0].cards.edges %}
+
+
+        <table class="govuk-c-table">
+          <tr>
+            <th class="govuk-c-table__header">Name</th>
+            <th class="govuk-c-table__header">Status</th>
+          </tr>
+
+          {% for card in inProgress %}
+          <tr>
+          {% if card.node.content.title %}
+            <td class="govuk-c-table__cell">
+              <a href="{{ card.node.content.url }}">{{ card.node.content.title }}</a>
+            </td>
+            <td class="govuk-c-table__cell">
+              In progress
+            </td>
+          {% endif %}
+          </tr>
+          {% endfor %}
+
+          {% for card in agreed %}
+          <tr>
+          {% if card.node.content.title %}
+            <td class="govuk-c-table__cell">
+              <a href="{{ card.node.content.url }}">{{ card.node.content.title }}</a>
+            </td>
+            <td class="govuk-c-table__cell">
+            </td>
+          {% endif %}
+          </tr>
+          {% endfor %}
+          
+        </table>
+
+
+        <h3 class="heading-medium">Proposals</h3>
+
+        <p>The following styles, components and patterns have been proposed by the community but have not yet been added to the backlog.</p>
+
+        <p><a href="#">Propose a new style, component or pattern</a></p>
+
+        <table class="govuk-c-table">
+          <tr>
+            <th class="govuk-c-table__header">Name</th>
+          </tr>
+
+          {% for card in proposed %}
+          <tr>
+          {% if card.node.content.title %}
+            <td class="govuk-c-table__cell">
+              <a href="{{ card.node.content.url }}">{{ card.node.content.title }}</a>
+            </td>
+          {% endif %}
+          </tr>
+          {% endfor %}
+          
+        </table>
+
+        </div>
+
+      </div>
+  </div>
+</div>

@@ -18,7 +18,7 @@ query {
   repository(owner:"alphagov", name:"govuk-design-system-backlog") {
     project(number:3){
       name,
-      columns(first:4){
+      columns(first:3){
         nodes{
           name,
           cards(first:100){
@@ -26,10 +26,12 @@ query {
               node{
                 note,
                 content{
-					... on Issue {
-						title,
-                    	url
-    				}
+					        ... on Issue {
+						        title,
+                    url,
+                    lastEditedAt,
+                    bodyHTML
+    				      }
                 }
               }
             }
