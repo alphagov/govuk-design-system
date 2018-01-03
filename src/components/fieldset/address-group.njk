@@ -8,26 +8,29 @@ layout: layout-example.njk
     <h1 class="govuk-heading-xl">What is your address?</h1>
   </legend>
 
-  <label class="govuk-c-label" for="input-1">
-    Building and street
-  </label>
-  <input class="govuk-c-input" id="input-1" name="test-name" type="text">
-  <input class="govuk-c-input" id="input-2" name="test-name" type="text">
+  <fieldset class="govuk-c-fieldset govuk-!-mb-r0">
+    <legend class="govuk-c-fieldset__legend govuk-!-mb-r0">
+      Building and street
+    </legend>
 
-  <label class="govuk-c-label" for="input-3">
+    <input class="govuk-c-input" name="address-street-1" type="text">
+    <input class="govuk-c-input" name="address-street-2" type="text">
+  </fieldset>
+
+  <label class="govuk-c-label" for="address-town">
     Town or city
   </label>
-  <input class="govuk-c-input" id="input-3" name="test-name" type="text">
+  <input class="govuk-c-input" id="address-town" name="address-town" type="text">
 
-  <label class="govuk-c-label" for="input-4">
+  <label class="govuk-c-label" for="address-county">
     County
   </label>
-  <input class="govuk-c-input" id="input-4" name="test-name" type="text">
+  <input class="govuk-c-input" id="address-county" name="address-county" type="text">
 
-  <label class="govuk-c-label" for="input-5">
+  <label class="govuk-c-label" for="address-postcode">
     Postcode
   </label>
-  <input class="govuk-c-input" id="input-5" name="test-name" type="text">
+  <input class="govuk-c-input" id="address-postcode" name="address-postcode" type="text">
 </fieldset>
 
 
