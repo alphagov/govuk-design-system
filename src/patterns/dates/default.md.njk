@@ -4,9 +4,9 @@ layout: layout-example.njk
 
 {% from "date-input/macro.njk" import govukDateInput %}
 
-{{- govukDateInput({
+{{ govukDateInput({
   fieldset: {
-    legendHtml: '<h1 class=\govuk-heading-xl\>What is your date of birth?</h1>',
+    legendHtml: '<h1 class="govuk-heading-xl">What is your date of birth?</h1>',
     legendHintText: 'For example, 31 3 1980'
   },
   id: 'dob',
@@ -23,4 +23,4 @@ layout: layout-example.njk
     }
   ]
   })
--}}
+}}
