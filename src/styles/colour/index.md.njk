@@ -6,8 +6,6 @@ aliases:
 layout: layout-styles.njk
 ---
 
-{% from "_example.njk" import example %}
-
 Always use the GOV.UK colour palette.
 
 ## Colour contrast
@@ -16,4 +14,69 @@ The colour contrast ratio for text and interactive elements should be at least 4
 ## Sass variables
 Use the Sass variables listed below, so you'll get any updates to the GOV.UK palette when you update GOV.UK Frontend.
 
-{{ example({group: 'styles', item: 'colour', example: 'default'}) }}
+
+## Main colours
+
+{% for groupName, group in colours.main %}
+
+  ### {{groupName}}
+
+  <table class="govuk-body app-c-colour-list">
+
+    {% for colour in group %}
+
+      <tr class="app-c-colour-list-row">
+
+        <td class="app-c-colour-list-column app-c-colour-list-column--swatch">
+          <span class="app-c-swatch" style="background-color:{{colour.colour}}"></span>
+        </td>
+        <td class="app-c-colour-list-column app-c-colour-list-column--name">
+          {{colour.name}}
+        </td>
+        <td class="app-c-colour-list-column app-c-colour-list-column--colour">
+          {{colour.colour}}
+        </td>
+        <td class="app-c-colour-list-column app-c-colour-list-column--notes">
+          {{colour.notes}}
+        </td>
+
+      </tr>
+
+    {% endfor %}
+
+  </table>
+
+{% endfor %}
+
+## Extended colours
+
+Use these colours for graphs and supporting material.
+
+For tints of the extended palette, use 50% or 25%
+
+You can find the departmental colours in the GOV.UK Frontend _colours-organisations file
+
+<table class="govuk-body app-c-colour-list">
+
+  {% for colour in colours.extended %}
+
+    <tr class="app-c-colour-list-row">
+
+      <td class="app-c-colour-list-column app-c-colour-list-column--swatch">
+        <span class="app-c-swatch" style="background-color:{{colour.colour}}"></span>
+      </td>
+      <td class="app-c-colour-list-column app-c-colour-list-column--name">
+        {{colour.name}}
+      </td>
+      <td class="app-c-colour-list-column app-c-colour-list-column--colour">
+        {{colour.colour}}
+      </td>
+      <td class="app-c-colour-list-column app-c-colour-list-column--notes">
+        {{colour.notes}}
+      </td>
+
+    </tr>
+
+  {% endfor %}
+
+</table>
