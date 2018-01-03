@@ -1,5 +1,5 @@
 {
-  "Main":{
+  "main":{
     "Text": [
       {
         "name": "$govuk-text-colour"
@@ -58,7 +58,7 @@
       }
     ]
   },
-  "Extended":[
+  "extended":[
     {
       "name": "$govuk-red"
     },
