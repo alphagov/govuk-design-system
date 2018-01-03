@@ -7,14 +7,15 @@ layout: layout-example.njk
     <h1 class="govuk-heading-xl">What is your address?</h1>
   </legend>
 
-  <fieldset class="govuk-c-fieldset govuk-!-mb-r0">
-    <legend class="govuk-c-fieldset__legend govuk-!-mb-r0">
-      Building and street
-    </legend>
+  <label class="govuk-c-label" for="address-line-1">
+    Building and street <span class="govuk-h-visually-hidden">line 1 of 2</span>
+  </label>
+  <input class="govuk-c-input" id="address-line-1" name="address-line-1" type="text">
 
-    <input class="govuk-c-input" name="address-street-1" type="text">
-    <input class="govuk-c-input" name="address-street-2" type="text">
-  </fieldset>
+  <label class="govuk-c-label govuk-h-visually-hidden" for="address-street">
+    Building and street line 2 of 2
+  </label>
+  <input class="govuk-c-input" id="address-line-2" name="address-line-2" type="text">
 
   <label class="govuk-c-label" for="address-town">
     Town or city
