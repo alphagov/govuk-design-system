@@ -21,8 +21,8 @@ layout: layout-example.njk
           "html": '<h3 class="govuk-heading-m govuk-!-mb-r1">Passport number</h3>',
           "hintText": "For example, 502135326"
         },
-        id: "input-1",
-        name: "test-name"
+        id: "passport-number",
+        name: "passport-number"
       }) }}
 
 
@@ -31,8 +31,8 @@ layout: layout-example.njk
           legendHtml: '<h3 class="govuk-heading-m">Expiry date</h3>',
           legendHintText: 'For example, 08 2014'
         },
-        id: 'dob',
-        name: 'dob',
+        id: 'expiry',
+        name: 'expiry',
         items:[
           {
             name: 'month'
@@ -45,8 +45,7 @@ layout: layout-example.njk
       }}
 
       {{ govukButton({
-        "text": "Continue",
-        "classes": "example-class"
+        "text": "Continue"
       }) }}
 
     </div>
