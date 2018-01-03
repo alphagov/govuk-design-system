@@ -1,6 +1,6 @@
 ---
 applications:
-- name: govuk-design-system-production
+- name: govuk-design-system-backlog
   memory: 64M
   path: ./deploy
   buildpack: staticfile_buildpack
