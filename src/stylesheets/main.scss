@@ -87,6 +87,15 @@ $mq-breakpoint-widescreen: 1200px;
     max-width: 38em;
   }
 
+  img {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    padding: $govuk-spacing-scale-2;
+    @include govuk-responsive-margin($govuk-spacing-responsive-2, "top");
+    @include govuk-responsive-margin($govuk-spacing-responsive-6, "bottom");
+    border: 1px solid $govuk-border-colour;
+  }
 }
 
 .app-c-content__header {
