@@ -175,10 +175,12 @@ $mq-breakpoint-widescreen: 1200px;
   border-radius: 50%;
 }
 
+$colour-list-breakpoint: 980px;
+
 .app-c-colour-list{
   width: 100%;
   border-collapse: collapse;
-  @include mq($from: tablet) {
+  @include mq($from: $colour-list-breakpoint) {
     border-collapse: separate;
   }
 }
@@ -186,7 +188,7 @@ $mq-breakpoint-widescreen: 1200px;
 .app-c-colour-list-row{
   display: block;
   margin-bottom: $govuk-spacing-scale-2;
-  @include mq($from: tablet) {
+  @include mq($from: $colour-list-breakpoint) {
     display: table-row;
     margin: auto;
   }
@@ -195,7 +197,7 @@ $mq-breakpoint-widescreen: 1200px;
 .app-c-colour-list-column{
   width: 100%;
   display: block;
-  @include mq($from: tablet) {
+  @include mq($from: $colour-list-breakpoint) {
     display: table-cell;
   }
 }
@@ -204,28 +206,28 @@ $mq-breakpoint-widescreen: 1200px;
   width: 50px;
   float: left;
   margin-right: -50px;
-  @include mq($from: tablet) {
+  @include mq($from: $colour-list-breakpoint) {
     width: 10%;
   }
 }
 
 .app-c-colour-list-column--name{
   margin-left: 50px;
-  @include mq($from: tablet) {
+  @include mq($from: $colour-list-breakpoint) {
     width: 40%;
   }
 }
 
 .app-c-colour-list-column--colour{
   margin-left: 50px;
-  @include mq($from: tablet) {
+  @include mq($from: $colour-list-breakpoint) {
     width: 15%;
   }
 }
 
 .app-c-colour-list-column--notes{
   margin-left: 50px;
-  @include mq($from: tablet) {
+  @include mq($from: $colour-list-breakpoint) {
     width: 35%;
   }
 }
