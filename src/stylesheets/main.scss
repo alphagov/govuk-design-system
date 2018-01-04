@@ -168,21 +168,11 @@ $mq-breakpoint-widescreen: 1200px;
   }
 }
 
-.app-c-swatch{
-  display:inline-block;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-
 $colour-list-breakpoint: 980px;
 
 .app-c-colour-list{
   width: 100%;
   border-collapse: collapse;
-  @include mq($from: $colour-list-breakpoint) {
-    border-collapse: separate;
-  }
 }
 
 .app-c-colour-list-row{
@@ -199,22 +189,29 @@ $colour-list-breakpoint: 980px;
   display: block;
   @include mq($from: $colour-list-breakpoint) {
     display: table-cell;
+    vertical-align: middle;
   }
 }
 
-.app-c-colour-list-column--swatch{
-  width: 50px;
-  float: left;
-  margin-right: -50px;
+.app-c-swatch{
+  display: block;
+  float:left;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
   @include mq($from: $colour-list-breakpoint) {
-    width: 10%;
+    display: inline-block;
+    float: none;
+    vertical-align: middle;
+    margin-top: 6px;
+    margin-bottom: 7px; // odd number so the text lines up vertically
   }
 }
 
 .app-c-colour-list-column--name{
-  margin-left: 50px;
   @include mq($from: $colour-list-breakpoint) {
-    width: 40%;
+    width: 50%;
   }
 }
 

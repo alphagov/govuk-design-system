@@ -29,11 +29,9 @@ the GOV.UK palette when you update GOV.UK Frontend.
     {% for colour in group %}
 
       <tr class="app-c-colour-list-row">
-
-        <td class="app-c-colour-list-column app-c-colour-list-column--swatch">
-          <span class="app-c-swatch" style="background-color:{{colour.colour}}"></span>
-        </td>
+          
         <td class="app-c-colour-list-column app-c-colour-list-column--name">
+          <span class="app-c-swatch" style="background-color:{{colour.colour}}"></span>
           {{colour.name}}
         </td>
         <td class="app-c-colour-list-column app-c-colour-list-column--colour">
@@ -59,10 +57,8 @@ the GOV.UK palette when you update GOV.UK Frontend.
 
     <tr class="app-c-colour-list-row">
 
-      <td class="app-c-colour-list-column app-c-colour-list-column--swatch">
-        <span class="app-c-swatch" style="background-color:{{colour.colour}}"></span>
-      </td>
       <td class="app-c-colour-list-column app-c-colour-list-column--name">
+        <span class="app-c-swatch" style="background-color:{{colour.colour}}"></span>
         {{colour.name}}
       </td>
       <td class="app-c-colour-list-column app-c-colour-list-column--colour">
@@ -92,10 +88,8 @@ You can find the departmental colours in the GOV.UK Frontend _colours-organisati
 
     <tr class="app-c-colour-list-row">
 
-      <td class="app-c-colour-list-column app-c-colour-list-column--swatch">
-        <span class="app-c-swatch" style="background-color:{{colour.colour}}"></span>
-      </td>
       <td class="app-c-colour-list-column app-c-colour-list-column--name">
+        <span class="app-c-swatch" style="background-color:{{colour.colour}}"></span>
         {{colour.name}}
       </td>
       <td class="app-c-colour-list-column app-c-colour-list-column--colour">
