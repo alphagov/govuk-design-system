@@ -9,6 +9,11 @@
   @include mq($until: desktop) {
     display: none;
   }
+
+  .govuk-prose-scope & { // A specific selector to reset .govuk-prose-scope ul
+    margin-bottom: 0;
+    padding: 0;
+  }
 }
 
 .app-c-tabs__item {
@@ -27,6 +32,10 @@
     background: inherit;
     font-weight: bold;
     text-decoration: none;
+  }
+
+  .govuk-prose-scope & { // A specific selector to reset .govuk-prose-scope ul li
+    margin: 0;
   }
 }
 

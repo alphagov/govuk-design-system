@@ -21,7 +21,10 @@
         </h1>
       </div>
 
-      {{ contents | safe }}
+      <div class="govuk-prose-scope">
+        {{ contents | safe }}
+      </div>
+
     </main>
     {# No JS fallback to show overview #}
     <div class="app-o-pane__toc-mobile-overview app-u-hide-desktop">
