@@ -20,7 +20,7 @@
 <div class="app-c-tabs__heading"><a href="#{{examplePrefix}}html" role="tab" aria-controls="{{examplePrefix}}html">HTML</a></div>
 <div class="app-c-tabs__container" id="{{examplePrefix}}html" role="tabpanel">
   ```html
-  {{ getHTMLCode(examplePath) }}
+  {{ getHTMLCode(examplePath) | safe }}
   ```
 </div>
 {% endif %}
@@ -29,7 +29,7 @@
 <div class="app-c-tabs__heading"><a href="#{{examplePrefix}}nunjucks" role="tab" aria-controls="{{examplePrefix}}nunjucks">Nunjucks</a></div>
 <div class="app-c-tabs__container" id="{{examplePrefix}}nunjucks" role="tabpanel">
   ```js
-  {{ getNunjucksCode(examplePath) }}
+  {{ getNunjucksCode(examplePath) | safe }}
   ```
 </div>
 {% endif %}
