@@ -1,0 +1,21 @@
+<nav class="app-c-subnav">
+  <ul class="app-c-subnav__section">
+
+    {% for item in navigation %}
+      {% if item.url in path %}
+      {% if item.items %}
+        {% for theme, items in item.items | groupby("theme") %}
+          {% if theme != 'undefined' %}
+            <h4 class="govuk-caption-m">{{ theme }}</h4>
+          {% endif %}
+          {% for subitem in items %}
+            <li class="app-c-subnav__section-item{% if subitem.url == path %} app-c-subnav__section-item--current{% endif %}">
+              <a href="/{{ subitem.url }}">{{ subitem.label }}</a>
+            </li>
+          {% endfor %}
+        {% endfor %}
+      {% endif %}
+      {% endif %}
+    {% endfor %}
+  </ul>
+</nav>

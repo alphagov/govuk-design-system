@@ -2,9 +2,8 @@
 
 {% block body %}
 <div class="app-o-pane__body">
-  <div class="app-o-pane__toc app-u-hide-mobile">
-    {% block toc %}
-    {% endblock %}
+  <div class="app-o-pane__subnav app-u-hide-mobile">
+    {% include "_subnav.njk" %}
   </div>
   <div class="app-o-pane__content">
     <main id="content" class="app-c-content" role="main">
@@ -27,9 +26,8 @@
 
     </main>
     {# No JS fallback to show overview #}
-    <div class="app-o-pane__toc-mobile-overview app-u-hide-desktop">
-      {% block endtoc %}
-      {% endblock %}
+    <div class="app-o-pane__subnav-mobile-overview app-u-hide-desktop">
+      {% include "_subnav.njk" %}
     </div>
     {% include "_footer.njk" %}
   </div>
