@@ -58,6 +58,23 @@
       }
     ]
   },
+  "greyscale":[
+    {
+      "name": "$govuk-black"
+    },
+    {
+      "name": "$govuk-grey-1"
+    },
+    {
+      "name": "$govuk-grey-2"
+    },
+    {
+      "name": "$govuk-grey-3"
+    },
+    {
+      "name": "$govuk-grey-4"
+    }
+  ],
   "extended":[
     {
       "name": "$govuk-red"

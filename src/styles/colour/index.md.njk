@@ -51,6 +51,33 @@ the GOV.UK palette when you update GOV.UK Frontend.
 
 {% endfor %}
 
+## Greyscale
+
+<table class="govuk-body app-c-colour-list">
+
+  {% for colour in colours.greyscale %}
+
+    <tr class="app-c-colour-list-row">
+
+      <td class="app-c-colour-list-column app-c-colour-list-column--swatch">
+        <span class="app-c-swatch" style="background-color:{{colour.colour}}"></span>
+      </td>
+      <td class="app-c-colour-list-column app-c-colour-list-column--name">
+        {{colour.name}}
+      </td>
+      <td class="app-c-colour-list-column app-c-colour-list-column--colour">
+        {{colour.colour}}
+      </td>
+      <td class="app-c-colour-list-column app-c-colour-list-column--notes">
+        {{colour.notes}}
+      </td>
+
+    </tr>
+
+  {% endfor %}
+
+</table>
+
 ## Extended colours
 
 Use these colours for graphs and supporting material.
