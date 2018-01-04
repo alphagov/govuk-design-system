@@ -10,18 +10,18 @@
       <script src="/javascripts/ie.js"></script>
     <![endif]-->
     <script src="/javascripts/vendor/modernizr.js"></script>
-    {% include "../partials/_tracking-head.njk" %}
+    {% include "_tracking-head.njk" %}
   </head>
   <body>
-    {% include "../partials/_tracking-body.njk" %}
+    {% include "_tracking-body.njk" %}
     <a href="#content" class="govuk-c-skip-link">Skip to main content</a>
     <div class="app-o-pane">
       <div class="app-o-pane__header">
         {% include "_header.njk" %}
       </div>
       <div class="app-o-pane__nav">
-        {% include "../partials/_navigation.njk" %}
-        {% include "../partials/_mobile-navigation.njk" %}
+        {% include "_navigation.njk" %}
+        {% include "_mobile-navigation.njk" %}
       </div>
 
       {% block body %}
