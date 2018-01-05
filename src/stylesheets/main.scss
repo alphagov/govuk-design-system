@@ -177,3 +177,38 @@ pre {
     }
   }
 }
+
+// Styling for layout examples
+
+.app-example-background {
+  background: $govuk-grey-3;
+  & > .app-example-background {
+    background: $govuk-grey-4;
+  }
+}
+
+.app-example-background .app-example-block {
+  background-color: $govuk-grey-4;
+}
+
+.app-example-block {
+  @extend .govuk-body;
+  display: block;
+  @include govuk-responsive-padding($govuk-spacing-responsive-6);
+  background-color: $govuk-grey-3;
+  text-align: center;
+}
+
+.app-example-block--transparent {
+  background-color: transparent !important;
+}
+
+.app-c-table--constrained {
+  max-width: 38em;
+}
+
+p code {
+  padding: 0px $govuk-spacing-scale-1;
+  background-color: $govuk-grey-4;
+  color: #d14;
+}
