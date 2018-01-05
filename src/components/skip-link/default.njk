@@ -1,0 +1,11 @@
+---
+layout: layout-example.njk
+---
+<p class="govuk-body">To view the Skip link component click inside this example and press tab</p>
+
+{% from "skip-link/macro.njk" import govukSkipLink %}
+
+{{ govukSkipLink({
+  "text": "Skip to main content",
+  "href": "#content"
+}) }}

@@ -1,0 +1,43 @@
+---
+title: Textarea
+description: Help users provide detailed information using the Textarea component.
+section: Components
+aliases:
+layout: layout-components.njk
+---
+
+{% from "_example.njk" import example %}
+
+{{ example({group: 'components', item: 'textarea', example: 'default'}) }}
+
+## When to use this component
+
+Use the Textarea component when you need to let users enter an amount of text that’s longer than a single line.
+
+### When not to use this component
+
+Don’t use the Textarea component if you need to let users enter shorter answers no longer than a single line, such as a phone number or name. In this case, you should use the [Text input component](../text-input).
+
+## How it works
+
+There are 2 ways to use the Textarea component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the GOV.UK Prototype Kit, you can use the Textarea macro.
+
+{{ example({group: 'components', item: 'textarea', example: 'default', html: true, nunjucks: true, open: true}) }}
+
+### Label textareas
+
+You must label textareas. Placeholder text is not a suitable substitute for a label, as it disappears when users click inside the textarea.
+
+Labels must be aligned above the textarea they refer to. They should be short, direct and written in sentence case. Don’t use colons at the end of labels.
+
+### Use appropriately-sized textareas
+
+Make the height of a textarea proportional to the amount of text you expect users to enter.
+
+### Don’t disable copy and paste
+
+Users will often need to copy and paste information into a textarea, so you shouldn’t prevent them from doing this.
+
+## Research on this component
+
+If you’ve used this component, [get in touch](Anchor link to Get in touch panel at bottom of page) to share your user research findings.

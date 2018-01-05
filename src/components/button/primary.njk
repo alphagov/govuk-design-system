@@ -1,0 +1,25 @@
+---
+layout: layout-example.njk
+---
+{% from "button/macro.njk" import govukButton %}
+
+<h3 class="govuk-heading-m">Input button</h3>
+
+{{ govukButton({
+  "text": "Save and continue"
+}) }}
+
+<h3 class="govuk-heading-m">Link button</h3>
+
+{{ govukButton({
+  "text": "Link button",
+  "href": "#"
+}) }}
+
+<h3 class="govuk-heading-m">&lt;button&gt;</h3>
+
+{{ govukButton({
+  "name": "button",
+  "text": "Save and continue",
+  "element": "button"
+}) }}

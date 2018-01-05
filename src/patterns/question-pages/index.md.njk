@@ -7,8 +7,9 @@ aliases:
 layout: layout-patterns.njk
 ---
 
+{% from "_example.njk" import example %}
 
-[Example of a question page]
+{{ example({group: 'patterns', item: 'question-pages', example: 'default', html: true, nunjucks: true, open: false}) }}
 
 ## When to use this pattern
 
@@ -34,17 +35,19 @@ Make sure the back link takes users to the previous page and that it still works
 
 ### Page headings
 
-
 Page headings can be statements or questions.
 
 If you’re only asking for one piece of information on a page, make the question the page heading.
 
 For example ‘What is your home postcode?’
 
+{{ example({group: 'patterns', item: 'question-pages', example: 'postcode', html: true, nunjucks: true, open: false}) }}
 
 If you need to ask for multiple related things on a page, use a statement as the heading.
 
 This example uses ‘Passport details’ to describe the related questions:
+
+{{ example({group: 'patterns', item: 'question-pages', example: 'passport', html: true, nunjucks: true, open: false}) }}
 
 Don’t duplicate the same page heading across multiple pages.
 
@@ -52,7 +55,7 @@ The page heading should relate specifically to the information being asked for o
 
 If you need to show the high-level section, you can use the 'secondary-heading' style. For example, ‘About you’:
 
-
+{{ example({group: 'patterns', item: 'question-pages', example: 'section-headings', html: true, nunjucks: true, open: false}) }}
 
 ### Continue button
 

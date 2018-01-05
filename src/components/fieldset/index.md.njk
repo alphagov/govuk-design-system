@@ -1,0 +1,35 @@
+---
+title: Fieldset
+description: Use the Fieldset component to group related form inputs.
+section: Components
+aliases:
+layout: layout-components.njk
+---
+
+{% from "_example.njk" import example %}
+
+{{ example({group: 'components', item: 'fieldset', example: 'default'}) }}
+
+Use the Fieldset component to group related form inputs.
+
+## When to use this component
+
+Use the Fieldset component when you need to show a relationship between multiple form inputs. For example, you may need to group a set of text inputs into a single fieldset when [asking for an address](../../patterns/addresses).
+
+{{ example({group: 'components', item: 'fieldset', example: 'address-group', html: true, nunjucks: true, open: true}) }}
+
+If you’re using the examples or macros for [Radios](../radios), [Checkboxes](../checkboxes) or [Date input](../date-input), the fieldset will already be included.
+
+## How it works
+
+The first element inside a fieldset must be a `legend` which describes the group of inputs. This could be a question, such as ‘What is your current address?’ or a statement like ‘Personal details’.
+
+{{ example({group: 'components', item: 'fieldset', example: 'default', html: true, nunjucks: true, open: false}) }}
+
+On [Question pages](../../patterns/question-pages) containing a group of inputs, including the question as the legend helps users of screenreaders to understand that the inputs are all related to that question.
+
+Include any general help text which is important for filling in the form and can’t be written as [hint text](Link to hint text section of help users Fill in a form) in the legend, but try to keep it as concise as possible.
+
+## Research on this component
+
+If you’ve used this component, [get in touch](Anchor link to Get in touch panel at bottom of page) to share your user research findings.

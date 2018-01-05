@@ -111,8 +111,35 @@ Use the Details component to make your page easier to scan, but don’t hide hel
 
 Make sure the link text is written so that users can quickly work out if they need to click on it.
 
+
+
+
+### Using progress indicators
+
+Start by testing your form without a progress indicator to see if it’s simple enough that users don’t need them.
+
+Try improving the order, type or number of questions before adding a progress indicator. If people still have difficulty, try adding a simple step or question indicator like this one.
+
+{{ example({group: 'patterns', item: 'fill-in-a-form', example: 'progress', html: true, nunjucks: true, open: false}) }}
+
+Only include the total number of questions if you can do so reliably. As the user moves through the form, make sure the indicator updates to tell them which question they are on and the total number remaining.
+
+Don’t use this type of progress indicator:
+
+![Horizontal progress indicator](progress_indicators_horizontal.png)
+
+These can be problematic because they:
+- are often not noticed
+- take up lots of space
+- don’t scale well on small screens
+- can distract and confuse some users
+- make it hard to write good labels for the steps
+- make it hard to handle conditional sections
+
+A number of GOV.UK services have removed this style of progress indicator without any negative effects.
+Read a blog post about [how the Carer’s Allowance team removed a 12-step progress indicator](https://designnotes.blog.gov.uk/2014/07/07/do-less-problems-as-shared-spaces/) with no effect on completion rates or times.
+
+
 ## Research on this pattern
 Learn more about the [question protocol](https://www.uxmatters.com/mt/archives/2010/06/the-question-protocol-how-to-make-sure-every-form-field-is-necessary.php).
 Read a blog post about how the [‘Register to vote’ service used forms](https://designnotes.blog.gov.uk/2014/07/14/things-we-learnt-designing-register-to-vote/).
-
-

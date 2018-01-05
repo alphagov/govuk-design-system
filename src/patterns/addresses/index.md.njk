@@ -7,6 +7,7 @@ aliases:
 layout: layout-patterns.njk
 ---
 
+{% from "_example.njk" import example %}
 
 Help users provide an address using one of the following:
 
@@ -16,8 +17,7 @@ Help users provide an address using one of the following:
 
 ## Address lookups
 
-Example
-[live example]
+![Address lookup](passports-address-lookup-1_.gif)
 
 ### When to use an address lookup
 
@@ -39,7 +39,7 @@ When using an address lookup, you should:
 
 ## Multiple text inputs
 
-[Live example of multiple text inputs]
+{{ example({group: 'patterns', item: 'addresses', example: 'multiple', html: true, nunjucks: true, open: false}) }}
 
 ### When to use multiple text inputs
 
@@ -72,7 +72,7 @@ Royal Mail doesn’t need a county as long as the town and postcode are included
 
 ## Text areas
 
-[Live example text area]
+{{ example({group: 'patterns', item: 'addresses', example: 'textarea', html: true, nunjucks: true, open: false}) }}
 
 ### When to use text areas
 

@@ -6,8 +6,9 @@ aliases:
 layout: layout-components.njk
 ---
 
+{% from "_example.njk" import example %}
 
-[Example of radios]
+{{ example({group: 'components', item: 'radios', example: 'default'}) }}
 
 ## When to use this component
 
@@ -15,25 +16,24 @@ Use the Radios component when users can only select one option from a list.
 
 ### When not to use this component
 
-Don’t use the Radios component if users might need to select more than one option. In this case, you should use the [Checkboxes component](/components/checkboxes/] instead.
+Don’t use the Radios component if users might need to select more than one option. In this case, you should use the [Checkboxes component](/components/checkboxes/) instead.
 
 ## How it works
 
-There are two ways to use the Radios component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](Insert prototype kit URL), you can use the Radios macro.
+There are 2 ways to use the Radios component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](Insert prototype kit URL), you can use the Radios macro.
 
 ### Stacked radios
 
 When there are more than two options, radios should be stacked, like so:
 
-[Example of stacked radios]
+{{ example({group: 'components', item: 'radios', example: 'default', html: true, nunjucks: true, open: true}) }}
 
-### Inline radios
+<!-- ### Inline radios
 
 If there are only two options, you can either stack the radios or display them inline, like so:
 
-[Example of inline radios]
+[Example of inline radios] -->
 
 ## Research on this component
 
 Read a blog post about updates to the [Radios and Checkboxes components](https://designnotes.blog.gov.uk/2016/11/30/weve-updated-the-radios-and-checkboxes-on-gov-uk/).
-
