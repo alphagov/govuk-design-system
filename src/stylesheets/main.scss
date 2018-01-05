@@ -210,6 +210,8 @@ $colour-list-breakpoint: 980px;
 }
 
 .app-c-colour-list-column--name{
+  text-align: left;
+  font-weight: normal;
   @include mq($from: $colour-list-breakpoint) {
     width: 50%;
   }
