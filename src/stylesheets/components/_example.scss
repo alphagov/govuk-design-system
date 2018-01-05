@@ -1,7 +1,10 @@
 // Example styles
-.app-c-example {
+.app-c-example-wrapper {
+  @include govuk-responsive-margin($govuk-spacing-responsive-6, "top");
   @include govuk-responsive-margin($govuk-spacing-responsive-6, "bottom");
+}
 
+.app-c-example {
   position: relative;
   border: 1px solid $govuk-border-colour;
   background: $govuk-grey-3;
