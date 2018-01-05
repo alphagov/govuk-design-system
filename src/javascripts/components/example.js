@@ -5,10 +5,14 @@
 
   GOVUK.example = {
     init: function (selector) {
-      // Example iframe; set the height equal to the body height
-      $(selector).on('load', function () {
-        this.style.height = this.contentDocument.body.scrollHeight + 'px'
-      })
+      try {
+        // Example iframe; set the height equal to the body height
+        $(selector).iFrameResize({scrolling: 'auto'})
+      } catch (err) {
+        if (err) {
+          console.error(err.message)
+        }
+      }
     }
   }
   global.GOVUK = GOVUK
