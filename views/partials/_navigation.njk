@@ -1,16 +1,9 @@
 <nav class="app-c-navigation govuk-h-clearfix">
   <ul class="app-c-navigation__list">
-    <li{% if path == '' %}  class="app-c-navigation--current-page"{% endif %}>
-      <a href="/">About</a>
+    {% for item in navigation %}
+    <li{% if path == item.url or item.url and item.url in path %} class="app-c-navigation--current-page"{% endif %}>
+      <a href="/{{ item.url }}">{{ item.label }}</a>
     </li>
-    <li{% if 'styles' in path %}  class="app-c-navigation--current-page"{% endif %}>
-      <a href="/styles">Styles</a>
-    </li>
-    <li{% if 'components' in path %}  class="app-c-navigation--current-page"{% endif %}>
-      <a href="/components">Components</a>
-    </li>
-    <li{% if 'patterns' in path %}  class="app-c-navigation--current-page"{% endif %}>
-      <a href="/patterns">Patterns</a>
-    </li>
+    {% endfor %}
   </ul>
 </nav>

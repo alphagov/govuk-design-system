@@ -66,7 +66,7 @@
     }
   }
 
-  .app-o-pane__toc {
+  .app-o-pane__subnav {
     border-right: 1px solid $govuk-border-colour;
     @include mq($from: tablet) {
       width: $toc-width;
@@ -82,7 +82,7 @@
     }
   }
 
-  .app-o-pane__toc-mobile-overview {
+  .app-o-pane__subnav-mobile-overview {
     display: none; // No JS fallback for overview links
   }
 
@@ -111,7 +111,7 @@
 
   .no-js {
 
-    .app-o-pane__toc-mobile-overview {
+    .app-o-pane__subnav-mobile-overview {
       display: block; // No JS fallback for overview links
     }
   }
@@ -121,7 +121,7 @@
       display: block;
     }
 
-    .app-o-pane__toc {
+    .app-o-pane__subnav {
       width: $toc-width;
       float: left;
       overflow-x: hidden;
