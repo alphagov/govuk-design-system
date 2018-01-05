@@ -1,0 +1,21 @@
+---
+layout: layout-example.njk
+---
+
+{% from "back-link/macro.njk" import govukBackLink %}
+
+<div class="govuk-o-width-container app-example-background">
+  {{ govukBackLink({href: '#', text: 'Back'}) }}
+  <main class="govuk-o-main-wrapper app-example-background">
+
+    <div class="govuk-o-grid">
+      <div class="govuk-o-grid__item govuk-o-grid__item--two-thirds">
+        <h1 class="govuk-heading-xl">Main content</h1>
+      </div>
+      <div class="govuk-o-grid__item govuk-o-grid__item--one-third">
+        <h3 class="govuk-heading-m">Secondary content</h3>
+      </div>
+    </div>
+
+  </main>
+</div>
