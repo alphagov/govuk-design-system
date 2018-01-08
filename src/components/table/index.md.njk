@@ -1,0 +1,45 @@
+---
+title: Table
+description: Use the Table component to make information easier to compare and scan for users.
+section: Components
+aliases:
+layout: layout-pane.njk
+---
+
+{% from "_example.njk" import example %}
+
+Use the Table component to make information easier to compare and scan for users.
+
+{{ example({group: 'components', item: 'table', example: 'default'}) }}
+
+## When to use this component
+
+Use the Table component to let users to compare information in rows and columns.
+
+### When not to use this component
+
+Don’t use the Table component to layout content on a page. Instead, use the [grid system](../../styles/layout).
+
+## How it works
+
+### Table captions
+
+Use the `<caption>` element to describe a table in the same way you would use a heading. A caption helps users find, navigate and understand tables.
+
+### Table headers
+
+Use table headers to tell users what the rows and columns represent. Use the `scope` attribute to help users of assistive technology distinguish between row and column headers.
+
+There are 2 ways to use the Table component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](Insert prototype kit URL), you can use the Table macro.
+
+{{ example({group: 'components', item: 'table', example: 'default', html: true, nunjucks: true, open: true}) }}
+
+## Numbers in a table
+
+When comparing columns of numbers, align the numbers to the right in table cells.
+
+{{ example({group: 'components', item: 'table', example: 'numbers', html: true, nunjucks: true, open: false}) }}
+
+## Research on this component
+
+If you’ve used this component, [get in touch](Anchor link to Get in touch panel at bottom of page) to share your user research findings.
