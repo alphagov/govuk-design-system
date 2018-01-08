@@ -83,7 +83,8 @@ $mq-breakpoint-widescreen: 1200px;
   p,
   ul:not(.app-c-tabs),
   ol,
-  img {
+  img,
+  .app-c-table--constrained {
     max-width: 38em;
   }
 
