@@ -87,8 +87,11 @@
 }
 
 .app-c-tabs__container pre {
-  padding-bottom: $govuk-spacing-scale-6;
   border: 0;
+}
+
+.app-c-tabs__container--with-close-button pre {
+  padding-bottom: $govuk-spacing-scale-6;
 }
 
 // Close container button
