@@ -1,0 +1,37 @@
+---
+title: Details
+description: Make a page easier to scan by letting users reveal more detailed information only if they need it.
+section: Components
+aliases:
+layout: layout-pane.njk
+---
+
+{% from "_example.njk" import example %}
+
+Make a page easier to scan by letting users reveal more detailed information only if they need it.
+
+{{ example({group: 'components', item: 'details', example: 'default'}) }}
+
+## When to use this component
+
+Use the Details component to make a page easier to scan when it contains information that only some users will need.
+
+### When not to use this component
+
+Don’t use the Details component to hide information that the majority of your users will need.
+
+## How it works
+
+The Details component is a short link that expands into more detailed help text when a user clicks on it.
+
+There are 2 ways to use the Details component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](Insert prototype kit URL), you can use the Details macro.
+
+{{ example({group: 'components', item: 'details', example: 'default', html: true, nunjucks: true, open: true}) }}
+
+### Write clear link text
+
+Make the link text short and descriptive so users can quickly work out if they need to click on it.
+
+## Research on this component
+
+If you’ve used this component, [get in touch](Anchor link to Get in touch panel at bottom of page) to share your user research findings.
