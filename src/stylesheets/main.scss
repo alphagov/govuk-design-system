@@ -178,3 +178,11 @@ pre {
     }
   }
 }
+
+// Add styling for inline code
+
+p code {
+  padding: 0px $govuk-spacing-scale-1;
+  background-color: $govuk-grey-4;
+  color: #d14;
+}
