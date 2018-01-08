@@ -1,12 +1,14 @@
 ---
 layout: layout-example.njk
+stylesheets:
+- layout-wrappers-annotate.css
 ---
 
 {% from "back-link/macro.njk" import govukBackLink %}
 
-<div class="govuk-o-width-container app-example-background">
+<div class="govuk-o-width-container">
   {{ govukBackLink({href: '#', text: 'Back'}) }}
-  <main class="govuk-o-main-wrapper app-example-background">
+  <main class="govuk-o-main-wrapper">
 
     <div class="govuk-o-grid">
       <div class="govuk-o-grid__item govuk-o-grid__item--two-thirds">

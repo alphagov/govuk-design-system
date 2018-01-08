@@ -1,0 +1,30 @@
+@import "@govuk-frontend/globals/common";
+
+.govuk-o-grid {
+  .govuk-o-grid__item  {
+    background-color: white;
+    border: 4px solid $govuk-light-blue;
+    padding-bottom: $govuk-spacing-scale-2;
+  }
+
+  .govuk-o-grid__item > p {
+    background-color: transparent;
+    color: $govuk-light-blue;
+  }
+
+  .govuk-o-grid {
+    .govuk-o-grid__item  {
+      background-color: white;
+      border: 0;
+    }
+    .govuk-o-grid__item > p {
+      @extend .govuk-body;
+      display: block;
+      @include govuk-responsive-padding($govuk-spacing-responsive-6);
+      background-color: $govuk-light-blue;
+      color: white;
+      text-align: center;
+      margin-bottom: 0;
+    }
+  }
+}

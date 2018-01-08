@@ -1,0 +1,11 @@
+@import "@govuk-frontend/globals/common";
+
+.govuk-o-grid__item > p {
+  @extend .govuk-body;
+  display: block;
+  @include govuk-responsive-padding($govuk-spacing-responsive-6);
+  background-color: $govuk-light-blue;
+  color: white;
+  text-align: center;
+  margin-bottom: 0;
+}
