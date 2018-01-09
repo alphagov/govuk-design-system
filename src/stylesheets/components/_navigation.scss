@@ -5,7 +5,7 @@
   background-color: $app-light-grey;
   @include govuk-font-bold-19;
 
-  @include mq($until: desktop) {
+  @include mq($until: tablet) {
     display: none;
   }
 
