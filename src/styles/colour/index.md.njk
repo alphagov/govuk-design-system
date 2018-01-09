@@ -43,7 +43,7 @@ the GOV.UK palette when you update GOV.UK Frontend.
       <tr class="app-c-colour-list-row">
 
         <th class="app-c-colour-list-column app-c-colour-list-column--name">
-          <span class="app-c-swatch" style="background-color:{{colour.colour}}"></span>
+          <span class="app-c-swatch {% if colour.colour == "#fff" %}app-c-swatch-border{% endif %}" style="background-color:{{colour.colour}}"></span>
           {{colour.name}}
         </th>
         <td class="app-c-colour-list-column app-c-colour-list-column--colour">
@@ -76,7 +76,7 @@ the GOV.UK palette when you update GOV.UK Frontend.
     <tr class="app-c-colour-list-row">
 
       <th class="app-c-colour-list-column app-c-colour-list-column--name">
-        <span class="app-c-swatch" style="background-color:{{colour.colour}}"></span>
+        <span class="app-c-swatch {% if colour.colour == "#fff" %}app-c-swatch-border{% endif %}" style="background-color:{{colour.colour}}"></span>
         {{colour.name}}
       </th>
 
@@ -114,7 +114,7 @@ You can find the departmental colours in the GOV.UK Frontend _colours-organisati
     <tr class="app-c-colour-list-row">
 
       <th class="app-c-colour-list-column app-c-colour-list-column--name">
-        <span class="app-c-swatch" style="background-color:{{colour.colour}}"></span>
+        <span class="app-c-swatch {% if colour.colour == "#fff" %}app-c-swatch-border{% endif %}" style="background-color:{{colour.colour}}"></span>
         {{colour.name}}
       </th>
       <td class="app-c-colour-list-column app-c-colour-list-column--colour">
