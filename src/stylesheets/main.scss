@@ -83,7 +83,8 @@ $mq-breakpoint-widescreen: 1200px;
   p,
   ul:not(.app-c-tabs),
   ol,
-  img {
+  img,
+  .app-c-table--constrained {
     max-width: 38em;
   }
 
@@ -185,4 +186,12 @@ pre {
       padding-bottom: 10px;
     }
   }
+}
+
+// Add styling for inline code
+
+p code {
+  padding: 0px $govuk-spacing-scale-1;
+  background-color: $govuk-grey-4;
+  color: #d14;
 }

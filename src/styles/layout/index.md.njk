@@ -1,0 +1,170 @@
+---
+title: Layout
+description: Help users orientate themselves and navigate pages within a hierarchical structure.
+section: Styles
+aliases: navigation path, cookie crumb
+layout: layout-pane.njk
+---
+
+{% from "_example.njk" import example %}
+
+## Screen size
+
+Design for small screens first using a single-column layout.
+
+Don’t make assumptions about what devices people are using. Design for different screen sizes rather than specific devices.
+
+The default maximum page width is 1020px, but make it wider if your content requires it.
+
+## Wrappers
+
+To setup your layout you will need to create 2 wrappers. The first should have the class  `govuk-o-width-container`, which sets the maximum width of the content but doesn’t add any vertical margin or padding.
+
+You should place components such as [Breadcrumbs](../../components/breadcrumbs), [Back link](../../components/back-link) and [Phase banner](../../components/phase-banner) inside this wrapper so that they sit directly underneath the header.
+
+Within `govuk-o-width-container` you should add the `govuk-o-main-wrapper` class to your `<main>` element.
+
+If your layout is defined using explicit widths on `<main>` and `<aside>`, you need to create a second wrapper around these elements using this class.
+
+This will be the container for your main content. This wrapper adds responsive padding to the top and bottom of the page.
+
+{{ example({group: 'styles', item: 'layout', example: 'layout-wrappers', html: true, nunjucks: true, open: true}) }}
+
+## Grid system
+
+Use the grid system to lay out the content on your service’s pages.
+
+Most GOV.UK pages follow a two-thirds to one-third layout but the grid system allows for a number of additional combinations when necessary.
+
+Your main content should always be in a two-thirds column to limit the line length of paragraphs, even if you’re not using a corresponding one-third column for secondary content.
+
+## Understanding the grid system
+
+The grid is structured with a wrapper `govuk-o-grid` which acts as a row to contain your grid columns.
+
+You can add columns inside this wrapper to create your layout. To define your columns add the class  `govuk-o-grid__item` to a new container to set the `padding` and `float` properties. Add a second class, for example `govuk-o-grid__item--one-third` to apply the desired width.
+
+The widths available are as follows:
+
+### Full width
+
+{{ example({group: 'styles', item: 'layout', example: 'full-width', html: true, nunjucks: true, open: true}) }}
+
+### One-half
+
+{{ example({group: 'styles', item: 'layout', example: 'one-half', html: true, nunjucks: true, open: true}) }}
+
+### One-third
+
+{{ example({group: 'styles', item: 'layout', example: 'one-third', html: true, nunjucks: true, open: true}) }}
+
+### Two-thirds
+
+{{ example({group: 'styles', item: 'layout', example: 'two-thirds', html: true, nunjucks: true, open: true}) }}
+
+### One-quarter
+
+{{ example({group: 'styles', item: 'layout', example: 'one-quarter', html: true, nunjucks: true, open: true}) }}
+
+### Example combinations
+
+{{ example({group: 'styles', item: 'layout', example: 'combinations', html: true, nunjucks: true, open: true}) }}
+
+### Nested grids
+
+{{ example({group: 'styles', item: 'layout', example: 'nested', html: true, nunjucks: true, open: true}) }}
+
+## Spacing override classes
+
+Occasionally, you might need to need to make minor adjustments, like adding or removing spacing to elements of your design. You can use the responsive spacing override classes for this.
+
+### Using the override classes
+
+The spacing override classes allow you to use any point in the responsive spacing scale:
+
+<table class="govuk-c-table app-c-table--constrained">
+  <caption class="govuk-c-table__caption small govuk-h-visually-hidden">GOV.UK Frontend spacing scale</caption>
+  <thead class="govuk-c-table__head">
+    <tr class="govuk-c-table__row">
+      <th class="govuk-c-table__header" scope="col">Spacing unit</th>
+      <th class="govuk-c-table__header govuk-c-table__header--numeric" scope="col">Large screens</th>
+      <th class="govuk-c-table__header govuk-c-table__header--numeric" scope="col">Small screens</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-c-table__body">
+    <tr class="govuk-c-table__row">
+      <th class="govuk-c-table__header" scope="row">0</th>
+      <td class="govuk-c-table__cell govuk-c-table__cell--numeric">0</td>
+      <td class="govuk-c-table__cell govuk-c-table__cell--numeric">0</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <th class="govuk-c-table__header" scope="row">1</th>
+      <td class="govuk-c-table__cell govuk-c-table__cell--numeric">5px</td>
+      <td class="govuk-c-table__cell govuk-c-table__cell--numeric">5px</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <th class="govuk-c-table__header" scope="row">2</th>
+      <td class="govuk-c-table__cell govuk-c-table__cell--numeric">10px</td>
+      <td class="govuk-c-table__cell govuk-c-table__cell--numeric">10px</td>
+    </tr>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <th class="govuk-c-table__header" scope="row">3</th>
+      <td class="govuk-c-table__cell govuk-c-table__cell--numeric">15px</td>
+      <td class="govuk-c-table__cell govuk-c-table__cell--numeric">15px</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <th class="govuk-c-table__header" scope="row">4</th>
+      <td class="govuk-c-table__cell govuk-c-table__cell--numeric">20px</td>
+      <td class="govuk-c-table__cell govuk-c-table__cell--numeric">15px</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <th class="govuk-c-table__header" scope="row">5</th>
+      <td class="govuk-c-table__cell govuk-c-table__cell--numeric">25px</td>
+      <td class="govuk-c-table__cell govuk-c-table__cell--numeric">15px</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <th class="govuk-c-table__header" scope="row">6</th>
+      <td class="govuk-c-table__cell govuk-c-table__cell--numeric">30px</td>
+      <td class="govuk-c-table__cell govuk-c-table__cell--numeric">20px</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <th class="govuk-c-table__header" scope="row">7</th>
+      <td class="govuk-c-table__cell govuk-c-table__cell--numeric">40px</td>
+      <td class="govuk-c-table__cell govuk-c-table__cell--numeric">25px</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <th class="govuk-c-table__header" scope="row">8</th>
+      <td class="govuk-c-table__cell govuk-c-table__cell--numeric">50px</td>
+      <td class="govuk-c-table__cell govuk-c-table__cell--numeric">30px</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <th class="govuk-c-table__header" scope="row">9</th>
+      <td class="govuk-c-table__cell govuk-c-table__cell--numeric">60px</td>
+      <td class="govuk-c-table__cell govuk-c-table__cell--numeric">40px</td>
+    </tr>
+  </tbody>
+</table>
+
+
+The spacing override classes are structured to allow you to apply any size of the scale, using margin or padding in any direction.
+
+The first part of the class name is `govuk-!-` as with all override classes. The second part signifies whether you want to add margin, `govuk-!-m` or padding, `govuk-!-p`.
+
+If you want to add the margin or padding in a particular direction you can add `l` for left, `r` for right, `t` for top, or `b` for bottom. If you don’t specify the direction, the margin or padding will be applied to all sides of the element.
+
+The last part represents the value you want to apply govuk-!-m-r9, the `r` stands for responsive and the `9` represents 9 on the spacing scale.
+
+For example:
+
+`govuk-!-m-r9` = margin: 60px (large screens) / 40px (small screens)
+
+`govuk-!-pt-r4` = padding-top: 20px (large screens) / 15px (small screens)
+
+## Width override classes
+
+If you need to constrain the width of an element independently of the grid system, you can use width-override classes.
+
+As with the spacing-override classes the width-override classes start with `govuk-!-`. The second part of the class name signifies the width on larger screen sizes, for example `govuk-!-width-one-half`  will apply a width of 50%,  `govuk-!-width-two-thirds`will apply a width of 66.66%.
+
+{{ example({group: 'styles', item: 'layout', example: 'input-width', html: true, nunjucks: true, open: true}) }}
