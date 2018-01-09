@@ -7,7 +7,7 @@
 <div class="app-c-example-wrapper">
   <div class="app-c-example {{ "app-c-example--tabs" if params.html or params.nunjucks }}">
     <span class="app-c-example__new-window"><a href="{{ exampleURL }}" target="_blank">(open in new window)</a></span>
-    <iframe class="app-c-example__frame app-c-example__frame--resizable js-example__frame" src="{{ exampleURL }}"></iframe>
+    <iframe class="app-c-example__frame app-c-example__frame--resizable js-example__frame" src="{{ exampleURL }}" frameBorder="0"></iframe>
   </div>
 
   {%- if (params.html and params.nunjucks) %}
