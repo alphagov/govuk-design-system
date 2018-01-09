@@ -18,7 +18,7 @@
     "lint": "gulp scss:lint"
   },
   "dependencies": {
-    "@govuk-frontend/all": "0.0.19-alpha",
+    "@govuk-frontend/all": "0.0.21-alpha",
     "scss-to-json": "^2.0.0"
   },
   "devDependencies": {
