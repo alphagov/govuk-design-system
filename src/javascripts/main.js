@@ -3,7 +3,7 @@ $(document).ready(function () {
   GOVUK.example.init('.js-example__frame')
 
   // Initialise tabs
-  GOVUK.tabs.init()
+  GOVUK.tabs.init('.js-example')
 
   // Add copy to clipboard to code blocks inside tab containers
   GOVUK.copy.init('.app-c-tabs__container pre')
