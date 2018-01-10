@@ -1,0 +1,125 @@
+{
+  "main":{
+    "Text": [
+      {
+        "name": "$govuk-text-colour"
+      },
+      {
+        "name": "$govuk-secondary-text-colour"
+      }
+    ],
+    "Links": [
+      {
+        "name": "$govuk-link-colour"
+      },
+      {
+        "name": "$govuk-link-hover-colour"
+      },
+      {
+        "name": "$govuk-link-visited-colour"
+      }
+    ],
+    "Backgrounds": [
+      {
+        "name": "$govuk-border-colour"
+      },
+      {
+        "name": "$govuk-panel-colour"
+      },
+      {
+        "name": "$govuk-highlight-colour"
+      },
+      {
+        "name": "$govuk-page-colour"
+      }
+    ],
+    "Buttons": [
+      {
+        "name": "$govuk-button-colour"
+      },
+      {
+        "name": "$govuk-green",
+        "notes": "Use for button hover"
+      }
+    ],
+    "Focus": [
+      {
+        "name": "$govuk-focus-colour"
+      }
+    ],
+    "Status":[
+      {
+        "name": "$govuk-blue",
+        "notes": "Use for Alpha and Beta banners"
+      },
+      {
+        "name": "$govuk-error-colour",
+        "notes": "Use for error messages"
+      }
+    ]
+  },
+  "greyscale":[
+    {
+      "name": "$govuk-black"
+    },
+    {
+      "name": "$govuk-grey-1"
+    },
+    {
+      "name": "$govuk-grey-2"
+    },
+    {
+      "name": "$govuk-grey-3"
+    },
+    {
+      "name": "$govuk-grey-4"
+    }
+  ],
+  "extended":[
+    {
+      "name": "$govuk-red"
+    },
+    {
+      "name": "$govuk-mellow-red"
+    },
+    {
+      "name": "$govuk-orange"
+    },
+    {
+      "name": "$govuk-brown"
+    },
+    {
+      "name": "$govuk-yellow"
+    },
+    {
+      "name": "$govuk-grass-green"
+    },
+    {
+      "name": "$govuk-green"
+    },
+    {
+      "name": "$govuk-turquoise"
+    },
+    {
+      "name": "$govuk-light-blue"
+    },
+    {
+      "name": "$govuk-blue"
+    },
+    {
+      "name": "$govuk-mauve"
+    },
+    {
+      "name": "$govuk-purple"
+    },
+    {
+      "name": "$govuk-fuschia"
+    },
+    {
+      "name": "$govuk-pink"
+    },
+    {
+      "name": "$govuk-baby-pink"
+    }
+  ]
+}

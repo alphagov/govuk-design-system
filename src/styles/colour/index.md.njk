@@ -1,0 +1,131 @@
+---
+title: Colour
+description:
+section: Styles
+aliases:
+layout: layout-styles.njk
+---
+
+Always use the GOV.UK colour palette.
+
+## Colour contrast
+You must make sure that the contrast ratio of text and interactive elements in
+your service meets [level AA of the Web Content Accessibility Guidelines
+(WCAG 2.0)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
+
+## Sass variables
+Use the Sass variables listed below, so you’ll automatically get any updates to
+the GOV.UK palette when you update GOV.UK Frontend.
+
+## Main colours
+
+<table class="govuk-body app-c-colour-list">
+
+  <thead class="govuk-h-visually-hidden">
+    <th scope="col">Sass name</th>
+    <th scope="col">Hex value</th>
+    <th scope="col">Notes</th>
+  </thead>
+
+  {% for groupName, group in colours.main %}
+
+    <tr>
+      <td colspan="3">
+          {# add padding to the top of each group heading, but not the first one #}
+          <h3 {% if not loop.first %}class="govuk-!-pt-r6"{% endif %}>
+            {{groupName}}
+          </h3>
+      </td>
+    </tr>
+
+    {% for colour in group %}
+
+      <tr class="app-c-colour-list-row">
+
+        <th class="app-c-colour-list-column app-c-colour-list-column--name">
+          <span class="app-c-swatch {% if colour.colour == "#fff" %}app-c-swatch-border{% endif %}" style="background-color:{{colour.colour}}"></span>
+          {{colour.name}}
+        </th>
+        <td class="app-c-colour-list-column app-c-colour-list-column--colour">
+          {{colour.colour}}
+        </td>
+        <td class="app-c-colour-list-column app-c-colour-list-column--notes">
+          {{colour.notes}}
+        </td>
+
+      </tr>
+
+    {% endfor %}
+
+  {% endfor %}
+
+</table>
+
+## Greyscale
+
+<table class="govuk-body app-c-colour-list">
+
+  <thead class="govuk-h-visually-hidden">
+    <th scope="col">Sass name</th>
+    <th scope="col">Hex value</th>
+    <th scope="col">Notes</th>
+  </thead>
+
+  {% for colour in colours.greyscale %}
+
+    <tr class="app-c-colour-list-row">
+
+      <th class="app-c-colour-list-column app-c-colour-list-column--name">
+        <span class="app-c-swatch {% if colour.colour == "#fff" %}app-c-swatch-border{% endif %}" style="background-color:{{colour.colour}}"></span>
+        {{colour.name}}
+      </th>
+
+      <td class="app-c-colour-list-column app-c-colour-list-column--colour">
+        {{colour.colour}}
+      </td>
+      <td class="app-c-colour-list-column app-c-colour-list-column--notes">
+        {{colour.notes}}
+      </td>
+
+    </tr>
+
+  {% endfor %}
+
+</table>
+
+## Extended colours
+
+Use these colours for graphs and supporting material.
+
+For tints of the extended palette, use 50% or 25%
+
+You can find the departmental colours in the GOV.UK Frontend _colours-organisations file
+
+<table class="govuk-body app-c-colour-list">
+
+  <thead class="govuk-h-visually-hidden">
+    <th scope="col">Sass name</th>
+    <th scope="col">Hex value</th>
+    <th scope="col">Notes</th>
+  </thead>
+
+  {% for colour in colours.extended %}
+
+    <tr class="app-c-colour-list-row">
+
+      <th class="app-c-colour-list-column app-c-colour-list-column--name">
+        <span class="app-c-swatch {% if colour.colour == "#fff" %}app-c-swatch-border{% endif %}" style="background-color:{{colour.colour}}"></span>
+        {{colour.name}}
+      </th>
+      <td class="app-c-colour-list-column app-c-colour-list-column--colour">
+        {{colour.colour}}
+      </td>
+      <td class="app-c-colour-list-column app-c-colour-list-column--notes">
+        {{colour.notes}}
+      </td>
+
+    </tr>
+
+  {% endfor %}
+
+</table>
