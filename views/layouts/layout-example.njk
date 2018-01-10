@@ -6,18 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ title }}</title>
     <link href="/stylesheets/main.css" rel="stylesheet" media="all" />
-    <!--[if lt IE 9]><script src="/javascripts/ie.js"></script><![endif]-->
-
     {#- Include any additional stylesheets specified in the example frontmatter #}
     {% for stylesheet in stylesheets %}
     <link href="{{ stylesheet }}" rel="stylesheet" media="all" />
     {%- endfor %}
 
-    <script src="/javascripts/application.js"></script>
+    <!--[if lt IE 9]>
+      <script src="/javascripts/ie.js"></script>
+    <![endif]-->
+    <script src="/javascripts/vendor/modernizr.js"></script>
   </head>
   <body class="app-o-example-page">
     {% block body %}
       {{ contents | safe }}
     {% endblock %}
+    <script src="/javascripts/vendor/iframeResizer.contentWindow.js"></script>
   </body>
 </html>
