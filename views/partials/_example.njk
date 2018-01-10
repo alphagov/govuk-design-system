@@ -7,7 +7,7 @@
   {% set exampleId = exampleId + '-open' %}
 {% endif %}
 
-<div class="app-c-example-wrapper" id="{{ exampleId }}">
+<div class="app-c-example-wrapper js-example" id="{{ exampleId }}">
   <div class="app-c-example {{ "app-c-example--tabs" if params.html or params.nunjucks }}">
     <span class="app-c-example__new-window"><a href="{{ exampleURL }}" target="_blank">(open in new window)</a></span>
     <iframe class="app-c-example__frame app-c-example__frame--resizable js-example__frame" src="{{ exampleURL }}"></iframe>
@@ -15,14 +15,14 @@
 
   {%- if (params.html and params.nunjucks) %}
   <ul class="app-c-tabs" role="tablist">
-    <li class="app-c-tabs__item" role="presentation"><a href="#{{ exampleId }}-html" role="tab" aria-controls="{{ exampleId }}-html"{{ " open" if (params.open) }}>HTML</a></li>
-    <li class="app-c-tabs__item" role="presentation"><a href="#{{ exampleId }}-nunjucks" role="tab" aria-controls="{{ exampleId }}-nunjucks">Nunjucks</a></li>
+    <li class="app-c-tabs__item js-tabs__item{{ " js-tabs__item--open" if (params.open) }}" role="presentation"><a href="#{{ exampleId }}-html" role="tab" aria-controls="{{ exampleId }}-html">HTML</a></li>
+    <li class="app-c-tabs__item js-tabs__item" role="presentation"><a href="#{{ exampleId }}-nunjucks" role="tab" aria-controls="{{ exampleId }}-nunjucks">Nunjucks</a></li>
   </ul>
   {% endif %}
 
   {%- if (params.html) %}
-  <div class="app-c-tabs__heading"><a href="#{{ exampleId }}-html" role="tab" aria-controls="{{ exampleId }}-html"{{ " open" if (params.open) }}>HTML</a></div>
-  <div class="app-c-tabs__container" id="{{ exampleId }}-html" role="tabpanel">
+  <div class="app-c-tabs__heading js-tabs__heading{{ " js-tabs__heading--open" if (params.open) }}"><a href="#{{ exampleId }}-html" role="tab" aria-controls="{{ exampleId }}-html">HTML</a></div>
+  <div class="app-c-tabs__container js-tabs__container" id="{{ exampleId }}-html" role="tabpanel">
     ```html
     {{ getHTMLCode(examplePath) | safe }}
     ```
@@ -30,8 +30,8 @@
   {% endif %}
 
   {%- if (params.nunjucks) %}
-  <div class="app-c-tabs__heading"><a href="#{{ exampleId }}-nunjucks" role="tab" aria-controls="{{ exampleId }}-nunjucks">Nunjucks</a></div>
-  <div class="app-c-tabs__container" id="{{ exampleId }}-nunjucks" role="tabpanel">
+  <div class="app-c-tabs__heading js-tabs__heading"><a href="#{{ exampleId }}-nunjucks" role="tab" aria-controls="{{ exampleId }}-nunjucks">Nunjucks</a></div>
+  <div class="app-c-tabs__container js-tabs__container" id="{{ exampleId }}-nunjucks" role="tabpanel">
     ```js
     {{ getNunjucksCode(examplePath) | safe }}
     ```
