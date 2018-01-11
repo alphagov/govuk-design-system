@@ -23,7 +23,9 @@
       <div class="govuk-prose-scope">
         {{ contents | safe }}
       </div>
-
+      {% if section %}
+        {% include "_contact-panel.njk" %}
+      {% endif %}
     </main>
     {# No JS fallback to show overview #}
     <div class="app-o-pane__subnav-mobile-overview app-u-hide-desktop">
