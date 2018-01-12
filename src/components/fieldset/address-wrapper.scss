@@ -1,0 +1,7 @@
+@import "@govuk-frontend/globals/common";
+
+.govuk-c-fieldset {
+  @include mq($from: tablet) {
+    max-width: 66.66%;
+  }
+}
