@@ -8,7 +8,7 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 
-{{ example({group: 'components', item: 'button', example: 'default'}) }}
+{{ example({group: 'components', item: 'button', example: 'default', html: true, nunjucks: true, open: false}) }}
 
 ## When to use this component
 
@@ -29,7 +29,7 @@ There are 2 ways to use the Button component. You can use HTML or, if you are us
 
 Use a start button as the main call to action on your service’s start page.
 
-{{ example({group: 'components', item: 'button', example: 'start', html: true, nunjucks: true, open: false}) }}
+{{ example({group: 'components', item: 'button', example: 'start', html: true, nunjucks: true, open: true}) }}
 
 ### Disabled buttons
 
@@ -37,7 +37,7 @@ Disabled buttons have poor contrast and can confuse some users, so avoid them if
 
 Only use disabled buttons if research shows it makes the user interface easier to understand.
 
-{{ example({group: 'components', item: 'button', example: 'disabled', html: true, nunjucks: true, open: false}) }}
+{{ example({group: 'components', item: 'button', example: 'disabled', html: true, nunjucks: true, open: true}) }}
 
 ## Research on this component
 
