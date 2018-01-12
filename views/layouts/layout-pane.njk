@@ -11,15 +11,22 @@
         <h1 class="govuk-heading-xl">
           <span class="govuk-caption-xl">
           {% if theme %}
-              {{ theme }}
+            {{ theme }}
             {% else %}
               {{ section }}
-          {% endif %}
+            {% endif %}
           </span>
           {{ title }}
+          {% if status %}
+          <div>
+            <strong class="govuk-c-tag govuk-!-mt-r4 govuk-!-mb-r2">
+              {{ status }}
+            </strong>
+            <p class="govuk-body">{{ statusMessage | safe }}</p>
+          </div>
+          {% endif %}
         </h1>
       </div>
-
       <div class="govuk-prose-scope">
         {{ contents | safe }}
       </div>
