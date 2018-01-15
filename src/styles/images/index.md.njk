@@ -1,0 +1,33 @@
+---
+title: Images
+description: GOV.UK Images
+section: Styles
+layout: layout-pane.njk
+---
+
+{% from "_example.njk" import example %}
+
+Avoid unnecessary decoration - only use images if there’s a real user need.
+
+## Aspect ratio
+
+### Photography
+
+The aspect ratio for photographs should be 3:2.
+
+{{ example({group: 'styles', item: 'images', example: 'default', html: false, open: false}) }}
+
+
+### Illustrations or representative imagery
+
+If your image represents something in the real world, such as a letter, document or credit card you should use the aspect ratio of that item.
+
+{{ example({group: 'styles', item: 'images', example: 'representative', html: false, open: false}) }}
+
+## Alt text
+
+All images should have associated alt text. This helps describe the image to users who are unable to see it.
+
+If your image is purely decorative, where a description would be confusing in context of the page, it should be marked to be ignored by screen readers. You should include a null alt tag `alt=""`.
+
+{{ example({group: 'styles', item: 'images', example: 'alt-text', html: true, open: true}) }}
