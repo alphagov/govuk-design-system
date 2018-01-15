@@ -40,13 +40,3 @@
   </div>
   {# </div> #}
 </header>
-
-{% from "phase-banner/macro.njk" import govukPhaseBanner %}
-
-{{ govukPhaseBanner({
-  "tag": {
-    "text": "beta"
-  },
-  "classes": "govuk-!-pl-r3 govuk-!-pr-r3",
-  "html": "This is a new service – your <a href=\"/get-in-touch\">feedback</a> will help us to improve it."
-}) }}

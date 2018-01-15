@@ -1,0 +1,25 @@
+{% from "phase-banner/macro.njk" import govukPhaseBanner %}
+
+{% if PULL_REQUEST %}
+  {# Extract the PR number from Netlify's DEPLOY_PRIME_URL, which looks like
+      https://deploy-preview-137--govuk-design-system-preview.netlify.com/ #}
+  {% set pr_number = DEPLOY_PRIME_URL | replace(r/.*deploy\-preview\-([0-9]*).*/, "$1") %}
+  {% set pr_url = "https://github.com/alphagov/govuk-design-system/pull/" + pr_number %}
+
+  {{ govukPhaseBanner({
+    "tag": {
+      "text": "preview",
+      "classes": "app-c-tag--review"
+    },
+    "classes": "govuk-!-pl-r3 govuk-!-pr-r3",
+    "html": "This is a preview of a <a href=\"" + pr_url  + "\">proposed change</a> to the <a href=\"https://govuk-design-system-production.cloudapps.digital\">Design System</a>."
+  }) }}
+{% else %}
+  {{ govukPhaseBanner({
+    "tag": {
+      "text": "beta"
+    },
+    "classes": "govuk-!-pl-r3 govuk-!-pr-r3",
+    "html": "This is a new service – your <a href=\"/get-in-touch\">feedback</a> will help us to improve it."
+  }) }}
+{% endif %}
