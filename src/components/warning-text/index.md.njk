@@ -1,0 +1,28 @@
+---
+title: Warning text
+description:
+section: Components
+aliases:
+backlog_issue_id: 71
+layout: layout-pane.njk
+---
+
+{% from "_example.njk" import example %}
+
+{{ example({group: 'components', item: 'warning-text', example: 'default', html: true, nunjucks: true, open: false}) }}
+
+## When to use this component
+
+Use the Warning text component when you need to warn users about something important, such as legal consequences of an action, or lack of action, that they might&nbsp;take.
+
+## How it works
+
+There are 2 ways to use the Warning text component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://govuk-prototype-kit-beta.herokuapp.com), you can use the Warning text macro.
+
+{{ example({group: 'components', item: 'warning-text', example: 'default', html: true, nunjucks: true, open: true}) }}
+
+You might need to rewrite the hidden text ('Warning' in the example) to make it appropriate for your context.
+
+## Research on this component
+
+If you’ve used this component, [get in touch](Anchor link to Get in touch panel at bottom of page) to share your user research findings.
