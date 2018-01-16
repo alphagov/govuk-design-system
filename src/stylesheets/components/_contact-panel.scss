@@ -1,6 +1,7 @@
 
 .app-c-contact-panel {
   @include govuk-responsive-margin($govuk-spacing-responsive-6, "top");
+  @include govuk-responsive-margin($govuk-spacing-responsive-6, "bottom");
   @include govuk-responsive-padding($govuk-spacing-responsive-3);
   background-color: $govuk-blue;
 
