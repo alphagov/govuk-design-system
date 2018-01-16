@@ -33,6 +33,9 @@
       {% if section %}
         {% include "_contact-panel.njk" %}
       {% endif %}
+      {% if backlog_issue_id %}
+        <p class="govuk-body govuk-!-mb-r0"><a href="https://github.com/alphagov/govuk-design-system-backlog/issues/{{backlog_issue_id}}">Discuss ‘{{title}}’ on Github</a></p>
+      {% endif %}
     </main>
     {# No JS fallback to show overview #}
     <div class="app-o-pane__subnav-mobile-overview app-u-hide-desktop">
