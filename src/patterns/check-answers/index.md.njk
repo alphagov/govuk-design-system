@@ -12,43 +12,41 @@ Let users check their answers before submitting information to a service.
 
 ![Check answers example](check-answers-page.png)
 
-There’s another [example of this page](Insert URL) in the [GOV.UK prototype kit](Insert URL).
-
 ## When to use this pattern
 
-Show a single ‘check your answers’ page immediately before the confirmation screen for small to medium-sized transactions.
+Show a single Check answers page immediately before the confirmation screen for small to medium-sized transactions.
 
-When designing a very large transaction with multiple sections, it may help to include a ‘check your answers’ pages at the end of each section.
+When designing a very large transaction with multiple sections, it may help to include a Check answers pages at the end of each section.
 
-This can be valuable for services where different users might be completing each section.You should test this approach with your users to find out if it’s helpful.
+This can be valuable for services where different users might be completing each section. You should test this approach with your users to find out if it’s helpful.
 
 ## How it works
 
-Check your answers’ pages help to:
+Check answers pages help to:
 
-- increase user confidence as they can clearly see that they have completed all the sections and that their data has been captured
+- increase users’ confidence as they can clearly see that they have completed all the sections and that their data has been captured
 - reduce error rates as users are given a second chance to notice and correct errors before submitting data
 
 ### Make the page easy to understand
 
-On your ‘check your answers’ page you should:
+On your Check answers page you should:
 
 - make it clear there’s a task to perform on the page
 - make it clear that the transaction won’t be complete until a user confirms their information is correct
 - break the content up into sections when you can
-- only show sections that are relevant to users - for example, if they’ve said they’re from the UK, don’t show sections for questions they haven’t answered about locations outside of the UK
-- rephrase questions if you need to - for example, you don’t need to label every individual line of an address, and you can rewrite long questions as shorter statements
-- make sure the submit button clearly shows the action it performs - for example ‘change your tax details’ or ‘send your claim form’
+- only show sections that are relevant to users &ndash; for example, if they’ve said they’re from the UK, don’t show sections for questions they haven’t answered about locations outside of the UK
+- rephrase questions if you need to &ndash; for example, you don’t need to label every individual line of an address, and you can rewrite long questions as shorter statements
+- make sure the submit button clearly shows the action it performs &ndash; for example ‘Change your tax details’ or ‘Send your claim form’
 
 ### Let users go back and change their answers
 
-You should provide a ‘Change’ link next to each section on your ‘check your answers’ page so that users can add or change the information.
+You should provide a ‘Change’ link next to each section on your Check answers page so that users can add or change the information.
 
 The answers pages should look the same way they did when the user last used them, with all their answers pre-populated.
 
-When they’ve finished, the ‘Continue’ button should return them to the ‘Check your answers’ page - they should not need to go through the rest of the transaction again.
+When they’ve finished, the ‘Continue’ button should return them to the Check answers page. They should not need to go through the rest of the transaction again.
 
-If a user changes their response in a way that means you need to ask them more questions, do this before returning them to the ‘Check your answers’ page.
+If a user changes their response in a way that means you need to ask them more questions, do this before returning them to the Check answers page.
 
 ### Make the page accessible
 
@@ -58,10 +56,10 @@ For example:
 
 <div class="govuk-!-mb-r6">
 ```html
-<a href="/renew/name/edit">Change<span class="visually-hidden"> name</span></a>
+<a href="/renew/name/edit">Change<span class="govuk-h-visually-hidden"> name</span></a>
 ```
 </div>
 
 ## Research on this pattern
 
-Read a blog about how the Carer’s Allowance Service used Check your answers to improve its users’ experience.
+Read a blog about [how the Carer’s Allowance Service used Check answers to improve its users’ experience](https://dwpdigital.blog.gov.uk/2016/07/08/a-live-service-is-not-the-end-of-the-story/).

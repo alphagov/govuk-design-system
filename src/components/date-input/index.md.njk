@@ -21,27 +21,27 @@ Use the Date input component when you’re asking users for a date they’ll alr
 
 Don’t use the Date input component if users are unlikely to know the exact date of the event you’re asking about.
 
-Read more about how to [ask users for dates](Insert URL for Dates pattern).
+Read more about how to [ask users for dates](../../patterns/dates/).
 
 ## How it works
 
 The Date input component consists of 3 fields to let users enter a day, month and year.
 
-There are 2 ways to use the Date input component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](Insert URL), you can use the Date input macro.
+There are 2 ways to use the Date input component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://govuk-prototype-kit-beta.herokuapp.com), you can use the Date input macro.
 
 {{ example({group: 'components', item: 'date-input', example: 'default', html: true, nunjucks: true, open: true}) }}
 
 
-Don’t automatically tab users between the fields of the Date input because this can be confusing, and may clash with normal keyboard controls.
+Don’t automatically tab users between the fields of the Date input because this can be confusing and may clash with normal keyboard controls.
 
 ### Error states
 
-Check that a valid date is entered by the user. Invalid dates should be shown to the user like this:
+Check that a valid date is entered by the user. Invalid dates should be reported to the user like this:
 
 {{ example({group: 'components', item: 'date-input', example: 'error', html: true, nunjucks: true, open: false}) }}
 
-## Research on this pattern
+## Research on this component
 
-If you’ve used this pattern, get in touch to share your user research findings.
+If you’ve used this component, get in touch to share your user research findings.
 
 More research is needed to determine the extent to which users struggle to enter months as numbers, and whether allowing them to enter months as text is helpful.

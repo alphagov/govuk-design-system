@@ -20,13 +20,13 @@ Follow this pattern whenever you need to ask users questions within your service
 
 Question pages must include a:
 
-- [back link](link to back link component/variant)
-- [page heading](link to Headings section on Typography page)
-- [continue button](link to button component)
+- back link
+- page heading
+- continue button
 
 ### Back link
 
-Always include a back link on question pages.
+Always include a [back link](../../components/back-link) on question pages.
 
 Some users don’t trust browser ‘back’ buttons when they’re entering data. Add a back link to reassure users that it’s possible to go back and change previous answers.
 
@@ -40,13 +40,13 @@ Page headings can be statements or questions.
 
 If you’re only asking for one piece of information on a page, make the question the page heading.
 
-For example ‘What is your home postcode?’
+For example:
 
 {{ example({group: 'patterns', item: 'question-pages', example: 'postcode', html: true, nunjucks: true, open: true}) }}
 
 If you need to ask for multiple related things on a page, use a statement as the heading.
 
-This example uses ‘Passport details’ to describe the related questions:
+For example:
 
 {{ example({group: 'patterns', item: 'question-pages', example: 'passport', html: true, nunjucks: true, open: true}) }}
 
@@ -54,7 +54,9 @@ Don’t duplicate the same page heading across multiple pages.
 
 The page heading should relate specifically to the information being asked for on the current page, not any higher-level section the page is part of.
 
-If you need to show the high-level section, you can use the 'secondary-heading' style. For example, ‘About you’:
+If you need to show the high-level section, you can use the `govuk-caption` style.
+
+For example, ‘About you’:
 
 {{ example({group: 'patterns', item: 'question-pages', example: 'section-headings', html: true, nunjucks: true, open: true}) }}
 
@@ -73,8 +75,8 @@ When asking users questions, you should:
 - order questions to give most people the quickest result
 - only ask questions that they will be able to answer
 - avoid asking for information that you can find in government data
-- allow users to answer ‘I don’t know’ or ‘I’m not sure’ - if they are valid responses
-- translate supporting documents into clear questions on the page - don’t force users to go away and read background information before they can give an answer
+- allow users to answer ‘I don’t know’ or ‘I’m not sure’ if they are valid responses
+- translate supporting documents into clear questions on the page &ndash; don’t force users to go away and read background information before they can give an answer
 
 ## Research on this pattern
 
