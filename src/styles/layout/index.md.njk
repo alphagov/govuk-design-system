@@ -79,9 +79,7 @@ The available widths are:
 
 Occasionally, you might need to need to make minor adjustments like adding or removing spacing to elements of your design. You can use the responsive spacing override classes for this.
 
-### Using the override classes
-
-The spacing override classes allow you to use any point in the responsive spacing scale:
+### The responsive spacing scale
 
 <table class="govuk-c-table app-c-table--constrained">
   <caption class="govuk-c-table__caption small govuk-h-visually-hidden">GOV.UK Frontend spacing scale</caption>
@@ -147,20 +145,23 @@ The spacing override classes allow you to use any point in the responsive spacin
   </tbody>
 </table>
 
+### Using the override classes
 
 The spacing override classes are structured to allow you to apply any size of the scale, using margin or padding in any direction.
 
-The first part of the class name is `govuk-!-` as with all override classes. The second part signifies whether you want to add margin, `govuk-!-m` or padding, `govuk-!-p`.
+As an example `govuk-!-m-r9` will set a margin of 60px on large screens and 40px on small screens.
 
-If you want to add the margin or padding in a particular direction you can add `l` for left, `r` for right, `t` for top, or `b` for bottom. If you don’t specify the direction, the margin or padding will be applied to all sides of the element. For example `govuk-!-pb` will add padding-bottom.
+To break this class down, the first part of the class name is `govuk-!-` as with all override classes. The second part signifies whether you want to add margin, `govuk-!-m` or padding, `govuk-!-p`.
+
+If you want to add the margin or padding in a particular direction you can add `l` for left, `r` for right, `t` for top, or `b` for bottom. If you don’t specify the direction, the margin or padding will be applied to all sides of the element.
 
 The last part of the class represents the value you want to apply. For example in `govuk-!-m-r9`, the `r` stands for responsive and the `9` represents 9 on the spacing scale.
 
 ### Examples
 
-`govuk-!-m-r9` will set a margin of 60px on large screens and 40px on small screens.
+{{ example({group: 'styles', item: 'layout', example: 'spacing-scale-padding', html: true, open: false}) }}
 
-`govuk-!-pt-r4` will set a padding-top of 20px on large screens and 15px on small&nbsp;screens.
+{{ example({group: 'styles', item: 'layout', example: 'spacing-scale-margin', html: true, open: false}) }}
 
 ## Width override classes
 
