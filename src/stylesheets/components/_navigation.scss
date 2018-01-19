@@ -35,6 +35,7 @@
       }
 
       a {
+        @include govuk-typography-weight-bold; // Override .govuk-link weight
         display: block;
         padding: 0 20px;
         color: $govuk-link-colour;

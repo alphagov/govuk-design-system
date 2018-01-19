@@ -29,6 +29,7 @@
     font-size: 19px; // We don't have a font mixin that produces 19px on mobile
 
     & > a {
+      @include govuk-typography-weight-bold; // Override .govuk-link weight
       display: block;
       padding: 16px $govuk-spacing-scale-4 17px $govuk-spacing-scale-4;
       text-decoration: none;
