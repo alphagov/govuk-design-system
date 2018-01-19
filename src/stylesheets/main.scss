@@ -158,6 +158,7 @@ $mq-breakpoint-widescreen: 1200px;
   &:active,
   &:visited,
   &:hover {
+    @include govuk-font-regular-16;
     position: absolute;
     z-index: 1;
     top: $govuk-spacing-scale-3;
