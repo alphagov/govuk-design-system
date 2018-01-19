@@ -1,0 +1,22 @@
+{% from "phase-banner/macro.njk" import govukPhaseBanner %}
+
+{% if PULL_REQUEST %}
+  {% set pr_url = "https://github.com/alphagov/govuk-design-system/pull/" + REVIEW_ID %}
+
+  {{ govukPhaseBanner({
+    "tag": {
+      "text": "preview",
+      "classes": "app-c-tag--review"
+    },
+    "classes": "govuk-!-pl-r3 govuk-!-pr-r3",
+    "html": "This is a preview of a <a href=\"" + pr_url  + "\">proposed change</a> to the <a href=\"https://govuk-design-system-production.cloudapps.digital\">Design System</a>."
+  }) }}
+{% else %}
+  {{ govukPhaseBanner({
+    "tag": {
+      "text": "beta"
+    },
+    "classes": "govuk-!-pl-r3 govuk-!-pr-r3",
+    "html": "This is a new service – your <a href=\"/get-in-touch\">feedback</a> will help us to improve it."
+  }) }}
+{% endif %}
