@@ -1,10 +1,7 @@
 {% from "phase-banner/macro.njk" import govukPhaseBanner %}
 
 {% if PULL_REQUEST %}
-  {# Extract the PR number from Netlify's DEPLOY_PRIME_URL, which looks like
-      https://deploy-preview-137--govuk-design-system-preview.netlify.com/ #}
-  {% set pr_number = DEPLOY_PRIME_URL | replace(r/.*deploy\-preview\-([0-9]*).*/, "$1") %}
-  {% set pr_url = "https://github.com/alphagov/govuk-design-system/pull/" + pr_number %}
+  {% set pr_url = "https://github.com/alphagov/govuk-design-system/pull/" + REVIEW_ID %}
 
   {{ govukPhaseBanner({
     "tag": {
