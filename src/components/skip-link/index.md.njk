@@ -9,13 +9,13 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 
-{{ example({group: 'components', item: 'skip-link', example: 'default', html: true, nunjucks: true, open: false}) }}
+Use the Skip link component to help keyboard-only users skip to the main content on a&nbsp;page.
 
-Use the Skip link component to help keyboard-only users skip to the main content on a page.
+{{ example({group: 'components', item: 'skip-link', example: 'default', html: true, nunjucks: true, open: false}) }}
 
 ## When to use this component
 
-All GOV.UK pages must have include a Skip link in the header.
+All GOV.UK pages must include a Skip link in the header.
 
 ## How it works
 
@@ -25,7 +25,7 @@ Including the Skip link component gives users the option to bypass the top-level
 
 The Skip link component is visually hidden until a keyboard press activates it.
 
-There are 2 ways to use the Skip link component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](Insert prototype kit URL), you can use the Skip link macro.
+There are 2 ways to use the Skip link component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://govuk-prototype-kit-beta.herokuapp.com), you can use the Skip link macro.
 
 {{ example({group: 'components', item: 'skip-link', example: 'default', html: true, nunjucks: true, open: true}) }}
 

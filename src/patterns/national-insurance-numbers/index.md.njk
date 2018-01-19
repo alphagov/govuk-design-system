@@ -26,13 +26,13 @@ Find out how to [protect your service against fraud](https://www.gov.uk/service-
 
 ## How it works
 
-Use a single text field labelled ‘National Insurance number’. Write it out in full and don’t use abbreviations such as ‘NINO’ or ‘NI Number’.
+Use a single [text input](../../components/text-input) labelled ‘National Insurance number’. Write it out in full and don’t use abbreviations such as ‘NINO’ or ‘NI Number’.
 
 You should:
 
 - allow for 13 characters as National Insurance numbers are spaced in pairs followed by a single letter
 - allow upper and lower case letters and strip out spaces before validating
-- avoid using ‘AB 12 34 56 C’ as an example - it belongs to a real person - use ‘QQ 12 34 56 C’ instead
+- avoid using ‘AB 12 34 56 C’ as an example because it belongs to a real person and use ‘QQ 12 34 56 C’ instead
 
 {{ example({group: 'patterns', item: 'national-insurance-numbers', example: 'default', html: true, nunjucks: true, open: true}) }}
 

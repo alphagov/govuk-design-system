@@ -16,23 +16,23 @@ Help users enter or select a date.
 
 ## When to use this pattern
 
-Follow this pattern whenever you need users to provide or select a date as part of your service.
+Follow this pattern whenever you need users to provide or select a date as part of your&nbsp;service.
 
 ## How it works
 
 The way you should ask users for dates depends on the types of date you’re asking for.
 
-Dates you may need, include:
-- memorable dates - like a date of birth or marriage
-- dates from documents or cards - like a passport or credit card
-- approximate dates - like ‘December 2017’
-- relative dates - like ‘4 days from today’
+Dates you may need users to provide include:
+- memorable dates, like a date of birth or marriage
+- dates from documents or cards, like a passport or credit card
+- approximate dates, like ‘December 2017’
+- relative dates, like ‘4 days from today’
 
-In some cases, you might need users to pick a date.
+In some cases you might need users to pick a date from a given selection.
 
 ### Asking for memorable dates
 
-Ask for memorable dates, like dates of birth using the [Date input component](../../components/date-input).
+Ask for memorable dates, like dates of birth, using the [Date input](../../components/date-input) component.
 
 {{ example({group: 'patterns', item: 'dates', example: 'default', html: true, nunjucks: true, open: true}) }}
 
@@ -42,7 +42,7 @@ When asking for a date exactly as it’s shown on a passport, credit card or oth
 
 ### Asking for approximate dates
 
-Allow users to enter an approximate date when you are asking them for information they may not know or struggle to remember. For example, allow users to enter ‘December 2017’ for a field that says ‘the date you lost your passport’.
+Allow users to enter an approximate date when you are asking them for information they may not know or may struggle to remember. For example, allow users to enter ‘December 2017’ for a field that says ‘the date you lost your passport’.
 
 ### Asking for relative dates
 
@@ -54,15 +54,15 @@ To do this let users enter or select relative dates like ‘tomorrow’ or ‘1 
 
 Users might need to pick a date from a selection, for example, to book an appointment.
 
-To do this, you can present dates in a calendar format using a calendar control. Users are typically shown one month’s worth of dates at a time, and can skip through months and years.
+To do this, you can present dates in a calendar format using a calendar control. Users are typically shown one month’s worth of dates at a time, and can skip through months and&nbsp;years.
 
 Only use a calendar control if users need to:
 
 - pick a date in the near future or recent past
-- know the day of the week - or the week of the month - as well as the date
+- know the day of the week, or the week of the month, as well as the date
 - be able to see dates in relation to other dates
 
-Never make a calendar control that depends on JavaScript as the only input option. Allow users to enter the date into a Textarea as well as use the control.
+Never make a calendar control that depends on JavaScript as the only input option.&nbsp;Allow users to enter the date into a text input as well as use the control.
 
 ### How to check that dates are valid
 

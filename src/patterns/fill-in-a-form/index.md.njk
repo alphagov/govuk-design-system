@@ -37,9 +37,10 @@ Only add a question if you know:
 - how you’ll check the information is accurate
 - how to keep the information up to date and secure
 
-This list is called a ‘question protocol’ - it’s different from the form itself because it’s about how you’ll use the answers.
+This list is called a question protocol. It’s different from the form itself because it’s about how you’ll use the answers.
 
 A question protocol forces you and your organisation to analyse why you’re asking users for each item of information. The protocol helps to sense check your approach and remove unnecessary questions.
+
 If you do need to ask for any optional information, mark the labels of optional fields as ‘(optional)’. Don’t mark mandatory fields with asterisks.
 
 ### Design for the most common scenarios first
@@ -48,11 +49,14 @@ Once you have a question protocol, you can decide how to order your questions.
 Start with questions that will let users know if they’re not eligible for the service, so you don’t waste people’s time.
 
 If there are complicated eligibility requirements, follow the pattern to help users [Check a service is suitable](../check-a-service-is-suitable/).
+
 Use ‘branching’ questions so people only have to answer questions that are relevant to them.
 Make sure you know the relative size of your different user groups and how your decisions will affect them.
 
 ### Start with one thing per page
+
 If your service is used infrequently by people without a broad range of digital skills and confidence, they may struggle to complete complicated forms.
+
 Start by splitting the form across multiple pages with each page containing only one thing, for example:
 
 - one piece of information you’re telling a user
@@ -75,12 +79,13 @@ It also helps you to:
 - capture analytics about each question
 - handle branching questions and loops
 
-Try the Register to vote service on GOV.UK to see an example of this approach.
+[Try the Register to vote service on GOV.UK](https://www.gov.uk/register-to-vote) to see an example of this approach.
 
 Read more about designing [Question pages](../question-pages).
 
 ### Providing help text
 You should do everything you can to make sure your form is simple and doesn’t need further explaining.
+
 However, there may be times when you need to add help text to explain:
 
 - legal jargon
@@ -94,11 +99,12 @@ Don’t explain the interface. If you have to do that, you haven’t made your s
 
 When writing help text, you should:
 
-- keep it short and simple - users are unlikely to read anything longer than 3 lines
-- focus on the action the user must do - make it relevant to their current situation
+- keep it short and simple, as users are unlikely to read anything longer than 3 lines
+- focus on the action the user must do &ndash; make it relevant to their current situation
 - avoid giving background information that’s useless to users, like ‘this used to be called X but in 2008 it was changed to Y’
 
- <a name="hint-text"></a>Hint text is short, clear text positioned immediately next to the part of the page it relates to. You can use hint text for help that’s relevant to the majority of your users, for example:
+<a name="hint-text"></a>
+Hint text is short, clear text positioned immediately next to the part of the page it relates to. You can use hint text for help that’s relevant to the majority of your users, for example:
 
 {{ example({group: 'patterns', item: 'fill-in-a-form', example: 'hint', html: true, nunjucks: true, open: true}) }}
 
@@ -108,14 +114,14 @@ If you need to provide information that only some users will need, you can use t
 
 {{ example({group: 'patterns', item: 'fill-in-a-form', example: 'details', html: true, nunjucks: true, open: true}) }}
 
-Use the Details component to make your page easier to scan, but don’t hide help if a majority of users will need it.
+Use the [Details](../../components/details) component to make your page easier to scan, but don’t hide help if a majority of users will need it.
 
 Make sure the link text is written so that users can quickly work out if they need to click on it.
 
 
 ### Using progress indicators
 
-Start by testing your form without a progress indicator to see if it’s simple enough that users don’t need them.
+Start by testing your form without a progress indicator to see if it’s simple enough that users don’t need one.
 
 Try improving the order, type or number of questions before adding a progress indicator. If people still have difficulty, try adding a simple step or question indicator like this one.
 
@@ -140,5 +146,7 @@ Read a blog post about [how the Carer’s Allowance team removed a 12-step progr
 
 
 ## Research on this pattern
+
 Learn more about the [question protocol](https://www.uxmatters.com/mt/archives/2010/06/the-question-protocol-how-to-make-sure-every-form-field-is-necessary.php).
-Read a blog post about how the [‘Register to vote’ service used forms](https://designnotes.blog.gov.uk/2014/07/14/things-we-learnt-designing-register-to-vote/).
+
+Read a blog post about [how the Register to vote service used forms](https://designnotes.blog.gov.uk/2014/07/14/things-we-learnt-designing-register-to-vote/).
