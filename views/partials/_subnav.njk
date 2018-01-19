@@ -9,7 +9,7 @@
           <ul class="app-c-subnav__section">
           {% for subitem in items %}
             <li class="app-c-subnav__section-item{% if subitem.url == path %} app-c-subnav__section-item--current{% endif %}">
-              <a href="/{{ subitem.url }}">{{ subitem.label }}</a>
+              <a class="govuk-link" href="/{{ subitem.url }}">{{ subitem.label }}</a>
             </li>
           {% endfor %}
           </ul>
