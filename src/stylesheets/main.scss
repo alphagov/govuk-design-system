@@ -168,6 +168,11 @@ $mq-breakpoint-widescreen: 1200px;
     background-color: $govuk-white;
     text-decoration: none;
     text-transform: uppercase;
+
+    .govuk-prose-scope & {
+      color: $govuk-button-colour; // A specific selector to override .govuk-prose-scope a:link
+      background-color: $govuk-white; // A specific selector to override .govuk-prose-scope a:focus
+    }
   }
 }
 
