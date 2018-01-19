@@ -9,7 +9,7 @@
       "classes": "app-c-tag--review"
     },
     "classes": "govuk-!-pl-r3 govuk-!-pr-r3",
-    "html": "This is a preview of a <a href=\"" + pr_url  + "\">proposed change</a> to the <a href=\"https://govuk-design-system-production.cloudapps.digital\">Design System</a>."
+    "html": "This is a preview of a <a class=\"govuk-link\" href=\"" + pr_url  + "\">proposed change</a> to the <a href=\"https://govuk-design-system-production.cloudapps.digital\">Design System</a>."
   }) }}
 {% else %}
   {{ govukPhaseBanner({
@@ -17,6 +17,6 @@
       "text": "beta"
     },
     "classes": "govuk-!-pl-r3 govuk-!-pr-r3",
-    "html": "This is a new service – your <a href=\"/get-in-touch\">feedback</a> will help us to improve it."
+    "html": "This is a new service – your <a class=\"govuk-link\" href=\"/get-in-touch\">feedback</a> will help us to improve it."
   }) }}
 {% endif %}
