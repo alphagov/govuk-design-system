@@ -1,0 +1,16 @@
+{% extends "_generic.njk" %}
+
+{% block body %}
+<div class="app-o-pane__content">
+  <main id="content" class="app-c-content" role="main">
+    <div class="govuk-o-width-container app-c-site-width-container">
+      <div class="govuk-o-grid">
+        {{ contents | safe }}
+      </div>
+    </div>
+  </main>
+
+  {% include "_footer.njk" %}
+</div>
+
+{% endblock %}
