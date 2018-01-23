@@ -2,11 +2,9 @@
 
 {% block body %}
 <div class="app-o-pane__content">
-  <main id="content" class="app-c-content" role="main">
+  <main id="content" class="govuk-o-main-wrapper" role="main">
     <div class="govuk-o-width-container app-c-site-width-container">
-      <div class="govuk-o-grid">
-        {{ contents | safe }}
-      </div>
+      {{ contents | safe }}
     </div>
   </main>
 
