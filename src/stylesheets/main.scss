@@ -72,7 +72,6 @@ $mq-breakpoint-widescreen: 1200px;
 }
 
 .app-c-content {
-  @include govuk-font-regular-19;
 
   @include govuk-responsive-padding($govuk-spacing-responsive-6);
 

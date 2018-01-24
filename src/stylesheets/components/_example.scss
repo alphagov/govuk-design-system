@@ -2,6 +2,7 @@
 .app-c-example-wrapper {
   @include govuk-responsive-margin($govuk-spacing-responsive-6, "top");
   @include govuk-responsive-margin($govuk-spacing-responsive-6, "bottom");
+  @include govuk-font-regular-19;
 }
 
 .app-c-example {
