@@ -13,6 +13,8 @@
   },
   "homepage": "https://github.com/alphagov/govuk-design-system#readme",
   "scripts": {
+    "preinstall": "node bin/check-nvmrc.js",
+    "prestart": "node bin/check-nvmrc.js",
     "build": "node tasks/build.js",
     "start": "node tasks/serve.js",
     "lint": "gulp scss:lint"
@@ -40,5 +42,8 @@
     "metalsmith-sass": "^1.5.0",
     "metalsmith-tagcleaner": "0.0.2",
     "nunjucks": "^3.0.1"
+  },
+  "engines": {
+    "node": "8.9.4"
   }
 }
