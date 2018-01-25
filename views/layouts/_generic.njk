@@ -10,10 +10,14 @@
       <script src="/javascripts/ie.js"></script>
     <![endif]-->
     <script src="/javascripts/vendor/modernizr.js"></script>
+    {% if CF_SPACE == "production" %}
     {% include "_tracking-head.njk" %}
+    {% endif %}
   </head>
   <body>
+    {% if CF_SPACE == "production" %}
     {% include "_tracking-body.njk" %}
+    {% endif %}
     <a href="#content" class="govuk-c-skip-link">Skip to main content</a>
     <div class="app-o-pane">
       <div class="app-o-pane__header">
