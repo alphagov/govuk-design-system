@@ -1,0 +1,92 @@
+---
+layout: layout-example.njk
+stylesheets:
+- related-items.css
+---
+
+{% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "button/macro.njk" import govukButton %}
+
+<div class="govuk-o-width-container">
+
+  {{ govukBreadcrumbs({
+    "items": [
+      {
+        "text": "Home",
+        "href": "#"
+      },
+      {
+        "text": "Section",
+        "href": "#"
+      },
+      {
+        "text": "Subsection"
+      }
+    ]
+  }) }}
+
+  <div class="govuk-o-main-wrapper">
+    <div class="govuk-o-grid">
+      <div class="govuk-o-grid__item govuk-o-grid__item--two-thirds">
+
+        <h1 class="govuk-heading-xl">Service name goes here</h1>
+        
+        <p class="govuk-body">Use this service to:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>do something</li>
+          <li>update your name, address or other details</li>
+          <li>do something else</li>
+        </ul>
+
+        <p class="govuk-body">Registering takes around 5 minutes.</p>
+
+        {{ govukButton({
+          "text": "Start now",
+          "href": "#",
+          "classes": "govuk-c-button--start govuk-!-mt-r2 govuk-!-mb-r8"
+        }) }}
+
+        <h2 class="govuk-heading-m">Before you start</h2>
+
+        <p class="govuk-body">You can also <a class="govuk-link" href="#">register by post</a>.</p>
+
+        <p class="govuk-body">The online service is also available in <a class="govuk-link" href="#">Welsh (Cymraeg)</a>.</p>
+
+        <p class="govuk-body">You can’t register for this service if you’re in the UK illegally.</p>
+
+      </div>
+
+      <div class="govuk-o-grid__item govuk-o-grid__item--one-third">
+
+        <!-- The Related items component is not part of GOV.UK Frontend but will be styled if used in the Prototype Kit -->
+
+        <aside class="app-c-related-items" role="complementary">
+          <h2 class="govuk-heading-m" id="subsection-title">
+            Subsection
+          </h2>
+          <nav role="navigation" aria-labelledby="subsection-title">
+            <ul class="govuk-list govuk-!-f-16">
+              <li>
+                <a href="#">
+                  Related link
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Related link
+                </a>
+              </li>
+              <li>
+                <a href="#" class="govuk-!-w-bold">
+                  More <span class="govuk-h-visually-hidden">in Subsection</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+
+        </div>
+    </div>
+  </div>
+</div>
