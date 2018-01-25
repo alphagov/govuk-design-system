@@ -1,0 +1,29 @@
+---
+layout: layout-example.njk
+---
+
+{% from 'radios/macro.njk' import govukRadios %}
+
+{{ govukRadios({
+  "name": "gender",
+  "fieldset": {
+    "legendHtml": '<h1 class="govuk-heading-xl">What is your gender?</h1>'
+  },
+  "items": [
+    {
+      "value": "female",
+      "id": "female",
+      "text": "Female"
+    },
+    {
+      "value": "male",
+      "id": "male",
+      "text": "Male"
+    },
+    {
+      "value": "nonbinary",
+      "id": "nonbinary",
+      "text": "Nonbinary"
+    }
+  ]
+}) }}
