@@ -7,47 +7,51 @@ layout: layout-example.njk
 {% from "date-input/macro.njk" import govukDateInput %}
 {% from "button/macro.njk" import govukButton %}
 
-{{ govukBackLink({
-  "text": "Back"
-}) }}
+<div class="govuk-o-width-container">
 
-<div class="govuk-o-main-wrapper">
-  <div class="govuk-o-grid">
-    <div class="govuk-o-grid__item govuk-o-grid__item--two-thirds">
-      <h1 class="govuk-heading-xl">Passport details</h1>
+  {{ govukBackLink({
+    "text": "Back"
+  }) }}
 
-      {{ govukInput({
-        label: {
-          "html": '<h3 class="govuk-heading-m govuk-!-mb-r1">Passport number</h3>',
-          "hintText": "For example, 502135326"
-        },
-        id: "passport-number",
-        name: "passport-number"
-      }) }}
+  <div class="govuk-o-main-wrapper">
+    <div class="govuk-o-grid">
+      <div class="govuk-o-grid__item govuk-o-grid__item--two-thirds">
+        <h1 class="govuk-heading-xl">Passport details</h1>
 
-
-      {{ govukDateInput({
-        fieldset: {
-          legendHtml: '<h3 class="govuk-heading-m">Expiry date</h3>',
-          legendHintText: 'For example, 08 2014'
-        },
-        id: 'expiry',
-        name: 'expiry',
-        items:[
-          {
-            name: 'month'
+        {{ govukInput({
+          label: {
+            "html": '<h3 class="govuk-heading-m govuk-!-mb-r1">Passport number</h3>',
+            "hintText": "For example, 502135326"
           },
-          {
-            name: 'year'
-          }
-        ]
-        })
-      }}
+          id: "passport-number",
+          name: "passport-number"
+        }) }}
 
-      {{ govukButton({
-        "text": "Continue"
-      }) }}
 
+        {{ govukDateInput({
+          fieldset: {
+            legendHtml: '<h3 class="govuk-heading-m">Expiry date</h3>',
+            legendHintText: 'For example, 08 2014'
+          },
+          id: 'expiry',
+          name: 'expiry',
+          items:[
+            {
+              name: 'month'
+            },
+            {
+              name: 'year'
+            }
+          ]
+          })
+        }}
+
+        {{ govukButton({
+          "text": "Continue"
+        }) }}
+
+      </div>
     </div>
   </div>
+
 </div>
