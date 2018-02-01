@@ -8,13 +8,16 @@ layout: layout-example.njk
 
 <div class="govuk-o-width-container">
 
-  {{ govukBackLink({
-    "text": "Back"
-  }) }}
+{{ govukBackLink({
+  "text": "Back"
+}) }}
 
-  <div class="govuk-o-main-wrapper">
-    <div class="govuk-o-grid">
-      <div class="govuk-o-grid__item govuk-o-grid__item--two-thirds">
+<div class="govuk-o-main-wrapper">
+  <div class="govuk-o-grid">
+    <div class="govuk-o-grid__item govuk-o-grid__item--two-thirds">
+
+      <form class="form" action="/url/of/next/page" method="post">
+
         {{ govukDateInput({
           fieldset: {
             legendHtml: '<h1 class="govuk-heading-xl">What is your date of birth?</h1>',
@@ -39,8 +42,8 @@ layout: layout-example.njk
         {{ govukButton({
           "text": "Continue"
         }) }}
-      </div>
+      </form>
+
     </div>
   </div>
-
 </div>
