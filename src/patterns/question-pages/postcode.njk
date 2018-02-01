@@ -6,24 +6,28 @@ layout: layout-example.njk
 {% from "input/macro.njk" import govukInput %}
 {% from "button/macro.njk" import govukButton %}
 
-{{ govukBackLink({
-  "text": "Back"
-}) }}
+<div class="govuk-o-width-container">
 
-<div class="govuk-o-main-wrapper">
-  <div class="govuk-o-grid">
-    <div class="govuk-o-grid__item govuk-o-grid__item--two-thirds">
-      {{ govukInput({
-        "label": {
-          "html": '<h1 class="govuk-heading-xl govuk-!-mb-r4">What is your home postcode?</h1>'
-        },
-        "id": "postcode",
-        "name": "postcode"
-      }) }}
+  {{ govukBackLink({
+    "text": "Back"
+  }) }}
 
-      {{ govukButton({
-        "text": "Continue"
-      }) }}
+  <div class="govuk-o-main-wrapper">
+    <div class="govuk-o-grid">
+      <div class="govuk-o-grid__item govuk-o-grid__item--two-thirds">
+        {{ govukInput({
+          "label": {
+            "html": '<h1 class="govuk-heading-xl govuk-!-mb-r4">What is your home postcode?</h1>'
+          },
+          "id": "postcode",
+          "name": "postcode"
+        }) }}
+
+        {{ govukButton({
+          "text": "Continue"
+        }) }}
+      </div>
     </div>
   </div>
+
 </div>

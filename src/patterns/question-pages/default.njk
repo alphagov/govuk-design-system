@@ -6,37 +6,41 @@ layout: layout-example.njk
 {% from "date-input/macro.njk" import govukDateInput %}
 {% from "button/macro.njk" import govukButton %}
 
-{{ govukBackLink({
-  "text": "Back"
-}) }}
+<div class="govuk-o-width-container">
 
-<div class="govuk-o-main-wrapper">
-  <div class="govuk-o-grid">
-    <div class="govuk-o-grid__item govuk-o-grid__item--two-thirds">
-      {{ govukDateInput({
-        fieldset: {
-          legendHtml: '<h1 class="govuk-heading-xl">What is your date of birth?</h1>',
-          legendHintText: 'For example, 31 3 1980'
-        },
-        id: 'dob',
-        name: 'dob',
-        items:[
-          {
-            name: 'day'
-          },
-          {
-            name: 'month'
-          },
-          {
-            name: 'year'
-          }
-        ]
-        })
-      }}
+  {{ govukBackLink({
+    "text": "Back"
+  }) }}
 
-      {{ govukButton({
-        "text": "Continue"
-      }) }}
+  <div class="govuk-o-main-wrapper">
+    <div class="govuk-o-grid">
+      <div class="govuk-o-grid__item govuk-o-grid__item--two-thirds">
+        {{ govukDateInput({
+          fieldset: {
+            legendHtml: '<h1 class="govuk-heading-xl">What is your date of birth?</h1>',
+            legendHintText: 'For example, 31 3 1980'
+          },
+          id: 'dob',
+          name: 'dob',
+          items:[
+            {
+              name: 'day'
+            },
+            {
+              name: 'month'
+            },
+            {
+              name: 'year'
+            }
+          ]
+          })
+        }}
+
+        {{ govukButton({
+          "text": "Continue"
+        }) }}
+      </div>
     </div>
   </div>
+
 </div>
