@@ -5,6 +5,7 @@
   "nodemodules": "node_modules/",
     "govukfrontend": "node_modules/@govuk-frontend/",
     "iframeresizer": "node_modules/iframe-resizer/",
+    "clipboard": "node_modules/clipboard/dist/",
   "source": "src/",
     "components": "src/components/",
     "images": "src/images/",

@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@govuk-frontend/all": "0.0.22-alpha",
+    "clipboard": "^1.7.1",
     "scss-to-json": "^2.0.0"
   },
   "devDependencies": {
