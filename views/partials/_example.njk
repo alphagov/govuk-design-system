@@ -15,13 +15,13 @@
 
   {%- if (params.html and params.nunjucks) %}
   <ul class="app-c-tabs" role="tablist">
-    <li class="app-c-tabs__item js-tabs__item{{ " js-tabs__item--open" if (params.open) }}" role="presentation"><a href="#{{ exampleId }}-html" role="tab" aria-controls="{{ exampleId }}-html">HTML</a></li>
-    <li class="app-c-tabs__item js-tabs__item" role="presentation"><a href="#{{ exampleId }}-nunjucks" role="tab" aria-controls="{{ exampleId }}-nunjucks">Nunjucks</a></li>
+    <li class="app-c-tabs__item js-tabs__item{{ " js-tabs__item--open" if (params.open) }}" role="presentation"><a href="#{{ exampleId }}-html" role="tab" aria-controls="{{ exampleId }}-html" data-track="tab-html">HTML</a></li>
+    <li class="app-c-tabs__item js-tabs__item" role="presentation"><a href="#{{ exampleId }}-nunjucks" role="tab" aria-controls="{{ exampleId }}-nunjucks" data-track="tab-nunjucks">Nunjucks</a></li>
   </ul>
   {% endif %}
 
   {%- if (params.html) %}
-  <div class="app-c-tabs__heading js-tabs__heading{{ " js-tabs__heading--open" if (params.open) }}"><a href="#{{ exampleId }}-html" role="tab" aria-controls="{{ exampleId }}-html">HTML</a></div>
+  <div class="app-c-tabs__heading js-tabs__heading{{ " js-tabs__heading--open" if (params.open) }}"><a href="#{{ exampleId }}-html" role="tab" aria-controls="{{ exampleId }}-html" data-track="tab-html">HTML</a></div>
   <div class="app-c-tabs__container js-tabs__container" id="{{ exampleId }}-html" role="tabpanel">
     ```html
     {{ getHTMLCode(examplePath) | safe }}
@@ -30,7 +30,7 @@
   {% endif %}
 
   {%- if (params.nunjucks) %}
-  <div class="app-c-tabs__heading js-tabs__heading"><a href="#{{ exampleId }}-nunjucks" role="tab" aria-controls="{{ exampleId }}-nunjucks">Nunjucks</a></div>
+  <div class="app-c-tabs__heading js-tabs__heading"><a href="#{{ exampleId }}-nunjucks" role="tab" aria-controls="{{ exampleId }}-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
   <div class="app-c-tabs__container js-tabs__container" id="{{ exampleId }}-nunjucks" role="tabpanel">
     ```js
     {{ getNunjucksCode(examplePath) | safe }}
