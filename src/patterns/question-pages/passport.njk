@@ -18,37 +18,41 @@ layout: layout-example.njk
       <div class="govuk-o-grid__item govuk-o-grid__item--two-thirds">
         <h1 class="govuk-heading-xl">Passport details</h1>
 
-        {{ govukInput({
-          label: {
-            "html": '<h3 class="govuk-heading-m govuk-!-mb-r1">Passport number</h3>',
-            "hintText": "For example, 502135326"
-          },
-          id: "passport-number",
-          name: "passport-number"
-        }) }}
+        <form class="form" action="/url/of/next/page" method="post">
 
-
-        {{ govukDateInput({
-          fieldset: {
-            legendHtml: '<h3 class="govuk-heading-m">Expiry date</h3>',
-            legendHintText: 'For example, 08 2014'
-          },
-          id: 'expiry',
-          name: 'expiry',
-          items:[
-            {
-              name: 'month'
+          {{ govukInput({
+            label: {
+              "html": '<h3 class="govuk-heading-m govuk-!-mb-r1">Passport number</h3>',
+              "hintText": "For example, 502135326"
             },
-            {
-              name: 'year'
-            }
-          ]
-          })
-        }}
+            id: "passport-number",
+            name: "passport-number"
+          }) }}
 
-        {{ govukButton({
-          "text": "Continue"
-        }) }}
+
+          {{ govukDateInput({
+            fieldset: {
+              legendHtml: '<h3 class="govuk-heading-m">Expiry date</h3>',
+              legendHintText: 'For example, 08 2014'
+            },
+            id: 'expiry',
+            name: 'expiry',
+            items:[
+              {
+                name: 'month'
+              },
+              {
+                name: 'year'
+              }
+            ]
+            })
+          }}
+
+          {{ govukButton({
+            "text": "Continue"
+          }) }}
+
+        </form>
 
       </div>
     </div>
