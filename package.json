@@ -22,6 +22,7 @@
   "dependencies": {
     "@govuk-frontend/all": "0.0.22-alpha",
     "clipboard": "^1.7.1",
+    "html5shiv": "^3.7.3",
     "modernizr": "^3.5.0",
     "scss-to-json": "^2.0.0"
   },
