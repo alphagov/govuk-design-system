@@ -7,6 +7,7 @@
     "iframeresizer": "node_modules/iframe-resizer/",
     "clipboard": "node_modules/clipboard/dist/",
     "html5shiv": "node_modules/html5shiv/dist/",
+    "jquery": "node_modules/jquery/dist/",
   "source": "src/",
     "components": "src/components/",
     "images": "src/images/",
