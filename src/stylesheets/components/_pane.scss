@@ -11,8 +11,7 @@
     }
 
     @supports (display: grid) {
-      // Temporary disable CSS Grid until #130 is fixed
-      // display: grid;
+      display: grid;
       grid-template-columns: minmax(100%, 1fr);
       grid-template-rows: repeat(3, auto);
 
