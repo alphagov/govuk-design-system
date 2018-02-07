@@ -2,6 +2,7 @@
 
 // App-specific variables
 $app-light-grey: #f8f8f8;
+$app-code-color: #dd1144;
 
 // App-specific components
 @import "components/contact-panel";
@@ -197,28 +198,28 @@ $colour-list-breakpoint: 980px;
   display: block;
   padding-left: 50px;
   @include mq($from: $colour-list-breakpoint) {
-    padding-left: 0;
     display: table-cell;
+    padding-left: 0;
     vertical-align: middle;
   }
 }
 
 .app-c-swatch {
-  position: absolute;
-  left: 0;
-  top: 0;
   display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 40px;
   height: 40px;
   border: 1px solid transparent; // only light colours need a border
   border-radius: 50%;
   @include mq($from: $colour-list-breakpoint) {
-    position: static;
     display: inline-block;
-    vertical-align: middle;
-    margin-right: 10px;
+    position: static;
     margin-top: 6px;
+    margin-right: 10px;
     margin-bottom: 7px; // odd number so the text lines up vertically
+    vertical-align: middle;
   }
 }
 
@@ -227,8 +228,8 @@ $colour-list-breakpoint: 980px;
 }
 
 .app-c-colour-list-column--name {
-  text-align: left;
   font-weight: normal;
+  text-align: left;
   @include mq($from: $colour-list-breakpoint) {
     width: 50%;
   }
@@ -266,9 +267,8 @@ pre {
 }
 
 // Add styling for inline code
-
 p code {
-  padding: 0px $govuk-spacing-scale-1;
+  padding: 0 $govuk-spacing-scale-1;
+  color: $app-code-color;
   background-color: $govuk-grey-4;
-  color: #d14;
 }

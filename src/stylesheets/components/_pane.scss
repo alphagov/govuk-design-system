@@ -18,8 +18,8 @@
 
       @include mq($from: tablet) {
         height: $pane-height;
-        grid-template-rows: min-content  // Header
-                            max-content; // Body (incl. footer)
+        // `min-content` for header, `max-content` for body(incl. footer)
+        grid-template-rows: min-content max-content;
       }
     }
   }
