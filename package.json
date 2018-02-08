@@ -17,7 +17,15 @@
     "prestart": "node bin/check-nvmrc.js",
     "build": "node tasks/build.js",
     "start": "node tasks/serve.js",
-    "lint": "gulp scss:lint"
+    "test": "npm run lint",
+    "lint": "standard && npm run lint:scss",
+    "lint:scss": "gulp scss:lint"
+  },
+  "standard": {
+    "ignore": [
+      "/lib/",
+      "/src/javascripts/vendor/"
+    ]
   },
   "dependencies": {
     "@govuk-frontend/all": "0.0.22-alpha",
@@ -46,7 +54,8 @@
     "metalsmith-permalinks": "^0.5.0",
     "metalsmith-sass": "^1.5.0",
     "metalsmith-tagcleaner": "0.0.2",
-    "nunjucks": "^3.0.1"
+    "nunjucks": "^3.0.1",
+    "standard": "^10.0.3"
   },
   "engines": {
     "node": "8.9.4"

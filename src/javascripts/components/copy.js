@@ -2,6 +2,7 @@
   'use strict'
   var $ = global.jQuery
   var GOVUK = global.GOVUK || {}
+  var Clipboard = window.Clipboard
 
   // This module is dependent on /vendor/clipboard.js
   GOVUK.copy = {

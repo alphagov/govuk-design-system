@@ -1,3 +1,6 @@
+const $ = window.jQuery
+const GOVUK = window.GOVUK
+
 $(document).ready(function () {
   // Initialise example frames
   GOVUK.example.init('.js-example__frame')
