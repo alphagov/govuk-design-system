@@ -1,0 +1,12 @@
+{
+  "minify": true,
+  "options": [
+    "html5printshiv",
+    "setClasses"
+  ],
+  "feature-detects": [
+    "test/history",
+    "test/css/flexbox",
+    "test/css/flexboxtweener"
+  ]
+}
