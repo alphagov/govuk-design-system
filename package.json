@@ -23,7 +23,6 @@
   },
   "standard": {
     "ignore": [
-      "/lib/",
       "/src/javascripts/vendor/"
     ]
   },
