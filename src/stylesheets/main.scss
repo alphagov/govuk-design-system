@@ -163,10 +163,12 @@ $mq-breakpoint-widescreen: 1200px;
     z-index: 1;
     top: $govuk-spacing-scale-3;
     right: $govuk-spacing-scale-3;
+    min-width: 58px;
     padding: 4px 10px 0;
     border: 1px solid $govuk-button-colour;
     color: $govuk-button-colour;
     background-color: $govuk-white;
+    text-align: center;
     text-decoration: none;
     text-transform: uppercase;
 

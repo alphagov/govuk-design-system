@@ -19,7 +19,7 @@
           e.clearSelection()
           setTimeout(function () {
             e.trigger.text = 'Copy'
-          }, 2000)
+          }, 5000)
         })
       } catch (err) {
         if (err) {
