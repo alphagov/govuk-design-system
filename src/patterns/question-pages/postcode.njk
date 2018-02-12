@@ -8,28 +8,29 @@ layout: layout-example.njk
 
 <div class="govuk-o-width-container">
 
-{{ govukBackLink({
-  "text": "Back"
-}) }}
+  {{ govukBackLink({
+    "text": "Back"
+  }) }}
 
-<div class="govuk-o-main-wrapper">
-  <div class="govuk-o-grid">
-    <div class="govuk-o-grid__item govuk-o-grid__item--two-thirds">
+  <div class="govuk-o-main-wrapper">
+    <div class="govuk-o-grid">
+      <div class="govuk-o-grid__item govuk-o-grid__item--two-thirds">
 
-      <form class="form" action="/url/of/next/page" method="post">
-        {{ govukInput({
-          "label": {
-            "html": '<h1 class="govuk-heading-xl govuk-!-mb-r4">What is your home postcode?</h1>'
-          },
-          "id": "postcode",
-          "name": "postcode"
-        }) }}
+        <form class="form" action="/url/of/next/page" method="post">
+          {{ govukInput({
+            "label": {
+              "html": '<h1 class="govuk-heading-xl govuk-!-mb-r4">What is your home postcode?</h1>'
+            },
+            "id": "postcode",
+            "name": "postcode"
+          }) }}
 
-        {{ govukButton({
-          "text": "Continue"
-        }) }}
-      </form>
+          {{ govukButton({
+            "text": "Continue"
+          }) }}
+        </form>
 
+      </div>
     </div>
   </div>
 </div>
