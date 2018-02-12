@@ -6,6 +6,7 @@ layout: layout-example.njk
 {% from "input/macro.njk" import govukInput %}
 {% from "date-input/macro.njk" import govukDateInput %}
 {% from "button/macro.njk" import govukButton %}
+{% from "fieldset/macro.njk" import govukFieldset %}
 
 <div class="govuk-o-width-container">
 
@@ -20,14 +21,22 @@ layout: layout-example.njk
 
         <form class="form" action="/url/of/next/page" method="post">
 
-          {{ govukInput({
-            label: {
-              "html": '<h3 class="govuk-heading-m govuk-!-mb-r1">Passport number</h3>',
-              "hintText": "For example, 502135326"
-            },
-            id: "passport-number",
-            name: "passport-number"
-          }) }}
+          {% call govukFieldset({
+            "legendHtml": '<h3 class="govuk-heading-m govuk-!-mb-r1">Passport number</h3>',
+            "legendHintText": 'For example, 502135326'
+          }) %}
+
+            {{ govukInput({
+              label: {
+                "html": 'Passport number',
+                "hintText": 'For example, 502135326',
+                "classes": 'govuk-h-visually-hidden'
+              },
+              id: "passport-number",
+              name: "passport-number"
+            }) }}
+
+          {% endcall %}
 
 
           {{ govukDateInput({
