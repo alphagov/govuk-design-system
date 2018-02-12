@@ -15,7 +15,11 @@
             return trigger.nextElementSibling
           }
         }).on('success', function (e) {
+          e.trigger.text = 'Copied'
           e.clearSelection()
+          setTimeout(() => {
+            e.trigger.text = 'Copy'
+          }, 2000)
         })
       } catch (err) {
         if (err) {
