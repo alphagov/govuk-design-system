@@ -4,10 +4,24 @@
 // can be seen at http://govuk-static.herokuapp.com/component-guide/related_items
 
 .app-c-related-items {
-  border-top: 10px solid $govuk-blue;
+  @include govuk-responsive-margin($govuk-spacing-responsive-9, "top");
   padding-top: $govuk-spacing-scale-2;
+  border-top: 2px solid $govuk-blue;
+
+  @include mq($from: tablet) {
+    margin-top: 0;
+  }
+}
+
+.app-c-related-items h3 {
+  @include govuk-responsive-margin($govuk-spacing-responsive-2, "bottom");
 }
 
 .app-c-related-items li {
   margin-bottom: $govuk-spacing-scale-2;
+}
+
+.app-c-related-items li a {
+  font-size: 16px;
+  text-decoration: none;
 }
