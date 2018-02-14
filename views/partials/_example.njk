@@ -35,6 +35,9 @@
     ```js
     {{ getNunjucksCode(examplePath) | safe }}
     ```
+  {%- if (params.group == 'components') %}
+    <p class="app-c-tabs__copy">You can configure this component using the <a href="https://github.com/alphagov/govuk-frontend/tree/master/packages/{{params.item}}/README.md#component-arguments" class="govuk-link"  target="_blank" data-track="link to table of arguments in Frontend readme">Nunjucks macro arguments</a>.</p>
+  {% endif %}
   </div>
   {% endif %}
 </div>
