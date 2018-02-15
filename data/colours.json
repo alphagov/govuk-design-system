@@ -19,18 +19,9 @@
         "name": "$govuk-link-visited-colour"
       }
     ],
-    "Backgrounds": [
+    "Border": [
       {
         "name": "$govuk-border-colour"
-      },
-      {
-        "name": "$govuk-panel-colour"
-      },
-      {
-        "name": "$govuk-highlight-colour"
-      },
-      {
-        "name": "$govuk-page-colour"
       }
     ],
     "Buttons": [
