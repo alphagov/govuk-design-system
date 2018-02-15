@@ -5,31 +5,42 @@ layout: layout-example.njk
 {% from "back-link/macro.njk" import govukBackLink %}
 {% from "input/macro.njk" import govukInput %}
 {% from "button/macro.njk" import govukButton %}
+{% from "fieldset/macro.njk" import govukFieldset %}
 
 <div class="govuk-o-width-container">
 
-{{ govukBackLink({
-  "text": "Back"
-}) }}
+  {{ govukBackLink({
+    "text": "Back"
+  }) }}
 
-<div class="govuk-o-main-wrapper">
-  <div class="govuk-o-grid">
-    <div class="govuk-o-grid__item govuk-o-grid__item--two-thirds">
+  <div class="govuk-o-main-wrapper">
+    <div class="govuk-o-grid">
+      <div class="govuk-o-grid__item govuk-o-grid__item--two-thirds">
 
-      <form class="form" action="/url/of/next/page" method="post">
-        {{ govukInput({
-          "label": {
-            "html": '<h1 class="govuk-heading-xl govuk-!-mb-r4">What is your home postcode?</h1>'
-          },
-          "id": "postcode",
-          "name": "postcode"
-        }) }}
+        <form class="form" action="/url/of/next/page" method="post">
 
-        {{ govukButton({
-          "text": "Continue"
-        }) }}
-      </form>
+          {% call govukFieldset({
+            "legendHtml": '<h1 class="govuk-heading-xl govuk-!-mb-r4">What is your home postcode?</h1>'
+          }) %}
 
+            {{ govukInput({
+              "label": {
+                "text": 'What is your home postcode?',
+                "classes": 'govuk-h-visually-hidden'
+              },
+              "id": "postcode",
+              "name": "postcode"
+            }) }}
+
+          {% endcall %}
+
+          {{ govukButton({
+            "text": "Continue"
+          }) }}
+
+        </form>
+
+      </div>
     </div>
   </div>
 </div>
