@@ -4,25 +4,30 @@
 // Based on the existing GOV.UK footer in GOV.UK Template
 
 @include exports("footer") {
+  $app-footer-background: $govuk-grey-3;
+  $app-footer-border-top: #a1acb2;
+  $app-footer-link: #454a4c;
+  $app-footer-text: $app-footer-link;
+  $app-footer-link-hover: #171819;
 
   .app-c-footer {
     display: block;
     padding: $govuk-gutter $govuk-spacing-scale-3 ($govuk-gutter * 2);
-    border-top: 1px solid $govuk-footer-border-top;
-    color: $govuk-footer-text;
-    background: $govuk-footer-background;
+    border-top: 1px solid $app-footer-border-top;
+    color: $app-footer-text;
+    background: $app-footer-background;
     @include mq($from: desktop) {
       padding: $govuk-spacing-scale-6;
     }
 
     a:link,
     a:visited {
-      color: $govuk-footer-link;
+      color: $app-footer-link;
     }
 
     a:hover,
     a:active {
-      color: $govuk-footer-link-hover;
+      color: $app-footer-link-hover;
     }
   }
 
