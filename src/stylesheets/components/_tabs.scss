@@ -118,6 +118,6 @@
   text-decoration: none;
 
   @include mq($from: 1080px) {
-    bottom: $govuk-spacing-scale-3 + 2; // ont baseline adjustment
+    bottom: $govuk-spacing-scale-3 + 2; // font baseline adjustment
   }
 }
