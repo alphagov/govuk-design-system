@@ -1,8 +1,9 @@
 {% macro example(params) %}
-
 {% set examplePath = "src/" + params.group + "/" + params.item + "/" + params.example + ".njk" %}
 {% set exampleURL = "/" + params.group + "/" + params.item + "/" + params.example + "/index.html" %}
 {% set exampleId = "example-" + params.example %}
+{% set frontendComponentName = params.frontendComponentName | default(params.item) %}
+
 {% if params.open %}
   {% set exampleId = exampleId + '-open' %}
 {% endif %}
@@ -35,6 +36,9 @@
     ```js
     {{ getNunjucksCode(examplePath) | safe }}
     ```
+  {%- if (params.group == 'components') %}
+    <p class="app-c-tabs__text">You can configure this component using the <a href="https://github.com/alphagov/govuk-frontend/tree/master/packages/{{frontendComponentName}}/README.md#component-arguments" class="govuk-link"  target="_blank" data-components="github-component-arguments" rel="noopener">Nunjucks macro arguments</a>.</p>
+  {% endif %}
   </div>
   {% endif %}
 </div>

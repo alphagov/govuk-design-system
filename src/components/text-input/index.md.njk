@@ -9,7 +9,7 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 
-{{ example({group: 'components', item: 'text-input', example: 'default', html: true, nunjucks: true, open: false}) }}
+{{ example({group: 'components', item: 'text-input', frontendComponentName: 'input', example: 'default', html: true, nunjucks: true, open: false}) }}
 
 ## When to use this component
 
@@ -21,9 +21,9 @@ Don’t use the Text input component if you need to let users enter longer answe
 
 ## How it works
 
-There are 2 ways to use the Text input component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://govuk-prototype-kit-beta.herokuapp.com), you can use the Text input macro.
+There are 2 ways to use the Text input component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://govuk-prototype-kit-beta.herokuapp.com), you can use the Nunjucks macro.
 
-{{ example({group: 'components', item: 'text-input', example: 'default', html: true, nunjucks: true, open: true}) }}
+{{ example({group: 'components', item: 'text-input', frontendComponentName: 'input', example: 'default', html: true, nunjucks: true, open: true}) }}
 
 ### Label text inputs
 
@@ -37,7 +37,7 @@ Make text inputs the right size for the content they’re intended for. Postcode
 
 Ensure that users can still easily enter the information they need on smaller screens by snapping text inputs to 100% width at smaller screen sizes.
 
-{{ example({group: 'components', item: 'text-input', example: 'input-width', html: true, nunjucks: true, open: true}) }}
+{{ example({group: 'components', item: 'text-input', frontendComponentName: 'input', example: 'input-width', html: true, nunjucks: true, open: true}) }}
 
 ### Don’t disable copy and paste
 

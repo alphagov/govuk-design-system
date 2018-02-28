@@ -98,10 +98,26 @@
   padding-bottom: $govuk-spacing-scale-6;
 }
 
+.app-c-tabs__text {
+  padding: $govuk-spacing-scale-4 $govuk-spacing-scale-4 $govuk-spacing-scale-4 $govuk-spacing-scale-4;
+
+  // magical number 1080px below as the content is inside a narrow panel
+  // and can't rely on predefined media queries
+  // sassmq converts pixels to ems
+
+  @include mq($from: 1080px) {
+    padding-bottom: 0;
+  }
+}
+
 // Close container button
 .app-c-link--close {
   position: absolute;
   right: $govuk-spacing-scale-3;
   bottom: $govuk-spacing-scale-3 / 2;
   text-decoration: none;
+
+  @include mq($from: 1080px) {
+    bottom: $govuk-spacing-scale-3 + 2; // font baseline adjustment
+  }
 }
