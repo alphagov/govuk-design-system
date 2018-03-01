@@ -4,33 +4,54 @@ stylesheets:
 - address-wrapper.css
 ---
 
-<fieldset class="govuk-c-fieldset">
-  <legend class="govuk-c-fieldset__legend">
-    <h1 class="govuk-heading-xl">What is your address?</h1>
-  </legend>
+{% from "input/macro.njk" import govukInput %}
+{% from "fieldset/macro.njk" import govukFieldset %}
 
-  <label class="govuk-c-label" for="address-line-1">
-    Building and street <span class="govuk-h-visually-hidden">line 1 of 2</span>
-  </label>
-  <input class="govuk-c-input" id="address-line-1" name="address-line-1" type="text">
+{% call govukFieldset({
+  "legendHtml": '<h1 class="govuk-heading-xl govuk-!-mb-r4">What is your address?</h1>'
+}) %}
 
-  <label class="govuk-c-label govuk-h-visually-hidden" for="address-street">
-    Building and street line 2 of 2
-  </label>
-  <input class="govuk-c-input" id="address-line-2" name="address-line-2" type="text">
+  {{ govukInput({
+    "label": {
+      "html": 'Building and street <span class="govuk-h-visually-hidden">line 1 of 2</span>'
+    },
+    "id": "address-line-1",
+    "name": "address-line-1"
+  }) }}
 
-  <label class="govuk-c-label" for="address-town">
-    Town or city
-  </label>
-  <input class="govuk-c-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text">
+  {{ govukInput({
+    "label": {
+      "html": '<span class="govuk-h-visually-hidden">Building and street line 2 of 2</span>'
+    },
+    "id": "address-line-2",
+    "name": "address-line-2"
+  }) }}
 
-  <label class="govuk-c-label" for="address-county">
-    County
-  </label>
-  <input class="govuk-c-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text">
+  {{ govukInput({
+    "label": {
+      "html": 'Town or city'
+    },
+    "classes": 'govuk-!-width-two-thirds',
+    "id": "address-town",
+    "name": "address-town"
+  }) }}
 
-  <label class="govuk-c-label" for="address-postcode">
-    Postcode
-  </label>
-  <input class="govuk-c-input govuk-!-width-one-third" id="address-postcode" name="address-postcode" type="text">
-</fieldset>
+  {{ govukInput({
+    "label": {
+      "html": 'County'
+    },
+    "classes": 'govuk-!-width-two-thirds',
+    "id": "address-county",
+    "name": "address-county"
+  }) }}
+
+  {{ govukInput({
+    "label": {
+      "html": 'Postcode'
+    },
+    "classes": 'govuk-!-width-one-third',
+    "id": "address-postcode",
+    "name": "address-postcode"
+  }) }}
+
+{% endcall %}
