@@ -3,7 +3,7 @@
 //
 // Based on the existing GOV.UK footer in GOV.UK Template
 
-@include exports("footer") {
+@include govuk-exports("footer") {
   $app-footer-background: $govuk-grey-3;
   $app-footer-border-top: #a1acb2;
   $app-footer-link: #454a4c;
