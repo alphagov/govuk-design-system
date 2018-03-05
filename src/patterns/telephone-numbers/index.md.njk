@@ -10,6 +10,9 @@ status: In development
 statusMessage: This pattern is currently in development and is not yet formal guidance.
 ---
 
+{% from "_example.njk" import example %}
+
+{{ example({group: 'patterns', item: 'telephone-numbers', example: 'default', html: true, nunjucks: true, open: false}) }}
 
 ## When to use this pattern
 
