@@ -1,0 +1,13 @@
+---
+layout: layout-example.njk
+---
+
+{% from "input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    "text": "Telephone number"
+  },
+  id: "telephone-number",
+  name: "telephone-number"
+}) }}
