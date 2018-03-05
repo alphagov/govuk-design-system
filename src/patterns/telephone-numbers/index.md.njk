@@ -11,11 +11,46 @@ layout: layout-pane.njk
 
 ## When to use this pattern
 
+Only collect phone numbers from people if you genuinely need them. Not everyone has or can use a phone, so make sure you give users a choice about how they can be contacted by you.
 
 
 ## How it works
 
+### Be forgiving of different formats
+Users should be allowed to enter phone numbers in whatever format is familiar to them. You should be forgiving of additional spaces, hyphens, brackets and dashes, and be able to accommodate country and area codes.
 
+### Write phone numbers in the format that they were given
+When you play back numbers that have been provided by the user, use the same format they gave you. This will help people recognise numbers that they have a particular way of formatting.
+
+### Use spaces to make phone numbers easier to read
+For phone numbers that were not provided by the user, use spaces to break the number into easily readable chunks. 
+
+### Make it clear what type of telephone number you need
+Tell users if you specifically need a UK phone number or a mobile number.
+ 
+### Using example phone numbers
+If you wish to include an example phone number (in hint text for example), [Ofcom maintains a list of numbers](https://www.ofcom.org.uk/phones-telecoms-and-internet/information-for-industry/numbering/numbers-for-drama) that are reserved for use in media. These are:
+
+- UK non-geographic: 01632 960000 to 960999
+- UK London:  020 7946 0000 to 7946 0999
+- UK mobile: 07700 900000 to 900999
+
+### Explain why you need a phone number
+Tell users why you might contact them and when.
+
+Don’t display phone numbers as links on devices that can’t make calls
+
+It’s possible to mark up phone numbers as links, like this:
+
+```
+<a href="tel:+442079476330">020 7947 6330</a>
+```
+
+However, doing this will style phone numbers as links, which is confusing on devices that don’t support phone calls (like most desktop machines).
+
+It’s also not necessary - most modern mobile browsers automatically detect phone numbers and display them as links anyway.
+
+If you do need to mark up your phone number as links (perhaps to support a device that cannot auto-detect them), make sure that they don’t display as links on devices that don’t support phone calls.
 
 ## Research on this pattern
 
