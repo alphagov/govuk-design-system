@@ -2,7 +2,7 @@
   'use strict'
   var $ = global.jQuery
   var GOVUK = global.GOVUK || {}
-  var Clipboard = window.Clipboard
+  var ClipboardJS = window.ClipboardJS
 
   // This module is dependent on /vendor/clipboard.js
   GOVUK.copy = {
@@ -10,7 +10,7 @@
       $(selector).parent().prepend('<a class="govuk-link app-c-link--copy" href="#copy" aria-live="assertive">Copy</a>')
       // Copy to clipboard
       try {
-        new Clipboard('.app-c-link--copy', {
+        new ClipboardJS('.app-c-link--copy', {
           target: function (trigger) {
             return trigger.nextElementSibling
           }
