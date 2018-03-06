@@ -1,0 +1,65 @@
+---
+layout: layout-example.njk
+---
+
+{% from "input/macro.njk" import govukInput %}
+
+<h3 class="govuk-heading-m">Three-quarters</h3>
+
+{{ govukInput({
+  "label": {
+    "text": "Full name",
+    "classes": "govuk-!-width-three-quarters"
+  },
+  classes: "govuk-!-width-three-quarters",
+  id: "full-name",
+  name: "full-name"
+}) }}
+
+<h3 class="govuk-heading-m">Two-thirds</h3>
+
+{{ govukInput({
+  "label": {
+    "text": "Full name",
+    "classes": "govuk-!-width-two-thirds"
+  },
+  classes: "govuk-!-width-two-thirds",
+  id: "full-name",
+  name: "full-name"
+}) }}
+
+<h3 class="govuk-heading-m">One-half</h3>
+
+{{ govukInput({
+  "label": {
+    "text": "Full name",
+    "classes": "govuk-!-width-one-half"
+  },
+  classes: "govuk-!-width-one-half",
+  id: "full-name",
+  name: "full-name"
+}) }}
+
+<h3 class="govuk-heading-m">One-third</h3>
+
+{{ govukInput({
+  "label": {
+    "text": "Full name",
+    "classes": "govuk-!-width-one-third"
+  },
+  classes: "govuk-!-width-one-third",
+  id: "full-name",
+  name: "full-name"
+}) }}
+
+<h3 class="govuk-heading-m">One-quarter</h3>
+
+{{ govukInput({
+  "label": {
+    "text": "Full name",
+    "classes": "govuk-!-width-one-quarter"
+  },
+  classes: "govuk-!-width-one-quarter",
+  id: "full-name",
+  name: "full-name"
+}) }}
