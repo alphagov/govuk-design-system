@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@govuk-frontend/all": "0.0.24-alpha",
-    "clipboard": "^1.7.1",
+    "clipboard": "^2.0.0",
     "html5shiv": "^3.7.3",
     "jquery": "^1.12.4",
     "modernizr": "^3.6.0",
