@@ -11,7 +11,7 @@ layout: layout-pane.njk
 
 ## The responsive spacing scale
 
-The design systems uses a spacing scale stemming from the typographic values. The spacing scale is responsive. For example, this means that every time you use spacing scale 9, it will be 60px on large screns and 40 px on small screens.
+The Design System uses a responsive spacing scale which adapts based on screen size. For example, if you apply spacing unit 9 to a margin, it will be 60px on large screens and 40px on small screens.
 
 <table class="govuk-c-table app-c-table--constrained">
   <caption class="govuk-c-table__caption small govuk-h-visually-hidden">GOV.UK Frontend spacing scale</caption>
@@ -106,22 +106,18 @@ If you’re building your own components and want to reference the spacing scale
 
 ### Spacing scale variables
 
-If you want to use static values that won’t change based on breakpoints you can reference the spacing scale vairiables directly like this:
+If you want to use static values that won’t change based on breakpoints you can reference the spacing scale variables directly like this:
 
 `padding-top: $govuk-spacing-scale-6`
 
 
 ### Using the responsive spacing mixin
 
-If you want to use the responsive spacing scale on your custom component you can reference the mixin like this:
+If you want to use the responsive spacing scale on your custom component you can reference the mixin.
 
-`@include govuk-responsive-margin($govuk-spacing-responsive-6, "bottom");`
+For example, use `@include govuk-responsive-margin($govuk-spacing-responsive-6, "bottom");` for 30px margin-bottom on large screens and 20px on small screens.
 
-Will give you 30px margin-bottom on large screens and 20px on small screens.
-
-`@include govuk-responsive-padding($govuk-spacing-responsive-6);` for padding on all sides.
-
-Will give you 30px padding in all directions on large screens and 20px on small screens.
+Use `@include govuk-responsive-padding($govuk-spacing-responsive-6);` for 30px padding on all sides on large screens and 20px on small screens.
 
 ## Width override classes
 
