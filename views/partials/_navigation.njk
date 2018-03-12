@@ -2,7 +2,7 @@
   <ul class="app-c-navigation__list">
     {% for item in navigation %}
     <li{% if path == item.url or item.url and item.url in path %} class="app-c-navigation--current-page"{% endif %}>
-      <a class="govuk-link" href="/{{ item.url }}">{{ item.label }}</a>
+      <a class="govuk-link" href="/{{ item.url }}" data-topnav="{{ item.label }}">{{ item.label }}</a>
     </li>
     {% endfor %}
   </ul>
