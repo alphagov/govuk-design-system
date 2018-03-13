@@ -1,0 +1,16 @@
+---
+layout: layout-example.njk
+---
+
+{% from "file-upload/macro.njk" import govukFileUpload %}
+
+{{ govukFileUpload({
+  id: 'file-upload-1',
+  name: 'file-upload-1',
+  errorMessage: {
+    text: "Please select an option"
+  },
+  label: {
+    text: 'Upload a file'
+  }
+}) }}
