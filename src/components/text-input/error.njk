@@ -1,0 +1,16 @@
+---
+layout: layout-example.njk
+---
+{% from "input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  "label": {
+    "text": "National insurance number",
+    "hintText": "It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’."
+  },
+  "errorMessage": {
+    text: "Error message goes here"
+  },
+  id: "national-insurance-number",
+  name: "national-insurance-number"
+}) }}
