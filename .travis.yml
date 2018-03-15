@@ -28,7 +28,6 @@ env:
   - GTM_TAG="GTM-53XG2JT"
 
 before_install:
-  - if [[ `npm -v | cut -d. -f1` -lt 5 ]]; then npm i -g npm@latest; fi
   # Configure NPM to use the NPM_TOKEN
   - npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN
 
