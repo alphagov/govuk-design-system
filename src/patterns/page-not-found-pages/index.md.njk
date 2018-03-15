@@ -1,0 +1,77 @@
+---
+title: Page not found pages
+description: A page not found tells someone the page they were trying to view cannot be found. They are also known as 404 pages.
+section: Patterns
+theme: Pages
+aliases:
+backlog_issue_id: 130
+layout: layout-pane.njk
+status: Experimental
+statusMessage: This pattern is currently experimental because <a class="govuk-link" href="#research-on-this-pattern">more research</a> is needed to validate it.
+---
+
+{% from "_example.njk" import example %}
+
+A page not found tells someone the page they were trying to view cannot be found. They are also known as 404 pages.
+
+{{ example({group: 'patterns', item: 'page-not-found-pages', example: 'default', html: true, nunjucks: true, open: false}) }}
+
+## When to use this pattern
+
+Use a page not found if someone is trying to view a page that does not exist. This happens if someone:
+
+- selects a link or button that takes them to a page that does not exist
+- types or copies a web address for a page that does not exist
+- types or copies a web address incorrectly
+
+Test all links and buttons to make sure they go where they are supposed to.
+
+Make sure any web addresses in your service, letters, forms and on GOV.UK are for or redirect to pages that exist.
+
+## How it works
+
+The page should have:
+
+- “Page not found – service name – GOV.UK” as the page title
+- “Page not found” as the H1
+- contact information, if it exists and helps meet a user need
+
+Contact information should be either:
+
+- a link to a specific GOV.UK contact page not a general contact page
+- formatted like a GOV.UK contact page when there is no GOV.UK page
+
+The content should be clear and concise, not blame the user. 
+
+Do not use:
+
+- breadcrumbs
+- technical jargon like 404 or bad request
+- informal or humourous words like oops
+- red text to warn people
+
+### If you do not know why the page is not found
+
+{{ example({group: 'patterns', item: 'page-not-found-pages', example: 'reason-not-known', html: true, nunjucks: true, open: false}) }}
+
+When a user submits the form, take them to a confirmation page which has:
+
+- "We have your details and what you were trying to do" as the H1
+- "We will email you when we have fixed the service" as the body content
+
+### Service mistake
+
+{{ example({group: 'patterns', item: 'page-not-found-pages', example: 'default', html: true, nunjucks: true, open: false}) }}
+
+### User mistake
+
+{{ example({group: 'patterns', item: 'page-not-found-pages', example: 'user-mistake', html: true, nunjucks: true, open: false}) }}
+
+## Research on this pattern
+
+More research is needed to find out if people:
+
+- can fix the problem on their own
+- understand what has happened
+- understand the content and if there is anything missing
+- would use a form to tell us about the problem and if that helps them

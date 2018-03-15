@@ -1,0 +1,46 @@
+---
+layout: layout-example.njk
+---
+
+<div class="govuk-o-width-container">
+
+  <div class="govuk-o-main-wrapper">
+    <div class="govuk-o-grid">
+      <div class="govuk-o-grid__item govuk-o-grid__item--two-thirds">
+
+        <h1 class="govuk-heading-xl">Page not found</h1>
+        <p class="govuk-body">If you typed the web address, check it is correct.</p>
+        <p class="govuk-body">If you pasted the web address, check you copied the entire address.</p>
+        <p class="govuk-body">If the web address is correct or you selected a link or button, you can:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>tell us what you were trying to do</li>
+            <li><a class="govuk-list" href="https://www.gov.uk/contact-the-tax-credit-office">contact the Tax Credit Helpline</a> if you need to speak to someone about your tax credits</li>
+          </ul>
+        <h2 class="govuk-heading-l">Tell us what you were trying to do</h2>
+        <form action="/url/of/next/page" method="post">
+          <div class="govuk-o-form-group"><label class="govuk-c-label" for="full-name">
+            Full name
+          </label>
+          <input class="govuk-c-input" id="full-name" name="full-name" type="text">
+          </div>
+          <div class="govuk-o-form-group"><label class="govuk-c-label" for="email">
+          Email address
+          </label>
+          <input class="govuk-c-input" id="email" name="email" type="text">
+          </div>
+          <div class="govuk-o-form-group"><label class="govuk-c-label" for="what">
+           What were you trying to do?
+            <span class="govuk-c-label__hint">
+            Do not include personal or financial information like your National Insurance number or credit card details.
+            </span>
+          </label>
+          <textarea id="more-detail" name="more-detail" rows="5" class="govuk-c-textarea"></textarea>
+          </div>
+          <input value="Continue" type="submit" class="govuk-c-button">
+        </form>
+        
+      </div>
+    </div>
+  </div>
+
+</div>
