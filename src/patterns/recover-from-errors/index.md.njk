@@ -1,0 +1,114 @@
+---
+title: Recover from errors
+description: Help users to recover from validation erros by explaining what went wrong and how to fix it.
+section: Patterns
+theme: Help users to...
+aliases:
+backlog_issue_id: 128
+layout: layout-pane.njk
+status: Experimental
+statusMessage: This pattern is currently experimental because <a class="govuk-link" href="#research-on-this-pattern">more research</a> is needed to validate it.
+---
+
+{% from "_example.njk" import example %}
+
+Help users to recover from validation erros by explaining what went wrong and how to fix it.
+
+## When to use this pattern
+
+Use this pattern and its components whenever you need to display a validation error message.
+
+Use standard messages for different components.
+
+Try to [design your service to be easy to use and understand so someone never sees an error message](/patterns/fill-in-a-form).
+
+### When not to use this pattern
+
+What someone enters or selects may be correct. An error creates a dead end. Take them to a screen that:
+
+- explains why we cannot accept the entry or selection
+- tells them what to do next
+- includes a way to leave the transaction
+
+## How it works
+
+Use the [Error summary](/components/error-summary) and [Error message](/components/error-message) components. These explain how to:
+
+- summarise errors at the top of the page
+- link the summary to each error
+- display error messages in the `<label>` or `<legend>`
+
+### Be clear and concise
+
+Describe what has happened and tell them how to fix it. The message must be in plain English, use positive language and get to the point.
+
+Do not use:
+
+- technical jargon like ‘form post error’, ‘unspecified error’ and ‘error 0x0000000643’
+- words like ‘forbidden’, ‘illegal’, ‘you forgot’ and ‘prohibited’
+- ‘please’ because it implies a choice
+- ‘sorry’ because it does not help fix the problem
+- ‘valid’ and ‘invalid’ because they do not add anything to the message
+- humour and personality
+
+Some errors work better as instructions and some work better as descriptions.
+
+‘Enter your first name’ is clear, direct and natural. ‘First name must have an entry’ is less clear, wordier and less natural. 
+
+Use both types consistently. Do not use instructions for most empty fields and a description for others.
+
+Clarity is more important than consistency.
+
+Read the message out loud to see if it sounds like something you would say.
+
+## Be consistent
+
+Use the same message in the [error summary](/components/error-summary) and [next to the field](/components/error-message) so they:
+
+- look, sound and mean the same
+- make sense out of context
+- reduce the cognitive effort needed to understand what has happened
+
+Use the question or form label in the error to provide context. For example, ‘Enter how many hours you work a week’ for ‘How many hours do you work a week?’
+
+There should be one way to say ‘Enter address line 1’ not 5.
+
+### Be specific
+
+General errors are not helpful to everyone. They do not make sense out of context. Avoid messages like:
+
+- ‘An error occurred’
+- ‘Answer the question’
+- ‘Select an option’
+- ‘Fill in the field’
+- ‘This field is required’
+
+Different errors need different messages. For example, text fields may be:
+
+- empty
+- too long
+- too short
+- using characters that are not allowed
+- in the wrong format
+
+An error for a specific situation is more helpful. It will tell someone what has happened and how to fix it.
+
+[EXAMPLE]
+
+### Track errors
+
+Find out how often people see them. This will let you:
+
+- edit content
+- A/B test variations
+- redesign a journey
+
+## Research on this pattern
+
+Error messages designed using this pattern and its components have been tested with all types of users. 
+
+Research showed people:
+
+- understand what has gone wrong
+- know how to fix the problem
+- were able to recover from the error
