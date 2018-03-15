@@ -40,3 +40,18 @@ deploy:
   skip_cleanup: true
   on:
     branch: master
+
+# Notify the developers on the team when:
+# - a build was just broken or still is broken (1)
+# - a previously broken build is fixed (2)
+#
+# Unfortunately there is currently no way to filter branches, so we get these
+# notifications for any branch (but not for the pull requests themselves)
+notifications:
+  email:
+    recipients:
+      - design-system-developers@digital.cabinet-office.gov.uk
+    # This is the default behaviour for email notifications, this just makes
+    # it explicit
+    on_success: change # 1
+    on_failure: always # 2
