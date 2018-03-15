@@ -23,7 +23,8 @@ layout: layout-example.njk
           
           {{ govukInput({
             "label": {
-              "text": "National Insurance number",
+              "html": '<h1 class="govuk-heading-xl govuk-!-mb-r4">What is your home postcode?</h1>'
+            },
               "hintHtml": "It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’."
             },
             "id": "national-insurance-number",
