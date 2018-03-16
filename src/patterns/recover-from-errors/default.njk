@@ -5,11 +5,6 @@ layout: layout-example.njk
 {% from "error-summary/macro.njk" import govukErrorSummary %}
 {% from "input/macro.njk" import govukInput %}
 
-<div class="govuk-o-width-container">
- <div class="govuk-o-main-wrapper">
-   <div class="govuk-o-grid">
-     <div class="govuk-o-grid__item govuk-o-grid__item--two-thirds">
-
        {{ govukErrorSummary({
          "titleText": "There is a problem",
          "classes": "govuk-!-mb-r8",
@@ -32,8 +27,3 @@ layout: layout-example.njk
            "text": "Enter your National Insurance number"
          }
        }) }}
-
-     </div>
-   </div>
- </div>
-</div>
