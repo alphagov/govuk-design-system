@@ -6,38 +6,34 @@ layout: layout-example.njk
 {% from "input/macro.njk" import govukInput %}
 
 <div class="govuk-o-width-container">
-  <div class="govuk-o-main-wrapper">
-    <div class="govuk-o-grid">
-      <div class="govuk-o-grid__item govuk-o-grid__item--two-thirds">
-        <form action="/url/of/next/page" method="post">
+ <div class="govuk-o-main-wrapper">
+   <div class="govuk-o-grid">
+     <div class="govuk-o-grid__item govuk-o-grid__item--two-thirds">
 
-          {{ govukErrorSummary({
-            "titleText": "There is a problem",
-            "errorList": [
-              {
-                "text": "Enter your National Insurance number",
-                "href": "#national-insurance-number"
-              }
-            ]
-          }) }}
-          
-          {{ govukInput({
-            "label": {
-              "html": '<h1 class="govuk-heading-xl govuk-!-mb-r4">What is your home postcode?</h1>'
-            },
-              "hintHtml": "It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’."
-            },
-            "id": "national-insurance-number",
-            "name": "national-insurance-number",
-            "errorMessage": {
-              "text": "Enter your National Insurance number"
-            }
-          }) }}
-    
-        </form>
-        
-      </div>
-    </div>
-  </div>
-  
+       {{ govukErrorSummary({
+         "titleText": "There is a problem",
+         "classes": "govuk-!-mb-r8",
+         "errorList": [
+           {
+             "text": "Enter your National Insurance number",
+             "href": "#national-insurance-number"
+           }
+         ]
+       }) }}
+
+       {{ govukInput({
+         "label": {
+           "html": '<h1 class="govuk-heading-xl govuk-!-mb-r4">National Insurance number</h1>',
+           "hintHtml": "It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’."
+         },
+         "id": "national-insurance-number",
+         "name": "national-insurance-number",
+         "errorMessage": {
+           "text": "Enter your National Insurance number"
+         }
+       }) }}
+
+     </div>
+   </div>
+ </div>
 </div>
