@@ -20,15 +20,17 @@ env:
   # CF_PASSWORD
   - secure: UYvRRq3/WSAF5udIroJRoN0i4ha04K9tWf5ozXAidP9oF1o3kAdz7dMlb/UWE10KCki8WwYSKufsJknSC7yygg6BgkajpUFWZc36XWUgyIlXEti3kxjq8GhHUtVQpdH/Mp702DgzJCgA4Bwj9TlfkyP+PIYW4PfljRllJtPzqgxSur++23Q+kMmvA8T/GOEyab72ZjEMQmonl0Vxf6UWx/y7/4+XLj34OTzoYQ18utWfH9o9i1KUA8dYFCT3oCauGXF8Ra6iOPmNhBjvKrT9+foyYvfbwtL+o+tcbyBQM+p2toWUC2E5e+gIyed+woNnUMFGjGzkwzRe5evhH7RbssGMnkAHn19EGht+Ycdo5Wqh06kmb6sGVFa5EfvuX8AUHaOJrjBjS4ojHA9rmrkCrLvXpKECJi/NK2if5mk39ULtmtUzBBAjgPY3ZY34wweKrRgKz1Q2+Z59nJuX4/UM/KP3lrG0IWKIqdcrnoRaXsWADmf512zFw699+3rre6Bv7h08cyJZWAPWFhZiFibFOQXpT7uVeGyF2VcNrDjVzOiUFOWb7+5IRLi3Volp9o5OHuH1aOw3vNb2KqbIvJAFcQJF4l7c8Jopp6obeyBtXsupAVOTKZQnc9rokwDvyLbCNfseXXWNPekRD9+Ey8asSM+NauWLASFIWxNrRj6M5m0=
 
-  # An NPM_TOKEN belonging to the govuk-frontend-test user, who has access to
-  # the private govuk-frontend packages.
+  # NPM_TOKEN - An npm token belonging to the govuk-frontend-test user, who has
+  # access to the private govuk-frontend packages.
+  #
+  # https://docs.npmjs.com/getting-started/working_with_tokens
   - secure: pzsV8YKYzvIgJCr69XmVb78gsEvvAsIB0A7JIq5gu0KtdCRsv9S/u3zrdkRK7XpLMsQG5PRjwl4HL822fGfYK/We8hsjbGXf/dlD6xSD6ssX+rCGqUm0jr5QZcBXK3gL3Fcmk+xc0H8zrQH5bqnSktQzMA9U77wUaqjy/rRy2+QlSJesLuIPBGJpyysvAxDREH6IXz9QR8dX9wO6fB+1lIkDtJvemH06komM9pcPEXQaoAUNP5jrMONMATQru+2gv3RzD/CN9nZJL6F+VRTn41L2+GRYIH6s/uROEYskq0MOShtJMzRrHJgUMZSTKL7rR/vGVQptNFzGbKzALM/dQFZ31t5adaTb9UWxkVcXf7yV/YzzLQuCuK+eRsTzuDux84Fvgzl8LFvGiGuYWGkSCvsmRreijgmtEQRZmXedadhWtPzF7oDjO/DlZP2nbF12r4YsS14iBgmhdiqrjJCTpeU+XKABhX/WA9OPcmUcSFsMEJrmZ6vqRImY+L50KVL24BUac6xFMBexdsiL0i7GdiGNa3WX3LC3Nml1n7vplhuWcIQomNLrb6tyzk9WLG8Q+8REIpo09qsmq/XEyGZWAehlmNxswV4HwiDxZD2/sGDj16Uc/LJeu4ydg/Ct3s6lbGmzVtnYbzChe+dtNkuabMUsQS3qQzsnYvb41XyIJls=
 
   # Google Tag Manager ID – different for production and preview builds
   - GTM_TAG="GTM-53XG2JT"
 
 before_install:
-  # Configure NPM to use the NPM_TOKEN
+  # Configure npm to use the NPM_TOKEN
   - npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN
 
 install:
