@@ -7,7 +7,7 @@
     init: function (selector) {
       try {
         // Example iframe; set the height equal to the body height
-        $(selector).iFrameResize({scrolling: 'auto'})
+        $(selector).iFrameResize({scrolling: 'auto', autoResize: false})
       } catch (err) {
         if (err) {
           console.error(err.message)
