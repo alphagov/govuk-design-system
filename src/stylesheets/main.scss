@@ -121,11 +121,12 @@ $mq-breakpoint-widescreen: 1200px;
 
   &:before {
     content: "Resize";
-    position: absolute;
+    position: fixed;
     z-index: 2;
     right: $govuk-spacing-scale-3;
     bottom: 0;
     color: $govuk-secondary-text-colour;
+    background: $govuk-white;
     @include govuk-font-regular-16;
   }
 }
