@@ -26,6 +26,7 @@
   padding: 5px $govuk-spacing-scale-6 / 2;
   @include govuk-font-regular-14;
   background: $govuk-grey-3;
+  z-index: 1;
 
   a {
     color: $govuk-link-colour;
