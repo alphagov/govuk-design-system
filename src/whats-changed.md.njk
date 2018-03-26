@@ -1,0 +1,588 @@
+---
+layout: layout-single-page-prose.njk
+---
+
+# What’s changed in GOV.UK&nbsp;Frontend
+
+[GOV.UK Frontend](https://github.com/alphagov/govuk-frontend) is the frontend library that replaces GOV.UK Elements, Frontend&nbsp;Toolkit and parts of GOV.UK Template.
+
+If you’re used to builing prototypes of production services with GOV.UK Elements or Frontend Toolkit this guide should help you transition to GOV.UK Frontend.
+
+## Component names
+
+<table class="govuk-c-table app-c-table--fixed">
+  <caption class="govuk-c-table__caption govuk-h-visually-hidden">Component names</caption>
+  <thead class="govuk-c-table__head">
+    <tr class="govuk-c-table__row">
+      <th class="govuk-c-table__header" scope="col">GOV.UK Elements</th>
+      <th class="govuk-c-table__header" scope="col">GOV.UK Frontend</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-c-table__body">
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">link-back</td>
+      <td class="govuk-c-table__cell "><a class="govuk-link" href="../components/back-link">See ‘Back link’ component</a></td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">Button</td>
+      <td class="govuk-c-table__cell "><a class="govuk-link" href="../components/button">See ‘Button’ component</a></td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">Checkboxes</td>
+      <td class="govuk-c-table__cell "><a class="govuk-link" href="../components/checkboxes">See ‘Checkboxes’ component</a></td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">Date pattern</td>
+      <td class="govuk-c-table__cell "><a class="govuk-link" href="../components/date-input">See ‘Date input’ component</a></td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">Hidden text (Progressive disclousure)</td>
+      <td class="govuk-c-table__cell "><a class="govuk-link" href="../components/details">See ‘Details’ component</a></td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">Errors and validation</td>
+      <td class="govuk-c-table__cell "><a class="govuk-link" href="../components/error-message">See ‘Error message’ component</a><br><a class="govuk-link" href="../components/error-summary">See ‘Error summary’ component</a></td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">&lt;fieldset&gt;</td>
+      <td class="govuk-c-table__cell "><a class="govuk-link" href="../components/fieldset">See ‘Fieldset’ component</a></td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">File upload</td>
+      <td class="govuk-c-table__cell "><a class="govuk-link" href="../components/file-upload">See ‘File upload’ component</a></td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">Alpha and beta banners</td>
+      <td class="govuk-c-table__cell "><a class="govuk-link" href="../components/phase-banner">See ‘Phase banner’ component</a></td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">Radio buttons</td>
+      <td class="govuk-c-table__cell "><a class="govuk-link" href="../components/radios">See ‘Radios’ component</a></td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">Select boxes</td>
+      <td class="govuk-c-table__cell "><a class="govuk-link" href="../components/select">See ‘Select’ component</a></td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">Phase tag</td>
+      <td class="govuk-c-table__cell "><a class="govuk-link" href="../components/tag">See ‘Tag’ component</a></td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">Form fields</td>
+      <td class="govuk-c-table__cell "><a class="govuk-link" href="../components/text-input">See ‘Text input’ component</a></td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">&lt;textarea&gt;</td>
+      <td class="govuk-c-table__cell "><a class="govuk-link" href="../components/textarea">See ‘Textarea’ component</a></td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">Warning text (previously Legal text)</td>
+      <td class="govuk-c-table__cell "><a class="govuk-link" href="../components/text-input">See ‘Warning text’ component</a></td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">govuk-box-highlight</td>
+      <td class="govuk-c-table__cell "><a class="govuk-link" href="../components/panel">See ‘Panel’ component</a></td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">Inset text</td>
+      <td class="govuk-c-table__cell ">Deprecated – This component is not included in GOV.UK Frontend.</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">panel (object)<br>
+        panel-border-wide<br>panel-border-narrow</td>
+      <td class="govuk-c-table__cell ">Deprecated - This is no longer a shared style, each component impliments this style separately</td>
+    </tr>
+  </tbody>
+</table>
+
+## Class names
+
+GOV.UK Frontend uses [BEM](http://getbem.com/) and [ITCSS](https://www.creativebloq.com/web-design/manage-large-scale-web-projects-new-css-architecture-itcss-41514731) to structure CSS and define class names. This means all of the existing class names have changed.
+
+### Typography class names
+
+<table class="govuk-c-table app-c-table--fixed">
+  <caption class="govuk-c-table__caption govuk-h-visually-hidden">Typography class names</caption>
+  <thead class="govuk-c-table__head">
+    <tr class="govuk-c-table__row">
+      <th class="govuk-c-table__header" scope="col">GOV.UK Elements</th>
+      <th class="govuk-c-table__header" scope="col">GOV.UK Frontend</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-c-table__body">
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">heading-xlarge</td>
+      <td class="govuk-c-table__cell ">govuk-heading-xl</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">heading-large</td>
+      <td class="govuk-c-table__cell ">govuk-heading-l</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">heading-medium</td>
+      <td class="govuk-c-table__cell ">govuk-heading-m</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">heading-small</td>
+      <td class="govuk-c-table__cell ">govuk-heading-s</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">lede</td>
+      <td class="govuk-c-table__cell ">govuk-body-l</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">&lt;p&gt;<br>body-text</td>
+      <td class="govuk-c-table__cell ">govuk-body</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">font-xsmall</td>
+      <td class="govuk-c-table__cell ">govuk-body-s</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">&lt;a&gt;</td>
+      <td class="govuk-c-table__cell ">govuk-link</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">&lt;hr&gt;</td>
+      <td class="govuk-c-table__cell ">govuk-section-break<br>govuk-section-break--visible<br>govuk-section-break--xl<br>govuk-section-break--l<br>govuk-section-break--m</td>
+    </tr>
+  </tbody>
+</table>
+
+### Lists
+
+<table class="govuk-c-table app-c-table--fixed">
+  <caption class="govuk-c-table__caption govuk-h-visually-hidden">Lists</caption>
+  <thead class="govuk-c-table__head">
+    <tr class="govuk-c-table__row">
+      <th class="govuk-c-table__header" scope="col">GOV.UK Elements</th>
+      <th class="govuk-c-table__header" scope="col">GOV.UK Frontend</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-c-table__body">
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">list</td>
+      <td class="govuk-c-table__cell ">govuk-list</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">list<br>list-bullet</td>
+      <td class="govuk-c-table__cell ">govuk-list<br>govuk-list--bullet</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">list<br>list-number</td>
+      <td class="govuk-c-table__cell ">govuk-list<br>govuk-list--number</td>
+    </tr>
+  </tbody>
+</table>
+
+
+### Layout and grid system class names
+
+<table class="govuk-c-table app-c-table--fixed">
+  <caption class="govuk-c-table__caption govuk-h-visually-hidden">Grid system class names</caption>
+  <thead class="govuk-c-table__head">
+    <tr class="govuk-c-table__row">
+      <th class="govuk-c-table__header" scope="col">GOV.UK Elements</th>
+      <th class="govuk-c-table__header" scope="col">GOV.UK Frontend</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-c-table__body">
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">grid-row</td>
+      <td class="govuk-c-table__cell ">govuk-o-grid</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">N/A</td>
+      <td class="govuk-c-table__cell ">govuk-o-grid__item</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">column-full</td>
+      <td class="govuk-c-table__cell ">govuk-o-grid__item<br>govuk-o-grid__item--full</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">column-one-half</td>
+      <td class="govuk-c-table__cell ">govuk-o-grid__item<br>govuk-o-grid__item--one-half</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">column-one-third</td>
+      <td class="govuk-c-table__cell ">govuk-o-grid__item<br>govuk-o-grid__item--one-third</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">column-two-thirds</td>
+      <td class="govuk-c-table__cell ">govuk-o-grid__item<br>govuk-o-grid__item--two-thirds</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">column-one-quarter</td>
+      <td class="govuk-c-table__cell ">govuk-o-grid__item<br>govuk-o-grid__item--one-quarter</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">#content</td>
+      <td class="govuk-c-table__cell "><a class="govuk-link" href="../styles/layout#page-wrappers">See ‘Page wrappers’</a></td>
+    </tr>
+
+  </tbody>
+</table>
+
+
+### Form related class names
+
+<table class="govuk-c-table app-c-table--fixed">
+  <caption class="govuk-c-table__caption govuk-h-visually-hidden">Helper class names</caption>
+  <thead class="govuk-c-table__head">
+    <tr class="govuk-c-table__row">
+      <th class="govuk-c-table__header" scope="col">GOV.UK Elements</th>
+      <th class="govuk-c-table__header" scope="col">GOV.UK Frontend</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-c-table__body">
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">form-group</td>
+      <td class="govuk-c-table__cell ">govuk-o-form-group</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">form-hint</td>
+      <td class="govuk-c-table__cell ">Specific to component, for example<br>govuk-c-label__hint</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">form-label</td>
+      <td class="govuk-c-table__cell ">Specific to component, for example<br>govuk-c-label<br>govuk-c-radios__label</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">form-label-bold</td>
+      <td class="govuk-c-table__cell ">govuk-c-label--bold</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">form-control<br>form-control-3-4<br>form-control-2-3<br>form-control-1-2<br>form-control-1-3<br>form-control-1-4<br>form-control-1-8</td>
+      <td class="govuk-c-table__cell ">No longer specific to forms<br><a class="govuk-link" href="../styles/spacing#width-override-classes">See ‘Width override classes’</a></td>
+    </tr>
+
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">form-section</td>
+      <td class="govuk-c-table__cell ">Deprecated - Not required with new spacing implementation</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">form-group-related</td>
+      <td class="govuk-c-table__cell ">Deprecated - Not required with new spacing implementation</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">form-group-compound</td>
+      <td class="govuk-c-table__cell ">Deprecated - Not required with new spacing implementation</td>
+    </tr>
+  </tbody>
+</table>
+
+
+### Helper class names
+
+<table class="govuk-c-table app-c-table--fixed">
+  <caption class="govuk-c-table__caption govuk-h-visually-hidden">Helper class names</caption>
+  <thead class="govuk-c-table__head">
+    <tr class="govuk-c-table__row">
+      <th class="govuk-c-table__header" scope="col">GOV.UK Elements</th>
+      <th class="govuk-c-table__header" scope="col">GOV.UK Frontend</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-c-table__body">
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">visually-hidden, visuallyhidden</td>
+      <td class="govuk-c-table__cell ">govuk-h-visually-hidden<br>govuk-h-visually-hidden-focussable</td>
+    </tr>
+
+  </tbody>
+</table>
+
+### Override class names
+
+<table class="govuk-c-table app-c-table--fixed">
+  <caption class="govuk-c-table__caption govuk-h-visually-hidden">Override class names</caption>
+  <thead class="govuk-c-table__head">
+    <tr class="govuk-c-table__row">
+      <th class="govuk-c-table__header" scope="col">GOV.UK Elements</th>
+      <th class="govuk-c-table__header" scope="col">GOV.UK Frontend</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-c-table__body">
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">font-xxlarge</td>
+      <td class="govuk-c-table__cell ">govuk-!-f-80</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">font-xlarge</td>
+      <td class="govuk-c-table__cell ">govuk-!-f-48</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">font-large</td>
+      <td class="govuk-c-table__cell ">govuk-!-f-36</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">font-medium</td>
+      <td class="govuk-c-table__cell ">govuk-!-f-24</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">font-small</td>
+      <td class="govuk-c-table__cell ">govuk-!-f-19</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">font-xsmall</td>
+      <td class="govuk-c-table__cell ">govuk-!-f-16</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">bold-xxlarge</td>
+      <td class="govuk-c-table__cell ">govuk-!-f-80<br>govuk-!-w-bold</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">bold-xlarge</td>
+      <td class="govuk-c-table__cell ">govuk-!-f-48<br>govuk-!-w-bold</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">bold-large</td>
+      <td class="govuk-c-table__cell ">govuk-!-f-36<br>govuk-!-w-bold</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">bold-medium</td>
+      <td class="govuk-c-table__cell ">govuk-!-f-24<br>govuk-!-w-bold</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">bold-small</td>
+      <td class="govuk-c-table__cell ">govuk-!-f-19<br>govuk-!-w-bold</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">bold-xsmall</td>
+      <td class="govuk-c-table__cell ">govuk-!-f-16<br>govuk-!-w-bold</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">bold</td>
+      <td class="govuk-c-table__cell ">govuk-!-w-bold</td>
+    </tr>
+  </tbody>
+</table>
+
+## Mixins
+
+
+### Typography
+<table class="govuk-c-table app-c-table--fixed">
+  <caption class="govuk-c-table__caption govuk-h-visually-hidden">Helper class names</caption>
+  <thead class="govuk-c-table__head">
+    <tr class="govuk-c-table__row">
+      <th class="govuk-c-table__header" scope="col">GOV.UK Frontend Tooklit</th>
+      <th class="govuk-c-table__header" scope="col">GOV.UK Frontend</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-c-table__body">
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">@include core-80</td>
+      <td class="govuk-c-table__cell ">@include govuk-font-regular-80</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">@include core-48</td>
+      <td class="govuk-c-table__cell ">@include govuk-font-regular-48</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">@include core-36</td>
+      <td class="govuk-c-table__cell ">@include govuk-font-regular-36</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">@include core-27</td>
+      <td class="govuk-c-table__cell ">@include govuk-font-regular-27</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">@include core-24</td>
+      <td class="govuk-c-table__cell ">@include govuk-font-regular-24</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">@include core-19</td>
+      <td class="govuk-c-table__cell ">@include govuk-font-regular-19</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">@include core-16</td>
+      <td class="govuk-c-table__cell ">@include govuk-font-regular-16</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">@include core-14</td>
+      <td class="govuk-c-table__cell ">@include govuk-font-regular-14</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">@include bold-80</td>
+      <td class="govuk-c-table__cell ">@include govuk-font-bold-80</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">@include bold-48</td>
+      <td class="govuk-c-table__cell ">@include govuk-font-bold-48</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">@include bold-36</td>
+      <td class="govuk-c-table__cell ">@include govuk-font-bold-36</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">@include bold-27</td>
+      <td class="govuk-c-table__cell ">@include govuk-font-bold-27</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">@include bold-24</td>
+      <td class="govuk-c-table__cell ">@include govuk-font-bold-24</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">@include bold-19</td>
+      <td class="govuk-c-table__cell ">@include govuk-font-bold-19</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">@include bold-16</td>
+      <td class="govuk-c-table__cell ">@include govuk-font-bold-16</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">@include bold-14</td>
+      <td class="govuk-c-table__cell ">@include govuk-font-bold-14</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">@include heading-80</td>
+      <td class="govuk-c-table__cell ">Deprecated – 80px hardings are not used, @include govuk-font-bold-80 should be used instead</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">@include heading-48</td>
+      <td class="govuk-c-table__cell ">@extend %govuk-heading-xl</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">@include heading-36</td>
+      <td class="govuk-c-table__cell ">@extend %govuk-heading-l</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">@include heading-27</td>
+      <td class="govuk-c-table__cell ">Deprecated – 27px hardings are not used, @include govuk-font-bold-27 should be used instead</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">@include heading-24</td>
+      <td class="govuk-c-table__cell ">@extend %govuk-heading-m</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">@include copy-19</td>
+      <td class="govuk-c-table__cell ">@extend %govuk-body</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">@include copy-14</td>
+      <td class="govuk-c-table__cell ">@extend %govuk-body-xs</td>
+    </tr>
+  </tbody>
+</table>
+
+### Layout
+<table class="govuk-c-table app-c-table--fixed">
+  <caption class="govuk-c-table__caption govuk-h-visually-hidden">Helper class names</caption>
+  <thead class="govuk-c-table__head">
+    <tr class="govuk-c-table__row">
+      <th class="govuk-c-table__header" scope="col">GOV.UK Frontend Tooklit</th>
+      <th class="govuk-c-table__header" scope="col">GOV.UK Frontend</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-c-table__body">
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">@extend site-width-container</td>
+      <td class="govuk-c-table__cell ">@include govuk-width-container</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">@include grid-column( 1/4 )</td>
+      <td class="govuk-c-table__cell ">Deprecated - Applying grid properties to other elements isn’t supported in GOV.UK Frontend</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">@include grid-column( 1/2 )</td>
+      <td class="govuk-c-table__cell ">Deprecated - Applying grid properties to other elements isn’t supported in GOV.UK Frontend</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">@include grid-column( 1/3 )</td>
+      <td class="govuk-c-table__cell ">Deprecated - Applying grid properties to other elements isn’t supported in GOV.UK Frontend</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">@include grid-column( 2/3 )</td>
+      <td class="govuk-c-table__cell ">Deprecated - Applying grid properties to other elements isn’t supported in GOV.UK Frontend</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell "> @include grid-column( 1/3, $full-width: desktop );</td>
+      <td class="govuk-c-table__cell ">Deprecated - Applying grid properties to other elements isn’t supported in GOV.UK Frontend</td>
+    </tr>
+  </tbody>
+</table>
+
+### Media queries
+<table class="govuk-c-table app-c-table--fixed">
+  <caption class="govuk-c-table__caption govuk-h-visually-hidden">Helper class names</caption>
+  <thead class="govuk-c-table__head">
+    <tr class="govuk-c-table__row">
+      <th class="govuk-c-table__header" scope="col">GOV.UK Frontend Tooklit</th>
+      <th class="govuk-c-table__header" scope="col">GOV.UK Frontend</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-c-table__body">
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">@include media(desktop)</td>
+      <td class="govuk-c-table__cell ">@include mq($from: desktop)<br>@include mq($to: desktop)</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">@include media(tablet)</td>
+      <td class="govuk-c-table__cell ">@include mq($from: tablet)<br>@include mq($to: tablet)</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">@include media(mobile)</td>
+      <td class="govuk-c-table__cell ">@include mq($from: mobile)<br>@include mq($to: mobile)</td>
+    </tr>
+  </tbody>
+</table>
+
+### Images
+<table class="govuk-c-table app-c-table--fixed">
+  <caption class="govuk-c-table__caption govuk-h-visually-hidden">Helper class names</caption>
+  <thead class="govuk-c-table__head">
+    <tr class="govuk-c-table__row">
+      <th class="govuk-c-table__header" scope="col">GOV.UK Frontend Tooklit</th>
+      <th class="govuk-c-table__header" scope="col">GOV.UK Frontend</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-c-table__body">
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">@include device-pixel-ratio($ratio: 2)</td>
+      <td class="govuk-c-table__cell ">@include govuk-h-device-pixel-ratio($ratio: 2)</td>
+    </tr>
+  </tbody>
+</table>
+
+### Shims
+
+<table class="govuk-c-table app-c-table--fixed">
+  <caption class="govuk-c-table__caption govuk-h-visually-hidden">Helper class names</caption>
+  <thead class="govuk-c-table__head">
+    <tr class="govuk-c-table__row">
+      <th class="govuk-c-table__header" scope="col">GOV.UK Frontend Tooklit</th>
+      <th class="govuk-c-table__header" scope="col">GOV.UK Frontend</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-c-table__body">
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">@include inline-block</td>
+      <td class="govuk-c-table__cell ">Deprecated – inline-block is now the default for any components</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">@extend contain-floats</td>
+      <td class="govuk-c-table__cell ">@include govuk-h-clearfix</td>
+    </tr>
+  </tbody>
+</table>
+
+### Internet Explorer
+<table class="govuk-c-table app-c-table--fixed">
+  <caption class="govuk-c-table__caption govuk-h-visually-hidden">Helper class names</caption>
+  <thead class="govuk-c-table__head">
+    <tr class="govuk-c-table__row">
+      <th class="govuk-c-table__header" scope="col">GOV.UK Frontend Tooklit</th>
+      <th class="govuk-c-table__header" scope="col">GOV.UK Frontend</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-c-table__body">
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">@include ie-lte(8)</td>
+      <td class="govuk-c-table__cell ">@include govuk-ie-lte(8)</td>
+    </tr>
+    <tr class="govuk-c-table__row">
+      <td class="govuk-c-table__cell ">@include ie(6)</td>
+      <td class="govuk-c-table__cell ">@include govuk-ie(6)</td>
+    </tr>
+  </tbody>
+</table>
