@@ -17,6 +17,23 @@ Don’t make assumptions about what devices people are using. Design for differe
 
 The default maximum page width is 1020px, but you can make it wider if your content requires it.
 
+## Common layouts
+
+### Row 1: Two-thirds
+
+{{ example({group: 'styles', item: 'layout', example: 'common-two-thirds', html: true, open: true}) }}
+
+### Two-thirds / One-third
+
+{{ example({group: 'styles', item: 'layout', example: 'common-two-thirds-one-third', html: true, open: true}) }}
+
+### Row 1: Two thirds <br>Row 2: Two-thirds / One-third
+
+{{ example({group: 'styles', item: 'layout', example: 'common-two-thirds-two-thirds-one-third', html: true, open: true}) }}
+
+
+If you want to build your layout from scratch, here’s an explaination of how the page wrappers and grid system works.
+
 ## Page wrappers
 
 To set up your layout you will need to create 2 wrappers. The first should have the class  `govuk-o-width-container`, which sets the maximum width of the content but doesn’t add any vertical margin or padding.
@@ -39,7 +56,7 @@ Most GOV.UK pages follow a two-thirds to one-third layout but the grid system al
 
 Your main content should always be in a two-thirds column even if you’re not using a corresponding one-third column for secondary content.
 
-## Understanding the grid system
+### Understanding the grid system
 
 The grid is structured with a `govuk-o-grid` wrapper which acts as a row to contain your grid columns.
 
