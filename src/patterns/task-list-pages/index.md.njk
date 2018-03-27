@@ -10,13 +10,15 @@ status: Experimental
 statusMessage: This pattern is currently experimental because <a class="govuk-link" href="#next-steps">more research</a> is needed to validate it.
 ---
 
+{% from "_example.njk" import example %}
+
 Task list pages help users understand:
 
 - the tasks involved in completing a transaction
 - the order they should complete tasks in
 - when they have completed tasks
 
-![A screenshot showing an example of the task list as used in a fictional service](task-list-whole.png)
+{{ example({group: 'patterns', item: 'task-list-pages', example: 'default', html: true, nunjucks: false, open: false}) }}
 
 ## When to use this pattern
 
