@@ -6,7 +6,11 @@ const paths = require('../config/paths.json') // specify paths to main working d
 // setup synchronised browser testing
 metalsmith.use(browsersync({
   server: paths.public, // server directory
-  files: [paths.source + '**/*', paths.views + '**/*'] // files to watch
+  files: [
+    paths.source + '**/*',
+    paths.views + '**/*',
+    'node_modules/@govuk-frontend/**/*'
+  ] // files to watch
 }))
 
 // build to destination directory
