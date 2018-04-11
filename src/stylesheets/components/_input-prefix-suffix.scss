@@ -1,0 +1,28 @@
+// Styles for form input prefix and suffixes
+
+.input-wrapper{
+  display: flex;
+}
+
+$govuk-light-grey: #f3f2f1; // New light grey colour
+
+.govuk-c-input__prefix,
+.govuk-c-input__suffix{
+  background-color: $govuk-light-grey;
+  white-space: nowrap;
+  cursor: default; // emphasise non-editable status of prefixes and suffixes
+  flex: 0;
+  padding: 6px; // Fix text alignment
+}
+
+.govuk-c-input__prefix{
+  border-right: 0;
+}
+
+.govuk-c-input__suffix{
+  border-left: 0;
+}
+
+.govuk-c-input:focus {
+  z-index: 1 // Bump up the z-index on focus so it appears over the suffix
+}

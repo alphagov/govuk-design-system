@@ -20,6 +20,9 @@ $app-code-color: #dd1144;
 @import "components/table";
 @import "components/tag";
 
+// New styles for text input prefixes and suffixes
+@import "components/input-prefix-suffix";
+
 body {
   margin: 0;
 }

@@ -1,0 +1,66 @@
+---
+layout: layout-example.njk
+---
+
+{% macro govukInput2(params) %}
+  {% from "label/macro.njk" import govukLabel %}
+
+<div class="govuk-o-form-group {%- if params.errorMessage %} govuk-o-form-group--error{% endif %}">
+
+  {{- govukLabel({
+    html: params.label.html,
+    text: params.label.text,
+    hintText: params.label.hintText,
+    hintHtml: params.label.hintHtml,
+    classes: params.label.classes,
+    attributes: params.label.attributes,
+    errorMessage: params.errorMessage,
+    for: params.id
+  }) -}}
+<div class="input-wrapper">
+{%- if params.prefix %}<span class="govuk-c-input govuk-c-input__prefix" aria-hidden="true">{{ params.prefix }}</span>{% endif %}<input class="govuk-c-input {%- if params.classes %} {{ params.classes }}{% endif %} {%- if params.errorMessage %} govuk-c-input--error{% endif %}" id="{{ params.id }}" name="{{ params.name }}" type="{{ params.type | default('text') }}"
+  {%- if params.value %} value="{{ params.value}}"{% endif %}
+  {%- for attribute, value in params.attributes %} {{ attribute }}="{{ value }}"{% endfor -%}>{%- if params.suffix %}<span class="govuk-c-input govuk-c-input__suffix" aria-hidden="true">{{ params.suffix }}</span>{% endif %}
+</div>
+</div>
+{% endmacro %}
+
+{{ govukInput2({
+  "label": {
+    "html": "Ticket price <span class='visually-hidden'>in £</span>"
+  },
+  id: "ticket-price",
+  name: "ticket-price",
+  classes: "govuk-!-width-one-quarter",
+  prefix: "£"
+}) }}
+
+{{ govukInput2({
+  "label": {
+    "text": "Access code"
+  },
+  id: "access-code",
+  name: "access-code",
+  classes: "govuk-!-width-one-quarter",
+  prefix: "PEX"
+}) }}
+
+{{ govukInput2({
+  "label": {
+    "html": "Total weight <span class='visually-hidden'>in kilograms</span>"
+  },
+  id: "total-weight",
+  name: "total-weight",
+  classes: "govuk-!-width-one-quarter",
+  suffix: "kg"
+}) }}
+
+{{ govukInput2({
+  "label": {
+    "text": "Percent complete"
+  },
+  id: "percent-complete",
+  name: "percent-complete",
+  classes: "govuk-!-width-one-quarter",
+  suffix: "%"
+}) }}

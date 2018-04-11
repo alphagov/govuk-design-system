@@ -43,6 +43,19 @@ Ensure that users can still easily enter the information they need on smaller sc
 
 Users often need to copy and paste information into a text input, so you shouldn’t prevent them from doing this.
 
+### Prefixes and suffixes
+
+Use prefixes and suffixes to indicate things like measurement units, currencies, percentages and area codes.
+
+{{ example({group: 'components', item: 'text-input', frontendComponentName: 'input', example: 'input-prefix-suffix', html: true, nunjucks: true, open: true}) }}
+
+The contents of prefixes and suffixes are a purely visual prompt and are not read out by assistive technology. Instead, use hidden text inside the form label to provide the necessary context.
+
+Some users will not notice the prefix or suffix and will enter it manually into the input. You should ignore manually entered prefixes and suffixes when validating the input.
+
+
 ## Research on this component
+
+More research is needed to determine how best to handle situations where users enter invalid characters into a form input control.
 
 If you’ve used this component, get in touch to share your user research findings.
