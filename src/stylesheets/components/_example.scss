@@ -1,17 +1,17 @@
 // Example styles
-.app-c-example-wrapper {
+.app-example-wrapper {
   @include govuk-responsive-margin($govuk-spacing-responsive-6, "top");
   @include govuk-responsive-margin($govuk-spacing-responsive-6, "bottom");
   @include govuk-font-regular-19;
 }
 
-.app-c-example {
+.app-example {
   position: relative;
   border: 1px solid $govuk-border-colour;
   background: $govuk-grey-3;
 }
 
-.app-c-example--tabs {
+.app-example--tabs {
   @include govuk-responsive-margin($govuk-spacing-responsive-0, "bottom");
 
   @include mq($from: desktop) {
@@ -19,7 +19,7 @@
   }
 }
 
-.app-c-example__new-window {
+.app-example__new-window {
   position: absolute;
   top: 0;
   left: 0;
@@ -40,7 +40,7 @@
   }
 }
 
-.app-c-example__frame {
+.app-example__frame {
   display: block;
   width: 100%;
   max-width: 100%;
@@ -49,7 +49,7 @@
   background: $govuk-white;
 }
 
-.app-c-example__frame--resizable {
+.app-example__frame--resizable {
   min-width: 230px;
   min-height: $govuk-spacing-scale-6 * 2;
   overflow: auto;

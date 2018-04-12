@@ -1,7 +1,7 @@
 @include govuk-exports("pane") {
   $toc-width: 300px;
 
-  .app-o-pane {
+  .app-pane {
     $pane-height: 100vh;
 
     @include mq($from: tablet) {
@@ -23,7 +23,7 @@
     }
   }
 
-  .app-o-pane__header {
+  .app-pane__header {
     @include mq($from: tablet) {
       display: flex;
       flex-direction: column;
@@ -39,7 +39,7 @@
     }
   }
 
-  .app-o-pane__body {
+  .app-pane__body {
     @include mq($from: tablet) {
       display: flex;
       position: relative;
@@ -66,7 +66,7 @@
     }
   }
 
-  .app-o-pane__subnav {
+  .app-pane__subnav {
     border-right: 1px solid $govuk-border-colour;
     @include mq($from: tablet) {
       width: $toc-width;
@@ -82,11 +82,11 @@
     }
   }
 
-  .app-o-pane__subnav-mobile-overview {
+  .app-pane__subnav-mobile-overview {
     display: none; // No JS fallback for overview links
   }
 
-  .app-o-pane__content {
+  .app-pane__content {
     @include mq($from: tablet) {
       display: flex;
       margin-left: auto;
@@ -111,23 +111,23 @@
 
   .no-js {
 
-    .app-o-pane__subnav-mobile-overview {
+    .app-pane__subnav-mobile-overview {
       display: block; // No JS fallback for overview links
     }
   }
 
   .no-flexbox {
-    .app-o-pane__body {
+    .app-pane__body {
       display: block;
     }
 
-    .app-o-pane__subnav {
+    .app-pane__subnav {
       width: $toc-width;
       float: left;
       overflow-x: hidden;
     }
 
-    .app-o-pane__content {
+    .app-pane__content {
       overflow-x: hidden;
     }
   }

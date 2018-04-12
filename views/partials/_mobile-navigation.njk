@@ -1,19 +1,19 @@
-<nav id="app-c-mobile-nav" class="app-c-mobile-nav js-app-mobile-nav" role="navigation">
-  <ul class="app-c-mobile-nav__list">
+<nav id="app-mobile-nav" class="app-mobile-nav js-app-mobile-nav" role="navigation">
+  <ul class="app-mobile-nav__list">
     {% for item in navigation %}
     <li>
       <a class="govuk-link js-mobile-nav-subnav-toggler" href="/{{ item.url }}">{{ item.label }}</a>
       {% if item.items %}
-      <ul class="app-c-mobile-nav__subnav js-app-mobile-nav-subnav app-c-mobile-nav__subnav--hidden">
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden">
         <li{% if path == item.url %} class="current-page"{% endif %}>
           <a class="govuk-link" href="/{{ item.url }}">{{ item.label }} overview</a>
         </li>
 
         {% for theme, items in item.items | groupby("theme") %}
           {% if theme != 'undefined' %}
-            <h4 class="app-c-mobile-nav__theme">{{ theme }}</h4>
+            <h4 class="app-mobile-nav__theme">{{ theme }}</h4>
           {% endif %}
-          <ul class="app-c-mobile-nav__theme-nav">
+          <ul class="app-mobile-nav__theme-nav">
           {% for subitem in items %}
             <li{% if path == subitem.url %} class="current-page"{% endif %}>
               <a class="govuk-link" href="/{{ subitem.url }}">{{ subitem.label }}</a>

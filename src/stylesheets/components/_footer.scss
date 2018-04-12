@@ -4,7 +4,7 @@
 // GOV.UK Frontend footer adapted for full width
 
 @include govuk-exports("app-footer") {
-  .app-o-width-container--full {
+  .app-width-container--full {
     max-width: 100%;
     padding: 0;
     @include mq($from: desktop) {
@@ -13,7 +13,7 @@
     }
   }
 
-  .app-c-footer .govuk-c-footer__section-break {
+  .app-footer .govuk-c-footer__section-break {
     margin-bottom: 0;
     border-bottom: 0;
   }

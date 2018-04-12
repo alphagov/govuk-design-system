@@ -10,35 +10,35 @@
 
 @include govuk-exports("header") {
 
-  .app-c-header {
+  .app-header {
     padding: $govuk-spacing-scale-2 $govuk-spacing-scale-3;
     border-bottom: 10px solid $govuk-blue;
     color: $govuk-white;
     background: $govuk-black;
   }
 
-  .app-c-header__logotype {
+  .app-header__logotype {
     margin-right: $govuk-spacing-scale-1;
   }
 
-  .app-c-header__logotype-crown {
+  .app-header__logotype-crown {
     margin-right: 1px;
     fill: currentColor;
     vertical-align: middle;
   }
 
-  .app-c-header__logotype-crown-fallback-image {
+  .app-header__logotype-crown-fallback-image {
     width: 36px;
     height: 32px;
     border: 0;
     vertical-align: middle;
   }
 
-  .app-c-header__title {
+  .app-header__title {
     @include govuk-font-regular-24;
   }
 
-  .app-c-header__link {
+  .app-header__link {
     // Font size needs to be set on the link so that the box sizing is correct
     // in Firefox
     @include govuk-typography-common;
@@ -67,18 +67,18 @@
   }
 
   @include mq($media-type: print) {
-    .app-c-header {
+    .app-header {
       border-bottom-width: 0;
       color: $govuk-black;
       background: transparent;
     }
 
     // Hide the inverted crown when printing in browsers that don't support SVG.
-    .app-c-header__logotype-crown-fallback-image {
+    .app-header__logotype-crown-fallback-image {
       display: none;
     }
 
-    .app-c-header__link {
+    .app-header__link {
       &:link,
       &:visited {
         color: $govuk-black;
@@ -91,12 +91,12 @@
     }
   }
 
-  .app-c-header-mobile-nav-toggler-wrapper {
+  .app-header-mobile-nav-toggler-wrapper {
     display: block;
     text-align: right;
   }
 
-  .app-c-header-mobile-nav-toggler {
+  .app-header-mobile-nav-toggler {
     width: 100px;
     margin-top: $govuk-spacing-scale-2;
     margin-bottom: $govuk-spacing-scale-2;
@@ -111,7 +111,7 @@
       box-shadow: 0 0 0 $govuk-black; // Override the button default green
     }
 
-    &--active.app-c-header-mobile-nav-toggler {
+    &--active.app-header-mobile-nav-toggler {
       background-color: $govuk-blue;
       box-shadow: 0 0 0 $govuk-blue;
     }
@@ -123,13 +123,13 @@
 
   // Begin adjustments for font baseline offset
   // These should be removed when the font is updated with the correct baseline
-  .app-c-header__logotype-crown,
-  .app-c-header__logotype-crown-fallback-image {
+  .app-header__logotype-crown,
+  .app-header__logotype-crown-fallback-image {
     position: relative;
     top: -4px;
   }
 
-  .app-c-header {
+  .app-header {
     $offset: 3px;
     padding-top: $govuk-spacing-scale-2 + $offset;
     padding-bottom: $govuk-spacing-scale-2 - $offset;

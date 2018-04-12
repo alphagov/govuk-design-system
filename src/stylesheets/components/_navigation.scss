@@ -1,4 +1,4 @@
-.app-c-navigation {
+.app-navigation {
   $navigation-height: 53px;
   padding-right: $govuk-spacing-scale-3;
   padding-left: $govuk-spacing-scale-3;
@@ -26,7 +26,7 @@
         border-bottom: 4px solid $govuk-light-blue;
       }
 
-      &.app-c-navigation--current-page {
+      &.app-navigation--current-page {
         border-bottom: 4px solid $govuk-blue !important;
 
         a:hover {

@@ -7,10 +7,10 @@
   // This module is dependent on /vendor/clipboard.js
   GOVUK.copy = {
     init: function (selector) {
-      $(selector).parent().prepend('<a class="govuk-link app-c-link--copy" href="#copy" aria-live="assertive">Copy</a>')
+      $(selector).parent().prepend('<a class="govuk-link app-link--copy" href="#copy" aria-live="assertive">Copy</a>')
       // Copy to clipboard
       try {
-        new ClipboardJS('.app-c-link--copy', {
+        new ClipboardJS('.app-link--copy', {
           target: function (trigger) {
             return trigger.nextElementSibling
           }

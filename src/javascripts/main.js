@@ -9,7 +9,7 @@ $(document).ready(function () {
   GOVUK.tabs.init('.js-example')
 
   // Add copy to clipboard to code blocks inside tab containers
-  GOVUK.copy.init('.app-c-tabs__container pre')
+  GOVUK.copy.init('.app-tabs__container pre')
 
   // Initialise mobile navigation
   GOVUK.mobileNav.init()
