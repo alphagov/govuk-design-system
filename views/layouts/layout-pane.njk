@@ -1,13 +1,13 @@
 {% extends "_generic.njk" %}
 
 {% block body %}
-<div class="app-o-pane__body">
-  <div class="app-o-pane__subnav app-u-hide-mobile">
+<div class="app-pane__body">
+  <div class="app-pane__subnav app-u-hide-mobile">
     {% include "_subnav.njk" %}
   </div>
-  <div class="app-o-pane__content">
-    <main id="content" class="app-c-content" role="main">
-      <div class="app-c-content__header">
+  <div class="app-pane__content">
+    <main id="content" class="app-content" role="main">
+      <div class="app-content__header">
         <h1 class="govuk-heading-xl">
           <span class="govuk-caption-xl">
           {% if theme %}
@@ -38,7 +38,7 @@
       {% endif %}
     </main>
     {# No JS fallback to show overview #}
-    <div class="app-o-pane__subnav-mobile-overview app-u-hide-desktop">
+    <div class="app-pane__subnav-mobile-overview app-u-hide-desktop">
       {% include "_subnav.njk" %}
     </div>
     {% include "_footer.njk" %}

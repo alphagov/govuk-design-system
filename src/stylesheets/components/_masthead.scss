@@ -1,16 +1,16 @@
-.app-c-masthead {
+.app-masthead {
   @include govuk-responsive-padding($govuk-spacing-responsive-6, "top");
   @include govuk-responsive-padding($govuk-spacing-responsive-6, "bottom");
   color: $govuk-white;
   background-color: $govuk-blue;
 }
 
-.app-c-masthead__title {
+.app-masthead__title {
   color: $govuk-white;
   @include govuk-responsive-margin($govuk-spacing-responsive-6, "bottom");
 }
 
-.app-c-masthead__description {
+.app-masthead__description {
   @include govuk-font-regular-24;
   margin-bottom: 0;
 }

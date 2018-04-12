@@ -1,11 +1,11 @@
 @include govuk-exports("subnav") {
 
-  .app-c-subnav {
+  .app-subnav {
     padding: $govuk-spacing-scale-3;
     @include govuk-font-regular-16;
   }
 
-  .app-c-subnav__section {
+  .app-subnav__section {
     margin: 0 0 $govuk-spacing-scale-4;
     padding: 0;
     list-style-type: none;
@@ -26,7 +26,7 @@
     }
   }
 
-  .app-c-subnav__section-item--current {
+  .app-subnav__section-item--current {
     a,
     a:link,
     a:visited {
@@ -36,7 +36,7 @@
     }
   }
 
-  .app-c-subnav__theme {
+  .app-subnav__theme {
     margin: 0;
     padding: $govuk-spacing-scale-2 $govuk-spacing-scale-3;
     color: $govuk-grey-1;

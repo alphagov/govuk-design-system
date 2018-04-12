@@ -20,7 +20,7 @@ the GOV.UK colour palette when you update GOV.UK Frontend.
 
 ## Main colours
 
-<table class="govuk-body app-c-colour-list">
+<table class="govuk-body app-colour-list">
 
   <thead class="govuk-h-visually-hidden">
     <th scope="col">Sass name</th>
@@ -42,16 +42,16 @@ the GOV.UK colour palette when you update GOV.UK Frontend.
 
     {% for colour in group %}
 
-      <tr class="app-c-colour-list-row">
+      <tr class="app-colour-list-row">
 
-        <th class="app-c-colour-list-column app-c-colour-list-column--name">
-          <span class="app-c-swatch {% if colour.colour == "#fff" %}app-c-swatch-border{% endif %}" style="background-color:{{colour.colour}}"></span>
+        <th class="app-colour-list-column app-colour-list-column--name">
+          <span class="app-swatch {% if colour.colour == "#fff" %}app-swatch-border{% endif %}" style="background-color:{{colour.colour}}"></span>
           {{colour.name}}
         </th>
-        <td class="app-c-colour-list-column app-c-colour-list-column--colour">
+        <td class="app-colour-list-column app-colour-list-column--colour">
           {{colour.colour}}
         </td>
-        <td class="app-c-colour-list-column app-c-colour-list-column--notes">
+        <td class="app-colour-list-column app-colour-list-column--notes">
           {{colour.notes}}
         </td>
 
@@ -65,7 +65,7 @@ the GOV.UK colour palette when you update GOV.UK Frontend.
 
 ## Greyscale
 
-<table class="govuk-body app-c-colour-list">
+<table class="govuk-body app-colour-list">
 
   <thead class="govuk-h-visually-hidden">
     <th scope="col">Sass name</th>
@@ -75,17 +75,17 @@ the GOV.UK colour palette when you update GOV.UK Frontend.
 
   {% for colour in colours.greyscale %}
 
-    <tr class="app-c-colour-list-row">
+    <tr class="app-colour-list-row">
 
-      <th class="app-c-colour-list-column app-c-colour-list-column--name">
-        <span class="app-c-swatch {% if colour.colour == "#fff" %}app-c-swatch-border{% endif %}" style="background-color:{{colour.colour}}"></span>
+      <th class="app-colour-list-column app-colour-list-column--name">
+        <span class="app-swatch {% if colour.colour == "#fff" %}app-swatch-border{% endif %}" style="background-color:{{colour.colour}}"></span>
         {{colour.name}}
       </th>
 
-      <td class="app-c-colour-list-column app-c-colour-list-column--colour">
+      <td class="app-colour-list-column app-colour-list-column--colour">
         {{colour.colour}}
       </td>
-      <td class="app-c-colour-list-column app-c-colour-list-column--notes">
+      <td class="app-colour-list-column app-colour-list-column--notes">
         {{colour.notes}}
       </td>
 
@@ -103,7 +103,7 @@ If you need to use tints of the extended palette, use either 25% or 50%.
 
 You can find departmental colours in the GOV.UK Frontend [_colours-organisations](https://github.com/alphagov/govuk-frontend/blob/master/src/globals/scss/settings/_colours-organisations.scss) file.
 
-<table class="govuk-body app-c-colour-list">
+<table class="govuk-body app-colour-list">
 
   <thead class="govuk-h-visually-hidden">
     <th scope="col">Sass name</th>
@@ -113,16 +113,16 @@ You can find departmental colours in the GOV.UK Frontend [_colours-organisations
 
   {% for colour in colours.extended %}
 
-    <tr class="app-c-colour-list-row">
+    <tr class="app-colour-list-row">
 
-      <th class="app-c-colour-list-column app-c-colour-list-column--name">
-        <span class="app-c-swatch {% if colour.colour == "#fff" %}app-c-swatch-border{% endif %}" style="background-color:{{colour.colour}}"></span>
+      <th class="app-colour-list-column app-colour-list-column--name">
+        <span class="app-swatch {% if colour.colour == "#fff" %}app-swatch-border{% endif %}" style="background-color:{{colour.colour}}"></span>
         {{colour.name}}
       </th>
-      <td class="app-c-colour-list-column app-c-colour-list-column--colour">
+      <td class="app-colour-list-column app-colour-list-column--colour">
         {{colour.colour}}
       </td>
-      <td class="app-c-colour-list-column app-c-colour-list-column--notes">
+      <td class="app-colour-list-column app-colour-list-column--notes">
         {{colour.notes}}
       </td>
 

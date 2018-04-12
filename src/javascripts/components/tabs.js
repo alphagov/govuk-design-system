@@ -16,8 +16,8 @@
       var $example = $(id).parent()
 
       // Reset state
-      $example.find('.js-tabs__item').removeClass('app-c-tabs__item--current')
-      $example.find('.js-tabs__heading').removeClass('app-c-tabs__heading--current')
+      $example.find('.js-tabs__item').removeClass('app-tabs__item--current')
+      $example.find('.js-tabs__heading').removeClass('app-tabs__heading--current')
       $example.find('.js-tabs__item a').removeAttr('aria-selected')
       $example.find('.js-tabs__container').hide().attr('aria-hidden', 'true')
     },
@@ -37,10 +37,10 @@
       $('[href="' + id + '"]').attr('aria-selected', 'true')
       var $parents = $('[href="' + id + '"]').parent()
       $.each($parents, function (key, obj) {
-        if ($(obj).hasClass('app-c-tabs__item')) {
-          $(obj).addClass('app-c-tabs__item--current')
-        } else if ($(obj).hasClass('app-c-tabs__heading')) {
-          $(obj).addClass('app-c-tabs__heading--current')
+        if ($(obj).hasClass('app-tabs__item')) {
+          $(obj).addClass('app-tabs__item--current')
+        } else if ($(obj).hasClass('app-tabs__heading')) {
+          $(obj).addClass('app-tabs__heading--current')
         }
       })
 
@@ -79,8 +79,8 @@
           $(obj).find('.js-tabs__container').hide()
 
           // Add close button to each container
-          $(obj).find('.js-tabs__container').append('<a class="govuk-link app-c-link--close js-link--close app-o-chevron--top" href="#close">Close</a>')
-          $(obj).find('.js-tabs__container').addClass('app-c-tabs__container--with-close-button')
+          $(obj).find('.js-tabs__container').append('<a class="govuk-link app-link--close js-link--close app-chevron--top" href="#close">Close</a>')
+          $(obj).find('.js-tabs__container').addClass('app-tabs__container--with-close-button')
         }
       })
 

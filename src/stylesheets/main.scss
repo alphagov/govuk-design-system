@@ -46,14 +46,14 @@ body {
 $mq-breakpoint-widescreen: 1200px;
 
 // This will be coming to FE later but making it app specific for now
-.app-c-site-width-container {
+.app-site-width-container {
   @media (min-width: $mq-breakpoint-widescreen) {
     max-width: 1100px;
   }
 }
 
 // This layout is currently used on error pages like 404
-.app-c-site-width-container--constraint {
+.app-site-width-container--constraint {
   max-width: 960px;
 }
 
@@ -73,7 +73,7 @@ $mq-breakpoint-widescreen: 1200px;
   }
 }
 
-.app-c-content {
+.app-content {
 
   @include govuk-responsive-padding($govuk-spacing-responsive-6);
 
@@ -84,10 +84,10 @@ $mq-breakpoint-widescreen: 1200px;
   h5,
   h6,
   p,
-  ul:not(.app-c-tabs),
+  ul:not(.app-tabs),
   ol,
   img,
-  .app-c-table--constrained {
+  .app-table--constrained {
     max-width: 38em;
   }
 
@@ -102,22 +102,22 @@ $mq-breakpoint-widescreen: 1200px;
   }
 }
 
-.app-c-content__header {
+.app-content__header {
   @include govuk-font-regular-24;
 }
 
-.app-c-content__heading {
+.app-content__heading {
   margin-top: 0;
   margin-bottom: $govuk-spacing-scale-6;
 }
 
-.app-c-content__section-heading {
+.app-content__section-heading {
   margin-top: 0;
   margin-bottom: 0;
   color: $govuk-secondary-text-colour;
 }
 
-.app-o-example-page {
+.app-example-page {
   padding: $govuk-spacing-scale-6 * 2 $govuk-spacing-scale-6 $govuk-spacing-scale-6;
 
   &:before {
@@ -132,13 +132,13 @@ $mq-breakpoint-widescreen: 1200px;
   }
 }
 
-.app-o-example-page--full-page {
+.app-example-page--full-page {
   padding: 0;
 }
 
 // Generic chevron
 // can be rotated for --right --bottom --left versions
-.app-o-chevron--top::before {
+.app-chevron--top::before {
   content: "";
   display: inline-block;
   position: relative;
@@ -155,7 +155,7 @@ $mq-breakpoint-widescreen: 1200px;
 }
 
 // Copy button
-.app-c-link--copy {
+.app-link--copy {
   &:link,
   &:active,
   &:visited,
@@ -183,12 +183,12 @@ $mq-breakpoint-widescreen: 1200px;
 
 $colour-list-breakpoint: 980px;
 
-.app-c-colour-list {
+.app-colour-list {
   width: 100%;
   border-collapse: collapse;
 }
 
-.app-c-colour-list-row {
+.app-colour-list-row {
   display: block;
   position: relative;
   margin-bottom: $govuk-spacing-scale-2;
@@ -198,7 +198,7 @@ $colour-list-breakpoint: 980px;
   }
 }
 
-.app-c-colour-list-column {
+.app-colour-list-column {
   display: block;
   padding-left: 50px;
   @include mq($from: $colour-list-breakpoint) {
@@ -208,7 +208,7 @@ $colour-list-breakpoint: 980px;
   }
 }
 
-.app-c-swatch {
+.app-swatch {
   display: block;
   position: absolute;
   top: 0;
@@ -227,11 +227,11 @@ $colour-list-breakpoint: 980px;
   }
 }
 
-.app-c-swatch-border {
+.app-swatch-border {
   border-color: $govuk-grey-2;
 }
 
-.app-c-colour-list-column--name {
+.app-colour-list-column--name {
   font-weight: normal;
   text-align: left;
   @include mq($from: $colour-list-breakpoint) {
@@ -239,13 +239,13 @@ $colour-list-breakpoint: 980px;
   }
 }
 
-.app-c-colour-list-column--colour {
+.app-colour-list-column--colour {
   @include mq($from: $colour-list-breakpoint) {
     width: 15%;
   }
 }
 
-.app-c-colour-list-column--notes {
+.app-colour-list-column--notes {
   @include mq($from: $colour-list-breakpoint) {
     width: 35%;
   }
@@ -261,8 +261,8 @@ pre {
 }
 
 .no-js {
-  // Adjustments in app-o-pane layout as it has toc below
-  .app-o-pane__content .app-c-content {
+  // Adjustments in app-pane layout as it has toc below
+  .app-pane__content .app-content {
 
     @include mq($until: tablet) {
       padding-bottom: 10px;
