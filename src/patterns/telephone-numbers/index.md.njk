@@ -25,11 +25,9 @@ Only collect telephone numbers from people if you genuinely need them. Not every
 Users should be allowed to enter telephone numbers in whatever format is familiar to them. You should allow for additional spaces, hyphens, brackets and dashes, and be able to accommodate country and area codes.
 
 ### Validate telephone numbers
-You should validate telephone numbers so you can let users know if they have entered one incorrectly.
+You should validate telephone numbers so you can let users know if they have entered one incorrectly. Google's [libphonenumber](https://github.com/googlei18n/libphonenumber) library can validate telephone numbers from most countries.
 
-#### Error messages
-
-Error messages should be styled like this:
+Validation errors should be styled like this:
 
 {{ example({group: 'patterns', item: 'telephone-numbers', example: 'error-empty-field', html: true, nunjucks: true, open: false}) }}
 
@@ -41,13 +39,10 @@ Some examples of common error messages are:
 - too long: Telephone number cannot have more than x numbers
 - not a UK mobile phone number: Enter a UK mobile telephone number
 
-
-The GOV.UK Notify team have used the following code for validating telephone numbers:
-- [Test cases for valid and invalid telephone numbers, with appropriate error messages](https://github.com/alphagov/notifications-utils/blob/e428bdd0ca82f7b97833e707eea95dae849713fb/tests/test_recipient_validation.py#L24-L100)
-- [Implementing validation of international telephone numbers](https://github.com/alphagov/notifications-utils/pull/154)
-
 ### Make it clear what type of telephone number you need
-Use the form label or hint text to tell users if you specifically need a UK telephone number or a mobile number.
+Use the form label or hint text to tell users if you specifically need a UK, international or mobile telephone number.
+
+{{ example({group: 'patterns', item: 'telephone-numbers', example: 'international', html: true, nunjucks: true, open: false}) }}
  
 ### Using example telephone numbers
 If you wish to include an example telephone number (in hint text for example), [Ofcom maintains a list of numbers](https://www.ofcom.org.uk/phones-telecoms-and-internet/information-for-industry/numbering/numbers-for-drama) that are reserved for use in media. These are:
@@ -94,7 +89,7 @@ More research is needed on the best way to handle:
 - internationalisation
 - extensions
 - SMS shortcodes
-- [input masking](https://css-tricks.com/input-masking/)
+- input masking
 
 
 
