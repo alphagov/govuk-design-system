@@ -2,7 +2,7 @@
 
 {% block body %}
 <div class="app-pane__body">
-  <div class="app-pane__subnav app-u-hide-mobile">
+  <div class="app-pane__subnav app-hide-mobile">
     {% include "_subnav.njk" %}
   </div>
   <div class="app-pane__content">
@@ -38,7 +38,7 @@
       {% endif %}
     </main>
     {# No JS fallback to show overview #}
-    <div class="app-pane__subnav-mobile-overview app-u-hide-desktop">
+    <div class="app-pane__subnav-mobile-overview app-hide-desktop">
       {% include "_subnav.njk" %}
     </div>
     {% include "_footer.njk" %}

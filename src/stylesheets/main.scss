@@ -24,19 +24,19 @@ body {
   margin: 0;
 }
 
-.app-u-hide-mobile {
+.app-hide-mobile {
   @include mq($until: tablet) {
     display: none;
   }
 }
 
-.app-u-hide-tablet {
+.app-hide-tablet {
   @include mq($from: tablet) {
     display: none;
   }
 }
 
-.app-u-hide-desktop {
+.app-hide-desktop {
   @include mq($from: desktop) {
     display: none;
   }
