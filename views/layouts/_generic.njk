@@ -5,9 +5,9 @@
     <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ title }}</title>
-    <link href="/stylesheets/main.css" rel="stylesheet" media="all" />
+    <link href="/{{ fingerprint['stylesheets/main.css'] }}" rel="stylesheet" media="all" />
     <!--[if lt IE 9]>
-      <script src="/javascripts/ie.js"></script>
+      <script src="/{{ fingerprint['javascripts/ie.js'] }}"></script>
     <![endif]-->
     <script src="/javascripts/vendor/modernizr.js"></script>
     {% include "_tracking-head.njk" %}
@@ -30,6 +30,6 @@
       {% endblock %}
 
     </div>
-    <script src="/javascripts/application.js"></script>
+    <script src="/{{ fingerprint['javascripts/application.js'] }}"></script>
   </body>
 </html>
