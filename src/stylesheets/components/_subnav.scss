@@ -40,7 +40,6 @@
     margin: 0;
     padding: $govuk-spacing-scale-2 $govuk-spacing-scale-3;
     color: $govuk-grey-1;
-    @include govuk-font-bold-16;
-    text-transform: uppercase;
+    @include govuk-font-regular-19;
   }
 }
