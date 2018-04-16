@@ -37,7 +37,18 @@ Make text inputs the right size for the content they’re intended for. Postcode
 
 Ensure that users can still easily enter the information they need on smaller screens by snapping text inputs to 100% width at smaller screen sizes.
 
-{{ example({group: 'components', item: 'text-input', frontendComponentName: 'input', example: 'input-width', html: true, nunjucks: true, open: true}) }}
+#### Fixed width inputs
+
+Use fixed width inputs for content that has a specific, known length. These inputs will not re-size until they are was wide as the viewport.
+
+{{ example({group: 'components', item: 'text-input', frontendComponentName: 'input', example: 'input-fixed-width', html: true, nunjucks: true, open: false}) }}
+
+#### Fluid width inputs
+
+Use the width override classes to control the width of any component within it’s parent container. When applied to a text input they will re-size with the viewport.
+
+{{ example({group: 'components', item: 'text-input', frontendComponentName: 'input', example: 'input-fluid-width', html: true, nunjucks: true, open: false}) }}
+
 
 ### Don’t disable copy and paste
 
