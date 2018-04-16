@@ -21,10 +21,16 @@ Only collect telephone numbers from people if you genuinely need them. Not every
 
 ## How it works
 
+Whenever you ask for a telephone number you should tell users why you might contact them and when.
+
+
 ### Allow different formats
-Users should be allowed to enter telephone numbers in whatever format is familiar to them. You should allow for additional spaces, hyphens, brackets and dashes, and be able to accommodate country and area codes.
+
+Users should be allowed to enter telephone numbers in whatever format is familiar to them. You should allow spaces, hyphens, brackets and dashes, and be able to accommodate country and area codes.
+
 
 ### Validate telephone numbers
+
 You should validate telephone numbers so you can let users know if they have entered one incorrectly. Google's [libphonenumber](https://github.com/googlei18n/libphonenumber) library can validate telephone numbers from most countries.
 
 Validation errors should be styled like this:
@@ -39,20 +45,18 @@ Some examples of common error messages are:
 - too long: Telephone number cannot have more than x numbers
 - not a UK mobile phone number: Enter a UK mobile telephone number
 
-### Make it clear what type of telephone number you need
+
+### Make it clear what type of telephone number users can enter
+
 Use the form label or hint text to tell users if you specifically need a UK, international or mobile telephone number.
 
 {{ example({group: 'patterns', item: 'telephone-numbers', example: 'international', html: true, nunjucks: true, open: false}) }}
  
-### Using example telephone numbers
-If you wish to include an example telephone number (in hint text for example), [Ofcom maintains a list of numbers](https://www.ofcom.org.uk/phones-telecoms-and-internet/information-for-industry/numbering/numbers-for-drama) that are reserved for use in media. These are:
+ 
+### Don't use real telephone numbers as examples
 
-- UK non-geographic: 01632 960000 to 960999
-- UK London:  020 7946 0000 to 7946 0999
-- UK mobile: 07700 900000 to 900999
+If you need to include an example telephone number (in hint text for example), [Ofcom maintains a list of numbers](https://www.ofcom.org.uk/phones-telecoms-and-internet/information-for-industry/numbering/numbers-for-drama) that are reserved for use in media. Follow the [GOV.UK style for writing telephone numbers](https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#telephone-numbers).
 
-### Explain why you need a telephone number
-Tell users why you might contact them and when.
 
 ### Don’t display telephone numbers as links on devices that can’t make calls
 
@@ -61,14 +65,12 @@ It’s possible to mark up telephone numbers as links, like this:
 ```
 <a href="tel:+442079476330">020 7947 6330</a>
 ```
-
 However, doing this will style telephone numbers as links, which is confusing on devices that don’t support telephone calls, like most desktop machines.
 
 It’s also not necessary - most modern mobile browsers automatically detect telephone numbers and display them as links anyway.
 
-If you do need to mark up your telephone number as links, for example, to support a device that cannot auto-detect them, make sure they don’t display as links on devices that cannot make calls.
-### Write telephone numbers in the GOV.UK style
-See the [GOV.UK style for writing telephone numbers](https://via.hypothes.is/https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#telephone-numbers).
+If you need to mark up your telephone number as links to support a device that cannot auto-detect them, you must make sure they don’t display as links on devices that cannot make calls.
+
 
 ### Avoid input masking
 
@@ -77,9 +79,13 @@ Avoid [input masking](https://css-tricks.com/input-masking/) because it makes it
 - type a number in their preferred way
 - transcribe a number from another place and check that they’ve got it right
 
+
 ### Avoid reformatting telephone numbers
 
-The GOV.UK Notify team have observed some users becoming confused when presented with a reformatted version of a telephone number that they provided, for example, with the +44 country code added.
+The GOV.UK Notify team has observed some users becoming confused when presented with a reformatted version of a telephone number that they provided, for example, with the +44 country code added.
+
+When playing back a telephone number that the user has provided, use the orgiginal format.
+
 
 ## Research on this pattern
 
