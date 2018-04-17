@@ -80,6 +80,8 @@
   margin: 0;
   padding: $govuk-spacing-scale-4 $govuk-spacing-scale-4 $govuk-spacing-scale-1 $govuk-spacing-scale-4;
   color: $govuk-grey-1;
+  // Font is defined as a hard 19px so
+  // it doesn't re-size on mobile viewport
   font-size: 19px;
   font-weight: 400;
 }
