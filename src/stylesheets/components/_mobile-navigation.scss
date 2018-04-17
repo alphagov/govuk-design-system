@@ -45,13 +45,16 @@
 }
 
 .app-mobile-nav__subnav {
-  display: none;
   margin: 0;
   padding: $govuk-spacing-scale-2 0 0 0;
   list-style: none;
   border-top: 1px solid $govuk-grey-3;
   border-bottom: 1px solid $govuk-grey-3;
   background-color: $govuk-white;
+
+  &--hidden {
+    display: none;
+  }
 
   &--active {
     display: block;
