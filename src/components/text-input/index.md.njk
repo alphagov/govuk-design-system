@@ -31,13 +31,30 @@ All text inputs must have visible labels; placeholder text is not an acceptable 
 
 Labels should be aligned above the text input they refer to. They should be short, direct and written in sentence case. Don’t use colons at the end of labels.
 
+
 ### Use appropriately-sized text inputs
 
-Make text inputs the right size for the content they’re intended for. Postcode inputs should be postcode-sized, telephone number inputs should be telephone number-sized.
+Help users understand what they should enter by making text inputs the right size for the content they’re intended for.
 
-Ensure that users can still easily enter the information they need on smaller screens by snapping text inputs to 100% width at smaller screen sizes.
+By default, the width of text inputs is fluid and will fit the full width of the container they are placed into.
 
-{{ example({group: 'components', item: 'text-input', frontendComponentName: 'input', example: 'input-width', html: true, nunjucks: true, open: true}) }}
+If you want to make the input smaller, you can either use a fixed width input, or use the width override classes to create a smaller, fluid width input.
+
+#### Fixed width inputs
+
+Use fixed width inputs for content that has a specific, known length. Postcode inputs should be postcode-sized, telephone number inputs should be telephone number-sized.
+
+On fixed width inputs, the width will remain fixed on all screens unless it is wider than the viewport, in which case it will shrink to fit.
+
+{{ example({group: 'components', item: 'text-input', frontendComponentName: 'input', example: 'input-fixed-width', html: true, nunjucks: true, open: false}) }}
+
+#### Fluid width inputs
+
+Use the width override classes to reduce the width of an input in relation to its parent container, for example, to two-thirds.
+
+Fluid width inputs will resize with the viewport.
+
+{{ example({group: 'components', item: 'text-input', frontendComponentName: 'input', example: 'input-fluid-width', html: true, nunjucks: true, open: false}) }}
 
 ### Don’t disable copy and paste
 
