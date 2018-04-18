@@ -12,9 +12,9 @@ statusMessage: This pattern is currently experimental because <a class="govuk-li
 
 {% from "_example.njk" import example %}
 
-A page not found tells someone the page they were trying to view cannot be found. They are also known as 404 pages.
+A page not found tells someone we cannot find the page they were trying to view. They are also known as 404 pages.
 
-{{ example({group: 'patterns', item: 'page-not-found-pages', example: 'default', html: true, nunjucks: true, open: false}) }}
+{{ example({group: 'patterns', item: 'page-not-found-pages', example: 'default', html: true}) }}
 
 ## When to use this pattern
 
@@ -24,9 +24,14 @@ Use a page not found if someone is trying to view a page that does not exist. Th
 - types or copies a web address for a page that does not exist
 - types or copies a web address incorrectly
 
-Test all links and buttons to make sure they go where they are supposed to.
+Test all links and buttons to make sure they work. Remember to [do the hard work to make it simple](https://www.gov.uk/guidance/government-design-principles#do-the-hard-work-to-make-it-simple).
 
-Make sure any web addresses in your service, letters, forms and on GOV.UK are for or redirect to pages that exist.
+Make sure any web addresses in your service, letters, forms and on GOV.UK are for pages that exist or redirect to pages that exist.
+
+For example, if someone has bookmarked a confirmation or a page in the middle of a journey:
+
+- explain that the information or page is no longer available
+- give them a link or button to get to a sensible place in the service
 
 ## How it works
 
@@ -36,12 +41,12 @@ The page should have:
 - “Page not found” as the H1
 - contact information, if it exists and helps meet a user need
 
-Contact information should be either:
+Contact information should either:
 
-- a link to a specific GOV.UK contact page not a general contact page
-- formatted like a GOV.UK contact page when there is no GOV.UK page
+- be a link to a specific page that includes numbers and opening times
+- include all numbers and opening times
 
-The content should be clear and concise, not blame the user. 
+The content should be clear and concise, not blame the user.
 
 Do not use:
 
@@ -49,6 +54,14 @@ Do not use:
 - technical jargon like 404 or bad request
 - informal or humourous words like oops
 - red text to warn people
+
+### Service mistake
+
+{{ example({group: 'patterns', item: 'page-not-found-pages', example: 'default', html: true}) }}
+
+### User mistake
+
+{{ example({group: 'patterns', item: 'page-not-found-pages', example: 'user-mistake', html: true}) }}
 
 ### If you do not know why the page is not found
 
@@ -58,14 +71,6 @@ When a user submits the form, take them to a confirmation page which has:
 
 - "We have your details and what you were trying to do" as the H1
 - "We will email you when we have fixed the service" as the body content
-
-### Service mistake
-
-{{ example({group: 'patterns', item: 'page-not-found-pages', example: 'default', html: true, nunjucks: true, open: false}) }}
-
-### User mistake
-
-{{ example({group: 'patterns', item: 'page-not-found-pages', example: 'user-mistake', html: true, nunjucks: true, open: false}) }}
 
 ## Research on this pattern
 
