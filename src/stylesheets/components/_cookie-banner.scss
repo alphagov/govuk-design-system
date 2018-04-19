@@ -4,13 +4,13 @@
   @include govuk-text-colour;
 
   width: 100%;
+  box-sizing: border-box;
 
-  padding-top: $govuk-spacing-scale-2;
-  padding-bottom: $govuk-spacing-scale-2;
+  padding-top: $govuk-spacing-scale-3;
+  padding-bottom: $govuk-spacing-scale-3;
   padding-left: $govuk-spacing-scale-3;
   padding-right: $govuk-spacing-scale-3;
   background-color: $govuk-light-blue-25;
-
 }
 
 .js-enabled .app-cookie-banner {
