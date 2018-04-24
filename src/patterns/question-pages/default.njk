@@ -3,47 +3,57 @@ layout: layout-example.njk
 ---
 
 {% from "back-link/macro.njk" import govukBackLink %}
-{% from "date-input/macro.njk" import govukDateInput %}
 {% from "button/macro.njk" import govukButton %}
+{% from 'radios/macro.njk' import govukRadios %}
 
 <div class="govuk-o-width-container">
 
-{{ govukBackLink({
-  "text": "Back"
-}) }}
+  {{ govukBackLink({
+    "text": "Back"
+  }) }}
 
   <div class="govuk-o-main-wrapper">
     <div class="govuk-o-grid">
       <div class="govuk-o-grid__item govuk-o-grid__item--two-thirds">
+        <h1 class="govuk-heading-xl">Check if you can get leave or pay when you have a child</h1>
+
         <form action="/url/of/next/page" method="post">
 
-          {{ govukDateInput({
-            fieldset: {
-              legendHtml: '<h1 class="govuk-heading-xl">What is your date of birth?</h1>',
-              legendHintText: 'For example, 31 3 1980'
+          {{ govukRadios({
+            "idPrefix": "partner",
+            "name": "partner",
+            "fieldset": {
+              "legendHtml": '<h3 class="govuk-heading-m">Will the mother care for the child with a partner?</h1>'
             },
-            id: 'dob',
-            name: 'dob',
-            items:[
+            "items": [
               {
-                name: 'day'
+                "value": "yes",
+                "text": "Yes"
               },
               {
-                name: 'month'
-              },
-              {
-                name: 'year'
+                "value": "no",
+                "text": "No"
               }
             ]
-            })
-          }}
+          }) }}
+
+
+          <p class="govuk-body">The partner is one of the following:</p>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>the mother’s husband, wife or civil partner</li>
+            <li>the child’s other parent</li>
+            <li>the mother’s partner (if they live with the mother and the child)</li>
+          </ul>
 
           {{ govukButton({
             "text": "Continue"
           }) }}
+
         </form>
 
       </div>
     </div>
   </div>
+
 </div>

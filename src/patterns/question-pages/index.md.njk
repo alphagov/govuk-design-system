@@ -42,13 +42,17 @@ If you’re only asking for one piece of information on a page, make the questio
 
 For example:
 
-{{ example({group: 'patterns', item: 'question-pages', example: 'postcode', html: true, nunjucks: true, open: true}) }}
+#### Using a heading inside a label
+{{ example({group: 'patterns', item: 'question-pages', example: 'postcode', html: true, nunjucks: true, open: false}) }}
+
+#### Using a heading inside a legend
+{{ example({group: 'patterns', item: 'question-pages', example: 'date-of-birth', html: true, nunjucks: true, open: false}) }}
 
 If you need to ask for multiple related things on a page, use a statement as the heading.
 
 For example:
 
-{{ example({group: 'patterns', item: 'question-pages', example: 'passport', html: true, nunjucks: true, open: true}) }}
+{{ example({group: 'patterns', item: 'question-pages', example: 'passport', html: true, nunjucks: true, open: false}) }}
 
 Don’t duplicate the same page heading across multiple pages.
 
@@ -58,7 +62,7 @@ If you need to show the high-level section, you can use the `govuk-caption` styl
 
 For example, ‘About you’:
 
-{{ example({group: 'patterns', item: 'question-pages', example: 'section-headings', html: true, nunjucks: true, open: true}) }}
+{{ example({group: 'patterns', item: 'question-pages', example: 'section-headings', html: true, nunjucks: true, open: false}) }}
 
 ### Continue button
 
