@@ -5,16 +5,16 @@
       <div class="govuk-o-grid">
 
         <div class="govuk-o-grid__item govuk-o-grid__item--two-thirds govuk-u-mb-5">
-          
+
           <h2 class="heading-large">Design System Backlog</h2>
 
           <p>This is the backlog of styles, components and patterns that the government design community is currently working on. Select an item to find out more on GitHub.</p>
 
 
         {% set columns = backlog.data.repository.project.columns.nodes %}
-        {% set inProgress = columns[2].cards.edges %}
-        {% set agreed = columns[1].cards.edges %}
-        {% set proposed = columns[0].cards.edges %}
+        {% set inProgress = columns[3].cards.edges %}
+        {% set agreed = columns[2].cards.edges %}
+        {% set proposed = columns[1].cards.edges %}
 
 
         <table class="govuk-c-table">
@@ -47,7 +47,7 @@
           {% endif %}
           </tr>
           {% endfor %}
-          
+
         </table>
 
 
@@ -71,7 +71,7 @@
           {% endif %}
           </tr>
           {% endfor %}
-          
+
         </table>
 
         </div>

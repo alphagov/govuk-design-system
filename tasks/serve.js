@@ -19,7 +19,7 @@ query {
   repository(owner:"alphagov", name:"govuk-design-system-backlog") {
     project(number:1){
       name,
-      columns(first:3){
+      columns(first:4){
         nodes{
           name,
           cards(first:100){
