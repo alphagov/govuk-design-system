@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@govuk-frontend/all": "^0.0.18-alpha",
+    "dotenv": "^5.0.1",
     "node-github-graphql": "^0.2.6"
   },
   "devDependencies": {
