@@ -106,13 +106,13 @@ When writing help text, you should:
 <a name="hint-text"></a>
 Hint text is short, clear text positioned immediately next to the part of the page it relates to. You can use hint text for help that’s relevant to the majority of your users, for example:
 
-{{ example({group: 'patterns', item: 'fill-in-a-form', example: 'hint', html: true, nunjucks: true, open: true}) }}
+{{ example({group: 'patterns', item: 'fill-in-a-form', example: 'hint', html: true, nunjucks: true, open: false}) }}
 
 You should place inline help for form fields between the label and the field so sighted users and screenreaders can read it before they get to the field itself.
 
 If you need to provide information that only some users will need, you can use the Details component. This is a short link that expands into more detailed help when a user clicks on it, for example:
 
-{{ example({group: 'patterns', item: 'fill-in-a-form', example: 'details', html: true, nunjucks: true, open: true}) }}
+{{ example({group: 'patterns', item: 'fill-in-a-form', example: 'details', html: true, nunjucks: true, open: false}) }}
 
 Use the [Details](../../components/details) component to make your page easier to scan, but don’t hide help if a majority of users will need it.
 
@@ -125,7 +125,7 @@ Start by testing your form without a progress indicator to see if it’s simple 
 
 Try improving the order, type or number of questions before adding a progress indicator. If people still have difficulty, try adding a simple step or question indicator like this one.
 
-{{ example({group: 'patterns', item: 'fill-in-a-form', example: 'progress', html: true, nunjucks: true, open: true}) }}
+{{ example({group: 'patterns', item: 'fill-in-a-form', example: 'progress', html: true, nunjucks: true, open: false}) }}
 
 Only include the total number of questions if you can do so reliably. As the user moves through the form, make sure the indicator updates to tell them which question they are on and the total number remaining.
 
