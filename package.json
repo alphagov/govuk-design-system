@@ -29,9 +29,11 @@
   "dependencies": {
     "@govuk-frontend/all": "0.0.28-alpha",
     "clipboard": "^2.0.0",
+    "dotenv": "^5.0.1",
     "html5shiv": "^3.7.3",
     "jquery": "^1.12.4",
     "modernizr": "^3.6.0",
+    "node-github-graphql": "^0.2.6",
     "scss-to-json": "^2.0.0"
   },
   "devDependencies": {
