@@ -55,7 +55,8 @@
     "metalsmith-sass": "^1.5.1",
     "metalsmith-tagcleaner": "0.0.2",
     "nunjucks": "^3.1.2",
-    "standard": "^10.0.3"
+    "standard": "^10.0.3",
+    "workbox-build": "^3.1.0"
   },
   "engines": {
     "node": "8.9.4"
