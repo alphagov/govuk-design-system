@@ -1,0 +1,60 @@
+@import "@govuk-frontend/globals/common";
+
+.govuk-c-task-list {
+  list-style-type: none;
+  padding-left: 0;
+  @include mq($from: tablet) {
+    min-width: 550px;
+  }
+}
+
+.govuk-c-task-list__section {
+  display: table;
+  @include govuk-font-bold-24;
+}
+
+.govuk-c-task-list__section-number {
+  display: table-cell;
+
+  @include mq($from: tablet) {
+    min-width: $govuk-spacing-scale-6;
+    padding-right: 0;
+  }
+}
+
+.govuk-c-task-list__items {
+  @include govuk-responsive-margin($govuk-spacing-responsive-9, "bottom");
+  @include mq($from: tablet) {
+    padding-left: $govuk-spacing-scale-6;
+  }
+}
+
+.govuk-c-task-list__item {
+  border-bottom: 1px solid $govuk-border-colour;
+  margin-bottom: 0 !important;
+  padding-top: $govuk-spacing-scale-2;
+  padding-bottom: $govuk-spacing-scale-2;
+  @include govuk-h-clearfix;
+}
+
+.govuk-c-task-list__item:first-child {
+  border-top: 1px solid $govuk-border-colour;
+}
+
+.govuk-c-task-list__task-name {
+  display: block;
+  @include mq($from: 450px) {
+    float: left;
+  }
+}
+
+.govuk-c-task-list__task-completed {
+  margin-top: $govuk-spacing-scale-2;
+  margin-bottom: $govuk-spacing-scale-1;
+
+  @include mq($from: 450px) {
+    float: right;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

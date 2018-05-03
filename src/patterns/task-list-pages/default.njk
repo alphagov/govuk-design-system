@@ -1,0 +1,96 @@
+---
+layout: layout-example.njk
+stylesheets:
+- task-list-pages.css
+---
+
+<!--
+This pattern is experimental
+The code will only work in the GOV.UK Prototype Kit
+-->
+
+<div class="govuk-o-width-container">
+  <a href="#" class="govuk-c-back-link">Back</a>
+
+  <main class="govuk-o-main-wrapper">
+
+    <div class="govuk-o-grid">
+      <div class="govuk-o-grid__item govuk-o-grid__item--two-thirds">
+        <h1 class="govuk-heading-xl">
+          Service name goes here
+        </h1>
+
+        <ol class="govuk-list govuk-list--number govuk-c-task-list">
+          <li>
+            <h2 class="govuk-c-task-list__section">
+              <span class="govuk-c-task-list__section-number">1. </span> Check before you start
+            </h2>
+            <ul class="govuk-list govuk-c-task-list__items">
+              <li class="govuk-c-task-list__item">
+                <a class="govuk-c-task-list__task-name" href="#" aria-describedby="eligibility-completed">
+                  Check eligibility
+                </a>
+                <strong class="govuk-c-tag govuk-c-task-list__task-completed" id="eligibility-completed">Completed</strong>
+              </li>
+              <li class="govuk-c-task-list__item">
+                <a class="govuk-c-task-list__task-name" href="#" aria-describedby="read-declaration-completed">
+                  Read declaration
+                </a>
+                <strong class="govuk-c-tag govuk-c-task-list__task-completed" id="read-declaration-completed">Completed</strong>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h2 class="govuk-c-task-list__section">
+              <span class="govuk-c-task-list__section-number">2. </span> Prepare application
+            </h2>
+            <ul class="govuk-list govuk-c-task-list__items">
+              <li class="govuk-c-task-list__item">
+                <a class="govuk-c-task-list__task-name" href="#" aria-describedby="company-information-completed">
+                  Company information
+                </a>
+                <strong class="govuk-c-tag govuk-c-task-list__task-completed" id="company-information-completed">Completed</strong>
+              </li>
+              <li class="govuk-c-task-list__item">
+                <a class="govuk-c-task-list__task-name" href="#" aria-describedby="contact-details-completed">
+                  Your contact details
+                </a>
+                <strong class="govuk-c-tag govuk-c-task-list__task-completed" id="contact-details-completed">Completed</strong>
+              </li>
+              <li class="govuk-c-task-list__item">
+                <a class="govuk-c-task-list__task-name" href="#">
+                  List convictions
+                </a>
+              </li>
+              <li class="govuk-c-task-list__item">
+                <a class="govuk-c-task-list__task-name" href="#">
+                  Provide financial evidence
+                </a>
+              </li>
+              <li class="govuk-c-task-list__item">
+                <a class="govuk-c-task-list__task-name" href="#" aria-describedby="medical-information-completed">
+                  Give medical information
+                </a>
+                <strong class="govuk-c-tag govuk-c-task-list__task-completed" id="medical-information-completed">Completed</strong>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h2 class="govuk-c-task-list__section">
+              <span class="govuk-c-task-list__section-number">3. </span> Apply
+            </h2>
+            <ul class="govuk-list govuk-c-task-list__items">
+              <li class="govuk-c-task-list__item">
+                <a class="govuk-c-task-list__task-name" href="#">
+                  Submit and pay
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ol>
+
+      </div>
+    </div>
+
+  </main>
+</div>
