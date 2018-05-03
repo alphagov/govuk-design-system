@@ -14,5 +14,9 @@
   {
     "label": "Patterns",
     "url": "patterns"
+  },
+  {
+    "label": "Backlog",
+    "url": "backlog"
   }
 ]

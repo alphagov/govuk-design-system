@@ -1,0 +1,51 @@
+---
+title: Agreed
+description: Components and patterns that the Design System Working Group has agreed could go into the Design System.
+section: Backlog
+aliases:
+layout: layout-pane.njk
+order: 1
+---
+
+Components and patterns that the Design System Working Group has agreed could go into the Design System.
+
+You can [suggest a new component or pattern](https://github.com/alphagov/govuk-design-system-backlog/issues/new)
+on GitHub.
+
+{% set columns = backlog.data.repository.project.columns.nodes %}
+{% set inProgress = columns[3].cards.edges %}
+{% set agreed = columns[2].cards.edges %}
+
+
+<table class="govuk-c-table">
+  <tr>
+    <th class="govuk-c-table__header">Name</th>
+    <th class="govuk-c-table__header">Status</th>
+  </tr>
+
+  {% for card in inProgress %}
+    <tr>
+    {% if card.node.content.title %}
+      <td class="govuk-c-table__cell">
+        <a href="{{ card.node.content.url }}">{{ card.node.content.title }}</a>
+      </td>
+      <td class="govuk-c-table__cell">
+        In progress
+      </td>
+    {% endif %}
+    </tr>
+  {% endfor %}
+
+  {% for card in agreed %}
+  <tr>
+  {% if card.node.content.title %}
+    <td class="govuk-c-table__cell">
+      <a href="{{ card.node.content.url }}">{{ card.node.content.title }}</a>
+    </td>
+    <td class="govuk-c-table__cell">
+    </td>
+  {% endif %}
+  </tr>
+  {% endfor %}
+
+</table>

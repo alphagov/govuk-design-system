@@ -1,0 +1,34 @@
+---
+title: Proposed
+description: Components and patterns that people have suggested for the Design System.
+section: Backlog
+aliases:
+layout: layout-pane.njk
+order: 0
+---
+
+Components and patterns that people have suggested for the Design System.
+
+You can [suggest a new component or pattern](https://github.com/alphagov/govuk-design-system-backlog/issues/new)
+on GitHub.
+
+{% set columns = backlog.data.repository.project.columns.nodes %}
+{% set proposed = columns[1].cards.edges %}
+
+
+<table class="govuk-c-table">
+  <tr>
+    <th class="govuk-c-table__header">Name</th>
+  </tr>
+
+  {% for card in proposed %}
+    <tr>
+    {% if card.node.content.title %}
+      <td class="govuk-c-table__cell">
+        <a href="{{ card.node.content.url }}">{{ card.node.content.title }}</a>
+      </td>
+    {% endif %}
+    </tr>
+  {% endfor %}
+
+</table>
