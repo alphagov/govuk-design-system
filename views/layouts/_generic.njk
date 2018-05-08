@@ -5,8 +5,11 @@
     <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ title }}</title>
-    <link href="/{{ fingerprint['stylesheets/main.css'] }}" rel="stylesheet" media="all" />
+    <!--[if !IE 8]><!-->
+      <link href="/{{ fingerprint['stylesheets/main.css'] }}" rel="stylesheet" media="all" />
+    <!--<![endif]-->
     <!--[if lt IE 9]>
+      <link href="/{{ fingerprint['stylesheets/main-ie8.css'] }}" rel="stylesheet" media="all" />
       <script src="/{{ fingerprint['javascripts/ie.js'] }}"></script>
     <![endif]-->
     <script src="/javascripts/vendor/modernizr.js"></script>
