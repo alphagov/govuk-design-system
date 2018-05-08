@@ -1,7 +1,7 @@
 @import "@govuk-frontend/globals/common";
 
-.govuk-o-width-container,
-.govuk-o-main-wrapper,
+.govuk-width-container,
+.govuk-main-wrapper,
 .govuk-c-back-link,
 .govuk-grid-row,
 .govuk-grid-column {
@@ -10,8 +10,8 @@
   border: 2px dashed $govuk-grey-3;
 }
 
-.govuk-o-width-container,
-.govuk-o-main-wrapper {
+.govuk-width-container,
+.govuk-main-wrapper {
   border: 2px dashed $govuk-grey-1;
 }
 
@@ -19,11 +19,11 @@
   padding: 15px;
 }
 
-.govuk-o-width-container {
+.govuk-width-container {
   padding: 15px;
 }
 
-.govuk-o-main-wrapper {
+.govuk-main-wrapper {
   padding-right: $govuk-spacing-scale-6;
   padding-left: $govuk-spacing-scale-6;
 }
