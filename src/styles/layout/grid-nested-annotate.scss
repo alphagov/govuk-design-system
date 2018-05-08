@@ -1,23 +1,28 @@
-@import "@govuk-frontend/globals/common";
+@import "@govuk-frontend/frontend/settings/all";
+@import "@govuk-frontend/frontend/tools/all";
+@import "@govuk-frontend/frontend/helpers/all";
+@import "@govuk-frontend/frontend/core/all";
+@import "@govuk-frontend/frontend/objects/all";
+@import "@govuk-frontend/frontend/utilities/all";
 
-.govuk-o-grid {
-  .govuk-o-grid__item  {
+.govuk-grid-row {
+  [class^="govuk-grid-column"]  {
     background-color: white;
     border: 4px solid $govuk-light-blue;
     padding-bottom: $govuk-spacing-scale-2;
   }
 
-  .govuk-o-grid__item > p {
+  [class^="govuk-grid-column"] > p {
     background-color: transparent;
     color: $govuk-light-blue;
   }
 
-  .govuk-o-grid {
-    .govuk-o-grid__item  {
+  .govuk-grid-row {
+    [class^="govuk-grid-column"]  {
       background-color: white;
       border: 0;
     }
-    .govuk-o-grid__item > p {
+    [class^="govuk-grid-column"] > p {
       @extend .govuk-body;
       display: block;
       @include govuk-responsive-padding($govuk-spacing-responsive-6);
