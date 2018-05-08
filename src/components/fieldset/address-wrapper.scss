@@ -4,7 +4,7 @@
 // fieldset,  simulating the content being in a two-thirds column (most common
 // scenario that the code will be pasted) without adding it to the markup.
 
-.govuk-c-fieldset {
+.govuk-fieldset {
   @include mq($from: tablet) {
     max-width: 66.66%;
   }
