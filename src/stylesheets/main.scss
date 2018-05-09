@@ -47,8 +47,10 @@ $mq-breakpoint-widescreen: 1200px;
 
 // This will be coming to FE later but making it app specific for now
 .app-site-width-container {
-  @media (min-width: $mq-breakpoint-widescreen) {
-    max-width: 1100px;
+
+  // On desktop, override margin: 0 auto; coming from .govuk-o-width-container
+  @include mq($from: desktop) {
+    margin: 0 $govuk-gutter;
   }
 }
 
