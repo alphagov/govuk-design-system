@@ -1,7 +1,6 @@
 const githubBacklog = require('../lib/github-backlog') // get backlog data from GitHubAPI
 
 githubBacklog.getData(() => {
-
   const browsersync = require('metalsmith-browser-sync') // setup synchronised browser testing
   const metalsmith = require('../lib/metalsmith') // configured static site generator
   const paths = require('../config/paths.json') // specify paths to main working directories
