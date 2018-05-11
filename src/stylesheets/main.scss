@@ -276,3 +276,30 @@ p code {
   color: $app-code-color;
   background-color: $govuk-grey-4;
 }
+
+// anchored headings
+.app-content-heading__anchor {
+  @include govuk-h-visually-hidden-focusable;
+}
+
+.app-content-heading:hover,
+.app-content-heading:focus {
+  .app-content-heading__anchor {
+    position: static;
+
+    width: auto;
+    height: auto;
+    margin: inherit;
+
+    overflow: visible;
+    clip: auto;
+    white-space: inherit; 
+    -webkit-clip-path: none;
+    clip-path: none;
+  }
+}
+
+.app-content-heading__icon {
+  width: 1em;
+  height: .75em;        
+}
