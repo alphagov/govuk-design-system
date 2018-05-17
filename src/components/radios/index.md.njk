@@ -23,6 +23,16 @@ Don’t use the Radios component if users might need to select more than one opt
 
 There are 2 ways to use the Radios component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://govuk-prototype-kit-beta.herokuapp.com), you can use the Nunjucks macro.
 
+### Stacked radios
+
+When there are more than 2 options, radios should be stacked, like so:
+
+{{ example({group: 'components', item: 'radios', example: 'stacked', html: true, nunjucks: true, open: true}) }}
+
+### Inline radios
+
+If there are only 2 options, you can either stack the radios or display them inline, like so:
+
 {{ example({group: 'components', item: 'radios', example: 'default', html: true, nunjucks: true, open: true}) }}
 
 ## Research on this component
