@@ -75,7 +75,7 @@ $app-button-inverted-shadow-colour: shade($app-button-inverted-foreground-colour
 
 .app-button--inverted:hover,
 .app-button--inverted:focus {
-  color: $app-button-inverted-foreground-colour;
+  color: $app-button-inverted-foreground-colour !important;
   background-color: tint($app-button-inverted-foreground-colour, 90%);
 }
 
