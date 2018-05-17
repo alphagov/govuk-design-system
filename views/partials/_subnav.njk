@@ -14,7 +14,16 @@
           {% endfor %}
           </ul>
         {% endfor %}
+
+        {% if item.label == "Components" or item.label == "Patterns" %}
+        <h3 class="govuk-body-s govuk-!-mb-r0 govuk-!-ml-r3 govuk-!-mr-r3 govuk-!-pt-r3" style="border-top: 1px solid #bfc1c3">Can't find what you're looking for?</h3>
+        <p class="govuk-!-mt-r2 govuk-!-mb-r9 govuk-!-ml-r3"><a href="/backlog">Check the backlog</a></p>
+        {% endif %}
+
       {% endif %}
       {% endif %}
     {% endfor %}
+
+
+
 </nav>

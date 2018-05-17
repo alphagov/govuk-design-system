@@ -1,0 +1,40 @@
+---
+layout: layout-single-page-prose.njk
+title: Backlog
+---
+
+# Backlog
+
+The Design System is built upon the research and experience of teams across the whole of government.
+
+Anyone can propose, develop or contribute to new patterns and components, or improvements to existing ones. 
+
+Here is a list of the components, patterns and updates currently on the Design System backlog. They can be:
+
+- **Proposed** - someone has suggested a new component or pattern
+- **To do** - the proposed component or pattern has been agreed and is ready to work on
+- **In progress** - someone is actively working on the component or pattern
+
+
+<table class="govuk-c-table">
+  <tr>
+    <th class="govuk-c-table__header">Name</th>
+    <th class="govuk-c-table__header" style="width: 90px; text-align: right">Status</th>
+  </tr>
+
+
+  {% for card in backlog %}
+    <tr>
+    {% if card.node.content.title %}
+      <td class="govuk-c-table__cell">
+        <a href="{{ card.node.content.url }}">{{ card.node.content.title }}</a>
+      </td>
+      <td class="govuk-c-table__cell govuk-body-s" style="text-align: right">
+        {{ card.column }}
+      </td>
+    {% endif %}
+    </tr>
+  {% endfor %}
+
+
+</table>

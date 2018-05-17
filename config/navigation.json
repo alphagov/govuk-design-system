@@ -1,7 +1,7 @@
 [
   {
-    "label": "About",
-    "url": ""
+    "label": "Get started",
+    "url": "get-started"
   },
   {
     "label": "Styles",
@@ -14,5 +14,9 @@
   {
     "label": "Patterns",
     "url": "patterns"
+  },
+  {
+    "label": "Backlog",
+    "url": "backlog"
   }
 ]
