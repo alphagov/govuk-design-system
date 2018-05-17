@@ -11,56 +11,26 @@ Anyone can propose, develop or contribute to new patterns and components, or imp
 
 Here is a list of all of the components and patterns currently on the Design System backlog. They can be:
 
-- Proposed - someone has suggested a new component or pattern
-- To do - the proposal to add this new component or pattern has been agreed and it’s ready to work on
-- In progress - an individual or team are actively working on the component or pattern
+- **Proposed** - someone has suggested a new component or pattern
+- **To do** - the proposed component or pattern has been agreed and is ready to work on
+- **In progress** - someone is actively working on the component or pattern
 
-{% set columns = backlog.data.repository.project.columns.nodes %}
-{% set inProgress = columns[3].cards.edges %}
-{% set toDo = columns[2].cards.edges %}
-{% set proposed = columns[1].cards.edges %}
 
 <table class="govuk-c-table">
   <tr>
     <th class="govuk-c-table__header">Name</th>
-    <th class="govuk-c-table__header">Status</th>
+    <th class="govuk-c-table__header" style="width: 90px; text-align: right">Status</th>
   </tr>
 
 
-  {% for card in proposed %}
+  {% for card in backlog %}
     <tr>
     {% if card.node.content.title %}
       <td class="govuk-c-table__cell">
         <a href="{{ card.node.content.url }}">{{ card.node.content.title }}</a>
       </td>
-      <td class="govuk-c-table__cell">
-        All
-      </td>
-    {% endif %}
-    </tr>
-  {% endfor %}
-
-  {% for card in toDo %}
-  <tr>
-  {% if card.node.content.title %}
-    <td class="govuk-c-table__cell">
-      <a href="{{ card.node.content.url }}">{{ card.node.content.title }}</a>
-    </td>
-    <td class="govuk-c-table__cell">
-    	To do
-    </td>
-  {% endif %}
-  </tr>
-  {% endfor %}
-
-  {% for card in proposed %}
-    <tr>
-    {% if card.node.content.title %}
-      <td class="govuk-c-table__cell">
-        <a href="{{ card.node.content.url }}">{{ card.node.content.title }}</a>
-      </td>
-      <td class="govuk-c-table__cell">
-        Proposed
+      <td class="govuk-c-table__cell govuk-body-s" style="text-align: right">
+        {{ card.column }}
       </td>
     {% endif %}
     </tr>
