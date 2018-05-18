@@ -5,11 +5,13 @@ layout: layout-example.njk
 {% from "input/macro.njk" import govukInput %}
 
 {{ govukInput({
-  label: {
-    "text": "National Insurance Number",
-     "hintText": "It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’."
+  "label": {
+    "text": "National insurance number"
   },
-  id: "national-insurance-number",
-  name: "national-insurance-number",
-  classes: "govuk-input--width-10"
+  "hint": {
+    "html": "It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’."
+  },
+  "classes": "govuk-input--width-10",
+  "id": "national-insurance-number",
+  "name": "national-insurance-number"
 }) }}

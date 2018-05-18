@@ -5,12 +5,18 @@ layout: layout-example.njk
 {% from 'radios/macro.njk' import govukRadios %}
 
 {{ govukRadios({
+  "classes": "govuk-radios--inline",
   "idPrefix": "changed-name",
   "name": "changed-name",
-  "classes": "govuk-radios--inline",
   "fieldset": {
-    "legendHtml": '<h1 class="govuk-heading-xl">Have you changed your name?</h1>',
-    "legendHintText": "This includes changing your last name or spelling your name differently."
+    "legend": {
+      "text": 'Have you changed your name?',
+      "isPageHeading": true,
+      "classes": 'govuk-fieldset__legend--xl'
+    }
+  },
+  "hint": {
+    "text": "This includes changing your last name or spelling your name differently."
   },
   "items": [
     {

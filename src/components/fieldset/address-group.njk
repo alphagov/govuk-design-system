@@ -8,7 +8,11 @@ stylesheets:
 {% from "fieldset/macro.njk" import govukFieldset %}
 
 {% call govukFieldset({
-  "legendHtml": '<h1 class="govuk-heading-xl govuk-!-mb-r4">What is your address?</h1>'
+  "legend": {
+    "text": "What is your address?",
+    "classes": "govuk-fieldset__legend--xl",
+    "isPageHeading": true
+  }
 }) %}
 
   {{ govukInput({

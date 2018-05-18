@@ -17,9 +17,12 @@ layout: layout-example.njk
       <div class="govuk-grid-column-two-thirds">
 
         <form action="/url/of/next/page" method="post">
+
           {{ govukInput({
             "label": {
-              "html": '<h1 class="govuk-heading-xl govuk-!-mb-r4">What is your home postcode?</h1>'
+              "text": "What is your home postcode?",
+              isPageHeading: true,
+              "classes": "govuk-label--xl"
             },
             "id": "postcode",
             "name": "postcode"

@@ -5,10 +5,12 @@ layout: layout-example.njk
 {% from "input/macro.njk" import govukInput %}
 
 {{ govukInput({
-  label: {
-    "text": "Email address",
-    "hintText": "We’ll only use this to send you a receipt"
+  "label": {
+    "text": "Email address"
   },
-  id: "email",
-  name: "email"
+  "hint": {
+    "html": "We’ll only use this to send you a receip"
+  },
+  "id": "email",
+  "name": "email"
 }) }}
