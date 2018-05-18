@@ -1,4 +1,4 @@
-@import "@govuk-frontend/all/all";
+@import "@govuk-frontend/frontend/all";
 
 // App-specific variables
 $app-light-grey: #f8f8f8;
@@ -58,16 +58,16 @@ $mq-breakpoint-widescreen: 1200px;
 }
 
 // This is consistent with Elements - will be changed in FE
-.govuk-o-grid__item {
+[class*="govuk-grid-column"] {
   @include mq($until: desktop) {
     padding: 0 $govuk-gutter-half;
   }
 }
 
 // This is consistent with Elements - will be changed in FE
-.govuk-o-grid__item--one-third,
-.govuk-o-grid__item--two-thirds,
-.govuk-o-grid__item--one-quarter {
+.govuk-grid-column-one-third,
+.govuk-grid-column-two-thirds,
+.govuk-grid-column-one-quarter {
   @include mq($until: desktop) {
     width: 100%;
   }

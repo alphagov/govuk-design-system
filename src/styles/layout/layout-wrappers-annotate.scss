@@ -1,29 +1,29 @@
-@import "@govuk-frontend/globals/common";
+@import "@govuk-frontend/frontend/settings/all";
 
-.govuk-o-width-container,
-.govuk-o-main-wrapper,
-.govuk-c-back-link,
-.govuk-o-grid,
-.govuk-o-grid__item {
+.govuk-width-container,
+.govuk-main-wrapper,
+.govuk-back-link,
+.govuk-grid-row,
+[class^="govuk-grid-column"] {
   position: relative;
   z-index: 0;
   border: 2px dashed $govuk-grey-3;
 }
 
-.govuk-o-width-container,
-.govuk-o-main-wrapper {
+.govuk-width-container,
+.govuk-main-wrapper {
   border: 2px dashed $govuk-grey-1;
 }
 
-.govuk-o-grid {
+.govuk-grid-row {
   padding: 15px;
 }
 
-.govuk-o-width-container {
+.govuk-width-container {
   padding: 15px;
 }
 
-.govuk-o-main-wrapper {
+.govuk-main-wrapper {
   padding-right: $govuk-spacing-scale-6;
   padding-left: $govuk-spacing-scale-6;
 }

@@ -8,12 +8,16 @@ stylesheets:
 {% from "fieldset/macro.njk" import govukFieldset %}
 
 {% call govukFieldset({
-  "legendHtml": '<h1 class="govuk-heading-xl govuk-!-mb-r4">What is your address?</h1>'
+  "legend": {
+    "text": "What is your address?",
+    "classes": "govuk-fieldset__legend--xl",
+    "isPageHeading": true
+  }
 }) %}
 
   {{ govukInput({
     "label": {
-      "html": 'Building and street <span class="govuk-h-visually-hidden">line 1 of 2</span>'
+      "html": 'Building and street <span class="govuk-visually-hidden">line 1 of 2</span>'
     },
     "id": "address-line-1",
     "name": "address-line-1"
@@ -21,7 +25,7 @@ stylesheets:
 
   {{ govukInput({
     "label": {
-      "html": '<span class="govuk-h-visually-hidden">Building and street line 2 of 2</span>'
+      "html": '<span class="govuk-visually-hidden">Building and street line 2 of 2</span>'
     },
     "id": "address-line-2",
     "name": "address-line-2"

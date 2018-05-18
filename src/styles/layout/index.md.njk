@@ -42,13 +42,13 @@ If you want to build your layout from scratch, or understand what each of the pa
 
 ### Limiting width of content
 
-To set up your layout you will need to create 2 wrappers. The first should have the class  `govuk-o-width-container`, which sets the maximum width of the content but doesn’t add any vertical margin or padding.
+To set up your layout you will need to create 2 wrappers. The first should have the class  `govuk-width-container`, which sets the maximum width of the content but doesn’t add any vertical margin or padding.
 
 If your design requires them, you should place components such as [Breadcrumbs](../../components/breadcrumbs), [Back link](../../components/back-link) and [Phase banner](../../components/phase-banner) inside this wrapper so that they sit directly underneath the header.
 
 ### Add vertical space
 
-Within `govuk-o-width-container` you should add the `govuk-o-main-wrapper` class to your `<main>` element. This adds responsive padding to the top and bottom of the page and will be the container for your main content.
+Within `govuk-width-container` you should add the `govuk-main-wrapper` class to your `<main>` element. This adds responsive padding to the top and bottom of the page and will be the container for your main content.
 
 ### Exploded view of page wrappers
 
@@ -56,7 +56,7 @@ Within `govuk-o-width-container` you should add the `govuk-o-main-wrapper` class
 
 ### Exploded view of page wrappers without Back link, Breadcrumbs or Phase Banner
 
-If you’re not using the [Breadcrumbs](../../components/breadcrumbs), [Back link](../../components/back-link) or [Phase banner](../../components/phase-banner) components in your design, use a modifier class `govuk-o-main-wrapper--l` to increase the vertical space above the content.
+If you’re not using the [Breadcrumbs](../../components/breadcrumbs), [Back link](../../components/back-link) or [Phase banner](../../components/phase-banner) components in your design, use a modifier class `govuk-main-wrapper--l` to increase the vertical space above the content.
 
 {{ example({group: 'styles', item: 'layout', example: 'layout-wrappers-l', html: true, open: true}) }}
 
@@ -70,9 +70,9 @@ Your main content should always be in a two-thirds column even if you’re not u
 
 ### Understanding the grid system
 
-The grid is structured with a `govuk-o-grid` wrapper which acts as a row to contain your grid columns.
+The grid is structured with a `govuk-grid-row` wrapper which acts as a row to contain your grid columns.
 
-You can add columns inside this wrapper to create your layout. To define your columns add the class  `govuk-o-grid__item` to a new container to set the padding and float properties. Then add a second class, for example `govuk-o-grid__item--one-third` to apply your desired width.
+You can add columns inside this wrapper to create your layout. To define your columns add the class beginning with `govuk-grid-column-` to a new container followed by the width "modifier", for example `govuk-grid-column-one-third` to apply your desired width.
 
 The available widths are:
 

@@ -1,4 +1,4 @@
-<nav class="app-navigation govuk-h-clearfix">
+<nav class="app-navigation govuk-clearfix">
   <ul class="app-navigation__list">
     {% for item in navigation %}
     <li{% if path == item.url or item.url and item.url in path %} class="app-navigation--current-page"{% endif %}>

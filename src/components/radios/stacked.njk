@@ -8,7 +8,11 @@ layout: layout-example.njk
   "idPrefix": "where-do-you-live",
   "name": "where-do-you-live",
   "fieldset": {
-    "legendHtml": '<h1 class="govuk-heading-xl">Where do you live?</h1>'
+    "legend": {
+      "text": 'Where do you live?',
+      "isPageHeading": true,
+      "classes": 'govuk-fieldset__legend--xl'
+    }
   },
   "items": [
     {
