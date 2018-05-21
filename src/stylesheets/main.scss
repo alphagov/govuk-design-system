@@ -183,6 +183,13 @@ $mq-breakpoint-widescreen: 1200px;
 
 $colour-list-breakpoint: 980px;
 
+// for IE8 we need to set that to 'desktop' so media queries get rasterised
+// $mq-static-breakpoint is set in Frontend
+@if $govuk-is-ie8 == true {
+  $colour-list-breakpoint: $mq-static-breakpoint;
+}
+
+
 .app-colour-list {
   width: 100%;
   border-collapse: collapse;
