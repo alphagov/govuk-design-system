@@ -58,30 +58,30 @@ Use the form label or hint text to tell users if you specifically need a UK, int
 {{ example({group: 'patterns', item: 'telephone-numbers', example: 'international', html: true, nunjucks: true, open: false}) }}
  
  
-### Don't use real telephone numbers as examples
+### Do not use real telephone numbers as examples
 
 If you need to include an example telephone number (in hint text for example), [Ofcom maintains a list of numbers](https://www.ofcom.org.uk/phones-telecoms-and-internet/information-for-industry/numbering/numbers-for-drama) that are reserved for use in media. Follow the [GOV.UK style for writing telephone numbers](https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#telephone-numbers).
 
 
-### Don’t display telephone numbers as links on devices that can’t make calls
+### Do not display telephone numbers as links on devices that cannot make calls
 
 It’s possible to mark up telephone numbers as links, like this:
 
 ```
 <a href="tel:+442079476330">020 7947 6330</a>
 ```
-However, doing this will style telephone numbers as links, which is confusing on devices that don’t support telephone calls, like most desktop machines.
+However, doing this will style telephone numbers as links, which is confusing on devices that do not support telephone calls, like most desktop machines.
 
 It’s also not necessary - most modern mobile browsers automatically detect telephone numbers and display them as links anyway.
 
-If you need to mark up your telephone number as links to support a device that cannot auto-detect them, you must make sure they don’t display as links on devices that cannot make calls.
+If you need to mark up your telephone number as links to support a device that cannot auto-detect them, you must make sure they do not display as links on devices that cannot make calls.
 
 
 ### Avoid input masking
 
 Input masking is the technique of restricting the format that a user can enter data into a text field. It's often used in conjunction with placeholder text to illustrate what the allowed format is.
 
-Avoid [input masking](https://css-tricks.com/input-masking/) because it makes it harder for users to:
+Do not use [input masking](https://css-tricks.com/input-masking/) because it makes it harder for users to:
 
 - type a number in their preferred way
 - transcribe a number from another place and check that they’ve got it right
