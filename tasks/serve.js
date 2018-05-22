@@ -5,6 +5,8 @@ const paths = require('../config/paths.json') // specify paths to main working d
 
 // setup synchronised browser testing
 metalsmith.use(browsersync({
+  ghostMode: false, // Ghost mode tries to check the same input across examples.
+  open: false, // When making changes to the server, we don't want multiple windows opening.
   server: paths.public, // server directory
   files: [
     paths.source + '**/*',
