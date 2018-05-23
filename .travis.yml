@@ -46,8 +46,8 @@ before_deploy:
   # Install CloudFoundry
   - travis_retry curl -L -o $HOME/cf.tgz "https://cli.run.pivotal.io/stable?release=linux64-binary&source=github"
   - tar xzvf $HOME/cf.tgz -C $HOME
-  # Install Autopilot plugin for zero-downtime-push
-  - travis_retry cf install-plugin autopilot -f -r CF-Community
+  # Install Blue/Green Deploy plugin for zero-downtime-push
+  - travis_retry cf install-plugin blue-green-deploy -f -r CF-Community
 
 # Deploy the Design System to production when the master branch is changed (1)
 #
