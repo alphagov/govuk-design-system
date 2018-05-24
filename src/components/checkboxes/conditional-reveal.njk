@@ -1,0 +1,58 @@
+---
+layout: layout-example.njk
+---
+
+{% from 'checkboxes/macro.njk' import govukCheckboxes %}
+
+{% set emailHtml %}
+<label class="govuk-label" for="contact-by-email">Email address</label>
+<input class="govuk-input govuk-!-width-one-third" name="contact-by-email" type="text" id="contact-by-email">
+{% endset -%}
+
+{% set phoneHtml %}
+<label class="govuk-label" for="contact-by-phone">Phone number</label>
+<input class="govuk-input govuk-!-width-one-third" name="contact-by-phone" type="text" id="contact-by-phone">
+{% endset -%}
+
+{% set textHtml %}
+<label class="govuk-label" for="contact-by-text">Mobile phone number</label>
+<input class="govuk-input govuk-!-width-one-third" name="contact-by-text" type="text" id="contact-by-text">
+{% endset -%}
+
+{{ govukCheckboxes({
+  "idPrefix": "citizenship",
+  "name": "citizen",
+  "fieldset": {
+    "legend": {
+      "text": "How would you like to be contacted?",
+      "isPageHeading": true,
+      "classes": "govuk-fieldset__legend--m"
+    },
+    "hint": {
+      "text": "Select all options that are relevant to you."
+    }
+  },
+  "items": [
+    {
+      "value": "email",
+      "text": "Email",
+      "conditional": {
+        "html": emailHtml
+      }
+    },
+    {
+      "value": "phone",
+      "text": "Phone",
+      "conditional": {
+        "html": phoneHtml
+      }
+    },
+    {
+      "value": "text message",
+      "text": "Text message",
+      "conditional": {
+        "html": textHtml
+      }
+    }
+  ]
+}) }}
