@@ -1,5 +1,5 @@
 {% macro example(params) %}
-{% set examplePath = "src/" + params.group + "/" + params.item + "/" + params.example + ".njk" %}
+{% set examplePath = "src/" + params.group + "/" + params.item + "/" + params.example + "/index.njk" %}
 {% set exampleURL = "/" + params.group + "/" + params.item + "/" + params.example + "/index.html" %}
 {% set exampleId = "example-" + params.example %}
 {% set frontendComponentName = params.frontendComponentName | default(params.item) %}

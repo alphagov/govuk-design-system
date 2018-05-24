@@ -1,0 +1,13 @@
+@import "@govuk-frontend/frontend/settings/all";
+
+// This is a GOV.UK Publishing specific component that
+// can be seen at http://govuk-static.herokuapp.com/component-guide/related_items
+
+.app-related-items {
+  padding-top: $govuk-spacing-scale-2;
+  border-top: 10px solid $govuk-blue;
+}
+
+.app-related-items li {
+  margin-bottom: $govuk-spacing-scale-2;
+}
