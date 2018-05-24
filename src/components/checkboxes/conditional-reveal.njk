@@ -3,24 +3,43 @@ layout: layout-example.njk
 ---
 
 {% from 'checkboxes/macro.njk' import govukCheckboxes %}
+{% from "input/macro.njk" import govukInput %}
 
 {% set emailHtml %}
-<label class="govuk-label" for="contact-by-email">Email address</label>
-<input class="govuk-input govuk-!-width-one-third" name="contact-by-email" type="text" id="contact-by-email">
+{{ govukInput({
+  "id": "contact-by-email",
+  "name": "contact-by-email",
+  "classes": "govuk-!-width-one-third",
+  "label": {
+    "text": "Email address"
+  }
+}) }}
 {% endset -%}
 
 {% set phoneHtml %}
-<label class="govuk-label" for="contact-by-phone">Phone number</label>
-<input class="govuk-input govuk-!-width-one-third" name="contact-by-phone" type="text" id="contact-by-phone">
+{{ govukInput({
+  "id": "contact-by-phone",
+  "name": "contact-by-phone",
+  "classes": "govuk-!-width-one-third",
+  "label": {
+    "text": "Phone number"
+  }
+}) }}
 {% endset -%}
 
 {% set textHtml %}
-<label class="govuk-label" for="contact-by-text">Mobile phone number</label>
-<input class="govuk-input govuk-!-width-one-third" name="contact-by-text" type="text" id="contact-by-text">
+{{ govukInput({
+  "id": "contact-by-text",
+  "name": "contact-by-text",
+  "classes": "govuk-!-width-one-third",
+  "label": {
+    "text": "Mobile phone number"
+  }
+}) }}
 {% endset -%}
 
 {{ govukCheckboxes({
-  "idPrefix": "citizenship",
+  "idPrefix": "citizenship-conditional",
   "name": "citizen",
   "fieldset": {
     "legend": {
