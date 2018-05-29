@@ -1,8 +1,8 @@
 {% extends "_generic.njk" %}
 
-{% block body %}
+{% block appBody %}
 <div class="app-pane__content">
-  <main id="content" role="main">
+  <main id="main-content" role="main">
     {{ contents | safe }}
   </main>
 
@@ -10,4 +10,3 @@
 </div>
 
 {% endblock %}
-
