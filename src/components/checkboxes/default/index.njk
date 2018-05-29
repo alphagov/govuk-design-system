@@ -5,30 +5,30 @@ layout: layout-example.njk
 {% from 'checkboxes/macro.njk' import govukCheckboxes %}
 
 {{ govukCheckboxes({
-  "idPrefix": "nationality",
-  "name": "nationality",
-  "fieldset": {
-    "legend": {
-      "text": 'What is your nationality?',
-      "isPageHeading": true,
-      "classes": 'govuk-fieldset__legend--xl'
+  idPrefix: "nationality",
+  name: "nationality",
+  fieldset: {
+    legend: {
+      text: 'What is your nationality?',
+      isPageHeading: true,
+      classes: 'govuk-fieldset__legend--xl'
     }
   },
-  "hint": {
-    "text": "If you have dual nationality, select all options that are relevant to you."
+  hint: {
+    text: "If you have dual nationality, select all options that are relevant to you."
   },
-  "items": [
+  items: [
     {
-      "value": "british",
-      "text": "British"
+      value: "british",
+      text: "British"
     },
     {
-      "value": "irish",
-      "text": "Irish"
+      value: "irish",
+      text: "Irish"
     },
     {
-      "value": "other",
-      "text": "Citizen of another country"
+      value: "other",
+      text: "Citizen of another country"
     }
   ]
 }) }}

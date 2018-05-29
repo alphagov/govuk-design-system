@@ -10,7 +10,7 @@ layout: layout-example.njk
 <div class="govuk-width-container">
 
   {{ govukBackLink({
-    "text": "Back"
+    text: "Back"
   }) }}
 
   <div class="govuk-main-wrapper">
@@ -21,15 +21,15 @@ layout: layout-example.njk
         <form action="/url/of/next/page" method="post">
 
           {{ govukInput({
-            "label": {
-              "text": "Passport number",
-              "classes": "govuk-label--m"
+            label: {
+              text: "Passport number",
+              classes: "govuk-label--m"
             },
-            "hint": {
-              "text": "For example, 502135326"
+            hint: {
+              text: "For example, 502135326"
             },
-            "id": "passport-number",
-            "name": "passport-number"
+            id: "passport-number",
+            name: "passport-number"
           }) }}
 
           {{ govukDateInput({
@@ -44,7 +44,7 @@ layout: layout-example.njk
             hint: {
               text: 'For example, 31 3 1980'
             },
-            items:[
+            items: [
               {
                 name: 'month'
               },
@@ -56,7 +56,7 @@ layout: layout-example.njk
           }}
 
           {{ govukButton({
-            "text": "Continue"
+            text: "Continue"
           }) }}
 
         </form>

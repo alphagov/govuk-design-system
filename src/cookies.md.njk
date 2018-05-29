@@ -24,31 +24,31 @@ You will see a message about cookies when you first visit the GOV.UK Design Syst
 {% from "table/macro.njk" import govukTable %}
 
 {{ govukTable({
-  "caption": "Dates and amounts",
-  "captionClasses": "govuk-visually-hidden",
-  "firstCellIsHeader": false,
-  "classes": "app-table--fixed",
-  "head": [
+  caption: "Dates and amounts",
+  captionClasses: "govuk-visually-hidden",
+  firstCellIsHeader: false,
+  classes: "app-table--fixed",
+  head: [
     {
-      "text": "Name"
+      text: "Name"
     },
     {
-      "text": "Purpose"
+      text: "Purpose"
     },
     {
-      "text": "Expires"
+      text: "Expires"
     }
   ],
-  "rows": [
+  rows: [
     [
       {
-        "text": "seen_cookie_message"
+        text: "seen_cookie_message"
       },
       {
-        "text": "Saves a message to let us know that you have seen our cookie message"
+        text: "Saves a message to let us know that you have seen our cookie message"
       },
       {
-        "text": "28 days"
+        text: "28 days"
       }
     ]
   ]
@@ -72,53 +72,53 @@ We don’t allow Google to use or share our analytics data.
 Google Analytics sets the following cookies:
 
 {{ govukTable({
-  "caption": "Dates and amounts",
-  "captionClasses": "govuk-visually-hidden",
-  "firstCellIsHeader": false,
-  "classes": "app-table--fixed",
-  "head": [
+  caption: "Dates and amounts",
+  captionClasses: "govuk-visually-hidden",
+  firstCellIsHeader: false,
+  classes: "app-table--fixed",
+  head: [
     {
-      "text": "Name"
+      text: "Name"
     },
     {
-      "text": "Purpose"
+      text: "Purpose"
     },
     {
-      "text": "Expires"
+      text: "Expires"
     }
   ],
-  "rows": [
+  rows: [
     [
       {
-        "text": "_ga"
+        text: "_ga"
       },
       {
-        "text": "This helps us count how many people visit the GOV.UK Design System site by tracking if you’ve visited before"
+        text: "This helps us count how many people visit the GOV.UK Design System site by tracking if you’ve visited before"
       },
       {
-        "text": "2 years"
+        text: "2 years"
       }
     ],
     [
       {
-        "text": "_gid"
+        text: "_gid"
       },
       {
-        "text": "This helps us count how many people visit the GOV.UK Design System site by tracking if you’ve visited before"
+        text: "This helps us count how many people visit the GOV.UK Design System site by tracking if you’ve visited before"
       },
       {
-        "text": "24 hours"
+        text: "24 hours"
       }
     ],
     [
       {
-        "text": "_gat"
+        text: "_gat"
       },
       {
-        "text": "This is used to limit the rate at which page view requests are recorded by Google"
+        text: "This is used to limit the rate at which page view requests are recorded by Google"
       },
       {
-        "text": "1 minute"
+        text: "1 minute"
       }
     ]
   ]
