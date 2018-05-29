@@ -7,67 +7,67 @@ layout: layout-example.njk
 
 {% set emailHtml %}
 {{ govukInput({
-  "id": "contact-by-email",
-  "name": "contact-by-email",
-  "classes": "govuk-!-width-one-third",
-  "label": {
-    "text": "Email address"
+  id: "contact-by-email",
+  name: "contact-by-email",
+  classes: "govuk-!-width-one-third",
+  label: {
+    text: "Email address"
   }
 }) }}
 {% endset -%}
 
 {% set phoneHtml %}
 {{ govukInput({
-  "id": "contact-by-phone",
-  "name": "contact-by-phone",
-  "classes": "govuk-!-width-one-third",
-  "label": {
-    "text": "Phone number"
+  id: "contact-by-phone",
+  name: "contact-by-phone",
+  classes: "govuk-!-width-one-third",
+  label: {
+    text: "Phone number"
   }
 }) }}
 {% endset -%}
 
 {% set textHtml %}
 {{ govukInput({
-  "id": "contact-by-text",
-  "name": "contact-by-text",
-  "classes": "govuk-!-width-one-third",
-  "label": {
-    "text": "Mobile phone number"
+  id: "contact-by-text",
+  name: "contact-by-text",
+  classes: "govuk-!-width-one-third",
+  label: {
+    text: "Mobile phone number"
   }
 }) }}
 {% endset -%}
 
 {{ govukRadios({
-  "idPrefix": "how-contacted-conditional",
-  "name": "how-contacted",
-  "fieldset": {
-    "legend": {
-      "text": "How do you want to be contacted?",
-      "isPageHeading": true,
-      "classes": "govuk-fieldset__legend--m"
+  idPrefix: "how-contacted-conditional",
+  name: "how-contacted",
+  fieldset: {
+    legend: {
+      text: "How do you want to be contacted?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
     }
   },
-  "items": [
+  items: [
     {
-      "value": "email",
-      "text": "Email",
-      "conditional": {
-        "html": emailHtml
+      value: "email",
+      text: "Email",
+      conditional: {
+        html: emailHtml
       }
     },
     {
-      "value": "phone",
-      "text": "Phone",
-      "conditional": {
-        "html": phoneHtml
+      value: "phone",
+      text: "Phone",
+      conditional: {
+        html: phoneHtml
       }
     },
     {
-      "value": "text",
-      "text": "Text message",
-      "conditional": {
-        "html": textHtml
+      value: "text",
+      text: "Text message",
+      conditional: {
+        html: textHtml
       }
     }
   ]

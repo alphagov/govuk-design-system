@@ -8,54 +8,54 @@ stylesheets:
 {% from "fieldset/macro.njk" import govukFieldset %}
 
 {% call govukFieldset({
-  "legend": {
-    "text": "What is your address?",
-    "classes": "govuk-fieldset__legend--xl",
-    "isPageHeading": true
+  legend: {
+    text: "What is your address?",
+    classes: "govuk-fieldset__legend--xl",
+    isPageHeading: true
   }
 }) %}
 
   {{ govukInput({
-    "label": {
-      "html": 'Building and street <span class="govuk-visually-hidden">line 1 of 2</span>'
+    label: {
+      html: 'Building and street <span class="govuk-visually-hidden">line 1 of 2</span>'
     },
-    "id": "address-line-1",
-    "name": "address-line-1"
+    id: "address-line-1",
+    name: "address-line-1"
   }) }}
 
   {{ govukInput({
-    "label": {
-      "html": '<span class="govuk-visually-hidden">Building and street line 2 of 2</span>'
+    label: {
+      html: '<span class="govuk-visually-hidden">Building and street line 2 of 2</span>'
     },
-    "id": "address-line-2",
-    "name": "address-line-2"
+    id: "address-line-2",
+    name: "address-line-2"
   }) }}
 
   {{ govukInput({
-    "label": {
-      "html": 'Town or city'
+    label: {
+      html: 'Town or city'
     },
-    "classes": 'govuk-!-width-two-thirds',
-    "id": "address-town",
-    "name": "address-town"
+    classes: 'govuk-!-width-two-thirds',
+    id: "address-town",
+    name: "address-town"
   }) }}
 
   {{ govukInput({
-    "label": {
-      "html": 'County'
+    label: {
+      html: 'County'
     },
-    "classes": 'govuk-!-width-two-thirds',
-    "id": "address-county",
-    "name": "address-county"
+    classes: 'govuk-!-width-two-thirds',
+    id: "address-county",
+    name: "address-county"
   }) }}
 
   {{ govukInput({
-    "label": {
-      "html": 'Postcode'
+    label: {
+      html: 'Postcode'
     },
-    "classes": 'govuk-input--width-10',
-    "id": "address-postcode",
-    "name": "address-postcode"
+    classes: 'govuk-input--width-10',
+    id: "address-postcode",
+    name: "address-postcode"
   }) }}
 
 {% endcall %}

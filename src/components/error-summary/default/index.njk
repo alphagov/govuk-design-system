@@ -5,16 +5,16 @@ layout: layout-example.njk
 {% from "error-summary/macro.njk" import govukErrorSummary %}
 
 {{ govukErrorSummary({
-  "titleText": "Message to alert the user to a problem goes here",
-  "descriptionText": "Optional description of the errors and how to correct them",
-  "errorList": [
+  titleText: "Message to alert the user to a problem goes here",
+  descriptionText: "Optional description of the errors and how to correct them",
+  errorList: [
     {
-      "text": "Descriptive link to the question with an error",
-      "href": "#example-error-1"
+      text: "Descriptive link to the question with an error",
+      href: "#example-error-1"
     },
     {
-      "html": "Descriptive link to the question with an error",
-      "href": "#example-error-1"
+      html: "Descriptive link to the question with an error",
+      href: "#example-error-1"
     }
   ]
 }) }}

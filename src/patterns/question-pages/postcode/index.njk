@@ -9,7 +9,7 @@ layout: layout-example.njk
 <div class="govuk-width-container">
 
 {{ govukBackLink({
-  "text": "Back"
+  text: "Back"
 }) }}
 
   <div class="govuk-main-wrapper">
@@ -19,17 +19,17 @@ layout: layout-example.njk
         <form action="/url/of/next/page" method="post">
 
           {{ govukInput({
-            "label": {
-              "text": "What is your home postcode?",
+            label: {
+              text: "What is your home postcode?",
               isPageHeading: true,
-              "classes": "govuk-label--xl"
+              classes: "govuk-label--xl"
             },
-            "id": "postcode",
-            "name": "postcode"
+            id: "postcode",
+            name: "postcode"
           }) }}
 
           {{ govukButton({
-            "text": "Continue"
+            text: "Continue"
           }) }}
         </form>
 

@@ -5,31 +5,31 @@ layout: layout-example.njk
 {% from 'radios/macro.njk' import govukRadios %}
 
 {{ govukRadios({
-  "idPrefix": "where-do-you-live",
-  "name": "where-do-you-live",
-  "fieldset": {
-    "legend": {
-      "text": 'Where do you live?',
-      "isPageHeading": true,
-      "classes": 'govuk-fieldset__legend--xl'
+  idPrefix: "where-do-you-live",
+  name: "where-do-you-live",
+  fieldset: {
+    legend: {
+      text: 'Where do you live?',
+      isPageHeading: true,
+      classes: 'govuk-fieldset__legend--xl'
     }
   },
-  "items": [
+  items: [
     {
-      "value": "england",
-      "text": "England"
+      value: "england",
+      text: "England"
     },
     {
-      "value": "scotland",
-      "text": "Scotland"
+      value: "scotland",
+      text: "Scotland"
     },
     {
-      "value": "wales",
-      "text": "Wales"
+      value: "wales",
+      text: "Wales"
     },
     {
-      "value": "northern-ireland",
-      "text": "Northern Ireland"
+      value: "northern-ireland",
+      text: "Northern Ireland"
     }
   ]
 }) }}
