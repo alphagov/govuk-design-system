@@ -44,6 +44,7 @@
     "jstransformer-nunjucks": "^0.5.0",
     "metalsmith": "^2.3.0",
     "metalsmith-assets": "^0.1.0",
+    "metalsmith-broken-link-checker": "^1.0.1",
     "metalsmith-browser-sync": "^1.1.1",
     "metalsmith-concat": "^6.0.0",
     "metalsmith-env": "^2.1.1",
