@@ -2,34 +2,36 @@
 layout: layout-example.njk
 ---
 
-{% from "date-input/macro.njk" import govukDateInput %}
+{% from 'checkboxes/macro.njk' import govukCheckboxes %}
 
-{{ govukDateInput({
+{{ govukCheckboxes({
+  idPrefix: "nationality",
+  name: "nationality",
   fieldset: {
     legend: {
-      text: 'What is your date of birth?',
+      text: 'What is your nationality?',
       isPageHeading: true,
       classes: 'govuk-fieldset__legend--xl'
-    } 
+    }
   },
   hint: {
-    text: 'For example, 31 3 1980'
+    text: "If you have dual nationality, select all options that are relevant to you."
   },
   errorMessage: {
-    text: "Error message goes here"
+    text: "Select if you are British, Irish or a citizen of a different country"
   },
-  id: 'dob',
-  name: 'dob',
   items: [
     {
-      name: 'day'
+      value: "british",
+      text: "British"
     },
     {
-      name: 'month'
+      value: "irish",
+      text: "Irish"
     },
     {
-      name: 'year'
+      value: "other",
+      text: "Citizen of another country"
     }
   ]
-  })
-}}
+}) }}

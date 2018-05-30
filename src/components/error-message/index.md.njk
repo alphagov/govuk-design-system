@@ -9,11 +9,13 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 
+Use an error message when a there is a validation error. Explain what went wrong and how to fix it.
+
 {{ example({group: 'components', item: 'error-message', example: 'default', html: true, nunjucks: true, open: false}) }}
 
 ## When to use this component
 
-Show an error message next to the field and in the [Error summary](../error-summary/) when there is a validation error. Explain what went wrong and how to fix it.
+Show an error message next to the field and in the [error summary](../error-summary/) when there is a validation error.
 
 Use standard messages for different components.
 
@@ -27,7 +29,7 @@ Only display an error when someone tries to move to the next part of the service
 - as they are typing
 - when they move away from a field
 
-Do not use this error messages to tell users that they are not eligible or do not have permission to do something. Instead, take them to a screen that:
+Do not use error messages to tell users that they are not eligible or do not have permission to do something. Instead, take them to a screen that:
 
 - explains why we cannot accept the entry or selection
 - tells them what to do next
@@ -37,13 +39,13 @@ Do not use this error messages to tell users that they are not eligible or do no
 
 For each error:
 
-- put the message in red inside the question’s `<label>` or `<legend>`, after the question text and hint text
+- put the message in red after the question text and hint text
 - use a red border to visually connect the message and the question it belongs to
 - if the error relates to specific text fields within the question, give these a red border as well
 
-You must also summarise all errors at the top of the page the user is on using an [Error summary](../error-summary/).
+Summarise all errors at the top of the page the user is on using an [error summary](../error-summary/).
 
-There are 2 ways to use the Error message component. You can use HTML or, if you are using Nunjucks or the GOV.UK Prototype Kit, you can use the Nunjucks macro.
+There are 2 ways to use the error message component. You can use HTML or, if you are using Nunjucks or the GOV.UK Prototype Kit, you can use the Nunjucks macro.
 
 ### Legend
 
@@ -72,7 +74,7 @@ Read the message out loud to see if it sounds like something you would say.
 
 ### Be consistent
 
-Use the same message next to the field and in the [Error summary](../error-summary/) so they:
+Use the same message next to the field and in the [error summary](../error-summary/) so they:
 
 - look, sound and mean the same
 - make sense out of context
@@ -122,7 +124,7 @@ Find out how often people see them. This will let you:
 
 Error messages designed using this guidance have been tested with all types of users in live services, including tax credits.
 
-Research showed the messages meant users:
+Research showed users:
 
 - understood what went wrong
 - knew how to fix the problem
