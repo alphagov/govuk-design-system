@@ -1,39 +1,46 @@
-<!doctype html>
-<html class="no-js">
-  <head>
-    <meta charset="utf-8">
-    <meta name="robots" content="noindex, nofollow">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ title }}</title>
-    <!--[if !IE 8]><!-->
-      <link href="/{{ fingerprint['stylesheets/main.css'] }}" rel="stylesheet" media="all" />
-    <!--<![endif]-->
-    <!--[if lt IE 9]>
-      <link href="/{{ fingerprint['stylesheets/main-ie8.css'] }}" rel="stylesheet" media="all" />
-      <script src="/{{ fingerprint['javascripts/ie.js'] }}"></script>
-    <![endif]-->
-    <script src="/javascripts/vendor/modernizr.js"></script>
-    {% include "_tracking-head.njk" %}
-  </head>
-  <body>
-    {% include "_tracking-body.njk" %}
-    <a href="#content" class="govuk-skip-link">Skip to main content</a>
-    <div class="app-pane">
-      {% include "_cookie-banner.njk" %}
-      <div class="app-pane__header">
-        {% include "_header.njk" %}
-        {% include "_banner.njk" %}
-      </div>
-      <div class="app-pane__nav">
-        {% include "_navigation.njk" %}
-        {% include "_mobile-navigation.njk" %}
-      </div>
+{% extends "template.njk" %}
 
-      {% block body %}
-        {{ contents | safe }}
-      {% endblock %}
+{% block pageTitle %}{{ title }}{% endblock %}
 
+{% block head %}
+  <meta name="robots" content="noindex, nofollow">
+  <!--[if !IE 8]><!-->
+    <link href="/{{ fingerprint['stylesheets/main.css'] }}" rel="stylesheet" media="all" />
+  <!--<![endif]-->
+  <!--[if lt IE 9]>
+    <link href="/{{ fingerprint['stylesheets/main-ie8.css'] }}" rel="stylesheet" media="all" />
+    <script src="/{{ fingerprint['javascripts/ie.js'] }}"></script>
+  <![endif]-->
+  <script src="/javascripts/vendor/modernizr.js"></script>
+  {% include "_tracking-head.njk" %}
+{% endblock %}
+
+{% block bodyStart %}
+  {% include "_tracking-body.njk" %}
+{% endblock %}
+
+{# Hide default header and footer, since we wrap it. #}
+{% block footer %}{% endblock %}
+{% block header %}{% endblock %}
+
+{% block main %}
+  <div class="app-pane">
+    {% include "_cookie-banner.njk" %}
+    <div class="app-pane__header">
+      {% include "_header.njk" %}
+      {% include "_banner.njk" %}
     </div>
-    <script src="/{{ fingerprint['javascripts/application.js'] }}"></script>
-  </body>
-</html>
+    <div class="app-pane__nav">
+      {% include "_navigation.njk" %}
+      {% include "_mobile-navigation.njk" %}
+    </div>
+
+    {% block appBody %}
+      {{ contents | safe }}
+    {% endblock %}
+  </div>
+{% endblock %}
+
+{% block bodyEnd %}
+  <script src="/{{ fingerprint['javascripts/application.js'] }}"></script>
+{% endblock %}
