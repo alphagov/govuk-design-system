@@ -1,0 +1,26 @@
+@include govuk-exports("app-content-heading") {
+  // Anchored headings
+  // If the heading is not being interacted with, don't show anchor link.
+  .app-content-heading:not(:active):not(:hover) .app-content-heading__anchor {
+    @include govuk-visually-hidden-focusable;
+  }
+
+  // Remove focus styles on anchor, instead put them on the icon.
+  // Since we need padding to create whitespace between the anchor and the top of the screen.
+  .app-content-heading__anchor:focus {
+    /* Prose scope has high specificity requiring !importants */
+    outline: none !important;
+    background: transparent !important;
+  }
+
+  .app-content-heading__anchor:focus .app-content-heading__icon {
+    outline: $govuk-focus-width solid $govuk-focus-colour;
+    outline-offset: 0;
+    background-color: $govuk-focus-colour;
+  }
+
+  .app-content-heading__icon {
+    width: .6em;
+    height: .6em;
+  }
+}
