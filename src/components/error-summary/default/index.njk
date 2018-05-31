@@ -5,16 +5,15 @@ layout: layout-example.njk
 {% from "error-summary/macro.njk" import govukErrorSummary %}
 
 {{ govukErrorSummary({
-  titleText: "Message to alert the user to a problem goes here",
-  descriptionText: "Optional description of the errors and how to correct them",
+  titleText: "There is a problem",
   errorList: [
     {
-      text: "Descriptive link to the question with an error",
-      href: "#example-error-1"
+      text: "Date of birth must be in the past",
+      href: "#dob-error"
     },
     {
-      html: "Descriptive link to the question with an error",
-      href: "#example-error-1"
+      html: "Enter a postcode, like AA1 1AA",
+      href: "#postcode-error"
     }
   ]
 }) }}
