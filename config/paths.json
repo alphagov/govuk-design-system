@@ -16,5 +16,6 @@
     "stylesheets": "src/stylesheets/",
   "views": "views/",
     "layouts": "views/layouts/",
-    "partials": "views/partials/"
+    "partials": "views/partials/",
+  "port": 3000
 }
