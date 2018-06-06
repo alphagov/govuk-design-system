@@ -4,6 +4,13 @@
         <div class="govuk-grid-column-two-thirds">
             <h1 class="govuk-heading-xl app-masthead__title">Design your service using GOV.UK styles, components and&nbsp;patterns</h1>
             <p class="app-masthead__description">Use this design system to make your service consistent with GOV.UK. Learn from the research and experience of other service teams and avoid repeating work that’s already been done.</p>
+
+            {% from "button/macro.njk" import govukButton %}
+            {{ govukButton({
+              "text": "Get started",
+              "href": "/get-started",
+              "classes": "govuk-c-button--start app-button--inverted govuk-!-mt-r6 govuk-!-mb-r0"
+            }) }}
         </div>
     </div>
   </div>
