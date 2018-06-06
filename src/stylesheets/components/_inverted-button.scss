@@ -82,7 +82,9 @@ $app-button-inverted-shadow-colour: shade($app-button-inverted-foreground-colour
 .govuk-c-button--start.app-button--inverted {
   background-image: url('/images/icon-pointer--blue.png');
 
+/*
   @include govuk-h-device-pixel-ratio {
     background-image: url('/images/icon-pointer--blue-2x.png');
   }
+  */
 }

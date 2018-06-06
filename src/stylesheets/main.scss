@@ -284,3 +284,29 @@ p code {
   color: $app-code-color;
   background-color: $govuk-grey-4;
 }
+
+/// HACKS
+
+.govuk-c-button--start {
+    padding-top: 9px;
+    padding-bottom: 6px;
+}
+
+.govuk-c-button--start {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1;
+    min-height: auto;
+    padding-top: 8px;
+    padding-right: 40px;
+    padding-bottom: 8px;
+    padding-left: 15px;
+    background-image: url(/icons/icon-pointer.png);
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+}
+
+.govuk-c-button--start {
+    font-size: 24px;
+    line-height: 1;
+}
