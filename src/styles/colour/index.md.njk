@@ -20,31 +20,22 @@ the GOV.UK colour palette when you update GOV.UK Frontend.
 
 ## Main colours
 
-<table class="govuk-body app-colour-list">
-
-  <thead class="govuk-visually-hidden">
-    <th scope="col">Sass name</th>
-    <th scope="col">Hex value</th>
-    <th scope="col">Notes</th>
-  </thead>
-
+<table class="govuk-body app-colour-list" summary="Table of main colours">
+  <tbody>
   {# colours is an object built by ./lib/colours.js based on data defined in ./data/colours.json #}
   {% for groupName, group in colours.main %}
-
     <tr>
       <td colspan="3">
-          {# add padding to the top of each group heading, but not the first one #}
-          <h3 {% if not loop.first %}class="govuk-!-pt-r6"{% endif %}>
-            {{groupName}}
-          </h3>
+        <h3 class="govuk-heading-m {% if not loop.first %}govuk-!-pt-r6{% endif %}">
+        {{groupName}} 
+        </h3>
       </td>
     </tr>
-
     {% for colour in group %}
 
       <tr class="app-colour-list-row">
 
-        <th class="app-colour-list-column app-colour-list-column--name">
+        <th class="app-colour-list-column app-colour-list-column--name" scope="row">
           <span class="app-swatch {% if colour.colour == "#fff" %}app-swatch-border{% endif %}" style="background-color:{{colour.colour}}"></span>
           {{colour.name}}
         </th>
@@ -56,23 +47,18 @@ the GOV.UK colour palette when you update GOV.UK Frontend.
         </td>
 
       </tr>
-
     {% endfor %}
+    
 
   {% endfor %}
-
+  </tbody>
 </table>
 
 ## Greyscale
 
-<table class="govuk-body app-colour-list">
+<table class="govuk-body app-colour-list" summary="Table of greyscale colours"> 
 
-  <thead class="govuk-visually-hidden">
-    <th scope="col">Sass name</th>
-    <th scope="col">Hex value</th>
-    <th scope="col">Notes</th>
-  </thead>
-
+  <tbody>
   {% for colour in colours.greyscale %}
 
     <tr class="app-colour-list-row">
@@ -92,7 +78,7 @@ the GOV.UK colour palette when you update GOV.UK Frontend.
     </tr>
 
   {% endfor %}
-
+  </tbody>
 </table>
 
 ## Extended colours
@@ -103,14 +89,9 @@ If you need to use tints of the extended palette, use either 25% or 50%.
 
 You can find departmental colours in the GOV.UK Frontend [_colours-organisations](https://github.com/alphagov/govuk-frontend/blob/master/src/settings/_colours-organisations.scss) file.
 
-<table class="govuk-body app-colour-list">
+<table class="govuk-body app-colour-list" summary="Table of extended colours">
 
-  <thead class="govuk-visually-hidden">
-    <th scope="col">Sass name</th>
-    <th scope="col">Hex value</th>
-    <th scope="col">Notes</th>
-  </thead>
-
+  <tbody>
   {% for colour in colours.extended %}
 
     <tr class="app-colour-list-row">
@@ -129,5 +110,5 @@ You can find departmental colours in the GOV.UK Frontend [_colours-organisations
     </tr>
 
   {% endfor %}
-
+ </tbody>
 </table>
