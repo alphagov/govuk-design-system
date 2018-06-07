@@ -87,18 +87,34 @@ $mq-breakpoint-widescreen: 1200px;
   ul:not(.app-tabs),
   ol,
   img,
+  video,
   .app-table--constrained {
     max-width: 38em;
   }
 
+  video,
   img {
     box-sizing: border-box;
     width: 100%;
     height: auto;
-    padding: $govuk-spacing-scale-2;
     @include govuk-responsive-margin($govuk-spacing-responsive-2, "top");
     @include govuk-responsive-margin($govuk-spacing-responsive-6, "bottom");
     border: 1px solid $govuk-border-colour;
+  }
+
+  img {
+    padding: $govuk-spacing-scale-2;
+  }
+
+  video {
+    @include govuk-focusable;
+  }
+
+  // IE8 does not support the video element, so we hide the element entirely.
+  @if $govuk-is-ie8 == true {
+    video {
+      display: none;
+    }
   }
 }
 
