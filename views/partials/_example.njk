@@ -2,16 +2,22 @@
 {% set examplePath = "src/" + params.group + "/" + params.item + "/" + params.example + "/index.njk" %}
 {% set exampleURL = "/" + params.group + "/" + params.item + "/" + params.example + "/index.html" %}
 {% set exampleId = "example-" + params.example %}
+{% set exampleTitle = getFrontmatter(examplePath).title %}
 {% set frontendComponentName = params.frontendComponentName | default(params.item) %}
-
 {% if params.open %}
   {% set exampleId = exampleId + '-open' %}
 {% endif %}
 
 <div class="app-example-wrapper js-example" id="{{ exampleId }}">
   <div class="app-example {{ "app-example--tabs" if params.html or params.nunjucks }}">
-    <span class="app-example__new-window"><a href="{{ exampleURL }}" target="_blank">(open in new window)</a></span>
-    <iframe class="app-example__frame app-example__frame--resizable js-example__frame" src="{{ exampleURL }}" frameBorder="0"></iframe>
+    <span class="app-example__new-window">
+      <a href="{{ exampleURL }}" target="_blank">
+        Open this
+        <span class="govuk-visually-hidden"> "{{ exampleTitle }}" </span>
+        example in a new window
+      </a>
+    </span>
+    <iframe title="{{ exampleTitle }}" class="app-example__frame app-example__frame--resizable js-example__frame" src="{{ exampleURL }}" frameBorder="0"></iframe>
   </div>
 
   {%- if (params.html and params.nunjucks) %}
