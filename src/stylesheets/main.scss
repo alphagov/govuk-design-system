@@ -196,17 +196,19 @@ $colour-list-breakpoint: 980px;
 }
 
 .app-colour-list-row {
-  display: block;
-  position: relative;
+  display: table-row;
   margin-bottom: $govuk-spacing-scale-2;
+  border-bottom: 10px solid transparent;
   @include mq($from: $colour-list-breakpoint) {
     display: table-row;
     margin: auto;
+    border-bottom: 0;
   }
 }
 
 .app-colour-list-column {
   display: block;
+  position: relative;
   padding-left: 50px;
   @include mq($from: $colour-list-breakpoint) {
     display: table-cell;
