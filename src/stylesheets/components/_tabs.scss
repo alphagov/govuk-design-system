@@ -94,6 +94,24 @@
   border: 0;
 }
 
+// Ensure the copy button does not obstruct the examples.
+// Use relative units to allow this also to work when the user is zoomed 200%
+@media (min-width: 65.0625em) {
+  .app-tabs__container pre code {
+    // Account for the size of the copy button.
+    // On bigger screens the copy button is to not obstruct the content
+    // So instead shorten the length of the code block
+    max-width: calc(100% - 6em);
+  }
+}
+@media (max-width: 65em) {
+  .app-tabs__container pre {
+    // On smaller screens, we need all the width we can get,
+    // so instead add padding to the top of the example, which feels more balanced.
+    padding-top: 2em;
+  }
+}
+
 .app-tabs__container--with-close-button pre {
   padding-bottom: $govuk-spacing-scale-6;
 }
