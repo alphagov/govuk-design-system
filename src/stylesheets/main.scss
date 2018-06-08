@@ -119,17 +119,6 @@ $mq-breakpoint-widescreen: 1200px;
 
 .app-example-page {
   padding: $govuk-spacing-scale-6 * 2 $govuk-spacing-scale-6 $govuk-spacing-scale-6;
-
-  &:before {
-    content: "Resize";
-    position: fixed;
-    z-index: 2;
-    right: $govuk-spacing-scale-3;
-    bottom: 0;
-    color: $govuk-secondary-text-colour;
-    background: $govuk-white;
-    @include govuk-font-regular-16;
-  }
 }
 
 .app-example-page--full-page {
