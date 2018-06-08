@@ -23,7 +23,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  padding: 5px $govuk-spacing-scale-6 / 2;
+  padding: 5px $govuk-spacing-scale-2;
   @include govuk-font-regular-14;
   background: $govuk-grey-3;
   z-index: 1;
@@ -31,12 +31,6 @@
   a {
     color: $govuk-link-colour;
     text-decoration: none;
-  }
-
-  &:before {
-    @include govuk-font-regular-14;
-    content: "EXAMPLE";
-    margin-right: 10px;
   }
 }
 
