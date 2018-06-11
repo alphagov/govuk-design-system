@@ -1,0 +1,17 @@
+---
+layout: layout-example.njk
+title: International – Telephone numbers
+---
+
+{% from "input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "Telephone number",
+    hintText: "For international numbers include the country code"
+  },
+  id: "telephone-number",
+  name: "telephone-number",
+  type: "tel",
+  classes: "govuk-input--width-20"
+}) }}
