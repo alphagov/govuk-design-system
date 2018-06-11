@@ -1,38 +1,46 @@
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
-    <meta charset="utf-8">
-    <meta name="robots" content="noindex, nofollow">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ title }} – GOV.UK Design System</title>
-    <!--[if !IE 8]><!-->
-      <link href="/{{ fingerprint['stylesheets/main.css'] }}" rel="stylesheet" media="all" />
-    <!--<![endif]-->
-    <!--[if lt IE 9]>
-      <link href="/{{ fingerprint['stylesheets/main-ie8.css'] }}" rel="stylesheet" media="all" />
-      <script src="/{{ fingerprint['javascripts/ie.js'] }}"></script>
-    <![endif]-->
-    <script src="/javascripts/vendor/modernizr.js"></script>
-    {% include "_tracking-head.njk" %}
-  </head>
-  <body>
-    <a href="#content" class="govuk-skip-link">Skip to main content</a>
-    <div class="app-pane">
-      {% include "_cookie-banner.njk" %}
-      <div class="app-pane__header">
-        {% include "_header.njk" %}
-        {% include "_banner.njk" %}
-      </div>
-      <div class="app-pane__nav">
-        {% include "_navigation.njk" %}
-        {% include "_mobile-navigation.njk" %}
-      </div>
+{% extends "template.njk" %}
 
-      {% block body %}
-        {{ contents | safe }}
-      {% endblock %}
+{% set htmlClasses = 'no-js' %}
 
-    </div>
-    <script src="/{{ fingerprint['javascripts/application.js'] }}"></script>
-  </body>
-</html>
+{% block pageTitle %}{{ title }} – GOV.UK Design System{% endblock %}
+
+{% block head %}
+  <meta name="robots" content="noindex, nofollow">
+
+  <!--[if !IE 8]><!-->
+    <link href="/{{ fingerprint['stylesheets/main.css'] }}" rel="stylesheet" media="all" />
+  <!--<![endif]-->
+  <!--[if lt IE 9]>
+    <link href="/{{ fingerprint['stylesheets/main-ie8.css'] }}" rel="stylesheet" media="all" />
+    <script src="/{{ fingerprint['javascripts/ie.js'] }}"></script>
+  <![endif]-->
+  <script src="/javascripts/vendor/modernizr.js"></script>
+  {% include "_tracking-head.njk" %}
+{% endblock %}
+
+{# We provide our own header, so blank the one provided by the template #}
+{% block header %}{% endblock %}
+
+{% block main %}
+<div class="app-pane {% block appPaneClasses %}{% endblock %}">
+  {% include "_cookie-banner.njk" %}
+  <div class="app-pane__header">
+    {% include "_header.njk" %}
+    {% include "_banner.njk" %}
+  </div>
+  <div class="app-pane__nav">
+    {% include "_navigation.njk" %}
+    {% include "_mobile-navigation.njk" %}
+  </div>
+  {% block body %}
+    {{ contents | safe }}
+  {% endblock %}
+</div>
+{% endblock %}
+
+{# We provide our own footer, so blank the one provided by the template #}
+{% block footer %}{% endblock %}
+
+{% block bodyEnd %}
+<script src="/{{ fingerprint['javascripts/application.js'] }}"></script>
+{% endblock %}

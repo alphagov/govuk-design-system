@@ -1,7 +1,7 @@
 @include govuk-exports("app-pane") {
   $toc-width: 300px;
 
-  .app-pane {
+  .app-pane.app-pane--enabled {
     $pane-height: 100vh;
 
     @include mq($from: tablet) {
