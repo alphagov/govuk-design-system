@@ -1,18 +1,18 @@
 [
   {
     "label": "About",
-    "url": ""
+    "url": "design-system"
   },
   {
     "label": "Styles",
-    "url": "styles"
+    "url": "design-system/styles"
   },
   {
     "label": "Components",
-    "url": "components"
+    "url": "design-system/components"
   },
   {
     "label": "Patterns",
-    "url": "patterns"
+    "url": "design-system/patterns"
   }
 ]
