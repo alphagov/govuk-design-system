@@ -7,7 +7,7 @@
   @extend .govuk-body;
   display: block;
   @include govuk-responsive-padding($govuk-spacing-responsive-6);
-  background-color: $govuk-light-blue;
+  background-color: $govuk-blue;
   color: white;
   text-align: center;
   margin-bottom: 0;
