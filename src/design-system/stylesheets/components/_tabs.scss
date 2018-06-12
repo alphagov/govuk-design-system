@@ -10,7 +10,7 @@
     display: none;
   }
 
-  .govuk-prose-scope & { // A specific selector to reset .govuk-prose-scope ul
+  .app-prose-scope & { // A specific selector to reset .app-prose-scope ul
     margin-bottom: 0;
     padding: 0;
   }
@@ -33,12 +33,12 @@
     font-weight: bold;
     text-decoration: none;
 
-    .govuk-prose-scope &:focus { // A specific selector to reset .govuk-prose-scope a:focus
+    .app-prose-scope &:focus { // A specific selector to reset .app-prose-scope a:focus
       background: inherit;
     }
   }
 
-  .govuk-prose-scope & { // A specific selector to reset .govuk-prose-scope ul li
+  .app-prose-scope & { // A specific selector to reset .app-prose-scope ul li
     margin: 0;
   }
 }
