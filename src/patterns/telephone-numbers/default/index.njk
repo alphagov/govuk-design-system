@@ -1,0 +1,16 @@
+---
+layout: layout-example.njk
+title: Default – Telephone numbers
+---
+
+{% from "input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "UK telephone number"
+  },
+  id: "telephone-number",
+  name: "telephone-number",
+  type: "tel",
+  classes: "govuk-input--width-20"
+}) }}
