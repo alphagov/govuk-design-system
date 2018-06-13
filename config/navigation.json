@@ -14,5 +14,9 @@
   {
     "label": "Patterns",
     "url": "design-system/patterns"
+  },
+  {
+    "label": "Community",
+    "url": "design-system/community"
   }
 ]
