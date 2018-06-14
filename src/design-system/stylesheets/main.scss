@@ -161,6 +161,8 @@ $app-breakpoint-widescreen: 1200px;
   vertical-align: top;
 }
 
+$app-link-colour: #00823b;
+
 // Copy button
 .app-link--copy {
   &:link,
@@ -174,15 +176,15 @@ $app-breakpoint-widescreen: 1200px;
     right: govuk-spacing(3);
     min-width: 58px;
     padding: 4px 10px 0;
-    border: 1px solid $govuk-button-colour;
-    color: $govuk-button-colour;
+    border: 1px solid $app-link-colour;
+    color: $app-link-colour;
     background-color: govuk-colour("white");
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
 
     .app-prose-scope & {
-      color: $govuk-button-colour; // A specific selector to override .app-prose-scope a:link
+      color: $app-link-colour; // A specific selector to override .app-prose-scope a:link
       background-color: govuk-colour("white"); // A specific selector to override .app-prose-scope a:focus
     }
   }
