@@ -24,15 +24,6 @@
         "name": "$govuk-border-colour"
       }
     ],
-    "Buttons": [
-      {
-        "name": "$govuk-button-colour"
-      },
-      {
-        "name": "$govuk-green",
-        "notes": "Use for button hover"
-      }
-    ],
     "Focus": [
       {
         "name": "$govuk-focus-colour"
