@@ -1,12 +1,12 @@
 .app-masthead {
   @include govuk-responsive-padding($govuk-spacing-responsive-6, "top");
   @include govuk-responsive-padding($govuk-spacing-responsive-6, "bottom");
-  color: $govuk-white;
-  background-color: $govuk-blue;
+  color: govuk-colour("white");
+  background-color: govuk-colour("blue");
 }
 
 .app-masthead__title {
-  color: $govuk-white;
+  color: govuk-colour("white");
   @include govuk-responsive-margin($govuk-spacing-responsive-6, "bottom");
 }
 

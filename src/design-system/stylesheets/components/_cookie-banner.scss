@@ -9,7 +9,7 @@
   padding-right: $govuk-spacing-scale-3;
   padding-bottom: $govuk-spacing-scale-3;
   padding-left: $govuk-spacing-scale-3;
-  background-color: $govuk-light-blue-25;
+  background-color: lighten(desaturate(govuk-colour("light-blue"), 8.46), 42.55);
 }
 
 .app-cookie-banner {

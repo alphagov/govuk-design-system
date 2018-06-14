@@ -8,13 +8,13 @@
 .govuk-grid-row {
   [class^="govuk-grid-column"]  {
     background-color: white;
-    border: 4px solid $govuk-blue;
+    border: 4px solid govuk-colour("blue");
     padding-bottom: $govuk-spacing-scale-2;
   }
 
   [class^="govuk-grid-column"] > p {
     background-color: transparent;
-    color: $govuk-blue;
+    color: govuk-colour("blue");
   }
 
   .govuk-grid-row {
@@ -26,7 +26,7 @@
       @extend .govuk-body;
       display: block;
       @include govuk-responsive-padding($govuk-spacing-responsive-6);
-      background-color: $govuk-blue;
+      background-color: govuk-colour("blue");
       color: white;
       text-align: center;
       margin-bottom: 0;

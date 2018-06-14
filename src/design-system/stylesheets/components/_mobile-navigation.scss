@@ -37,7 +37,7 @@
       &:hover,
       &:focus,
       &:visited {
-        color: $govuk-blue;
+        color: govuk-colour("blue");
         background-color: inherit;
       }
     }
@@ -48,9 +48,9 @@
   margin: 0;
   padding: $govuk-spacing-scale-2 0 0 0;
   list-style: none;
-  border-top: 1px solid $govuk-grey-3;
-  border-bottom: 1px solid $govuk-grey-3;
-  background-color: $govuk-white;
+  border-top: 1px solid govuk-colour("grey-3");
+  border-bottom: 1px solid govuk-colour("grey-3");
+  background-color: govuk-colour("white");
 
   &--hidden {
     display: none;
@@ -70,19 +70,19 @@
     }
 
     &.current-page a {
-      border-left: 4px solid $govuk-blue;
+      border-left: 4px solid govuk-colour("blue");
     }
   }
 }
 
 .app-mobile-nav__current-page {
-  border-left: 4px solid $govuk-blue;
+  border-left: 4px solid govuk-colour("blue");
 }
 
 .app-mobile-nav__theme {
   margin: 0;
   padding: $govuk-spacing-scale-4 $govuk-spacing-scale-4 $govuk-spacing-scale-1 $govuk-spacing-scale-4;
-  color: $govuk-grey-1;
+  color: govuk-colour("grey-1");
   // Font is defined as a hard 19px so
   // it doesn't re-size on mobile viewport
   font-size: 19px;
@@ -93,7 +93,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  background-color: $govuk-white;
+  background-color: govuk-colour("white");
 
   & > li {
     @include govuk-font-regular-19;
@@ -106,7 +106,7 @@
     }
 
     &.current-page a {
-      border-left: 4px solid $govuk-blue;
+      border-left: 4px solid govuk-colour("blue");
     }
 
     &:last-child a {
@@ -116,5 +116,5 @@
 }
 
 .app-mobile-nav__subnav-toggler--active {
-  border-top: 1px solid $govuk-white;
+  border-top: 1px solid govuk-colour("white");
 }

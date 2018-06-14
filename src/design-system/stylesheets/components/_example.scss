@@ -8,7 +8,7 @@
 .app-example {
   position: relative;
   border: 1px solid $govuk-border-colour;
-  background: $govuk-grey-3;
+  background: govuk-colour("grey-3");
 }
 
 .app-example--tabs {
@@ -25,7 +25,7 @@
   left: 0;
   padding: 5px $govuk-spacing-scale-2;
   @include govuk-font-regular-14;
-  background: $govuk-grey-3;
+  background: govuk-colour("grey-3");
   z-index: 1;
 
   a {
@@ -40,7 +40,7 @@
   max-width: 100%;
   border: 0;
   border-right: 1px solid $govuk-border-colour;
-  background: $govuk-white;
+  background: govuk-colour("white");
 }
 
 .app-example__frame--resizable {

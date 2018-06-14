@@ -176,14 +176,14 @@ $mq-breakpoint-widescreen: 1200px;
     padding: 4px 10px 0;
     border: 1px solid $govuk-button-colour;
     color: $govuk-button-colour;
-    background-color: $govuk-white;
+    background-color: govuk-colour("white");
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
 
     .app-prose-scope & {
       color: $govuk-button-colour; // A specific selector to override .app-prose-scope a:link
-      background-color: $govuk-white; // A specific selector to override .app-prose-scope a:focus
+      background-color: govuk-colour("white"); // A specific selector to override .app-prose-scope a:focus
     }
   }
 }
@@ -244,7 +244,7 @@ $colour-list-breakpoint: 980px;
 }
 
 .app-swatch-border {
-  border-color: $govuk-grey-2;
+  border-color: govuk-colour("grey-2");
 }
 
 .app-colour-list-column--name {
@@ -290,7 +290,7 @@ pre {
 p code {
   padding: 0 $govuk-spacing-scale-1;
   color: $app-code-color;
-  background-color: $govuk-grey-4;
+  background-color: govuk-colour("grey-4");
 }
 
 .app-prose-scope {

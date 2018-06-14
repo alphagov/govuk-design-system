@@ -3,20 +3,20 @@
   @include govuk-responsive-margin($govuk-spacing-responsive-6, "top");
   @include govuk-responsive-margin($govuk-spacing-responsive-6, "bottom");
   @include govuk-responsive-padding($govuk-spacing-responsive-3);
-  background-color: $govuk-blue;
+  background-color: govuk-colour("blue");
 
   .app-contact-panel__heading,
   .app-contact-panel__body,
   .app-contact-panel__link {
-    color: $govuk-white;
+    color: govuk-colour("white");
   }
 
   .app-contact-panel__link:hover {
-    color: lighten($govuk-light-blue, 45%);
+    color: lighten(govuk-colour("light-blue"), 45%);
   }
 
   .app-contact-panel__link:focus {
-    color: $govuk-blue;
+    color: govuk-colour("blue");
   }
 }
 

@@ -23,11 +23,11 @@
       -webkit-box-sizing: border-box;
 
       &:hover {
-        border-bottom: 4px solid $govuk-light-blue;
+        border-bottom: 4px solid govuk-colour("light-blue");
       }
 
       &.app-navigation--current-page {
-        border-bottom: 4px solid $govuk-blue !important;
+        border-bottom: 4px solid govuk-colour("blue") !important;
 
         a:hover {
           color: $govuk-link-colour;

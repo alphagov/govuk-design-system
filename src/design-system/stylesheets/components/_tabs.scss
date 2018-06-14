@@ -45,9 +45,9 @@
 
 .app-tabs__item--current {
   a {
-    border-top-color: $govuk-blue;
-    border-bottom-color: $govuk-blue;
-    background-color: darken($govuk-grey-4, 3%);
+    border-top-color: govuk-colour("blue");
+    border-bottom-color: govuk-colour("blue");
+    background-color: darken(govuk-colour("grey-4"), 3%);
   }
 }
 
@@ -76,7 +76,7 @@
 }
 
 .app-tabs__heading--current {
-  background-color: darken($govuk-grey-4, 3%);
+  background-color: darken(govuk-colour("grey-4"), 3%);
 }
 
 // Tab containers

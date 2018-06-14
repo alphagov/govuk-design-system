@@ -1,10 +1,9 @@
 @import "@govuk-frontend/frontend/settings/all";
 
 div {
-  background-color: lighten($govuk-light-blue, 25%);
+  background-color: lighten(govuk-colour("light-blue"), 25%);
 }
 
 div:nth-of-type(odd) {
-  background-color: $govuk-light-blue;
+  background-color: govuk-colour("light-blue");
 }
-
