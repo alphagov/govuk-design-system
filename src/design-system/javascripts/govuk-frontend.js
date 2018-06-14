@@ -5,8 +5,12 @@ import Checkboxes from '@govuk-frontend/frontend/components/checkboxes/checkboxe
 // import ErrorSummary from '@govuk-frontend/frontend/components/error-summary/error-summary'
 import Radios from '@govuk-frontend/frontend/components/radios/radios'
 
-new Button().init()
-new Details().init()
+new Button(document).init()
+
+var $details = document.querySelector('details')
+if ($details) {
+  new Details($details).init()
+}
 
 var $checkbox = document.querySelector('[data-module="checkboxes"]')
 if ($checkbox) {
