@@ -4,14 +4,14 @@
   &--active {
     display: block;
 
-    @include mq($from: tablet) {
+    @include govuk-media-query($from: tablet) {
       display: none;
     }
   }
 }
 
 .no-js .app-mobile-nav {
-  @include mq($until: desktop) {
+  @include govuk-media-query($until: desktop) {
     display: block;
   }
 }

@@ -6,7 +6,7 @@
   list-style-type: none;
   border: 1px solid $govuk-border-colour;
 
-  @include mq($until: desktop) {
+  @include govuk-media-query($until: desktop) {
     display: none;
   }
 
@@ -69,7 +69,7 @@
       color: $govuk-link-colour;
     }
 
-    @include mq($until: desktop) {
+    @include govuk-media-query($until: desktop) {
       display: block;
     }
   }
@@ -85,7 +85,7 @@
   margin-top: -2px;
   border: 1px solid $govuk-border-colour;
 
-  @include mq($until: desktop) {
+  @include govuk-media-query($until: desktop) {
     border-top: 0;
   }
 }
@@ -121,9 +121,9 @@
 
   // magical number 1080px below as the content is inside a narrow panel
   // and can't rely on predefined media queries
-  // sassmq converts pixels to ems
+  // govuk-media-query converts pixels to ems
 
-  @include mq($from: 1080px) {
+  @include govuk-media-query($from: 1080px) {
     padding-bottom: 0;
   }
 }
@@ -135,7 +135,7 @@
   bottom: $govuk-spacing-scale-3 / 2;
   text-decoration: none;
 
-  @include mq($from: 1080px) {
+  @include govuk-media-query($from: 1080px) {
     bottom: $govuk-spacing-scale-3 + 2; // font baseline adjustment
   }
 }

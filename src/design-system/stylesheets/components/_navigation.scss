@@ -5,7 +5,7 @@
   background-color: $app-light-grey;
   @include govuk-font-bold-19;
 
-  @include mq($until: tablet) {
+  @include govuk-media-query($until: tablet) {
     display: none;
   }
 

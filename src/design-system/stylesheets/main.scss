@@ -27,29 +27,29 @@ body {
 }
 
 .app-hide-mobile {
-  @include mq($until: tablet) {
+  @include govuk-media-query($until: tablet) {
     display: none;
   }
 }
 
 .app-hide-tablet {
-  @include mq($from: tablet) {
+  @include govuk-media-query($from: tablet) {
     display: none;
   }
 }
 
 .app-hide-desktop {
-  @include mq($from: desktop) {
+  @include govuk-media-query($from: desktop) {
     display: none;
   }
 }
 
 // Mirrors Bootstrap 4 - open for discussion
-$mq-breakpoint-widescreen: 1200px;
+$app-breakpoint-widescreen: 1200px;
 
 // This will be coming to FE later but making it app specific for now
 .app-site-width-container {
-  @media (min-width: $mq-breakpoint-widescreen) {
+  @media (min-width: $app-breakpoint-widescreen) {
     max-width: 1100px;
   }
 }
@@ -61,7 +61,7 @@ $mq-breakpoint-widescreen: 1200px;
 
 // This is consistent with Elements - will be changed in FE
 [class*="govuk-grid-column"] {
-  @include mq($until: desktop) {
+  @include govuk-media-query($until: desktop) {
     padding: 0 $govuk-gutter-half;
   }
 }
@@ -70,7 +70,7 @@ $mq-breakpoint-widescreen: 1200px;
 .govuk-grid-column-one-third,
 .govuk-grid-column-two-thirds,
 .govuk-grid-column-one-quarter {
-  @include mq($until: desktop) {
+  @include govuk-media-query($until: desktop) {
     width: 100%;
   }
 }
@@ -191,9 +191,9 @@ $mq-breakpoint-widescreen: 1200px;
 $colour-list-breakpoint: 980px;
 
 // for IE8 we need to set that to 'desktop' so media queries get rasterised
-// $mq-static-breakpoint is set in Frontend
+// $govuk-ie8-breakpoint is set in Frontend
 @if $govuk-is-ie8 == true {
-  $colour-list-breakpoint: $mq-static-breakpoint;
+  $colour-list-breakpoint: $govuk-ie8-breakpoint;
 }
 
 
@@ -206,7 +206,7 @@ $colour-list-breakpoint: 980px;
   display: table-row;
   margin-bottom: $govuk-spacing-scale-2;
   border-bottom: 10px solid transparent;
-  @include mq($from: $colour-list-breakpoint) {
+  @include govuk-media-query($from: $colour-list-breakpoint) {
     display: table-row;
     margin: auto;
     border-bottom: 0;
@@ -217,7 +217,7 @@ $colour-list-breakpoint: 980px;
   display: block;
   position: relative;
   padding-left: 50px;
-  @include mq($from: $colour-list-breakpoint) {
+  @include govuk-media-query($from: $colour-list-breakpoint) {
     display: table-cell;
     padding-left: 0;
     vertical-align: middle;
@@ -233,7 +233,7 @@ $colour-list-breakpoint: 980px;
   height: 40px;
   border: 1px solid transparent; // only light colours need a border
   border-radius: 50%;
-  @include mq($from: $colour-list-breakpoint) {
+  @include govuk-media-query($from: $colour-list-breakpoint) {
     display: inline-block;
     position: static;
     margin-top: 6px;
@@ -250,19 +250,19 @@ $colour-list-breakpoint: 980px;
 .app-colour-list-column--name {
   font-weight: normal;
   text-align: left;
-  @include mq($from: $colour-list-breakpoint) {
+  @include govuk-media-query($from: $colour-list-breakpoint) {
     width: 50%;
   }
 }
 
 .app-colour-list-column--colour {
-  @include mq($from: $colour-list-breakpoint) {
+  @include govuk-media-query($from: $colour-list-breakpoint) {
     width: 15%;
   }
 }
 
 .app-colour-list-column--notes {
-  @include mq($from: $colour-list-breakpoint) {
+  @include govuk-media-query($from: $colour-list-breakpoint) {
     width: 35%;
   }
 }
@@ -280,7 +280,7 @@ pre {
   // Adjustments in app-pane layout as it has toc below
   .app-pane__content .app-content {
 
-    @include mq($until: tablet) {
+    @include govuk-media-query($until: tablet) {
       padding-bottom: 10px;
     }
   }

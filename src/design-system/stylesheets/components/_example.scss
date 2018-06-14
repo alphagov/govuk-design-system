@@ -14,7 +14,7 @@
 .app-example--tabs {
   @include govuk-responsive-margin($govuk-spacing-responsive-0, "bottom");
 
-  @include mq($from: desktop) {
+  @include govuk-media-query($from: desktop) {
     margin-bottom: -1px;
   }
 }

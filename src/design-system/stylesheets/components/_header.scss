@@ -66,7 +66,7 @@
     }
   }
 
-  @include mq($media-type: print) {
+  @include govuk-media-query($media-type: print) {
     .app-header {
       border-bottom-width: 0;
       color: govuk-colour("black");
@@ -116,7 +116,7 @@
       box-shadow: 0 0 0 govuk-colour("blue");
     }
 
-    @include mq($from: tablet) {
+    @include govuk-media-query($from: tablet) {
       display: none;
     }
   }

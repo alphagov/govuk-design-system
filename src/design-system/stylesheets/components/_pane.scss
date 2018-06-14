@@ -4,7 +4,7 @@
   .app-pane.app-pane--enabled {
     $pane-height: 100vh;
 
-    @include mq($from: tablet) {
+    @include govuk-media-query($from: tablet) {
       display: flex;
       height: $pane-height;
       flex-direction: column;
@@ -15,7 +15,7 @@
       grid-template-columns: minmax(100%, 1fr);
       grid-template-rows: repeat(3, auto);
 
-      @include mq($from: tablet) {
+      @include govuk-media-query($from: tablet) {
         height: $pane-height;
         // `min-content` for header, `max-content` for body(incl. footer)
         grid-template-rows: min-content max-content;
@@ -24,7 +24,7 @@
   }
 
   .app-pane__header {
-    @include mq($from: tablet) {
+    @include govuk-media-query($from: tablet) {
       display: flex;
       flex-direction: column;
       flex: 1 0 auto;
@@ -40,7 +40,7 @@
   }
 
   .app-pane__body {
-    @include mq($from: tablet) {
+    @include govuk-media-query($from: tablet) {
       display: flex;
       position: relative;
       min-height: 0;
@@ -56,7 +56,7 @@
     @supports (display: grid) {
       grid-column: span 1;
 
-      @include mq($from: tablet) {
+      @include govuk-media-query($from: tablet) {
         display: grid;
         grid-template-columns: $toc-width 1fr;
         grid-template-rows: auto;
@@ -68,14 +68,14 @@
 
   .app-pane__subnav {
     border-right: 1px solid $govuk-border-colour;
-    @include mq($from: tablet) {
+    @include govuk-media-query($from: tablet) {
       width: $toc-width;
       border-right: 1px solid $govuk-border-colour;
       flex: 0 0 auto;
     }
 
     @supports (display: grid) {
-      @include mq($from: tablet) {
+      @include govuk-media-query($from: tablet) {
         width: auto;
         grid-column: span 1;
       }
@@ -87,7 +87,7 @@
   }
 
   .app-pane__content {
-    @include mq($from: tablet) {
+    @include govuk-media-query($from: tablet) {
       display: flex;
       margin-left: auto;
       flex: 1 1 auto;
@@ -101,7 +101,7 @@
     }
 
     @supports (display: grid) {
-      @include mq($from: tablet) {
+      @include govuk-media-query($from: tablet) {
         margin-left: 0;
         grid-column: span 1;
       }

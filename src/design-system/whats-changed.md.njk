@@ -515,15 +515,15 @@ GOV.UK Frontend uses ["Block, Element, Modifier" (BEM)](http://getbem.com/) and 
   <tbody class="govuk-table__body">
     <tr class="govuk-table__row">
       <td class="govuk-table__cell ">@include media(desktop)</td>
-      <td class="govuk-table__cell ">@include mq($from: desktop)<br>@include mq($to: desktop)</td>
+      <td class="govuk-table__cell ">@include govuk-media-query($from: desktop)<br>@include govuk-media-query($to: desktop)</td>
     </tr>
     <tr class="govuk-table__row">
       <td class="govuk-table__cell ">@include media(tablet)</td>
-      <td class="govuk-table__cell ">@include mq($from: tablet)<br>@include mq($to: tablet)</td>
+      <td class="govuk-table__cell ">@include govuk-media-query($from: tablet)<br>@include govuk-media-query($to: tablet)</td>
     </tr>
     <tr class="govuk-table__row">
       <td class="govuk-table__cell ">@include media(mobile)</td>
-      <td class="govuk-table__cell ">@include mq($from: mobile)<br>@include mq($to: mobile)</td>
+      <td class="govuk-table__cell ">@include govuk-media-query($from: mobile)<br>@include govuk-media-query($to: mobile)</td>
     </tr>
   </tbody>
 </table>

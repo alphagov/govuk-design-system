@@ -20,7 +20,7 @@
   margin: 0;
 }
 
-@include mq($media-type: print) {
+@include govuk-media-query($media-type: print) {
   .app-cookie-banner {
     display: none !important;
   }
