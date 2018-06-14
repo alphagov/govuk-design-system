@@ -25,7 +25,7 @@
   a {
     display: block;
     margin-top: -1px;
-    padding: $govuk-spacing-scale-3;
+    padding: govuk-spacing(3);
     border-top: 2px solid transparent;
     border-bottom: 2px solid transparent;
     color: $govuk-link-colour;
@@ -57,7 +57,7 @@
     display: none;
     position: relative;
     z-index: 2;
-    padding: $govuk-spacing-scale-3;
+    padding: govuk-spacing(3);
     border: 1px solid $govuk-border-colour;
     border-top: 0;
     color: $govuk-link-colour;
@@ -113,11 +113,11 @@
 }
 
 .app-tabs__container--with-close-button pre {
-  padding-bottom: $govuk-spacing-scale-6;
+  padding-bottom: govuk-spacing(6);
 }
 
 .app-tabs__text {
-  padding: $govuk-spacing-scale-4 $govuk-spacing-scale-4 $govuk-spacing-scale-4 $govuk-spacing-scale-4;
+  padding: govuk-spacing(4) govuk-spacing(4) govuk-spacing(4) govuk-spacing(4);
 
   // magical number 1080px below as the content is inside a narrow panel
   // and can't rely on predefined media queries
@@ -131,11 +131,11 @@
 // Close container button
 .app-link--close {
   position: absolute;
-  right: $govuk-spacing-scale-3;
-  bottom: $govuk-spacing-scale-3 / 2;
+  right: govuk-spacing(3);
+  bottom: govuk-spacing(3) / 2;
   text-decoration: none;
 
   @include govuk-media-query($from: 1080px) {
-    bottom: $govuk-spacing-scale-3 + 2; // font baseline adjustment
+    bottom: govuk-spacing(3) + 2; // font baseline adjustment
   }
 }

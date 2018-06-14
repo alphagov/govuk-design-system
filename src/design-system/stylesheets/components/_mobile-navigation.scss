@@ -31,7 +31,7 @@
     & > a {
       @include govuk-typography-weight-bold; // Override .govuk-link weight
       display: block;
-      padding: 16px $govuk-spacing-scale-4 17px $govuk-spacing-scale-4;
+      padding: 16px govuk-spacing(4) 17px govuk-spacing(4);
       text-decoration: none;
 
       &:hover,
@@ -46,7 +46,7 @@
 
 .app-mobile-nav__subnav {
   margin: 0;
-  padding: $govuk-spacing-scale-2 0 0 0;
+  padding: govuk-spacing(2) 0 0 0;
   list-style: none;
   border-top: 1px solid govuk-colour("grey-3");
   border-bottom: 1px solid govuk-colour("grey-3");
@@ -64,7 +64,7 @@
     & > a {
       @include govuk-font-regular-19;
       display: block;
-      padding: $govuk-spacing-scale-2 $govuk-spacing-scale-4;
+      padding: govuk-spacing(2) govuk-spacing(4);
 
       text-decoration: none;
     }
@@ -81,7 +81,7 @@
 
 .app-mobile-nav__theme {
   margin: 0;
-  padding: $govuk-spacing-scale-4 $govuk-spacing-scale-4 $govuk-spacing-scale-1 $govuk-spacing-scale-4;
+  padding: govuk-spacing(4) govuk-spacing(4) govuk-spacing(1) govuk-spacing(4);
   color: govuk-colour("grey-1");
   // Font is defined as a hard 19px so
   // it doesn't re-size on mobile viewport
@@ -100,7 +100,7 @@
 
     & > a {
       display: block;
-      padding: $govuk-spacing-scale-3 $govuk-spacing-scale-4 $govuk-spacing-scale-2 $govuk-spacing-scale-4;
+      padding: govuk-spacing(3) govuk-spacing(4) govuk-spacing(2) govuk-spacing(4);
 
       text-decoration: none;
     }
@@ -110,7 +110,7 @@
     }
 
     &:last-child a {
-      padding-bottom: $govuk-spacing-scale-5;
+      padding-bottom: govuk-spacing(5);
     }
   }
 }

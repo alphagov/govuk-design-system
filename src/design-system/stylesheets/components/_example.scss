@@ -1,7 +1,7 @@
 // Example styles
 .app-example-wrapper {
-  @include govuk-responsive-margin($govuk-spacing-responsive-6, "top");
-  @include govuk-responsive-margin($govuk-spacing-responsive-6, "bottom");
+  @include govuk-responsive-margin(6, "top");
+  @include govuk-responsive-margin(6, "bottom");
   @include govuk-font-regular-19;
 }
 
@@ -12,7 +12,7 @@
 }
 
 .app-example--tabs {
-  @include govuk-responsive-margin($govuk-spacing-responsive-0, "bottom");
+  @include govuk-responsive-margin(0, "bottom");
 
   @include govuk-media-query($from: desktop) {
     margin-bottom: -1px;
@@ -23,7 +23,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  padding: 5px $govuk-spacing-scale-2;
+  padding: 5px govuk-spacing(2);
   @include govuk-font-regular-14;
   background: govuk-colour("grey-3");
   z-index: 1;
@@ -45,7 +45,7 @@
 
 .app-example__frame--resizable {
   min-width: 230px;
-  min-height: $govuk-spacing-scale-6 * 2;
+  min-height: govuk-spacing(6) * 2;
   overflow: auto;
   resize: both;
   transform: translate3d(0, 0, 0);

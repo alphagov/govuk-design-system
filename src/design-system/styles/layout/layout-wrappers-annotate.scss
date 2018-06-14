@@ -24,6 +24,6 @@
 }
 
 .govuk-main-wrapper {
-  padding-right: $govuk-spacing-scale-6;
-  padding-left: $govuk-spacing-scale-6;
+  padding-right: govuk-spacing(6);
+  padding-left: govuk-spacing(6);
 }

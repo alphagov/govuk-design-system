@@ -4,10 +4,10 @@
 // can be seen at http://govuk-static.herokuapp.com/component-guide/related_items
 
 .app-related-items {
-  padding-top: $govuk-spacing-scale-2;
+  padding-top: govuk-spacing(2);
   border-top: 10px solid govuk-colour("blue");
 }
 
 .app-related-items li {
-  margin-bottom: $govuk-spacing-scale-2;
+  margin-bottom: govuk-spacing(2);
 }

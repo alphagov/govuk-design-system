@@ -109,16 +109,16 @@ If you’re building your own components and want to reference the spacing scale
 
 If you want to use static values that won’t change based on breakpoints you can reference the spacing scale variables directly like this:
 
-`padding-top: $govuk-spacing-scale-6`
+`padding-top: govuk-spacing(6)`
 
 
 ### Using the responsive spacing mixin
 
 If you want to use the responsive spacing scale you can reference the mixin.
 
-For example, use `@include govuk-responsive-margin($govuk-spacing-responsive-6, "bottom");` for 30px margin-bottom on large screens and 20px on small screens.
+For example, use `@include govuk-responsive-margin(6, "bottom");` for 30px margin-bottom on large screens and 20px on small screens.
 
-Use `@include govuk-responsive-padding($govuk-spacing-responsive-6);` for 30px padding on all sides on large screens and 20px on small screens.
+Use `@include govuk-responsive-padding(6);` for 30px padding on all sides on large screens and 20px on small screens.
 
 ## Width override classes
 

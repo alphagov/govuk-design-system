@@ -1,8 +1,8 @@
 
 .app-contact-panel {
-  @include govuk-responsive-margin($govuk-spacing-responsive-6, "top");
-  @include govuk-responsive-margin($govuk-spacing-responsive-6, "bottom");
-  @include govuk-responsive-padding($govuk-spacing-responsive-3);
+  @include govuk-responsive-margin(6, "top");
+  @include govuk-responsive-margin(6, "bottom");
+  @include govuk-responsive-padding(3);
   background-color: govuk-colour("blue");
 
   .app-contact-panel__heading,

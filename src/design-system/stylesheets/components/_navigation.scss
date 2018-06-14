@@ -1,7 +1,7 @@
 .app-navigation {
   $navigation-height: 53px;
-  padding-right: $govuk-spacing-scale-3;
-  padding-left: $govuk-spacing-scale-3;
+  padding-right: govuk-spacing(3);
+  padding-left: govuk-spacing(3);
   background-color: $app-light-grey;
   @include govuk-font-bold-19;
 
@@ -37,7 +37,7 @@
       a {
         @include govuk-typography-weight-bold; // Override .govuk-link weight
         display: block;
-        padding: 0 $govuk-spacing-scale-3;
+        padding: 0 govuk-spacing(3);
         color: $govuk-link-colour;
         text-decoration: none;
 

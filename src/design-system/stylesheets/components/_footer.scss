@@ -9,7 +9,7 @@
     padding: 0;
     @include govuk-media-query($from: desktop) {
       margin: 0 auto;
-      padding: 0 $govuk-spacing-scale-6;
+      padding: 0 govuk-spacing(6);
     }
   }
 
