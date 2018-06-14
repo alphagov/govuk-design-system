@@ -11,6 +11,6 @@
 }
 
 .app-masthead__description {
-  @include govuk-font-regular-24;
+  @include govuk-font(24);
   margin-bottom: 0;
 }

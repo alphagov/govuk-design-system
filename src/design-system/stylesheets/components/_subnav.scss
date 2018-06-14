@@ -2,7 +2,7 @@
 
   .app-subnav {
     padding: govuk-spacing(3);
-    @include govuk-font-regular-16;
+    @include govuk-font(16);
   }
 
   .app-subnav__section {
@@ -40,6 +40,6 @@
     margin: 0;
     padding: govuk-spacing(2) govuk-spacing(3);
     color: govuk-colour("grey-1");
-    @include govuk-font-regular-19;
+    @include govuk-font(19);
   }
 }

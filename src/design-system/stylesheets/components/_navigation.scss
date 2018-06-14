@@ -3,7 +3,7 @@
   padding-right: govuk-spacing(3);
   padding-left: govuk-spacing(3);
   background-color: $app-light-grey;
-  @include govuk-font-bold-19;
+  @include govuk-font(19, $weight: bold);
 
   @include govuk-media-query($until: tablet) {
     display: none;

@@ -121,7 +121,7 @@ $app-breakpoint-widescreen: 1200px;
 }
 
 .app-content__header {
-  @include govuk-font-regular-24;
+  @include govuk-font(24);
 }
 
 .app-content__heading {
@@ -167,7 +167,7 @@ $app-breakpoint-widescreen: 1200px;
   &:active,
   &:visited,
   &:hover {
-    @include govuk-font-regular-16;
+    @include govuk-font(16);
     position: absolute;
     z-index: 1;
     top: govuk-spacing(3);

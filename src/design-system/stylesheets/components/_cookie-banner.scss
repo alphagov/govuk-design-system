@@ -1,5 +1,5 @@
 .app-cookie-banner {
-  @include govuk-font-regular-16;
+  @include govuk-font(16);
   @include govuk-text-colour;
 
   box-sizing: border-box;
