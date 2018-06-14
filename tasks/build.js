@@ -4,6 +4,6 @@ const generateServiceWorker = require('../lib/build-service-worker') // setup se
 // build to destination directory
 metalsmith.build(function (err, files) {
   if (err) { throw err }
-  // after all files are built, generate the service worker
+  // after all files are built, generate the service worker and copy workbox assets
   generateServiceWorker.init()
 })
