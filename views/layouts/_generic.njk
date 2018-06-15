@@ -51,7 +51,7 @@
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         // Scope will be restricted to the path where the service-worker.js file is located
-        navigator.serviceWorker.register('/service-worker.js', {scope: './'}).then(registration => {
+        navigator.serviceWorker.register('/service-worker.js', {scope: '/'}).then(registration => {
           console.log('Service Worker registered: ', registration);
         }).catch(registrationError => {
           console.log('Service Worker registration failed: ', registrationError);
