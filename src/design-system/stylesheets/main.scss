@@ -277,7 +277,7 @@ pre {
   border: 1px solid $govuk-border-colour;
   background-color: $app-light-grey;
   max-width: 38em;
-  @include govuk-responsive-margin($govuk-spacing-responsive-4, "bottom");
+  @include govuk-responsive-margin(4, "bottom");
 }
 
 .no-js {
