@@ -1,14 +1,15 @@
-@import "govuk-frontend/settings/all";
-@import "govuk-frontend/tools/all";
-@import "govuk-frontend/helpers/all";
-@import "govuk-frontend/core/all";
+@import "example-init";
 
 [class^="govuk-grid-column"] > p {
-  @extend .govuk-body;
-  display: block;
+  @include govuk-text-colour;
+  @include govuk-font($size: 24);
   @include govuk-responsive-padding(6);
+
+  display: block;
+  margin: 0;
+
   background-color: govuk-colour("blue");
-  color: white;
+  color: govuk-colour("white");
+
   text-align: center;
-  margin-bottom: 0;
 }
