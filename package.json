@@ -28,8 +28,8 @@
     ]
   },
   "dependencies": {
-    "@govuk-frontend/frontend": "0.0.31-alpha",
     "clipboard": "^2.0.0",
+    "govuk-frontend": "0.0.32",
     "gray-matter": "^4.0.1",
     "html5shiv": "^3.7.3",
     "jquery": "^1.12.4",

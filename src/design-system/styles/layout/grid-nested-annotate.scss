@@ -1,9 +1,9 @@
-@import "@govuk-frontend/frontend/settings/all";
-@import "@govuk-frontend/frontend/tools/all";
-@import "@govuk-frontend/frontend/helpers/all";
-@import "@govuk-frontend/frontend/core/all";
-@import "@govuk-frontend/frontend/objects/all";
-@import "@govuk-frontend/frontend/utilities/all";
+@import "govuk-frontend/settings/all";
+@import "govuk-frontend/tools/all";
+@import "govuk-frontend/helpers/all";
+@import "govuk-frontend/core/all";
+@import "govuk-frontend/objects/all";
+@import "govuk-frontend/utilities/all";
 
 .govuk-grid-row {
   [class^="govuk-grid-column"]  {

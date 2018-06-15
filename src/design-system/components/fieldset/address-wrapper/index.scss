@@ -1,6 +1,6 @@
-@import "@govuk-frontend/frontend/settings/all";
-@import "@govuk-frontend/frontend/tools/all";
-@import "@govuk-frontend/frontend/helpers/all";
+@import "govuk-frontend/settings/all";
+@import "govuk-frontend/tools/all";
+@import "govuk-frontend/helpers/all";
 
 // This is a separate stylesheet for the address example to limit the width of the
 // fieldset,  simulating the content being in a two-thirds column (most common

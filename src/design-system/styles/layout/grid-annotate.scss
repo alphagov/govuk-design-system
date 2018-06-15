@@ -1,7 +1,7 @@
-@import "@govuk-frontend/frontend/settings/all";
-@import "@govuk-frontend/frontend/tools/all";
-@import "@govuk-frontend/frontend/helpers/all";
-@import "@govuk-frontend/frontend/core/all";
+@import "govuk-frontend/settings/all";
+@import "govuk-frontend/tools/all";
+@import "govuk-frontend/helpers/all";
+@import "govuk-frontend/core/all";
 
 [class^="govuk-grid-column"] > p {
   @extend .govuk-body;
