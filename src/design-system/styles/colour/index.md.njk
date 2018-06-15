@@ -26,7 +26,7 @@ the GOV.UK colour palette when you update GOV.UK Frontend.
   {% for groupName, group in colours.main %}
     <tr>
       <td colspan="3">
-        <h3 class="govuk-heading-m {% if not loop.first %}govuk-!-pt-r6{% endif %}">
+        <h3 class="govuk-heading-m {% if not loop.first %}govuk-!-padding-top-6{% endif %}">
         {{groupName}} 
         </h3>
       </td>
@@ -37,7 +37,7 @@ the GOV.UK colour palette when you update GOV.UK Frontend.
 
         <th class="app-colour-list-column app-colour-list-column--name" scope="row">
           <span class="app-swatch {% if colour.colour == "#fff" %}app-swatch-border{% endif %}" style="background-color:{{colour.colour}}"></span>
-          {{colour.name}}
+          <code>{{colour.name}}</code>
         </th>
         <td class="app-colour-list-column app-colour-list-column--colour">
           {{colour.colour}}
@@ -65,7 +65,7 @@ the GOV.UK colour palette when you update GOV.UK Frontend.
 
       <th class="app-colour-list-column app-colour-list-column--name">
         <span class="app-swatch {% if colour.colour == "#fff" %}app-swatch-border{% endif %}" style="background-color:{{colour.colour}}"></span>
-        {{colour.name}}
+        <code>{{colour.name}}</code>
       </th>
 
       <td class="app-colour-list-column app-colour-list-column--colour">
@@ -98,7 +98,7 @@ You can find departmental colours in the GOV.UK Frontend [_colours-organisations
 
       <th class="app-colour-list-column app-colour-list-column--name">
         <span class="app-swatch {% if colour.colour == "#fff" %}app-swatch-border{% endif %}" style="background-color:{{colour.colour}}"></span>
-        {{colour.name}}
+        <code>{{colour.name}}</code>
       </th>
       <td class="app-colour-list-column app-colour-list-column--colour">
         {{colour.colour}}

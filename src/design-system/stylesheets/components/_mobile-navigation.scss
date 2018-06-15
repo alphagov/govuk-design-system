@@ -4,14 +4,14 @@
   &--active {
     display: block;
 
-    @include mq($from: tablet) {
+    @include govuk-media-query($from: tablet) {
       display: none;
     }
   }
 }
 
 .no-js .app-mobile-nav {
-  @include mq($until: desktop) {
+  @include govuk-media-query($until: desktop) {
     display: block;
   }
 }
@@ -31,13 +31,13 @@
     & > a {
       @include govuk-typography-weight-bold; // Override .govuk-link weight
       display: block;
-      padding: 16px $govuk-spacing-scale-4 17px $govuk-spacing-scale-4;
+      padding: 16px govuk-spacing(4) 17px govuk-spacing(4);
       text-decoration: none;
 
       &:hover,
       &:focus,
       &:visited {
-        color: $govuk-blue;
+        color: govuk-colour("blue");
         background-color: inherit;
       }
     }
@@ -46,11 +46,11 @@
 
 .app-mobile-nav__subnav {
   margin: 0;
-  padding: $govuk-spacing-scale-2 0 0 0;
+  padding: govuk-spacing(2) 0 0 0;
   list-style: none;
-  border-top: 1px solid $govuk-grey-3;
-  border-bottom: 1px solid $govuk-grey-3;
-  background-color: $govuk-white;
+  border-top: 1px solid govuk-colour("grey-3");
+  border-bottom: 1px solid govuk-colour("grey-3");
+  background-color: govuk-colour("white");
 
   &--hidden {
     display: none;
@@ -62,27 +62,27 @@
 
   & > li {
     & > a {
-      @include govuk-font-regular-19;
+      @include govuk-font(19);
       display: block;
-      padding: $govuk-spacing-scale-2 $govuk-spacing-scale-4;
+      padding: govuk-spacing(2) govuk-spacing(4);
 
       text-decoration: none;
     }
 
     &.current-page a {
-      border-left: 4px solid $govuk-blue;
+      border-left: 4px solid govuk-colour("blue");
     }
   }
 }
 
 .app-mobile-nav__current-page {
-  border-left: 4px solid $govuk-blue;
+  border-left: 4px solid govuk-colour("blue");
 }
 
 .app-mobile-nav__theme {
   margin: 0;
-  padding: $govuk-spacing-scale-4 $govuk-spacing-scale-4 $govuk-spacing-scale-1 $govuk-spacing-scale-4;
-  color: $govuk-grey-1;
+  padding: govuk-spacing(4) govuk-spacing(4) govuk-spacing(1) govuk-spacing(4);
+  color: govuk-colour("grey-1");
   // Font is defined as a hard 19px so
   // it doesn't re-size on mobile viewport
   font-size: 19px;
@@ -93,28 +93,28 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  background-color: $govuk-white;
+  background-color: govuk-colour("white");
 
   & > li {
-    @include govuk-font-regular-19;
+    @include govuk-font(19);
 
     & > a {
       display: block;
-      padding: $govuk-spacing-scale-3 $govuk-spacing-scale-4 $govuk-spacing-scale-2 $govuk-spacing-scale-4;
+      padding: govuk-spacing(3) govuk-spacing(4) govuk-spacing(2) govuk-spacing(4);
 
       text-decoration: none;
     }
 
     &.current-page a {
-      border-left: 4px solid $govuk-blue;
+      border-left: 4px solid govuk-colour("blue");
     }
 
     &:last-child a {
-      padding-bottom: $govuk-spacing-scale-5;
+      padding-bottom: govuk-spacing(5);
     }
   }
 }
 
 .app-mobile-nav__subnav-toggler--active {
-  border-top: 1px solid $govuk-white;
+  border-top: 1px solid govuk-colour("white");
 }

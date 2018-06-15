@@ -1,11 +1,11 @@
 .app-navigation {
   $navigation-height: 53px;
-  padding-right: $govuk-spacing-scale-3;
-  padding-left: $govuk-spacing-scale-3;
+  padding-right: govuk-spacing(3);
+  padding-left: govuk-spacing(3);
   background-color: $app-light-grey;
-  @include govuk-font-bold-19;
+  @include govuk-font(19, $weight: bold);
 
-  @include mq($until: tablet) {
+  @include govuk-media-query($until: tablet) {
     display: none;
   }
 
@@ -23,11 +23,11 @@
       -webkit-box-sizing: border-box;
 
       &:hover {
-        border-bottom: 4px solid $govuk-light-blue;
+        border-bottom: 4px solid govuk-colour("light-blue");
       }
 
       &.app-navigation--current-page {
-        border-bottom: 4px solid $govuk-blue !important;
+        border-bottom: 4px solid govuk-colour("blue") !important;
 
         a:hover {
           color: $govuk-link-colour;
@@ -37,7 +37,7 @@
       a {
         @include govuk-typography-weight-bold; // Override .govuk-link weight
         display: block;
-        padding: 0 $govuk-spacing-scale-3;
+        padding: 0 govuk-spacing(3);
         color: $govuk-link-colour;
         text-decoration: none;
 

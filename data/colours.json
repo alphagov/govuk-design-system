@@ -24,15 +24,6 @@
         "name": "$govuk-border-colour"
       }
     ],
-    "Buttons": [
-      {
-        "name": "$govuk-button-colour"
-      },
-      {
-        "name": "$govuk-green",
-        "notes": "Use for button hover"
-      }
-    ],
     "Focus": [
       {
         "name": "$govuk-focus-colour"
@@ -40,7 +31,7 @@
     ],
     "Status":[
       {
-        "name": "$govuk-blue",
+        "name": "govuk-colour(\"blue\")",
         "notes": "Use for phase banners"
       },
       {
@@ -51,66 +42,66 @@
   },
   "greyscale":[
     {
-      "name": "$govuk-black"
+      "name": "govuk-colour(\"black\")"
     },
     {
-      "name": "$govuk-grey-1"
+      "name": "govuk-colour(\"grey-1\")"
     },
     {
-      "name": "$govuk-grey-2"
+      "name": "govuk-colour(\"grey-2\")"
     },
     {
-      "name": "$govuk-grey-3"
+      "name": "govuk-colour(\"grey-3\")"
     },
     {
-      "name": "$govuk-grey-4"
+      "name": "govuk-colour(\"grey-4\")"
     }
   ],
   "extended":[
     {
-      "name": "$govuk-red"
+      "name": "govuk-colour(\"red\")"
     },
     {
-      "name": "$govuk-mellow-red"
+      "name": "govuk-colour(\"bright-red\")"
     },
     {
-      "name": "$govuk-orange"
+      "name": "govuk-colour(\"orange\")"
     },
     {
-      "name": "$govuk-brown"
+      "name": "govuk-colour(\"brown\")"
     },
     {
-      "name": "$govuk-yellow"
+      "name": "govuk-colour(\"yellow\")"
     },
     {
-      "name": "$govuk-grass-green"
+      "name": "govuk-colour(\"light-green\")"
     },
     {
-      "name": "$govuk-green"
+      "name": "govuk-colour(\"green\")"
     },
     {
-      "name": "$govuk-turquoise"
+      "name": "govuk-colour(\"turquoise\")"
     },
     {
-      "name": "$govuk-light-blue"
+      "name": "govuk-colour(\"light-blue\")"
     },
     {
-      "name": "$govuk-blue"
+      "name": "govuk-colour(\"blue\")"
     },
     {
-      "name": "$govuk-mauve"
+      "name": "govuk-colour(\"light-purple\")"
     },
     {
-      "name": "$govuk-purple"
+      "name": "govuk-colour(\"purple\")"
     },
     {
-      "name": "$govuk-fuchsia"
+      "name": "govuk-colour(\"bright-purple\")"
     },
     {
-      "name": "$govuk-pink"
+      "name": "govuk-colour(\"pink\")"
     },
     {
-      "name": "$govuk-baby-pink"
+      "name": "govuk-colour(\"light-pink\")"
     }
   ]
 }

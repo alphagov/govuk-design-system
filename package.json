@@ -28,13 +28,13 @@
     ]
   },
   "dependencies": {
-    "@govuk-frontend/frontend": "0.0.31-alpha",
     "clipboard": "^2.0.0",
+    "govuk-frontend": "0.0.32",
     "gray-matter": "^4.0.1",
     "html5shiv": "^3.7.3",
     "jquery": "^1.12.4",
     "modernizr": "^3.6.0",
-    "scss-to-json": "^2.0.0"
+    "sass-export": "^1.0.2"
   },
   "devDependencies": {
     "fs-extra": "^5.0.0",

@@ -86,13 +86,14 @@ Occasionally, you might need to make minor adjustments like adding or removing s
 
 The spacing override classes are structured to allow you to apply any size of the scale, using margin or padding in any direction.
 
-For example, `govuk-!-m-r9` will set a margin of 60px on large screens and 40px on small screens.
+For example, `govuk-!-margin-9` will set a margin of 60px on large screens and 40px on small screens.
 
-In this example, the first part of the class name is `govuk-!` as with all override classes. The second part `-m` adds margin. To add padding use `-p` instead of `-m`.
+To add padding use `-padding` instead of `-margin`.
 
-If you want to add the margin or padding in a particular direction, add `l` for left, `r` for right, `t` for top, or `b` for bottom. For example, `-mt` will set margin-top, `-pr` will set padding-right. If you don’t specify a direction, the margin or padding will be applied to all sides of the element.
+If you want to add the margin or padding in a particular direction, add `left` for left, `right` for right, `top` for top, or `bottom` for bottom. For example, `-margin-top` will set margin-top, `-padding-right` will set padding-right.
+If you don’t specify a direction, the margin or padding will be applied to all sides of the element.
 
-The last part of the class represents the value you want to apply. For example, in `govuk-!-m-r9`, the `-r9` represents 9 on the spacing scale.
+The last part of the class represents the value you want to apply. For example, in `govuk-!-margin-9`, the `-9` represents 9 on the spacing scale.
 
 ### Examples
 
@@ -108,16 +109,16 @@ If you’re building your own components and want to reference the spacing scale
 
 If you want to use static values that won’t change based on breakpoints you can reference the spacing scale variables directly like this:
 
-`padding-top: $govuk-spacing-scale-6`
+`padding-top: govuk-spacing(6)`
 
 
 ### Using the responsive spacing mixin
 
 If you want to use the responsive spacing scale you can reference the mixin.
 
-For example, use `@include govuk-responsive-margin($govuk-spacing-responsive-6, "bottom");` for 30px margin-bottom on large screens and 20px on small screens.
+For example, use `@include govuk-responsive-margin(6, "bottom");` for 30px margin-bottom on large screens and 20px on small screens.
 
-Use `@include govuk-responsive-padding($govuk-spacing-responsive-6);` for 30px padding on all sides on large screens and 20px on small screens.
+Use `@include govuk-responsive-padding(6);` for 30px padding on all sides on large screens and 20px on small screens.
 
 ## Width override classes
 

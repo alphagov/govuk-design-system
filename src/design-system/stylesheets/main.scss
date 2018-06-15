@@ -1,6 +1,6 @@
 $govuk-assets-path: "/design-system/assets/";
 
-@import "@govuk-frontend/frontend/all";
+@import "govuk-frontend/all";
 
 // App-specific variables
 $app-light-grey: #f8f8f8;
@@ -27,29 +27,29 @@ body {
 }
 
 .app-hide-mobile {
-  @include mq($until: tablet) {
+  @include govuk-media-query($until: tablet) {
     display: none;
   }
 }
 
 .app-hide-tablet {
-  @include mq($from: tablet) {
+  @include govuk-media-query($from: tablet) {
     display: none;
   }
 }
 
 .app-hide-desktop {
-  @include mq($from: desktop) {
+  @include govuk-media-query($from: desktop) {
     display: none;
   }
 }
 
 // Mirrors Bootstrap 4 - open for discussion
-$mq-breakpoint-widescreen: 1200px;
+$app-breakpoint-widescreen: 1200px;
 
 // This will be coming to FE later but making it app specific for now
 .app-site-width-container {
-  @media (min-width: $mq-breakpoint-widescreen) {
+  @media (min-width: $app-breakpoint-widescreen) {
     max-width: 1100px;
   }
 }
@@ -61,7 +61,7 @@ $mq-breakpoint-widescreen: 1200px;
 
 // This is consistent with Elements - will be changed in FE
 [class*="govuk-grid-column"] {
-  @include mq($until: desktop) {
+  @include govuk-media-query($until: desktop) {
     padding: 0 $govuk-gutter-half;
   }
 }
@@ -70,14 +70,14 @@ $mq-breakpoint-widescreen: 1200px;
 .govuk-grid-column-one-third,
 .govuk-grid-column-two-thirds,
 .govuk-grid-column-one-quarter {
-  @include mq($until: desktop) {
+  @include govuk-media-query($until: desktop) {
     width: 100%;
   }
 }
 
 .app-content {
 
-  @include govuk-responsive-padding($govuk-spacing-responsive-6);
+  @include govuk-responsive-padding(6);
 
   h1,
   h2,
@@ -99,13 +99,13 @@ $mq-breakpoint-widescreen: 1200px;
     box-sizing: border-box;
     width: 100%;
     height: auto;
-    @include govuk-responsive-margin($govuk-spacing-responsive-2, "top");
-    @include govuk-responsive-margin($govuk-spacing-responsive-6, "bottom");
+    @include govuk-responsive-margin(2, "top");
+    @include govuk-responsive-margin(6, "bottom");
     border: 1px solid $govuk-border-colour;
   }
 
   img {
-    padding: $govuk-spacing-scale-2;
+    padding: govuk-spacing(2);
   }
 
   video {
@@ -121,12 +121,12 @@ $mq-breakpoint-widescreen: 1200px;
 }
 
 .app-content__header {
-  @include govuk-font-regular-24;
+  @include govuk-font(24);
 }
 
 .app-content__heading {
   margin-top: 0;
-  margin-bottom: $govuk-spacing-scale-6;
+  margin-bottom: govuk-spacing(6);
 }
 
 .app-content__section-heading {
@@ -136,7 +136,7 @@ $mq-breakpoint-widescreen: 1200px;
 }
 
 .app-example-page {
-  padding: $govuk-spacing-scale-6 * 2 $govuk-spacing-scale-6 $govuk-spacing-scale-6;
+  padding: govuk-spacing(6) * 2 govuk-spacing(6) govuk-spacing(6);
 }
 
 .app-example-page--full-page {
@@ -161,29 +161,31 @@ $mq-breakpoint-widescreen: 1200px;
   vertical-align: top;
 }
 
+$app-link-colour: #00823b;
+
 // Copy button
 .app-link--copy {
   &:link,
   &:active,
   &:visited,
   &:hover {
-    @include govuk-font-regular-16;
+    @include govuk-font(16);
     position: absolute;
     z-index: 1;
-    top: $govuk-spacing-scale-3;
-    right: $govuk-spacing-scale-3;
+    top: govuk-spacing(3);
+    right: govuk-spacing(3);
     min-width: 58px;
     padding: 4px 10px 0;
-    border: 1px solid $govuk-button-colour;
-    color: $govuk-button-colour;
-    background-color: $govuk-white;
+    border: 1px solid $app-link-colour;
+    color: $app-link-colour;
+    background-color: govuk-colour("white");
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
 
     .app-prose-scope & {
-      color: $govuk-button-colour; // A specific selector to override .app-prose-scope a:link
-      background-color: $govuk-white; // A specific selector to override .app-prose-scope a:focus
+      color: $app-link-colour; // A specific selector to override .app-prose-scope a:link
+      background-color: govuk-colour("white"); // A specific selector to override .app-prose-scope a:focus
     }
   }
 }
@@ -191,9 +193,9 @@ $mq-breakpoint-widescreen: 1200px;
 $colour-list-breakpoint: 980px;
 
 // for IE8 we need to set that to 'desktop' so media queries get rasterised
-// $mq-static-breakpoint is set in Frontend
+// $govuk-ie8-breakpoint is set in Frontend
 @if $govuk-is-ie8 == true {
-  $colour-list-breakpoint: $mq-static-breakpoint;
+  $colour-list-breakpoint: $govuk-ie8-breakpoint;
 }
 
 
@@ -204,9 +206,9 @@ $colour-list-breakpoint: 980px;
 
 .app-colour-list-row {
   display: table-row;
-  margin-bottom: $govuk-spacing-scale-2;
+  margin-bottom: govuk-spacing(2);
   border-bottom: 10px solid transparent;
-  @include mq($from: $colour-list-breakpoint) {
+  @include govuk-media-query($from: $colour-list-breakpoint) {
     display: table-row;
     margin: auto;
     border-bottom: 0;
@@ -217,7 +219,7 @@ $colour-list-breakpoint: 980px;
   display: block;
   position: relative;
   padding-left: 50px;
-  @include mq($from: $colour-list-breakpoint) {
+  @include govuk-media-query($from: $colour-list-breakpoint) {
     display: table-cell;
     padding-left: 0;
     vertical-align: middle;
@@ -233,7 +235,7 @@ $colour-list-breakpoint: 980px;
   height: 40px;
   border: 1px solid transparent; // only light colours need a border
   border-radius: 50%;
-  @include mq($from: $colour-list-breakpoint) {
+  @include govuk-media-query($from: $colour-list-breakpoint) {
     display: inline-block;
     position: static;
     margin-top: 6px;
@@ -244,25 +246,25 @@ $colour-list-breakpoint: 980px;
 }
 
 .app-swatch-border {
-  border-color: $govuk-grey-2;
+  border-color: govuk-colour("grey-2");
 }
 
 .app-colour-list-column--name {
   font-weight: normal;
   text-align: left;
-  @include mq($from: $colour-list-breakpoint) {
+  @include govuk-media-query($from: $colour-list-breakpoint) {
     width: 50%;
   }
 }
 
 .app-colour-list-column--colour {
-  @include mq($from: $colour-list-breakpoint) {
+  @include govuk-media-query($from: $colour-list-breakpoint) {
     width: 15%;
   }
 }
 
 .app-colour-list-column--notes {
-  @include mq($from: $colour-list-breakpoint) {
+  @include govuk-media-query($from: $colour-list-breakpoint) {
     width: 35%;
   }
 }
@@ -270,7 +272,7 @@ $colour-list-breakpoint: 980px;
 pre {
   position: relative;
   margin: 0;
-  padding: $govuk-spacing-scale-3;
+  padding: govuk-spacing(3);
   overflow: auto;
   border: 1px solid $govuk-border-colour;
   background-color: $app-light-grey;
@@ -282,7 +284,7 @@ pre {
   // Adjustments in app-pane layout as it has toc below
   .app-pane__content .app-content {
 
-    @include mq($until: tablet) {
+    @include govuk-media-query($until: tablet) {
       padding-bottom: 10px;
     }
   }
@@ -290,9 +292,9 @@ pre {
 
 // Add styling for inline code
 p code {
-  padding: 0 $govuk-spacing-scale-1;
+  padding: 0 govuk-spacing(1);
   color: $app-code-color;
-  background-color: $govuk-grey-4;
+  background-color: govuk-colour("grey-4");
 }
 
 .app-prose-scope {

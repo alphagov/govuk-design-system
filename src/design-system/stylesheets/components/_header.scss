@@ -11,14 +11,14 @@
 @include govuk-exports("app-header") {
 
   .app-header {
-    padding: $govuk-spacing-scale-2 $govuk-spacing-scale-3;
-    border-bottom: 10px solid $govuk-blue;
-    color: $govuk-white;
-    background: $govuk-black;
+    padding: govuk-spacing(2) govuk-spacing(3);
+    border-bottom: 10px solid govuk-colour("blue");
+    color: govuk-colour("white");
+    background: govuk-colour("black");
   }
 
   .app-header__logotype {
-    margin-right: $govuk-spacing-scale-1;
+    margin-right: govuk-spacing(1);
   }
 
   .app-header__logotype-crown {
@@ -35,7 +35,7 @@
   }
 
   .app-header__title {
-    @include govuk-font-regular-24;
+    @include govuk-font(24);
   }
 
   .app-header__link {
@@ -52,7 +52,7 @@
     &:visited {
       margin-bottom: -1px; // Negate transparent bottom border
       border-bottom: 1px solid transparent;
-      color: $govuk-white;
+      color: govuk-colour("white");
       text-decoration: none;
     }
 
@@ -62,14 +62,14 @@
     }
 
     &:focus {
-      color: $govuk-black;
+      color: govuk-colour("black");
     }
   }
 
-  @include mq($media-type: print) {
+  @include govuk-media-query($media-type: print) {
     .app-header {
       border-bottom-width: 0;
-      color: $govuk-black;
+      color: govuk-colour("black");
       background: transparent;
     }
 
@@ -81,7 +81,7 @@
     .app-header__link {
       &:link,
       &:visited {
-        color: $govuk-black;
+        color: govuk-colour("black");
       }
 
       // Do not append link href to GOV.UK link when printing (e.g. '(/)')
@@ -98,25 +98,25 @@
 
   .app-header-mobile-nav-toggler {
     width: 100px;
-    margin-top: $govuk-spacing-scale-2;
-    margin-bottom: $govuk-spacing-scale-2;
-    border: 1px solid $govuk-white;
-    background-color: $govuk-black;
-    box-shadow: 0 0 0 $govuk-black;
+    margin-top: govuk-spacing(2);
+    margin-bottom: govuk-spacing(2);
+    border: 1px solid govuk-colour("white");
+    background-color: govuk-colour("black");
+    box-shadow: 0 0 0 govuk-colour("black");
 
     &:active,
     &:focus,
     &:hover {
-      background-color: $govuk-black; // Override the button default green
-      box-shadow: 0 0 0 $govuk-black; // Override the button default green
+      background-color: govuk-colour("black"); // Override the button default green
+      box-shadow: 0 0 0 govuk-colour("black"); // Override the button default green
     }
 
     &--active.app-header-mobile-nav-toggler {
-      background-color: $govuk-blue;
-      box-shadow: 0 0 0 $govuk-blue;
+      background-color: govuk-colour("blue");
+      box-shadow: 0 0 0 govuk-colour("blue");
     }
 
-    @include mq($from: tablet) {
+    @include govuk-media-query($from: tablet) {
       display: none;
     }
   }
@@ -131,8 +131,8 @@
 
   .app-header {
     $offset: 3px;
-    padding-top: $govuk-spacing-scale-2 + $offset;
-    padding-bottom: $govuk-spacing-scale-2 - $offset;
+    padding-top: govuk-spacing(2) + $offset;
+    padding-bottom: govuk-spacing(2) - $offset;
   }
   // End adjustments
 }

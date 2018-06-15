@@ -1,13 +1,13 @@
-@import "@govuk-frontend/frontend/settings/all";
-@import "@govuk-frontend/frontend/tools/all";
-@import "@govuk-frontend/frontend/helpers/all";
-@import "@govuk-frontend/frontend/core/all";
+@import "govuk-frontend/settings/all";
+@import "govuk-frontend/tools/all";
+@import "govuk-frontend/helpers/all";
+@import "govuk-frontend/core/all";
 
 [class^="govuk-grid-column"] > p {
   @extend .govuk-body;
   display: block;
-  @include govuk-responsive-padding($govuk-spacing-responsive-6);
-  background-color: $govuk-blue;
+  @include govuk-responsive-padding(6);
+  background-color: govuk-colour("blue");
   color: white;
   text-align: center;
   margin-bottom: 0;

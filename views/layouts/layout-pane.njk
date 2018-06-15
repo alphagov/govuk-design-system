@@ -21,7 +21,7 @@
           {{ title }}
           {% if status %}
           <div>
-            <strong class="govuk-tag govuk-!-mt-r4 govuk-!-mb-r2">
+            <strong class="govuk-tag govuk-!-margin-top-4 govuk-!-margin-bottom-2">
               {{ status }}
             </strong>
             <p class="govuk-body">{{ statusMessage | safe }}</p>
@@ -36,7 +36,7 @@
         {% include "_contact-panel.njk" %}
       {% endif %}
       {% if backlog_issue_id %}
-        <p class="govuk-body govuk-!-mb-r0"><a class="govuk-link" href="https://github.com/alphagov/govuk-design-system-backlog/issues/{{backlog_issue_id}}">Discuss ‘{{title}}’ on GitHub</a></p>
+        <p class="govuk-body govuk-!-margin-bottom-0"><a class="govuk-link" href="https://github.com/alphagov/govuk-design-system-backlog/issues/{{backlog_issue_id}}">Discuss ‘{{title}}’ on GitHub</a></p>
       {% endif %}
     </main>
     {# No JS fallback to show overview #}
