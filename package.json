@@ -67,6 +67,7 @@
     "request": "^2.87.0",
     "rollup-plugin-commonjs": "^9.1.3",
     "rollup-plugin-node-resolve": "^3.3.0",
+    "sitemap": "^1.13.0",
     "standard": "^10.0.3"
   },
   "engines": {
