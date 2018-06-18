@@ -4,7 +4,7 @@ const PORT = configPaths.port
 
 let browser
 let page
-let baseUrl = `http://localhost:${PORT}/design-system`
+let baseUrl = 'http://localhost:' + PORT
 
 beforeAll(async (done) => {
   browser = global.browser
