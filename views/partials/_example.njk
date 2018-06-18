@@ -1,5 +1,11 @@
+
 {% macro example(params) %}
-{% set examplePath = "src/" + params.group + "/" + params.item + "/" + params.example + "/index.njk" %}
+{% set exampleRoot = "src/" + params.group + "/" + params.item + "/" + params.example + "/" %}
+{% if params.customCode %}
+  {% set examplePath = exampleRoot + "code.njk" %}
+{% else %}
+  {% set examplePath = exampleRoot + "index.njk" %}
+{% endif %}
 {% set exampleURL = "/" + params.group + "/" + params.item + "/" + params.example + "/index.html" %}
 {% set exampleId = "example-" + params.example %}
 {% set exampleTitle = getFrontmatter(examplePath).title %}
