@@ -1,22 +1,22 @@
 [
   {
     "label": "About",
-    "url": "design-system"
+    "url": ""
   },
   {
     "label": "Styles",
-    "url": "design-system/styles"
+    "url": "styles"
   },
   {
     "label": "Components",
-    "url": "design-system/components"
+    "url": "components"
   },
   {
     "label": "Patterns",
-    "url": "design-system/patterns"
+    "url": "patterns"
   },
   {
     "label": "Community",
-    "url": "design-system/community"
+    "url": "community"
   }
 ]

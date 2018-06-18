@@ -24,7 +24,7 @@
   },
   "standard": {
     "ignore": [
-      "/src/design-system/javascripts/vendor/"
+      "/src/javascripts/vendor/"
     ]
   },
   "dependencies": {

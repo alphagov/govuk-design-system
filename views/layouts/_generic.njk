@@ -8,13 +8,13 @@
   <meta name="robots" content="noindex, nofollow">
 
   <!--[if !IE 8]><!-->
-    <link href="/{{ fingerprint['design-system/stylesheets/main.css'] }}" rel="stylesheet" media="all" />
+    <link href="/{{ fingerprint['stylesheets/main.css'] }}" rel="stylesheet" media="all" />
   <!--<![endif]-->
   <!--[if lt IE 9]>
-    <link href="/{{ fingerprint['design-system/stylesheets/main-ie8.css'] }}" rel="stylesheet" media="all" />
-    <script src="/{{ fingerprint['design-system/javascripts/ie.js'] }}"></script>
+    <link href="/{{ fingerprint['stylesheets/main-ie8.css'] }}" rel="stylesheet" media="all" />
+    <script src="/{{ fingerprint['javascripts/ie.js'] }}"></script>
   <![endif]-->
-  <script src="/design-system/javascripts/vendor/modernizr.js"></script>
+  <script src="/javascripts/vendor/modernizr.js"></script>
   {% include "_tracking-head.njk" %}
 {% endblock %}
 
@@ -42,5 +42,5 @@
 {% block footer %}{% endblock %}
 
 {% block bodyEnd %}
-<script src="/{{ fingerprint['design-system/javascripts/application.js'] }}"></script>
+<script src="/{{ fingerprint['javascripts/application.js'] }}"></script>
 {% endblock %}
