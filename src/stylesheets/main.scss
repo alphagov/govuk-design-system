@@ -275,6 +275,7 @@ pre {
   overflow: auto;
   border: 1px solid $govuk-border-colour;
   background-color: $app-light-grey;
+  font-size: 16px;
   max-width: 38em;
   @include govuk-responsive-margin(4, "bottom");
 }
@@ -290,6 +291,8 @@ pre {
 }
 
 // Add styling for inline code
+li code,
+td code,
 p code {
   padding: 0 govuk-spacing(1);
   color: $app-code-color;
