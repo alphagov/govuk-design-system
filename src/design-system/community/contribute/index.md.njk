@@ -11,24 +11,23 @@ The GOV.UK Design System is currently in beta. The Design System team will be de
 
 ## Discussing styles, components and patterns
 
-You can discuss the existing styles, components and patterns in the Design System, or ones being developed, by commenting on issues in the [community backlog](/design-system/community/backlog). Alternatively, you can email [govuk-design-system-support@digital.cabinet-office.gov.uk](mailto: govuk-design-system-support@digital.cabinet-office.gov.uk).
+You can discuss the existing styles, components and patterns in the Design System, or ones being developed, by commenting on issues in the [community backlog](/design-system/community/backlog). Alternatively, you can email govuk-design-system-support@digital.cabinet-office.gov.uk.
 
 For example, you can:
 
 - ask questions about a style, component or pattern
 - answer questions from other contributors
-- share examples or demos of a style, component or pattern
+- share examples or demos of a component or pattern
 - share research relating to a style, component or pattern
 
 ## Proposing new styles, components or patterns
 
-If you have an idea for a new style, component or pattern you can propose it by [raising an issue](https://github.com/alphagov/govuk-design-system-backlog/issues/new) or emailing the Design System team at [govuk-design-system-support@digital.cabinet-office.gov.uk](mailto: govuk-design-system-support@digital.cabinet-office.gov.uk).
+If you have an idea for a new component or pattern you can propose it by [raising an issue](https://github.com/alphagov/govuk-design-system-backlog/issues/new) in the backlog or emailing the Design System team.
 
 ## Developing components and patterns
 
-If there’s something you’d be interested in working on, comment on its issue or email the Design System team at [govuk-design-system-support@digital.cabinet-office.gov.uk](mailto: govuk-design-system-support@digital.cabinet-office.gov.uk).
+If there’s something you’d be interested in working on, comment on its issue in the [community backlog](/design-system/community/backlog) or email the Design System team.
 
-If you're writing code, please follow the [GOV.UK Frontend coding standards](https://github.com/alphagov/govuk-frontend/blob/master/CONTRIBUTING.md#conventions-to-follow).
 
 ## Design System criteria
 
@@ -90,7 +89,10 @@ Before new components and patterns are published into the GOV.UK Design System, 
         text: "Usable"
       },
       {
-        text: "It’s been tested and shown to work with a representative sample of users, including those with disabilities."
+        html: "<p> It has been tested  in user research and shown to work with a representative sample of users, including those with disabilities. </p>
+
+        <p> Components and patterns which do not meet the ‘usable’ criteria can be published as ‘experimental’, provided that they are based on relevant user research from other organisations and best practice, and meet the other criteria. </p>
+        <p> Most new components and patterns will be published as experimental at first. The experimental tag can be removed once they have been validated through research in a range of services, and with different types of users. </p>"
       }
     ],
     [
@@ -98,7 +100,9 @@ Before new components and patterns are published into the GOV.UK Design System, 
         text: "Consistent"
       },
       {
-        text: "It uses existing styles and components in the GOV.UK Design System where relevant."
+        html: "<p>It uses existing styles and components in the GOV.UK Design System where relevant.</p>
+
+        <p>Any code follows the <a href='https://github.com/alphagov/govuk-frontend/blob/master/CONTRIBUTING.md#conventions-to-follow'>GOV.UK Frontend coding standards</a> and is ready to merge in GOV.UK Frontend.</p>"
       }
     ],
     [
@@ -107,14 +111,6 @@ Before new components and patterns are published into the GOV.UK Design System, 
       },
       {
         text: "It can be easily applied in different contexts."
-      }
-    ],
-    [
-      {
-        text: "Coded"
-      },
-      {
-        text: "Components are ready to merge in GOV.UK Frontend."
       }
     ],
     [
