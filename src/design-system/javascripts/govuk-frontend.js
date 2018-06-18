@@ -4,6 +4,7 @@ import Checkboxes from 'govuk-frontend/components/checkboxes/checkboxes'
 // Intentionally avoid importing ErrorSummary since it will steal focus, scrolling example pages.
 // import ErrorSummary from 'govuk-frontend/components/error-summary/error-summary'
 import Radios from 'govuk-frontend/components/radios/radios'
+import Header from 'govuk-frontend/components/header/header'
 
 new Button(document).init()
 
@@ -20,4 +21,9 @@ if ($checkbox) {
 var $radio = document.querySelector('[data-module="radios"]')
 if ($radio) {
   new Radios($radio).init()
+}
+
+var $header = document.querySelector('[data-module="header"]')
+if ($header) {
+  new Header($header).init()
 }
