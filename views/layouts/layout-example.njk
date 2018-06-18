@@ -17,6 +17,7 @@
     <script src="/design-system/javascripts/vendor/modernizr.js"></script>
   </head>
   <body class="app-example-page">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
     {% block body %}
       {{ contents | safe }}
     {% endblock %}
