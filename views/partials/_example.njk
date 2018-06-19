@@ -1,6 +1,6 @@
 {% macro example(params) %}
-{% set examplePath = "src/design-system/" + params.group + "/" + params.item + "/" + params.example + "/index.njk" %}
-{% set exampleURL = "/design-system/" + params.group + "/" + params.item + "/" + params.example + "/index.html" %}
+{% set examplePath = "src/" + params.group + "/" + params.item + "/" + params.example + "/index.njk" %}
+{% set exampleURL = "/" + params.group + "/" + params.item + "/" + params.example + "/index.html" %}
 {% set exampleId = "example-" + params.example %}
 {% set exampleTitle = getFrontmatter(examplePath).title %}
 {% set frontendComponentName = params.frontendComponentName | default(params.item) %}
