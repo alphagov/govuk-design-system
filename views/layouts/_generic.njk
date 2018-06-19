@@ -47,16 +47,24 @@
 
 {% block bodyEnd %}
 <script src="/{{ fingerprint['javascripts/application.js'] }}"></script>
+<script src="/{{ fingerprint['javascripts/connection-status.js'] }}"></script>
 <script>
     if ('serviceWorker' in navigator) {
+      // initialise the offline status module
       window.addEventListener('load', () => {
         // Scope will be restricted to the path where the service-worker.js file is located
         navigator.serviceWorker.register('/service-worker.js', {scope: '/'}).then(registration => {
-          console.log('Service Worker registered: ', registration);
+          console.log('Service Worker registered: ', registration)
+          // on SW registration see what the connection status is
+          ConnectionStatus.update()
         }).catch(registrationError => {
-          console.log('Service Worker registration failed: ', registrationError);
-        });
-      });
+          console.log('Service Worker registration failed: ', registrationError)
+        })
+      })
+
+      // trigger the connection state events
+      window.addEventListener('online', ConnectionStatus.update)
+      window.addEventListener('offline', ConnectionStatus.update)
     }
 </script>
 {% endblock %}
