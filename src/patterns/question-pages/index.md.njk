@@ -10,6 +10,8 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 
+This pattern explains when to use question pages and what elements they need to include.
+
 {{ example({group: 'patterns', item: 'question-pages', example: 'default', html: true, nunjucks: true, open: false}) }}
 
 ## When to use this pattern
@@ -23,6 +25,8 @@ Question pages must include a:
 - back link
 - page heading
 - continue button
+
+If research shows it’s helpful for users, you can also include a [progress indicator](#using-progress-indicators).
 
 ### Back link
 
@@ -67,16 +71,54 @@ Make sure your ‘Continue’ button is:
 - labelled ‘Continue’, not ‘Next’
 - aligned to the left so users don’t miss it
 
+### Using progress indicators
+
+Start by testing your form without a progress indicator to see if it’s simple enough that users don’t need one.
+
+Try improving the order, type or number of questions before adding a progress indicator. If people still have difficulty, try adding a simple step or question indicator like this one.
+
+{{ example({group: 'patterns', item: 'question-pages', example: 'progress', html: true, nunjucks: true, open: true}) }}
+
+Only include the total number of questions if you can do so reliably. As the user moves through the form, make sure the indicator updates to tell them which question they are on and the total number remaining.
+
+Don't use progress indicators that do all of the following:
+
+- show all questions at once
+- allow navigation to previous questions
+- show the current question
+
+An example of this looks like:
+
+![Screenshot of a progress indicator that shows five questions.](progress_indicators_horizontal.png)
+
+These can be problematic because they:
+
+- are often not noticed
+- take up lots of space
+- don’t scale well on small screens
+- can distract and confuse some users
+- make it hard to write good labels for the steps
+- make it hard to handle conditional sections
+
+A number of GOV.UK services have removed this style of progress indicator without any negative effects.
+Read a blog post about [how the Carer’s Allowance team removed a 12-step progress indicator](https://designnotes.blog.gov.uk/2014/07/07/do-less-problems-as-shared-spaces/) with no effect on completion rates or times.
+
+### Start by asking one question per page
+
+Asking just one question per question page helps users understand what you’re asking them to do, and focus on the specific question and its answer.
+
+Read more about how starting with [one thing per page](https://www.gov.uk/service-manual/design/form-structure#start-with-one-thing-per-page) helps users.
+
 ### Asking users questions
 
-When asking users questions, you should:
+You should make sure you know why you're asking every question and only ask users for information you really need. 
 
-- explain why they’ll be asked questions
-- order questions to give most people the quickest result
-- only ask questions that they will be able to answer
-- avoid asking for information that you can find in government data
+To help you work out what to ask, you can carry out a [question protocol](https://www.uxmatters.com/mt/archives/2010/06/the-question-protocol-how-to-make-sure-every-form-field-is-necessary.php)
+
+On every question page you should:
+
+- make sure it's clear to users why you're asking each questio
 - allow users to answer ‘I don’t know’ or ‘I’m not sure’ if they are valid responses
-- translate supporting documents into clear questions on the page &ndash; don’t force users to go away and read background information before they can give an answer
 
 ## Research on this pattern
 
