@@ -9,19 +9,19 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 
-Use the Back link component to help users go back to the previous page in a multi-page transaction.
+Use the back link component to help users go back to the previous page in a multi-page transaction.
 
 {{ example({group: 'components', item: 'back-link', example: 'default', html: true, nunjucks: true, open: false}) }}
 
 ## When to use this component
 
-Always include the Back link component on GOV.UK [Question pages](../../patterns/question-pages).
+Always include the back link component on GOV.UK [question pages](../../patterns/question-pages).
 
 You can include a back link on other pages within a multi-page transaction, if it makes sense to do so.
 
 ## When not to use this component
 
-Don’t use the Back link component together with [breadcrumbs](../breadcrumbs). If necessary, you should do research with your users to learn which they find more helpful in your service.
+Don’t use the back link component together with [breadcrumbs](../breadcrumbs). If necessary, you should do research with your users to learn which they find more helpful in your service.
 
 ## How it works
 
@@ -29,7 +29,7 @@ Back links must always go at the top of a page.
 
 Make sure the link takes users to the previous page and that it works even when JavaScript isn’t available.
 
-There are 2 ways to use the Back link component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://govuk-prototype-kit-beta.herokuapp.com), you can use the Nunjucks macro.
+There are 2 ways to use the back link component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://govuk-prototype-kit-beta.herokuapp.com), you can use the Nunjucks macro.
 
 {{ example({group: 'components', item: 'back-link', example: 'default', html: true, nunjucks: true, open: true}) }}
 
