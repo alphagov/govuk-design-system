@@ -50,6 +50,7 @@
     "metalsmith-assets": "^0.1.0",
     "metalsmith-broken-link-checker": "^1.0.1",
     "metalsmith-browser-sync": "^1.1.1",
+    "metalsmith-canonical": "^1.1.2",
     "metalsmith-concat": "^6.0.0",
     "metalsmith-env": "^2.1.1",
     "metalsmith-fingerprint-ignore": "^2.0.0",
