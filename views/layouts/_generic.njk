@@ -5,8 +5,10 @@
 {% block pageTitle %}{{ title }} – GOV.UK Design System{% endblock %}
 
 {% block head %}
+{% if not TRAVIS_BRANCH or TRAVIS_BRANCH != 'master' %}
   <meta name="robots" content="noindex, nofollow">
-
+{% endif %}
+  
   <!--[if !IE 8]><!-->
     <link href="/{{ fingerprint['stylesheets/main.css'] }}" rel="stylesheet" media="all" />
   <!--<![endif]-->
