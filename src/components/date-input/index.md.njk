@@ -9,28 +9,27 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 
-Use the Date input component to help users enter a memorable date.
+Use the date input component to help users enter a memorable date.
 
 {{ example({group: 'components', item: 'date-input', example: 'default', html: true, nunjucks: true, open: false}) }}
 
 ## When to use this component
 
-Use the Date input component when you’re asking users for a date they’ll already know, or can look up without using a calendar.
+Use the date input component when you’re asking users for a date they’ll already know, or can look up without using a calendar.
 
 ## When not to use this component
 
-Don’t use the Date input component if users are unlikely to know the exact date of the event you’re asking about.
+Don’t use the date input component if users are unlikely to know the exact date of the event you’re asking about.
 
 Read more about how to [ask users for dates](../../patterns/dates/).
 
 ## How it works
 
-The Date input component consists of 3 fields to let users enter a day, month and year.
+The date input component consists of 3 fields to let users enter a day, month and year.
 
-There are 2 ways to use the Date input component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://govuk-prototype-kit-beta.herokuapp.com), you can use the Nunjucks macro.
+There are 2 ways to use the date input component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://govuk-prototype-kit-beta.herokuapp.com), you can use the Nunjucks macro.
 
 {{ example({group: 'components', item: 'date-input', example: 'default', html: true, nunjucks: true, open: true}) }}
-
 
 Don’t automatically tab users between the fields of the Date input because this can be confusing and may clash with normal keyboard controls.
 
