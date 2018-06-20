@@ -117,6 +117,12 @@
   }
 
   .no-flexbox {
+
+    .app-pane {
+      height: auto;
+      @include govuk-clearfix;
+    }
+
     .app-pane__body {
       display: block;
     }
@@ -125,10 +131,13 @@
       width: $toc-width;
       float: left;
       overflow-x: hidden;
+      border-right: none;
     }
 
     .app-pane__content {
       overflow-x: hidden;
+      border-left: 1px solid $govuk-border-colour;
+      margin-left: -1px;
     }
   }
 }
