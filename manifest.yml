@@ -1,6 +1,12 @@
 ---
 applications:
 - name: govuk-design-system-production
+  # NGINX requires 20 MB of RAM to serve static assets. Reduce RAM allocation
+  # from the default 1 GB allocated to containers by default to 64M.
   memory: 64M
   path: ./deploy
-  buildpack: staticfile_buildpack
+  # PaaS don't currently support the nginx buildpack so we have to reference it
+  # by GitHub URL
+  #
+  # https://docs.cloud.service.gov.uk/#how-to-use-custom-buildpacks
+  buildpack: https://github.com/cloudfoundry/nginx-buildpack.git#v0.0.5
