@@ -17,4 +17,10 @@
     margin-bottom: 0;
     border-bottom: 0;
   }
+
+  // Fix the visually hidden 'Support links' heading causing Safari to pad out
+  // the bottom of the page or... something.
+  .app-footer .govuk-visually-hidden {
+    position: relative;
+  }
 }
