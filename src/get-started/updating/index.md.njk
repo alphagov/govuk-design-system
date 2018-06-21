@@ -7,6 +7,247 @@ title: Updating your code
 
 The tables below show the old and new names for components, classes and mixins, to help you find what you need.
 
+## Page template
+
+Previously, to keep your pages consistent with the rest of GOV.UK you would have needed to use [GOV.UK Template](http://alphagov.github.io/govuk_template/).
+
+This has been brought into GOV.UK Frontend. You can consume it using Nunjucks or HTML.
+
+If you are not using Nunjucks you can [get the page template HTML](../../styles/page-template/#default).
+
+### Nunjucks
+
+Where possible we have kept the new page template the same as GOV.UK Template.
+
+The main change is changing variables from [camelCase](https://en.wikipedia.org/wiki/Camel_case) to [snake_case](https://en.wikipedia.org/wiki/Snake_case).
+
+<table class="govuk-table app-table--fixed">
+  <caption class="govuk-table__caption govuk-visually-hidden">Nunjucks Template</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col">GOV.UK Template</th>
+      <th class="govuk-table__header" scope="col">GOV.UK Frontend</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">:top_of_page</td>
+      <td class="govuk-table__cell">Deprecated: putting content above the <code>&lt;!DOCTYPE html&gt;</code> will result in broken pages for users of older Internet Explorer versions.</td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">:html_lang</td>
+      <td class="govuk-table__cell">htmlLang</td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">:page_title</td>
+      <td class="govuk-table__cell">pageTitle</td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">:asset_path</td>
+      <td class="govuk-table__cell">assetPath</td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">:head</td>
+      <td class="govuk-table__cell">head</td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">:body_classes</td>
+      <td class="govuk-table__cell">bodyClasses</td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">:body_start</td>
+      <td class="govuk-table__cell">bodyStart</td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">:skip_link_message</td>
+      <td class="govuk-table__cell">
+        <p>
+          You can now entirely replace the skip link by rendering your own,
+          which can include custom <code>text</code>
+        </p>
+        <p>
+          <pre><code>{% raw %}
+{% block skipLink %}
+  {{ govukSkipLink({ text: 'custom text' }) }}
+{% endblock %}{% endraw %}</code></pre>
+        </p>
+        <p>
+          See the <a class="govuk-link" href="../../components/skip-link">skip link component</a> for more details.
+        </p>
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">:cookie_message</td>
+      <td class="govuk-table__cell">No replacement, we are looking to improve this component based on GDPR requirements.</td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">header_class</td>
+      <td class="govuk-table__cell">
+        <p>
+          You can now entirely replace the header component by rendering your own,
+          which can include custom <code>classes</code>
+        </p>
+        <p>
+          <pre><code>{% raw %}
+{% block header %}
+    {{ govukHeader({ classes: 'app-custom-classes' }) }}
+{% endblock %}{% endraw %}</code></pre>
+        </p>
+        <p>
+          See the <a class="govuk-link" href="../../components/header">header component</a> for more details.
+        </p>
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">homepage_url</td>
+      <td class="govuk-table__cell">
+        <p>
+          You can now entirely replace the header component by rendering your own,
+          which can include custom <code>homepageUrl</code>
+        </p>
+        <p>
+          <pre><code>{% raw %}
+{% block header %}
+    {{ govukHeader({ homepageUrl: '/custom-url' }) }}
+{% endblock %}{% endraw %}</code></pre>
+        </p>
+        <p>
+          See the <a class="govuk-link" href="../../components/header">header component</a> for more details.
+        </p>
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">global_header_text</td>
+      <td class="govuk-table__cell">
+        No equivalent. <a href="https://github.com/alphagov/govuk-frontend/issue/new">Raise an issue</a> if you need this.
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">inside_header</td>
+      <td class="govuk-table__cell">
+        <p>
+          You can now entirely replace the header component by rendering your own,
+          which can include a custom <code>serviceName</code>
+        </p>
+        <p>
+          <pre><code>{% raw %}
+{% block header %}
+    {{ govukHeader({ serviceName: 'Custom service name' }) }}
+{% endblock %}{% endraw %}</code></pre>
+        </p>
+        <p>
+          See the <a class="govuk-link" href="../../components/header">header component</a> for more details.
+        </p>
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">proposition_header</td>
+      <td class="govuk-table__cell">
+        <p>
+          You can now entirely replace the header component by rendering your own,
+          which can include a custom <code>navigation</code>
+        </p>
+        <p>
+          <pre><code>{% raw %}
+{% block header %}
+    {{ govukHeader({ navigation: [] }) }}
+{% endblock %}{% endraw %}</code></pre>
+        </p>
+        <p>
+          See the <a class="govuk-link" href="../../components/header">header component</a> for more details.
+        </p>
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">:after_header</td>
+      <td class="govuk-table__cell">beforeContent</td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">:content</td>
+      <td class="govuk-table__cell">
+        <p>
+          main
+        </p>
+        <p>
+          Setting <code>content</code> in the new template will put it inside a  <code>&lt;main&gt;</code> element.
+        </p>
+        <p>
+          In the old GOV.UK Template there was no default <code>&lt;main&gt;</code> element.
+        </p>
+        <p>
+          You can restructure your content so that it doesn't use a <code>&lt;main&gt;</code> element, or override the <code>main</code> block.
+        </p>
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">:footer_top</td>
+      <td class="govuk-table__cell">
+        <p>
+          You can now entirely replace the footer component by rendering your own,
+          which can include a custom <code>navigation</code>
+        </p>
+        <p>
+          <pre><code>{% raw %}
+{% block header %}
+    {{ govukFooter({ navigation: [] }) }}
+{% endblock %}{% endraw %}</code></pre>
+        </p>
+        <p>
+          See the <a class="govuk-link" href="../../components/footer">footer component</a> for more details.
+        </p>
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">:footer_support_links</td>
+      <td class="govuk-table__cell">
+        <p>
+          You can now entirely replace the footer component by rendering your own,
+          which can include custom <code>meta</code> links
+        </p>
+        <p>
+          <pre><code>{% raw %}
+{% block header %}
+    {{ govukFooter({ meta: [] }) }}
+{% endblock %}{% endraw %}</code></pre>
+        </p>
+        <p>
+          See the <a class="govuk-link" href="../../components/footer">footer component</a> for more details.
+        </p>
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">:licence_message</td>
+      <td class="govuk-table__cell">
+        No equivalent. <a href="https://github.com/alphagov/govuk-frontend/issues/new">Raise an issue</a> if you need this.
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">:body_end</td>
+      <td class="govuk-table__cell">bodyEnd</td>
+    </tr>
+  </tbody>
+</table>
+
 ## Component names
 
 <table class="govuk-table app-table--fixed">
