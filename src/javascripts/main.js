@@ -1,5 +1,5 @@
-const $ = window.jQuery
-const GOVUK = window.GOVUK
+var $ = window.jQuery
+var GOVUK = window.GOVUK
 
 $(document).ready(function () {
   // Initialise example frames

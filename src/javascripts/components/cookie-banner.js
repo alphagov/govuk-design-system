@@ -55,7 +55,7 @@
     return null
   }
   root.GOVUK.addCookieMessage = function () {
-    var message = document.getElementsByClassName('js-cookie-banner')[0]
+    var message = document.querySelector('.js-cookie-banner')
     var hasCookieMessage = (message && root.GOVUK.cookie('seen_cookie_message') === null)
 
     if (hasCookieMessage) {
