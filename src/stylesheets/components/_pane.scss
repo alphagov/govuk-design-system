@@ -9,18 +9,6 @@
       height: $pane-height;
       flex-direction: column;
     }
-
-    @supports (display: grid) {
-      display: grid;
-      grid-template-columns: minmax(100%, 1fr);
-      grid-template-rows: repeat(3, auto);
-
-      @include govuk-media-query($from: tablet) {
-        height: $pane-height;
-        // `min-content` for header, `max-content` for body(incl. footer)
-        grid-template-rows: min-content max-content;
-      }
-    }
   }
 
   .app-pane__header {
@@ -32,10 +20,6 @@
       > * {
         flex: 1 0 auto;
       }
-    }
-
-    @supports (display: grid) {
-      grid-column: span 1;
     }
   }
 
@@ -52,18 +36,6 @@
         -ms-overflow-style: none;
       }
     }
-
-    @supports (display: grid) {
-      grid-column: span 1;
-
-      @include govuk-media-query($from: tablet) {
-        display: grid;
-        grid-template-columns: $toc-width 1fr;
-        grid-template-rows: auto;
-        grid-column: span 1;
-        grid-row: span 2;
-      }
-    }
   }
 
   .app-pane__subnav {
@@ -72,13 +44,6 @@
       width: $toc-width;
       border-right: 1px solid $govuk-border-colour;
       flex: 0 0 auto;
-    }
-
-    @supports (display: grid) {
-      @include govuk-media-query($from: tablet) {
-        width: auto;
-        grid-column: span 1;
-      }
     }
   }
 
@@ -99,25 +64,15 @@
         flex: 1 0 auto;
       }
     }
-
-    @supports (display: grid) {
-      @include govuk-media-query($from: tablet) {
-        margin-left: 0;
-        grid-column: span 1;
-      }
-    }
-
   }
 
   .no-js {
-
     .app-pane__subnav-mobile-overview {
       display: block; // No JS fallback for overview links
     }
   }
 
   .no-flexbox {
-
     .app-pane {
       height: auto;
       @include govuk-clearfix;
