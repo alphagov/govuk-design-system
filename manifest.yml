@@ -1,6 +1,6 @@
 ---
 applications:
-- name: govuk-design-system-production
+- name: govuk-design-system-origin
   # NGINX requires 20 MB of RAM to serve static assets. Reduce RAM allocation
   # from the default 1 GB allocated to containers by default to 64M.
   memory: 64M
