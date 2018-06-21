@@ -6,7 +6,7 @@
 
     @include govuk-media-query($from: tablet) {
       display: flex;
-      height: $pane-height;
+      min-height: $pane-height;
       flex-direction: column;
     }
 
@@ -16,7 +16,7 @@
       grid-template-rows: repeat(3, auto);
 
       @include govuk-media-query($from: tablet) {
-        height: $pane-height;
+        min-height: $pane-height;
         // `min-content` for header, `max-content` for body(incl. footer)
         grid-template-rows: min-content max-content;
       }
