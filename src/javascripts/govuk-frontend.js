@@ -5,6 +5,7 @@ import Checkboxes from 'govuk-frontend/components/checkboxes/checkboxes'
 // import ErrorSummary from 'govuk-frontend/components/error-summary/error-summary'
 import Radios from 'govuk-frontend/components/radios/radios'
 import Header from 'govuk-frontend/components/header/header'
+import Tabs from 'govuk-frontend/components/tabs/tabs'
 
 new Button(document).init()
 
@@ -26,4 +27,9 @@ if ($radio) {
 var $header = document.querySelector('[data-module="header"]')
 if ($header) {
   new Header($header).init()
+}
+
+var $tabs = document.querySelector('[data-module="tabs"]')
+if ($tabs) {
+  new Tabs($tabs).init()
 }
