@@ -1,12 +1,13 @@
 ---
 layout: layout-pane.njk
 title: Using the Design System in production
+order: 2
 ---
 
 {% from "_example.njk" import example %}
 {% from "inset-text/macro.njk" import govukInsetText %}
 
-This guide explains how to set up your project so you can start using the styles and coded examples in the GOV.UK Design System in production.  
+This guide explains how to set up your project so you can start using the styles and coded examples in the GOV.UK Design System in production.
 
 {{ govukInsetText({
   classes: "app-table--constrained",
@@ -18,7 +19,7 @@ This guide explains how to set up your project so you can start using the styles
 
 To start using GOV.UK styles, components and patterns contained here, you’ll need to include GOV.UK Frontend in your project.
 
-There are 2 ways to include GOV.UK Frontend in your project. You can either install it using  node package manager (npm) or include the compiled files in your application. 
+There are 2 ways to include GOV.UK Frontend in your project. You can either install it using  node package manager (npm) or include the compiled files in your application.
 
 ### Option 1: install using npm
 
@@ -33,7 +34,7 @@ Using this option, you will be able to:
 
 ### Option 2: include compiled files
 
-If your project does not use npm, or if you want to try out GOV.UK Frontend in your project without installing it through npm, you can [download and include compiled stylesheets, JavaScript and the asset files](https://github.com/alphagov/govuk-frontend/blob/master/docs/installation/installing-from-dist.md). 
+If your project does not use npm, or if you want to try out GOV.UK Frontend in your project without installing it through npm, you can [download and include compiled stylesheets, JavaScript and the asset files](https://github.com/alphagov/govuk-frontend/blob/master/docs/installation/installing-from-dist.md).
 
 Using this option, you will be able to include all the CSS and JavaScript of GOV.UK Frontend in your project.
 
@@ -57,7 +58,7 @@ Explore the [Styles](../../styles/) section of the Design System to see what cla
 
 ## Using components
 
-The components in the Design System are designed to be accessible and responsive - there are 2 ways to implement them in your application. 
+The components in the Design System are designed to be accessible and responsive - there are 2 ways to implement them in your application.
 
 You can either use HTML or - if you’re using Nunjucks with node.js and you installed GOV.UK Frontend using npm - you can use a Nunjucks Macro.
 
@@ -85,6 +86,3 @@ For example, to use the breadcrumb macro, use the import statement `{% raw %}{% 
 }) }}
 
 There are various way to mitigate against that. One example is described in the [Nunjucks documentation](https://mozilla.github.io/nunjucks/api.html#user-defined-templates-warning).
-
- 
-
