@@ -8,6 +8,7 @@
 {% if not TRAVIS_BRANCH or TRAVIS_BRANCH != 'master' %}
   <meta name="robots" content="noindex, nofollow">
 {% endif %}
+<meta name="description" content="{{description}}">
   
   <!--[if !IE 8]><!-->
     <link href="/{{ fingerprint['stylesheets/main.css'] }}" rel="stylesheet" media="all" />
