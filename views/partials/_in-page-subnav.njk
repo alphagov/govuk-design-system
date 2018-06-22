@@ -1,0 +1,22 @@
+<div class="app-pane__subnav-mobile-overview app-hide-desktop app-hide-tablet">
+  <nav>
+    {% for item in navigation %}
+      {% if item.url in path %}
+      {% if item.items %}
+        {% for theme, items in item.items | groupby("theme") %}
+          {% if theme != 'undefined' %}
+            <h2 class="govuk-heading-m govuk-!-padding-top-2">{{ theme }}</h2>
+          {% endif %}
+          <ul class="govuk-list">
+          {% for subitem in items %}
+            <li class="govuk-!-margin-bottom-2">
+              <a class="govuk-link" href="/{{ subitem.url }}">{{ subitem.label }}</a>
+            </li>
+          {% endfor %}
+          </ul>
+        {% endfor %}
+      {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</nav>
