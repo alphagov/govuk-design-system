@@ -32,6 +32,12 @@
       <div class="app-prose-scope">
         {{ contents | safe }}
       </div>
+
+      {# No JS fallback to show overview #}
+      {% if show_subnav %}
+        {% include "_in-page-subnav.njk" %}
+      {% endif %}
+
       {% if section %}
         {% include "_contact-panel.njk" %}
       {% endif %}
@@ -39,10 +45,6 @@
         <p class="govuk-body govuk-!-margin-bottom-0"><a class="govuk-link" href="https://github.com/alphagov/govuk-design-system-backlog/issues/{{backlog_issue_id}}">Discuss ‘{{title}}’ on GitHub</a></p>
       {% endif %}
     </main>
-    {# No JS fallback to show overview #}
-    <div class="app-pane__subnav-mobile-overview app-hide-desktop">
-      {% include "_subnav.njk" %}
-    </div>
     {% include "_footer.njk" %}
   </div>
 {% endblock %}
