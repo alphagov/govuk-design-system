@@ -6,24 +6,28 @@ layout: layout-example.njk
 {% from "select/macro.njk" import govukSelect %}
 
 {{ govukSelect({
-  id: "select-1",
-  name: "select-1",
+  id: "sort",
+  name: "sort",
   label: {
-    html: "Label text goes here"
+    text: "Sort by"
   },
   items: [
     {
-      value: 1,
-      text: "GOV.UK frontend option 1"
+      value: 'published',
+      text: "Recently published"
     },
     {
-      value: 2,
-      text: "GOV.UK frontend option 2",
+      value: 'updated',
+      text: "Recently updated",
       selected: true
     },
     {
-      value: 3,
-      text: "GOV.UK frontend option 3"
+      value: 'views',
+      text: "Most views"
+    },
+    {
+      value: 'comments',
+      text: "Most comments"
     }
   ]
 }) }}
