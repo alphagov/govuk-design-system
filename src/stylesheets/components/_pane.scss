@@ -7,8 +7,15 @@
 
     @include govuk-media-query($from: tablet) {
       display: flex;
-      height: $pane-height;
       flex-direction: column;
+    }
+
+    @include govuk-media-query($from: tablet, $and: '(orientation: portrait)') {
+        height: $pane-height;
+    }
+
+    @include govuk-media-query($from: desktop) {
+      height: $pane-height;
     }
   }
 
