@@ -1,11 +1,11 @@
-<div class="app-pane__subnav-mobile-overview app-hide-desktop app-hide-tablet">
+<div class="app-pane__subnav-mobile-overview app-hide-desktop app-hide-tablet govuk-!-padding-top-2">
   <nav>
     {% for item in navigation %}
       {% if item.url in path %}
       {% if item.items %}
         {% for theme, items in item.items | groupby("theme") %}
           {% if theme != 'undefined' %}
-            <h2 class="govuk-heading-m govuk-!-padding-top-2">{{ theme }}</h2>
+            <h2 class="govuk-heading-m">{{ theme }}</h2>
           {% endif %}
           <ul class="govuk-list">
           {% for subitem in items %}
