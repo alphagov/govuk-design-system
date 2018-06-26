@@ -62,9 +62,7 @@ This is defined in the [package.json](package.json) file.
 
 --------------------
 
-## Automated Checks
-
-We're using [GOV.UK PaaS](https://www.cloud.service.gov.uk/) for automated checks and production deployment.
+## Continuous integration
 
 When changes are pushed to GitHub [Travis][travis] will:
 
@@ -77,20 +75,7 @@ interface.
 
 [travis]: https://travis-ci.org/alphagov/govuk-design-system
 
-## Automated Deployment
-We're using Netlify to automate our deployment for development preview.
+# Deployment
 
-### Master deploy
-The master branch is published to `govuk-design-system-preview.netlify.com`.
-
-### Branch deploy
-When a new branch is pushed to GitHub a preview website will be deployed.
-Branch deploys are published to a URL which includes the branch name as a prefix.
-
-For example, if a branch is called `staging`, it will deploy to `staging--govuk-design-system-preview.netlify.com`.
-
-### Deploy preview
-When a new pull request is raised a preview website will be deployed.
-A deploy generated from a pull request will building the site as it would be if the proposed changes were merged. Deploy Previews are published to a URL which has the prefix `deploy-preview` followed by the identifier number of the pull request.
-
-For example, pull request #137 will automatically trigger a Deploy Preview at `deploy-preview-137--govuk-design-system-preview.netlify.com`. You will also be able to access the deploy preview URL from the govuk-design-system-ci's comment.
+- [How the Design System is deployed to production](docs/deployment/production.md)
+- [How branch and PR previews are deployed](docs/deployment/previews.md)
