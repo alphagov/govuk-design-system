@@ -1,13 +1,21 @@
 @include govuk-exports("app-pane") {
   $toc-width: 300px;
+  $toc-width-tablet: 210px;
 
   .app-pane.app-pane--enabled {
     $pane-height: 100vh;
 
     @include govuk-media-query($from: tablet) {
       display: flex;
-      height: $pane-height;
       flex-direction: column;
+    }
+
+    @include govuk-media-query($from: tablet, $and: '(orientation: portrait)') {
+        height: $pane-height;
+    }
+
+    @include govuk-media-query($from: desktop) {
+      height: $pane-height;
     }
   }
 
@@ -41,9 +49,12 @@
   .app-pane__subnav {
     border-right: 1px solid $govuk-border-colour;
     @include govuk-media-query($from: tablet) {
-      width: $toc-width;
+      width: $toc-width-tablet;
       border-right: 1px solid $govuk-border-colour;
       flex: 0 0 auto;
+    }
+    @include govuk-media-query($from: desktop) {
+      width: $toc-width;
     }
   }
 
