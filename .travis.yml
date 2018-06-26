@@ -32,7 +32,7 @@ install:
 # Set up dependencies for deployment:
 #
 # - The CloudFoundry command line tools
-# - The autopilot plugin for zero downtime push
+# - The blue-green-deploy plugin for zero downtime push
 before_deploy:
   # Add the home directory (where we install CloudFoundry) to our $PATH
   - export PATH=$HOME:$PATH
