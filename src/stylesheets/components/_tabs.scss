@@ -84,17 +84,13 @@
   position: relative;
   margin-top: -2px;
   border: 1px solid $govuk-border-colour;
-
-  @include govuk-media-query($until: desktop) {
-    border-top: 0;
-  }
 }
 
 .app-tabs__container pre {
   max-width: inherit;
-  font-size: inherit;
   margin-bottom: 0;
   border: 0;
+  font-size: inherit;
 }
 
 // Ensure the copy button does not obstruct the examples.
