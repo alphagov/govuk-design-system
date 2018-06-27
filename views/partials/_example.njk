@@ -1,4 +1,3 @@
-
 {% macro example(params) %}
 {% set exampleRoot = "src/" + params.group + "/" + params.item + "/" + params.example + "/" %}
 {% if params.customCode %}
@@ -7,7 +6,7 @@
   {% set examplePath = exampleRoot + "index.njk" %}
 {% endif %}
 {% set exampleURL = "/" + params.group + "/" + params.item + "/" + params.example + "/index.html" %}
-{% set exampleId = "example-" + params.example %}
+{% set exampleId = params.id | default("example-" + params.example) %}
 {% set exampleTitle = getFrontmatter(examplePath).title %}
 {% set frontendComponentName = params.frontendComponentName | default(params.item) %}
 {% if params.open %}
