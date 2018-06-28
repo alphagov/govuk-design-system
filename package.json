@@ -20,7 +20,8 @@
     "test": "npm run lint && jest",
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "standard",
-    "lint:scss": "gulp scss:lint"
+    "lint:scss": "gulp scss:lint",
+    "workbox:copy": "rm -rf lib/workbox/ && workbox copyLibraries lib/workbox/"
   },
   "standard": {
     "ignore": [
@@ -70,7 +71,7 @@
     "rollup-plugin-commonjs": "^9.1.3",
     "rollup-plugin-node-resolve": "^3.3.0",
     "standard": "^10.0.3",
-    "workbox-build": "^3.3.0"
+    "workbox-build": "^3.3.1"
   },
   "engines": {
     "node": "8.9.4"
