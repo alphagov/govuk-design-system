@@ -3,16 +3,16 @@ title: Checkboxes
 layout: layout-example.njk
 ---
 
-{% from 'checkboxes/macro.njk' import govukCheckboxes %}
+{% from "checkboxes/macro.njk" import govukCheckboxes %}
 
 {{ govukCheckboxes({
   idPrefix: "nationality",
   name: "nationality",
   fieldset: {
     legend: {
-      text: 'What is your nationality?',
+      text: "What is your nationality?",
       isPageHeading: true,
-      classes: 'govuk-fieldset__legend--xl'
+      classes: "govuk-fieldset__legend--xl"
     }
   },
   hint: {

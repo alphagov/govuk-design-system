@@ -4,16 +4,16 @@ layout: layout-example.njk
 ignore_in_sitemap: true
 ---
 
-{% from 'radios/macro.njk' import govukRadios %}
+{% from "radios/macro.njk" import govukRadios %}
 
 {{ govukRadios({
   idPrefix: "where-do-you-live",
   name: "where-do-you-live",
   fieldset: {
     legend: {
-      text: 'Where do you live?',
+      text: "Where do you live?",
       isPageHeading: true,
-      classes: 'govuk-fieldset__legend--xl'
+      classes: "govuk-fieldset__legend--xl"
     }
   },
   items: [

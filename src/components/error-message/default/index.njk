@@ -8,31 +8,31 @@ layout: layout-example.njk
 {{ govukDateInput({
   fieldset: {
     legend: {
-      text: 'What is your date of birth?',
+      text: "What is your date of birth?",
       isPageHeading: true,
-      classes: 'govuk-fieldset__legend--xl'
+      classes: "govuk-fieldset__legend--xl"
     }
   },
   hint: {
-    text: 'For example, 31 3 1980'
+    text: "For example, 31 3 1980"
   },
   errorMessage: {
     text: "Date of birth must be in the past"
   },
-  id: 'dob',
-  name: 'dob',
+  id: "dob",
+  name: "dob",
   items: [
     {
-      name: 'day',
-      value: '6'
+      name: "day",
+      value: "6"
     },
     {
-      name: 'month',
-      value: '3'
+      name: "month",
+      value: "3"
     },
     {
-      name: 'year',
-      value: '2076'
+      name: "year",
+      value: "2076"
     }
   ]
 }) }}

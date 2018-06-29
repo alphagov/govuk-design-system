@@ -17,29 +17,29 @@ This page template combines the boilerplate markup and [components](../../compon
 
 In the examples provided, we show both HTML and Nunjucks.
 
-You can use the HTML examples if you aren't able to use Nunjucks. If you use HTML you'll need to update it manually when new versions are released.
+You can use the HTML examples if you aren’t able to use Nunjucks. If you use HTML you’ll need to update it manually when new versions are released.
 
-If you are using Nunjucks you can get this page template by installing GOV.UK Frontend, you'll get updates to the page template when we update GOV.UK Frontend.
+If you are using Nunjucks you can get this page template by installing GOV.UK Frontend, you’ll get updates to the page template when we update GOV.UK Frontend.
 
 ## Default
 
 This example shows the minimum required for a GOV.UK page.
 
-{{ example({group: 'styles', item: 'page-template', example: 'default', customCode: true, html: true, nunjucks: true, open: false }) }}
+{{ example({group: "styles", item: "page-template", example: "default", customCode: true, html: true, nunjucks: true, open: false }) }}
 
 ## Customised page template
 
-{{ example({group: 'styles', item: 'page-template', example: 'custom', customCode: true, html: true, nunjucks: true, open: false }) }}
+{{ example({group: "styles", item: "page-template", example: "custom", customCode: true, html: true, nunjucks: true, open: false }) }}
 
 ## Nunjucks
 
 
 ### Configuring Nunjucks
 
-When using Nunjucks you'll need to add `node_modules/govuk-frontend/` as an available view:
+When using Nunjucks you’ll need to add `node_modules/govuk-frontend/` as an available view:
 
 ```
-nunjucks.configure('node_modules/govuk-frontend/', {
+nunjucks.configure("node_modules/govuk-frontend/", {
   autoescape: true
 })
 ```
@@ -127,7 +127,7 @@ To change the components that are included by default, set their equivalent bloc
 {% raw %}
 {% block header %}
   {{ header({
-    homepageUrl: '/custom-url'
+    homepageUrl: "/custom-url"
   }) }}
 {% endblock %}
 {% endraw %}
@@ -225,4 +225,4 @@ To change the components that are included by default, set their equivalent bloc
 
 #### Exploded view of the page template block areas
 
-{{ example({group: 'styles', item: 'page-template', example: 'block-areas', html: false, open: false }) }}
+{{ example({group: "styles", item: "page-template", example: "block-areas", html: false, open: false }) }}

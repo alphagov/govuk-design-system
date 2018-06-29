@@ -6,7 +6,10 @@ layout: layout-example.njk
 {% from "back-link/macro.njk" import govukBackLink %}
 
 <div class="govuk-width-container">
-  {{ govukBackLink({href: '#', text: 'Back'}) }}
+  {{ govukBackLink({
+    href: "#",
+    text: "Back"
+  }) }}
   <main class="govuk-main-wrapper">
 
     <div class="govuk-grid-row">
