@@ -12,7 +12,7 @@ statusMessage: This pattern is currently experimental because <a class="govuk-li
 
 {% from "_example.njk" import example %}
 
-{{ example({group: 'patterns', item: 'telephone-numbers', example: 'default', html: true, nunjucks: true, open: false}) }}
+{{ example({group: "patterns", item: "telephone-numbers", example: "default", html: true, nunjucks: true, open: false}) }}
 
 ## When to use this pattern
 
@@ -25,11 +25,11 @@ Only collect telephone numbers from people if you genuinely need them. Not every
 Users should be allowed to enter telephone numbers in whatever format is familiar to them. You should allow for additional spaces, hyphens, brackets and dashes, and be able to accommodate country and area codes.
 
 ### Validate telephone numbers
-You should validate telephone numbers so you can let users know if they have entered one incorrectly. Google's [libphonenumber](https://github.com/googlei18n/libphonenumber) library can validate telephone numbers from most countries.
+You should validate telephone numbers so you can let users know if they have entered one incorrectly. Google’s [libphonenumber](https://github.com/googlei18n/libphonenumber) library can validate telephone numbers from most countries.
 
 Validation errors should be styled like this:
 
-{{ example({group: 'patterns', item: 'telephone-numbers', example: 'error-empty-field', html: true, nunjucks: true, open: false}) }}
+{{ example({group: "patterns", item: "telephone-numbers", example: "error-empty-field", html: true, nunjucks: true, open: false}) }}
 
 Some examples of common error messages are:
 
@@ -42,8 +42,8 @@ Some examples of common error messages are:
 ### Make it clear what type of telephone number you need
 Use the form label or hint text to tell users if you specifically need a UK, international or mobile telephone number.
 
-{{ example({group: 'patterns', item: 'telephone-numbers', example: 'international', html: true, nunjucks: true, open: false}) }}
- 
+{{ example({group: "patterns", item: "telephone-numbers", example: "international", html: true, nunjucks: true, open: false}) }}
+
 ### Using example telephone numbers
 If you wish to include an example telephone number (in hint text for example), [Ofcom maintains a list of numbers](https://www.ofcom.org.uk/phones-telecoms-and-internet/information-for-industry/numbering/numbers-for-drama) that are reserved for use in media. These are:
 
@@ -56,7 +56,7 @@ Tell users why you might contact them and when.
 
 ### Don’t display telephone numbers as links on devices that can’t make calls
 
-It’s possible to mark up telephone numbers as links, like this: 
+It’s possible to mark up telephone numbers as links, like this:
 
 ```
 <a href="tel:+442079476330">020 7947 6330</a>

@@ -6,27 +6,27 @@ layout: layout-example.njk
 {% from "date-input/macro.njk" import govukDateInput %}
 
 {{ govukDateInput({
-  id: 'dob',
-  name: 'dob',
+  id: "dob",
+  name: "dob",
   fieldset: {
     legend: {
-      text: 'What is your date of birth?',
+      text: "What is your date of birth?",
       isPageHeading: true,
-      classes: 'govuk-fieldset__legend--xl'
+      classes: "govuk-fieldset__legend--xl"
     }
   },
   hint: {
-    text: 'For example, 31 3 1980'
+    text: "For example, 31 3 1980"
   },
   items: [
     {
-      name: 'day'
+      name: "day"
     },
     {
-      name: 'month'
+      name: "month"
     },
     {
-      name: 'year'
+      name: "year"
     }
   ]
 }) }}

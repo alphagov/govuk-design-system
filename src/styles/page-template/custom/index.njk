@@ -14,13 +14,13 @@ ignore_in_sitemap: true
 
 {% extends "template.njk" %}
 
-{% set htmlClasses = 'app-html-class' %}
-{% set htmlLang = 'fr' %}
-{% set assetPath = '' %}
-{% set themeColor = 'blue' %}
-{% set bodyClasses = 'app-body-class' %}
+{% set htmlClasses = "app-html-class" %}
+{% set htmlLang = "fr" %}
+{% set assetPath = "" %}
+{% set themeColor = "blue" %}
+{% set bodyClasses = "app-body-class" %}
 
-{% block pageTitle %}GOV.UK - Le meilleur endroit pour trouver des services gouvernementaux et de l'information{% endblock %}
+{% block pageTitle %}GOV.UK - Le meilleur endroit pour trouver des services gouvernementaux et de l’information{% endblock %}
 
 {% block headIcons %}
     {{ super() }}
@@ -43,8 +43,8 @@ ignore_in_sitemap: true
 
 {% block skipLink %}
   {{ govukSkipLink({
-    href: '#main-content',
-    text: 'Passer au contenu principal'
+    href: "#main-content",
+    text: "Passer au contenu principal"
   }) }}
 {% endblock %}
 
@@ -56,23 +56,23 @@ ignore_in_sitemap: true
     serviceUrl: "#",
     navigation: [
       {
-        href: '#1',
-        text: 'Élément de navigation 1',
+        href: "#1",
+        text: "Élément de navigation 1",
         active: true
       },
       {
-        href: '#2',
-        text: 'Élément de navigation 2'
+        href: "#2",
+        text: "Élément de navigation 2"
       },
       {
-        href: '#3',
-        text: 'Élément de navigation 3'
+        href: "#3",
+        text: "Élément de navigation 3"
       }
     ]
   }) }}
 {% endblock %}
 
-{% set mainClasses = 'app-main-class' %}
+{% set mainClasses = "app-main-class" %}
 
 {% block main %}
   {{ super() }}
@@ -83,11 +83,11 @@ ignore_in_sitemap: true
     tag: {
       text: "alpha"
     },
-    html: 'C\'est un nouveau service - vos <a class="govuk-link" href="#">commentaires</a> nous aideront à l\'améliorer.'
+    html: 'C’est un nouveau service - vos <a class="govuk-link" href="#">commentaires</a> nous aideront à l’améliorer.'
   }) }}
   {{ govukBackLink({
-    "href": "#",
-    "text": "Retourner"
+    href: "#",
+    text: "Retourner"
   }) }}
 {% endblock %}
 
@@ -97,19 +97,19 @@ ignore_in_sitemap: true
 
 {% block footer %}
   {{ govukFooter({
-    "meta": {
-      "items": [
+    meta: {
+      items: [
         {
-          "href": "#1",
-          "text": "Aidez-moi"
+          href: "#1",
+          text: "Aidez-moi"
         },
         {
-          "href": "#2",
-          "text": "Politique de confidentialité"
+          href: "#2",
+          text: "Politique de confidentialité"
         },
         {
-          "href": "#3",
-          "text": "Contactez-nous"
+          href: "#3",
+          text: "Contactez-nous"
         }
       ]
     }
