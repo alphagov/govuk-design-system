@@ -5,8 +5,6 @@
     "setClasses"
   ],
   "feature-detects": [
-    "test/history",
-    "test/css/flexbox",
-    "test/css/flexboxtweener"
+    "test/css/flexbox"
   ]
 }
