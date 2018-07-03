@@ -29,6 +29,12 @@ The first element inside a fieldset must be a `legend` which describes the group
 
 On [question pages](../../patterns/question-pages) containing a group of inputs, including the question as the legend helps users of screenreaders to understand that the inputs are all related to that&nbsp;question.
 
+### Legend as a page heading
+
+If you want the `<legend>` to be the `<h1>` of the page the Nunjucks macro makes this easier by adding the `<h1>` for you when you set `isPageHeading: true,`.
+
+{{ example({group: "components", item: "fieldset", example: "fieldset-heading", html: true, nunjucks: true, open: true}) }}
+
 Include any general help text which is important for filling in the form and can’t be written as [hint text](../../components/text-input#using-hint-text) in the legend, but try to keep it as concise as possible.
 
 ## Research on this component

@@ -1,0 +1,61 @@
+---
+title: Fieldset with page heading
+layout: layout-example.njk
+ignore_in_sitemap: true
+stylesheets:
+- address-wrapper.css
+---
+
+{% from "fieldset/macro.njk" import govukFieldset %}
+
+<h2 class="govuk-heading-m">Legend as page heading</h2>
+
+{{ govukFieldset({
+  legend: {
+    text: "<h1> govuk-fieldset__legend--xl",
+    classes: "govuk-fieldset__legend--xl",
+    isPageHeading: true
+  }
+}) }}
+
+{{ govukFieldset({
+  legend: {
+    text: "<h1> govuk-fieldset__legend--l",
+    classes: "govuk-fieldset__legend--l",
+    isPageHeading: true
+  }
+}) }}
+
+<h2 class="govuk-heading-m govuk-!-padding-top-4">Legend styled as a heading</h2>
+
+{{ govukFieldset({
+  legend: {
+    text: "<legend> govuk-fieldset__legend--xl",
+    classes: "govuk-fieldset__legend--xl",
+    isPageHeading: false
+  }
+}) }}
+
+{{ govukFieldset({
+  legend: {
+    text: "<legend> govuk-fieldset__legend--l",
+    classes: "govuk-fieldset__legend--l",
+    isPageHeading: false
+  }
+}) }}
+
+{{ govukFieldset({
+  legend: {
+    text: "<legend> govuk-fieldset__legend--m",
+    classes: "govuk-fieldset__legend--m",
+    isPageHeading: false
+  }
+}) }}
+
+{{ govukFieldset({
+  legend: {
+    text: "<legend> govuk-fieldset__legend--s",
+    classes: "govuk-fieldset__legend--s",
+    isPageHeading: false
+  }
+}) }}
