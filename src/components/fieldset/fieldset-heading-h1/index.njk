@@ -1,0 +1,16 @@
+---
+title: Fieldset with page heading
+layout: layout-example.njk
+ignore_in_sitemap: true
+stylesheets:
+- address-wrapper.css
+---
+
+{% from "fieldset/macro.njk" import govukFieldset %}
+
+{{ govukFieldset({
+  legend: {
+    text: "<h1> legend",
+    isPageHeading: true
+  }
+}) }}

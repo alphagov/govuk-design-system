@@ -8,26 +8,6 @@ stylesheets:
 
 {% from "fieldset/macro.njk" import govukFieldset %}
 
-<h2 class="govuk-heading-m">Legend as page heading</h2>
-
-{{ govukFieldset({
-  legend: {
-    text: "<h1> govuk-fieldset__legend--xl",
-    classes: "govuk-fieldset__legend--xl",
-    isPageHeading: true
-  }
-}) }}
-
-{{ govukFieldset({
-  legend: {
-    text: "<h1> govuk-fieldset__legend--l",
-    classes: "govuk-fieldset__legend--l",
-    isPageHeading: true
-  }
-}) }}
-
-<h2 class="govuk-heading-m govuk-!-padding-top-4">Legend styled as a heading</h2>
-
 {{ govukFieldset({
   legend: {
     text: "<legend> govuk-fieldset__legend--xl",

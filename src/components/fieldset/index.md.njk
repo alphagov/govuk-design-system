@@ -29,11 +29,29 @@ The first element inside a fieldset must be a `legend` which describes the group
 
 On [question pages](../../patterns/question-pages) containing a group of inputs, including the question as the legend helps users of screenreaders to understand that the inputs are all related to that&nbsp;question.
 
-### Legend as a page heading
+### One thing per page
 
-If you want the `<legend>` to be the `<h1>` of the page the Nunjucks macro makes this easier by adding the `<h1>` for you when you set `isPageHeading: true,`.
+When asking one thing per page, depending on the question you’re asking you may want your `<legend>` to be the page heading.
 
-{{ example({group: "components", item: "fieldset", example: "fieldset-heading", html: true, nunjucks: true, open: true}) }}
+#### Legend as a semantic page heading
+
+If you want the `<legend>` content to be the `<h1>` of the page the Nunjucks macro makes this easy by adding the `<h1>` for you when you set `isPageHeading: true,`. This outputs a `<h1>` tag inside the `<legend>` tag.
+
+{{ example({group: "components", item: "fieldset", example: "fieldset-heading-h1", html: true, nunjucks: true, open: false}) }}
+
+### Styling the legend
+
+If you want to make the `<legend>` look like a heading you can also apply classes to the `<legend>` to make it larger.
+
+#### Semantic page heading with styling
+
+{{ example({group: "components", item: "fieldset", example: "fieldset-heading-h1-classes", html: true, nunjucks: true, open: false}) }}
+
+#### Legends styled as a headings
+
+{{ example({group: "components", item: "fieldset", example: "fieldset-heading-classes", html: true, nunjucks: true, open: false}) }}
+
+### Hint text
 
 Include any general help text which is important for filling in the form and can’t be written as [hint text](../../components/text-input#using-hint-text) in the legend, but try to keep it as concise as possible.
 
