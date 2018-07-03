@@ -1,0 +1,77 @@
+---
+title: Inputs with page heading
+layout: layout-example.njk
+ignore_in_sitemap: true
+---
+
+{% from "input/macro.njk" import govukInput %}
+
+<h2 class="govuk-heading-m">Label as page heading</h2>
+
+{{ govukInput({
+  label: {
+    text: "<h1> govuk-label--xl",
+    isPageHeading: true,
+    classes: "govuk-label--xl"
+  },
+  classes: "",
+  id: "input",
+  name: "input"
+}) }}
+
+{{ govukInput({
+  label: {
+    text: "<h1> govuk-label--l",
+    isPageHeading: true,
+    classes: "govuk-label--l"
+  },
+  classes: "",
+  id: "input",
+  name: "input"
+}) }}
+
+<h2 class="govuk-heading-m govuk-!-padding-top-4">Label styled as a heading</h2>
+
+{{ govukInput({
+  label: {
+    text: "<label> govuk-label--xl",
+    isPageHeading: false,
+    classes: "govuk-label--xl"
+  },
+  classes: "",
+  id: "input",
+  name: "input"
+}) }}
+
+{{ govukInput({
+  label: {
+    text: "<label> govuk-label--l",
+    isPageHeading: false,
+    classes: "govuk-label--l"
+  },
+  classes: "",
+  id: "input",
+  name: "input"
+}) }}
+
+{{ govukInput({
+  label: {
+    text: "<label> govuk-label--m",
+    isPageHeading: false,
+    classes: "govuk-label--m"
+  },
+  classes: "",
+  id: "input",
+  name: "input"
+}) }}
+
+{{ govukInput({
+  label: {
+    text: "<label> govuk-label--s",
+    isPageHeading: false,
+    classes: "govuk-label--s"
+  },
+  classes: "",
+  id: "input",
+  name: "input"
+}) }}
