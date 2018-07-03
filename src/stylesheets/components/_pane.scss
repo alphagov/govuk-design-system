@@ -4,6 +4,7 @@
 
   .app-pane.app-pane--enabled {
     $pane-height: 100vh;
+    overflow: hidden;
 
     @include govuk-media-query($from: tablet) {
       display: flex;
@@ -76,6 +77,7 @@
   .no-flexbox {
     .app-pane {
       height: auto;
+      overflow: visible;
       @include govuk-clearfix;
     }
 
