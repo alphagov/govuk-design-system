@@ -15,12 +15,12 @@ ignore_in_sitemap: true
 {% extends "template.njk" %}
 
 {% set htmlClasses = "app-html-class" %}
-{% set htmlLang = "fr" %}
+{% set htmlLang = "en" %}
 {% set assetPath = "" %}
 {% set themeColor = "blue" %}
 {% set bodyClasses = "app-body-class" %}
 
-{% block pageTitle %}GOV.UK - Le meilleur endroit pour trouver des services gouvernementaux et de l’information{% endblock %}
+{% block pageTitle %}GOV.UK - Customised page template{% endblock %}
 
 {% block headIcons %}
     {{ super() }}
@@ -49,7 +49,7 @@ ignore_in_sitemap: true
 {% block skipLink %}
   {{ govukSkipLink({
     href: "#main-content",
-    text: "Passer au contenu principal"
+    text: "Skip to main content"
   }) }}
 {% endblock %}
 
@@ -57,21 +57,21 @@ ignore_in_sitemap: true
   {{ govukHeader({
     homepageUrl: "#",
     containerClasses: "govuk-width-container",
-    serviceName: "Nom du service",
+    serviceName: "Service name",
     serviceUrl: "#",
     navigation: [
       {
         href: "#1",
-        text: "Élément de navigation 1",
+        text: "Navigation item 1",
         active: true
       },
       {
         href: "#2",
-        text: "Élément de navigation 2"
+        text: "Navigation item 2"
       },
       {
         href: "#3",
-        text: "Élément de navigation 3"
+        text: "Navigation item 3"
       }
     ]
   }) }}
@@ -88,11 +88,11 @@ ignore_in_sitemap: true
     tag: {
       text: "alpha"
     },
-    html: 'C’est un nouveau service - vos <a class="govuk-link" href="#">commentaires</a> nous aideront à l’améliorer.'
+    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
   }) }}
   {{ govukBackLink({
     href: "#",
-    text: "Retourner"
+    text: "Back"
   }) }}
 {% endblock %}
 
@@ -106,15 +106,19 @@ ignore_in_sitemap: true
       items: [
         {
           href: "#1",
-          text: "Aidez-moi"
+          text: "Help"
         },
         {
           href: "#2",
-          text: "Politique de confidentialité"
+          text: "Cookies"
         },
         {
           href: "#3",
-          text: "Contactez-nous"
+          text: "Contact"
+        },
+        {
+          href: "#4",
+          text: "Terms and conditions"
         }
       ]
     }
