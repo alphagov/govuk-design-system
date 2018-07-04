@@ -15,12 +15,12 @@ ignore_in_sitemap: true
 {% extends "template.njk" %}
 
 {% set htmlClasses = "app-html-class" %}
-{% set htmlLang = "fr" %}
+{% set htmlLang = "cy" %}
 {% set assetPath = "" %}
 {% set themeColor = "blue" %}
 {% set bodyClasses = "app-body-class" %}
 
-{% block pageTitle %}GOV.UK - Le meilleur endroit pour trouver des services gouvernementaux et de l’information{% endblock %}
+{% block pageTitle %}GOV.UK - Customised page template{% endblock %}
 
 {% block headIcons %}
     {{ super() }}
@@ -49,7 +49,7 @@ ignore_in_sitemap: true
 {% block skipLink %}
   {{ govukSkipLink({
     href: "#main-content",
-    text: "Passer au contenu principal"
+    text: "Sgipiwch i'r prif gynnwys"
   }) }}
 {% endblock %}
 
@@ -57,21 +57,21 @@ ignore_in_sitemap: true
   {{ govukHeader({
     homepageUrl: "#",
     containerClasses: "govuk-width-container",
-    serviceName: "Nom du service",
+    serviceName: "Enw’r gwasanaeth",
     serviceUrl: "#",
     navigation: [
       {
         href: "#1",
-        text: "Élément de navigation 1",
+        text: "Eitem llywio 1",
         active: true
       },
       {
         href: "#2",
-        text: "Élément de navigation 2"
+        text: "Eitem llywio 2"
       },
       {
         href: "#3",
-        text: "Élément de navigation 3"
+        text: "Eitem llywio 3"
       }
     ]
   }) }}
@@ -88,11 +88,11 @@ ignore_in_sitemap: true
     tag: {
       text: "alpha"
     },
-    html: 'C’est un nouveau service - vos <a class="govuk-link" href="#">commentaires</a> nous aideront à l’améliorer.'
+    html: 'Mae hwn yn wasanaeth newydd – bydd eich <a class="govuk-link" href="#">adborth</a> yn ein helpu ni i’w wella.'
   }) }}
   {{ govukBackLink({
     href: "#",
-    text: "Retourner"
+    text: "Nôl"
   }) }}
 {% endblock %}
 
@@ -106,15 +106,19 @@ ignore_in_sitemap: true
       items: [
         {
           href: "#1",
-          text: "Aidez-moi"
+          text: "Cymorth"
         },
         {
           href: "#2",
-          text: "Politique de confidentialité"
+          text: "Cwcis"
         },
         {
           href: "#3",
-          text: "Contactez-nous"
+          text: "Cyswllt"
+        },
+        {
+          href: "#4",
+          text: "Amodau a thelerau"
         }
       ]
     }
