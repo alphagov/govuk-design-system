@@ -1,56 +1,56 @@
 ---
 title: Question pages
-layout: layout-example.njk
+layout: layout-example-with-template.njk
 ---
 
 {% from "back-link/macro.njk" import govukBackLink %}
 {% from "date-input/macro.njk" import govukDateInput %}
 {% from "button/macro.njk" import govukButton %}
 
-<div class="govuk-width-container">
 
-{{ govukBackLink({
-  text: "Back"
-}) }}
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back"
+  }) }}
+{% endblock %}
 
-  <div class="govuk-main-wrapper">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <form action="/form-handler" method="post">
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/form-handler" method="post">
 
-          {{ govukDateInput({
-            id: "dob",
-            name: "dob",
-            fieldset: {
-              legend: {
-                text: "What is your date of birth?",
-                isPageHeading: true,
-                classes: "govuk-fieldset__legend--xl"
-              }
+        {{ govukDateInput({
+          id: "dob",
+          name: "dob",
+          fieldset: {
+            legend: {
+              text: "What is your date of birth?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--xl"
+            }
+          },
+          hint: {
+            text: "For example, 31 3 1980"
+          },
+          items: [
+            {
+              name: "day"
             },
-            hint: {
-              text: "For example, 31 3 1980"
+            {
+              name: "month"
             },
-            items: [
-              {
-                name: "day"
-              },
-              {
-                name: "month"
-              },
-              {
-                name: "year"
-              }
-            ]
-            })
-          }}
+            {
+              name: "year"
+            }
+          ]
+          })
+        }}
 
-          {{ govukButton({
-            text: "Continue"
-          }) }}
-        </form>
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </form>
 
-      </div>
     </div>
   </div>
-</div>
+{% endblock %}
