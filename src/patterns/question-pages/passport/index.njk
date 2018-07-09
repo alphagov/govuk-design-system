@@ -1,6 +1,6 @@
 ---
 title: Passport – Question pages
-layout: layout-example.njk
+layout: layout-example-with-template.njk
 ignore_in_sitemap: true
 ---
 
@@ -9,62 +9,60 @@ ignore_in_sitemap: true
 {% from "date-input/macro.njk" import govukDateInput %}
 {% from "button/macro.njk" import govukButton %}
 
-<div class="govuk-width-container">
-
+{% block beforeContent %}
   {{ govukBackLink({
     text: "Back"
   }) }}
+{% endblock %}
 
-  <div class="govuk-main-wrapper">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">Passport details</h1>
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Passport details</h1>
 
-        <form action="/form-handler" method="post">
+      <form action="/form-handler" method="post">
 
-          {{ govukInput({
-            label: {
-              text: "Passport number",
-              classes: "govuk-label--m"
+        {{ govukInput({
+          label: {
+            text: "Passport number",
+            classes: "govuk-label--m"
+          },
+          hint: {
+            text: "For example, 502135326"
+          },
+          id: "passport-number",
+          name: "passport-number"
+        }) }}
+
+        {{ govukDateInput({
+          id: "expiry",
+          name: "expiry",
+          fieldset: {
+            legend: {
+              text: "Expiry date",
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          hint: {
+            text: "For example, 31 3 1980"
+          },
+          items: [
+            {
+              name: "month"
             },
-            hint: {
-              text: "For example, 502135326"
-            },
-            id: "passport-number",
-            name: "passport-number"
-          }) }}
+            {
+              name: "year"
+            }
+          ]
+          })
+        }}
 
-          {{ govukDateInput({
-            id: "expiry",
-            name: "expiry",
-            fieldset: {
-              legend: {
-                text: "Expiry date",
-                classes: "govuk-fieldset__legend--m"
-              }
-            },
-            hint: {
-              text: "For example, 31 3 1980"
-            },
-            items: [
-              {
-                name: "month"
-              },
-              {
-                name: "year"
-              }
-            ]
-            })
-          }}
+        {{ govukButton({
+          text: "Continue"
+        }) }}
 
-          {{ govukButton({
-            text: "Continue"
-          }) }}
+      </form>
 
-        </form>
-
-      </div>
     </div>
   </div>
-
-</div>
+{% endblock %}
