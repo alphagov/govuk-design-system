@@ -50,9 +50,11 @@
   <div class="app-tabs__heading js-tabs__heading"><a href="#{{ exampleId }}-nunjucks" role="tab" aria-controls="{{ exampleId }}-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
   {% endif %}
   <div class="app-tabs__container js-tabs__container" id="{{ exampleId }}-nunjucks" role="tabpanel">
-    ```js
-    {{ getNunjucksCode(examplePath) | safe }}
-    ```
+
+  ```js
+  {{ getNunjucksCode(examplePath) | safe }}
+  ```
+
   {%- if (params.group == 'components') %}
     <p class="app-tabs__text">You can configure this component using the <a href="https://github.com/alphagov/govuk-frontend/tree/master/package/components/{{frontendComponentName}}/README.md#component-arguments" class="govuk-link"  target="_blank" data-components="github-component-arguments" rel="noopener">Nunjucks macro arguments</a>.</p>
   {% endif %}

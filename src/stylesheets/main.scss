@@ -74,49 +74,38 @@ $app-breakpoint-widescreen: 1200px;
   }
 }
 
+.app-\!-max-width-measure {
+  max-width: 38em;
+}
+
+.app-video,
+.app-img {
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  @include govuk-responsive-margin(2, "top");
+  @include govuk-responsive-margin(6, "bottom");
+  border: 1px solid $govuk-border-colour;
+}
+
+.app-img {
+  padding: govuk-spacing(2);
+}
+
+.app-video {
+  @include govuk-focusable;
+}
+
+// IE8 does not support the video element, so we hide the element entirely.
+@if $govuk-is-ie8 == true {
+  .app-video {
+    display: none;
+  }
+}
+
 .app-content {
 
   @include govuk-responsive-padding(6);
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  ul:not(.app-tabs),
-  ol,
-  img,
-  video,
-  .app-table--constrained {
-    max-width: 38em;
-  }
-
-  video,
-  img {
-    box-sizing: border-box;
-    width: 100%;
-    height: auto;
-    @include govuk-responsive-margin(2, "top");
-    @include govuk-responsive-margin(6, "bottom");
-    border: 1px solid $govuk-border-colour;
-  }
-
-  img {
-    padding: govuk-spacing(2);
-  }
-
-  video {
-    @include govuk-focusable;
-  }
-
-  // IE8 does not support the video element, so we hide the element entirely.
-  @if $govuk-is-ie8 == true {
-    video {
-      display: none;
-    }
-  }
 }
 
 .app-content__header {
@@ -181,11 +170,6 @@ $app-link-colour: #00823b;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-
-    .app-prose-scope & {
-      color: $app-link-colour; // A specific selector to override .app-prose-scope a:link
-      background-color: govuk-colour("white"); // A specific selector to override .app-prose-scope a:focus
-    }
   }
 }
 
@@ -297,55 +281,4 @@ p code {
   padding: 0 govuk-spacing(1);
   color: $app-code-color;
   background-color: govuk-colour("grey-4");
-}
-
-.app-prose-scope {
-
-  h1 {
-    @extend %govuk-heading-xl;
-  }
-
-  h2 {
-    @extend %govuk-heading-l;
-  }
-
-  h3 {
-    @extend %govuk-heading-m;
-  }
-
-  h4 {
-    @extend %govuk-heading-s;
-  }
-
-  p {
-    @extend %govuk-body-m;
-  }
-
-  strong,
-  b {
-    @include govuk-typography-weight-bold;
-  }
-
-  ul,
-  ol {
-    @extend %govuk-list;
-  }
-
-  ol {
-    @extend %govuk-list--number;
-  }
-
-  ul {
-    @extend %govuk-list--bullet;
-  }
-
-  a {
-    @extend %govuk-link;
-  }
-
-  hr {
-    @extend %govuk-section-break;
-    @extend %govuk-section-break--visible;
-    @extend %govuk-section-break--xl;
-  }
 }
