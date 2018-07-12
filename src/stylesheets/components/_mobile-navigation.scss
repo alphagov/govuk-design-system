@@ -11,7 +11,7 @@
 }
 
 .no-js .app-mobile-nav {
-  @include govuk-media-query($until: desktop) {
+  @include govuk-media-query($until: tablet) {
     display: block;
   }
 }
