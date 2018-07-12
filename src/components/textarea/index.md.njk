@@ -9,7 +9,7 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 
-{{ example({group: "components", item: "textarea", example: "default", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "components", item: "textarea", example: "default", html: true, nunjucks: true, open: false, size: "m"}) }}
 
 ## When to use this component
 
@@ -23,7 +23,7 @@ Don’t use the textarea component if you need to let users enter shorter answer
 
 There are 2 ways to use the textarea component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://govuk-prototype-kit.herokuapp.com), you can use the Nunjucks macro.
 
-{{ example({group: "components", item: "textarea", example: "default", html: true, nunjucks: true, open: true}) }}
+{{ example({group: "components", item: "textarea", example: "default", html: true, nunjucks: true, open: true, size: "m"}) }}
 
 ### Label textareas
 
@@ -35,7 +35,7 @@ Labels must be aligned above the textarea they refer to. They should be short, d
 
 Make the height of a textarea proportional to the amount of text you expect users to enter. You can set the height of a textarea by by specifying the `rows` attribute.
 
-{{ example({group: "components", item: "textarea", example: "specifying-rows", html: true, nunjucks: true, open: true}) }}
+{{ example({group: "components", item: "textarea", example: "specifying-rows", html: true, nunjucks: true, open: true, size: "l"}) }}
 
 ### Don’t disable copy and paste
 
