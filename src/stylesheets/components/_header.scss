@@ -97,6 +97,7 @@
   }
 
   .app-header-mobile-nav-toggler {
+    display: none;
     width: 100px;
     margin-top: govuk-spacing(2);
     margin-bottom: govuk-spacing(2);
@@ -116,8 +117,10 @@
       box-shadow: 0 0 0 govuk-colour("blue");
     }
 
-    @include govuk-media-query($from: tablet) {
-      display: none;
+    .js-enabled & {
+      @include govuk-media-query($until: tablet) {
+        display: inline;
+      }
     }
   }
 
