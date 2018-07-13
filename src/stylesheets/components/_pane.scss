@@ -3,21 +3,12 @@
   $toc-width-tablet: 210px;
 
   .app-pane.app-pane--enabled {
-    $pane-height: 100vh;
-    overflow: hidden;
 
     @include govuk-media-query($from: tablet) {
       display: flex;
       flex-direction: column;
     }
-
-    @include govuk-media-query($from: tablet, $and: '(orientation: portrait)') {
-        height: $pane-height;
-    }
-
-    @include govuk-media-query($from: desktop) {
-      height: $pane-height;
-    }
+    
   }
 
   .app-pane__header {
