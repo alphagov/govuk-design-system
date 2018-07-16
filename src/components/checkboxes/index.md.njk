@@ -11,7 +11,7 @@ layout: layout-pane.njk
 
 Let users select one or more options by using the checkboxes component.
 
-{{ example({group: "components", item: "checkboxes", example: "default", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "components", item: "checkboxes", example: "default", html: true, nunjucks: true, open: false, size: "m" }) }}
 
 ## When to use this component
 
@@ -28,13 +28,13 @@ Don’t use the checkboxes component if users can only choose one option from a 
 
 There are 2 ways to use the checkboxes component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://govuk-prototype-kit.herokuapp.com), you can use the Nunjucks macro.
 
-{{ example({group: "components", item: "checkboxes", example: "default", html: true, nunjucks: true, open: true}) }}
+{{ example({group: "components", item: "checkboxes", example: "default", html: true, nunjucks: true, open: true, size: "m"}) }}
 
 ### Conditionally revealing content
 
 You can add conditionally revealing content to checkboxes, so users only see content when it’s relevant to them. For example, you could reveal a phone number input only when a user chooses to be contacted by phone.
 
-{{ example({group: "components", item: "checkboxes", example: "conditional-reveal", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "components", item: "checkboxes", example: "conditional-reveal", html: true, nunjucks: true, open: false, size: "xl"}) }}
 
 Keep it simple - if you need to add a lot of content, consider showing it on the next page in the process instead.
 

@@ -9,7 +9,7 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 
-{{ example({group: "components", item: "text-input", frontendComponentName: "input", example: "default", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "components", item: "text-input", frontendComponentName: "input", example: "default", html: true, nunjucks: true, open: false, size: "s"}) }}
 
 ## When to use this component
 
@@ -23,7 +23,7 @@ Don’t use the text input component if you need to let users enter longer answe
 
 There are 2 ways to use the text input component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://govuk-prototype-kit.herokuapp.com), you can use the Nunjucks macro.
 
-{{ example({group: "components", item: "text-input", frontendComponentName: "input", example: "default", html: true, nunjucks: true, open: true}) }}
+{{ example({group: "components", item: "text-input", frontendComponentName: "input", example: "default", html: true, nunjucks: true, open: true, size: "s"}) }}
 
 ### Label text inputs
 
@@ -45,7 +45,7 @@ Use fixed width inputs for content that has a specific, known length. Postcode i
 
 On fixed width inputs, the width will remain fixed on all screens unless it is wider than the viewport, in which case it will shrink to fit.
 
-{{ example({group: "components", item: "text-input", frontendComponentName: "input", example: "input-fixed-width", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "components", item: "text-input", frontendComponentName: "input", example: "input-fixed-width", html: true, nunjucks: true, open: false, size: "l"}) }}
 
 #### Fluid width inputs
 
@@ -53,13 +53,13 @@ Use the width override classes to reduce the width of an input in relation to it
 
 Fluid width inputs will resize with the viewport.
 
-{{ example({group: "components", item: "text-input", frontendComponentName: "input", example: "input-fluid-width", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "components", item: "text-input", frontendComponentName: "input", example: "input-fluid-width", html: true, nunjucks: true, open: false, size: "xl"}) }}
 
 ### Using hint text
 
 Use hint for help that’s relevant to the majority of users - like how their information will be used, or where to find it.
 
-{{ example({group: "components", item: "text-input", frontendComponentName: "input", example: "input-hint-text", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "components", item: "text-input", frontendComponentName: "input", example: "input-hint-text", html: true, nunjucks: true, open: false, size: "s"}) }}
 
 ### Don’t disable copy and paste
 

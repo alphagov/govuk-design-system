@@ -43,6 +43,28 @@
   background: govuk-colour("white");
 }
 
+// Default size
+.app-example__iframe,
+.app-example__frame--xs {
+  height: 150px;
+}
+
+.app-example__frame--s {
+  height: 250px;
+}
+
+.app-example__frame--m {
+  height: 350px;
+}
+
+.app-example__frame--l {
+  height: 450px;
+}
+
+.app-example__frame--xl {
+  height: 550px;
+}
+
 .app-example__frame--resizable {
   min-width: 230px;
   min-height: govuk-spacing(6) * 2;
