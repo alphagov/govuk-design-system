@@ -1,15 +1,16 @@
 ---
 title: Start pages
-layout: layout-example.njk
+layout: layout-example-full-page.njk
 stylesheets:
 - related-items.css
 ---
 
+{% extends "example-wrappers/full-page.njk" %}
+
 {% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
 {% from "button/macro.njk" import govukButton %}
 
-<div class="govuk-width-container">
-
+{% block beforeContent %}
   {{ govukBreadcrumbs({
     items: [
       {
@@ -25,69 +26,67 @@ stylesheets:
       }
     ]
   }) }}
+{% endblock %}
 
-  <div class="govuk-main-wrapper">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Service name goes here</h1>
 
-        <h1 class="govuk-heading-xl">Service name goes here</h1>
+      <p class="govuk-body">Use this service to:</p>
 
-        <p class="govuk-body">Use this service to:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>do something</li>
+        <li>update your name, address or other details</li>
+        <li>do something else</li>
+      </ul>
 
-        <ul class="govuk-list govuk-list--bullet">
-          <li>do something</li>
-          <li>update your name, address or other details</li>
-          <li>do something else</li>
-        </ul>
+      <p class="govuk-body">Registering takes around 5 minutes.</p>
 
-        <p class="govuk-body">Registering takes around 5 minutes.</p>
+      {{ govukButton({
+        text: "Start now",
+        href: "#",
+        classes: "govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"
+      }) }}
 
-        {{ govukButton({
-          text: "Start now",
-          href: "#",
-          classes: "govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"
-        }) }}
+      <h2 class="govuk-heading-m">Before you start</h2>
 
-        <h2 class="govuk-heading-m">Before you start</h2>
+      <p class="govuk-body">You can also <a class="govuk-link" href="#">register by post</a>.</p>
 
-        <p class="govuk-body">You can also <a class="govuk-link" href="#">register by post</a>.</p>
+      <p class="govuk-body">The online service is also available in <a class="govuk-link" href="#">Welsh (Cymraeg)</a>.</p>
 
-        <p class="govuk-body">The online service is also available in <a class="govuk-link" href="#">Welsh (Cymraeg)</a>.</p>
+      <p class="govuk-body">You can’t register for this service if you’re in the UK illegally.</p>
+    </div>
 
-        <p class="govuk-body">You can’t register for this service if you’re in the UK illegally.</p>
+    <div class="govuk-grid-column-one-third">
 
-      </div>
+      <!-- The Related items component is not part of GOV.UK Frontend but will be styled if used in the Prototype Kit -->
 
-      <div class="govuk-grid-column-one-third">
+      <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Subsection
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <a href="#">
+                Related link
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Related link
+              </a>
+            </li>
+            <li>
+              <a href="#" class="govuk-!-font-weight-bold">
+                More <span class="govuk-visually-hidden">in Subsection</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
 
-        <!-- The Related items component is not part of GOV.UK Frontend but will be styled if used in the Prototype Kit -->
-
-        <aside class="app-related-items" role="complementary">
-          <h2 class="govuk-heading-m" id="subsection-title">
-            Subsection
-          </h2>
-          <nav role="navigation" aria-labelledby="subsection-title">
-            <ul class="govuk-list govuk-!-font-size-16">
-              <li>
-                <a href="#">
-                  Related link
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  Related link
-                </a>
-              </li>
-              <li>
-                <a href="#" class="govuk-!-font-weight-bold">
-                  More <span class="govuk-visually-hidden">in Subsection</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </aside>
-
-        </div>
     </div>
   </div>
-</div>
+{% endblock %}
