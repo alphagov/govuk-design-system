@@ -1,7 +1,7 @@
 {% extends "template.njk" %}
 {% set bodyClasses = 'app-example-page' %}
+{% block pageTitle %}{{ title }} – Example – GOV.UK Design System{% endblock %}
 {% block head %}
-  <title>{{ title }} – Example – GOV.UK Design System</title>
   <link href="/{{ fingerprint['stylesheets/main.css'] }}" rel="stylesheet" media="all" />
   {#- Include any additional stylesheets specified in the example frontmatter #}
   {% for stylesheet in stylesheets %}
