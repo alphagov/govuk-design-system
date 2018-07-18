@@ -12,10 +12,7 @@
   <![endif]-->
   <script src="/javascripts/vendor/modernizr.js"></script>
 {% endblock %}
-{% block header %}{% endblock %}
-{% block skipLink %}{% endblock %}
-{% block main %}
-  {% block content %}{% endblock %}
+{% block content %}
   {% block body %}
     {{ contents | safe }}
   {% endblock %}
@@ -23,5 +20,4 @@
 {% block bodyEnd %}
   <script src="/javascripts/vendor/iframeResizer.contentWindow.js"></script>
   <script src="/{{ fingerprint['javascripts/govuk-frontend.js'] }}"></script>
-{% block footer %}{% endblock %}
 {% endblock %}

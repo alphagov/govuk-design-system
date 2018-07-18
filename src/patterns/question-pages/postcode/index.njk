@@ -1,6 +1,6 @@
 ---
 title: Postcode – Question pages
-layout: layout-example.njk
+layout: layout-example-with-template.njk
 ignore_in_sitemap: true
 ---
 
@@ -8,35 +8,34 @@ ignore_in_sitemap: true
 {% from "input/macro.njk" import govukInput %}
 {% from "button/macro.njk" import govukButton %}
 
-<div class="govuk-width-container">
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back"
+  }) }}
+{% endblock %}
 
-{{ govukBackLink({
-  text: "Back"
-}) }}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
 
-  <div class="govuk-main-wrapper">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
+      <form action="/form-handler" method="post">
 
-        <form action="/form-handler" method="post">
+        {{ govukInput({
+          label: {
+            text: "What is your home postcode?",
+            isPageHeading: true,
+            classes: "govuk-label--xl"
+          },
+          classes: "govuk-input--width-10",
+          id: "postcode",
+          name: "postcode"
+        }) }}
 
-          {{ govukInput({
-            label: {
-              text: "What is your home postcode?",
-              isPageHeading: true,
-              classes: "govuk-label--xl"
-            },
-            classes: "govuk-input--width-10",
-            id: "postcode",
-            name: "postcode"
-          }) }}
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </form>
 
-          {{ govukButton({
-            text: "Continue"
-          }) }}
-        </form>
-
-      </div>
     </div>
   </div>
-</div>
+{% endblock %}

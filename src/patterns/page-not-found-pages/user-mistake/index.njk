@@ -1,22 +1,18 @@
 ---
 title: User mistake – Page not found pages
-layout: layout-example.njk
+layout: layout-example-with-template-large.njk
 ignore_in_sitemap: true
 ---
 
-<div class="govuk-width-container">
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
 
-  <div class="govuk-main-wrapper">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Page not found</h1>
+      <p class="govuk-body">If you typed the web address, check it is correct.</p>
+      <p class="govuk-body">If you pasted the web address, check you copied the entire address.</p>
+      <p class="govuk-body"><a class="govuk-link" href="#">Contact the Tax Credit Helpline</a> if you need to speak to someone about your tax credits.</p>
 
-        <h1 class="govuk-heading-xl">Page not found</h1>
-        <p class="govuk-body">If you typed the web address, check it is correct.</p>
-        <p class="govuk-body">If you pasted the web address, check you copied the entire address.</p>
-        <p class="govuk-body"><a class="govuk-link" href="#">Contact the Tax Credit Helpline</a> if you need to speak to someone about your tax credits.</p>
-
-      </div>
     </div>
   </div>
-
-</div>
+{% endblock %}
