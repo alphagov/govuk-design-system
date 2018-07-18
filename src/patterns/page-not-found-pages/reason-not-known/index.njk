@@ -1,51 +1,57 @@
 ---
 title: Reason not known – Page not found pages
-layout: layout-example.njk
+layout: layout-example-full-page.njk
 ignore_in_sitemap: true
 ---
+
+{% extends "example-wrappers/full-page.njk" %}
+{% set mainClasses = "govuk-main-wrapper--l" %}
 
 {% from "input/macro.njk" import govukInput %}
 {% from "button/macro.njk" import govukButton %}
 
-<div class="govuk-width-container">
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Page not found</h1>
+      <p class="govuk-body">
+        If you typed the web address, check it is correct.
+      </p>
+      <p class="govuk-body">
+        If you pasted the web address, check you copied the entire address.
+      </p>
 
-  <div class="govuk-main-wrapper">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
+      <p class="govuk-body">
+        If the web address is correct or you selected a link or button, you can:
+      </p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a class="govuk-list" href="#">contact the Tax Credit Helpline</a> if you need to speak to someone about your tax credits</li>
+        <li>report the page not found</li>
+      </ul>
 
-        <h1 class="govuk-heading-xl">Page not found</h1>
-        <p class="govuk-body">If you typed the web address, check it is correct.</p>
-        <p class="govuk-body">If you pasted the web address, check you copied the entire address.</p>
-        <p class="govuk-body">If the web address is correct or you selected a link or button, you can:</p>
-        <ul class="govuk-list govuk-list--bullet">
-          <li><a class="govuk-list" href="#">contact the Tax Credit Helpline</a> if you need to speak to someone about your tax credits</li>
-          <li>report the page not found</li>
-        </ul>
-        <p class="govuk-body">If you want us to tell you when we have fixed the link or button, give us your name and email address.</p>
-        <form action="/form-handler" method="post">
-          {{ govukInput({
-            label: {
-              text: "Name (optional)"
-            },
-            id: "name",
-            name: "name"
-          }) }}
+      <p class="govuk-body">If you want us to tell you when we have fixed the link or button, give us your name and email address.</p>
+      <form action="/form-handler" method="post">
+        {{ govukInput({
+          label: {
+            text: "Name (optional)"
+          },
+          id: "name",
+          name: "name"
+        }) }}
 
-          {{ govukInput({
-            label: {
-              text: "Email address"
-            },
-            id: "email",
-            name: "email",
-            type: "email"
-          }) }}
+        {{ govukInput({
+          label: {
+            text: "Email address"
+          },
+          id: "email",
+          name: "email",
+          type: "email"
+        }) }}
 
-          {{ govukButton({
-            text: "Report a page not found"
-          }) }}
-        </form>
-      </div>
+        {{ govukButton({
+          text: "Report a page not found"
+        }) }}
+      </form>
     </div>
   </div>
-
-</div>
+{% endblock %}
