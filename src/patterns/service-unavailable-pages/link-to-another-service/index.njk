@@ -1,22 +1,25 @@
 ---
 title: A link to another service
-layout: layout-example.njk
+layout: layout-example-full-page.njk
 ignore_in_sitemap: true
 ---
 
-<div class="govuk-width-container">
+{% extends "example-wrappers/full-page.njk" %}
+{% set mainClasses = "govuk-main-wrapper--l" %}
 
-  <div class="govuk-main-wrapper">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-
-        <h1 class="govuk-heading-xl">Service unavailable</h1>
-        <p class="govuk-body-l">You will be able to use the service from 9am on Monday 19&nbsp;November&nbsp;2018.</p>
-        <p class="govuk-body">You can <a class="govuk-link" href="#">change other VAT details</a>.</p>
-        <p class="govuk-body"><a class="govuk-link" href="#">Contact the Income Tax Helpline</a> if you need to speak to someone about your tax calculation.</p>
-
-      </div>
-    </div>
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Service unavailable</h1>
+    <p class="govuk-body-l">
+      You will be able to use the service from 9am on Monday 19&nbsp;November&nbsp;2018.
+    </p>
+    <p class="govuk-body">
+      You can <a class="govuk-link" href="#">change other VAT details</a>.
+    </p>
+    <p class="govuk-body">
+      <a class="govuk-link" href="#">Contact the Income Tax Helpline</a> if you need to speak to someone about your tax calculation.
+    </p>
   </div>
-
 </div>
+{% endblock %}
