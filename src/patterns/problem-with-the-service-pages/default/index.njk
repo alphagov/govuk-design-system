@@ -1,21 +1,20 @@
 ---
 title: Service has a specific page that includes numbers and opening times
-layout: layout-example.njk
+layout: layout-example-full-page.njk
 ---
 
-<div class="govuk-width-container">
+{% extends "example-wrappers/full-page.njk" %}
+{% set mainClasses = "govuk-main-wrapper--l" %}
 
-  <div class="govuk-main-wrapper">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">Sorry, there is a problem with the service</h1>
       <p class="govuk-body">Try again later.</p>
       <p class="govuk-body">We saved your answers. They will be available for 30 days.</p>
-      <p class="govuk-body"><a class="govuk-link" href="#">Contact the Tax Credit Helpline</a> if you need to make changes to your claim or speak to someone about your tax credits.</p>
-
-      </div>
+      <p class="govuk-body">
+        <a class="govuk-link" href="#">Contact the Tax Credit Helpline</a> if you need to make changes to your claim or speak to someone about your tax credits.
+      </p>
     </div>
   </div>
-
-</div>
+{% endblock %}

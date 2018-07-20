@@ -1,22 +1,25 @@
 ---
 title: General page
-layout: layout-example.njk
+layout: layout-example-full-page.njk
 ignore_in_sitemap: true
 ---
 
-<div class="govuk-width-container">
+{% extends "example-wrappers/full-page.njk" %}
+{% set mainClasses = "govuk-main-wrapper--l" %}
 
-  <div class="govuk-main-wrapper">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-
-        <h1 class="govuk-heading-xl">Service unavailable</h1>
-        <p class="govuk-body-l">You will be able to use the service later.</p>
-  	    <p class="govuk-body">We saved your answers. They will be available for 30 days.</p>
-        <p class="govuk-body"><a class="govuk-link" href="#">Contact the Tax Credit Helpline</a> if you need to make changes to your claim or speak to someone about your tax credits.</p>
-
-      </div>
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Service unavailable</h1>
+      <p class="govuk-body-l">
+        You will be able to use the service later.
+      </p>
+      <p class="govuk-body">
+        We saved your answers. They will be available for 30 days.
+      </p>
+      <p class="govuk-body"><a class="govuk-link" href="#">
+        Contact the Tax Credit Helpline</a> if you need to make changes to your claim or speak to someone about your tax credits.
+      </p>
     </div>
   </div>
-
-</div>
+{% endblock %}
