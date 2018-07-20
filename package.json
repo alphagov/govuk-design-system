@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "clipboard": "^2.0.0",
-    "govuk-frontend": "^1.1.0",
+    "govuk-frontend": "^1.1.1",
     "gray-matter": "^4.0.1",
     "html5shiv": "^3.7.3",
     "jquery": "^1.12.4",
