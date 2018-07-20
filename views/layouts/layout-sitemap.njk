@@ -3,7 +3,7 @@
 {% set contents %}
   <h1 class="govuk-heading-xl">Sitemap</h1>
   {% for item in navigation %}
-    <h2 class="govuk-heading-l"><a class="govuk-link govuk-link--text-colour" href="/{{ item.url }}">{{ item.label }}</a></h2>
+    <h2 class="govuk-heading-l"><a class="govuk-link" href="/{{ item.url }}">{{ item.label }}</a></h2>
     {% if item.items %}
       {% for theme, items in item.items | groupby("theme") %}
         {% if theme != 'undefined' %}
