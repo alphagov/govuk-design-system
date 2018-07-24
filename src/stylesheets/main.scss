@@ -268,6 +268,10 @@ $colour-list-breakpoint: 980px;
   }
 }
 
+code {
+  font-family: monaco, Consolas, "Lucida Console", monospace;
+}
+
 pre {
   position: relative;
   margin: 0;
