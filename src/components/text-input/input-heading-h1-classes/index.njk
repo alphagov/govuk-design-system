@@ -1,0 +1,29 @@
+---
+title: Inputs with page heading
+layout: layout-example.njk
+ignore_in_sitemap: true
+---
+
+{% from "input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "<h1> govuk-label--xl",
+    isPageHeading: true,
+    classes: "govuk-label--xl"
+  },
+  classes: "",
+  id: "input",
+  name: "input"
+}) }}
+
+{{ govukInput({
+  label: {
+    text: "<h1> govuk-label--l",
+    isPageHeading: true,
+    classes: "govuk-label--l"
+  },
+  classes: "",
+  id: "input",
+  name: "input"
+}) }}

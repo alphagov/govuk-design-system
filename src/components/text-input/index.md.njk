@@ -31,6 +31,28 @@ All text inputs must have visible labels; placeholder text is not an acceptable 
 
 Labels should be aligned above the text input they refer to. They should be short, direct and written in sentence case. Don’t use colons at the end of labels.
 
+### One thing per page
+
+When asking one thing per page, depending on the question you’re asking you may want your `<label>` to be the page  heading.
+
+#### Label as a semantic page heading
+
+If you want the `<label>` content to be the `<h1>` of the page the Nunjucks macro makes this easy by adding the `<h1>` for you when you set `isPageHeading: true,`. This outputs a `<h1>` tag around the `<label>` tag.
+
+{{ example({group: "components", item: "text-input", frontendComponentName: "input", example: "input-heading-h1", html: true, nunjucks: true, open: false}) }}
+
+### Styling the label
+
+If you want to make the `<label>` look like a heading you can also apply classes to the `<label>` to make it larger.
+
+#### Semantic page heading with styling
+
+{{ example({group: "components", item: "text-input", frontendComponentName: "input", example: "input-heading-h1-classes", html: true, nunjucks: true, open: false}) }}
+
+#### Labels styled as a headings
+
+{{ example({group: "components", item: "text-input", frontendComponentName: "input", example: "input-heading-classes", html: true, nunjucks: true, open: false}) }}
+
 ### Use appropriately-sized text inputs
 
 Help users understand what they should enter by making text inputs the right size for the content they’re intended for.

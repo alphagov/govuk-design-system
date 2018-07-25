@@ -1,0 +1,47 @@
+---
+title: Inputs with page heading
+layout: layout-example.njk
+ignore_in_sitemap: true
+---
+
+{% from "input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "<label> govuk-label--xl",
+    classes: "govuk-label--xl"
+  },
+  classes: "",
+  id: "input",
+  name: "input"
+}) }}
+
+{{ govukInput({
+  label: {
+    text: "<label> govuk-label--l",
+    classes: "govuk-label--l"
+  },
+  classes: "",
+  id: "input",
+  name: "input"
+}) }}
+
+{{ govukInput({
+  label: {
+    text: "<label> govuk-label--m",
+    classes: "govuk-label--m"
+  },
+  classes: "",
+  id: "input",
+  name: "input"
+}) }}
+
+{{ govukInput({
+  label: {
+    text: "<label> govuk-label--s",
+    classes: "govuk-label--s"
+  },
+  classes: "",
+  id: "input",
+  name: "input"
+}) }}
