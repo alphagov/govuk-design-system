@@ -8,7 +8,7 @@
       display: flex;
       flex-direction: column;
     }
-    
+
   }
 
   .app-pane__header {
@@ -39,10 +39,8 @@
   }
 
   .app-pane__subnav {
-    border-right: 1px solid $govuk-border-colour;
     @include govuk-media-query($from: tablet) {
       width: $toc-width-tablet;
-      border-right: 1px solid $govuk-border-colour;
       flex: 0 0 auto;
     }
     @include govuk-media-query($from: desktop) {
@@ -85,7 +83,6 @@
 
     .app-pane__content {
       overflow-x: hidden;
-      border-left: 1px solid $govuk-border-colour;
       margin-left: -1px;
     }
   }
