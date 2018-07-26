@@ -6,68 +6,56 @@ ignore_in_sitemap: true
 
 {% from "input/macro.njk" import govukInput %}
 
-<h3 class="govuk-heading-m">20 characters</h3>
-
 {{ govukInput({
   label: {
-    text: "Driving licence number"
+    text: "20 character width"
   },
   classes: "govuk-input--width-20",
-  id: "driving-licence-number",
-  name: "driving-licence-number"
+  id: "width-20",
+  name: "width-20"
 }) }}
-
-<h3 class="govuk-heading-m">10 characters</h3>
 
 {{ govukInput({
   label: {
-    text: "Post code"
+    text: "10 character width"
   },
   classes: "govuk-input--width-10",
-  id: "post-code",
-  name: "post-code"
+  id: "width-10",
+  name: "width-10"
 }) }}
-
-<h3 class="govuk-heading-m">5 characters</h3>
 
 {{ govukInput({
   label: {
-    text: "Reference number"
+    text: "5 character width"
   },
   classes: "govuk-input--width-5",
-  id: "reference-number",
-  name: "Reference number"
+  id: "width-5",
+  name: "width-5"
 }) }}
-
-<h3 class="govuk-heading-m">4 characters</h3>
 
 {{ govukInput({
   label: {
-    text: "Year"
+    text: "4 character width"
   },
   classes: "govuk-input--width-4",
-  id: "post-code",
-  name: "post-code"
+  id: "width-4",
+  name: "width-4"
 }) }}
-
-<h3 class="govuk-heading-m">3 characters</h3>
 
 {{ govukInput({
   label: {
-    text: "CVV"
+    text: "3 character width"
   },
   classes: "govuk-input--width-3",
-  id: "cvv",
-  name: "cvv"
+  id: "width-3",
+  name: "width-3"
 }) }}
-
-<h3 class="govuk-heading-m">2 characters</h3>
 
 {{ govukInput({
   label: {
-    text: "Month"
+    text: "2 character width"
   },
   classes: "govuk-input--width-2",
-  id: "month",
-  name: "month"
+  id: "width-2",
+  name: "width-2"
 }) }}
