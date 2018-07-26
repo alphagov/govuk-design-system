@@ -25,6 +25,10 @@ If you’re using the examples or macros for [radios](../radios), [checkboxes](.
 
 The first element inside a fieldset must be a `legend` which describes the group of inputs. This could be a question, such as ‘What is your current address?’ or a statement like ‘Personal details’.
 
+If you’re asking just [one question per page](../../patterns/question-pages/#start-by-asking-one-question-per-page) as recommended, you can set the contents of the `<legend>` as the page heading, as shown in the example below. This is good practice as it means that users of screen readers will only hear the contents once.
+
+Read more about [why and how to set legends as headings](../../get-started/labels-legends-headings).
+
 {{ example({group: "components", item: "fieldset", example: "default", html: true, nunjucks: true, open: true}) }}
 
 On [question pages](../../patterns/question-pages) containing a group of inputs, including the question as the legend helps users of screenreaders to understand that the inputs are all related to that&nbsp;question.
