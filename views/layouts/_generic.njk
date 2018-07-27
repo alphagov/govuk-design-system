@@ -1,6 +1,7 @@
 {% extends "template.njk" %}
 
 {% set htmlClasses = 'no-js' %}
+{% set assetUrl = 'https://design-system.service.gov.uk/assets' %}
 
 {% block pageTitle %}{{ title }} – GOV.UK Design System{% endblock %}
 
@@ -9,7 +10,6 @@
   <meta name="robots" content="noindex, nofollow">
 {% endif %}
 <meta name="description" content="{{description}}">
-<meta property="og:image" content="https://design-system.service.gov.uk/assets/images/govuk-opengraph-image.png">
   <!--[if !IE 8]><!-->
     <link href="/{{ fingerprint['stylesheets/main.css'] }}" rel="stylesheet" media="all" />
   <!--<![endif]-->
