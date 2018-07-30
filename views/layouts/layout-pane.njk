@@ -1,5 +1,9 @@
 {% extends "_generic.njk" %}
 
+{# If the theme ends in '…', then we nest the caption inside the H1 so that the
+  H1 becomes e.g. 'Ask users for dates'. Otherwise, we put it before the H1. #}
+{% set includeThemeInPageHeading = theme and "…" in theme %}
+
 {% block appPaneClasses %}app-pane--enabled{% endblock %}
 
 {% block body %}
@@ -10,14 +14,17 @@
   <div class="app-pane__content">
     <main id="main-content" class="app-content" role="main">
       <div class="app-content__header">
+        {% if not includeThemeInPageHeading %}
+        <span class="govuk-caption-xl">
+          {{ theme if theme else section }}
+        </span>
+        {% endif %}
         <h1 class="govuk-heading-xl">
+          {% if includeThemeInPageHeading %}
           <span class="govuk-caption-xl">
-          {% if theme %}
-            {{ theme }}
-            {% else %}
-              {{ section }}
-            {% endif %}
+            {{ theme | replace("…", "") }}
           </span>
+          {% endif %}
           {{ title }}
           {% if status %}
           <div>
