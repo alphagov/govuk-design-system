@@ -44,7 +44,7 @@ as available views:
 
 ```
 nunjucks.configure([
-  "node_modules/govuk-frontend/", 
+  "node_modules/govuk-frontend/",
   "node_modules/govuk-frontend/components/"
 ], {
   autoescape: true
@@ -112,6 +112,10 @@ Variables can be set with:
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">mainClasses</td>
       <td class="govuk-table__cell">Add a class to the <code>&lt;main&gt;</code> element. </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">assetUrl</td>
+      <td class="govuk-table__cell">Specify an absolute URL for the <code>&lt;meta property="og:image"&gt;</code> tag image asset.</td>
     </tr>
   </tbody>
 </table>
