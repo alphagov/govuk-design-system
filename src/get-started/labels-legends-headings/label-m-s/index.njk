@@ -1,0 +1,32 @@
+---
+title: Labels, legends and headings
+layout: layout-example.njk
+ignore_in_sitemap: true
+---
+
+
+{% from "input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "govuk-label--m",
+    classes: "govuk-label--m"
+  },
+  hint: {
+    text: "This example shows a <label> with the class of govuk-label--m"
+  },
+  id: "example",
+  name: "example"
+}) }}
+
+{{ govukInput({
+  label: {
+    text: "govuk-label--s",
+    classes: "govuk-label--s"
+  },
+  hint: {
+    text: "This example shows a <label> with the class of govuk-label--s"
+  },
+  id: "example",
+  name: "example"
+}) }}
