@@ -1,6 +1,6 @@
 ---
 title: Page not found pages
-description: A page not found tells someone the page they were trying to view cannot be found. They are also known as 404 pages
+description: A page not found tells someone we cannot find the page they were trying to view. They are also known as 404 pages.
 section: Patterns
 theme: Pages
 aliases:
@@ -55,22 +55,19 @@ Do not use:
 - informal or humourous words like oops
 - red text to warn people
 
-### Service mistake
+### If you do not know what caused the page not found
 
 {{ example({group: "patterns", item: "page-not-found-pages", example: "default", html: true, size: "xl"}) }}
 
-### User mistake
+### If you know the page not found is because of a broken link or button inside the service
 
-{{ example({group: "patterns", item: "page-not-found-pages", example: "user-mistake", html: true, size: "l"}) }}
+{{ example({group: "patterns", item: "page-not-found-pages", example: "inside-service", html: true, size: "xl"}) }}
 
-### If you do not know why the page is not found
+### If the page exists but is no longer available
 
-{{ example({group: "patterns", item: "page-not-found-pages", example: "reason-not-known", html: true, nunjucks: true, open: false, size: "xl"}) }}
+Use this version if the page exists but cannot be displayed. This could be a page in the middle of a journey or a confirmation page. Give a link or button to get to a sensible place in the service.
 
-When a user submits the form, take them to a confirmation page which has:
-
-- "We have your details and what you were trying to do" as the H1
-- "We will email you when we have fixed the service" as the body content
+{{ example({group: "patterns", item: "page-not-found-pages", example: "no-longer-available", html: true, size: "xl"}) }}
 
 ## Research on this pattern
 
@@ -79,4 +76,3 @@ More research is needed to find out if people:
 - can fix the problem on their own
 - understand what has happened
 - understand the content and if there is anything missing
-- would use a form to tell us about the problem and if that helps them

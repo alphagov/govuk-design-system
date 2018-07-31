@@ -1,5 +1,5 @@
 ---
-title: User mistake – Page not found pages
+title: Reason not known – Page not found pages
 layout: layout-example-full-page.njk
 ignore_in_sitemap: true
 ---
@@ -7,19 +7,17 @@ ignore_in_sitemap: true
 {% extends "example-wrappers/full-page.njk" %}
 {% set mainClasses = "govuk-main-wrapper--l" %}
 
+{% from "input/macro.njk" import govukInput %}
+{% from "button/macro.njk" import govukButton %}
+
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">Page not found</h1>
       <p class="govuk-body">
-        If you typed the web address, check it is correct.
+        The page is no longer available.
       </p>
-      <p class="govuk-body">
-        If you pasted the web address, check you copied the entire address.
-      </p>
-      <p class="govuk-body">
-        <a class="govuk-link" href="#">Contact the Tax Credit Helpline</a> if you need to speak to someone about your tax credits.
-      </p>
+      <a href="#" role="button">Manage your tax credits</a>
     </div>
   </div>
 {% endblock %}
