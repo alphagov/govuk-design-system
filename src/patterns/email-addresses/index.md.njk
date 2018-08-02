@@ -20,19 +20,13 @@ Follow this pattern whenever you need to capture an email address.
 
 When asking users for their email address, you must:
 
-- make the field long enough
 - make it clear why you’re asking
+- make sure the field works for all of your users
 - help users to enter a valid email address
 
 You may also need to check that users have access to the email account they give you.
 
 {{ example({group: "patterns", item: "email-addresses", example: "default", html: true, nunjucks: true, open: true, size: "s"}) }}
-
-### Make the field long enough
-
-Make sure the field is long enough to accommodate all of your users’ email addresses.
-
-You can analyse your user data to establish what this is. A good rule of thumb is 30&nbsp;characters.
 
 ### Tell users why you want the email address
 
@@ -43,6 +37,10 @@ Make it clear what the email address will be used for so that:
 
 If the email address field is part of a sign-in box, you don’t need to say: ‘We need your email so we can sign you in’.
 
+### Make sure the field works for all of your users
+
+Make sure the field can accommodate up to 256 characters, which is the longest an email address can be.
+
 ### Help users to enter a valid email address
 
 Help your users to enter a valid email address by:
@@ -52,7 +50,9 @@ Help your users to enter a valid email address by:
 - using the `type=“email”` attribute so that devices display the correct keyboard
 - confirming their address back to them so they can check and change it
 
-You can also check for common misspellings of popular email providers for example, ‘homtail.com’ instead of ‘hotmail.com’. Warn users if you detect one, but allow them to proceed in case it’s a genuine email address.
+The field should be wide enough for most users to see their entire email address once they have entered it. A good rule of thumb is to make sure you can see at least 30 characters at once. You can analyse your user data to refine this.
+
+You can check for common misspellings of popular email providers, for example ‘homtail.com’ instead of ‘hotmail.com’. Warn users if you detect one, but allow them to proceed in case it’s a genuine email address.
 
 Some services ask users to repeat their email address. Only do this if your user research shows it to be effective.
 
