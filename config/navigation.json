@@ -5,15 +5,18 @@
   },
   {
     "label": "Styles",
-    "url": "styles"
+    "url": "styles",
+    "includeInSearch": true
   },
   {
     "label": "Components",
-    "url": "components"
+    "url": "components",
+    "includeInSearch": true
   },
   {
     "label": "Patterns",
-    "url": "patterns"
+    "url": "patterns",
+    "includeInSearch": true
   },
   {
     "label": "Community",
