@@ -6,30 +6,30 @@ layout: layout-example.njk
 {% from "checkboxes/macro.njk" import govukCheckboxes %}
 
 {{ govukCheckboxes({
-  idPrefix: "nationality",
-  name: "nationality",
+  idPrefix: "waste",
+  name: "waste",
   fieldset: {
     legend: {
-      text: "What is your nationality?",
+      text: "Which types of waste do you transport?",
       isPageHeading: true,
       classes: "govuk-fieldset__legend--xl"
     }
   },
   hint: {
-    text: "If you have dual nationality, select all options that are relevant to you."
+    text: "Select all that apply."
   },
   items: [
     {
-      value: "british",
-      text: "British"
+      value: "carcasses",
+      text: "Waste from animal carcasses"
     },
     {
-      value: "irish",
-      text: "Irish"
+      value: "mines",
+      text: "Waste from mines or quarries"
     },
     {
-      value: "other",
-      text: "Citizen of another country"
+      value: "farm",
+      text: "Farm or agricultural waste"
     }
   ]
 }) }}

@@ -1,0 +1,44 @@
+---
+title: Radios with a text divider
+layout: layout-example.njk
+ignore_in_sitemap: true
+---
+
+{% from "radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  idPrefix: "where-do-you-live",
+  name: "where-do-you-live",
+  fieldset: {
+    legend: {
+      text: "Where do you live?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--xl"
+    }
+  },
+  items: [
+    {
+      value: "england",
+      text: "England"
+    },
+    {
+      value: "scotland",
+      text: "Scotland"
+    },
+    {
+      value: "wales",
+      text: "Wales"
+    },
+    {
+      value: "northern-ireland",
+      text: "Northern Ireland"
+    },
+    {
+      divider: "or"
+    },
+    {
+      value: "abroad",
+      text: "I am a British citizen living abroad"
+    }
+  ]
+}) }}
