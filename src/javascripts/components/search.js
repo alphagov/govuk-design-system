@@ -6,7 +6,7 @@ import lunr from 'lunr'
 var TIMEOUT = 10 // Time to wait before giving up fetching the search index
 var STATE_DONE = 4 // XHR client readyState DONE
 
-// LunrJS Seach index
+// LunrJS Search index
 var searchIndex = null
 var documentStore = null
 
@@ -15,9 +15,9 @@ var searchQuery = ''
 var searchCallback = function () {}
 
 var AppSearch = {
-  fetchSearchIndex: function (callback) {
+  fetchSearchIndex: function (indexUrl, callback) {
     var request = new XMLHttpRequest()
-    request.open('GET', '/search-index.json', true)
+    request.open('GET', indexUrl, true)
     request.timeout = TIMEOUT * 1000
     statusMessage = 'Loading search index'
     request.onreadystatechange = function () {
@@ -35,7 +35,6 @@ var AppSearch = {
         }
       }
     }
-    request.open('GET', '/search-index.json', true)
     request.send()
   },
   renderResults: function () {
@@ -77,12 +76,13 @@ var AppSearch = {
       return itemTemplate
     }
   },
-  init: function (container, input) {
-    if (!document.querySelector(container)) {
+  init: function (selector, input) {
+    var $container = document.querySelector(selector)
+    if (!$container) {
       return
     }
     accessibleAutocomplete({
-      element: document.querySelector(container),
+      element: $container,
       id: input,
       cssNamespace: 'app-site-search',
       displayMenu: 'overlay',
@@ -97,7 +97,8 @@ var AppSearch = {
       },
       tNoResults: function () { return statusMessage }
     })
-    this.fetchSearchIndex(function () {
+    var searchIndexUrl = $container.getAttribute('data-search-index')
+    this.fetchSearchIndex(searchIndexUrl, function () {
       this.renderResults()
     }.bind(this))
   }
