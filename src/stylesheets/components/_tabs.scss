@@ -128,11 +128,30 @@
 }
 
 // Close container button
-.app-link--close {
+.app-tabs__close {
+  @include govuk-font($size: 19);
+  @include govuk-focusable-fill;
+
   position: absolute;
   right: govuk-spacing(3);
   bottom: govuk-spacing(3) / 2;
-  text-decoration: none;
+
+  // Override default button styling
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: $govuk-link-colour;
+  cursor: pointer;
+
+ // Fix unwanted button padding and border in Firefox
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+
+  &:hover {
+    color: $govuk-link-hover-colour;
+  }
 
   @include govuk-media-query($from: 1080px) {
     bottom: govuk-spacing(3) + 2; // font baseline adjustment
