@@ -128,11 +128,46 @@
 }
 
 // Close container button
-.app-link--close {
+.app-tabs__close {
+  @include govuk-font($size: 19);
+  @include govuk-focusable-fill;
+
   position: absolute;
   right: govuk-spacing(3);
   bottom: govuk-spacing(3) / 2;
-  text-decoration: none;
+
+  // Override default button styling
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: $govuk-link-colour;
+  cursor: pointer;
+
+ // Fix unwanted button padding and border in Firefox
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+
+  &::before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    top: .15em;
+    left: .15em;
+    width: .45em;
+    height: .45em;
+    margin-top: .25em;
+    margin-right: .5em;
+    transform: rotate(-45deg);
+    border-width: .15em .15em 0 0;
+    border-style: solid;
+    vertical-align: top;
+  }
+
+  &:hover {
+    color: $govuk-link-hover-colour;
+  }
 
   @include govuk-media-query($from: 1080px) {
     bottom: govuk-spacing(3) + 2; // font baseline adjustment

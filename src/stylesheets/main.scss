@@ -142,24 +142,6 @@ $app-breakpoint-widescreen: 1200px;
   padding: 0;
 }
 
-// Generic chevron
-// can be rotated for --right --bottom --left versions
-.app-chevron--top::before {
-  content: "";
-  display: inline-block;
-  position: relative;
-  top: .15em;
-  left: .15em;
-  width: .45em;
-  height: .45em;
-  margin-top: .25em;
-  margin-right: .5em;
-  transform: rotate(-45deg);
-  border-width: .15em .15em 0 0;
-  border-style: solid;
-  vertical-align: top;
-}
-
 // Copy button
 .app-copy-button {
   $copy-button-colour: #00823b;

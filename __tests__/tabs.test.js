@@ -55,7 +55,7 @@ describe('Component page', () => {
         await page.goto(baseUrl + '/components/back-link/', { waitUntil: 'load' })
 
         await page.click('.js-tabs__item a')
-        await page.click('.js-link--close')
+        await page.click('.js-tabs__close')
 
         const toggleButtonIsOpen = await page.evaluate(() => document.body.querySelector('.app-tabs__item').classList.contains('app-tabs__item--current'))
         expect(toggleButtonIsOpen).toBeFalsy()
@@ -65,7 +65,7 @@ describe('Component page', () => {
         await page.goto(baseUrl + '/components/back-link/', { waitUntil: 'load' })
 
         await page.click('.js-tabs__item a')
-        await page.click('.js-link--close')
+        await page.click('.js-tabs__close')
 
         const toggleButtonAriaExpanded = await page.evaluate(() => document.body.querySelector('.js-tabs__item a').getAttribute('aria-selected'))
         expect(toggleButtonAriaExpanded).toBeFalsy()

@@ -79,7 +79,7 @@
           $(obj).find('.js-tabs__container').hide()
 
           // Add close button to each container
-          $(obj).find('.js-tabs__container').append('<a class="govuk-link app-link--close js-link--close app-chevron--top" href="#close">Close</a>')
+          $(obj).find('.js-tabs__container').append('<button class="app-tabs__close js-tabs__close">Close</button>')
           $(obj).find('.js-tabs__container').addClass('app-tabs__container--with-close-button')
         }
       })
@@ -91,7 +91,7 @@
       $('.js-tabs__heading a').click(GOVUK.tabs.clickTabItem)
 
       // Bind close container link
-      $('.js-link--close').click(GOVUK.tabs.clickCloseContainer)
+      $('.js-tabs__close').click(GOVUK.tabs.clickCloseContainer)
 
       // Show open containers
       $('.js-tabs__heading--open a').click()
