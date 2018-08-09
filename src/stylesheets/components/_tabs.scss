@@ -149,6 +149,22 @@
     border: 0;
   }
 
+  &::before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    top: .15em;
+    left: .15em;
+    width: .45em;
+    height: .45em;
+    margin-top: .25em;
+    margin-right: .5em;
+    transform: rotate(-45deg);
+    border-width: .15em .15em 0 0;
+    border-style: solid;
+    vertical-align: top;
+  }
+
   &:hover {
     color: $govuk-link-hover-colour;
   }

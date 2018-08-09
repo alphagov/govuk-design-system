@@ -79,7 +79,7 @@
           $(obj).find('.js-tabs__container').hide()
 
           // Add close button to each container
-          $(obj).find('.js-tabs__container').append('<button class="app-tabs__close js-tabs__close app-chevron--top">Close</button>')
+          $(obj).find('.js-tabs__container').append('<button class="app-tabs__close js-tabs__close">Close</button>')
           $(obj).find('.js-tabs__container').addClass('app-tabs__container--with-close-button')
         }
       })
