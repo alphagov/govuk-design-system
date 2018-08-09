@@ -160,33 +160,25 @@ $app-breakpoint-widescreen: 1200px;
   vertical-align: top;
 }
 
-$app-link-colour: #00823b;
-
 // Copy button
-.app-link--copy {
-  &:link,
-  &:active,
-  &:visited,
-  &:hover {
-    @include govuk-font(16);
-    position: absolute;
-    z-index: 1;
-    top: govuk-spacing(3);
-    right: govuk-spacing(3);
-    min-width: 58px;
-    padding: 4px 10px 0;
-    border: 1px solid $app-link-colour;
-    color: $app-link-colour;
-    background-color: govuk-colour("white");
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
+.app-copy-button {
+  $copy-button-colour: #00823b;
 
-    .app-prose-scope & {
-      color: $app-link-colour; // A specific selector to override .app-prose-scope a:link
-      background-color: govuk-colour("white"); // A specific selector to override .app-prose-scope a:focus
-    }
-  }
+  @include govuk-font(16);
+  @include govuk-focusable();
+  position: absolute;
+  z-index: 1;
+  top: govuk-spacing(3);
+  right: govuk-spacing(3);
+  min-width: 80px;
+  padding: 4px 10px 0;
+  border: 1px solid $copy-button-colour;
+  color: $copy-button-colour;
+  background-color: govuk-colour("white");
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 $colour-list-breakpoint: 980px;
