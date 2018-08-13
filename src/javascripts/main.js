@@ -13,4 +13,7 @@ $(document).ready(function () {
 
   // Initialise mobile navigation
   GOVUK.mobileNav.init()
+
+  // Initialise search
+  window.AppSearch.init('.app-site-search', 'app-site-search__input')
 })
