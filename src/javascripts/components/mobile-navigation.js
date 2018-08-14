@@ -69,16 +69,17 @@
         var $nextSubNav = $toggler.next(GOVUK.mobileNav.$subNav) //
 
         if ($nextSubNav.length > 0) {
+          var navIsOpen = $nextSubNav.hasClass(GOVUK.mobileNav.subNavActiveClass)
           var subNavTogglerId = 'js-mobile-nav-subnav-toggler-' + index
           var nextSubNavId = 'js-mobile-nav__subnav-' + index
 
           $nextSubNav.attr('id', nextSubNavId)
-          $nextSubNav.attr('aria-hidden', 'true')
+          $nextSubNav.attr('aria-hidden', navIsOpen ? 'false' : 'true')
           $nextSubNav.attr('aria-labelledby', subNavTogglerId)
 
           $toggler.attr('id', subNavTogglerId)
           $toggler.attr('aria-label', 'Toggle subnavigation for ' + $toggler.text())
-          $toggler.attr('aria-expanded', 'false')
+          $toggler.attr('aria-expanded', navIsOpen ? 'true' : 'false')
           $toggler.attr('aria-controls', nextSubNavId)
         }
       })
