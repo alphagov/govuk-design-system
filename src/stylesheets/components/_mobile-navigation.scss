@@ -53,10 +53,6 @@
   background-color: govuk-colour("white");
   display: none;
 
-  &--active {
-    display: block;
-  }
-
   & > li {
     & > a {
       @include govuk-font(19);
@@ -70,6 +66,10 @@
       border-left: 4px solid govuk-colour("blue");
     }
   }
+}
+
+.js-enabled .app-mobile-nav__subnav--active {
+  display: block;
 }
 
 .app-mobile-nav__current-page {
@@ -113,6 +113,6 @@
   }
 }
 
-.app-mobile-nav__subnav-toggler--active {
+.js-enabled .app-mobile-nav__subnav-toggler--active {
   border-top: 1px solid govuk-colour("white");
 }
