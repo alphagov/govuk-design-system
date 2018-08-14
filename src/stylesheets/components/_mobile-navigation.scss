@@ -51,10 +51,7 @@
   border-top: 1px solid govuk-colour("grey-3");
   border-bottom: 1px solid govuk-colour("grey-3");
   background-color: govuk-colour("white");
-
-  &--hidden {
-    display: none;
-  }
+  display: none;
 
   &--active {
     display: block;

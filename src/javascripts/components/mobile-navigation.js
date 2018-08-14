@@ -51,7 +51,7 @@
           }
           return false
         } else {
-          return true // Go to achor link URL
+          return true // Go to anchor link URL
         }
       })
     },
