@@ -104,6 +104,7 @@
 
     &.current-page a {
       border-left: 4px solid govuk-colour("blue");
+      padding-left: govuk-spacing(4) - 4px;
     }
 
     &:last-child a {
