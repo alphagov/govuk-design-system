@@ -1,0 +1,192 @@
+// Site search using Accessible autocomplete
+// below styles are based on the default accessible autocomplete stylesheet
+
+$icon-size: 40px;
+
+.app-site-search {
+  float: left;
+  margin-bottom: govuk-spacing(2);
+  margin-top: govuk-spacing(2);
+  max-width: calc(100% - 120px);
+  width: 100%;
+  position: relative;
+
+  @include govuk-media-query($from: tablet) {  
+    max-width: 100%;
+    width: 300px;
+    float: none;
+  }
+
+  @include govuk-media-query($from: desktop) {
+    float: right;
+    margin: 0;
+    margin-top: -6px; //negative margin to vertically align search in header
+  }
+
+  .no-js & {
+    display: none;
+
+    @include govuk-media-query($from: tablet) {
+      display: block;
+    }
+
+    @include govuk-media-query($from: desktop) {
+      text-align: right;
+    }
+  }
+}
+
+.app-site-search__wrapper {
+  position: relative;
+  display: block;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36' width='40' height='40'%3E%3Cpath d='M25.7 24.8L21.9 21c.7-1 1.1-2.2 1.1-3.5 0-3.6-2.9-6.5-6.5-6.5S10 13.9 10 17.5s2.9 6.5 6.5 6.5c1.6 0 3-.6 4.1-1.5l3.7 3.7 1.4-1.4zM12 17.5c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5-2 4.5-4.5 4.5-4.5-2-4.5-4.5z' fill='white'%3E%3C/path%3E%3C/svg%3E") govuk-colour("blue") no-repeat top left;
+  background-size: $icon-size $icon-size;
+  height: $icon-size;
+}
+
+.app-site-search__hint,
+.app-site-search__input {
+  min-height: $icon-size;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 0; // BUG: Safari 10 on macOS seems to add an implicit margin.
+  border: 2px solid govuk-colour("white");
+  border-radius: 0; // Safari 10 on iOS adds implicit border rounding.
+  -webkit-appearance: none;
+}
+
+.app-site-search__hint {
+  position: absolute;
+  color: govuk-colour("grey-2");
+}
+
+.app-site-search__input {
+  margin-left: $icon-size;
+  width: calc(100% - #{$icon-size});
+  height: $icon-size;
+  position: relative;
+  background-color: govuk-colour("white");
+}
+
+.app-site-search__input--default {
+  padding: 9px govuk-spacing(2) govuk-spacing(1);
+}
+
+.app-site-search__input--focused {
+  outline: 3px solid $govuk-focus-colour;
+  outline-offset: 0;
+  margin-left: 0;
+  width: 100%;
+}
+
+.app-site-search__input--show-all-values {
+  padding: govuk-spacing(1) 34px govuk-spacing(1) govuk-spacing(1);
+  cursor: pointer;
+}
+
+.app-site-search__dropdown-arrow-down {
+  display: inline-block;
+  position: absolute;
+  z-index: -1;
+  top: govuk-spacing(2);
+  right: 8px;
+  width: 24px;
+  height: 24px;
+}
+
+.app-site-search__menu {
+  width: 100%;
+  width: calc(100% - 4px);
+  max-height: 342px;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  border-top: 0;
+  color: govuk-colour("black");
+  background-color: govuk-colour("white");
+}
+
+.app-site-search__menu--visible {
+  display: block;
+}
+
+.app-site-search__menu--hidden {
+  display: none;
+}
+
+.app-site-search__menu--overlay {
+  position: absolute;
+  z-index: 100;
+  top: 100%;
+  left: 0;
+  box-shadow: rgba(govuk-colour("black"), .256863) 0 2px 6px;
+}
+
+.app-site-search__menu--inline {
+  position: relative;
+}
+
+.app-site-search__option {
+  display: block;
+  position: relative;
+  border-bottom: solid govuk-colour("grey-2");
+  border-width: 1px 0;
+  cursor: pointer;
+}
+
+.app-site-search__option > * {
+  pointer-events: none;
+}
+
+.app-site-search__option:first-of-type {
+  border-top-width: 0;
+}
+
+.app-site-search__option:last-of-type {
+  border-bottom-width: 0;
+}
+
+.app-site-search__option--odd {
+  background-color: #FAFAFA;
+}
+
+.app-site-search__option--focused,
+.app-site-search__option:hover {
+  border-color: govuk-colour("blue");
+  outline: none;
+  color: govuk-colour("white");
+  background-color: govuk-colour("blue");
+}
+
+.app-site-search__option--no-results {
+  background-color: govuk-colour("white");
+  color: govuk-colour("grey-1");
+  cursor: not-allowed;
+}
+
+.app-site-search__hint,
+.app-site-search__option {
+  padding: govuk-spacing(2);
+}
+
+.app-site-search__hint,
+.app-site-search__input,
+.app-site-search__option {
+  @include govuk-font($size: 19);
+}
+
+.app-site-search__link {
+  display: none;
+
+  .no-js & {
+    @include govuk-media-query($from: tablet) {
+      color: govuk-colour("white");
+      margin-top: 10px;
+      display: inline-block;
+      &:focus {
+        color: govuk-colour("black");
+      }
+    }
+  }
+}
+
