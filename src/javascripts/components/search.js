@@ -71,10 +71,17 @@ var AppSearch = {
     }
   },
   resultTemplate: function (result) {
+    // add rest of the data here to build the item
     if (result) {
-      // add rest of the data here to build the item
-      var itemTemplate = result.title
-      return itemTemplate
+      var elem = document.createElement('span')
+      elem.textContent = result.title
+
+      var section = document.createElement('span')
+      section.className = 'app-site-search--section'
+      section.textContent = result.section
+
+      elem.appendChild(section)
+      return elem.innerHTML
     }
   },
   init: function (container, input) {

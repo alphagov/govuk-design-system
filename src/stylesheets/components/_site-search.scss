@@ -11,7 +11,7 @@ $icon-size: 40px;
   width: 100%;
   position: relative;
 
-  @include govuk-media-query($from: tablet) {  
+  @include govuk-media-query($from: tablet) {
     max-width: 100%;
     width: 300px;
     float: none;
@@ -155,6 +155,10 @@ $icon-size: 40px;
   outline: none;
   color: govuk-colour("white");
   background-color: govuk-colour("blue");
+
+  .app-site-search--section {
+    color: inherit;
+  }
 }
 
 .app-site-search__option--no-results {
@@ -189,3 +193,8 @@ $icon-size: 40px;
   }
 }
 
+.app-site-search--section {
+  display: block;
+  @include govuk-font($size: 16);
+  color: $govuk-secondary-text-colour;
+}
