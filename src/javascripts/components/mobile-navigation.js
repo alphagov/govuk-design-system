@@ -1,93 +1,89 @@
-;(function (global) {
-  'use strict'
+import $ from 'jquery'
 
-  var $ = global.jQuery
-  var GOVUK = global.GOVUK || {}
+var MobileNav = {
+  $mobileNav: $('.js-app-mobile-nav'),
+  $mobileNavToggler: $('.js-app-mobile-nav-toggler'),
+  mobileNavActiveClass: 'app-mobile-nav--active',
+  mobileNavTogglerActiveClass: 'app-header-mobile-nav-toggler--active',
+  $subNav: $('.js-app-mobile-nav-subnav'),
+  $subNavToggler: $('.js-mobile-nav-subnav-toggler'),
+  subNavActiveClass: 'app-mobile-nav__subnav--active',
+  subNavTogglerActiveClass: 'app-mobile-nav__subnav-toggler--active',
 
-  GOVUK.mobileNav = {
-    $mobileNav: $('.js-app-mobile-nav'),
-    $mobileNavToggler: $('.js-app-mobile-nav-toggler'),
-    mobileNavActiveClass: 'app-mobile-nav--active',
-    mobileNavTogglerActiveClass: 'app-header-mobile-nav-toggler--active',
-    $subNav: $('.js-app-mobile-nav-subnav'),
-    $subNavToggler: $('.js-mobile-nav-subnav-toggler'),
-    subNavActiveClass: 'app-mobile-nav__subnav--active',
-    subNavTogglerActiveClass: 'app-mobile-nav__subnav-toggler--active',
+  bindUIEvents: function () {
+    MobileNav.$mobileNavToggler.on('click', function (e) {
+      if (MobileNav.$mobileNav.hasClass(MobileNav.mobileNavActiveClass)) {
+        MobileNav.$mobileNav.removeClass(MobileNav.mobileNavActiveClass)
+        MobileNav.$mobileNav.attr('aria-hidden', 'true')
 
-    bindUIEvents: function () {
-      GOVUK.mobileNav.$mobileNavToggler.on('click', function (e) {
-        if (GOVUK.mobileNav.$mobileNav.hasClass(GOVUK.mobileNav.mobileNavActiveClass)) {
-          GOVUK.mobileNav.$mobileNav.removeClass(GOVUK.mobileNav.mobileNavActiveClass)
-          GOVUK.mobileNav.$mobileNav.attr('aria-hidden', 'true')
+        MobileNav.$mobileNavToggler.removeClass(MobileNav.mobileNavTogglerActiveClass)
+        MobileNav.$mobileNavToggler.attr('aria-expanded', 'false')
+      } else {
+        MobileNav.$mobileNav.addClass(MobileNav.mobileNavActiveClass)
+        MobileNav.$mobileNav.attr('aria-hidden', 'false')
 
-          GOVUK.mobileNav.$mobileNavToggler.removeClass(GOVUK.mobileNav.mobileNavTogglerActiveClass)
-          GOVUK.mobileNav.$mobileNavToggler.attr('aria-expanded', 'false')
+        MobileNav.$mobileNavToggler.attr('aria-expanded', 'true')
+        MobileNav.$mobileNavToggler.addClass(MobileNav.mobileNavTogglerActiveClass)
+      }
+    })
+
+    MobileNav.$subNavToggler.on('click', function () {
+      var $toggler = $(this)
+      var $nextSubNav = $(this).next(MobileNav.$subNav)
+
+      if ($nextSubNav.length > 0) {
+        if ($nextSubNav.hasClass(MobileNav.subNavActiveClass)) {
+          $nextSubNav.removeClass(MobileNav.subNavActiveClass)
+          $toggler.removeClass(MobileNav.subNavTogglerActiveClass)
+
+          $nextSubNav.attr('aria-hidden', 'true')
+          $toggler.attr('aria-expanded', 'false')
         } else {
-          GOVUK.mobileNav.$mobileNav.addClass(GOVUK.mobileNav.mobileNavActiveClass)
-          GOVUK.mobileNav.$mobileNav.attr('aria-hidden', 'false')
+          $nextSubNav.addClass(MobileNav.subNavActiveClass)
+          $toggler.addClass(MobileNav.subNavTogglerActiveClass)
 
-          GOVUK.mobileNav.$mobileNavToggler.attr('aria-expanded', 'true')
-          GOVUK.mobileNav.$mobileNavToggler.addClass(GOVUK.mobileNav.mobileNavTogglerActiveClass)
+          $nextSubNav.attr('aria-hidden', 'false')
+          $toggler.attr('aria-expanded', 'true')
         }
-      })
+        return false
+      } else {
+        return true // Go to anchor link URL
+      }
+    })
+  },
 
-      GOVUK.mobileNav.$subNavToggler.on('click', function () {
-        var $toggler = $(this)
-        var $nextSubNav = $(this).next(GOVUK.mobileNav.$subNav)
+  includeAria: function () {
+    MobileNav.$mobileNav.attr('aria-hidden', 'true')
+    MobileNav.$mobileNav.attr('aria-labelledby', 'app-header-mobile-nav-toggler')
 
-        if ($nextSubNav.length > 0) {
-          if ($nextSubNav.hasClass(GOVUK.mobileNav.subNavActiveClass)) {
-            $nextSubNav.removeClass(GOVUK.mobileNav.subNavActiveClass)
-            $toggler.removeClass(GOVUK.mobileNav.subNavTogglerActiveClass)
+    MobileNav.$mobileNavToggler.attr('aria-label', 'Toggle mobile menu')
+    MobileNav.$mobileNavToggler.attr('aria-expanded', 'false')
+    MobileNav.$mobileNavToggler.attr('aria-controls', 'app-mobile-nav')
 
-            $nextSubNav.attr('aria-hidden', 'true')
-            $toggler.attr('aria-expanded', 'false')
-          } else {
-            $nextSubNav.addClass(GOVUK.mobileNav.subNavActiveClass)
-            $toggler.addClass(GOVUK.mobileNav.subNavTogglerActiveClass)
+    MobileNav.$subNavToggler.each(function (index) {
+      var $toggler = $(this)
+      var $nextSubNav = $toggler.next(MobileNav.$subNav) //
 
-            $nextSubNav.attr('aria-hidden', 'false')
-            $toggler.attr('aria-expanded', 'true')
-          }
-          return false
-        } else {
-          return true // Go to anchor link URL
-        }
-      })
-    },
+      if ($nextSubNav.length > 0) {
+        var navIsOpen = $nextSubNav.hasClass(MobileNav.subNavActiveClass)
+        var subNavTogglerId = 'js-mobile-nav-subnav-toggler-' + index
+        var nextSubNavId = 'js-mobile-nav__subnav-' + index
 
-    includeAria: function () {
-      GOVUK.mobileNav.$mobileNav.attr('aria-hidden', 'true')
-      GOVUK.mobileNav.$mobileNav.attr('aria-labelledby', 'app-header-mobile-nav-toggler')
+        $nextSubNav.attr('id', nextSubNavId)
+        $nextSubNav.attr('aria-hidden', navIsOpen ? 'false' : 'true')
+        $nextSubNav.attr('aria-labelledby', subNavTogglerId)
 
-      GOVUK.mobileNav.$mobileNavToggler.attr('aria-label', 'Toggle mobile menu')
-      GOVUK.mobileNav.$mobileNavToggler.attr('aria-expanded', 'false')
-      GOVUK.mobileNav.$mobileNavToggler.attr('aria-controls', 'app-mobile-nav')
-
-      GOVUK.mobileNav.$subNavToggler.each(function (index) {
-        var $toggler = $(this)
-        var $nextSubNav = $toggler.next(GOVUK.mobileNav.$subNav) //
-
-        if ($nextSubNav.length > 0) {
-          var navIsOpen = $nextSubNav.hasClass(GOVUK.mobileNav.subNavActiveClass)
-          var subNavTogglerId = 'js-mobile-nav-subnav-toggler-' + index
-          var nextSubNavId = 'js-mobile-nav__subnav-' + index
-
-          $nextSubNav.attr('id', nextSubNavId)
-          $nextSubNav.attr('aria-hidden', navIsOpen ? 'false' : 'true')
-          $nextSubNav.attr('aria-labelledby', subNavTogglerId)
-
-          $toggler.attr('id', subNavTogglerId)
-          $toggler.attr('aria-label', 'Toggle subnavigation for ' + $toggler.text())
-          $toggler.attr('aria-expanded', navIsOpen ? 'true' : 'false')
-          $toggler.attr('aria-controls', nextSubNavId)
-        }
-      })
-    },
-    init: function () {
-      GOVUK.mobileNav.includeAria()
-      GOVUK.mobileNav.bindUIEvents()
-    }
+        $toggler.attr('id', subNavTogglerId)
+        $toggler.attr('aria-label', 'Toggle subnavigation for ' + $toggler.text())
+        $toggler.attr('aria-expanded', navIsOpen ? 'true' : 'false')
+        $toggler.attr('aria-controls', nextSubNavId)
+      }
+    })
+  },
+  init: function () {
+    MobileNav.includeAria()
+    MobileNav.bindUIEvents()
   }
-  global.GOVUK = GOVUK
-})(window); // eslint-disable-line semi
+}
+
+export default MobileNav
