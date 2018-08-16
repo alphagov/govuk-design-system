@@ -44,8 +44,7 @@ var AppSearch = {
     }
     var searchResults = searchIndex.query(function (q) {
       q.term(lunr.tokenizer(searchQuery), {
-        wildcard: lunr.Query.wildcard.TRAILING,
-        presence: lunr.Query.presence.REQUIRED
+        wildcard: lunr.Query.wildcard.TRAILING
       })
     })
     matchedResults = searchResults.map(function (result) {
