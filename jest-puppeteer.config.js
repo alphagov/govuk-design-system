@@ -4,7 +4,7 @@ const PORT = configPaths.port
 module.exports = {
   server: {
     command: 'SEARCH=true node tasks/serve.js',
-    launchTimeout: 20000,
+    launchTimeout: 30000,
     port: PORT
   }
 }
