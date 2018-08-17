@@ -122,5 +122,5 @@ ignore_in_sitemap: true
 
 {% block bodyEnd %}
   <script src="/javascripts/vendor/iframeResizer.contentWindow.js"></script>
-  <script src="/public/all.js"></script>
+  <script src="/{{ fingerprint['javascripts/govuk-frontend.js'] }}"></script>
 {% endblock %}
