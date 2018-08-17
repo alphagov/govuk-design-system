@@ -72,8 +72,28 @@ var AppSearch = {
     // add rest of the data here to build the item
     if (result) {
       var elem = document.createElement('span')
-      elem.textContent = result.title
-
+      var resultTitle = result.title
+      elem.textContent = resultTitle
+      if (result.aliases) {
+        var aliases = result.aliases.split(',').map(function (item) {
+          return item.trim()
+        })
+        var matchedAliases = []
+        // only show a matching alias if there are no matches in the title
+        if (resultTitle.toLowerCase().indexOf(searchQuery) === -1) {
+          // it would be confusing to show the user
+          // aliases that don't match the typed query
+          matchedAliases = aliases.filter(function (alias) {
+            return alias.indexOf(searchQuery) !== -1
+          })
+        }
+        if (matchedAliases.length > 0) {
+          var aliasesContainer = document.createElement('span')
+          aliasesContainer.className = 'app-site-search__aliases'
+          aliasesContainer.textContent = matchedAliases.join(', ')
+          elem.appendChild(aliasesContainer)
+        }
+      }
       var section = document.createElement('span')
       section.className = 'app-site-search--section'
       section.textContent = result.section
