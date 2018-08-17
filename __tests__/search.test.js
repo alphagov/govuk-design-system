@@ -36,9 +36,36 @@ describe('Site search', () => {
     await page.waitForSelector('.app-site-search__input')
     await page.type('.app-site-search__input', 'd')
     const resultsArray = await page.evaluate(
-      () => [...document.querySelectorAll('.app-site-search__option')].map(elem => elem.innerText.toLowerCase())
+      () => [...document.querySelectorAll('.app-site-search__option')]
+      .map(elem => elem.innerText.toLowerCase())
+      .filter(elem => elem.startsWith('d'))
+    )
+
+    expect(resultsArray.every(item => item.startsWith('d'))).toBeTruthy()
+  })
+  it('returns results that contain aliases that start with the letter "d"', async () => {
+    await page.goto(baseUrl, { waitUntil: 'load' })
+
+    await page.waitForSelector('.app-site-search__input')
+    await page.type('.app-site-search__input', 'd')
+
+    const resultsArray = await page.evaluate(
+      () => [...document.querySelectorAll('.app-site-search__option')]
+      .filter(elem => !elem.textContent.toLowerCase().startsWith('d'))
+      .map(elem => elem.querySelector('.app-site-search__aliases').textContent)
     )
     expect(resultsArray.every(item => item.startsWith('d'))).toBeTruthy()
+  })
+  it('doesn\'t show any aliases if it finds any matches in the title', async () => {
+    await page.goto(baseUrl, { waitUntil: 'load' })
+
+    await page.waitForSelector('.app-site-search__input')
+    await page.type('.app-site-search__input', 'det')
+    const resultsArray = await page.evaluate(
+      () => [...document.querySelectorAll('.app-site-search__aliases')]
+      .map(elem => elem.querySelector('.app-site-search__aliases'))
+    )
+    expect(resultsArray).toHaveLength(0)
   })
   it('selecting "details" as the result takes you to the the "details" page', async () => {
     await page.goto(baseUrl, { waitUntil: 'load' })
