@@ -3,7 +3,7 @@ title: Block areas – Page template
 layout: false
 ignore_in_sitemap: true
 stylesheets:
-- ./block-areas-annotate.css
+- styles/page-template/block-areas/block-areas-annotate.css
 ---
 
 {% extends "template.njk" %}
@@ -22,9 +22,8 @@ stylesheets:
     <script src="{{ getFingerprint('javascripts/ie.js') }}"></script>
   <![endif]-->
   <script src="/javascripts/vendor/modernizr.js"></script>
-
   {% for stylesheet in stylesheets %}
-    <link href="{{ stylesheet }}" rel="stylesheet" media="all" />
+    <link href="{{ getFingerprint(stylesheet) }}" rel="stylesheet" media="all" />
   {%- endfor %}
 {%- endblock %}
 
