@@ -11,11 +11,11 @@
 {% endif %}
 <meta name="description" content="{{description}}">
   <!--[if !IE 8]><!-->
-    <link href="/{{ fingerprint['stylesheets/main.css'] }}" rel="stylesheet" media="all" />
+    <link href="{{ getFingerprint('stylesheets/main.css') }}" rel="stylesheet" media="all" />
   <!--<![endif]-->
   <!--[if lt IE 9]>
-    <link href="/{{ fingerprint['stylesheets/main-ie8.css'] }}" rel="stylesheet" media="all" />
-    <script src="/{{ fingerprint['javascripts/ie.js'] }}"></script>
+    <link href="{{ getFingerprint('stylesheets/main-ie8.css') }}" rel="stylesheet" media="all" />
+    <script src="{{ getFingerprint('javascripts/ie.js') }}"></script>
   <![endif]-->
   <link rel="canonical" href="{{ canonical }}" />
   <script src="/javascripts/vendor/modernizr.js"></script>
@@ -46,5 +46,5 @@
 {% block footer %}{% endblock %}
 
 {% block bodyEnd %}
-<script src="/{{ fingerprint['javascripts/application.js'] }}"></script>
+<script src="{{ getFingerprint('javascripts/application.js') }}"></script>
 {% endblock %}
