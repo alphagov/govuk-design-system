@@ -12,7 +12,7 @@
     {%- endfor %}
 
     <!--[if lt IE 9]>
-      <script src="/javascripts/ie.js"></script>
+      <script src="{{ getFingerprint('javascripts/ie.js') }}"></script>
     <![endif]-->
     <script src="/javascripts/vendor/modernizr.js"></script>
   </head>
