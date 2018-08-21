@@ -1,0 +1,158 @@
+params:
+- name: id
+  type: string
+  required: false
+  description: Optional id. This is used for the main component and to compose id attribute for each item.
+- name: name
+  type: string
+  required: false
+  description: Optional name. This is used to compose the name attribute for each item.
+- name: items
+  type: array
+  required: true
+  description: An array of input objects with name, value and optional classes.
+  params:
+  - name: id
+    type: string
+    required: false
+    description: Optional item-specific id. If provided, it will be used instead of the generated id.
+  - name: name
+    type: string
+    required: true
+    description: Item-specific name attribute.
+  - name: value
+    type: string
+    required: false
+    description: Optional item-specific value attribute. If provided, it will be used as the initial value of the input.
+- name: hint
+  type: object
+  required: false
+  description: Optional hint. See [hint](https://github.com/alphagov/govuk-frontend/blob/master/src/components/hint/README.md#component-arguments) component.
+- name: errorMessage
+  type: object
+  required: false
+  description: Optional error message. See [errorMessage](https://github.com/alphagov/govuk-frontend/blob/master/src/components/error-message/README.md#component-arguments) component.
+- name: fieldset
+  type: object
+  required: false
+  description: Arguments for the fieldset component (e.g. legend). See [fieldset](https://github.com/alphagov/govuk-frontend/blob/master/src/components/fieldset/README.md#component-arguments) component.
+- name: classes
+  type: string
+  required: false
+  description: Optional additional classes to add to the anchor tag.
+- name: attributes
+  type: object
+  required: false
+  description: Any extra HTML attributes (for example data attributes) to add to the anchor tag.
+examples:
+- name: default
+  data:
+    id: dob
+    name: dob
+    fieldset:
+      legend:
+        text: What is your date of birth?
+    hint:
+      text: For example, 31 3 1980
+    items:
+      -
+        name: day
+        classes: govuk-input--width-2
+      -
+        name: month
+        classes: govuk-input--width-2
+      -
+        name: year
+        classes: govuk-input--width-4
+- name: with errors
+  data:
+    id: dob-errors
+    fieldset:
+      legend:
+        text: What is your date of birth?
+    hint:
+      text: For example, 31 3 1980
+    errorMessage:
+      text: Error message goes here
+    items:
+      -
+        name: day
+        classes: govuk-input--width-2 govuk-input--error
+      -
+        name: month
+        classes: govuk-input--width-2 govuk-input--error
+      -
+        name: year
+        classes: govuk-input--width-4 govuk-input--error
+- name: with error on day input
+  data:
+    id: dob-day-error
+    name: dob-day-error
+    fieldset:
+      legend:
+        text: What is your date of birth?
+    hint:
+      text: For example, 31 3 1980
+    errorMessage:
+      text: Error message goes here
+    items:
+      -
+        name: day
+        classes: govuk-input--width-2 govuk-input--error
+      -
+        name: month
+        classes: govuk-input--width-2
+      -
+        name: year
+        classes: govuk-input--width-4
+- name: with error on month input
+  data:
+    id: dob-month-error
+    name: dob-month-error
+    fieldset:
+      legend:
+        text: What is your date of birth?
+    hint:
+      text: For example, 31 3 1980
+    errorMessage:
+      text: Error message goes here
+    items:
+      -
+        name: day
+        classes: govuk-input--width-2
+      -
+        name: month
+        classes: govuk-input--width-2 govuk-input--error
+      -
+        name: year
+        classes: govuk-input--width-4
+- name: with error on year input
+  data:
+    id: dob-year-error
+    name: dob-year-error
+    fieldset:
+      legend:
+        text: What is your date of birth?
+    hint:
+      text: For example, 31 3 1980
+    errorMessage:
+      text: Error message goes here
+    items:
+      -
+        name: day
+        classes: govuk-input--width-2
+      -
+        name: month
+        classes: govuk-input--width-2
+      -
+        name: year
+        classes: govuk-input--width-4 govuk-input--error
+- name: with default items
+  data:
+    id: dob
+    name: dob
+    fieldset:
+      legend:
+        text: What is your date of birth?
+    hint:
+      text: For example, 31 3 1980

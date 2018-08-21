@@ -28,6 +28,60 @@ The breadcrumbs component should include the user’s current page, which should
 
 There are 2 ways to use the breadcrumbs component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://govuk-prototype-kit.herokuapp.com), you can use the Nunjucks macro.
 
+{% set arguments = getMacroArguments("src/components/breadcrumbs/macro-arguments.json") %}
+
+{% set argumentsHTML %}
+
+{% for group in arguments %}
+
+  {% if group.groupName != "" %}
+  <h3 id="nunjucks-macro-arguments-{{group.groupName}}">{{group.groupName}}</h3>
+  {% endif %}
+
+  <table class="govuk-table">
+    <caption class="govuk-table__caption govuk-visually-hidden">
+      {% if group.groupName == "" %}
+        Nunjucks macro arguments
+      {% else %}
+        {{group.groupName}}
+      {% endif %}
+    </caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th class="govuk-table__header" scope="col">Name</th>
+        <th class="govuk-table__header" scope="col">Type</th>
+        <th class="govuk-table__header" scope="col">Required</th>
+        <th class="govuk-table__header" scope="col">Description</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+
+      {% for argument in group.arguments %}
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">{{argument.name}}</th>
+          <td class="govuk-table__cell ">{{argument.type}}</td>
+          <td class="govuk-table__cell ">{{argument.required}}</td>
+          <td class="govuk-table__cell ">{{argument.description | safe}}</td>
+        </tr>
+      {% endfor %}
+
+    </tbody>
+  </table>
+
+{% endfor %}
+
+{% endset %}
+
+{% from "details/macro.njk" import govukDetails %}
+
+{{ govukDetails({
+  summaryText: "Nunjucks macro arguments",
+  html: argumentsHTML,
+  attributes:{
+    id: "nunjucks-macro-arguments"
+  }
+})}}
+
 {{ example({group: "components", item: "breadcrumbs", example: "default", html: true, nunjucks: true, open: true}) }}
 
 ## Research on this component

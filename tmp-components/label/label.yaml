@@ -1,0 +1,13 @@
+examples:
+  - name: default
+    data:
+      text: National Insurance number
+  - name: with bold text
+    data:
+      classes: govuk-label--s
+      text: National Insurance number
+  - name: as page heading
+    data:
+      text: National Insurance number
+      classes: govuk-label--xl
+      isPageHeading: true

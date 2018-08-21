@@ -5,6 +5,7 @@
 {% else %}
   {% set examplePath = exampleRoot + "index.njk" %}
 {% endif %}
+
 {% set exampleURL = "/" + params.group + "/" + params.item + "/" + params.example + "/index.html" %}
 {% set exampleId = params.id | default("example-" + params.example) %}
 {% set exampleTitle = getFrontmatter(examplePath).title %}
@@ -54,7 +55,7 @@
     {{ getNunjucksCode(examplePath) | safe }}
     ```
   {%- if (params.group == 'components') %}
-    <p class="app-tabs__text">You can configure this component using the <a href="https://github.com/alphagov/govuk-frontend/tree/master/package/components/{{frontendComponentName}}/README.md#component-arguments" class="govuk-link"  target="_blank" data-components="github-component-arguments" rel="noopener">Nunjucks macro arguments</a>.</p>
+    <p class="app-tabs__text">You can configure this component using the <a href="#nunjucks-macro-arguments" class="govuk-link" data-components="github-component-arguments">Nunjucks macro arguments</a>.</p>
   {% endif %}
   </div>
   {% endif %}

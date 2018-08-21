@@ -1,0 +1,58 @@
+examples:
+- name: default
+  data:
+    id: select-1
+    name: select-1
+    label:
+      text: Label text goes here
+    items:
+      -
+        value: 1
+        text: GOV.UK frontend option 1
+      -
+        value: 2
+        text: GOV.UK frontend option 2
+        selected: true
+      -
+        value: 3
+        text: GOV.UK frontend option 3
+        disabled: true
+- name: with hint text and error message
+  data:
+    id: select-2
+    name: select-2
+    label:
+      text: Label text goes here
+    hint:
+      text: Hint text goes here
+    errorMessage:
+      text: Error message goes here
+    items:
+      -
+        value: 1
+        text: GOV.UK frontend option 1
+      -
+        value: 2
+        text: GOV.UK frontend option 2
+      -
+        value: 3
+        text: GOV.UK frontend option 3
+- name: with label as page heading
+  data:
+    id: select-3
+    name: select-3
+    label:
+      text: Label text goes here
+      isPageHeading: true
+    items:
+      -
+        value: 1
+        text: GOV.UK frontend option 1
+      -
+        value: 2
+        text: GOV.UK frontend option 2
+        selected: true
+      -
+        value: 3
+        text: GOV.UK frontend option 3
+        disabled: true
