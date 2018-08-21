@@ -88,4 +88,24 @@ describe('Site search', () => {
     const optionResult = await page.$eval('.app-site-search__option', option => option.textContent)
     expect(optionResult).toBe('Loading search index')
   })
+
+  it('should focus the input when clicking the button', async () => {
+    await page.goto(baseUrl, { waitUntil: 'load' })
+
+    await page.waitForSelector('.app-site-search__input')
+
+    // The button is actually a background on the left most part of the wrapper element.
+    const wrapperCoordinates = await page.$eval('.app-site-search__wrapper', $wrapper => {
+      const { top, left } = $wrapper.getBoundingClientRect()
+      return { top, left }
+    })
+    // Click the top left side of the element.
+    await page.mouse.click(wrapperCoordinates.left, wrapperCoordinates.top)
+
+    // Get the active focused element to compare with the actual expected input.
+    const $activeElement = await page.evaluate(() => document.activeElement)
+    const $input = await page.evaluate(() => document.querySelector('.app-site-search__input'))
+
+    expect($activeElement).toEqual($input)
+  })
 })

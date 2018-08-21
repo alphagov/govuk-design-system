@@ -103,6 +103,15 @@ var AppSearch = {
       },
       tNoResults: function () { return statusMessage }
     })
+    // Ensure the Button (which is a background image of the wrapper) focuses the input when clicked.
+    var $wrapper = $container.querySelector('.app-site-search__wrapper')
+    $wrapper.addEventListener('click', function (event) {
+      // Only focus the input if the user clicks the wrapper and not the input.
+      if (event.target === $wrapper) {
+        $container.querySelector('.app-site-search__input').focus()
+      }
+    })
+
     var searchIndexUrl = $container.getAttribute('data-search-index')
     this.fetchSearchIndex(searchIndexUrl, function () {
       this.renderResults()
