@@ -1,15 +1,23 @@
 <nav class="app-subnav">
     {% for item in navigation %}
       {% if item.url in path %}
+      
       {% if item.items %}
         {% for theme, items in item.items | groupby("theme") %}
           {% if theme != 'undefined' %}
+           
             <h4 class="app-subnav__theme">{{ theme }}</h4>
           {% endif %}
+
           <ul class="app-subnav__section">
           {% for subitem in items %}
             <li class="app-subnav__section-item{% if subitem.url == path %} app-subnav__section-item--current{% endif %}">
               <a class="govuk-link" href="/{{ subitem.url }}">{{ subitem.label }}</a>
+                {% if subitem.url == path %}
+                  {% for link in subitem.links %}
+                    <a href="/{{ subitem.url }}#{{ link.url }}" class="app-subnav__sub-item">{{ link.label }}</a>
+                  {% endfor %}
+                {% endif %}
             </li>
           {% endfor %}
           </ul>
@@ -18,3 +26,13 @@
       {% endif %}
     {% endfor %}
 </nav>
+
+
+
+
+
+
+
+
+
+
