@@ -2,6 +2,9 @@
 const configPaths = require('../config/paths.json')
 const PORT = configPaths.port
 
+// Regex that can be used to match on fingerprinted search index files
+const isSearchIndex = /.*\/search-index-[0-9a-f]{32}.json$/
+
 let browser
 let page
 let baseUrl = 'http://localhost:' + PORT
@@ -54,7 +57,7 @@ describe('Site search', () => {
   it('shows user a message that the index has failed to download', async () => {
     await page.setRequestInterception(true)
     page.on('request', interceptedRequest => {
-      if (interceptedRequest.url().endsWith('search-index.json')) {
+      if (isSearchIndex.test(interceptedRequest.url())) {
         interceptedRequest.abort()
       } else {
         interceptedRequest.continue()
@@ -73,7 +76,7 @@ describe('Site search', () => {
     await page.setRequestInterception(true)
     page.on('request', interceptedRequest => {
       // Intentionally make the search-index request hang
-      if (!interceptedRequest.url().endsWith('search-index.json')) {
+      if (!isSearchIndex.test(interceptedRequest.url())) {
         interceptedRequest.continue()
       }
     })
