@@ -1,31 +1,27 @@
-;(function () {
-  'use strict'
-  var root = this
-  if (typeof root.GOVUK === 'undefined') { root.GOVUK = {} }
-
-  /*
-    Cookie methods
-    ==============
-    Usage:
-      Setting a cookie:
-      GOVUK.cookie('hobnob', 'tasty', { days: 30 });
-      Reading a cookie:
-      GOVUK.cookie('hobnob');
-      Deleting a cookie:
-      GOVUK.cookie('hobnob', null);
-  */
-  root.GOVUK.cookie = function (name, value, options) {
+/*
+  Cookie methods
+  ==============
+  Usage:
+    Setting a cookie:
+    CookieBanner.init('hobnob', 'tasty', { days: 30 });
+    Reading a cookie:
+    CookieBanner.init('hobnob');
+    Deleting a cookie:
+    CookieBanner.init('hobnob', null);
+*/
+var CookieBanner = {
+  init: function (name, value, options) {
     if (typeof value !== 'undefined') {
       if (value === false || value === null) {
-        return root.GOVUK.setCookie(name, '', { days: -1 })
+        return CookieBanner.setCookie(name, '', { days: -1 })
       } else {
-        return root.GOVUK.setCookie(name, value, options)
+        return CookieBanner.setCookie(name, value, options)
       }
     } else {
-      return root.GOVUK.getCookie(name)
+      return CookieBanner.getCookie(name)
     }
-  }
-  root.GOVUK.setCookie = function (name, value, options) {
+  },
+  setCookie: function (name, value, options) {
     if (typeof options === 'undefined') {
       options = {}
     }
@@ -39,8 +35,8 @@
       cookieString = cookieString + '; Secure'
     }
     document.cookie = cookieString
-  }
-  root.GOVUK.getCookie = function (name) {
+  },
+  getCookie: function (name) {
     var nameEQ = name + '='
     var cookies = document.cookie.split(';')
     for (var i = 0, len = cookies.length; i < len; i++) {
@@ -53,18 +49,16 @@
       }
     }
     return null
-  }
-  root.GOVUK.addCookieMessage = function () {
+  },
+  addCookieMessage: function () {
     var message = document.querySelector('.js-cookie-banner')
-    var hasCookieMessage = (message && root.GOVUK.cookie('seen_cookie_message') === null)
+    var hasCookieMessage = (message && CookieBanner.init('seen_cookie_message') === null)
 
     if (hasCookieMessage) {
       message.style.display = 'block'
-      root.GOVUK.cookie('seen_cookie_message', 'yes', { days: 28 })
+      CookieBanner.init('seen_cookie_message', 'yes', { days: 28 })
     }
   }
-  // add cookie message
-  if (root.GOVUK && root.GOVUK.addCookieMessage) {
-    root.GOVUK.addCookieMessage()
-  }
-}).call(this)
+}
+
+export default CookieBanner
