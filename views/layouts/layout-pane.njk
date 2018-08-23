@@ -37,6 +37,18 @@
         </h1>
       </div>
       <div class="app-prose-scope">
+
+        {% if links %}
+        <ul class="govuk-list app-page-navigation">
+          {% for link in links %}
+            <li class="app-page-navigation__item">
+              <a href="#{{ link.url }}" class="govuk-link">
+                {{ link.label }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
         {{ contents | safe }}
       </div>
 
