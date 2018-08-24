@@ -37,15 +37,14 @@
         </h1>
       </div>
       <div class="app-prose-scope">
-
-        {% if links %}
+        {% if show_inpage_nav %} {# if variable in metadata set to true #}
         <ul class="govuk-list app-page-navigation">
-          {% for link in links %}
+          {% for heading in headings %}
+            {% if heading.depth == 2 %} {# each heading in the object has depth equals h1,h2,h3... #}
             <li class="app-page-navigation__item">
-              <a href="#{{ link.url }}" class="govuk-link">
-                {{ link.label }}
-              </a>
-            </li>
+              <a class="govuk-link" href="#{{ heading.url}}">{{ heading.text }}</a>
+            </li>  
+            {% endif %}
           {% endfor %}
         </ul>
         {% endif %}
