@@ -1,0 +1,68 @@
+---
+layout: layout-pane.njk
+title: Using override and utility classes
+section: Get started
+theme: How to guides
+order: 5
+description: How to use our override and utility classes
+---
+{% from "_example.njk" import example %}
+
+
+## Overrides
+
+As a user of the design system there will be times you will want to override some of the CSS we provide.
+
+Rather than needing to create your own styles, classes or variants of components the design system also supplies a number of override classes that you can add directly to the HTML.
+
+Although we don’t have override classes for everything you may want to do we do have a number of the most common.
+
+### Class structure
+
+The CSS associated with any overrides uses `!important`, this is because when they are used they should override any other CSS declared on that element. For this reason all of the override classes are prefixed `govuk-!-`.
+
+### Typography
+
+#### Font size
+
+You can override the font-size and line-height of any typographic element by using the font size overrides. For example adding the class `govuk-!-font-size-36` to an element will override the font-size to 36px (in rem) with a line-height of 1.1.
+
+You can see all of the font size overrides on the [typography page](/styles/typography/#font-size).
+
+#### Font weight
+
+Font weight can be overidden to be made bold by adding `govuk-!-font-weight-regular` or regular by adding `govuk-!-font-weight-regular`.
+
+### Spacing
+
+If you want to override the margin or padding of any element you can use the spacing override classes. The spacing override classes reference the [responsive spacing scale](/styles/spacing/#responsive-spacing-scale), a unit of 1&endash;9 that maps to a specific size on the scale.
+
+If you want to add margin of to an element you can use a class `govuk-!-margin-9`, the `-9` being the spacing scale unit. You can apply margin in a specific direction by adding `-top`, `-right`, `-bottom` or `-left` like so `govuk-!-margin-bottom-9`. The same process can be used to apply padding, just swap the word margin for padding, for example `govuk-!-padding-bottom-9`.
+
+You can find out more about the spacing scale and overrides on the [spacing page](/styles/spacing).
+
+### Width
+
+You can override the width of an element with the width override classes. The width override classes use the same format as the grid columns. For example, you want an element to take up one half of it’s container, setting a `width: 50%;` you can add the class `govuk-!-width-one-half`.
+
+You can see all of the width override classes on the [spacing page](/styles/typography/#width-override-classes).
+
+### Display
+
+When you want to override the `display` property of an element you can use the display override classes.
+
+These are `govuk-!-display-inline`, `govuk-!-display-inline-block` and `govuk-!-display-block`
+
+## Utility classes
+
+Utility classes are like overrides, they have a single purpose and can be applied to any element in the HTML by adding a class. Utility classes differ from overrides, they do not use `!important` so do not include the `!-` in their class name.
+
+### Clearfix
+
+When an element contains only floated elements it’s height will collapse to nothing. The common approach to fixing this is adding what’s called a ‘clearfix’ to the parent container of the floated items. Doing this means the container will not collapse and you won't need to clear floated items individually.
+
+If you need to clearfix a container you can use the class `govuk-clearfix`.
+
+### Visually hidden
+
+If you need to visually hide an element, but still make it available to screen readers you can add the class `govuk-visually-hidden`.
