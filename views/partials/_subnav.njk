@@ -10,6 +10,13 @@
           {% for subitem in items %}
             <li class="app-subnav__section-item{% if subitem.url == path %} app-subnav__section-item--current{% endif %}">
               <a class="govuk-link" href="/{{ subitem.url }}">{{ subitem.label }}</a>
+              {% if subitem.url == path %}
+                {% for link in subitem.links %}
+                  {% if link.depth == 2 %} 
+                    <a href="/{{ subitem.url }}#{{ link.url }}" class="app-subnav__sub-item">{{ link.text }}</a>
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
             </li>
           {% endfor %}
           </ul>
@@ -18,3 +25,10 @@
       {% endif %}
     {% endfor %}
 </nav>
+
+
+
+
+
+
+
