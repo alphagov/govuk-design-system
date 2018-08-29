@@ -100,6 +100,8 @@
     // Account for the size of the copy button.
     // On bigger screens the copy button is to not obstruct the content
     // So instead shorten the length of the code block
+    display: block;
+    overflow-x: auto;
     max-width: calc(100% - 6em);
   }
 }
