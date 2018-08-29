@@ -39,7 +39,7 @@
   <div class="app-tabs__heading js-tabs__heading{{ " js-tabs__heading--open" if (params.open) }}"><a href="#{{ exampleId }}-html" role="tab" aria-controls="{{ exampleId }}-html" data-track="tab-html">HTML</a></div>
   {% endif %}
   <div class="app-tabs__container js-tabs__container" id="{{ exampleId }}-html" role="tabpanel">
-    <pre><code class="hljs html">
+    <pre data-module="app-copy"><code class="hljs html">
       {{- getHTMLCode(examplePath) | highlight('html') | safe -}}
     </code></pre>
   </div>
@@ -50,7 +50,7 @@
   <div class="app-tabs__heading js-tabs__heading"><a href="#{{ exampleId }}-nunjucks" role="tab" aria-controls="{{ exampleId }}-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
   {% endif %}
   <div class="app-tabs__container js-tabs__container" id="{{ exampleId }}-nunjucks" role="tabpanel">
-    <pre><code class="hljs js">
+    <pre data-module="app-copy"><code class="hljs js">
       {{- getNunjucksCode(examplePath) | highlight('js') | safe -}}
     </code></pre>
 
