@@ -1,0 +1,19 @@
+.app-page-navigation {
+    padding-left: govuk-spacing(4);
+    list-style: none;
+}
+
+.app-page-navigation__item {
+    @include govuk-font(19);
+    margin-bottom: govuk-spacing(2);
+
+    @include govuk-media-query($from:tablet) {
+        display: none;
+    }
+}
+
+.app-page-navigation__item::before {
+    content: "—";
+    margin-left: -(govuk-spacing(4));
+    padding-right: govuk-spacing(1);
+}
