@@ -1,7 +1,7 @@
 @include govuk-exports("app-subnav") {
 
   .app-subnav {
-    padding: govuk-spacing(3);
+    padding: govuk-spacing(6) govuk-spacing(3) govuk-spacing(3);
     @include govuk-font(16);
   }
 
