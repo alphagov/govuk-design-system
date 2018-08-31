@@ -1,0 +1,9 @@
+
+.app-back-to-top {
+  display: inline-block;
+  position: -webkit-sticky;
+  position: sticky;
+  margin-bottom: govuk-spacing(6);
+  top: govuk-spacing(6);
+  left: govuk-spacing(6);
+}

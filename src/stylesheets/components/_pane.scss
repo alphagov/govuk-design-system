@@ -31,9 +31,9 @@
       flex: 1 1 100%;
 
       > * {
-        overflow-x: scroll;
-        -webkit-overflow-scrolling: touch;
-        -ms-overflow-style: none;
+/*         overflow-x: scroll;
+-webkit-overflow-scrolling: touch;
+-ms-overflow-style: none; */
       }
     }
   }
@@ -52,7 +52,7 @@
     @include govuk-media-query($from: tablet) {
       display: flex;
       margin-left: auto;
-      flex: 1 1 auto;
+      flex: 1 1 100%;
       flex-direction: column;
 
       // Stick footer to bottom of screen if content is shorter than viewport

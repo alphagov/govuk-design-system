@@ -5,6 +5,7 @@ $app-light-grey: #f8f8f8;
 $app-code-color: #dd1144;
 
 // App-specific components
+@import "components/back-to-top";
 @import "components/contact-panel";
 @import "components/cookie-banner";
 @import "components/example";
