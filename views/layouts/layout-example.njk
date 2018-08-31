@@ -18,9 +18,12 @@
   </head>
   <body class="app-example-page">
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
-    {% block body %}
-      {{ contents | safe }}
-    {% endblock %}
+    <!-- Disable browser validation for any examples that include form elements -->
+    <form novalidate>
+      {% block body %}
+        {{ contents | safe }}
+      {% endblock %}
+    </form>
     <script src="/javascripts/vendor/iframeResizer.contentWindow.js"></script>
     <script src="{{ getFingerprint('javascripts/govuk-frontend.js') }}"></script>
   </body>
