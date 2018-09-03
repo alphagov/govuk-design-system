@@ -30,10 +30,10 @@
       min-height: 0;
       flex: 1 1 100%;
 
-      > * {
-/*         overflow-x: scroll;
--webkit-overflow-scrolling: touch;
--ms-overflow-style: none; */
+      .app-pane__content {
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: none;
       }
     }
   }
