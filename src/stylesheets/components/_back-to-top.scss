@@ -10,4 +10,11 @@
     top: govuk-spacing(6);
     left: govuk-spacing(6);
   }
+
+  > svg {
+    margin-top: -(govuk-spacing(1));
+    margin-right: govuk-spacing(2);
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
