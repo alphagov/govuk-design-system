@@ -12,7 +12,10 @@ var nodeListForEach = common.nodeListForEach
 CookieBanner.addCookieMessage()
 
 // Initialise example frames
-Example.init('.js-example__frame')
+var $examples = document.querySelectorAll('[data-module="app-example-frame"]')
+nodeListForEach($examples, function ($example) {
+  new Example($example).init()
+})
 
 // Initialise tabs
 Tabs.init('.js-example')

@@ -24,7 +24,7 @@
         example in a new window
       </a>
     </span>
-    <iframe title="{{ exampleTitle }}" class="app-example__frame app-example__frame--resizable js-example__frame{% if params.size %} app-example__frame--{{ params.size }}{% endif %}" src="{{ exampleURL }}" frameBorder="0"></iframe>
+    <iframe title="{{ exampleTitle }}" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable{% if params.size %} app-example__frame--{{ params.size }}{% endif %}" src="{{ exampleURL }}" frameBorder="0"></iframe>
   </div>
 
   {%- if (multipleTabs) %}
