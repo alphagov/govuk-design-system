@@ -30,4 +30,5 @@ nodeListForEach($codeBlocks, function ($codeBlock) {
 MobileNav.init()
 
 // Initialise search
-Search.init('.app-site-search', 'app-site-search__input')
+var $searchContainer = document.querySelector('[data-module="app-search"]')
+new Search($searchContainer).init()
