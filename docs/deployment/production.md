@@ -12,7 +12,7 @@ directory will then by uploaded to our application on
 
 ## Travis
 
-Travis is configured using the [.travis.yml](../.travis.yml) config file. Travis
+Travis is configured using the [.travis.yml](../../.travis.yml) config file. Travis
 will attempt to build the Design System, run the linter and run tests for every
 branch, but will only run the deploy step when on the master branch.
 
@@ -28,11 +28,11 @@ This app exists within the `govuk-design-system` organisation and the
 `production` space, and is deployed by the `design-system-deploy-production@digital.cabinet-office.gov.uk` user, the
 credentials for which can be found in our credential store.
 
-We use an [application manifest](../manifest.yml) to configure the app name
+We use an [application manifest](../../manifest.yml) to configure the app name
 and the type of buildpack that we want to use.
 
 We use the [nginx buildpack][nginx-bp]. Nginx is configured in
-[nginx.conf](../deploy/nginx.conf).
+[nginx.conf](../../deploy/nginx.conf).
 
 ## Content Delivery Network (CDN)
 
