@@ -1,0 +1,18 @@
+---
+title: Name input with errors
+layout: layout-example.njk
+ignore_in_sitemap: true
+---
+
+{% from "input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "Full name"
+  },
+  id: "full-name",
+  name: "full-name",
+  errorMessage: {
+    text: "Enter your full name"
+  }
+}) }}
