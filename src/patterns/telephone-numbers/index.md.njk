@@ -27,17 +27,24 @@ Users should be allowed to enter telephone numbers in whatever format is familia
 ### Validate telephone numbers
 You should validate telephone numbers so you can let users know if they have entered one incorrectly. Google’s [libphonenumber](https://github.com/googlei18n/libphonenumber) library can validate telephone numbers from most countries.
 
-Validation errors should be styled like this:
+
+### Error messages
+
+Error messages should be styled like this:
 
 {{ example({group: "patterns", item: "telephone-numbers", example: "error-empty-field", html: true, nunjucks: true, open: false, size: "s"}) }}
 
-Some examples of common error messages are:
+Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
 
-- empty field: Enter a telephone number
-- not a real number: Enter a telephone number in the correct format, like examples
-- too short: Telephone number must have at least x numbers
-- too long: Telephone number cannot have more than x numbers
-- not a UK mobile phone number: Enter a UK mobile telephone number
+#### If the telephone number is not in the right format and there is no example
+
+Say "Enter a telephone number, like 01632 960 001, 07700 900 982 or +44 0808 157 0192".
+
+
+#### If the telephone number is not in the right format and there is an example
+
+Say "Enter a telephone number in the correct format".
+
 
 ### Make it clear what type of telephone number you need
 Use the form label or hint text to tell users if you specifically need a UK, international or mobile telephone number.
@@ -80,20 +87,6 @@ Avoid [input masking](https://css-tricks.com/input-masking/) because it makes it
 ### Avoid reformatting telephone numbers
 
 The GOV.UK Notify team have observed some users becoming confused when presented with a reformatted version of a telephone number that they provided, for example, with the +44 country code added.
-
-
-### Error messages
-
-Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
-
-#### If the telephone number is not in the right format and there is no example
-
-Say "Enter a telephone number, like 01632 960 001, 07700 900 982 or +44 0808 157 0192".
-
-
-#### If the telephone number is not in the right format and there is an example
-
-Say "Enter a telephone number in the correct format".
 
 
 ## Research on this pattern
