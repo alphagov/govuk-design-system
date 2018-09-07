@@ -69,6 +69,94 @@ Use hint for help that’s relevant to the majority of users - like how their in
 
 Users often need to copy and paste information into a text input, so you shouldn’t prevent them from doing this.
 
+
+### Error messages
+
+Error messages should be styled like this:
+
+{{ example({group: "components", item: "text-input", frontendComponentName: "input", example: "error", html: true, nunjucks: true, closed: true, size: "s"}) }}
+
+Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
+
+
+#### If the input is empty
+
+Say "Enter [whatever it is]".<br>
+For example, "Enter your first name".
+
+#### If the input is too long
+
+Say "[whatever it is] must be [number] characters or less".<br>
+For example, "Address line 1 must be 35 characters or less".
+
+#### If the input is too short
+
+Say "[whatever it is] must be [number] characters or more".<br>
+For example, "Full name must be 2 characters or more".
+
+#### If the input is too long or too short
+
+Say "[whatever it is] must be between [number] and [number] characters".<br>
+For example, "Last name must be between 2 and 35 characters".
+
+#### If the input uses characters that are not allowed and you know what the characters are
+
+Say "[whatever it is] must not include [characters]".<br>
+For example, "Town or city must not include è and £".
+
+#### If the input uses characters that are not allowed and you do not know what the characters are 
+
+Say "[whatever it is] must only include [list of allowed characters]".<br>
+For example, "Full name must only include letters a to z, hyphens, spaces and apostrophes".
+
+#### If the input is not a number
+
+Say "[whatever it is] must be a number [optional example]".<br>
+For example, "Hours worked a week must be a number, like 30".
+
+#### If the input is not a whole number
+
+Say "[whatever it is] must be a whole number [optional example]".<br>
+For example, "Hours worked a week must be a whole number, like 30".
+
+#### If the number is too low
+
+Say "[whatever it is] must be [lowest] or more".<br>
+For example, "Hours worked a week must be 16 or more".
+
+#### If the number is too high
+
+Say "[whatever it is] must be [highest] or less".<br>
+For example, "Hours worked a week must be 99 or less".
+
+#### If the input must be between 2 numbers 
+
+Say "[whatever it is] must be between [lowest] and [highest]".<br>
+For example, "Hours worked a week must be between 16 and 99".
+
+#### If the input is not an amount of money and the field allows decimals
+
+Say "[whatever it is] must be an amount of money [optional example that includes decimals and non-decimals]".<br>
+For example, "How much you earn an hour must be an amount of money, like 7.50 or 8".
+
+#### If the input is not an amount of money and the field needs decimals
+
+Say "[whatever it is] must be an amount of money [optional example that includes decimals]".<br>
+For example, "How much you earn an hour must be an amount of money, like 7.50 or 8.00".
+
+#### If the input is an amount of money that needs decimals
+
+Say "[whatever it is] must include pence, like 123.45 or 156.00".<br>
+For example, "How much you earn a week must include pence, like 123,,56 or 156.00".
+
+#### If the input is an amount of money that must not have decimals
+
+Say "[whatever it is] must not include pence, like 123 or 156".<br>
+For example, "How much you earn a week must not include pence, like 123 or 156".
+
+
+
+
 ## Research on this component
 
 If you’ve used this component, get in touch to share your user research findings.

@@ -41,6 +41,47 @@ Make the height of a textarea proportional to the amount of text you expect user
 
 Users will often need to copy and paste information into a textarea, so you shouldn’t prevent them from doing this.
 
+### Error messages
+
+Error messages should be styled like this:
+
+{{ example({group: "components", item: "textarea", frontendComponentName: "input", example: "error", html: true, nunjucks: true, closed: true, size: "l"}) }}
+
+Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
+
+
+#### If the input is empty
+
+Say "Enter [whatever it is]".<br>
+For example, "Enter your first name".
+
+#### If the input is too long
+
+Say "[whatever it is] must be [number] characters or less".<br>
+For example, "Address line 1 must be 35 characters or less".
+
+#### If the input is too short
+
+Say "[whatever it is] must be [number] characters or more".<br>
+For example, "Full name must be 2 characters or more".
+
+#### If the input is too long or too short
+
+Say "[whatever it is] must be between [number] and [number] characters".<br>
+For example, "Last name must be between 2 and 35 characters".
+
+#### If the input uses characters that are not allowed and you know what the characters are
+
+
+Say "[whatever it is] must not include [characters]".<br>
+For example, "Town or city must not include è and £".
+
+#### If the input uses characters that are not allowed and you do not know what the characters are 
+
+Say "[whatever it is] must only include [list of allowed characters]".<br>
+For example, "Full name must only include letters a to z, hyphens, spaces and apostrophes".
+
+
 ## Research on this component
 
 If you’ve used this component, get in touch to share your user research findings.
