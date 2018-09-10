@@ -27,6 +27,7 @@
     @include govuk-typography-common;
     @include govuk-typography-weight-bold;
     font-size: 19px; // We don't have a font mixin that produces 19px on mobile
+    font-size: govuk-px-to-rem(19px);
 
     & > a {
       @include govuk-typography-weight-bold; // Override .govuk-link weight
@@ -83,6 +84,7 @@
   // Font is defined as a hard 19px so
   // it doesn't re-size on mobile viewport
   font-size: 19px;
+  font-size: govuk-px-to-rem(19px);
   font-weight: 400;
 }
 
