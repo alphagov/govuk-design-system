@@ -73,6 +73,14 @@ Make sure there are enough text inputs to accommodate longer addresses if you kn
 
 Royal Mail doesn’t need a county as long as the town and postcode are included. You should include an optional county text input so that people who don’t know their postcode can give a valid address.
 
+#### Error messages
+
+Error messages should be styled like this:
+
+{{ example({group: "patterns", item: "addresses", example: "error", html: true, nunjucks: true, open: false, size: "s"}) }}
+
+Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
+
 ## Textarea
 
 {{ example({group: "patterns", item: "addresses", example: "textarea", html: true, nunjucks: true, open: true, size: "s"}) }}
@@ -91,15 +99,6 @@ You shouldn’t use a textarea if you:
 ### How a textarea works
 
 Textareas let users enter an address in any format and make it easy to copy and paste addresses from their clipboard.
-
-
-### Error messages
-
-Error messages should be styled like this:
-
-{{ example({group: "patterns", item: "addresses", example: "error", html: true, nunjucks: true, open: false, size: "s"}) }}
-
-Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
 
 
 ## Research on this pattern
