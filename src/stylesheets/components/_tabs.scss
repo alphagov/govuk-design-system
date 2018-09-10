@@ -34,6 +34,7 @@
     text-decoration: none;
 
     .app-prose-scope &:focus { // A specific selector to reset .app-prose-scope a:focus
+      color: $govuk-link-colour;
       background: inherit;
     }
   }
@@ -169,6 +170,10 @@
 
   &:hover {
     color: $govuk-link-hover-colour;
+  }
+
+  &:focus {
+    color: $govuk-focus-text-colour;
   }
 
   @include govuk-media-query($from: 1080px) {

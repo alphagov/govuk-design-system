@@ -16,7 +16,7 @@
   }
 
   .app-contact-panel__link:focus {
-    color: govuk-colour("blue");
+    color: $govuk-focus-text-colour;
   }
 }
 
