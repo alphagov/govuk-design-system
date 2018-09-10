@@ -10,21 +10,85 @@ layout: layout-pane.njk
 {% from "_example.njk" import example %}
 
 
-
-{{ example({group: "components", item: "character-count", example: "default", html: true, nunjucks: true, open: false, size: "m" }) }}
+Help users enter text within a limited number of characters or words.
 
 ## When to use this component
 
+Always test your service without a character count first. 
 
+Only use the character count component when you really need to limit the number of characters or words the user can enter. For example, if there is:
 
-## When not to use this component
-
+- evidence that users are likely to enter far more information than they need to
+- a legal reason, for example, a submission has to be under a certain number of words
 
 
 ## How it works
 
+The character count component tells users how many characters or words they have remaining. 
+
+The character count component is a progressive enhancement of a textarea which limits the number of characters that are entered into it. 
+
+When the character count component is used and JavaScript is enabled:
+
+- users can continue typing after they have entered the maximum number of characters or words but are told they’ve exceeded the limit
+- a message with the number of characters or words remaining or over the limit appears below the textarea
+- users of screen readers will hear the message about the number of characters remaining or over the limit when they stop typing
+
+There are 2 ways to use the character count component. You can use HTML or, if you’re using Nunjucks or the GOV.UK Prototype Kit, you can use the Nunjucks macro.
+
+
+### Avoid overly constraining limits
+
+When using a character count, set the limit higher than most users will need to enter. You can find out what this is through user research.
+
+Make the textarea slightly larger than the amount of content your limit allows. This makes it easier for users who have copied and pasted their answer to edit it down if it’s too long.
+
+### Error messages
+
+Make sure errors follow GOV.UK guidance on [writing error messages](/components/error-message/#be-clear-and-concise) and have specific error messages for specific error states.
+
+Do not give an example in the error message if there is already an example on the screen.
+
+For example, if you are asking for a National Insurance number and include ‘QQ 12 34 56 C’ as hint text, do not include an example in the error message.
+
+#### If the input is empty
+
+Say “Enter [whatever it is]”.<br>
+For example, “Enter a summary”.
+
+#### If the input is too long
+
+Say “[whatever it is] must be [number] characters or less”.<br>
+For example, “Summary must be 400 characters or less”.
 
 
 ## Research on this component
+
+[This component has been tested](https://github.com/alphagov/govuk-design-system/wiki/Character-count-testing-and-user-research) by the Government Digital Service (GDS) in a prototype of the “Apply for a temporary event notice” service.
+
+The component has also been used in the following services.
+
+#### Department for Education
+
+Publish teacher training courses
+
+#### Government Digital Service
+
+Content publisher application
+
+### Next steps
+
+Work is needed to fix a known issue with Jaws.
+
+In addition, more user research is needed to find out:
+
+- whether to always show the limit message by default, or if it’s better in some cases to only show it after user has typed a certain number of characters
+- if highlighting characters over the limit in red is helpful for users
+- how the component might work with lower as well as upper limits
+- if enabling a character count on text inputs is useful
+- how to decide between a character limit and a word limit
+
+If you’ve used this component, get in touch to share your user research findings.
+
 
 
