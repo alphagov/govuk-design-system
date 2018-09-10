@@ -38,7 +38,7 @@ ignore_in_sitemap: true
 
         {{ govukDateInput({
           id: "expiry",
-          name: "expiry",
+          namePrefix: "expiry",
           fieldset: {
             legend: {
               text: "Expiry date",
@@ -47,20 +47,8 @@ ignore_in_sitemap: true
           },
           hint: {
             text: "For example, 31 3 1980"
-          },
-          items: [
-            {
-              name: "day"
-            },
-            {
-              name: "month"
-            },
-            {
-              name: "year"
-            }
-          ]
-          })
-        }}
+          }
+        }) }}
 
         {{ govukButton({
           text: "Continue"

@@ -21,7 +21,7 @@ layout: layout-example-full-page.njk
       <form action="/form-handler" method="post" novalidate>
         {{ govukDateInput({
           id: "dob",
-          name: "dob",
+          namePrefix: "dob",
           fieldset: {
             legend: {
               text: "What is your date of birth?",
@@ -31,20 +31,8 @@ layout: layout-example-full-page.njk
           },
           hint: {
             text: "For example, 31 3 1980"
-          },
-          items: [
-            {
-              name: "day"
-            },
-            {
-              name: "month"
-            },
-            {
-              name: "year"
-            }
-          ]
-          })
-        }}
+          }
+        }) }}
 
         {{ govukButton({
           text: "Continue"
