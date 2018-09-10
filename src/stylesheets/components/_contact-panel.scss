@@ -25,6 +25,6 @@
 }
 
 .app-contact-panel__body {
-  @include govuk-font(19)
+  @include govuk-font(19);
   margin: 0;
 }
