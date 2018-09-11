@@ -68,9 +68,12 @@ Do not use:
 - ‘valid’ and ‘invalid’ because they do not add anything to the message
 - humourous, informal language like ‘oops’
 
+Do not give an example in the error message if there is an example on the screen. For example, if you are asking for a National Insurance number and include ‘QQ 12 34 56 C’ as hint text, do not include an example in the error message.
+
 Above all, aim for clarity.
 
 Read the message out loud to see if it sounds like something you would say.
+
 
 ### Be consistent
 
@@ -111,6 +114,23 @@ Some errors work better as instructions and some work better as descriptions. Fo
 - ‘Enter a date after 31 August 2017 for when you started the course’ is wordier, less direct and natural than ‘Date you started the course must be after 31 August 2017’
 
 Use both instructions and descriptions, but use them consistently. For example, use an instruction for empty fields like ‘Enter your name’, but a description like ‘Name must be 35 characters or less’ for entries that are too long.
+
+
+### Use error message templates
+
+Use template messages for common errors on:
+
+- [addresses](/patterns/addresses/#error-messages)
+- [checkboxes](/components/checkboxes/#error-messages)
+- [date input](/components/date-input/#error-messages)
+- [dates](/patterns/dates/#error-messages)
+- [names](/patterns/names/#error-messages)
+- [National Insurance numbers](/patterns/national-insurance-numbers/#error-messages)
+- [radios](/components/radios/#error-messages)
+- [telephone numbers](/patterns/telephone-numbers/#error-messages)
+- [text input](/components/text-input/#error-messages)
+- [textarea](/components/textarea/#error-messages)
+
 
 ### Track errors
 

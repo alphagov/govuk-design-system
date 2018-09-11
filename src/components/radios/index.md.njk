@@ -61,6 +61,33 @@ You can add conditionally revealing content to radios, so users only see content
 
 Keep it simple - if you need to add a lot of content, consider showing it on the next page in the process instead.
 
+### Error messages
+
+Error messages should be styled like this:
+
+{{ example({group: "components", item: "radios", example: "error", html: true, nunjucks: true, open: false, size: "s"}) }}
+
+
+Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
+
+#### If nothing is selected and the options are ‘yes’ and ‘no’
+
+Say "Select yes if [whatever it is is true]".<br>
+For example, "Select yes if Sarah normally lives with you"
+
+
+#### If nothing is selected and the question has options in it
+
+Say "Select if [whatever it is]".<br>
+For example, "Select if you are employed or self-employed"
+
+
+#### If nothing is selected and the question does not have options in it
+
+Say "Select [whatever it is]".<br>
+For example, "Select the day of the week you pay your rent"
+
+
 ## Research on this component
 
 Read a blog post about [updates to the radios and checkboxes components](https://designnotes.blog.gov.uk/2016/11/30/weve-updated-the-radios-and-checkboxes-on-gov-uk/).
