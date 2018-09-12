@@ -46,13 +46,19 @@ If you’re only asking for one piece of information on a page, make the questio
 
 For example:
 
-{{ example({group: "patterns", item: "question-pages", example: "postcode", html: true, nunjucks: true, open: true}) }}
+#### Legend as page heading
+
+{{ example({group: "patterns", item: "question-pages", example: "default", html: true, nunjucks: true, open: false, id: "default-2"}) }}
+
+#### Label as a page heading
+
+{{ example({group: "patterns", item: "question-pages", example: "postcode", html: true, nunjucks: true, open: false}) }}
 
 If you need to ask for multiple related things on a page, use a statement as the heading.
 
 For example:
 
-{{ example({group: "patterns", item: "question-pages", example: "passport", html: true, nunjucks: true, open: true}) }}
+{{ example({group: "patterns", item: "question-pages", example: "passport", html: true, nunjucks: true, open: false}) }}
 
 Don’t duplicate the same page heading across multiple pages.
 
@@ -77,7 +83,7 @@ Start by testing your form without a progress indicator to see if it’s simple 
 
 Try improving the order, type or number of questions before adding a progress indicator. If people still have difficulty, try adding a simple step or question indicator like this one.
 
-{{ example({group: "patterns", item: "question-pages", example: "progress", html: true, nunjucks: true, open: true}) }}
+{{ example({group: "patterns", item: "question-pages", example: "progress", html: true, nunjucks: true, open: false}) }}
 
 Only include the total number of questions if you can do so reliably. As the user moves through the form, make sure the indicator updates to tell them which question they are on and the total number remaining.
 
