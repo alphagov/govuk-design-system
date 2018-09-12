@@ -118,6 +118,23 @@ $app-breakpoint-widescreen: 1200px;
       display: none;
     }
   }
+
+  // Fix monospace font size when used with relative typography
+  //
+  // Browsers automatically reduce monospace font size 
+  //
+  // [1] restores the normal text size in Mozilla Firefox, Google Chrome, 
+  // and Safari; this unusual style rule should also be used anywhere where 
+  // you would otherwise set the font-family property to ‘monospace’. 
+  // [2] restores the normal text size in Internet Explorer and Opera.
+  //
+  // source: 
+  // http://code.iamkate.com/html-and-css/fixing-browsers-broken-monospace-font-handling/
+  pre,
+  code {
+    font-family: monospace, monospace; // [1]
+    font-size: 1em; // [2]
+  }
 }
 
 .app-content__header {
