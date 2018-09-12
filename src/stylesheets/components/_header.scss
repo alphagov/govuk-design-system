@@ -49,7 +49,7 @@
     font-size: 30px; // We don't have a mixin that produces 30px font size\
     line-height: 30px;
     @include govuk-clearfix;
-    
+
     &:link,
     &:visited {
       margin-bottom: -1px; // Negate transparent bottom border
@@ -100,13 +100,14 @@
 
   .app-header-mobile-nav-toggler {
     display: none;
-    width: 100px;
     margin-top: govuk-spacing(2);
     margin-bottom: govuk-spacing(2);
-    border: 1px solid govuk-colour("white");
+    border: 1px solid transparent;
     background-color: govuk-colour("black");
     box-shadow: 0 0 0 govuk-colour("black");
     min-height: 40px; // match the height of the search box
+    padding-left: 0;
+    padding-right: 0;
 
     &:active,
     &:focus,
@@ -115,9 +116,18 @@
       box-shadow: 0 0 0 govuk-colour("black"); // Override the button default green
     }
 
+    &::after {
+      @include govuk-shape-arrow($direction: down, $base: 10px, $display: inline-block);
+      content: "";
+      border-color: govuk-colour("white");
+      margin-left: govuk-spacing(1);
+    }
+
     &--active.app-header-mobile-nav-toggler {
-      background-color: govuk-colour("blue");
-      box-shadow: 0 0 0 govuk-colour("blue");
+      &::after {
+        @include govuk-shape-arrow($direction: up, $base: 10px, $display: inline-block);
+        border-color: govuk-colour("white");
+      }
     }
 
     .js-enabled & {
