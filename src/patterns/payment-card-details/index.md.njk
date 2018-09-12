@@ -8,13 +8,13 @@ backlog_issue_id: 80
 layout: layout-pane.njk
 ---
 
-![A form entitled enter card details which asks for a card number, an expiry date, a name on the card and the card security code. There is a payment summary to the right of the form which says that the total payment amount is 20 pounds.](card-payments.png)
+![A form entitled enter card details which asks for a card number, an expiry date, a name on the card and the card security code. There is a payment summary to the right of the form which says that the total payment amount is 20 pounds.](enter-card-details.jpg)
 
 ## When to use this pattern
 
 Before using this pattern, check if [GOV.UK Pay](https://www.payments.service.gov.uk/) is suitable for your service. 
 
-If you need to build your own payment service, follow this pattern to collect payment card details from your users. 
+If you cannot use GOV.UK Pay and need to build your own payment service, follow this pattern to collect payment card details from your users. 
 
 ## How it works
 
@@ -24,13 +24,17 @@ Let users enter payment card numbers in whatever format is familiar to them. All
 
 ### Help users enter valid card information
 
-Show logos for the cards you accept as icons. 
+Present all fields on a single page, in the order in which they appear on a credit or debit card. This makes it easy for users to transcribe the information from their payment card.
 
-Use issuer identification number (IIN) lookups to validate the card number as the user enters it. Once you’ve been able to identify the user’s card type, leave only the relevant logo highlighted and grey out the others.
+Show logos for the cards you accept as icons so users can see whether their card is supported.
+
+Use Issuer Identification Number (IIN) lookups to validate the card number as the user enters it. Once you’ve been able to identify the user’s card type, leave only the relevant logo highlighted and grey out the others.
 
 <video role="region" aria-label="Card number validation flow example video, this video has no audio." controls muted>
   <source src="card-number.mp4" type="video/mp4">
 </video>
+
+If JavaScript is not available, display all of the logos anyway, as they still help users to understand which card types you support.
 
 When you validate the card number, the card security code information should update according to the type of card being used. For example, if a user enters an American Express card, the hint text and icon should change to match the front of the card. 
 
@@ -38,16 +42,11 @@ When you validate the card number, the card security code information should upd
 
 Do not use CVV or other acronyms for the card security code. 
 
-### Show a payment summary
-
-Include a summary of what the user is paying for and how much they are paying on the page where they enter their card numbers. 
-
 ## Research on this pattern
 
 This pattern is based on the one used in [GOV.UK Pay](https://www.payments.service.gov.uk/), which has been live since November 2016. 
 
 The GOV.UK Pay team tests this pattern quarterly as part of its user research.
-
 
 ### Services using this pattern
 
