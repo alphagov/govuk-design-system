@@ -1,0 +1,33 @@
+{% macro govukCharacterCount(params) %}
+{% from "error-message/macro.njk" import govukErrorMessage -%}
+{% from "hint/macro.njk" import govukHint %}
+{% from "label/macro.njk" import govukLabel %}
+{% from "textarea/macro.njk" import govukTextarea %}
+{#- a record of other elements that we need to associate with the input using
+aria-describedby – for example hints or error messages -#}
+{% set describedBy = "" %}
+<div class="govuk-character-count" data-module="character-count"
+{% if params.maxlength %} data-maxlength="{{ params.maxlength }}"{% endif %}
+{% if params.threshold %} data-threshold="{{ params.threshold }}"{% endif %}
+{% if params.maxwords %} data-maxwords="{{ params.maxwords }}"{% endif %}>
+{{ govukTextarea({
+    id: params.id,
+    name: params.name,
+    describedBy: describedBy,
+    rows: params.rows,
+    value: params.value,
+    classes: 'js-character-count ' + (' govuk-textarea--error' if params.errorMessage) + (params.classes if params.classes),
+    label: {
+    html: params.label.html,
+    text: params.label.text,
+    classes: params.label.classes,
+    isPageHeading: params.label.isPageHeading,
+    attributes: params.label.attributes,
+    for: params.id
+    },
+    hint: params.hint,
+    errorMessage: params.errorMessage,
+    attributes: params.attributes
+}) }}
+</div>
+{% endmacro %}

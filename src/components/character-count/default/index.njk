@@ -2,3 +2,16 @@
 title: Character count
 layout: layout-example.njk
 ---
+{% from "character-count/macro.njk" import govukCharacterCount %}
+
+{{ govukCharacterCount({
+  name: "with-hint",
+  id: "with-hint",
+  maxlength: 200,
+  label: {
+    text: "Can you provide more detail?"
+  },
+  hint: {
+    text: "Do not include personal or financial information, for example, your National Insurance number or credit card details."
+  }
+}) }}
