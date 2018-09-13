@@ -5,7 +5,6 @@ import Tabs from './components/tabs.js'
 import Copy from './components/copy.js'
 import MobileNav from './components/mobile-navigation.js'
 import Search from './components/search.js'
-import CharacterCount from './components/character-count.js'
 
 var nodeListForEach = common.nodeListForEach
 
@@ -33,8 +32,3 @@ MobileNav.init()
 // Initialise search
 var $searchContainer = document.querySelector('[data-module="app-search"]')
 new Search($searchContainer).init()
-
-var $characterCount = document.querySelectorAll('[data-module="character-count"]');
-nodeListForEach($characterCount, function ($characterCount) {
-  new CharacterCount($characterCount).init()
-})
