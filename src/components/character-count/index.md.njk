@@ -15,3 +15,107 @@ Help users enter text within a limited number of characters or words.
 {% from "_example.njk" import example %}
 
 {{ example({group: "components", item: "character-count", example: "default", html: true, nunjucks: true, open: false}) }}
+
+## When to use this component
+
+Always test your service without a character count first.
+
+Only use the character count component when you really need to limit the number of characters or words the user can enter. For example, if there is:
+
+- evidence that users are likely to enter far more information than they need to
+- a legal reason, for example, a submission has to be under a certain number of words
+
+
+## How it works
+
+The character count component tells users how many characters they have remaining.
+
+It is a progressive enhancement of a textarea which limits the number of characters  that are entered into it.
+
+When the character count component is used and JavaScript is enabled:
+
+- users can enter more than the maximum number of characters but are told they’ve exceeded the limit
+- a count message showing the number of characters remaining or over the limit appears below the textarea
+- users of screen readers will hear the count message when they stop typing
+
+There are 2 ways to use the character count component. You can use HTML or, if you’re using Nunjucks or the GOV.UK Prototype Kit, you can use the Nunjucks macro.
+
+{% from "_example.njk" import example %}
+{{ example({group: "components", item: "character-count", example: "label-page-heading", html: true, nunjucks: true, open: false}) }}
+
+### Consider if a word count is more helpful
+
+In some cases, it may be more helpful for your users to show a word count rather than a character count.
+
+Do this by setting `data-maxwords` in the component markup. For example, `data-maxwords="150"` will set a word limit of 150.
+
+{% from "_example.njk" import example %}
+{{ example({group: "components", item: "character-count", example: "word-count", html: true, nunjucks: true, open: false}) }}
+
+### Avoid overly constraining limits
+
+When using a character count, try to set the limit higher than most users will need to enter. You can find out what this is through user research and data analysis.
+
+If the limit is much higher than most users are likely to reach, you can make it so the message only appears after a user has entered a certain amount.
+
+To do this, you need to set a threshold in the component markup. For example, `data-threshold="75"` will show a message after users have entered 75% of the limit.
+
+{% from "_example.njk" import example %}
+{{ example({group: "components", item: "character-count", example: "threshold", html: true, nunjucks: true, open: false}) }}
+
+
+Make the textarea slightly larger than the amount of content your limit allows. This makes it easier for users who have copied and pasted their answer to edit it down if it’s too long.
+
+### Error messages
+
+Error messages should be styled like this:
+
+{% from "_example.njk" import example %}
+
+{{ example({group: "components", item: "character-count", example: "error", html: true, nunjucks: true, open: false}) }}
+
+You must provide validation error messages in addition to the count message.
+
+A count message provides inline feedback, whereas a validation message confirms what has gone wrong after a user tries to submit there response.
+
+In addition, when JavaScript is not available, users will not see the count message and need an error message to tell them what’s gone wrong.
+
+Make sure errors follow GOV.UK guidance on [writing error messages](/components/error-message/#be-clear-and-concise) and have specific error messages for specific error states.
+
+#### If the input is empty
+
+Say “Enter [whatever it is]”.<br>
+For example, “Enter a summary”.
+
+#### If the input is too long
+
+Say “[whatever it is] must be [number] characters or less”.<br>
+For example, “Summary must be 400 characters or less”.
+
+## Research on this component
+
+[This component has been tested](https://github.com/alphagov/govuk-design-system/wiki/Character-count-testing-and-user-research) by the Government Digital Service (GDS) in a prototype of the “Apply for a temporary event notice” service.
+
+The component has also been used in the following services.
+
+#### Department for Education
+
+Publish teacher training courses
+
+#### Government Digital Service
+
+Content publisher application
+
+### Next steps
+
+Work is needed to fix a known issue with Jaws whereby the field’s label is repeated every time the count message is played. This is repetitive and likely to be disruptive for users.
+
+In addition, more user research is needed to find out:
+
+- whether to always show the count message, or only show it after a user has typed a certain number of characters
+- how to decide between a character limit and a word limit
+- if highlighting characters over the limit in red would be helpful for users
+- how the component might work with lower as well as upper limits
+- if enabling a character count on text inputs would be useful
+
+If you’ve used this component, get in touch to share your user research findings.
