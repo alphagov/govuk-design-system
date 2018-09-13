@@ -1,0 +1,17 @@
+---
+title: Character count
+layout: layout-example.njk
+---
+
+{% from "character-count/macro.njk" import govukCharacterCount %}
+
+{{ govukCharacterCount({
+  name: "word-count",
+  id: "word-count",
+  maxlength: 114,
+  threshold: 75,
+  value: "Type another letter into this field after this message to see the threshold feature .",
+  label: {
+    text: "Can you provide more detail?"
+  }
+}) }}

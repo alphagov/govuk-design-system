@@ -1,0 +1,15 @@
+---
+title: Character count
+layout: layout-example.njk
+---
+
+{% from "character-count/macro.njk" import govukCharacterCount %}
+
+{{ govukCharacterCount({
+  name: "word-count",
+  id: "word-count",
+  maxwords: 150,
+  label: {
+    text: "Enter a job description"
+  }
+}) }}

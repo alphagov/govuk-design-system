@@ -1,0 +1,41 @@
+// Example usage with Breadcrumbs, phase banners, back links:
+// <div class="govuk-width-container">
+//   <!-- Breadcrumbs, phase banners, back links are placed in here. -->
+//   <div class="govuk-main-wrapper">
+//       <!-- Wrapper for the main content of your page which applies padding
+//            to the top / bottom -->
+//   </div>
+// </div>
+//
+// Example usage without Breadcrumbs, phase banners, back links:
+// <div class="govuk-width-container">
+//   <div class="govuk-main-wrapper govuk-main-wrapper--l">
+//       <!-- Wrapper for the main content of your page which applies padding
+//            to the top / bottom -->
+//   </div>
+// </div>
+
+
+@mixin govuk-main-wrapper {
+  @include govuk-responsive-padding(6, "top");
+  @include govuk-responsive-padding(6, "bottom");
+  // In IE11 the `main` element can be used, but is not recognized  –
+  // meaning it's not defined in IE's default style sheet,
+  // so it uses CSS initial value, which is inline.
+  display: block;
+}
+
+// Use govuk-main-wrapper--l when you page does not have Breadcrumbs, phase banners or back links
+@mixin govuk-main-wrapper--l {
+  @include govuk-responsive-padding(8, "top");
+}
+
+@include govuk-exports("govuk/objects/main-wrapper") {
+  .govuk-main-wrapper {
+    @include govuk-main-wrapper;
+  }
+
+  .govuk-main-wrapper--l {
+    @include govuk-main-wrapper--l;
+  }
+}
