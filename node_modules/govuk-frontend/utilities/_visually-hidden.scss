@@ -1,0 +1,15 @@
+@include govuk-exports("govuk/utilities/visually-hidden") {
+  .govuk-visually-hidden {
+    @include govuk-visually-hidden;
+  }
+
+  /// @deprecated Deprecated as of release 1.1, replaced by `.govuk-visually-hidden-focusable`
+  .govuk-visually-hidden-focussable {
+    @include govuk-visually-hidden-focusable;
+  }
+
+  .govuk-visually-hidden-focusable {
+    @include govuk-visually-hidden-focusable;
+  }
+
+}

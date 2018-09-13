@@ -1,5 +1,8 @@
 deploy/public
-/node_modules
 npm-debug.log
 .DS_Store
 .sass-cache
+# keep govuk frontend from branch
+!node_modules/
+node_modules/*
+!node_modules/govuk-frontend/
