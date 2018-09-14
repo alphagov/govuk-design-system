@@ -36,6 +36,21 @@
           {% endif %}
         </h1>
       </div>
+
+      {% if show_page_nav %}
+        <ul class="app-page-navigation">
+          {% for heading in headings %}
+            {% if heading.depth == 2 %}
+              <li class="app-page-navigation__item">
+                <a class="govuk-link" href="#{{ heading.url}}">
+                  {{ heading.text }}
+                </a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      {% endif %}
+
       <div class="app-prose-scope">
         {{ contents | safe }}
       </div>
