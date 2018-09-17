@@ -104,7 +104,7 @@ Search.prototype.resultTemplate = function (result) {
     }
     var section = document.createElement('span')
     section.className = 'app-site-search--section'
-    section.textContent = result.section
+    section.innerHTML = result.section
 
     elem.appendChild(section)
     return elem.innerHTML
