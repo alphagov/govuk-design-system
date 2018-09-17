@@ -209,6 +209,12 @@ $icon-size: 40px;
       content: ')';
     }
   }
+
+  .app-site-search__separator {
+    display: inline-block;
+    margin-left: govuk-spacing(1);
+    margin-right: govuk-spacing(1);
+  }
 }
 
 // on IE8 we show the sitemap link as Accessible autocomplete
