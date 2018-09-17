@@ -583,7 +583,7 @@ GOV.UK Frontend uses ["Block, Element, Modifier" (BEM)](http://getbem.com/) and 
   </tbody>
 </table>
 
-## Mixins
+## Mixins and variables
 
 
 ### Typography
@@ -724,6 +724,14 @@ GOV.UK Frontend uses ["Block, Element, Modifier" (BEM)](http://getbem.com/) and 
     <tr class="govuk-table__row">
       <td class="govuk-table__cell "> @include grid-column( 1/3, $full-width: desktop );</td>
       <td class="govuk-table__cell ">Deprecated: you can’t apply grid properties to other elements using GOV.UK Frontend</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell ">$gutter</td>
+      <td class="govuk-table__cell ">$govuk-gutter, only use for the gaps in between grid columns, otherwise use the <a class="govuk-link" href="../../styles/spacing/#spacing-on-custom-components">spacing scale</a>.</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell ">$gutter-half</td>
+      <td class="govuk-table__cell ">$govuk-gutter-half, only use for the gaps in between grid columns, otherwise use the <a class="govuk-link" href="../../styles/spacing/#spacing-on-custom-components">spacing scale</a>.</td>
     </tr>
   </tbody>
 </table>
