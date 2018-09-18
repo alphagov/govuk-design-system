@@ -6,7 +6,7 @@ layout: layout-example-full-page.njk
 {% extends "example-wrappers/full-page.njk" %}
 
 {% from "back-link/macro.njk" import govukBackLink %}
-{% from "radios/macro.njk" import govukRadios %}
+{% from "date-input/macro.njk" import govukDateInput %}
 {% from "button/macro.njk" import govukButton %}
 
 {% block beforeContent %}
@@ -19,35 +19,19 @@ layout: layout-example-full-page.njk
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <form action="/form-handler" method="post" novalidate>
-
-        {{ govukRadios({
-          idPrefix: "where-do-you-live",
-          name: "where-do-you-live",
+        {{ govukDateInput({
+          id: "dob",
+          namePrefix: "dob",
           fieldset: {
             legend: {
-              text: "Where do you live?",
+              text: "What is your date of birth?",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--xl"
             }
           },
-          items: [
-            {
-              value: "england",
-              text: "England"
-            },
-            {
-              value: "scotland",
-              text: "Scotland"
-            },
-            {
-              value: "wales",
-              text: "Wales"
-            },
-            {
-              value: "northern-ireland",
-              text: "Northern Ireland"
-            }
-          ]
+          hint: {
+            text: "For example, 31 3 1980"
+          }
         }) }}
 
         {{ govukButton({
