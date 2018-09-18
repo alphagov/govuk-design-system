@@ -66,7 +66,7 @@ Search.prototype.handleSearchQuery = function (query, callback) {
 Search.prototype.handleOnConfirm = function (result) {
   var path = result.path
   if (path) {
-    window.location.pathname = path
+    window.location.href = '/' + path
   }
 }
 
@@ -104,7 +104,7 @@ Search.prototype.resultTemplate = function (result) {
     }
     var section = document.createElement('span')
     section.className = 'app-site-search--section'
-    section.textContent = result.section
+    section.innerHTML = result.section
 
     elem.appendChild(section)
     return elem.innerHTML
