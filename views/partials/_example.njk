@@ -32,13 +32,20 @@
     <li class="app-tabs__item js-tabs__item{{ " js-tabs__item--open" if (params.open) }}" role="presentation"><a href="#{{ exampleId }}-html" role="tab" aria-controls="{{ exampleId }}-html" data-track="tab-html">HTML</a></li>
     <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#{{ exampleId }}-nunjucks" role="tab" aria-controls="{{ exampleId }}-nunjucks" data-track="tab-nunjucks">Nunjucks</a></li>
   </ul>
+  {% elif not (params.hideTab) %}
+  {% set tabType = "html" if params.html else ("nunjucks" if params.nunjucks ) %}
+  <ul class="app-tabs" role="tablist">
+    <li class="app-tabs__item js-tabs__item{{ " js-tabs__item--open" if (params.open) }}" role="presentation">
+      <a href="#{{ exampleId }}-{{ tabType }}" role="tab" aria-controls="{{ exampleId }}-{{ tabType }}" data-track="tab-{{ tabType }}">{{ "HTML" if params.html else ("Nunjucks" if params.nunjucks )}}</a>
+    </li>
+  </ul>
   {% endif %}
 
   {%- if (params.html) %}
-  {%- if (multipleTabs) %}
+  {%- if (multipleTabs) or (not params.hideTab) %}
   <div class="app-tabs__heading js-tabs__heading{{ " js-tabs__heading--open" if (params.open) }}"><a href="#{{ exampleId }}-html" role="tab" aria-controls="{{ exampleId }}-html" data-track="tab-html">HTML</a></div>
   {% endif %}
-  <div class="app-tabs__container js-tabs__container" id="{{ exampleId }}-html" role="tabpanel">
+  <div class="app-tabs__container js-tabs__container{{ " js-tabs__container--no-tabs" if (params.hideTab) }}" id="{{ exampleId }}-html" role="tabpanel">
     <pre data-module="app-copy"><code class="hljs html">
       {{- getHTMLCode(examplePath) | highlight('html') | safe -}}
     </code></pre>
@@ -48,8 +55,10 @@
   {%- if (params.nunjucks) %}
   {%- if (multipleTabs) %}
   <div class="app-tabs__heading js-tabs__heading"><a href="#{{ exampleId }}-nunjucks" role="tab" aria-controls="{{ exampleId }}-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
+  {% elif not (params.hideTab) %}
+	<div class="app-tabs__heading js-tabs__heading{{ " js-tabs__heading--open" if (params.open) }}"><a href="#{{ exampleId }}-nunjucks" role="tab" aria-controls="{{ exampleId }}-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
   {% endif %}
-  <div class="app-tabs__container js-tabs__container" id="{{ exampleId }}-nunjucks" role="tabpanel">
+  <div class="app-tabs__container js-tabs__container{{ " js-tabs__container--no-tabs" if (params.hideTab) }}" id="{{ exampleId }}-nunjucks" role="tabpanel">
     <pre data-module="app-copy"><code class="hljs js">
       {{- getNunjucksCode(examplePath) | highlight('js') | safe -}}
     </code></pre>
