@@ -15,34 +15,48 @@ var Tabs = {
     // Reset state
     $example.find('.js-tabs__item').removeClass('app-tabs__item--current')
     $example.find('.js-tabs__heading').removeClass('app-tabs__heading--current')
-    $example.find('.js-tabs__item a').removeAttr('aria-selected')
+    $example.find('.js-tabs__item a').attr('aria-expanded', 'false')
     $example.find('.js-tabs__container').hide().attr('aria-hidden', 'true')
   },
 
   // Activate current tab
-  activateCurrentTab: function (id) {
+  activateAndToggleCurrentTab: function (id) {
     // Check if we have an id
     if (!id) {
       console.error('id is undefined')
       return
     }
 
-    // Reset tabs
-    Tabs.resetTabs(id)
+    var $target = $('[href="' + id + '"]')
+    var isTargetOpen = $target.attr('aria-expanded') === 'true'
+    var $targetParent = $target.parent()
 
-    // Set current active tab for both tabs and accordion links
-    $('[href="' + id + '"]').attr('aria-selected', 'true')
-    var $parents = $('[href="' + id + '"]').parent()
-    $.each($parents, function (key, obj) {
-      if ($(obj).hasClass('app-tabs__item')) {
-        $(obj).addClass('app-tabs__item--current')
-      } else if ($(obj).hasClass('app-tabs__heading')) {
-        $(obj).addClass('app-tabs__heading--current')
+    if (isTargetOpen) {
+      $target.attr('aria-expanded', 'false')
+      $(id).hide().attr('aria-hidden', 'true')
+
+      if ($targetParent.hasClass('app-tabs__item--current')) {
+        $targetParent.removeClass('app-tabs__item--current')
+      } else if ($targetParent.hasClass('app-tabs__heading--current')) {
+        $targetParent.removeClass('app-tabs__heading--current')
       }
-    })
+    } else {
+      // Reset tabs
+      Tabs.resetTabs(id)
 
-    // Set current container
-    $(id).show().removeAttr('aria-hidden')
+      // Set current active tab for both tabs and accordion links
+      $target.attr('aria-expanded', 'true')
+      $.each($targetParent, function (key, obj) {
+        if ($(obj).hasClass('app-tabs__item')) {
+          $(obj).addClass('app-tabs__item--current')
+        } else if ($(obj).hasClass('app-tabs__heading')) {
+          $(obj).addClass('app-tabs__heading--current')
+        }
+      })
+
+      // Set current container
+      $(id).show().attr('aria-hidden', 'false')
+    }
   },
 
   // Tabs mode
@@ -53,7 +67,7 @@ var Tabs = {
     var id = $(this).attr('href')
 
     // Activate current tab
-    Tabs.activateCurrentTab(id)
+    Tabs.activateAndToggleCurrentTab(id)
   },
 
   // Close current container on click
@@ -71,13 +85,14 @@ var Tabs = {
     // If more than one container
     var $examples = $(selector)
     $.each($examples, function (key, obj) {
-      if ($(obj).find('.js-tabs__container').length > 1) {
+      var tabsContainer = $(obj).find('.js-tabs__container')
+      if (tabsContainer.length > 0 && !tabsContainer.hasClass('js-tabs__container--no-tabs')) {
         // Hide all containers
-        $(obj).find('.js-tabs__container').hide()
+        tabsContainer.hide()
 
         // Add close button to each container
-        $(obj).find('.js-tabs__container').append('<button class="app-tabs__close js-tabs__close">Close</button>')
-        $(obj).find('.js-tabs__container').addClass('app-tabs__container--with-close-button')
+        tabsContainer.append('<button class="app-tabs__close js-tabs__close">Close</button>')
+        tabsContainer.addClass('app-tabs__container--with-close-button')
       }
     })
 
