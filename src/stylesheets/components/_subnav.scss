@@ -3,6 +3,10 @@
   .app-subnav {
     padding: govuk-spacing(6) govuk-spacing(3) govuk-spacing(3);
     @include govuk-font(16);
+
+    @media (min-width: $app-breakpoint-widescreen) {
+      padding: govuk-spacing(6) govuk-spacing(3) 0 0;
+    }
   }
 
   .app-subnav__section {

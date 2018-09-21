@@ -16,6 +16,10 @@
     color: govuk-colour("white");
     background: govuk-colour("black");
     @include govuk-clearfix;
+    width: 100%;
+    @media (min-width: $app-breakpoint-widescreen) {
+      padding: govuk-spacing(2) 0;
+    }
   }
 
   .app-header__logotype {
@@ -49,7 +53,7 @@
     font-size: 30px; // We don't have a mixin that produces 30px font size\
     line-height: 30px;
     @include govuk-clearfix;
-    
+
     &:link,
     &:visited {
       margin-bottom: -1px; // Negate transparent bottom border

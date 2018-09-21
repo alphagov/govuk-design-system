@@ -1,0 +1,10 @@
+
+.app-phase-banner {
+  padding-right: govuk-spacing(3);
+  padding-left: govuk-spacing(3);
+  border-bottom: 0;
+  @media (min-width: $app-breakpoint-widescreen) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}

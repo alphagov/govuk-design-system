@@ -1,11 +1,15 @@
 @import "govuk-frontend/all";
 
+// Mirrors Bootstrap 4 - open for discussion
+$app-breakpoint-widescreen: 1200px;
+
 // App-specific variables
 $app-light-grey: #f8f8f8;
 $app-code-color: #dd1144;
 
 // App-specific components
 @import "components/back-to-top";
+@import "components/banner";
 @import "components/contact-panel";
 @import "components/cookie-banner";
 @import "components/example";
@@ -45,8 +49,6 @@ body {
   }
 }
 
-// Mirrors Bootstrap 4 - open for discussion
-$app-breakpoint-widescreen: 1200px;
 
 // This will be coming to FE later but making it app specific for now
 .app-site-width-container {
@@ -242,6 +244,10 @@ $colour-list-breakpoint: 980px;
   @include govuk-media-query($from: $colour-list-breakpoint) {
     width: 35%;
   }
+}
+
+.app-\!-margin-auto {
+  margin: 0 auto;
 }
 
 pre {

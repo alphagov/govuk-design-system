@@ -4,9 +4,20 @@
   padding-left: govuk-spacing(3);
   background-color: $app-light-grey;
   @include govuk-font(19, $weight: bold);
+  width: 100%;
 
   @include govuk-media-query($until: tablet) {
     display: none;
+  }
+
+  @include govuk-media-query($from: desktop) {
+    margin-right: -(govuk-spacing(3));
+    margin-left: -(govuk-spacing(3));
+  }
+
+  @media (min-width: $app-breakpoint-widescreen) {
+    padding-right: 0;
+    padding-left: 0;
   }
 
   &__list {
