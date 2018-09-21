@@ -6,6 +6,18 @@ ignore_in_sitemap: true
 
 {% from "input/macro.njk" import govukInput %}
 
+<h3 class="govuk-heading-m">Full</h3>
+
+{{ govukInput({
+  label: {
+    text: "Full name",
+    classes: "govuk-!-width-full"
+  },
+  classes: "govuk-!-width-full",
+  id: "full-name",
+  name: "full-name"
+}) }}
+
 <h3 class="govuk-heading-m">Three-quarters</h3>
 
 {{ govukInput({
