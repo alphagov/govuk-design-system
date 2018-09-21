@@ -29,7 +29,7 @@ The date input component consists of 3 fields to let users enter a day, month an
 
 The 3 date fields are grouped together in a `<fieldset>` with a `<legend>` that describes them, as shown in the examples on this page. This is usually a question, like ‘What is your date of birth?’.
 
-If you’re asking [one question per page](../../patterns/question-pages/#start-by-asking-one-question-per-page), you can set the contents of the `<legend>` as the page heading. This is good practice as it means that users of screen readers will only hear the contents once. 
+If you’re asking [one question per page](../../patterns/question-pages/#start-by-asking-one-question-per-page), you can set the contents of the `<legend>` as the page heading. This is good practice as it means that users of screen readers will only hear the contents once.
 
 Read more about [why and how to set legends as headings](../../get-started/labels-legends-headings).
 
@@ -45,85 +45,72 @@ Check that a valid date is entered by the user. Invalid dates should be reported
 
 {{ example({group: "components", item: "date-input", example: "error", html: true, nunjucks: true, open: false, size: "m"}) }}
 
-
 Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
 
 Check the entire date, not the day, month and year separately.
 
-Avoid assuming what is wrong with the date. For example, if a user enters ‘31 2 2016’, the day may be right and the month may be wrong. An error message that mentions February may be confusing if they meant to enter ‘1’. 
-
+Avoid assuming what is wrong with the date. For example, if a user enters ‘31 2 2016’, the day may be right and the month may be wrong. An error message that mentions February may be confusing if they meant to enter ‘1’.
 
 #### If nothing is entered
 
-Say "Enter [whatever it is]".<br>
-For example, "Enter your date of birth".
-
+Say “Enter [whatever it is]”.<br>
+For example, “Enter your date of birth”.
 
 #### If an incomplete date is entered
 
-Say "Enter [whatever it is] and include a day, month and year".<br>
-For example, "Enter your date of birth and include a day, month and year".
-
+Say “Enter [whatever it is] and include a day, month and year”.<br>
+For example, “Enter your date of birth and include a day, month and year”.
 
 #### If the date entered is not a real one
 
-Say "Enter a real [whatever it is]".<br>
-For example, "Enter a real date of birth".
-
+Say “Enter a real [whatever it is]”.<br>
+For example, “Enter a real date of birth”.
 
 #### If the date is in the future when it needs to be in the past
 
-Say "[whatever it is] must be in the past".<br>
-For example, "Date of birth must be in the past".
-
+Say “[whatever it is] must be in the past”.<br>
+For example, “Date of birth must be in the past”.
 
 #### If the date is in the future when it needs to be today or in the past
 
-Say "[whatever it is] must be today or in the past".<br>
-For example, "Date of birth must be today or in the past".
-
+Say “[whatever it is] must be today or in the past”.<br>
+For example, “Date of birth must be today or in the past”.
 
 #### If the date is in the past when it needs to be in the future
 
-Say "[whatever it is] must be in the future".<br>
-For example, "The date your course ends must be in the future".
-
+Say “[whatever it is] must be in the future”.<br>
+For example, “The date your course ends must be in the future”.
 
 #### If the date is in the past when it needs to be today or in the future
 
-Say "[whatever it is] must be today or in the future".<br>
-For example, "The date your course ends must be today or in the future".
-
+Say “[whatever it is] must be today or in the future”.<br>
+For example, “The date your course ends must be today or in the future”.
 
 #### If the date must be the same as or after another date
 
-Say "[whatever it is] must be the same as or after [date and optional description]".<br>
-For example, "The date your course ends must be the same as or after 1 September 2017 when you started the course".
-
+Say “[whatever it is] must be the same as or after [date and optional description]”.<br>
+For example, “The date your course ends must be the same as or after 1 September 2017 when you started the course”.
 
 #### If the date must be after another date
 
-Say "[whatever it is] must be after [date and optional description]".<br>
-For example, "The day your course ends must be after 1 September 2017".
-
+Say “[whatever it is] must be after [date and optional description]”.<br>
+For example, “The day your course ends must be after 1 September 2017”.
 
 #### If the date must be the same as or before another date
 
-Say "[whatever it is] must be  the same as or before [date and optional description]".<br>
-For example, "The date of Gordon’s last exam must be the same as or before 31 August 2017 when they left school".
-
+Say “[whatever it is] must be  the same as or before [date and optional description]”.<br>
+For example, “The date of Gordon’s last exam must be the same as or before 31 August 2017 when they left school”.
 
 #### If the date must be before another date
 
-Say "[whatever it is] must be before [date and optional description]".<br>
-For example, "The date of Gordon’s last exam must be the same as or before 31 August 2017".
+Say “[whatever it is] must be before [date and optional description]”.<br>
+For example, “The date of Gordon’s last exam must be the same as or before 31 August 2017”.
 
 
 #### If the date must be between two dates
 
-Say "[whatever it is] must be between [date] and [date and optional description]".<br>
-For example, "The date your contract started must be between 1 September 2017 and 30 September  2017 when you were self-employed".
-
+Say “[whatever it is] must be between [date] and [date and optional description]”.<br>
+For example, “The date your contract started must be between 1 September 2017 and 30 September  2017 when you were self-employed”.
 
 ## Research on this component
 
