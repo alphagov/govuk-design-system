@@ -104,8 +104,8 @@ CharacterCount.prototype.bindChangeEvents = function () {
   $textarea.addEventListener('keyup', this.updateCountMessage.bind(this))
 
   // Bind focus/blur events to start/stop polling
-  $textarea.addEventListener('focus', this.handleFocus.bind(this))
-  $textarea.addEventListener('blur', this.handleBlur.bind(this))
+  // $textarea.addEventListener('focus', this.handleFocus.bind(this))
+  // $textarea.addEventListener('blur', this.handleBlur.bind(this))
 }
 
 // Speech recognition software such as Dragon NaturallySpeaking will modify the
