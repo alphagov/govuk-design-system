@@ -33,31 +33,31 @@ There are 2 ways to use the radios component. You can use HTML or, if you are us
 
 When there are more than 2 options, radios should be stacked, like so:
 
-{{ example({group: "components", item: "radios", example: "stacked", html: true, nunjucks: true, open: true, size: "m"}) }}
+{{ example({group: "components", item: "radios", example: "stacked", html: true, nunjucks: true, open: false, size: "m"}) }}
 
 ### Inline radios
 
 If there are only 2 options, you can either stack the radios or display them inline, like so:
 
-{{ example({group: "components", item: "radios", example: "default", html: true, nunjucks: true, open: true, size: "s"}) }}
+{{ example({group: "components", item: "radios", example: "default", html: true, nunjucks: true, open: false, size: "s", id: "default-2"}) }}
 
 ### Radio items with hints
 
 You can add hints to radio items to provide additional information about the options.
 
-{{ example({group: "components", item: "radios", example: "hint", html: true, nunjucks: true, open: true, size: "s"}) }}
+{{ example({group: "components", item: "radios", example: "hint", html: true, nunjucks: true, open: false, size: "s"}) }}
 
 ### Radio items with a text divider
 
 If one or more of your radio options is different from the others, it can help users if you separate them using a text divider. The text is usually the word ‘or’.
 
-{{ example({group: "components", item: "radios", example: "divider", html: true, nunjucks: true, open: true, size: "s"}) }}
+{{ example({group: "components", item: "radios", example: "divider", html: true, nunjucks: true, open: false, size: "s"}) }}
 
 ### Conditionally revealing content
 
 You can add conditionally revealing content to radios, so users only see content when it’s relevant to them. For example, you could reveal an email address input only when a user chooses to be contacted by email.
 
-{{ example({group: "components", item: "radios", example: "conditional-reveal", html: true, nunjucks: true, open: true, size: "xl"}) }}
+{{ example({group: "components", item: "radios", example: "conditional-reveal", html: true, nunjucks: true, open: false, size: "xl"}) }}
 
 Keep it simple. If you need to add a lot of content, consider showing it on the next page in the process instead.
 

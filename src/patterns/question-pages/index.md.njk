@@ -42,17 +42,23 @@ Make sure the back link takes users to the previous page and that it still works
 
 Page headings can be statements or questions.
 
-If you’re only asking for one piece of information on a page, make the question the page heading.
-
-For example:
-
-{{ example({group: "patterns", item: "question-pages", example: "postcode", html: true, nunjucks: true, open: true}) }}
-
 If you need to ask for multiple related things on a page, use a statement as the heading.
 
-For example:
+{{ example({group: "patterns", item: "question-pages", example: "passport", html: true, nunjucks: true, open: false}) }}
 
-{{ example({group: "patterns", item: "question-pages", example: "passport", html: true, nunjucks: true, open: true}) }}
+If you only asking for one piece of information per page, you can set the contents of the `<label>` or `<legend>` as the page heading.
+
+This is good practice as it means that users of screen readers will only hear the contents once.
+
+Read more about why and [how to set legends and labels as page headings](https://design-system.service.gov.uk/get-started/labels-legends-headings/) or see examples below.
+
+#### Legend as page heading
+
+{{ example({group: "patterns", item: "question-pages", example: "date-of-birth", html: true, nunjucks: true, open: false}) }}
+
+#### Label as a page heading
+
+{{ example({group: "patterns", item: "question-pages", example: "postcode", html: true, nunjucks: true, open: false}) }}
 
 Don’t duplicate the same page heading across multiple pages.
 
@@ -60,7 +66,7 @@ The page heading should relate specifically to the information being asked for o
 
 If you need to show the high-level section, you can use the `govuk-caption` style.
 
-For example, ‘About you’:
+For example, ‘About you’
 
 {{ example({group: "patterns", item: "question-pages", example: "section-headings", html: true, open: true}) }}
 
@@ -77,7 +83,7 @@ Start by testing your form without a progress indicator to see if it’s simple 
 
 Try improving the order, type or number of questions before adding a progress indicator. If people still have difficulty, try adding a simple step or question indicator like this one.
 
-{{ example({group: "patterns", item: "question-pages", example: "progress", html: true, nunjucks: true, open: true}) }}
+{{ example({group: "patterns", item: "question-pages", example: "progress", html: true, nunjucks: true, open: false}) }}
 
 Only include the total number of questions if you can do so reliably. As the user moves through the form, make sure the indicator updates to tell them which question they are on and the total number remaining.
 
