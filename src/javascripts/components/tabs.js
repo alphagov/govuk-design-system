@@ -19,6 +19,26 @@ var Tabs = {
     $example.find('.js-tabs__container').hide().attr('aria-hidden', 'true')
   },
 
+  // Attach aria attributes on load based on whether tabs have been set to open or closed
+  attachAriaAttributes: function (container) {
+    // Check if we have an id
+    if (!container) {
+      console.error('container is undefined')
+      return
+    }
+
+    var $example = $(container).parent()
+    var isTabOpen = $example.find('.js-tabs__item a').attr('aria-expanded')
+
+    if (!isTabOpen) {
+      $example.find('.js-tabs__item a').attr('aria-expanded', 'false')
+      $example.find('.js-tabs__container').hide().attr('aria-hidden', 'true')
+    } else {
+      $example.find('.js-tabs__item a').attr('aria-expanded', 'true')
+      $example.find('.js-tabs__container').hide().attr('aria-hidden', 'false')
+    }
+  },
+
   // Activate current tab
   activateAndToggleCurrentTab: function (id) {
     // Check if we have an id
@@ -89,7 +109,7 @@ var Tabs = {
       if (tabsContainer.length > 0 && !tabsContainer.hasClass('js-tabs__container--no-tabs')) {
         // Hide all containers
         tabsContainer.hide()
-
+        Tabs.attachAriaAttributes(tabsContainer)
         // Add close button to each container
         tabsContainer.append('<button class="app-tabs__close js-tabs__close">Close</button>')
         tabsContainer.addClass('app-tabs__container--with-close-button')
