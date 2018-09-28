@@ -15,8 +15,7 @@ Copy.prototype.init = function () {
   $button.setAttribute('aria-live', 'assertive')
   $button.textContent = 'Copy'
 
-  var $parent = $module.parentNode
-  $parent.insertBefore($button, $parent.firstChild)
+  $module.insertBefore($button, $module.firstChild)
   this.copyAction()
 }
 Copy.prototype.copyAction = function () {
