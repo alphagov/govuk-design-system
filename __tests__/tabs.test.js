@@ -39,12 +39,12 @@ describe('Component page', () => {
         expect(toggleButtonIsOpen).toBeTruthy()
       })
 
-      it('should indicate the selected state of the tab using aria-selected', async () => {
+      it('should indicate the selected state of the tab using aria-expanded', async () => {
         await page.goto(baseUrl + '/components/back-link/', { waitUntil: 'load' })
 
         await page.click('.js-tabs__item a')
 
-        const toggleButtonAriaExpanded = await page.evaluate(() => document.body.querySelector('.js-tabs__item a').getAttribute('aria-selected'))
+        const toggleButtonAriaExpanded = await page.evaluate(() => document.body.querySelector('.js-tabs__item a').getAttribute('aria-expanded'))
         expect(toggleButtonAriaExpanded).toBe('true')
       })
     })
@@ -60,15 +60,46 @@ describe('Component page', () => {
         const toggleButtonIsOpen = await page.evaluate(() => document.body.querySelector('.app-tabs__item').classList.contains('app-tabs__item--current'))
         expect(toggleButtonIsOpen).toBeFalsy()
       })
+    })
 
-      it('should not indicate the selected state of the tab using aria-selected', async () => {
+    describe('when the tab closed and clicked twice', () => {
+      it('should indicate the closed state of the tab', async () => {
+        await page.setJavaScriptEnabled(true)
         await page.goto(baseUrl + '/components/back-link/', { waitUntil: 'load' })
 
         await page.click('.js-tabs__item a')
-        await page.click('.js-tabs__close')
+        await page.click('.js-tabs__item a')
 
-        const toggleButtonAriaExpanded = await page.evaluate(() => document.body.querySelector('.js-tabs__item a').getAttribute('aria-selected'))
-        expect(toggleButtonAriaExpanded).toBeFalsy()
+        const toggleButtonIsOpen = await page.evaluate(() => document.body.querySelector('.app-tabs__item').classList.contains('app-tabs__item--current'))
+        expect(toggleButtonIsOpen).toBeFalsy()
+      })
+
+      it('should indicate the closed state by setting aria-expanded attribute to false', async () => {
+        await page.goto(baseUrl + '/components/back-link/', { waitUntil: 'load' })
+
+        await page.click('.js-tabs__item a')
+        await page.click('.js-tabs__item a')
+
+        const toggleButtonAriaExpanded = await page.evaluate(() => document.body.querySelector('.js-tabs__item a').getAttribute('aria-expanded'))
+        expect(toggleButtonAriaExpanded).toBe('false')
+      })
+    })
+  })
+})
+
+describe('Patterns page', () => {
+  describe('when JavaScript is available', () => {
+    describe('when "hideTab" parameter is set to true', () => {
+      it('the tab list is not rendered', async () => {
+        await page.goto(baseUrl + '/patterns/question-pages/', { waitUntil: 'load' })
+        const expandedTabContentWithNoTab = await page.evaluate(() => document.body.querySelector('#example-section-headings-open .app-tabs'))
+        expect(expandedTabContentWithNoTab).toBeFalsy()
+      })
+
+      it('close button is not shown on the code block', async () => {
+        await page.goto(baseUrl + '/patterns/question-pages/', { waitUntil: 'load' })
+        const expandedTabContentWithNoTabCloseButton = await page.evaluate(() => document.body.querySelector('.js-tabs__container--no-tabs .js-tabs__close'))
+        expect(expandedTabContentWithNoTabCloseButton).toBeFalsy()
       })
     })
   })
