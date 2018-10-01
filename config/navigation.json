@@ -20,6 +20,7 @@
   },
   {
     "label": "Community",
-    "url": "community"
+    "url": "community",
+    "includeInSearch": true
   }
 ]
