@@ -102,6 +102,30 @@ Search.prototype.resultTemplate = function (result) {
         elem.appendChild(aliasesContainer)
       }
     }
+
+    if (result.backlog) {
+      //elem.textContent = ""
+      var backlog = result.backlog.split(',').map(function (item) {
+        return item.trim()
+      })
+      var matchedBacklog = []
+      // only show a matching backlog item if there are no matches in the title
+      if (resultTitle.toLowerCase().indexOf(searchQuery) === -1) {
+        // it would be confusing to show the user
+        // backlog items that don't match the typed query
+        matchedBacklog = backlog.filter(function (backlog) {
+          return backlog.toLowerCase().indexOf(searchQuery) !== -1
+        })
+      }
+      if (matchedBacklog.length > 0) {
+        //var backlogContainer = document.createElement('span')
+        //backlogContainer.className = 'app-site-search__aliases'
+        elem.textContent = matchedBacklog.join(', ')
+        //elem.appendChild(backlogContainer)
+      }
+      result.section = "Backlog"
+    }
+
     var section = document.createElement('span')
     section.className = 'app-site-search--section'
     section.innerHTML = result.section
