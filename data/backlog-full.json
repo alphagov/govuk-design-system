@@ -1,0 +1,945 @@
+{
+  "data": {
+    "repository": {
+      "project": {
+        "name": "GOV.UK Design System Community Backlog",
+        "columns": {
+          "nodes": [
+            {
+              "name": "Intro",
+              "cards": {
+                "edges": [
+                  {
+                    "node": {
+                      "note": "This is a community backlog of components and patterns being developed by the government community for the GOV.UK Design System.\r\n\r\n**[How to contribute](https://github.com/alphagov/govuk-design-system-backlog/blob/master/docs/CONTRIBUTING.md)**",
+                      "content": null
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Proposed",
+              "cards": {
+                "edges": [
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Moving a user from offline to online",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/127",
+                        "lastEditedAt": "2018-03-07T14:34:24Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Lots of services send letters to users with a unique code, which the user then enters to identify themself.</p>\n<p>There could also be a very similar pattern called something like \"Allowing a user to share data about themself\" which would also use a code.</p>\n<h2>Why</h2>\n<p>This is a very similar thing that is done differently across government, for example, the vehicle tax service uses a 16 digit number:</p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://user-images.githubusercontent.com/4106955/37097636-e2d94660-2213-11e8-89f2-657ac205abad.png\"><img src=\"https://user-images.githubusercontent.com/4106955/37097636-e2d94660-2213-11e8-89f2-657ac205abad.png\" alt=\"image\" style=\"max-width:100%;\"></a></p>\n<p>Whereas other services use smaller amounts of digits. One of the things I think this pattern should do is recommend an amount of digits, amongst other things that would be important to consider – Such as display the code clearly on the page.</p>\n<p>There's a bit of work that's needed here to look at some different ways this is done and find the best way.</p>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Showing text changes",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/126",
+                        "lastEditedAt": "2018-03-06T17:19:26Z",
+                        "bodyHTML": "<h1>Showing text changes</h1>\n<h2>What</h2>\n<p>An insertion and deletion pattern we're using to show changes in a text.</p>\n<h2>Why</h2>\n<p>On the Digital Marketplace we have used this pattern in 2 places and I've spoken to other teams within GDS who have prototyped similar designs.</p>\n<p>See a related discussion on dropbox-paper: <a href=\"https://paper.dropbox.com/doc/Document-history-xF4y6zErHipG4hJwmTfMo\" rel=\"nofollow\">https://paper.dropbox.com/doc/Document-history-xF4y6zErHipG4hJwmTfMo</a></p>\n<p>This pattern needs usability and accessibility testing.</p>\n<h2>Code</h2>\n<p>Insertion background colour: #acf2bd<br>\nDeletion background colour: #fdb8c0</p>\n<p>We have hidden text to announce inserted or removed text, adding a ',' slows the screenreader down. I think we need to understand more about how to announce inserted or deleted content in a user friendly way for screen reader users.</p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://user-images.githubusercontent.com/3798032/37046203-acf0e652-215f-11e8-8e13-84e85bafa298.png\"><img width=\"394\" alt=\"screen shot 2018-03-06 at 16 42 34\" src=\"https://user-images.githubusercontent.com/3798032/37046203-acf0e652-215f-11e8-8e13-84e85bafa298.png\" style=\"max-width:100%;\"></a></p>\n<h2>Screenshots</h2>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://user-images.githubusercontent.com/3798032/37046190-a0918ff6-215f-11e8-8d6c-3c47b286e8c0.png\"><img width=\"1162\" alt=\"screen shot 2018-03-06 at 16 14 43\" src=\"https://user-images.githubusercontent.com/3798032/37046190-a0918ff6-215f-11e8-8d6c-3c47b286e8c0.png\" style=\"max-width:100%;\"></a></p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://user-images.githubusercontent.com/3798032/37046159-8f93feb4-215f-11e8-88bc-998233d72525.gif\"><img src=\"https://user-images.githubusercontent.com/3798032/37046159-8f93feb4-215f-11e8-88bc-998233d72525.gif\" alt=\"mar-06-2018 16-19-18\" style=\"max-width:100%;\"></a></p>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": "Items that have been proposed for the Design System. [Find out more](https://github.com/alphagov/govuk-design-system-backlog/blob/master/docs/CONTRIBUTING.md#proposing-new-styles-components-or-patterns)",
+                      "content": null
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Border styles",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/135",
+                        "lastEditedAt": null,
+                        "bodyHTML": "<h2>What</h2>\n<p>Guidance and examples showing the available border styles in the Design System and when to use them.</p>\n<h2>Why</h2>\n<p>We use a range of border styles and colours on GOV.UK. We don't currently offer much in the way of guidance on how or when to use each style. This makes it harder for designers of new components to know how to style them, and increases the chance that components will have an inconsistent design.</p>\n<h2>Anything else</h2>\n<p>[ Examples to follow ]</p>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Search box",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/132",
+                        "lastEditedAt": "2018-04-04T10:18:54Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Help users search through large collections of information or documents using a search box component. This is potentially part of a pattern for <a href=\"https://github.com/alphagov/govuk-design-system-backlog/issues/88\">'search for something'</a></p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://user-images.githubusercontent.com/33149131/38259558-3f516644-375d-11e8-9ef5-bcf85e08f038.png\"><img src=\"https://user-images.githubusercontent.com/33149131/38259558-3f516644-375d-11e8-9ef5-bcf85e08f038.png\" alt=\"screen shot 2018-04-03 at 16 36 52\" style=\"max-width:100%;\"></a></p>\n<h2>Why</h2>\n<p>Search boxes are used in many government services - including:</p>\n<ul>\n<li><a href=\"https://www.gov.uk/\" rel=\"nofollow\">GOV.UK</a></li>\n<li><a href=\"https://beta.companieshouse.gov.uk/\" rel=\"nofollow\">Companies House</a></li>\n<li><a href=\"https://www.gov.uk/find-your-local-park\" rel=\"nofollow\">Find your local park</a> (variation)</li>\n</ul>\n<blockquote>\n<ul>\n<li>What evidence do you have that it meets the needs of the users of those services?</li>\n</ul>\n</blockquote>\n<h2>Anything else</h2>\n<p><a href=\"https://paper.dropbox.com/doc/Search-boxes-WVuvy5JmNJLK9w4Tq4QHC\" rel=\"nofollow\">Search boxes: Dropbox paper</a><br>\n<a href=\"http://govuk-static.herokuapp.com/component-guide/search\" rel=\"nofollow\">Search: GOV.UK Publishing</a><br>\n<a href=\"https://dwp-patterns.herokuapp.com/search\" rel=\"nofollow\">Search: DWP design patterns</a></p>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Contents links",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/115",
+                        "lastEditedAt": "2018-02-22T11:00:56Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>A list of navigation links to the headings on a page or the pages in a guide on GOV.UK:</p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://user-images.githubusercontent.com/1590604/36030791-71dd4f92-0da0-11e8-8ceb-dd5c0ce923cb.png\"><img src=\"https://user-images.githubusercontent.com/1590604/36030791-71dd4f92-0da0-11e8-8ceb-dd5c0ce923cb.png\" alt=\"image\" style=\"max-width:100%;\"></a></p>\n<h2>Why</h2>\n<ul>\n<li>is this component needed on multiple services on GOV.UK?</li>\n<li>does the component meet the needs that it's intended to?</li>\n<li>is there already something in the Design System that meets these needs?</li>\n</ul>\n<h2>Anything else</h2>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Filter a list",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/133",
+                        "lastEditedAt": null,
+                        "bodyHTML": "<p>Also known as: faceted search</p>\n<h2>What</h2>\n<p>Help users filter a list of items for to see things that are relevant to their task. For example filtering search results.</p>\n<h2>Why</h2>\n<p>Services that use this pattern:</p>\n<ul>\n<li><a href=\"https://www.gov.uk/search?q=tax\" rel=\"nofollow\">GOV.UK search</a></li>\n<li>GOV.UK Pay Admin</li>\n<li>GOV.UK Notify Admin</li>\n</ul>\n<h2>Anything else</h2>\n<ul>\n<li><a href=\"https://paper.dropbox.com/doc/Search-filters-VxP46U2qgjrYnNwqXakKJ\" rel=\"nofollow\">Discussion on Design Wiki</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Additional information",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/125",
+                        "lastEditedAt": "2018-03-05T10:23:49Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Help users provide additional information that might support an application or other transaction.</p>\n<h2>Why</h2>\n<p>This is a fairly common pattern in government services, and is often misused, so we need to provide guidance around it.</p>\n<h2>Anything else</h2>\n<p><a href=\"https://paper.dropbox.com/doc/Additional-information-E2pg3EVP8fNcAPbSBTfPC\" rel=\"nofollow\">Draft guidance on Dropbox paper</a></p>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Before you start page",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/112",
+                        "lastEditedAt": "2018-02-15T09:20:44Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>An information page that immediately follows a start page. It helps users understand what they need to do before they start using the service.</p>\n<h2>Why</h2>\n<p>Qualitative research for Carer's Allowance found that GOV.UK content alone wasn't making people aware that applying for Carer's Allowance may (in certain circumstances) affect the benefits of the person they care for. Data analysis found that people were dropping out of the service when this was made clear to them later in their journey.</p>\n<h2>Anything else</h2>\n<ul>\n<li><a href=\"https://dwp-patterns.herokuapp.com/beforeyoustart\" rel=\"nofollow\">Before you start: DWP design patterns</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Callout text",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/123",
+                        "lastEditedAt": "2018-02-22T10:59:50Z",
+                        "bodyHTML": "<p>AKA: Highlight text, Inset text</p>\n<h2>What</h2>\n<p>Draw attention to or visually distinguish text on a page:</p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://user-images.githubusercontent.com/1590604/36040552-b3e10768-0dbd-11e8-9019-a14c2d935b57.png\"><img src=\"https://user-images.githubusercontent.com/1590604/36040552-b3e10768-0dbd-11e8-9019-a14c2d935b57.png\" alt=\"image\" style=\"max-width:100%;\"></a></p>\n<h2>Why</h2>\n<p>We had planned to deprecate this component as there was confusion over it's appropriate use. However, during user research participants brought many examples of pages using this component, so it feels like we should review again.</p>\n<h2>Anything else</h2>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Back-to-top link",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/5",
+                        "lastEditedAt": "2018-02-09T14:52:09Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>A link to help users quickly navigate back to the top of long pages of content:</p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://user-images.githubusercontent.com/1590604/36030398-f7ec3794-0d9e-11e8-8341-c2938d6be8f8.png\"><img src=\"https://user-images.githubusercontent.com/1590604/36030398-f7ec3794-0d9e-11e8-8341-c2938d6be8f8.png\" alt=\"image\" style=\"max-width:100%;\"></a></p>\n<h2>Why</h2>\n<blockquote>\n<p>Explain why you think this should be added to the GOV.UK Design System.</p>\n<ul>\n<li>Is it needed by multiple services across government?</li>\n<li>Does it meets the needs of the users of those services?</li>\n<li>Could those needs be better met by something already in the Design System?</li>\n</ul>\n</blockquote>\n<h2>Anything else</h2>\n<p><a href=\"https://www.gov.uk/government/publications/financial-sanctions-consolidated-list-of-targets/consolidated-list-of-targets#contents\" rel=\"nofollow\">There's an example at the bottom of this page on GOV.UK</a></p>\n<h2>To do</h2>\n<ul>\n<li>Analyse analytics from GOV.UK to measure usage against page length</li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Compare options",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/114",
+                        "lastEditedAt": "2018-02-22T11:00:37Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Help users compare different options and make an informed choice between them.</p>\n<h2>Why</h2>\n<ul>\n<li>What evidence do you have that it's needed by multiple services across government?</li>\n<li>Have you checked that it doesn't already exist in the GOV.UK Design System?</li>\n</ul>\n<h2>Anything else</h2>\n<ul>\n<li>Example: <a href=\"https://github.com/hmrc/design-patterns/issues/47\">Compare: HMRC design patterns</a></li>\n<li>Example: Home Office Visas</li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Document metadata",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/116",
+                        "lastEditedAt": "2018-02-22T11:01:46Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Metadata about a document. For example, author, owner, document type, date last edited etc.</p>\n<h2>Why</h2>\n<p>This is used on multiple services:</p>\n<ul>\n<li><a href=\"https://www.gov.uk//guidance/annual-tax-summary\" rel=\"nofollow\">GOV.UK Annual tax summary</a></li>\n<li><a href=\"https://www.ethnicity-facts-figures.service.gov.uk/crime-justice-and-the-law/policing/stop-and-search/latest\" rel=\"nofollow\">Ethnicity facts and figures</a></li>\n</ul>\n<h2>Anything else</h2>\n<ul>\n<li>Related pattern: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load issue title\" data-id=\"288534162\" data-permission-text=\"Issue title is private\" data-url=\"https://github.com/alphagov/govuk-design-system-backlog/issues/105\" data-hovercard-url=\"/alphagov/govuk-design-system-backlog/issues/105/hovercard\" data-hovercard-type=\"issue\" href=\"https://github.com/alphagov/govuk-design-system-backlog/issues/105\">#105</a> Timeline</li>\n<li>Related pattern: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load issue title\" data-id=\"288116555\" data-permission-text=\"Issue title is private\" data-url=\"https://github.com/alphagov/govuk-design-system-backlog/issues/19\" data-hovercard-url=\"/alphagov/govuk-design-system-backlog/issues/19/hovercard\" data-hovercard-type=\"issue\" href=\"https://github.com/alphagov/govuk-design-system-backlog/issues/19\">#19</a> Document history</li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Feedback link",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/117",
+                        "lastEditedAt": "2018-02-22T11:03:07Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Let users leave feedback about a page</p>\n<h2>Why</h2>\n<ul>\n<li>What evidence do you have that it's needed by multiple services across government?</li>\n</ul>\n<h2>Anything else</h2>\n<ul>\n<li>Example: <a href=\"https://www.gov.uk/take-pet-abroad\" rel=\"nofollow\">GOV.UK - Take a pet abroad</a></li>\n<li>Example: <a href=\"https://www.gov.uk/service-manual/design/email-addresses\" rel=\"nofollow\">GOV.UK Service Manual - Email addresses</a></li>\n<li><a href=\"https://paper.dropbox.com/doc/Feedback-links-Zb9L2Ih5gSA0Bwg7pql9u\" rel=\"nofollow\">Design System Wiki discussion</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Department logos",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/118",
+                        "lastEditedAt": "2018-02-22T11:03:23Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Logos for government departments.</p>\n<h2>Why</h2>\n<ul>\n<li>What evidence do you have that it's needed by multiple services across government?</li>\n</ul>\n<h2>Anything else</h2>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Share links on social media",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/119",
+                        "lastEditedAt": "2018-02-22T11:04:13Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Help users share or follow government content on social media platforms like Twitter and Facebook.</p>\n<h2>Why</h2>\n<p>Used on:</p>\n<ul>\n<li><a href=\"https://petition.parliament.uk/petitions/201947\" rel=\"nofollow\">Petition Parliament</a></li>\n<li><a href=\"https://www.gov.uk/government/news/imperial-war-museum-appointments\" rel=\"nofollow\">GOV.UK - Imperial War Museum Appointments</a></li>\n</ul>\n<h2>Anything else</h2>\n<ul>\n<li>Read draft guidance <a href=\"https://paper.dropbox.com/doc/Social-media-links-irvaCCV4pkYBbVXkKxkW6\" rel=\"nofollow\">Social media links: Dropbox Paper</a></li>\n</ul>"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "To do",
+              "cards": {
+                "edges": [
+                  {
+                    "node": {
+                      "note": "Items that the working group have agreed will go in the Design System. [Find out more](https://github.com/alphagov/govuk-design-system-backlog/blob/master/docs/CONTRIBUTING.md#proposing-new-styles-components-or-patterns)",
+                      "content": null
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Alerts",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/2",
+                        "lastEditedAt": "2018-04-05T18:07:03Z",
+                        "bodyHTML": "<p>Also known as: notification banner</p>\n<h2>What</h2>\n<p>An on-screen alert to notify users that something important has happened.</p>\n<p>For example:</p>\n<ul>\n<li>an action was successful</li>\n<li>an action was not successful</li>\n<li>a deadline is imminent</li>\n<li>a payment is overdue</li>\n</ul>\n<h2>Why</h2>\n<h2>Anything else</h2>\n<ul>\n<li>Digital Marketplace has a version of this called \"Notification banner\" <a href=\"http://alphagov.github.io/digitalmarketplace-frontend-toolkit/notification-banner.html\" rel=\"nofollow\">Notification banners: Digital Marketplace style guide</a> (also used on GOV.UK Notify and GOV.UK Publisher)</li>\n<li>DWP has a version of this <a href=\"https://dwp-patterns.herokuapp.com/alerts\" rel=\"nofollow\">Alerts and notifications: DWP design patterns</a></li>\n<li>Rural payments has a version of this <a href=\"http://rural-payments-styleguide.herokuapp.com/alerts/\" rel=\"nofollow\">Alerts: Rural Payments Styleguide</a></li>\n<li>HMRC has a version of this called \"Overdue\" <a href=\"https://github.com/hmrc/design-patterns/issues/14\">Overdue: HMRC design patterns</a></li>\n<li>GOV.UK Publishing has a similar component used to let users know the status of documents, for example if they're withdrawn by the current government <a href=\"http://government-frontend.herokuapp.com/component-guide/notice\" rel=\"nofollow\">notice</a>, also <a href=\"https://government-frontend.herokuapp.com/component-guide/banner\" rel=\"nofollow\">banner</a></li>\n<li>Read discussion about \"Warnings, notifications and alerts\" <a href=\"https://paper.dropbox.com/doc/Warnings-notifications-and-alerts-evalKLOaO6okntGi12Qkv\" rel=\"nofollow\">Dropbox paper</a></li>\n<li>Read discussion about \"in-service notifications &amp; alerts\" <a href=\"https://paper.dropbox.com/doc/In-service-notifications-and-alerts-XMfiGjjgDxBvLHJUPJ6aN\" rel=\"nofollow\">Dropbox paper</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Book an appointment",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/6",
+                        "lastEditedAt": "2018-02-20T10:46:49Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Help users book things like meetings, appointments or annual leave, based on criteria of their choosing.</p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://user-images.githubusercontent.com/33149131/36419958-59318506-162b-11e8-9202-87c23e021f9e.png\"><img src=\"https://user-images.githubusercontent.com/33149131/36419958-59318506-162b-11e8-9202-87c23e021f9e.png\" alt=\"screen shot 2018-02-20 at 10 46 26\" style=\"max-width:100%;\"></a></p>\n<h2>Why</h2>\n<h2>Anything else</h2>\n<p>This pattern is used by the following departments:</p>\n<ul>\n<li>MoJ - <a href=\"https://www.gov.uk/prison-visits\" rel=\"nofollow\">Visit someone in prison</a></li>\n<li>NHS - NHS Alpha</li>\n<li>Home Office - Bed management</li>\n<li>Foreign Office - <a href=\"https://www.consular-appointments.service.gov.uk\" rel=\"nofollow\">Book a consular appointment</a></li>\n<li>DfE - Digital first careers service</li>\n<li><a href=\"https://paper.dropbox.com/doc/Book-an-appointment-creK2LiDJPEo3XRFH1z4c\" rel=\"nofollow\">Read the draft guidance on Dropbox Paper</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Business details",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/7",
+                        "lastEditedAt": "2018-02-20T10:48:22Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Help users provide information about a business. Some types include:</p>\n<ul>\n<li>sole trader</li>\n<li>partnership</li>\n<li>limited liability company</li>\n<li>limited liability partnership</li>\n<li>unincorporated association</li>\n<li>charity</li>\n<li>cooperative</li>\n</ul>\n<h2>Why</h2>\n<h2>Anything else</h2>\n<ul>\n<li><a href=\"https://paper.dropbox.com/doc/Business-type-UHCpoFo1hw8MsBgP4WUL3\" rel=\"nofollow\">Read draft guidance on 'business type' on Dropbox Paper</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Card",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/113",
+                        "lastEditedAt": "2018-02-20T14:26:00Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Panels of structured content (eg. image, title, description, link), typically organised in rows or grids:</p>\n<h3>Example 1: Home Office</h3>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://user-images.githubusercontent.com/1590604/36030460-40f1067c-0d9f-11e8-870f-bcdffc79ed7e.png\"><img src=\"https://user-images.githubusercontent.com/1590604/36030460-40f1067c-0d9f-11e8-870f-bcdffc79ed7e.png\" alt=\"image\" style=\"max-width:100%;\"></a></p>\n<h3>Example 2: HMRC Tax Platform</h3>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://user-images.githubusercontent.com/660238/34210504-f1e091bc-e58d-11e7-8182-4fac81f8b0ba.png\"><img src=\"https://user-images.githubusercontent.com/660238/34210504-f1e091bc-e58d-11e7-8182-4fac81f8b0ba.png\" alt=\"image\" style=\"max-width:100%;\"></a></p>\n<h3>Example 3: GOV.UK Notify</h3>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://user-images.githubusercontent.com/1590604/36268385-3aa153b6-126e-11e8-997d-1beabb0c05df.png\"><img src=\"https://user-images.githubusercontent.com/1590604/36268385-3aa153b6-126e-11e8-997d-1beabb0c05df.png\" alt=\"image\" style=\"max-width:100%;\"></a></p>\n<h3>Example 4: GOV.UK Home page</h3>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://user-images.githubusercontent.com/1590604/36308826-1986ef40-131a-11e8-9caa-3b6644ad0c39.png\"><img src=\"https://user-images.githubusercontent.com/1590604/36308826-1986ef40-131a-11e8-9caa-3b6644ad0c39.png\" alt=\"image\" style=\"max-width:100%;\"></a></p>\n<h2>Why</h2>\n<p>Versions of this pattern are already being used in various government services (see examples above).</p>\n<p><a href=\"https://github.com/hmrc/design-patterns/issues/137\">HMRC have some evidence</a> that adopting this pattern has improved the usability of their tax platform.</p>\n<p>This specific component doesn't exist, but it's possible that it could be build from GOV.UK Frontend styles and the panel component.</p>\n<h2>Anything else</h2>\n<p><a href=\"https://home-office-digital-patterns.herokuapp.com/components/cards\" rel=\"nofollow\">Cards: Home Office design system</a><br>\n<a href=\"https://github.com/hmrc/design-patterns/issues/137\">Cards: HMRC Design Patterns</a></p>\n<h2>Recommendations</h2>\n<p>This proposal was reviewed by a panel of designers from GDS, DVLA, HMRC, DWP and Home Office on 15 Feb 2018.</p>\n<p>The panel agreed that the pattern should be included in the GOV.UK Design System with the following recommendations.</p>\n<h3>Guidance</h3>\n<p>There were concerns that cards are often used to compensate for poor information hierarchy or content design.</p>\n<p>Contributors to this pattern should establish what user needs the pattern is designed to meet and write appropriate guidance explaining when to use, and not to use, the pattern.</p>\n<h3>Design</h3>\n<p>Cards are already being used in many government services, but quite inconsistently. When used appropriately, cards are a good way of chunking up related content, data and links. They can also be used to highlight content on a page.</p>\n<p>A consistent style and structure for cards should be established. A number of variants should be provided, with guidance for their appropriate use.</p>\n<h3>Accessibility</h3>\n<p>Close attention should be paid to the accessibility of the pattern, in particular colour contrast and the affordance of links.</p>\n<h3>Component or pattern</h3>\n<p>Consider whether Cards should be developed as a new component, or as a pattern built from existing styes and components.</p>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Contact preferences",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/11",
+                        "lastEditedAt": "2018-04-17T09:42:58Z",
+                        "bodyHTML": "<h2>What</h2>\n<ul>\n<li>when and how to contact users</li>\n<li>how to ask users for their preferred contact methods</li>\n<li>how to help users keep their contact details up-to-date</li>\n</ul>\n<h2>Why</h2>\n<p>Users of government services will often need contacting, to notify them of a decision or to update them on progress. How and when we do this should be consistent.</p>\n<h2>Anything else</h2>\n<ul>\n<li><a href=\"https://paper.dropbox.com/doc/9bt6nSGBcJDusHu6c46Ql\" rel=\"nofollow\">Read the draft guidance on Dropbox Paper</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Cookie banner",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/12",
+                        "lastEditedAt": "2018-02-20T12:06:44Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Help users manage their personal data by telling them when you store cookies on their device.</p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://user-images.githubusercontent.com/33149131/36423084-74e02d6a-1636-11e8-9099-60c8f804c96c.png\"><img src=\"https://user-images.githubusercontent.com/33149131/36423084-74e02d6a-1636-11e8-9099-60c8f804c96c.png\" alt=\"screen shot 2018-02-20 at 12 06 02\" style=\"max-width:100%;\"></a></p>\n<h2>Why</h2>\n<h2>Anything else</h2>\n<ul>\n<li><a href=\"https://paper.dropbox.com/doc/Cookie-page-and-banner-kOzwR5Y1dkepEwTFJYKZb\" rel=\"nofollow\">Read the draft guidance on Dropbox Paper</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Cookie page",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/13",
+                        "lastEditedAt": "2018-02-20T12:08:47Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Help users manage their personal data by telling them what information you store as cookies on their device. This pattern is related to the <a href=\"https://github.com/alphagov/govuk-design-system-backlog/issues/12\">Cookie banner component</a></p>\n<h2>Why</h2>\n<h2>Anything else</h2>\n<ul>\n<li><a href=\"https://paper.dropbox.com/doc/Cookie-page-and-banner-kOzwR5Y1dkepEwTFJYKZb\" rel=\"nofollow\">Read the draft guidance on Dropbox Paper</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Currency input",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/68",
+                        "lastEditedAt": "2018-02-20T12:13:08Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Help users enter an amount of money in a specified currency.</p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://user-images.githubusercontent.com/33149131/36423322-66b0445e-1637-11e8-99ca-e5aa20b46971.png\"><img src=\"https://user-images.githubusercontent.com/33149131/36423322-66b0445e-1637-11e8-99ca-e5aa20b46971.png\" alt=\"screen shot 2018-02-20 at 12 12 50\" style=\"max-width:100%;\"></a></p>\n<h2>Why</h2>\n<h2>Anything else</h2>\n<ul>\n<li><a href=\"https://paper.dropbox.com/doc/Currency-input-Zsbea0fAPzUXbYOSYcieW\" rel=\"nofollow\">Read the draft guidance in Dropbox Paper</a></li>\n<li>Example: <a href=\"https://govuk-currency-input.herokuapp.com/\" rel=\"nofollow\">view demo here</a></li>\n<li>Get code from <a href=\"https://github.com/hannalaakso/accessible-currency-input\">here</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Submit a photo",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/120",
+                        "lastEditedAt": "2018-02-20T14:17:08Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Help users submit a photo of themselves to a service by uploading it or using the camera on their device. Ask users questions to determine the best option for them.</p>\n<p>Note: In the future it will hopefully be possible to use HMPO's passport photos instead of this.</p>\n<h2>Why</h2>\n<p>This pattern is being used by DfT in the Apply for a blue badge Alpha.</p>\n<p>Users are required to upload a photo of themselves for their bus pass. The easiest way for most users to do this is by taking a photo with their device.</p>\n<h2>Anything else</h2>\n<p>I've documented <a href=\"https://verify-local-patterns.herokuapp.com/service-patterns/concessionary-travel/photo/design\" rel=\"nofollow\">the pattern as used in the concessionary travel service</a>.</p>\n<p>The research on this pattern is documented <a href=\"https://verify-local-patterns.herokuapp.com/service-patterns/concessionary-travel/photo/research\" rel=\"nofollow\">here</a>.</p>\n<p><a href=\"https://github.com/alphagov/verify-local-patterns/tree/master/app/views/service-patterns/concessionary-travel/example-service\">All of relevant HTML is here</a>. (Sorry I haven't organised it better).</p>\n<p><a href=\"https://github.com/alphagov/verify-local-patterns/blob/master/app/assets/javascripts/take-photo-webcam.js\">js file 1</a><br>\n<a href=\"https://github.com/alphagov/verify-local-patterns/blob/master/app/assets/javascripts/take-photo.js\">js file 2</a></p>\n<h2>Recommendations</h2>\n<p>This proposal was reviewed by a panel of designers from GDS, DVLA, HMRC, DWP and Home Office on 15 Feb 2018.</p>\n<p>The panel agreed that the pattern should be included in the GOV.UK Design System with the following recommendations.</p>\n<h3>Pattern scope</h3>\n<p>Make sure that the scope of the pattern reflects the most common user tasks. It might be useful to broaden it and make it more generic, or alternatively break it down into a group of smaller more specific sub-patterns.</p>\n<h3>Photo requirements</h3>\n<p>Different services have different requirements for which images they will accept. The pattern should acknowledge this and give appropriate guidance.</p>\n<p>For example, DVLA need a ‘recent and true’ likeness’ for their photos, but passport photos aren’t always recent. Similarly, passport photos have requirements that don’t apply to other services.</p>\n<h3>Technical guidance</h3>\n<p>The developer of this patterns should consider how much guidance can realistically be provided about transferring photos from all the different types of device.</p>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Case summary page",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/109",
+                        "lastEditedAt": "2018-02-20T10:49:02Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Help case workers get an overview of a new or unfamiliar case.</p>\n<h2>Why</h2>\n<h2>Anything else:</h2>\n<ul>\n<li>Home Office has a version of this <a href=\"https://github.com/UKHomeOffice/design-system/issues/37\">Case summary: Home Office design system</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Code block",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/8",
+                        "lastEditedAt": "2018-02-20T10:55:34Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>A block of formatted, colour-coded code.</p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://user-images.githubusercontent.com/33149131/36420329-915e4e7c-162c-11e8-97e8-d3c0c15ad325.png\"><img src=\"https://user-images.githubusercontent.com/33149131/36420329-915e4e7c-162c-11e8-97e8-d3c0c15ad325.png\" alt=\"screen shot 2018-02-20 at 10 55 07\" style=\"max-width:100%;\"></a></p>\n<h2>Why</h2>\n<h2>Anything else</h2>\n<ul>\n<li>Example: <a href=\"https://govuk-design-system-production.cloudapps.digital/components/button/\" rel=\"nofollow\">View an example in the GOV.UK Design System</a></li>\n<li>View code <a href=\"https://github.com/alphagov/govuk-design-system/blob/c46bbd35d949f29bd536ba39e83fe41747a571ff/src/stylesheets/components/_highlight.scss\">Sass styles for code highlighting in GOV.UK Design System</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Confirm an action",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/9",
+                        "lastEditedAt": "2018-02-20T10:56:39Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Ask users to confirm that they want to perform a serious or irreversible action. For example delete an account or cancel an application.</p>\n<h2>Why</h2>\n<h2>Anything else</h2>\n<p>Not yet available.</p>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Contact a department",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/10",
+                        "lastEditedAt": "2018-02-20T10:58:03Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Help users contact you on their preferred channel.</p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://user-images.githubusercontent.com/33149131/36420420-eb32af9c-162c-11e8-8df6-3e92e885ef1e.png\"><img src=\"https://user-images.githubusercontent.com/33149131/36420420-eb32af9c-162c-11e8-8df6-3e92e885ef1e.png\" alt=\"screen shot 2018-02-20 at 10 57 47\" style=\"max-width:100%;\"></a></p>\n<h2>Why</h2>\n<h2>Anything else</h2>\n<ul>\n<li>HMRC has a version of this <a href=\"https://github.com/hmrc/design-patterns/issues/98\">Sign post: HMRC design patterns</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Country",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/14",
+                        "lastEditedAt": "2018-04-05T14:30:53Z",
+                        "bodyHTML": "<p>AKA: Country picker</p>\n<p><strong>This component depends on the <a href=\"https://github.com/alphagov/govuk-design-system-backlog/issues/4\">Autocomplete component</a> being ready</strong></p>\n<h2>What</h2>\n<p>A country selector based on the <a href=\"https://github.com/alphagov/govuk-design-system-backlog/issues/4\">autocomplete component</a> and the <a href=\"https://country.register.gov.uk/\" rel=\"nofollow\">countries register</a>.</p>\n<h2>Why</h2>\n<h2>Anything else</h2>\n<ul>\n<li>HMRC has a version of this called <a href=\"https://github.com/hmrc/design-patterns/issues/27\">Which country: HMRC design patterns</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Dashboard page",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/15",
+                        "lastEditedAt": "2018-02-20T12:18:11Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Help users who need to view and compare a lot of information at once.</p>\n<p>Example from Service performance on GOV.UK</p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://user-images.githubusercontent.com/33149131/36423490-10d8e422-1638-11e8-801a-f970cb5b5595.png\"><img src=\"https://user-images.githubusercontent.com/33149131/36423490-10d8e422-1638-11e8-801a-f970cb5b5595.png\" alt=\"screen shot 2018-02-20 at 12 16 26\" style=\"max-width:100%;\"></a></p>\n<p>Example from Service performance on GOV.UK Pay</p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://user-images.githubusercontent.com/33149131/36423480-065f964e-1638-11e8-92d2-bc92ed4ef457.png\"><img src=\"https://user-images.githubusercontent.com/33149131/36423480-065f964e-1638-11e8-92d2-bc92ed4ef457.png\" alt=\"screen shot 2018-02-20 at 12 16 38\" style=\"max-width:100%;\"></a></p>\n<h2>Why</h2>\n<h2>Anything else</h2>\n<ul>\n<li>Example on GOV.UK: <a href=\"https://www.gov.uk/performance/register-to-vote\" rel=\"nofollow\">Service performance dashboard on GOV.UK</a></li>\n<li>Read draft guidance <a href=\"https://paper.dropbox.com/doc/Dashboards-3CqSJXNincDKTcaJbaBKq\" rel=\"nofollow\">Dashboards: Dropbox Paper</a></li>\n<li>DWP has a version <a href=\"https://dwp-patterns.herokuapp.com/dashboards\" rel=\"nofollow\">Dashboards: DWP design patterns</a></li>\n<li>HMRC has a version <a href=\"https://github.com/hmrc/design-patterns/issues/66\">Dashboards: HMRC design patterns</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Data",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/16",
+                        "lastEditedAt": "2018-02-20T12:21:20Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Styles for representing data in numbers, graphs, charts and diagrams.</p>\n<h2>Why</h2>\n<h2>Anything else</h2>\n<p>You could to at reference in the issue on <a href=\"https://github.com/alphagov/govuk-design-system-backlog/issues/15\">Dashboard page</a></p>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Date picker",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/17",
+                        "lastEditedAt": "2018-06-13T15:23:36Z",
+                        "bodyHTML": "<p>Also known as: calendar control</p>\n<h2>What</h2>\n<p>Help users select a date using a calendar. Useful when knowing the day of the week is important.</p>\n<h2>Why</h2>\n<p>Used on these services:</p>\n<ul>\n<li><a href=\"https://www.payments.service.gov.uk/\" rel=\"nofollow\">GOV.UK Pay</a></li>\n<li><a href=\"https://www.gov.uk/prison-visits\" rel=\"nofollow\">Book a Prison Visit</a></li>\n</ul>\n<h2>Anything else</h2>\n<ul>\n<li><a href=\"https://docs.google.com/document/d/1VRHWD8trG384hmHfNT1uhS1m3r7JTYC-RIpI3_tj-5k/edit\" rel=\"nofollow\">Read the draft guidance on Google Docs</a></li>\n<li><a href=\"https://github.com/alex-ju/datepicker\">Download the code from GitHub</a></li>\n<li>Read the draft guidance in Dropbox paper on <a href=\"https://paper.dropbox.com/doc/Calendar-control-ekhYjEuIRtxt5suKgyZWI\" rel=\"nofollow\">Calendar control</a></li>\n<li>Related to the <a href=\"https://github.com/alphagov/govuk-design-system-backlog/issues/43\">'Ask users for dates'</a> pattern issue</li>\n<li>Related to the <a href=\"https://github.com/alphagov/govuk-design-system-backlog/issues/42\">'date input'</a> component issue</li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Delegate authority",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/18",
+                        "lastEditedAt": "2018-02-20T12:28:40Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Help users give someone else permission to use all or part of your service on their behalf.</p>\n<p>Example of 'Lasting power of attorney' service</p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://user-images.githubusercontent.com/33149131/36423890-7599baa2-1639-11e8-82e9-d638abf13326.png\"><img src=\"https://user-images.githubusercontent.com/33149131/36423890-7599baa2-1639-11e8-82e9-d638abf13326.png\" alt=\"screen shot 2018-02-20 at 12 27 20\" style=\"max-width:100%;\"></a></p>\n<p>Example of 'Agent authorisation to deal with HMRC'</p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://user-images.githubusercontent.com/33149131/36423929-92e52cae-1639-11e8-901b-48a81c9f2639.png\"><img src=\"https://user-images.githubusercontent.com/33149131/36423929-92e52cae-1639-11e8-901b-48a81c9f2639.png\" alt=\"screen shot 2018-02-20 at 12 28 13\" style=\"max-width:100%;\"></a></p>\n<h2>Why</h2>\n<h2>Anything else</h2>\n<ul>\n<li>Read draft guidance in <a href=\"https://paper.dropbox.com/doc/Delegate-authority-hE9rwaF7u87GN8MQY9XSz\" rel=\"nofollow\">Delegate authority: Dropbox Paper</a></li>\n<li>DWP has a version called 'Naming a representative' <a href=\"https://dwp-patterns.herokuapp.com/representatives\" rel=\"nofollow\">DWP design patterns</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Document history",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/19",
+                        "lastEditedAt": "2018-04-05T13:04:28Z",
+                        "bodyHTML": "<p>AKA: Change note, publication history</p>\n<h2>What</h2>\n<p>Show the history of edits to a document.</p>\n<h2>Why</h2>\n<p>Used on these services:</p>\n<ul>\n<li><a href=\"https://www.gov.uk/government/publications/financial-sanctions-consolidated-list-of-targets\" rel=\"nofollow\">GOV.UK Publications</a></li>\n</ul>\n<h2>Anything else</h2>\n<ul>\n<li>Read draft research and proposal in Dropbox paper on <a href=\"https://paper.dropbox.com/doc/Document-history-xF4y6zErHipG4hJwmTfMo\" rel=\"nofollow\">Document history</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Download links",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/20",
+                        "lastEditedAt": "2018-02-20T12:31:38Z",
+                        "bodyHTML": "<p>AKA: files, attachments</p>\n<h2>What</h2>\n<p>A link to a document to download or print. May include file size, format and thumbnail.</p>\n<h2>Why</h2>\n<h2>Anything else</h2>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Edit a list",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/21",
+                        "lastEditedAt": "2018-07-30T13:20:39Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>A list of items that can be edited and added to. Actions can be performed on one or more items in the list (eg. delete, archive).</p>\n<h2>Why</h2>\n<h2>Anything else</h2>\n<ul>\n<li>Read draft guidance about <a href=\"https://paper.dropbox.com/doc/Add-and-remove-items-0erEgFmQk3SHwH3p46Jdm\" rel=\"nofollow\">Add and remove items: Dropbox Paper</a></li>\n<li><a href=\"https://github.com/UKHomeOffice/design-system/issues/36\">Multiple loops: Home Office Design System</a></li>\n<li>DWP has a version called <a href=\"https://dwp-patterns.herokuapp.com/additemstoalist\" rel=\"nofollow\">Add items to a list: DWP patterns</a></li>\n<li><a href=\"https://github.com/dwp/design-examples/issues/25\">DWP GitHub discussion</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Find an address",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/23",
+                        "lastEditedAt": "2018-06-26T11:07:44Z",
+                        "bodyHTML": "<p>Also know as: address lookup, postcode lookup, address finder</p>\n<h2>What</h2>\n<p>Help users find an address from a postcode and, optionally, a street number.</p>\n<h2>Why</h2>\n<h2>Anything else</h2>\n<ul>\n<li>Read draft guidance on <a href=\"https://paper.dropbox.com/doc/onXOd0swg0swTRt2Wvlod#Postcodes\" rel=\"nofollow\">Postcodes: Dropbox Paper</a></li>\n<li>Home Office have a version called <a href=\"https://github.com/UKHomeOffice/design-system/issues/84\">Postcode lookup: Home Office design system</a></li>\n<li>DWP has a version called <a href=\"https://dwp-patterns.herokuapp.com/addresslookup\" rel=\"nofollow\">Search for your address: DWP design patterns</a></li>\n<li>Related pattern of 'Ask users for addresses' in this issue <a href=\"https://github.com/alphagov/govuk-design-system-backlog/issues/31\">Addresses</a></li>\n<li><a href=\"https://github.com/DWP/postcode-format-validation\">DWP postcode validation</a></li>\n<li><a href=\"https://github.com/UKHomeOfficeForms/hof-behaviour-address-lookup\">HOF address lookup</a></li>\n<li><a href=\"https://github.com/ministryofjustice/postcodeinfo\">MOJ postcode info</a></li>\n<li><a href=\"https://github.com/alphagov/ier-frontend/tree/master/app/assets/mustache/ordinary\">Register to vote</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Get updates about a service",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/106",
+                        "lastEditedAt": "2018-02-20T10:54:20Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Let your users know when your service has changed.</p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://user-images.githubusercontent.com/1590604/36420268-5f2ee2ae-162c-11e8-9f31-1b5f2f77d452.png\"><img src=\"https://user-images.githubusercontent.com/1590604/36420268-5f2ee2ae-162c-11e8-9f31-1b5f2f77d452.png\" alt=\"image\" style=\"max-width:100%;\"></a></p>\n<h2>Why</h2>\n<p>This pattern is used in at least 3 Home Office internal services. It's particularly useful for rapidly changing services that are used regularly.</p>\n<h2>Anything else</h2>\n<p><a href=\"https://github.com/UKHomeOffice/design-system/issues/30\">Update notifications: Home Office design system backlog</a></p>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Icons",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/24",
+                        "lastEditedAt": "2018-04-06T11:59:43Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>A small set of icons with guidance on how and when to use them.</p>\n<h2>Why</h2>\n<p>Services that use icons:</p>\n<ul>\n<li><a href=\"https://flood-warning-information.service.gov.uk/warnings\" rel=\"nofollow\">Flood warnings</a></li>\n</ul>\n<h2>Anything else</h2>\n<ul>\n<li>See issue on the Home Office design system github (<a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load issue title\" data-id=\"257014165\" data-permission-text=\"Issue title is private\" data-url=\"https://github.com/UKHomeOffice/design-system/issues/39\" data-hovercard-url=\"/UKHomeOffice/design-system/issues/39/hovercard\" data-hovercard-type=\"issue\" href=\"https://github.com/UKHomeOffice/design-system/issues/39\">UKHomeOffice/design-system#39</a>)</li>\n<li>Home Office have a version of this in the <a href=\"https://home-office-digital-patterns.herokuapp.com/components/icons\" rel=\"nofollow\">Home Office design system</a></li>\n</ul>\n<h1>Discuss</h1>\n<p>If you've used icons on your service and seen them tested with users, please add your experiences in the comments below</p>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Identifying users",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/25",
+                        "lastEditedAt": "2018-03-14T09:41:01Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Provide a secure service by accurately identifying users. Includes guidance on:</p>\n<ul>\n<li>authentication</li>\n<li>identity assurance</li>\n<li>user accounts</li>\n</ul>\n<h2>Why</h2>\n<h2>Anything else</h2>\n<ul>\n<li>Home Office has a version of <a href=\"https://home-office-digital-patterns.herokuapp.com/patterns/identifying-users\" rel=\"nofollow\">Identifying users</a></li>\n<li>HMRC has a version for <a href=\"https://github.com/hmrc/design-patterns/issues/86\">Two factor authentication (2FA)</a></li>\n<li><a href=\"https://paper.dropbox.com/doc/Two-factor-authentication-Qwp6rulBEZ1yQ3uBjuXdb\" rel=\"nofollow\">Discussion about 2 Factor authentication on Dropbox Paper</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Illustrations",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/26",
+                        "lastEditedAt": "2018-02-20T12:52:56Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>When and how to use illustrations and examples of appropriate illustration style.</p>\n<p>Example on GOV.UK for renewing passport for photo guidance</p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://user-images.githubusercontent.com/33149131/36424915-eb4e6786-163c-11e8-8220-93c69df19948.png\"><img src=\"https://user-images.githubusercontent.com/33149131/36424915-eb4e6786-163c-11e8-8220-93c69df19948.png\" alt=\"screen shot 2018-02-20 at 12 52 13\" style=\"max-width:100%;\"></a></p>\n<h2>Why</h2>\n<h2>Anything else</h2>\n<ul>\n<li>Read draft guidance on <a href=\"https://paper.dropbox.com/doc/Illustrations-oXJ47BVjoB7uQZyb5RAGp\" rel=\"nofollow\">Illustrations in Dropbox Paper</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Interruption card",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/27",
+                        "lastEditedAt": "2018-02-20T13:00:44Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>An alert that interrupts the user flow with important information and must be acknowledged before continuing.</p>\n<h2>Why</h2>\n<h2>Anything else</h2>\n<p>Draft guidance here below:</p>\n<p>When to use this pattern:</p>\n<ul>\n<li>to draw a users attention to important information specific to that point in their journey</li>\n<li>allow users to acknowledge something before continuing</li>\n<li>if important information is styled normally and users are missing it use this pattern - its unexpected so helps to bring attention to essential information</li>\n</ul>\n<p>When not to use this pattern:</p>\n<ul>\n<li>for form elements</li>\n<li>for large amounts of content</li>\n<li>the effectiveness of the pattern is based on its unexpected appearance so should be used sparingly</li>\n</ul>\n<p>How to use this pattern:</p>\n<p>Include a clear heading and use large body text at a minimum size of 24px.</p>\n<p>Try to reduce the content down to the minimum amount the user needs. If the user needs to do more than one thing, use extra cards.</p>\n<h2>Anything else</h2>\n<ul>\n<li>For research <a href=\"https://designnotes.blog.gov.uk/2015/09/21/helping-users-understand-gov-uk-verify-designing-with-data/\" rel=\"nofollow\">read a blog post about the patterns use on Verify</a></li>\n<li>Example on GOV.UK Verify: <a href=\"https://www.gov.uk/update-company-car-details\" rel=\"nofollow\">Check or update your company tax car</a></li>\n<li>Notes: This pattern has been so successful on the passport renewals service that the team have been able to dramatically reduce the amount of content on the start page.<br>\nTeams have found interrupting users’ flow with this pattern has increased understanding and retention of important information.<br>\nEvidence that the contrast levels of interruption cards help dyslexic users.</li>\n<li><a href=\"https://paper.dropbox.com/doc/Introducing-a-service-Nc6EsanyLyk7omaKShWU0\" rel=\"nofollow\">Introducing a service: Dropbox Paper</a></li>\n<li>Home office has an <a href=\"https://home-office-digital-patterns.herokuapp.com/patterns/interruption-card\" rel=\"nofollow\">Interruption card: Home Office design system</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Loading spinner",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/28",
+                        "lastEditedAt": "2018-04-04T18:11:40Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Help users understand that they need to wait for something to happen.</p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://user-images.githubusercontent.com/33149131/36425347-6ae8ccb0-163e-11e8-9a72-4c8466035be4.png\"><img src=\"https://user-images.githubusercontent.com/33149131/36425347-6ae8ccb0-163e-11e8-9a72-4c8466035be4.png\" alt=\"screen shot 2018-02-20 at 13 03 02\" style=\"max-width:100%;\"></a></p>\n<h2>Why</h2>\n<p>This pattern is used on GOV.UK Verify - when returning users from Verify to services, data matching takes place which can take some time, so we present a spinner and explanatory text.</p>\n<h2>Anything else</h2>\n<ul>\n<li>Example: <a href=\"https://govuk-loader-prototype.herokuapp.com/\" rel=\"nofollow\">View demo</a></li>\n<li><a href=\"https://docs.google.com/document/d/1vsqhK7ZlR5yIVNpvJbgphZz4C9-aaNftqm8mFPfQnJw/edit\" rel=\"nofollow\">Read the draft guidance on Google Docs</a></li>\n<li><a href=\"https://github.com/alex-ju/loading-spinner\">Download the code on GitHub</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Make a declaration",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/29",
+                        "lastEditedAt": "2018-04-04T17:41:38Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Help users tell you that they've understood or agree to something.</p>\n<h2>Why</h2>\n<p>This is used on many government services  including:</p>\n<ul>\n<li><a href=\"https://www.gov.uk/register-to-vote\" rel=\"nofollow\">Register to vote</a></li>\n</ul>\n<h2>Anything else</h2>\n<ul>\n<li>Read draft guidance on <a href=\"https://paper.dropbox.com/doc/Declarations-Lp3ZmSPJzLKQVkY0d1P4K\" rel=\"nofollow\">Declarations: Dropbox Paper</a></li>\n<li>DWP has a version <a href=\"https://dwp-patterns.herokuapp.com/declaration\" rel=\"nofollow\">Declaration: DWP design patterns</a></li>\n<li>HMRC has a version <a href=\"https://github.com/hmrc/design-patterns/issues/73\">Declaration: HMRC design patterns</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Modal dialogue",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/30",
+                        "lastEditedAt": "2018-07-18T16:03:06Z",
+                        "bodyHTML": "<p>Also known as: Modal window, pop-up</p>\n<h2>What</h2>\n<p>A pop up window that appears over the current page and requires interaction before the user can proceed.</p>\n<h2>Why</h2>\n<p>Services using this pattern:</p>\n<ul>\n<li>Employers Checking Service</li>\n<li>Passport renewals (timeout)</li>\n</ul>\n<h2>Anything else</h2>\n<ul>\n<li>Example: <a href=\"http://govuk-prototype-kit-warning.herokuapp.com/\" rel=\"nofollow\">Try a demo</a></li>\n<li>Home Office have a version for <a href=\"https://home-office-digital-patterns.herokuapp.com/patterns/modal\" rel=\"nofollow\">Modal Window: Home Office design system</a></li>\n<li>Notes: look at <a href=\"https://github.com/alphagov/govuk-design-system-backlog/issues/104\">Timeout warning</a> to find a reference on Modal dialogue</li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Nationality",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/73",
+                        "lastEditedAt": "2018-05-09T14:12:56Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>How to ask for someone's nationality</p>\n<h2>Why</h2>\n<p>Services using this pattern:</p>\n<ul>\n<li><a href=\"https://www.gov.uk/register-to-vote\" rel=\"nofollow\">Register to vote</a></li>\n<li><a href=\"https://www.electronic-visa-waiver.service.gov.uk/apply/begin\" rel=\"nofollow\">Electronic Visa Waiver</a></li>\n<li><a href=\"https://www.faster-uk-entry.service.gov.uk/initial/nationality\" rel=\"nofollow\">Registered traveller</a></li>\n<li><a href=\"https://visas-immigration.service.gov.uk/country-selection\" rel=\"nofollow\">International and Tier 2 visa</a></li>\n</ul>\n<h2>Anything else:</h2>\n<ul>\n<li>Related pattern: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load issue title\" data-id=\"288111068\" data-permission-text=\"Issue title is private\" data-url=\"https://github.com/alphagov/govuk-design-system-backlog/issues/14\" data-hovercard-url=\"/alphagov/govuk-design-system-backlog/issues/14/hovercard\" data-hovercard-type=\"issue\" href=\"https://github.com/alphagov/govuk-design-system-backlog/issues/14\">#14</a> Country</li>\n<li>Related pattern: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load issue title\" data-id=\"288049967\" data-permission-text=\"Issue title is private\" data-url=\"https://github.com/alphagov/govuk-design-system-backlog/issues/4\" data-hovercard-url=\"/alphagov/govuk-design-system-backlog/issues/4/hovercard\" data-hovercard-type=\"issue\" href=\"https://github.com/alphagov/govuk-design-system-backlog/issues/4\">#4</a> Autocomplete</li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Number input",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/74",
+                        "lastEditedAt": "2018-04-05T13:34:51Z",
+                        "bodyHTML": "<p>Also known as: numerical input</p>\n<h2>What</h2>\n<p>A component for accepting different kinds of number.<br>\nIncludes variants with:</p>\n<ul>\n<li>increment/decrement buttons</li>\n<li>decimal points and delimiters</li>\n<li>unit suffixes for things like weight, speed, distance etc.</li>\n</ul>\n<h2>Why</h2>\n<h2>Anything else</h2>\n<ul>\n<li><a href=\"https://docs.google.com/document/d/1wozIhOdt6wvlgqVReauUnlsJI-3fqUlNuQFwUI7tqAA/edit\" rel=\"nofollow\">Read the draft guide on Google Docs</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Maps",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/75",
+                        "lastEditedAt": "2018-04-05T14:53:34Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>How and when to use mapping interfaces. How to make sure that information in maps is accessible.</p>\n<p>Example of \"Find apprenticeship training\" service</p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://user-images.githubusercontent.com/33149131/36471264-c2fd3524-16e5-11e8-81ff-a3535235bee7.png\"><img src=\"https://user-images.githubusercontent.com/33149131/36471264-c2fd3524-16e5-11e8-81ff-a3535235bee7.png\" alt=\"screen shot 2018-02-21 at 09 00 41\" style=\"max-width:100%;\"></a></p>\n<h2>Why</h2>\n<p>Services that use this pattern:</p>\n<ul>\n<li><a href=\"https://flood-warning-information.service.gov.uk/warnings\" rel=\"nofollow\">Flood warning</a></li>\n<li><a href=\"https://www.gov.uk/foreign-travel-advice/afghanistan\" rel=\"nofollow\">GOV.UK Foreign Travel Advice</a></li>\n</ul>\n<h2>Anything else</h2>\n<ul>\n<li><a href=\"https://paper.dropbox.com/doc/MnSzTZv5Zy0tE742A8hPu#Maps\" rel=\"nofollow\">Read the draft guidance on Dropbox Paper</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Navigation",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/76",
+                        "lastEditedAt": "2018-08-13T10:29:22Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Help users navigate sections in your service.</p>\n<h2>Why</h2>\n<p>Services that use this pattern:</p>\n<ul>\n<li><a href=\"https://www.gov.uk/government/organisations\" rel=\"nofollow\">gov.uk/government</a></li>\n<li>GOV.UK Notify Admin</li>\n<li>GOV.UK Pay Admin</li>\n</ul>\n<h2>Anything else</h2>\n<ul>\n<li>Home Office has an example of <a href=\"https://home-office-digital-patterns.herokuapp.com/components/navigation\" rel=\"nofollow\">Sub-navigation links: Home Office design system</a></li>\n<li>HMRC removed and labeled \"not a thing\" to their example of <a href=\"https://github.com/hmrc/design-patterns/issues/36\">Navigation: HMRC design system</a></li>\n<li>Digital Market Place Frontend toolkit has a component for <a href=\"http://alphagov.github.io/digitalmarketplace-frontend-toolkit/previous-next-navigation.html\" rel=\"nofollow\">previous/next navigation</a></li>\n</ul>\n<h2>Related items:</h2>\n<ul>\n<li><a href=\"https://github.com/alphagov/govuk-design-system-backlog/issues/33\">Breadcrumbs</a></li>\n<li><a href=\"https://github.com/alphagov/govuk-design-system-backlog/issues/151\">Navigation bar</a></li>\n<li><a href=\"https://github.com/alphagov/govuk-design-system-backlog/issues/138\">Tabbed navigation</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Pagination",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/77",
+                        "lastEditedAt": "2018-07-25T16:24:50Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Help users navigate through multiple pages. Typically used for pages of search results.</p>\n<h2>Why</h2>\n<h2>Anything else</h2>\n<ul>\n<li><a href=\"https://home-office-digital-patterns.herokuapp.com/components/pagination\" rel=\"nofollow\">Pagination: Home Office design system</a></li>\n<li><a href=\"http://land-registry-elements.herokuapp.com/incubation-area/pagination-complex/demo\" rel=\"nofollow\">Pagination: Land Registry Elements</a></li>\n<li><a href=\"http://rural-payments-styleguide.herokuapp.com/pagination/\" rel=\"nofollow\">Pagination: Rural Payments styleguide</a></li>\n<li>Related component: <a href=\"https://github.com/alphagov/govuk-design-system-backlog/issues/110\">Previous and next links</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Passport details",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/78",
+                        "lastEditedAt": "2018-02-21T09:20:03Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Help users quickly and accurately give their passport details.</p>\n<h2>Why</h2>\n<h2>Anything else</h2>\n<ul>\n<li>HMRC has a version <a href=\"https://github.com/hmrc/design-patterns/issues/12\">Passport details: HMRC design patterns</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Pay for something",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/79",
+                        "lastEditedAt": "2018-04-05T15:51:20Z",
+                        "bodyHTML": "<p>Also known as: checkout, shopping basket, shopping cart.</p>\n<h2>What</h2>\n<p>Help users review, amend and purchase one or more items.</p>\n<h2>Why</h2>\n<h2>Anything else</h2>\n<ul>\n<li>Example: <a href=\"https://www.payments.service.gov.uk/\" rel=\"nofollow\">GOV.UK Pay</a></li>\n<li>Related patterns: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load issue title\" data-id=\"288524965\" data-permission-text=\"Issue title is private\" data-url=\"https://github.com/alphagov/govuk-design-system-backlog/issues/80\" data-hovercard-url=\"/alphagov/govuk-design-system-backlog/issues/80/hovercard\" data-hovercard-type=\"issue\" href=\"https://github.com/alphagov/govuk-design-system-backlog/issues/80\">#80</a> Payment details</li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Personal details",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/81",
+                        "lastEditedAt": "2018-02-21T09:21:36Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Help people see and update the personal information you hold about them.</p>\n<h2>Why</h2>\n<h2>Anything else</h2>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Postcodes",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/82",
+                        "lastEditedAt": "2018-04-05T16:11:07Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>How to ask for a postcode.</p>\n<h2>Why</h2>\n<p>This pattern is often used separately to full <a href=\"https://github.com/alphagov/govuk-design-system-backlog/issues/31\">addresses</a>, for example to find things near a certain location</p>\n<p>Services that use this pattern:</p>\n<ul>\n<li><a href=\"https://www.gov.uk/register-to-vote\" rel=\"nofollow\">Register to vote</a></li>\n<li><a href=\"https://www.gov.uk/find-local-council\" rel=\"nofollow\">Find a local council</a></li>\n</ul>\n<h2>Anything else</h2>\n<ul>\n<li><a href=\"https://paper.dropbox.com/doc/onXOd0swg0swTRt2Wvlod#Postcodes\" rel=\"nofollow\">Read the draft guidance on Dropbox Paper</a></li>\n<li>Related pattern: <a href=\"https://github.com/alphagov/govuk-design-system-backlog/issues/31\">Addresses</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Previous and next links",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/110",
+                        "lastEditedAt": "2018-07-25T16:27:21Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Help users navigate through a linear sequence of information pages.</p>\n<p>Example on GOV.UK</p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://user-images.githubusercontent.com/33149131/36476655-6bff6ca4-16f6-11e8-9f59-5cf67c9c88b6.png\"><img src=\"https://user-images.githubusercontent.com/33149131/36476655-6bff6ca4-16f6-11e8-9f59-5cf67c9c88b6.png\" alt=\"screen shot 2018-02-21 at 11 00 04\" style=\"max-width:100%;\"></a></p>\n<h2>Why</h2>\n<p>Services that use this pattern:</p>\n<ul>\n<li><a href=\"https://www.gov.uk/bullying-at-school/reporting-bullying\" rel=\"nofollow\">GOV.UK guidance</a></li>\n</ul>\n<h2>Anything else</h2>\n<ul>\n<li>Land Registry has a version called <a href=\"http://land-registry-elements.herokuapp.com/pagination-simple/demo\" rel=\"nofollow\">Pagination simple</a></li>\n<li>Related component: <a href=\"https://github.com/alphagov/govuk-design-system-backlog/issues/77\">Pagination</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Protected characteristics",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/83",
+                        "lastEditedAt": "2018-04-05T16:47:37Z",
+                        "bodyHTML": "<p>Also known as: sensitive data, personal data</p>\n<h2>What</h2>\n<p>How and when to ask for protected characteristics: age, disability, gender reassignment, race, religion or belief, sex, sexual orientation, marriage and civil partnership, and pregnancy and maternity.</p>\n<h2>Why</h2>\n<p>Services that use this pattern:</p>\n<ul>\n<li><a href=\"https://www.gov.uk/honours/nominate-someone-in-the-uk\" rel=\"nofollow\">Nominate someone for an honour</a></li>\n</ul>\n<h2>Anything else</h2>\n<ul>\n<li><a href=\"https://paper.dropbox.com/doc/YLNc0YjwGDj69KzMVjk2E#Protected-characteristics-(such-as-age,-disability,-gender-reassignment)\" rel=\"nofollow\">Read the draft guidance on Dropbox Paper</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Recover an account",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/84",
+                        "lastEditedAt": "2018-04-05T16:50:18Z",
+                        "bodyHTML": "<p>Also known as: failed sign in, account recovery, forgotten password</p>\n<h2>What</h2>\n<p>How to help users who have forgotten their sign-in details or whose account has been locked.</p>\n<h2>Why</h2>\n<p>Services that use this pattern:</p>\n<ul>\n<li><a href=\"https://nominate-uk-honour.service.gov.uk/HAS_ForgotPassword\" rel=\"nofollow\">Nominate someone for honours</a></li>\n<li><a href=\"https://www.tax.service.gov.uk/government-gateway-lost-credentials-frontend/choose-your-account?continue=%2Faccount&amp;origin=unknown&amp;forgottenOption=UserIdAndPassword\" rel=\"nofollow\">HMRC forgotten details</a></li>\n</ul>\n<h2>Anything else</h2>\n<ul>\n<li><a href=\"https://paper.dropbox.com/doc/Failed-sign-in-and-account-recovery-DsnLxh1RI0TEtor6E3I4Y\" rel=\"nofollow\">Read the draft guidance on Dropbox Paper</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Reference numbers",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/85",
+                        "lastEditedAt": "2018-04-05T17:08:03Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>When to use reference numbers, how to generate them and how to display them.</p>\n<h2>Why</h2>\n<p>Services that use this pattern:</p>\n<ul>\n<li><a href=\"https://www.gov.uk/register-to-vote\" rel=\"nofollow\">Register to vote</a></li>\n<li><a href=\"https://employmenttribunals.service.gov.uk/apply\" rel=\"nofollow\">Make a claim to an employment tribunal</a></li>\n</ul>\n<h3>Anything else</h3>\n<ul>\n<li><a href=\"https://paper.dropbox.com/doc/Transaction-reference-numbers-rutTu74goUwXfKxG9NBcr\" rel=\"nofollow\">Read the draft guidance on Dropbox Paper</a></li>\n<li><a href=\"https://github.com/hmrc/design-patterns/issues/79\">Reference number: HMRC design patterns</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Related links",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/86",
+                        "lastEditedAt": "2018-04-05T16:43:26Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>A list of links related to the current page. Appears on the right hand side of a page on large screen devices.</p>\n<p>Example on GOV.UK <a href=\"https://www.gov.uk/renew-driving-licence\" rel=\"nofollow\">Renew your driving licence</a></p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://user-images.githubusercontent.com/33149131/36544385-45ee290e-17de-11e8-8d34-cc1a9d8cfe2b.png\"><img src=\"https://user-images.githubusercontent.com/33149131/36544385-45ee290e-17de-11e8-8d34-cc1a9d8cfe2b.png\" alt=\"screen shot 2018-02-22 at 14 39 47\" style=\"max-width:100%;\"></a></p>\n<h2>Why</h2>\n<p>Services using this pattern:</p>\n<ul>\n<li><a href=\"https://www.gov.uk/renew-driving-licence\" rel=\"nofollow\">GOV.UK start pages</a></li>\n</ul>\n<h2>Anything else</h2>\n<ul>\n<li>See code in GOV.UK Frontend on <a href=\"http://government-frontend.herokuapp.com/component-guide/related-navigation\" rel=\"nofollow\">Related Navigation</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Save their progress",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/87",
+                        "lastEditedAt": "2018-04-05T17:17:38Z",
+                        "bodyHTML": "<p>Also known as: save and return, save and continue</p>\n<h2>What</h2>\n<p>Help users save their progress in your service, so they can continue later.</p>\n<p>Example on <a href=\"https://employmenttribunals.service.gov.uk/apply\" rel=\"nofollow\">'Make a claim to an employment tribunal'</a></p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://user-images.githubusercontent.com/33149131/36531721-b44737b0-17b6-11e8-8509-b1f79eb50a76.png\"><img src=\"https://user-images.githubusercontent.com/33149131/36531721-b44737b0-17b6-11e8-8509-b1f79eb50a76.png\" alt=\"screen shot 2018-02-22 at 09 56 40\" style=\"max-width:100%;\"></a></p>\n<h2>Why</h2>\n<h2>Anything else</h2>\n<ul>\n<li><a href=\"https://paper.dropbox.com/doc/Save-and-return-WL6WgACutT16zqoUZ0ns2\" rel=\"nofollow\">Read the draft guidance on Dropbox Paper</a></li>\n</ul>\n<h2>Related items:</h2>\n<ul>\n<li><a href=\"https://github.com/alphagov/govuk-design-system-backlog/issues/41\">Create account</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Search for something",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/88",
+                        "lastEditedAt": "2018-07-26T12:06:11Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Help users search through large collections of information or documents.</p>\n<p>Includes examples of:</p>\n<ul>\n<li><a href=\"https://github.com/alphagov/govuk-design-system-backlog/issues/132\">Search box</a></li>\n<li><a href=\"https://github.com/alphagov/govuk-design-system-backlog/issues/133\">Search filter</a></li>\n<li>Search results page</li>\n</ul>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://user-images.githubusercontent.com/33149131/36531952-56c68f04-17b7-11e8-9b54-3a157b669065.png\"><img src=\"https://user-images.githubusercontent.com/33149131/36531952-56c68f04-17b7-11e8-9b54-3a157b669065.png\" alt=\"screen shot 2018-02-22 at 10 01 01\" style=\"max-width:100%;\"></a></p>\n<h2>Why</h2>\n<p>Services that use this pattern:</p>\n<ul>\n<li><a href=\"https://www.gov.uk\" rel=\"nofollow\">GOV.UK</a></li>\n<li><a href=\"https://beta.companieshouse.gov.uk\" rel=\"nofollow\">Companies House</a></li>\n</ul>\n<h2>Anything else</h2>\n<ul>\n<li><a href=\"https://paper.dropbox.com/doc/VxP46U2qgjrYnNwqXakKJ#Filterable-lists-/-faceted-search\" rel=\"nofollow\">Search filters: Dropbox Paper</a></li>\n<li><a href=\"https://paper.dropbox.com/doc/Search-boxes-WVuvy5JmNJLK9w4Tq4QHC\" rel=\"nofollow\">Search boxes: Dropbox Paper</a></li>\n<li><a href=\"https://dwp-patterns.herokuapp.com/search\" rel=\"nofollow\">Search: DWP design patterns</a></li>\n<li><a href=\"https://github.com/dwp/design-examples/issues/5\">Search: DWP GitHub discussion</a></li>\n<li><a href=\"https://github.com/hmrc/design-patterns/issues/53\">Search: HMRC design patterns</a></li>\n<li><a href=\"https://dwp-patterns.herokuapp.com/showhidefilters\" rel=\"nofollow\">Show and hide filters: DWP design patterns</a></li>\n<li><a href=\"https://github.com/UKHomeOffice/design-system/issues/80\">Filtering: Home Office design system backlog</a></li>\n<li><a href=\"https://github.com/hmrc/design-patterns/issues/55\">Search results: HMRC design patterns</a></li>\n<li><a href=\"https://home-office-digital-patterns.herokuapp.com/components/highlighting-matches\" rel=\"nofollow\">Highlighted search matches: Home Office design system</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Sending emails",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/89",
+                        "lastEditedAt": "2018-04-05T17:32:48Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>How and when to send emails, with example templates.</p>\n<p>Example in GOV.Notify</p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://user-images.githubusercontent.com/33149131/36533419-67922100-17bb-11e8-90c9-8b22d6663f20.png\"><img src=\"https://user-images.githubusercontent.com/33149131/36533419-67922100-17bb-11e8-90c9-8b22d6663f20.png\" alt=\"screen shot 2018-02-22 at 10 30 07\" style=\"max-width:100%;\"></a></p>\n<h2>Why</h2>\n<p>Services that use this pattern:</p>\n<ul>\n<li><a href=\"https://www.gov.uk/guidance/the-alcohol-wholesaler-registration-scheme-awrs\" rel=\"nofollow\">Alcohol Wholesaler Registration</a></li>\n<li><a href=\"https://www.digitalmarketplace.service.gov.uk/\" rel=\"nofollow\">Digital Marketplace</a></li>\n<li><a href=\"https://petition.parliament.uk/\" rel=\"nofollow\">Petition Parliament</a></li>\n</ul>\n<h2>Anything else</h2>\n<ul>\n<li>Read draft guidance here <a href=\"https://paper.dropbox.com/doc/Sending-emails-0O9JyksvPiJ0boNda3nKH\" rel=\"nofollow\">Notifications: Dropbox Paper</a></li>\n<li>Example: <a href=\"https://www.notifications.service.gov.uk/\" rel=\"nofollow\">GOV.UK Notify</a></li>\n<li>Example: <a href=\"https://github.com/hmrc/design-patterns/issues/71\">Emails sent to users: HMRC design system</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Sending letters",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/90",
+                        "lastEditedAt": "2018-04-05T17:38:34Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>How and when to send text letters, with example templates.</p>\n<h2>Why</h2>\n<p>Services that use this pattern:</p>\n<ul>\n<li><a href=\"https://insidegovuk.blog.gov.uk/2015/11/16/guerrilla-testing-content-it-makes-it-better/\" rel=\"nofollow\">DVSA</a></li>\n</ul>\n<h2>Anything else</h2>\n<ul>\n<li><a href=\"https://paper.dropbox.com/doc/Paper-letters-for-services-KvXNKAzbIhT3MllSEg4DD\" rel=\"nofollow\">Design wiki 1</a></li>\n<li><a href=\"https://paper.dropbox.com/doc/Sending-notifications-by-email-text-message-or-letter-3JIvSsDSBOeoZIEdjkC4Z\" rel=\"nofollow\">Design wiki 2</a></li>\n<li>Example: <a href=\"https://www.notifications.service.gov.uk/\" rel=\"nofollow\">GOV.UK Notify</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Sending text messages",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/91",
+                        "lastEditedAt": "2018-03-05T12:47:27Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>How and when to send text messages, with example templates.</p>\n<h2>Why</h2>\n<h2>Anything else</h2>\n<ul>\n<li>Read draft guidance on <a href=\"https://paper.dropbox.com/doc/Sending-notifications-by-email-text-message-or-letter-3JIvSsDSBOeoZIEdjkC4Z\" rel=\"nofollow\">Notifications: Dropbox Paper</a></li>\n<li>Example: <a href=\"https://www.notifications.service.gov.uk/\" rel=\"nofollow\">GOV.UK Notify</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Set user permissions",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/92",
+                        "lastEditedAt": "2018-04-05T17:39:20Z",
+                        "bodyHTML": "<p>Also known as: roles, account permissions</p>\n<h2>What</h2>\n<p>Help administrators assign different permissions to different groups of users of your service.</p>\n<p>Example on GOV.UK Pay</p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://user-images.githubusercontent.com/33149131/36533642-0f6dc744-17bc-11e8-84d9-08ba5c1778cc.png\"><img src=\"https://user-images.githubusercontent.com/33149131/36533642-0f6dc744-17bc-11e8-84d9-08ba5c1778cc.png\" alt=\"screen shot 2018-02-22 at 10 35 01\" style=\"max-width:100%;\"></a></p>\n<h2>Why</h2>\n<h2>Anything else</h2>\n<ul>\n<li><a href=\"https://paper.dropbox.com/doc/Permissions-and-roles-EBSLgpOrOpDBDPXYuOqnm\" rel=\"nofollow\">Read the draft guidance on Dropbox Paper</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Share personal data",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/93",
+                        "lastEditedAt": "2018-04-05T17:40:03Z",
+                        "bodyHTML": "<p>Also known as: consent</p>\n<h2>What</h2>\n<p>Help users share their personal data with other individuals or services in an informed and responsible way.</p>\n<p>Example on <a href=\"https://www.gov.uk/view-driving-licence\" rel=\"nofollow\">View your driving licence information</a></p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://user-images.githubusercontent.com/33149131/36534001-2bdcdf54-17bd-11e8-9838-3c0c7cecbaed.png\"><img src=\"https://user-images.githubusercontent.com/33149131/36534001-2bdcdf54-17bd-11e8-9838-3c0c7cecbaed.png\" alt=\"screen shot 2018-02-22 at 10 37 25\" style=\"max-width:100%;\"></a></p>\n<h2>Why</h2>\n<h2>Anything else</h2>\n<ul>\n<li><a href=\"https://paper.dropbox.com/doc/Sharing-user-data-bzjkZjcZShbtnNopSv4Wr\" rel=\"nofollow\">Read the draft guidance on Dropbox Paper</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Sign in",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/94",
+                        "lastEditedAt": "2018-04-05T17:40:43Z",
+                        "bodyHTML": "<p>Also known as: log in</p>\n<h2>What</h2>\n<p>Help users sign in easily to your service.</p>\n<h2>Why</h2>\n<h2>Anything else</h2>\n<ul>\n<li><a href=\"https://paper.dropbox.com/doc/Signing-in-68O9bdpgCixU42XEqWoCK\" rel=\"nofollow\">Read the draft guidance on Dropbox Paper</a></li>\n<li>Example: <a href=\"https://github.com/UKHomeOffice/design-system/issues/34\">Identifying users: Home Office design system</a></li>\n<li>Example: <a href=\"https://github.com/hmrc/design-patterns/issues/19\">Sign in: HMRC design patterns</a></li>\n<li>Example: <a href=\"https://www.gov.uk/government/publications/introducing-govuk-verify/introducing-govuk-verify\" rel=\"nofollow\">GOV.UK Verify</a></li>\n<li>GDS blog post: <a href=\"https://insidegovuk.blog.gov.uk/2018/02/21/making-it-easier-for-users-to-sign-in-to-services/\" rel=\"nofollow\">Making it easier for users to sign in</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Sign out",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/95",
+                        "lastEditedAt": "2018-04-05T17:41:16Z",
+                        "bodyHTML": "<p>Also known as: log out</p>\n<h2>What</h2>\n<p>Help users protect their personal data by making it easy for them to sign out of your service.</p>\n<h2>Why</h2>\n<h2>Anything else</h2>\n<ul>\n<li><a href=\"https://paper.dropbox.com/doc/4Gzy87b7hMuwLeyP8rkQO\" rel=\"nofollow\">Read the draft guidance on Dropbox Paper</a></li>\n<li>Home Office has a version of <a href=\"https://github.com/UKHomeOffice/design-system/issues/96\">Signing out: Home Office Design System/ Github link</a></li>\n<li><a href=\"https://home-office-digital-patterns.herokuapp.com/patterns/sign-out\" rel=\"nofollow\">Signing out: Home Office Design System</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Site header",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/97",
+                        "lastEditedAt": "2018-04-05T17:41:40Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Header for GOV.UK, including full-width, departmental, internal and service variants.</p>\n<h2>Why</h2>\n<p>Site headers are used on all web pages. There's also a need for consistent headers for departmental and internal services.</p>\n<h2>Anything else</h2>\n<ul>\n<li><a href=\"http://dwp-elements.herokuapp.com/\" rel=\"nofollow\">Top bar in DWP design patterns</a></li>\n<li><a href=\"https://home-office-digital-patterns.herokuapp.com/patterns/header\" rel=\"nofollow\">Service header in Home Office design system</a></li>\n<li><a href=\"https://paper.dropbox.com/doc/Header-ESaAFgOsA70lLP8ZFJqFP\" rel=\"nofollow\">Site header discussion on Dropbox Paper</a></li>\n</ul>\n<h2>Related patterns</h2>\n<ul>\n<li><a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load issue title\" data-id=\"288530958\" data-permission-text=\"Issue title is private\" data-url=\"https://github.com/alphagov/govuk-design-system-backlog/issues/96\" data-hovercard-url=\"/alphagov/govuk-design-system-backlog/issues/96/hovercard\" data-hovercard-type=\"issue\" href=\"https://github.com/alphagov/govuk-design-system-backlog/issues/96\">#96</a> Site footer</li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Showing status",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/98",
+                        "lastEditedAt": "2018-02-20T11:51:51Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Help users understand the status of something, so they can decide what action to perform next.</p>\n<h2>Why</h2>\n<p>Statuses are used in many government services, especially internal ones. Many different styles are used however, so some guidance and good examples here would be useful.</p>\n<h2>Anything else</h2>\n<ul>\n<li><a href=\"https://github.com/UKHomeOffice/design-system/issues/53\">Status indicator in Home Office Design System</a></li>\n<li><a href=\"https://paper.dropbox.com/doc/Status-tracking-vMeDLJY7BwgXKpaCUMm2G\" rel=\"nofollow\">Status tracking discussion in Dropbox Paper</a></li>\n</ul>\n<h2>Related patterns</h2>\n<ul>\n<li><a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load issue title\" data-id=\"288170707\" data-permission-text=\"Issue title is private\" data-url=\"https://github.com/alphagov/govuk-design-system-backlog/issues/62\" data-hovercard-url=\"/alphagov/govuk-design-system-backlog/issues/62/hovercard\" data-hovercard-type=\"issue\" href=\"https://github.com/alphagov/govuk-design-system-backlog/issues/62\">#62</a> Tag</li>\n<li><a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load issue title\" data-id=\"288183632\" data-permission-text=\"Issue title is private\" data-url=\"https://github.com/alphagov/govuk-design-system-backlog/issues/72\" data-hovercard-url=\"/alphagov/govuk-design-system-backlog/issues/72/hovercard\" data-hovercard-type=\"issue\" href=\"https://github.com/alphagov/govuk-design-system-backlog/issues/72\">#72</a> Task list</li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Supporting multiple languages",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/99",
+                        "lastEditedAt": "2018-02-20T11:37:56Z",
+                        "bodyHTML": "<h2>What</h2>\n<ul>\n<li>how to make your service work in multiple languages</li>\n<li>the law regarding multiple language support</li>\n<li>how to let users switch the language of your service</li>\n</ul>\n<h2>Why</h2>\n<p>Welsh language support is a legal requirement for many government services, so we should provide design guidance for this.</p>\n<h2>Anything else</h2>\n<ul>\n<li><a href=\"http://land-registry-elements.herokuapp.com/language-switcher/demo\" rel=\"nofollow\">Language switcher: Land Registry Elements</a></li>\n<li><a href=\"https://paper.dropbox.com/doc/Multiple-language-support-hSVIJqjyWFVc5N6Irvxnn\" rel=\"nofollow\">Multiple language support discussion Dropbox Paper</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Terms and conditions",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/102",
+                        "lastEditedAt": "2018-02-20T11:23:10Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Help users understand the terms and conditions of using your service.</p>\n<h2>Why</h2>\n<p>Most government services have terms and conditions of use. The best services integrate this information into the service at the relevant points, rather than burying it all in a long page that users won't read.</p>\n<h2>Anything else</h2>\n<ul>\n<li><a href=\"https://paper.dropbox.com/doc/Terms-and-conditions-pages-3mDeXlG9FZjeFMz4dUeQr\" rel=\"nofollow\">Terms and conditions page discussion on Dropbox Paper</a></li>\n<li><a href=\"https://github.com/hmrc/design-patterns/issues/121\">Terms and conditions in HMRC design patterns</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Timeout page",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/103",
+                        "lastEditedAt": "2018-02-21T10:23:54Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Protect users personal data by cancelling a session if it is inactive for a period of time.</p>\n<h2>Why</h2>\n<p>All services that use sessions already use, or should use this pattern.</p>\n<h2>Anything else</h2>\n<ul>\n<li><a href=\"https://docs.google.com/document/d/1XIAgXZDCVBU9hWO0gEUEZlg-wzK7G9BhUvwwvyDoBS4/edit\" rel=\"nofollow\">Draft guidance for session timeouts on Google Docs</a></li>\n<li><a href=\"https://docs.google.com/document/d/1zYubYtnIwY9ctm-y7i88Lsnn2rQMRzNST7w72v2M1eg/edit\" rel=\"nofollow\">User research findings</a></li>\n<li><a href=\"https://govuk-temporary-event-notice.herokuapp.com/timeout\" rel=\"nofollow\">Demo page used in research</a><br>\n(contact the design system team for credentials)</li>\n<li>Notes from xgov design system workshop: We need to explain drawbacks of timeouts</li>\n</ul>\n<h2>Related patterns</h2>\n<p><a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load issue title\" data-id=\"288533303\" data-permission-text=\"Issue title is private\" data-url=\"https://github.com/alphagov/govuk-design-system-backlog/issues/104\" data-hovercard-url=\"/alphagov/govuk-design-system-backlog/issues/104/hovercard\" data-hovercard-type=\"issue\" href=\"https://github.com/alphagov/govuk-design-system-backlog/issues/104\">#104</a> Timeout warning</p>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Timeout warning",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/104",
+                        "lastEditedAt": "2018-02-20T11:06:21Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Warn users that their session is about to time out and let them extend it if possible.</p>\n<h2>Why</h2>\n<p>All services that use sessions already use, or should use this pattern.</p>\n<h2>Anything else</h2>\n<ul>\n<li><a href=\"http://govuk-prototype-kit-warning.herokuapp.com/\" rel=\"nofollow\">Demo</a></li>\n<li><a href=\"https://docs.google.com/document/d/16BEBhmodDoUyIeyVAfyj3rMX45Lw0Zo5rs0pWC3_5Mw/edit\" rel=\"nofollow\">Draft guidance on Google Docs</a></li>\n<li><a href=\"https://github.com/hannalaakso/accessible-timeout-warning\">Code on GitHub</a></li>\n<li><a href=\"https://gist.github.com/hannalaakso/2641fc16d2158e60d551cd9da960b5da\">Accessibility acceptance criteria</a></li>\n<li><a href=\"https://docs.google.com/document/d/1_tMBKwjvNtiJAGCgK6b9QUTBLkQVbOdSm8wPcjS2Ik0/edit#heading=h.dm20j2a04dzz\" rel=\"nofollow\">User research on Google Docs</a></li>\n</ul>\n<h2>Related patterns</h2>\n<p><a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load issue title\" data-id=\"288532964\" data-permission-text=\"Issue title is private\" data-url=\"https://github.com/alphagov/govuk-design-system-backlog/issues/103\" data-hovercard-url=\"/alphagov/govuk-design-system-backlog/issues/103/hovercard\" data-hovercard-type=\"issue\" href=\"https://github.com/alphagov/govuk-design-system-backlog/issues/103\">#103</a> Timeout page</p>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Timeline",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/105",
+                        "lastEditedAt": "2018-02-20T11:03:15Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Help users understand the history of a document, object or process by showing them a sequence of timestamped events.</p>\n<h2>Why</h2>\n<p>Variants of this pattern are already in use in multiple internal services at Home Office and DWP.</p>\n<h2>Anything else</h2>\n<ul>\n<li><a href=\"https://trello.com/c/yn7odsCQ/49-staff-interfaces-timelines\" rel=\"nofollow\">Timelines: DWP design patterns</a></li>\n<li><a href=\"https://github.com/dwpdigitaltech/design-examples/tree/master/timeline\">Timelines: DWP design examples</a></li>\n<li><a href=\"https://home-office-digital-patterns.herokuapp.com/components/timeline\" rel=\"nofollow\">Timeline: Home Office Design System</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Video",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/107",
+                        "lastEditedAt": "2018-02-20T10:36:43Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Accessible video player for GOV.UK.</p>\n<h2>Why</h2>\n<p>More research is required to establish when video is the most appropriate format for government information.</p>\n<h2>Anything else</h2>\n<ul>\n<li><a href=\"https://paper.dropbox.com/doc/Video-content-Gx0ZbMXECwCGf7ktYsKef\" rel=\"nofollow\">Discussion about video on Dropbox Paper</a></li>\n<li><a href=\"https://github.com/alphagov/govuk_frontend_toolkit/blob/9abfaf9d2236a628aadc05244a7dd6ae8024505a/docs/javascript.md\">Forked version of the Nomensa accessible media player, used by the GOV.UK Frontend toolkit</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Web chat",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/108",
+                        "lastEditedAt": "2018-04-05T17:04:52Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Help people use your service by offering them real-time support via a web chat interface.</p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://user-images.githubusercontent.com/1590604/36417699-85396ab2-1624-11e8-810c-5664e07b619b.png\"><img src=\"https://user-images.githubusercontent.com/1590604/36417699-85396ab2-1624-11e8-810c-5664e07b619b.png\" alt=\"image\" style=\"max-width:100%;\"></a></p>\n<h2>Why</h2>\n<p>We’ve seen an increasing number of government services offering, or looking to offer, web (or live) chat as an alternative contact channel for their users. Several services have successfully adopted web chat using commercial software.</p>\n<p>Webchat allows people to talk to customer support advisers through their browser. This can be more convenient than picking up the phone. It also helps keep people within a digital transaction when they may otherwise drop out, particularly if they don’t understand something or hit a problem.</p>\n<p>Services using this pattern:</p>\n<ul>\n<li><a href=\"https://hmrcdigital.blog.gov.uk/2016/03/10/so-how-do-the-numbers-stack-up-so-far/\" rel=\"nofollow\">HMRC Tax Platform</a></li>\n</ul>\n<h2>Anything else</h2>\n<ul>\n<li><a href=\"https://governmentasaplatform.blog.gov.uk/2017/01/17/webchat-journey/\" rel=\"nofollow\">Summary of the GDS discovery and alpha work on webchat</a></li>\n<li><a href=\"https://paper.dropbox.com/doc/Web-Chat-RX0iTdHN5wytns1pVE4EP\" rel=\"nofollow\">Web chat discussion on Dropbox Paper</a></li>\n</ul>"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "In progress",
+              "cards": {
+                "edges": [
+                  {
+                    "node": {
+                      "note": "Items that are being developed for the Design System. [Find out more](https://github.com/alphagov/govuk-design-system-backlog/blob/master/docs/CONTRIBUTING.md#developing-styles-components-and-patterns)",
+                      "content": null
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Accordion",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/1",
+                        "lastEditedAt": "2018-04-17T08:34:43Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Accordions hide the contents of a section until the user clicks on the section header.<br>\nUse them to help people quickly navigation to a section on a page that's relevant to them.</p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://user-images.githubusercontent.com/33149131/36419336-81c514e4-1629-11e8-8df2-4620cb9eacef.png\"><img src=\"https://user-images.githubusercontent.com/33149131/36419336-81c514e4-1629-11e8-8df2-4620cb9eacef.png\" alt=\"screen shot 2018-02-20 at 10 32 33\" style=\"max-width:100%;\"></a></p>\n<h2>Why</h2>\n<h2>Anything else</h2>\n<ul>\n<li>Research <a href=\"https://designnotes.blog.gov.uk/2017/06/29/designing-new-navigation-elements-for-gov-uk/\" rel=\"nofollow\">Blog post: Designing new navigation elements for GOV.UK</a></li>\n<li><a href=\"https://paper.dropbox.com/doc/Accordions-4lnTjyNru2mN1XXjA1Xf3\" rel=\"nofollow\">Read the draft guidance on Dropbox Paper</a></li>\n<li>Example: <a href=\"https://www.gov.uk/service-manual/agile-delivery\" rel=\"nofollow\">The section pages in the GOV.UK Service Manual use accordions</a></li>\n<li>DVSA (MOT) has a <a href=\"https://dvsa-front-end.herokuapp.com/library/components/accordions\" rel=\"nofollow\">version in their library</a> (<a href=\"https://github.com/dvsa/front-end/blob/master/src/assets/js/dvsa/modules/accordions/accordion.js\">source code here</a>)<br>\nusername: admin<br>\npassword: dvsa</li>\n<li>No component code has been developed yet for the GOV.UK Design System</li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Autocomplete",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/4",
+                        "lastEditedAt": "2018-02-20T10:44:47Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>A text input that suggests options to the user as they type.</p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://user-images.githubusercontent.com/33149131/36419847-09d59c22-162b-11e8-954c-7fbb0df9c473.png\"><img src=\"https://user-images.githubusercontent.com/33149131/36419847-09d59c22-162b-11e8-954c-7fbb0df9c473.png\" alt=\"screen shot 2018-02-20 at 10 44 08\" style=\"max-width:100%;\"></a></p>\n<h2>Why</h2>\n<h2>Anything else</h2>\n<ul>\n<li>Example: <a href=\"https://alphagov.github.io/accessible-autocomplete/examples/\" rel=\"nofollow\">View the demo</a></li>\n<li><a href=\"https://paper.dropbox.com/doc/BIMIenFtAnzbXW5mbqEWK\" rel=\"nofollow\">Read the draft guidance on Dropbox Paper</a></li>\n<li><a href=\"https://github.com/alphagov/accessible-autocomplete\">Download the code from GitHub</a></li>\n</ul>"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "note": null,
+                      "content": {
+                        "title": "Character count",
+                        "url": "https://github.com/alphagov/govuk-design-system-backlog/issues/67",
+                        "lastEditedAt": "2018-09-21T10:18:27Z",
+                        "bodyHTML": "<h2>What</h2>\n<p>Help users understand how many characters they have left to type into a textarea.</p>\n<p>This component was contributed to the GOV.UK Design System by <a class=\"user-mention\" data-hovercard-type=\"user\" data-hovercard-url=\"/hovercards?user_id=788096\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/alex-ju\">@alex-ju</a> on 13 September 2018.</p>\n<p><a href=\"https://deploy-preview-543--govuk-design-system-preview.netlify.com/components/character-count/\" rel=\"nofollow\">Preview the character count component</a></p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://user-images.githubusercontent.com/33149131/36420216-33aa65ae-162c-11e8-872f-2254c397995d.png\"><img src=\"https://user-images.githubusercontent.com/33149131/36420216-33aa65ae-162c-11e8-872f-2254c397995d.png\" alt=\"screen shot 2018-02-20 at 10 52 36\" style=\"max-width:100%;\"></a></p>\n<h2>Research</h2>\n<p>Please see <a href=\"https://github.com/alphagov/govuk-design-system/wiki/Character-count-testing-and-user-research\">Character count testing and user research<br>\n</a></p>"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

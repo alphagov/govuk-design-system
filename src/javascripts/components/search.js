@@ -104,7 +104,6 @@ Search.prototype.resultTemplate = function (result) {
     }
 
     if (result.backlog) {
-      //elem.textContent = ""
       var backlog = result.backlog.split(',').map(function (item) {
         return item.trim()
       })
@@ -118,10 +117,7 @@ Search.prototype.resultTemplate = function (result) {
         })
       }
       if (matchedBacklog.length > 0) {
-        //var backlogContainer = document.createElement('span')
-        //backlogContainer.className = 'app-site-search__aliases'
         elem.textContent = matchedBacklog.join(', ')
-        //elem.appendChild(backlogContainer)
       }
       result.section = "Backlog"
     }
