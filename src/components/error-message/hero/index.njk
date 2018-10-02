@@ -1,0 +1,18 @@
+---
+title: Error message with Label
+layout: layout-example-hero.njk
+ignore_in_sitemap: true
+---
+
+{% from "input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "National Insurance number"
+  },
+  id: "national-insurance-number",
+  name: "national-insurance-number",
+  errorMessage: {
+    text: "Enter a National Insurance number in the right format"
+  }
+}) }}

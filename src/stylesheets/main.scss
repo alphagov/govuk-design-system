@@ -122,14 +122,14 @@ $app-breakpoint-widescreen: 1200px;
 
   // Fix monospace font size when used with relative typography
   //
-  // Browsers automatically reduce monospace font size 
+  // Browsers automatically reduce monospace font size
   //
-  // [1] restores the normal text size in Mozilla Firefox, Google Chrome, 
-  // and Safari; this unusual style rule should also be used anywhere where 
-  // you would otherwise set the font-family property to ‘monospace’. 
+  // [1] restores the normal text size in Mozilla Firefox, Google Chrome,
+  // and Safari; this unusual style rule should also be used anywhere where
+  // you would otherwise set the font-family property to ‘monospace’.
   // [2] restores the normal text size in Internet Explorer and Opera.
   //
-  // source: 
+  // source:
   // http://code.iamkate.com/html-and-css/fixing-browsers-broken-monospace-font-handling/
   pre,
   code {
@@ -341,4 +341,26 @@ p code {
     @extend %govuk-section-break--visible;
     @extend %govuk-section-break--xl;
   }
+}
+
+
+.app-example-grid {
+
+}
+
+.app-example-grid__item {
+  border: 1px solid govuk-colour("grey-2");
+  @include govuk-responsive-padding(4);
+  @include govuk-responsive-margin(6, "bottom");
+  /* box-shadow: 7px 7px 0 #fff, 8px 8px 0 #bfc1c3; */
+}
+
+.app-example-grid__item-heading {
+
+}
+.app-example-grid__item-example {
+  border: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
 }

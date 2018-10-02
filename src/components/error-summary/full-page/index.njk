@@ -1,0 +1,66 @@
+---
+title: Error summary
+layout: layout-example-full-page.njk
+---
+
+{% extends "example-wrappers/full-page.njk" %}
+
+{% from "back-link/macro.njk" import govukBackLink %}
+{% from "date-input/macro.njk" import govukDateInput %}
+{% from "button/macro.njk" import govukButton %}
+{% from "error-summary/macro.njk" import govukErrorSummary %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/" method="post">
+
+        {{ govukErrorSummary({
+          "titleText": "Message to alert the user to a problem goes here",
+          "descriptionText": "Optional description of the errors and how to correct them",
+          "classes": "optional-extra-class",
+          "errorList": [
+            {
+              "text": "Descriptive link to the question with an error",
+              "href": "#example-error-1"
+            },
+            {
+              "text": "Descriptive link to the question with an error",
+              "href": "#example-error-1"
+            }
+          ]
+        }) }}
+
+        {{ govukDateInput({
+          id: 'dob',
+          name: 'dob',
+          fieldset: {
+            legend: {
+              text: 'What is your date of birth?',
+              isPageHeading: true,
+              classes: 'govuk-fieldset__legend--xl'
+            }
+          },
+          hint: {
+            text: 'For example 5 12 1987'
+          },
+          errorMessage: {
+            text: "You must provide your date of birth"
+          }
+          })
+        }}
+
+        {{ govukButton({
+          "text": "Continue"
+        }) }}
+
+      </form>
+    </div>
+  </div>
+{% endblock %}

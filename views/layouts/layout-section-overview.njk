@@ -1,0 +1,10 @@
+{% extends "layout-single-page.njk" %}
+
+{% set contents %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">{{ title }}</h1>
+    {{ contents | safe }}
+  </div>
+</div>
+{% endset %}

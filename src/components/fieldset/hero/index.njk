@@ -1,0 +1,37 @@
+---
+title: Fieldset address group
+layout: layout-example-hero.njk
+ignore_in_sitemap: true
+stylesheets:
+- address-wrapper.css
+---
+
+{% from "input/macro.njk" import govukInput %}
+{% from "fieldset/macro.njk" import govukFieldset %}
+
+{% call govukFieldset({
+  legend: {
+    text: "Legend",
+    classes: "govuk-fieldset__legend--m",
+    isPageHeading: true
+  }
+}) %}
+
+  {{ govukInput({
+    label: {
+      text: 'Input 1'
+    },
+    id: "address-line-1",
+    name: "address-line-1"
+  }) }}
+
+  {{ govukInput({
+    label: {
+      text: "Input 2"
+    },
+    classes: "govuk-!-width-two-thirds",
+    id: "address-town",
+    name: "address-town"
+  }) }}
+
+{% endcall %}
