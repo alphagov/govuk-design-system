@@ -344,12 +344,33 @@ p code {
 }
 
 
+
+/* Extra Grid classes */
+
+// Desktop sizes
+
+@include govuk-grid-column($class: "app-grid-column--at-desktop", $at: desktop, $width: "full");
+
+@include govuk-grid-column($class: "app-grid-column--at-desktop", $at: desktop, $width: "one-half");
+
+@include govuk-grid-column($class: "app-grid-column--at-desktop", $at: desktop, $width: "two-thirds");
+
+@include govuk-grid-column($class: "app-grid-column--at-desktop", $at: desktop, $width: "one-third");
+
+@include govuk-grid-column($class: "app-grid-column--at-desktop", $at: desktop, $width: "three-quarters");
+
+@include govuk-grid-column($class: "app-grid-column--at-desktop", $at: desktop, $width: "one-quarter");
+
+
+/* Landing page visual browse */
+
 .app-example-grid {
 
 }
 
 .app-example-grid__item {
-  border: 1px solid govuk-colour("grey-2");
+  border: 1px solid govuk-colour("grey-3");
+  background-color: govuk-colour("grey-4");
   @include govuk-responsive-padding(4);
   @include govuk-responsive-margin(6, "bottom");
   /* box-shadow: 7px 7px 0 #fff, 8px 8px 0 #bfc1c3; */
@@ -358,9 +379,6 @@ p code {
 .app-example-grid__item-heading {
 
 }
-.app-example-grid__item-example {
-  border: 0;
-  height: 100%;
+.app-example-grid__item-image {
   width: 100%;
-  margin: 0;
 }
