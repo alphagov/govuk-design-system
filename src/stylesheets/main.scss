@@ -381,4 +381,9 @@ p code {
 }
 .app-example-grid__item-image {
   width: 100%;
+  border: 2px solid transparent;
+}
+
+.app-example-grid__item-image:hover {
+  border: 2px solid govuk-colour("blue");
 }
