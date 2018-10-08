@@ -63,8 +63,17 @@
       {% if section %}
         {% include "_contact-panel.njk" %}
       {% endif %}
+      <p class="govuk-body{% if not backlog_issue_id %} govuk-!-margin-bottom-0{% endif %}">
+        <a class="govuk-link" href="https://github.com/alphagov/govuk-design-system/blob/master/src/{{ path }}/index.md.njk">
+          Edit ‘{{title}}’ on Github
+        </a>
+      </p>
       {% if backlog_issue_id %}
-        <p class="govuk-body govuk-!-margin-bottom-0"><a class="govuk-link" href="https://github.com/alphagov/govuk-design-system-backlog/issues/{{backlog_issue_id}}">Discuss ‘{{title}}’ on GitHub</a></p>
+        <p class="govuk-body govuk-!-margin-bottom-0">
+          <a class="govuk-link" href="https://github.com/alphagov/govuk-design-system-backlog/issues/{{backlog_issue_id}}">
+            Discuss ‘{{title}}’ on GitHub
+          </a>
+        </p>
       {% endif %}
     </main>
     {% include "_footer.njk" %}
