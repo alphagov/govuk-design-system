@@ -1,25 +1,25 @@
 {% from "phase-banner/macro.njk" import govukPhaseBanner %}
 <div class="app-!-margin-auto govuk-!-width-full app-site-width-container">
-  {% if PULL_REQUEST %}
-    {% set phaseBannerText %}
-      This is a preview of
-      {% if REVIEW_ID %}
-        a <a class="govuk-link" href="https://github.com/alphagov/govuk-design-system/pull/{{ REVIEW_ID  }}">proposed change</a> to the
-      {% else %}
-        the <a class="govuk-link" href="https://github.com/alphagov/govuk-design-system/tree/{{ BRANCH }}">{{ BRANCH }}</a> branch for the
-      {% endif %}
-      <a class="govuk-link" href="https://design-system.service.gov.uk">Design System</a>.
-    {% endset %}
+{% if PULL_REQUEST %}
+  {% set phaseBannerText %}
+    This is a preview of
+    {% if REVIEW_ID %}
+      a <a class="govuk-link" href="https://github.com/alphagov/govuk-design-system/pull/{{ REVIEW_ID  }}">proposed change</a> to the
+    {% else %}
+      the <a class="govuk-link" href="https://github.com/alphagov/govuk-design-system/tree/{{ BRANCH }}">{{ BRANCH }}</a> branch for the
+    {% endif %}
+    <a class="govuk-link" href="https://design-system.service.gov.uk">Design System</a>.
+  {% endset %}
 
-    {{ govukPhaseBanner({
-      "tag": {
-        "text": "preview",
-        "classes": "app-tag--review"
-      },
-      "classes": "app-phase-banner",
-      "html": phaseBannerText
-    }) }}
-  {% else %}
+  {{ govukPhaseBanner({
+    "tag": {
+      "text": "preview",
+      "classes": "app-tag--review"
+    },
+    "classes": "app-phase-banner",
+    "html": phaseBannerText
+  }) }}
+{% else %}
     {{ govukPhaseBanner({
       "tag": {
         "text": "beta"
