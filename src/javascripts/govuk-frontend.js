@@ -6,6 +6,10 @@ import Checkboxes from 'govuk-frontend/components/checkboxes/checkboxes'
 import Radios from 'govuk-frontend/components/radios/radios'
 import Header from 'govuk-frontend/components/header/header'
 import Tabs from 'govuk-frontend/components/tabs/tabs'
+import CharacterCount from './components/character-count.js'
+import common from 'govuk-frontend/common'
+
+var nodeListForEach = common.nodeListForEach
 
 new Button(document).init()
 
@@ -33,3 +37,8 @@ var $tabs = document.querySelector('[data-module="tabs"]')
 if ($tabs) {
   new Tabs($tabs).init()
 }
+
+var $characterCount = document.querySelectorAll('[data-module="character-count"]')
+nodeListForEach($characterCount, function ($characterCount) {
+  new CharacterCount($characterCount).init()
+})

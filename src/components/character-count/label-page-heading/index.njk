@@ -1,0 +1,15 @@
+---
+title: Character count
+layout: layout-example.njk
+---
+ {% from "character-count/macro.njk" import govukCharacterCount %}
+ {{ govukCharacterCount({
+  id: "label-as-page-heading",
+  name: "label-as-page-heading",
+  maxlength: 200,
+  label: {
+    text: "Describe the nature of your event",
+    classes: "govuk-label--xl",
+    isPageHeading: true
+  }
+}) }}
