@@ -65,14 +65,52 @@ Where possible, allow users to complete tasks in any order. This will help them 
 
 ## Research on this pattern
 
-Read a blog post about [testing and iterating the task list page pattern](https://designnotes.blog.gov.uk/2017/04/04/weve-published-the-task-list-pattern/).
+This pattern was originally developed and tested by a team at the Government Digital Service (GDS). 
 
-### <a name="next-steps"></a>Next steps
+The team built prototypes of task lists for 3 services, Register as a childminder, Learn to drive and Transport goods and tested them with 34 users over 5 rounds of research. 
 
-More research is needed to find the best way to represent:
+The pattern was iterated after each round of testing.
 
-- which task to complete next
-- tasks that cannot be completed yet
-- partially completed tasks
+You can read more about [testing and iterating the task list page pattern](https://designnotes.blog.gov.uk/2017/04/04/weve-published-the-task-list-pattern/).
 
-Research is also needed to understand whether it’s more helpful to take users back to the task list page after each task, or to the next task in the sequence.
+### Known issues and gaps
+
+There is evidence that the completed tag might be misleading to some users.
+
+In one instance, [a user saw a task marked ‘completed’ and thought this meant they had submitted their response](https://github.com/alphagov/govuk-design-system-backlog/issues/72#issuecomment-413159884). As a result, they didn’t continue to the ‘Check and submit your response’ task, and were later issued with a court order for not responding.
+
+In addition, user research and feedback on this pattern has shown that: 
+
+- some screen reader users are frustrated by having to tab through every section each time they return to the task list after completing a task
+- some services need users to complete tasks in a particular order, for example, a user must fill in an application before they can pay 
+- once a few tasks have been completed it becomes harder to scan the page and spot incomplete tasks
+- some users do not realise they have to complete all the tasks before they can continue
+
+### Services using this pattern
+
+This pattern has been used in a number of services, including the following.
+
+<h4 class="govuk-!-margin-bottom-0">Ministry of Justice</h4>
+
+Apply for probate</br>
+Money claims
+
+<h4 class="govuk-!-margin-bottom-0">Ofsted</h4>
+
+Register as a childminder
+
+### Next steps
+
+Work is needed to ensure that users can understand the difference between completing a task and completing the whole service. 
+
+In addition, more user research is needed to find out:
+
+- how to help screen reader users to get an overview of the progress they have made through the task list
+- whether to return users to the task list after each task or take them straight to the next task in the sequence
+- the best way to show when tasks must be completed in a fixed order
+- how to ensure users can see which tasks have been completed and which they still need to do 
+
+If you’ve used this component, get in touch to share your user research findings.
+
+
+
