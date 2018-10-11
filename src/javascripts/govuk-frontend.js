@@ -1,5 +1,6 @@
 import Button from 'govuk-frontend/components/button/button'
 import Details from 'govuk-frontend/components/details/details'
+import CharacterCount from 'govuk-frontend/components/character-count/character-count'
 import Checkboxes from 'govuk-frontend/components/checkboxes/checkboxes'
 // Intentionally avoid importing ErrorSummary since it will steal focus, scrolling example pages.
 // import ErrorSummary from 'govuk-frontend/components/error-summary/error-summary'
@@ -12,6 +13,11 @@ new Button(document).init()
 var $details = document.querySelector('details')
 if ($details) {
   new Details($details).init()
+}
+
+var $characterCount = document.querySelector('[data-module="character-count"]')
+if ($characterCount) {
+  new CharacterCount($characterCount).init()
 }
 
 var $checkbox = document.querySelector('[data-module="checkboxes"]')
