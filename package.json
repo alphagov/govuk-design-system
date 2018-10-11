@@ -30,7 +30,7 @@
   "dependencies": {
     "autoprefixer": "^9.1.0",
     "clipboard": "^2.0.1",
-    "govuk-frontend": "^2.1.0",
+    "govuk-frontend": "^2.2.0",
     "gray-matter": "^4.0.1",
     "highlight.js": "^9.12.0",
     "html5shiv": "^3.7.3",
