@@ -1,6 +1,6 @@
 /* eslint-env jest */
 const configPaths = require('../config/paths.json')
-const PORT = configPaths.port
+const PORT = configPaths.testPort
 
 // Regex that can be used to match on fingerprinted search index files
 const isSearchIndex = /.*\/search-index-[0-9a-f]{32}.json$/

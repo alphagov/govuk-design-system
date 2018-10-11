@@ -9,8 +9,8 @@ const paths = require('../config/paths.json')
 const runServer = () => {
   // Create a simple server for serving static files
   const app = connect().use(serveStatic(paths.public))
-  http.createServer(app).listen(paths.port, () => {
-    console.log(`Listening on port ${paths.port}...`)
+  http.createServer(app).listen(paths.testPort, () => {
+    console.log(`Listening on port ${paths.testPort}...`)
   })
 }
 

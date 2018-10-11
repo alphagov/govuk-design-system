@@ -1,5 +1,5 @@
 const configPaths = require('./config/paths.json')
-const PORT = configPaths.port
+const PORT = configPaths.testPort
 
 module.exports = {
   server: {
