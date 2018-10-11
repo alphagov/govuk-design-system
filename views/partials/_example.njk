@@ -15,7 +15,7 @@
 
 {% set multipleTabs = params.html and params.nunjucks %}
 
-<div class="app-example-wrapper js-example" id="{{ exampleId }}">
+<div class="app-example-wrapper" id="{{ exampleId }}" data-module="app-tabs">
   <div class="app-example {{ "app-example--tabs" if params.html or params.nunjucks }}">
     <span class="app-example__new-window">
       <a href="{{ exampleURL }}" target="_blank">
