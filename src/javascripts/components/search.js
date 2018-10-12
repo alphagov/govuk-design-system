@@ -24,7 +24,10 @@ var inputDebounceTimer = null
 // We want to wait a bit before firing events to indicate that
 // someone is looking at a result and not that it's come up in passing.
 var DEBOUNCE_TIME_TO_WAIT = function () {
-  return 2000 // milliseconds
+  // We want to be able to reduce this timeout in order to make sure
+  // our tests do not run very slowly.
+  var timeout = window.__SITE_SEARCH_TRACKING_TIMEOUT
+  return (typeof timeout !== 'undefined') ? timeout : 2000 // milliseconds
 }
 
 function Search ($module) {

@@ -20,10 +20,6 @@ afterEach(async (done) => {
   done()
 })
 
-function timeout (ms) {
-  return new Promise(resolve => setTimeout(resolve, ms))
-}
-
 describe('Site search', () => {
   it('does not return any results when searching for something that does not exist', async () => {
     await page.goto(baseUrl, { waitUntil: 'load' })
@@ -145,14 +141,14 @@ describe('Site search', () => {
   })
 
   describe('tracking', () => {
-    const SEARCH_TRACKING_TIMEOUT = 2000
     it('should track if there are no results', async () => {
       await page.goto(baseUrl, { waitUntil: 'load' })
+
+      await page.evaluate(() => { window.__SITE_SEARCH_TRACKING_TIMEOUT = 0 })
 
       await page.waitForSelector('.app-site-search__input')
       await page.focus('.app-site-search__input')
       await page.type('.app-site-search__input', 'lorem ipsum')
-      await timeout(SEARCH_TRACKING_TIMEOUT)
       const GoogleTagManagerDataLayer = await page.evaluate(() => window.dataLayer)
 
       expect(GoogleTagManagerDataLayer).toEqual(
@@ -174,10 +170,11 @@ describe('Site search', () => {
     it('should track if there are results', async () => {
       await page.goto(baseUrl, { waitUntil: 'load' })
 
+      await page.evaluate(() => { window.__SITE_SEARCH_TRACKING_TIMEOUT = 0 })
+
       await page.waitForSelector('.app-site-search__input')
       await page.focus('.app-site-search__input')
       await page.type('.app-site-search__input', 'g')
-      await timeout(SEARCH_TRACKING_TIMEOUT)
       const optionResults = await page.$$('.app-site-search__option')
       const GoogleTagManagerDataLayer = await page.evaluate(() => window.dataLayer)
 
@@ -261,10 +258,11 @@ describe('Site search', () => {
     it('should block personally identifable information emails', async () => {
       await page.goto(baseUrl, { waitUntil: 'load' })
 
+      await page.evaluate(() => { window.__SITE_SEARCH_TRACKING_TIMEOUT = 0 })
+
       await page.waitForSelector('.app-site-search__input')
       await page.focus('.app-site-search__input')
       await page.type('.app-site-search__input', 'user@example.com')
-      await timeout(SEARCH_TRACKING_TIMEOUT)
       const GoogleTagManagerDataLayer = await page.evaluate(() => window.dataLayer)
 
       expect(GoogleTagManagerDataLayer).toEqual(
@@ -280,10 +278,11 @@ describe('Site search', () => {
     it('should block personally identifable information numbers', async () => {
       await page.goto(baseUrl, { waitUntil: 'load' })
 
+      await page.evaluate(() => { window.__SITE_SEARCH_TRACKING_TIMEOUT = 0 })
+
       await page.waitForSelector('.app-site-search__input')
       await page.focus('.app-site-search__input')
       await page.type('.app-site-search__input', '079460999')
-      await timeout(SEARCH_TRACKING_TIMEOUT)
       const GoogleTagManagerDataLayer = await page.evaluate(() => window.dataLayer)
 
       expect(GoogleTagManagerDataLayer).toEqual(
