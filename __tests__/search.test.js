@@ -212,6 +212,8 @@ describe('Site search', () => {
       await page.goto(baseUrl, { waitUntil: 'load' })
 
       // Prevent page from unloading so we can check what was tracked.
+      // By setting onbeforeunload it forces a dialog to appear that allows a user
+      // to cancel leaving the page, so we detect the dialog opening and dismiss it to stop the navigation.
       await page.evaluate(() => {
         window.onbeforeunload = () => true
       })
