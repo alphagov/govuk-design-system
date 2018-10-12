@@ -2,6 +2,8 @@
 import accessibleAutocomplete from 'accessible-autocomplete'
 import lunr from 'lunr'
 
+import { trackSearchResults, trackConfirm } from './search.tracking.js'
+
 // CONSTANTS
 var TIMEOUT = 10 // Time to wait before giving up fetching the search index
 var STATE_DONE = 4 // XHR client readyState DONE
@@ -13,6 +15,17 @@ var documentStore = null
 var statusMessage = null
 var searchQuery = ''
 var searchCallback = function () {}
+// Results that are rendered by the autocomplete
+var searchResults = []
+
+// Timer that allows us to only fire events after a user has finished typing
+var inputDebounceTimer = null
+
+// We want to wait a bit before firing events to indicate that
+// someone is looking at a result and not that it's come up in passing.
+var DEBOUNCE_TIME_TO_WAIT = function () {
+  return 2000 // milliseconds
+}
 
 function Search ($module) {
   this.$module = $module
@@ -42,32 +55,39 @@ Search.prototype.fetchSearchIndex = function (indexUrl, callback) {
 }
 
 Search.prototype.renderResults = function () {
-  var matchedResults = []
   if (!searchIndex || !documentStore) {
-    return searchCallback(matchedResults)
+    return searchCallback(searchResults)
   }
-  var searchResults = searchIndex.query(function (q) {
+  var lunrSearchResults = searchIndex.query(function (q) {
     q.term(lunr.tokenizer(searchQuery), {
       wildcard: lunr.Query.wildcard.TRAILING
     })
   })
-  matchedResults = searchResults.map(function (result) {
+  searchResults = lunrSearchResults.map(function (result) {
     return documentStore[result.ref]
   })
-  searchCallback(matchedResults)
+  searchCallback(searchResults)
 }
 
 Search.prototype.handleSearchQuery = function (query, callback) {
   searchQuery = query
   searchCallback = callback
+
+  clearTimeout(inputDebounceTimer)
+  inputDebounceTimer = setTimeout(function () {
+    trackSearchResults(searchQuery, searchResults)
+  }, DEBOUNCE_TIME_TO_WAIT())
+
   this.renderResults()
 }
 
 Search.prototype.handleOnConfirm = function (result) {
   var path = result.path
-  if (path) {
-    window.location.href = '/' + path
+  if (!path) {
+    return
   }
+  trackConfirm(searchQuery, searchResults, result)
+  window.location.href = '/' + path
 }
 
 Search.prototype.inputValueTemplate = function (result) {
@@ -146,12 +166,19 @@ Search.prototype.init = function () {
     tNoResults: function () { return statusMessage }
   })
 
-  // Ensure the Button (which is a background image of the wrapper) focuses the input when clicked.
   var $wrapper = $module.querySelector('.app-site-search__wrapper')
+  var $input = $module.querySelector('.app-site-search__input')
+
+  // Ensure if the user stops using the search that we do not send tracking events
+  $input.addEventListener('blur', function (event) {
+    clearTimeout(inputDebounceTimer)
+  })
+
+  // Ensure the Button (which is a background image of the wrapper) focuses the input when clicked.
   $wrapper.addEventListener('click', function (event) {
     // Only focus the input if the user clicks the wrapper and not the input.
     if (event.target === $wrapper) {
-      $module.querySelector('.app-site-search__input').focus()
+      $input.focus()
     }
   })
 
