@@ -1,6 +1,6 @@
 /* eslint-env jest */
 const configPaths = require('../config/paths.json')
-const PORT = configPaths.port
+const PORT = configPaths.testPort
 
 let browser
 let page

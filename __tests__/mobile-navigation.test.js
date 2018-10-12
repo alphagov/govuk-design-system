@@ -2,7 +2,7 @@
 const devices = require('puppeteer/DeviceDescriptors')
 const iPhone = devices['iPhone 6']
 const configPaths = require('../config/paths.json')
-const PORT = configPaths.port
+const PORT = configPaths.testPort
 
 let browser
 let page

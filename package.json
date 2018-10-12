@@ -30,6 +30,7 @@
   "dependencies": {
     "autoprefixer": "^9.1.0",
     "clipboard": "^2.0.1",
+    "connect": "^3.6.6",
     "govuk-frontend": "^2.2.0",
     "gray-matter": "^4.0.1",
     "highlight.js": "^9.12.0",
@@ -38,7 +39,8 @@
     "lunr": "^2.3.1",
     "metalsmith-postcss": "^4.2.0",
     "modernizr": "^3.6.0",
-    "sass-export": "^1.0.2"
+    "sass-export": "^1.0.2",
+    "serve-static": "^1.13.2"
   },
   "devDependencies": {
     "accessible-autocomplete": "^1.6.1",

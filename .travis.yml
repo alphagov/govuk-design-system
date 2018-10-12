@@ -8,8 +8,8 @@ script:
   # TravisCI is slower than our local machines, so results in intermittent timeouts
   # using the `--runInBand` flag we can force it to without requiring as much
   # resources (https://facebook.github.io/jest/docs/en/troubleshooting.html#tests-are-extremely-slow-on-docker-and-or-continuous-integration-ci-server)
-  - npm test -- --runInBand
   - npm run build
+  - npm test -- --runInBand
 
 sudo: false
 
