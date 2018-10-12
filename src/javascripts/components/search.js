@@ -117,6 +117,18 @@ Search.prototype.init = function () {
     return
   }
 
+  // The Accessible Autocomplete only works in IE9+ so we can use newer JavaScript features here
+  // but need to check for browsers that do not have these features and force the fallback by returning early.
+  // http://responsivenews.co.uk/post/18948466399/cutting-the-mustard
+  var cutsTheMustard = (
+    'querySelector' in document &&
+    !!(Array.prototype && Array.prototype.forEach)
+  )
+
+  if (!cutsTheMustard) {
+    return
+  }
+
   accessibleAutocomplete({
     element: $module,
     id: 'app-site-search__input',
