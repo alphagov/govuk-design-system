@@ -115,7 +115,7 @@ Search.prototype.resultTemplate = function (result) {
         // it would be confusing to show the user
         // aliases that don't match the typed query
         matchedAliases = aliases.filter(function (alias) {
-          return alias.indexOf(searchQuery) !== -1
+          return alias.toLowerCase().indexOf(searchQuery.toLowerCase()) !== -1
         })
       }
       if (matchedAliases.length > 0) {
