@@ -27,7 +27,7 @@ nodeListForEach($codeBlocks, function ($codeBlock) {
 })
 
 // Initialise mobile navigation
-MobileNav.init()
+new MobileNav().init()
 
 // Initialise search
 var $searchContainer = document.querySelector('[data-module="app-search"]')
