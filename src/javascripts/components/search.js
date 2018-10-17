@@ -143,13 +143,13 @@ Search.prototype.init = function () {
   // The Accessible Autocomplete only works in IE9+ so we can use newer JavaScript features here
   // but need to check for browsers that do not have these features and force the fallback by returning early.
   // http://responsivenews.co.uk/post/18948466399/cutting-the-mustard
-  var cutsTheMustard = (
+  var featuresNeeded = (
     'querySelector' in document &&
     'addEventListener' in window &&
     !!(Array.prototype && Array.prototype.forEach)
   )
 
-  if (!cutsTheMustard) {
+  if (!featuresNeeded) {
     return
   }
 
