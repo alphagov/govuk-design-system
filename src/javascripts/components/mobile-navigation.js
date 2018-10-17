@@ -1,4 +1,3 @@
-import 'govuk-frontend/vendor/polyfills/Event'
 import 'govuk-frontend/vendor/polyfills/Element/prototype/classList'
 
 import common from 'govuk-frontend/common'
@@ -94,6 +93,18 @@ MobileNav.prototype.includeAria = function () {
 }
 
 MobileNav.prototype.init = function () {
+  // Since the Mobile navigation is not included in IE8
+  // We detect features we need to use only available in IE9+ https://caniuse.com/#feat=addeventlistener
+  // http://responsivenews.co.uk/post/18948466399/cutting-the-mustard
+  var featuresNeeded = (
+    'querySelector' in document &&
+    'addEventListener' in window
+  )
+
+  if (!featuresNeeded) {
+    return
+  }
+
   this.includeAria()
   this.bindUIEvents()
 }
