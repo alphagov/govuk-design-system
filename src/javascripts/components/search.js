@@ -145,6 +145,7 @@ Search.prototype.init = function () {
   // http://responsivenews.co.uk/post/18948466399/cutting-the-mustard
   var cutsTheMustard = (
     'querySelector' in document &&
+    'addEventListener' in window &&
     !!(Array.prototype && Array.prototype.forEach)
   )
 
