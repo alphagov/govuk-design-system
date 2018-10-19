@@ -12,13 +12,11 @@ function MobileNav ($module) {
   this.$module = $module || document
   this.$mobileNav = this.$module.querySelector('.js-app-mobile-nav')
   this.$mobileNavToggler = this.$module.querySelector('.js-app-mobile-nav-toggler')
-  this.$subNavTogglers = this.$module.querySelectorAll('.js-mobile-nav-subnav-toggler')
 }
 
 MobileNav.prototype.bindUIEvents = function () {
   var $mobileNav = this.$mobileNav
   var $mobileNavToggler = this.$mobileNavToggler
-  var $subNavTogglers = this.$subNavTogglers
 
   $mobileNavToggler.addEventListener('click', function (e) {
     if ($mobileNav.classList.contains(mobileNavActiveClass)) {
@@ -36,28 +34,29 @@ MobileNav.prototype.bindUIEvents = function () {
     }
   })
 
-  nodeListForEach($subNavTogglers, function ($toggler) {
-    $toggler.addEventListener('click', function (event) {
-      var $toggler = event.target
-      var $nextSubNav = $toggler.parentNode.querySelector('.js-app-mobile-nav-subnav')
+  $mobileNav.addEventListener('click', function (event) {
+    var $toggler = event.target
+    if (!$toggler.classList.contains('js-mobile-nav-subnav-toggler')) {
+      return
+    }
+    var $nextSubNav = $toggler.parentNode.querySelector('.js-app-mobile-nav-subnav')
 
-      if ($nextSubNav) {
-        if ($nextSubNav.classList.contains(subNavActiveClass)) {
-          $nextSubNav.classList.remove(subNavActiveClass)
-          $toggler.classList.remove(subNavTogglerActiveClass)
+    if ($nextSubNav) {
+      if ($nextSubNav.classList.contains(subNavActiveClass)) {
+        $nextSubNav.classList.remove(subNavActiveClass)
+        $toggler.classList.remove(subNavTogglerActiveClass)
 
-          $nextSubNav.setAttribute('aria-hidden', 'true')
-          $toggler.setAttribute('aria-expanded', 'false')
-        } else {
-          $nextSubNav.classList.add(subNavActiveClass)
-          $toggler.classList.add(subNavTogglerActiveClass)
+        $nextSubNav.setAttribute('aria-hidden', 'true')
+        $toggler.setAttribute('aria-expanded', 'false')
+      } else {
+        $nextSubNav.classList.add(subNavActiveClass)
+        $toggler.classList.add(subNavTogglerActiveClass)
 
-          $nextSubNav.setAttribute('aria-hidden', 'false')
-          $toggler.setAttribute('aria-expanded', 'true')
-        }
-        event.preventDefault()
+        $nextSubNav.setAttribute('aria-hidden', 'false')
+        $toggler.setAttribute('aria-expanded', 'true')
       }
-    })
+      event.preventDefault()
+    }
   })
 }
 
@@ -70,7 +69,7 @@ MobileNav.prototype.includeAria = function () {
   $mobileNavToggler.setAttribute('aria-expanded', 'false')
   $mobileNavToggler.setAttribute('aria-controls', 'app-mobile-nav')
 
-  var $subNavTogglers = this.$subNavTogglers
+  var $subNavTogglers = this.$module.querySelectorAll('.js-mobile-nav-subnav-toggler')
 
   nodeListForEach($subNavTogglers, function ($toggler, index) {
     var $nextSubNav = $toggler.parentNode.querySelector('.js-app-mobile-nav-subnav')
