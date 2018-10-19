@@ -3,38 +3,38 @@ import 'govuk-frontend/vendor/polyfills/Element/prototype/classList'
 import common from 'govuk-frontend/common'
 var nodeListForEach = common.nodeListForEach
 
-var mobileNavActiveClass = 'app-mobile-nav--active'
-var mobileNavTogglerActiveClass = 'app-header-mobile-nav-toggler--active'
+var navActiveClass = 'app-mobile-nav--active'
+var navTogglerActiveClass = 'app-header-mobile-nav-toggler--active'
 var subNavActiveClass = 'app-mobile-nav__subnav--active'
 var subNavTogglerActiveClass = 'app-mobile-nav__subnav-toggler--active'
 
 function MobileNav ($module) {
   this.$module = $module || document
-  this.$mobileNav = this.$module.querySelector('.js-app-mobile-nav')
-  this.$mobileNavToggler = this.$module.querySelector('.js-app-mobile-nav-toggler')
+  this.$nav = this.$module.querySelector('.js-app-mobile-nav')
+  this.$navToggler = this.$module.querySelector('.js-app-mobile-nav-toggler')
 }
 
 MobileNav.prototype.bindUIEvents = function () {
-  var $mobileNav = this.$mobileNav
-  var $mobileNavToggler = this.$mobileNavToggler
+  var $nav = this.$nav
+  var $navToggler = this.$navToggler
 
-  $mobileNavToggler.addEventListener('click', function (e) {
-    if ($mobileNav.classList.contains(mobileNavActiveClass)) {
-      $mobileNav.classList.remove(mobileNavActiveClass)
-      $mobileNav.setAttribute('aria-hidden', 'true')
+  $navToggler.addEventListener('click', function (e) {
+    if ($nav.classList.contains(navActiveClass)) {
+      $nav.classList.remove(navActiveClass)
+      $nav.setAttribute('aria-hidden', 'true')
 
-      $mobileNavToggler.classList.remove(mobileNavTogglerActiveClass)
-      $mobileNavToggler.setAttribute('aria-expanded', 'false')
+      $navToggler.classList.remove(navTogglerActiveClass)
+      $navToggler.setAttribute('aria-expanded', 'false')
     } else {
-      $mobileNav.classList.add(mobileNavActiveClass)
-      $mobileNav.setAttribute('aria-hidden', 'false')
+      $nav.classList.add(navActiveClass)
+      $nav.setAttribute('aria-hidden', 'false')
 
-      $mobileNavToggler.setAttribute('aria-expanded', 'true')
-      $mobileNavToggler.classList.add(mobileNavTogglerActiveClass)
+      $navToggler.setAttribute('aria-expanded', 'true')
+      $navToggler.classList.add(navTogglerActiveClass)
     }
   })
 
-  $mobileNav.addEventListener('click', function (event) {
+  $nav.addEventListener('click', function (event) {
     var $toggler = event.target
     if (!$toggler.classList.contains('js-mobile-nav-subnav-toggler')) {
       return
@@ -61,13 +61,13 @@ MobileNav.prototype.bindUIEvents = function () {
 }
 
 MobileNav.prototype.includeAria = function () {
-  this.$mobileNav.setAttribute('aria-hidden', 'true')
-  this.$mobileNav.setAttribute('aria-labelledby', 'app-header-mobile-nav-toggler')
+  this.$nav.setAttribute('aria-hidden', 'true')
+  this.$nav.setAttribute('aria-labelledby', 'app-header-mobile-nav-toggler')
 
-  var $mobileNavToggler = this.$mobileNavToggler
-  $mobileNavToggler.setAttribute('aria-label', 'Toggle mobile menu')
-  $mobileNavToggler.setAttribute('aria-expanded', 'false')
-  $mobileNavToggler.setAttribute('aria-controls', 'app-mobile-nav')
+  var $navToggler = this.$navToggler
+  $navToggler.setAttribute('aria-label', 'Toggle mobile menu')
+  $navToggler.setAttribute('aria-expanded', 'false')
+  $navToggler.setAttribute('aria-controls', 'app-mobile-nav')
 
   var $subNavTogglers = this.$module.querySelectorAll('.js-mobile-nav-subnav-toggler')
 
