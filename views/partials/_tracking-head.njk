@@ -1,4 +1,4 @@
-{% if GTM_TAG %}
+{% if GTM_TAG and GTM_TAG != 'false' %}
 <script>
 // Normalize doNotTrack implementations, see https://caniuse.com/#feat=do-not-track
 var DO_NOT_TRACK_ENABLED = (

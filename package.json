@@ -17,7 +17,7 @@
     "prestart": "node bin/check-nvmrc.js",
     "build": "node tasks/build.js",
     "start": "node tasks/serve.js",
-    "test": "npm run lint && jest",
+    "test": "GTM_TAG=false npm run lint && jest",
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "standard",
     "lint:scss": "gulp scss:lint"
