@@ -17,7 +17,11 @@ Use the textarea component when you need to let users enter an amount of text th
 
 ## When not to use this component
 
-Don’t use the textarea component if you need to let users enter shorter answers no longer than a single line, such as a phone number or name. In this case, you should use the [text input](../text-input) component.
+Users can find open-ended questions difficult to answer. It might be better to break up one complex question into a series of simple ones, for example where users can select from options using [radios](../radios).
+
+### If you need to ask an open question
+
+Do not use the textarea component if you need to let users enter shorter answers no longer than a single line, such as a phone number or name. In this case, you should use the [text input](../text-input) component.
 
 ## How it works
 
@@ -40,6 +44,11 @@ Make the height of a textarea proportional to the amount of text you expect user
 ### Don’t disable copy and paste
 
 Users will often need to copy and paste information into a textarea, so you shouldn’t prevent them from doing this.
+
+### Limiting the number of characters
+
+If there’s a good reason to limit the number of characters users can enter, you can use the [character count](../character-count) component.
+
 
 ### Error messages
 
