@@ -8,7 +8,6 @@
 {% set exampleURL = "/" + params.group + "/" + params.item + "/" + params.example + "/index.html" %}
 {% set exampleId = params.id | default("example-" + params.example) %}
 {% set exampleTitle = getFrontmatter(examplePath).title %}
-{% set frontendComponentName = params.frontendComponentName | default(params.item) %}
 {% if params.open %}
   {% set exampleId = exampleId + '-open' %}
 {% endif %}
