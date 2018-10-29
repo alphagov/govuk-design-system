@@ -87,6 +87,10 @@
   border: 1px solid $govuk-border-colour;
 }
 
+.app-tabs__container--hidden {
+  display: none;
+}
+
 .app-tabs__container pre {
   max-width: inherit;
   margin-bottom: 0;

@@ -1,7 +1,7 @@
 import common from 'govuk-frontend/common'
 import CookieBanner from './components/cookie-banner.js'
 import Example from './components/example.js'
-import Tabs from './components/tabs.js'
+import AppTabs from './components/tabs.js'
 
 var nodeListForEach = common.nodeListForEach
 
@@ -15,4 +15,7 @@ nodeListForEach($examples, function ($example) {
 })
 
 // Initialise tabs
-Tabs.init('.js-example')
+var $tabs = document.querySelectorAll('[data-module="app-tabs"]')
+nodeListForEach($tabs, function ($tabs) {
+  new AppTabs($tabs).init()
+})

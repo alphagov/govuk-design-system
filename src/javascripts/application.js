@@ -1,7 +1,7 @@
 import common from 'govuk-frontend/common'
 import CookieBanner from './components/cookie-banner.js'
 import Example from './components/example.js'
-import Tabs from './components/tabs.js'
+import AppTabs from './components/tabs.js'
 import Copy from './components/copy.js'
 import MobileNav from './components/mobile-navigation.js'
 import Search from './components/search.js'
@@ -18,7 +18,10 @@ nodeListForEach($examples, function ($example) {
 })
 
 // Initialise tabs
-Tabs.init('.js-example')
+var $tabs = document.querySelectorAll('[data-module="app-tabs"]')
+nodeListForEach($tabs, function ($tabs) {
+  new AppTabs($tabs).init()
+})
 
 // Add copy to clipboard to code blocks inside tab containers
 var $codeBlocks = document.querySelectorAll('[data-module="app-copy"]')
