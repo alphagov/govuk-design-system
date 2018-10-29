@@ -12,6 +12,9 @@ let baseUrl = 'http://localhost:' + PORT
 beforeEach(async (done) => {
   browser = global.browser
   page = await browser.newPage()
+  await page.evaluateOnNewDocument(() => {
+    window.__TESTS_RUNNING = true
+  })
   done()
 })
 
