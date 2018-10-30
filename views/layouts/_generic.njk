@@ -9,7 +9,9 @@
   {% if not TRAVIS_BRANCH or TRAVIS_BRANCH != 'master' %}
     <meta name="robots" content="noindex, nofollow">
   {% endif %}
+  <meta name="og:title" content="{{title}}">
   <meta name="description" content="{{description}}">
+  <meta name="og:description" content="{{description}}">
   <link rel="canonical" href="{{ canonical }}" />
   <!--[if lt IE 9]>
     <link href="{{ getFingerprint('stylesheets/main-ie8.css') }}" rel="stylesheet" media="all" />
