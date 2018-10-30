@@ -19,6 +19,7 @@
   <body class="app-example-page">
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
     <!-- Disable browser validation for any examples that include form elements -->
+    <iframe width="0" height="0" border="0" name="redirectback" id="redirectback"></iframe>
     <form novalidate>
       {% block body %}
         {{ contents | safe }}
