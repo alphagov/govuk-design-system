@@ -5,6 +5,7 @@ import AppTabs from './components/tabs.js'
 import Copy from './components/copy.js'
 import MobileNav from './components/mobile-navigation.js'
 import Search from './components/search.js'
+import OptionsTable from './components/options-table.js'
 
 var nodeListForEach = common.nodeListForEach
 
@@ -22,6 +23,9 @@ var $tabs = document.querySelectorAll('[data-module="app-tabs"]')
 nodeListForEach($tabs, function ($tabs) {
   new AppTabs($tabs).init()
 })
+
+// Do this after initialising tabs
+OptionsTable.init()
 
 // Add copy to clipboard to code blocks inside tab containers
 var $codeBlocks = document.querySelectorAll('[data-module="app-copy"]')

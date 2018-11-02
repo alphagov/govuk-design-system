@@ -1,0 +1,29 @@
+.app-options {
+  max-width: 38em;
+  margin-bottom: govuk-spacing(1);
+  padding: govuk-spacing(2) govuk-spacing(2) 0 govuk-spacing(2);
+  background-color: govuk-colour("white");
+
+  @include govuk-media-query($from: tablet) {
+    margin-bottom: govuk-spacing(4);
+    padding: govuk-spacing(5) govuk-spacing(5) 0 govuk-spacing(5);
+  }
+}
+
+.app-options__table {
+  @include govuk-media-query(mobile) {
+    table-layout: fixed;
+
+    .govuk-table__header,
+    .govuk-table__cell {
+      padding-right: govuk-spacing(2);
+      word-break: break-word;
+    }
+  }
+}
+
+.app-options__limit-table-cell {
+  @include govuk-media-query(mobile) {
+    width: 29%;
+  }
+}
