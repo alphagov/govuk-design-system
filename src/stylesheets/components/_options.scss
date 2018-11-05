@@ -19,9 +19,3 @@
     }
   }
 }
-
-.app-options__limit-table-cell {
-  @include govuk-media-query(mobile) {
-    width: 29%;
-  }
-}
