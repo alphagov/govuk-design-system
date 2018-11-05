@@ -13,11 +13,8 @@
   max-width: 38em;
 
   @include govuk-media-query(mobile) {
-    table-layout: fixed;
-
     .govuk-table__header,
     .govuk-table__cell {
-      padding-right: govuk-spacing(2);
       word-break: break-word;
     }
   }
