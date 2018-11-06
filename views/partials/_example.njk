@@ -102,12 +102,11 @@
       {% from "details/macro.njk" import govukDetails %}
 
       {{ govukDetails({
-        summaryText: "Nunjucks macro options",
+        summaryHtml: "<span data-components='github-component-arguments'>Nunjucks macro options</span>",
         html: macroOptionsHTML,
         classes: "app-options",
         attributes:{
-          id: "options-" + exampleId + "-details",
-          "data-components": "github-component-arguments"
+          id: "options-" + exampleId + "-details"
         }
       })}}
     {% endif %}
