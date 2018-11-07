@@ -4,6 +4,7 @@
     "setClasses"
   ],
   "feature-detects": [
-    "test/css/flexbox"
+    "test/css/flexbox",
+    "test/css/flexboxtweener"
   ]
 }
