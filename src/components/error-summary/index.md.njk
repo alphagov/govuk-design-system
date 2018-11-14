@@ -11,7 +11,7 @@ layout: layout-pane.njk
 
 Use this component at the top of a page to summarise any errors a user has made.
 
-When a user makes an error, you must show both an error summary and an [error message](../error-message/) next to each field that contains an error.
+When a user makes an error, you must show both an error summary and an [error message](../error-message/) next to each question that contains an error.
 
 {{ example({group: "components", item: "error-summary", example: "default", html: true, nunjucks: true, open: false, size: "s"}) }}
 
@@ -27,7 +27,7 @@ You must:
 - show an error summary at the top of a page
 - move keyboard focus to the error summary
 - include the heading ‘There is a problem’
-- link to each of the validation errors
+- link to each of the questions that have validation errors
 - show the same error messages next to the inputs with errors
 
 Read guidance on [writing good error messages](../error-message#be-clear-and-concise).
@@ -35,6 +35,22 @@ Read guidance on [writing good error messages](../error-message#be-clear-and-con
 There are 2 ways to use the error summary component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://govuk-prototype-kit.herokuapp.com), you can use the Nunjucks macro.
 
 {{ example({group: "components", item: "error-summary", example: "default", html: true, nunjucks: true, open: false, size: "s", id: "default-2"}) }}
+
+### Linking from the error summary to each question
+
+You must link the errors in the error summary to the question they relate to.
+
+For questions that use a single field, for example the character count, file upload, select, textarea or text input components, link to the field.
+
+{{ example({group: "components", item: "error-summary", example: "linking", html: true, nunjucks: true, open: false, size: "s"}) }}
+
+For questions that use multiple fields, for example the date input component, you should link to the first field that contains an error. If you don't know which fields contain errors, link to the first field.
+
+{{ example({group: "components", item: "error-summary", example: "linking-multiple-fields", html: true, nunjucks: true, open: false, size: "s"}) }}
+
+For questions that use multiple inputs, such as the checkboxes or radios components, link to the first checkbox or radio.
+
+{{ example({group: "components", item: "error-summary", example: "linking-checkboxes-radios", html: true, nunjucks: true, open: false, size: "s"}) }}
 
 ## Research on this component
 
