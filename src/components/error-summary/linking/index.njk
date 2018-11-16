@@ -3,16 +3,8 @@ title: Error summary
 layout: layout-example.njk
 ---
 
-{% from "back-link/macro.njk" import govukBackLink %}
-{% from "button/macro.njk" import govukButton %}
-{% from "date-input/macro.njk" import govukDateInput %}
 {% from "error-summary/macro.njk" import govukErrorSummary %}
-{% from "file-upload/macro.njk" import govukFileUpload %}
 {% from "input/macro.njk" import govukInput %}
-{% from "select/macro.njk" import govukSelect %}
-{% from "radios/macro.njk" import govukRadios %}
-{% from "checkboxes/macro.njk" import govukCheckboxes %}
-{% from "textarea/macro.njk" import govukTextarea %}
 
 {{ govukErrorSummary({
   "titleText": "There is a problem",
