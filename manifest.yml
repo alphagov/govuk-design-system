@@ -8,5 +8,9 @@ applications:
   # PaaS don't currently support the nginx buildpack so we have to reference it
   # by GitHub URL
   #
-  # https://docs.cloud.service.gov.uk/#how-to-use-custom-buildpacks
+  # https://docs.cloud.service.gov.uk/deploying_apps.html#how-to-use-custom-buildpacks
   buildpack: https://github.com/cloudfoundry/nginx-buildpack.git#v0.0.5
+  # Run two instances to ensure availability
+  #
+  # https://docs.cloud.service.gov.uk/managing_apps.html#scaling
+  instances: 2
