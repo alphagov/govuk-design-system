@@ -17,7 +17,7 @@ Only use email confirmation loops if:
 - critical functionality in the service is only available via email, for example, a password reset
 - accidentally using the wrong email address would give someone else access to sensitive information about the user
 
-Remember that confirmed emails don’t prove a person’s identity, just that they have access to that email address at the time they confirmed.
+Remember that confirmed emails do not prove a person’s identity, just that they have access to that email address at the time they confirmed.
 
 ## How it works
 
@@ -27,7 +27,7 @@ Common problems with email confirmation include:
 
 - confusing users about the journey outside the service
 - assuming users have an email account and access to it
-- sending emails to spam folders so users don’t see them, for example, because it goes to their spam folder
+- sending emails to spam folders so users do not see them, for example, because it goes to their spam folder
 - taking too long to send send the confirmation email
 
 You must design your service to reduce these issues for users.
@@ -41,7 +41,7 @@ If you use email confirmation loops you must consider:
 
 ### Set expiry conditions
 
-You must set an expiry date on the email you send so that the link can’t be used after a certain period of time.
+You must set an expiry date on the email you send so that the link cannot be used after a certain period of time.
 
 You should also set the link to expire when:
 
@@ -53,19 +53,19 @@ If a user attempts to use an expired link or a link that’s already been used t
 
 ### Let users resend the email
 
-You should let users resend the email confirmation link in case they entered the wrong email address previously or the email didn’t arrive.
+You should let users resend the email confirmation link in case they entered the wrong email address previously or the email did not arrive.
 
 ### Blocking or non-blocking loops
 
 There are 2 versions of the email confirmation loop: blocking and non-blocking.
 
-In a blocking loop, the user can’t use the service until they’ve confirmed their email&nbsp;address.
+In a blocking loop, the user cannot use the service until they’ve confirmed their email&nbsp;address.
 
 In the non-blocking version, they can continue to use the service, but will be reminded regularly that they need to confirm their email. Some functionality may not be available until they’ve done this.
 
-Blocking loops have a simpler flow, but if a user can’t complete the loop then they’re unable to use the service at all. It’s important that you send the emails instantly if you use blocking loops.
+Blocking loops have a simpler flow, but if a user cannot complete the loop then they’re unable to use the service at all. It’s important that you send the emails instantly if you use blocking loops.
 
-Non-blocking loops need more careful design because you can’t guarantee that all users will confirm their email. This could stop people from accessing your service.
+Non-blocking loops need more careful design because you cannot guarantee that all users will confirm their email. This could stop people from accessing your service.
 
 You can also use a combination of both, by starting users on a non-blocking loop initially and then change to a blocking loop.
 

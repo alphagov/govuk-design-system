@@ -46,7 +46,7 @@
     @include govuk-typography-weight-bold;
     display: inline-block;
 
-    font-size: 30px; // We don't have a mixin that produces 30px font size\
+    font-size: 30px; // We do not have a mixin that produces 30px font size\
     line-height: 30px;
     @include govuk-clearfix;
 
@@ -75,7 +75,7 @@
       background: transparent;
     }
 
-    // Hide the inverted crown when printing in browsers that don't support SVG.
+    // Hide the inverted crown when printing in browsers that do not support SVG.
     .app-header__logotype-crown-fallback-image {
       display: none;
     }
