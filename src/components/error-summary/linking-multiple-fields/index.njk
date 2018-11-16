@@ -1,0 +1,51 @@
+---
+title: Linking from the error summary to an answer that uses multiple fields
+layout: layout-example.njk
+ignore_in_sitemap: true
+---
+
+{% from "date-input/macro.njk" import govukDateInput %}
+{% from "error-summary/macro.njk" import govukErrorSummary %}
+
+{{ govukErrorSummary({
+  "titleText": "There is a problem",
+  "errorList": [
+    {
+      "text": "Enter your date of birth and include a day, month and year",
+      "href": "#dob-year"
+    }
+  ]
+}) }}
+
+{{ govukDateInput({
+  fieldset: {
+    legend: {
+      isPageHeading: true,
+      text: 'What is your date of birth?',
+      classes: 'govuk-fieldset__legend--xl'
+    }
+  },
+  id: 'dob',
+  name: 'dob',
+  errorMessage: {
+    text: "Enter your date of birth and include a day, month and year"
+  },
+  items: [
+    {
+      name: "day",
+      classes: "govuk-input--width-2",
+      value: 5
+    },
+    {
+      name: "month",
+      classes: "govuk-input--width-2",
+      value: 12
+    },
+    {
+      name: "year",
+      classes: "govuk-input--width-4 govuk-input--error"
+    }
+  ]
+  })
+}}
+
