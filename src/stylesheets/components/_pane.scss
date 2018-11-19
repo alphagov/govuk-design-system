@@ -11,8 +11,8 @@
       flex-direction: column;
     }
 
-    @include govuk-media-query($from: tablet, $and: '(orientation: portrait)') {
-        height: $pane-height;
+    @include govuk-media-query($from: tablet, $and: "(orientation: portrait)") {
+      height: $pane-height;
     }
 
     @include govuk-media-query($from: desktop) {
@@ -89,13 +89,13 @@
       width: $toc-width;
       float: left;
       overflow-x: hidden;
-      border-right: none;
+      border-right: 0;
     }
 
     .app-pane__content {
+      margin-left: -1px;
       overflow-x: hidden;
       border-left: 1px solid $govuk-border-colour;
-      margin-left: -1px;
     }
   }
 }

@@ -1,22 +1,25 @@
 @import "example-init";
 
+$grid-nested-annotate-row-background-color: #ffffff;
+
 .govuk-grid-row {
   [class^="govuk-grid-column"]  {
-    background-color: white;
-    border: 4px solid govuk-colour("blue");
     padding-bottom: govuk-spacing(2);
+    border: 4px solid govuk-colour("blue");
+    background-color: $grid-nested-annotate-row-background-color;
   }
 
   [class^="govuk-grid-column"] > p {
-    background-color: transparent;
     color: govuk-colour("blue");
+    background-color: transparent;
   }
 
   .govuk-grid-row {
     [class^="govuk-grid-column"]  {
-      background-color: white;
       border: 0;
+      background-color: $grid-nested-annotate-row-background-color;
     }
+
     [class^="govuk-grid-column"] > p {
       @include govuk-font($size: 24);
       @include govuk-responsive-padding(6);
@@ -24,8 +27,8 @@
       display: block;
       margin: 0;
 
-      background-color: govuk-colour("blue");
       color: govuk-colour("white");
+      background-color: govuk-colour("blue");
 
       text-align: center;
     }

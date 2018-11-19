@@ -41,9 +41,9 @@ describe('Site search', () => {
     const resultsArray = await page.evaluate(
       () => [...document.querySelectorAll('.app-site-search__option')]
       // ignore any results where a match was found in the alias
-      .filter(elem => !elem.querySelector('.app-site-search__aliases'))
+        .filter(elem => !elem.querySelector('.app-site-search__aliases'))
       // only get text, ignore child nodes
-      .map(elem => elem.firstChild.textContent.toLowerCase())
+        .map(elem => elem.firstChild.textContent.toLowerCase())
     )
     // regex with word boundry, in our case words that begin with 'd'
     expect(resultsArray.every(item => (/\b[d]\w*/).test(item))).toBeTruthy()
@@ -57,8 +57,8 @@ describe('Site search', () => {
     const resultsArray = await page.evaluate(
       () => [...document.querySelectorAll('.app-site-search__option')]
       // only get results where a match was found in the alias
-      .filter(elem => elem.querySelector('.app-site-search__aliases'))
-      .map(elem => elem.querySelector('.app-site-search__aliases').textContent)
+        .filter(elem => elem.querySelector('.app-site-search__aliases'))
+        .map(elem => elem.querySelector('.app-site-search__aliases').textContent)
     )
     // regex with word boundry, in our case words that begin with 'd'
     expect(resultsArray.every(item => (/\b[d]\w*/).test(item))).toBeTruthy()
@@ -70,7 +70,7 @@ describe('Site search', () => {
     await page.type('.app-site-search__input', 'det')
     const resultsArray = await page.evaluate(
       () => [...document.querySelectorAll('.app-site-search__aliases')]
-      .map(elem => elem.querySelector('.app-site-search__aliases'))
+        .map(elem => elem.querySelector('.app-site-search__aliases'))
     )
     expect(resultsArray).toHaveLength(0)
   })

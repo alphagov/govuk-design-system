@@ -1,11 +1,13 @@
 @import "example-init";
 
+$app-annotate-block-label-color: #ffffff;
+
 .app-annotate-block {
   position: relative;
-  outline: 2px dashed govuk-colour("grey-1");
+  margin-bottom: govuk-spacing(6);
   padding: govuk-spacing(3);
   padding-top: 3em;
-  margin-bottom: govuk-spacing(6);
+  outline: 2px dashed govuk-colour("grey-1");
 }
 
 .app-annotate-block__label {
@@ -13,9 +15,9 @@
   top: 0;
   left: 0;
   padding: .25em .5em;
-  background: white;
-  border-bottom: 2px dashed govuk-colour("grey-1");
   border-right: 2px dashed govuk-colour("grey-1");
+  border-bottom: 2px dashed govuk-colour("grey-1");
+  background: $app-annotate-block-label-color;
   font-family: $govuk-font-family;
 }
 

@@ -30,7 +30,7 @@ describe('Component page', () => {
   it('"Nunjucks" tab content should contain a details summary with "Nunjucks macro options" text', async () => {
     await page.goto(baseUrl + '/components/back-link/', { waitUntil: 'load' })
 
-     // Get "aria-controls" attributes from "Nunjucks" tab headings
+    // Get "aria-controls" attributes from "Nunjucks" tab headings
     const nunjucksTabHeadingControls = await page.evaluateHandle(() => Array.from(document.querySelectorAll('.js-tabs__item a'))
       .filter(element => element.textContent === 'Nunjucks')
       .map(element => element.getAttribute('aria-controls')))

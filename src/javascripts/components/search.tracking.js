@@ -4,9 +4,9 @@ function addToDataLayer (payload) {
 }
 
 function stripPossiblePII (string) {
-    // Try to detect emails and redact it.
+  // Try to detect emails and redact it.
   string = string.replace(/\S*@\S*\s?/g, '[blocked]')
-    // If someone has typed in a number it's likely not related so redact it
+  // If someone has typed in a number it's likely not related so redact it
   string = string.replace(/0|1|2|3|4|5|6|7|8|9/g, '[blocked]')
   return string
 }
