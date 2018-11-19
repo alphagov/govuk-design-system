@@ -167,7 +167,7 @@ $app-breakpoint-widescreen: 1200px;
   $copy-button-colour: #00823b;
 
   @include govuk-font(16);
-  @include govuk-focusable();
+  @include govuk-focusable;
   position: absolute;
   z-index: 1;
   top: govuk-spacing(3);
@@ -264,13 +264,13 @@ $colour-list-breakpoint: 980px;
 
 pre {
   position: relative;
+  max-width: 38em;
   margin: 0;
   padding: govuk-spacing(4);
   overflow: auto;
   border: 1px solid $govuk-border-colour;
   background-color: $app-light-grey;
   font-size: 16px;
-  max-width: 38em;
   @include govuk-responsive-margin(4, "bottom");
 }
 

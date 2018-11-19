@@ -5,23 +5,23 @@ $icon-size: 40px;
 
 @include govuk-not-ie8 {
   .app-site-search {
-    float: left;
-    margin-bottom: govuk-spacing(2);
-    margin-top: govuk-spacing(2);
-    max-width: calc(100% - 75px);
-    width: 100%;
     position: relative;
+    width: 100%;
+    max-width: calc(100% - 75px);
+    margin-top: govuk-spacing(2);
+    margin-bottom: govuk-spacing(2);
+    float: left;
 
     @include govuk-media-query($from: tablet) {
-      max-width: 100%;
       width: 300px;
+      max-width: 100%;
       float: none;
     }
 
     @include govuk-media-query($from: desktop) {
-      float: right;
       margin: 0;
       margin-top: -6px; //negative margin to vertically align search in header
+      float: right;
     }
 
     .no-js & {
@@ -38,18 +38,18 @@ $icon-size: 40px;
   }
 
   .app-site-search__wrapper {
-    position: relative;
     display: block;
+    position: relative;
+    height: $icon-size;
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36' width='40' height='40'%3E%3Cpath d='M25.7 24.8L21.9 21c.7-1 1.1-2.2 1.1-3.5 0-3.6-2.9-6.5-6.5-6.5S10 13.9 10 17.5s2.9 6.5 6.5 6.5c1.6 0 3-.6 4.1-1.5l3.7 3.7 1.4-1.4zM12 17.5c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5-2 4.5-4.5 4.5-4.5-2-4.5-4.5z' fill='white'%3E%3C/path%3E%3C/svg%3E") govuk-colour("blue") no-repeat top left;
     background-size: $icon-size $icon-size;
-    height: $icon-size;
   }
 
   .app-site-search__hint,
   .app-site-search__input {
-    min-height: $icon-size;
     box-sizing: border-box;
     width: 100%;
+    min-height: $icon-size;
     margin-bottom: 0; // BUG: Safari 10 on macOS seems to add an implicit margin.
     border: 2px solid govuk-colour("white");
     border-radius: 0; // Safari 10 on iOS adds implicit border rounding.
@@ -62,10 +62,10 @@ $icon-size: 40px;
   }
 
   .app-site-search__input {
-    margin-left: $icon-size;
+    position: relative;
     width: calc(100% - #{$icon-size});
     height: $icon-size;
-    position: relative;
+    margin-left: $icon-size;
     background-color: govuk-colour("white");
   }
 
@@ -74,10 +74,10 @@ $icon-size: 40px;
   }
 
   .app-site-search__input--focused {
+    width: 100%;
+    margin-left: 0;
     outline: 3px solid $govuk-focus-colour;
     outline-offset: 0;
-    margin-left: 0;
-    width: 100%;
   }
 
   .app-site-search__input--show-all-values {
@@ -147,7 +147,8 @@ $icon-size: 40px;
   }
 
   .app-site-search__option--odd {
-    background-color: #FAFAFA;
+    $_app-site-search-option-background-color: #fafafa;
+    background-color: $_app-site-search-option-background-color;
   }
 
   .app-site-search__option--focused,
@@ -163,8 +164,8 @@ $icon-size: 40px;
   }
 
   .app-site-search__option--no-results {
-    background-color: govuk-colour("white");
     color: govuk-colour("grey-1");
+    background-color: govuk-colour("white");
     cursor: not-allowed;
   }
 
@@ -184,9 +185,10 @@ $icon-size: 40px;
 
     .no-js & {
       @include govuk-media-query($from: tablet) {
-        color: govuk-colour("white");
-        margin-top: 10px;
         display: inline-block;
+        margin-top: 10px;
+        color: govuk-colour("white");
+
         &:focus {
           color: govuk-colour("black");
         }
@@ -202,18 +204,20 @@ $icon-size: 40px;
 
   .app-site-search__aliases {
     margin-left: govuk-spacing(1);
+
     &::before {
-      content: '(';
+      content: "(";
     }
+
     &::after {
-      content: ')';
+      content: ")";
     }
   }
 
   .app-site-search__separator {
     display: inline-block;
-    margin-left: govuk-spacing(1);
     margin-right: govuk-spacing(1);
+    margin-left: govuk-spacing(1);
   }
 }
 
@@ -221,17 +225,18 @@ $icon-size: 40px;
 // doesn't support it
 @include govuk-if-ie8 {
   .app-site-search {
-    float: right;
     width: 300px;
     margin: 0;
     margin-top: -6px;
+    float: right;
     text-align: right;
   }
 
   .app-site-search__link:link {
-    color: govuk-colour("white");
-    margin-top: 10px;
     display: inline-block;
+    margin-top: 10px;
+    color: govuk-colour("white");
+
     &:focus {
       color: govuk-colour("black");
     }

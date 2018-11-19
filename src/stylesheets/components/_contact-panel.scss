@@ -21,7 +21,7 @@
 }
 
 .app-contact-panel__heading {
-  @extend .govuk-heading-m;
+  @extend %govuk-heading-m;
 }
 
 .app-contact-panel__body {

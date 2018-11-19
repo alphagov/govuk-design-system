@@ -1,3 +1,5 @@
- .govuk-grid-row {
-  border-bottom: 2px solid white;
+$grid-combinations-annotate-row-border-color: #ffffff;
+
+.govuk-grid-row {
+  border-bottom: 2px solid $grid-combinations-annotate-row-border-color;
 }
