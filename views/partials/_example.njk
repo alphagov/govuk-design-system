@@ -34,11 +34,14 @@
   </ul>
   {% elif not (params.hideTab) %}
   {% set tabType = "html" if params.html else ("nunjucks" if params.nunjucks ) %}
+  {#- if at least one tab is set to true show the list -#}
+  {% if tabType %}
   <ul class="app-tabs" role="tablist">
     <li class="app-tabs__item js-tabs__item{{ " js-tabs__item--open" if (params.open) }}" role="presentation">
       <a href="#{{ exampleId }}-{{ tabType }}" role="tab" aria-controls="{{ exampleId }}-{{ tabType }}" data-track="tab-{{ tabType }}">{{ "HTML" if params.html else ("Nunjucks" if params.nunjucks )}}</a>
     </li>
   </ul>
+  {% endif %}
   {% endif %}
 
   {%- if (params.html) %}
