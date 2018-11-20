@@ -37,6 +37,7 @@
       display: flex;
       position: relative;
       min-height: 0;
+      overflow: hidden;
       flex: 1 1 100%;
 
       > * {
@@ -62,6 +63,7 @@
   .app-pane__content {
     @include govuk-media-query($from: tablet) {
       display: flex;
+      min-width: 0;
       margin-left: auto;
       flex: 1 1 auto;
       flex-direction: column;
@@ -74,7 +76,7 @@
     }
   }
 
-  .no-flexbox {
+  .no-flexbox.no-flexboxtweener {
     .app-pane {
       height: auto;
       overflow: visible;
