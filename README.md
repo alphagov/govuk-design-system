@@ -1,5 +1,17 @@
 # GOV.UK Design System
 
+---
+
+## Government Frontend Survey 2018 📝
+
+We're looking to find out more about which frontend technologies and resources you use to support your project.
+
+[Fill in the frontend survey](https://goo.gl/forms/nxoSd4iZ3yQpY4Er2)
+
+This survey is a re-run of a 2016 survey, we plan to publish an anonymised comparison between this year's results and 2016's results.
+
+---
+
 **One place for service teams to find styles, components and patterns for
 designing government services.**
 
