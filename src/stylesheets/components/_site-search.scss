@@ -222,7 +222,7 @@ $icon-size: 40px;
 }
 
 // on IE8 we show the sitemap link as Accessible autocomplete
-// doesn't support it
+// does not support it
 @include govuk-if-ie8 {
   .app-site-search {
     width: 300px;
