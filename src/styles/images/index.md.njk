@@ -25,10 +25,32 @@ If your image represents something physical, such as a letter, document or credi
 
 {{ example({group: "styles", item: "images", example: "representative", html: false, open: false, size: "l"}) }}
 
+
 ## Alt text
 
-All images must have an alt text. You should include a description of the image inside the tag to help users who are unable to see it.
+All images must have alt text. This is a description of an image that is read out by screen readers or is displayed if an image does not load or images have been switched off. The description tells people who cannot see an image to understand what information the image provides.
+
+Alt text must:
+
+- describe the content and function of the image
+- be specific, meaningful and concise
+- use normal punctuation and end with a full stop
+
+Do not:
+
+- include the name of the photographer or person who created the image
+- start with ‘Image of’, ‘Graphic of’ or ‘Photo of’
+- repeat information from the page
+- include extra information not on the page
 
 {{ example({group: "styles", item: "images", example: "alt-text", html: true, open: true, size: "l"}) }}
 
-If your image is purely decorative and a description would be confusing you should still include the alt text, but leave it empty so it will be ignored by screen readers.
+Use `alt=""` if the image is:
+
+- decorative and does not include important content
+- an icon that has a text label
+- part of a link
+
+This means it will be ignored by screen readers.
+
+If the image needs a detailed description, for example a graph or pie chart, include it in the content of the screen because it will help everyone. Use the `aria-describedby` attribute to connect the image and the description for screen reader users.
