@@ -1,15 +1,16 @@
 // GitHub code highlight
+// sass-lint:disable no-color-literals
 
 .hljs-comment,
 .hljs-quote {
-  color: #998;
+  color: #999998;
   font-style: italic;
 }
 
 .hljs-keyword,
 .hljs-selector-tag,
 .hljs-subst {
-  color: #333;
+  color: #333333;
   font-weight: bold;
 }
 
@@ -18,18 +19,18 @@
 .hljs-variable,
 .hljs-template-variable,
 .hljs-tag .hljs-attr {
-  color: #007F80;
+  color: #007f80;
 }
 
 .hljs-string,
 .hljs-doctag {
-  color: #d14;
+  color: #dd1144;
 }
 
 .hljs-title,
 .hljs-section,
 .hljs-selector-id {
-  color: #900;
+  color: #990000;
   font-weight: bold;
 }
 
@@ -39,7 +40,7 @@
 
 .hljs-type,
 .hljs-class .hljs-title {
-  color: #458;
+  color: #445588;
   font-weight: bold;
 }
 
@@ -60,22 +61,22 @@
   color: #990073;
 }
 
-.hljs-built_in,
+.hljs-builtin,
 .hljs-builtin-name {
   color: #017ba5;
 }
 
 .hljs-meta {
-  color: #999;
+  color: #999999;
   font-weight: bold;
 }
 
 .hljs-deletion {
-  background: #fdd;
+  background: #ffdddd;
 }
 
 .hljs-addition {
-  background: #dfd;
+  background: #ddffdd;
 }
 
 .hljs-emphasis {

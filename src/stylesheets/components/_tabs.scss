@@ -106,8 +106,8 @@
     // On bigger screens the copy button is to not obstruct the content
     // So instead shorten the length of the code block
     display: block;
-    overflow-x: auto;
     max-width: calc(100% - 6em);
+    overflow-x: auto;
   }
 }
 @media (max-width: 65em) {
@@ -126,7 +126,7 @@
   padding: govuk-spacing(4) govuk-spacing(4) govuk-spacing(4) govuk-spacing(4);
 
   // magical number 1080px below as the content is inside a narrow panel
-  // and can't rely on predefined media queries
+  // and cannot rely on predefined media queries
   // govuk-media-query converts pixels to ems
 
   @include govuk-media-query($from: 1080px) {
@@ -145,12 +145,12 @@
 
   // Override default button styling
   padding: 0;
-  border: none;
-  background: transparent;
+  border: 0;
   color: $govuk-link-colour;
+  background: transparent;
   cursor: pointer;
 
- // Fix unwanted button padding and border in Firefox
+  // Fix unwanted button padding and border in Firefox
   &::-moz-focus-inner {
     padding: 0;
     border: 0;
