@@ -28,7 +28,7 @@ If your image represents something physical, such as a letter, document or credi
 
 ## Alt text
 
-All images must have alt text. This is a description of an image that is read out by screen readers or is displayed if an image does not load or images have been switched off. The description tells people who cannot see an image to understand what information the image provides.
+All images must have alt text. This is a description of an image that is read out by screen readers or is displayed if an image does not load or images have been switched off. The description tells people who cannot see an image what information the image provides.
 
 Alt text must:
 
@@ -45,12 +45,12 @@ Do not:
 
 {{ example({group: "styles", item: "images", example: "alt-text", html: true, open: true, size: "l"}) }}
 
-Use `alt=""` if the image is:
+So an image will be ignored by screen readers, use `alt=""` if it is:
 
 - decorative and does not include important content
 - an icon that has a text label
 - part of a link
 
-This means it will be ignored by screen readers.
+Avoid images that contain text, especially PNGs and JPGs because the text becomes unreadable when the user zooms in. If the image does contain text, use SVG because it remains readable when the user zooms in. The alt should be the same as the text displayed in the image.
 
 If the image needs a detailed description, for example a graph or pie chart, include it in the content of the screen because it will help everyone. Use the `aria-describedby` attribute to connect the image and the description for screen reader users.
