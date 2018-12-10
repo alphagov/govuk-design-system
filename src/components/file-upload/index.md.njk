@@ -23,6 +23,54 @@ There are 2 ways to use the file upload component. You can use HTML or, if you�
 
 {{ example({group: "components", item: "file-upload", example: "default", html: true, nunjucks: true, open: false, id: "default-2"}) }}
 
+### Error messages
+
+Check that a valid date is entered by the user. Invalid dates should be reported to the user like this:
+
+{{ example({group: "components", item: "file-upload", example: "error", html: true, nunjucks: true, open: false, size: "m"}) }}
+
+Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
+
+#### If nothing has been uploaded
+Say ‘Select a [whatever they need to upload]’.<br>
+For example, ‘Select a report’.
+
+#### If the file is the wrong file type
+Say‘The [whatever] must be a [list of file types]’.<br>
+For example, ‘The report must be a CSV or ODS’ or ‘The upload must be a JPG, BMP, PNG, TIF or PDF’.
+
+#### If the file is too big
+Say ‘The [whatever] must be smaller than [largest file size]’.<br>
+For example, ‘The CSV must be smaller than 2MB’.
+
+#### If the file is empty
+Say ‘The [whatever] is empty – select a [whatever] with data in it’.<br>
+For example, ‘The CSV is empty – select a CSV with data in it’.
+
+#### If the file contains a virus
+Say ‘The [whatever] contains a virus’.<br>
+For example, ‘The CSV contains a virus’.
+
+#### If the file is password protected
+Say ‘The [whatever] is password protected’.<br>
+For example, ‘The report is password protected’.
+
+#### If there was a problem and the file was not uploaded
+Say ‘The [whatever] could not be uploaded – try again’.<br>
+For example, ‘The CSV could not be uploaded – try again’.
+
+#### If the user can upload more than one file but there is a limit on how many they can upload
+Say ‘You can only upload up to [highest number] [whatevers] at the same time’.<br>
+For example, ‘You can only upload up to 10 reports at the same time’.
+
+#### If the upload must be in a template that has been changed and you do know what has changed
+Say ‘The [whatever has changed and whatever has happened] – the [whatever] must match the template’.<br>
+For example, ‘The first column has been moved or deleted – the report must match the template’.
+
+#### If the upload must be in a template that has been changed and you do not know what has changed
+Say ‘The [whatever] must match the template’.<br>
+For example, ‘The report must match the template’.
+
 ## Research on this component
 
 Read a blog post about [design tips for helping users upload things](https://designnotes.blog.gov.uk/2017/02/14/some-design-tips-for-uploading-things/).
