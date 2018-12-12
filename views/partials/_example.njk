@@ -63,7 +63,7 @@
   {% endif %}
   <div class="app-tabs__container js-tabs__container{{ " js-tabs__container--no-tabs" if (params.hideTab) }}" id="{{ exampleId }}-nunjucks" role="tabpanel">
     {%- if (params.group == 'components') %}
-      {% set macroOptions = getMacroOptions(params.item, exampleId) %}
+      {% set macroOptions = getMacroOptions(params.item) %}
 
       {% set macroOptionsHTML %}
 
@@ -93,7 +93,23 @@
                 <tr class="govuk-table__row">
                   <th class="govuk-table__header" scope="row">{{option.name}}</th>
                   <td class="govuk-table__cell ">{{option.type}}</td>
-                  <td class="govuk-table__cell ">{{option.description | safe}}</td>
+                  <td class="govuk-table__cell ">
+                    {% if (option.required === true) %}
+                      <strong>Required.</strong>
+                    {% endif %}
+                    {{ option.description | safe }}
+                    {% if (option.isComponent) %}
+                      {# Create separate table data for components that are hidden in the Design System #}
+                      {% if (option.name === "hint" or option.name === "label") %}
+                        See <a href="#options-{{ exampleId }}--{{ option.name }}">{{ option.name }}</a>.
+                      {% else %}
+                        See <a href="/components/{{ option.slug }}/#options-example-default">{{ option.name }}</a>.
+                      {% endif %}
+                    {% endif %}
+                    {% if (option.params) %}
+                      See <a href="#options-{{ exampleId }}--{{ option.name }}">{{ option.name }}</a>.
+                    {% endif %}
+                  </td>
                 </tr>
               {% endfor %}
             </tbody>
