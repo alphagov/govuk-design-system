@@ -13,7 +13,7 @@
   }
 
   .app-width-container--full {
-    min-width: calc(100% - 60px);
+    min-width: calc(100% - #{$govuk-gutter * 2});
     max-width: 100%;
     padding: 0;
     @include govuk-media-query($from: desktop) {
