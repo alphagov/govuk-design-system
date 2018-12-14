@@ -32,6 +32,14 @@
     }
   }
 
+  .app-pane__nav {
+    @include govuk-media-query($from: tablet) {
+      display: flex;
+      flex-direction: column;
+      flex: 1 0 auto;
+    }
+  }
+
   .app-pane__body {
     @include govuk-media-query($from: tablet) {
       display: flex;
