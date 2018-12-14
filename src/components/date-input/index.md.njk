@@ -41,7 +41,7 @@ Never automatically tab users between the fields of the Date input because this 
 
 ### Error messages
 
-Check that a valid date is entered by the user. Invalid dates should be reported to the user like this:
+Error messages should be styled like this:
 
 {{ example({group: "components", item: "date-input", example: "error", html: true, nunjucks: true, open: false, size: "m"}) }}
 
@@ -57,15 +57,10 @@ Say ‘Enter [whatever it is]’.<br>
 For example, ‘Enter your date of birth’.
 
 #### If an incomplete date is entered and you know what is missing
-Say ‘[whatever it is] must include a [whatever is missing]’.
+Say ‘[whatever it is] must include a [whatever is missing]’.<br>
 For example, ‘Date of birth must include a month’ or ‘Date of birth must include a day and month’.
 
 #### If an incomplete date is entered and you do not know what is missing
-Say ‘Enter [whatever it is] and include a day, month and year’.
-For example, ‘Enter your date of birth and include a day, month and year’.
-
-#### If an incomplete date is entered
-
 Say ‘Enter [whatever it is] and include a day, month and year’.<br>
 For example, ‘Enter your date of birth and include a day, month and year’.
 
