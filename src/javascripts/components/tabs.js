@@ -14,10 +14,8 @@ var headingItemJsClass = 'js-tabs__heading'
 var tabContainerHiddenClass = 'app-tabs__container--hidden'
 var tabContainerJsClass = '.js-tabs__container'
 var tabContainerNoTabsJsClass = 'js-tabs__container--no-tabs'
-var tabContainerWithCloseBtnClass = 'app-tabs__container--with-close-button'
 var allTabTogglers = '.' + tabsItemJsClass + ' a, ' + '.' + headingItemJsClass + ' a'
 var tabTogglersMarkedOpenClass = '.js-tabs__item--open a'
-var closeButtonClass = 'js-tabs__close'
 
 function AppTabs ($module) {
   this.$module = $module
@@ -32,8 +30,7 @@ AppTabs.prototype.init = function () {
   }
   // reset all tabs
   this.resetTabs()
-  // add close buttons to each tab
-  this.addCloseBtn()
+  // add close to each tab
   this.$module.addEventListener('click', this.handleClick.bind(this))
 
   nodeListForEach(this.$allTabTogglersMarkedOpen, function ($tabToggler) {
@@ -41,18 +38,6 @@ AppTabs.prototype.init = function () {
   })
 }
 
-AppTabs.prototype.addCloseBtn = function () {
-  // add close button to each tab container except open one with no tab items
-  nodeListForEach(this.$allTabContainers, function ($tabContainer) {
-    if (!($tabContainer.classList.contains(tabContainerNoTabsJsClass))) {
-      var $closeButton = document.createElement('button')
-      $closeButton.className = 'app-tabs__close ' + closeButtonClass
-      $closeButton.innerText = 'Close'
-      $tabContainer.appendChild($closeButton)
-      $tabContainer.classList.add(tabContainerWithCloseBtnClass)
-    }
-  })
-}
 // expand and collapse functionality
 AppTabs.prototype.activateAndToggle = function (event) {
   event.preventDefault()
@@ -114,11 +99,6 @@ AppTabs.prototype.handleClick = function (event) {
   if (event.target.parentNode.classList.contains(tabsItemJsClass) ||
     event.target.parentNode.classList.contains(headingItemJsClass)) {
     this.activateAndToggle(event)
-  }
-
-  // close button behavior
-  if (event.target.classList.contains(closeButtonClass)) {
-    this.clickCloseContainer(event)
   }
 }
 
