@@ -52,19 +52,6 @@ describe('Component page', () => {
       })
     })
 
-    describe('when tab is open and close button is pressed', () => {
-      it('should not indicate the open state of the tab', async () => {
-        await page.setJavaScriptEnabled(true)
-        await page.goto(baseUrl + '/components/back-link/', { waitUntil: 'load' })
-
-        await page.click('.js-tabs__item a')
-        await page.click('.js-tabs__close')
-
-        const toggleButtonIsOpen = await page.evaluate(() => document.body.querySelector('.app-tabs__item').classList.contains('app-tabs__item--current'))
-        expect(toggleButtonIsOpen).toBeFalsy()
-      })
-    })
-
     describe('when the tab closed and clicked twice', () => {
       it('should indicate the closed state of the tab', async () => {
         await page.setJavaScriptEnabled(true)

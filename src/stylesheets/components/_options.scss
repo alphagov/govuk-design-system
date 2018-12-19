@@ -1,5 +1,4 @@
 .app-options {
-  max-width: 38em;
   margin-bottom: govuk-spacing(1);
   padding: govuk-spacing(2) govuk-spacing(2) 0 govuk-spacing(2);
   background-color: govuk-colour("white");
@@ -11,6 +10,8 @@
 }
 
 .app-options__table {
+  max-width: 38em;
+
   @include govuk-media-query(mobile) {
     table-layout: fixed;
 

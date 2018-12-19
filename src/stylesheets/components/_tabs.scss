@@ -37,6 +37,10 @@
       color: $govuk-link-colour;
       background: inherit;
     }
+
+    .app-prose-scope &:visited {
+      color: $govuk-link-colour;
+    }
   }
 
   .app-prose-scope & { // A specific selector to reset .app-prose-scope ul li
@@ -70,6 +74,10 @@
       color: $govuk-link-colour;
     }
 
+    &:focus {
+      color: govuk-colour("black");
+    }
+
     @include govuk-media-query($until: desktop) {
       display: block;
     }
@@ -82,7 +90,6 @@
 
 // Tab containers
 .app-tabs__container {
-  position: relative;
   margin-top: -2px;
   border: 1px solid $govuk-border-colour;
 }
@@ -92,31 +99,25 @@
 }
 
 .app-tabs__container pre {
+  position: relative;
   max-width: inherit;
   margin-bottom: 0;
   border: 0;
   font-size: inherit;
 }
 
-// Ensure the copy button does not obstruct the examples.
-// Use relative units to allow this also to work when the user is zoomed 200%
-@media (min-width: 65.0625em) {
-  .app-tabs__container pre code {
-    // Account for the size of the copy button.
-    // On bigger screens the copy button is to not obstruct the content
-    // So instead shorten the length of the code block
-    display: block;
-    max-width: calc(100% - 6em);
-    overflow-x: auto;
-  }
+.app-tabs__container pre code {
+  display: block;
+  padding-right: govuk-spacing(4);
+  padding-bottom: govuk-spacing(4);
+  overflow-x: auto;
 }
-@media (max-width: 65em) {
-  .app-tabs__container pre {
-    // On smaller screens, we need all the width we can get,
-    // so instead add padding to the top of the example, which feels more balanced.
-    padding-top: 2em;
-  }
+
+.app-tabs__container pre {
+  padding-right: 0;
+  padding-bottom: 0;
 }
+
 
 .app-tabs__container--with-close-button pre {
   padding-bottom: govuk-spacing(6);
@@ -131,56 +132,5 @@
 
   @include govuk-media-query($from: 1080px) {
     padding-bottom: 0;
-  }
-}
-
-// Close container button
-.app-tabs__close {
-  @include govuk-font($size: 19);
-  @include govuk-focusable-fill;
-
-  position: absolute;
-  right: govuk-spacing(3);
-  bottom: govuk-spacing(3) / 2;
-
-  // Override default button styling
-  padding: 0;
-  border: 0;
-  color: $govuk-link-colour;
-  background: transparent;
-  cursor: pointer;
-
-  // Fix unwanted button padding and border in Firefox
-  &::-moz-focus-inner {
-    padding: 0;
-    border: 0;
-  }
-
-  &::before {
-    content: "";
-    display: inline-block;
-    position: relative;
-    top: .15em;
-    left: .15em;
-    width: .45em;
-    height: .45em;
-    margin-top: .25em;
-    margin-right: .5em;
-    transform: rotate(-45deg);
-    border-width: .15em .15em 0 0;
-    border-style: solid;
-    vertical-align: top;
-  }
-
-  &:hover {
-    color: $govuk-link-hover-colour;
-  }
-
-  &:focus {
-    color: $govuk-focus-text-colour;
-  }
-
-  @include govuk-media-query($from: 1080px) {
-    bottom: govuk-spacing(3) + 2; // font baseline adjustment
   }
 }
