@@ -13,15 +13,34 @@ layout: layout-pane.njk
 
 ## When to use this component
 
-Use the button component to help users carry out an action on a GOV.UK page like starting an application or saving their progress.
+Use the button component to help users carry out an action on a GOV.UK page like starting an application or saving their information.
 
 ## How it works
 
-Write button text in sentence case, describing the action it performs. For example ‘Save and continue’ or ‘Start now’.
+Write button text in sentence case, describing the action it performs. For example:
+
+- ‘Start now’ at the [start of the service](/patterns/start-pages/)
+- ‘Sign in’ to an account a user has already created
+- ‘Continue’ when the service does not save a user’s information
+- ‘Save and continue’ when the service does save a user’s information
+- ‘Save and come back later’ when a user can save their information and come back later
+- ‘Add another’ to add another item to a list or group
+- ‘Pay’ to make a payment
+- ‘Confirm and send’ on a [check answers](/patterns/check-answers/) page that does not have any legal content a user must agree to
+- ‘Accept and send’ on a [check answers](/patterns/check-answers/) page that has legal content a user must agree to
+- ‘Sign out’ when a user is signed in to an account
+
+You may need to include more or different words to better describe the action. For example, ‘Add another address’ and ‘Accept and claim a tax refund’.
 
 Align the primary action button to the left edge of your form.
 
 There are 2 ways to use the button component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://govuk-prototype-kit.herokuapp.com), you can use the Nunjucks macro.
+
+### Start buttons
+
+Use a start button as the main call to action on your service’s start page.
+
+{{ example({group: "components", item: "button", example: "start", html: true, nunjucks: true, open: false}) }}
 
 ### Disabled buttons
 
@@ -30,12 +49,6 @@ Disabled buttons have poor contrast and can confuse some users, so avoid them if
 Only use disabled buttons if research shows it makes the user interface easier to&nbsp;understand.
 
 {{ example({group: "components", item: "button", example: "disabled", html: true, nunjucks: true, open: false}) }}
-
-### Start buttons
-
-Use a start button as the main call to action on your service’s start page.
-
-{{ example({group: "components", item: "button", example: "start", html: true, nunjucks: true, open: false}) }}
 
 ## Research on this component
 
