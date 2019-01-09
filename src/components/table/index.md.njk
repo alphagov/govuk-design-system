@@ -43,11 +43,13 @@ When comparing columns of numbers, align the numbers to the right in table cells
 
 ## Custom column widths
 
-You can use the [width override classes](../../styles/spacing#width-override-classes) to set the width of table columns. 
-
-If these do not meet your needs you can set your own by by providing the `classes` option to the Nunjucks macro as shown in the example or applying CSS classes to cells in the table head.
+You can use the [width override classes](../../styles/spacing#width-override-classes) to set the width of table columns.
 
 {{ example({group: "components", item: "table", example: "column-widths", html: true, nunjucks: true, open: false, size: "m"}) }}
+
+If the [width override classes](../../styles/spacing#width-override-classes) do not meet your needs you can create your own width classes and apply them to the cells in the table head. These can be added using the `classes` option in the Nunjucks macro or adding the class directly to the individual cells within `govuk-table__head` as below.
+
+{{ example({group: "components", item: "table", example: "column-widths-custom-classes", html: true, nunjucks: true, open: false, size: "m"}) }}
 
 ## Research on this component
 
