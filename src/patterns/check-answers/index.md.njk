@@ -7,12 +7,11 @@ aliases:
 backlog_issue_id: 36
 layout: layout-pane.njk
 ---
+{% from "_example.njk" import example %}
 
 Let users check their answers before submitting information to a service.
 
-![Screenshot of a check answers page, includes a heading, and two sections for personal details and application details. Each section has details on the answers a user has given with a corresponding link to change their answer. At the bottom of the page there is a button to ‘accept and send’ the application.](check-answers-page.png)
-
-There is a [coded example of a check your answers page](https://govuk-prototype-kit.herokuapp.com/docs/templates/check-your-answers) in the GOV.UK Prototype Kit.
+{{ example({group: "patterns", item: "check-answers", example: "default", html: true, nunjucks: true, open: false, size: "xl"}) }}
 
 ## When to use this pattern
 
