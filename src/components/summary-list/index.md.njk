@@ -34,6 +34,11 @@ There are 2 ways to use the summary list component. You can use HTML or, if you�
 
 You can add actions to a summary list, like a ‘Change’ link to let users go back and edit their answer.
 
+For sighted users, the actions get their context from the other content in the row they appear in.
+
+Assistive technology users, like those who use a screen reader, may hear the links out of context and not know what they do.
+To give more context, add visually hidden text to the links. This means a screen reader user will hear a meaningful action, like ‘Change name’ or ‘Change date of birth’.
+
 {{ example({group: "components", item: "summary-list", example: "default", html: true, nunjucks: true, open: false, id: "default-2"}) }}
 
 ### Summary list without actions
