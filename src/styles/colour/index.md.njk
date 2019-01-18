@@ -23,7 +23,7 @@ the GOV.UK colour palette when you update GOV.UK Frontend.
 <table class="govuk-body app-colour-list" summary="Table of main colours">
   <tbody>
   {# colours is an object built by ./lib/colours.js based on data defined in ./data/colours.json #}
-  {% for groupName, group in colours.main %}
+  {% for groupName, group in colours.applied %}
     <tr>
       <td colspan="3">
         <h3 class="govuk-heading-m {% if not loop.first %}govuk-!-padding-top-6{% endif %}">
@@ -36,7 +36,7 @@ the GOV.UK colour palette when you update GOV.UK Frontend.
       <tr class="app-colour-list-row">
 
         <th class="app-colour-list-column app-colour-list-column--name" scope="row">
-          <span class="app-swatch {% if colour.colour == "#fff" %}app-swatch-border{% endif %}" style="background-color:{{colour.colour}}"></span>
+          <span class="app-swatch {% if colour.colour == "#ffffff" %}app-swatch-border{% endif %}" style="background-color:{{colour.colour}}"></span>
           <code>{{colour.name}}</code>
         </th>
         <td class="app-colour-list-column app-colour-list-column--colour">
@@ -54,33 +54,6 @@ the GOV.UK colour palette when you update GOV.UK Frontend.
   </tbody>
 </table>
 
-## Greyscale
-
-<table class="govuk-body app-colour-list" summary="Table of greyscale colours"> 
-
-  <tbody>
-  {% for colour in colours.greyscale %}
-
-    <tr class="app-colour-list-row">
-
-      <th class="app-colour-list-column app-colour-list-column--name">
-        <span class="app-swatch {% if colour.colour == "#ffffff" %}app-swatch-border{% endif %}" style="background-color:{{colour.colour}}"></span>
-        <code>{{colour.name}}</code>
-      </th>
-
-      <td class="app-colour-list-column app-colour-list-column--colour">
-        {{colour.colour}}
-      </td>
-      <td class="app-colour-list-column app-colour-list-column--notes">
-        {{colour.notes}}
-      </td>
-
-    </tr>
-
-  {% endfor %}
-  </tbody>
-</table>
-
 ## Extended colours
 
 Use these colours for graphs and supporting material.
@@ -92,21 +65,18 @@ You can find departmental colours in the GOV.UK Frontend [_colours-organisations
 <table class="govuk-body app-colour-list" summary="Table of extended colours">
 
   <tbody>
-  {% for colour in colours.extended %}
+  {% for name, colour in colours.palette %}
 
     <tr class="app-colour-list-row">
 
       <th class="app-colour-list-column app-colour-list-column--name">
-        <span class="app-swatch {% if colour.colour == "#fff" %}app-swatch-border{% endif %}" style="background-color:{{colour.colour}}"></span>
-        <code>{{colour.name}}</code>
+        <span class="app-swatch {% if colour == "#ffffff" %}app-swatch-border{% endif %}" style="background-color:{{colour}}"></span>
+        <code>govuk-colour("{{name}}")</code>
       </th>
       <td class="app-colour-list-column app-colour-list-column--colour">
-        {{colour.colour}}
+        {{colour}}
       </td>
-      <td class="app-colour-list-column app-colour-list-column--notes">
-        {{colour.notes}}
-      </td>
-
+      <td class="app-colour-list-column app-colour-list-column--notes"></td>
     </tr>
 
   {% endfor %}
