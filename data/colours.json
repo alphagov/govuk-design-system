@@ -30,14 +30,15 @@
         "notes": "Only use this colour to indicate which element is focussed on. For example, when a user tabs to an element with their keyboard."
       }
     ],
-    "Status":[
-      {
-        "name": "govuk-colour(\"blue\")",
-        "notes": "Use for phase banners"
-      },
+    "Error state": [
       {
         "name": "$govuk-error-colour",
         "notes": "Use for error messages"
+      }
+    ],
+    "Brand colour": [
+      {
+        "name": "$govuk-brand-colour"
       }
     ]
   },
