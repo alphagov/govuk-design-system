@@ -14,11 +14,16 @@ You must make sure that the contrast ratio of text and interactive elements in
 your service meets [level AA of the Web Content Accessibility Guidelines
 (WCAG 2.0)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
-## Sass variables
-Use the Sass variables listed below, so you’ll automatically get any updates to
-the GOV.UK colour palette when you update GOV.UK Frontend.
-
 ## Main colours
+
+Use the Sass variables provided rather than copying the hexadecimal colour
+codes. This means that your service will always use the most recent colour
+palette when you update GOV.UK Frontend.
+
+Avoid using these variables to re-use colours in different contexts. For
+example, if you wanted to use red to represent some data in a graph, use
+`govuk-colour("red")` to reference the [colour palette](#colour-palette)
+directly rather than reusing `$govuk-error-colour`.
 
 <table class="govuk-body app-colour-list" summary="Table of main colours">
   <tbody>
@@ -32,9 +37,7 @@ the GOV.UK colour palette when you update GOV.UK Frontend.
       </td>
     </tr>
     {% for colour in group %}
-
       <tr class="app-colour-list-row">
-
         <th class="app-colour-list-column app-colour-list-column--name" scope="row">
           <span class="app-swatch {% if colour.colour == "#ffffff" %}app-swatch-border{% endif %}" style="background-color:{{colour.colour}}"></span>
           <code>{{colour.name}}</code>
@@ -45,30 +48,31 @@ the GOV.UK colour palette when you update GOV.UK Frontend.
         <td class="app-colour-list-column app-colour-list-column--notes">
           {{colour.notes}}
         </td>
-
       </tr>
     {% endfor %}
-    
-
   {% endfor %}
   </tbody>
 </table>
 
-## Extended colours
+## Colour palette
 
 Use these colours for graphs and supporting material.
+
+To reference colours from the palette directly you should use the `govuk-colour`
+function.
+
+Avoid using the palette colours directly when there is a contextual colour that
+meets your use case. For example, if you are styling a component's error state
+you should use `$govuk-error-colour` rather than `govuk-colour("red")`.
 
 If you need to use tints of the extended palette, use either 25% or 50%.
 
 You can find departmental colours in the GOV.UK Frontend [_colours-organisations](https://github.com/alphagov/govuk-frontend/blob/master/src/settings/_colours-organisations.scss) file.
 
 <table class="govuk-body app-colour-list" summary="Table of extended colours">
-
   <tbody>
   {% for name, colour in colours.palette %}
-
     <tr class="app-colour-list-row">
-
       <th class="app-colour-list-column app-colour-list-column--name">
         <span class="app-swatch {% if colour == "#ffffff" %}app-swatch-border{% endif %}" style="background-color:{{colour}}"></span>
         <code>govuk-colour("{{name}}")</code>
@@ -78,7 +82,6 @@ You can find departmental colours in the GOV.UK Frontend [_colours-organisations
       </td>
       <td class="app-colour-list-column app-colour-list-column--notes"></td>
     </tr>
-
   {% endfor %}
  </tbody>
 </table>
