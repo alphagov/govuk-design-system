@@ -16,17 +16,26 @@
     },
     {
       "name": "$govuk-link-visited-colour"
+    },
+    {
+      "name": "$govuk-link-active-colour"
     }
   ],
   "Border": [
     {
       "name": "$govuk-border-colour"
+    },
+    {
+      "name": "$govuk-input-border-colour"
     }
   ],
-  "Focus": [
+  "Focus state": [
     {
       "name": "$govuk-focus-colour",
       "notes": "Only use this colour to indicate which element is focussed on. For example, when a user tabs to an element with their keyboard."
+    },
+    {
+      "name": "$govuk-focus-text-colour"
     }
   ],
   "Error state": [
