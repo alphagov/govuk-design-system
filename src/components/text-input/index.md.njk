@@ -81,6 +81,12 @@ You will not normally need to use the `autocomplete` attribute in prototypes, as
 
 Users often need to copy and paste information into a text input, so do not stop them from doing this.
 
+### Do not spell check user input in some cases
+
+If you ask users for data such as reference numbers or document numbers that don't contain human readable content, it is recommended to disable spell check using `spellcheck="false"` so that browsers don't [suggest or make corrections](https://github.com/alphagov/govuk-frontend/issues/1129#issuecomment-455584260) to the user input.
+
+{{ example({group: "components", item: "text-input", example: "input-spellcheck-disabled", html: true, nunjucks: true, open: false, size: "s"}) }}
+
 ### Error messages
 
 Error messages should be styled like this:
