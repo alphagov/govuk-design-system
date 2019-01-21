@@ -32,7 +32,7 @@
   "Focus state": [
     {
       "name": "$govuk-focus-colour",
-      "notes": "Only use this colour to indicate which element is focussed on. For example, when a user tabs to an element with their keyboard."
+      "notes": "Only use this colour to indicate which element is focused on. For example, when a user tabs to an element with their keyboard."
     },
     {
       "name": "$govuk-focus-text-colour"

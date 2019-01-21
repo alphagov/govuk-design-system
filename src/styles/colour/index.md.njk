@@ -16,14 +16,17 @@ your service meets [level AA of the Web Content Accessibility Guidelines
 
 ## Main colours
 
-Use the Sass variables provided rather than copying the hexadecimal colour
-codes. This means that your service will always use the most recent colour
-palette when you update GOV.UK Frontend.
+If you are using GOV.UK Frontend or the GOV.UK Prototype Kit, use the [Sass
+variables](https://sass-lang.com/guide#topic-2) provided rather than copying the
+hexadecimal (hex) colour values. For example, use `$govuk-brand-colour` rather
+than `{{ colours.applied['Brand colour'][0]['colour'] | trim }}`.
+This means that your service will always use the most recent colour palette
+whenever you update.
 
-Avoid using these variables to re-use colours in different contexts. For
-example, if you wanted to use red to represent some data in a graph, use
-`govuk-colour("red")` to reference the [colour palette](#colour-palette)
-directly rather than reusing `$govuk-error-colour`.
+Only uses the variables in the context they're designed for. In all other cases,
+you should reference the [colour palette](#colour-palette) directly. For
+example, if you wanted to use red to represent some data in a graph you should
+use `govuk-colour("red")` rather than `$govuk-error-colour`.
 
 <table class="govuk-body app-colour-list" summary="Table of main colours">
   <tbody>
@@ -59,11 +62,12 @@ directly rather than reusing `$govuk-error-colour`.
 Use these colours for graphs and supporting material.
 
 To reference colours from the palette directly you should use the `govuk-colour`
-function.
+function. For example, `color: govuk-colour("blue")`.
 
-Avoid using the palette colours directly when there is a contextual colour that
-meets your use case. For example, if you are styling a component's error state
-you should use `$govuk-error-colour` rather than `govuk-colour("red")`.
+Avoid using the palette colours if there is a Sass variable that is designed for
+your context. For example, if you are styling the error state of a component you
+should use the `$govuk-error-colour` Sass variable rather than
+`govuk-colour("red")`.
 
 If you need to use tints of the extended palette, use either 25% or 50%.
 
