@@ -1,16 +1,18 @@
 .app-navigation {
   $navigation-height: 53px;
-  padding-right: govuk-spacing(3);
-  padding-left: govuk-spacing(3);
-  background-color: $app-light-grey;
+  box-sizing: border-box;
   @include govuk-font(19, $weight: bold);
+  width: 100%;
 
   @include govuk-media-query($until: tablet) {
     display: none;
   }
 
+  @include govuk-media-query($from: tablet) {
+    margin-left: -(govuk-spacing(3));
+  }
+
   &__list {
-    margin: 0;
     padding: 0;
     list-style: none;
 

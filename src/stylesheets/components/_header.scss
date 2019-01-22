@@ -11,11 +11,16 @@
 @include govuk-exports("app-header") {
 
   .app-header {
-    padding: govuk-spacing(2) govuk-spacing(3);
+    box-sizing: border-box;
+    width: 100%;
     border-bottom: 10px solid govuk-colour("blue");
     color: govuk-colour("white");
     background: govuk-colour("black");
     @include govuk-clearfix;
+
+    @include govuk-media-query($from: desktop) {
+      padding: govuk-spacing(2) 0;
+    }
   }
 
   .app-header__logotype {

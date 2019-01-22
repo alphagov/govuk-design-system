@@ -1,22 +1,11 @@
 @include govuk-exports("app-pane") {
-  $toc-width: 300px;
+  $toc-width: 260px;
   $toc-width-tablet: 210px;
 
   .app-pane.app-pane--enabled {
-    $pane-height: 100vh;
-    overflow: hidden;
-
     @include govuk-media-query($from: tablet) {
       display: flex;
       flex-direction: column;
-    }
-
-    @include govuk-media-query($from: tablet, $and: "(orientation: portrait)") {
-      height: $pane-height;
-    }
-
-    @include govuk-media-query($from: desktop) {
-      height: $pane-height;
     }
   }
 
@@ -35,6 +24,7 @@
   .app-pane__nav {
     @include govuk-media-query($from: tablet) {
       display: flex;
+      background-color: $app-light-grey;
       flex-direction: column;
       flex: 1 0 auto;
     }
@@ -45,22 +35,17 @@
       display: flex;
       position: relative;
       min-height: 0;
-      overflow: hidden;
-      flex: 1 1 100%;
+      overflow: inherit;
+    }
 
-      > * {
-        overflow-x: scroll;
-        -webkit-overflow-scrolling: touch;
-        -ms-overflow-style: -ms-autohiding-scrollbar;
-      }
+    @include govuk-media-query(1160px) {
+      width: 100%;
     }
   }
 
   .app-pane__subnav {
-    border-right: 1px solid $govuk-border-colour;
     @include govuk-media-query($from: tablet) {
       width: $toc-width-tablet;
-      border-right: 1px solid $govuk-border-colour;
       flex: 0 0 auto;
     }
     @include govuk-media-query($from: desktop) {
@@ -72,15 +57,8 @@
     @include govuk-media-query($from: tablet) {
       display: flex;
       min-width: 0;
-      margin-left: auto;
-      flex: 1 1 auto;
+      flex: 1 1 100%;
       flex-direction: column;
-
-      // Stick footer to bottom of screen if content is shorter than viewport
-      main {
-        display: block;
-        flex: 1 0 auto;
-      }
     }
   }
 
@@ -105,7 +83,6 @@
     .app-pane__content {
       margin-left: -1px;
       overflow-x: hidden;
-      border-left: 1px solid $govuk-border-colour;
     }
   }
 }

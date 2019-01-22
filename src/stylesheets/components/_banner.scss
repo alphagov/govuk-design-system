@@ -1,0 +1,12 @@
+.app-phase-banner {
+  @include govuk-media-query($until: tablet) {
+    margin-right: 0;
+    margin-left: 0;
+    padding-right: govuk-spacing(3);
+    padding-left: govuk-spacing(3);
+  }
+
+  @include govuk-media-query($from: tablet) {
+    border-bottom: 0;
+  }
+}

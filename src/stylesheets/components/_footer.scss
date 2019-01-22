@@ -4,13 +4,6 @@
 // GOV.UK Frontend footer adapted for full width
 
 @include govuk-exports("app-footer") {
-  .app-footer {
-    @include govuk-media-query($from: tablet) {
-      display: flex;
-      flex-direction: column;
-      flex: 1 0 auto;
-    }
-  }
 
   .app-width-container--full {
     min-width: calc(100% - #{$govuk-gutter * 2});
