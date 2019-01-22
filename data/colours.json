@@ -1,111 +1,52 @@
 {
-  "main":{
-    "Text": [
-      {
-        "name": "$govuk-text-colour"
-      },
-      {
-        "name": "$govuk-secondary-text-colour"
-      }
-    ],
-    "Links": [
-      {
-        "name": "$govuk-link-colour"
-      },
-      {
-        "name": "$govuk-link-hover-colour"
-      },
-      {
-        "name": "$govuk-link-visited-colour"
-      }
-    ],
-    "Border": [
-      {
-        "name": "$govuk-border-colour"
-      }
-    ],
-    "Focus": [
-      {
-        "name": "$govuk-focus-colour",
-        "notes": "Only use this colour to indicate which element is focussed on. For example, when a user tabs to an element with their keyboard."
-      }
-    ],
-    "Status":[
-      {
-        "name": "govuk-colour(\"blue\")",
-        "notes": "Use for phase banners"
-      },
-      {
-        "name": "$govuk-error-colour",
-        "notes": "Use for error messages"
-      }
-    ]
-  },
-  "greyscale":[
+  "Text": [
     {
-      "name": "govuk-colour(\"black\")"
+      "name": "$govuk-text-colour"
     },
     {
-      "name": "govuk-colour(\"grey-1\")"
-    },
-    {
-      "name": "govuk-colour(\"grey-2\")"
-    },
-    {
-      "name": "govuk-colour(\"grey-3\")"
-    },
-    {
-      "name": "govuk-colour(\"grey-4\")"
-    },
-    {
-      "name": "govuk-colour(\"white\")"
+      "name": "$govuk-secondary-text-colour"
     }
   ],
-  "extended":[
+  "Links": [
     {
-      "name": "govuk-colour(\"red\")"
+      "name": "$govuk-link-colour"
     },
     {
-      "name": "govuk-colour(\"bright-red\")"
+      "name": "$govuk-link-hover-colour"
     },
     {
-      "name": "govuk-colour(\"orange\")"
+      "name": "$govuk-link-visited-colour"
     },
     {
-      "name": "govuk-colour(\"brown\")"
+      "name": "$govuk-link-active-colour"
+    }
+  ],
+  "Border": [
+    {
+      "name": "$govuk-border-colour"
     },
     {
-      "name": "govuk-colour(\"yellow\")"
+      "name": "$govuk-input-border-colour"
+    }
+  ],
+  "Focus state": [
+    {
+      "name": "$govuk-focus-colour",
+      "notes": "Only use this colour to indicate which element is focused on. For example, when a user tabs to an element with their keyboard."
     },
     {
-      "name": "govuk-colour(\"light-green\")"
-    },
+      "name": "$govuk-focus-text-colour"
+    }
+  ],
+  "Error state": [
     {
-      "name": "govuk-colour(\"green\")"
-    },
+      "name": "$govuk-error-colour",
+      "notes": "Use for error messages"
+    }
+  ],
+  "Brand colour": [
     {
-      "name": "govuk-colour(\"turquoise\")"
-    },
-    {
-      "name": "govuk-colour(\"light-blue\")"
-    },
-    {
-      "name": "govuk-colour(\"blue\")"
-    },
-    {
-      "name": "govuk-colour(\"light-purple\")"
-    },
-    {
-      "name": "govuk-colour(\"purple\")"
-    },
-    {
-      "name": "govuk-colour(\"bright-purple\")"
-    },
-    {
-      "name": "govuk-colour(\"pink\")"
-    },
-    {
-      "name": "govuk-colour(\"light-pink\")"
+      "name": "$govuk-brand-colour"
     }
   ]
 }
