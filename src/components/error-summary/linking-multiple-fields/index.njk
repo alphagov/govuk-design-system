@@ -11,8 +11,8 @@ ignore_in_sitemap: true
   "titleText": "There is a problem",
   "errorList": [
     {
-      "text": "Date of birth must include a year",
-      "href": "#dob-year"
+      "text": "Passport issue date must include a year",
+      "href": "#passport-issued-year"
     }
   ]
 }) }}
@@ -21,14 +21,14 @@ ignore_in_sitemap: true
   fieldset: {
     legend: {
       isPageHeading: true,
-      text: 'What is your date of birth?',
+      text: 'When was your passport issued?',
       classes: 'govuk-fieldset__legend--xl'
     }
   },
-  id: 'dob',
-  name: 'dob',
+  id: 'passport-issued',
+  name: 'passport-issued',
   errorMessage: {
-    text: "Date of birth must include a year"
+    text: "Passport issue date must include a year"
   },
   items: [
     {
