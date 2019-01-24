@@ -1,5 +1,5 @@
 $app-content-heading-icon-size: .6em;
-$app-content-heading-icon-gutter: .1em;
+$app-content-heading-icon-gutter: .1.5em;
 
 @include govuk-exports("app-content-heading") {
   // Anchored headings
@@ -8,13 +8,13 @@ $app-content-heading-icon-gutter: .1em;
     left: -($app-content-heading-icon-size + $app-content-heading-icon-gutter);
     padding-left: $app-content-heading-icon-size + $app-content-heading-icon-gutter;
   }
-  
+
   .app-content-heading__anchor {
-    text-decoration: none;
-    /* Prose scope has high specificity requiring !importants */
+    // Prose scope has high specificity requiring !importants
     color: currentColor !important;
+    text-decoration: none;
   }
-  
+
   .app-content-heading__icon {
     margin-left: -($app-content-heading-icon-size + $app-content-heading-icon-gutter);
     padding-right: $app-content-heading-icon-gutter;
@@ -22,7 +22,7 @@ $app-content-heading-icon-gutter: .1em;
 
   // Remove focus styles on anchor since you can't tab to them.
   .app-content-heading__anchor:focus {
-    /* Prose scope has high specificity requiring !importants */
+    // Prose scope has high specificity requiring !importants
     outline: none !important;
     background: transparent !important;
   }
@@ -39,7 +39,5 @@ $app-content-heading-icon-gutter: .1em;
     width: $app-content-heading-icon-size;
     height: $app-content-heading-icon-size;
     opacity: 0;
-    // // Show icon in a less abrupt way.
-    // transition: opacity ease-in-out 200ms;
   }
 }
