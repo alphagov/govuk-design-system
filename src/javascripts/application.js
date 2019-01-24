@@ -1,3 +1,4 @@
+import BackToTop from './components/back-to-top.js'
 import common from 'govuk-frontend/common'
 import CookieBanner from './components/cookie-banner.js'
 import Example from './components/example.js'
@@ -39,3 +40,8 @@ new MobileNav().init()
 // Initialise search
 var $searchContainer = document.querySelector('[data-module="app-search"]')
 new Search($searchContainer).init()
+
+// Initialise back to top
+var $backToTop = document.querySelector('[data-module="app-back-to-top"]')
+var $observedElement = document.querySelector('.app-subnav')
+new BackToTop($backToTop, { $observedElement: $observedElement }).init()

@@ -1,5 +1,5 @@
 {% from "phase-banner/macro.njk" import govukPhaseBanner %}
-
+<div class="app-phase-banner__wrapper">
 {% if PULL_REQUEST %}
   {% set phaseBannerText %}
     This is a preview of
@@ -16,15 +16,16 @@
       "text": "preview",
       "classes": "app-tag--review"
     },
-    "classes": "govuk-!-padding-left-3 govuk-!-padding-right-3",
+    "classes": "app-phase-banner govuk-width-container",
     "html": phaseBannerText
   }) }}
 {% else %}
-  {{ govukPhaseBanner({
-    "tag": {
-      "text": "beta"
-    },
-    "classes": "govuk-!-padding-left-3 govuk-!-padding-right-3",
-    "html": "This is a new service – your <a class=\"govuk-link\" href=\"/get-in-touch\">feedback</a> will help us to improve it."
-  }) }}
-{% endif %}
+    {{ govukPhaseBanner({
+      "tag": {
+        "text": "beta"
+      },
+      "classes": "app-phase-banner govuk-width-container",
+      "html": "This is a new service – your <a class=\"govuk-link\" href=\"/get-in-touch\">feedback</a> will help us to improve it."
+    }) }}
+  {% endif %}
+</div>

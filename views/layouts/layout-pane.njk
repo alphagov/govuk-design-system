@@ -7,9 +7,10 @@
 {% block appPaneClasses %}app-pane--enabled{% endblock %}
 
 {% block body %}
-<div class="app-pane__body">
+<div class="app-pane__body govuk-width-container">
   <div class="app-pane__subnav app-hide-mobile">
     {% include "_subnav.njk" %}
+    {% include "_back-to-top.njk" %}
   </div>
   <div class="app-pane__content">
     <main id="main-content" class="app-content" role="main">
@@ -67,7 +68,7 @@
         <p class="govuk-body govuk-!-margin-bottom-0"><a class="govuk-link" href="https://github.com/alphagov/govuk-design-system-backlog/issues/{{backlog_issue_id}}">Discuss ‘{{title}}’ on GitHub</a></p>
       {% endif %}
     </main>
-    {% include "_footer.njk" %}
   </div>
 </div>
+{% include "_footer.njk" %}
 {% endblock %}

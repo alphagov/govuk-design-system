@@ -1,3 +1,5 @@
+$govuk-page-width: 1100px !default;
+
 @import "govuk-frontend/all";
 
 // App-specific variables
@@ -5,6 +7,8 @@ $app-light-grey: #f8f8f8;
 $app-code-color: #dd1144;
 
 // App-specific components
+@import "components/back-to-top";
+@import "components/banner";
 @import "components/contact-panel";
 @import "components/cookie-banner";
 @import "components/example";
@@ -46,21 +50,6 @@ body {
   }
 }
 
-// Mirrors Bootstrap 4 - open for discussion
-$app-breakpoint-widescreen: 1200px;
-
-// This will be coming to FE later but making it app specific for now
-.app-site-width-container {
-  @media (min-width: $app-breakpoint-widescreen) {
-    max-width: 1100px;
-  }
-}
-
-// This layout is currently used on error pages like 404
-.app-site-width-container--constraint {
-  max-width: 960px;
-}
-
 // This is consistent with Elements - will be changed in FE
 [class*="govuk-grid-column"] {
   @include govuk-media-query($until: desktop) {
@@ -79,7 +68,12 @@ $app-breakpoint-widescreen: 1200px;
 
 .app-content {
 
-  @include govuk-responsive-padding(6);
+  padding: govuk-spacing(3) govuk-spacing(0);
+
+  @include govuk-media-query($from: tablet) {
+    padding: govuk-spacing(6);
+    padding-right: 0;
+  }
 
   h1 {
     max-width: 15em;
