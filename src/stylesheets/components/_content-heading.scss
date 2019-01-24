@@ -1,5 +1,5 @@
-$app-content-heading-icon-size: .6em;
-$app-content-heading-icon-gutter: .1.5em;
+$app-content-heading-icon-size: .4em;
+$app-content-heading-icon-gutter: .4em;
 
 @include govuk-exports("app-content-heading") {
   // Anchored headings
@@ -16,8 +16,13 @@ $app-content-heading-icon-gutter: .1.5em;
   }
 
   .app-content-heading__icon {
+    display: inline-block;
+    width: $app-content-heading-icon-size;
     margin-left: -($app-content-heading-icon-size + $app-content-heading-icon-gutter);
     padding-right: $app-content-heading-icon-gutter;
+    opacity: 0;
+    color: govuk-colour("grey-2");
+    font-size: 1em;
   }
 
   // Remove focus styles on anchor since you can't tab to them.
@@ -30,14 +35,8 @@ $app-content-heading-icon-gutter: .1.5em;
   // Only show icon with pointers that have hover (desktop)
   // Prevents mobile from accidentally having icons appear when pressing headings.
   @media (hover: hover) {
-    .app-content-heading:hover .app-content-heading__icon {
+    .app-content-heading__anchor:hover .app-content-heading__icon {
       opacity: 1;
     }
-  }
-
-  .app-content-heading__icon {
-    width: $app-content-heading-icon-size;
-    height: $app-content-heading-icon-size;
-    opacity: 0;
   }
 }
