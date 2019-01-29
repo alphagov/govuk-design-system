@@ -65,6 +65,32 @@
     {%- if (params.group == 'components') %}
       {% set macroOptions = getMacroOptions(params.item) %}
 
+      {% set nameCellWidth = 0 %}
+      {% set typeCellWidth = 0 %}
+      {#
+      Iterate over all the tables to find the biggest names.
+      Use that for the width of the table so that users can scan in columns between tables.
+      #}
+      {% for table in macroOptions %}
+        {% for option in table.options %}
+          {% set nameLength = (option.name | length) %}
+          {% set typeLength = (option.type | length) %}
+          {% if (nameLength) > nameCellWidth %}
+            {% set nameCellWidth = (nameLength) %}
+          {% endif %}
+          {% if (typeLength) > typeCellWidth %}
+            {% set typeCellWidth = (typeLength) %}
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+
+      <style>
+        [id="{{ exampleId }}-nunjucks"] {
+          --app-macro-options-name-width: {{ nameCellWidth }}ch;
+          --app-macro-options-type-width: {{ typeCellWidth }}ch;
+        }
+      </style>
+
       {% set macroOptionsHTML %}
 
         <p>
@@ -77,44 +103,13 @@
         If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
         </p>
 
-        {% set nameCellWidth = 0 %}
-        {% set typeCellWidth = 0 %}
-        {#
-        Iterate over all the tables to find the biggest names.
-        Use that for the width of the table so that users can scan in columns between tables.
-        #}
-        {% for table in macroOptions %}
-          {% for option in table.options %}
-            {% set nameLength = (option.name | length) %}
-            {% set typeLength = (option.type | length) %}
-            {% if (nameLength) > nameCellWidth %}
-              {% set nameCellWidth = (nameLength) %}
-            {% endif %}
-            {% if (typeLength) > typeCellWidth %}
-              {% set typeCellWidth = (typeLength) %}
-            {% endif %}
-          {% endfor %}
-        {% endfor %}
-
         {% for table in macroOptions %}
           <table class="govuk-table app-options__table" id="options-{{ exampleId }}--{{ table.id }}">
             <caption class="govuk-table__caption govuk-heading-m {% if table.id == 'primary' %} govuk-visually-hidden{% endif %}">{{ table.name }}</caption>
             <thead class="govuk-table__head">
               <tr class="govuk-table__row">
-                <th
-                  class="govuk-table__header"
-                  scope="col"
-                  {% if (nameCellWidth > 0)  %}
-                    style="width: {{ nameCellWidth }}ch"
-                  {% endif %}
-                >Name</th>
-                <th
-                  class="govuk-table__header"
-                  scope="col"
-                  {% if (typeCellWidth > 0)  %}
-                    style="width: {{ typeCellWidth }}ch"
-                  {% endif %}
-                >Type</th>
+                <th class="govuk-table__header" scope="col">Name</th>
+                <th class="govuk-table__header" scope="col">Type</th>
                 <th class="govuk-table__header" scope="col">Description</th>
               </tr>
             </thead>

@@ -13,9 +13,22 @@
   max-width: 38em;
 
   @include govuk-media-query(mobile) {
+    table-layout: fixed;
+
     .govuk-table__header,
     .govuk-table__cell {
+      padding-right: govuk-spacing(2);
       word-break: break-word;
+    }
+
+    .govuk-table__head {
+      .govuk-table__header:first-child {
+        width: var(--app-macro-options-name-width);
+      }
+
+      .govuk-table__header:nth-child(2) {
+        width: var(--app-macro-options-type-width);
+      }
     }
   }
 }
