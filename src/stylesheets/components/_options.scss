@@ -20,15 +20,19 @@
       padding-right: govuk-spacing(2);
       word-break: break-word;
     }
+  }
+}
 
-    .govuk-table__head {
-      .govuk-table__header:first-child {
-        width: var(--app-macro-options-name-width);
-      }
+@include govuk-media-query(mobile) {
+  .app-options__limit-table-cell {
+    width: 29%;
 
-      .govuk-table__header:nth-child(2) {
-        width: var(--app-macro-options-type-width);
-      }
+    &:nth-child(1) {
+      width: var(--app-macro-options-name-width);
+    }
+
+    &:nth-child(2) {
+      width: var(--app-macro-options-type-width);
     }
   }
 }
