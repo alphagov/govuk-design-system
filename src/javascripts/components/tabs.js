@@ -88,12 +88,6 @@ AppTabs.prototype.resetTabs = function () {
   })
 }
 
-// Close current container on click
-AppTabs.prototype.clickCloseContainer = function (event) {
-  event.preventDefault()
-  this.resetTabs()
-}
-
 AppTabs.prototype.handleClick = function (event) {
   // toggle and active selected tab and heading (on mobile)
   if (event.target.parentNode.classList.contains(tabsItemJsClass) ||
