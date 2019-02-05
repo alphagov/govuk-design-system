@@ -38,6 +38,15 @@ Unlike with radios, users can select multiple options from a list of checkboxes.
 
 If needed, add a hint explaining this, for example, 'Select all that apply'.
 
+Do not pre-select checkbox options as this makes it more likely that users will:
+
+- not realise they’ve missed a question
+- submit the wrong answer
+
+Order checkbox options alphabetically by default.
+
+In some cases, it can be helpful to order them from most-to-least common options. For example, you could order options for ‘What is your nationality?’ based on population size.
+
 There are 2 ways to use the checkboxes component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://govuk-prototype-kit.herokuapp.com), you can use the Nunjucks macro.
 
 {{ example({group: "components", item: "checkboxes", example: "default", html: true, nunjucks: true, open: false, size: "m", id: "default-2"}) }}
