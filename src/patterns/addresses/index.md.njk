@@ -48,14 +48,12 @@ When using an address lookup, you should:
 
 Only use multiple text inputs when you know which countries the addresses will come from and can find a format that supports them all. This can be difficult to know if you’re asking for addresses outside of the UK.
 
-### How multiple text inputs work
-
 Using multiple text inputs means:
 
 - you can easily extract and use specific parts of an address
 - you can give help for individual text inputs
 - you can validate each part of the address separately
-- users can complete the form using their browser’s auto-complete function
+- users can complete the form using their browser’s autocomplete function
 
 The disadvantages of using multiple text inputs are that:
 
@@ -63,15 +61,25 @@ The disadvantages of using multiple text inputs are that:
 - there’s no guarantee that users will use the text inputs the way you think they will
 - users cannot easily paste addresses from their clipboards
 
+### How multiple text inputs work
+
 If you use multiple text inputs, you should:
 
 - only make individual text inputs mandatory if you really need the information
-- make the text inputs the appropriate length for the content - it helps people understand the form, for example, make postcode text inputs shorter than street text inputs
+- make the text inputs the appropriate length for the content – it helps people understand the form, for example, make postcode text inputs shorter than street text inputs
 - let people enter their postcodes in upper or lower case and with or without spaces
 
 Make sure there are enough text inputs to accommodate longer addresses if you know your users will need them. For example, allow users to include a company name or flat&nbsp;number.
 
 Royal Mail does not need a county as long as the town and postcode are included. You should include an optional county text input so that people who do not know their postcode can give a valid address.
+
+#### Use the autocomplete attribute on multiple address fields
+
+Use the `autocomplete` attribute on each individual address field to help users enter their address more quickly. This lets you specify each input’s purpose so browsers can autofill the information on a user’s behalf if they’ve entered it previously.
+
+[Check which input purpose to use](https://www.w3.org/TR/WCAG21/#input-purposes) for each field.
+
+In production, you’ll need to do this to meet [WCAG 2.1 Level AA](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html). You will not normally need to use the `autocomplete` attribute in prototypes, as users will not generally be using their own devices.
 
 #### Error messages
 
@@ -100,6 +108,15 @@ You should not use a textarea if you:
 
 Textareas let users enter an address in any format and make it easy to copy and paste addresses from their clipboard.
 
+#### Use the autocomplete attribute on a textarea
+
+Use the `autocomplete` attribute on the textarea component when you're asking for an address. This lets browsers autofill the information on a user's behalf if they’ve entered it previously.
+
+To do this, set the `autocomplete` attribute to `street-address` as shown in the HTML and Nunjucks tabs in the textarea example above. 
+
+If you are working in production you’ll need to do this to meet [WCAG 2.1 Level AA](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html).
+
+You will not normally need to use the `autocomplete` attribute in prototypes, as users will not generally be using their own devices.
 
 ## Research on this pattern
 

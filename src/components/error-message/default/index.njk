@@ -8,19 +8,19 @@ layout: layout-example.njk
 {{ govukDateInput({
   fieldset: {
     legend: {
-      text: "What is your date of birth?",
+      text: "When was your passport issued?",
       isPageHeading: true,
       classes: "govuk-fieldset__legend--xl"
     }
   },
   hint: {
-    text: "For example, 31 3 1980"
+    text: "For example, 12 11 2007"
   },
   errorMessage: {
-    text: "Date of birth must be in the past"
+    text: "The date your passport was issued must be in the past"
   },
-  id: "dob",
-  namePrefix: "dob",
+  id: "passport-issued",
+  namePrefix: "passport-issued",
   items: [
     {
       classes: "govuk-input--width-2 govuk-input--error",
