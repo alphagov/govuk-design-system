@@ -6,28 +6,32 @@ layout: layout-example.njk
 {% from "checkboxes/macro.njk" import govukCheckboxes %}
 
 {{ govukCheckboxes({
-  idPrefix: "waste",
-  name: "waste",
+  idPrefix: "organisation",
+  name: "organisation",
   classes: "govuk-checkboxes--small",
   fieldset: {
     legend: {
-      text: "Filter",
+      text: "Organisation",
       isPageHeading: true,
       classes: "govuk-fieldset__legend--m"
     }
   },
   items: [
     {
-      value: "filter-1",
-      text: "Filter 1"
+      value: "hmrc",
+      text: "HM Revenue and Customs (HMRC)"
     },
     {
-      value: "filter-2",
-      text: "Filter 2"
+      value: "employment-tribunal",
+      text: "Employment Tribunal"
     },
     {
-      value: "filter-3",
-      text: "Filter 3"
+      value: "MOD",
+      text: "Ministry of Defence"
+    },
+    {
+      value: "DfT",
+      text: "Department for Transport"
     }
   ]
 }) }}
