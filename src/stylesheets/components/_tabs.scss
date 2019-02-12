@@ -84,6 +84,12 @@
   }
 }
 
+@include govuk-media-query($until: desktop) {
+  .app-tabs__heading:nth-of-type(1) {
+    border-top: 1px solid $govuk-border-colour;
+  }
+}
+
 .app-tabs__heading--current {
   background-color: darken(govuk-colour("grey-4"), 3%);
 }
