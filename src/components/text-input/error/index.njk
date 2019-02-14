@@ -8,11 +8,14 @@ ignore_in_sitemap: true
 
 {{ govukInput({
   label: {
-    text: "First name"
+    text: "Event name"
   },
-  id: "first-name",
-  name: "first-name",
+  id: "event-name",
+  name: "event-name",
+  hint: {
+    text: "The name you'll use on promotional material."
+  },
   errorMessage: {
-    text: "Enter your first name"
+    text: "Enter an event name"
   }
 }) }}

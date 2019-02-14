@@ -1,5 +1,5 @@
 ---
-title: National insurance numbers
+title: Hint text
 layout: layout-example.njk
 ignore_in_sitemap: true
 ---
@@ -8,12 +8,11 @@ ignore_in_sitemap: true
 
 {{ govukInput({
   label: {
-    text: "National Insurance number"
+    text: "Event name"
   },
   hint: {
-    text: "It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’."
+    text: "The name you'll use on promotional material."
   },
-  classes: "govuk-input--width-10",
-  id: "national-insurance-number",
-  name: "national-insurance-number"
+  id: "event-name",
+  name: "event-name"
 }) }}
