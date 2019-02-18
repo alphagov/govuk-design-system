@@ -1,5 +1,5 @@
 ---
-title: Names
+title: Text input with spellcheck disabled
 layout: layout-example.njk
 ---
 
@@ -7,11 +7,10 @@ layout: layout-example.njk
 
 {{ govukInput({
   label: {
-    text: "Full name"
+    text: "Reference number"
   },
-  id: "full-name",
-  name: "full-name",
-  autocomplete: "name",
+  id: "name",
+  name: "name",
   attributes: {
     spellcheck: "false"
   }
