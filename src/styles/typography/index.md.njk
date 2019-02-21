@@ -13,7 +13,9 @@ show_page_nav: true
 
 If your service is on the service.gov.uk subdomain you must use the GDS Transport font.
 
-You should use an alternative typeface like Helvetica or Arial for services that are publicly available on different domains.
+You should use an alternative typeface like Helvetica or Arial for services that are publicly available on different domains. 
+
+The GDS Transport font can be overridden by inserting the `$govuk-font-family: 'Your font', Arial, sans-serif;` variable before importing GOV.UK Frontend in your main css file.
 
 If you’re not sure whether you should be using GDS Transport, read the Service Manual guide on [making your service look like GOV.UK](https://www.gov.uk/service-manual/design/making-your-service-look-like-govuk) or [contact the Design System team](../../get-in-touch/).
 
@@ -85,6 +87,14 @@ For example, "Your reference number is **ABC12345678**. Use this to track your a
 
 Use bold sparingly. Overuse will make it difficult for users to know which parts of your content they need to pay the most attention to.
 
+### Applying font styles directly to your elements in SCSS
+
+If you want to apply the responsive font styles directly to an element in SCSS you can use the `govuk-font()` mixin.
+
+For example if you wanted your element to have 19px font size on large screens and 16px ont size on small screens you could set this by adding `@include govuk-font(19);`.
+
+The `govuk-font()` mixin takes multiple arguments for font weight, tabular numbers and line-height. For example `govuk-font($size: 19, $weight: regular, $tabular: false, $line-height: 1)`.
+
 ## Links
 
 Links are blue and underlined by default. If your link is at the end of a sentence or paragraph, make sure that the linked text does not include the full stop.
@@ -94,6 +104,18 @@ Links are blue and underlined by default. If your link is at the end of a senten
 Use the `govuk-link--no-visited-state` modifier class where it is not helpful to distinguish between visited and unvisited states, for example when linking to pages with frequently-changing content such as the dashboard for an admin interface.
 
 {{ example({group: "styles", item: "typography", example: "link-no-visited-state", html: true, open: true}) }}
+
+### Applying link styles directly to your elements in SCSS
+
+The `.govuk-link` class is made up of 3 separate mixins.
+
+`@include govuk-link-common;` which applies the global typography style and link focus state.
+
+`@include govuk-link-style-default;` which applies the link colours for all states.
+
+`@include govuk-link-print-friendly;` which displays the URL of links when the page is printed.
+
+In addition you can also apply the `govuk-link--no-visited-state` style as a mixin `@include govuk-link-style-no-visited-state;`
 
 ## Lists
 
