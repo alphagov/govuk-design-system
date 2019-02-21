@@ -1,0 +1,30 @@
+---
+layout: layout-pane.njk
+title: Settings
+section: Styles
+theme: SCSS helpers, settings and utilities
+aliases: 
+description: 
+---
+{% from "_example.njk" import example %}
+
+## Using global settings
+
+GOV.UK Frontend contains some global settings that can be applied to your app. These incluse things like overriding the defualt font, page width and stying of default HTML elements.
+
+To override these settings insert the variable with your preferred setting in your main stylesheet before the import declaration for GOV.UK Frontend.
+
+### Override ‘New Transport’ font
+
+The ‘New Transport’ font can be overridden by inserting `$govuk-font-family: 'Your font', Arial, sans-serif;` 
+
+### Override the maximum page width
+
+The max width of 960px can be overriden, for example you can make it 1200px by inserting `$govuk-page-width: 1200px;`.
+
+### Apply global styles to paragraphs and links
+
+As standard we do not style any default HTML elements. This is so we don’t unintentionally style parts of your application and you can feel confident about installing GOV.UK Frontend. 
+
+Because of this you need to use the classes `govuk-body` and `govuk-link` on paragraphs and links. If you’re happy to automatically style `<p>` and `<a>` tags then you can add `$govuk-global-styles: true`.
+

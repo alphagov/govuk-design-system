@@ -1,0 +1,93 @@
+---
+layout: layout-pane.njk
+title: Media queries
+section: Styles
+theme: SCSS helpers, settings and utilities
+aliases: display block, display inline, display inline-block, clearfix, visually hidden
+description: How to use our override and utility classes
+---
+{% from "_example.njk" import example %}
+
+
+## Using media query mixins
+
+All of the components supplied with GOV.UK Frontend contain the appropriate styles for different size screens.
+
+If you are creating your own components or need to change elements of your page at different screen sizes you can use the media query mixins in your SCSS file.
+
+The media query mixin can be used in a number of different ways but the most common will be to define styles based on the existing breakpoints, mobile, tablet and desktop.
+
+The mixin translates min-width and max-width into `$from` and `$until`. For example if you wanted a style to apply from tablet you can use `$from: tablet`. If you wanted a style to apply on mobile and desktop but stop at desktop you could use `$until: desktop`.
+
+Here’s an example of an element that has a colour of `green`, that changes to `red` from the tablet breakpoint.
+
+```
+.element {
+  color: green;
+  
+  @include govuk-media-query($from: tablet) {
+    color: red;
+  }
+} 
+```
+
+### Examples of from and until
+```
+.element {
+  @include govuk-media-query($from: mobile) {
+    color: red;
+  }
+  @include govuk-media-query($until: tablet) {
+    color: blue;
+  }
+  @include govuk-media-query($from: tablet) {
+    color: yellow;
+  }
+  @include govuk-media-query($until: desktop) {
+    color: aqua;
+  }
+  @include govuk-media-query($from: desktop) {
+    color: orange;
+  }
+}
+```
+
+### Other uses
+
+You can define the breakpoint behaviour in some other ways if needed.
+
+#### Breakpont shorthand
+
+You can use `mobile, tablet, desktop` to apply styles explicitly to the boundaries of each breakpoint. For example, if you want a style to apply to mobile and tablet you can do so like this.
+
+```
+.element {
+  @include govuk-media-query(mobile, tablet) {
+    color: green;
+  }
+}
+```
+
+#### Specific units
+
+You can add your own minor breakpoints by specifiying specific widths. For example, 
+
+```
+.element {
+  @include govuk-media-query(950px) {
+    color: green;
+  }
+}
+```
+
+#### Other media query options
+
+If you want to make use of some of the default `@media` rules, you can do so using `$and` like this:
+
+```
+.element {
+  @include govuk-media-query($from: tablet, $and: '(orientation: landscape)') {
+    color: teal;
+  }
+}
+```

@@ -2,6 +2,7 @@
 layout: layout-pane.njk
 title: Overrides and utilities
 section: Styles
+theme: SCSS helpers, settings and utilities
 aliases: display block, display inline, display inline-block, clearfix, visually hidden
 description: How to use our override and utility classes
 show_page_nav: true
@@ -49,9 +50,9 @@ You can see all of the width override classes on the [spacing page](/styles/typo
 
 ### Display
 
-When you want to override the `display` property of an element you can use the display override classes.
+When you want to override the `display` property of an element you can use the display override classes in your HTML.
 
-These are `govuk-!-display-inline`, `govuk-!-display-inline-block` and `govuk-!-display-block`
+These are `govuk-!-display-inline`, `govuk-!-display-inline-block` and `govuk-!-display-block`.
 
 ## Utility classes
 
@@ -61,8 +62,10 @@ Utility classes are like overrides, they have a single purpose and can be applie
 
 When an element contains only floated elements it’s height will collapse to nothing. The common approach to fixing this is adding what’s called a ‘clearfix’ to the parent container of the floated items. Doing this means the container will not collapse and you won't need to clear floated items individually.
 
-If you need to clearfix a container you can use the class `govuk-clearfix`.
+If you need to clearfix a container you can use the class `govuk-clearfix` in your HTML. If you want to apply a clearfix directly to an element in SCSS you can use the clearfix mixin `@include govuk-clearfix;`.
 
 ### Visually hidden
 
-If you need to visually hide an element, but still make it available to screen readers you can add the class `govuk-visually-hidden`.
+If you need to visually hide an element, but still make it available to screen readers you can add the class `govuk-visually-hidden` in your HTML.
+
+If you want to apply visually hidden directly to an element in SCSS you can use the visually hidden mixin `@include govuk-visually-hidden;`.
