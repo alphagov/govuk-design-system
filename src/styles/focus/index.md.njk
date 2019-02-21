@@ -1,0 +1,22 @@
+---
+layout: layout-pane.njk
+title: Focus
+section: Styles
+theme: SCSS helpers, settings and utilities
+aliases: 
+description: 
+---
+{% from "_example.njk" import example %}
+
+
+## Applying focus styles to your elements
+
+By default all of the interactive elements provided in the GOV.UK Frontend codebase have focus states applied. If you want to add the govuk focus state styles to another element you can do so with the `govuk-focusable()` mixin in your SCSS file.
+
+### Outline focus
+
+To add the outline focus style to an element use `@include govuk-focusable;`. This is most commonly used on focusable objects such as text inputs, tabs, buttons.
+
+### Focus fill
+
+To make text links stand out we apply a background colour to the focus state in addition to the outline. To apply this use `@include govuk-focusable-fill;`
