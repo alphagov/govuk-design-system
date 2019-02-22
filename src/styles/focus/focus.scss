@@ -1,0 +1,14 @@
+@import "example-init";
+
+.custom-object {
+  @include govuk-focusable;
+  display: block;
+  background-color: govuk-colour("grey-4");
+  border: $govuk-border-width solid $govuk-border-colour;
+  padding: govuk-spacing(3);
+  text-decoration: none;
+
+  p {
+    margin-bottom: 0;
+  }
+}

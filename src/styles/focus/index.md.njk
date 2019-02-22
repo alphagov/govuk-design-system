@@ -15,8 +15,36 @@ By default all of the interactive elements provided in the GOV.UK Frontend codeb
 
 ### Outline focus
 
-To add the outline focus style to an element use `@include govuk-focusable;`. This is most commonly used on focusable objects such as text inputs, tabs, buttons.
+To add the outline focus style to an interactive element use `@include govuk-focusable;`. This is most commonly used on focusable objects such as text inputs, tabs, buttons.
+
+{{ example({group: "styles", item: "focus", example: "default", html: false, open: false, size: "s"}) }}
+
+If you are not using SCSS and you want to add `:focus` styles to an interactive element, you can add the styles to each element separately in your CSS.
+
+<pre>
+  <code>
+    your-class-name:focus {
+      outline: 3px solid #ffbf47;
+      outline-offset: 0;
+    }
+  </code>
+</pre>  
 
 ### Focus fill
 
 To make text links stand out we apply a background colour to the focus state in addition to the outline. To apply this use `@include govuk-focusable-fill;`
+
+{{ example({group: "styles", item: "focus", example: "text", html: false, open: false, size: "s"}) }}
+
+If you are not using SCSS and you want to add `:focus` styles to custom actionable text, you can add the styles to each element separately in your CSS.
+
+<pre>
+  <code>
+    your-class-name:focus {
+      outline: 3px solid #ffbf47;
+      outline-offset: 0;
+      background-color: #ffbf47
+    }
+  </code>
+</pre>  
+
