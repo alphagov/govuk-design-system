@@ -29,7 +29,7 @@ Read more about [why and how to set legends as headings](../../get-started/label
 
 Always position radios to the left of their labels. This makes them easier to find, especially for users of screen magnifiers.
 
-Unlike with checkboxes, users can only select one option from a list of radios. Do not assume that users will know how many options they can select based on the visual difference between radios and checkboxes alone. 
+Unlike with checkboxes, users can only select one option from a list of radios. Do not assume that users will know how many options they can select based on the visual difference between radios and checkboxes alone.
 
 If needed, add a hint explaining this, for example, 'Select one option'.
 
@@ -38,13 +38,13 @@ Do not pre-select radio options as this makes it more likely that users will:
 - not realise they've missed a question
 - submit the wrong answer
 
-Users cannot go back to having no option selected once they have selected one, without refreshing their browser window. Therefore, you should include 'None of the above' or 'I do not know' if they are valid options. 
+Users cannot go back to having no option selected once they have selected one, without refreshing their browser window. Therefore, you should include 'None of the above' or 'I do not know' if they are valid options.
 
-Order radio options alphabetically by default. 
+Order radio options alphabetically by default.
 
 In some cases, it can be helpful to order them from most-to-least common options. For example, you could order options for 'Where do you live?' based on population size.
 
-However you should do this with extreme caution as it can reinforce bias in your service. If in doubt, order alphabetically. 
+However you should do this with extreme caution as it can reinforce bias in your service. If in doubt, order alphabetically.
 
 There are 2 ways to use the radios component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://govuk-prototype-kit.herokuapp.com), you can use the Nunjucks macro.
 
@@ -58,7 +58,7 @@ When there are more than 2 options, radios should be stacked, like so:
 
 If there are only 2 options, you can either stack the radios or display them inline, like so:
 
-{{ example({group: "components", item: "radios", example: "default", html: true, nunjucks: true, open: false, size: "s", id: "default-2"}) }}
+{{ example({group: "components", item: "radios", example: "default", html: true, nunjucks: true, open: false, size: "s", titleSuffix: "second"}) }}
 
 ### Radio items with hints
 
@@ -74,7 +74,7 @@ If one or more of your radio options is different from the others, it can help u
 
 ### Conditionally revealing content
 
-Using this component, you can add conditionally revealing content to stacked radios, so users only see content when it’s relevant to them. 
+Using this component, you can add conditionally revealing content to stacked radios, so users only see content when it’s relevant to them.
 
 For example, you could reveal an email address input only when a user chooses to be contacted by email.
 
