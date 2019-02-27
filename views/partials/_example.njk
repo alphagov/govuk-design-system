@@ -6,14 +6,9 @@
   {% set examplePath = exampleRoot + "index.njk" %}
 {% endif %}
 {% set exampleURL = "/" + params.group + "/" + params.item + "/" + params.example + "/index.html" %}
-
+{% set exampleId = params.id | default("example-" + params.example) %}
 {% set exampleTitle = getFrontmatter(examplePath).title %}
-{% if params.titleSuffix %}
-  {% set exampleTitle = exampleTitle + " " + params.titleSuffix %}
-{% endif %}
-{% set exampleTitle = exampleTitle + " example" %}
 
-{% set exampleId = exampleTitle | kebabCase %}
 {% if params.open %}
   {% set exampleId = exampleId + '-open' %}
 {% endif %}
