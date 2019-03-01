@@ -13,10 +13,16 @@
 {% endif %}
 {% set exampleTitle = exampleTitle + " example" %}
 
-{% set exampleId = exampleTitle | kebabCase %}
+{% if params.id %}
+  {% set exampleId = params.id %}
+{% else %}
+  {% set exampleId = exampleTitle | slugger %}
+{% endif %}
+
 {% if params.open %}
   {% set exampleId = exampleId + '-open' %}
 {% endif %}
+
 {% set display = params.displayExample | default(true) %}
 
 {% set multipleTabs = params.html and params.nunjucks %}
