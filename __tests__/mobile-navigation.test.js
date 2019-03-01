@@ -15,6 +15,12 @@ beforeAll(async (done) => {
     window.__TESTS_RUNNING = true
   })
   await page.emulate(iPhone)
+
+  // Capture JavaScript errors.
+  page.on('pageerror', error => {
+    throw error
+  })
+
   done()
 })
 
