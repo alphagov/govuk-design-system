@@ -13,7 +13,7 @@
 {% endif %}
 {% set exampleTitle = exampleTitle + " example" %}
 
-{% set exampleId = exampleTitle | kebabCase %}
+{% set exampleId = exampleTitle | slugger %}
 {% if params.open %}
   {% set exampleId = exampleId + '-open' %}
 {% endif %}
