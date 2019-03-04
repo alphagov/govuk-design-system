@@ -43,8 +43,18 @@ AppTabs.prototype.activateAndToggle = function (event) {
   event.preventDefault()
   var $currentToggler = event.target
   var $currentTogglerSiblings = this.$module.querySelectorAll('[href="' + $currentToggler.hash + '"]')
-  var $tabContainer = this.$module.querySelector($currentToggler.hash)
+  var $tabContainer
+
+  try {
+    $tabContainer = this.$module.querySelector($currentToggler.hash)
+  } catch (exception) {
+    throw new Error('Invalid example ID given: ' + exception)
+  }
   var isTabAlreadyOpen = $currentToggler.getAttribute('aria-expanded') === 'true'
+
+  if (!$tabContainer) {
+    return
+  }
 
   if (isTabAlreadyOpen) {
     $tabContainer.classList.add(tabContainerHiddenClass)
