@@ -1,0 +1,10 @@
+---
+title: Warning button
+layout: layout-example.njk
+---
+{% from "button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Delete account",
+  classes: "govuk-button--warning"
+}) }}
