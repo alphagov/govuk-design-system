@@ -9,6 +9,12 @@ let baseUrl = 'http://localhost:' + PORT
 beforeAll(async (done) => {
   browser = global.browser
   page = await browser.newPage()
+
+  // Capture JavaScript errors.
+  page.on('pageerror', error => {
+    throw error
+  })
+
   done()
 })
 

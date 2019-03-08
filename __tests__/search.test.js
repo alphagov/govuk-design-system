@@ -15,6 +15,12 @@ beforeEach(async (done) => {
   await page.evaluateOnNewDocument(() => {
     window.__TESTS_RUNNING = true
   })
+
+  // Capture JavaScript errors.
+  page.on('pageerror', error => {
+    throw error
+  })
+
   done()
 })
 

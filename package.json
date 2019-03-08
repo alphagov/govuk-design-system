@@ -39,10 +39,12 @@
     "metalsmith-postcss": "^4.2.0",
     "modernizr": "^3.6.0",
     "sass-export": "^1.0.2",
-    "serve-static": "^1.13.2"
+    "serve-static": "^1.13.2",
+    "slugger": "^1.0.1"
   },
   "devDependencies": {
     "accessible-autocomplete": "^1.6.2",
+    "axe-puppeteer": "^1.0.0",
     "fs-extra": "^7.0.1",
     "iframe-resizer": "^3.5.16",
     "jest": "^23.6.0",

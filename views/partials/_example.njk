@@ -6,12 +6,23 @@
   {% set examplePath = exampleRoot + "index.njk" %}
 {% endif %}
 {% set exampleURL = "/" + params.group + "/" + params.item + "/" + params.example + "/index.html" %}
-{% set exampleId = params.id | default("example-" + params.example) %}
+
 {% set exampleTitle = getFrontmatter(examplePath).title %}
+{% if params.titleSuffix %}
+  {% set exampleTitle = exampleTitle + " " + params.titleSuffix %}
+{% endif %}
+{% set exampleTitle = exampleTitle + " example" %}
+
+{% if params.id %}
+  {% set exampleId = params.id %}
+{% else %}
+  {% set exampleId = exampleTitle | slugger %}
+{% endif %}
 
 {% if params.open %}
   {% set exampleId = exampleId + '-open' %}
 {% endif %}
+
 {% set display = params.displayExample | default(true) %}
 
 {% set multipleTabs = params.html and params.nunjucks %}
