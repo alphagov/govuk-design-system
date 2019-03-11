@@ -1,0 +1,23 @@
+---
+title: Extra letter spacing
+layout: layout-example.njk
+ignore_in_sitemap: true
+---
+
+{% from "input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "National Insurance number"
+  },
+  hint: {
+    text: "It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’."
+  },
+  value: "QQ123456C",
+  classes: "govuk-input--width-10 govuk-input--extra-tracking",
+  id: "national-insurance-number",
+  name: "national-insurance-number",
+  attributes: {
+    spellcheck: "false"
+  }
+}) }}
