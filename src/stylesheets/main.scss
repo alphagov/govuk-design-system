@@ -350,3 +350,9 @@ p code {
     @extend %govuk-section-break--xl;
   }
 }
+
+// Hide banner for user research
+.app-phase-banner__wrapper{
+  display: none;
+}
+
