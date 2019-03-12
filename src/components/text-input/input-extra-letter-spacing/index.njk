@@ -8,12 +8,24 @@ ignore_in_sitemap: true
 
 {{ govukInput({
   label: {
-    text: "UK telephone number"
+    text: "UK telephone number (without extra spacing)"
   },
   id: "telephone-number",
   name: "telephone-number",
   type: "tel",
   autocomplete: "tel",
-  value: "01632960001",
-  classes: "govuk-input--width-20 govuk-input--extra-letter-spacing"
+  value: "01632 96 00 01",
+  classes: "govuk-input--width-20"
+}) }}
+
+{{ govukInput({
+  label: {
+    text: "UK telephone number (with extra spacing)"
+  },
+  id: "telephone-number",
+  name: "telephone-number",
+  type: "tel",
+  autocomplete: "tel",
+  value: "01632 96 00 01",
+  classes: "govuk-input--extra-letter-spacing govuk-input--width-20"
 }) }}
