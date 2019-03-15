@@ -43,6 +43,12 @@ For each error:
 - use a red border to visually connect the message and the question it belongs to
 - if the error relates to specific text fields within the question, give these a red border as well
 
+To help screen reader users, the error message component includes a hidden 'Error:' before the error message. These users will hear, for example, "Error: The date your passport was issued must be in the past".
+
+If your error message is written in another language, you can change the prefix as needed, as shown in this example.
+
+{{ example({group: "components", item: "error-message", example: "custom-prefix", html: true, nunjucks: true, open: true, displayExample: false, size: "s"}) }}
+
 Summarise all errors at the top of the page the user is on using an [error summary](../error-summary/).
 
 There are 2 ways to use the error message component. You can use HTML or, if you are using Nunjucks or the GOV.UK Prototype Kit, you can use the Nunjucks macro.
