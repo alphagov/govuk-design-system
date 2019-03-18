@@ -1,29 +1,18 @@
 /* eslint-env jest */
+
+const { setupPage } = require('../lib/jest-utilities.js')
 const configPaths = require('../config/paths.json')
 const PORT = configPaths.testPort
 
-let browser
 let page
 let baseUrl = 'http://localhost:' + PORT
 
-beforeAll(async (done) => {
-  browser = global.browser
-  page = await browser.newPage()
-  await page.evaluateOnNewDocument(() => {
-    window.__TESTS_RUNNING = true
-  })
-
-  // Capture JavaScript errors.
-  page.on('pageerror', error => {
-    throw error
-  })
-
-  done()
+beforeAll(async () => {
+  page = await setupPage()
 })
 
-afterAll(async (done) => {
+afterAll(async () => {
   await page.close()
-  done()
 })
 
 describe('Example page', () => {

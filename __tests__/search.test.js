@@ -1,32 +1,21 @@
 /* eslint-env jest */
+
+const { setupPage } = require('../lib/jest-utilities.js')
 const configPaths = require('../config/paths.json')
 const PORT = configPaths.testPort
 
 // Regex that can be used to match on fingerprinted search index files
 const isSearchIndex = /.*\/search-index-[0-9a-f]{32}.json$/
 
-let browser
 let page
 let baseUrl = 'http://localhost:' + PORT
 
-beforeEach(async (done) => {
-  browser = global.browser
-  page = await browser.newPage()
-  await page.evaluateOnNewDocument(() => {
-    window.__TESTS_RUNNING = true
-  })
-
-  // Capture JavaScript errors.
-  page.on('pageerror', error => {
-    throw error
-  })
-
-  done()
+beforeEach(async () => {
+  page = await setupPage()
 })
 
-afterEach(async (done) => {
+afterEach(async () => {
   await page.close()
-  done()
 })
 
 describe('Site search', () => {

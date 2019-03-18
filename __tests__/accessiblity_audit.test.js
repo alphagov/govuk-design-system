@@ -1,32 +1,26 @@
 /* eslint-env jest */
-const configPaths = require('../config/paths.json')
-const PORT = configPaths.testPort
+
 const { AxePuppeteer } = require('axe-puppeteer')
 
-let browser
+const { setupPage } = require('../lib/jest-utilities.js')
+const configPaths = require('../config/paths.json')
+const PORT = configPaths.testPort
+
 let page
 let baseUrl = 'http://localhost:' + PORT
+
 const thingsToExclude = [
   // axe reports there is "no label associated with the text field", when there is one.
   ['#app-site-search__input'],
   // axe reports that the phase banner is not inside a landmark, which is intentional.
   ['.app-phase-banner__wrapper']
 ]
-beforeAll(async (done) => {
-  browser = global.browser
-  page = await browser.newPage()
-
-  // Capture JavaScript errors.
-  page.on('pageerror', error => {
-    throw error
-  })
-
-  done()
+beforeAll(async () => {
+  page = await setupPage()
 })
 
-afterAll(async (done) => {
+afterAll(async () => {
   await page.close()
-  done()
 })
 
 describe('Accessibility Audit', () => {
