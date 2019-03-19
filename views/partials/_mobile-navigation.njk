@@ -2,9 +2,9 @@
   <ul class="app-mobile-nav__list">
     {% for item in navigation %}
     <li>
-      <a class="govuk-link js-mobile-nav-subnav-toggler{% if item.url in path %} app-mobile-nav__subnav-toggler--active{% endif %}" href="/{{ item.url }}">{{ item.label }}</a>
+      <a class="govuk-link js-mobile-nav-subnav-toggler{% if path.startsWith(item.url) %} app-mobile-nav__subnav-toggler--active{% endif %}" href="/{{ item.url }}">{{ item.label }}</a>
       {% if item.items %}
-      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav {% if item.url in path %}app-mobile-nav__subnav--active{% endif %}">
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav {% if path.startsWith(item.url) %}app-mobile-nav__subnav--active{% endif %}">
         <li{% if path == item.url %} class="current-page"{% endif %}>
           <a class="govuk-link" href="/{{ item.url }}">{{ item.label }} overview</a>
         </li>
