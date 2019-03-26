@@ -1,7 +1,7 @@
 <div class="app-pane__subnav-mobile-overview app-hide-desktop app-hide-tablet govuk-!-padding-top-2">
   <nav>
     {% for item in navigation %}
-      {% if item.url in path %}
+      {% if path.startsWith(item.url) %}
       {% if item.items %}
         {% for theme, items in item.items | groupby("theme") %}
           {% if theme != 'undefined' %}
