@@ -64,7 +64,7 @@
     "metalsmith-layouts": "^2.1.0",
     "metalsmith-permalinks": "^2.0.0",
     "metalsmith-rollup": "^2.0.0",
-    "metalsmith-sass": "^1.5.1",
+    "metalsmith-sass": "^1.6.0",
     "metalsmith-tagcleaner": "0.0.2",
     "metalsmith-uglify": "^2.3.2",
     "nunjucks": "^3.2.0",
