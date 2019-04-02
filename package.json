@@ -70,7 +70,7 @@
     "nunjucks": "^3.2.0",
     "puppeteer": "^1.14.0",
     "request": "^2.87.0",
-    "rollup-plugin-commonjs": "^9.1.3",
+    "rollup-plugin-commonjs": "^9.2.3",
     "rollup-plugin-node-resolve": "^3.3.0",
     "sass-lint": "^1.12.1",
     "sitemap": "^2.1.0",
