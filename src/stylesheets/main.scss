@@ -349,4 +349,13 @@ p code {
     @extend %govuk-section-break--visible;
     @extend %govuk-section-break--xl;
   }
+
+  pre + h2 {
+    padding-top: govuk-spacing(4);
+  }
+
+  pre + h3,
+  pre + h4 {
+    padding-top: govuk-spacing(2);
+  }
 }
