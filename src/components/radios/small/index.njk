@@ -1,0 +1,29 @@
+---
+title: Small radios
+layout: layout-example.njk
+---
+
+{% from "radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  classes: "govuk-radios--small",
+  idPrefix: "changed-name",
+  name: "changed-name",
+  fieldset: {
+    legend: {
+      text: "Filter",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "month",
+      text: "Monthly"
+    },
+    {
+      value: "year",
+      text: "Yearly"
+    }
+  ]
+}) }}
