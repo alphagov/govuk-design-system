@@ -6,33 +6,36 @@ layout: layout-single-page-prose.njk
 
 # Accessibility
 
-The GOV.UK Design System team works hard to ensure that the GOV.UK Design System and the styles, components and patterns it contains are accessible.
+The GOV.UK Design System team works hard to ensure that this Design System and the styles, components and patterns it contains are accessible.
 
-At the time the Design System went into public beta in June 2018, it had been independently audited by the [Digital Accessibility Centre](https://digitalaccessibilitycentre.org/) and was fully compliant with the Web Content Accessibility Guidelines (WCAG 2.0).
+When the Design System went into public beta in June 2018, it had been audited by accessibility specialists [DAC (Digital Accessibility Centre)](https://digitalaccessibilitycentre.org/) and met level AA of the Web Content Accessibility Guidelines (WCAG 2.0).
 
 Where possible, the team aims to research components and patterns with a representative range of users, including those with disabilities. 
 
-It also tests components to ensure they work with a broad range of browsers, devices and assistive technologies.
+It also tests components to ensure they work with a broad range of [browsers, devices and assistive technologies](https://github.com/alphagov/govuk-frontend#assistive-technology-support).
+
 ## Making your service accessible
+
 While the GOV.UK Design System team takes steps to ensure the Design System is as accessible as possible by default, this does not remove the need for contextual research. 
 
-You need to research styles, components and patterns as part of your service to ensure that they are accessible in context.  
+You must research styles, components and patterns as part of your service to ensure that they are accessible in context.  
 
-Find detailed guidance on [making your service accessible](https://www.gov.uk/service-manual/helping-people-to-use-your-service/making-your-service-accessible-an-introduction) in the GOV.UK Service Manual.
+Find detailed guidance on meeting level AA of WCAG 2.1 and [making your service accessible](https://www.gov.uk/service-manual/helping-people-to-use-your-service/making-your-service-accessible-an-introduction) in the GOV.UK Service Manual.
 
 ## WCAG 2.1 updates
-New regulations came into force on 23 September 2018 which state that, by law, all public sector websites must meet WCAG 2.1 by:
+
+New regulations came into force on 23 September 2018 which mean that, by law, all public sector websites must meet at least level AA of WCAG 2.1 by:
 
 - 23 September 2019 for new websites
 - 23 September 2020 for existing websites
 
-The GOV.UK Design System team is making a number of updates to ensure the Design System and the codebase it uses, GOV.UK Frontend, meet WCAG 2.1. 
+The GOV.UK Design System team is making a number of updates to ensure the Design System and the codebase it uses, GOV.UK Frontend, meet level AA of WCAG 2.1. 
 
 Read more about the [requirements for making your public sector website accessible](https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps).
 
 ### If you are using the GOV.UK Design System and GOV.UK Frontend
 
-Currently, a number of components in the Design System do not meet WCAG 2.1. 
+Currently, a number of components in the Design System do not meet level AA of WCAG 2.1. 
 
 If you are using the Design System or Frontend now, you will fail an accessibility audit on a number of things. For example:
 
@@ -40,15 +43,15 @@ If you are using the Design System or Frontend now, you will fail an accessibili
 - text contrast of the link hover colour
 - non-text contrast of the tabs component
 
-The GOV.UK Design System team has started work to make the Design System and Frontend meet WCAG 2.1. For example, they have added the autocomplete attribute to relevant patterns, like [Asking users for names](https://design-system.service.gov.uk/patterns/names/#use-the-autocomplete-attribute-on-name-fields). 
+The GOV.UK Design System team has done some work already to make the Design System and Frontend meet level AA of WCAG 2.1. For example, they have added the autocomplete attribute to relevant patterns, like [asking users for names](https://design-system.service.gov.uk/patterns/names/#use-the-autocomplete-attribute-on-name-fields). 
 
 The team is also aiming to release a new version of Frontend (v.3.0.0) and a series of updates to the Design System in June 2019 that will address the known issues.
 
 If you have failed an audit because of something from the Design System or Frontend, it’s recommended you wait for the release, rather than trying to fix the issues independently. 
 
-If you have failed because of something built specifically for your service, for example a component you’ve designed, you’ll need to fix these separately. 
+This includes if you are using existing styles, such as the focus state, in your own components.
 
-Updating to the next release of Frontend will not automatically mean you pass WCAG 2.1. You will still need your own audit to assess your service as a whole.
+Updating to the next release of Frontend will not automatically mean you meet level AA of WCAG 2.1. You will still need your own audit to assess your service as a whole.
 
 ### If you are not using the GOV.UK Design System and GOV.UK Frontend
 
@@ -58,7 +61,7 @@ The Design System and Frontend were introduced in June 2018 to replace the follo
 - Frontend Toolkit
 - GOV.UK Template
 
-The GOV.UK Design System team no longer supports these products and will not be making updates to make them WCAG 2.1 compliant. 
+The GOV.UK Design System team no longer supports these products and will not be making updates to help them meet level AA of WCAG 2.1. 
 
 If you are using these products, it’s recommended that you begin [updating your service now to use the Design System and Frontend](https://design-system.service.gov.uk/get-started/updating-your-code/).
 
