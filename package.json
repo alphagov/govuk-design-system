@@ -80,7 +80,10 @@
     "node": "10.15.1"
   },
   "jest": {
-    "preset": "jest-puppeteer"
+    "preset": "jest-puppeteer",
+    "setupFilesAfterEnv": [
+       "./jest.setup.js"
+     ]
   },
   "browserslist": [
     "last 2 versions",
