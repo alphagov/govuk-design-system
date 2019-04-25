@@ -1,0 +1,16 @@
+---
+title: Secondary button combo
+layout: layout-example.njk
+---
+{% from "button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Save and continue",
+  classes: "govuk-!-margin-right-1"
+}) }}
+
+{{ govukButton({
+  text: "Save as draft",
+  classes: "govuk-button--secondary"
+}) }}
+
