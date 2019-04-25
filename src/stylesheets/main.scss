@@ -103,6 +103,7 @@ body {
   img {
     box-sizing: border-box;
     width: 100%;
+    max-width: 722px;
     height: auto;
     @include govuk-responsive-margin(2, "top");
     @include govuk-responsive-margin(6, "bottom");

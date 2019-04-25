@@ -1,0 +1,50 @@
+---
+title: Ethnic group
+layout: layout-example.njk
+---
+
+{% from "radios/macro.njk" import govukRadios %}
+{% from "input/macro.njk" import govukInput %}
+
+{% set asianOtherHtml %}
+  {{ govukInput({
+    id: "ethnicity-asian-other",
+    name: "ethnicity-asian-other",
+    classes: "govuk-!-width-two-thirds",
+    label: {
+      text: "Your Asian background (optional)"
+    }
+  }) }}
+{% endset -%}
+
+{{ govukRadios({
+  idPrefix: "ethnic-group",
+  name: "ethnic-group",
+  fieldset: {
+    legend: {
+      text: "Which one best describes your background?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      text: "Indian"
+    },
+    {
+      text: "Pakistani"
+    },
+    {
+      text: "Bangladeshi"
+    },
+    {
+      text: "Chinese"
+    },
+    {
+      text: "Another Asian background",
+      conditional: {
+        html: asianOtherHtml
+      }
+    }
+  ]
+}) }}

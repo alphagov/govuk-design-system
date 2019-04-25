@@ -1,0 +1,47 @@
+---
+title: Ethnic group
+layout: layout-example.njk
+---
+
+{% from "radios/macro.njk" import govukRadios %}
+{% from "input/macro.njk" import govukInput %}
+
+{% set mixedOtherHtml %}
+  {{ govukInput({
+    id: "ethnicity-white-other",
+    name: "ethnicity-white-other",
+    classes: "govuk-!-width-two-thirds",
+    label: {
+      text: "Your Mixed background (optional)"
+    }
+  }) }}
+{% endset -%}
+
+{{ govukRadios({
+  idPrefix: "ethnic-group",
+  name: "ethnic-group",
+  fieldset: {
+    legend: {
+      text: "Which one best describes your background?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      text: "White and Black Caribbean"
+    },
+    {
+      text: "White and Black African"
+    },
+    {
+      text: "White and Asian"
+    },
+    {
+      text: "Another Mixed background",
+      conditional: {
+        html: mixedOtherHtml
+      }
+    }
+  ]
+}) }}

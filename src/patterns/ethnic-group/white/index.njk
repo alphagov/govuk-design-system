@@ -1,0 +1,47 @@
+---
+title: Ethnic group
+layout: layout-example.njk
+---
+
+{% from "radios/macro.njk" import govukRadios %}
+{% from "input/macro.njk" import govukInput %}
+
+{% set whiteOtherHtml %}
+  {{ govukInput({
+    id: "ethnicity-white-other",
+    name: "ethnicity-white-other",
+    classes: "govuk-!-width-two-thirds",
+    label: {
+      text: "Your White background (optional)"
+    }
+  }) }}
+  {% endset -%}
+
+  {{ govukRadios({
+    idPrefix: "ethnic-group",
+    name: "ethnic-group",
+    fieldset: {
+      legend: {
+        text: "Which one best describes your background?",
+        isPageHeading: true,
+        classes: "govuk-fieldset__legend--l"
+      }
+    },
+    items: [
+      {
+        text: "Welsh, English, Scottish, Northern Irish or British"
+      },
+      {
+        text: "Irish"
+      },
+      {
+        text: "Gypsy or Irish Traveller"
+      },
+      {
+        text: "Another White background",
+        conditional: {
+          html: whiteOtherHtml
+        }
+      }
+    ]
+  }) }}
