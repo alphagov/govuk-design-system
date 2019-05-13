@@ -40,7 +40,7 @@ Ask for memorable dates, like dates of birth, using the [date input](../../compo
 
 Use the `autocomplete` attribute when you're asking for a date of birth. This lets browsers autofill the information on a user's behalf if they’ve entered it previously.
 
-To do this, set the `autocomplete` attribute on the 3 fields to `bday-day`, `bday-month` and `bday-year`. See how to do this in the HTML and Nunjucks tabs in the memorable date example above. 
+To do this, set the `autocomplete` attribute on the 3 fields to `bday-day`, `bday-month` and `bday-year`. See how to do this in the HTML and Nunjucks tabs in the memorable date example above.
 
 If you are working in production you’ll need to do this to meet [WCAG 2.1 Level AA](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html).
 
@@ -83,9 +83,13 @@ To check that the dates users give you are valid, make sure that:
 - future dates are in the future
 - the first date in a date range is before the second
 
+Make sure you accept numbers below 10 both with and without a leading zero.
+
 ### How to write dates
 
 See the [GOV.UK style for writing dates](https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#dates) and [date ranges]( https://www.gov.uk/guidance/content-design/writing-for-gov-uk#date-ranges).
+
+If you give an example date, use 13 or more for the day and 9 or less for the month - for example ‘27 3 2007’. This helps users enter the date in the correct order and shows them they do not need to include leading zeroes.
 
 ### Error messages
 
