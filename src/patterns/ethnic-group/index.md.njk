@@ -12,6 +12,11 @@ statusMessage: This pattern is experimental because <a class="govuk-link" href="
 
 {% from "_example.njk" import example %}
 
+Before using this pattern, consider whether you need to ask for this information and make sure you have permission from your organisation to do so. 
+
+Only collect users’ ethnic groups if you are going to use the data, for example, as part of your organisation’s equality monitoring.
+
+Read guidance about [collecting personal information](https://www.gov.uk/service-manual/design/collecting-personal-information-from-users) in the GOV.UK Service Manual.
 
 ![‘Ethnic group’ flow diagram. Contains an initial page asking “What is your ethnic group?” with 6 options. 5 of the options lead to separate follow-up pages asking ”Which one best describes your background?” for Asian, Black, Mixed, White, or Other. The 6th option is “Prefer not to say”, which exits the flow.](ethnic-group-flow.png)
 
@@ -19,40 +24,24 @@ statusMessage: This pattern is experimental because <a class="govuk-link" href="
 
 Follow this pattern if you need to ask users in the UK for their ethnic group.
 
-
 ## How it works
 
-You should:
+When asking for users’ ethnic groups:
 
-- only collect users’ ethnic groups if the data will be used
+- use the same wording of the question as shown in this pattern
+- use the exact ethnic group categories shown in this pattern, which are from the most recent census in England
+- let users specify a different ethnic group from those provided
+- make the question optional
 - tell users how their data will be used
-- use the ethnic group categories from the most recent census
-- allow users to opt out
-- allow users to write in their ethnicity
 - ensure the data is used and stored in line with data protection rules
 
-You should not:
+Ask users for their ethnic group in 2 stages, as shown in this pattern. 
 
-- change any of the wording
-- change the ordering of the categories
+Ask users for their broad ethnic group first of all. 
 
-### Two step process
-
-This pattern is designed to be split across 2 pages. The first page asks the user for their broad ethnic group. The second page allows users to choose from a more detailed breakdown of ethnicities within their broad group.  Users should only be able to select 1 option per page.
+From there, direct them to a second page where they can choose a specific ethnic background within their broad ethnic group. 
 
 {{ example({group: "patterns", item: "ethnic-group", example: "default", html: true, nunjucks: true, open: false, size: "s"}) }}
-
-#### White
-
-Users who select ‘White’ should see this page.
-
-{{ example({group: "patterns", item: "ethnic-group", example: "white", html: true, nunjucks: true, open: false, size: "s"}) }}
-
-#### Mixed or multiple ethnic groups
-
-Users who select ‘Mixed or multiple ethnic groups’ should see this page.
-
-{{ example({group: "patterns", item: "ethnic-group", example: "mixed", html: true, nunjucks: true, open: false, size: "s"}) }}
 
 #### Asian or Asian British
 
@@ -60,11 +49,23 @@ Users who select ‘Asian or Asian British’ should see this page.
 
 {{ example({group: "patterns", item: "ethnic-group", example: "asian", html: true, nunjucks: true, open: false, size: "s"}) }}
 
-#### Black, Caribbean, African or Black British
+#### Black, African, Black British or Carribean
 
-Users who select ‘Black, Caribbean, African or Black British’ should see this page.
+Users who select ‘Black, African, Black British or Carribean’ should see this page.
 
 {{ example({group: "patterns", item: "ethnic-group", example: "black", html: true, nunjucks: true, open: false, size: "s"}) }}
+
+#### Mixed or multiple ethnic groups
+
+Users who select ‘Mixed or multiple ethnic groups’ should see this page.
+
+{{ example({group: "patterns", item: "ethnic-group", example: "mixed", html: true, nunjucks: true, open: false, size: "s"}) }}
+
+#### White
+
+Users who select ‘White’ should see this page.
+
+{{ example({group: "patterns", item: "ethnic-group", example: "white", html: true, nunjucks: true, open: false, size: "s"}) }}
 
 #### Another ethnic group
 
@@ -72,27 +73,25 @@ Users who select ‘Another ethnic group’ should see this page.
 
 {{ example({group: "patterns", item: "ethnic-group", example: "other", html: true, nunjucks: true, open: false, size: "s"}) }}
 
+### Let users specify a different ethnic group from those provided
 
-### Regional differences
+You should provide an option for users to enter a different ethnic group in case theirs is not covered in the options given. This can also help to inform future changes to the options, to reflect how users describe their ethnic groups.
 
-The ethnic groups used here are for services in England. Different categories are used in Wales, Scotland and Northern Ireland.
+### Accommodate regional differences
 
-Services covering more than 1 country should accommodate these differences in their design. For example, by changing the ethnic groups shown depending on whether the user is based in [England](https://gss.civilservice.gov.uk/policy-store/ethnicity/#england), [Wales](https://gss.civilservice.gov.uk/policy-store/ethnicity/#wales-), [Scotland](https://gss.civilservice.gov.uk/policy-store/ethnicity/#scotland) or [Northern Ireland](https://gss.civilservice.gov.uk/policy-store/ethnicity/#northern-ireland).
+The ethnic groups used in this pattern are for services in England. Different categories are used in Wales, Scotland and Northern Ireland.
 
-Where this isn’t possible, services should use the English categories.
+If your service covers more than 1 region, you should accommodate these differences in your design. For example, by changing the ethnic groups shown depending on whether the user is based in [England](https://gss.civilservice.gov.uk/policy-store/ethnicity/#englandhttps://gss.civilservice.gov.uk/policy-store/ethnicity/#england), [Wales](https://gss.civilservice.gov.uk/policy-store/ethnicity/#wales-), [Scotland](https://gss.civilservice.gov.uk/policy-store/ethnicity/#scotland) or [Northern Ireland](https://gss.civilservice.gov.uk/policy-store/ethnicity/#northern-ireland).
 
+Where this isn’t possible, use the English categories.
 
-### Allowing users to opt out
+### Make the question optional
 
-Users should be able to decline to give their ethnicity.
+Always give users the option not to give their ethnicity unless you cannot deliver your service without it.
 
-The preferred option is a separate page asking if users are willing to give their ethnic group, with an explanation of how the data will be used. This should be as specific as possible, for example: ‘we use this information to make sure we’re giving equal opportunities to all candidates’.
+The best way to do this is to include a step asking if users are willing to give their ethnic group. To help users decide how to answer, you should clearly explain how you will use the data. 
 
-Users who do not want to give their ethnicity should be able to finish or exit the service.
-
-### Placement
-
-The question should appear just before, or after, a user has completed your service. For example, using the [check answers pattern](https://design-system.service.gov.uk/patterns/check-answers/), the question appears just before the user checks their answers, or just after they've submitted the form.
+Be as specific as possible, for example: ‘we use this information to make sure we’re giving equal opportunities to all candidates’.
 
 ### Asking for other protected characteristics
 
@@ -102,48 +101,22 @@ You could ask an initial question such as “Will you answer a few more question
 
 ### Asking a user for someone else’s ethnic group
 
-You should normally not ask users to give someone else’s ethnic group. This is because ethnicity is self-defined. There are some exceptions in the case of young children, for example.
+You should not normally ask users to give someone else’s ethnic group. This is because ethnicity is self-defined. There are some exceptions, for example, in the case of young children.
 
 ### Data protection
 
-Under the General Data Protection Regulation, there are [different rules](https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/lawful-basis-for-processing/special-category-data/) around the use and storage of someone’s ethnic origin.
-
-### Check your answers
-
-If a user’s ethnic group will appear in the check answers pattern, you should:
-
-- repeat both options chosen by the user, for example ‘Asian or Asian British: Bangladeshi’
-- take the user back to the point at which they could opt out, if they decide to change their answer
-
+Under the General Data Protection Regulation, there are different [rules around the use and storage of someone’s ethnic origin](https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/lawful-basis-for-processing/special-category-data/ ).
 
 ## Research on this pattern
 
-### Language
+This pattern was originally contributed by the Race Disparity Unit based on work and research findings from the Office of National Statistics (ONS).
 
-The question ‘What is your ethnic group?’ was agreed following a 2 year cross-government consultation led by the Office for National Statistics.
+The question ‘What is your ethnic group?’ was agreed following a 2 year cross-government consultation led by the ONS.
 
-### Ordering
-
-The order in which the ethnic categories appear on the first page is:
-
-- White
-- Mixed or multiple ethnic groups
-- Asian or Asian British
-- Black or Black British
-- another ethnic group
-
-This reflects the most recent figures on the ethnic breakdown of the UK. For example, White is the most common ethnic group in the UK so this appears first. This helps the maximum number of users answer the question as quickly as possible.
-
-The exception is the Mixed and multiple ethnic groups category, which appears second in the list. Testing found that users were more likely to miss this category if it appeared further down the list.
-
-### Write-in option
-
-You should allow users to write in their own ethnicity. Giving users this option has been shown to improve response rates. It can also be a good source of evidence for how ethnic identifications are changing in the long term.
-
-### Two step process
-
-Research by the Office for National Statistics found that presenting all of the ethnic group options on a single page led to some users trying to select more than 1 option. Splitting the question across 2 pages solved this problem across multiple testing rounds with 300+ users.
+ONS research found that presenting all of the ethnic group options on a single page led to some users trying to select more than 1 option. Splitting the question across 2 pages solved this problem across multiple testing rounds with more than 300 users.
 
 ### Next steps
 
-More research is needed to understand when is the best point within a service to ask this question.
+More research is needed to understand where to ask this question in relation to a service.
+
+If you've used this pattern in your service, please get in touch to share your research findings.
