@@ -247,7 +247,7 @@ $colour-list-breakpoint: 980px;
 }
 
 .app-swatch-border {
-  border-color: govuk-colour("grey-2");
+  border-color: govuk-colour("mid-grey");
 }
 
 .app-colour-list-column--name {
@@ -297,7 +297,7 @@ td code,
 p code {
   padding: 0 govuk-spacing(1);
   color: $app-code-color;
-  background-color: govuk-colour("grey-4");
+  background-color: govuk-colour("light-grey");
 }
 
 .app-prose-scope {

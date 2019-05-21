@@ -59,7 +59,7 @@ $icon-size: 40px;
 
   .app-site-search__hint {
     position: absolute;
-    color: govuk-colour("grey-2");
+    color: govuk-colour("mid-grey");
   }
 
   .app-site-search__input {
@@ -130,7 +130,7 @@ $icon-size: 40px;
   .app-site-search__option {
     display: block;
     position: relative;
-    border-bottom: solid govuk-colour("grey-2");
+    border-bottom: solid govuk-colour("mid-grey");
     border-width: 1px 0;
     cursor: pointer;
   }
@@ -165,7 +165,7 @@ $icon-size: 40px;
   }
 
   .app-site-search__option--no-results {
-    color: govuk-colour("grey-1");
+    color: govuk-colour("dark-grey");
     background-color: govuk-colour("white");
     cursor: not-allowed;
   }
