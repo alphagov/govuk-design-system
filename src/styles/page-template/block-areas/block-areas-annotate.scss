@@ -7,7 +7,7 @@ $app-annotate-block-label-color: #ffffff;
   margin-bottom: govuk-spacing(6);
   padding: govuk-spacing(3);
   padding-top: 3em;
-  outline: 2px dashed govuk-colour("grey-1");
+  outline: 2px dashed govuk-colour("dark-grey");
 }
 
 .app-annotate-block__label {
@@ -15,8 +15,8 @@ $app-annotate-block-label-color: #ffffff;
   top: 0;
   left: 0;
   padding: .25em .5em;
-  border-right: 2px dashed govuk-colour("grey-1");
-  border-bottom: 2px dashed govuk-colour("grey-1");
+  border-right: 2px dashed govuk-colour("dark-grey");
+  border-bottom: 2px dashed govuk-colour("dark-grey");
   background: $app-annotate-block-label-color;
   font-family: $govuk-font-family;
 }

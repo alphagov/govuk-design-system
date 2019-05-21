@@ -52,7 +52,7 @@
   a {
     border-top-color: govuk-colour("blue");
     border-bottom-color: govuk-colour("blue");
-    background-color: darken(govuk-colour("grey-4"), 3%);
+    background-color: darken(govuk-colour("light-grey"), 3%);
   }
 }
 
@@ -91,7 +91,7 @@
 }
 
 .app-tabs__heading--current {
-  background-color: darken(govuk-colour("grey-4"), 3%);
+  background-color: darken(govuk-colour("light-grey"), 3%);
 }
 
 // Tab containers
