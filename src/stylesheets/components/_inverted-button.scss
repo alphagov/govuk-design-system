@@ -1,69 +1,7 @@
-/// Mixes a color with white.
-///
-/// @argument {color} $color
-///
-/// @argument {number (percentage)} $percent
-///   The amount of white to be mixed in.
-///
-/// @return {color}
-///
-/// @example scss
-///   .element {
-///     background-color: tint(#6ecaa6, 40%);
-///   }
-///
-///   // CSS Output
-///   .element {
-///     background-color: #a8dfc9;
-///   }
-
-@function tint(
-  $color,
-  $percent
-) {
-  @if not _is-color($color) {
-    @error "`#{$color}` is not a valid color for the `$color` argument in " +
-    "the `tint` mixin.";
-  } @else {
-    @return mix(#ffffff, $color, $percent);
-  }
-}
-
-/// Mixes a color with black.
-///
-/// @argument {color} $color
-///
-/// @argument {number (percentage)} $percent
-///   The amount of black to be mixed in.
-///
-/// @return {color}
-///
-/// @example scss
-///   .element {
-///     background-color: shade(#ffbb52, 60%);
-///   }
-///
-///   // CSS Output
-///   .element {
-///     background-color: #664a20;
-///   }
-
-@function shade(
-  $color,
-  $percent
-) {
-  @if not _is-color($color) {
-    @error "`#{$color}` is not a valid color for the `$color` argument in " +
-    "the `tint` mixin.";
-  } @else {
-    @return mix(#000000, $color, $percent);
-  }
-}
-
 $button-shadow-size: $govuk-border-width-form-element;
 $app-button-inverted-background-colour: govuk-colour("white");
 $app-button-inverted-foreground-colour: govuk-colour("blue");
-$app-button-inverted-shadow-colour: shade($app-button-inverted-foreground-colour, 30%);
+$app-button-inverted-shadow-colour: govuk-shade($app-button-inverted-foreground-colour, 30%);
 
 .app-button--inverted,
 .app-button--inverted:link,
@@ -76,6 +14,6 @@ $app-button-inverted-shadow-colour: shade($app-button-inverted-foreground-colour
 .app-button--inverted:hover,
 .app-button--inverted:focus {
   color: $app-button-inverted-foreground-colour !important;
-  background-color: tint($app-button-inverted-foreground-colour, 90%);
+  background-color: govuk-tint($app-button-inverted-foreground-colour, 90%);
 }
 
