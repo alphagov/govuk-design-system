@@ -54,7 +54,7 @@
   .app-subnav__theme {
     margin: 0;
     padding: govuk-spacing(2) govuk-spacing(3);
-    color: govuk-colour("grey-1");
+    color: govuk-colour("dark-grey");
     @include govuk-font(19);
   }
 }
