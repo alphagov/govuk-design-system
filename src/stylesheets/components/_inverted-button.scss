@@ -79,10 +79,10 @@ $app-button-inverted-shadow-colour: shade($app-button-inverted-foreground-colour
   background-color: tint($app-button-inverted-foreground-colour, 90%);
 }
 
-.govuk-button--start.app-button--inverted {
-  background-image: url("/images/components/icon-pointer--blue.png");
+// .govuk-button--start.app-button--inverted {
+//   // background-image: url("/images/components/icon-pointer--blue.png");
 
-  @include govuk-device-pixel-ratio {
-    background-image: url("/images/components/icon-pointer--blue-2x.png");
-  }
-}
+//   // @include govuk-device-pixel-ratio {
+//   //   background-image: url("/images/components/icon-pointer--blue-2x.png");
+//   // }
+// }
