@@ -78,7 +78,8 @@ $icon-size: 40px;
     width: 100%;
     margin-left: 0;
     outline: 3px solid $govuk-focus-colour;
-    outline-offset: 0;
+    outline-offset: -2px;
+    box-shadow: inset 0 0 0 4px $govuk-input-border-colour;
   }
 
   .app-site-search__input--show-all-values {
@@ -97,9 +98,11 @@ $icon-size: 40px;
   }
 
   .app-site-search__menu {
-    width: 100%;
+    width: calc(100% + 2px);
     max-height: 342px;
     margin: 0;
+    margin-top: 1px;
+    margin-left: -1px;
     padding: 0;
     overflow-x: hidden;
     border-top: 0;
