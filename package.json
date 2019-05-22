@@ -52,7 +52,7 @@
     "js-beautify": "^1.9.1",
     "jstransformer-marked": "^1.0.3",
     "jstransformer-nunjucks": "^0.5.0",
-    "marked": "^0.5.2",
+    "marked": "^0.6.2",
     "metalsmith": "^2.3.0",
     "metalsmith-assets": "^0.1.0",
     "metalsmith-broken-link-checker": "^1.0.1",
@@ -72,7 +72,7 @@
     "request": "^2.88.0",
     "rollup-plugin-commonjs": "^9.3.4",
     "rollup-plugin-node-resolve": "^4.2.3",
-    "sass-lint": "^1.12.1",
+    "sass-lint": "^1.13.1",
     "sitemap": "^2.1.0",
     "standard": "^12.0.1"
   },
