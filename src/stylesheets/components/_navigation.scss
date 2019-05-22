@@ -24,20 +24,21 @@
       -moz-box-sizing: border-box;
       -webkit-box-sizing: border-box;
 
-      &:hover {
-        border-bottom: 4px solid govuk-colour("light-blue");
+      a:hover {
+        box-shadow: inset 0 -4px 0 0 govuk-colour("light-blue");
       }
 
       &.app-navigation--current-page {
-        border-bottom: 4px solid govuk-colour("blue") !important;
+        box-shadow: inset 0 -4px 0 0 govuk-colour("blue");
 
         a:hover {
           color: $govuk-link-colour;
+          box-shadow: inset 0 -4px 0 0 govuk-colour("blue");
         }
       }
 
       a {
-        @include govuk-typography-weight-bold; // Override .govuk-link weight
+        @include govuk-typography-weight-bold;
         display: block;
         padding: 0 govuk-spacing(3);
         color: $govuk-link-colour;
@@ -47,10 +48,16 @@
           color: $govuk-link-colour;
         }
 
-        &:hover,
-        &:focus {
-          color: $govuk-link-hover-colour;
+        &:hover {
+          color: $govuk-link-colour;
           background-color: inherit;
+        }
+
+        &:focus {
+          box-shadow: inset 0 -4px 0 0 govuk-colour("black"),
+                      inset 0 -8px 0 0 govuk-colour("yellow");
+          color: $govuk-focus-text-colour;
+          outline: 2px solid transparent;
         }
       }
     }

@@ -2,7 +2,7 @@
   <ul class="app-navigation__list govuk-width-container">
     {% for item in navigation %}
     <li{% if path == item.url or item.url and path.startsWith(item.url) %} class="app-navigation--current-page"{% endif %}>
-      <a class="govuk-link" href="/{{ item.url }}" data-topnav="{{ item.label }}">{{ item.label }}</a>
+      <a href="/{{ item.url }}" data-topnav="{{ item.label }}">{{ item.label }}</a>
     </li>
     {% endfor %}
   </ul>
