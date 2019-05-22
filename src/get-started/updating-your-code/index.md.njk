@@ -794,7 +794,7 @@ GOV.UK Frontend uses ["Block, Element, Modifier" (BEM)](http://getbem.com/) and 
       <td class="govuk-table__cell ">Deprecated: inline-block is now the default for any components</td>
     </tr>
     <tr class="govuk-table__row">
-      <td class="govuk-table__cell ">@extend contain-floats</td>
+      <td class="govuk-table__cell ">@extend %contain-floats</td>
       <td class="govuk-table__cell ">@include govuk-clearfix</td>
     </tr>
   </tbody>
@@ -811,12 +811,8 @@ GOV.UK Frontend uses ["Block, Element, Modifier" (BEM)](http://getbem.com/) and 
   </thead>
   <tbody class="govuk-table__body">
     <tr class="govuk-table__row">
-      <td class="govuk-table__cell ">@include ie-lte(8)</td>
-      <td class="govuk-table__cell ">@include govuk-ie-lte(8)</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell ">@include ie(6)</td>
-      <td class="govuk-table__cell ">@include govuk-ie(6)</td>
+      <td class="govuk-table__cell ">@include ie(8)</td>
+      <td class="govuk-table__cell ">@include govuk-if-ie8</td>
     </tr>
   </tbody>
 </table>
