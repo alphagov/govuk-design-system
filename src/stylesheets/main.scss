@@ -113,9 +113,11 @@ body {
     padding: govuk-spacing(2);
   }
 
-  video {
-    @include govuk-focusable;
-  }
+  // TODO: Need to make Video focusable but we need some design decision to be made
+  // video {
+  //   @include govuk-focusable;
+  // }
+
 
   // IE8 does not support the video element, so we hide the element entirely.
   @if $govuk-is-ie8 == true {
@@ -170,7 +172,8 @@ body {
   $copy-button-colour: #00823b;
 
   @include govuk-font(16);
-  @include govuk-focusable;
+  // TODO: Need to make copy button focusable/hoverable but we need some design decision to be made
+  // @include govuk-focusable;
   position: absolute;
   z-index: 1;
   top: govuk-spacing(4);
