@@ -3,10 +3,6 @@
   .app-subnav {
     padding: govuk-spacing(6) govuk-spacing(3) 0 0;
     @include govuk-font(16);
-
-    @include govuk-media-query($from: tablet) {
-      margin-left: -(govuk-spacing(3));
-    }
   }
 
   .app-subnav__section {
@@ -17,44 +13,72 @@
 
   .app-subnav__link {
     display: block;
-    padding: 8px govuk-spacing(6) 8px govuk-spacing(2);
-    border-left: 4px solid transparent;
+    padding: 2px 0;
     text-decoration: none;
-
-    &:focus {
-      background: inherit;
-    }
 
     &:hover,
     &:active,
     &:visited {
       color: $govuk-link-colour;
     }
+  }
+  .app-subnav__section-item {
+    margin-bottom: govuk-spacing(2);
 
     &:hover {
-      border-left-color: $govuk-link-hover-colour;
+      // box-shadow: -5px -1px 0 5px govuk-colour("white"), 
+      //             5px -1px 0 5px govuk-colour("white"),
+      //             -9px -1px 0 5px govuk-colour("light-blue");
+    }  
+    
+    a:hover {
+      text-decoration: underline;
+    }
+
+    a:focus {
+      text-decoration: none;
     }
   }
 
-  .app-subnav__section-item--current .app-subnav__link {
-    border-left-color: $govuk-link-colour;
-    background: $app-light-grey;
-    font-weight: bold;
+  .app-subnav__section-item--current {
+    box-shadow: -5px -1px 0 5px govuk-colour("white"), 
+                5px -1px 0 5px govuk-colour("white"),
+                -9px -1px 0 5px govuk-colour("blue");
+    background-color: govuk-colour("white");
+    
+    .app-subnav__link {
+      font-weight: bold;
+      outline: 2px solid transparent;
+    }
   }
 
   .app-subnav__section--nested {
+    margin-top: govuk-spacing(2);
     margin-bottom: 0;
   }
 
   .app-subnav__section--nested .app-subnav__link {
     padding-left: govuk-spacing(4);
     font-weight: 400;
+    
+    &:before {
+      content: "—";
+      color: govuk-colour("dark-grey");
+      margin-left: -(govuk-spacing(4));
+      padding-right: govuk-spacing(1);
+    }
   }
 
   .app-subnav__theme {
     margin: 0;
-    padding: govuk-spacing(2) govuk-spacing(3);
+    padding: govuk-spacing(2) govuk-spacing(3) govuk-spacing(2) 0;
     color: govuk-colour("dark-grey");
     @include govuk-font(19);
+  }
+  .app-subnav__link {
+    &:focus {
+      display: inline-block;
+      @include govuk-focusable-text;
+    }
   }
 }
