@@ -28,7 +28,7 @@
     @include govuk-font(19, $weight: bold);
     display: block;
     margin-top: -1px;
-    padding: govuk-spacing(3);
+    padding: govuk-spacing(4) govuk-spacing(3);
     border-top: 1px solid transparent;
     color: $govuk-link-colour;
     background: inherit;
@@ -37,15 +37,15 @@
 
     &:hover {
       color: govuk-colour("blue");
-      box-shadow: inset 0 4px 0 0 govuk-colour("light-blue");
+      box-shadow: inset 0 -4px 0 0 govuk-colour("light-blue");
     }
 
     .app-prose-scope &:focus { // A specific selector to reset .app-prose-scope a:focus
       color: $govuk-link-colour;
       background: inherit;
       color: govuk-colour("black");
-      box-shadow: inset 0 4px 0 0 govuk-colour("yellow"),
-                  inset 0 8px 0 0 govuk-colour("black");
+      box-shadow: inset 0 -4px 0 0 govuk-colour("yellow"),
+                  inset 0 -8px 0 0 govuk-colour("black");
     }
 
     .app-prose-scope &:visited {
@@ -60,7 +60,7 @@
 
 .app-tabs__item--current {
   a {
-    box-shadow: inset 0 4px 0 0 govuk-colour("blue");
+    box-shadow: inset 0 -4px 0 0 govuk-colour("blue");
   }
 }
 
