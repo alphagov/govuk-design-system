@@ -12,7 +12,7 @@
   }
 
   .app-subnav__link {
-    display: block;
+    display: inline-block;
     padding: 2px 0;
     text-decoration: none;
 
@@ -24,12 +24,6 @@
   }
   .app-subnav__section-item {
     margin-bottom: govuk-spacing(2);
-
-    &:hover {
-      // box-shadow: -5px -1px 0 5px govuk-colour("white"), 
-      //             5px -1px 0 5px govuk-colour("white"),
-      //             -9px -1px 0 5px govuk-colour("light-blue");
-    }  
     
     a:hover {
       text-decoration: underline;
@@ -57,16 +51,17 @@
     margin-bottom: 0;
   }
 
-  .app-subnav__section--nested .app-subnav__link {
-    padding-left: govuk-spacing(4);
-    font-weight: 400;
-    
+  .app-subnav__section--nested .app-subnav__section-item {
     &:before {
       content: "—";
       color: govuk-colour("dark-grey");
-      margin-left: -(govuk-spacing(4));
       padding-right: govuk-spacing(1);
     }
+  }
+
+  .app-subnav__section--nested .app-subnav__link {
+    padding-left: 0;
+    font-weight: 400;
   }
 
   .app-subnav__theme {
