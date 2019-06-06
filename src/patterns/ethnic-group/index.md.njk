@@ -12,7 +12,7 @@ statusMessage: This pattern is experimental because <a class="govuk-link" href="
 
 {% from "_example.njk" import example %}
 
-Before using this pattern, consider whether you need to ask for this information and make sure you have permission from your organisation to do so. 
+Before using this pattern, consider whether you need to ask for this information and make sure you have permission from your organisation to do so.
 
 Only collect users’ ethnic groups if you are going to use the data, for example, as part of your organisation’s equality monitoring.
 
@@ -35,13 +35,13 @@ When asking for users’ ethnic groups:
 - tell users how their data will be used
 - ensure the data is used and stored in line with data protection rules
 
-### Ask for ethnic groups in 2 steps 
+### Ask for ethnic groups in 2 steps
 
 ONS research found that presenting all of the ethnic group options on a single page caused some users to try and select more than 1 option. Splitting the question across 2 pages solved this problem across multiple testing rounds with more than 300 users.
 
-Ask users for their broad ethnic group first of all. 
+Ask users for their broad ethnic group first of all.
 
-From there, direct them to a second page where they can choose a specific ethnic background within their broad ethnic group. 
+From there, direct them to a second page where they can choose a specific ethnic background within their broad ethnic group.
 
 {{ example({group: "patterns", item: "ethnic-group", example: "default", html: true, nunjucks: true, open: false, size: "s"}) }}
 
@@ -91,7 +91,7 @@ Where this isn’t possible, use the English categories.
 
 Always give users the option not to give their ethnicity unless you cannot deliver your service without it.
 
-The best way to do this is to include a step asking if users are willing to give their ethnic group. To help users decide how to answer, you should clearly explain how you will use the data. 
+The best way to do this is to include a step asking if users are willing to give their ethnic group. To help users decide how to answer, you should clearly explain how you will use the data.
 
 Be as specific as possible, for example: ‘we use this information to make sure we’re giving equal opportunities to all candidates’.
 
@@ -104,6 +104,15 @@ In this case, you could ask a more generic initial question, such as “Will you
 ### Asking a user for someone else’s ethnic group
 
 You should not normally ask users to give someone else’s ethnic group. This is because ethnicity is self-defined. There are some exceptions, for example, in the case of young children.
+
+### Error messages
+
+Error messages should be styled like this:
+
+{{ example({group: "patterns", item: "ethnic-group", example: "error", html: true, nunjucks: true, open: false, size: "s"}) }}
+
+{{ example({group: "patterns", item: "ethnic-group", example: "error-background", html: true, nunjucks: true, open: false, size: "s"}) }}
+
 
 ### Data protection
 
@@ -127,4 +136,4 @@ Almost all participants answered the question quickly and easily, with no one ba
 
 More research is needed to understand where to ask this question in a service.
 
-If you’ve used this pattern in your service, please get in touch to share your research findings
+If you’ve used this pattern in your service, please get in touch to share your research findings.

@@ -1,0 +1,83 @@
+---
+title: Ethnic group with error
+layout: layout-example.njk
+---
+
+{% from "radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  idPrefix: "ethnic-group",
+  name: "ethnic-group",
+  fieldset: {
+    legend: {
+      text: "What is your ethnic group?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--xl"
+    }
+  },
+  errorMessage: {
+    text: "Select an ethnic group or ‘Prefer not to say’"
+  },
+  items: [
+    {
+      value: "Asian or Asian British",
+      text: "Asian or Asian British",
+      label: {
+        classes: 'govuk-label--s'
+      },
+      hint: {
+        text: 'Includes any Asian background, for example, Bangladeshi, Chinese, Indian, Pakistani.'
+      }
+    },
+    {
+      value: "Black, African, Black British or Caribbean",
+      text: "Black, African, Black British or Caribbean",
+      label: {
+        classes: 'govuk-label--s'
+      },
+      hint: {
+        text: 'Includes any Black background'
+      }
+    },
+     {
+      value: "Mixed or multiple ethnic groups",
+      text: "Mixed or multiple ethnic groups",
+      label: {
+        classes: 'govuk-label--s'
+      },
+      hint: {
+        text: 'Includes any Mixed background'
+      }
+    },
+    {
+      value: "White",
+      text: "White",
+      label: {
+        classes: 'govuk-label--s'
+      },
+      hint: {
+        text: 'Includes any White background'
+      }
+    },
+    {
+      value: "Another ethnic group",
+      text: "Another ethnic group",
+      label: {
+        classes: 'govuk-label--s'
+      },
+      hint: {
+        text: 'Includes any other ethnic group, for example, Arab'
+      }
+    },
+    {
+      divider: "or"
+    },
+    {
+      value: "prefer-not-to-say",
+      text: "Prefer not to say",
+      label: {
+        classes: 'govuk-label'
+      }
+    }
+  ]
+}) }}
