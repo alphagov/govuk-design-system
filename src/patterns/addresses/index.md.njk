@@ -40,6 +40,12 @@ When using an address lookup, you should:
 - provide a manual option for people with international addresses or addresses that are missing or not properly listed in the address lookup
 - let people enter their postcodes in upper or lower case and with or without spaces
 
+#### Allow different postcode formats
+
+It is easier for users if you accept and ignore unwanted characters. This is better than rejecting the input and telling a user they've not provided a valid postcode.
+
+You should allow postcodes that contain upper and lower case letters, no spaces or additional spaces and punctuation like hyphens, brackets, dashes and full stops.
+
 ## Multiple text inputs
 
 {{ example({group: "patterns", item: "addresses", example: "multiple", html: true, nunjucks: true, open: true, size: "xl"}) }}
@@ -67,7 +73,7 @@ If you use multiple text inputs, you should:
 
 - only make individual text inputs mandatory if you really need the information
 - make the text inputs the appropriate length for the content – it helps people understand the form, for example, make postcode text inputs shorter than street text inputs
-- let people enter their postcodes in upper or lower case and with or without spaces
+- <a href="#allow-different-postcode-formats">let users enter postcodes in different formats</a>
 
 Make sure there are enough text inputs to accommodate longer addresses if you know your users will need them. For example, allow users to include a company name or flat&nbsp;number.
 
