@@ -36,32 +36,6 @@ describe('Accessibility Audit', () => {
     })
   })
 
-  describe('Component page - layout-pane.njk', () => {
-    it('validates', async () => {
-      await page.goto(baseUrl + '/components/radios/', { waitUntil: 'load' })
-      const results =
-        await new AxePuppeteer(page)
-          .include(['body'])
-          .exclude(...thingsToExclude)
-          .analyze()
-
-      expect(results.violations).toEqual([])
-    })
-  })
-
-  describe('Patterns page - layout-pane.njk', () => {
-    it('validates', async () => {
-      await page.goto(baseUrl + '/patterns/gender-or-sex/', { waitUntil: 'load' })
-      const results =
-        await new AxePuppeteer(page)
-          .include(['body'])
-          .exclude(...thingsToExclude)
-          .analyze()
-
-      expect(results.violations).toEqual([])
-    })
-  })
-
   describe('Cookies page - layout-single-page-prose.njk', () => {
     it('validates', async () => {
       await page.goto(baseUrl + '/cookies/', { waitUntil: 'load' })
