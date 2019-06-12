@@ -1,6 +1,6 @@
 {% extends "template.njk" %}
 {% set bodyClasses = 'app-example-page' %}
-{% block pageTitle %}{{ title }} – Example – [[Service Name]]{% endblock %}
+{% block pageTitle %}{{ title }} – Example – {{ serviceName }}{% endblock %}
 {% block head %}
   <link href="{{ getFingerprint('stylesheets/main.css') }}" rel="stylesheet" media="all" />
   {#- Include any additional stylesheets specified in the example frontmatter #}

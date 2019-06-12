@@ -1,14 +1,20 @@
 ---
 title: Home
-description: 
+description: Make realistic prototypes of GOV.UK services
 ---
 
 <div class="app-masthead">
   <div class="govuk-width-container app-site-width-container">
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-            <h1 class="govuk-heading-xl app-masthead__title">Title</h1>
-            <p class="app-masthead__description">Description</p>
+            <h1 class="govuk-heading-xl app-masthead__title">
+              Make realistic prototypes of GOV.UK services
+            </h1>
+            <p class="app-masthead__description">
+              Use the GOV.UK Prototype Kit to make interactive prototypes that
+              look and feel like GOV.UK. Make prototypes using code to create
+              realistic journeys for research.
+            </p>
             {% from "button/macro.njk" import govukButton %}
             {{ govukButton({
               "text": "Get started",
@@ -25,43 +31,52 @@ description:
   <div class="govuk-main-wrapper govuk-main-wrapper--l">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-one-third govuk-!-margin-bottom-8">
-        <h2 class="govuk-heading-l govuk-!-font-weight-bold">Section title</h2>
-        <p class="govuk-body">Section text</p>
-        <p class="govuk-body govuk-!-margin-bottom-0"><a href="#" class="govuk-link govuk-!-font-weight-bold">Browse section</a></p>
+        <h2 class="govuk-heading-l govuk-!-font-weight-bold">Template pages</h2>
+        <p class="govuk-body">
+          Templates to quickly prototype common page types like start pages, question pages or confirmation pages.
+        </p>
+        <p class="govuk-body govuk-!-margin-bottom-0"><a href="/template-pages" class="govuk-link govuk-!-font-weight-bold">Browse template pages</a></p>
       </div>
       <div class="govuk-grid-column-one-third govuk-!-margin-bottom-8">
-        <h2 class="govuk-heading-l govuk-!-font-weight-bold">Section title</h2>
-        <p class="govuk-body">Section text</p>
-        <p class="govuk-body govuk-!-margin-bottom-0"><a href="#" class="govuk-link govuk-!-font-weight-bold">Browse section</a></p>
+        <h2 class="govuk-heading-l govuk-!-font-weight-bold">Guides</h2>
+        <p class="govuk-body">
+          How to guides for prototyping tasks like making pages,
+          updating the Prototype Kit, and publishing prototypes.
+        </p>
+        <p class="govuk-body govuk-!-margin-bottom-0">
+          <a href="#" class="govuk-link govuk-!-font-weight-bold">
+            Browse guides
+          </a>
+        </p>
       </div>
       <div class="govuk-grid-column-one-third govuk-!-margin-bottom-8">
-        <h2 class="govuk-heading-l govuk-!-font-weight-bold">Section title</h2>
-        <p class="govuk-body">Section text</p>
-        <p class="govuk-body govuk-!-margin-bottom-0"><a href="#" class="govuk-link govuk-!-font-weight-bold">Browse section</a></p>
+        <h2 class="govuk-heading-l govuk-!-font-weight-bold">Support</h2>
+        <p class="govuk-body">
+          Get support and report problems.
+        </p>
+        <p class="govuk-body govuk-!-margin-bottom-0">
+          <a href="#" class="govuk-link govuk-!-font-weight-bold">
+            Get support
+          </a>
+        </p>
       </div>
 
       <div class="govuk-grid-column-full">
         <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl govuk-!-margin-top-0">
       </div>
 
-      <div class="govuk-grid-column-two-thirds">
-        <h2 id="community" class="govuk-heading-l">Section</h2>
+      <div class="govuk-grid-column-two-thirds govuk-!-mb-r4">
+        <h2 class="govuk-heading-l">GOV.UK Design System</h2>
         <p class="govuk-body">
-          Section text
+          Guidance and example code for components like radios, checkboxes and buttons that
+          you can paste straight into your prototypes.
         </p>
-      </div>
-
-      <div class="govuk-grid-column-full">
-        <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl">
-      </div>
-
-      <div class="govuk-grid-column-two-thirds">
-        <h2 id="support" class="govuk-heading-l">Support</h2>
         <p class="govuk-body">
-          Support text
+          <a href="https://design-system.service.gov.uk" class="govuk-link">GOV.UK Design System</a>
         </p>
       </div>
 
     </div>
+
   </div>
 </div>

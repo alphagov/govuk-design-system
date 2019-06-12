@@ -8,7 +8,7 @@
     {% else %}
       the <a class="govuk-link" href="https://github.com/alphagov/govuk-design-system/tree/{{ BRANCH }}">{{ BRANCH }}</a> branch for the
     {% endif %}
-    <a class="govuk-link" href="#">[[Service Name]]</a>.
+    <a class="govuk-link" href="#">{{ serviceName }}</a>.
   {% endset %}
 
   {{ govukPhaseBanner({
