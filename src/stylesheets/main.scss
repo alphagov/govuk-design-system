@@ -279,7 +279,7 @@ pre {
   padding: govuk-spacing(4);
   overflow: auto;
   border: 1px solid $govuk-border-colour;
-  background-color: $app-light-grey;
+  background-color: govuk-colour("light-grey");
   font-size: 16px;
   @include govuk-responsive-margin(4, "bottom");
 }

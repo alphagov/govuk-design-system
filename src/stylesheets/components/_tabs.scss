@@ -5,6 +5,7 @@
   overflow: visible;
   list-style-type: none;
   border: 1px solid $govuk-border-colour;
+  border-top: 0;
 
   @include govuk-media-query($until: desktop) {
     display: none;
@@ -22,34 +23,29 @@
   display: inline-block;
   position: relative;
   z-index: 2;
-  margin: 0;
+  padding: govuk-spacing(4);
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+  margin-left: -1px;
 
   a {
-    @include govuk-font(19, $weight: bold);
-    display: block;
-    margin-top: -1px;
-    padding: govuk-spacing(4) govuk-spacing(3);
-    border-top: 1px solid transparent;
-    color: $govuk-link-colour;
-    background: inherit;
-    font-weight: bold;
-    text-decoration: none;
+    @include govuk-font(19, $weight: regular);
+    color: $govuk-text-colour;
+    text-decoration: underline;
 
     &:hover {
       color: govuk-colour("blue");
-      box-shadow: inset 0 -4px 0 0 govuk-colour("light-blue");
+      text-decoration: underline;
     }
 
     .app-prose-scope &:focus { // A specific selector to reset .app-prose-scope a:focus
-      color: $govuk-link-colour;
-      background: inherit;
-      color: govuk-colour("black");
-      box-shadow: inset 0 -4px 0 0 govuk-colour("yellow"),
-                  inset 0 -8px 0 0 govuk-colour("black");
+      color: $govuk-text-colour;
+      text-decoration: none;
     }
 
     .app-prose-scope &:visited {
-      color: $govuk-link-colour;
+      color: $govuk-text-colour;
     }
   }
 
@@ -59,9 +55,22 @@
 }
 
 .app-tabs__item--current {
+  background-color: govuk-colour("white");
+  border-right: 1px solid $govuk-border-colour;
+  border-left: 1px solid $govuk-border-colour;
+  
   a {
-    box-shadow: inset 0 -4px 0 0 govuk-colour("blue");
+    color: $govuk-text-colour !important;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
+}
+
+.app-tabs__item:not(.app-tabs__item--current) {
+  
 }
 
 // Tab drawer heading for accordion look on mobile
@@ -106,6 +115,8 @@
 .app-tabs__container {
   margin-top: -2px;
   border: 1px solid $govuk-border-colour;
+  padding: 20px;
+  background-color: govuk-colour("white");
 }
 
 .app-tabs__container--hidden {
@@ -118,6 +129,8 @@
   margin-bottom: 0;
   border: 0;
   font-size: inherit;
+  background-color: govuk-colour("white");
+  padding: 0;
 }
 
 .app-tabs__container pre code {
@@ -126,7 +139,9 @@
   padding-top: govuk-spacing(7) + 3px;
   padding-right: govuk-spacing(4);
   padding-bottom: govuk-spacing(4);
+  padding-left: govuk-spacing(4);
   overflow-x: auto;
+  background-color: govuk-colour("light-grey");
 }
 
 .app-tabs__container pre {

@@ -15,7 +15,7 @@
   @include govuk-responsive-margin(0, "bottom");
 
   @include govuk-media-query($from: desktop) {
-    margin-bottom: -1px;
+    // margin-bottom: -1px;
   }
 }
 
