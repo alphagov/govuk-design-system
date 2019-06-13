@@ -192,6 +192,18 @@ body {
     margin-top: 2px;
     box-shadow: none;
   }
+
+  &:focus:not(:hover) {
+    color: $govuk-focus-text-colour;
+    background-color: $govuk-focus-colour;
+  }
+  
+  &:active,
+  &:focus {
+    border-color: $govuk-focus-colour;
+    box-shadow: 0 0 0 2px govuk-colour("yellow");
+    outline: 2px solid transparent;
+  }
 }
 
 $colour-list-breakpoint: 980px;
