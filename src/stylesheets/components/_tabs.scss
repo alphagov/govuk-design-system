@@ -29,6 +29,10 @@
   border-left: 1px solid transparent;
   margin-left: -1px;
 
+  &:first-child {
+    margin-left: -1px !important;
+  }
+
   a {
     @include govuk-font(19, $weight: regular);
     color: $govuk-text-colour;
