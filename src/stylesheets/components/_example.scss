@@ -13,15 +13,9 @@
 
 .app-example--tabs {
   @include govuk-responsive-margin(0, "bottom");
-
-  @include govuk-media-query($from: desktop) {
-    // margin-bottom: -1px;
-  }
 }
 
 .app-example__new-window {
-  
-
   a {
     position: absolute;
     z-index: 1;
@@ -29,10 +23,10 @@
     left: 0;
     padding: 5px govuk-spacing(2);
     @include govuk-font(14);
-    background: govuk-colour("light-grey");
     color: $govuk-link-colour;
+    background: govuk-colour("light-grey");
     text-decoration: none;
-    
+
     &:focus {
       box-shadow: 0 4px 0 0 govuk-colour("black");
     }

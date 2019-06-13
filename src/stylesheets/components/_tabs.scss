@@ -14,7 +14,7 @@
   .app-prose-scope & { // A specific selector to reset .app-prose-scope ul
     margin-bottom: 0;
     padding: 0;
-    // Inline block - remove white space 
+    // Inline block - remove white space
     font-size: 0;
   }
 }
@@ -23,11 +23,11 @@
   display: inline-block;
   position: relative;
   z-index: 2;
+  margin-left: -1px;
   padding: govuk-spacing(4);
   border-top: 1px solid transparent;
   border-right: 1px solid transparent;
   border-left: 1px solid transparent;
-  margin-left: -1px;
 
   &:first-child {
     margin-left: -1px !important;
@@ -69,10 +69,10 @@
 }
 
 .app-tabs__item--current {
-  background-color: govuk-colour("white");
   border-right: 1px solid $govuk-border-colour;
   border-left: 1px solid $govuk-border-colour;
-  
+  background-color: govuk-colour("white");
+
   a {
     color: $govuk-text-colour !important;
     text-decoration: none;
@@ -92,7 +92,7 @@
     border: 1px solid $govuk-border-colour;
     border-top: 0;
   }
-  
+
   a {
     display: none;
     z-index: 2;
@@ -136,7 +136,7 @@
 
 .app-tabs__heading--current {
   border-bottom: 0;
-  
+
   a {
     text-decoration: none;
   }
@@ -145,8 +145,9 @@
 // Tab containers
 .app-tabs__container {
   margin-top: -2px;
-  border: 1px solid $govuk-border-colour;
   padding: 20px;
+  border: 1px solid $govuk-border-colour;
+
   background-color: govuk-colour("white");
 }
 
@@ -158,10 +159,10 @@
   position: relative;
   max-width: inherit;
   margin-bottom: 0;
-  border: 0;
-  font-size: inherit;
-  background-color: govuk-colour("white");
   padding: 0;
+  border: 0;
+  background-color: govuk-colour("white");
+  font-size: inherit;
 }
 
 .app-tabs__container pre code {
