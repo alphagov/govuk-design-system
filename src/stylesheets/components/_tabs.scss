@@ -73,23 +73,26 @@
   }
 }
 
-.app-tabs__item:not(.app-tabs__item--current) {
-  
-}
-
 // Tab drawer heading for accordion look on mobile
 .app-tabs__heading {
+
+  @include govuk-media-query($until: desktop) {
+    padding: govuk-spacing(3);
+    border: 1px solid $govuk-border-colour;
+    border-top: 0;
+  }
+  
   a {
     display: none;
     position: relative;
     z-index: 2;
-    padding: govuk-spacing(3);
-    border: 1px solid $govuk-border-colour;
-    border-top: 0;
     color: $govuk-link-colour;
     background: inherit;
-    font-weight: bold;
-    text-decoration: none;
+    text-decoration: underline;
+
+    &:hover {
+      color: $govuk-link-colour;
+    }
 
     &:visited {
       color: $govuk-link-colour;
@@ -100,7 +103,7 @@
     }
 
     @include govuk-media-query($until: desktop) {
-      display: block;
+      display: inline-block;
     }
   }
 }
@@ -112,7 +115,9 @@
 }
 
 .app-tabs__heading--current {
-  background-color: darken(govuk-colour("light-grey"), 3%);
+  a {
+    text-decoration: none;
+  }
 }
 
 // Tab containers
