@@ -51,6 +51,16 @@
     .app-prose-scope &:visited {
       color: $govuk-text-colour;
     }
+
+    // Extend the touch area of the <a> to the <li>
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
   }
 
   .app-prose-scope & { // A specific selector to reset .app-prose-scope ul li
@@ -75,6 +85,7 @@
 
 // Tab drawer heading for accordion look on mobile
 .app-tabs__heading {
+  position: relative;
 
   @include govuk-media-query($until: desktop) {
     padding: govuk-spacing(3);
@@ -84,7 +95,6 @@
   
   a {
     display: none;
-    position: relative;
     z-index: 2;
     color: $govuk-link-colour;
     background: inherit;
@@ -102,6 +112,16 @@
       color: govuk-colour("black");
     }
 
+    // Extend the touch area of the <a> to the <li>
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
     @include govuk-media-query($until: desktop) {
       display: inline-block;
     }
@@ -115,6 +135,8 @@
 }
 
 .app-tabs__heading--current {
+  border-bottom: 0;
+  
   a {
     text-decoration: none;
   }
