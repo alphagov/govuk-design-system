@@ -15,7 +15,7 @@
 }
 
 @supports (position: sticky) {
-  .js-enabled .app-back-to-top--hidden {
-    display: none;
+  .js-enabled .app-back-to-top--hidden .app-back-to-top__link {
+    @include govuk-visually-hidden-focusable;
   }
 }
