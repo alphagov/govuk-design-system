@@ -1,7 +1,7 @@
 {# Safari on OSX with `position: -webkit-sticky` requires a block level element.
 To avoid a large focus area we use a wrapper element. #}
 <div class="app-back-to-top app-back-to-top--hidden" data-module="app-back-to-top">
-  <a class="govuk-link govuk-link--no-visited-state" href="#top">
+  <a class="govuk-link govuk-link--no-visited-state app-back-to-top__link" href="#top">
     {#- The SVG needs `focusable="false"` so that Internet Explorer does not
        treat it as an interactive element - without this it will be 'focusable'
        when using the keyboard to navigate. #}
