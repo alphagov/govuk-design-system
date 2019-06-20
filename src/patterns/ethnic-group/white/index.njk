@@ -15,47 +15,47 @@ layout: layout-example.njk
       text: "Your White background (optional)"
     }
   }) }}
-  {% endset -%}
+{% endset -%}
 
-  {{ govukRadios({
-    idPrefix: "ethnic-group",
-    name: "ethnic-group",
-    fieldset: {
-      legend: {
-        text: "Which one best describes your White background?",
-        isPageHeading: true,
-        classes: "govuk-fieldset__legend--l"
+{{ govukRadios({
+  idPrefix: "ethnic-group",
+  name: "ethnic-group",
+  fieldset: {
+    legend: {
+      text: "Which one best describes your White background?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "british-english-northern-irish-scottish-or-welsh",
+      text: "British, English, Northern Irish, Scottish, or Welsh"
+    },
+    {
+      value: "irish",
+      text: "Irish"
+    },
+    {
+      value: "irish-traveller-or-gypsy",
+      text: "Irish Traveller or Gypsy"
+    },
+    {
+      value: "another-white-background",
+      text: "Another White background",
+      conditional: {
+        html: whiteOtherHtml
       }
     },
-    items: [
-      {
-        value: "british-english-northern-irish-scottish-or-welsh",
-        text: "British, English, Northern Irish, Scottish, or Welsh"
-      },
-      {
-        value: "irish",
-        text: "Irish"
-      },
-      {
-        value: "irish-traveller-or-gypsy",
-        text: "Irish Traveller or Gypsy"
-      },
-      {
-        value: "another-white-background",
-        text: "Another White background",
-        conditional: {
-          html: whiteOtherHtml
-        }
-      },
-      {
+    {
       divider: "or"
-      },
-      {
+    },
+    {
       value: "prefer-not-to-say",
       text: "Prefer not to say",
       label: {
         classes: 'govuk-label'
       }
     }
-    ]
-  }) }}
+  ]
+}) }}
