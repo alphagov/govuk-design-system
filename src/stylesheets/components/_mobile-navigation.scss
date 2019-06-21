@@ -26,20 +26,36 @@
   & > li {
     @include govuk-typography-common;
     @include govuk-typography-weight-bold;
+    position: relative;
+    display: block;
     font-size: 19px; // We do not have a font mixin that produces 19px on mobile
     font-size: govuk-px-to-rem(19px); // sass-lint:disable-line no-duplicate-properties
+    padding: 16px govuk-spacing(4) 17px govuk-spacing(4);
 
     & > a {
       @include govuk-typography-weight-bold; // Override .govuk-link weight
-      display: block;
-      padding: 16px govuk-spacing(4) 17px govuk-spacing(4);
       text-decoration: none;
 
-      &:hover,
-      &:focus,
+      &:hover {
+        text-decoration: underline; 
+      }
+
       &:visited {
         color: govuk-colour("blue");
-        background-color: inherit;
+      }
+
+      &:focus {
+        @include govuk-focused-text;
+      }
+
+      // Extend the touch area of the <a> to the <li>
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
       }
     }
   }
@@ -47,7 +63,7 @@
 
 .app-mobile-nav__subnav {
   display: none;
-  margin: 0;
+  margin: govuk-spacing(3) -20px;
   padding: govuk-spacing(2) 0 0 0;
   list-style: none;
   border-top: 1px solid govuk-colour("light-grey");
@@ -55,16 +71,20 @@
   background-color: govuk-colour("white");
 
   & > li {
-    & > a {
-      @include govuk-font(19);
-      display: block;
-      padding: govuk-spacing(2) govuk-spacing(4);
+    display: block;
+    padding: govuk-spacing(2) govuk-spacing(4);
 
-      text-decoration: none;
+    &.current-page {
+      border-left: 4px solid govuk-colour("blue");
     }
 
-    &.current-page a {
-      border-left: 4px solid govuk-colour("blue");
+    & > a {
+      @include govuk-font(19);
+      text-decoration: none;
+
+      &:focus {
+        @include govuk-focused-text;
+      }
     }
   }
 }
@@ -79,7 +99,7 @@
 
 .app-mobile-nav__theme {
   margin: 0;
-  padding: govuk-spacing(4) govuk-spacing(4) govuk-spacing(1) govuk-spacing(4);
+  padding: govuk-spacing(4) govuk-spacing(4) govuk-spacing(1) 0;
   color: govuk-colour("dark-grey");
   // Font is defined as a hard 19px so
   // it does not re-size on mobile viewport
@@ -89,32 +109,27 @@
 }
 
 .app-mobile-nav__theme-nav {
-  margin: 0;
+  margin: 0 -20px;
   padding: 0;
   list-style: none;
   background-color: govuk-colour("white");
 
   & > li {
     @include govuk-font(19);
+    display: block;
+    padding: govuk-spacing(3) govuk-spacing(4) govuk-spacing(2) govuk-spacing(4);
 
-    & > a {
-      display: block;
-      padding: govuk-spacing(3) govuk-spacing(4) govuk-spacing(2) govuk-spacing(4);
-
-      text-decoration: none;
-    }
-
-    &.current-page a {
+    &.current-page {
       padding-left: govuk-spacing(4) - 4px;
       border-left: 4px solid govuk-colour("blue");
     }
 
-    &:last-child a {
-      padding-bottom: govuk-spacing(5);
+    & > a {
+      text-decoration: none;
     }
   }
 }
 
 .js-enabled .app-mobile-nav__subnav-toggler--active {
-  border-top: 1px solid govuk-colour("white");
+  // border-top: 1px solid govuk-colour("white");
 }
