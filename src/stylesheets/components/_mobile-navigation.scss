@@ -22,7 +22,6 @@
   list-style: none;
   background-color: $app-light-grey;
 
-
   & > li {
     @include govuk-typography-common;
     @include govuk-typography-weight-bold;
@@ -30,7 +29,7 @@
     display: block;
     font-size: 19px; // We do not have a font mixin that produces 19px on mobile
     font-size: govuk-px-to-rem(19px); // sass-lint:disable-line no-duplicate-properties
-    padding: 16px govuk-spacing(4) 17px govuk-spacing(4);
+    padding: govuk-spacing(3) govuk-spacing(4);
 
     & > a {
       @include govuk-typography-weight-bold; // Override .govuk-link weight
@@ -63,7 +62,7 @@
 
 .app-mobile-nav__subnav {
   display: none;
-  margin: govuk-spacing(3) -20px;
+  margin: govuk-spacing(3) -20px -15px;
   padding: govuk-spacing(2) 0 0 0;
   list-style: none;
   border-top: 1px solid govuk-colour("light-grey");
@@ -75,6 +74,7 @@
     padding: govuk-spacing(2) govuk-spacing(4);
 
     &.current-page {
+      padding-left: govuk-spacing(4) - 4px;
       border-left: 4px solid govuk-colour("blue");
     }
 
@@ -94,12 +94,13 @@
 }
 
 .app-mobile-nav__current-page {
+  padding-left: govuk-spacing(4) - 4px;
   border-left: 4px solid govuk-colour("blue");
 }
 
 .app-mobile-nav__theme {
   margin: 0;
-  padding: govuk-spacing(4) govuk-spacing(4) govuk-spacing(1) 0;
+  padding: govuk-spacing(1) govuk-spacing(4) govuk-spacing(1) 0;
   color: govuk-colour("dark-grey");
   // Font is defined as a hard 19px so
   // it does not re-size on mobile viewport
@@ -117,7 +118,7 @@
   & > li {
     @include govuk-font(19);
     display: block;
-    padding: govuk-spacing(3) govuk-spacing(4) govuk-spacing(2) govuk-spacing(4);
+    padding: govuk-spacing(2) govuk-spacing(4) govuk-spacing(2) govuk-spacing(4);
 
     &.current-page {
       padding-left: govuk-spacing(4) - 4px;
