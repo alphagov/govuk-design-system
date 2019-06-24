@@ -45,12 +45,15 @@ MobileNav.prototype.bindUIEvents = function () {
       if ($nextSubNav.classList.contains(subNavActiveClass)) {
         $nextSubNav.classList.remove(subNavActiveClass)
         $toggler.classList.remove(subNavTogglerActiveClass)
+        $toggler.parentNode.classList.remove("app-mobile-nav__subnav-toggler-parent--active")
 
         $nextSubNav.setAttribute('aria-hidden', 'true')
         $toggler.setAttribute('aria-expanded', 'false')
       } else {
         $nextSubNav.classList.add(subNavActiveClass)
         $toggler.classList.add(subNavTogglerActiveClass)
+        console.log($toggler.parentNode)
+        $toggler.parentNode.classList.add("app-mobile-nav__subnav-toggler-parent--active")
 
         $nextSubNav.setAttribute('aria-hidden', 'false')
         $toggler.setAttribute('aria-expanded', 'true')
