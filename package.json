@@ -37,6 +37,7 @@
     "html5shiv": "^3.7.3",
     "lunr": "^2.3.6",
     "metalsmith-postcss": "^4.2.0",
+    "metalsmith-timer": "0.0.2",
     "modernizr": "^3.7.1",
     "sass-export": "^1.0.4",
     "serve-static": "^1.13.2",
