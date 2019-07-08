@@ -7,7 +7,7 @@
     </p>
     <ul class="govuk-list govuk-list--bullet">
       <li>
-        <a class="govuk-link app-contact-panel__link" href="https://github.com/alphagov/govuk-design-system-backlog/issues/{{backlog_issue_id}}">share research or feedback about {{title}} on GitHub</a>
+        <a class="govuk-link app-contact-panel__link" href="https://github.com/alphagov/govuk-design-system-backlog/issues/{{backlog_issue_id}}">share research or feedback about {% if section === 'Components' or section === 'Patterns' %}the {% endif %}{{title}}{% if section === 'Components' %} component{% endif %}{% if section === 'Patterns' %} pattern{% endif %} on GitHub</a>
       </li>
       <li>
         <a class="govuk-link app-contact-panel__link" href="https://github.com/alphagov/govuk-design-system/edit/master/src/{{section|lower}}/{{title|lower|replace(" ", "-")}}/index.md.njk">propose a change to this page</a> - read more about <a class="govuk-link app-contact-panel__link" href="/community/propose-a-content-change-using-github/">how to propose changes in GitHub</a>
