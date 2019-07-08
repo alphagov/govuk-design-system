@@ -67,13 +67,13 @@ Use hint for help that’s relevant to the majority of users, like how their inf
 
 ### Use the autocomplete attribute
 
-Use the `autocomplete` attribute on text inputs to help users complete forms more quickly. This lets you specify an input's purpose so browsers can autofill the information on a user's behalf if they’ve entered it previously.
+Use the `autocomplete` attribute on text inputs to help users complete forms more quickly. This lets you specify an input’s purpose so browsers can autofill the information on a user’s behalf if they’ve entered it previously.
 
 For example, to enable autofill on a postcode field, set the `autocomplete` attribute to `postal-code`. See how to do this in the HTML and Nunjucks tabs in the following example.
 
 {{ example({group: "components", item: "text-input", example: "input-autocomplete-attribute", displayExample: false, html: true, nunjucks: true, open: true, size: "s"}) }}
 
-If you are working in production and there is a relevant [input purpose](https://www.w3.org/TR/WCAG21/#input-purposes), you'll need to use the `autocomplete` attribute to meet [WCAG 2.1 Level AA](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html).
+If you are working in production and there is a relevant [input purpose](https://www.w3.org/TR/WCAG21/#input-purposes), you’ll need to use the `autocomplete` attribute to meet [WCAG 2.1 Level AA](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html).
 
 You will not normally need to use the `autocomplete` attribute in prototypes, as users will not generally be using their own devices.
 
