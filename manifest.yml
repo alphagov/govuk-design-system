@@ -12,7 +12,7 @@ applications:
   # by GitHub URL
   #
   # https://docs.cloud.service.gov.uk/deploying_apps.html#how-to-use-custom-buildpacks
-  buildpack: https://github.com/cloudfoundry/nginx-buildpack.git#v1.0.3
+  buildpack: https://github.com/cloudfoundry/nginx-buildpack.git#v1.0.14
   # Run two instances to ensure availability
   #
   # https://docs.cloud.service.gov.uk/managing_apps.html#scaling
