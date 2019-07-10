@@ -1,6 +1,9 @@
 ---
 applications:
 - name: govuk-design-system-origin
+  routes:
+    - route: govuk-design-system-origin.cloudapps.digital
+    - route: design-system.service.gov.uk
   # NGINX requires 20 MB of RAM to serve static assets. Reduce RAM allocation
   # from the default 1 GB allocated to containers by default to 64M.
   memory: 64M
