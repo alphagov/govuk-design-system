@@ -11,4 +11,4 @@ cf login -a $CF_API -u $CF_USERNAME -p $CF_PASSWORD -o $CF_ORG -s $CF_SPACE
 
 # Zero downtime push comes from "Blue/Green Deploy plugin" which is installed in before_deploy
 # step in Travis
-cf blue-green-deploy $APP_NAME -f manifest.yml --smoke-test ./smoke-test
+cf blue-green-deploy $APP_NAME -f manifest.yml --smoke-test ./bin/smoke-test
