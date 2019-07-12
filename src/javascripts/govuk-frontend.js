@@ -1,12 +1,12 @@
-import Accordion from 'govuk-frontend/components/accordion/accordion'
-import Button from 'govuk-frontend/components/button/button'
-import Details from 'govuk-frontend/components/details/details'
-import CharacterCount from 'govuk-frontend/components/character-count/character-count'
-import Checkboxes from 'govuk-frontend/components/checkboxes/checkboxes'
-import ErrorSummary from 'govuk-frontend/components/error-summary/error-summary'
-import Radios from 'govuk-frontend/components/radios/radios'
-import Header from 'govuk-frontend/components/header/header'
-import Tabs from 'govuk-frontend/components/tabs/tabs'
+import Accordion from 'govuk-frontend/govuk/components/accordion/accordion'
+import Button from 'govuk-frontend/govuk/components/button/button'
+import Details from 'govuk-frontend/govuk/components/details/details'
+import CharacterCount from 'govuk-frontend/govuk/components/character-count/character-count'
+import Checkboxes from 'govuk-frontend/govuk/components/checkboxes/checkboxes'
+import ErrorSummary from 'govuk-frontend/govuk/components/error-summary/error-summary'
+import Radios from 'govuk-frontend/govuk/components/radios/radios'
+import Header from 'govuk-frontend/govuk/components/header/header'
+import Tabs from 'govuk-frontend/govuk/components/tabs/tabs'
 
 new Button(document).init()
 
