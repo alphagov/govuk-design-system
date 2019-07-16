@@ -8,7 +8,7 @@ description: This guide explains how to set up your project so you can start usi
 ---
 
 {% from "_example.njk" import example %}
-{% from "inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 
 This guide explains how to set up your project so you can start using the styles and coded examples in the GOV.UK Design System in production.
 
@@ -84,7 +84,7 @@ To use Nunjucks macros in your application, you’ll need to setup Nunjucks view
 
 To include a specific component macro in your page template, you need to import the macro.
 
-For example, to use the breadcrumb macro, use the import statement `{% raw %}{% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}{% endraw %}`.
+For example, to use the breadcrumb macro, use the import statement `{% raw %}{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}{% endraw %}`.
 
 {{ govukInsetText({
   classes: "app-table--constrained",

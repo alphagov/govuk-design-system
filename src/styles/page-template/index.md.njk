@@ -41,7 +41,7 @@ You can customise the page template, for example, by adding a service name and n
 
 ### Configuring Nunjucks
 
-When using Nunjucks you’ll need to add `node_modules/govuk-frontend/govuk/` and `node_modules/govuk-frontend/govuk/components/`
+When using Nunjucks you’ll need to add `node_modules/govuk-frontend/`
 as available views:
 
 ```
@@ -59,7 +59,7 @@ Once you have configured Nunjucks, you can now extend `template.njk` in your vie
 
 ```
 {% raw %}
-{% extends "template.njk" %}
+{% extends "govuk/template.njk" %}
 {% endraw %}
 ```
 
