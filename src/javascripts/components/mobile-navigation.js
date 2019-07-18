@@ -18,7 +18,7 @@ MobileNav.prototype.bindUIEvents = function () {
   var $nav = this.$nav
   var $navToggler = this.$navToggler
 
-  $navToggler.addEventListener('click', function (e) {
+  $navToggler.addEventListener('click', function (event) {
     if ($nav.classList.contains(navActiveClass)) {
       $nav.classList.remove(navActiveClass)
       $nav.setAttribute('aria-hidden', 'true')
@@ -39,18 +39,21 @@ MobileNav.prototype.bindUIEvents = function () {
     if (!$toggler.classList.contains('js-mobile-nav-subnav-toggler')) {
       return
     }
-    var $nextSubNav = $toggler.parentNode.querySelector('.js-app-mobile-nav-subnav')
+    // The presentational touch area of the toggler is on it's parent.
+    var $togglerLinkArea = $toggler.parentNode
+
+    var $nextSubNav = $togglerLinkArea.parentNode.querySelector('.js-app-mobile-nav-subnav')
 
     if ($nextSubNav) {
       if ($nextSubNav.classList.contains(subNavActiveClass)) {
         $nextSubNav.classList.remove(subNavActiveClass)
-        $toggler.classList.remove(subNavTogglerActiveClass)
+        $togglerLinkArea.classList.remove(subNavTogglerActiveClass)
 
         $nextSubNav.setAttribute('aria-hidden', 'true')
         $toggler.setAttribute('aria-expanded', 'false')
       } else {
         $nextSubNav.classList.add(subNavActiveClass)
-        $toggler.classList.add(subNavTogglerActiveClass)
+        $togglerLinkArea.classList.add(subNavTogglerActiveClass)
 
         $nextSubNav.setAttribute('aria-hidden', 'false')
         $toggler.setAttribute('aria-expanded', 'true')
