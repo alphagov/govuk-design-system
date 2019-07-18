@@ -13,7 +13,7 @@ if ($button) {
   new Button($button).init()
 }
 
-var $accordion = document.querySelector('[data-module="accordion"]')
+var $accordion = document.querySelector('[data-module="govuk-accordion"]')
 if ($accordion) {
   new Accordion($accordion).init()
 }
@@ -23,7 +23,7 @@ if ($details) {
   new Details($details).init()
 }
 
-var $errorSummary = document.querySelector('[data-module="error-summary"]')
+var $errorSummary = document.querySelector('[data-module="govuk-error-summary"]')
 if ($errorSummary) {
   var errorSummary = new ErrorSummary($errorSummary)
   // Override the `init` method since it automatically focuses the ErrorSummary.
@@ -35,27 +35,27 @@ if ($errorSummary) {
   errorSummary.init()
 }
 
-var $characterCount = document.querySelector('[data-module="character-count"]')
+var $characterCount = document.querySelector('[data-module="govuk-character-count"]')
 if ($characterCount) {
   new CharacterCount($characterCount).init()
 }
 
-var $checkbox = document.querySelector('[data-module="checkboxes"]')
+var $checkbox = document.querySelector('[data-module="govuk-checkboxes"]')
 if ($checkbox) {
   new Checkboxes($checkbox).init()
 }
 
-var $radio = document.querySelector('[data-module="radios"]')
+var $radio = document.querySelector('[data-module="govuk-radios"]')
 if ($radio) {
   new Radios($radio).init()
 }
 
-var $header = document.querySelector('[data-module="header"]')
+var $header = document.querySelector('[data-module="govuk-header"]')
 if ($header) {
   new Header($header).init()
 }
 
-var $tabs = document.querySelector('[data-module="tabs"]')
+var $tabs = document.querySelector('[data-module="govuk-tabs"]')
 if ($tabs) {
   new Tabs($tabs).init()
 }
