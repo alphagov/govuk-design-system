@@ -27,10 +27,13 @@
   padding: 5px govuk-spacing(2);
   @include govuk-font(14);
   background: govuk-colour("light-grey");
+  text-decoration: none;
 
-  a {
-    color: $govuk-link-colour;
-    text-decoration: none;
+  // Override the focus state to remove the top 'yellow' shadow to avoid
+  // spilling out from the parent container. The yellow part of the focused link
+  // is already bigger than usual because of its padding.
+  .app-prose-scope &:focus {
+    box-shadow: 0 4px 0 0 $govuk-focus-text-colour;
   }
 }
 
