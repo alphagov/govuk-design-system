@@ -136,20 +136,3 @@
   padding-right: 0;
   padding-bottom: 0;
 }
-
-
-.app-tabs__container--with-close-button pre {
-  padding-bottom: govuk-spacing(6);
-}
-
-.app-tabs__text {
-  padding: govuk-spacing(4) govuk-spacing(4) govuk-spacing(4) govuk-spacing(4);
-
-  // magical number 1080px below as the content is inside a narrow panel
-  // and cannot rely on predefined media queries
-  // govuk-media-query converts pixels to ems
-
-  @include govuk-media-query($from: 1080px) {
-    padding-bottom: 0;
-  }
-}
