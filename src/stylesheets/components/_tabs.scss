@@ -13,33 +13,35 @@
   .app-prose-scope & { // A specific selector to reset .app-prose-scope ul
     margin-bottom: 0;
     padding: 0;
+    font-size: 0; // Prevent white space taking up space between tabs
   }
 }
 
 .app-tabs__item {
+  @include govuk-font(19);
   display: inline-block;
   position: relative;
-  z-index: 2;
-  margin: 0;
+  padding: govuk-spacing(4);
 
   a {
     display: block;
-    margin-top: -1px;
-    padding: govuk-spacing(3);
-    border-top: 2px solid transparent;
-    border-bottom: 2px solid transparent;
-    color: $govuk-link-colour;
-    background: inherit;
-    font-weight: bold;
-    text-decoration: none;
-
-    .app-prose-scope &:focus { // A specific selector to reset .app-prose-scope a:focus
-      color: $govuk-link-colour;
-      background: inherit;
-    }
 
     .app-prose-scope &:visited {
       color: $govuk-link-colour;
+    }
+
+    .app-prose-scope &:focus {
+      color: $govuk-focus-text-colour;
+    }
+
+    // Extend the touch area of the <a> to fill the entire tab
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
     }
   }
 
@@ -49,10 +51,19 @@
 }
 
 .app-tabs__item--current {
+  border-right: 1px solid $govuk-border-colour;
+  border-left: 1px solid $govuk-border-colour;
+  background: govuk-colour("white");
+
+  &:first-child {
+    border-left: 0;
+  }
+
   a {
-    border-top-color: govuk-colour("blue");
-    border-bottom-color: govuk-colour("blue");
-    background-color: darken(govuk-colour("light-grey"), 3%);
+    .app-prose-scope & {
+      color: $govuk-text-colour;
+      text-decoration: none;
+    }
   }
 }
 
