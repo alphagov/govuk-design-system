@@ -148,8 +148,11 @@
 .app-tabs__container pre code {
   display: block;
   padding: govuk-spacing(4);
-  padding-top: 45px; // Allow extra space for the copy code button
   overflow-x: auto;
+
+  .js-enabled & {
+    padding-top: 45px; // Allow extra space for the copy code button
+  }
 }
 
 .app-tabs__container pre {
