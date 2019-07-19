@@ -1,4 +1,8 @@
-// Tabs styles
+
+// =========================================================
+// Tabs (desktop)
+// =========================================================
+
 .app-tabs {
   margin: -1px auto;
   padding: 0;
@@ -67,48 +71,63 @@
   }
 }
 
-// Tab drawer heading for accordion look on mobile
-.app-tabs__heading {
-  a {
-    display: none;
-    position: relative;
-    z-index: 2;
-    padding: govuk-spacing(3);
-    border: 1px solid $govuk-border-colour;
-    border-top: 0;
-    color: $govuk-link-colour;
-    background: inherit;
-    font-weight: bold;
-    text-decoration: none;
+// =========================================================
+// 'Accordion' (mobile and tablet)
+// =========================================================
 
-    &:visited {
+.app-tabs__heading {
+  display: none;
+  position: relative;
+  padding: govuk-spacing(3);
+  border: 1px solid $govuk-border-colour;
+  border-top: 0;
+
+  @include govuk-media-query($until: desktop) {
+    display: block;
+  }
+
+  a {
+    // Extend the touch area of the <a> to fill the entire heading
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    .app-prose-scope &:visited {
       color: $govuk-link-colour;
     }
 
-    &:focus {
-      color: govuk-colour("black");
+    .app-prose-scope &:focus {
+      color: $govuk-focus-text-colour;
     }
-
-    @include govuk-media-query($until: desktop) {
-      display: block;
-    }
-  }
-}
-
-@include govuk-media-query($until: desktop) {
-  .app-tabs__heading:nth-of-type(1) {
-    border-top: 1px solid $govuk-border-colour;
   }
 }
 
 .app-tabs__heading--current {
-  background-color: darken(govuk-colour("light-grey"), 3%);
+  border-bottom: 0;
+
+  a {
+    text-decoration: none;
+  }
 }
 
-// Tab containers
+// =========================================================
+// Code blocks
+// =========================================================
+
 .app-tabs__container {
-  margin-top: -2px;
+  padding: 20px;
   border: 1px solid $govuk-border-colour;
+  background-color: govuk-colour("white");
+
+  // When used for tabs, position to underlap tabs
+  @include govuk-media-query($from: desktop) {
+    margin-top: -2px;
+  }
 }
 
 .app-tabs__container--hidden {
@@ -119,16 +138,17 @@
   position: relative;
   max-width: inherit;
   margin-bottom: 0;
+  padding: 0;
   border: 0;
+  outline: 1px solid transparent;
+  background-color: govuk-colour("light-grey");
   font-size: inherit;
 }
 
 .app-tabs__container pre code {
   display: block;
-  // Extra 3px to compensate for border and box shadow of button
-  padding-top: govuk-spacing(7) + 3px;
-  padding-right: govuk-spacing(4);
-  padding-bottom: govuk-spacing(4);
+  padding: govuk-spacing(4);
+  padding-top: 45px; // Allow extra space for the copy code button
   overflow-x: auto;
 }
 
