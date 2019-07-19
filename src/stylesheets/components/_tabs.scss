@@ -59,8 +59,19 @@
   border-left: 1px solid $govuk-border-colour;
   background: govuk-colour("white");
 
+  // Offset the added borders
+  .app-prose-scope & {
+    margin: 0 -1px;
+  }
+
+  // No left hand border is required for the first tab, as it would just double
+  // up the border of its parent
   &:first-child {
     border-left: 0;
+
+    .app-prose-scope & {
+      margin-left: 0;
+    }
   }
 
   a {
