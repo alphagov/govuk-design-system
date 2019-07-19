@@ -8,14 +8,17 @@ import Radios from 'govuk-frontend/govuk/components/radios/radios'
 import Header from 'govuk-frontend/govuk/components/header/header'
 import Tabs from 'govuk-frontend/govuk/components/tabs/tabs'
 
-new Button(document).init()
+var $button = document.querySelector('[data-module="govuk-button"]')
+if ($button) {
+  new Button($button).init()
+}
 
 var $accordion = document.querySelector('[data-module="accordion"]')
 if ($accordion) {
   new Accordion($accordion).init()
 }
 
-var $details = document.querySelector('details')
+var $details = document.querySelector('[data-module="govuk-details"]')
 if ($details) {
   new Details($details).init()
 }
