@@ -9,13 +9,13 @@
           <ul class="app-subnav__section">
           {% for subitem in items %}
             <li class="app-subnav__section-item{% if subitem.url == path %} app-subnav__section-item--current{% endif %}">
-              <a class="app-subnav__link govuk-link" href="/{{ subitem.url }}">{{ subitem.label }}</a>
+              <a class="app-subnav__link govuk-link govuk-link--no-visited-state" href="/{{ subitem.url }}">{{ subitem.label }}</a>
               {% if (subitem.headings) and (subitem.url == path) %}
                 <ul class="app-subnav__section app-subnav__section--nested">
                   {% for link in subitem.headings %}
                     {% if link.depth == 2 %}
                       <li class="app-subnav__section-item">
-                        <a class="app-subnav__link govuk-link" href="/{{ subitem.url }}/#{{ link.url }}" >
+                        <a class="app-subnav__link govuk-link govuk-link--no-visited-state" href="/{{ subitem.url }}/#{{ link.url }}" >
                           {{ link.text }}
                         </a>
                       </li>
