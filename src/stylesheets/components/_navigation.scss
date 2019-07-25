@@ -1,4 +1,4 @@
-$navigation-height: 53px;
+$navigation-height: 50px;
 
 .app-navigation {
   box-sizing: border-box;
@@ -42,6 +42,7 @@ $navigation-height: 53px;
   }
 
   &:not(:focus):hover {
+    color: $govuk-link-colour;
     text-decoration: underline;
   }
 
