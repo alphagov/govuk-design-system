@@ -42,6 +42,7 @@ $navigation-height: 53px;
   }
 
   &:not(:focus):hover {
+    color: $govuk-link-colour;
     text-decoration: underline;
   }
 
