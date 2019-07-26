@@ -8,7 +8,11 @@ layout: layout-single-page-prose.njk
 
 The GOV.UK Design System team works hard to ensure that this Design System and GOV.UK Frontend, the codebase it uses, are accessible.
 
-When the Design System went into public beta in June 2018, it had been audited by accessibility specialists [DAC (Digital Accessibility Centre)](https://digitalaccessibilitycentre.org/) and met level AA of the Web Content Accessibility Guidelines (WCAG 2.0).
+This Design System and GOV.UK Frontend were last tested for accessibility in May 2019. The test was carried out by accessibility specialists [DAC (Digital Accessibility Centre)](https://digitalaccessibilitycentre.org/) against level AA of the Web Content Accessibility Guidelines (WCAG) 2.1.
+
+You can see the [issues DAC raised and what we fixed](https://github.com/issues?q=is%3Aissue+archived%3Afalse+org%3Aalphagov+label%3A%22audit%3A+may-2019%22+).
+
+There are a small number of [accessibility issues that we still need to fix](https://github.com/issues?q=is%3Aissue+archived%3Afalse+org%3Aalphagov+label%3A%22audit%3A+may-2019%22+is%3Aopen).
 
 Where possible, the team aims to research components and patterns with a representative range of users, including those with disabilities. 
 
@@ -18,39 +22,13 @@ It also tests components to ensure they work with a broad range of [browsers, de
 
 While the GOV.UK Design System team takes steps to ensure the Design System is as accessible as possible by default, this does not remove the need for contextual research. 
 
+Using GOV.UK Frontend does not mean you automatically meet level AA of WCAG 2.1. You will still need to make sure your service as a whole meets accessibility requirements.
+
 You must research styles, components and patterns as part of your service to ensure that they are accessible in context.  
 
 Find out what you need to do to [make your service accessible](https://www.gov.uk/service-manual/helping-people-to-use-your-service/making-your-service-accessible-an-introduction) in the GOV.UK Service Manual.
 
-## WCAG 2.1 updates
-
-The GOV.UK Design System team is making some updates to improve the standard of accessibility for users. This includes making sure that the Design System and the styles, components and patterns it contains meet level AA of WCAG 2.1.
-
-This will help ensure compliance with [The Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018](http://www.legislation.gov.uk/uksi/2018/952/contents/made).
-
-Read about the [requirements for making your public sector website accessible](https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps).
-
-### If you are using the GOV.UK Design System and GOV.UK Frontend
-
-Currently, a number of components in the Design System do not meet level AA of WCAG 2.1. 
-
-If you are using the Design System or Frontend now, you will fail an accessibility audit on a number of things. For example:
-
-- non-text contrast of links and various component focus states
-- text contrast of the link hover colour
-- non-text contrast of the tabs component
-
-The GOV.UK Design System team has done some work already to make the Design System and Frontend meet level AA of WCAG 2.1. For example, they have added the autocomplete attribute to relevant patterns, like [asking users for names](https://design-system.service.gov.uk/patterns/names/#use-the-autocomplete-attribute-on-name-fields). 
-
-The team is also aiming to release a new version of Frontend (v.3.0.0) and a series of updates to the Design System in June 2019 that will address the known issues.
-
-If you have failed an audit because of something from the Design System or Frontend, it’s recommended you wait for the release, rather than trying to fix the issues independently. 
-
-This includes if you are using existing styles, such as the focus state, in your own components.
-
-Updating to the next release of Frontend will not automatically mean you meet level AA of WCAG 2.1. You will still need to make sure your service as a whole meets accessibility requirements.
-
-### If you are not using the GOV.UK Design System and GOV.UK Frontend
+## If you are not using the GOV.UK Design System and GOV.UK Frontend
 
 The Design System and Frontend were introduced in June 2018 to replace the following deprecated codebases:
 
