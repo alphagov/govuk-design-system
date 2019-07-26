@@ -50,9 +50,10 @@ If your design requires them, you should place components such as [breadcrumbs](
 
 Within `govuk-width-container` you should add the `govuk-main-wrapper` class to your `<main>` element. This adds responsive padding to the top and bottom of the page and will be the container for your main content.
 
-If you’re not using the [breadcrumbs](../../components/breadcrumbs), [back link](../../components/back-link) or [phase banner](../../components/phase-banner) components in your design, use the modifier class `govuk-main-wrapper--l` to increase the vertical space above the content.
+If you’re not using the [breadcrumbs](../../components/breadcrumbs), [back link](../../components/back-link) or [phase banner](../../components/phase-banner) components in your design, add the correct amount of vertical padding above the content by adding one of the following to your `<main>` element:
 
-You can also use the modifier class `govuk-main-wrapper--auto-spacing` which will increase the vertical space to match `govuk-main-wrapper--l` whenever there are no other elements between the opening tag of the `govuk-width-container` and the `govuk-main-wrapper`.
+- the `govuk-main-wrapper--auto-spacing` class
+- the `govuk-main-wrapper--l class` - if `govuk-main-wrapper--auto-spacing` does not work for your service
 
 ### Exploded view of page wrappers
 
