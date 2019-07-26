@@ -4,8 +4,8 @@ layout: layout-example.njk
 ignore_in_sitemap: true
 ---
 
-{% from "error-summary/macro.njk" import govukErrorSummary %}
-{% from "checkboxes/macro.njk" import govukCheckboxes %}
+{% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
 {{ govukErrorSummary({
   "titleText": "There is a problem",

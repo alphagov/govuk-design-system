@@ -4,8 +4,8 @@ layout: layout-example.njk
 ignore_in_sitemap: true
 ---
 
-{% from "date-input/macro.njk" import govukDateInput %}
-{% from "error-summary/macro.njk" import govukErrorSummary %}
+{% from "govuk/components/date-input/macro.njk" import govukDateInput %}
+{% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
 
 {{ govukErrorSummary({
   "titleText": "There is a problem",

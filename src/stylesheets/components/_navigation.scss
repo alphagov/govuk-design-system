@@ -1,5 +1,6 @@
+$navigation-height: 50px;
+
 .app-navigation {
-  $navigation-height: 53px;
   box-sizing: border-box;
   @include govuk-font(19, $weight: bold);
   width: 100%;
@@ -11,48 +12,51 @@
   @include govuk-media-query($from: tablet) {
     margin-left: -(govuk-spacing(3));
   }
+}
 
-  &__list {
-    padding: 0;
-    list-style: none;
+.app-navigation__list {
+  padding: 0;
+  list-style: none;
+}
 
-    & > li {
-      box-sizing: border-box;
-      height: $navigation-height;
-      float: left;
-      line-height: $navigation-height;
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
+.app-navigation__list-item {
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  height: $navigation-height;
+  padding: 0 govuk-spacing(3);
+  float: left;
+  line-height: $navigation-height;
+}
 
-      &:hover {
-        border-bottom: 4px solid govuk-colour("light-blue");
-      }
+.app-navigation__list-item--current {
+  box-shadow: inset 0 -4px 0 0 govuk-colour("blue");
+}
 
-      &.app-navigation--current-page {
-        border-bottom: 4px solid govuk-colour("blue") !important;
+.app-navigation__link {
+  @include govuk-typography-weight-bold;
+  text-decoration: none;
 
-        a:hover {
-          color: $govuk-link-colour;
-        }
-      }
-
-      a {
-        @include govuk-typography-weight-bold; // Override .govuk-link weight
-        display: block;
-        padding: 0 govuk-spacing(3);
-        color: $govuk-link-colour;
-        text-decoration: none;
-
-        &:visited {
-          color: $govuk-link-colour;
-        }
-
-        &:hover,
-        &:focus {
-          color: $govuk-link-hover-colour;
-          background-color: inherit;
-        }
-      }
-    }
+  &:not(:focus):visited {
+    color: $govuk-link-colour;
   }
+
+  &:not(:focus):hover {
+    color: $govuk-link-colour;
+    text-decoration: underline;
+  }
+
+  // Extend the touch area of the link to the list
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.app-navigation__list-item--current .app-navigation__link:hover {
+  text-decoration: none;
 }
