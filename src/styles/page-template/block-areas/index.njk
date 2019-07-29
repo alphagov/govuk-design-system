@@ -6,7 +6,7 @@ stylesheets:
 - styles/page-template/block-areas/block-areas-annotate.css
 ---
 
-{% extends "template.njk" %}
+{% extends "govuk/template.njk" %}
 
 {% set bodyClasses = "app-example-page" %}
 
@@ -61,7 +61,7 @@ stylesheets:
   <div class="app-annotate-block">
     <span class="app-annotate-block__label">block: beforeContent</span>
     {{ super() }}
-    {% from "back-link/macro.njk" import govukBackLink %}
+    {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
 
     {{ govukBackLink({
       href: "/",

@@ -20,8 +20,7 @@ $icon-size: 40px;
 
     @include govuk-media-query($from: desktop) {
       margin: 0;
-      margin-top: -6px; //negative margin to vertically align search in header
-      margin-bottom: -1px;
+      margin-top: -5px; //negative margin to vertically align search in header
       float: right;
     }
 
@@ -59,7 +58,7 @@ $icon-size: 40px;
 
   .app-site-search__hint {
     position: absolute;
-    color: govuk-colour("grey-2");
+    color: govuk-colour("mid-grey");
   }
 
   .app-site-search__input {
@@ -71,14 +70,14 @@ $icon-size: 40px;
   }
 
   .app-site-search__input--default {
-    padding: 9px govuk-spacing(2) govuk-spacing(1);
+    padding: govuk-spacing(1);
   }
 
   .app-site-search__input--focused {
     width: 100%;
     margin-left: 0;
     outline: 3px solid $govuk-focus-colour;
-    outline-offset: 0;
+    outline-offset: -2px;
   }
 
   .app-site-search__input--show-all-values {
@@ -130,7 +129,7 @@ $icon-size: 40px;
   .app-site-search__option {
     display: block;
     position: relative;
-    border-bottom: solid govuk-colour("grey-2");
+    border-bottom: solid govuk-colour("mid-grey");
     border-width: 1px 0;
     cursor: pointer;
   }
@@ -165,7 +164,7 @@ $icon-size: 40px;
   }
 
   .app-site-search__option--no-results {
-    color: govuk-colour("grey-1");
+    color: govuk-colour("dark-grey");
     background-color: govuk-colour("white");
     cursor: not-allowed;
   }

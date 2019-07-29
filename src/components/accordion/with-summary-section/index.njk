@@ -3,7 +3,7 @@ title: Accordion with summary sections
 layout: layout-example.njk
 ---
 
-{% from "accordion/macro.njk" import govukAccordion %}
+{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
 
 {{ govukAccordion({
   id: "accordion-with-summary-sections",
@@ -16,7 +16,7 @@ layout: layout-example.njk
         text: "Introductions, methods, core features."
       },
       content: {
-        html: 
+        html:
         '<ul class="govuk-list">
             <li>
               <a class="govuk-link" href="#">Agile and government services: an introduction</a>

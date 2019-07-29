@@ -4,8 +4,8 @@ layout: layout-example.njk
 ignore_in_sitemap: true
 ---
 
-{% from "checkboxes/macro.njk" import govukCheckboxes %}
-{% from "input/macro.njk" import govukInput %}
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
 
 {% set emailHtml %}
 {{ govukInput({
@@ -55,7 +55,7 @@ ignore_in_sitemap: true
       isPageHeading: true,
       classes: "govuk-fieldset__legend--xl"
     }
-  },  
+  },
   hint: {
     text: "Select all options that are relevant to you."
   },

@@ -7,8 +7,8 @@ stylesheets:
 
 {% extends "example-wrappers/full-page.njk" %}
 
-{% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
-{% from "button/macro.njk" import govukButton %}
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
 
 {% block beforeContent %}
   {{ govukBreadcrumbs({
@@ -46,7 +46,8 @@ stylesheets:
       {{ govukButton({
         text: "Start now",
         href: "#",
-        classes: "govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"
+        classes: "govuk-!-margin-top-2 govuk-!-margin-bottom-8",
+        isStartButton: true
       }) }}
 
       <h2 class="govuk-heading-m">Before you start</h2>

@@ -1,4 +1,4 @@
-import 'govuk-frontend/vendor/polyfills/Element/prototype/classList'
+import 'govuk-frontend/govuk/vendor/polyfills/Element/prototype/classList'
 
 var OptionsTable = {
   init: function () {

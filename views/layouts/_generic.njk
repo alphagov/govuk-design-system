@@ -1,4 +1,4 @@
-{% extends "template.njk" %}
+{% extends "govuk/template.njk" %}
 
 {% set htmlClasses = 'no-js' %}
 {% set assetUrl = 'https://design-system.service.gov.uk/assets' %}
@@ -30,10 +30,8 @@
 {% block main %}
 <div class="app-pane {% block appPaneClasses %}{% endblock %}" id="top">
   {% include "_cookie-banner.njk" %}
-  <div class="app-pane__header">
-    {% include "_header.njk" %}
-    {% include "_banner.njk" %}
-  </div>
+  {% include "_header.njk" %}
+  {% include "_banner.njk" %}
   <div class="app-pane__nav">
     {% include "_navigation.njk" %}
     {% include "_mobile-navigation.njk" %}

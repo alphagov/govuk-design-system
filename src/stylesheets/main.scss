@@ -1,10 +1,10 @@
 $govuk-page-width: 1100px !default;
 
-@import "govuk-frontend/all";
+@import "govuk-frontend/govuk/all";
 
 // App-specific variables
 $app-light-grey: #f8f8f8;
-$app-code-color: #dd1144;
+$app-code-color: #c62950;
 
 // App-specific components
 @import "components/back-to-top";
@@ -114,9 +114,11 @@ body {
     padding: govuk-spacing(2);
   }
 
-  video {
-    @include govuk-focusable;
-  }
+  // TODO: Need to make Video focusable but we need some design decision to be made
+  // video {
+  //   @include govuk-focusable;
+  // }
+
 
   // IE8 does not support the video element, so we hide the element entirely.
   @if $govuk-is-ie8 == true {
@@ -171,13 +173,14 @@ body {
   $copy-button-colour: #00823b;
 
   @include govuk-font(16);
-  @include govuk-focusable;
+  // TODO: Need to make copy button focusable/hoverable but we need some design decision to be made
+  // @include govuk-focusable;
   position: absolute;
   z-index: 1;
-  top: govuk-spacing(4);
-  right: govuk-spacing(4);
+  top: govuk-spacing(2);
+  right: govuk-spacing(2);
   min-width: 110px;
-  padding: 4px 10px 2px 10px;
+  padding: 3px 10px;
   border: 1px solid $copy-button-colour;
   color: $copy-button-colour;
   background-color: govuk-colour("white");
@@ -185,6 +188,20 @@ body {
   text-align: center;
   text-decoration: none;
   cursor: pointer;
+
+  &:focus:not(:hover) {
+    color: $govuk-focus-text-colour;
+    background-color: $govuk-focus-colour;
+    box-shadow: 0 2px 0 0 $govuk-focus-text-colour;
+  }
+
+  &:active,
+  &:focus {
+    padding: 2px 10px; // Counter increased border size
+    border: 2px solid $govuk-focus-colour;
+    outline: 2px solid transparent;
+    box-shadow: none;
+  }
 
   &:active {
     margin-top: 2px;
@@ -248,7 +265,7 @@ $colour-list-breakpoint: 980px;
 }
 
 .app-swatch-border {
-  border-color: govuk-colour("grey-2");
+  border-color: govuk-colour("mid-grey");
 }
 
 .app-colour-list-column--name {
@@ -298,7 +315,7 @@ td code,
 p code {
   padding: 0 govuk-spacing(1);
   color: $app-code-color;
-  background-color: govuk-colour("grey-4");
+  background-color: govuk-colour("light-grey");
 }
 
 .app-prose-scope {

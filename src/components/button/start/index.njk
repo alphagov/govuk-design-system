@@ -3,10 +3,10 @@ title: Start now button
 layout: layout-example.njk
 ignore_in_sitemap: true
 ---
-{% from "button/macro.njk" import govukButton %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
 
 {{ govukButton({
   text: "Start now",
   href: "#",
-  classes: "govuk-button--start"
+  isStartButton: true
 }) }}

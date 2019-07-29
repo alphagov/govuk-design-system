@@ -1,101 +1,21 @@
-// Known issues:
-//
-// When the GOV.UK logotype is focussed in Firefox, the outline is drawn based
-// on a different box to the background, which leads to 'gaps' on the top and
-// bottom between the outline and the background.
-//
-// This seems to only happen when the link is displayed 'inline-block', but
-// removing this affects the positioning of the underline and causes other
-// issues with the display of the focus style in IE8-11.
-
 @include govuk-exports("app-header") {
 
+  // Move the blue border from the container to the header so that it spans
+  // the full width of the page
   .app-header {
-    box-sizing: border-box;
-    width: 100%;
-    border-bottom: 10px solid govuk-colour("blue");
-    color: govuk-colour("white");
-    background: govuk-colour("black");
-    @include govuk-clearfix;
-
-    @include govuk-media-query($from: desktop) {
-      padding: govuk-spacing(2) 0;
-    }
+    border-bottom: 10px solid $govuk-brand-colour;
   }
 
-  .app-header__logotype {
-    margin-right: govuk-spacing(1);
+  .app-header__container {
+    margin-bottom: 0;
+    border-bottom: 0;
   }
 
-  .app-header__logotype-crown {
-    margin-right: 1px;
-    fill: currentColor;
-    vertical-align: middle;
-  }
-
-  .app-header__logotype-crown-fallback-image {
-    width: 36px;
-    height: 32px;
-    border: 0;
-    vertical-align: middle;
-  }
-
-  .app-header__title {
-    @include govuk-font(24);
-  }
-
-  .app-header__link {
-    // Font size needs to be set on the link so that the box sizing is correct
-    // in Firefox
-    @include govuk-typography-common;
-    @include govuk-typography-weight-bold;
-    display: inline-block;
-
-    font-size: 30px; // We do not have a mixin that produces 30px font size\
-    line-height: 30px;
-    @include govuk-clearfix;
-
-    &:link,
-    &:visited {
-      margin-bottom: -1px; // Negate transparent bottom border
-      border-bottom: 1px solid transparent;
-      color: govuk-colour("white");
-      text-decoration: none;
-    }
-
-    &:hover,
-    &:active {
-      border-bottom-color: currentColor;
-    }
-
-    &:focus {
-      color: $govuk-focus-text-colour;
-    }
-  }
-
-  @include govuk-media-query($media-type: print) {
-    .app-header {
-      border-bottom-width: 0;
-      color: govuk-colour("black");
-      background: transparent;
-    }
-
-    // Hide the inverted crown when printing in browsers that do not support SVG.
-    .app-header__logotype-crown-fallback-image {
-      display: none;
-    }
-
-    .app-header__link {
-      &:link,
-      &:visited {
-        color: govuk-colour("black");
-      }
-
-      // Do not append link href to GOV.UK link when printing (e.g. '(/)')
-      &:after {
-        display: none;
-      }
-    }
+  // Override the default 33% width on the logo in GOV.UK Frontend (prevents
+  // unnecessary wrapping of "GOV.UK Design System" on smaller tablet / desktop
+  // viewports)
+  .app-header__logo {
+    width: auto;
   }
 
   .app-header-mobile-nav-toggler-wrapper {
@@ -108,31 +28,26 @@
     min-height: 40px; // match the height of the search box
     margin-top: govuk-spacing(2);
     margin-bottom: govuk-spacing(2);
-    padding-right: 0;
-    padding-left: 0;
-    border: 1px solid transparent;
-    background-color: govuk-colour("black");
-    box-shadow: 0 0 0 govuk-colour("black");
+    padding-right: govuk-spacing(1);
+    padding-left: govuk-spacing(1);
+    border: 1px solid transparent; // Override the button default border, keep this around for when users change their colours
+    box-shadow: none; // Override the button default box shadow
 
-    &:active,
-    &:focus,
+    &,
     &:hover {
-      background-color: govuk-colour("black"); // Override the button default green
-      box-shadow: 0 0 0 govuk-colour("black"); // Override the button default green
+      background-color: transparent; // Override the button default green
     }
 
     &::after {
       @include govuk-shape-arrow($direction: down, $base: 10px, $display: inline-block);
       content: "";
       margin-left: govuk-spacing(1);
-      border-color: govuk-colour("white");
+      border-top-color: currentColor;
     }
 
-    &--active.app-header-mobile-nav-toggler {
-      &::after {
-        @include govuk-shape-arrow($direction: up, $base: 10px, $display: inline-block);
-        border-color: govuk-colour("white");
-      }
+    &--active::after {
+      @include govuk-shape-arrow($direction: up, $base: 10px, $display: inline-block);
+      border-bottom-color: currentColor;
     }
 
     .js-enabled & {
@@ -141,19 +56,4 @@
       }
     }
   }
-
-  // Begin adjustments for font baseline offset
-  // These should be removed when the font is updated with the correct baseline
-  .app-header__logotype-crown,
-  .app-header__logotype-crown-fallback-image {
-    position: relative;
-    top: -4px;
-  }
-
-  .app-header {
-    $offset: 3px;
-    padding-top: govuk-spacing(2) + $offset;
-    padding-bottom: govuk-spacing(2) - $offset;
-  }
-  // End adjustments
 }

@@ -1,4 +1,4 @@
-import 'govuk-frontend/vendor/polyfills/Function/prototype/bind'
+import 'govuk-frontend/govuk/vendor/polyfills/Function/prototype/bind'
 
 function BackToTop ($module, options) {
   this.$module = $module
