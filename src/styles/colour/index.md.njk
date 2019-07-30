@@ -28,35 +28,35 @@ you should reference the [colour palette](#colour-palette) directly. For
 example, if you wanted to use red to represent some data in a graph you should
 use `govuk-colour("red")` rather than `$govuk-error-colour`.
 
+{%- from "_heading-anchor.njk" import headingAnchor -%}
+
 <table class="govuk-body app-colour-list" summary="Table of main colours">
   <tbody>
   {# colours is an object built by ./lib/colours.js based on data defined in ./data/colours.json #}
   {% for groupName, group in colours.applied %}
-    <tr>
-      <td colspan="3">
-        <h3 class="app-content-heading" id="{{ groupName | slugger }}">
-          <a class="app-content-heading__anchor" href="#{{ groupName | slugger }}" role="presentation" tabindex="-1">
-            <svg height="25" width="25" viewBox="0 0 512 512" class="app-content-heading__icon" aria-hidden="true">
-              <use xlink:href="#app-icon-link" href="#app-icon-link" />
-            </svg>{{groupName}}
-          </a>
-        </h3>
-      </td>
-    </tr>
-    {% for colour in group %}
-      <tr class="app-colour-list-row">
-        <th class="app-colour-list-column app-colour-list-column--name" scope="row">
-          <span class="app-swatch {% if colour.colour == "#ffffff" %}app-swatch-border{% endif %}" style="background-color:{{colour.colour}}"></span>
-          <code>{{colour.name}}</code>
-        </th>
-        <td class="app-colour-list-column app-colour-list-column--colour">
-          {{colour.colour}}
-        </td>
-        <td class="app-colour-list-column app-colour-list-column--notes">
-          {{colour.notes}}
-        </td>
-      </tr>
-    {% endfor %}
+  <tr>
+  <td colspan="3">
+  {{ headingAnchor({
+  classes: "govuk-heading-m govuk-!-padding-top-6",
+  level: 3,
+  text: groupName
+  }) }}
+  </td>
+  </tr>
+  {% for colour in group %}
+  <tr class="app-colour-list-row">
+  <th class="app-colour-list-column app-colour-list-column--name" scope="row">
+  <span class="app-swatch {% if colour.colour == "#ffffff" %}app-swatch-border{% endif %}" style="background-color:{{colour.colour}}"></span>
+  <code>{{colour.name}}</code>
+  </th>
+  <td class="app-colour-list-column app-colour-list-column--colour">
+  {{colour.colour}}
+  </td>
+  <td class="app-colour-list-column app-colour-list-column--notes">
+  {{colour.notes}}
+  </td>
+  </tr>
+  {% endfor %}
   {% endfor %}
   </tbody>
 </table>
