@@ -34,8 +34,12 @@ use `govuk-colour("red")` rather than `$govuk-error-colour`.
   {% for groupName, group in colours.applied %}
     <tr>
       <td colspan="3">
-        <h3 class="govuk-heading-m {% if not loop.first %}govuk-!-padding-top-6{% endif %}">
-        {{groupName}} 
+        <h3 class="app-content-heading" id="{{ groupName | slugger }}">
+          <a class="app-content-heading__anchor" href="#{{ groupName | slugger }}" role="presentation" tabindex="-1">
+            <svg height="25" width="25" viewBox="0 0 512 512" class="app-content-heading__icon" aria-hidden="true">
+              <use xlink:href="#app-icon-link" href="#app-icon-link" />
+            </svg>{{groupName}}
+          </a>
         </h3>
       </td>
     </tr>
