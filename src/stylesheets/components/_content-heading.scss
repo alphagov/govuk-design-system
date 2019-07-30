@@ -31,7 +31,7 @@ $app-content-heading-icon-gutter: .15em;
   // Only show icon with pointers that have hover (desktop)
   // Prevents mobile from accidentally having icons appear when pressing headings.
   @media (hover: hover) {
-    .app-content-heading:hover .app-content-heading__icon {
+    .app-content-heading__anchor:hover .app-content-heading__icon {
       opacity: 1;
     }
   }
