@@ -25,6 +25,7 @@ $app-content-heading-icon-gutter: .15em;
     // Prose scope has high specificity requiring !importants
     outline: none !important;
     background: transparent !important;
+    box-shadow: none !important;
   }
 
   // Only show icon with pointers that have hover (desktop)
