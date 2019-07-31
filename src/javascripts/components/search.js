@@ -170,20 +170,11 @@ Search.prototype.init = function () {
     tNoResults: function () { return statusMessage }
   })
 
-  var $wrapper = $module.querySelector('.app-site-search__wrapper')
   var $input = $module.querySelector('.app-site-search__input')
 
   // Ensure if the user stops using the search that we do not send tracking events
   $input.addEventListener('blur', function (event) {
     clearTimeout(inputDebounceTimer)
-  })
-
-  // Ensure the Button (which is a background image of the wrapper) focuses the input when clicked.
-  $wrapper.addEventListener('click', function (event) {
-    // Only focus the input if the user clicks the wrapper and not the input.
-    if (event.target === $wrapper) {
-      $input.focus()
-    }
   })
 
   var searchIndexUrl = $module.getAttribute('data-search-index')
