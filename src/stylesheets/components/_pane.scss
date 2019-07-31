@@ -9,15 +9,6 @@
     }
   }
 
-  .app-pane__nav {
-    @include govuk-media-query($from: tablet) {
-      display: flex;
-      background-color: $app-light-grey;
-      flex-direction: column;
-      flex: 1 0 auto;
-    }
-  }
-
   .app-pane__body {
     @include govuk-media-query($from: tablet) {
       display: flex;

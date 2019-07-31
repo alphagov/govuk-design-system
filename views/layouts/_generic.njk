@@ -31,11 +31,9 @@
 <div class="app-pane {% block appPaneClasses %}{% endblock %}" id="top">
   {% include "_cookie-banner.njk" %}
   {% include "_header.njk" %}
+  {% include "_mobile-navigation.njk" %}
   {% include "_banner.njk" %}
-  <div class="app-pane__nav">
-    {% include "_navigation.njk" %}
-    {% include "_mobile-navigation.njk" %}
-  </div>
+  {% include "_navigation.njk" %}
   {% block body %}
     {{ contents | safe }}
   {% endblock %}

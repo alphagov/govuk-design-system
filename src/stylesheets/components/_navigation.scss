@@ -1,20 +1,19 @@
 $navigation-height: 50px;
 
 .app-navigation {
-  box-sizing: border-box;
   @include govuk-font(19, $weight: bold);
+  box-sizing: border-box;
   width: 100%;
+  background-color: $app-light-grey;
 
   @include govuk-media-query($until: tablet) {
     display: none;
   }
-
-  @include govuk-media-query($from: tablet) {
-    margin-left: -(govuk-spacing(3));
-  }
 }
 
 .app-navigation__list {
+  position: relative;
+  left: -(govuk-spacing(3));
   padding: 0;
   list-style: none;
 }
