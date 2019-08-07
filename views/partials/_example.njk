@@ -35,7 +35,7 @@
       <span class="govuk-visually-hidden">{{ exampleTitle | lower }}</span>
       example in a new window
     </a>
-    <iframe title="{{ exampleTitle + " example" }}" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable{% if params.size %} app-example__frame--{{ params.size }}{% endif %}" src="{{ exampleURL }}" frameBorder="0"></iframe>
+    <iframe title="{{ exampleTitle + " example" }}" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable{% if params.size %} app-example__frame--{{ params.size }}{% endif %}" src="{{ exampleURL }}" frameBorder="0" loading="lazy"></iframe>
   </div>
   {% endif %}
 
