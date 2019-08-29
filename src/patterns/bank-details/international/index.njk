@@ -1,0 +1,68 @@
+---
+title: International bank account details
+layout: layout-example.njk
+---
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{# <h1 class="govuk-heading-xl">Non-UK bank account details</h1> #}
+
+{# {{ govukInput({
+  label: {
+    text: "Name on the account"
+  },
+  id: "name-on-the-account",
+  name: "name-on-the-account",
+  attributes: {
+    spellcheck: "false"
+  }
+}) }} #}
+
+{{ govukInput({
+  label: {
+    text: "BIC or SWIFT code"
+  },
+  classes: "govuk-input--width-10",
+  hint: {
+    text: "Must be between 8 and 11 characters long. You can ask your bank or check your bank statement"
+  },
+  id: "bic-code",
+  name: "bic-code",
+  attributes: {
+    spellcheck: "false"
+  }
+}) }}
+
+{{ govukInput({
+  label: {
+    text: "IBAN"
+  },
+  hint: {
+    text: "You can ask your bank or check your bank statement"
+  },
+  id: "iban",
+  name: "iban",
+  attributes: {
+    spellcheck: "false"
+  }
+}) }}
+
+{# {{ govukInput({
+  label: {
+    text: "Currency of account"
+  },
+  classes: "govuk-input--width-10",
+  hint: {
+    text: "For example, US dollar or euro"
+  },
+  id: "currency",
+  name: "currency",
+  attributes: {
+    spellcheck: "false"
+  }
+}) }} #}
+
+{# {{ govukButton({
+  text: 'Continue'
+}) }} #}

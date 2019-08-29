@@ -1,0 +1,26 @@
+---
+title: Errors
+layout: layout-example.njk
+---
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+
+{{ govukInput({
+  label: {
+    text: "Sort code"
+  },
+  classes: "govuk-input--width-5",
+  hint: {
+    text: 'Must be 6 digits long'
+  },
+  value: '12',
+  id: "sort-code",
+  name: "sort-code",
+  attributes: {
+    spellcheck: "false"
+  },
+  errorMessage: {
+    text: 'Enter a valid sort code like 404771'
+  }
+}) }}
