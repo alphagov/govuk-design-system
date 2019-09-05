@@ -8,7 +8,7 @@
           </a>
         </div>
         {% if item.items %}
-          <ul class="app-mobile-nav__list app-mobile-nav__subnav js-app-mobile-nav-subnav {% if path.startsWith(item.url) %}app-mobile-nav__subnav--active{% endif %}">
+          <ul class="app-mobile-nav__list app-mobile-nav__subnav js-app-mobile-nav-subnav {% if path.startsWith(item.url) %}app-mobile-nav__subnav--active{% endif %}" aria-label="{{ item.label }}">
             <li class="app-mobile-nav__subnav-item{% if path == item.url %} app-mobile-nav__subnav-item--current{% endif %}">
               <a class="govuk-link govuk-link--no-visited-state app-mobile-nav__link" href="/{{ item.url }}/">
                 {{ item.label }} overview

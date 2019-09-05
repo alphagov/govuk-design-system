@@ -88,7 +88,6 @@ MobileNav.prototype.includeAria = function () {
 
       $nextSubNav.setAttribute('id', nextSubNavId)
       $nextSubNav.setAttribute('aria-hidden', navIsOpen ? 'false' : 'true')
-      $nextSubNav.setAttribute('aria-labelledby', subNavTogglerId)
 
       $toggler.setAttribute('id', subNavTogglerId)
       $toggler.setAttribute('aria-label', (navIsOpen ? 'Hide' : 'Show') + ' pages within ' + $toggler.innerText.trim())
