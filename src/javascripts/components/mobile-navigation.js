@@ -53,12 +53,14 @@ MobileNav.prototype.bindUIEvents = function () {
 
         $nextSubNav.setAttribute('aria-hidden', 'true')
         $toggler.setAttribute('aria-expanded', 'false')
+        $toggler.setAttribute('aria-label', 'Show pages within ' + $toggler.innerText.trim())
       } else {
         $nextSubNav.classList.add(subNavActiveClass)
         $togglerLinkArea.classList.add(subNavTogglerActiveClass)
 
         $nextSubNav.setAttribute('aria-hidden', 'false')
         $toggler.setAttribute('aria-expanded', 'true')
+        $toggler.setAttribute('aria-label', 'Hide pages within ' + $toggler.innerText.trim())
       }
       event.preventDefault()
     }
@@ -89,7 +91,7 @@ MobileNav.prototype.includeAria = function () {
       $nextSubNav.setAttribute('aria-labelledby', subNavTogglerId)
 
       $toggler.setAttribute('id', subNavTogglerId)
-      $toggler.setAttribute('aria-label', 'Toggle subnavigation for ' + $toggler.innerText)
+      $toggler.setAttribute('aria-label', (navIsOpen ? 'Hide' : 'Show') + ' pages within ' + $toggler.innerText.trim())
       $toggler.setAttribute('aria-expanded', navIsOpen ? 'true' : 'false')
       $toggler.setAttribute('aria-controls', nextSubNavId)
     }
