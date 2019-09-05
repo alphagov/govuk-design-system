@@ -25,11 +25,13 @@ MobileNav.prototype.bindUIEvents = function () {
 
       $navToggler.classList.remove(navTogglerActiveClass)
       $navToggler.setAttribute('aria-expanded', 'false')
+      $navToggler.setAttribute('aria-label', 'Show top-level navigation')
     } else {
       $nav.classList.add(navActiveClass)
       $nav.setAttribute('aria-hidden', 'false')
 
       $navToggler.setAttribute('aria-expanded', 'true')
+      $navToggler.setAttribute('aria-label', 'Hide top-level navigation')
       $navToggler.classList.add(navTogglerActiveClass)
     }
   })
@@ -68,7 +70,7 @@ MobileNav.prototype.includeAria = function () {
   this.$nav.setAttribute('aria-label', 'Top-level')
 
   var $navToggler = this.$navToggler
-  $navToggler.setAttribute('aria-label', 'Toggle mobile menu')
+  $navToggler.setAttribute('aria-label', 'Show top-level navigation')
   $navToggler.setAttribute('aria-expanded', 'false')
   $navToggler.setAttribute('aria-controls', 'app-mobile-nav')
 
