@@ -65,7 +65,7 @@ MobileNav.prototype.bindUIEvents = function () {
 
 MobileNav.prototype.includeAria = function () {
   this.$nav.setAttribute('aria-hidden', 'true')
-  this.$nav.setAttribute('aria-labelledby', 'app-header-mobile-nav-toggler')
+  this.$nav.setAttribute('aria-label', 'Top-level')
 
   var $navToggler = this.$navToggler
   $navToggler.setAttribute('aria-label', 'Toggle mobile menu')
