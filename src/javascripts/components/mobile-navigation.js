@@ -77,7 +77,7 @@ MobileNav.prototype.includeAria = function () {
   var $subNavTogglers = this.$module.querySelectorAll('.js-mobile-nav-subnav-toggler')
 
   nodeListForEach($subNavTogglers, function ($toggler, index) {
-    var $nextSubNav = $toggler.parentNode.querySelector('.js-app-mobile-nav-subnav')
+    var $nextSubNav = $toggler.parentNode.parentNode.querySelector('.js-app-mobile-nav-subnav')
 
     if ($nextSubNav) {
       var navIsOpen = $nextSubNav.classList.contains(subNavActiveClass)
