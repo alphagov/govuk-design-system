@@ -65,17 +65,14 @@ MobileNav.prototype.bindUIEvents = function () {
 
 MobileNav.prototype.includeAria = function () {
   this.$nav.setAttribute('aria-hidden', 'true')
-  this.$nav.setAttribute('aria-labelledby', 'app-header-mobile-nav-toggler')
 
   var $navToggler = this.$navToggler
-  $navToggler.setAttribute('aria-label', 'Toggle mobile menu')
   $navToggler.setAttribute('aria-expanded', 'false')
-  $navToggler.setAttribute('aria-controls', 'app-mobile-nav')
 
   var $subNavTogglers = this.$module.querySelectorAll('.js-mobile-nav-subnav-toggler')
 
   nodeListForEach($subNavTogglers, function ($toggler, index) {
-    var $nextSubNav = $toggler.parentNode.querySelector('.js-app-mobile-nav-subnav')
+    var $nextSubNav = $toggler.parentNode.parentNode.querySelector('.js-app-mobile-nav-subnav')
 
     if ($nextSubNav) {
       var navIsOpen = $nextSubNav.classList.contains(subNavActiveClass)
@@ -84,10 +81,8 @@ MobileNav.prototype.includeAria = function () {
 
       $nextSubNav.setAttribute('id', nextSubNavId)
       $nextSubNav.setAttribute('aria-hidden', navIsOpen ? 'false' : 'true')
-      $nextSubNav.setAttribute('aria-labelledby', subNavTogglerId)
 
       $toggler.setAttribute('id', subNavTogglerId)
-      $toggler.setAttribute('aria-label', 'Toggle subnavigation for ' + $toggler.innerText)
       $toggler.setAttribute('aria-expanded', navIsOpen ? 'true' : 'false')
       $toggler.setAttribute('aria-controls', nextSubNavId)
     }
