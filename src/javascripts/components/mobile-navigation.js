@@ -25,13 +25,11 @@ MobileNav.prototype.bindUIEvents = function () {
 
       $navToggler.classList.remove(navTogglerActiveClass)
       $navToggler.setAttribute('aria-expanded', 'false')
-      $navToggler.setAttribute('aria-label', 'Show top-level navigation')
     } else {
       $nav.classList.add(navActiveClass)
       $nav.setAttribute('aria-hidden', 'false')
 
       $navToggler.setAttribute('aria-expanded', 'true')
-      $navToggler.setAttribute('aria-label', 'Hide top-level navigation')
       $navToggler.classList.add(navTogglerActiveClass)
     }
   })
@@ -53,14 +51,12 @@ MobileNav.prototype.bindUIEvents = function () {
 
         $nextSubNav.setAttribute('aria-hidden', 'true')
         $toggler.setAttribute('aria-expanded', 'false')
-        $toggler.setAttribute('aria-label', 'Show pages within ' + $toggler.innerText.trim())
       } else {
         $nextSubNav.classList.add(subNavActiveClass)
         $togglerLinkArea.classList.add(subNavTogglerActiveClass)
 
         $nextSubNav.setAttribute('aria-hidden', 'false')
         $toggler.setAttribute('aria-expanded', 'true')
-        $toggler.setAttribute('aria-label', 'Hide pages within ' + $toggler.innerText.trim())
       }
       event.preventDefault()
     }
@@ -69,12 +65,9 @@ MobileNav.prototype.bindUIEvents = function () {
 
 MobileNav.prototype.includeAria = function () {
   this.$nav.setAttribute('aria-hidden', 'true')
-  this.$nav.setAttribute('aria-label', 'Top-level')
 
   var $navToggler = this.$navToggler
-  $navToggler.setAttribute('aria-label', 'Show top-level navigation')
   $navToggler.setAttribute('aria-expanded', 'false')
-  $navToggler.setAttribute('aria-controls', 'app-mobile-nav')
 
   var $subNavTogglers = this.$module.querySelectorAll('.js-mobile-nav-subnav-toggler')
 
@@ -90,7 +83,6 @@ MobileNav.prototype.includeAria = function () {
       $nextSubNav.setAttribute('aria-hidden', navIsOpen ? 'false' : 'true')
 
       $toggler.setAttribute('id', subNavTogglerId)
-      $toggler.setAttribute('aria-label', (navIsOpen ? 'Hide' : 'Show') + ' pages within ' + $toggler.innerText.trim())
       $toggler.setAttribute('aria-expanded', navIsOpen ? 'true' : 'false')
       $toggler.setAttribute('aria-controls', nextSubNavId)
     }
