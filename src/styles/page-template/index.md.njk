@@ -90,12 +90,19 @@ Variables can be set with:
 
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">htmlLang</td>
-      <td class="govuk-table__cell">Set the language of the document.</td>
+      <td class="govuk-table__cell">Set the language of the whole document. If your <code>&lt;title&gt;</code> and <code>&lt;main&gt;</code> element are in a different language to the rest of the page, use <code>htmlLang</code> to set the language of the rest of the page.</td>
     </tr>
 
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">htmlClasses</td>
       <td class="govuk-table__cell">Add a class to the <code>&lt;html&gt;</code> element.</td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">pageTitleLang</td>
+      <td class="govuk-table__cell">
+        Set the language of the <code>&lt;title&gt;</code> element if it's different to <code>htmlLang</code>.
+      </td>
     </tr>
 
     <tr class="govuk-table__row">
@@ -113,6 +120,13 @@ Variables can be set with:
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">mainClasses</td>
       <td class="govuk-table__cell">Add a class to the <code>&lt;main&gt;</code> element. </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">mainLang</td>
+      <td class="govuk-table__cell">
+        Set the language of the <code>&lt;main&gt;</code> element if it's different to <code>htmlLang</code>.
+      </td>
     </tr>
 
     <tr class="govuk-table__row">
