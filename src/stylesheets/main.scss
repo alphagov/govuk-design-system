@@ -1,5 +1,9 @@
 $govuk-page-width: 1100px !default;
 
+html {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
 @import "govuk-frontend/govuk/all";
 
 // App-specific variables
