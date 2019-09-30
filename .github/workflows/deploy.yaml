@@ -1,0 +1,25 @@
+name: Deploy Design System
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Push to GOV.UK PaaS  
+      uses: alphagov/paas-cf-github-action@master
+      with:
+        args: push --strategy rolling -f manifest.yml
+      env:
+        CF_API: "https://api.cloud.service.gov.uk"
+        CF_ORG: "govuk-design-system"
+        CF_SPACE: "production"
+        CF_USERNAME: "design-system-deploy-production@digital.cabinet-office.gov.uk"
+        # Set CFPassword - https://help.github.com/en/articles/virtual-environments-for-github-actions#creating-and-using-secrets-encrypted-variables
+        CF_PASSWORD: ${{ secrets.CFPassword }}
+        # Google Tag Manager ID – different for production and preview builds
+        GTM_TAG: "GTM-53XG2JT"

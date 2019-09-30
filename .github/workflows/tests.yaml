@@ -1,0 +1,18 @@
+name: Unit test Design System
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '10.x'
+    - name: Install dependencies
+      run: npm install
+    - name: Run linter
+      run: npm run lint
+    - name: Run tests
+      run: npm test

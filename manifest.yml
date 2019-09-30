@@ -17,3 +17,9 @@ applications:
   #
   # https://docs.cloud.service.gov.uk/managing_apps.html#scaling
   instances: 2
+  # 
+  # CF won't route to newly-deployed app if it doesn't produce a healthy endpoint
+  # Essentially, this provides both a post-deploy and constant smoke test
+  # https://docs.cloudfoundry.org/devguide/deploy-apps/manifest-attributes.html#health-check-http-endpoint
+  health-check-type: http
+  health-check-http-endpoint: /__canary__
