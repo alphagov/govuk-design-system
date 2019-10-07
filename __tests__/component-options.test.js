@@ -7,11 +7,11 @@ const PORT = configPaths.testPort
 let page
 let baseUrl = 'http://localhost:' + PORT
 
-beforeAll(async () => {
+beforeEach(async () => {
   page = await setupPage()
 })
 
-afterAll(async () => {
+afterEach(async () => {
   await page.close()
 })
 
@@ -60,5 +60,27 @@ describe('Component page', () => {
       .map(element => element.textContent.trim()), id)
 
     expect(nunjucksTableHeadings.sort()).toEqual(['Name', 'Type', 'Description'].sort())
+  })
+
+  it('macro options should be opened and in view when linked to', async () => {
+    await page.goto(baseUrl + '/components/back-link/#options-back-link-example', { waitUntil: 'load' })
+
+    // Check if example's macro options details element is open
+    await page.waitForSelector('#options-back-link-example-details[open=open]')
+
+    // Check if the example has been scrolled into the viewport
+    const $example = await page.$('#options-back-link-example')
+    expect(await $example.isIntersectingViewport()).toBe(true)
+  })
+
+  it('macro options subtable should be opened and in view when linked to', async () => {
+    await page.goto(baseUrl + '/components/text-input/#options-text-input-example--label', { waitUntil: 'load' })
+
+    // Check if example's macro options details element is open
+    await page.waitForSelector('#options-text-input-example-details[open=open]')
+
+    // Check if the example has been scrolled into the viewport
+    const $example = await page.$('#options-text-input-example--label')
+    expect(await $example.isIntersectingViewport()).toBe(true)
   })
 })
