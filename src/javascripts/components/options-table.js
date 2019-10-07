@@ -11,7 +11,7 @@ var OptionsTable = {
     if (hash.match('^#options-')) {
       var exampleName = hash.split('#options-')[1]
 
-      // Is hash for a specific options table? eg. #options-example-default--hint
+      // Is hash for a specific options table? eg. #options-checkboxes-example--hint
       var isLinkToTable = hash.indexOf('--') > -1
       if (isLinkToTable) {
         exampleName = exampleName.split('--')[0]
