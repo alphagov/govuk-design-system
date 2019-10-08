@@ -1,35 +1,67 @@
+{%- set fileEditURL = "https://github.com/alphagov/govuk-design-system/edit/master/src/" + path + "/index.md.njk" -%}
 {% if section === 'Styles' or section === 'Components' or section === 'Patterns'%}
   <h2 class="govuk-heading-l govuk-!-padding-top-4">Help improve this page</h2>
 
   {% if backlog_issue_id %}
     <p class="govuk-body">
-    To help make sure the {{title}} page is useful, relevant and up to date, you can:
+    To help make sure the {{ title }} page is useful, relevant and up to date, you can:
     </p>
     <ul class="govuk-list govuk-list--bullet">
       <li>
-        <a class="govuk-link app-contact-panel__link" href="https://github.com/alphagov/govuk-design-system-backlog/issues/{{backlog_issue_id}}">share research or feedback about {% if section === 'Components' or section === 'Patterns' %}the {% endif %}{{title}}{% if section === 'Components' %} component{% endif %}{% if section === 'Patterns' %} pattern{% endif %} on GitHub</a>
+        <a class="govuk-link app-contact-panel__link" href="https://github.com/alphagov/govuk-design-system-backlog/issues/{{ backlog_issue_id }}">
+          share research or feedback about
+          {% if section === 'Components' or section === 'Patterns' %}
+            the
+          {% endif %}
+          {{ title }}
+          {% if section === 'Components' %} component{% endif %}
+          {% if section === 'Patterns' %} pattern{% endif %}
+          on GitHub
+        </a>
       </li>
       <li>
-        <a class="govuk-link app-contact-panel__link" href="https://github.com/alphagov/govuk-design-system/edit/master/src/{{section|lower}}/{{title|lower|replace(" ", "-")}}/index.md.njk">propose a change to this page</a> - read more about <a class="govuk-link app-contact-panel__link" href="/community/propose-a-content-change-using-github/">how to propose changes in GitHub</a>
+        <a class="govuk-link app-contact-panel__link" href="{{ fileEditURL }}">
+          propose a change to this page
+        </a> – read more about
+        <a class="govuk-link app-contact-panel__link" href="/community/propose-a-content-change-using-github/">
+          how to propose changes in GitHub
+        </a>
       </li>
     </ul>
   {% else %}
       <p class="govuk-body">
-        If you spot a problem with the {{title}} guidance you can <a class="govuk-link app-contact-panel__link" href="https://github.com/alphagov/govuk-design-system/edit/master/src/{{section|lower}}/{{title|lower|replace(" ", "-")}}/index.md.njk">propose a change</a>.
-        </p>
-        <p class="govuk-body">If you're not sure how to do this, read guidance on <a class="govuk-link app-contact-panel__link" href="/community/propose-a-content-change-using-github/">how to propose changes in GitHub</a>.
+        If you spot a problem with the {{ title }} guidance you can
+        <a class="govuk-link app-contact-panel__link" href="{{ fileEditURL }}">
+          propose a change
+        </a>.
+      </p>
+      <p class="govuk-body">
+        If you're not sure how to do this, read guidance on
+        <a class="govuk-link app-contact-panel__link" href="/community/propose-a-content-change-using-github/">
+          how to propose changes in GitHub
+        </a>.
       </p>
   {% endif %}
 {% endif %}
 
 <div class="app-contact-panel">
   <h2 class="app-contact-panel__heading">Need help?</h2>
-  
+
   <p class="govuk-body app-contact-panel__body">
     If you’ve got a question about the GOV.UK Design System you can contact the team:
   </p>
   <ul class="govuk-list govuk-list--bullet">
-    <li>on <a class="govuk-link app-contact-panel__link" href="https://ukgovernmentdigital.slack.com/app_redirect?channel=govuk-design-system" data-hsupport="slack">#govuk-design-system channel on cross-government Slack</a></li>
-    <li>by email at <a class="govuk-link app-contact-panel__link" href="mailto:govuk-design-system-support@digital.cabinet-office.gov.uk" data-hsupport="email">govuk-design-system-support@digital.cabinet-office.gov.uk</a>.</li>
+    <li>
+      on
+      <a class="govuk-link app-contact-panel__link" href="https://ukgovernmentdigital.slack.com/app_redirect?channel=govuk-design-system" data-hsupport="slack">
+        #govuk-design-system channel on cross-government Slack
+      </a>
+    </li>
+    <li>
+      by email at
+      <a class="govuk-link app-contact-panel__link" href="mailto:govuk-design-system-support@digital.cabinet-office.gov.uk" data-hsupport="email">
+        govuk-design-system-support@digital.cabinet-office.gov.uk
+      </a>.
+    </li>
   </ul>
 </div>
