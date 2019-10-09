@@ -16,18 +16,19 @@ statusMessage: This pattern is currently experimental because <a class="govuk-li
 
 ## When to use this pattern
 
-Follow this pattern when you need users to provide their bank details so that:
+Follow this pattern if you need users to provide their bank details so you can pay them.
 
-- you can pay them 
-- they can pay by Direct Debit
+Only ask for bank details securely within your service. For example, do not ask users to share their bank details by email.
 
-If your service lets users set up Direct Debit payments, first check if you can use [GOV.UK Pay](https://www.payments.service.gov.uk/direct-debit/). If you do use this pattern, you’ll need to ask whether the user is authorised to set up the Direct Debit.
+This pattern does yet not cover asking users for bank details so they can pay by Direct Debit.
+
+If your service lets users set up Direct Debit payments, first check if you can use [GOV.UK Pay](https://www.payments.service.gov.uk/direct-debit/).
 
 ## How it works
 
 Make it as easy as possible for users to enter their bank details.
 
-If your payment service provider needs additional information include those as extra fields. Remove fields that are not needed.
+Include extra fields if your payment service provider needs additional information.
 
 ### Bank accounts or building society accounts
 
@@ -37,7 +38,7 @@ If your service only accommodates bank accounts, remove building society from th
 
 ### Asking for building society roll numbers
 
-Roll numbers are only used by some building societies for certain types of account, so make this field optional. 
+Roll numbers are only used by some building societies for certain types of account, so make this field optional.
 
 However, it is required when a user’s account has one. This is why the label says ‘(if you have one)’.
 
@@ -53,6 +54,8 @@ Not everyone has a bank account or wants to share their account details online.
 
 Let users choose to pay or get paid by an alternative method if needed.
 
+Adapt this question depending on what payment options your users need and what your service can support.
+
 {{ example({group: "patterns", item: "bank-details", example: "branch", html: true, nunjucks: true, open: false, size: "xl"}) }}
 
 ### International bank account details
@@ -61,11 +64,13 @@ If you expect your users to have a non-UK bank account, give them an option to s
 
 International bank accounts require different fields to sort code and account number.
 
+Different countries ask for additional details. This guidance does not cover all possibilities. You will need to research what information is needed by the countries your service supports.
+
+Only show the fields that relate to that country.
+
 Most countries need the IBAN and BIC, sometimes known as the SWIFT code.
 
 {{ example({group: "patterns", item: "bank-details", example: "international", html: true, nunjucks: true, open: false, size: "xl"}) }}
-
-Different countries ask for different details. Only show fields that relate to the user's country.
 
 ### Error messages
 
@@ -85,7 +90,7 @@ Enter a sort code
 
 #### If the sort code is not in the correct format
 
-Enter a valid sort code like 404771
+Enter a valid sort code like 309430
 
 #### If the account number is empty
 
@@ -93,7 +98,7 @@ Enter an account number
 
 #### If the account number is not in the correct format
 
-Enter a valid account number like 61733445
+Enter a valid account number like 00733445
 
 #### If the account number is too long or too short
 
@@ -101,17 +106,17 @@ Account number must be between 6 and 8 digits
 
 #### If the building society roll number is too long
 
-Building society roll number must be between 1 to 18 characters
+Building society roll number must be between 1 and 18 characters
 
 #### If the building society roll number uses characters that are not allowed
 
-Building society roll number must only include letters a to z, numbers, hyphens, spaces and periods.
+Building society roll number must only include letters a to z, numbers, hyphens, spaces and full stops.
 
 ## Research on this pattern
 
-This pattern was originally contributed by a team at the Ministry of Justice. 
+This pattern was originally contributed by a team at the Ministry of Justice.
 
-It's based on the one used in GOV.UK Pay and other variations across government including the following.
+It hasn't been tested in user research yet but is closely based on the one used in GOV.UK Pay and other variations across government including the following.
 
 **Department for work and pensions**<br>Universal Credit<br>
 Get jobseeker’s Allowance<br>
@@ -135,6 +140,12 @@ The team who developed this pattern only found one service, Claim power of attor
 
 But the GoCardless Direct Debit provider that GOV.UK Pay uses says to display the customer’s bank details back to them before submission.
 
+Some users with older bank or building society accounts might have account numbers that are 9 or 10 digits long. Research is needed to confirm that these users know how to shorten their account number to fit into the field.
+
+Research is needed on how to ask users for their bank details in the context of setting up a Direct Debit.
+
 More research is needed on whether bank details should be shown or not on a ‘Check your answers’ page, and how that affects this pattern.
 
 More research is also needed on the best way to handle international bank accounts so that users are only asked for information that’s needed based on the location of their bank account.
+
+This pattern doesn’t currently allow users to provide details of a credit union account. Research is needed on the information required to make payments to credit union accounts and how best to ask credit union members for that information.
