@@ -116,7 +116,7 @@
                       {% if (option.name === "hint" or option.name === "label") %}
                         See <a href="#options-{{ exampleId }}--{{ option.name }}">{{ option.name }}</a>.
                       {% else %}
-                        See <a href="/components/{{ option.slug }}/#options-example-default">{{ option.name }}</a>.
+                        See <a href="/components/{{ option.slug }}/#options-{{ option.name | kebabCase }}-example">{{ option.name }}</a>.
                       {% endif %}
                     {% endif %}
                     {% if (option.params) %}
