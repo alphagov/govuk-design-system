@@ -18,7 +18,7 @@ statusMessage: This pattern is currently experimental because <a class="govuk-li
 
 Follow this pattern if you need users to provide their bank details so you can pay them.
 
-Only ask for bank details securely within your service. For example, do not ask users to share their bank details by email.
+Only ask for bank details securely within your service. For example, do not ask users to send their bank details by email.
 
 This pattern does yet not cover asking users for bank details so they can pay by Direct Debit.
 
@@ -26,39 +26,43 @@ If your service lets users set up Direct Debit payments, first check if you can 
 
 ## How it works
 
-Make it as easy as possible for users to enter their bank details.
-
 Include extra fields if your payment service provider needs additional information.
 
-### Bank accounts or building society accounts
+### Do not ask users for their account type
 
 Do not ask users if they have a bank account or building society account as not all users know this.
 
-If your service only accommodates bank accounts, remove building society from the content and do not ask for a roll number.
+If your service does not support building society accounts, remove building society from the content and do not ask for a roll number.
 
 ### Asking for building society roll numbers
 
 Roll numbers are only used by some building societies for certain types of account, so make this field optional.
 
-However, it is required when a user’s account has one. This is why the label says ‘(if you have one)’.
+However, you need a user’s roll number when they have one. This is why the label says ‘(if you have one)’.
 
 ### Allow different formats for the sort code
 
 Let users enter their sort code in whatever format is familiar to them. Allow additional spaces, hyphens and dashes.
 
-Use one input for the sort code. It’s quicker to use and does not need multiple input labels that might be unclear.
+Use one input for the sort code. It allows users to enter their sort code more quickly, and avoids them needing to read and understand multiple input labels.
 
-### Use a branching question if users can choose how to pay or get paid
+### Use a branching question if users can choose how to get paid
 
 Not everyone has a bank account or wants to share their account details online.
 
-Let users choose to pay or get paid by an alternative method if needed.
+Let users choose to get paid by an alternative method.
 
 Adapt this question depending on what payment options your users need and what your service can support.
 
 {{ example({group: "patterns", item: "bank-details", example: "branch", html: true, nunjucks: true, open: false, size: "xl"}) }}
 
 ### International bank account details
+
+If you expect your users will have a non-UK bank account, you’ll need to:
+
+- use different fields to sort code and account number - usually BIC code (also known as 'SWIFT code') and IBAN
+- do research on other fields you may need to add for the countries your service supports
+- only show the fields for the country your user selects
 
 If you expect your users to have a non-UK bank account, give them an option to select this.
 
@@ -81,6 +85,7 @@ Error messages should be styled like this:
 Make sure errors follow the guidance in [error message](https://design-system.service.gov.uk/components/error-message/) and have specific error messages for specific error states.
 
 #### If the name on the account is empty
+Use 'Enter the name on the account'.
 
 Enter the name on the account
 
@@ -116,15 +121,15 @@ Building society roll number must only include letters a to z, numbers, hyphens,
 
 This pattern was originally contributed by a team at the Ministry of Justice.
 
-It hasn't been tested in user research yet but is closely based on the one used in GOV.UK Pay and other variations across government including the following.
+It hasn't been tested in user research yet. It's closely based on the pattern used by GOV.UK Pay, and patterns used by the following government services.
 
-**Department for work and pensions**<br>Universal Credit<br>
-Get jobseeker’s Allowance<br>
-Get your state pension
+**Department for Work and Pensions**<br>Universal Credit<br>
+Get Jobseeker’s Allowance<br>
+Get your State Pension
 
 **HM Revenue & Customs**<br>
 Register your anti-money laundering supervision<br>
-Tax-free childcare
+Tax-Free Childcare
 
 **Office of the Public Guardian**<br>
 Claim a power of attorney refund
@@ -136,16 +141,17 @@ If you’ve used this pattern, get in touch to share your user research findings
 
 ### Next steps
 
-The team who developed this pattern only found one service, Claim power of attorney refund, that warns the user that the details will be hidden for their security.
+The team that developed this pattern only found one service, Claim power of attorney refund, that warns users their bank details will be hidden for their security.
 
-But the GoCardless Direct Debit provider that GOV.UK Pay uses says to display the customer’s bank details back to them before submission.
+But GoCardless, GOV.UK Pay's Direct Debit provider, says to display a user's bank details again before the user submits them.
 
 Some users with older bank or building society accounts might have account numbers that are 9 or 10 digits long. Research is needed to confirm that these users know how to shorten their account number to fit into the field.
 
-Research is needed on how to ask users for their bank details in the context of setting up a Direct Debit.
+More research is also needed on:
 
-More research is needed on whether bank details should be shown or not on a ‘Check your answers’ page, and how that affects this pattern.
+- how to ask users for their bank details in the context of setting up Direct Debit payments
+- whether bank details should be shown or not on a ‘Check your answers’ page and how that affects this pattern
+- how to handle international bank accounts so users are only asked for information that’s needed based on the location of their bank account
+- the information required to pay credit union accounts and how to ask credit union members for that information
 
-More research is also needed on the best way to handle international bank accounts so that users are only asked for information that’s needed based on the location of their bank account.
 
-This pattern doesn’t currently allow users to provide details of a credit union account. Research is needed on the information required to make payments to credit union accounts and how best to ask credit union members for that information.
