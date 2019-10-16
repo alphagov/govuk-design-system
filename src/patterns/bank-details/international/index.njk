@@ -6,19 +6,6 @@ layout: layout-example.njk
 {% from "govuk/components/button/macro.njk" import govukButton %}
 {% from "govuk/components/input/macro.njk" import govukInput %}
 
-{# <h1 class="govuk-heading-xl">Non-UK bank account details</h1> #}
-
-{# {{ govukInput({
-  label: {
-    text: "Name on the account"
-  },
-  id: "name-on-the-account",
-  name: "name-on-the-account",
-  attributes: {
-    spellcheck: "false"
-  }
-}) }} #}
-
 {{ govukInput({
   label: {
     text: "BIC or SWIFT code"
@@ -47,22 +34,3 @@ layout: layout-example.njk
     spellcheck: "false"
   }
 }) }}
-
-{# {{ govukInput({
-  label: {
-    text: "Currency of account"
-  },
-  classes: "govuk-input--width-10",
-  hint: {
-    text: "For example, US dollar or euro"
-  },
-  id: "currency",
-  name: "currency",
-  attributes: {
-    spellcheck: "false"
-  }
-}) }} #}
-
-{# {{ govukButton({
-  text: 'Continue'
-}) }} #}
