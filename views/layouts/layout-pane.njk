@@ -10,7 +10,6 @@
 <div class="app-pane__body govuk-width-container">
   <div class="app-pane__subnav app-hide-mobile">
     {% include "_subnav.njk" %}
-    {% include "_back-to-top.njk" %}
   </div>
   <div class="app-pane__content">
     <main id="main-content" class="app-content" role="main">
@@ -66,6 +65,7 @@
       {% endif %}
     </main>
   </div>
+  {% include "_back-to-top.njk" %}
 </div>
 {% include "_footer.njk" %}
 {% endblock %}
