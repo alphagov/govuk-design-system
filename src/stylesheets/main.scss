@@ -68,11 +68,12 @@ body {
 
 .app-content {
 
-  padding: govuk-spacing(3) govuk-spacing(0);
+  padding: govuk-spacing(3) govuk-spacing(0) govuk-spacing(4);
 
   @include govuk-media-query($from: tablet) {
     padding: govuk-spacing(6);
     padding-right: 0;
+    padding-bottom: govuk-spacing(8);
   }
 
   h1 {
@@ -375,5 +376,11 @@ p code {
   pre + h3,
   pre + h4 {
     padding-top: govuk-spacing(2);
+  }
+
+  // Ensure that content at the bottom of the page does not have margins
+  // so that they line up with the back to top link.
+  > :last-child {
+    margin-bottom: 0;
   }
 }
