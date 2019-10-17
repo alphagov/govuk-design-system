@@ -30,7 +30,9 @@ layout: layout-example.njk
   id: "sort-code",
   name: "sort-code",
   attributes: {
-    spellcheck: "false"
+    spellcheck: "false",
+    inputmode: "numeric",
+    pattern: "[0-9]*"
   }
 }) }}
 
@@ -45,7 +47,9 @@ layout: layout-example.njk
   id: "account-number",
   name: "account-number",
   attributes: {
-    spellcheck: "false"
+    spellcheck: "false",
+    inputmode: "numeric",
+    pattern: "[0-9]*"
   }
 }) }}
 
