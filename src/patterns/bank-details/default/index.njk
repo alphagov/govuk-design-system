@@ -1,0 +1,73 @@
+---
+title: Bank or building society account details
+layout: layout-example.njk
+---
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+<h1 class="govuk-heading-xl">Bank or building society account details</h1>
+
+{{ govukInput({
+  label: {
+    text: "Name on the account"
+  },
+  id: "name-on-the-account",
+  name: "name-on-the-account",
+  attributes: {
+    spellcheck: "false"
+  }
+}) }}
+
+{{ govukInput({
+  label: {
+    text: "Sort code"
+  },
+  classes: "govuk-input--width-5",
+  hint: {
+    text: "Must be 6 digits long"
+  },
+  id: "sort-code",
+  name: "sort-code",
+  attributes: {
+    spellcheck: "false",
+    inputmode: "numeric",
+    pattern: "[0-9]*"
+  }
+}) }}
+
+{{ govukInput({
+  label: {
+    text: "Account number"
+  },
+  classes: "govuk-input--width-10",
+  hint: {
+    text: "Must be between 6 and 8 digits long"
+  },
+  id: "account-number",
+  name: "account-number",
+  attributes: {
+    spellcheck: "false",
+    inputmode: "numeric",
+    pattern: "[0-9]*"
+  }
+}) }}
+
+{{ govukInput({
+  label: {
+    text: "Building society roll number (if you have one)"
+  },
+  classes: "govuk-input--width-10",
+  hint: {
+    text: "You can find it on your card, statement or passbook"
+  },
+  id: "roll-number",
+  name: "roll-number",
+  attributes: {
+    spellcheck: "false"
+  }
+}) }}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
