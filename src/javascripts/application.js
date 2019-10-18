@@ -43,5 +43,4 @@ new Search($searchContainer).init()
 
 // Initialise back to top
 var $backToTop = document.querySelector('[data-module="app-back-to-top"]')
-var $observedElement = document.querySelector('.app-subnav')
-new BackToTop($backToTop, { $observedElement: $observedElement }).init()
+new BackToTop($backToTop).init()

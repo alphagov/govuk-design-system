@@ -1,62 +1,63 @@
 import 'govuk-frontend/govuk/vendor/polyfills/Function/prototype/bind'
 
-function BackToTop ($module, options) {
+function BackToTop ($module) {
   this.$module = $module
-  this.$observedElement = options.$observedElement
-  this.intersectionRatio = 0
 }
 
 BackToTop.prototype.init = function () {
-  var $observedElement = this.$observedElement
+  // Check if we can use Intersection Observers
+  if (!('IntersectionObserver' in window)) {
+    // If there's no support fallback to regular behaviour
+    // Since JavaScript is enabled we can remove the default hidden state
+    return this.$module.classList.remove('app-back-to-top--hidden')
+  }
 
-  // If there's no element for the back to top to follow, exit early.
-  if (!$observedElement) {
+  var $footer = document.querySelector('.app-footer')
+  var $subNav = document.querySelector('.app-subnav')
+
+  // Check if there is anything to observe
+  if (!$footer || !$subNav) {
     return
   }
 
-  if (!('IntersectionObserver' in window)) {
-    // If there's no support fallback to regular sticky behaviour
-    return this.update()
-  }
+  var footerIsIntersecting = false
+  var subNavIsIntersecting = false
 
-  // Create new IntersectionObserver
   var observer = new window.IntersectionObserver(function (entries) {
-    // Available data when an intersection happens
-    // Back to top visibility
-    // Element enters the viewport
-    if (entries[0].intersectionRatio !== 0) {
-      // How much of the element is visible
-      this.intersectionRatio = entries[0].intersectionRatio
-    // Element leaves the viewport
-    } else {
-      this.intersectionRatio = 0
+    // Find the elements we care about from the entries
+    var footerEntry = entries.find(function (entry) {
+      return entry.target === $footer
+    })
+    var subNavEntry = entries.find(function (entry) {
+      return entry.target === $subNav
+    })
+
+    // If there is an entry this means the element has changed so lets check if it's intersecting.
+    if (footerEntry) {
+      footerIsIntersecting = footerEntry.isIntersecting
     }
-    this.update()
-  }.bind(this), {
-    // Call the observer, when the element enters the viewport,
-    // when 25%, 50%, 75% and the whole element are visible
-    threshold: [0, 0.25, 0.5, 0.75, 1]
-  })
+    if (subNavEntry) {
+      subNavIsIntersecting = subNavEntry.isIntersecting
+    }
 
-  observer.observe($observedElement)
-}
+    // If the subnav or the footer not visible then fix the back to top link to follow the user
+    if (subNavIsIntersecting || footerIsIntersecting) {
+      this.$module.classList.remove('app-back-to-top--fixed')
+    } else {
+      this.$module.classList.add('app-back-to-top--fixed')
+    }
 
-BackToTop.prototype.update = function () {
-  var thresholdPercent = (this.intersectionRatio * 100)
+    // If the subnav is visible but you can see it all at once, then a back to top link is likely not as useful.
+    // We hide the link but make it focusable for screen readers users who might still find it useful.
+    if (subNavIsIntersecting && subNavEntry.intersectionRatio === 1) {
+      this.$module.classList.add('app-back-to-top--hidden')
+    } else {
+      this.$module.classList.remove('app-back-to-top--hidden')
+    }
+  }.bind(this))
 
-  if (thresholdPercent === 100) {
-    this.hide()
-  } else if (thresholdPercent < 90) {
-    this.show()
-  }
-}
-
-BackToTop.prototype.hide = function () {
-  this.$module.classList.add('app-back-to-top--hidden')
-}
-
-BackToTop.prototype.show = function () {
-  this.$module.classList.remove('app-back-to-top--hidden')
+  observer.observe($footer)
+  observer.observe($subNav)
 }
 
 export default BackToTop
