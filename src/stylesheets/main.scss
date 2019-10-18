@@ -114,10 +114,11 @@ body {
     padding: govuk-spacing(2);
   }
 
-  // TODO: Need to make Video focusable but we need some design decision to be made
-  // video {
-  //   @include govuk-focusable;
-  // }
+  video:focus {
+    border-color: $govuk-focus-text-colour;
+    outline: $govuk-focus-width solid $govuk-focus-text-colour;
+    box-shadow: 0 0 0 ($govuk-focus-width * 2) $govuk-focus-colour;
+  }
 
 
   // IE8 does not support the video element, so we hide the element entirely.
