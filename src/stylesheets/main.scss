@@ -174,8 +174,6 @@ body {
   $copy-button-colour: #00823b;
 
   @include govuk-font(16);
-  // TODO: Need to make copy button focusable/hoverable but we need some design decision to be made
-  // @include govuk-focusable;
   position: absolute;
   z-index: 1;
   top: govuk-spacing(2);
