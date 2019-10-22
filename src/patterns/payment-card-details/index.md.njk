@@ -30,9 +30,14 @@ Show logos for the cards you accept as icons so users can see whether their card
 
 Use Issuer Identification Number (IIN) lookups to validate the card number as the user enters it. Once you’ve been able to identify the user’s card type, leave only the relevant logo highlighted and grey out the others.
 
-<video role="region" aria-label="Visual demonstration of the card number validation user interaction described. This video has no audio." controls>
-  <source src="card-number.mp4" type="video/mp4">
-</video>
+<div class="app-video">
+  <video class="app-video__player" role="region" aria-labelledby="card-number-video-description" controls muted>
+    <source src="card-number.mp4" type="video/mp4">
+  </video>
+  <p class="app-video__description" id="card-number-video-description">
+    This video shows the card number validation in practice. It doesn't have any audio.
+  </p>
+</div>
 
 If JavaScript is not available, display all of the logos anyway, as they still help users to understand which card types you support.
 
