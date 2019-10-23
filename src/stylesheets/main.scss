@@ -100,30 +100,39 @@ body {
     max-width: 38em;
   }
 
-  video,
+  .app-video__player,
   img {
     box-sizing: border-box;
     width: 100%;
     max-width: 722px;
     height: auto;
     @include govuk-responsive-margin(2, "top");
-    @include govuk-responsive-margin(6, "bottom");
     border: 1px solid $govuk-border-colour;
   }
 
   img {
     padding: govuk-spacing(2);
+    @include govuk-responsive-margin(6, "bottom");
   }
 
-  // TODO: Need to make Video focusable but we need some design decision to be made
-  // video {
-  //   @include govuk-focusable;
-  // }
+  .app-video__player {
+    @include govuk-responsive-margin(2, "bottom");
+  }
+
+  .app-video__player:focus {
+    border-color: $govuk-focus-text-colour;
+    outline: $govuk-focus-width solid $govuk-focus-text-colour;
+    box-shadow: 0 0 0 ($govuk-focus-width * 2) $govuk-focus-colour;
+  }
+
+  .app-video__description {
+    @include govuk-responsive-margin(6, "bottom");
+  }
 
 
   // IE8 does not support the video element, so we hide the element entirely.
   @if $govuk-is-ie8 == true {
-    video {
+    .app-video {
       display: none;
     }
   }
@@ -174,8 +183,6 @@ body {
   $copy-button-colour: #00823b;
 
   @include govuk-font(16);
-  // TODO: Need to make copy button focusable/hoverable but we need some design decision to be made
-  // @include govuk-focusable;
   position: absolute;
   z-index: 1;
   top: govuk-spacing(2);
