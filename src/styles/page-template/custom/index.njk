@@ -19,6 +19,10 @@ ignore_in_sitemap: true
 {% set assetPath = "" %}
 {% set themeColor = "blue" %}
 {% set bodyClasses = "app-body-class" %}
+{% set bodyAttributes = {
+  'data-test': 'My value',
+  'data-other': 'report:details'
+} %}
 
 {% block pageTitle %}GOV.UK - Customised page template{% endblock %}
 
