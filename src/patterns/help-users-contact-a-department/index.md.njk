@@ -1,0 +1,106 @@
+---
+title: Contact a department or service team
+description: Contact a department or service team
+section: Patterns
+theme: Help users to…
+aliases:
+backlog_issue_id: 10
+layout: layout-pane.njk
+status: Experimental
+statusMessage: This pattern is currently experimental because <a class="govuk-link" href="#next-steps">more research</a> is needed to validate it.
+---
+
+{%- from "_example.njk" import example -%}
+
+This pattern explains how to give users contact information within your service.
+
+{{ example({group: "patterns", item: "help-users-contact-a-department", example: "default", html: true, nunjucks: true, open: false, size: "xl"}) }}
+
+## When to use this pattern
+
+Follow this pattern whenever you need to help users contact your team or department.
+
+## How it works
+
+{{ example({group: "patterns", item: "help-users-contact-a-department", example: "all-contact-information", html: true, nunjucks: true, open: false, size: "xl"}) }}
+
+### Order contact channels consistently
+
+List contact channels in the same order throughout your service. The most common order on GOV.UK is:
+
+  - telephone
+  - alternative language telephone
+  - textphone
+  - text message
+  - email
+  - webchat
+  - postal address
+
+Leave out contact channels that your service does not support or are not available.
+
+### Social media
+
+Include social media channels if your service or department supports this. If you do this:
+
+- list these channels last
+- do not include a link to the social media sites you're using
+- tell users not to share personal information with you
+
+### Write telephone numbers in the GOV.UK style
+
+See the [GOV.UK style for writing telephone numbers](https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#telephone-numbers).
+
+### Explain any charges
+
+Tell users if they might have to pay to use any of your contact channels.
+
+For telephone call charges, link to the GOV.UK page on [call charges](https://www.gov.uk/call-charges).
+
+Include the link after the contact channels list and opening hours.
+
+{{ example({group: "patterns", item: "help-users-contact-a-department", example: "default", html: true, nunjucks: true, open: false, size: "xl"}) }}
+
+### Give opening hours
+
+Follow the GOV.UK style guide format for [time ranges](https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#times) and [date ranges](https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#dates).
+
+Explain any exceptions, like bank holidays, or days of the week when your opening hours are different.
+
+For example, ‘Monday to Friday, 9am to midday and 2pm to 4:30pm (closed on bank holidays)’ or ‘24-hour service’.
+
+### Tell users how long they’ll have to wait
+
+Let users know up front when you will respond to them. This helps users choose which contact channel to use.
+
+For example, say that you aim to respond to emails within 2 working days.
+
+Or, if you’re using webchat or telephone, say how long you estimate it will take them to get to the front of the queue.
+
+### Inset contact information
+
+Use [inset text](https://design-system.service.gov.uk/components/inset-text/) to display contact information when you want to differentiate it from the content that surrounds it.
+
+{{ example({group: "patterns", item: "help-users-contact-a-department", example: "inset-contact-information", html: true, nunjucks: true, open: false, size: "xl"}) }}
+
+### Expanding contact information
+
+If contact information is less important than other content on a page, you can enclose contact information inside the [details](https://design-system.service.gov.uk/components/details/) component to avoid distracting users.
+
+For example, if you need to provide contact information at the bottom of a form page for users who need help completing the form.
+
+{{ example({group: "patterns", item: "help-users-contact-a-department", example: "expanding-contact-information", html: true, nunjucks: true, open: false, size: "xl"}) }}
+
+## Research on this pattern
+
+This pattern was originally contributed by a team at the Government Digital Service (GDS).
+
+The examples and guidance here are based on patterns used in the Legal Aid Agency (LAA) and Her Majesty’s Courts and Tribunals Service (HMCTS).
+
+The team tested this pattern as part of a government campaign. They ran 2 rounds of research with 12 participants in total.
+
+### Next steps
+
+Research is needed to work out:
+
+- if a different approach is needed for users who are signed into a service
+- how to provide contact information to users who need urgent help

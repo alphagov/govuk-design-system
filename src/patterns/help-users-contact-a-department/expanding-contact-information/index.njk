@@ -1,0 +1,21 @@
+---
+title: Contact information details component
+layout: layout-example.njk
+---
+
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% set contactInformation %}
+<ul class="govuk-list">
+  <li>Telephone: 020 7946 0101</li>
+  <li>Monday to Friday, 9am to 5pm (except public holidays)</li>
+</ul>
+<p class="govuk-body">
+  <a class="govuk-link" href="#">Find out about call charges</a>
+</p>
+{% endset %}
+
+{{ govukDetails({
+  summaryText: 'If you need help',
+  html: contactInformation
+}) }}
