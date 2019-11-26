@@ -76,6 +76,10 @@ $icon-size: 40px;
     background-repeat: no-repeat;
     background-position: center left -2px;
     background-size: $icon-size $icon-size;
+
+    &::placeholder {
+      color: govuk-colour("dark-grey");
+    }
   }
 
   .app-site-search__input--focused {
