@@ -158,7 +158,9 @@ $icon-size: 40px;
   .app-site-search__option--focused,
   .app-site-search__option:hover {
     border-color: govuk-colour("blue");
-    outline: none;
+    // Add a transparent outline for when users change their colours.
+    outline: 3px solid transparent;
+    outline-offset: -3px;
     color: govuk-colour("white");
     background-color: govuk-colour("blue");
 
