@@ -1,13 +1,15 @@
 ---
-title: Contact information details component
+title: Contact information inset text
 layout: layout-example.njk
 ---
 
-{% from "govuk/components/details/macro.njk" import govukDetails %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 
 {% set contactInformation %}
+<h2 class="govuk-heading-m">Talk to an advisor</h2>
 <ul class="govuk-list">
   <li>Telephone: 020 7946 0101</li>
+  <li>Textphone: 020 7946 0102</li>
   <li>Monday to Friday, 9am to 5pm (except public holidays)</li>
 </ul>
 <p class="govuk-body">
@@ -15,7 +17,6 @@ layout: layout-example.njk
 </p>
 {% endset %}
 
-{{ govukDetails({
-  summaryText: 'If you need help',
+{{ govukInsetText({
   html: contactInformation
 }) }}
