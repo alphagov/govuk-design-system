@@ -1,6 +1,10 @@
 ---
 applications:
 - name: govuk-design-system-origin
+  # Send application logs to logit
+  # https://docs.cloud.service.gov.uk/monitoring_apps.html#configure-app
+  services:
+    - logit-ssl-drain
   routes:
     - route: govuk-design-system-origin.cloudapps.digital
     - route: design-system.service.gov.uk
