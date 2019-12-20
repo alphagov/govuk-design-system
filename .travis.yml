@@ -23,9 +23,6 @@ env:
   # CF_PASSWORD
   - secure: jtVKWHzf2mxGnvKC6Ift+QfbXZuQEF5bQn/igin4356V+NAk78HJ7irGrB1DoMUrZeNCLK/CfmWeYWBjIsdZSXh+eW3djRMplcVIxKpOrGUWZXuyCbBZCeE4hItK7/iGRaDSndo+MnIO6Sie/0NebIAsMumeWLjUQj4/Zv/1/dV2r0USYDAKzduJx6i4wTleYjxojAo/Bjfh1z8GqcjfMFrusY2RoaymarSVsPhB93ix+U6Xd7c5LCK3APZZEhGwxLb7sfkVkIiUnbr4rDEXhK0eavUMZn0J9EukftR8OtK6e0WYTDhmBwQW5vlpo9/dW9SuFMpfsqt5qbtyQz2zCiPgN4rIVP3aCtPayjDMX2mWKgYYy0WBCsyJIsrTdG/uZLDD5ci5r2ahpRCeGg0SAPvmTX2Y8gzxE27vZWaq4REiWbgiipIdosMbipG6rZBGxYjJ9M3gjCZlT/2HtT6N5nVYpsH+1j5qtTNis3IfiopPNoLEBOV/7NSDyiASKFGg4LpVOFwvtKARhLqkKwq66JCVDOjnsISpvrAGYG6kzyMOYsWxdhwq/zsGNA/vOuLlhwgaqo+9NsWQ0jLWl1kR/wqcD5uSari0KhrFtsmQEq/4Gg6l80jo29wPUZoCHGf87WN8eFAarKM3QTmJ6Xn8rqBh4hMT9e/QwdDIbXfvAn8=
 
-  # Google Tag Manager ID – different for production and preview builds
-  - GTM_TAG="GTM-53XG2JT"
-
 install:
   - npm install --no-optional
 

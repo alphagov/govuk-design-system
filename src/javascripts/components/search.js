@@ -2,8 +2,6 @@
 import accessibleAutocomplete from 'accessible-autocomplete'
 import lunr from 'lunr'
 
-import { trackSearchResults, trackConfirm } from './search.tracking.js'
-
 // CONSTANTS
 var TIMEOUT = 10 // Time to wait before giving up fetching the search index
 var STATE_DONE = 4 // XHR client readyState DONE
@@ -17,18 +15,6 @@ var searchQuery = ''
 var searchCallback = function () {}
 // Results that are rendered by the autocomplete
 var searchResults = []
-
-// Timer that allows us to only fire events after a user has finished typing
-var inputDebounceTimer = null
-
-// We want to wait a bit before firing events to indicate that
-// someone is looking at a result and not that it's come up in passing.
-var DEBOUNCE_TIME_TO_WAIT = function () {
-  // We want to be able to reduce this timeout in order to make sure
-  // our tests do not run very slowly.
-  var timeout = window.__SITE_SEARCH_TRACKING_TIMEOUT
-  return (typeof timeout !== 'undefined') ? timeout : 2000 // milliseconds
-}
 
 function Search ($module) {
   this.$module = $module
@@ -50,7 +36,6 @@ Search.prototype.fetchSearchIndex = function (indexUrl, callback) {
         callback(json)
       } else {
         statusMessage = 'Failed to load the search index'
-        // Log to analytics?
       }
     }
   }
@@ -76,11 +61,6 @@ Search.prototype.handleSearchQuery = function (query, callback) {
   searchQuery = query
   searchCallback = callback
 
-  clearTimeout(inputDebounceTimer)
-  inputDebounceTimer = setTimeout(function () {
-    trackSearchResults(searchQuery, searchResults)
-  }, DEBOUNCE_TIME_TO_WAIT())
-
   this.renderResults()
 }
 
@@ -89,7 +69,6 @@ Search.prototype.handleOnConfirm = function (result) {
   if (!path) {
     return
   }
-  trackConfirm(searchQuery, searchResults, result)
   window.location.href = '/' + path
 }
 
@@ -168,13 +147,6 @@ Search.prototype.init = function () {
       suggestion: this.resultTemplate
     },
     tNoResults: function () { return statusMessage }
-  })
-
-  var $input = $module.querySelector('.app-site-search__input')
-
-  // Ensure if the user stops using the search that we do not send tracking events
-  $input.addEventListener('blur', function (event) {
-    clearTimeout(inputDebounceTimer)
   })
 
   var searchIndexUrl = $module.getAttribute('data-search-index')
