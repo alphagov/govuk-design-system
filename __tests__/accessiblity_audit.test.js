@@ -62,19 +62,6 @@ describe('Accessibility Audit', () => {
     })
   })
 
-  describe('Cookies page - layout-single-page-prose.njk', () => {
-    it('validates', async () => {
-      await page.goto(baseUrl + '/cookies/', { waitUntil: 'load' })
-      const results =
-        await new AxePuppeteer(page)
-          .include(['body'])
-          .exclude(...thingsToExclude)
-          .analyze()
-
-      expect(results.violations).toEqual([])
-    })
-  })
-
   describe('Get in touch page - layout-single-page.njk', () => {
     it('validates', async () => {
       await page.goto(baseUrl + '/get-in-touch/', { waitUntil: 'load' })
