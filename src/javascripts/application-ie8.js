@@ -1,13 +1,9 @@
 import common from 'govuk-frontend/govuk/common'
-import CookieBanner from './components/cookie-banner.js'
 import Example from './components/example.js'
 import AppTabs from './components/tabs.js'
 import OptionsTable from './components/options-table.js'
 
 var nodeListForEach = common.nodeListForEach
-
-// // Add cookie message
-CookieBanner.addCookieMessage()
 
 // Initialise example frames
 var $examples = document.querySelectorAll('[data-module="app-example-frame"]')
