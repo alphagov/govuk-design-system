@@ -13,29 +13,27 @@
   </div>
   <div class="app-pane__content">
     <main id="main-content" class="app-content" role="main">
-      <div class="app-content__header">
-        {% if not includeThemeInPageHeading %}
+      {% if not includeThemeInPageHeading %}
+      <span class="govuk-caption-xl">
+        {{ theme if theme else section }}
+      </span>
+      {% endif %}
+      <h1 class="govuk-heading-xl">
+        {% if includeThemeInPageHeading %}
         <span class="govuk-caption-xl">
-          {{ theme if theme else section }}
+          {{ theme | replace("…", "") }}
         </span>
         {% endif %}
-        <h1 class="govuk-heading-xl">
-          {% if includeThemeInPageHeading %}
-          <span class="govuk-caption-xl">
-            {{ theme | replace("…", "") }}
-          </span>
-          {% endif %}
-          {{ title }}
-          {% if status %}
-          <div>
-            <strong class="govuk-tag govuk-!-margin-top-4 govuk-!-margin-bottom-2">
-              {{ status }}
-            </strong>
-            <p class="govuk-body">{{ statusMessage | safe }}</p>
-          </div>
-          {% endif %}
-        </h1>
-      </div>
+        {{ title }}
+        {% if status %}
+        <div>
+          <strong class="govuk-tag govuk-!-margin-top-4 govuk-!-margin-bottom-2">
+            {{ status }}
+          </strong>
+          <p class="govuk-body">{{ statusMessage | safe }}</p>
+        </div>
+        {% endif %}
+      </h1>
 
       {% if show_page_nav %}
         <ul class="app-page-navigation">
