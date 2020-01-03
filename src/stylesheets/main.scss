@@ -6,7 +6,6 @@ $app-code-color: #d13118;
 
 // App-specific components
 @import "components/back-to-top";
-@import "components/banner";
 @import "components/contact-panel";
 @import "components/example";
 @import "components/footer";
@@ -19,6 +18,7 @@ $app-code-color: #d13118;
 @import "components/options";
 @import "components/page-navigation";
 @import "components/pane";
+@import "components/phase-banner";
 @import "components/site-search";
 @import "components/subnav";
 @import "components/tabs";
