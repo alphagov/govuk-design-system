@@ -48,22 +48,6 @@ $app-code-color: #d13118;
   }
 }
 
-// This is consistent with Elements - will be changed in FE
-[class*="govuk-grid-column"] {
-  @include govuk-media-query($until: desktop) {
-    padding: 0 $govuk-gutter-half;
-  }
-}
-
-// This is consistent with Elements - will be changed in FE
-.govuk-grid-column-one-third,
-.govuk-grid-column-two-thirds,
-.govuk-grid-column-one-quarter {
-  @include govuk-media-query($until: desktop) {
-    width: 100%;
-  }
-}
-
 .app-content {
 
   padding: govuk-spacing(3) govuk-spacing(0) govuk-spacing(4);
