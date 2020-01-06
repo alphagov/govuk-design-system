@@ -57,7 +57,7 @@ filter {
   if [syslog_proc] =~ "RTR" {
     mutate { replace => { "type" => "gorouter" } }
     grok {
-      match => { "syslog_msg" => "%{HOSTNAME:[access][host]} - \[%{TIMESTAMP_ISO8601:router_timestamp}\] \"%{WORD:[access][method]} %{NOTSPACE:[access][url]} HTTP/%{NUMBER:[access][http_version]}\" %{NONNEGINT:[access][response_code]:int} %{NONNEGINT:[access][body_received][bytes]:int} %{NONNEGINT:[access][body_sent][bytes]:int} %{QUOTEDSTRING:[access][referrer]} %{QUOTEDSTRING:[access][agent]} \"%{HOSTPORT:[access][remote_ip_and_port]}\" \"%{HOSTPORT:[access][upstream_ip_and_port]}\" %{GREEDYDATA:router_keys}" }
+      match => { "syslog_msg" => "%{HOSTNAME:[access][host]} - \[%{TIMESTAMP_ISO8601:router_timestamp}\] \"%{WORD:[access][method]} %{NOTSPACE:[access][url]} HTTP/%{NUMBER:[access][http_version]}\" %{NONNEGINT:[access][response_code]:int} %{NONNEGINT:[access][body_received][bytes]:int} %{NONNEGINT:[access][body_sent][bytes]:int} %{QUOTEDSTRING:[access][referrer]} %{QUOTEDSTRING:[access][agent]} \"%{HOSTPORT:[access][remote_ip_and_port]}\" \"%{HOSTPORT:[access][upstream_ip_and_port]}\" x_forwarded_for:\"%{IP:[access][user_ip]}, %{IP}, %{IP}\" %{GREEDYDATA:router_keys}" }
       tag_on_failure => ["_routerparsefailure"]
       add_tag => ["gorouter"]
     }
@@ -81,20 +81,35 @@ filter {
     }
   }
 
-  # User agent parsing
-  if [access][agent] {
-    useragent {
-      source => "[access][agent]"
-      target => "[access][user_agent]"
+  # Anonymise IP addresses
+  # https://www.elastic.co/guide/en/logstash/current/plugins-filters-fingerprint.html
+  # Fingerprinting the IP address removes the ‘host part’, which makes the IPs less likely to identify someone. (key: 16)
+  if [access][user_ip] {
+    fingerprint {
+      key => "16"
+      source => "[access][user_ip]"
+      target => "[access][user_ip]"
+      method => "IPV4_NETWORK"
     }
+    # Anonymised IP is passed to Geo IP to give high level region information, for example to find people from the UK
+    # https://www.elastic.co/guide/en/logstash/current/plugins-filters-geoip.html
+    geoip { source => "[access][user_ip]" }
   }
 
-  if !("_syslogparsefailure" in [tags]) {
-    # if we successfully parsed syslog, replace the message and source_host fields
-    mutate {
-      rename => [ "syslog_host", "source_host" ]
-      rename => [ "syslog_msg", "message" ]
-    }
+  # Replace the message and source_host fields
+  mutate {
+    rename => [ "syslog_host", "source_host" ]
+    rename => [ "syslog_msg", "message" ]
+  }
+
+  # Update the original message to remove potentially personally identifable information
+  mutate {
+    gsub => [
+      # redact all IP addresses
+      # You can't use grok patterns so copying manually the IPv4 pattern from https://github.com/logstash-plugins/logstash-patterns-core/blob/master/patterns/grok-patterns
+      "message", "(?<![0-9])(?:(?:[0-1]?[0-9]{1,2}|2[0-4][0-9]|25[0-5])[.](?:[0-1]?[0-9]{1,2}|2[0-4][0-9]|25[0-5])[.](?:[0-1]?[0-9]{1,2}|2[0-4][0-9]|25[0-5])[.](?:[0-1]?[0-9]{1,2}|2[0-4][0-9]|25[0-5]))(?![0-9])", "[redacted-ip]"
+    ]
+    tag_on_failure => ["_redactingmessagefailure"]
   }
 }
 ```
