@@ -1,0 +1,118 @@
+# Logs
+
+We use server logs from the GOV.UK Design System website for basic analytics.
+
+We store router logs ([GoRouter](https://docs.cloudfoundry.org/concepts/architecture/router.html)) and general application logs for 14 days and anonymise IP addresses.
+
+Our Content Delivery Network (CDN) logs are not currently avaliable, this means many requests are not shown in the router logs.
+However, we do not currently cache HTML requests (pages) so router logs are still useful for pages visited.
+
+The GOV.UK Design System website's logs are sent to
+the [`GOV.UK Design System Production` Logtash stack (Logit.io)](https://logit.io/a/1c6b2316-16e2-4ca5-a3df-ff18631b0e74) using the `logit-ssl-drain` service.
+
+- the `logit-ssl-drain` service is bound to the website application in the [manifest services config option](../../manifest.yml).
+- the hosted Logstash (Logit.io) is maintained by the Reliability Engneering team, we followed the [Logit setup guidance to configure our stack](https://reliability-engineering.cloudapps.digital/logging.html#get-started-with-logit).
+
+When the raw logs are sent to Logstash they are transformed using Logstash Filters so they can be queried in Kibana for visualisations and querying.
+
+## Logging into Logit.io
+
+Follow the Reliability engineering ['getting started with logit'](https://reliability-engineering.cloudapps.digital/logging.html#get-started-with-logit) instructions to login with your Google account.
+
+You can now access the [GOV.UK Design System Production stack](https://logit.io/a/1c6b2316-16e2-4ca5-a3df-ff18631b0e74).
+
+## Logstash Filters
+
+We use the default configuration recommended by the [GOV.UK PaaS setup instructions](https://docs.cloud.service.gov.uk/monitoring_apps.html#configure-logstash-filters).
+
+Update this documentation when updating Logstash filters.
+
+### Configuration
+
+```ruby
+filter {
+  grok {
+    # attempt to parse syslog lines
+    match => { "message" => "%{SYSLOG5424PRI}%{NONNEGINT:syslog_ver} +(?:%{TIMESTAMP_ISO8601:syslog_timestamp}|-) +(?:%{HOSTNAME:syslog_host}|-) +(?:%{NOTSPACE:syslog_app}|-) +(?:%{NOTSPACE:syslog_proc}|-) +(?:%{WORD:syslog_msgid}|-) +(?:%{SYSLOG5424SD:syslog_sd}|-|) +%{GREEDYDATA:syslog_msg}" }
+    # if successful, save original `@timestamp` and `host` fields created by logstash
+    add_field => [ "received_at", "%{@timestamp}" ]
+    add_field => [ "received_from", "%{host}" ]
+    tag_on_failure => ["_syslogparsefailure"]
+  }
+
+  # parse the syslog pri field into severity/facility
+  syslog_pri { syslog_pri_field_name => 'syslog5424_pri' }
+
+  # replace @timestamp field with the one from syslog
+  date { match => [ "syslog_timestamp", "ISO8601" ] }
+
+  # Cloud Foundry passes the app name, space and organisation in the syslog_host
+  # Filtering them into separate fields makes it easier to query multiple apps in a single Kibana instance
+  dissect {
+    mapping => { "syslog_host" => "%{[cf][org]}.%{[cf][space]}.%{[cf][app]}" }
+    tag_on_failure => ["_sysloghostdissectfailure"]
+  }
+
+  # Cloud Foundry gorouter logs
+  if [syslog_proc] =~ "RTR" {
+    mutate { replace => { "type" => "gorouter" } }
+    grok {
+      match => { "syslog_msg" => "%{HOSTNAME:[access][host]} - \[%{TIMESTAMP_ISO8601:router_timestamp}\] \"%{WORD:[access][method]} %{NOTSPACE:[access][url]} HTTP/%{NUMBER:[access][http_version]}\" %{NONNEGINT:[access][response_code]:int} %{NONNEGINT:[access][body_received][bytes]:int} %{NONNEGINT:[access][body_sent][bytes]:int} %{QUOTEDSTRING:[access][referrer]} %{QUOTEDSTRING:[access][agent]} \"%{HOSTPORT:[access][remote_ip_and_port]}\" \"%{HOSTPORT:[access][upstream_ip_and_port]}\" %{GREEDYDATA:router_keys}" }
+      tag_on_failure => ["_routerparsefailure"]
+      add_tag => ["gorouter"]
+    }
+    # replace @timestamp field with the one from router access log
+    date {
+      match => [ "router_timestamp", "ISO8601" ]
+    }
+    kv {
+      source => "router_keys"
+      target => "router"
+      value_split => ":"
+      remove_field => "router_keys"
+    }
+  }
+
+  # Application logs
+  if [syslog_proc] =~ "APP" {
+    json {
+      source => "syslog_msg"
+      add_tag => ["app"]
+    }
+  }
+
+  # User agent parsing
+  if [access][agent] {
+    useragent {
+      source => "[access][agent]"
+      target => "[access][user_agent]"
+    }
+  }
+
+  if !("_syslogparsefailure" in [tags]) {
+    # if we successfully parsed syslog, replace the message and source_host fields
+    mutate {
+      rename => [ "syslog_host", "source_host" ]
+      rename => [ "syslog_msg", "message" ]
+    }
+  }
+}
+```
+
+## Updating the Logstash Filters
+
+1. go to the [Logit dashboard Logstash Filters page](https://logit.io/a/1c6b2316-16e2-4ca5-a3df-ff18631b0e74/s/c5df6a7b-07bb-483a-a69b-49c9629309b6/filters).
+2. make updates as required.
+3. select Validate.
+If something goes wrong and the interface fails to respond, Logit support are proactive and can help you out, they have a support live chat you can also use.
+4. select Apply once the code is valid.
+When you've successfully applied a filter change Kibana wont show events coming in for a minute or so.
+
+## Querying and visualising logs
+
+Transformed logs can be accessed in the [Logit Kibana dashboard](https://kibana.logit.io/app/kibana#/discover?_g=()).
+
+### Dashboards
+
+- [metrics](https://kibana.logit.io/app/kibana#/dashboard/f9b0d520-2346-11ea-9ca6-d1e81c1bed53)
+- [developer metrics](https://kibana.logit.io/app/kibana#/dashboard/03bc8c80-2347-11ea-9ca6-d1e81c1bed53)
