@@ -138,6 +138,14 @@ Transformed logs can be accessed in the [Logit Kibana dashboard](https://kibana.
 - [metrics](https://kibana.logit.io/app/kibana#/dashboard/f9b0d520-2346-11ea-9ca6-d1e81c1bed53)
 - [developer metrics](https://kibana.logit.io/app/kibana#/dashboard/03bc8c80-2347-11ea-9ca6-d1e81c1bed53)
 
+### Making new visualsations
+
+1. go to [visualisations page](https://kibana.logit.io/app/kibana#/visualize?_g=())
+2. press 'create new visualisation'.
+3. pick type of visualisation e.g. bar chart.
+4. choose the `*-*` index pattern.
+5. save using `Design System -` prefix for easier searching later on.
+
 ### Refreshing index patterns
 In order to use some fields in visualisations / filters you need to refresh the field list index.
 
