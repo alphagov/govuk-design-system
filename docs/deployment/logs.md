@@ -74,9 +74,10 @@ filter {
   }
 
   # Application logs
-  if [syslog_proc] =~ "APP" {
-    json {
-      source => "syslog_msg"
+  if [syslog_proc] =~ "APP\/PROC\/WEB" {
+    grok {
+      match => { "syslog_msg" => "NginxLog \"%{WORD:[access][method]} %{NOTSPACE:[access][url]} HTTP/%{NUMBER:[access][http_version]}\" %{NONNEGINT:[access][response_code]:int} %{NONNEGINT:[access][body_received][bytes]:int}" }
+      tag_on_failure => ["_appparsefailure"]
       add_tag => ["app"]
     }
   }
