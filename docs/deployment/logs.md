@@ -23,7 +23,7 @@ You can now access the [GOV.UK Design System Production stack](https://logit.io/
 
 ## How we transform logs with Logstash Filters
 
-We use the default configuration recommended by the [GOV.UK PaaS setup instructions](https://docs.cloud.service.gov.uk/monitoring_apps.html#configure-logstash-filters).
+The configuration is based on the [GOV.UK PaaS setup instructions](https://docs.cloud.service.gov.uk/monitoring_apps.html#configure-logstash-filters), see git history for updates.
 
 Update this documentation when updating Logstash filters.
 
