@@ -21,7 +21,7 @@ Follow the Reliability engineering ['getting started with logit'](https://reliab
 
 You can now access the [GOV.UK Design System Production stack](https://logit.io/a/1c6b2316-16e2-4ca5-a3df-ff18631b0e74).
 
-## Logstash Filters
+## How we transform logs with Logstash Filters
 
 We use the default configuration recommended by the [GOV.UK PaaS setup instructions](https://docs.cloud.service.gov.uk/monitoring_apps.html#configure-logstash-filters).
 
@@ -124,7 +124,12 @@ If something goes wrong and the interface fails to respond, Logit support are pr
 4. select Apply once the code is valid.
 When you've successfully applied a filter change Kibana wont show events coming in for a minute or so.
 
-## Querying and visualising logs
+If you've added new fields and want to use them in a Kibana filter / visualisation you'll need to [refresh the index pattern](#refreshing-index-patterns).
+
+## Using grok regex patterns
+When using the [`grok plugin`](https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html) you can reference global 'patterns' which are aliases for common regex patterns, for example such as ‘IP’, these are defined in [logstash-patterns-core/patterns/grok-patterns](https://github.com/logstash-plugins/logstash-patterns-core/blob/master/patterns/grok-patterns).
+
+## Querying and visualising logs with Kibana
 
 Transformed logs can be accessed in the [Logit Kibana dashboard](https://kibana.logit.io/app/kibana#/discover?_g=()).
 
@@ -132,3 +137,9 @@ Transformed logs can be accessed in the [Logit Kibana dashboard](https://kibana.
 
 - [metrics](https://kibana.logit.io/app/kibana#/dashboard/f9b0d520-2346-11ea-9ca6-d1e81c1bed53)
 - [developer metrics](https://kibana.logit.io/app/kibana#/dashboard/03bc8c80-2347-11ea-9ca6-d1e81c1bed53)
+
+### Refreshing index patterns
+In order to use some fields in visualisations / filters you need to refresh the field list index.
+
+1. go to the [index pattern page](https://kibana.logit.io/app/kibana#/management/kibana/index_patterns/8ac115c0-aac1-11e8-88ea-0383c11b333a?_g=()&_a=(tab:indexedFields))
+2. press refresh field list icon at top right of screen.
