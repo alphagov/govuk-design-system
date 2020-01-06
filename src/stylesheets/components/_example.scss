@@ -22,12 +22,11 @@
 .app-example__toolbar {
   padding: 10px;
   border-bottom: 1px solid $govuk-border-colour;
-  background: $app-light-grey;
+  background: $govuk-body-background-colour;
 }
 
 .app-example__new-window {
   @include govuk-font(14);
-  text-decoration: none;
 }
 
 .app-example__frame {
