@@ -151,3 +151,7 @@ In order to use some fields in visualisations / filters you need to refresh the 
 
 1. go to the [index pattern page](https://kibana.logit.io/app/kibana#/management/kibana/index_patterns/8ac115c0-aac1-11e8-88ea-0383c11b333a?_g=()&_a=(tab:indexedFields))
 2. press refresh field list icon at top right of screen.
+
+## Debugging a failed Logstash Filters parse
+For some Logstash Filters tags are added to the log which indicate they have failed, for example `_routerparsefailure`.
+You can debug this by looking at the `message` field.
