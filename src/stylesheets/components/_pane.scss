@@ -23,12 +23,21 @@
   }
 
   .app-pane__subnav {
+    @include govuk-media-query($until: tablet) {
+      display: none;
+    }
     @include govuk-media-query($from: tablet) {
       width: $toc-width-tablet;
       flex: 0 0 auto;
     }
     @include govuk-media-query($from: desktop) {
       width: $toc-width;
+    }
+  }
+
+  .app-pane__subnav-mobile-overview {
+    @include govuk-media-query($from: tablet) {
+      display: none;
     }
   }
 
