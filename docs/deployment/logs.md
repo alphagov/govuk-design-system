@@ -1,6 +1,6 @@
 # Logs
 
-We use server logs from the GOV.UK Design System website for basic analytics.
+We use server logs from the GOV.UK Design System website for basic analytics, we keep logs for 14 days and anonymise IP addresses.
 
 We store router logs ([GoRouter](https://docs.cloudfoundry.org/concepts/architecture/router.html)) and general application logs for 14 days and anonymise IP addresses.
 
