@@ -21,5 +21,4 @@ ExamplePage.prototype.preventFormSubmission = function ($form) {
   })
 }
 
-var $examplePageContainer = document.querySelector('.app-example-page')
-new ExamplePage($examplePageContainer).init()
+new ExamplePage(document).init()
