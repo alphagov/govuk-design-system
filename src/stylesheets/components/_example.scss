@@ -2,13 +2,13 @@
 .app-example-wrapper {
   @include govuk-responsive-margin(6, "top");
   @include govuk-responsive-margin(6, "bottom");
-  @include govuk-font(19);
 }
 
 .app-example {
   position: relative;
   border: 1px solid $govuk-border-colour;
-  background: govuk-colour("light-grey");
+  // Add a 'checkerboard' background
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAJUlEQVQoU2P88ePHfwY0wMHBwYguxjgUFKI7GsTH5m4M3w1ChQAZTSeO0/AZpgAAAABJRU5ErkJggg==") repeat;
 }
 
 .app-example--tabs {
@@ -19,22 +19,14 @@
   }
 }
 
-.app-example__new-window {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  padding: 5px govuk-spacing(2);
-  @include govuk-font(14);
-  background: govuk-colour("light-grey");
-  text-decoration: none;
+.app-example__toolbar {
+  padding: 10px;
+  border-bottom: 1px solid $govuk-border-colour;
+  background: $govuk-body-background-colour;
+}
 
-  // Override the focus state to remove the top 'yellow' shadow to avoid
-  // spilling out from the parent container. The yellow part of the focused link
-  // is already bigger than usual because of its padding.
-  .app-prose-scope &:focus {
-    box-shadow: 0 4px 0 0 $govuk-focus-text-colour;
-  }
+.app-example__new-window {
+  @include govuk-font(14);
 }
 
 .app-example__frame {
@@ -76,4 +68,8 @@
   @include govuk-media-query($from: desktop) {
     resize: both;
   }
+}
+
+.app-example__code {
+  @include govuk-font($size: 19);
 }
