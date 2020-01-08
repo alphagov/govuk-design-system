@@ -82,6 +82,20 @@ filter {
     }
   }
 
+  # Extract file extension from URL
+  if [access][url] {
+      grok {
+          match => { "[access][url]" => ".+\.%{WORD:[access][extension]}" }
+      }
+  }
+
+  # Extract query string
+  if [access][url] {
+    grok {
+      match => [ "[access][url]", "%{URIPARAM:[access][querystring]}" ]
+    }
+  }
+
   # Anonymise IP addresses
   # https://www.elastic.co/guide/en/logstash/current/plugins-filters-fingerprint.html
   # Fingerprinting the IP address removes the ‘host part’, which makes the IPs less likely to identify someone. (key: 16)
