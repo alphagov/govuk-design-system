@@ -152,6 +152,11 @@ Transformed logs can be accessed in the [Logit Kibana dashboard](https://kibana.
 - [metrics](https://kibana.logit.io/app/kibana#/dashboard/f9b0d520-2346-11ea-9ca6-d1e81c1bed53)
 - [developer metrics](https://kibana.logit.io/app/kibana#/dashboard/03bc8c80-2347-11ea-9ca6-d1e81c1bed53)
 
+### Example queries
+
+- [Page visits](https://kibana.logit.io/goto/43b97c384d92a2318db416759f341c08)
+- [Requests that are not found](https://kibana.logit.io/goto/09da28d6907e07868998b05872be609c)
+
 ### Making new visualsations
 
 1. go to [visualisations page](https://kibana.logit.io/app/kibana#/visualize?_g=())
