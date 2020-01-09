@@ -23,7 +23,7 @@ You can now access the [GOV.UK Design System Production stack](https://logit.io/
 
 ## How we transform logs with Logstash Filters
 
-The configuration is based on the [GOV.UK PaaS setup instructions](https://docs.cloud.service.gov.uk/monitoring_apps.html#configure-logstash-filters), see git history for updates.
+The configuration is based on the [GOV.UK PaaS setup instructions](https://docs.cloud.service.gov.uk/monitoring_apps.html#configure-logstash-filters), see [git history for updates](https://github.com/alphagov/govuk-design-system/commits/master/docs/logs.md).
 
 Update this documentation when updating Logstash filters.
 
@@ -134,7 +134,7 @@ Logit.io allows you to use use all the [official plugins](https://www.elastic.co
 
 ### How the filter turns the raw logs into fields
 
-Using filters we turn the raw log message into individual fields which can then be stored in Elasticsearch and [queried in Kibana](#querying-and-visualising-logs-kibana).
+Using filters we turn the raw log message into individual fields which can then be stored in Elasticsearch and [queried in Kibana](#querying-and-visualising-logs-with-kibana).
 
 You can think of the input data as an object containing a message as a string, for this example we're using the [Common Log Format](https://en.wikipedia.org/wiki/Common_Log_Format#Example).
 
