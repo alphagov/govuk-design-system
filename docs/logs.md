@@ -4,14 +4,14 @@ We use server logs from the GOV.UK Design System website for basic analytics, we
 
 We store router logs ([GoRouter](https://docs.cloudfoundry.org/concepts/architecture/router.html)) and general application logs for 14 days and anonymise IP addresses.
 
-Our Content Delivery Network (CDN) logs are not currently avaliable, this means many requests are not shown in the router logs.
+Our Content Delivery Network (CDN) logs are not currently available, this means many requests are not shown in the router logs.
 However, we do not currently cache HTML requests (pages) so router logs are still useful for pages visited.
 
 The GOV.UK Design System website's logs are sent to
-the [`GOV.UK Design System Production` Logtash stack (Logit.io)](https://logit.io/a/1c6b2316-16e2-4ca5-a3df-ff18631b0e74) using the `logit-ssl-drain` service.
+the [`GOV.UK Design System Production` Logstash stack (Logit.io)](https://logit.io/a/1c6b2316-16e2-4ca5-a3df-ff18631b0e74) using the `logit-ssl-drain` service.
 
-- the `logit-ssl-drain` service is bound to the website application in the [manifest services config option](../../manifest.yml).
-- the hosted Logstash (Logit.io) is maintained by the Reliability Engneering team, we followed the [Logit setup guidance to configure our stack](https://reliability-engineering.cloudapps.digital/logging.html#get-started-with-logit).
+- the `logit-ssl-drain` service is bound to the website application in the [manifest services config option](../manifest.yml).
+- the hosted Logstash (Logit.io) is maintained by the Reliability Engineering team, we followed the [Logit setup guidance to configure our stack](https://reliability-engineering.cloudapps.digital/logging.html#get-started-with-logit).
 
 When the raw logs are sent to Logstash they are transformed using Logstash Filters so they can be queried in Kibana for visualisations and querying.
 
@@ -134,7 +134,7 @@ Logit.io allows you to use use all the [official plugins](https://www.elastic.co
 
 ### How the filter turns the raw logs into fields
 
-Using filters we turn the raw log message into individual fields which can then be stored in elasticsearch and [queried in Kibana](#querying-and-visualising-logs-kibana).
+Using filters we turn the raw log message into individual fields which can then be stored in Elasticsearch and [queried in Kibana](#querying-and-visualising-logs-kibana).
 
 You can think of the input data as an object containing a message as a string, for this example we're using the [Common Log Format](https://en.wikipedia.org/wiki/Common_Log_Format#Example).
 
@@ -200,7 +200,7 @@ Transformed logs can be accessed in the [Logit Kibana dashboard](https://kibana.
 - [Page visits](https://kibana.logit.io/goto/43b97c384d92a2318db416759f341c08)
 - [Requests that are not found](https://kibana.logit.io/goto/09da28d6907e07868998b05872be609c)
 
-### Making new visualsations
+### Making new visualisation
 
 1. go to [visualisations page](https://kibana.logit.io/app/kibana#/visualize?_g=())
 2. press 'create new visualisation'.
