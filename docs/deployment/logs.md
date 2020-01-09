@@ -129,6 +129,52 @@ filter {
 }
 ```
 
+## Filter plugins
+Logit.io allows you to use use all the [official plugins](https://www.elastic.co/guide/en/logstash/current/filter-plugins.html).
+
+### How the filter turns the raw logs into fields
+
+Using filters we turn the raw log message into individual fields which can then be stored in elasticsearch and [queried in Kibana](#querying-and-visualising-logs-kibana).
+
+You can think of the input data as an object containing a message as a string, for this example we're using the [Common Log Format](https://en.wikipedia.org/wiki/Common_Log_Format#Example).
+
+```json
+{
+  "message": "127.0.0.1 user-identifier frank [10/Oct/2000:13:55:36 -0700] \"GET /apache_pb.gif HTTP/1.0\" 200 2326"
+}
+```
+
+To split the data out we use the [grok plugin filter](https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html) which allows us to match patterns in the string using regex and then assign them to new fields.
+
+```ruby
+filter {
+  grok {
+    match => { "message" => "%{IP:user_ip} %{WORD:user_agent} %{WORD:username} %{TIMESTAMP:timestamp} \"%{WORD:method} %{URI:url} %{WORD:protocol}\" %{INTEGER:response_code} %{INTEGER:bytes}" }
+  }
+}
+```
+
+In this example, the syntax `%{IP:user_ip}` means to match the IP address using the [IP regex pattern](#using-grok-regex-patterns) and then assign it to the field `user_ip`.
+If the match is successful we end up with a document that looks like the following:
+
+```json
+{
+  "message": "127.0.0.1 user-identifier frank [10/Oct/2000:13:55:36 -0700] \"GET /apache_pb.gif HTTP/1.0\" 200 2326",
+  "user_ip": "127.0.0.1",
+  "user_agent": "user-identifier",
+  "username": "frank",
+  "timestamp": "[10/Oct/2000:13:55:36 -0700]",
+  "method": "GET",
+  "url": "/apache_pb.gif",
+  "protocol": "HTTP/1.0",
+  "response_code": "200",
+  "bytes": "2326"
+}
+```
+
+## Using grok regex patterns
+When using the [`grok plugin`](https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html) you can reference global 'patterns' which are aliases for common regex patterns, for example such as ‘IP’, these are defined in [logstash-patterns-core/patterns/grok-patterns](https://github.com/logstash-plugins/logstash-patterns-core/blob/master/patterns/grok-patterns).
+
 ## Updating the Logstash Filters
 
 1. go to the [Logit dashboard Logstash Filters page](https://logit.io/a/1c6b2316-16e2-4ca5-a3df-ff18631b0e74/s/c5df6a7b-07bb-483a-a69b-49c9629309b6/filters).
@@ -139,9 +185,6 @@ If something goes wrong and the interface fails to respond, Logit support are pr
 When you've successfully applied a filter change Kibana wont show events coming in for a minute or so.
 
 If you've added new fields and want to use them in a Kibana filter / visualisation you'll need to [refresh the index pattern](#refreshing-index-patterns).
-
-## Using grok regex patterns
-When using the [`grok plugin`](https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html) you can reference global 'patterns' which are aliases for common regex patterns, for example such as ‘IP’, these are defined in [logstash-patterns-core/patterns/grok-patterns](https://github.com/logstash-plugins/logstash-patterns-core/blob/master/patterns/grok-patterns).
 
 ## Querying and visualising logs with Kibana
 
