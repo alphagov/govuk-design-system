@@ -47,8 +47,10 @@
     "slugger": "^1.0.1"
   },
   "devDependencies": {
+    "@octokit/rest": "^16.36.0",
     "accessible-autocomplete": "^2.0.0",
     "axe-puppeteer": "^1.0.0",
+    "dotenv": "^8.2.0",
     "fs-extra": "^7.0.1",
     "iframe-resizer": "^3.6.6",
     "jest": "^24.7.1",
