@@ -208,6 +208,15 @@ Transformed logs can be accessed in the [Logit Kibana dashboard](https://kibana.
 4. choose the `*-*` index pattern.
 5. save using `Design System -` prefix for easier searching later on.
 
+### Adding a visualisation to a dashboard
+
+1. go to a [dashboard page](https://kibana.logit.io/app/kibana#/dashboard/f9b0d520-2346-11ea-9ca6-d1e81c1bed53)).
+2. press `edit`.
+3. press `add`.
+4. search for `Design System-`.
+5. click on the visualisation you want to add it to the dashboard.
+5. save the dashboard, do not make it a new dashboard.
+
 ### Refreshing index patterns
 In order to use some fields in visualisations / filters you need to refresh the field list index.
 
