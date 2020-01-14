@@ -25,7 +25,7 @@ You can now access the [GOV.UK Design System Production stack](https://logit.io/
 
 The configuration is based on the [GOV.UK PaaS setup instructions](https://docs.cloud.service.gov.uk/monitoring_apps.html#configure-logstash-filters), see [git history for updates](https://github.com/alphagov/govuk-design-system/commits/master/docs/logs.md).
 
-Update this documentation when updating Logstash filters.
+**We use this file as version control for the Logit Filters for our stack. Please make sure to update the below code snippet in this file before changing Filters.**
 
 ### Configuration
 
