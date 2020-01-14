@@ -129,9 +129,6 @@ filter {
 }
 ```
 
-## Filter plugins
-Logit.io allows you to use use all the [official plugins](https://www.elastic.co/guide/en/logstash/current/filter-plugins.html).
-
 ### How the filter turns the raw logs into fields
 
 Using filters we turn the raw log message into individual fields which can then be stored in Elasticsearch and [queried in Kibana](#querying-and-visualising-logs-with-kibana).
@@ -171,6 +168,9 @@ If the match is successful we end up with a document that looks like the followi
   "bytes": "2326"
 }
 ```
+
+## Filter plugins
+Logit.io allows you to use use all the [official plugins](https://www.elastic.co/guide/en/logstash/current/filter-plugins.html).
 
 ## Using grok regex patterns
 When using the [`grok plugin`](https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html) you can reference global 'patterns' which are aliases for common regex patterns, for example such as ‘IP’, these are defined in [logstash-patterns-core/patterns/grok-patterns](https://github.com/logstash-plugins/logstash-patterns-core/blob/master/patterns/grok-patterns).
