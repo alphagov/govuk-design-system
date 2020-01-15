@@ -8,56 +8,55 @@ backlog_issue_id: 171
 layout: layout-pane.njk
 ---
 
-Step by step navigation is a way of presenting end-to-end journeys on GOV.UK. It groups existing guidance and transactions into a series of steps.
+The step by step navigation pattern presents an end to end journey in logical steps, providing links users out to the content that helps them complete each step. 
 
-The Government Digital Service (GDS) works with departments to build step by step navigation journeys. Use this pattern in your prototype only.
+The Government Digital Service (GDS) works with departments to build step by step navigation journeys on GOV.UK. You won’t be able to publish step by step navigation you’ve created yourself on the live GOV.UK site: this pattern is for use in your prototype only.
 
-You will not be able to publish step by step navigation you’ve created yourself on GOV.UK.
+If you can, get a content designer to work on your prototype and help you decide what content fits in your step by step navigation.
 
-Email modelling-services@digital.cabinet-office.gov.uk as soon as possible if you think your service would fit into a step by step journey.
+If you want to suggest new step by step navigation for the GOV.UK live site, ask the content team in your department to contact GOV.UK using the [GOV.UK content change form](https://support.publishing.service.gov.uk/content_change_request/new) (requires a password).
 
 ![A screenshot showing an example of the step by step navigation pattern](step-by-step-navigation.png)
 
 ## When to use this pattern
 
-GOV.UK uses step by step navigation to represent services that:
+GOV.UK uses step by step navigation to represent end to end journeys:
 
-- cover end-to-end journeys
-- span one or more department’s content and services
-- have specific start and end points
-- contain many pieces of guidance, transactions or both guidance and transactions that a user must complete in a specific order
++ that have a specific start and end point
++ that require the user to interact with several pieces of guidance or transactions on GOV.UK
++ where it’s helpful for the user to complete tasks in a specific order
 
 ## When not to use this pattern
 
-GOV.UK does not use step by step navigation:
+Do not use the step by step pattern:
 
-- when a user only needs to read guidance and not take a particular action
-- for content inside a transactional service – use the [task list pattern](/patterns/task-list-pages/) instead
-- to track a user’s progress through a service
++ when most of the guidance or services that make up the journey aren’t on GOV.UK
++ when the user only needs to read guidance and not take an action
++ when there’s no logical or helpful order to complete the tasks - for example, when you’re mostly presenting the user with a series of options 
++ inside a transactional service – use the [task list pattern](/patterns/task-list-pages/) instead
 
 ## How it works
 
 A step by step navigation journey can:
 
-- include content and transactions owned by different departments, agencies, services and topics, like [‘Employ someone’](https://www.gov.uk/employ-someone)
-- be completed in one go, or require users to return at different times
-- include online and offline actions
-- represent one-off or regularly repeated tasks
-- link to content and services outside of government
++ bring together guidance and transactions from different departments, agencies, services and topics
++ be completed in one go, or require the user to return to at different times
++ link to content and services outside government
++ include both online and offline actions
 
-You can customise content like the links in the steps and the names, but you cannot customise the design of step by step navigation.
+When you prototype a step by step journey, don’t customise the design. If you did, it wouldn’t be a realistic representation of the pattern as it would eventually appear on the GOV.UK live site.
 
-It’s displayed in 2 ways.
+Step by step navigation is displayed in 2 ways.
 
-1. In the sidebar of content pages that are part of the step by step navigation.
+1. On the right hand sidebar of content pages that are part of the step by step navigation.
 
     ![A screenshot showing an example of the step by step as a sidebar](step-by-step-sidebar.png)
 
-2. As a standalone page that does not contain any other content.
+2. As a standalone page.
 
     ![A screenshot showing an example of the step by step navigation pattern](step-by-step-standalone-page.png)
 
-To prototype how step by step navigation could join your service up with GOV.UK, you can use the following examples in the GOV.UK Prototype Kit:
+You can use the following examples in the GOV.UK Prototype Kit to prototype a step by step:
 
 - [Step by step page](https://govuk-prototype-kit.herokuapp.com/docs/templates/step-by-step-navigation)
 - [Start page with step by step navigation as a sidebar](https://govuk-prototype-kit.herokuapp.com/docs/templates/start-with-step-by-step)
@@ -70,19 +69,28 @@ Content pages that are part of the step by step navigation always have a link at
 
 #### Introduction
 
-This is a short summary that describes the service the step by step navigation represents.
+This is a short statement describing what the step by step helps the user to do.
 
-It can be used to tell users when this step by step navigation is not relevant to them. For example, if the process is different in another region.
+You can also use it to tell users when this step by step navigation is not relevant to them. For example, if the process is different in another region.
+
+Users don’t see the introduction in the sidebar, so don’t add anything vital there. 
 
 ![A screenshot showing an example of the step by step navigation summary](step-by-step-summary.png)
 
 #### Steps
 
-A step is a task or group of tasks that a user can do as part of the service. They appear in the pattern as expandable, numbered sections.
+A step is a task or group of tasks that a user can complete as part of the journey. They appear in the pattern as numbered sections. The user can click on the step to expand it. 
 
 #### Tasks
 
-A task is an action you need to do or piece of content you need to read to help you complete a step. They appear as a single link or a list of links. They can be bullet points if you need to show a range of options within a task. For example, if there are different versions of a form to download.
+A task is an action you need to take or piece of content you need to read to help you complete a step. They appear as a single link or a list of links. 
+
+Different tasks can link to the same service or piece of content.
+
+You can present tasks in bullet points if you need to show: 
+
++ different ways to perform the same task - for example, different versions of a form to download
++ different conditions that change how the user should complete the task
 
 ![A screenshot showing an example of the step by step navigation task](step-by-step-task.png)
 
@@ -96,9 +104,9 @@ For example, ‘Agree a contract and salary’ is listed as step 4 in ‘Employ 
 
 ### Use both ‘and’ and ‘or’
 
-Use ‘and’ to show when you can or must complete more than one step at the same time.
+Use ‘and’ to show when you can or must complete steps at the same time. You can use ‘and’ for more than 2 steps.
 
-Use ‘or’ to show when there’s a choice between 2 steps.
+Use ‘or’ to show when there’s a choice between 2 steps, or when a task must be completed in a different way based the user’s circumstances or eligibility. 
 
 ![A screenshot showing an example of the step by step navigation pattern with an 'and' step](step-by-step-and.png)
 
@@ -106,16 +114,16 @@ Use ‘or’ to show when there’s a choice between 2 steps.
 
 ### Costs
 
-If there is a cost of doing a task, show it after the link text.
+If there is a cost for completing a task, show it after the link text.
 
 ![A screenshot showing an example of showing the cost of a step](step-by-step-cost.png)
 
-### Instructions
+### Text within a step
 
-If needed, include instruction text to provide:
+Only include text in the step if it gives:
 
-- essential context that is not included in the content we link to
-- conditions, for example if there is a task that only some users need to complete
++ essential context that the user needs before they click on the link 
++ the conditions the user needs to meet to complete the task - for example, if only some users can do it 
 
 ![A screenshot showing an example of a step with instructions](step-by-step-instructions.png)
 
