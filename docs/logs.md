@@ -200,22 +200,45 @@ Transformed logs can be accessed in the [Logit Kibana dashboard](https://kibana.
 - [Page visits](https://kibana.logit.io/goto/43b97c384d92a2318db416759f341c08)
 - [Requests that are not found](https://kibana.logit.io/goto/09da28d6907e07868998b05872be609c)
 
-### Making new visualisation
+### How to make a "Page visits" visualisation
 
-1. go to [visualisations page](https://kibana.logit.io/app/kibana#/visualize?_g=())
-2. press 'create new visualisation'.
-3. pick type of visualisation e.g. bar chart.
-4. choose the `*-*` index pattern.
-5. save using `Design System -` prefix for easier searching later on.
+#### Create a new visualisation
 
-### Adding a visualisation to a dashboard
+1. Go to the [visualisations page](https://kibana.logit.io/app/kibana#/visualize?_g=()).
+2. Press `Create new visualisation`.
+3. Pick type of visualisation eg. `Vertical Bar`.
+4. Choose the `*-*` index pattern.
+5. Save using `Design System -` prefix for easier searching later on.
+6. Under `Buckets`, press `Add` and choose `X-axis`.
+7. Under `Aggregation`, choose `Date histogram` (All our current metrics use the date histogram but you could also explore other options).
+8. Under `Minimum interval`, choose `Daily`.
+9. Click the play button to run your selection (the button is in the top right hand corner of the container, next to `x`).
+10. You should see a bar chart of the data. If the chart doesn't look right, make sure that you've chosen an appropriate period under `Show dates` eg. `Last 14 days`.
+11. Press `Save` and then `Confirm save`.
 
-1. go to a [dashboard page](https://kibana.logit.io/app/kibana#/dashboard/f9b0d520-2346-11ea-9ca6-d1e81c1bed53)).
-2. press `edit`.
-3. press `add`.
-4. search for `Design System-`.
-5. click on the visualisation you want to add it to the dashboard.
-5. save the dashboard, do not make it a new dashboard.
+#### Add filters to your visualisation
+
+1. Choose `Discover` in the left hand side menu.
+2. Press `Add filter`.
+3. In `Edit filter`, set the desired properties and values to filter for. For example, to create a filter to get requests with status code 200, set `Field` to `access.response_code`, `Operator` to `is` and `Value` to `200`. See [Page visits](https://kibana.logit.io/goto/43b97c384d92a2318db416759f341c08) for the filters we used to create that visualisation.
+4. Press `Save` and then `Confirm save`.
+
+#### Optional: Create a new dashboard
+
+You might wish to do this for testing purposes, rather than changing the Design System dashboard.
+
+1. Go to the [Dashboards page](https://kibana.logit.io/app/kibana#/dashboards).
+2. Press "Create a new dashboard".
+3. Press "Save".
+
+#### Add your visualisation to a dashboard
+
+1. Go to the [Dashboards page](https://kibana.logit.io/app/kibana#/dashboards)). Choose the Design System board or another one (see [Create a new dashboard](#optional-create-a-new-dashboard).)
+2. Press `Edit`.
+3. Press `Add`.
+4. Search for `Design System-`.
+5. Click on the visualisation you want to add to the dashboard.
+5. Save the dashboard, do not make it a new dashboard.
 
 ### Refreshing index patterns
 In order to use some fields in visualisations / filters you need to refresh the field list index.
