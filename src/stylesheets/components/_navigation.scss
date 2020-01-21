@@ -14,6 +14,7 @@ $navigation-height: 50px;
 .app-navigation__list {
   position: relative;
   left: -(govuk-spacing(3));
+  margin: 0;
   padding: 0;
   list-style: none;
 }
