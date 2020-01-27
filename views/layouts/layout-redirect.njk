@@ -1,0 +1,15 @@
+{% extends "layout-single-page.njk" %}
+
+{% set contents %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">This page has been archived</h1>
+    <p class="govuk-body">
+        You can view the up to date information about
+        <a class="govuk-link" href="{{ destination }}">{{ title }}</a>.
+    </p>
+  </div>
+</div>
+{% endset %}
+
+{% set title = title + ' page has been archived' %}
