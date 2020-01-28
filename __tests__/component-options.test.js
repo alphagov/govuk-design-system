@@ -74,13 +74,13 @@ describe('Component page', () => {
   })
 
   it('macro options subtable should be opened and in view when linked to', async () => {
-    await page.goto(baseUrl + '/components/text-input/#options-text-input-example--label', { waitUntil: 'load' })
+    await page.goto(baseUrl + '/components/input-field/#options-input-field-example--label', { waitUntil: 'load' })
 
     // Check if example's macro options details element is open
-    await page.waitForSelector('#options-text-input-example-details[open=open]')
+    await page.waitForSelector('#options-input-field-example-details[open=open]')
 
     // Check if the example has been scrolled into the viewport
-    const $example = await page.$('#options-text-input-example--label')
+    const $example = await page.$('#options-input-field-example--label')
     expect(await $example.isIntersectingViewport()).toBe(true)
   })
 })

@@ -13,7 +13,7 @@ layout: layout-pane.njk
 Help users provide an address using one of the following:
 
 - Address lookup
-- Multiple text inputs
+- Multiple input fields
 - Textarea
 
 ## Address lookup
@@ -33,7 +33,7 @@ Use an address lookup when you’re asking users for a UK address.
 
 ### When not to use an address lookup
 
-Address lookups generally only work for UK addresses. Use a manual option such as  multiple text inputs or a textarea when you are collecting mostly or only international&nbsp;addresses
+Address lookups generally only work for UK addresses. Use a manual option such as multiple input fields or a textarea when you are collecting mostly or only international&nbsp;addresses
 
 ### How an address lookup works
 
@@ -51,38 +51,38 @@ It is easier for users if you accept and ignore unwanted characters. This is bet
 
 You should allow postcodes that contain upper and lower case letters, no spaces, additional spaces at the beginning, middle or end and punctuation like hyphens, brackets, dashes and full stops.
 
-## Multiple text inputs
+## Multiple input fields
 
 {{ example({group: "patterns", item: "addresses", example: "multiple", html: true, nunjucks: true, open: true, size: "xl"}) }}
 
-### When to use multiple text inputs
+### When to use multiple input fields
 
-Only use multiple text inputs when you know which countries the addresses will come from and can find a format that supports them all. This can be difficult to know if you’re asking for addresses outside of the UK.
+Only use multiple input fields when you know which countries the addresses will come from and can find a format that supports them all. This can be difficult to know if you’re asking for addresses outside of the UK.
 
-Using multiple text inputs means:
+Using multiple input fields means:
 
 - you can easily extract and use specific parts of an address
-- you can give help for individual text inputs
+- you can give help for individual input fields
 - you can validate each part of the address separately
 - users can complete the form using their browser’s autocomplete function
 
-The disadvantages of using multiple text inputs are that:
+The disadvantages of using multiple input fields are that:
 
 - it’s hard to find a single format that works for all addresses
-- there’s no guarantee that users will use the text inputs the way you think they will
+- there’s no guarantee that users will use the input fields the way you think they will
 - users cannot easily paste addresses from their clipboards
 
-### How multiple text inputs work
+### How multiple input fields work
 
-If you use multiple text inputs, you should:
+If you use multiple input fields, you should:
 
-- only make individual text inputs mandatory if you really need the information
-- make the text inputs the appropriate length for the content – it helps people understand the form, for example, make postcode text inputs shorter than street text inputs
+- only make individual input fields mandatory if you really need the information
+- make the input fields the appropriate length for the content – it helps people understand the form, for example, make postcode input fields shorter than street input fields
 - <a href="#allow-different-postcode-formats">let users enter postcodes in different formats</a>
 
-Make sure there are enough text inputs to accommodate longer addresses if you know your users will need them. For example, allow users to include a company name or flat&nbsp;number.
+Make sure there are enough input fields to accommodate longer addresses if you know your users will need them. For example, allow users to include a company name or flat&nbsp;number.
 
-Royal Mail does not need a county as long as the town and postcode are included. You should include an optional county text input so that people who do not know their postcode can give a valid address.
+Royal Mail does not need a county as long as the town and postcode are included. You should include an optional county input field so that people who do not know their postcode can give a valid address.
 
 #### Use the autocomplete attribute on multiple address fields
 
