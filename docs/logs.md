@@ -1,8 +1,8 @@
 # Logs
 
-We use server logs from the GOV.UK Design System website for basic analytics, we keep logs for 14 days and anonymise IP addresses.
+We keep router logs ([GoRouter](https://docs.cloudfoundry.org/concepts/architecture/router.html)) and general application logs for 14 days and anonymise IP addresses.
 
-We store router logs ([GoRouter](https://docs.cloudfoundry.org/concepts/architecture/router.html)) and general application logs for 14 days and anonymise IP addresses.
+These logs are used for basic analytics.
 
 Our Content Delivery Network (CDN) logs are not currently available, this means many requests are not shown in the router logs.
 However, we do not currently cache HTML requests (pages) so router logs are still useful for pages visited.
@@ -19,13 +19,13 @@ When the raw logs are sent to Logstash they are transformed using Logstash Filte
 
 Follow the Reliability engineering ['getting started with logit'](https://reliability-engineering.cloudapps.digital/logging.html#get-started-with-logit) instructions to login with your Google account.
 
-You can now access the [GOV.UK Design System Production stack](https://logit.io/a/1c6b2316-16e2-4ca5-a3df-ff18631b0e74).
+You'll then need to ask the technical lead on the GOV.UK Design System team to give you access to the [GOV.UK Design System Production stack](https://logit.io/a/1c6b2316-16e2-4ca5-a3df-ff18631b0e74).
 
 ## How we transform logs with Logstash Filters
 
 The configuration is based on the [GOV.UK PaaS setup instructions](https://docs.cloud.service.gov.uk/monitoring_apps.html#configure-logstash-filters), see [git history for updates](https://github.com/alphagov/govuk-design-system/commits/master/docs/logs.md).
 
-**We use this file as version control for the Logit Filters for our stack. Please make sure to update the below code snippet in this file before changing Filters.**
+**We use this file as version control for the Logit Filters for our stack. Please make sure to update the below code snippet in this file whenever changing Filters. We recommend pairing on updating filters as they are easy to break.**
 
 ### Configuration
 
@@ -183,6 +183,7 @@ When using the [`grok plugin`](https://www.elastic.co/guide/en/logstash/current/
 If something goes wrong and the interface fails to respond, Logit support are proactive and can help you out, they have a support live chat you can also use.
 4. select Apply once the code is valid.
 When you've successfully applied a filter change Kibana wont show events coming in for a minute or so.
+5. update the [configuration](#configuration) with your changes.
 
 If you've added new fields and want to use them in a Kibana filter / visualisation you'll need to [refresh the index pattern](#refreshing-index-patterns).
 
