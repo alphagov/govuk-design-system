@@ -1,5 +1,11 @@
 {% extends "layout-single-page.njk" %}
 
+{% block head %}
+  {{ super() }}
+  {# Make sure redirect pages are not indexed by search engines #}
+  <meta name="robots" content="noindex">
+{% endblock %}
+
 {% set contents %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
