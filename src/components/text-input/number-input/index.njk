@@ -1,5 +1,5 @@
 ---
-title: Errors
+title: Number input
 layout: layout-example.njk
 ---
 
@@ -7,21 +7,17 @@ layout: layout-example.njk
 
 {{ govukInput({
   label: {
-    text: "Sort code"
+    text: "Account number"
   },
-  classes: "govuk-input--width-5",
+  classes: "govuk-input--width-10",
   hint: {
-    text: "Must be 6 digits long"
+    text: "Must be between 6 and 8 digits long"
   },
-  value: "12",
-  id: "sort-code",
-  name: "sort-code",
+  id: "account-number",
+  name: "account-number",
   inputmode: "numeric",
   pattern: "[0-9]*",
   attributes: {
     spellcheck: "false"
-  },
-  errorMessage: {
-    text: "Enter a valid sort code like 309430"
   }
 }) }}

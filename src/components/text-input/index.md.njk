@@ -59,6 +59,19 @@ Fluid width inputs will resize with the viewport.
 
 {{ example({group: "components", item: "text-input", example: "input-fluid-width", html: true, nunjucks: true, open: false, size: "xl"}) }}
 
+### Numbers
+
+If it’s likely that the user will need to enter a number and you want to bring up the numeric keypad on a mobile device, set the `inputmode` attribute to `numeric` and the `pattern` attribute to `[0-9]*`. See how to do this in the HTML and Nunjucks tabs in the following example.
+
+{{ example({group: "components", item: "text-input", example: "number-input", html: true, nunjucks: true, open: false, size: "m"}) }}
+
+Do not use `<input type=”number”>` unless your user research shows that there’s a need for it. With `<input type=”number”>` there’s a risk of users accidentally incrementing a number when they’re trying to do something else - for example, scroll up or down the page. And if the user tries to enter something that’s not a number, there’s no explicit feedback about what they’re doing wrong.
+
+There are specific patterns for:
+
+- [dates](/patterns/dates/)
+- [telephone numbers](/patterns/telephone-numbers/)
+
 ### Hint text
 
 Use hint for help that’s relevant to the majority of users, like how their information will be used, or where to find it.
