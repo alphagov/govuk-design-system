@@ -20,129 +20,43 @@ Use the tag component to indicate the status of something, such as an item on a 
 
 There are 2 ways to use the tag component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://govuk-prototype-kit.herokuapp.com), you can use the Nunjucks macro.
 
-{{ example({group: "components", item: "tag", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second"}) }}
-
-## Using multiple tags
+### Using multiple tags
 
 You can use multiple tags for things that have multiple states. For example, items in a [task list](../../patterns/task-list-pages).
 
-Tags should help people to organise things into useful categories: for example, things they’ve done and things they still need to do. The more categories you add, the harder it is for users to remember them. So start with the fewest number of tags you think might work, then add more if your user research shows there’s a need for them.
+Tags should help people to organise things into useful categories: for example, inactive and active users.
 
-## Using coloured tags
+{{ example({group: "components", item: "tag", example: "multiple-tags", html: true, nunjucks: true, open: false }) }}
 
-You can use colour to help distinguish between different tags - or to help draw the user’s attention to a tag if it’s especially important. For example, it probably makes sense to use  ´govuk-tag--red´ for a tag that reads ‘Urgent’.
+### Start with as few categories as possible
 
-Tags that have the same wording should use the same colour. [Do not use colour alone to convey information](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html) because it’s not accessible.
+The more categories you add, the harder it is for users to remember them. So start with the smallest number of tags you think might work, then add more if your user research shows there’s a need for them.
 
-<table class="govuk-table">
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th class="govuk-table__header" scope="col"> Class name </th>
-      <th class="govuk-table__header" scope="col"> Tag </th>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">
-        <code> govuk-tag--grey </code>
-      </td>
-      <td class="govuk-table__cell">
-        {{govukTag({
-          text: "Not started",
-          classes: "govuk-tag--grey"
-        })}}
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">
-        <code> govuk-tag--green </code>
-      </td>
-      <td class="govuk-table__cell">
-        {{govukTag({
-          text: "New",
-          classes: "govuk-tag--green"
-        })}}
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">
-        <code> govuk-tag--turquoise </code>
-      </td>
-      <td class="govuk-table__cell">
-        {{govukTag({
-          text: "Active",
-          classes: "govuk-tag--turquoise"
-        })}}
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">
-        <code> govuk-tag--blue </code>
-      </td>
-      <td class="govuk-table__cell">
-        {{govukTag({
-          text: "Pending",
-          classes: "govuk-tag--blue"
-        })}}
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">
-        <code> govuk-tag--purple </code>
-      </td>
-      <td class="govuk-table__cell">
-        {{govukTag({
-          text: "Received",
-          classes: "govuk-tag--purple"
-        })}}
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">
-        <code> govuk-tag--pink </code>
-      </td>
-      <td class="govuk-table__cell">
-        {{govukTag({
-          text: "Sent",
-          classes: "govuk-tag--pink"
-        })}}
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">
-        <code> govuk-tag--red </code>
-      </td>
-      <td class="govuk-table__cell">
-        {{govukTag({
-          text: "Rejected",
-          classes: "govuk-tag--red"
-        })}}
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">
-        <code> govuk-tag--orange </code>
-      </td>
-      <td class="govuk-table__cell">
-        {{govukTag({
-          text: "Declined",
-          classes: "govuk-tag--orange"
-        })}}
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">
-        <code> govuk-tag--yellow </code>
-      </td>
-      <td class="govuk-table__cell">
-        {{govukTag({
-          text: "Delayed",
-          classes: "govuk-tag--yellow"
-        })}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+### Using colour to distinguish between different categories
+
+You can use colour to help distinguish between different tags – or to help draw the user’s attention to a tag if it’s especially important. For example, it probably makes sense to use  `govuk-tag--red` for a tag that reads ‘Urgent’.
+
+{{ example({group: "components", item: "tag", example: "coloured-tags", html: true, nunjucks: true, open: false }) }}
+
+### Avoid using different tag styles at the same time
+
+Avoid using tints and solid coloured tags at the same time because the solid colours are more prominent.
+
+You can use a mix if you only have 2 states. For example, it's okay to use the tint `govuk-tag--grey` and solid blue tags together.
+
+### Use the same colour with the same wording
+
+If you use the same tag in more than one place, make sure you keep the colour consistent. [Do not use colour alone to convey information](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html) because it’s not accessible.
+
+### Do not make tags clickable
+
+Tags should be used as statuses, not actions. Do not add links or use verbs in your tags, as this might make users think that clicking on them will do something.
+
+### Additional colours
+
+You can use the following tints in your service.
+
+{{ example({group: "components", item: "tag", example: "all-colours", html: true, nunjucks: true, open: false }) }}
 
 ## Research on this component
 
