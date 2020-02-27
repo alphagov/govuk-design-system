@@ -8,53 +8,44 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{%- from "govuk/components/tag/macro.njk" import govukTag -%}
-
-{{ example({group: "components", item: "tag", example: "default", html: true, nunjucks: true, open: false}) }}
 
 ## When to use this component
 
-Use the tag component to indicate the status of something, such as an item on a [task list](../../patterns/task-list-pages) or a [phase banner](../phase-banner).
+Use the tag component when it’s possible for something to have more than one status and it’s useful for the user to know about that status. For example, you can use a tag to show whether an item in a [task list](../../patterns/task-list-pages) has been ‘completed’.
 
 ## How it works
 
-There are 2 ways to use the tag component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://govuk-prototype-kit.herokuapp.com), you can use the Nunjucks macro.
+There are two ways to use the tag component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://govuk-prototype-kit.herokuapp.com), you can use the Nunjucks macro.
 
-### Using multiple tags
+Tags are just used to indicate a status, so do not add links. Use nouns rather than verbs for the names of your tags. Using a verb might make a user think that clicking on them will do something.
 
-You can use multiple tags for things that have multiple states. For example, items in a [task list](../../patterns/task-list-pages).
+## Showing one or two statuses
 
-Tags should help people to organise things into useful categories: for example, inactive and active users.
+Sometimes a single status is enough. For example if you need to tell users which parts of an application they’ve finished and which they haven’t, you may only need a ‘Completed’ tag. Because the user understands that if something doesn’t have a tag, that means it’s incomplete.
+
+The [task list pattern](/patterns/task-list-pages/) has an example of how to show one status using tags.
+
+Or it can make sense to have two statuses. For example you may find that there’s a need to have one tag for ‘Active’ users and one for ‘Inactive’ users.
 
 {{ example({group: "components", item: "tag", example: "multiple-tags", html: true, nunjucks: true, open: false }) }}
 
-### Start with as few categories as possible
+## Showing multiple statuses
 
-The more categories you add, the harder it is for users to remember them. So start with the smallest number of tags you think might work, then add more if your user research shows there’s a need for them.
-
-### Using colour to distinguish between different categories
-
-You can use colour to help distinguish between different tags – or to help draw the user’s attention to a tag if it’s especially important. For example, it probably makes sense to use  `govuk-tag--red` for a tag that reads ‘Urgent’.
+Tags should be helpful to users. The more you add, the harder it is for users to remember them. So start with the smallest number of statuses you think might work, then add more if your user research shows there’s a need for them.
 
 {{ example({group: "components", item: "tag", example: "coloured-tags", html: true, nunjucks: true, open: false }) }}
 
-### Avoid using different tag styles at the same time
+## Using colour with tags
 
-Avoid using tints and solid coloured tags at the same time because the solid colours are more prominent.
+You can use colour to help distinguish between different tags – or to help draw the user’s attention to a tag if it’s especially important. For example, it probably makes sense to use  `govuk-tag--red` for a tag that reads ‘Urgent’.
 
-You can use a mix if you only have 2 states. For example, it's okay to use the tint `govuk-tag--grey` and solid blue tags together.
+[Do not use colour alone to convey information](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html) because it’s not accessible. If you use the same tag in more than one place, make sure you keep the colour consistent.
 
-### Use the same colour with the same wording
-
-If you use the same tag in more than one place, make sure you keep the colour consistent. [Do not use colour alone to convey information](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html) because it’s not accessible.
-
-### Do not make tags clickable
-
-Tags should be used as statuses, not actions. Do not add links or use verbs in your tags, as this might make users think that clicking on them will do something.
+Because tags with solid colours tend to stand out more, it’s usually best to avoid mixing solid colours and tints: use one or the other. This matters less if you’re only using two colours. For example, it's okay to use the tint `govuk-tag--grey` and solid blue tags together if you only need two statuses.
 
 ### Additional colours
 
-You can use the following tints in your service.
+If you need more tag colours, you can use the following tints.
 
 {{ example({group: "components", item: "tag", example: "all-colours", html: true, nunjucks: true, open: false }) }}
 
