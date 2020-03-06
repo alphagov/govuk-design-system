@@ -1,0 +1,95 @@
+---
+title: Coloured tags
+layout: layout-example.njk
+---
+
+{%- from "govuk/components/tag/macro.njk" import govukTag -%}
+
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col"> Application </th>
+      <th class="govuk-table__header" scope="col"> Status </th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        Joshua Wessel
+      </td>
+      <td class="govuk-table__cell">
+        {{govukTag({
+          text: "Urgent",
+          classes: "govuk-tag--red"
+        })}}
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        Rachel Silver
+      </td>
+      <td class="govuk-table__cell">
+        {{govukTag({
+          text: "New",
+          classes: "govuk-tag--blue"
+        })}}
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        Laura Frith
+      </td>
+      <td class="govuk-table__cell">
+        {{govukTag({
+          text: "New",
+          classes: "govuk-tag--blue"
+        })}}
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        Paul French
+      </td>
+      <td class="govuk-table__cell">
+        {{govukTag({
+          text: "New",
+          classes: "govuk-tag--blue"
+        })}}
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        Jesse Smith
+      </td>
+      <td class="govuk-table__cell">
+        {{govukTag({
+          text: "New",
+          classes: "govuk-tag--blue"
+        })}}
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        Rachael Pepper
+      </td>
+      <td class="govuk-table__cell">
+        {{govukTag({
+          text: "Finished",
+          classes: "govuk-tag--green"
+        })}}
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        Emma Tennant
+      </td>
+      <td class="govuk-table__cell">
+        {{govukTag({
+          text: "Waiting on",
+          classes: "govuk-tag--yellow"
+        })}}
+      </td>
+    </tr>
+  </tbody>
+</table>
