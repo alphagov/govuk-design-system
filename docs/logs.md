@@ -102,7 +102,7 @@ filter {
     rename => [ "syslog_msg", "message" ]
   }
 
-  # Update the original message to remove potentially personally identifable information
+  # Update the original message to remove potentially personally identifiable information
   mutate {
     gsub => [
       # redact all IP addresses
