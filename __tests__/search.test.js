@@ -40,7 +40,7 @@ describe('Site search', () => {
       // only get text, ignore child nodes
         .map(elem => elem.firstChild.textContent.toLowerCase())
     )
-    // regex with word boundry, in our case words that begin with 'd'
+    // regex with word boundary, in our case words that begin with 'd'
     expect(resultsArray.every(item => (/\b[d]\w*/).test(item))).toBeTruthy()
   })
   it('returns results that contain aliases that start with the letter "d"', async () => {
@@ -55,7 +55,7 @@ describe('Site search', () => {
         .filter(elem => elem.querySelector('.app-site-search__aliases'))
         .map(elem => elem.querySelector('.app-site-search__aliases').textContent)
     )
-    // regex with word boundry, in our case words that begin with 'd'
+    // regex with word boundary, in our case words that begin with 'd'
     expect(resultsArray.every(item => (/\b[d]\w*/).test(item))).toBeTruthy()
   })
   it('doesn\'t show any aliases if it finds any matches in the title', async () => {
