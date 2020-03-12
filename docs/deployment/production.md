@@ -29,7 +29,7 @@ Travis is deployed using [deploy-travis](bin/deploy-travis).
 
 We log into CloudFoundry using the configured environment variables. We then run a smoke test to make sure that the app built correctly.
 
-## Hosting on Platform as a Service
+## Hosting on GOV.UK Platform as a Service (PaaS)
 
 We deploy to the `govuk-design-system-origin` app using the
 [blue-green-deploy][bgd] plugin.
@@ -40,6 +40,8 @@ credentials for which can be found in our credential store.
 
 We use an [application manifest](../../manifest.yml) to configure the app name
 and the type of buildpack that we want to use.
+
+See [PaaS documentation](https://docs.cloud.service.gov.uk/) for how to sign in and deploy apps.
 
 ### nginx
 
