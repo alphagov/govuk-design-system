@@ -20,6 +20,7 @@ Use this pattern to help a user find the a school somewhere in England.
 ## How it works
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xnk4J9WhmB8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br/>
 
 Schools in England are maintained on the [Get Information About Schools](https://get-information-schools.service.gov.uk/) (GIAS)
 service. We use this data combined with [accessible autocomplete](https://github.com/alphagov/accessible-autocomplete)
@@ -57,10 +58,46 @@ Say ‘No results match that search term. Try again.’
 
 ## Research on this pattern
 
-Somethings about research on this pattern:
+Research on this pattern is limited. We've done some testing which indicates it
+is usable and accessible, but we've also included an [option for users who are
+unable to use javascript](../school-search-non-js-fallback).
 
-- WRITE THIS NICER => We were seeing users search for a school name that did not
-exist. One reason for this was that the school had changed status during their
-employment and they were searcing for the old school name.
-- EXAMPLE 2
-- SOMETHING ELSE
+### Employed to teach vs employed attribute
+
+Most schools are part of a Multi Academy Trust (MAT) and may not be employed by
+the school they work at. For example, a teacher's employment contract could be
+with the MAT, but they work at an academy within the MAT.
+
+You can distinguish between asking where a teacher is employed and where they
+work by using 'employed to teach at'.
+
+### Open and closed schools
+
+Some schools close then reopen with a new name, a slightly different name, or
+the same name. In these cases GIAS will return more than one school. Only
+display to the user the open school and discount the closed schools. If you need
+to show a user closed schools:
+
+- Visually differentiate them to make it easier to pick
+- Display to the user when the school closed
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RSd-MzkPkuU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br/>
+### Problems finding the right school
+
+Some school names are more difficult to search for and identify.
+
+Some schools are hard to distinguish between due to having similar names, for
+example if there are multiple 'St Andrew's'.
+
+A teacher may also type the school name differently to how it is spelt in the
+GIAS data, for example typing `Saint` instead of `St` or using an apostrophe
+differently.
+
+For circumstances such as these, provide alternative methods of searching such
+as by address or postcode as well as name.
+
+You might also consider ignoring apostrophes and other punctuation in the
+search.
+
+
