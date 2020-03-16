@@ -23,14 +23,14 @@ Always show an error summary when there is a validation error, even if there’s
 
 You must:
 
-- add ‘Error: ’ to the beginning of the `<title>` so screen readers read it out as soon as possible
-- show an error summary at the top of a page
-- move keyboard focus to the error summary
-- include the heading ‘There is a problem’
-- link to each of the answers that have validation errors
-- show the same error messages next to the inputs with errors
++ move keyboard focus to the error summary
++ include the heading ‘There is a problem’
++ link to each of the answers that have validation errors
++ make sure the error messages in the error summary are worded the same as those which appear next to the inputs with errors
 
-Read guidance on [writing good error messages](../error-message#be-clear-and-concise).
+As well as showing an error summary, follow the [validation pattern](/patterns/validation) - for example, by adding ‘Error: ’ to the beginning of the page `<title>` so screen readers read it out as soon as possible.
+
+And make your [error messages](../error-message#be-clear-and-concise) clear and concise.
 
 There are 2 ways to use the error summary component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://govuk-prototype-kit.herokuapp.com), you can use the Nunjucks macro.
 

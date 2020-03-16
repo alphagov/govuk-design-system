@@ -1,6 +1,6 @@
 ---
 title: Error message
-description: Use an error message when there is a validation error. Explain what went wrong and how to fix it
+description: When there's a validation error, use an error message to explain what went wrong and how to fix it
 section: Components
 aliases: validation message
 backlog_issue_id: 47
@@ -9,31 +9,25 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 
-Use an error message when there is a validation error. Explain what went wrong and how to fix it.
+Follow the [validation pattern](/patterns/validation/) and show an error message when there is a validation error. In the error message explain what went wrong and how to fix it.
 
 {{ example({group: "components", item: "error-message", example: "default", html: true, nunjucks: true, open: false, size: "m"}) }}
 
 ## When to use this component
 
-Show an error message next to the field and in the [error summary](../error-summary/) when there is a validation error.
+Show an error message next to the field and in the [error summary](/components/error-summary/) when there is a validation error.
 
 Use standard messages for different components.
 
-Try to [design your service to be easy to use and understand so someone never sees an error message](https://www.gov.uk/service-manual/design/form-structure).
-
 ## When not to use this component
 
-Only display an error when someone tries to move to the next part of the service. Do not show error messages:
+Do not use error messages to tell users that they are not eligible or do not have permission to do something. Instead, take them to a page which tells them they’re not eligible and gives them useful information about what to do next.
 
-- when users select or tab to a field
-- as they are typing
-- when they move away from a field
+There are separate patterns for:
 
-Do not use error messages to tell users that they are not eligible or do not have permission to do something. Instead, take them to a screen that:
-
-- explains why we cannot accept the entry or selection
-- tells them what to do next
-- includes a way to leave the transaction
+- [‘there is a problem with the service’ pages](/patterns/problem-with-the-service-pages/)
+- [‘page not found’ pages](/patterns/page-not-found-pages/)
+- [‘service unavailable’ pages](/patterns/service-unavailable-pages/)
 
 ## How it works
 
@@ -80,7 +74,6 @@ Above all, aim for clarity.
 
 Read the message out loud to see if it sounds like something you would say.
 
-
 ### Be consistent
 
 Use the same message next to the field and in the [error summary](../error-summary/) so they:
@@ -121,7 +114,6 @@ Some errors work better as instructions and some work better as descriptions. Fo
 
 Use both instructions and descriptions, but use them consistently. For example, use an instruction for empty fields like ‘Enter your name’, but a description like ‘Name must be 35 characters or fewer’ for entries that are too long.
 
-
 ### Use error message templates
 
 Use template messages for common errors on:
@@ -140,7 +132,6 @@ Use template messages for common errors on:
 - [telephone numbers](/patterns/telephone-numbers/#error-messages)
 - [text input](/components/text-input/#error-messages)
 - [textarea](/components/textarea/#error-messages)
-
 
 ### Track errors
 
