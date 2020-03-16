@@ -4,7 +4,6 @@ description: Help users enter a Teacher Reference Number
 section: Patterns
 theme: Ask users for…
 aliases: TRN
-backlog_issue_id: 101
 layout: layout-pane.njk
 status: Experimental
 statusMessage: This pattern is currently experimental because <a class="govuk-link" href="#research-on-this-pattern">more research</a> is needed to validate it.
@@ -16,15 +15,25 @@ statusMessage: This pattern is currently experimental because <a class="govuk-li
 
 ## When to use this pattern
 
-Use this pattern when you need to collect the teacher reference number from
-users. Not everyone knows their teacher reference number, and whilst it is
-possible to find out a teacher reference number, it can be a costly question to
-answer.
+Use this pattern when you need to ask teachers for their teacher reference
+number.
 
 ## How it works
 
+DfE record every teacher by issuing them an individual reference number when
+they qualify. Schools often use this for employment purposes and for recording
+information with the Teacher Pension Service.
+
+Teacher reference numbers contain 7 digits and may also contain a hyphen, a
+forward slash, or the letters 'RP'.
+
 ### Allow different formats
-Users should be allowed to enter teacher reference numbers in whatever format is familiar to them. You should allow for additional spaces and slashes.
+Users should be allowed to enter teacher reference numbers in whatever format is
+familiar to them. You should allow for additional spaces and slashes and the
+letters 'RP'.
+
+### Tell them how they can find out the information
+Give advice about where the user can find their teacher reference number.
 
 ### Error messages
 
@@ -44,7 +53,7 @@ Say ‘Enter your teacher reference number’.
 
 Say ‘Teacher reference number must contain seven digits’.
 
-### Using example telephone numbers
+### Using example teacher reference numbers
 If you wish to include an example teacher reference number (in hint text for example):
 
 - If your number is "9912345" just enter "9912345"
@@ -58,10 +67,29 @@ Avoid [input masking](https://css-tricks.com/input-masking/) because it makes it
 - type a number in their preferred way
 - transcribe a number from another place and check that they’ve got it right
 
-## Research on this pattern
+### Avoid asking where possible
 
-Somethings about research on this pattern:
+Decide if your service can avoid asking this question by using other data that
+the user has easier access to.
 
-- RESEARCH 1
-- EXAMPLE 2
-- SOMETHING ELSE
+While some teachers memorise the number, most teachers will not have this to
+hand. Users will often check their teaching qualification certificate, ask their
+school, or check a recent job application.
+
+### Teachers often get this wrong
+
+Your service should cater for mistakes entering this information as it is common
+for teachers to mistype the number.
+
+We have also seen users get the number completely wrong, referencing a different
+number from some other form of certification.
+
+### It is possible to have more than one
+
+Some teachers also have multiple reference numbers. This can occur when they
+join the teacher pension service and a temporary reference number is generated.
+
+Some teachers who re-qualify also end up with multiple reference numbers. While
+the Database of Qualified Teachers should accommodate for this and assign new
+qualifications to existing records, we have observed instances where mistakes
+have been made.
