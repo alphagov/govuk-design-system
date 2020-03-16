@@ -1,0 +1,44 @@
+---
+title: Which subject did you complete your initial teacher training in?
+layout: layout-example.njk
+---
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukRadios({
+  idPrefix: "itt-subject",
+  name: "itt-subject",
+  fieldset: {
+    legend: {
+      text: "Which subject did you complete your initial teacher training in?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--xl"
+    }
+  },
+  items: [
+    {
+      value: "Maths",
+      text: "Maths"
+    },
+    {
+      value: "Physics",
+      text: "Physics"
+    },
+    {
+      value: "Science (physics biology and chemistry)",
+      text: "Science (physics biology and chemistry)"
+    },
+    {
+      divider: "or"
+    },
+    {
+      value: "None of these subjects",
+      text: "None of these subjects"
+    }
+  ]
+}) }}
+
+{{ govukButton({
+          text: "Continue"
+        }) }}

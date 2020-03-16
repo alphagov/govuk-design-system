@@ -1,0 +1,48 @@
+---
+title: Error, none selected – Which subject did you complete your initial teacher training in?
+layout: layout-example.njk
+---
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukRadios({
+  idPrefix: "itt-subject",
+  name: "itt-subject",
+  errorMessage: {
+    text: "Select if you completed your initial teacher training in Maths,
+    Physics, Science, or None of these subjects"
+  },
+  fieldset: {
+    legend: {
+      text: "When did you complete your initial teacher training?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--xl"
+    }
+  },
+  items: [
+    {
+      value: "Maths",
+      text: "Maths"
+    },
+    {
+      value: "Physics",
+      text: "Physics"
+    },
+    {
+      value: "Science (physics biology and chemistry)",
+      text: "Science (physics biology and chemistry)"
+    },
+    {
+      divider: "or"
+    },
+    {
+      value: "None of these subjects",
+      text: "None of these subjects"
+    }
+  ]
+}) }}
+
+{{ govukButton({
+          text: "Continue"
+        }) }}

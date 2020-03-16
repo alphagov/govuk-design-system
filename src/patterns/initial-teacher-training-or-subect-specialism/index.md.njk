@@ -1,0 +1,124 @@
+---
+title: Initial teacher training or subject specialism
+description: Ask user about their initial teacher training or subject specialism
+section: Patterns
+theme: Ask users for…
+aliases: ITT, initial teacher training, subject, specialism
+layout: layout-pane.njk
+---
+
+![Image of Yaktocat](ITT-flow.png)
+
+
+{% from "_example.njk" import example %}
+
+{{ example({group: "patterns", item: "initial-teacher-training-or-subect-specialism", example: "default", html: true, nunjucks: true, open: false, size: "s"}) }}
+
+## When to use this pattern
+
+Use this pattern when a teacher is eligible for your service if they completed
+their initial teacher training in one of a small selection of subjects.
+
+## When not to use this pattern
+
+Do not use this pattern when you need to ask what subject a teacher completed
+their initial teacher training in and the service will accept any subject or a
+large selection of subjects.
+
+## How it works
+
+When asking which subjects the teacher completed their initial teacher training
+in:
+
+- do not use the initialism ITT (Initial Teacher Training) which is common
+within DfE
+- use radios and list the eligible specialist subjects
+- use an 'or' text divider before an option for 'None of these subjects'
+- if listing specific subjects within a group, also include the subject group if
+it's possible teachers trained to teach multiple subjects within it. Teachers
+of grouped subjects may not know their specialism
+
+### If you need to know a specific subject  within a group
+
+For example, if you need to know which science subject a science teacher's
+initial teacher training specialised in.
+
+Science teacher training courses are funded differently based on a specialism,
+which can be a specific science subject: physics, biology or chemistry.
+
+If a user selects 'Science' as their initial teacher training subject and you
+need to know which specific science subject their course specialised in, ask a
+follow-up question:
+
+{{ example({group: "patterns", item: "initial-teacher-training-or-subect-specialism", example: "specific-subject", html: true, nunjucks: true, open: false, size: "s"}) }}
+
+When asking which subject within a group the teacher's initial teacher training
+specialised in:
+
+- do not use the initialism ITT which is common within DfE
+- include help text to explain initial teacher training specialism
+- use radios and list the specialisms, for example physics, biology and chemistry
+- use an 'or' text divider before an option for 'I'm not sure'
+- if the user selects 'I'm not sure', reveal a message to explain what this
+means in your service
+
+### Teachers of grouped subjects may not know their specialism
+
+For example, teachers who trained to teach science may have completed their
+initial teacher training in multiple science subjects.
+
+Although some training courses have a specialism in physics, chemistry or
+biology, the teacher may not be aware their course had a specialism.
+
+Some teachers' qualified teacher status (QTS) certificates will show their
+course specialism but others will not, for example some may only describe the
+qualification as 'Secondary education'.
+
+### Use initial teacher training as the general term
+
+There are many different routes a qualified teacher may have taken into teaching.
+
+Unless you know which route a teacher took, avoid using specific names for
+teacher training courses like PGCE and Teach First when you only need to ask t
+he subject.
+
+Avoid specific references to QTS (Qualified Teacher Status) and QTLS (Qualified
+Teacher Learning and Skills) unless you know which a teacher has.
+
+'Initial teacher training' and 'initial teacher training qualification' are
+blanket terms for teacher training courses and qualifications that teachers are
+familiar with and understand.
+
+### Error messages
+
+Error messages should be styled like this:
+
+{{ example({group: "patterns", item: "initial-teacher-training-or-subect-specialism", example: "error-none-selected", html: true, nunjucks: true, open: false, size: "s"}) }}
+
+#### If the user does not select a subject
+
+Say ‘select if you completed your initial teacher training in Maths, Physics,
+Science, or None of these subjects’.
+
+#### If the user does not select a specialism
+
+Say ‘select the subject your initial teacher training specialised in or select
+I'm not sure’.
+
+Make sure errors follow the guidance in the GDS
+[error message](https://design-system.service.gov.uk/components/error-message/)
+and have specific error messages for specific error states.
+
+## Research on this pattern
+
+Our insights into initial teacher training subject and specialism are from maths
+and physics (or science) teachers. We have not looked into:
+
+- how to best ask this question to teachers of subjects other than maths,
+physics or science
+- whether there are any other groups of subjects that have  distinct initial
+teacher training specialisms within them
+- how other grouped subjects are categorised in our records of a teacher's
+qualification
+- how other grouped subjects are recorded on a teacher's qualification
+certificate

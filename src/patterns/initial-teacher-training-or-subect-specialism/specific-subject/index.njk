@@ -1,0 +1,57 @@
+---
+title: Which science subject did your initial teacher training specialise in?
+layout: layout-example.njk
+---
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% set notSure %}
+  <span class="govuk-hint">
+      If you’re not sure, we’ll check this for you. Your claim may be rejected
+      if your initial teacher training in science did not specialise in physics.
+  </span>
+{% endset -%}
+
+{{ govukRadios({
+  idPrefix: "itt-specialisation",
+  name: "itt-specialisation",
+  fieldset: {
+    legend: {
+      text: "Which science subject did your initial teacher training specialise in?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--xl"
+    }
+  },
+  hint: {
+    text: "Your specialism is normally the science you spent the most time training to teach."
+  },
+  items: [
+    {
+      value: "Physics",
+      text: "Physics"
+    },
+    {
+      value: "Biology",
+      text: "Biology"
+    },
+    {
+      value: "Chemistry",
+      text: "Chemistry"
+    },
+    {
+      divider: "or"
+    },
+    {
+      value: "I'm not sure",
+      text: "I'm not sure",
+      conditional: {
+        html: notSure
+      }
+    }
+  ]
+}) }}
+
+{{ govukButton({
+          text: "Continue"
+        }) }}
