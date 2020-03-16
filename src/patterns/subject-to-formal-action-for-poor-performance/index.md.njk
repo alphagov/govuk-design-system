@@ -1,0 +1,64 @@
+---
+title: Are you currently subject to formal action for poor performance at work?
+description: Ask users if they are subject to any disciplinary action
+section: Patterns
+theme: Ask users for…
+aliases: radio buttons, option buttons, ITT
+backlog_issue_id: 59
+layout: layout-pane.njk
+---
+
+{% from "_example.njk" import example %}
+
+{{ example({group: "patterns", item: "subject-to-formal-action-for-poor-performance", example: "default", html: true, nunjucks: true, open: false, size: "s"}) }}
+
+## When to use this pattern
+
+Use this pattern when you need to ask a teacher if they are currently subject to
+formal action for poor performance at work.
+
+## When not to use this pattern
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non ipsum viverra, vehicula arcu at, varius sem. Donec
+porta porta lectus, et semper odio facilisis id. Mauris eu libero nulla. Vivamus id ultricies odio.
+
+## Another heading
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non ipsum viverra, vehicula arcu at, varius sem. Donec
+porta porta lectus, et semper odio facilisis id. Mauris eu libero nulla. Vivamus id ultricies odio.
+Bullet points:
+
+- Bullet 1
+- Bulled 2
+
+### SOME H3
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nibh mauris,
+sollicitudin quis efficitur non, porttitor sit amet massa. Integer tincidunt
+massa venenatis arcu pulvinar molestie.
+
+### Error messages
+
+Error messages should be styled like this:
+
+{{ example({group: "patterns", item: "subject-to-formal-action-for-poor-performance", example: "error-none-selected", html: true, nunjucks: true, open: false, size: "s"}) }}
+
+#### If nothing has been selected
+
+Say ‘Select yes if you are subject to formal action for poor performance at work’.
+
+
+Make sure errors follow the guidance in the GDS
+[error message](https://design-system.service.gov.uk/components/error-message/)
+and have specific error messages for specific error states.
+
+## More information on the ineligible screen
+
+It is possible for users to currently be ineligible but for the disciplinary
+action to be reovked before the dealine for a service. You should tell users the
+deadline for applying if your service is not open all year round.
+
+## Research on this component
+
+- Something about mentioning that we only use this for eligibility not to put
+users on some black list.

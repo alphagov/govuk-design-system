@@ -1,0 +1,103 @@
+---
+title: Payroll gender
+description: Let users answer what their payroll gender could be
+section: Patterns
+theme: Ask users for…
+aliases: gender, sex, payroll, binary
+layout: layout-pane.njk
+---
+
+{% from "_example.njk" import example %}
+
+{{ example({group: "patterns", item: "payroll-gender", example: "default", html: true, nunjucks: true, open: false, size: "xxl"}) }}
+
+## When to use this pattern
+
+Avoiding asking users for gender and always follow the guidelines on the
+[GOV.UK Design System](https://design-system.service.gov.uk/patterns/gender-or-sex/).
+
+Use this pattern when you need to provide a gender for a user to an external
+system, where that gender is constrained to a binary response. For example, if
+HMRC require a 'female' or 'male' value to identify an individual for payroll.
+
+This is a very specific scenario, however the research and design decisions that
+went into creating this pattern may be insightful for other teams.
+
+## When not to use this pattern
+
+Do not use this pattern to ask users how they identify their gender.
+
+## How it works
+
+In our example, we needed to provide HMRC with a value for gender.
+
+HMRC currently only recognise Male and Female genders as a method of identifying
+a user's tax accounts (along with other identifiers).
+
+Gender is a required field.
+
+We designed this pattern to avoid asking the user for their gender when we only
+needed to know what HMRC were most likely to have recorded, in order to match a
+user to that record.
+
+To remain sympathetic to users, and transparent about why we're asking for this
+information:
+
+- Tell users exactly what information you're asking for
+- Explain why you're asking for this information
+- Let users know what you'll do with their data
+- Provide an option for those who do not know (this is different to providing a
+"I prefer not to say" option)
+- Let users know what you'll do if they cannot provide this information
+- Do not store this information if you do not need to do so
+
+### Error messages
+
+Error messages should be styled like this:
+
+{{ example({group: "patterns", item: "payroll-gender", example: "error-none-selected", html: true, nunjucks: true, open: false, size: "s"}) }}
+
+Make sure errors follow the guidance in the GDS
+[error message](https://design-system.service.gov.uk/components/error-message/)
+and have specific error messages for specific error states.
+
+### There is a concern for users
+
+Gender identity is not a 2 dimensial scale but more of a cloud, this makes it
+particularly difficult to choose from the limited options available.
+
+Asking users about their gender can force them to reconsider which gender they
+associate with at that time and potentially cause some distress or anxiety.
+
+A user's gender itendity can can over time, this could be years or a much
+shorter period of time such as a matter of minutes.
+
+Recording information about a user's gender can have a detrimental impact on
+them now or in the future.
+
+The information might be stored in a way that is difficult to change, or it may
+be shared or used for a different purpose.
+
+Users may also have concerns that their response will be used as evidence of how
+they identify their gender.
+
+It's important to make it clear why we're asking and give users the choice not
+to respond. If users choose not to respond, you must have a mechanism for
+finding out and you must never guess.
+
+Consider who within your service needs to access this information and only
+share it when absolutely necessary.
+
+
+## Research on this component
+
+This pattern has had limited research with LGBTQIA+ groups. More research is
+required to understand:
+
+- How comfortable users are with DfE handling this data
+- If it's clear to users why we ask for this information and if they understand
+- If users know what's on record at HMRC or at their school
+- If we're creating discomfort for users who have to ask the question to someone
+at their school
+- If the question is difficult to answer correctly for users who have thought
+about their gender differently at different times

@@ -1,0 +1,53 @@
+---
+title: Error, none selected – What gender does your school's payroll system associate with you?
+layout: layout-example.njk
+---
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{{ govukRadios({
+  idPrefix: "changed-name",
+  name: "changed-name",
+  fieldset: {
+    legend: {
+      text: "What gender does your school's payroll system associate with you?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--xl"
+    }
+  },
+  hint: {
+    text: "Your school will need to send HMRC a “Male“ or “Female“ gender to pay you. We ask so we can provide this information to HMRC who use it along with other data to find you in their database, allowing us to make a payment to you."
+  },
+  errorMessage: {
+    text: "Choose the option for the gender your school’s payroll system associates with you"
+  },
+  items: [
+    {
+      value: "Female",
+      text: "Female"
+    },
+    {
+      value: "Male",
+      text: "Male"
+    },
+    {
+      divider: "or"
+    },
+    {
+      value: "abroad",
+      text: "I do not know"
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
+
+
+{{ govukDetails({
+  summaryText: "If you do not know",
+  text: "If you do not know what gender is held on record we will contact HMRC or the Teachers Pension Scheme. We do not need to record this information but it is required to make tax contributions on your behalf to HMRC."
+}) }}

@@ -1,0 +1,22 @@
+---
+layout: layout-example.njk
+title: Default – Student loan amount
+---
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+
+<h1 class="govuk-label-wrapper">
+  <label class="govuk-label govuk-label--xl" for="student-loan-amount">
+    Exactly how much student loan did you repay while employed as a teacher between 6 April 2018 and 5 April 2019?
+  </label>
+</h1>
+
+<span id="changed-name-hint" class="govuk-hint">
+  Check your annual student loan statement, or your P60 if you had only one employer. You can also add up the student loan contributions from your payslips from this period, but bear in mind the amounts on each payslip might be different.
+</span>
+
+<div class="govuk-currency-input govuk-!-margin-bottom-7">
+  <span class="govuk-currency-input__unit">£</span>
+  <input class="govuk-currency-input__input govuk-input--width-5 govuk-input" step="any" min="0" max="99999" type="number" name="studnetLoanAmount" id="studnetLoanAmount">
+</div>

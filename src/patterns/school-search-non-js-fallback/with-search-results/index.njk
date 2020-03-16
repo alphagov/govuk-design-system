@@ -1,0 +1,70 @@
+---
+layout: layout-example.njk
+title: With search results - school search non-JS fallback
+---
+
+{% extends "example-wrappers/full-page.njk" %}
+{% set mainClasses = "govuk-main-wrapper--l" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Which school are you employed to teach at?</h1>
+
+
+        {{ govukInput({
+          hint: {
+            text: "Enter the school name or postcode. Use at least three characters."
+          },
+          id: "name-on-the-account",
+          name: "name-on-the-account",
+          attributes: {
+            spellcheck: "false"
+          }
+        }) }}
+
+    <div class="govuk-radios  govuk-!-padding-bottom-2">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" type="radio" value="Penistone Grammar School" checked="checked" name="Penistone Grammar School">
+          <label class="govuk-radios__label govuk-label--s govuk-radios__label govuk-!-padding-0" for="Penistone Grammar School">
+            <div class="school-search__suggestion">
+              <div class="school-search__suggestion-main-section">
+                <div class="govuk-label govuk-radios__label govuk-label--s">
+                  Penistone Grammar School
+                </div>
+                <span class="govuk-hint govuk-radios__hint">Huddersfield Road, Penistone, Sheffield, South Yorkshire, S36 7BX</span>
+              </div>
+            </div>
+          </label>
+        </div>
+
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" type="radio" value="Penistone St John's Voluntary Aided Primary School" name="Penistone St John's Voluntary Aided Primary School" id="Penistone St John's Voluntary Aided Primary School">
+          <label class="govuk-radios__label govuk-label--s govuk-radios__label govuk-!-padding-0" for="Penistone St John's Voluntary Aided Primary School">
+            <div class="school-search__suggestion">
+              <div class="school-search__suggestion-main-section">
+                <div class="govuk-label govuk-radios__label govuk-label--s">
+                  Penistone St John's Voluntary Aided Primary School
+                </div>
+                <span class="govuk-hint govuk-radios__hint">High Street, Penistone, Sheffield, South Yorkshire, S36 6BS</span>
+              </div>
+            </div>
+          </label>
+        </div>
+    </div>
+
+    {{ govukButton({
+      text: "Continue",
+      classes: "govuk-!-margin-right-1"
+    }) }}
+
+    {{ govukButton({
+      text: "Search again",
+      classes: "govuk-button--secondary"
+    }) }}
+
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,63 @@
+---
+title: Error, none selected – Which of the following subjects did you teach at Penistone Grammar School between 6 April 2018 and 5 April 2019?
+layout: layout-example.njk
+---
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+{{ govukCheckboxes({
+  idPrefix: "subjectsTaught",
+  name: "subjectsTaught",
+  fieldset: {
+    legend: {
+      text: "Which subjects do you teach?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--xl"
+    }
+  },
+  errorMessage: {
+    text: "Which subjects do you teach?"
+  },
+  items: [
+    {
+      value: "Biology",
+      text: "Biology"
+    },
+    {
+      value: "Chemistry",
+      text: "Chemistry"
+    },
+    {
+      value: "Physics",
+      text: "Physics"
+    },
+    {
+      value: "Computing",
+      text: "Computing"
+    },
+    {
+      value: "Languages",
+      text: "Languages"
+    }
+  ]
+}) }}
+
+{{ govukRadios({
+  idPrefix: "subjectsTaught",
+  name: "subjectsTaught",
+  items: [
+    {
+      divider: "or"
+    },
+    {
+      value: "I did not teach any of these subjects",
+      text: "I did not teach any of these subjects"
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  text: "Continue"
+}) }}

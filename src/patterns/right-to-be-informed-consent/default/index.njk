@@ -1,0 +1,71 @@
+---
+layout: layout-example-full-page.njk
+title: Default - Right to be informed consent
+---
+
+{% extends "example-wrappers/full-page.njk" %}
+{% set mainClasses = "govuk-main-wrapper--l" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">How we will use the information you provide</h1>
+        <h2 class="govuk-heading-m">To process your claim</h2>
+        <p class="govuk-body">
+          We will check the information in your application with:
+        </p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>the school you are currently employed to teach at</li>
+          <li>the Department for Education's database of qualified teachers</li>
+          <li>the Teacher Pension Service</li>
+        </ul>
+        <h2 class="govuk-heading-m">To pay you</h2>
+        <p class="govuk-body">
+          We'll send some of your personal information to our payroll partner Cantium, who are responsible
+          for processing your payment.
+        </p>
+        <p class="govuk-body">
+          We also send some of your information to HMRC so that:
+        </p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>your student loan repayment can be deducted from your payment, if applicable</li>
+          <li>we can pay Income Tax and National Insurance (NI) on your behalf</li>
+        </ul>
+
+        {{ govukButton({
+          text: "Save and continue"
+        }) }}
+
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              What information is sent to HMRC and Cantium?
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p class="govuk-body">
+              We send Cantium and HMRC your:
+            </p>
+
+            <ul class="govuk-list govuk-list--bullet">
+              <li>full name</li>
+              <li>NI number</li>
+              <li>gender</li>
+              <li>date of birth</li>
+              <li>address</li>
+            </ul>
+
+            <p class="govuk-body">
+              We also send Cantium your:
+            </p>
+
+            <ul class="govuk-list govuk-list--bullet">
+              <li>email address</li>
+              <li>bank details</li>
+            </ul>
+          </div>
+        </details>
+    </div>
+  </div>
+{% endblock %}

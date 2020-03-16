@@ -1,0 +1,37 @@
+---
+title: Error, none selected – When did you complete your initial teacher training Error
+layout: layout-example.njk
+---
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  idPrefix: "changed-name",
+  name: "changed-name",
+  errorMessage: {
+    text: "Select when you completed your initial teacher training"
+  },
+  fieldset: {
+    legend: {
+      text: "When did you complete your initial teacher training?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--xl"
+    }
+  },
+  items: [
+    {
+      value: "In or before the academic year 2012 to 2013",
+      text: "In or before the academic year 2012 to 2013"
+    },
+    {
+      value: "In or after the academic year 2013 to 2014",
+      text: "In or after the academic year 2013 to 2014"
+    }
+  ]
+}) }}
+
+{{ govukButton({
+          text: "Continue"
+        }) }}

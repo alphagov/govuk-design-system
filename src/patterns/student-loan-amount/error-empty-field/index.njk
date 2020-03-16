@@ -1,0 +1,23 @@
+---
+layout: layout-example.njk
+title: Error, empty field – Student Loan amount
+---
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "Teacher Reference Number"
+  },
+  hint: {
+    html: "You can get this from your school, the certificate you got when you qualified as a teacher or from the <a href='https://www.gov.uk/guidance/individual-teacher-records-information-for-teachers#contact'  class='govuk-link'>teacher qualifications helpdesk</a>."
+  },
+  errorMessage: {
+    text: "Teacher reference number must contain seven digits"
+  },
+  id: "telephone-number",
+  name: "telephone-number",
+  type: "tel",
+  autocomplete: "tel",
+  classes: "govuk-input--width-20"
+}) }}

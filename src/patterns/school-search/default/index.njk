@@ -1,0 +1,34 @@
+---
+layout: layout-example.njk
+title: Default – School search
+---
+
+{% extends "example-wrappers/full-page.njk" %}
+{% set mainClasses = "govuk-main-wrapper--l" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Which school are you employed to teach at</h1>
+
+
+        {{ govukInput({
+          hint: {
+            text: "Enter the school name or postcode. Use at least three characters."
+          },
+          id: "name-on-the-account",
+          name: "name-on-the-account",
+          attributes: {
+            spellcheck: "false"
+          }
+        }) }}
+
+        {{ govukButton({
+          text: "Save and continue"
+        }) }}
+
+    </div>
+  </div>
+{% endblock %}
