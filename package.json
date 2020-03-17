@@ -20,7 +20,8 @@
     "test": "npm run lint && jest",
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "standard",
-    "lint:scss": "sass-lint '**/*.scss' --verbose --ignore 'node_modules/**/*.scss'"
+    "lint:scss": "sass-lint '**/*.scss' --verbose --ignore 'node_modules/**/*.scss'",
+    "continuous-integration": "npm run lint && npm run build"
   },
   "standard": {
     "ignore": [
