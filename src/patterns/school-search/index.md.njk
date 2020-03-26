@@ -1,5 +1,5 @@
 ---
-title: School search
+title: School taught at
 description: Help users find a school in England
 section: Patterns
 theme: Ask users for…
@@ -15,25 +15,25 @@ statusMessage: This pattern is currently experimental because <a class="govuk-li
 
 ## When to use this pattern
 
-Use this pattern to help a user find the a school somewhere in England.
+Use this pattern to help a user identify a school somewhere in England.
 
 ## How it works
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xnk4J9WhmB8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br/>
 
-Schools in England are maintained on the [Get Information About Schools](https://get-information-schools.service.gov.uk/) (GIAS)
-service. We use this data combined with [accessible autocomplete](https://github.com/alphagov/accessible-autocomplete)
+Schools in England are maintained on the [Get information about schools](https://get-information-schools.service.gov.uk/) (GIAS)
+service. We use this data
 to make it easier for the user to find a school.
 
 When asking for a school
 
 - give multiple methods of finding a school
-- use suggestions to help a user when typing long school names
+- use [accessible autocomplete](https://github.com/alphagov/accessible-autocomplete) to help a user when typing long school names
 - use up to date data from Get information about schools
 - display additional information to the user to help them identify the correct
 school (such as the address)
-- support those who do not have javascript enabled
+- support those who do not have JavaScript enabled
 - depending on what your service needs to do, distinguish between open and
 closed schools
 - do not use an autocomplete attribute
@@ -45,10 +45,10 @@ Error messages should be styled like this:
 {{ example({group: "patterns", item: "school-search", example: "error-empty-field", html: true, nunjucks: true, open: false, size: "s"}) }}
 
 Make sure errors follow the guidance in the GDS
-[error message](https://design-system.service.gov.uk/components/error-message/)
+[error message component](https://design-system.service.gov.uk/components/error-message/)
 and have specific error messages for specific error states.
 
-#### If nothing has been entered
+#### If the input is empty
 
 Say ‘Enter the name or postcode of the school’.
 
@@ -60,11 +60,11 @@ Say ‘No results match that search term. Try again.’
 
 Research on this pattern is limited. We've done some testing which indicates it
 is usable and accessible, but we've also included an [option for users who are
-unable to use javascript](../school-search-non-js-fallback).
+unable to use JavaScript](../school-search-non-js-fallback).
 
 ### Employed to teach vs employed at
 
-Most schools are part of a Multi Academy Trust (MAT) and may not be employed by
+Most schools are part of a Multi Academy Trust (MAT) and teachers may not be employed by
 the school they work at. For example, a teacher's employment contract could be
 with the MAT, but they work at an academy within the MAT.
 
@@ -78,8 +78,8 @@ the same name. In these cases GIAS will return more than one school. Only
 display to the user the open school and discount the closed schools. If you need
 to show a user closed schools:
 
-- Visually differentiate them to make it easier to pick
-- Display to the user when the school closed
+- visually differentiate them to make it easier to pick
+- display to the user when the school closed
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/RSd-MzkPkuU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br/>
@@ -91,7 +91,7 @@ Some schools are hard to distinguish between due to having similar names, for
 example if there are multiple 'St Andrew's'.
 
 A teacher may also type the school name differently to how it is spelt in the
-GIAS data, for example typing `Saint` instead of `St` or using an apostrophe
+GIAS data, for example typing 'Saint' instead of 'St' or using an apostrophe
 differently.
 
 For circumstances such as these, provide alternative methods of searching such
