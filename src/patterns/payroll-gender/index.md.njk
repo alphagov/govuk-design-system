@@ -13,8 +13,8 @@ layout: layout-pane.njk
 
 ## When to use this pattern
 
-Avoiding asking users for gender and always follow the guidelines on the
-[GOV.UK Design System](https://design-system.service.gov.uk/patterns/gender-or-sex/).
+Avoid asking users for gender and always follow the
+[guidelines on the GOV.UK Design System](https://design-system.service.gov.uk/patterns/gender-or-sex/).
 
 Use this pattern when you need to provide a gender for a user to an external
 system, where that gender is constrained to a binary response. For example, if
@@ -43,13 +43,13 @@ user to that record.
 To remain sympathetic to users, and transparent about why we're asking for this
 information:
 
-- Tell users exactly what information you're asking for
-- Explain why you're asking for this information
-- Let users know what you'll do with their data
-- Provide an option for those who do not know (this is different to providing a
+- tell users exactly what information you're asking for
+- explain why you're asking for this information
+- let users know what you'll do with their data
+- provide an option for those who do not know (this is different to providing an
 "I prefer not to say" option)
-- Let users know what you'll do if they cannot provide this information
-- Do not store this information if you do not need to do so
+- let users know what you'll do if they cannot provide this information
+- do not store this information if you do not need to do so
 
 ### Error messages
 
@@ -58,21 +58,15 @@ Error messages should be styled like this:
 {{ example({group: "patterns", item: "payroll-gender", example: "error-none-selected", html: true, nunjucks: true, open: false, size: "s"}) }}
 
 Make sure errors follow the guidance in the GDS
-[error message](https://design-system.service.gov.uk/components/error-message/)
+[error message component](https://design-system.service.gov.uk/components/error-message/)
 and have specific error messages for specific error states.
 
-### There is a concern for users
+### There are concerns for users
 
-Gender identity is not a 2 dimensial scale but more of a cloud, this makes it
-particularly difficult to choose from the limited options available.
-
-Asking users about their gender can force them to reconsider which gender they
+A user's gender can change. Asking users about their gender can force them to reconsider which gender they
 associate with at that time and potentially cause some distress or anxiety.
 
-A user's gender itendity can can over time, this could be years or a much
-shorter period of time such as a matter of minutes.
-
-Recording information about a user's gender can have a detrimental impact on
+Recording information about a user's gender can also have a detrimental impact on
 them now or in the future.
 
 The information might be stored in a way that is difficult to change, or it may
@@ -94,10 +88,10 @@ share it when absolutely necessary.
 This pattern has had limited research with LGBTQIA+ groups. More research is
 required to understand:
 
-- How comfortable users are with DfE handling this data
-- If it's clear to users why we ask for this information and if they understand
-- If users know what's on record at HMRC or at their school
-- If we're creating discomfort for users who have to ask the question to someone
+- how comfortable users are with DfE handling this data
+- if it's clear to users why we ask for this information and if they understand
+- if users know what's on record at HMRC or at their school
+- if we're creating discomfort for users who have to ask the question to someone
 at their school
-- If the question is difficult to answer correctly for users who have thought
+- if the question is difficult to answer correctly for users who have thought
 about their gender differently at different times
