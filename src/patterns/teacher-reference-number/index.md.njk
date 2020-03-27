@@ -27,13 +27,11 @@ information with the Teacher Pension Service.
 Teacher reference numbers contain 7 digits and may also contain a hyphen, a
 forward slash, or the letters 'RP'.
 
-### Allow different formats
-Users should be allowed to enter teacher reference numbers in whatever format is
-familiar to them. You should allow for additional spaces and slashes and the
-letters 'RP'.
+When asking for teacher reference number:
 
-### Tell them how they can find out the information
-Give advice about where the user can find their teacher reference number.
+- give advice about where the user can find their teacher reference number
+- allow the user to enter their reference in whichever format is familiar to them, for example with or without spaces, a slash, a hyphen, or the letters 'RP' 
+- do not use the initialism 'TRN', which is commonly used within DfE
 
 ### Error messages
 
@@ -42,23 +40,16 @@ Error messages should be styled like this:
 {{ example({group: "patterns", item: "teacher-reference-number", example: "error-empty-field", html: true, nunjucks: true, open: false, size: "s"}) }}
 
 Make sure errors follow the guidance in the GDS
-[error message](https://design-system.service.gov.uk/components/error-message/)
+[error message component](https://design-system.service.gov.uk/components/error-message/)
 and have specific error messages for specific error states.
 
-#### If nothing has been entered
+#### If the input is empty
 
 Say ‘Enter your teacher reference number’.
 
-#### If the incorrect amount of characters have been entered
+#### If the input contains more or less than 7 digits
 
 Say ‘Teacher reference number must contain seven digits’.
-
-### Using example teacher reference numbers
-If you wish to include an example teacher reference number (in hint text for example):
-
-- If your number is "9912345" just enter "9912345"
-- If your number is "RP 99/54321" just enter "9954321"
-- If your number is "68/45678" just enter "6745678"
 
 ### Avoid input masking
 
@@ -84,7 +75,7 @@ for teachers to mistype the number.
 We have also seen users get the number completely wrong, referencing a different
 number from some other form of certification.
 
-### It is possible to have more than one
+### It's possible to have more than one
 
 Some teachers also have multiple reference numbers. This can occur when they
 join the teacher pension service and a temporary reference number is generated.
