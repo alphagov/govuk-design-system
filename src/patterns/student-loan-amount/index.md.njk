@@ -1,6 +1,6 @@
 ---
 title: Student loan amount
-description: Help users enter a Teacher Reference Number
+description: Ask users how much student loan they repaid in a given timeframe
 section: Patterns
 theme: Ask users for…
 aliases: TRN
@@ -16,13 +16,9 @@ statusMessage: This pattern is currently experimental because <a class="govuk-li
 
 ## When to use this pattern
 
-Use this pattern when you need to ask how much someone have paid towards their
-student loan.
+Use this pattern when you need to ask a user how much they repaid towards their student loan in a given timeframe.
 
 ## How it works
-
-### Allow different formats
-Use the number property on the input so that it defaults to numeric values only.
 
 ### Error messages
 
@@ -31,35 +27,11 @@ Error messages should be styled like this:
 {{ example({group: "patterns", item: "teacher-reference-number", example: "error-empty-field", html: true, nunjucks: true, open: false, size: "s"}) }}
 
 Make sure errors follow the guidance in the GDS
-[error message](https://design-system.service.gov.uk/components/error-message/)
+[error message component](https://design-system.service.gov.uk/components/error-message/)
 and have specific error messages for specific error states.
 
 #### If nothing has been entered
 
-Say ‘Enter your teacher reference number’.
-
 #### If the incorrect amount of characters have been entered
 
-Say ‘Teacher reference number must contain seven digits’.
-
-### Using example telephone numbers
-If you wish to include an example teacher reference number (in hint text for example):
-
-- If your number is "9912345" just enter "9912345"
-- If your number is "RP 99/54321" just enter "9954321"
-- If your number is "68/45678" just enter "6745678"
-
-### Avoid input masking
-
-Avoid [input masking](https://css-tricks.com/input-masking/) because it makes it harder for users to:
-
-- type a number in their preferred way
-- transcribe a number from another place and check that they’ve got it right
-
 ## Research on this pattern
-
-Somethings about research on this pattern:
-
-- RESEARCH 1
-- EXAMPLE 2
-- SOMETHING ELSE
