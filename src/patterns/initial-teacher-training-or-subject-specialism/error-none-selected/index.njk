@@ -1,5 +1,5 @@
 ---
-title: Which subject did you complete your initial teacher training in?
+title: Error, none selected – Which subject did you complete your initial teacher training in?
 layout: layout-example.njk
 ---
 
@@ -9,9 +9,13 @@ layout: layout-example.njk
 {{ govukRadios({
   idPrefix: "itt-subject",
   name: "itt-subject",
+  errorMessage: {
+    text: "Select if you completed your initial teacher training in Maths,
+    Physics, Science, or None of these subjects"
+  },
   fieldset: {
     legend: {
-      text: "Which subject did you complete your initial teacher training in?",
+      text: "When did you complete your initial teacher training?",
       isPageHeading: true,
       classes: "govuk-fieldset__legend--xl"
     }
@@ -40,5 +44,5 @@ layout: layout-example.njk
 }) }}
 
 {{ govukButton({
-          text: "Continue"
-        }) }}
+  text: "Continue"
+}) }}
