@@ -8,8 +8,8 @@ layout: layout-example.njk
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {{ govukRadios({
-  idPrefix: "changed-name",
-  name: "changed-name",
+  idPrefix: "payroll-gender",
+  name: "payroll-gender",
   fieldset: {
     legend: {
       text: "What gender does your school's payroll system associate with you?",
@@ -33,7 +33,7 @@ layout: layout-example.njk
       divider: "or"
     },
     {
-      value: "abroad",
+      value: "I do not know",
       text: "I do not know"
     }
   ]
@@ -42,7 +42,6 @@ layout: layout-example.njk
 {{ govukButton({
   text: "Continue"
 }) }}
-
 
 {{ govukDetails({
   summaryText: "If you do not know",
