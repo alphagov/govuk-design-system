@@ -10,6 +10,21 @@ layout: layout-single-page.njk
 
      <p class="govuk-body-l">If you’ve got a question, idea or suggestion get in touch with the Design System team.</p>
 
+      {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+
+      {% set callout %}
+        The GOV.UK Design System team provide support to people who work in the government.<br>
+        <br>
+        We cannot give general advice to the public. We do not have access to information about you held by government departments.<br>
+        <br>
+        For other enquiries, use <a class="govuk-link" href="https://www.gov.uk/contact">the contact form on GOV.UK</a>.
+      {% endset %}
+
+      {{ govukWarningText({
+        html: callout,
+        iconFallbackText: "Warning"
+      }) }}
+
      <h2 class="govuk-heading-l">Slack</h2>
 
      <p class="govuk-body">Use the <a class="govuk-link" href="https://ukgovernmentdigital.slack.com/app_redirect?channel=govuk-design-system" data-hsupport="slack">#govuk-design-system channel on cross-government Slack</a>.</p>
