@@ -103,7 +103,10 @@ Avoid opening links in a new tab or window. It can be disorienting - and [can ca
 
 If you need a link to open in a new tab - for example, to stop the user losing information they’ve entered into a form - then include the words ‘opens in new tab’ as part of the link.
 
-Include `rel="noreferrer noopener"` along with `target="_blank"` to reduce the risk of [reverse tabnabbing](https://owasp.org/www-community/attacks/Reverse_Tabnabbing).
+Include `rel="noreferrer noopener"` along with `target="_blank"` to reduce the risk of [reverse tabnabbing](https://owasp.org/www-community/attacks/Reverse_Tabnabbing). See how to do this in HTML in the following example.
+
+{{ example({group: "styles", item: "typography", example: "link-opening-in-new-tab", html: true, open: true}) }}
+
 If you're displaying lots of links together and want to save space and avoid repetition, consider doing both of the following:
 
   - adding a line of text before the links saying 'The following links open in a new tab'
