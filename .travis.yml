@@ -18,10 +18,10 @@ env:
   # CloudFoundry credentials for deployment
   - CF_API="https://api.cloud.service.gov.uk"
   - CF_ORG="govuk-design-system"
-  - CF_SPACE="production"
-  - CF_USERNAME="design-system-deploy-production@digital.cabinet-office.gov.uk"
+  - CF_SPACE="design-system"
+  - CF_USERNAME="design-system-deploy+design-system@digital.cabinet-office.gov.uk"
   # CF_PASSWORD
-  - secure: jtVKWHzf2mxGnvKC6Ift+QfbXZuQEF5bQn/igin4356V+NAk78HJ7irGrB1DoMUrZeNCLK/CfmWeYWBjIsdZSXh+eW3djRMplcVIxKpOrGUWZXuyCbBZCeE4hItK7/iGRaDSndo+MnIO6Sie/0NebIAsMumeWLjUQj4/Zv/1/dV2r0USYDAKzduJx6i4wTleYjxojAo/Bjfh1z8GqcjfMFrusY2RoaymarSVsPhB93ix+U6Xd7c5LCK3APZZEhGwxLb7sfkVkIiUnbr4rDEXhK0eavUMZn0J9EukftR8OtK6e0WYTDhmBwQW5vlpo9/dW9SuFMpfsqt5qbtyQz2zCiPgN4rIVP3aCtPayjDMX2mWKgYYy0WBCsyJIsrTdG/uZLDD5ci5r2ahpRCeGg0SAPvmTX2Y8gzxE27vZWaq4REiWbgiipIdosMbipG6rZBGxYjJ9M3gjCZlT/2HtT6N5nVYpsH+1j5qtTNis3IfiopPNoLEBOV/7NSDyiASKFGg4LpVOFwvtKARhLqkKwq66JCVDOjnsISpvrAGYG6kzyMOYsWxdhwq/zsGNA/vOuLlhwgaqo+9NsWQ0jLWl1kR/wqcD5uSari0KhrFtsmQEq/4Gg6l80jo29wPUZoCHGf87WN8eFAarKM3QTmJ6Xn8rqBh4hMT9e/QwdDIbXfvAn8=
+  - secure: "N1ybDZ35FJ63/oGDfO8pofzTdFicyRHqx/H6Y6vsm+0WedU9bc4mTQ2qBQydYIsjQH+V17EIW+BjomL2ozivtcrf5ZBMvVdXJFk/7U2ii2LifimAXa1j2cQNZnOoviAjJIUPn90QkkjCyZlEe8vp97RYHHhDc17NGacttAvZmzVlPJB9KlwM6PGf7L9HfID2B2vEx5q/DXZcpl6uNJUPXI0/Clnjxl5K0RdvGbyNHvN7N3/cFg97NFe0wbBT64kcxo8HeWLsWeYjMEx3TlwhOJ0z5zisjoCFTI34aUxnV8HRt1BHwU8kghistaLKXc5hpQFnCD6ZVIK23Vmzgg4WheWUvkG14D8E6RggHaKizFgNemz7N0wE9ZwUSrT6lRMUfINUQfDPhFXUPKMTTttyNTRCXmFy7gklu6wh/kG/kFNJhFEZ7SIK0+g33RMV95taolNwsZp4UuKqJwo6TageMeFcpTG0yJ3CgJI6AVxMHNvgunAT7rNdCoc7h8+gBMBMShOw9vTkcPTpdu8Z78b4LMn7GmKaW/PFDfU3EcOsQ6kdmXoayDErXePwLXr/ZYaC9vG+1cPqaTcQ7s5lFismkfwK8XPJfZBCWNamXwLftEuDqTegZz84YwJnbK26JRSjWo50SlEHmbKnM+CWGnreV2YBQGdhupJvtoHFOlYrGqg="
 
 install:
   - npm install --no-optional
