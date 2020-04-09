@@ -97,6 +97,18 @@ Use the `govuk-link--no-visited-state` modifier class where it is not helpful to
 
 {{ example({group: "styles", item: "typography", example: "link-no-visited-state", html: true, open: true}) }}
 
+### Opening links in a new tab
+
+Avoid opening links in a new tab or window. It can be disorienting - and [can cause accessibility problems for people who aren't able to visually perceive that the new tab has opened](https://www.w3.org/TR/WCAG20-TECHS/G200.html).
+
+If you need a link to open in a new tab - for example, to stop the user losing information they’ve entered into a form - then include the words ‘opens in new tab’ as part of the link.
+
+Include `rel="noreferrer noopener"` along with `target="_blank"` to reduce the risk of [reverse tabnabbing](https://owasp.org/www-community/attacks/Reverse_Tabnabbing).
+If you're displaying lots of links together and want to save space and avoid repetition, consider doing both of the following:
+
+  - adding a line of text before the links saying 'The following links open in a new tab'
+  - including `<span class="govuk-visually-hidden">(opens in new tab)</span>` as part of the link text, so that part of the link text is visually hidden but still accessible to screen readers
+
 ### Links without underlines
 
 Only remove underlines from links if:
