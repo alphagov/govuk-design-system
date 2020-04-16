@@ -19,7 +19,7 @@ layout: layout-example.njk
     text: "For example, 27 3 2007"
   },
   errorMessage: {
-    text: "The date your passport was issued must be in the past"
+    text: "The date your passport was issued must include a year"
   },
   items: [
     {
@@ -34,8 +34,7 @@ layout: layout-example.njk
     },
     {
       classes: "govuk-input--width-4 govuk-input--error",
-      name: "year",
-      value: "2076"
+      name: "year"
     }
   ]
 }) }}
