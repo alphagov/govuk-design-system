@@ -1,0 +1,31 @@
+---
+title: Breadcrumbs that collapse on mobile
+layout: layout-example.njk
+---
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+{{ govukBreadcrumbs({
+  collapseOnMobile: true,
+  items: [
+    {
+      text: "Home",
+      href: "#"
+    },
+    {
+      text: "Environment",
+      href: "#"
+    },
+    {
+      text: "Rural and countryside",
+      href: '#'
+    },
+    {
+      text: "Rural development and land management",
+      href: '#'
+    },
+    {
+      text: "Economic growth in rural areas",
+      href: '#'
+    }
+  ]
+}) }}
