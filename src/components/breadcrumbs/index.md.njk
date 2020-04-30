@@ -33,8 +33,8 @@ There are 2 ways to use the breadcrumbs component. You can use HTML or, if you a
 
 ### Collapsing breadcrumbs on tablet and mobile
 
-If you have long breadcrumbs you can configure the component to only show the first and last items on tablet breakpoint and below.
+If you have long breadcrumbs you can configure the component to only show the first and last items if the screen breakpoint is at tablet size or below.
 
-To do this, add a `govuk-breadcrumbs--collapse-on-mobile` class to the outer `<div>` element of the component HTML or, if you’re using Nunjucks, add `collapseOnMobile: true` to the Nunjucks macro, as shown in this example.
+To do this, add a `govuk-breadcrumbs--collapse-on-mobile` class to the outer `<div>` element of the component HTML. Or if you’re using Nunjucks, add `collapseOnMobile: true` to the Nunjucks macro as shown in this example.
 
 {{ example({group: "components", item: "breadcrumbs", example: "collapse-mobile", html: true, nunjucks: true, open: false}) }}
