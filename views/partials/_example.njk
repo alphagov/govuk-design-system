@@ -34,7 +34,7 @@
         Open this
         {# Don't use full title visually as the context is shown based on location of this link #}
         <span class="govuk-visually-hidden">{{ exampleTitle | lower }}</span>
-        example in a new window
+        example in a new tab
       </a>
     </div>
     <iframe title="{{ exampleTitle + " example" }}" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable{% if params.size %} app-example__frame--{{ params.size }}{% endif %}" src="{{ exampleURL }}" frameBorder="0" loading="lazy"></iframe>
