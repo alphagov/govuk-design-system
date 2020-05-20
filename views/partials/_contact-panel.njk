@@ -4,25 +4,17 @@
 
   {% if backlog_issue_id %}
     <p class="govuk-body">
-    To help make sure the {{ title }} page is useful, relevant and up to date, you can:
+    To help make sure that this page is useful, relevant and up to date, you can:
     </p>
     <ul class="govuk-list govuk-list--bullet">
       <li>
         <a class="govuk-link app-contact-panel__link" href="https://github.com/alphagov/govuk-design-system-backlog/issues/{{ backlog_issue_id }}">
-          share research or feedback about
-          {% if section === 'Components' or section === 'Patterns' %}
-            the
-          {% endif %}
-          {{ title }}
-          {% if section === 'Components' %} component{% endif %}
-          {% if section === 'Patterns' %} pattern{% endif %}
-          on GitHub
+          share your research or feedback on GitHub
         </a>
       </li>
       <li>
-        <a class="govuk-link app-contact-panel__link" href="{{ fileEditURL }}">
-          propose a change to this page
-        </a> – read more about
+        <a class="govuk-link app-contact-panel__link" href="{{ fileEditURL }}">propose a change</a>
+         – read more about
         <a class="govuk-link app-contact-panel__link" href="/community/propose-a-content-change-using-github/">
           how to propose changes in GitHub
         </a>
@@ -30,16 +22,12 @@
     </ul>
   {% else %}
       <p class="govuk-body">
-        If you spot a problem with the {{ title }} guidance you can
-        <a class="govuk-link app-contact-panel__link" href="{{ fileEditURL }}">
-          propose a change
-        </a>.
+        If you spot a problem with this guidance you can
+        <a class="govuk-link app-contact-panel__link" href="{{ fileEditURL }}">propose a change</a>.
       </p>
       <p class="govuk-body">
         If you're not sure how to do this, read guidance on
-        <a class="govuk-link app-contact-panel__link" href="/community/propose-a-content-change-using-github/">
-          how to propose changes in GitHub
-        </a>.
+        <a class="govuk-link app-contact-panel__link" href="/community/propose-a-content-change-using-github/">how to propose changes in GitHub</a>.
       </p>
   {% endif %}
 {% endif %}
