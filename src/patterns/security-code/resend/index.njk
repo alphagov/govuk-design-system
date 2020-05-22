@@ -1,0 +1,19 @@
+---
+layout: layout-example.njk
+title: Resend security code – Security code
+---
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+
+{{ govukBackLink({
+  text: "Back",
+  href: "#"
+}) }}
+
+<h1 class="govuk-heading-l">Resend security code</h1>
+
+<p class="govuk-body">Text messages sometimes take a few minutes to arrive. If you do not receive the text message, you can request a new one.</p>
+
+{{ govukButton({text: "Resend security code"}) }}
