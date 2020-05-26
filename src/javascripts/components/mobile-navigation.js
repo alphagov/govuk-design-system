@@ -1,6 +1,6 @@
-import 'govuk-frontend/govuk/vendor/polyfills/Element/prototype/classList'
+import 'govuk-frontend/package/govuk/vendor/polyfills/Element/prototype/classList'
 
-import common from 'govuk-frontend/govuk/common'
+import common from 'govuk-frontend/package/govuk/common'
 var nodeListForEach = common.nodeListForEach
 
 var navActiveClass = 'app-mobile-nav--active'
