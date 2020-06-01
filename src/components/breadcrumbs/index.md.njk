@@ -30,3 +30,11 @@ The breadcrumb should start with your 'home' page and end with the parent sectio
 There are 2 ways to use the breadcrumbs component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://govuk-prototype-kit.herokuapp.com), you can use the Nunjucks macro.
 
 {{ example({group: "components", item: "breadcrumbs", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second"}) }}
+
+### Collapsing breadcrumbs on mobile devices
+
+If you have long breadcrumbs you can configure the component to only show the first and last items on mobile devices.
+
+To do this, add a `govuk-breadcrumbs--collapse-on-mobile` class to the outer `<div>` element of the component HTML. Or if you’re using Nunjucks, add `collapseOnMobile: true` to the Nunjucks macro as shown in this example.
+
+{{ example({group: "components", item: "breadcrumbs", example: "collapse-mobile", html: true, nunjucks: true, open: false}) }}
