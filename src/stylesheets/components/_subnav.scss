@@ -19,7 +19,7 @@
     text-decoration: none;
 
     &:not(:focus):hover {
-      box-shadow: 0 -2px transparent, 0 2px #1d70b8;
+      box-shadow: 0 -2px transparent, 0 2px $govuk-link-colour;
     }
   }
 
