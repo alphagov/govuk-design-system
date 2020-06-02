@@ -43,7 +43,6 @@ $navigation-height: 50px;
 
   &:not(:focus):hover {
     color: $govuk-link-colour;
-    text-decoration: underline;
   }
 
   // Extend the touch area of the link to the list
@@ -59,4 +58,5 @@ $navigation-height: 50px;
 
 .app-navigation__list-item--current .app-navigation__link:hover {
   text-decoration: none;
+  box-shadow: none;
 }
