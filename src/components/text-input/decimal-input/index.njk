@@ -1,0 +1,22 @@
+---
+title: Example of an input asking for numbers with decimal places
+layout: layout-example.njk
+---
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "Cost per item, in pounds"
+  },
+  classes: "govuk-input--width-10",
+  hint: {
+    text: "For example, 23.99"
+  },
+  id: "cost",
+  name: "cost",
+  inputmode: "decimal",
+  attributes: {
+    spellcheck: "false"
+  }
+}) }}
