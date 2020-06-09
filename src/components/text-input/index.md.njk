@@ -76,7 +76,7 @@ There are specific patterns for:
 
 If you're asking the user to enter a number that might include a decimal place, use `input type="text"` without `inputmode` or `pattern` attributes.
 
-Unfortunately, setting `inputmode` to `decimal` causes some devices to bring up a keypad without a period key, preventing users from entering a decimal point.
+Do not set the `inputmode` attribute to `decimal` as it causes some devices to bring up a keypad without a period key, preventing users from entering a decimal point.
 
 {{ example({group: "components", item: "text-input", example: "decimal-input", html: true, nunjucks: true, open: false, size: "m"}) }}
 
