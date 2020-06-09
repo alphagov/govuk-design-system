@@ -42,15 +42,11 @@ An exception to this is when the user has performed an action they should only d
 
 Page headings can be statements or questions.
 
-If you need to ask for multiple related things on a page, use a statement as the heading.
-
-{{ example({group: "patterns", item: "question-pages", example: "passport", html: true, nunjucks: true, open: false}) }}
-
 If you are only asking for one piece of information per page, you can set the contents of the `<label>` or `<legend>` as the page heading.
 
 This is good practice as it means that users of screen readers will only hear the contents once.
 
-Read more about why and [how to set legends and labels as page headings](https://design-system.service.gov.uk/get-started/labels-legends-headings/) or see examples below.
+Read more about why and [how to set legends and labels as page headings](../../get-started/labels-legends-headings/) or see examples below.
 
 #### Legend as page heading
 
@@ -118,6 +114,18 @@ To help you follow this approach, you can set the contents of a `<legend>` or `<
 Read more about [why and how to set labels and legends as headings](../../get-started/labels-legends-headings).
 
 You can also learn more about how starting with [one thing per page](https://www.gov.uk/service-manual/design/form-structure#start-with-one-thing-per-page) helps users in the GOV.UK Service Manual.
+
+### Asking multiple questions on a page
+
+Sometimes it makes sense to group a number of related questions on the same page.
+
+User research will tell you when you can group pages together. For example, if you’re designing an internal service for government users who need to repeat and switch between tasks quickly.
+
+If you need to ask for multiple related things on a page, use a statement as the heading.
+
+You can style each `<label>` or `<legend>` to make the questions easier to scan. Read more about why and [how to style labels and legends](../../get-started/labels-legends-headings/#styling-options-for-labels-and-legends).
+
+{{ example({group: "patterns", item: "question-pages", example: "passport", html: true, nunjucks: true, open: false}) }}
 
 ### Asking users questions
 
