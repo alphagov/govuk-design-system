@@ -36,15 +36,9 @@ You should show a task list page:
 When using a task list page in your service you need to:
 
 - group related actions into tasks
-- show the status of each task
+- show the status of the tasks
 
 If there are lots of tasks to complete, you might also need to group them into sub-sections.
-
-### Show the status of the task
-
-Whenever you show a task list page, make it clear to users which tasks they’ve completed by labelling them ‘Completed’.
-
-![A screenshot showing a completed tag next to a list of tasks](task-list-statuses.png)
 
 ### Group related actions into tasks
 
@@ -54,6 +48,24 @@ Where possible, task names should:
 
 - describe what the task or activity will involve
 - start with verbs, for example, ‘check’, ‘declare’, ‘report’
+
+### Show the status of the tasks
+
+Include a summary above the task list to say how many tasks or sections have been completed.
+
+![A screenshot showing a task list summary that says 'Application incomplete. You have completed 3 of 8 sections'](task-list-summary.png)
+
+Make it clear to users which tasks they’ve completed and which still need their attention, by labelling them using the [Tag component](../../components/tag).
+
+![A screenshot showing a completed tag next to a list of tasks](task-list-statuses.png)
+
+Use the following labels to describe the different states of a task:
+
+- 'Not started' (in grey) if the user can start work on the task, but hasn't done so yet
+- 'Cannot start yet' (in grey) if the user cannot start the task yet - for example because another task must be completed first
+- 'In progress' (in light blue) if the user has started but not completed the task
+- 'Completed' (in blue) if the user has completed the task
+
 
 ### Group tasks into sections
 
@@ -73,18 +85,21 @@ The pattern was iterated after each round of testing.
 
 You can read more about [testing and iterating the task list page pattern](https://designnotes.blog.gov.uk/2017/04/04/weve-published-the-task-list-pattern/).
 
+In the original pattern only completed tasks were labelled. Some users did not realise they had to complete all the tasks before they could continue, or [thought that they had completed the whole transaction](https://github.com/alphagov/govuk-design-system-backlog/issues/72#issuecomment-413159884). 
+
+The pattern has now been iterated to include labels for all statuses and a summary above the list.
+
+
 ### Known issues and gaps
 
-There is evidence that the completed tag might be misleading to some users.
-
-In one instance, [a user saw a task marked ‘completed’ and thought this meant they had submitted their response](https://github.com/alphagov/govuk-design-system-backlog/issues/72#issuecomment-413159884). As a result, they did not continue to the ‘Check and submit your response’ task, and were later issued with a court order for not responding.
-
-In addition, user research and feedback on this pattern has shown that:
+User research and feedback on this pattern has shown that:
 
 - some screen reader users are frustrated by having to tab through every section each time they return to the task list after completing a task
 - some services need users to complete tasks in a particular order, for example, a user must fill in an application before they can pay
 - once a few tasks have been completed it becomes harder to scan the page and spot incomplete tasks
-- some users do not realise they have to complete all the tasks before they can continue
+
+More research is required to establish whether or not users of screen readers struggle to perceive tasks that cannot be started yet, because they are not marked up with hyperlinks.
+
 
 ### Services using this pattern
 
