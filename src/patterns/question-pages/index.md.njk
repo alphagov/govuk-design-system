@@ -18,6 +18,19 @@ This pattern explains when to use question pages and what elements they need to 
 
 Follow this pattern whenever you need to ask users questions within your service.
 
+You should make sure you know why you’re asking every question and only ask users for information you really need.
+
+To help you work out what to ask, you can carry out a [question protocol](https://www.uxmatters.com/mt/archives/2010/06/the-question-protocol-how-to-make-sure-every-form-field-is-necessary.php).
+
+If you ask for optional information, mark the labels of optional fields with ‘(optional)’. Never mark mandatory fields with asterisks.
+
+On every question page you should:
+
+- make sure it’s clear to users why you’re asking each question
+- allow users to answer ‘I do not know’ or ‘I’m not sure’ if they are valid responses
+
+Read more about [designing good questions](https://www.gov.uk/service-manual/design/designing-good-questions) in the GOV.UK Service Manual.
+
 ## How it works
 
 Question pages must include a:
@@ -40,31 +53,7 @@ An exception to this is when the user has performed an action they should only d
 
 ### Page headings
 
-Page headings can be statements or questions.
-
-If you are only asking for one piece of information per page, you can set the contents of the `<label>` or `<legend>` as the page heading.
-
-This is good practice as it means that users of screen readers will only hear the contents once.
-
-Read more about why and [how to set legends and labels as page headings](../../get-started/labels-legends-headings/) or see examples below.
-
-#### Legend as page heading
-
-{{ example({group: "patterns", item: "question-pages", example: "date-of-birth", html: true, nunjucks: true, open: false}) }}
-
-#### Label as a page heading
-
-{{ example({group: "patterns", item: "question-pages", example: "postcode", html: true, nunjucks: true, open: false}) }}
-
-Do not use the same page heading across multiple pages.
-
-The page heading should relate specifically to the information being asked for on the current page, not any higher-level section the page is part of.
-
-If you need to show the high-level section, you can use the `govuk-caption` style.
-
-For example, ‘About you’
-
-{{ example({group: "patterns", item: "question-pages", example: "section-headings", html: true, open: true, hideTab:true}) }}
+Page headings can be questions or statements. If you're [asking one question per page](#start-by-asking-one-question-per-page), use a question. If you're asking [multiple questions on a page](#asking-multiple-questions-on-a-page), use a statement.
 
 ### Continue button
 
@@ -111,7 +100,25 @@ Asking just one question per question page helps users understand what you’re 
 
 To help you follow this approach, you can set the contents of a `<legend>` or `<label>` for a page’s input as the page heading. This is good practice as it means that users of screen readers will only hear the contents once.
 
-Read more about [why and how to set labels and legends as headings](../../get-started/labels-legends-headings).
+Read more about why and [how to set labels and legends as headings](../../get-started/labels-legends-headings) or see examples below.
+
+#### Legend as page heading
+
+{{ example({group: "patterns", item: "question-pages", example: "date-of-birth", html: true, nunjucks: true, open: false}) }}
+
+#### Label as a page heading
+
+{{ example({group: "patterns", item: "question-pages", example: "postcode", html: true, nunjucks: true, open: false}) }}
+
+Do not use the same page heading across multiple pages.
+
+The page heading should relate specifically to the information being asked for on the current page, not any higher-level section the page is part of.
+
+If you need to show the high-level section, you can use the `govuk-caption` style.
+
+For example, ‘About you’
+
+{{ example({group: "patterns", item: "question-pages", example: "section-headings", html: true, open: true, hideTab:true}) }}
 
 You can also learn more about how starting with [one thing per page](https://www.gov.uk/service-manual/design/form-structure#start-with-one-thing-per-page) helps users in the GOV.UK Service Manual.
 
@@ -127,17 +134,4 @@ You can style each `<label>` or `<legend>` to make the questions easier to scan.
 
 {{ example({group: "patterns", item: "question-pages", example: "passport", html: true, nunjucks: true, open: false}) }}
 
-### Asking users questions
 
-You should make sure you know why you’re asking every question and only ask users for information you really need.
-
-To help you work out what to ask, you can carry out a [question protocol](https://www.uxmatters.com/mt/archives/2010/06/the-question-protocol-how-to-make-sure-every-form-field-is-necessary.php).
-
-If you ask for optional information, mark the labels of optional fields with ‘(optional)’. Never mark mandatory fields with asterisks.
-
-On every question page you should:
-
-- make sure it’s clear to users why you’re asking each question
-- allow users to answer ‘I do not know’ or ‘I’m not sure’ if they are valid responses
-
-Read more about [designing good questions](https://www.gov.uk/service-manual/design/designing-good-questions) in the GOV.UK Service Manual.
