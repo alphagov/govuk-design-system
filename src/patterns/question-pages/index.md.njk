@@ -41,7 +41,7 @@ Question pages must include a:
 
 If research shows it’s helpful for users, you can also include a [progress indicator](#using-progress-indicators).
 
-## Back link
+### Back link
 
 Some users do not trust browser back buttons when they’re entering data. 
 
@@ -51,11 +51,11 @@ However, do not break the browser back button. Make sure it takes users to the p
 
 An exception to this is when the user has performed an action they should only do once, like make a payment or complete an application. The browser back button should still work, but show the user a sensible message rather than let them perform the action again.
 
-## Page headings
+### Page headings
 
 Page headings can be questions or statements.
 
-### Start by asking one question per page
+#### Start by asking one question per page
 
 Asking just one question per question page helps users understand what you’re asking them to do, and focus on the specific question and its answer.
 
@@ -63,11 +63,11 @@ To help you follow this approach, you can set the contents of a `<legend>` or `<
 
 Read more about why and [how to set labels and legends as headings](../../get-started/labels-legends-headings) or see examples below.
 
-#### Legend as page heading
+A question page with a legend as the page heading:
 
 {{ example({group: "patterns", item: "question-pages", example: "date-of-birth", html: true, nunjucks: true, open: false}) }}
 
-#### Label as a page heading
+A question page with a label as the page heading:
 
 {{ example({group: "patterns", item: "question-pages", example: "postcode", html: true, nunjucks: true, open: false}) }}
 
@@ -83,7 +83,7 @@ For example, ‘About you’
 
 You can also learn more about how starting with [one thing per page](https://www.gov.uk/service-manual/design/form-structure#start-with-one-thing-per-page) helps users in the GOV.UK Service Manual.
 
-### Asking multiple questions on a page
+#### Asking multiple questions on a page
 
 Sometimes it makes sense to group a number of related questions on the same page.
 
@@ -95,14 +95,14 @@ You can style each `<label>` or `<legend>` to make the questions easier to scan.
 
 {{ example({group: "patterns", item: "question-pages", example: "passport", html: true, nunjucks: true, open: false}) }}
 
-## Continue button
+### Continue button
 
 Make sure your ‘Continue’ button is:
 
 - labelled ‘Continue’, not ‘Next’
 - aligned to the left so users do not miss it
 
-## Using progress indicators
+### Using progress indicators
 
 Start by testing your form without a progress indicator to see if it’s simple enough that users do not need one.
 
@@ -131,5 +131,4 @@ These can be problematic because they:
 - make it hard to write good labels for the steps
 - make it hard to handle conditional sections
 
-A number of GOV.UK services have removed this style of progress indicator without any negative effects.
-Read a blog post about [how the Carer’s Allowance team removed a 12-step progress indicator](https://designnotes.blog.gov.uk/2014/07/07/do-less-problems-as-shared-spaces/) with no effect on completion rates or times.
+A number of GOV.UK services have removed this style of progress indicator without any negative effects. Read a blog post about [how the Carer’s Allowance team removed a 12-step progress indicator](https://designnotes.blog.gov.uk/2014/07/07/do-less-problems-as-shared-spaces/) with no effect on completion rates or times.
