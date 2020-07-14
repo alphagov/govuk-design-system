@@ -41,7 +41,7 @@ Question pages must include a:
 
 If research shows it’s helpful for users, you can also include a [progress indicator](#using-progress-indicators).
 
-### Back link
+## Back link
 
 Some users do not trust browser back buttons when they’re entering data. 
 
@@ -51,48 +51,9 @@ However, do not break the browser back button. Make sure it takes users to the p
 
 An exception to this is when the user has performed an action they should only do once, like make a payment or complete an application. The browser back button should still work, but show the user a sensible message rather than let them perform the action again.
 
-### Page headings
+## Page headings
 
-Page headings can be questions or statements. If you're [asking one question per page](#start-by-asking-one-question-per-page), use a question. If you're asking [multiple questions on a page](#asking-multiple-questions-on-a-page), use a statement.
-
-### Continue button
-
-Make sure your ‘Continue’ button is:
-
-- labelled ‘Continue’, not ‘Next’
-- aligned to the left so users do not miss it
-
-### Using progress indicators
-
-Start by testing your form without a progress indicator to see if it’s simple enough that users do not need one.
-
-Try improving the order, type or number of questions before adding a progress indicator. If people still have difficulty, try adding a simple step or question indicator like this one.
-
-{{ example({group: "patterns", item: "question-pages", example: "progress", html: true, nunjucks: true, open: false}) }}
-
-Only include the total number of questions if you can do so reliably. As the user moves through the form, make sure the indicator updates to tell them which question they are on and the total number remaining.
-
-Do not use progress indicators that do all of the following:
-
-- show all questions at once
-- allow navigation to previous questions
-- show the current question
-
-An example of this looks like:
-
-![Screenshot of a progress indicator that shows five questions.](progress_indicators_horizontal.png)
-
-These can be problematic because they:
-
-- are often not noticed
-- take up lots of space
-- do not scale well on small screens
-- can distract and confuse some users
-- make it hard to write good labels for the steps
-- make it hard to handle conditional sections
-
-A number of GOV.UK services have removed this style of progress indicator without any negative effects.
-Read a blog post about [how the Carer’s Allowance team removed a 12-step progress indicator](https://designnotes.blog.gov.uk/2014/07/07/do-less-problems-as-shared-spaces/) with no effect on completion rates or times.
+Page headings can be questions or statements.
 
 ### Start by asking one question per page
 
@@ -134,4 +95,41 @@ You can style each `<label>` or `<legend>` to make the questions easier to scan.
 
 {{ example({group: "patterns", item: "question-pages", example: "passport", html: true, nunjucks: true, open: false}) }}
 
+## Continue button
 
+Make sure your ‘Continue’ button is:
+
+- labelled ‘Continue’, not ‘Next’
+- aligned to the left so users do not miss it
+
+## Using progress indicators
+
+Start by testing your form without a progress indicator to see if it’s simple enough that users do not need one.
+
+Try improving the order, type or number of questions before adding a progress indicator. If people still have difficulty, try adding a simple step or question indicator like this one.
+
+{{ example({group: "patterns", item: "question-pages", example: "progress", html: true, nunjucks: true, open: false}) }}
+
+Only include the total number of questions if you can do so reliably. As the user moves through the form, make sure the indicator updates to tell them which question they are on and the total number remaining.
+
+Do not use progress indicators that do all of the following:
+
+- show all questions at once
+- allow navigation to previous questions
+- show the current question
+
+An example of this looks like:
+
+![Screenshot of a progress indicator that shows five questions.](progress_indicators_horizontal.png)
+
+These can be problematic because they:
+
+- are often not noticed
+- take up lots of space
+- do not scale well on small screens
+- can distract and confuse some users
+- make it hard to write good labels for the steps
+- make it hard to handle conditional sections
+
+A number of GOV.UK services have removed this style of progress indicator without any negative effects.
+Read a blog post about [how the Carer’s Allowance team removed a 12-step progress indicator](https://designnotes.blog.gov.uk/2014/07/07/do-less-problems-as-shared-spaces/) with no effect on completion rates or times.
