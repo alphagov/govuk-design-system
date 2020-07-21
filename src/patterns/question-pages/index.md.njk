@@ -18,6 +18,19 @@ This pattern explains when to use question pages and what elements they need to 
 
 Follow this pattern whenever you need to ask users questions within your service.
 
+You should make sure you know why you’re asking every question and only ask users for information you really need.
+
+To help you work out what to ask, you can carry out a [question protocol](https://www.uxmatters.com/mt/archives/2010/06/the-question-protocol-how-to-make-sure-every-form-field-is-necessary.php).
+
+If you ask for optional information, mark the labels of optional fields with ‘(optional)’. Never mark mandatory fields with asterisks.
+
+On every question page you should:
+
+- make sure it’s clear to users why you’re asking each question
+- allow users to answer ‘I do not know’ or ‘I’m not sure’ if they are valid responses
+
+Read more about [designing good questions](https://www.gov.uk/service-manual/design/designing-good-questions) in the GOV.UK Service Manual.
+
 ## How it works
 
 Question pages must include a:
@@ -40,23 +53,21 @@ An exception to this is when the user has performed an action they should only d
 
 ### Page headings
 
-Page headings can be statements or questions.
+Page headings can be questions or statements.
 
-If you need to ask for multiple related things on a page, use a statement as the heading.
+#### Start by asking one question per page
 
-{{ example({group: "patterns", item: "question-pages", example: "passport", html: true, nunjucks: true, open: false}) }}
+Asking just one question per question page helps users understand what you’re asking them to do, and focus on the specific question and its answer.
 
-If you are only asking for one piece of information per page, you can set the contents of the `<label>` or `<legend>` as the page heading.
+To help you follow this approach, you can set the contents of a `<legend>` or `<label>` for a page’s input as the page heading. This is good practice as it means that users of screen readers will only hear the contents once.
 
-This is good practice as it means that users of screen readers will only hear the contents once.
+Read more about why and [how to set labels and legends as headings](../../get-started/labels-legends-headings) or see examples below.
 
-Read more about why and [how to set legends and labels as page headings](https://design-system.service.gov.uk/get-started/labels-legends-headings/) or see examples below.
-
-#### Legend as page heading
+A question page with a legend as the page heading:
 
 {{ example({group: "patterns", item: "question-pages", example: "date-of-birth", html: true, nunjucks: true, open: false}) }}
 
-#### Label as a page heading
+A question page with a label as the page heading:
 
 {{ example({group: "patterns", item: "question-pages", example: "postcode", html: true, nunjucks: true, open: false}) }}
 
@@ -69,6 +80,20 @@ If you need to show the high-level section, you can use the `govuk-caption` styl
 For example, ‘About you’
 
 {{ example({group: "patterns", item: "question-pages", example: "section-headings", html: true, open: true, hideTab:true}) }}
+
+You can also learn more about how starting with [one thing per page](https://www.gov.uk/service-manual/design/form-structure#start-with-one-thing-per-page) helps users in the GOV.UK Service Manual.
+
+#### Asking multiple questions on a page
+
+Sometimes it makes sense to group a number of related questions on the same page.
+
+User research will tell you when you can group pages together. For example, if you’re designing an internal service for government users who need to repeat and switch between tasks quickly.
+
+If you need to ask for multiple related things on a page, use a statement as the heading.
+
+You can style each `<label>` or `<legend>` to make the questions easier to scan. Read more about why and [how to style labels and legends](../../get-started/labels-legends-headings/#styling-options-for-labels-and-legends).
+
+{{ example({group: "patterns", item: "question-pages", example: "passport", html: true, nunjucks: true, open: false}) }}
 
 ### Continue button
 
@@ -106,30 +131,4 @@ These can be problematic because they:
 - make it hard to write good labels for the steps
 - make it hard to handle conditional sections
 
-A number of GOV.UK services have removed this style of progress indicator without any negative effects.
-Read a blog post about [how the Carer’s Allowance team removed a 12-step progress indicator](https://designnotes.blog.gov.uk/2014/07/07/do-less-problems-as-shared-spaces/) with no effect on completion rates or times.
-
-### Start by asking one question per page
-
-Asking just one question per question page helps users understand what you’re asking them to do, and focus on the specific question and its answer.
-
-To help you follow this approach, you can set the contents of a `<legend>` or `<label>` for a page’s input as the page heading. This is good practice as it means that users of screen readers will only hear the contents once.
-
-Read more about [why and how to set labels and legends as headings](../../get-started/labels-legends-headings).
-
-You can also learn more about how starting with [one thing per page](https://www.gov.uk/service-manual/design/form-structure#start-with-one-thing-per-page) helps users in the GOV.UK Service Manual.
-
-### Asking users questions
-
-You should make sure you know why you’re asking every question and only ask users for information you really need.
-
-To help you work out what to ask, you can carry out a [question protocol](https://www.uxmatters.com/mt/archives/2010/06/the-question-protocol-how-to-make-sure-every-form-field-is-necessary.php).
-
-If you ask for optional information, mark the labels of optional fields with ‘(optional)’. Never mark mandatory fields with asterisks.
-
-On every question page you should:
-
-- make sure it’s clear to users why you’re asking each question
-- allow users to answer ‘I do not know’ or ‘I’m not sure’ if they are valid responses
-
-Read more about [designing good questions](https://www.gov.uk/service-manual/design/designing-good-questions) in the GOV.UK Service Manual.
+A number of GOV.UK services have removed this style of progress indicator without any negative effects. Read a blog post about [how the Carer’s Allowance team removed a 12-step progress indicator](https://designnotes.blog.gov.uk/2014/07/07/do-less-problems-as-shared-spaces/) with no effect on completion rates or times.
