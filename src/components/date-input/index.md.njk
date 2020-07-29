@@ -53,11 +53,11 @@ You will not normally need to use the `autocomplete` attribute in prototypes, as
 
 ### Error messages
 
-Error messages should be styled like this if you’re highlighting the date as a whole:
+If you’re highlighting the whole date, style all the fields like this:
 
 {{ example({group: "components", item: "date-input", example: "error", html: true, nunjucks: true, open: false, size: "m"}) }}
 
-Or like this is you’re highlighting just one of the day, month or year:
+If you’re highlighting just one field - either the day, month or year - only style the field that has an error. The error message must say which field has an error, like this:
 
 {{ example({group: "components", item: "date-input", example: "error-single", html: true, nunjucks: true, open: false, size: "m"}) }}
 
