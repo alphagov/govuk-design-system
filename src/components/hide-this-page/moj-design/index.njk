@@ -2,8 +2,26 @@
 title: Hide this Page
 layout: layout-example.njk
 ---
-{% from "govuk/components/button/macro.njk" import govukButton %}
+{# {% from "govuk/components/button/macro.njk" import govukButton %}
 
 {{ govukButton({
+  classes: "govuk-button--warning",
   text: "Hide this page"
-}) }}
+}) }} #}
+{# <div class="govuk-button--warning">
+  press the 'esc' key'
+</div> #}
+<div class="govuk-quick-exit__container govuk-quick-exit__enabled">
+  <div class="govuk-quick-exit__position">
+    <a href="https://www.google.com" id="quick-exit" tabindex="-1" class="govuk-button govuk-button--warning govuk-quick-exit">
+      <strong>Hide this page</strong>
+      <span class="govuk-visually-hidden">Or press escape key to hide this page</span>
+    </a>
+    <p class="govuk-body govuk-quick-exit--info govuk-!-font-size-14">
+      (Or press Esc key)
+    </p>
+  </div>
+  <p class="govuk-button govuk-quick-exit__IEsizing">
+    <strong>Hide this page</strong>
+  </p>
+</div>
