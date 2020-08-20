@@ -33,7 +33,7 @@ Using this option, you will be able to:
 - selectively [include the CSS or JavaScript](https://frontend.design-system.service.gov.uk/importing-css-assets-and-javascript/) for individual components
 - build your own styles or components based on the palette or typography and spacing mixins
 - customise the build (for example, overriding colours or enabling global styles)
-- use the component Nunjucks templates
+- use the [Nunjucks template and macros](https://frontend.design-system.service.gov.uk/use-nunjucks/) if your environment supports them
 
 ### Option 2: include compiled files
 
@@ -64,31 +64,13 @@ Explore the [Styles](../../styles/) section of the Design System to see what cla
 
 ## Using components
 
-The components in the Design System are designed to be accessible and responsive - there are 2 ways to implement them in your application.
+The components in the Design System are designed to be accessible and responsive.
 
-You can either use HTML or - if you’re using Nunjucks with node.js and you installed GOV.UK Frontend using npm - you can use a Nunjucks Macro.
+You can use them in your live application as either:
+
+- HTML
+- [Nunjucks macros](https://frontend.design-system.service.gov.uk/use-nunjucks/) - if you installed GOV.UK Frontend using npm and your application uses Node.js
 
 You can get the code from the HTML or Nunjucks tabs below any examples:
 
 {{ example({group: "components", item: "button", example: "default", html: true, nunjucks: true, open: false}) }}
-
-### Using Nunjucks macros
-
-A Nunjucks macro is a simple template that generates more complex HTML.
-
-Nunjucks macros save you time by managing repetitive or error-prone tasks, like linking form labels to their controls.
-
-Nunjucks macros also make it easier to keep your application up to date. You can run a command to update component code instead of having to manually update your HTML.
-
-To use Nunjucks macros in your application, you’ll need to setup Nunjucks views to point to the location of GOV.UK Frontend components, which is `node_modules/govuk-frontend/govuk/components/`.
-
-To include a specific component macro in your page template, you need to import the macro.
-
-For example, to use the breadcrumb macro, use the import statement `{% raw %}{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}{% endraw %}`.
-
-{{ govukInsetText({
-  classes: "app-table--constrained",
-  html: "If you’re using Nunjucks macros in production be aware that using  <code>html</code> arguments, or ones ending with <code>Html</code> can be a <a href='https://en.wikipedia.org/wiki/Cross-site_scripting'>security risk</a>."
-}) }}
-
-There are various way to mitigate against that. One example is described in the [Nunjucks documentation](https://mozilla.github.io/nunjucks/api.html#user-defined-templates-warning).
