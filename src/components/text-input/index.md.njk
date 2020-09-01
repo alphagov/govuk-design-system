@@ -98,11 +98,11 @@ Use prefixes and suffixes to help users enter things like currencies and measure
 
 {{ example({group: "components", item: "text-input", example: "input-prefix-suffix", html: true, nunjucks: true, closed: true, size: "s"}) }}
 
-Prefixes and suffixes are useful when you use symbols and abbreviations that are commonly known and understood. Symbols and abbreviations should be explained in the label or hint. For example, put “Cost, in pounds” in the label, and use the “£” symbol in the text input prefix.
+Prefixes and suffixes are useful when there's a commonly understood symbol or abbreviation for the type of information you're asking for. Do not rely on prefixes or suffixes alone, because people who use a screen reader won't see them.
 
-Prefixes and suffixes are visual aids and are not available to assistive technologies.
+If you need a specific type of information, say so in the input label or hint text as well. For example, put "Cost, in pounds" in the input label and use the "£" symbol in the prefix.
 
-Some users may not notice or understand the prefix or suffix, and may add their own into the input as part of their entry. Allow for this in your validation and do not show an error.
+Some users may miss the fact that the input already has a suffix or prefix, and enter a prefix or suffix into the input. Allow for this in your validation and do not show an error.
 
 #### Text inputs with a prefix
 
@@ -146,7 +146,7 @@ Error messages should be styled like this:
 
 {{ example({group: "components", item: "text-input", example: "error", html: true, nunjucks: true, closed: true, size: "s"}) }}
 
-#### Prefixes and suffixes
+#### If the input has a prefix or a suffix
 
 {{ example({group: "components", item: "text-input", example: "input-prefix-suffix-error", html: true, nunjucks: true, closed: true, size: "s"}) }}
 
