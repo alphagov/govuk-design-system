@@ -7,13 +7,13 @@ layout: layout-example.njk
 
 {{ govukInput({
   label: {
-    text: "Cost per item, in pounds"
+    text: "Weight, in kilograms"
   },
-  classes: "govuk-input--width-10",
-  hint: {
-    text: "For example, 23.99"
+  classes: "govuk-input--width-5",
+  id: "weight",
+  name: "weight",
+  suffix: {
+    text: "kg"
   },
-  id: "cost",
-  name: "cost",
   spellcheck: false
 }) }}
