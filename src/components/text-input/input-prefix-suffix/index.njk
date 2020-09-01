@@ -1,0 +1,26 @@
+---
+title: Input prefix and suffix
+layout: layout-example.njk
+---
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  id: "cost-per-item",
+  name: "cost-per-item",
+  label: {
+    text: "Cost per item, in pounds"
+  },
+  prefix: {
+    text: "£"
+  },
+  suffix: {
+    text: "per item"
+  },
+  classes: "govuk-input--width-10",
+  inputmode: "numeric",
+  pattern: "[0-9]*",
+  attributes: {
+    spellcheck: "false"
+  }
+}) }}

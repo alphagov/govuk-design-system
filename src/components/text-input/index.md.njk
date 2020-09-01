@@ -92,6 +92,24 @@ Use hint for help that’s relevant to the majority of users, like how their inf
 
 {{ example({group: "components", item: "text-input", example: "input-hint-text", html: true, nunjucks: true, open: false, size: "s"}) }}
 
+### Prefixes and suffixes
+
+Use prefixes and suffixes to help users enter things like currencies and measurements.
+
+{{ example({group: "components", item: "text-input", example: "input-prefix-suffix", html: true, nunjucks: true, closed: true, size: "s"}) }}
+
+Prefixes and suffixes are visual aids and are not available to assistive technologies. Instead, word the label to provide the necessary context.
+
+Some users may not notice or understand the prefix or suffix, and may add their own into the input as part of their entry. Allow for this in your validation and do not throw an error.
+
+#### Text inputs with a prefix
+
+{{ example({group: "components", item: "text-input", example: "input-prefix", html: true, nunjucks: true, closed: true, size: "s"}) }}
+
+#### Text inputs with a suffix
+
+{{ example({group: "components", item: "text-input", example: "input-suffix", html: true, nunjucks: true, closed: true, size: "s"}) }}
+
 ### Use the autocomplete attribute
 
 Use the `autocomplete` attribute on text inputs to help users complete forms more quickly. This lets you specify an input's purpose so browsers can autofill the information on a user's behalf if they’ve entered it previously.

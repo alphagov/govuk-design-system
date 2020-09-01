@@ -1,0 +1,23 @@
+---
+title: Input suffix
+layout: layout-example.njk
+---
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  id: "weight",
+  name: "weight",
+  label: {
+    text: "Weight, in kilograms"
+  },
+  suffix: {
+    text: "kg"
+  },
+  classes: "govuk-input--width-10",
+  inputmode: "numeric",
+  pattern: "[0-9]*",
+  attributes: {
+    spellcheck: "false"
+  }
+}) }}
