@@ -59,6 +59,12 @@ Fluid width inputs will resize with the viewport.
 
 {{ example({group: "components", item: "text-input", example: "input-fluid-width", html: true, nunjucks: true, open: false, size: "xl"}) }}
 
+### Hint text
+
+Use hint for help that’s relevant to the majority of users, like how their information will be used, or where to find it.
+
+{{ example({group: "components", item: "text-input", example: "input-hint-text", html: true, nunjucks: true, open: false, size: "s"}) }}
+
 ### Numbers
 
 #### Asking for whole numbers
@@ -85,12 +91,6 @@ Do not set the `inputmode` attribute to `decimal` as it causes some devices to b
 #### Avoid using inputs with a type of number
 
 Do not use `<input type="number">` unless your user research shows that there’s a need for it. With `<input type="number">` there’s a risk of users accidentally incrementing a number when they’re trying to do something else - for example, scroll up or down the page. And if the user tries to enter something that’s not a number, there’s no explicit feedback about what they’re doing wrong.
-
-### Hint text
-
-Use hint for help that’s relevant to the majority of users, like how their information will be used, or where to find it.
-
-{{ example({group: "components", item: "text-input", example: "input-hint-text", html: true, nunjucks: true, open: false, size: "s"}) }}
 
 ### Prefixes and suffixes
 
