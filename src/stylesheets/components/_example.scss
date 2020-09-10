@@ -71,5 +71,6 @@
 }
 
 .app-example__code {
+  position: relative;
   @include govuk-font($size: 19);
 }
