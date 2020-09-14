@@ -1,19 +1,21 @@
 ---
-title: Example of an input asking for numbers with decimal places
+title: Text input with suffix
 layout: layout-example.njk
 ---
 
 {% from "govuk/components/input/macro.njk" import govukInput %}
 
 {{ govukInput({
-  label: {
-    text: "Weight, in kilograms"
-  },
-  classes: "govuk-input--width-5",
   id: "weight",
   name: "weight",
+  label: {
+    text: "What is the weight in kilograms?",
+    classes: "govuk-label--l",
+    isPageHeading: true
+  },
   suffix: {
     text: "kg"
   },
+  classes: "govuk-input--width-5",
   spellcheck: false
 }) }}

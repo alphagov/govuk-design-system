@@ -59,6 +59,12 @@ Fluid width inputs will resize with the viewport.
 
 {{ example({group: "components", item: "text-input", example: "input-fluid-width", html: true, nunjucks: true, open: false, size: "xl"}) }}
 
+### Hint text
+
+Use hint for help that’s relevant to the majority of users, like how their information will be used, or where to find it.
+
+{{ example({group: "components", item: "text-input", example: "input-hint-text", html: true, nunjucks: true, open: false, size: "s"}) }}
+
 ### Numbers
 
 #### Asking for whole numbers
@@ -86,11 +92,25 @@ Do not set the `inputmode` attribute to `decimal` as it causes some devices to b
 
 Do not use `<input type="number">` unless your user research shows that there’s a need for it. With `<input type="number">` there’s a risk of users accidentally incrementing a number when they’re trying to do something else - for example, scroll up or down the page. And if the user tries to enter something that’s not a number, there’s no explicit feedback about what they’re doing wrong.
 
-### Hint text
+### Prefixes and suffixes
 
-Use hint for help that’s relevant to the majority of users, like how their information will be used, or where to find it.
+Use prefixes and suffixes to help users enter things like currencies and measurements.
 
-{{ example({group: "components", item: "text-input", example: "input-hint-text", html: true, nunjucks: true, open: false, size: "s"}) }}
+{{ example({group: "components", item: "text-input", example: "input-prefix-suffix", html: true, nunjucks: true, closed: true, size: "s"}) }}
+
+Prefixes and suffixes are useful when there's a commonly understood symbol or abbreviation for the type of information you're asking for. Do not rely on prefixes or suffixes alone, because people who use a screen reader won't see them.
+
+If you need a specific type of information, say so in the input label or hint text as well. For example, put "Cost, in pounds" in the input label and use the "£" symbol in the prefix.
+
+Some users may miss the fact that the input already has a suffix or prefix, and enter a prefix or suffix into the input. Allow for this in your validation and do not show an error.
+
+#### Text inputs with a prefix
+
+{{ example({group: "components", item: "text-input", example: "input-prefix", html: true, nunjucks: true, closed: true, size: "s"}) }}
+
+#### Text inputs with a suffix
+
+{{ example({group: "components", item: "text-input", example: "input-suffix", html: true, nunjucks: true, closed: true, size: "s"}) }}
 
 ### Use the autocomplete attribute
 
@@ -125,6 +145,10 @@ Browsers do not consistently spellcheck user’s input by default. If you are as
 Error messages should be styled like this:
 
 {{ example({group: "components", item: "text-input", example: "error", html: true, nunjucks: true, closed: true, size: "s"}) }}
+
+#### If the input has a prefix or a suffix
+
+{{ example({group: "components", item: "text-input", example: "input-prefix-suffix-error", html: true, nunjucks: true, closed: true, size: "s"}) }}
 
 Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
 
