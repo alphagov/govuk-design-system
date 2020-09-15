@@ -146,20 +146,24 @@
 }
 
 .app-tabs__container pre {
-  position: relative;
   max-width: inherit;
   margin-bottom: 0;
   padding: 0;
   border: 0;
   outline: 1px solid transparent;
+  color: $govuk-text-colour;
   background-color: govuk-colour("light-grey");
   font-size: inherit;
+
+  &:focus {
+    outline: $govuk-focus-width solid $govuk-focus-colour;
+    box-shadow: inset 0 0 0 $govuk-focus-width;
+  }
 }
 
 .app-tabs__container pre code {
-  display: block;
+  display: inline-block;
   padding: govuk-spacing(4);
-  overflow-x: auto;
 
   .js-enabled & {
     padding-top: 45px; // Allow extra space for the copy code button
