@@ -162,7 +162,7 @@
 }
 
 .app-tabs__container pre code {
-  display: block;
+  display: inline-block;
   padding: govuk-spacing(4);
 
   .js-enabled & {
