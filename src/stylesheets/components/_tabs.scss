@@ -149,15 +149,15 @@
   max-width: inherit;
   margin-bottom: 0;
   padding: 0;
-  border: 0;
+  border: $govuk-focus-width solid transparent;
   outline: 1px solid transparent;
   color: $govuk-text-colour;
   background-color: govuk-colour("light-grey");
   font-size: inherit;
 
   &:focus {
+    border: $govuk-focus-width solid $govuk-input-border-colour;
     outline: $govuk-focus-width solid $govuk-focus-colour;
-    box-shadow: inset 0 0 0 $govuk-focus-width;
   }
 }
 
