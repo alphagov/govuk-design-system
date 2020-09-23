@@ -10,7 +10,9 @@ The GOV.UK Design System website and the codebase it uses, GOV.UK Frontend, is m
 
 This page explains how the team works to ensure the Design System and Frontend are accessible.
 
-## Accessibility statement for the Design System website
+## Accessibility statement for the GOV.UK Design System website
+
+This accessibility statement applies to the GOV.UK Design System at https://design-system.service.gov.uk/, and the components and patterns from the GOV.UK Frontend codebase which appear in the examples throughout the Design System.
 
 The GOV.UK Design System team wants as many people as possible to be able to use this website. For example, that means you should be able to:
 
@@ -24,7 +26,7 @@ The team has also made the website text as simple as possible to understand.
 
 [AbilityNet](https://mcmw.abilitynet.org.uk/) has advice on making your device easier to use if you have a disability.
 
-### Reporting accessibility problems with this website
+### Feedback and contact information
 
 The GOV.UK Design System team is always looking to improve the accessibility of this website. If you find any problems that are not listed on this page or think this website is not meeting accessibility requirements, email the GOV.UK Design System team at govuk-design-system-support@digital.cabinet-office.gov.uk
 
@@ -34,13 +36,28 @@ The GOV.UK Design System team will review your request and get back to you in 2 
 
 The Equality and Human Rights Commission (EHRC) is responsible for enforcing the Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018 (the ‘accessibility regulations’). If you’re not happy with how we respond to your complaint, [contact the Equality Advisory and Support Service (EASS)](https://www.equalityadvisoryservice.com/).
 
-### Technical information about this website’s accessibility
-
 GDS is committed to making its websites accessible, in accordance with the Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018.
 
-The Design System website at [https://design-system.service.gov.uk/](https://design-system.service.gov.uk/) is fully compliant with the Web Content Accessibility Guidelines version 2.1 AA standard.
+### Compliance status
 
-The GOV.UK Frontend documentation website at [http://frontend.design-system.service.gov.uk/](https://frontend.design-system.service.gov.uk/) is partially compliant with the Web Content Accessibility Guidelines version 2.1 AA standard, because of [issues caused by our Technical Documentation Template](https://tdt-documentation.london.cloudapps.digital/accessibility/#using-the-technical-documentation-template-for-your-own-documentation).
+The Design System website at [https://design-system.service.gov.uk/](https://design-system.service.gov.uk/) is partially compliant with the Web Content Accessibility Guidelines (WCAG) version 2.1 AA standard, due to the non-compliances listed below.
+
+The GOV.UK Frontend documentation website at [http://frontend.design-system.service.gov.uk/](https://frontend.design-system.service.gov.uk/) is partially compliant with the WCAG 2.1 AA standard, due to the non-compliances listed below.
+
+### Non-accessible content
+
+The content listed below is non-accessible for the following reasons.
+
+#### Non-compliance with the accessibility regulations
+
+The Design System website at [https://design-system.service.gov.uk/](https://design-system.service.gov.uk/) is partially compliant due to the following non-compliances:
+
+- users are not always notified when conditionally revealed content associated with a radio button or checkbox is expanded or collapsed - this fails [WCAG 2.1 success criterion 4.1.2 Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
+- the section headings in accordions can be mistaken for links, but are treated as buttons - this fails [WCAG 2.1 success criterion 1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships)
+
+We plan to fix these accessibility issues by the end of March 2021.
+
+The GOV.UK Frontend documentation website is only partially compliant because of [issues caused by our Technical Documentation Template](https://tdt-documentation.london.cloudapps.digital/accessibility/#using-the-technical-documentation-template-for-your-own-documentation).
 
 We plan to fix the issues with the Technical Documentation Template by the end of 2020.
 
@@ -70,7 +87,10 @@ Where possible, the team aims to research components and patterns with a represe
 
 It also tests components to ensure they work with a broad range of browsers, devices and assistive technologies - including screen magnifiers, screen readers and speech recognition tools.
 
-This statement was prepared on 23 October 2019. It was last updated on 2 September 2020.
+### Preparation of this accessibility statement
+
+This statement was prepared on 23 October 2019. It was last updated on 23 September 2020.
+
 
 ## Using the Design System and Frontend in your service
 
@@ -94,7 +114,7 @@ The GOV.UK Design System team no longer supports these products and will not be 
 
 If you're using these products, you should start [updating your service to use the Design System and Frontend](https://design-system.service.gov.uk/get-started/updating-your-code/).
 
-If you have any questions or need help, you can contact the GOV.UK Design System team:
+If you have any questions or need help, contact the GOV.UK Design System team:
 
 - using the [#govuk-design-system channel on cross-government Slack](https://ukgovernmentdigital.slack.com/app_redirect?channel=govuk-design-system)
 - by email at govuk-design-system-support@digital.cabinet-office.gov.uk
