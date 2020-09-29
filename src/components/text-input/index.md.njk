@@ -104,6 +104,8 @@ If you need a specific type of information, say so in the input label or hint te
 
 Some users may miss the fact that the input already has a suffix or prefix, and enter a prefix or suffix into the input. Allow for this in your validation and do not show an error.
 
+Prefixes and suffixes are positioned outside of their input so that they don't interfere with the icons that some browsers insert into inputs (for example to show or generate a password).
+
 #### Text inputs with a prefix
 
 {{ example({group: "components", item: "text-input", example: "input-prefix", html: true, nunjucks: true, closed: true, size: "s"}) }}
@@ -222,3 +224,6 @@ For example, ‘How much you earn a week must not include pence, like 123 or 156
 ## Research on this component
 
 Read a blog post about [the problems we discovered with input type="number"](https://technology.blog.gov.uk/2020/02/24/why-the-gov-uk-design-system-team-changed-the-input-type-for-numbers/).
+
+
+
