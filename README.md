@@ -3,23 +3,23 @@
 **One place for service teams to find styles, components and patterns for
 designing government services.**
 
-## Run locally
+## Run Locally
 
 You'll need [Git](https://help.github.com/articles/set-up-git/) and [Node.js](https://nodejs.org/en/) installed to get this project running.
 
 Note: You will need the [active LTS (Long-term support)](https://github.com/nodejs/Release#release-schedule) Node.js version for this project (as specified in [.nvmrc](./.nvmrc))
 
-### Fork repository (optional)
+### Fork Repository (Optional)
 If you're an external contributor make sure to [fork this project first](https://help.github.com/articles/fork-a-repo/)
 
-### Clone repository
+### Clone Repository
 ```
 git clone git@github.com:alphagov/govuk-design-system.git # or clone your own fork
 
 cd govuk-design-system
 ```
 
-### Using nvm (optional)
+### Using nvm (Optional)
 If you work across multiple Node.js projects there's a good chance they require different Node.js and npm versions.
 
 To enable this we use [nvm (Node Version Manager)](https://github.com/creationix/nvm) to switch between versions easily.
@@ -27,12 +27,12 @@ To enable this we use [nvm (Node Version Manager)](https://github.com/creationix
 1. [install nvm](https://github.com/creationix/nvm#installation)
 2. Run `nvm install` in the project directory (this will use [.nvmrc](./.nvmrc))
 
-### Install npm dependencies
+### Install npm Dependencies
 ```
 npm install
 ```
 
-### Start a local server
+### Start a Local Server
 This will build sources, serve pages and watch for changes.
 ```
 npm start
@@ -55,14 +55,14 @@ npm run lint
 
 [sass-lint]: https://github.com/juanfran/gulp-scss-lint
 
-## GOV.UK Frontend packages
+## GOV.UK Frontend Packages
 
 Design System consumes the [GOV.UK Frontend](https://github.com/alphagov/govuk-frontend) package via [NPM](https://www.npmjs.com/).
 This is defined in the [package.json](package.json) file.
 
 --------------------
 
-## Continuous integration
+## Continuous Integration
 
 When changes are pushed to GitHub [Travis][travis] will:
 
