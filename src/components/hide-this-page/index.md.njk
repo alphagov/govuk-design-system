@@ -7,38 +7,11 @@ backlog_issue_id: 213
 status: Experimental
 layout: layout-pane.njk
 ---
+
 This component is currently experimental because more research is needed to validate it.
 
-{# {% from "_example.njk" import example %}
-
-{{ example({group: "components", item: "button", example: "default", html: true, nunjucks: false, open: false}) }}  #}
-
-<div class="app-example-wrapper" id="button-example" data-module="app-tabs">
-  <div class="app-example app-example--tabs">
-    <div class="app-example__toolbar">
-      <a href="/components/hide-this-page/moj-design/index.html" class="app-example__new-window" target="_blank">
-        Open this
-
-        <span class="govuk-visually-hidden">button</span>
-        example in a new tab
-      </a>
-    </div>
-    <iframe title="Button example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable" src="/components/hide-this-page/moj-design/index.html" frameborder="0" loading="lazy" id="iFrameResizer0" scrolling="auto" style="overflow: auto; height: 130px;"></iframe>
-  </div>
-  <ul class="app-tabs" role="tablist">
-    <li class="app-tabs__item js-tabs__item app-tabs__item--current" role="presentation">
-      <a href="#button-example-html" role="tab" aria-controls="button-example-html" data-track="tab-html" aria-expanded="true">HTML</a>
-    </li>
-  </ul>
-  <div class="app-tabs__heading js-tabs__heading app-tabs__heading--current"><a href="#button-example-html" role="tab" aria-controls="button-example-html" data-track="tab-html" aria-expanded="true">HTML</a></div>
-  <div class="app-tabs__container js-tabs__container" id="button-example-html" role="tabpanel" aria-hidden="false">
-    <div class="app-example__code">
-      <pre data-module="app-copy"><button class="app-copy-button js-copy-button" aria-live="assertive">Copy code</button><button class="app-copy-button js-copy-button" aria-live="assertive">Copy code</button><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
-  Hide this page
-<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
-    </div>
-  </div>
-</div>
+{% from "_example.njk" import example %}
+{{ example({group: "components", item: "hide-this-page", example: "default", html: true, nunjucks: false, open: false}) }}
 
 ## When to use this component
 
@@ -54,47 +27,72 @@ Do not use this component if the service or part of the service is unlikely to p
 
 There are 2 ways to use the warning text component. You can use HTML or, if you are using Nunjucks or the GOV.UK Prototype Kit, you can use the Nunjucks macro.
 
+### Help users cover their tracks
+
+Using the component, should help obscure any evidence that a user has visited the service or website.
+
+When a user opts to ‘Hide this page’, this should:
+
+ - change the current tab to a frequently visited website, for example Google obscure the previous page history
+ - open a new tab as the active tab. This should be a frequently visited website, for example the BBC Weather website
+
 ### Use in every place where users are at risk
 
-Add the ‘Hide this page’ component wherever a user could be at risk. This could cover a whole service or parts of a journey where the information is sensitive and could alert a perpetrator. 
+Add the ‘Hide this page’ component wherever a user could be at risk. This could cover a whole service or parts of a journey where the information is sensitive and could alert a perpetrator.
 
 ### Make the component clearly visible
 
 Add the ‘Hide this page’ component to the top of every screen you identify as having the potential to put a user at risk.
 
-The component can be enabled/disabled by adding or removing the class ```govuk-quick-exit__enabled``` from the main button, and adding the class ```govuk-visually-hidden``` from the screen reader information part. 
+The component is made up of two parts:
 
-The component is of two parts.  The main part should be placed just beneath the header or phase banner.  The second part should be at the very top of the page, above the skip to main content link.  
+**1. Visible button**
 
-The component should always be clearly visible and easy to reach so a user can hide the page immediately when needed.
+This should be placed just beneath the header or phase banner.
+
+The button component should always be clearly visible and easy to reach so a user can hide the page immediately when needed.
 
 Use the recommended colour to highlight the importance of the button and make it easy to locate in an emergency situation.
 
-### Be clear about what the button does
+The component can be enabled/disabled by adding or removing the class ```govuk-quick-exit__enabled```.
 
-Use language that clearly communicates what the component does, for example, “Hide this page”. Users must be able to instantly recognise what happens if they click the button.
+**2. Screen reader and spacing for mobile devices**
+
+This should be at the very top of the page, above the skip to main content link.
+
+The component can be enabled/disabled by adding or removing the class ```govuk-quick-exit__enabled``` from the main button, and adding the class ```govuk-visually-hidden``` from the screen reader information part.
+
+### Clearly communicate what will happen
+
+The ‘Hide the page’ text for the button clearly communicates what the component does. It helps users to recognise instantly what happens if they click the button.
 
 ### Create an alternative keyboard shortcut
 
-You should also offer a keyboard shortcut, for example, using the Escape key. This is necessary for accessibility. 
+You should also offer a keyboard shortcut, for example, using the Escape key. This is necessary for accessibility.
 
 Initial research also suggests that speed is critical for keeping users safe and avoiding potential harm. It may be quicker for users to press a keyboard button than move a mouse pointer.
 
-### Help users cover their tracks
-
-Using the component, should help obscure any evidence that a user has visited the service or website. 
-
- - When a user opts to ‘Hide this page’, this should:
- - change the current tab to a frequently visited website, for example Google obscure the previous page history
- - open a new tab as the active tab. This should be a frequently visited website, for example the BBC Weather website
-
 ### Add a warning for assistive technology users
 
-Every page where the component is used should have a hidden warning for assistive technologies such as screen readers. 
+Every page where the component is used should have a hidden warning for assistive technologies such as screen readers.
 
-This is done by adding code above the ‘Skip to main content’ element that is announced when the user using assistive technology arrives on the page. 
+This is done by adding code above the ```Skip to main content``` element that is announced when the user using assistive technology arrives on the page.
 
 ### Use cases (examples of uses)
 
- - MoJ: LAA Check if you can get legal aid service
- - DWP: Apply for help arranging child maintenance
+ - [MoJ: LAA Check if you can get legal aid service](https://www.gov.uk/check-legal-aid)
+ - [DWP: Apply for help arranging child maintenance](https://child-maintenance.service.gov.uk/apply/eligibility/info)
+ - [Cabinet Office](https://www.gov.uk/find-coronavirus-support/s/need-help-with)
+ - [Scottish Government](https://www.mygov.scot/domestic-abuse/)
+ - [Women's aid](https://www.womensaid.org.uk/)
+ - [Refuge](https://www.nationaldahelpline.org.uk/)
+
+## Research and testing
+
+This component is experimental because there has been limited user research into its usage.
+
+The design, placement and language for this component has evolved through iterations from the Ministry of Justice, Department for Work and Pensions, GOV.UK and the Scottish Government. 
+
+There has also been [research with a subject matter expert](https://miro.com/app/board/o9J_ktl_oUE=/?moveToWidget=3074457347613659921&cot=12) from a specialist provider of services to survivors of domestic abuse.
+
+The component has been tested as part of an accessibility audit by the Digital Accessibility Centre.

@@ -2,15 +2,15 @@
 title: Hide this Page
 layout: layout-example.njk
 ---
-{# {% from "govuk/components/button/macro.njk" import govukButton %}
 
-{{ govukButton({
-  classes: "govuk-button--warning",
-  text: "Hide this page"
-}) }} #}
-{# <div class="govuk-button--warning">
-  press the 'esc' key'
-</div> #}
+<!-- Code sits above the 'skip to main content' <div> to warn users that this feature exists on the page -->
+<div class="govuk-quick-exit__container govuk-visually-hidden">
+  <p class="govuk-body">
+    To leave the page quickly, press the escape key.
+  </p>
+</div>
+
+<!-- Code used for the component and sits inside the <main> content wrapper -->
 <div class="govuk-quick-exit__container govuk-quick-exit__enabled">
   <div class="govuk-quick-exit__position">
     <a href="https://www.google.com" id="quick-exit" tabindex="-1" class="govuk-button govuk-button--warning govuk-quick-exit">
