@@ -1,0 +1,10 @@
+---
+title: Inset text
+layout: layout-example.njk
+---
+
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+{{ govukNotificationBanner({
+  text: "This publication was withdrawn on 7 March 2014."
+}) }}
