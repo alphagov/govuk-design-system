@@ -5,6 +5,13 @@ layout: layout-example.njk
 
 {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
 
+{% set html %}
+  <p class="govuk-notification-banner__heading">
+    You have 7 days left to send your application.
+    <a class="govuk-notification-banner__link" href="#">View application</a>.
+  </p>
+{% endset %}
+
 {{ govukNotificationBanner({
-  html: '<p class="govuk-notification-banner__heading">You have 7 days left to send your application. <a class="govuk-notification-banner__link" href="#">View application</a>.<p>'
+  html: html
 }) }}
