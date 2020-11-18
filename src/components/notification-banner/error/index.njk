@@ -1,0 +1,18 @@
+---
+title: Error banner – notification banner
+layout: layout-example.njk
+---  
+
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+{% set html %}
+<p class="govuk-notification-banner__heading">
+  Photo upload failed because it’s the wrong format.
+  <a class="govuk-notification-banner__link" href="#">Try uploading photo again</a>.
+</p>
+{% endset %}
+
+{{ govukNotificationBanner({
+  html: html,
+  type: 'error'
+}) }}

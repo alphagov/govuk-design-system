@@ -1,0 +1,11 @@
+---
+title: Success banner – notification banner
+layout: layout-example.njk
+---  
+
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+{{ govukNotificationBanner({
+  text: "Photo uploaded",
+  type: 'success'
+}) }}
