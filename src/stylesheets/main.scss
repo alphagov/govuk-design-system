@@ -233,6 +233,12 @@ $colour-list-breakpoint: 980px;
   @include govuk-media-query($from: $colour-list-breakpoint) {
     width: 15%;
   }
+
+  code {
+    padding: 0;
+    color: $govuk-text-colour;
+    background: none;
+  }
 }
 
 .app-colour-list-column--notes {
