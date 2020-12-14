@@ -1,0 +1,29 @@
+name: Build
+
+on: [push, pull_request]
+
+jobs:
+  run-build:
+    name: Build govuk-design-system
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Read node version from .nvmrc
+      id: nvm
+      run: echo "##[set-output name=NVMRC;]$(cat .nvmrc)"
+
+    - name: Setup node
+      uses: actions/setup-node@v1
+      with:
+        node-version: "${{ steps.nvm.outputs.NVMRC }}"
+
+    - name: Install dependencies
+      run: npm install --no-optional
+
+    - name: Build
+      run: npm run build
+
+    - name: Lint and test
+      run: npm test -- --runInBand
