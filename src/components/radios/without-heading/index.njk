@@ -1,0 +1,30 @@
+---
+title: Radios without a heading
+layout: layout-example.njk
+---
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  idPrefix: "changed-name",
+  name: "changed-name",
+  fieldset: {
+    legend: {
+      text: "Have you changed your name?"
+    }
+  },
+  hint: {
+    text: "This includes changing your last name or spelling your name differently."
+  },
+  items: [
+    {
+      value: "yes",
+      text: "Yes"
+    },
+    {
+      value: "no",
+      text: "No"
+    }
+  ]
+}) }}

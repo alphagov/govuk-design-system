@@ -1,0 +1,14 @@
+---
+title: Text input without a heading
+layout: layout-example.njk
+---
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "What is the name of the event?"
+  },
+  id: "event-name",
+  name: "event-name"
+}) }}
