@@ -11,8 +11,9 @@ applications:
   # NGINX requires 20 MB of RAM to serve static assets. Reduce RAM allocation
   # from the default 1 GB allocated to containers by default to 64M.
   memory: 64M
-  path: ./deploy
   buildpack: nginx_buildpack
   # Run two instances to ensure availability
   # https://docs.cloud.service.gov.uk/managing_apps.html#scaling
   instances: 2
+  health-check-http-endpoint: /__canary__/
+  health-check-type: http
