@@ -37,6 +37,8 @@ jobs:
             path: deploy/**
             retention-days: 1
 
+  # Deploy the Design System to production when the master branch is changed
+  # Github Actions is not involved in deploying PR or branch previews – these are handled by Netlify
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
