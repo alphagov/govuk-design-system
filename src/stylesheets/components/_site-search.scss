@@ -60,7 +60,7 @@ $icon-size: 40px;
     margin-bottom: 0; // BUG: Safari 10 on macOS seems to add an implicit margin.
     padding: govuk-spacing(1);
     padding-left: $icon-size - govuk-spacing(1);
-    border: 2px solid govuk-colour("white");
+    border: $govuk-border-width-form-element solid govuk-colour("white");
     border-radius: 0; // Safari 10 on iOS adds implicit border rounding.
     -webkit-appearance: none;
   }
@@ -83,8 +83,10 @@ $icon-size: 40px;
   }
 
   .app-site-search__input--focused {
-    outline: 3px solid $govuk-focus-colour;
-    outline-offset: -2px;
+    border-color: $govuk-focus-text-colour;
+    outline: $govuk-focus-width solid $govuk-focus-colour;
+    outline-offset: 0;
+    box-shadow: inset 0 0 0 $govuk-border-width-form-element;
   }
 
   .app-site-search__input--show-all-values {
