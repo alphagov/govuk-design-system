@@ -2,6 +2,8 @@ name: CI Workflow
 
 on: [push, pull_request]
 
+# Separate build and deploy jobs so we can build all branches and pull requests
+# but only deploy from master
 jobs:
   build:
     name: Build & Test
@@ -30,6 +32,8 @@ jobs:
       - name: Lint and test
         run: npm test -- --runInBand
 
+      # Share data between the build and deploy jobs so we don't need to run `npm run build` again on deploy
+      # Upload the deploy folder as an artifact so it can be downloaded and used in the deploy job
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
