@@ -27,6 +27,10 @@ Never use the table component to layout content on a page. Instead, use the [gri
 
 Use the `<caption>` element to describe a table in the same way you would use a heading. A caption helps users find, navigate and understand tables.
 
+There are other styling options for table captions. You can use `govuk-table__caption--s`, `govuk-table__caption--m`, `govuk-table__caption--l` and `govuk-table__caption--xl` classes to make them larger or smaller from the default.
+
+{{ example({group: "components", item: "table", example: "caption-l", html: true, nunjucks: true, open: false, size: "m"}) }}
+
 ### Table headers
 
 Use table headers to tell users what the rows and columns represent. Use the `scope` attribute to help users of assistive technology distinguish between row and column headers.
