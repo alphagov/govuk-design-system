@@ -1,0 +1,19 @@
+---
+title: Date input without a heading
+layout: layout-example.njk
+---
+
+{% from "govuk/components/date-input/macro.njk" import govukDateInput %}
+
+{{ govukDateInput({
+  id: "passport-issued",
+  namePrefix: "passport-issued",
+  fieldset: {
+    legend: {
+      text: "When was your passport issued?"
+    }
+  },
+  hint: {
+    text: "For example, 12 11 2007"
+  }
+}) }}
