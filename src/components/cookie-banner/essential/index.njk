@@ -1,0 +1,26 @@
+---
+title: Essential Cookies - Cookie Banner
+layout: layout-example.njk
+---
+
+{% from "govuk/components/cookie-banner/macro.njk" import govukCookieBanner %}
+
+{{ govukCookieBanner({
+  ariaLabel: "Cookies on [name of service]",
+  messages: [
+    {
+      headingText: "Cookies on [name of service]",
+      text: "We use some essential cookies to make this service work.",
+      actions: [
+        {
+          text: "View cookies",
+          href: "#"
+        },
+        {
+          text: "Hide this message",
+          type: "button"
+        }
+      ]
+    }
+  ]
+}) }}

@@ -1,0 +1,58 @@
+---
+title: Client-side implementation – Cookie Banner
+layout: layout-example.njk
+---
+
+{% from "govuk/components/cookie-banner/macro.njk" import govukCookieBanner %}
+
+{% set acceptHtml %}
+  <p>You’ve accepted analytics cookies. You can <a href="#">change your cookie settings</a> at any time.</p>
+{% endset %}
+
+{% set rejectHtml %}
+  <p>You’ve accepted analytics cookies. You can <a href="#">change your cookie settings</a> at any time.</p>
+{% endset %}
+
+{{ govukCookieBanner({
+  ariaLabel: "Cookies on [name of service]",
+  messages: [
+    {
+      headingText: "Cookies on [name of service]",
+      html: html,
+      actions: [
+        {
+          text: "Accept analytics cookies",
+          type: "button"
+        },
+        {
+          text: "Reject analytics cookies",
+          type: "button"
+        },
+        {
+          text: "View cookies",
+          href: "#"
+        }
+      ]
+    },
+    {
+      html: acceptHtml,
+      role: "alert",
+      hidden: true,
+      actions: [
+        {
+          text: "Hide this message"
+        }
+      ]
+    },
+    {
+      html: rejectHtml,
+      role: "alert",
+      hidden: true,
+      actions: [
+        {
+          text: "Hide this message"
+        }
+      ]
+    }
+  ]
+}) }}
