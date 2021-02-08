@@ -1,16 +1,13 @@
 ---
-title: Secondary button combo
+title: Button group
 layout: layout-example.njk
 ---
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
 <div class="govuk-button-group">
   {{ govukButton({
-    text: "Save and continue"
+    text: "Continue"
   }) }}
 
-  {{ govukButton({
-    text: "Save as draft",
-    classes: "govuk-button--secondary"
-  }) }}
+  <a class="govuk-link" href="#">Cancel</a>
 </div>

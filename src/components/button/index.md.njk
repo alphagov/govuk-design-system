@@ -59,9 +59,7 @@ Pages with too many calls to action make it hard for users to know what to do ne
 
 {{ example({group: "components", item: "button", example: "secondary", html: true, nunjucks: true, open: false}) }}
 
-You can use secondary buttons in combination with default buttons.
-
-{{ example({group: "components", item: "button", example: "secondary-combo", html: true, nunjucks: true, open: false}) }}
+You can also [group default and secondary buttons together](#grouping-buttons).
 
 ### Warning buttons
 
@@ -84,6 +82,16 @@ Disabled buttons have poor contrast and can confuse some users, so avoid them if
 Only use disabled buttons if research shows it makes the user interface easier to&nbsp;understand.
 
 {{ example({group: "components", item: "button", example: "disabled", html: true, nunjucks: true, open: false}) }}
+
+### Grouping buttons
+
+Use a button group when two or more buttons are placed together.
+
+{{ example({group: "components", item: "button", example: "secondary-combo", html: true, nunjucks: true, open: false}) }}
+
+Any links within a button group will automatically align with the buttons.
+
+{{ example({group: "components", item: "button", example: "button-group", html: true, nunjucks: true, open: false}) }}
 
 ### Stop users from accidentally sending information more than once
 
