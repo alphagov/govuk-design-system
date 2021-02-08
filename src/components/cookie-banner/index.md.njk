@@ -5,6 +5,8 @@ section: Components
 aliases:
 backlog_issue_id: 12
 layout: layout-pane.njk
+status: Experimental
+statusMessage: This component is currently experimental because <a class="govuk-link" href="#research-on-this-component">more research</a> is needed to validate it.
 ---
 
 {% from "_example.njk" import example %}
@@ -118,6 +120,7 @@ You’ll need a [cookie page](https://design-system.service.gov.uk/patterns/cook
 When the user sets or changes their cookie preferences using the controls on the cookie page (rather than in the cookie banner), display this version of the replacement message. This is so they can get back to the page they were looking at.
 
 ## Research on this component
+
 We remove the visible focus indicator from when shifting focus to the cookie banner. We do this because the cookie banner is the first element on the page and the last thing the user interacted with prior to it being given focus.
 
 So we’ve assumed that giving the cookie banner a visible focus indicator in these circumstances would be more likely to confuse users than to help them, especially as the element is not normally operable with a keyboard. However, more research is needed to find out if that assumption is right.
