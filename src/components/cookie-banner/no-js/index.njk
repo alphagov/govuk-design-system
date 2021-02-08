@@ -1,0 +1,16 @@
+---
+title: No JavaScript - Cookie Banner
+layout: layout-example.njk
+---
+
+{% from "govuk/components/cookie-banner/macro.njk" import govukCookieBanner %}
+
+{{ govukCookieBanner({
+  ariaLabel: "Cookies on [name of service]",
+  messages: [
+    {
+      headingText: "Cookies on [name of service]",
+      text: "We use cookies to make this service work and collect analytics information. To accept or reject cookies, turn on JavaScript in your browser settings or reload this page."
+    }
+  ]
+}) }}
