@@ -1,45 +1,45 @@
 ---
-title: Table
+title: Custom caption size
 layout: layout-example.njk
 ---
 
 {% from "govuk/components/table/macro.njk" import govukTable %}
 
 {{ govukTable({
-  caption: "Dates and amounts",
-  captionClasses: "govuk-table__caption--m",
+  caption: "Months and rates",
+  captionClasses: "govuk-table__caption--l",
   firstCellIsHeader: true,
   head: [
     {
-      text: "Date"
+      text: "Month you apply"
     },
     {
-      text: "Amount"
+      text: "Rate for vehicles"
     }
   ],
   rows: [
     [
       {
-        text: "First 6 weeks"
+        text: "January"
       },
       {
-        text: "£109.80 per week"
+        text: "£95"
       }
     ],
     [
       {
-        text: "Next 33 weeks"
+        text: "February"
       },
       {
-        text: "£109.80 per week"
+        text: "£55"
       }
     ],
     [
       {
-        text: "Total estimated pay"
+        text: "March"
       },
       {
-        text: "£4,282.20"
+        text: "£125"
       }
     ]
   ]
