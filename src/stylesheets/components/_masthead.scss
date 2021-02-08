@@ -14,3 +14,22 @@
   @include govuk-font(24);
   margin-bottom: 0;
 }
+
+.app-masthead__image {
+  box-sizing: border-box;
+  display: none;
+  visibility: hidden;
+  width: 100%;
+  padding: 0 15px;
+  float: left;
+  @include govuk-media-query($from: desktop) {
+    display: block;
+    visibility: visible;
+    width: 33.3333%;
+  }
+  img {
+    max-width: 100%;
+    margin-top: 15px;
+  }
+}
+
