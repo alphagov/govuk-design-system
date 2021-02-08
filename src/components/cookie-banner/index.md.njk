@@ -1,6 +1,6 @@
 ---
 title: Cookie banner
-description: Allow users to accept or reject cookies which aren’t essential to making your service work.
+description: Allow users to accept or reject cookies which are not essential to making your service work.
 section: Components
 aliases:
 backlog_issue_id: 12
@@ -11,13 +11,13 @@ statusMessage: This component is currently experimental because <a class="govuk-
 
 {% from "_example.njk" import example %}
 
-Allow users to accept or reject cookies which aren’t essential to making your service work.
+Allow users to accept or reject cookies which are not essential to making your service work.
 
 {{ example({group: "components", item: "cookie-banner", example: "default", html: true, nunjucks: true, open: false}) }}
 
 ## When to use this component
 
-You must tell users about any cookies you’re using - or any similar technologies that store files on the user’s device, like HTML5 local storage or service workers. You must get the user’s consent before setting any cookies which aren’t essential to providing the service.
+You must tell users about any cookies you’re using - or any similar technologies that store files on the user’s device, like HTML5 local storage or service workers. You must get the user’s consent before setting any cookies which are not essential to providing the service.
 
 This cookie banner and the [cookie page pattern](/patterns/cookies-page/) are based on the approach to getting cookie consent used on the GOV.UK website.
 
@@ -43,7 +43,7 @@ You can use this example text for a service which sets essential and analytics c
 You can use this example text for a service which sets:
 
 - cookies which are essential to making the service work
-- ‘functional’ cookies which remember the user’s settings, but aren’t essential to making the service work
+- ‘functional’ cookies which remember the user’s settings, but are not essential to making the service work
 - first party cookies to collect analytics information about how well the service is performing
 
 {{ example({group: "components", item: "cookie-banner", example: "multiple-cookies", html: true, nunjucks: true, open: false}) }}
