@@ -102,9 +102,9 @@ Prefixes and suffixes are useful when there's a commonly understood symbol or ab
 
 If you need a specific type of information, say so in the input label or hint text as well. For example, put "Cost, in pounds" in the input label and use the "£" symbol in the prefix.
 
-Some users may miss the fact that the input already has a suffix or prefix, and enter a prefix or suffix into the input. Allow for this in your validation and do not show an error.
+Position prefixes and suffixes so that they're outside of their input. This is to avoid interfering with some browsers that might insert an icon (for example to show or generate a password) or autofill some information into the inputs.
 
-Prefixes and suffixes are positioned outside of their input so that they don't interfere with the icons that some browsers insert into inputs (for example to show or generate a password).
+Some users may miss that the input already has a suffix or prefix, and enter a prefix or suffix into the input. Allow for this in your validation and do not show an error.
 
 #### Text inputs with a prefix
 
@@ -224,6 +224,5 @@ For example, ‘How much you earn a week must not include pence, like 123 or 156
 ## Research on this component
 
 Read a blog post about [the problems we discovered with input type="number"](https://technology.blog.gov.uk/2020/02/24/why-the-gov-uk-design-system-team-changed-the-input-type-for-numbers/).
-
 
 
