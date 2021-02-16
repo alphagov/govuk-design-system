@@ -1,0 +1,33 @@
+---
+title: Checkboxes without a heading
+layout: layout-example.njk
+---
+
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+{{ govukCheckboxes({
+  idPrefix: "waste",
+  name: "waste",
+  fieldset: {
+    legend: {
+      text: "Which types of waste do you transport?"
+    }
+  },
+  hint: {
+    text: "Select all that apply."
+  },
+  items: [
+    {
+      value: "carcasses",
+      text: "Waste from animal carcasses"
+    },
+    {
+      value: "mines",
+      text: "Waste from mines or quarries"
+    },
+    {
+      value: "farm",
+      text: "Farm or agricultural waste"
+    }
+  ]
+}) }}

@@ -1,0 +1,18 @@
+---
+title: Cookie preferences updated - Cookies page
+layout: layout-example.njk
+---
+
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+{% set html %}
+  <p class="govuk-notification-banner__heading">
+    You’ve set your cookie preferences. <a class="govuk-notification-banner__link" href="#">Go back to the page you were looking at</a>.
+  </p>
+{% endset %}
+
+{{ govukNotificationBanner({
+  type: "success",
+  html: html,
+  disableAutoFocus: true
+}) }}

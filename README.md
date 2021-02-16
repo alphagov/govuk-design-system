@@ -64,7 +64,7 @@ This is defined in the [package.json](package.json) file.
 
 ## Continuous integration
 
-When changes are pushed to GitHub [Travis][travis] will:
+When changes are pushed to GitHub, [Github Actions][github-actions] will:
 
 - run the tests
 - lint the Sass stylesheets in `source/stylesheets`
@@ -73,7 +73,7 @@ When changes are pushed to GitHub [Travis][travis] will:
 If any of these fail, this will be reported in the GitHub status checks
 interface.
 
-[travis]: https://travis-ci.org/alphagov/govuk-design-system
+[github-actions]: https://github.com/alphagov/govuk-design-system/actions
 
 ## Deployment
 

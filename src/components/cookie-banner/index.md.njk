@@ -1,0 +1,126 @@
+---
+title: Cookie banner
+description: Allow users to accept or reject cookies which are not essential to making your service work.
+section: Components
+aliases: Cookies banner, consent banner, GDPR banner, tracking banner, analytics banner
+backlog_issue_id: 12
+layout: layout-pane.njk
+status: Experimental
+statusMessage: This component is currently experimental because <a class="govuk-link" href="#research-on-this-component">more research</a> is needed to validate it.
+---
+
+{% from "_example.njk" import example %}
+
+Allow users to accept or reject cookies which are not essential to making your service work.
+
+{{ example({group: "components", item: "cookie-banner", example: "default", html: true, nunjucks: true, open: false}) }}
+
+## When to use this component
+
+You must tell users about any cookies you’re using - or any similar technologies that store files on the user’s device, like HTML5 local storage or service workers. You must get the user’s consent before setting any cookies which are not essential to providing the service.
+
+This cookie banner and the [cookie page pattern](/patterns/cookies-page/) are based on the approach to getting cookie consent used on the GOV.UK website.
+
+## How it works
+
+Show the cookie banner when the user accesses your service for the first time.
+
+Do not remove the cookie banner or set any non-essential cookies until the user has either:
+
+- accepted or rejected cookies using the buttons in the cookie banner
+- saved their cookie preferences on the service’s [cookie page](/patterns/cookies-page/)
+
+Position the cookie banner after the opening `<body>` tag and before the ‘skip to main content’ link. If you're using the Nunjucks page template, use the `bodyStart` block.
+
+## If you’re using essential cookies and analytics cookies
+
+You can use this example text for a service which sets essential and analytics cookies.
+
+{{ example({group: "components", item: "cookie-banner", example: "default", html: true, nunjucks: true, open: false}) }}
+
+## If you’re using more than one type of non-essential cookie
+
+You can use this example text for a service which sets:
+
+- cookies which are essential to making the service work
+- ‘functional’ cookies which remember the user’s settings, but are not essential to making the service work
+- first party cookies to collect analytics information about how well the service is performing
+
+{{ example({group: "components", item: "cookie-banner", example: "multiple-cookies", html: true, nunjucks: true, open: false}) }}
+
+## If you’re only using essential cookies
+
+You can use this example text for a service which only sets essential cookies.
+
+{{ example({group: "components", item: "cookie-banner", example: "essential", html: true, nunjucks: true, open: false}) }}
+
+## What to cover in your cookie banner
+
+Include the name of the service in the banner heading to help users understand that the cookies you’re talking about are different from the ones set by the main GOV.UK platform.
+
+You’ll need to change the example cookie banner text if your service:
+
+- allows third parties to set cookies (tell the user that both your organisation and other organisations will be setting cookies)
+- uses cookies for reasons other than collecting analytics information or remembering the user’s settings
+
+Keep the text as short as possible while making sure it’s an accurate description of how you use cookies. For example, if you use more than one ‘functional’ cookie and there’s not enough space to mention what each of them does, you could ask for permission to set cookies so ‘you can use as many of the service’s features as possible’.
+
+## When the user accepts or rejects cookies using the cookie banner
+
+If you’re using JavaScript to manage cookie consent, write your own JavaScript so that when the user accepts or rejects cookies in the banner:
+
+- the cookie message is hidden using the `hidden` attribute
+- a replacement message is unhidden and displayed in place of the cookie banner
+- a replacement message is displayed in place of the cookie message
+- focus shifts to the replacement message
+
+Give the replacement message the `role="alert"` and `tabindex="-1"` attributes, to allow the focus to shift and so assistive technology can read the message.
+
+Here’s an example:
+
+{{ example({group: "components", item: "cookie-banner", example: "client-side", html: true, nunjucks: true, open: true}) }}
+
+Unhide a replacement message confirming that the user has either accepted or rejected cookies by removing the `hidden` attribute.
+
+{{ example({group: "components", item: "cookie-banner", example: "accepted", html: true, nunjucks: true, open: false}) }}
+
+{{ example({group: "components", item: "cookie-banner", example: "rejected", html: true, nunjucks: true, open: false}) }}
+
+Write your own code to:
+
+- update the cookies you’re setting on that user’s device - including removing any types of non-essential cookies the service has set previously, but that the user is no longer consenting to
+- set a cookie remembering that the user has seen the cookie banner and updated their cookie settings - this cookie should expire after 1 year
+- remove the cookie banner if the user clicks on the ‘Hide this message’ button
+- prevent the cookie banner being shown when the user moves on to a new page
+
+## If the user’s device is not running JavaScript
+
+If the user’s device is not running JavaScript, display a version of the cookie banner which tells them what to do in order to set or change their cookie preferences. Do not set any non-essential cookies, because the user has not consented to them.
+
+{{ example({group: "components", item: "cookie-banner", example: "no-js", html: true, nunjucks: true, open: false}) }}
+
+If your service only uses essential cookies, display a different version of the cookie banner to users whose devices are not running JavaScript.
+
+{{ example({group: "components", item: "cookie-banner", example: "essential-no-js", html: true, nunjucks: true, open: false}) }}
+
+## Getting consent from users who are not running JavaScript
+
+[Some users will not be running JavaScript on their devices](https://gds.blog.gov.uk/2013/10/21/how-many-people-are-missing-out-on-javascript-enhancement/). If you’re using non-essential cookies and want to get consent from these users, you’ll need an approach that does not depend on JavaScript.
+
+Show the replacement message confirming that the user has accepted or rejected cookies when they submit the form and the page has reloaded.
+
+Here’s an example showing how it should work.
+
+{{ example({group: "components", item: "cookie-banner", example: "server-side", html: true, nunjucks: true, open: true}) }}
+
+## Creating a cookies page
+
+You’ll need a [cookie page](/patterns/cookies-page/) as well as a cookie banner.
+
+When the user sets or changes their cookie preferences using the controls on the cookie page (rather than in the cookie banner), display this version of the replacement message. This is so they can get back to the page they were looking at.
+
+## Research on this component
+
+We remove the visible focus indicator from when shifting focus to the cookie banner. We do this because the cookie banner is the first element on the page and the last thing the user interacted with prior to it being given focus.
+
+So we’ve assumed that giving the cookie banner a visible focus indicator in these circumstances would be more likely to confuse users than to help them, especially as the element is not normally operable with a keyboard. However, more research is needed to find out if that assumption is right.

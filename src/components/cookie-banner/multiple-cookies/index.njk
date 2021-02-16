@@ -1,0 +1,39 @@
+---
+title: Non-essential Cookies - Cookie Banner
+layout: layout-example.njk
+---
+
+{% from "govuk/components/cookie-banner/macro.njk" import govukCookieBanner %}
+
+{% set html %}
+  <p>We use some essential cookies to make this service work.</p>
+  <p>We’d like to set additional cookies so we can remember your settings, understand how people use the service and make improvements.</p>
+{% endset %}
+
+{{ govukCookieBanner({
+  ariaLabel: "Cookies on [name of service]",
+  messages: [
+    {
+      headingText: "Cookies on [name of service]",
+      html: html,
+      actions: [
+        {
+          text: "Accept additional cookies",
+          type: "button",
+          name: "cookies",
+          value: "accept"
+        },
+        {
+          text: "Reject additional cookies",
+          type: "button",
+          name: "cookies",
+          value: "reject"
+        },
+        {
+          text: "View cookies",
+          href: "#"
+        }
+      ]
+    }
+  ]
+}) }}

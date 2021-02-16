@@ -26,15 +26,9 @@ Do not use the checkboxes component if users can only choose one option from a s
 
 ## How it works
 
-Group checkboxes together in a `<fieldset>` with a `<legend>` that describes them, as shown in the examples on this page. This is usually a question, like ‘How would you like to be contacted?’.
-
-If you are asking just [one question per page](../../patterns/question-pages/#start-by-asking-one-question-per-page) as recommended, you can set the contents of the `<legend>` as the page heading. This is good practice as it means that users of screen readers will only hear the contents once.
-
-Read more about [why and how to set legends as headings](../../get-started/labels-legends-headings).
-
 Always position checkboxes to the left of their labels. This makes them easier to find, especially for users of screen magnifiers.
 
-Unlike with radios, users can select multiple options from a list of checkboxes. Do not assume that users will know how many options they can select based on the visual difference between radios and checkboxes alone. 
+Unlike with radios, users can select multiple options from a list of checkboxes. Do not assume that users will know how many options they can select based on the visual difference between radios and checkboxes alone.
 
 If needed, add a hint explaining this, for example, 'Select all that apply'.
 
@@ -47,9 +41,23 @@ Order checkbox options alphabetically by default.
 
 In some cases, it can be helpful to order them from most-to-least common options. For example, you could order options for ‘What is your nationality?’ based on population size.
 
-There are 2 ways to use the checkboxes component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://govuk-prototype-kit.herokuapp.com), you can use the Nunjucks macro.
+Group checkboxes together in a `<fieldset>` with a `<legend>` that describes them, as shown in the examples on this page. This is usually a question, like ‘How would you like to be contacted?’.
+
+###  If you’re asking one question on the page
+
+If you're asking just [one question per page](../../patterns/question-pages/#start-by-asking-one-question-per-page) as recommended, you can set the contents of the `<legend>` as the page heading. This is good practice as it means that users of screen readers will only hear the contents once.
+
+Read more about [why and how to set legends as headings](../../get-started/labels-legends-headings).
+
+There are 2 ways to use the checkboxes component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://govuk-prototype-kit.herokuapp.com/docs), you can use the Nunjucks macro.
 
 {{ example({group: "components", item: "checkboxes", example: "default", html: true, nunjucks: true, open: false, size: "m", titleSuffix: "second"}) }}
+
+###  If you’re asking more than one question on the page
+
+If you're asking more than one question on the page, do not set the contents of the `<legend>` as the page heading. Read more about [asking multiple questions on question pages](../../patterns/question-pages/#asking-multiple-questions-on-a-page).
+
+{{ example({group: "components", item: "checkboxes", example: "without-heading", html: true, nunjucks: true, open: false, size: "m" }) }}
 
 ### Checkbox items with hints
 
@@ -59,7 +67,9 @@ You can add hints to checkbox items to provide additional information about the 
 
 ### Conditionally revealing content
 
-You can add conditionally revealing content to checkboxes, so users only see content when it’s relevant to them. For example, you could reveal a phone number input only when a user chooses to be contacted by phone.
+You can conditionally reveal content when the user selects a particular checkbox, so they only see content when it’s relevant to them.
+
+For example, you could reveal a phone number input when the user selects the 'Contact me by phone' option.
 
 {{ example({group: "components", item: "checkboxes", example: "conditional-reveal", html: true, nunjucks: true, open: false, size: "xl"}) }}
 

@@ -32,7 +32,7 @@ This example shows the minimum required for a GOV.UK page.
 
 ## Customised page template
 
-You can customise the page template, for example, by adding a service name and navigation or adding a block before the main contain to include a [back link](../../components/back-link/) or [phase banner](../../components/phase-banner/).
+You can customise the page template, for example, by adding a service name and navigation or adding a block before the main container to include a [back link](../../components/back-link/) or [phase banner](../../components/phase-banner/).
 
 {{ example({group: "styles", item: "page-template", example: "custom", customCode: true, html: true, nunjucks: true, open: false, size: "xl" }) }}
 
@@ -114,7 +114,7 @@ To change the components that are included in the page template by default, set 
 
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">bodyAttributes</td>
-      <td class="govuk-table__cell">Variable</td>      
+      <td class="govuk-table__cell">Variable</td>
       <td class="govuk-table__cell">Add attributes to the <code>&lt;body&gt;</code> element. Add each attribute and its value in the <code>bodyAttributes</code> object.</td>
     </tr>
 
@@ -132,12 +132,14 @@ To change the components that are included in the page template by default, set 
         Add content just before the closing <code>&lt;/body&gt;</code> element.
       </td>
     </tr>
-    
+
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">bodyStart</td>
       <td class="govuk-table__cell">Block</td>
       <td class="govuk-table__cell">
         Add content after the opening <code>&lt;body&gt;</code> element.
+        <br>
+        For example: The <a class="govuk-link" href="../../components/cookie-banner/">cookie banner</a> component.
       </td>
     </tr>
 
@@ -224,7 +226,7 @@ To change the components that are included in the page template by default, set 
         Set the language of the <code>&lt;main&gt;</code> element if it's different to <code>htmlLang</code>.
       </td>
     </tr>
-    
+
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">pageTitle</td>
       <td class="govuk-table__cell">Block</td>

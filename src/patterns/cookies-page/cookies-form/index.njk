@@ -1,0 +1,62 @@
+---
+title: Cookie preferences form - Cookies page
+layout: layout-example.njk
+---
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-l">Change your cookie settings</h2>
+    <form action="/form-handler" method="post" novalidate>
+      {{ govukRadios({
+          idPrefix: "functional-cookies",
+          name: "functional-cookies",
+          fieldset: {
+            legend: {
+              text: "Do you want to accept functional cookies?",
+              classes: "govuk-fieldset__legend--s"
+            }
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No",
+              checked: true
+            }
+          ]
+        }) }}
+
+        {{ govukRadios({
+          idPrefix: "analytics-cookies",
+          name: "analytics-cookies",
+          fieldset: {
+            legend: {
+              text: "Do you want to accept analytics cookies?",
+              classes: "govuk-fieldset__legend--s"
+            }
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No",
+              checked: true
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Save cookie settings"
+        }) }}
+    </form>
+  </div>
+</div>

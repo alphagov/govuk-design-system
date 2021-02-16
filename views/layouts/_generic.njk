@@ -6,7 +6,7 @@
 {% block pageTitle %}{{ title }} – GOV.UK Design System{% endblock %}
 
 {% block head %}
-  {% if not TRAVIS_BRANCH or TRAVIS_BRANCH != 'master' %}
+  {% if not ENVIRONMENT or ENVIRONMENT != 'production' %}
     <meta name="robots" content="noindex, nofollow">
   {% endif %}
   <meta name="og:title" content="{{title}}">

@@ -21,12 +21,6 @@ Do not use the radios component if users might need to select more than one opti
 
 ## How it works
 
-Group radios together in a `<fieldset>` with a `<legend>` that describes them, as shown in the examples on this page. This is usually a question, like ‘Where do you live?’.
-
-If you are asking just [one question per page](../../patterns/question-pages/#start-by-asking-one-question-per-page) as recommended, you can set the contents of the `<legend>` as the page heading. This is good practice as it means that users of screen readers will only hear the contents once.
-
-Read more about [why and how to set legends as headings](../../get-started/labels-legends-headings).
-
 Always position radios to the left of their labels. This makes them easier to find, especially for users of screen magnifiers.
 
 Unlike with checkboxes, users can only select one option from a list of radios. Do not assume that users will know how many options they can select based on the visual difference between radios and checkboxes alone.
@@ -46,7 +40,23 @@ In some cases, it can be helpful to order them from most-to-least common options
 
 However you should do this with extreme caution as it can reinforce bias in your service. If in doubt, order alphabetically.
 
+Group radios together in a `<fieldset>` with a `<legend>` that describes them, as shown in the examples on this page. This is usually a question, like ‘Where do you live?’.
+
+###  If you’re asking one question on the page
+
+If you are asking just [one question per page](../../patterns/question-pages/#start-by-asking-one-question-per-page) as recommended, you can set the contents of the `<legend>` as the page heading. This is good practice as it means that users of screen readers will only hear the contents once.
+
+Read more about [why and how to set legends as headings](../../get-started/labels-legends-headings).
+
 There are 2 ways to use the radios component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://govuk-prototype-kit.herokuapp.com), you can use the Nunjucks macro.
+
+{{ example({group: "components", item: "radios", example: "default", html: true, nunjucks: true, open: false, size: "s", titleSuffix: "second"}) }}
+
+###  If you’re asking more than one question on the page
+
+If you're asking more than one question on the page, do not set the contents of the `<legend>` as the page heading. Read more about [asking multiple questions on question pages](../../patterns/question-pages/#asking-multiple-questions-on-a-page).
+
+{{ example({group: "components", item: "radios", example: "without-heading", html: true, nunjucks: true, open: false, size: "s"}) }}
 
 ### Stacked radios
 
@@ -58,7 +68,7 @@ When there are more than 2 options, radios should be stacked, like so:
 
 If there are only 2 options, you can either stack the radios or display them inline, like so:
 
-{{ example({group: "components", item: "radios", example: "default", html: true, nunjucks: true, open: false, size: "s", titleSuffix: "second"}) }}
+{{ example({group: "components", item: "radios", example: "default", html: true, nunjucks: true, open: false, size: "s", titleSuffix: "third"}) }}
 
 ### Radio items with hints
 
@@ -74,15 +84,15 @@ If one or more of your radio options is different from the others, it can help u
 
 ### Conditionally revealing content
 
-Using this component, you can add conditionally revealing content to stacked radios, so users only see content when it’s relevant to them.
+You can conditionally reveal content when the user selects a particular radio, so they only see content when it’s relevant to them.
 
-For example, you could reveal an email address input only when a user chooses to be contacted by email.
+For example, you could reveal a phone number input when the user selects the 'Contact me by phone' option.
 
 {{ example({group: "components", item: "radios", example: "conditional-reveal", html: true, nunjucks: true, open: false, size: "xl"}) }}
 
 Keep it simple. If you need to add a lot of content, consider showing it on the next page in the process instead.
 
-Do not use this component to add conditionally revealing content to inline radios.
+Do not add conditionally revealing content to inline radios.
 
 #### Known issues
 

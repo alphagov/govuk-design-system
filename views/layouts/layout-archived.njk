@@ -1,0 +1,27 @@
+{% extends "layout-single-page.njk" %}
+
+{% set title = title + ' (archived)' %}
+
+{% block head %}
+  {{ super() }}
+  {# Make sure redirect pages are not indexed by search engines #}
+  <meta name="robots" content="noindex">
+{% endblock %}
+
+{% set contents %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">This page has been archived</h1>
+
+      <div class="app-prose-scope">
+        {{ contents | safe}}
+
+        <p>
+          You can also <a href="https://webarchive.nationalarchives.gov.uk/*/https://design-system.service.gov.uk/{{ path }}">
+            check for previous versions of this page in the UK Government Web Archive
+          </a>.
+        </p>
+      </div>
+    </div>
+  </div>
+{% endset %}

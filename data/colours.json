@@ -44,6 +44,12 @@
       "notes": "Use for error messages"
     }
   ],
+  "Success state": [
+    {
+      "name": "$govuk-success-colour",
+      "notes": "Use for success messages"
+    }
+  ],
   "Brand colour": [
     {
       "name": "$govuk-brand-colour"

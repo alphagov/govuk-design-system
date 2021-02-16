@@ -5,6 +5,7 @@ import Details from 'govuk-frontend/govuk/components/details/details'
 import CharacterCount from 'govuk-frontend/govuk/components/character-count/character-count'
 import Checkboxes from 'govuk-frontend/govuk/components/checkboxes/checkboxes'
 import ErrorSummary from 'govuk-frontend/govuk/components/error-summary/error-summary'
+import NotificationBanner from 'govuk-frontend/govuk/components/notification-banner/notification-banner'
 import Radios from 'govuk-frontend/govuk/components/radios/radios'
 import Header from 'govuk-frontend/govuk/components/header/header'
 import Tabs from 'govuk-frontend/govuk/components/tabs/tabs'
@@ -46,6 +47,11 @@ nodeListForEach($characterCounts, function ($characterCount) {
 var $checkboxes = document.querySelectorAll('[data-module="govuk-checkboxes"]')
 nodeListForEach($checkboxes, function ($checkbox) {
   new Checkboxes($checkbox).init()
+})
+
+var $notificationBanners = document.querySelectorAll('[data-module="govuk-notification-banner"]')
+nodeListForEach($notificationBanners, function ($notificationBanner) {
+  new NotificationBanner($notificationBanner).init()
 })
 
 var $radios = document.querySelectorAll('[data-module="govuk-radios"]')

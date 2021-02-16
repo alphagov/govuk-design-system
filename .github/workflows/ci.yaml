@@ -1,0 +1,96 @@
+name: CI Workflow
+
+on: [push, pull_request, workflow_dispatch]
+
+# Separate build and deploy jobs so we can build all branches and pull requests
+# but only deploy from master
+jobs:
+  build:
+    name: Build & Test
+    runs-on: ubuntu-latest
+    env:
+      ENVIRONMENT: production
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Read node version from .nvmrc
+        id: nvm
+        run: echo "##[set-output name=NVMRC;]$(cat .nvmrc)"
+
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "${{ steps.nvm.outputs.NVMRC }}"
+
+      - name: Install dependencies
+        run: npm install --no-optional
+
+      - name: Build
+        run: npm run build
+
+      - name: Lint and test
+        run: npm test -- --runInBand
+
+      # Share data between the build and deploy jobs so we don't need to run `npm run build` again on deploy
+      # Upload the deploy folder as an artifact so it can be downloaded and used in the deploy job
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+            name: build
+            path: deploy/**
+            retention-days: 1
+
+  # Deploy the Design System to production when the master branch is changed
+  # Github Actions is not involved in deploying PR or branch previews – these are handled by Netlify
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    needs: build
+    if: ${{ github.ref == 'refs/heads/master' }}
+    env:
+      CF_API: "https://api.cloud.service.gov.uk"
+      CF_ORG: "govuk-design-system"
+      CF_SPACE: "design-system"
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Download build artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: build
+
+      - name: Install the CF CLI
+        run: |
+          wget https://s3-us-west-1.amazonaws.com/v7-cf-cli-releases/releases/v7.2.0/cf7-cli-installer_7.2.0_x86-64.deb
+          sudo dpkg -i cf7-cli-installer_7.2.0_x86-64.deb
+
+      - name: Authenticate
+        env:
+          # CF_USERNAME and CF_PASSWORD are used by the `cf auth` command to login
+          # We use an environment variable instead of passing the details as options using -u / -p to reduce the risk of them being recorded in logs
+          # https://cli.cloudfoundry.org/en-US/v6/auth.html
+          CF_USERNAME: "design-system-deploy+design-system@digital.cabinet-office.gov.uk"
+          CF_PASSWORD: ${{ secrets.CF_PASSWORD }}
+        run: |
+          echo "Logging into $CF_ORG/$CF_SPACE..."
+          cf api "${CF_API}"
+          cf auth
+          cf target -o "${CF_ORG}" -s "${CF_SPACE}"
+
+      # Parse app name from manifest to ensure it matches up
+      - name: Fetch app name from manifest
+        run: echo "APP_NAME=$(ruby -e "require 'yaml'; config = YAML.load_file('manifest.yml'); puts config['applications'][0]['name']")" >> $GITHUB_ENV
+
+      - name: Cancel any existing running deploys to avoid conflict
+        run:  |
+          echo "Cancelling any previous deployments in progress"
+          cf cancel-deployment $APP_NAME || true
+
+      - name: Deploy to PaaS
+        # Deploy app and set up app healthcheck https://docs.cloudfoundry.org/devguide/deploy-apps/healthchecks.html
+        run: |
+          echo "Deploying $APP_NAME to $CF_ORG/$CF_SPACE..."
+          cf push $APP_NAME --strategy rolling
+          cf logout

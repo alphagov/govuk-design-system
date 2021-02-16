@@ -3,8 +3,8 @@ title: Recover from validation errors
 description: Check the answers users give to make sure they’re valid - and if there’s an error, tell them what's wrong and how to fix it
 section: Patterns
 theme: Help users to…
-aliases: 
-backlog_issue_id: 
+aliases:
+backlog_issue_id:
 layout: layout-pane.njk
 ---
 
@@ -12,12 +12,12 @@ Check the information the user gives you to make sure it’s valid. If there's a
 
 ## When to use this pattern
 
-Use validation to identify when the user tried to provide infomation that you're not able to use. So you can show the user an error message that helps them to fix the problem.
+Use validation to identify when the user tried to provide infomation that you're not able to use. Then show the user an error message that helps them to fix the problem.
 
 But minimise your chances of needing to show an error message in the first place by:
 
 + [making sure your questions are well designed](https://www.gov.uk/service-manual/design/designing-good-questions)
-+ accepting information in different formats, as long as it’s not ambiguous (for example, you should accept postcodes with or without spaces - and names that include non-alphabetical characters or diacritics (for example, an apostrophe or accent)
++ accepting information in different formats, as long as it’s not ambiguous (for example, accept postcodes with or without spaces - and names that include a non-alphabetical character or an apostrophe, accent or other diacritic)
 
 ## When not to use this pattern
 
@@ -67,7 +67,7 @@ There are 2 ways to carry out validation:
 + server side validation
 + client side validation (in the browser, using either JavaScript or HTML)
 
-You’ll always need to carry out server side validation, because there’s no guarantee that client side validation will work in all circumstances. For example users can bypass client side validation, or [JavaScript can fail to load](https://www.gov.uk/service-manual/technology/using-progressive-enhancement).
+You’ll always need to carry out server side validation, even if you use client side validation. This is because there’s no guarantee that client side validation will work in all circumstances. For example users can bypass client side validation, or [JavaScript can fail to load](https://www.gov.uk/service-manual/technology/using-progressive-enhancement).
 
 Avoid adding client side validation unless you can establish that there’s a need for it. For example, because user research shows it’s helpful to users if you validate the information they’re providing as they type.
 

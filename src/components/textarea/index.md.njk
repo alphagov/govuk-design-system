@@ -25,15 +25,13 @@ Do not use the textarea component if you need to let users enter shorter answers
 
 ## How it works
 
-There are 2 ways to use the textarea component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://govuk-prototype-kit.herokuapp.com), you can use the Nunjucks macro.
-
-{{ example({group: "components", item: "textarea", example: "default", html: true, nunjucks: true, open: false, size: "m", titleSuffix: "second"}) }}
-
-### Label textareas
-
 You must label textareas. Placeholder text is not a suitable substitute for a label, as it disappears when users click inside the textarea.
 
 Labels must be aligned above the textarea they refer to. They should be short, direct and written in sentence case. Do not use colons at the end of labels.
+
+There are 2 ways to use the textarea component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://govuk-prototype-kit.herokuapp.com), you can use the Nunjucks macro.
+
+{{ example({group: "components", item: "textarea", example: "default", html: true, nunjucks: true, open: false, size: "m", titleSuffix: "second"}) }}
 
 ### Use appropriately-sized textareas
 
@@ -45,10 +43,15 @@ Make the height of a textarea proportional to the amount of text you expect user
 
 Users will often need to copy and paste information into a textarea, so do not stop them from doing this.
 
+###  If you’re asking more than one question on the page
+
+If you're asking more than one question on the page, do not set the contents of the `<label>` as the page heading. Read more about [asking multiple questions on question pages](../../patterns/question-pages/#asking-multiple-questions-on-a-page).
+
+{{ example({group: "components", item: "textarea", example: "without-heading", html: true, nunjucks: true, open: false, size: "l"}) }}
+
 ### Limiting the number of characters
 
 If there’s a good reason to limit the number of characters users can enter, you can use the [character count](../character-count) component.
-
 
 ### Error messages
 

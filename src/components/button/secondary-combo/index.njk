@@ -4,13 +4,13 @@ layout: layout-example.njk
 ---
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
-{{ govukButton({
-  text: "Save and continue",
-  classes: "govuk-!-margin-right-1"
-}) }}
+<div class="govuk-button-group">
+  {{ govukButton({
+    text: "Save and continue"
+  }) }}
 
-{{ govukButton({
-  text: "Save as draft",
-  classes: "govuk-button--secondary"
-}) }}
-
+  {{ govukButton({
+    text: "Save as draft",
+    classes: "govuk-button--secondary"
+  }) }}
+</div>

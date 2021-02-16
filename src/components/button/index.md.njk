@@ -47,6 +47,7 @@ Avoid using multiple default buttons on a single page. Having more than one main
 ### Start buttons
 
 Use a start button for the main call to action on your service’s [start page](/patterns/start-pages/).
+Start buttons don't submit form data, so they use a link tag rather than a button tag.
 
 {{ example({group: "components", item: "button", example: "start", html: true, nunjucks: true, open: false}) }}
 
@@ -58,9 +59,7 @@ Pages with too many calls to action make it hard for users to know what to do ne
 
 {{ example({group: "components", item: "button", example: "secondary", html: true, nunjucks: true, open: false}) }}
 
-You can use secondary buttons in combination with default buttons.
-
-{{ example({group: "components", item: "button", example: "secondary-combo", html: true, nunjucks: true, open: false}) }}
+You can also [group default and secondary buttons together](#grouping-buttons).
 
 ### Warning buttons
 
@@ -84,6 +83,16 @@ Only use disabled buttons if research shows it makes the user interface easier t
 
 {{ example({group: "components", item: "button", example: "disabled", html: true, nunjucks: true, open: false}) }}
 
+### Grouping buttons
+
+Use a button group when two or more buttons are placed together.
+
+{{ example({group: "components", item: "button", example: "secondary-combo", html: true, nunjucks: true, open: false}) }}
+
+Any links within a button group will automatically align with the buttons.
+
+{{ example({group: "components", item: "button", example: "button-group", html: true, nunjucks: true, open: false}) }}
+
 ### Stop users from accidentally sending information more than once
 
 Sometimes, users double click buttons because they:
@@ -94,7 +103,7 @@ Sometimes, users double click buttons because they:
 
 In some cases, this can mean their information is sent twice.
 
-For example, the GOV.UK Notify team discovered that a number of users were receiving invitations twice, because the person sending them was double clicking the “send” button.
+For example, the GOV.UK Notify team discovered that a number of users were receiving invitations twice, because the person sending them was double clicking the 'send' button.
 
 If you are working in production and research shows that users are frequently sending information twice, you can configure the button to ignore the second click.
 
