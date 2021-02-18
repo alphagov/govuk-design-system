@@ -41,6 +41,12 @@ Avoid showing more than one notification banner on the same page. Instead, combi
 
 Do not show a notification banner and an [error summary](/components/error-summary/) on the same page. Show the error summary instead of the notification banner.
 
+### Notification banner headings
+
+You can add `<h3>` headings to the `govuk-notification-banner__content` container if you have structured content. 
+
+For single-line notifications that have no structure avoid using headings.
+
 ## Telling the user about a problem that affects the whole service
 
 Use a ‘neutral’ blue notification banner if the user needs to know about a problem with the service as a whole.
@@ -82,8 +88,6 @@ To make the green version of the notification banner accessible:
 
 - use headings like ‘Success’ - so that you’re [not relying on colour alone to convey meaning](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html))
 - use the same heading for green notification banners within the same service - so that you’re [identifying components that work in the same way consistently](https://www.w3.org/WAI/WCAG21/Understanding/consistent-identification)
-
-You can add more headings if you need them. Nest `<h3>` headings within a notification banner if you are following this with body content as you would with any other piece of content. For single-line notifications avoid using headings.
 
 ## Research on this component
 
