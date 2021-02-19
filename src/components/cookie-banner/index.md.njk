@@ -131,9 +131,9 @@ When the user accepts or rejects cookies, a replacement message will display. Fo
 
 However, a visible focus indicator does not display around the replacement message. This different from the notification banner, which does display a visible focus indicator.
 
-We decided to remove the visible focus indicator for a few reasons, as the replacement message:
-- is a `<div>`, so the user usually can’t interact with it using a keyboard
-- is the first element, at the very top of the page
-- displays in place of the cookie message, which is the last thing the user interacted with
+We decided to remove the visible focus indicator from the replacement message for a few reasons, as:
+- a user cannot interact with it
+- it's the first element, at the very top of the page
+- it displays in place of the cookie message, which is the last thing the user interacted with
 
 In this scenario, we assume that a visible focus indicator would be more likely to confuse users than to help them. However, we need more research to prove this.
