@@ -51,6 +51,8 @@ If you want to make the input smaller, you can either use a fixed width input, o
 
 Use fixed width inputs for content that has a specific, known length. Postcode inputs should be postcode-sized, telephone number inputs should be telephone number-sized.
 
+The widths are designed for specific character lengths and to be consistent across a range of browsers. They include extra padding to fit icons that some browsers might insert into the input (for example to show or generate a password).
+
 On fixed width inputs, the width will remain fixed on all screens unless it is wider than the viewport, in which case it will shrink to fit.
 
 {{ example({group: "components", item: "text-input", example: "input-fixed-width", html: true, nunjucks: true, open: false, size: "l"}) }}
