@@ -65,6 +65,24 @@ You can add hints to checkbox items to provide additional information about the 
 
 {{ example({group: "components", item: "checkboxes", example: "hint", html: true, nunjucks: true, open: false, size: "s"}) }}
 
+### Add an option for ‘none’
+
+When 'none' would be a valid answer, give users the option to check a box to say none of the other options apply to them. Without this option, users would have to leave all of the boxes unchecked. This requirement also makes sure users do not skip the question by accident.
+
+Show the ‘none’ option last. Separate it from the other options using a divider. The text is usually the word ‘or’.
+
+Write a label that repeats the key part of the question.
+
+For example, for the question 'Will you be travelling to any of these countries?', say 'No, I will not be travelling to any of these countries.'
+
+To enable some JavaScript that unchecks all other checkboxes when the user clicks 'None', add the `exclusive` behaviour to the 'none' checkbox.
+
+{{ example({group: "components", item: "checkboxes", example: "with-none-option", html: true, nunjucks: true, open: false, size: "xl"}) }}
+
+If JavaScript is unavailable, and a user selects both the ‘none’ checkbox and another checkbox, display an error message.
+
+{{ example({group: "components", item: "checkboxes", example: "with-none-option-in-error", html: true, nunjucks: true, open: false, size: "xl"}) }}
+
 ### Conditionally revealing content
 
 You can conditionally reveal content when the user selects a particular checkbox, so they only see content when it’s relevant to them.
@@ -81,9 +99,9 @@ Users are not always notified when conditionally revealed content is expanded or
 
 ### Smaller checkboxes
 
-Use standard-sized checkboxes in nearly all cases. However, smaller versions work well on pages where it’s helpful to make them less visually prominent.  
+Use standard-sized checkboxes in most cases. However, smaller checkboxes work well on pages where it’s helpful to make them less visually prominent.
 
-For example, on a page of search results, the primary user need is to see the results. Using smaller checkboxes lets users see and change search filters without distracting them from the main content. 
+For example, on a page of search results, the main user need is to see the results. Using smaller checkboxes lets users see and change search filters without distracting them from the main content.
 
 {{ example({group: "components", item: "checkboxes", example: "small", html: true, nunjucks: true, open: false, size: "m"}) }}
 
@@ -108,6 +126,11 @@ For example, ‘Select if you are British, Irish or a citizen of a different cou
 
 Say ‘Select [whatever it is]’.<br>
 For example, ‘Select your nationality or nationalities’.
+
+#### If users check both a 'none' checkbox and another checkbox
+
+Say ‘Select [option label text] or select “[none of the above label text]”’<br>
+For example, ‘Select countries you will be travelling to, or select “No, I will not be travelling to any of these countries”’
 
 ## Research on this component
 
