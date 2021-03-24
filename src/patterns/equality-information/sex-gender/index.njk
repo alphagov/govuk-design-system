@@ -1,0 +1,79 @@
+---
+title: Sex and gender equality question
+layout: layout-example.njk
+---
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+<h1 class="govuk-heading-l">Sex and gender identity</h1>
+
+{% set genderHtml %}
+  {{ govukInput({
+    id: "gender-description",
+    name: "gender-description",
+    type: "text",
+    classes: "govuk-!-width-one-half",
+    label: {
+      text: "What is your gender identity? (optional)"
+    }
+  }) }}
+{% endset -%}
+
+{{ govukRadios({
+  idPrefix: "sex",
+  name: "sex",
+  fieldset: {
+    legend: {
+      text: "What is your sex?",
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "female",
+      text: "Female"
+    },
+    {
+      value: "male",
+      text: "Male"
+    },
+    {
+      value: "skip",
+      text: "Prefer not to say"
+    }
+  ]
+}) }}
+
+{{ govukRadios({
+  idPrefix: "gender-identity",
+  name: "gender-identity",
+  fieldset: {
+    legend: {
+      text: "Is the gender you identify with the same as your sex registered at birth?",
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "yes",
+      text: "Yes"
+    },
+    {
+      value: "no",
+      text: "No",
+      conditional: {
+        html: genderHtml
+      }
+    },
+    {
+      value: "skip",
+      text: "Prefer not to say"
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  text: "Continue"
+}) }}

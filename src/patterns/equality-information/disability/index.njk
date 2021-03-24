@@ -1,0 +1,40 @@
+---
+title: Disability equality question
+layout: layout-example.njk
+---
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  idPrefix: "disability",
+  name: "disability",
+  fieldset: {
+    legend: {
+      text: "Do you have any physical or mental health conditions or illness lasting or expected to last 12 months or more?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "yes",
+      text: "Yes"
+    },
+    {
+      value: "no",
+      text: "No"
+    },
+    {
+      divider: "or"
+    },
+    {
+      value: "skip",
+      text: "Prefer not to say"
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  text: "Continue"
+}) }}

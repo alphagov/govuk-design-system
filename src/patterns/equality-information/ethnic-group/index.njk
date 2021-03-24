@@ -1,0 +1,52 @@
+---
+title: Ethnic group equality question
+layout: layout-example.njk
+---
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  idPrefix: "ethnicity",
+  name: "ethnicity",
+  fieldset: {
+    legend: {
+      text: "What is your ethnic group?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "white",
+      text: "White"
+    },
+    {
+      value: "multiple",
+      text: "Mixed or multiple ethnic groups"
+    },
+    {
+      value: "asian",
+      text: "Asian or Asian British"
+    },
+    {
+      value: "black",
+      text: "Black, African, Carribean or Black British"
+    },
+    {
+      value: "other",
+      text: "Other ethnic group"
+    },
+    {
+      divider: "or"
+    },
+    {
+      value: "skip",
+      text: "Prefer not to say"
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  text: "Continue"
+}) }}

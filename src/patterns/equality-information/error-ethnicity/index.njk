@@ -1,0 +1,55 @@
+---
+title: Ethnicity question with error
+layout: layout-example.njk
+---
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukRadios({
+  idPrefix: "ethnicity",
+  name: "ethnicity",
+  fieldset: {
+    legend: {
+      text: "What is your ethnic group?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  errorMessage: {
+    text: "Select an ethnic group or ‘Prefer not to say’"
+  },
+  items: [
+    {
+      value: "white",
+      text: "White"
+    },
+    {
+      value: "multiple",
+      text: "Mixed or multiple ethnic groups"
+    },
+    {
+      value: "asian",
+      text: "Asian or Asian British"
+    },
+    {
+      value: "black",
+      text: "Black, African, Carribean or Black British"
+    },
+    {
+      value: "other",
+      text: "Other ethnic group"
+    },
+    {
+      divider: "or"
+    },
+    {
+      value: "skip",
+      text: "Prefer not to say"
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
