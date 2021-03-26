@@ -1,0 +1,47 @@
+---
+title: Disability impact equality question
+layout: layout-example.njk
+---
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  idPrefix: "disability",
+  name: "disability",
+  fieldset: {
+    legend: {
+      text: "Do any of your conditions or illnesses reduce your ability to carry out day to day activities?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  hint: {
+    text: "For example eating, washing, walking or going shopping."
+  },
+  items: [
+    {
+      value: "lot",
+      text: "Yes, a lot"
+    },
+    {
+      value: "little",
+      text: "Yes, a little"
+    },
+    {
+      value: "no",
+      text: "Not at all"
+    },
+    {
+      divider: "or"
+    },
+    {
+      value: "skip",
+      text: "Prefer not to say"
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  text: "Continue"
+}) }}

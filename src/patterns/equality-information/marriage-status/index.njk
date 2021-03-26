@@ -1,0 +1,68 @@
+---
+title: Marriage or civil partnership status equality question
+layout: layout-example.njk
+---
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  idPrefix: "marriage-civil-partnership",
+  name: "marriage-civil-partnership",
+  fieldset: {
+    legend: {
+      text: "What is your legal marital or registered civil partnership status?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "never",
+      text: "Never married and never registered in a civil partnership"
+    },
+    {
+      value: "married",
+      text: "Married"
+    },
+    {
+      value: "civil-partnership",
+      text: "In a registered civil partnership"
+    },
+    {
+      value: "separated-married",
+      text: "Separated, but still legally married"
+    },
+    {
+      value: "separated-civil-partnership",
+      text: "Separated, but still legally in a civil partnership"
+    },
+    {
+      value: "divorced",
+      text: "Divorced"
+    },
+    {
+      value: "dissolved-civil-partnership",
+      text: "Formerly in a civil partnership which is now legally dissolved"
+    },
+    {
+      value: "widowed",
+      text: "Widowed"
+    },
+    {
+      value: "widowed-civil-partnership",
+      text: "Surviving partner from a registered civil partnership"
+    },
+    {
+      divider: "or"
+    },
+    {
+      value: "skip",
+      text: "Prefer not to say"
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  text: "Continue"
+}) }}

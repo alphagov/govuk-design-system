@@ -1,0 +1,50 @@
+---
+title: Explainer screen for equality information questions
+layout: layout-example.njk
+---
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% set hintHtml %}
+  <p class="govuk-!-margin-top-0">These questions are optional. [Add a couple of sentences explaining why you’re asking the questions and what you’ll do with the information].</p>
+  <p>Your answers won’t affect your application.</p>
+{% endset -%}
+
+<h1 class="govuk-heading-l">We have received your application</h1>
+
+<p class="govuk-body">Before you finish using the service, we’d like to ask some equality questions.</p>
+
+{{ govukRadios({
+  idPrefix: "equalities-info",
+  name: "equalities-info",
+  fieldset: {
+    legend: {
+      text: "Do you want to answer the equality questions?",
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  hint: {
+    html: hintHtml
+  },
+  items: [
+    {
+      value: "yes",
+      text: "Yes, answer the equality questions (takes 2 minutes)"
+    },
+    {
+      value: "no",
+      text: "No, skip the equality questions"
+    }
+  ]
+}) }}
+
+{{ govukDetails({
+  summaryText: "Why we ask equality questions",
+  text: "[Consider adding an optional longer explanation of what you’re asking the questions and what you’ll do with the information.]"
+}) }}
+
+{{ govukButton({
+  text: "Continue"
+}) }}

@@ -1,0 +1,83 @@
+---
+title: Religion equality question
+layout: layout-example.njk
+---
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{% set religionHtml %}
+  {{ govukInput({
+    id: "other-description",
+    name: "other-description",
+    type: "text",
+    classes: "govuk-!-width-one-half",
+    label: {
+      text: "What is your religion? (optional)"
+    }
+  }) }}
+{% endset -%}
+
+{{ govukRadios({
+  idPrefix: "religion",
+  name: "religion",
+  fieldset: {
+    legend: {
+      text: "What is your religion?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "none",
+      text: "No religion"
+    },
+    {
+      value: "christian",
+      text: "Christian",
+      hint: {
+        text: "Including Church of England, Catholic, Protestant and all other Christian denominations."
+      }
+    },
+    {
+      value: "buddhist",
+      text: "Buddhist"
+    },
+    {
+      value: "hindu",
+      text: "Hindu"
+    },
+    {
+      value: "jewish",
+      text: "Jewish"
+    },
+    {
+      value: "muslim",
+      text: "Muslim"
+    },
+    {
+      value: "sikh",
+      text: "Sikh"
+    },
+    {
+      value: "other",
+      text: "Any other religion",
+      conditional: {
+        html: religionHtml
+      }
+    },
+    {
+      divider: "or"
+    },
+    {
+      value: "skip",
+      text: "Prefer not to say"
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  text: "Continue"
+}) }}

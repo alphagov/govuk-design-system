@@ -1,0 +1,26 @@
+---
+title: Date of birth equality question
+layout: layout-example.njk
+---
+
+{% from "govuk/components/date-input/macro.njk" import govukDateInput %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukDateInput({
+  id: "date-of-birth",
+  namePrefix: "date-of-birth",
+  fieldset: {
+    legend: {
+      text: "What is your date of birth?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  hint: {
+    text: "For example, 31 3 1980. If you prefer not to say, continue without entering any information."
+  }
+}) }}
+
+{{ govukButton({
+  text: "Continue"
+}) }}

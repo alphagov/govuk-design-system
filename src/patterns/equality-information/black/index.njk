@@ -1,0 +1,60 @@
+---
+title: Black ethnicity equality question
+layout: layout-example.njk
+---
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{% set ethnicityHtml %}
+  {{ govukInput({
+    id: "other-description",
+    name: "other-description",
+    type: "text",
+    classes: "govuk-!-width-one-half",
+    label: {
+      text: "How would you describe your background? (optional)"
+    }
+  }) }}
+{% endset -%}
+
+{{ govukRadios({
+  idPrefix: "ethnicity-detail",
+  name: "ethnicity-detail",
+  fieldset: {
+    legend: {
+      text: "Which of the following best describes your Black, African, Caribbean or Black British background?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "african",
+      text: "African"
+    },
+    {
+      value: "caribbean",
+      text: "Caribbean"
+    },
+    {
+      value: "other",
+      text: "Any other Black, African or Caribbean background",
+      conditional: {
+        html: ethnicityHtml
+      }
+    },
+    {
+      divider: "or"
+    },
+    {
+      value: "skip",
+      text: "Prefer not to say"
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  text: "Continue"
+}) }}

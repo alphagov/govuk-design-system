@@ -1,0 +1,64 @@
+---
+title: Multiple ethnicity equality question
+layout: layout-example.njk
+---
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{% set ethnicityHtml %}
+  {{ govukInput({
+    id: "other-description",
+    name: "other-description",
+    type: "text",
+    classes: "govuk-!-width-one-half",
+    label: {
+      text: "How would you describe your background? (optional)"
+    }
+  }) }}
+{% endset -%}
+
+{{ govukRadios({
+  idPrefix: "ethnicity-detail",
+  name: "ethnicity-detail",
+  fieldset: {
+    legend: {
+      text: "Which of the following best describes your Mixed or Multiple ethnic groups background?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "white-black-caribbean",
+      text: "White and Black Caribbean"
+    },
+    {
+      value: "white-black-african",
+      text: "White and Black African"
+    },
+    {
+      value: "white-asian",
+      text: "White and Asian"
+    },
+    {
+      value: "other",
+      text: "Any other Mixed or Multiple ethnic background",
+      conditional: {
+        html: ethnicityHtml
+      }
+    },
+    {
+      divider: "or"
+    },
+    {
+      value: "skip",
+      text: "Prefer not to say"
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
