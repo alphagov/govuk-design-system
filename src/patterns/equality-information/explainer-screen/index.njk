@@ -16,37 +16,35 @@ layout: layout-example.njk
 
 <p class="govuk-body">Before you finish using the service, we’d like to ask some equality questions.</p>
 
-<form action="/form-handler" method="post" novalidate>
-  {{ govukRadios({
-    idPrefix: "equalities-info",
-    name: "equalities-info",
-    fieldset: {
-      legend: {
-        text: "Do you want to answer the equality questions?",
-        classes: "govuk-fieldset__legend--m"
-      }
+{{ govukRadios({
+  idPrefix: "equalities-info",
+  name: "equalities-info",
+  fieldset: {
+    legend: {
+      text: "Do you want to answer the equality questions?",
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  hint: {
+    html: hintHtml
+  },
+  items: [
+    {
+      value: "yes",
+      text: "Yes, answer the equality questions (takes 2 minutes)"
     },
-    hint: {
-      html: hintHtml
-    },
-    items: [
-      {
-        value: "yes",
-        text: "Yes, answer the equality questions (takes 2 minutes)"
-      },
-      {
-        value: "no",
-        text: "No, skip the equality questions"
-      }
-    ]
-  }) }}
+    {
+      value: "no",
+      text: "No, skip the equality questions"
+    }
+  ]
+}) }}
 
-  {{ govukDetails({
-    summaryText: "Why we ask equality questions",
-    text: "Consider adding an optional longer explanation of what you’re asking the questions and what you’ll do with the information."
-  }) }}
+{{ govukDetails({
+  summaryText: "Why we ask equality questions",
+  text: "[Consider adding an optional longer explanation of what you’re asking the questions and what you’ll do with the information.]"
+}) }}
 
-  {{ govukButton({
-    text: "Continue"
-  }) }}
-<form>
+{{ govukButton({
+  text: "Continue"
+}) }}
