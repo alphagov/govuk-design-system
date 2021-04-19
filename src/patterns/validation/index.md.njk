@@ -33,11 +33,11 @@ There are separate patterns for:
 
 Validation should refuse to accept:
 
-+ information that can’t be correct
++ information that cannot be correct
 + information that’s too ambiguous for you to use
 + missing information, if the information is required
 
-For example, if you’re asking for someone’s date of birth you shouldn’t accept ‘13’ in the month field.
+For example, if you’re asking for someone’s date of birth you should not accept ‘13’ in the month field.
 
 ### How to tell the user about validation errors
 
@@ -77,7 +77,7 @@ If you do use client side validation, make sure your client side and server side
 
 HTML5 validation is a type of client side validation built into browsers. Do not use it because:
 
-+ the visual style, placement and content of HTML5 error messages can’t be made consistent with the GOV.UK Design System
++ the visual style, placement and content of HTML5 error messages cannot be made consistent with the GOV.UK Design System
 + we know that the GOV.UK Design System error message and error summary components are accessible
 
 To turn off HTML5 validation, add ‘[novalidate](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attr-novalidate)’ to your form tags.
