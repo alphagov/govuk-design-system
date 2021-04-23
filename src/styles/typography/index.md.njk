@@ -118,14 +118,23 @@ If you're displaying lots of links together and want to save space and avoid rep
   - adding a line of text before the links saying 'The following links open in a new tab'
   - including `<span class="govuk-visually-hidden">(opens in new tab)</span>` as part of the link text, so that part of the link text is visually hidden but still accessible to screen readers
 
+## Links on dark backgrounds
+
+Use the `govuk-link--inverse` modifier class to show white links on dark backgrounds - for example, in headers, custom components, and patterns with darker backgrounds.
+
+Make sure all users can see the links - the white links and background colour must have a contrast ratio of at least 4.5:1.
+
+**[Example - govuk-link--inverse]**
+
 ### Links without underlines
 
-Only remove underlines from links if:
+Use the `govuk-link--no-underline` modifier class to remove underlines from links.
 
-* the number or placement of links makes them difficult to scan or interact with the element they're part of, and
-* it’s clear to the user from the context that they’re links, even without the underline
+Only do this if the context is clear to the user that they’re links, even without the underline. 
 
-For example, navigation links in a header will not necessarily need underlines. Users will understand that they’re links because of their position on the page.
+For example, links in a header or side navigation might not need underlines. Users will understand that they’re links by where they are, at the same place, across different pages.
+
+**[Example - govuk-link--no-underline]**
 
 ## Lists
 
