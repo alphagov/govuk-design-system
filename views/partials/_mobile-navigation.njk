@@ -3,14 +3,14 @@
     {% for item in navigation %}
       <li>
         <div class="app-mobile-nav-subnav-toggler{% if path.startsWith(item.url) %} app-mobile-nav__subnav-toggler--active{% endif %}">
-          <a class="govuk-link govuk-link--no-visited-state app-mobile-nav-subnav-toggler__link js-mobile-nav-subnav-toggler" href="/{{ item.url }}/">
+          <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-mobile-nav-subnav-toggler__link js-mobile-nav-subnav-toggler" href="/{{ item.url }}/">
             {{ item.label }}
           </a>
         </div>
         {% if item.items %}
           <ul class="app-mobile-nav__list app-mobile-nav__subnav js-app-mobile-nav-subnav {% if path.startsWith(item.url) %}app-mobile-nav__subnav--active{% endif %}" aria-label="{{ item.label }}">
             <li class="app-mobile-nav__subnav-item{% if path == item.url %} app-mobile-nav__subnav-item--current{% endif %}">
-              <a class="govuk-link govuk-link--no-visited-state app-mobile-nav__link" href="/{{ item.url }}/">
+              <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-mobile-nav__link" href="/{{ item.url }}/">
                 {{ item.label }} overview
               </a>
             </li>
@@ -22,7 +22,7 @@
                 <ul class="app-mobile-nav__list">
                   {% for subitem in items %}
                     <li class="app-mobile-nav__subnav-item{% if path == subitem.url %} app-mobile-nav__subnav-item--current{% endif %}">
-                      <a class="govuk-link govuk-link--no-visited-state app-mobile-nav__link" href="/{{ subitem.url }}/">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-mobile-nav__link" href="/{{ subitem.url }}/">
                         {{ subitem.label }}
                       </a>
                     </li>
