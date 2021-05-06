@@ -71,11 +71,11 @@ To get consent from the user, display the cookie banner inside a form that lets 
 
 All users will be able to see the banner as this approach does not rely on JavaScript.
 
-**[code example - cookie question - server side with no additional messages]**
+{{ example({group: "components", item: "cookie-banner", example: "server-side", html: true, nunjucks: true, open: false}) }}
 
 Once the user has accepted or rejected cookies and set their cookie preferences, reload the page to show a confirmation message:
 
-**[code example - cookie confirmation - server side with no additional messages]**
+{{ example({group: "components", item: "cookie-banner", example: "server-side-confirmation", html: true, nunjucks: true, open: false}) }}
 
 #### Show the same message to all users
 
@@ -89,9 +89,9 @@ To help users running JavaScript on their device, you can write some JavaScript 
 
 Include all possible messages that the user could see in the cookie banner when the page loads. Hide these with the `hidden` HTML attribute where needed.
 
-**[code example - cookie question - server side with additional messages but hidden]**
+{{ example({group: "components", item: "cookie-banner", example: "server-side-multiple-messages-question-visible", html: true, nunjucks: true, open: false}) }}
 
-**[code example - cookie confirmation - server side with additional messages but hidden]**
+{{ example({group: "components", item: "cookie-banner", example: "server-side-multiple-messages-confirmation-visible", html: true, nunjucks: true, open: false}) }}
 
 ### Option 3: If you set non-essential cookies, but only on the client
 
@@ -117,11 +117,11 @@ Here’s an example:
 
 Show a confirmation message confirming that the user has either accepted or rejected cookies by removing the `hidden` attribute.
 
-{{ example({group: "components", item: "cookie-banner", example: "accepted", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "components", item: "cookie-banner", example: "client-side-accepted", html: true, nunjucks: true, open: false}) }}
 
 #### When the user has rejected cookies 
 
-{{ example({group: "components", item: "cookie-banner", example: "rejected", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "components", item: "cookie-banner", example: "client-side-rejected", html: true, nunjucks: true, open: false}) }}
 
 ## What to cover in your cookie banner
 
