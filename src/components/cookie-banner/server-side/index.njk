@@ -5,22 +5,27 @@ layout: layout-example.njk
 
 {% from "govuk/components/cookie-banner/macro.njk" import govukCookieBanner %}
 
+{% set html %}
+  <p>We use some essential cookies to make this service work.</p>
+  <p>We’d like to set additional cookies so we can remember your settings, understand how people use the service and make improvements.</p>
+{% endset %}
+
 <form method="POST">
 {{ govukCookieBanner({
   ariaLabel: "Cookies on [name of service]",
   messages: [
     {
       headingText: "Cookies on [name of service]",
-      text: "We use some essential cookies to make this service work. We’d like to set additional cookies so we can remember your settings, understand how you use the service and make improvements.",
+      html: html,
       actions: [
         {
-          text: "Accept analytics cookies",
+          text: "Accept additional cookies",
           type: "submit",
           name: "cookies",
           value: "accept"
         },
         {
-          text: "Reject analytics cookies",
+          text: "Reject additional cookies",
           type: "submit",
           name: "cookies",
           value: "reject"
