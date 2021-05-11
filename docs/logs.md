@@ -23,7 +23,7 @@ You'll then need to ask the technical lead on the GOV.UK Design System team to g
 
 ## How we transform logs with Logstash Filters
 
-The configuration is based on the [GOV.UK PaaS setup instructions](https://docs.cloud.service.gov.uk/monitoring_apps.html#configure-logstash-filters), see [git history for updates](https://github.com/alphagov/govuk-design-system/commits/master/docs/logs.md).
+The configuration is based on the [GOV.UK PaaS setup instructions](https://docs.cloud.service.gov.uk/monitoring_apps.html#configure-logstash-filters), see [git history for updates](https://github.com/alphagov/govuk-design-system/commits/main/docs/logs.md).
 
 **We use this file as version control for the Logit Filters for our stack. Please make sure to update the below code snippet in this file whenever changing Filters. We recommend pairing on updating filters as they are easy to break.**
 
