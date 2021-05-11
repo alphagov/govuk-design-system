@@ -3,7 +3,7 @@ name: CI Workflow
 on: [push, pull_request, workflow_dispatch]
 
 # Separate build and deploy jobs so we can build all branches and pull requests
-# but only deploy from master
+# but only deploy from main
 jobs:
   build:
     name: Build & Test
@@ -41,13 +41,13 @@ jobs:
             path: deploy/**
             retention-days: 1
 
-  # Deploy the Design System to production when the master branch is changed
+  # Deploy the Design System to production when the main branch is changed
   # Github Actions is not involved in deploying PR or branch previews – these are handled by Netlify
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
     needs: build
-    if: ${{ github.ref == 'refs/heads/master' }}
+    if: ${{ github.ref == 'refs/heads/main' }}
     env:
       CF_API: "https://api.cloud.service.gov.uk"
       CF_ORG: "govuk-design-system"
