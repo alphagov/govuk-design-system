@@ -36,10 +36,6 @@ $navigation-height: 50px;
 .app-navigation__link {
   @include govuk-typography-weight-bold;
 
-  &:not(:focus):visited {
-    color: $govuk-link-colour;
-  }
-
   &:not(:focus):hover {
     color: $govuk-link-colour;
   }
