@@ -35,15 +35,9 @@ $navigation-height: 50px;
 
 .app-navigation__link {
   @include govuk-typography-weight-bold;
-  text-decoration: none;
-
-  &:not(:focus):visited {
-    color: $govuk-link-colour;
-  }
 
   &:not(:focus):hover {
     color: $govuk-link-colour;
-    text-decoration: underline;
   }
 
   // Extend the touch area of the link to the list

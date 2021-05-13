@@ -41,8 +41,6 @@
 
 .app-mobile-nav-subnav-toggler__link,
 .app-mobile-nav__link {
-  text-decoration: none;
-
   // Expand the touch area of the link to the full menu width
   &:after {
     content: "";

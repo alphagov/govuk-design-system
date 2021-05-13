@@ -16,11 +16,9 @@
 
   .app-subnav__link {
     padding: 2px 0;
-    text-decoration: none;
 
     &:not(:focus):hover {
       color: $govuk-link-colour;
-      text-decoration: underline;
     }
   }
 
