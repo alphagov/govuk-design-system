@@ -68,6 +68,15 @@ If your summary list does not have any actions, you can choose to remove the sep
 
 To remove borders on a single row, use the `govuk-summary-list__row--no-border` class.
 
+### Showing missing information
+
+There may be some contexts where users see a summary list where there is some missing information, for instance if they are returning to a partially-completed form, or if you have added some additional questions since they first answered.
+
+Where there are missing answers, display a link to the question page within the `value` column instead of as a "Change" action:
+
+{{ example({group: "components", item: "summary-list", example: "with-missing-information", html: true, nunjucks: true, open: false}) }}
+
+
 ## Summary cards
 
 
@@ -131,6 +140,6 @@ The summary card is also used in services run by other departments, such us:
 
 ### Next steps
 
-We still want to learn more about when this component works well. 
+We still want to learn more about when this component works well.
 
 If you use this component in your service, we'd like to hear about how you use the summary list and summary card, as well as any research findings you might have.
