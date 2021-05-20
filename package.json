@@ -64,7 +64,7 @@
     "metalsmith-canonical": "^1.2.0",
     "metalsmith-env": "^2.1.1",
     "metalsmith-fingerprint-ignore": "^2.0.0",
-    "metalsmith-in-place": "^4.4.0",
+    "metalsmith-in-place": "^4.4.2",
     "metalsmith-layouts": "^2.3.1",
     "metalsmith-permalinks": "^2.2.0",
     "metalsmith-rollup": "^2.0.0",
