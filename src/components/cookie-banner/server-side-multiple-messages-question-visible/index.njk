@@ -1,5 +1,5 @@
 ---
-title: Server-side implementation – Cookie Banner
+title: Server-side implementation with multiple messages and question visible – Cookie Banner
 layout: layout-example.njk
 ---
 
@@ -8,6 +8,14 @@ layout: layout-example.njk
 {% set html %}
   <p>We use some essential cookies to make this service work.</p>
   <p>We’d like to set additional cookies so we can remember your settings, understand how people use the service and make improvements.</p>
+{% endset %}
+
+{% set acceptHtml %}
+  <p>You’ve accepted additional cookies. You can <a class="govuk-link" href="#">change your cookie settings</a> at any time.</p>
+{% endset %}
+
+{% set rejectedHtml %}
+  <p>You’ve rejected additional cookies. You can <a class="govuk-link" href="#">change your cookie settings</a> at any time.</p>
 {% endset %}
 
 <form method="POST">
@@ -35,6 +43,28 @@ layout: layout-example.njk
           href: "#"
         }
       ]
+    },
+    {
+      html: acceptHtml,
+      actions: [
+        {
+          text: "Hide this message",
+          href: "#",
+          type: "button"
+        }
+      ],
+      hidden: true
+    },
+    {
+      html: rejectedHtml,
+      actions: [
+        {
+          text: "Hide this message",
+          href: "#",
+          type: "button"
+        }
+      ],
+      hidden: true
     }
   ]
 }) }}

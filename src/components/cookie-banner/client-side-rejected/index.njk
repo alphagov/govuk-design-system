@@ -1,5 +1,5 @@
 ---
-title: Client-side implementation – Cookie Banner
+title: Rejected replacement message – Cookie Banner
 layout: layout-example.njk
 ---
 
@@ -24,6 +24,7 @@ layout: layout-example.njk
     {
       headingText: "Cookies on [name of service]",
       html: html,
+      hidden: true,
       actions: [
         {
           text: "Accept analytics cookies",
@@ -52,7 +53,6 @@ layout: layout-example.njk
     {
       html: rejectHtml,
       role: "alert",
-      hidden: true,
       actions: [
         {
           text: "Hide this message"
