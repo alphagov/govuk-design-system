@@ -6,30 +6,35 @@ layout: layout-example.njk
 {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
 {{ govukRadios({
-  classes: "govuk-radios--inline",
-  idPrefix: "changed-name",
-  name: "changed-name",
+  idPrefix: "where-do-you-live",
+  name: "where-do-you-live",
   fieldset: {
     legend: {
-      text: "Have you changed your name?",
+      text: "Where do you live?",
       isPageHeading: true,
       classes: "govuk-fieldset__legend--l"
     }
   },
-  hint: {
-    text: "This includes changing your last name or spelling your name differently."
-  },
-  errorMessage: {
-    text: "Select yes if you have changed your name"
-  },
   items: [
     {
-      value: "yes",
-      text: "Yes"
+      value: "england",
+      text: "England"
     },
     {
-      value: "no",
-      text: "No"
+      value: "scotland",
+      text: "Scotland"
+    },
+    {
+      value: "wales",
+      text: "Wales"
+    },
+    {
+      value: "northern-ireland",
+      text: "Northern Ireland"
     }
-  ]
+  ],
+  errorMessage: {
+    text: "Select the country where you live"
+  }
 }) }}
+

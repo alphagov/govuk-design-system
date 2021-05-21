@@ -9,7 +9,7 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 
-{{ example({group: "components", item: "radios", example: "default", html: true, nunjucks: true, open: false, size: "s"}) }}
+{{ example({group: "components", item: "radios", example: "default", html: true, nunjucks: true, open: false, size: "m"}) }}
 
 ## When to use this component
 
@@ -58,17 +58,11 @@ If you're asking more than one question on the page, do not set the contents of 
 
 {{ example({group: "components", item: "radios", example: "without-heading", html: true, nunjucks: true, open: false, size: "s"}) }}
 
-### Stacked radios
-
-When there are more than 2 options, radios should be stacked, like so:
-
-{{ example({group: "components", item: "radios", example: "stacked", html: true, nunjucks: true, open: false, size: "m"}) }}
-
 ### Inline radios
 
-If there are only 2 options, you can either stack the radios or display them inline, like so:
+If there are only 2 options and both options have short labels, you can choose to display them inline, like this:
 
-{{ example({group: "components", item: "radios", example: "default", html: true, nunjucks: true, open: false, size: "s", titleSuffix: "third"}) }}
+{{ example({group: "components", item: "radios", example: "inline", html: true, nunjucks: true, open: false, size: "s"}) }}
 
 ### Radio items with hints
 
