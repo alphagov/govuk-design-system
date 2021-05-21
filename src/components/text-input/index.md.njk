@@ -67,9 +67,17 @@ Fluid width inputs will resize with the viewport.
 
 ### Hint text
 
-Use hint for help that’s relevant to the majority of users, like how their information will be used, or where to find it.
+Use hint text for help that’s relevant to the majority of users, like how their information will be used, or where to find it.
 
 {{ example({group: "components", item: "text-input", example: "input-hint-text", html: true, nunjucks: true, open: false, size: "s"}) }}
+
+#### When not to use hint text
+
+Do not use long paragraphs and lists in hint text. Screen readers read out the entire text when users interact with the form element. This could frustrate users if the text is long.
+
+#### Avoid links
+
+Do not include links within hint text. While screen readers will read out the link text when describing the field, they will not tell users that the text is a link.
 
 ### Numbers
 
