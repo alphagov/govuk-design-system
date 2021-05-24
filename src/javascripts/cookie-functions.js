@@ -1,4 +1,8 @@
 // used by the cookie banner component
+
+// name of the cookie to save users cookie preferences to
+const CONSENT_COOKIE_NAME = 'cookies_policy'
+
 const DEFAULT_COOKIE_CONSENT = {
   analytics: false
 }
@@ -56,7 +60,7 @@ function Cookie (name, value, options) {
 }
 
 export function getConsentCookie () {
-  var consentCookie = getCookie('dm_cookies_policy')
+  var consentCookie = getCookie(CONSENT_COOKIE_NAME)
   var consentCookieObj
 
   if (consentCookie) {
@@ -100,7 +104,7 @@ export function setConsentCookie (options) {
     }
   }
 
-  setCookie('dm_cookies_policy', JSON.stringify(cookieConsent), { days: 365 })
+  setCookie(CONSENT_COOKIE_NAME, JSON.stringify(cookieConsent), { days: 365 })
 }
 
 function checkConsentCookieCategory (cookieName, cookieCategory) {
@@ -124,7 +128,7 @@ function checkConsentCookieCategory (cookieName, cookieCategory) {
 
 function checkConsentCookie (cookieName, cookieValue) {
   // If we're setting the consent cookie OR deleting a cookie, allow by default
-  if (cookieName === 'dm_cookies_policy' || (cookieValue === null || cookieValue === false)) {
+  if (cookieName === CONSENT_COOKIE_NAME || (cookieValue === null || cookieValue === false)) {
     return true
   }
 
