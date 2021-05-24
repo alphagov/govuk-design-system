@@ -47,6 +47,7 @@
     "slugger": "^1.0.1"
   },
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.14.0",
     "accessible-autocomplete": "^2.0.2",
     "axe-puppeteer": "^1.0.0",
     "fs-extra": "^7.0.1",
