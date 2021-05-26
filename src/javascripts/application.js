@@ -6,12 +6,8 @@ import Copy from './components/copy.js'
 import MobileNav from './components/mobile-navigation.js'
 import Search from './components/search.js'
 import OptionsTable from './components/options-table.js'
-import Analytics from './components/analytics.js'
 
 var nodeListForEach = common.nodeListForEach
-
-// Initialise analytics tracking
-new Analytics('GTM-KGHVVHV').init()
 
 // Initialise example frames
 var $examples = document.querySelectorAll('[data-module="app-example-frame"]')
