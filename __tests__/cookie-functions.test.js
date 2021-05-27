@@ -37,9 +37,12 @@ describe('Cookie settings', () => {
     })
 
     it('allows deletion of any cookie even if not recognised', async () => {
-      CookieHelpers.Cookie('myCookie', null)
+      document.cookie = 'myCookie=hello; path=/'
+      document.cookie = 'otherCookie=world; path=/'
 
-      expect(document.cookie).toEqual('myCookie=null')
+      CookieHelpers.Cookie('otherCookie', null)
+
+      expect(document.cookie).toEqual('myCookie=hello')
     })
 
     it('sets allowed cookie with no options', async () => {

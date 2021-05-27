@@ -32,7 +32,7 @@ Usage:
 export function Cookie (name, value, options) {
   if (typeof value !== 'undefined') {
     if (value === false || value === null) {
-      return setCookie(name, '', { days: -1 })
+      return deleteCookie(name)
     } else {
       // Default expiry date of 30 days
       if (typeof options === 'undefined') {
@@ -108,9 +108,9 @@ function checkConsentCookieCategory (cookieName, cookieCategory) {
   }
 }
 
-function checkConsentCookie (cookieName, cookieValue) {
-  // If we're setting the consent cookie OR deleting a cookie, allow by default
-  if (cookieName === CONSENT_COOKIE_NAME || (cookieValue === null || cookieValue === false)) {
+function checkConsentCookie (cookieName) {
+  // Always allow setting the consent cookie
+  if (cookieName === CONSENT_COOKIE_NAME) {
     return true
   }
 
@@ -140,7 +140,7 @@ function getCookie (name) {
 }
 
 function setCookie (name, value, options) {
-  if (checkConsentCookie(name, value)) {
+  if (checkConsentCookie(name)) {
     if (typeof options === 'undefined') {
       options = {}
     }
@@ -155,4 +155,9 @@ function setCookie (name, value, options) {
     }
     document.cookie = cookieString
   }
+}
+
+function deleteCookie (name) {
+  document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT'
+  return null
 }
