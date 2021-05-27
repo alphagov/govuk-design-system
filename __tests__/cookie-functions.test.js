@@ -7,23 +7,23 @@
 import * as CookieHelpers from '../src/javascripts/cookie-functions'
 
 describe('Cookie settings', () => {
-  describe('getCookie', () => {
+  describe('Reading a cookie', () => {
     afterEach(() => {
       // Delete _ga cookie
       document.cookie = '_ga=;expires=Thu, 01 Jan 1970 00:00:00 UTC'
     })
 
     it('returns null if no cookie present', async () => {
-      expect(CookieHelpers.getCookie('_ga')).toEqual(null)
+      expect(CookieHelpers.Cookie('_ga')).toEqual(null)
     })
 
     it('returns cookie if present', async () => {
-      CookieHelpers.setCookie('_ga', 'foo')
-      expect(CookieHelpers.getCookie('_ga')).toEqual('foo')
+      CookieHelpers.Cookie('_ga', 'foo')
+      expect(CookieHelpers.Cookie('_ga')).toEqual('foo')
     })
   })
 
-  describe('setCookie', () => {
+  describe('Setting a cookie', () => {
     afterEach(() => {
       // Delete test cookies
       document.cookie = 'myCookie=;expires=Thu, 01 Jan 1970 00:00:00 UTC'
@@ -31,25 +31,25 @@ describe('Cookie settings', () => {
     })
 
     it('doesnt set a cookie with a value if not a recognised name', async () => {
-      CookieHelpers.setCookie('myCookie', 'myValue')
+      CookieHelpers.Cookie('myCookie', 'myValue')
 
       expect(document.cookie).toEqual('')
     })
 
     it('allows deletion of any cookie even if not recognised', async () => {
-      CookieHelpers.setCookie('myCookie', null)
+      CookieHelpers.Cookie('myCookie', null)
 
       expect(document.cookie).toEqual('myCookie=null')
     })
 
     it('sets allowed cookie with no options', async () => {
-      CookieHelpers.setCookie('cookies_policy', '{"analytics":false}')
+      CookieHelpers.Cookie('cookies_policy', '{"analytics":false}')
 
       expect(document.cookie).toEqual('cookies_policy={"analytics":false}')
     })
 
     it('sets allowed cookie with options', async () => {
-      CookieHelpers.setCookie('cookies_policy', '{"analytics":false}', { days: 100 })
+      CookieHelpers.Cookie('cookies_policy', '{"analytics":false}', { days: 100 })
 
       // Annoyingly JS can't retrieve expiry date directly from document.cookie, this is all we can assert
       expect(document.cookie).toEqual('cookies_policy={"analytics":false}')
@@ -95,9 +95,9 @@ describe('Cookie settings', () => {
 
         expect(document.cookie).toEqual('cookies_policy={"analytics":false}')
         // Make sure those analytics cookies are definitely gone
-        expect(CookieHelpers.getCookie('_ga')).toEqual(null)
-        expect(CookieHelpers.getCookie('_gid')).toEqual(null)
-        expect(CookieHelpers.getCookie('_gat_govuk_shared')).toEqual(null)
+        expect(CookieHelpers.Cookie('_ga')).toEqual(null)
+        expect(CookieHelpers.Cookie('_gid')).toEqual(null)
+        expect(CookieHelpers.Cookie('_gat_govuk_shared')).toEqual(null)
       })
     })
 
