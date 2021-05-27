@@ -69,10 +69,6 @@ export function getConsentCookie () {
     } catch (err) {
       return null
     }
-
-    if (typeof consentCookieObj !== 'object' && consentCookieObj !== null) {
-      consentCookieObj = JSON.parse(consentCookieObj)
-    }
   } else {
     return null
   }
