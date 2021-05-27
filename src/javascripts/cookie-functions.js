@@ -1,12 +1,22 @@
-// used by the cookie banner component
+/**
+ * Cookie functions
+ * ================
+ *
+ * Used by the cookie banner component and cookies page pattern.
+ *
+ * Includes function `Cookie()` for getting, setting, and deleting cookies, and
+ * functions to manage the users' consent to cookies.
+ */
 
-// name of the cookie to save users cookie preferences to
+/* Name of the cookie to save users cookie preferences to. */
 const CONSENT_COOKIE_NAME = 'cookies_policy'
 
+/* Default cookie preferences if user has no cookie preferences. */
 const DEFAULT_COOKIE_CONSENT = {
   analytics: false
 }
 
+/* Users can (dis)allow different groups of cookies. */
 const COOKIE_CATEGORIES = {
   _ga: 'analytics',
   _gid: 'analytics',
@@ -14,21 +24,19 @@ const COOKIE_CATEGORIES = {
 }
 
 /*
-Cookie methods
-==============
-
-Usage:
-
-  Setting a cookie:
-  Cookie('hobnob', 'tasty', { days: 30 })
-
-  Reading a cookie:
-  Cookie('hobnob')
-
-  Deleting a cookie:
-  Cookie('hobnob', null)
-*/
-
+ * Set, get, and delete cookies.
+ *
+ * Usage:
+ *
+ *   Setting a cookie:
+ *   Cookie('hobnob', 'tasty', { days: 30 })
+ *
+ *   Reading a cookie:
+ *   Cookie('hobnob')
+ *
+ *   Deleting a cookie:
+ *   Cookie('hobnob', null)
+ */
 export function Cookie (name, value, options) {
   if (typeof value !== 'undefined') {
     if (value === false || value === null) {
@@ -45,6 +53,7 @@ export function Cookie (name, value, options) {
   }
 }
 
+/** Return the user's cookie preferences. */
 export function getConsentCookie () {
   var consentCookie = getCookie(CONSENT_COOKIE_NAME)
   var consentCookieObj
@@ -62,6 +71,7 @@ export function getConsentCookie () {
   return consentCookieObj
 }
 
+/** Update the user's cookie preferences. */
 export function setConsentCookie (options) {
   var cookieConsent = getConsentCookie()
 
@@ -70,6 +80,7 @@ export function setConsentCookie (options) {
   }
 
   for (var cookieType in options) {
+    // Update existing user cookie consent preferences
     cookieConsent[cookieType] = options[cookieType]
 
     // Delete cookies of that type if consent being set to false
@@ -89,7 +100,7 @@ export function setConsentCookie (options) {
   setCookie(CONSENT_COOKIE_NAME, JSON.stringify(cookieConsent), { days: 365 })
 }
 
-function checkConsentCookieCategory (cookieName, cookieCategory) {
+function checkConsentForCookieCategory (cookieName, cookieCategory) {
   var currentConsentCookie = getConsentCookie()
 
   // If the consent cookie doesn't exist, but the cookie is in our known list, return true
@@ -117,7 +128,7 @@ function checkConsentCookie (cookieName) {
   if (COOKIE_CATEGORIES[cookieName]) {
     var cookieCategory = COOKIE_CATEGORIES[cookieName]
 
-    return checkConsentCookieCategory(cookieName, cookieCategory)
+    return checkConsentForCookieCategory(cookieName, cookieCategory)
   } else {
     // Deny the cookie if it is not known to us
     return false
