@@ -8,6 +8,8 @@
  * functions to manage the users' consent to cookies.
  */
 
+import Analytics from './components/analytics.js'
+
 /* Name of the cookie to save users cookie preferences to. */
 const CONSENT_COOKIE_NAME = 'design_system_cookies_policy'
 
@@ -98,6 +100,11 @@ export function setConsentCookie (options) {
       continue
     }
 
+    // Initialise analytics if allowed
+    if (cookieType === 'analytics' && options[cookieType]) {
+      Analytics()
+    }
+
     // Update existing user cookie consent preferences
     cookieConsent[cookieType] = options[cookieType]
 
@@ -115,6 +122,7 @@ export function setConsentCookie (options) {
     }
   }
 
+  // Set consent cookie
   setCookie(CONSENT_COOKIE_NAME, JSON.stringify(cookieConsent), { days: 365 })
 }
 
