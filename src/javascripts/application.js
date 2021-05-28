@@ -6,8 +6,16 @@ import Copy from './components/copy.js'
 import MobileNav from './components/mobile-navigation.js'
 import Search from './components/search.js'
 import OptionsTable from './components/options-table.js'
+import { getConsentCookie } from './cookie-functions.js'
+import Analytics from './components/analytics.js'
 
 var nodeListForEach = common.nodeListForEach
+
+// Initialise analytics if consent is given
+var userConsent = getConsentCookie()
+if (userConsent && userConsent['analytics']) {
+  Analytics()
+}
 
 // Initialise example frames
 var $examples = document.querySelectorAll('[data-module="app-example-frame"]')
