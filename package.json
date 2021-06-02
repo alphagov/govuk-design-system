@@ -70,7 +70,7 @@
     "metalsmith-rollup": "^2.0.0",
     "metalsmith-sass": "^1.7.0",
     "metalsmith-tagcleaner": "0.0.2",
-    "metalsmith-uglify": "^2.3.2",
+    "metalsmith-uglify": "^2.4.0",
     "nunjucks": "^3.2.2",
     "puppeteer": "^1.14.0",
     "request": "^2.88.0",
