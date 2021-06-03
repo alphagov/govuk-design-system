@@ -9,7 +9,7 @@
  */
 
 /* Name of the cookie to save users cookie preferences to. */
-const CONSENT_COOKIE_NAME = 'cookies_policy'
+const CONSENT_COOKIE_NAME = 'design_system_cookies_policy'
 
 /* Users can (dis)allow different groups of cookies. */
 const COOKIE_CATEGORIES = {

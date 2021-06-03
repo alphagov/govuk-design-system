@@ -16,7 +16,7 @@ describe('Cookie settings', () => {
     afterEach(() => {
       // Delete test cookies
       document.cookie = '_ga=;expires=Thu, 01 Jan 1970 00:00:00 UTC'
-      document.cookie = 'cookies_policy=;expires=Thu, 01 Jan 1970 00:00:00 UTC'
+      document.cookie = 'design_system_cookies_policy=;expires=Thu, 01 Jan 1970 00:00:00 UTC'
     })
 
     it('returns null if no cookie present', async () => {
@@ -33,7 +33,7 @@ describe('Cookie settings', () => {
     afterEach(() => {
       // Delete test cookies
       document.cookie = 'myCookie=;expires=Thu, 01 Jan 1970 00:00:00 UTC'
-      document.cookie = 'cookies_policy=;expires=Thu, 01 Jan 1970 00:00:00 UTC'
+      document.cookie = 'design_system_cookies_policy=;expires=Thu, 01 Jan 1970 00:00:00 UTC'
     })
 
     it('doesnt set a cookie with a value if not a recognised name', async () => {
@@ -52,23 +52,23 @@ describe('Cookie settings', () => {
     })
 
     it('sets allowed cookie with no options', async () => {
-      CookieHelpers.Cookie('cookies_policy', '{"analytics":false}')
+      CookieHelpers.Cookie('design_system_cookies_policy', '{"analytics":false}')
 
-      expect(document.cookie).toEqual('cookies_policy={"analytics":false}')
+      expect(document.cookie).toEqual('design_system_cookies_policy={"analytics":false}')
     })
 
     it('sets allowed cookie with options', async () => {
-      CookieHelpers.Cookie('cookies_policy', '{"analytics":false}', { days: 100 })
+      CookieHelpers.Cookie('design_system_cookies_policy', '{"analytics":false}', { days: 100 })
 
       // Annoyingly JS can't retrieve expiry date directly from document.cookie, this is all we can assert
-      expect(document.cookie).toEqual('cookies_policy={"analytics":false}')
+      expect(document.cookie).toEqual('design_system_cookies_policy={"analytics":false}')
     })
   })
 
   describe('getConsentCookie', () => {
     afterEach(() => {
       // Delete consent cookie
-      document.cookie = 'cookies_policy=;expires=Thu, 01 Jan 1970 00:00:00 UTC'
+      document.cookie = 'design_system_cookies_policy=;expires=Thu, 01 Jan 1970 00:00:00 UTC'
     })
 
     it('returns null if consent cookie not present', async () => {
@@ -76,7 +76,7 @@ describe('Cookie settings', () => {
     })
 
     it('returns consent cookie object if present', async () => {
-      document.cookie = 'cookies_policy={"analytics":false}'
+      document.cookie = 'design_system_cookies_policy={"analytics":false}'
 
       expect(CookieHelpers.getConsentCookie()).toEqual({ analytics: false })
     })
@@ -85,16 +85,16 @@ describe('Cookie settings', () => {
   describe('setConsentCookie', () => {
     afterEach(() => {
       // Delete consent cookie
-      document.cookie = 'cookies_policy=;expires=Thu, 01 Jan 1970 00:00:00 UTC'
+      document.cookie = 'design_system_cookies_policy=;expires=Thu, 01 Jan 1970 00:00:00 UTC'
     })
 
     describe('to false', () => {
       it('changes existing cookie value to false', async () => {
-        document.cookie = 'cookies_policy={"analytics":true};'
+        document.cookie = 'design_system_cookies_policy={"analytics":true};'
 
         CookieHelpers.setConsentCookie({ analytics: false })
 
-        expect(document.cookie).toEqual('cookies_policy={"analytics":false}')
+        expect(document.cookie).toEqual('design_system_cookies_policy={"analytics":false}')
       })
 
       it('deletes existing analytics cookies', async () => {
@@ -102,7 +102,7 @@ describe('Cookie settings', () => {
 
         CookieHelpers.setConsentCookie({ analytics: false })
 
-        expect(document.cookie).toEqual('cookies_policy={"analytics":false}')
+        expect(document.cookie).toEqual('design_system_cookies_policy={"analytics":false}')
         // Make sure those analytics cookies are definitely gone
         expect(CookieHelpers.Cookie('_ga')).toEqual(null)
         expect(CookieHelpers.Cookie('_gid')).toEqual(null)
@@ -112,11 +112,11 @@ describe('Cookie settings', () => {
 
     describe('to true', () => {
       it('sets existing cookie policy cookie to true', async () => {
-        document.cookie = 'cookies_policy={"analytics":false};'
+        document.cookie = 'design_system_cookies_policy={"analytics":false};'
 
         CookieHelpers.setConsentCookie({ analytics: true })
 
-        expect(document.cookie).toEqual('cookies_policy={"analytics":true}')
+        expect(document.cookie).toEqual('design_system_cookies_policy={"analytics":true}')
       })
     })
   })
