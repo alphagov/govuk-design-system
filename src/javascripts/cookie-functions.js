@@ -143,13 +143,8 @@ function userAllowsCookie (cookieName) {
   if (COOKIE_CATEGORIES[cookieName]) {
     var cookieCategory = COOKIE_CATEGORIES[cookieName]
 
-    // Get the current cookie preferences
-    var cookiePreferences = getConsentCookie()
-
-    // If the consent cookie doesn't exist, but the cookie is in our known list, return true
-    if (!cookiePreferences) {
-      return true
-    }
+    // Get the current cookie preferences, or the default if no preferences set
+    var cookiePreferences = getConsentCookie() || DEFAULT_COOKIE_CONSENT
 
     return userAllowsCookieCategory(cookieCategory, cookiePreferences)
   } else {

@@ -8,9 +8,15 @@ import * as CookieHelpers from '../src/javascripts/cookie-functions'
 
 describe('Cookie settings', () => {
   describe('Reading a cookie', () => {
+    beforeEach(() => {
+      // Allow setting _ga cookie
+      CookieHelpers.setConsentCookie({ analytics: true })
+    })
+
     afterEach(() => {
-      // Delete _ga cookie
+      // Delete test cookies
       document.cookie = '_ga=;expires=Thu, 01 Jan 1970 00:00:00 UTC'
+      document.cookie = 'cookies_policy=;expires=Thu, 01 Jan 1970 00:00:00 UTC'
     })
 
     it('returns null if no cookie present', async () => {
