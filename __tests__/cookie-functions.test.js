@@ -1,7 +1,10 @@
 /**
  * @jest-environment jsdom
  */
-import * as CookieHelpers from '../../helpers/cookie/cookie-functions'
+
+/* eslint-env jest */
+
+import * as CookieHelpers from '../src/javascripts/cookie-functions'
 
 describe('Cookie settings', () => {
   describe('getCookie', () => {
