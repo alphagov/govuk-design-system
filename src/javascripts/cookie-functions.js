@@ -11,16 +11,30 @@
 /* Name of the cookie to save users cookie preferences to. */
 const CONSENT_COOKIE_NAME = 'cookies_policy'
 
-/* Default cookie preferences if user has no cookie preferences. */
-const DEFAULT_COOKIE_CONSENT = {
-  analytics: false
-}
-
 /* Users can (dis)allow different groups of cookies. */
 const COOKIE_CATEGORIES = {
   _ga: 'analytics',
   _gid: 'analytics',
-  _gat_govuk_shared: 'analytics'
+  _gat_govuk_shared: 'analytics',
+
+  /* Essential cookies
+   *
+   * Essential cookies cannot be deselected, but we want our cookie code to
+   * only allow adding cookies that are documented in this object, so they need
+   * to be added here.
+   */
+  CONSENT_COOKIE_NAME: 'essential'
+}
+
+/*
+ * Default cookie preferences if user has no cookie preferences.
+ *
+ * Note that this doesn't include a key for essential cookies, essential
+ * cookies cannot be disallowed. If the object contains { essential: false }
+ * this will be ignored.
+ */
+const DEFAULT_COOKIE_CONSENT = {
+  analytics: false
 }
 
 /*
@@ -80,6 +94,11 @@ export function setConsentCookie (options) {
   }
 
   for (var cookieType in options) {
+    // Essential cookies cannot be deselected, ignore this cookie type
+    if (cookieType === 'essential') {
+      continue
+    }
+
     // Update existing user cookie consent preferences
     cookieConsent[cookieType] = options[cookieType]
 
@@ -100,26 +119,22 @@ export function setConsentCookie (options) {
   setCookie(CONSENT_COOKIE_NAME, JSON.stringify(cookieConsent), { days: 365 })
 }
 
-function checkConsentForCookieCategory (cookieName, cookieCategory) {
-  var currentConsentCookie = getConsentCookie()
-
-  // If the consent cookie doesn't exist, but the cookie is in our known list, return true
-  if (!currentConsentCookie && COOKIE_CATEGORIES[cookieName]) {
+function userAllowsCookieCategory (cookieCategory, cookiePreferences) {
+  // Essential cookies are always allowed
+  if (cookieCategory === 'essential') {
     return true
   }
 
-  currentConsentCookie = getConsentCookie()
-
-  // Sometimes currentConsentCookie is malformed in some of the tests, so we need to handle these
+  // Sometimes cookiePreferences is malformed in some of the tests, so we need to handle these
   try {
-    return currentConsentCookie[cookieCategory]
+    return cookiePreferences[cookieCategory]
   } catch (e) {
     console.error(e)
     return false
   }
 }
 
-function checkConsentCookie (cookieName) {
+function userAllowsCookie (cookieName) {
   // Always allow setting the consent cookie
   if (cookieName === CONSENT_COOKIE_NAME) {
     return true
@@ -128,7 +143,15 @@ function checkConsentCookie (cookieName) {
   if (COOKIE_CATEGORIES[cookieName]) {
     var cookieCategory = COOKIE_CATEGORIES[cookieName]
 
-    return checkConsentForCookieCategory(cookieName, cookieCategory)
+    // Get the current cookie preferences
+    var cookiePreferences = getConsentCookie()
+
+    // If the consent cookie doesn't exist, but the cookie is in our known list, return true
+    if (!cookiePreferences) {
+      return true
+    }
+
+    return userAllowsCookieCategory(cookieCategory, cookiePreferences)
   } else {
     // Deny the cookie if it is not known to us
     return false
@@ -151,7 +174,7 @@ function getCookie (name) {
 }
 
 function setCookie (name, value, options) {
-  if (checkConsentCookie(name)) {
+  if (userAllowsCookie(name)) {
     if (typeof options === 'undefined') {
       options = {}
     }
