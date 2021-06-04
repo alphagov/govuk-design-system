@@ -119,5 +119,13 @@ describe('Cookie settings', () => {
         expect(document.cookie).toEqual('design_system_cookies_policy={"analytics":true}')
       })
     })
+
+    describe('default', () => {
+      it('sets consent cookie to default if no options are provided', async () => {
+        CookieHelpers.setConsentCookie()
+
+        expect(document.cookie).toEqual('design_system_cookies_policy={"analytics":false}')
+      })
+    })
   })
 })
