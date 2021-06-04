@@ -15,7 +15,6 @@ const CONSENT_COOKIE_NAME = 'design_system_cookies_policy'
 const COOKIE_CATEGORIES = {
   _ga: 'analytics',
   _gid: 'analytics',
-  _gat_govuk_shared: 'analytics',
 
   /* Essential cookies
    *
