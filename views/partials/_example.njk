@@ -41,118 +41,114 @@
   </div>
   {% endif %}
 
-  {%- if (multipleTabs) %}
-  <span id="options-{{ exampleId }}"></span>
-  <ul class="app-tabs" role="tablist">
-    <li class="app-tabs__item js-tabs__item{{ " js-tabs__item--open" if (params.open) }}" role="presentation"><a href="#{{ exampleId }}-html" role="tab" aria-controls="{{ exampleId }}-html" data-track="tab-html">HTML</a></li>
-    <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#{{ exampleId }}-nunjucks" role="tab" aria-controls="{{ exampleId }}-nunjucks" data-track="tab-nunjucks">Nunjucks</a></li>
-  </ul>
-  {% elif not (params.hideTab) %}
-  {% set tabType = "html" if params.html else ("nunjucks" if params.nunjucks ) %}
-  {#- if at least one tab is set to true show the list -#}
-  {% if tabType %}
-  <ul class="app-tabs" role="tablist">
-    <li class="app-tabs__item js-tabs__item{{ " js-tabs__item--open" if (params.open) }}" role="presentation">
-      <a href="#{{ exampleId }}-{{ tabType }}" role="tab" aria-controls="{{ exampleId }}-{{ tabType }}" data-track="tab-{{ tabType }}">{{ "HTML" if params.html else ("Nunjucks" if params.nunjucks )}}</a>
-    </li>
-  </ul>
-  {% endif %}
-  {% endif %}
-
+{% if params.html or params.nunjucks %}
+  <div class="govuk-accordion app-accordion-code-examples" data-module="govuk-accordion" id="accordion-code-examples">
   {%- if (params.html) %}
-  {%- if (multipleTabs) or (not params.hideTab) %}
-  <div class="app-tabs__heading js-tabs__heading{{ " js-tabs__heading--open" if (params.open) }}"><a href="#{{ exampleId }}-html" role="tab" aria-controls="{{ exampleId }}-html" data-track="tab-html">HTML</a></div>
-  {% endif %}
-  <div class="app-tabs__container js-tabs__container{{ " js-tabs__container--no-tabs" if (params.hideTab) }}" id="{{ exampleId }}-html" role="tabpanel">
-    <div class="app-example__code">
-      <pre data-module="app-copy" tabindex="0"><code class="hljs html">
-        {{- getHTMLCode(examplePath) | highlight('html') | safe -}}
-      </code></pre>
+    <div class="govuk-accordion__section">
+      {%- if (multipleTabs) or (not params.hideTab) %}
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-heading-html">HTML</span>
+          </h2>
+        </div>
+      {% endif %}
+      <div id="accordion-content-html" class="govuk-accordion__section-content" aria-labelledby="accordion-heading-html">
+        <div class="app-example__code">
+          <pre data-module="app-copy" tabindex="0"><code class="hljs html">
+            {{- getHTMLCode(examplePath) | highlight('html') | safe -}}
+          </code></pre>
+        </div>
+      </div>
     </div>
-  </div>
   {% endif %}
+  {% if (params.nunjucks) %}
+    <div class="govuk-accordion__section">
+      {% if (multipleTabs) %}
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-heading-nunjucks">Nunjucks</span>
+          </h2>
+        </div>
+      {% endif %}
+      <div id="accordion-content-html" class="govuk-accordion__section-content" aria-labelledby="accordion-heading-html">
+      {%- if (params.group == 'components') %}
+        {% set macroOptions = getMacroOptions(params.item) %}
 
-  {%- if (params.nunjucks) %}
-  {%- if (multipleTabs) %}
-  <div class="app-tabs__heading js-tabs__heading"><a href="#{{ exampleId }}-nunjucks" role="tab" aria-controls="{{ exampleId }}-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
-  {% elif not (params.hideTab) %}
-	<div class="app-tabs__heading js-tabs__heading{{ " js-tabs__heading--open" if (params.open) }}"><a href="#{{ exampleId }}-nunjucks" role="tab" aria-controls="{{ exampleId }}-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
-  {% endif %}
-  <div class="app-tabs__container js-tabs__container{{ " js-tabs__container--no-tabs" if (params.hideTab) }}" id="{{ exampleId }}-nunjucks" role="tabpanel">
-    {%- if (params.group == 'components') %}
-      {% set macroOptions = getMacroOptions(params.item) %}
+        {% set macroOptionsHTML %}
 
-      {% set macroOptionsHTML %}
+          <p>
+          Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
+          </p>
+          <p>
+          Some options are required for the macro to work; these are marked as "Required" in the option description.
+          </p>
+          <p>
+          If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
+          </p>
 
-        <p>
-        Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
-        </p>
-        <p>
-        Some options are required for the macro to work; these are marked as "Required" in the option description.
-        </p>
-        <p>
-        If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
-        </p>
-
-        {% for table in macroOptions %}
-          <table class="govuk-table app-options__table" id="options-{{ exampleId }}--{{ table.id }}">
-            <caption class="govuk-table__caption govuk-heading-m {% if table.id == 'primary' %} govuk-visually-hidden{% endif %}">{{ table.name }}</caption>
-            <thead class="govuk-table__head">
-              <tr class="govuk-table__row">
-                <th class="govuk-table__header app-options__limit-table-cell" scope="col">Name</th>
-                <th class="govuk-table__header app-options__limit-table-cell" scope="col">Type</th>
-                <th class="govuk-table__header" scope="col">Description</th>
-              </tr>
-            </thead>
-            <tbody class="govuk-table__body">
-
-              {% for option in table.options %}
+          {% for table in macroOptions %}
+            <table class="govuk-table app-options__table" id="options-{{ exampleId }}--{{ table.id }}">
+              <caption class="govuk-table__caption govuk-heading-m {% if table.id == 'primary' %} govuk-visually-hidden{% endif %}">{{ table.name }}</caption>
+              <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
-                  <th class="govuk-table__header" scope="row">{{option.name}}</th>
-                  <td class="govuk-table__cell ">{{option.type}}</td>
-                  <td class="govuk-table__cell ">
-                    {% if (option.required === true) %}
-                      <strong>Required.</strong>
-                    {% endif %}
-                    {{ option.description | safe }}
-                    {% if (option.isComponent) %}
-                      {# Create separate table data for components that are hidden in the Design System #}
-                      {% if (option.name === "hint" or option.name === "label") %}
-                        See <a href="#options-{{ exampleId }}--{{ option.name }}">{{ option.name }}</a>.
-                      {% else %}
-                        See <a href="/components/{{ option.slug }}/#options-{{ option.name | kebabCase }}-example">{{ option.name }}</a>.
-                      {% endif %}
-                    {% endif %}
-                    {% if (option.params) %}
-                      See <a href="#options-{{ exampleId }}--{{ option.name }}">{{ option.name }}</a>.
-                    {% endif %}
-                  </td>
+                  <th class="govuk-table__header app-options__limit-table-cell" scope="col">Name</th>
+                  <th class="govuk-table__header app-options__limit-table-cell" scope="col">Type</th>
+                  <th class="govuk-table__header" scope="col">Description</th>
                 </tr>
-              {% endfor %}
-            </tbody>
-          </table>
-        {% endfor %}
+              </thead>
+              <tbody class="govuk-table__body">
 
-      {% endset %}
+                {% for option in table.options %}
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">{{option.name}}</th>
+                    <td class="govuk-table__cell ">{{option.type}}</td>
+                    <td class="govuk-table__cell ">
+                      {% if (option.required === true) %}
+                        <strong>Required.</strong>
+                      {% endif %}
+                      {{ option.description | safe }}
+                      {% if (option.isComponent) %}
+                        {# Create separate table data for components that are hidden in the Design System #}
+                        {% if (option.name === "hint" or option.name === "label") %}
+                          See <a href="#options-{{ exampleId }}--{{ option.name }}">{{ option.name }}</a>.
+                        {% else %}
+                          See <a href="/components/{{ option.slug }}/#options-{{ option.name | kebabCase }}-example">{{ option.name }}</a>.
+                        {% endif %}
+                      {% endif %}
+                      {% if (option.params) %}
+                        See <a href="#options-{{ exampleId }}--{{ option.name }}">{{ option.name }}</a>.
+                      {% endif %}
+                    </td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          {% endfor %}
 
-      {% from "govuk/components/details/macro.njk" import govukDetails %}
+        {% endset %}
 
-      {{ govukDetails({
-        summaryHtml: "<span data-components='github-component-arguments'>Nunjucks macro options</span>",
-        html: macroOptionsHTML,
-        classes: "app-options",
-        attributes:{
-          id: "options-" + exampleId + "-details"
-        }
-      })}}
-    {% endif %}
-    <div class="app-example__code">
-      <pre data-module="app-copy" tabindex="0"><code class="hljs js">
-        {{- getNunjucksCode(examplePath) | highlight('js') | safe -}}
-      </code></pre>
+        {% from "govuk/components/details/macro.njk" import govukDetails %}
+
+        {{ govukDetails({
+          summaryHtml: "<span data-components='github-component-arguments'>Nunjucks macro options</span>",
+          html: macroOptionsHTML,
+          classes: "app-options",
+          attributes:{
+            id: "options-" + exampleId + "-details"
+          }
+        })}}
+      {% endif %}
+      <div class="app-example__code">
+        <pre data-module="app-copy" tabindex="0"><code class="hljs js">
+          {{- getNunjucksCode(examplePath) | highlight('js') | safe -}}
+        </code></pre>
+      </div>
     </div>
-  </div>
   {% endif %}
+  </div>
+{% endif %}
+
 </div>
+
 
 {% endmacro %}

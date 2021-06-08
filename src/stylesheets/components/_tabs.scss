@@ -1,128 +1,25 @@
-
-// =========================================================
-// Tabs (desktop)
-// =========================================================
-
-.app-tabs {
-  margin: -1px auto;
-  padding: 0;
-  overflow: visible;
-  list-style-type: none;
+.app-accordion-code-examples {
   border: 1px solid $govuk-border-colour;
+  padding: govuk-spacing(3);
 
-  @include govuk-media-query($until: desktop) {
+  .govuk-accordion__controls {
     display: none;
   }
 
-  .app-prose-scope & { // A specific selector to reset .app-prose-scope ul
-    margin-bottom: 0;
-    padding: 0;
-    font-size: 0; // Prevent white space taking up space between tabs
-  }
-}
+  .govuk-accordion__section-header {
+    padding: 0 0 5px 0;
 
-.app-tabs__item {
-  @include govuk-font(19);
-  display: inline-block;
-  position: relative;
-  padding: govuk-spacing(4);
-
-  a {
-    display: block;
-
-    .app-prose-scope &:visited {
-      color: $govuk-link-colour;
-    }
-
-    .app-prose-scope &:focus {
-      color: $govuk-focus-text-colour;
-    }
-
-    // Extend the touch area of the <a> to fill the entire tab
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
+    &:first-child {
+      border-top: none;
     }
   }
 
-  .app-prose-scope & { // A specific selector to reset .app-prose-scope ul li
+  .govuk-accordion__section-heading {
     margin: 0;
   }
-}
 
-.app-tabs__item--current {
-  border-right: 1px solid $govuk-border-colour;
-  border-left: 1px solid $govuk-border-colour;
-  background: govuk-colour("white");
-
-  // Offset the added borders
-  .app-prose-scope & {
-    margin: 0 -1px;
-  }
-
-  // No left hand border is required for the first tab, as it would just double
-  // up the border of its parent
-  &:first-child {
-    border-left: 0;
-
-    .app-prose-scope & {
-      margin-left: 0;
-    }
-  }
-
-  a {
-    .app-prose-scope & {
-      color: $govuk-text-colour;
-      @include govuk-link-style-no-underline;
-    }
-  }
-}
-
-// =========================================================
-// 'Accordion' (mobile and tablet)
-// =========================================================
-
-.app-tabs__heading {
-  display: none;
-  position: relative;
-  padding: govuk-spacing(3);
-  border: 1px solid $govuk-border-colour;
-  border-top: 0;
-
-  @include govuk-media-query($until: desktop) {
-    display: block;
-  }
-
-  a {
-    // Extend the touch area of the <a> to fill the entire heading
-    &:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-    }
-
-    .app-prose-scope &:visited {
-      color: $govuk-link-colour;
-    }
-
-    .app-prose-scope &:focus {
-      color: $govuk-focus-text-colour;
-    }
-  }
-}
-
-.app-tabs__heading--current {
-  border-bottom: 0;
-
-  a {
-    @include govuk-link-style-no-underline;
+  .govuk-accordion__section-button {
+    vertical-align: middle;
   }
 }
 
