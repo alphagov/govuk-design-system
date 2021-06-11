@@ -67,7 +67,7 @@ confusion. The username is `origin` and the password is `badidea`.
 
 design-system.service.gov.uk is a subdomain of the service.gov.uk zone and is
 defined in [`alphagov/govuk-dns-config`][govuk-dns-config] and deployed by the
-reliability engineering team][re-team] using [`alphagov/govuk-dns`][govuk-dns].
+[reliability engineering team][re-team] using [`alphagov/govuk-dns`][govuk-dns].
 
 Most other services are delegated as their own zones so that the service team
 have control over their own DNS, but we have opted to set up a subdomain instead
