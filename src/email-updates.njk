@@ -12,78 +12,50 @@ layout: layout-single-page.njk
      <p class="govuk-body">We expect to send you about 2-3 emails a month, depending on what you want to get emails about.</p>
 
       <!-- Begin Mailchimp Signup Form -->
-      <div id="mc_embed_signup">
-      <form action="https://service.us1.list-manage.com/subscribe/post?u=ada1bae4b177beb9e03502ced&amp;id=367f0a5723" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+        <style type="text/css">
+        .mailchimp-border { border: 1px solid #b1b4b6;}
+        #mc_embed_signup .asterisk, #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {color: #d4351c;}
+        #mc_embed_signup #mc-embedded-subscribe-form input.mce_inline_error {border-color: #d4351c;}
+        </style>
+          <div id="mc_embed_signup" class="mailchimp-border">
+          <form action="https://service.us1.list-manage.com/subscribe/post?u=ada1bae4b177beb9e03502ced&amp;id=367f0a5723" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
           <div id="mc_embed_signup_scroll">
-
-      <div class="govuk-form-group">
-        <label class="govuk-label" for="mce-EMAIL">Email address</label>
-        <input type="email" value="" name="EMAIL" class="govuk-input" id="mce-EMAIL">
-      </div>
-      <div class="govuk-form-group">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-            <h3 class="govuk-fieldset__heading">I want to get emails about:</h3>
-          </legend>
-          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="mce-group[188630]-188630-0" name="group[188630][1]" type="checkbox" value="1">
-              <label class="govuk-label govuk-checkboxes__label" for="mce-group[188630]-188630-0">
-                updates to Design System components and patterns.
-              </label>
-            </div>
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="mce-group[188630]-188630-1" name="group[188630][2]" type="checkbox" value="2">
-              <label class="govuk-label govuk-checkboxes__label" for="mce-group[188630]-188630-1">
-                what’s coming up from the Design System team and community
-              </label>
-            </div>
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="mce-group[188630]-188630-2" name="group[188630][4]" type="checkbox" value="4">
-              <label class="govuk-label govuk-checkboxes__label" for="mce-group[188630]-188630-2">
-                events and workshops
-              </label>
-            </div>
+          <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+          <div class="mc-field-group">
+          <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+          </label>
+          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
           </div>
-      </div>
-
-      <div class="govuk-form-group">
-      <fieldset class="govuk-fieldset">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-          <h3 class="govuk-fieldset__heading">I want to recieve emails as:</h3>
-        </legend>
-        <div class="govuk-radios">
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="mce-EMAILTYPE-0" name="EMAILTYPE" type="radio" value="html">
-            <label class="govuk-label govuk-radios__label" for="mce-EMAILTYPE-0">
-              html
-            </label>
+          <div class="mc-field-group input-group">
+              <strong>I want to get emails about: </strong>
+              <ul><li><input type="checkbox" value="1" name="group[188630][1]" id="mce-group[188630]-188630-0"><label for="mce-group[188630]-188630-0">new and updated Design System components and patterns.</label></li>
+          <li><input type="checkbox" value="4" name="group[188630][4]" id="mce-group[188630]-188630-1"><label for="mce-group[188630]-188630-1">what’s coming up from the Design System team and community</label></li>
+          <li><input type="checkbox" value="2" name="group[188630][2]" id="mce-group[188630]-188630-2"><label for="mce-group[188630]-188630-2">events and workshops</label></li>
+          </ul>
           </div>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="mce-EMAILTYPE-1" name="EMAILTYPE" type="radio" value="text">
-            <label class="govuk-label govuk-radios__label" for="mce-EMAILTYPE-1">
-              text
-            </label>
+          <div class="mc-field-group input-group">
+              <strong>I want to receive emails as:</strong>
+              <ul><li><input type="radio" value="html" name="EMAILTYPE" id="mce-EMAILTYPE-0"><label for="mce-EMAILTYPE-0">html</label></li>
+          <li><input type="radio" value="text" name="EMAILTYPE" id="mce-EMAILTYPE-1"><label for="mce-EMAILTYPE-1">text</label></li>
+          </ul>
           </div>
-        </div>
-      </fieldset>
-      </div>
-
-
-            <div id="mce-responses" class="clear">
-              <div class="response" id="mce-error-response" style="display:none"></div>
-              <div class="response" id="mce-success-response" style="display:none"></div>
-            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ada1bae4b177beb9e03502ced_367f0a5723" tabindex="-1" value=""></div>
-            <div class="clear">
-              <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="govuk-button" data-module="govuk-button"></div>
-            </div>
-      </form>
-      </div>
-      <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+          <div id="mce-responses" class="clear">
+          <div class="response" id="mce-error-response" style="display:none"></div>
+          <div class="response" id="mce-success-response" style="display:none"></div>
+          </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ada1bae4b177beb9e03502ced_367f0a5723" tabindex="-1" value=""></div>
+              <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+              </div>
+          </form>
+          </div>
+        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
       <!--End mc_embed_signup-->
 
-     <h2 class="govuk-heading-m">Contact permissions</h2>
+     <h2 class="govuk-heading-m govuk-!-padding-top-6">Other ways to get updated by email</h2>
+     <p class="govuk-body">You can also sign up to get emails by contacting us at <a class="govuk-link" href="mailto:govuk-design-system-support@digital.cabinet-office.gov.uk">govuk-design-system-support@digital.cabinet-office.gov.uk</a></p>
 
+     <h2 class="govuk-heading-m">Contact permissions</h2>
      <p class="govuk-body">Government Digital Service will use the information you provide on this form to be in touch with you and to provide updates about the GOV.UK Design System and share information about the contributor community.</p>
      <p class="govuk-body">For more information about our privacy practices please <a class="govuk-link" href="/privacy-policy">please read our privacy notice</a>. You can change your mind at any time by clicking the unsubscribe link in the footer of any email you receive from us, or by contacting us at <a class="govuk-link" href="mailto:govuk-design-system-support@digital.cabinet-office.gov.uk">govuk-design-system-support@digital.cabinet-office.gov.uk</a>. We will treat your information with respect. By submitting this form, you agree that we may process your information in accordance with these terms.</p>
 </div>
