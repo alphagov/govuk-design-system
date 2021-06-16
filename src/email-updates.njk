@@ -28,17 +28,23 @@ layout: layout-single-page.njk
           <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
           </div>
           <div class="mc-field-group input-group">
-              <strong>I want to get emails about: </strong>
-              <ul><li><input type="checkbox" value="1" name="group[188630][1]" id="mce-group[188630]-188630-0"><label for="mce-group[188630]-188630-0">new and updated Design System components and patterns.</label></li>
-          <li><input type="checkbox" value="4" name="group[188630][4]" id="mce-group[188630]-188630-1"><label for="mce-group[188630]-188630-1">what’s coming up from the Design System team and community</label></li>
-          <li><input type="checkbox" value="2" name="group[188630][2]" id="mce-group[188630]-188630-2"><label for="mce-group[188630]-188630-2">events and workshops</label></li>
-          </ul>
+            <fieldset>
+              <legend><strong>I want to get emails about:</strong></legend>
+              <ul>
+                <li><input type="checkbox" value="1" name="group[188630][1]" id="mce-group[188630]-188630-0"><label for="mce-group[188630]-188630-0">new and updated Design System components and patterns.</label></li>
+                <li><input type="checkbox" value="4" name="group[188630][4]" id="mce-group[188630]-188630-1"><label for="mce-group[188630]-188630-1">what’s coming up from the Design System team and community</label></li>
+                <li><input type="checkbox" value="2" name="group[188630][2]" id="mce-group[188630]-188630-2"><label for="mce-group[188630]-188630-2">events and workshops</label></li>
+              </ul>
+            </fieldset>
           </div>
           <div class="mc-field-group input-group">
-              <strong>I want to receive emails as:</strong>
-              <ul><li><input type="radio" value="html" name="EMAILTYPE" id="mce-EMAILTYPE-0"><label for="mce-EMAILTYPE-0">html</label></li>
-          <li><input type="radio" value="text" name="EMAILTYPE" id="mce-EMAILTYPE-1"><label for="mce-EMAILTYPE-1">text</label></li>
-          </ul>
+            <fieldset class="govuk-fieldset">
+              <legend><strong>I want to receive emails as:</strong></legend>
+              <ul>
+                <li><input type="radio" value="html" name="EMAILTYPE" id="mce-EMAILTYPE-0"><label for="mce-EMAILTYPE-0">html</label></li>
+                <li><input type="radio" value="text" name="EMAILTYPE" id="mce-EMAILTYPE-1"><label for="mce-EMAILTYPE-1">text</label></li>
+              </ul>
+            </fieldset>
           </div>
           <div id="mce-responses" class="clear">
           <div class="response" id="mce-error-response" style="display:none"></div>
