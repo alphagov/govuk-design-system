@@ -5,6 +5,8 @@
 /* eslint-env jest */
 
 import * as CookieHelpers from '../src/javascripts/cookie-functions'
+import * as Analytics from '../src/javascripts/components/analytics'
+jest.mock('../src/javascripts/components/analytics')
 
 describe('Cookie settings', () => {
   describe('Reading a cookie', () => {
@@ -83,6 +85,11 @@ describe('Cookie settings', () => {
   })
 
   describe('setConsentCookie', () => {
+    beforeEach(() => {
+      // Clear all instances and calls to constructor and all methods:
+      Analytics.default.mockClear()
+    })
+
     afterEach(() => {
       // Delete consent cookie
       document.cookie = 'design_system_cookies_policy=;expires=Thu, 01 Jan 1970 00:00:00 UTC'
@@ -95,6 +102,12 @@ describe('Cookie settings', () => {
         CookieHelpers.setConsentCookie({ analytics: false })
 
         expect(document.cookie).toEqual('design_system_cookies_policy={"analytics":false}')
+      })
+
+      it('does not load the analytics script', async () => {
+        CookieHelpers.setConsentCookie({ analytics: false })
+
+        expect(Analytics.default).toHaveBeenCalledTimes(0)
       })
 
       it('deletes existing analytics cookies', async () => {
@@ -117,6 +130,12 @@ describe('Cookie settings', () => {
         CookieHelpers.setConsentCookie({ analytics: true })
 
         expect(document.cookie).toEqual('design_system_cookies_policy={"analytics":true}')
+      })
+
+      it('loads analytics script if consenting to analytics cookies', async () => {
+        CookieHelpers.setConsentCookie({ analytics: true })
+
+        expect(Analytics.default).toHaveBeenCalledTimes(1)
       })
     })
 
