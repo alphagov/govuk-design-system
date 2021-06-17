@@ -38,5 +38,34 @@ var $searchContainer = document.querySelector('[data-module="app-search"]')
 new Search($searchContainer).init()
 
 // Initialise back to top
-var $backToTop = document.querySelector('[data-module="app-back-to-top"]')
-new BackToTop($backToTop).init()
+// var $backToTop = document.querySelector('[data-module="app-back-to-top"]')
+// new BackToTop($backToTop).init()
+
+// Select the email signup form that will be observed for mutations
+var targetNode = document.getElementById('mc-embedded-subscribe-form')
+
+// Options for the observer (which mutations to observe)
+var config = { attributes: true, childList: true, subtree: true }
+
+// Callback function to execute when mutations are observed
+var callback = function(mutationsList, observer) {
+  for(var i = 0; i < mutationsList.length; i++) {
+    var mutation = mutationsList[i]
+    if (mutation.type === 'childList') {
+      // We can only focus one message so take the first one
+      var message = document.querySelector('#mce-success-response', '#mce-error-response')
+
+      if (message) {
+        message.setAttribute('role', 'alert')
+        message.setAttribute('tabindex', '-1')
+        message.focus()
+      }
+    }
+  }
+}
+
+// Create an observer instance linked to the callback function
+var observer = new MutationObserver(callback);
+
+// Start observing the target node for configured mutations
+observer.observe(targetNode, config);
