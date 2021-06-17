@@ -5,6 +5,10 @@ function BackToTop ($module) {
 }
 
 BackToTop.prototype.init = function () {
+  if (!this.$module) {
+    return
+  }
+
   // Check if we can use Intersection Observers
   if (!('IntersectionObserver' in window)) {
     // If there's no support fallback to regular behaviour
