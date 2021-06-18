@@ -95,6 +95,7 @@ AppTabs.prototype.enhanceMobileButtons = function (mobileTabs) {
     var button = document.createElement('button')
     button.setAttribute('aria-controls', mobileTab.getAttribute('aria-controls'))
     button.setAttribute('data-track', mobileTab.getAttribute('data-track'))
+    button.classList = 'app-tabs__heading-button'
     button.innerHTML = mobileTab.innerHTML
     mobileTab.parentNode.appendChild(button)
     mobileTab.parentNode.removeChild(mobileTab)
