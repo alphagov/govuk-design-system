@@ -9,16 +9,16 @@ import * as Analytics from '../src/javascripts/components/analytics'
 jest.mock('../src/javascripts/components/analytics')
 
 describe('Cookie settings', () => {
+  afterEach(() => {
+    // Delete test cookies
+    document.cookie = '_ga=;expires=Thu, 01 Jan 1970 00:00:00 UTC'
+    document.cookie = 'design_system_cookies_policy=;expires=Thu, 01 Jan 1970 00:00:00 UTC'
+  })
+
   describe('Reading a cookie', () => {
     beforeEach(() => {
       // Allow setting _ga cookie
       CookieHelpers.setConsentCookie({ analytics: true })
-    })
-
-    afterEach(() => {
-      // Delete test cookies
-      document.cookie = '_ga=;expires=Thu, 01 Jan 1970 00:00:00 UTC'
-      document.cookie = 'design_system_cookies_policy=;expires=Thu, 01 Jan 1970 00:00:00 UTC'
     })
 
     it('returns null if no cookie present', async () => {
@@ -78,9 +78,9 @@ describe('Cookie settings', () => {
     })
 
     it('returns consent cookie object if present', async () => {
-      document.cookie = 'design_system_cookies_policy={"analytics":false}'
+      document.cookie = 'design_system_cookies_policy={"analytics":false,"version":1}'
 
-      expect(CookieHelpers.getConsentCookie()).toEqual({ analytics: false })
+      expect(CookieHelpers.getConsentCookie()).toEqual({ analytics: false, version: 1 })
     })
   })
 
@@ -101,7 +101,7 @@ describe('Cookie settings', () => {
 
         CookieHelpers.setConsentCookie({ analytics: false })
 
-        expect(document.cookie).toEqual('design_system_cookies_policy={"analytics":false}')
+        expect(document.cookie).toEqual('design_system_cookies_policy={"analytics":false,"version":1}')
       })
 
       it('does not load the analytics script', async () => {
@@ -115,7 +115,7 @@ describe('Cookie settings', () => {
 
         CookieHelpers.setConsentCookie({ analytics: false })
 
-        expect(document.cookie).toEqual('design_system_cookies_policy={"analytics":false}')
+        expect(document.cookie).toEqual('design_system_cookies_policy={"analytics":false,"version":1}')
         // Make sure those analytics cookies are definitely gone
         expect(CookieHelpers.Cookie('_ga')).toEqual(null)
         expect(CookieHelpers.Cookie('_gid')).toEqual(null)
@@ -129,7 +129,7 @@ describe('Cookie settings', () => {
 
         CookieHelpers.setConsentCookie({ analytics: true })
 
-        expect(document.cookie).toEqual('design_system_cookies_policy={"analytics":true}')
+        expect(document.cookie).toEqual('design_system_cookies_policy={"analytics":true,"version":1}')
       })
 
       it('loads analytics script if consenting to analytics cookies', async () => {
@@ -143,8 +143,88 @@ describe('Cookie settings', () => {
       it('sets consent cookie to default if no options are provided', async () => {
         CookieHelpers.setConsentCookie()
 
-        expect(document.cookie).toEqual('design_system_cookies_policy={"analytics":false}')
+        expect(document.cookie).toEqual('design_system_cookies_policy={"analytics":false,"version":1}')
       })
+    })
+  })
+
+  describe('resetCookies', () => {
+    it('deletes cookies the user has not consented to', async () => {
+      document.cookie = '_ga=test'
+      document.cookie = '_gid=test'
+      document.cookie = 'design_system_cookies_policy={"analytics":false,"version":1}'
+
+      CookieHelpers.resetCookies()
+
+      expect(document.cookie).toEqual('design_system_cookies_policy={"analytics":false,"version":1}')
+    })
+
+    it('deletes cookies if the consent cookie is not present', async () => {
+      document.cookie = '_ga=test'
+      document.cookie = '_gid=test'
+
+      CookieHelpers.resetCookies()
+
+      expect(document.cookie).toEqual('')
+    })
+
+    it('loads analytics script if user consented to analytics', async () => {
+      document.cookie = 'design_system_cookies_policy={"analytics":true,"version":1}'
+
+      CookieHelpers.resetCookies()
+
+      expect(Analytics.default).toHaveBeenCalledTimes(1)
+    })
+  })
+
+  describe('consent cookie version', () => {
+    it('version is an integer property of the consent cookie object', async () => {
+      CookieHelpers.setConsentCookie()
+
+      expect(CookieHelpers.getConsentCookie().version).toEqual(1)
+    })
+
+    it('Cookie will not set cookies if consent cookie is old version', async () => {
+      document.cookie = 'design_system_cookies_policy={"analytics":true,"version":0}'
+
+      CookieHelpers.Cookie('_ga', 'foo')
+      expect(CookieHelpers.Cookie('_ga')).toEqual(null)
+    })
+
+    it('resetCookies deletes cookies if consent cookie is old version', async () => {
+      document.cookie = '_ga=test'
+      document.cookie = '_gid=test'
+      document.cookie = 'design_system_cookies_policy={"analytics":false,"version":0}'
+
+      CookieHelpers.resetCookies()
+
+      expect(document.cookie).toEqual('design_system_cookies_policy={"analytics":false,"version":0}')
+    })
+  })
+
+  describe('isValidConsentCookie', () => {
+    it('isValidConsentCookie returns true if consent cookie is current version', async () => {
+      var cookieOptions = { analytics: true, version: 1 }
+
+      expect(CookieHelpers.isValidConsentCookie(cookieOptions)).toEqual(true)
+    })
+
+    it('isValidConsentCookie returns true if consent cookie is newer than current version', async () => {
+      var cookieOptions = { analytics: true, version: 2 }
+
+      expect(CookieHelpers.isValidConsentCookie(cookieOptions)).toEqual(true)
+    })
+
+    it('isValidConsentCookie returns false if consent cookie is older than current version', async () => {
+      var cookieOptions = { analytics: true, version: 0 }
+
+      expect(CookieHelpers.isValidConsentCookie(cookieOptions)).toEqual(false)
+    })
+
+    it('isValidConsentCookie returns false if consent cookie version is not a number', async () => {
+      var cookieOptions = { analytics: true, version: 'foobar' }
+
+      expect(CookieHelpers.isValidConsentCookie(cookieOptions)).toEqual(false)
     })
   })
 })
