@@ -48,7 +48,7 @@
       actions: [
         {
           text: "Hide this message",
-          classes: "js-cookie-banner-hide"
+          classes: "js-cookie-banner-hide js-cookie-banner-hide--accept"
         }
       ],
       classes: "js-cookie-banner-confirmation-accept"
@@ -60,9 +60,7 @@
       actions: [
         {
           text: "Hide this message",
-          attributes: {
-            "data-app-cookie-banner-hide": true
-          }
+          classes: "js-cookie-banner-hide js-cookie-banner-hide--reject"
         }
       ],
       classes: "js-cookie-banner-confirmation-reject"
