@@ -34,7 +34,7 @@ var COOKIE_CATEGORIES = {
    * only allow adding cookies that are documented in this object, so they need
    * to be added here.
    */
-  CONSENT_COOKIE_NAME: 'essential'
+  'design_system_cookies_policy': 'essential'
 }
 
 /*
@@ -118,9 +118,8 @@ export function setConsentCookie (options) {
   }
 
   // Merge current cookie preferences and new preferences
-  cookieConsent = {
-    ...cookieConsent,
-    ...options
+  for (var option in options) {
+    cookieConsent[option] = options[option]
   }
 
   // Essential cookies cannot be deselected, ignore this cookie type
