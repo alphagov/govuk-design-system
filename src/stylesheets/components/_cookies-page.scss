@@ -1,0 +1,8 @@
+.app-cookies-page {
+
+  // Support older browsers which don't hide elements with the `hidden` attribute
+  [hidden] {
+    display: none;
+  }
+
+}
