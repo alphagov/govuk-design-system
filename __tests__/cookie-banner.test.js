@@ -19,6 +19,14 @@ afterEach(async () => {
 const COOKIE_BANNER_SELECTOR = '[data-module="govuk-cookie-banner"]'
 
 describe('Cookie banner', () => {
+  it('is hidden on the cookies page', async () => {
+    await page.setCookie({ name: 'design_system_cookies_policy', value: '{"analytics":true, "version":1}', url: baseUrl })
+    await page.goto(`${baseUrl}/cookies/`, { waitUntil: 'load' })
+
+    const isCookieBannerHidden = await page.waitForSelector(COOKIE_BANNER_SELECTOR, { visible: false })
+    expect(isCookieBannerHidden).toBeTruthy()
+  })
+
   describe('when JavaScript is disabled', () => {
     it('is hidden', async () => {
       await page.setJavaScriptEnabled(false)

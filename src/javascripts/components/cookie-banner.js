@@ -25,7 +25,9 @@ CookieBanner.prototype.init = function () {
   this.$cookieConfirmationReject = this.$module.querySelector(cookieConfirmationRejectSelector)
   this.$cookieBannerHideButtons = this.$module.querySelectorAll(cookieBannerHideButtonSelector)
 
-  if (!this.$cookieBanner) {
+  // Exit if no cookie banner module
+  // or if we're on the cookies page to avoid circular journeys
+  if (!this.$cookieBanner || this.onCookiesPage()) {
     return
   }
 
@@ -84,6 +86,10 @@ CookieBanner.prototype.revealConfirmationMessage = function (confirmationMessage
   }
 
   confirmationMessage.focus()
+}
+
+CookieBanner.prototype.onCookiesPage = function () {
+  return window.location.pathname === '/cookies/'
 }
 
 export default CookieBanner
