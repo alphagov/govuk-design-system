@@ -5,7 +5,7 @@
     {% if item.items %}
       {% for theme, items in item.items | groupby("theme") %}
         {% if theme != 'undefined' %}
-          <h4 class="app-subnav__theme">{{ theme }}</h4>
+          <h3 class="app-subnav__theme">{{ theme }}</h3>
         {% endif %}
         <ul class="app-subnav__section">
         {% for subitem in items %}
