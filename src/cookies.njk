@@ -7,6 +7,7 @@ layout: layout-single-page.njk
 {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
 {% from "govuk/components/radios/macro.njk" import govukRadios %}
 {% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/table/macro.njk" import govukTable %}
 
 {% set successNotificationBannerHtml %}
   <p class="govuk-notification-banner__heading">You’ve set your cookie preferences.</p>
@@ -28,44 +29,113 @@ layout: layout-single-page.njk
       <h1 class="govuk-heading-xl">Cookies</h1>
       <p class="govuk-body"><a href="/" class="govuk-link">GOV.UK Design System</a> puts small files (known as ‘cookies’) on your computer.</p>
 
+      <p class="govuk-body">These cookies are used across the GOV.UK Design System website.</p>
+
+      <p class="govuk-body">We only set cookies when JavaScript is running in your browser and you’ve accepted them. If you choose not to run Javascript, the information on this page will not apply to you.</p>
+
+      <p class="govuk-body">Find out <a href="https://ico.org.uk/for-the-public/online/cookies" class="govuk-link">how to manage cookies</a>
+
       <form class="js-cookies-page-form">
 
-        <h2 class="govuk-heading-l">Essential cookies (strictly necessary)</h2>
-        <h2 class="govuk-heading-l">Analytics cookies (optional)</h2>
+        <h2 class="govuk-heading-l govuk-!-margin-top-6">Essential cookies (strictly necessary)</h2>
 
-          {{ govukRadios({
-            name: "analytics",
-            idPrefix: "radio-analytics",
-            fieldset: {
-              legend: {
-                text: "Do you want to accept analytics cookies?"
-              },
-              classes: "js-cookies-page-form-fieldset",
-              attributes: {
-                id: "analytics",
-                hidden: true
-              }
-            },
-            items: [
-              {
-                text: "Yes",
-                value: "yes"
-              },
-              {
-                text: "No",
-                value: "no"
-              }
+        <p class="govuk-body">We use an essential cookie to remember when you accept or reject cookies on our website.</p>
+
+        {{ govukTable({
+          firstCellIsHeader: true,
+          caption: "Essential cookies we use",
+          head: [
+            { text: "Name" },
+            { text: "Purpose"},
+            { text: "Expires"}
+          ],
+          rows: [
+            [
+              {text: "design-system-cookie-policy"},
+              {text: "Saves your cookie consent settings"},
+              {text: "1 year"}
             ]
-          }) }}
+          ]
+        }) }}
 
-          {{ govukButton({
-            text: 'Save cookie settings',
-            classes: "js-cookies-form-button",
+        <h2 class="govuk-heading-l govuk-!-margin-top-6">Analytics cookies (optional)</h2>
+
+        <p class="govuk-body">We use Google Analytics software to understand how people use the GOV.UK Design System. We do this to help make sure the site is meeting the needs of its users and to help us make improvements.</p>
+
+        <p class="govuk-body">We do not collect or store your personal information (for example your name or address) so this information cannot be used to identify who you are.</p>
+
+        <p class="govuk-body">We do not allow Google to use or share our analytics data.</p>
+
+        <p class="govuk-body">Google Analytics stores information about:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>the pages you visit</li>
+          <li>how long you spend on each page</li>
+          <li>how you arrived at the site</li>
+          <li>what you click on while you visit the site</li>
+          <li>the device and browser you use</li>
+        </ul>
+
+        {{ govukTable({
+          firstCellIsHeader: true,
+          caption: "Analytics cookies we use",
+          head: [
+            { text: "Name" },
+            { text: "Purpose" },
+            { text: "Expires" }
+          ],
+          rows: [
+            [
+              { text: "_ga" },
+              { text: "Used to distinguish users." },
+              { text: "2 years" }
+            ],
+            [
+              { text: "_gid" },
+              { text: "Used to distinguish users." },
+              { text: "24 hours" }
+            ],
+            [
+              { text: "_gat" },
+              { text: "Used to throttle request rate. If Google Analytics is deployed via Google Tag Manager, this cookie will be named _dc_gtm_<property- id>." },
+              { text: "1 minute" }
+            ]
+          ]
+        }) }}
+
+        {{ govukRadios({
+          name: "analytics",
+          idPrefix: "radio-analytics",
+          fieldset: {
+            legend: {
+              text: "Do you want to accept analytics cookies?"
+            },
+            classes: "js-cookies-page-form-fieldset",
             attributes: {
+              id: "analytics",
               hidden: true
             }
-          }) }}
-        </form>
+          },
+          items: [
+            {
+              text: "Yes",
+              value: "yes"
+            },
+            {
+              text: "No",
+              value: "no"
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: 'Save cookie settings',
+          classes: "js-cookies-form-button",
+          attributes: {
+            hidden: true
+          }
+        }) }}
+      </form>
     </div>
   </div>
 </div>
