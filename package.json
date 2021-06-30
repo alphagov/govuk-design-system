@@ -15,6 +15,7 @@
   "scripts": {
     "preinstall": "node bin/check-nvmrc.js",
     "prestart": "node bin/check-nvmrc.js",
+    "build": "eleventy",
     "test": "npm run lint && jest",
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "standard",
