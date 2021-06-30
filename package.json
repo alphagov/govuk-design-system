@@ -43,7 +43,8 @@
   ],
   "dependencies": {
     "@11ty/eleventy": "^0.12.1",
-    "govuk-frontend": "^3.13.0"
+    "govuk-frontend": "^3.13.0",
+    "highlight.js": "^11.0.1"
   },
   "devDependencies": {
     "standard": "^16.0.3"
