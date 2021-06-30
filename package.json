@@ -48,6 +48,10 @@
     "highlight.js": "^11.0.1"
   },
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.14.5",
+    "jest": "^27.0.6",
+    "jest-puppeteer": "^5.0.4",
+    "puppeteer": "^9.1.1",
     "standard": "^16.0.3"
   }
 }
