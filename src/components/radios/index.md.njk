@@ -76,21 +76,27 @@ If one or more of your radio options is different from the others, it can help u
 
 {{ example({group: "components", item: "radios", example: "divider", html: true, nunjucks: true, open: false, size: "s"}) }}
 
-### Conditionally revealing content
+### Conditionally revealing a related question
 
-You can conditionally reveal content when the user selects a particular radio, so they only see content when it’s relevant to them.
+You can ask the user a related question when they select a particular radio option, so they only see the question when it's relevant to them.
 
-For example, you could reveal a phone number input when the user selects the 'Contact me by phone' option.
+This might make two related questions easier to answer by grouping them on the same page. For example, you could reveal a phone number input when the user selects the 'Contact me by phone' option.
 
 {{ example({group: "components", item: "radios", example: "conditional-reveal", html: true, nunjucks: true, open: false, size: "xl"}) }}
 
-Keep it simple. If you need to add a lot of content, consider showing it on the next page in the process instead.
+Keep it simple. If the related question is complicated or has more than one part, show it on the next page in the process instead.
 
-Do not add conditionally revealing content to inline radios.
+Do not conditionally reveal questions to inline radios, such as ‘yes’ and ‘no’ options placed next to each other.
+
+Conditionally reveal questions only - do not show or hide anything that is not a question.
 
 #### Known issues
 
-Users are not always notified when conditionally revealed content is expanded or collapsed. This fails [WCAG 2.1 success criterion 4.1.2 Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html). We plan to fix this issue by the end of June 2021.
+Users are not always notified when a conditionally revealed question is shown or hidden. This fails [WCAG 2.1 success criterion 4.1.2 Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html).
+
+However, we found that screen reader users did not have difficulty answering a conditionally revealed question - as long it’s kept simple. Users we tested with did get confused when complicated questions were conditionally revealed to them, particularly questions with more than one part.
+
+We’ll keep looking for opportunities to [learn more about how conditionally revealed questions be used in services](https://github.com/alphagov/govuk-design-system-backlog/issues/59).
 
 ### Smaller radios
 
@@ -128,4 +134,6 @@ Say ‘Select [whatever it is]’. For example, ‘Select the day of the week yo
 
 ## Research on this component
 
-Read a blog post about [updates to the radios and checkboxes components](https://designnotes.blog.gov.uk/2016/11/30/weve-updated-the-radios-and-checkboxes-on-gov-uk/).
+If you’ve done any user research involving conditionally revealed questions, particularly with users of assistive technologies, [tell us what you’ve learned by adding a comment to the discussion about this component](https://github.com/alphagov/govuk-design-system-backlog/issues/59).
+
+Read a blog post about [an update to the radios and checkboxes components in 2016](https://designnotes.blog.gov.uk/2016/11/30/weve-updated-the-radios-and-checkboxes-on-gov-uk/).

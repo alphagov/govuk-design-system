@@ -83,19 +83,25 @@ If JavaScript is unavailable, and a user selects both the ‘none’ checkbox an
 
 {{ example({group: "components", item: "checkboxes", example: "with-none-option-in-error", html: true, nunjucks: true, open: false, size: "xl"}) }}
 
-### Conditionally revealing content
+### Conditionally revealing a related question
 
-You can conditionally reveal content when the user selects a particular checkbox, so they only see content when it’s relevant to them.
+You can ask the user a related question when they select a particular checkbox, so they only see the question when it's relevant to them.
 
-For example, you could reveal a phone number input when the user selects the 'Contact me by phone' option.
+This might make 2 related questions easier to answer by grouping them on the same page. For example, you could reveal a phone number input when the user selects the 'Contact me by phone' option.
 
 {{ example({group: "components", item: "checkboxes", example: "conditional-reveal", html: true, nunjucks: true, open: false, size: "xl"}) }}
 
-Keep it simple - if you need to add a lot of content, consider showing it on the next page in the process instead.
+Keep it simple. If the related question is complicated or has more than one part, show it on the next page in the process instead.
+
+You should only conditionally reveal questions - do not show or hide anything that is not a question.
 
 #### Known issues
 
-Users are not always notified when conditionally revealed content is expanded or collapsed. This fails [WCAG 2.1 success criterion 4.1.2 Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html). We plan to fix this issue by the end of June 2021.
+Users are not always notified when a conditionally revealed question is shown or hidden. This fails [WCAG 2.1 success criterion 4.1.2 Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html).
+
+However, we found that screen reader users did not have difficulty answering a conditionally revealed question - as long as it’s kept simple. It confused our test users when we conditionally revealed complicated questions to them.
+
+We’ll keep looking for opportunities to [learn more about how conditionally revealed questions should be used in services](https://github.com/alphagov/govuk-design-system-backlog/issues/37).
 
 ### Smaller checkboxes
 
@@ -134,4 +140,6 @@ For example, ‘Select countries you will be travelling to, or select “No, I w
 
 ## Research on this component
 
-Read a blog post about [updates to the radios and checkboxes components](https://designnotes.blog.gov.uk/2016/11/30/weve-updated-the-radios-and-checkboxes-on-gov-uk/).
+If you’ve done any user research involving conditionally revealed questions, particularly with users of assistive technologies, [tell us what you’ve learned by adding a comment to the discussion about this component](https://github.com/alphagov/govuk-design-system-backlog/issues/59).
+
+Read a blog post about [an update to the radios and checkboxes components in 2016](https://designnotes.blog.gov.uk/2016/11/30/weve-updated-the-radios-and-checkboxes-on-gov-uk/).
