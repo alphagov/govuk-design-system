@@ -39,5 +39,8 @@
     "ie 8",
     "ie 9",
     "iOS 9"
-  ]
+  ],
+  "dependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  }
 }
