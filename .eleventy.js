@@ -1,6 +1,7 @@
 const nunjucks = require('nunjucks')
 
 const highlighter = require('./lib/highlighter.js')
+const { getFingerprint, getFrontmatter, getHTMLCode } = require('./lib/file-helper.js') // helper functions to operate on files
 const paths = require('./config/paths.json') // specify paths to main working directories
 
 const templatePaths = [
@@ -15,7 +16,10 @@ module.exports = eleventyConfig => {
     new nunjucks.FileSystemLoader(templatePaths)
   )
 
-  nunjucksEnvironment.addFilter("highlight", highlighter)
+  nunjucksEnvironment.addFilter('highlight', highlighter)
+  nunjucksEnvironment.addGlobal('getFingerprint', getFingerprint)
+  nunjucksEnvironment.addGlobal('getFrontmatter', getFrontmatter)
+  nunjucksEnvironment.addGlobal('getHTMLCode', getHTMLCode)
 
   eleventyConfig.setLibrary('njk', nunjucksEnvironment)
 
