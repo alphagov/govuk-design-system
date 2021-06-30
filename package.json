@@ -50,6 +50,7 @@
     "stylelint-order": "^5.0.0"
   },
   "dependencies": {
-    "govuk-frontend": "^4.4.1"
+    "govuk-frontend": "^4.4.1",
+    "highlight.js": "^11.0.1"
   }
 }
