@@ -13,8 +13,6 @@
   },
   "homepage": "https://github.com/alphagov/govuk-design-system#readme",
   "scripts": {
-    "build": "node tasks/build.js",
-    "start": "node tasks/serve.js",
     "test": "npm run lint && jest",
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "eslint --cache --cache-location .cache/eslint --cache-strategy content --color --ignore-path .gitignore \"**/*.{cjs,js,mjs}\"",
