@@ -1,6 +1,7 @@
 const nunjucks = require('nunjucks')
 
 const highlighter = require('./lib/highlighter.js')
+const fileHelper = require('./lib/file-helper.js') // helper functions to operate on files
 const paths = require('./config/paths.json') // specify paths to main working directories
 
 const templatePaths = [
@@ -16,6 +17,8 @@ module.exports = eleventyConfig => {
   )
 
   nunjucksEnvironment.addFilter("highlight", highlighter)
+  nunjucksEnvironment.addGlobal("getFrontmatter", fileHelper.getFrontmatter)
+  nunjucksEnvironment.addGlobal("getHTMLCode", fileHelper.getHTMLCode)
 
   eleventyConfig.setLibrary('njk', nunjucksEnvironment)
 
