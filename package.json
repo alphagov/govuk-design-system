@@ -42,7 +42,8 @@
     "iOS 9"
   ],
   "dependencies": {
-    "@11ty/eleventy": "^0.12.1"
+    "@11ty/eleventy": "^0.12.1",
+    "govuk-frontend": "^3.13.0"
   },
   "devDependencies": {
     "standard": "^16.0.3"
