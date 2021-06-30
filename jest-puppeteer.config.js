@@ -3,7 +3,7 @@ const PORT = configPaths.testPort
 
 module.exports = {
   server: {
-    command: `node tasks/test-serve.js`,
+    command: `eleventy --serve --port ${PORT}`,
     launchTimeout: 30000,
     port: PORT
   }
