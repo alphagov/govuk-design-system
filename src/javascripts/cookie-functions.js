@@ -11,7 +11,7 @@
 import Analytics from './components/analytics.js'
 
 /* Name of the cookie to save users cookie preferences to. */
-const CONSENT_COOKIE_NAME = 'design_system_cookies_policy'
+var CONSENT_COOKIE_NAME = 'design_system_cookies_policy'
 
 /* If cookie policy changes and/or the user preferences object format needs to
  * change, bump this version up afterwards. The user should then be shown the
@@ -21,10 +21,10 @@ const CONSENT_COOKIE_NAME = 'design_system_cookies_policy'
  * cookie is equal to or greater than this number, you should be careful to
  * check backwards compatibility when changing the object format.
  */
-const CONSENT_COOKIE_VERSION = 1
+var CONSENT_COOKIE_VERSION = 1
 
 /* Users can (dis)allow different groups of cookies. */
-const COOKIE_CATEGORIES = {
+var COOKIE_CATEGORIES = {
   _ga: 'analytics',
   _gid: 'analytics',
 
@@ -44,7 +44,7 @@ const COOKIE_CATEGORIES = {
  * cookies cannot be disallowed. If the object contains { essential: false }
  * this will be ignored.
  */
-const DEFAULT_COOKIE_CONSENT = {
+var DEFAULT_COOKIE_CONSENT = {
   analytics: false
 }
 
