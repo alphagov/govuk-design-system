@@ -31,7 +31,24 @@ layout: layout-example-full-page.njk
           },
           hint: {
             text: "For example, 31 3 1980"
-          }
+          },
+          items: [
+            {
+              name: "day",
+              classes: "govuk-input--width-2",
+              autocomplete: "bday-day"
+            },
+            {
+              name: "month",
+              classes: "govuk-input--width-2",
+              autocomplete: "bday-month"
+            },
+            {
+              name: "year",
+              classes: "govuk-input--width-4",
+              autocomplete: "bday-year"
+            }
+          ]
         }) }}
 
         {{ govukButton({
