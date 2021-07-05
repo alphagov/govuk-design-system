@@ -1,4 +1,9 @@
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{% set phaseBannerClasses = "app-phase-banner app-width-container" %}
+{% if masthead %}
+  {% set phaseBannerClasses = phaseBannerClasses + " app-phase-banner--no-border" %}
+{% endif %}
+
 <div class="app-phase-banner__wrapper">
 {% if PULL_REQUEST %}
   {% set phaseBannerText %}
@@ -16,7 +21,7 @@
       "text": "preview",
       "classes": "app-tag--review"
     },
-    "classes": "app-phase-banner app-width-container",
+    "classes": phaseBannerClasses,
     "html": phaseBannerText
   }) }}
 {% else %}
@@ -24,7 +29,7 @@
       "tag": {
         "text": "beta"
       },
-      "classes": "app-phase-banner app-width-container",
+      "classes": phaseBannerClasses,
       "html": "This is a new service – your <a class=\"govuk-link\" href=\"/get-in-touch\">feedback</a> will help us to improve it."
     }) }}
   {% endif %}
