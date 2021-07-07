@@ -30,26 +30,13 @@
 }
 
 .app-mobile-nav-subnav-toggler__link,
-.app-mobile-nav-subnav-toggler__link-heading {
+.app-mobile-nav-subnav__link-heading {
   @include govuk-typography-weight-bold; // Override .govuk-link weight
   font-size: 19px; // We do not have a font mixin that produces 19px on mobile
   font-size: govuk-px-to-rem(19px); // sass-lint:disable-line no-duplicate-properties
 
   &:not(:focus):hover {
     color: $govuk-link-colour;
-  }
-}
-
-.js-enabled .app-mobile-nav-subnav-toggler__link-text {
-  display: none;
-}
-
-.app-mobile-nav-subnav-toggler__link-heading {
-  display: none;
-
-  .js-enabled & {
-    display: inline-block;
-    margin: 0;
   }
 }
 
@@ -64,6 +51,11 @@
     bottom: 0;
     left: 0;
   }
+}
+
+.app-mobile-nav-subnav__link-heading {
+  display: inline-block;
+  margin: 0;
 }
 
 .app-mobile-nav__subnav {

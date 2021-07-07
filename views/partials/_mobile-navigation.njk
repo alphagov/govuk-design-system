@@ -7,8 +7,7 @@
           <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-mobile-nav-subnav-toggler__link js-mobile-nav-subnav-toggler" href="/{{ item.url }}/">
             {% if item.items %}
               <!-- When JavaScript is enabled, the menu links expand a section below with more content, so we should make them headings -->
-              <h3 class="app-mobile-nav-subnav-toggler__link-heading">{{ item.label }}</h3>
-              <span class="app-mobile-nav-subnav-toggler__link-text">{{ item.label }}</span>
+              <span class="js-app-mobile-nav-subnav__link-heading">{{ item.label }}</span>
             {% else %}
               {{ item.label }}
             {% endif %}
