@@ -7,7 +7,7 @@ import Copy from './components/copy.js'
 import MobileNav from './components/mobile-navigation.js'
 import Search from './components/search.js'
 import OptionsTable from './components/options-table.js'
-import { getConsentCookie, isValidConsentCookie } from './cookie-functions.js'
+import { getConsentCookie, isValidConsentCookie } from './components/cookie-functions.js'
 import Analytics from './components/analytics.js'
 import CookiesPage from './components/cookies-page.js'
 
