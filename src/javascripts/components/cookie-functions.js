@@ -8,7 +8,7 @@
  * functions to manage the users' consent to cookies.
  */
 
-import Analytics from './components/analytics.js'
+import Analytics from './analytics.js'
 
 /* Name of the cookie to save users cookie preferences to. */
 var CONSENT_COOKIE_NAME = 'design_system_cookies_policy'

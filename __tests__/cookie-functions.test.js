@@ -4,7 +4,7 @@
 
 /* eslint-env jest */
 
-import * as CookieHelpers from '../src/javascripts/cookie-functions'
+import * as CookieHelpers from '../src/javascripts/components/cookie-functions'
 import * as Analytics from '../src/javascripts/components/analytics'
 jest.mock('../src/javascripts/components/analytics')
 

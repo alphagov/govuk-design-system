@@ -3,7 +3,7 @@ import CookieBanner from './components/cookie-banner.js'
 import Example from './components/example.js'
 import AppTabs from './components/tabs.js'
 import OptionsTable from './components/options-table.js'
-import { getConsentCookie, isValidConsentCookie } from './cookie-functions.js'
+import { getConsentCookie, isValidConsentCookie } from './components/cookie-functions.js'
 import Analytics from './components/analytics.js'
 
 var nodeListForEach = common.nodeListForEach
