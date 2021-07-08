@@ -1,10 +1,17 @@
-<nav id="app-mobile-nav" class="app-mobile-nav js-app-mobile-nav" role="navigation">
+<nav id="app-mobile-nav" class="app-mobile-nav js-app-mobile-nav" role="navigation" aria-labelledby="app-mobile-navigation-heading">
+  <h2 class="govuk-visually-hidden" id="app-mobile-navigation-heading">Menu</h2>
   <ul class="app-mobile-nav__list">
     {% for item in navigation %}
       <li>
         <div class="app-mobile-nav-subnav-toggler{% if path.startsWith(item.url) %} app-mobile-nav__subnav-toggler--active{% endif %}">
           <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-mobile-nav-subnav-toggler__link js-mobile-nav-subnav-toggler" href="/{{ item.url }}/">
-            {{ item.label }}
+            {% if item.items %}
+              <!-- When JavaScript is enabled, the menu links expand a section below with more content, so we should make them headings -->
+              <span class="js-app-mobile-nav-subnav__link-heading">{{ item.label }}</span>
+            {% else %}
+              {{ item.label }}
+            {% endif %}
+
           </a>
         </div>
         {% if item.items %}

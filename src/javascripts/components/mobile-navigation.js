@@ -63,6 +63,17 @@ MobileNav.prototype.bindUIEvents = function () {
   })
 }
 
+MobileNav.prototype.addHeadings = function () {
+  var $headings = this.$nav.querySelectorAll('.js-app-mobile-nav-subnav__link-heading')
+
+  nodeListForEach($headings, function ($headingText) {
+    var $heading = document.createElement('h3')
+    $heading.classList.add('app-mobile-nav-subnav__link-heading')
+    $headingText.parentNode.appendChild($heading)
+    $heading.appendChild($headingText)
+  })
+}
+
 MobileNav.prototype.includeAria = function () {
   this.$nav.setAttribute('aria-hidden', 'true')
 
@@ -102,6 +113,7 @@ MobileNav.prototype.init = function () {
     return
   }
 
+  this.addHeadings()
   this.includeAria()
   this.bindUIEvents()
 }

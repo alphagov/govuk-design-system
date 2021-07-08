@@ -25,6 +25,16 @@ describe('Homepage', () => {
       const isMobileNavigationVisible = await page.waitForSelector('.js-app-mobile-nav', { visible: true, timeout: 1000 })
       expect(isMobileNavigationVisible).toBeTruthy()
     })
+
+    it('does not wrap the navigation links in a heading element', async () => {
+      await page.setJavaScriptEnabled(false)
+      await page.goto(baseUrl, { waitUntil: 'load' })
+      const isMobileNavigationLinkVisible = await page.waitForSelector('.app-mobile-nav-subnav-toggler__link', { visible: true, timeout: 1000 })
+      expect(isMobileNavigationLinkVisible).toBeTruthy()
+
+      const mobileNavigationWrappingHeading = await page.evaluate(() => document.body.querySelector('.app-mobile-nav-subnav__link-heading'))
+      expect(mobileNavigationWrappingHeading).toBeNull()
+    })
   })
 
   describe('when JavaScript is available', () => {
@@ -64,6 +74,18 @@ describe('Homepage', () => {
 
         const navigationAriaHidden = await page.evaluate(() => document.body.querySelector('.app-mobile-nav').getAttribute('aria-hidden'))
         expect(navigationAriaHidden).toBe('false')
+      })
+
+      it('should wrap the navigation links in a heading element', async () => {
+        await page.goto(baseUrl, { waitUntil: 'load' })
+
+        await page.click('.js-app-mobile-nav-toggler')
+
+        const isMobileNavigationLinkVisible = await page.waitForSelector('.app-mobile-nav-subnav-toggler__link', { visible: true, timeout: 1000 })
+        expect(isMobileNavigationLinkVisible).toBeTruthy()
+
+        const isMobileNavigationWrappingHeading = await page.waitForSelector('.app-mobile-nav-subnav__link-heading', { visible: true, timeout: 1000 })
+        expect(isMobileNavigationWrappingHeading).toBeTruthy()
       })
     })
   })
