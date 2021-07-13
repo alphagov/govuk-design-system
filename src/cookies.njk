@@ -1,0 +1,71 @@
+---
+title: Cookies
+description: GOV.UK Design System puts small files (known as ‘cookies’) on your computer
+layout: layout-single-page.njk
+---
+
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% set successNotificationBannerHtml %}
+  <p class="govuk-notification-banner__heading">You’ve set your cookie preferences.</p>
+{% endset %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="app-cookies-page" data-module="app-cookies-page">
+
+      {{ govukNotificationBanner({
+        type: "success",
+        html: successNotificationBannerHtml,
+        classes: "js-cookies-page-success",
+        attributes: {
+          hidden: true
+        }
+      }) }}
+
+      <h1 class="govuk-heading-xl">Cookies</h1>
+      <p class="govuk-body"><a href="/" class="govuk-link">GOV.UK Design System</a> puts small files (known as ‘cookies’) on your computer.</p>
+
+      <form class="js-cookies-page-form">
+
+        <h2 class="govuk-heading-l">Essential cookies (strictly necessary)</h2>
+        <h2 class="govuk-heading-l">Analytics cookies (optional)</h2>
+
+          {{ govukRadios({
+            name: "analytics",
+            idPrefix: "radio-analytics",
+            fieldset: {
+              legend: {
+                text: "Do you want to accept analytics cookies?"
+              },
+              classes: "js-cookies-page-form-fieldset",
+              attributes: {
+                id: "analytics",
+                hidden: true
+              }
+            },
+            items: [
+              {
+                text: "Yes",
+                value: "yes"
+              },
+              {
+                text: "No",
+                value: "no"
+              }
+            ]
+          }) }}
+
+          {{ govukButton({
+            text: 'Save cookie settings',
+            classes: "js-cookies-form-button",
+            attributes: {
+              hidden: true
+            }
+          }) }}
+        </form>
+    </div>
+  </div>
+</div>

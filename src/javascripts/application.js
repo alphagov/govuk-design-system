@@ -8,6 +8,7 @@ import Search from './components/search.js'
 import OptionsTable from './components/options-table.js'
 import { getConsentCookie } from './cookie-functions.js'
 import Analytics from './components/analytics.js'
+import CookiesPage from './components/cookies-page.js'
 
 var nodeListForEach = common.nodeListForEach
 
@@ -48,3 +49,7 @@ new Search($searchContainer).init()
 // Initialise back to top
 var $backToTop = document.querySelector('[data-module="app-back-to-top"]')
 new BackToTop($backToTop).init()
+
+// Initialise cookie page
+var $cookiesPage = document.querySelector('[data-module="app-cookies-page"]')
+new CookiesPage($cookiesPage).init()
