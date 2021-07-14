@@ -20,6 +20,9 @@ var CONSENT_COOKIE_NAME = 'design_system_cookies_policy'
  * Note that because isValidCookieConsent checks that the version in the user's
  * cookie is equal to or greater than this number, you should be careful to
  * check backwards compatibility when changing the object format.
+ *
+ * When updating CONSENT_COOKIE_VERSION, also update it in cookie-banner.njk to keep
+ * the two in sync
  */
 var CONSENT_COOKIE_VERSION = 1
 
@@ -104,6 +107,8 @@ export function getConsentCookie () {
  *
  * If the consent object is not present, malformed, or incorrect version,
  * returns false, otherwise returns true.
+ *
+ * This is also duplicated in cookie-banner.njk - the two need to be kept in sync
  */
 export function isValidConsentCookie (options) {
   return (options && options.version >= CONSENT_COOKIE_VERSION)
