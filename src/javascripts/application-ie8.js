@@ -8,6 +8,10 @@ import Analytics from './components/analytics.js'
 
 var nodeListForEach = common.nodeListForEach
 
+// Initialise cookie banner
+var $cookieBanner = document.querySelector('[data-module="govuk-cookie-banner"]')
+new CookieBanner($cookieBanner).init()
+
 // Initialise analytics if consent is given
 var userConsent = getConsentCookie()
 if (userConsent && isValidConsentCookie(userConsent) && userConsent.analytics) {
@@ -29,7 +33,3 @@ nodeListForEach($tabs, function ($tabs) {
 // Open options table when detected in URL hash
 // Do this after initialising tabs
 OptionsTable.init()
-
-// Initialise cookie banner
-var $cookieBanner = document.querySelector('[data-module="govuk-cookie-banner"]')
-new CookieBanner($cookieBanner).init()

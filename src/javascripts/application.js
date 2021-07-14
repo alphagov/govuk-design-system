@@ -1,5 +1,5 @@
-import BackToTop from './components/back-to-top.js'
 import CookieBanner from './components/cookie-banner.js'
+import BackToTop from './components/back-to-top.js'
 import common from 'govuk-frontend/govuk/common'
 import Example from './components/example.js'
 import AppTabs from './components/tabs.js'
@@ -12,6 +12,10 @@ import Analytics from './components/analytics.js'
 import CookiesPage from './components/cookies-page.js'
 
 var nodeListForEach = common.nodeListForEach
+
+// Initialise cookie banner
+var $cookieBanner = document.querySelector('[data-module="govuk-cookie-banner"]')
+new CookieBanner($cookieBanner).init()
 
 // Initialise analytics if consent is given
 var userConsent = getConsentCookie()
@@ -54,7 +58,3 @@ new BackToTop($backToTop).init()
 // Initialise cookie page
 var $cookiesPage = document.querySelector('[data-module="app-cookies-page"]')
 new CookiesPage($cookiesPage).init()
-
-// Initialise cookie banner
-var $cookieBanner = document.querySelector('[data-module="govuk-cookie-banner"]')
-new CookieBanner($cookieBanner).init()
