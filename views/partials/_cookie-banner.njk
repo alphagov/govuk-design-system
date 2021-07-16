@@ -68,37 +68,42 @@
   ]
 }) }}
 
-<!-- Inline script to show the cookie banner as soon as possible,
-to avoid a high cumulative layout shift (CLS) score https://web.dev/cls/ -->
+{# Inline script to show the cookie banner as soon as possible,
+to avoid a high cumulative layout shift (CLS) score https://web.dev/cls/ #}
 <script>
+
   /* If cookie policy changes and/or the user preferences object format needs to
   * change, bump this version up afterwards. The user should then be shown the
   * banner again to consent to the new policy.
   *
-  * When updating CONSENT_COOKIE_VERSION, also update it in cookie-functions.js to keep
-  * the two in sync
-  */
-  var CONSENT_COOKIE_VERSION = 1
-
-  /** Check the cookie preferences object.
+  * Note that because isValidCookieConsent checks that the version in the user's
+  * cookie is equal to or greater than this number, you should be careful to
+  * check backwards compatibility when changing the object format.
   *
-  * If the consent object is not present, malformed, or incorrect version,
-  * returns false, otherwise returns true.
-  *
-  * This is also duplicated in cookie-functions.js - the two need to be kept in sync
   */
-  function isValidConsentCookie (options) {
-    return (options && options.version >= CONSENT_COOKIE_VERSION)
-  }
+  window.GDS_CONSENT_COOKIE_VERSION = 1;
 
-  // Don't show the banner on the cookies page
-  if (window.location.pathname !== "/cookies/") {
-    // Show the banner if there is no consent cookie or if it is outdated
-    var currentConsentCookie = document.cookie.match(new RegExp('(^| )design_system_cookies_policy=([^;]+)'));
-
-    if (!currentConsentCookie || !isValidConsentCookie(JSON.parse(currentConsentCookie[2]))) {
-      var cookieBanner = document.querySelector("[data-module='govuk-cookie-banner']")
-      cookieBanner.removeAttribute('hidden')
+  (function () {
+    /** Check the cookie preferences object.
+    *
+    * If the consent object is not present, malformed, or incorrect version,
+    * returns false, otherwise returns true.
+    *
+    * This is also duplicated in cookie-functions.js - the two need to be kept in sync
+    */
+    function isValidConsentCookie (options) {
+      return (options && options.version >= window.GDS_CONSENT_COOKIE_VERSION)
     }
-  }
+
+    // Don't show the banner on the cookies page
+    if (window.location.pathname !== "/cookies/") {
+      // Show the banner if there is no consent cookie or if it is outdated
+      var currentConsentCookie = document.cookie.match(new RegExp('(^| )design_system_cookies_policy=([^;]+)'))
+
+      if (!currentConsentCookie || !isValidConsentCookie(JSON.parse(currentConsentCookie[2]))) {
+        var cookieBanner = document.querySelector("[data-module='govuk-cookie-banner']")
+        cookieBanner.removeAttribute('hidden')
+      }
+    }
+  })()
 </script>
