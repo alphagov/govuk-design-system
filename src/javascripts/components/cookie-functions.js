@@ -6,22 +6,16 @@
  *
  * Includes function `Cookie()` for getting, setting, and deleting cookies, and
  * functions to manage the users' consent to cookies.
+ *
+ * Note: there is an inline script in cookie-banner.njk to show the banner
+ * as soon as possible, to avoid a high Cumulative Layout Shift (CLS) score.
+ * The consent cookie version is defined in cookie-banner.njk
  */
 
-import Analytics from './components/analytics.js'
+import Analytics from './analytics.js'
 
 /* Name of the cookie to save users cookie preferences to. */
 var CONSENT_COOKIE_NAME = 'design_system_cookies_policy'
-
-/* If cookie policy changes and/or the user preferences object format needs to
- * change, bump this version up afterwards. The user should then be shown the
- * banner again to consent to the new policy.
- *
- * Note that because isValidCookieConsent checks that the version in the user's
- * cookie is equal to or greater than this number, you should be careful to
- * check backwards compatibility when changing the object format.
- */
-var CONSENT_COOKIE_VERSION = 1
 
 /* Users can (dis)allow different groups of cookies. */
 var COOKIE_CATEGORIES = {
@@ -34,7 +28,7 @@ var COOKIE_CATEGORIES = {
    * only allow adding cookies that are documented in this object, so they need
    * to be added here.
    */
-  CONSENT_COOKIE_NAME: 'essential'
+  'design_system_cookies_policy': 'essential'
 }
 
 /*
@@ -104,9 +98,11 @@ export function getConsentCookie () {
  *
  * If the consent object is not present, malformed, or incorrect version,
  * returns false, otherwise returns true.
+ *
+ * This is also duplicated in cookie-banner.njk - the two need to be kept in sync
  */
 export function isValidConsentCookie (options) {
-  return (options && options.version >= CONSENT_COOKIE_VERSION)
+  return (options && options.version >= window.GDS_CONSENT_COOKIE_VERSION)
 }
 
 /** Update the user's cookie preferences. */
@@ -118,15 +114,14 @@ export function setConsentCookie (options) {
   }
 
   // Merge current cookie preferences and new preferences
-  cookieConsent = {
-    ...cookieConsent,
-    ...options
+  for (var option in options) {
+    cookieConsent[option] = options[option]
   }
 
   // Essential cookies cannot be deselected, ignore this cookie type
   delete cookieConsent.essential
 
-  cookieConsent.version = CONSENT_COOKIE_VERSION
+  cookieConsent.version = window.GDS_CONSENT_COOKIE_VERSION
 
   // Set the consent cookie
   setCookie(CONSENT_COOKIE_NAME, JSON.stringify(cookieConsent), { days: 365 })

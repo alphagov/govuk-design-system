@@ -4,11 +4,15 @@
 
 /* eslint-env jest */
 
-import * as CookieHelpers from '../src/javascripts/cookie-functions'
+import * as CookieHelpers from '../src/javascripts/components/cookie-functions'
 import * as Analytics from '../src/javascripts/components/analytics'
 jest.mock('../src/javascripts/components/analytics')
 
 describe('Cookie settings', () => {
+  beforeEach(() => {
+    window.GDS_CONSENT_COOKIE_VERSION = 1
+  })
+
   afterEach(() => {
     // Delete test cookies
     document.cookie = '_ga=;expires=Thu, 01 Jan 1970 00:00:00 UTC'
