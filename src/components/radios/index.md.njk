@@ -58,9 +58,13 @@ If you're asking more than one question on the page, do not set the contents of 
 
 {{ example({group: "components", item: "radios", example: "without-heading", html: true, nunjucks: true, open: false, size: "s"}) }}
 
-### Inline radios
+### Horizontal arrangement
 
-If there are only 2 options and both options have short labels, you can choose to display them inline, like this:
+The default arrangement of radios is vertical (sometimes called 'stacked'). You can express a preference for horizontal arrangement (sometimes called 'inline') but vertical arrangement will always be used on mobile devices and when a page view is narrow. Horizontal arrangement should only be used if all of the following are true:
+- There are only two radios
+- Each of the two labels is short (to remain usable when zoomed)
+- You have a reason to deviate from the default vertical arrangement (for example the claim could be that multiple questions on the page have created a scrolling burden)
+The description and illustration of horizontal arrangement does not constitute a recommendation to use it.
 
 {{ example({group: "components", item: "radios", example: "inline", html: true, nunjucks: true, open: false, size: "s"}) }}
 
