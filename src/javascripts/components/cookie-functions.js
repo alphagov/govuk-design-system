@@ -242,11 +242,8 @@ function setCookie (name, value, options) {
 }
 
 function deleteCookie (name) {
-  document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT'
-
-  // If the cookie still exists, let's try a more thorough way of deleting it,
-  // by specifying the domain and path
   if (Cookie(name)) {
-    document.cookie = name + '=;expires=' + new Date() + ';domain=' + window.location.hostname.replace(/^www\./, '.') + ';path=/'
+    document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;domain=' + window.location.hostname + ';path=/'
+    document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;domain=.' + window.location.hostname + ';path=/'
   }
 }
