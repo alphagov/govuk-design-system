@@ -43,7 +43,7 @@ CookiesPage.prototype.savePreferences = function (event) {
     preferences[cookieType] = selectedItem === 'yes'
   }.bind(this))
 
-  // otherwise save preferences to cookie and show success notification
+  // Save preferences to cookie and show success notification
   setConsentCookie(preferences)
   this.showSuccessNotification()
 }
