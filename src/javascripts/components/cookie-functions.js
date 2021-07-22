@@ -59,13 +59,13 @@ var DEFAULT_COOKIE_CONSENT = {
 export function Cookie (name, value, options) {
   if (typeof value !== 'undefined') {
     if (value === false || value === null) {
-      return deleteCookie(name)
+      deleteCookie(name)
     } else {
       // Default expiry date of 30 days
       if (typeof options === 'undefined') {
         options = { days: 30 }
       }
-      return setCookie(name, value, options)
+      setCookie(name, value, options)
     }
   } else {
     return getCookie(name)
@@ -161,11 +161,8 @@ export function resetCookies () {
     if (!options[cookieType]) {
       for (var cookie in COOKIE_CATEGORIES) {
         if (COOKIE_CATEGORIES[cookie] === cookieType) {
+          // Delete cookie
           Cookie(cookie, null)
-
-          if (Cookie(cookie)) {
-            document.cookie = cookie + '=;expires=' + new Date() + ';domain=' + window.location.hostname.replace(/^www\./, '.') + ';path=/'
-          }
         }
       }
     }
@@ -246,5 +243,10 @@ function setCookie (name, value, options) {
 
 function deleteCookie (name) {
   document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT'
-  return null
+
+  // If the cookie still exists, let's try a more thorough way of deleting it,
+  // by specifying the domain and path
+  if (Cookie(name)) {
+    document.cookie = name + '=;expires=' + new Date() + ';domain=' + window.location.hostname.replace(/^www\./, '.') + ';path=/'
+  }
 }
