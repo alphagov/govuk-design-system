@@ -1,16 +1,16 @@
 ---
 layout: layout-example.njk
-title: Error, empty field – Telephone numbers
+title: Error, empty field – Phone numbers
 ---
 
 {% from "govuk/components/input/macro.njk" import govukInput %}
 
 {{ govukInput({
   label: {
-    text: "UK telephone number"
+    text: "UK phone number"
   },
   errorMessage: {
-    text: "Enter a UK telephone number"
+    text: "Enter a UK phone number"
   },
   id: "telephone-number",
   name: "telephone-number",
