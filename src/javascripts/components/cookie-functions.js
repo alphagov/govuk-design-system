@@ -156,7 +156,14 @@ export function resetCookies () {
 
     // Initialise analytics if allowed
     if (cookieType === 'analytics' && options[cookieType]) {
+      // Enable GA if allowed
+      window['ga-disable-UA-' + TRACKING_PREVIEW_ID] = false
+      window['ga-disable-UA-' + TRACKING_LIVE_ID] = false
       Analytics()
+    } else {
+      // Disable GA if not allowed
+      window['ga-disable-UA-' + TRACKING_PREVIEW_ID] = true
+      window['ga-disable-UA-' + TRACKING_LIVE_ID] = true
     }
 
     if (!options[cookieType]) {

@@ -179,6 +179,25 @@ describe('Cookie settings', () => {
 
       expect(Analytics.default).toHaveBeenCalledTimes(1)
     })
+
+    it('disables analytics by setting a window property', async () => {
+      document.cookie = '_ga=test'
+      document.cookie = '_gid=test'
+
+      CookieHelpers.resetCookies()
+
+      expect(window['ga-disable-UA-26179049-17']).toEqual(true)
+      expect(window['ga-disable-UA-116229859-1']).toEqual(true)
+    })
+
+    it('re-enables analytics by setting a window property', async () => {
+      document.cookie = 'design_system_cookies_policy={"analytics":true,"version":1}'
+
+      CookieHelpers.resetCookies()
+
+      expect(window['ga-disable-UA-26179049-17']).toEqual(false)
+      expect(window['ga-disable-UA-116229859-1']).toEqual(false)
+    })
   })
 
   describe('consent cookie version', () => {
