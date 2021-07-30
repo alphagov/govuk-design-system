@@ -9,22 +9,23 @@ const baseUrl = 'http://localhost:' + PORT
 
 const cookiesPageSelector = '[data-module="app-cookies-page"]'
 
-beforeAll(async () => {
-  page = await setupPage()
-})
-
-afterAll(async () => {
-  await page.close()
-})
-
 describe('Cookies page', () => {
   beforeEach(async () => {
+    page = await setupPage()
+    await page.setJavaScriptEnabled(true)
     await page.goto(`${baseUrl}/cookies`)
   })
 
   afterEach(async () => {
-    await page.deleteCookie({ name: 'design_system_cookies_policy' })
-    await page.setJavaScriptEnabled(true)
+    await page.evaluate(() => {
+      // Delete test cookies
+      var cookies = document.cookie.split(';')
+      cookies.forEach(function (cookie) {
+        var name = cookie.split('=')[0]
+        document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;domain=' + window.location.hostname + ';path=/'
+      })
+    })
+    await page.close()
   })
 
   it('without JavaScript it has no visible inputs', async () => {

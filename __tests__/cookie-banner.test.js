@@ -7,18 +7,25 @@ const PORT = configPaths.testPort
 let page
 let baseUrl = 'http://localhost:' + PORT
 
-beforeEach(async () => {
-  page = await setupPage()
-})
-
-afterEach(async () => {
-  await page.deleteCookie({ name: 'design_system_cookies_policy', url: baseUrl })
-  await page.close()
-})
-
 const COOKIE_BANNER_SELECTOR = '[data-module="govuk-cookie-banner"]'
 
 describe('Cookie banner', () => {
+  beforeEach(async () => {
+    page = await setupPage()
+  })
+
+  afterEach(async () => {
+    await page.evaluate(() => {
+      // Delete test cookies
+      var cookies = document.cookie.split(';')
+      cookies.forEach(function (cookie) {
+        var name = cookie.split('=')[0]
+        document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;domain=' + window.location.hostname + ';path=/'
+      })
+    })
+    await page.close()
+  })
+
   it('is hidden on the cookies page', async () => {
     await page.setCookie({ name: 'design_system_cookies_policy', value: '{"analytics":true, "version":1}', url: baseUrl })
     await page.goto(`${baseUrl}/cookies/`, { waitUntil: 'load' })
