@@ -9,24 +9,17 @@ const baseUrl = 'http://localhost:' + PORT
 
 const cookiesPageSelector = '[data-module="app-cookies-page"]'
 
-beforeAll(async () => {
+beforeEach(async () => {
   page = await setupPage()
+  await page.setJavaScriptEnabled(true)
+  await page.goto(`${baseUrl}/cookies`)
 })
 
-afterAll(async () => {
+afterEach(async () => {
   await page.close()
 })
 
 describe('Cookies page', () => {
-  beforeEach(async () => {
-    await page.goto(`${baseUrl}/cookies`)
-  })
-
-  afterEach(async () => {
-    await page.deleteCookie({ name: 'design_system_cookies_policy' })
-    await page.setJavaScriptEnabled(true)
-  })
-
   it('without JavaScript it has no visible inputs', async () => {
     await page.setJavaScriptEnabled(false)
     await page.goto(`${baseUrl}/cookies`)
