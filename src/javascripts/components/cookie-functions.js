@@ -17,18 +17,20 @@ import Analytics from './analytics.js'
 /* Name of the cookie to save users cookie preferences to. */
 var CONSENT_COOKIE_NAME = 'design_system_cookies_policy'
 
+/* Google Analytics tracking IDs for preview and live environments. */
+var TRACKING_PREVIEW_ID = '26179049-17'
+var TRACKING_LIVE_ID = '116229859-1'
+
 /* Users can (dis)allow different groups of cookies. */
 var COOKIE_CATEGORIES = {
-  _ga: 'analytics',
-  _gid: 'analytics',
-
+  analytics: ['_ga', '_gid', '_gat_UA-' + TRACKING_PREVIEW_ID, '_gat_UA-' + TRACKING_LIVE_ID],
   /* Essential cookies
    *
    * Essential cookies cannot be deselected, but we want our cookie code to
    * only allow adding cookies that are documented in this object, so they need
    * to be added here.
    */
-  'design_system_cookies_policy': 'essential'
+  essential: ['design_system_cookies_policy']
 }
 
 /*
@@ -59,13 +61,13 @@ var DEFAULT_COOKIE_CONSENT = {
 export function Cookie (name, value, options) {
   if (typeof value !== 'undefined') {
     if (value === false || value === null) {
-      return deleteCookie(name)
+      deleteCookie(name)
     } else {
       // Default expiry date of 30 days
       if (typeof options === 'undefined') {
         options = { days: 30 }
       }
-      return setCookie(name, value, options)
+      setCookie(name, value, options)
     }
   } else {
     return getCookie(name)
@@ -154,20 +156,24 @@ export function resetCookies () {
 
     // Initialise analytics if allowed
     if (cookieType === 'analytics' && options[cookieType]) {
+      // Enable GA if allowed
+      window['ga-disable-UA-' + TRACKING_PREVIEW_ID] = false
+      window['ga-disable-UA-' + TRACKING_LIVE_ID] = false
       Analytics()
+    } else {
+      // Disable GA if not allowed
+      window['ga-disable-UA-' + TRACKING_PREVIEW_ID] = true
+      window['ga-disable-UA-' + TRACKING_LIVE_ID] = true
     }
 
-    // Delete cookies of that type if consent is false
     if (!options[cookieType]) {
-      for (var cookie in COOKIE_CATEGORIES) {
-        if (COOKIE_CATEGORIES[cookie] === cookieType) {
-          Cookie(cookie, null)
+      // Fetch the cookies in that category
+      var cookiesInCategory = COOKIE_CATEGORIES[cookieType]
 
-          if (Cookie(cookie)) {
-            document.cookie = cookie + '=;expires=' + new Date() + ';domain=' + window.location.hostname.replace(/^www\./, '.') + ';path=/'
-          }
-        }
-      }
+      cookiesInCategory.forEach(function (cookie) {
+        // Delete cookie
+        Cookie(cookie, null)
+      })
     }
   }
 }
@@ -193,22 +199,24 @@ function userAllowsCookie (cookieName) {
     return true
   }
 
-  if (COOKIE_CATEGORIES[cookieName]) {
-    var cookieCategory = COOKIE_CATEGORIES[cookieName]
+  // Get the current cookie preferences
+  var cookiePreferences = getConsentCookie()
 
-    // Get the current cookie preferences
-    var cookiePreferences = getConsentCookie()
-
-    // If no preferences or old version use the default
-    if (!isValidConsentCookie(cookiePreferences)) {
-      cookiePreferences = DEFAULT_COOKIE_CONSENT
-    }
-
-    return userAllowsCookieCategory(cookieCategory, cookiePreferences)
-  } else {
-    // Deny the cookie if it is not known to us
-    return false
+  // If no preferences or old version use the default
+  if (!isValidConsentCookie(cookiePreferences)) {
+    cookiePreferences = DEFAULT_COOKIE_CONSENT
   }
+
+  for (var category in COOKIE_CATEGORIES) {
+    var cookiesInCategory = COOKIE_CATEGORIES[category]
+
+    if (cookiesInCategory.indexOf(cookieName) !== '-1') {
+      return userAllowsCookieCategory(category, cookiePreferences)
+    }
+  }
+
+  // Deny the cookie if it is not known to us
+  return false
 }
 
 function getCookie (name) {
@@ -245,6 +253,8 @@ function setCookie (name, value, options) {
 }
 
 function deleteCookie (name) {
-  document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT'
-  return null
+  if (Cookie(name)) {
+    document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;domain=' + window.location.hostname + ';path=/'
+    document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;domain=.' + window.location.hostname + ';path=/'
+  }
 }

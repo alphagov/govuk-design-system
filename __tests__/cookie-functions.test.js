@@ -15,8 +15,11 @@ describe('Cookie settings', () => {
 
   afterEach(() => {
     // Delete test cookies
-    document.cookie = '_ga=;expires=Thu, 01 Jan 1970 00:00:00 UTC'
-    document.cookie = 'design_system_cookies_policy=;expires=Thu, 01 Jan 1970 00:00:00 UTC'
+    var cookies = document.cookie.split(';')
+    cookies.forEach(function (cookie) {
+      var name = cookie.split('=')[0]
+      document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;domain=' + window.location.hostname + ';path=/'
+    })
   })
 
   describe('Reading a cookie', () => {
@@ -178,6 +181,25 @@ describe('Cookie settings', () => {
       CookieHelpers.resetCookies()
 
       expect(Analytics.default).toHaveBeenCalledTimes(1)
+    })
+
+    it('disables analytics by setting a window property', async () => {
+      document.cookie = '_ga=test'
+      document.cookie = '_gid=test'
+
+      CookieHelpers.resetCookies()
+
+      expect(window['ga-disable-UA-26179049-17']).toEqual(true)
+      expect(window['ga-disable-UA-116229859-1']).toEqual(true)
+    })
+
+    it('re-enables analytics by setting a window property', async () => {
+      document.cookie = 'design_system_cookies_policy={"analytics":true,"version":1}'
+
+      CookieHelpers.resetCookies()
+
+      expect(window['ga-disable-UA-26179049-17']).toEqual(false)
+      expect(window['ga-disable-UA-116229859-1']).toEqual(false)
     })
   })
 
