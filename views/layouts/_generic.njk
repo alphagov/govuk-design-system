@@ -28,7 +28,9 @@
 
 {% block main %}
 <div class="app-pane {% block appPaneClasses %}{% endblock %}" id="top">
-  {% include "_cookie-banner.njk" %}
+  <!--[if gte IE 9]><!-->
+    {% include "_cookie-banner.njk" %}
+  <!--<![endif]-->
   {% include "_header.njk" %}
   {% include "_mobile-navigation.njk" %}
   {% include "_banner.njk" %}
