@@ -39,6 +39,12 @@ Validation should refuse to accept:
 
 For example, if you’re asking for someone’s date of birth you should not accept ‘13’ in the month field.
 
+Remove or ignore any whitespace in users’ answers where it’s not needed. If an invisible character causes a validation error, it can be hard for users to know what's gone wrong and how to fix it. Consider removing:
+
++ spaces entered as part of numbers and codes, such as postcodes or card details
++ leading or trailing whitespace that a user may have been accidentally copied and pasted
++ extra spaces inserted by dictation software – this is particularly common when dictating numbers
+
 ### How to tell the user about validation errors
 
 If the user's answers fail validation:
