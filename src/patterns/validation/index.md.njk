@@ -39,6 +39,16 @@ Validation should refuse to accept:
 
 For example, if you’re asking for someone’s date of birth you should not accept ‘13’ in the month field.
 
+Validation should help remove (or ignore) any spaces or invisible characters, unless it makes the information too ambiguous for you to use.
+
+If spaces or invisible characters cause a validation error, it'd be difficult for the user to see and fix — especially if they were added by accident.
+
+Consider removing spaces and invisible characters entered:
+
++ as part of numbers and codes, such as postcodes or card details
++ before or after an answer, as these might have been copied and pasted in by accident
++ by dictation software — this is particularly common when dictating numbers
+
 ### How to tell the user about validation errors
 
 If the user's answers fail validation:
