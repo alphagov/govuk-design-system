@@ -18,6 +18,7 @@ describe('Cookie settings', () => {
     var cookies = document.cookie.split(';')
     cookies.forEach(function (cookie) {
       var name = cookie.split('=')[0]
+      document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/'
       document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;domain=' + window.location.hostname + ';path=/'
     })
   })
@@ -251,6 +252,24 @@ describe('Cookie settings', () => {
       var cookieOptions = { analytics: true, version: 'foobar' }
 
       expect(CookieHelpers.isValidConsentCookie(cookieOptions)).toEqual(false)
+    })
+  })
+
+  describe('deleteCookie', () => {
+    it('deletes cookies set with a domain attribute', async () => {
+      document.cookie = 'my_cookie=test;domain=design-system.service.gov.uk'
+
+      CookieHelpers.Cookie('my_cookie', null)
+
+      expect(document.cookie).toEqual('')
+    })
+
+    it('deletes cookies set without a domain attribute', async () => {
+      document.cookie = 'my_cookie_2=test'
+
+      CookieHelpers.Cookie('my_cookie_2', null)
+
+      expect(document.cookie).toEqual('')
     })
   })
 })
