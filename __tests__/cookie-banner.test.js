@@ -20,6 +20,7 @@ describe('Cookie banner', () => {
       var cookies = document.cookie.split(';')
       cookies.forEach(function (cookie) {
         var name = cookie.split('=')[0]
+        document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/'
         document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;domain=' + window.location.hostname + ';path=/'
       })
     })
