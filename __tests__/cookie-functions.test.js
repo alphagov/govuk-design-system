@@ -4,15 +4,23 @@
 
 /* eslint-env jest */
 
-import * as CookieHelpers from '../src/javascripts/cookie-functions'
+import * as CookieHelpers from '../src/javascripts/components/cookie-functions'
 import * as Analytics from '../src/javascripts/components/analytics'
 jest.mock('../src/javascripts/components/analytics')
 
 describe('Cookie settings', () => {
+  beforeEach(() => {
+    window.GDS_CONSENT_COOKIE_VERSION = 1
+  })
+
   afterEach(() => {
     // Delete test cookies
-    document.cookie = '_ga=;expires=Thu, 01 Jan 1970 00:00:00 UTC'
-    document.cookie = 'design_system_cookies_policy=;expires=Thu, 01 Jan 1970 00:00:00 UTC'
+    var cookies = document.cookie.split(';')
+    cookies.forEach(function (cookie) {
+      var name = cookie.split('=')[0]
+      document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/'
+      document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;domain=' + window.location.hostname + ';path=/'
+    })
   })
 
   describe('Reading a cookie', () => {
@@ -175,6 +183,25 @@ describe('Cookie settings', () => {
 
       expect(Analytics.default).toHaveBeenCalledTimes(1)
     })
+
+    it('disables analytics by setting a window property', async () => {
+      document.cookie = '_ga=test'
+      document.cookie = '_gid=test'
+
+      CookieHelpers.resetCookies()
+
+      expect(window['ga-disable-UA-26179049-17']).toEqual(true)
+      expect(window['ga-disable-UA-116229859-1']).toEqual(true)
+    })
+
+    it('re-enables analytics by setting a window property', async () => {
+      document.cookie = 'design_system_cookies_policy={"analytics":true,"version":1}'
+
+      CookieHelpers.resetCookies()
+
+      expect(window['ga-disable-UA-26179049-17']).toEqual(false)
+      expect(window['ga-disable-UA-116229859-1']).toEqual(false)
+    })
   })
 
   describe('consent cookie version', () => {
@@ -225,6 +252,24 @@ describe('Cookie settings', () => {
       var cookieOptions = { analytics: true, version: 'foobar' }
 
       expect(CookieHelpers.isValidConsentCookie(cookieOptions)).toEqual(false)
+    })
+  })
+
+  describe('deleteCookie', () => {
+    it('deletes cookies set with a domain attribute', async () => {
+      document.cookie = 'my_cookie=test;domain=design-system.service.gov.uk'
+
+      CookieHelpers.Cookie('my_cookie', null)
+
+      expect(document.cookie).toEqual('')
+    })
+
+    it('deletes cookies set without a domain attribute', async () => {
+      document.cookie = 'my_cookie_2=test'
+
+      CookieHelpers.Cookie('my_cookie_2', null)
+
+      expect(document.cookie).toEqual('')
     })
   })
 })

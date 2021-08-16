@@ -1,3 +1,4 @@
+import CookieBanner from './components/cookie-banner.js'
 import BackToTop from './components/back-to-top.js'
 import common from 'govuk-frontend/govuk/common'
 import Example from './components/example.js'
@@ -6,14 +7,19 @@ import Copy from './components/copy.js'
 import MobileNav from './components/mobile-navigation.js'
 import Search from './components/search.js'
 import OptionsTable from './components/options-table.js'
-import { getConsentCookie } from './cookie-functions.js'
+import { getConsentCookie, isValidConsentCookie } from './components/cookie-functions.js'
 import Analytics from './components/analytics.js'
+import CookiesPage from './components/cookies-page.js'
 
 var nodeListForEach = common.nodeListForEach
 
+// Initialise cookie banner
+var $cookieBanner = document.querySelector('[data-module="govuk-cookie-banner"]')
+new CookieBanner($cookieBanner).init()
+
 // Initialise analytics if consent is given
 var userConsent = getConsentCookie()
-if (userConsent && userConsent['analytics']) {
+if (userConsent && isValidConsentCookie(userConsent) && userConsent.analytics) {
   Analytics()
 }
 
@@ -48,3 +54,7 @@ new Search($searchContainer).init()
 // Initialise back to top
 var $backToTop = document.querySelector('[data-module="app-back-to-top"]')
 new BackToTop($backToTop).init()
+
+// Initialise cookie page
+var $cookiesPage = document.querySelector('[data-module="app-cookies-page"]')
+new CookiesPage($cookiesPage).init()

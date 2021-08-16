@@ -6,35 +6,31 @@
  *
  * Includes function `Cookie()` for getting, setting, and deleting cookies, and
  * functions to manage the users' consent to cookies.
+ *
+ * Note: there is an inline script in cookie-banner.njk to show the banner
+ * as soon as possible, to avoid a high Cumulative Layout Shift (CLS) score.
+ * The consent cookie version is defined in cookie-banner.njk
  */
 
-import Analytics from './components/analytics.js'
+import Analytics from './analytics.js'
 
 /* Name of the cookie to save users cookie preferences to. */
 var CONSENT_COOKIE_NAME = 'design_system_cookies_policy'
 
-/* If cookie policy changes and/or the user preferences object format needs to
- * change, bump this version up afterwards. The user should then be shown the
- * banner again to consent to the new policy.
- *
- * Note that because isValidCookieConsent checks that the version in the user's
- * cookie is equal to or greater than this number, you should be careful to
- * check backwards compatibility when changing the object format.
- */
-var CONSENT_COOKIE_VERSION = 1
+/* Google Analytics tracking IDs for preview and live environments. */
+var TRACKING_PREVIEW_ID = '26179049-17'
+var TRACKING_LIVE_ID = '116229859-1'
 
 /* Users can (dis)allow different groups of cookies. */
 var COOKIE_CATEGORIES = {
-  _ga: 'analytics',
-  _gid: 'analytics',
-
+  analytics: ['_ga', '_gid', '_gat_UA-' + TRACKING_PREVIEW_ID, '_gat_UA-' + TRACKING_LIVE_ID],
   /* Essential cookies
    *
    * Essential cookies cannot be deselected, but we want our cookie code to
    * only allow adding cookies that are documented in this object, so they need
    * to be added here.
    */
-  CONSENT_COOKIE_NAME: 'essential'
+  essential: ['design_system_cookies_policy']
 }
 
 /*
@@ -65,13 +61,13 @@ var DEFAULT_COOKIE_CONSENT = {
 export function Cookie (name, value, options) {
   if (typeof value !== 'undefined') {
     if (value === false || value === null) {
-      return deleteCookie(name)
+      deleteCookie(name)
     } else {
       // Default expiry date of 30 days
       if (typeof options === 'undefined') {
         options = { days: 30 }
       }
-      return setCookie(name, value, options)
+      setCookie(name, value, options)
     }
   } else {
     return getCookie(name)
@@ -104,9 +100,11 @@ export function getConsentCookie () {
  *
  * If the consent object is not present, malformed, or incorrect version,
  * returns false, otherwise returns true.
+ *
+ * This is also duplicated in cookie-banner.njk - the two need to be kept in sync
  */
 export function isValidConsentCookie (options) {
-  return (options && options.version >= CONSENT_COOKIE_VERSION)
+  return (options && options.version >= window.GDS_CONSENT_COOKIE_VERSION)
 }
 
 /** Update the user's cookie preferences. */
@@ -118,15 +116,14 @@ export function setConsentCookie (options) {
   }
 
   // Merge current cookie preferences and new preferences
-  cookieConsent = {
-    ...cookieConsent,
-    ...options
+  for (var option in options) {
+    cookieConsent[option] = options[option]
   }
 
   // Essential cookies cannot be deselected, ignore this cookie type
   delete cookieConsent.essential
 
-  cookieConsent.version = CONSENT_COOKIE_VERSION
+  cookieConsent.version = window.GDS_CONSENT_COOKIE_VERSION
 
   // Set the consent cookie
   setCookie(CONSENT_COOKIE_NAME, JSON.stringify(cookieConsent), { days: 365 })
@@ -159,20 +156,24 @@ export function resetCookies () {
 
     // Initialise analytics if allowed
     if (cookieType === 'analytics' && options[cookieType]) {
+      // Enable GA if allowed
+      window['ga-disable-UA-' + TRACKING_PREVIEW_ID] = false
+      window['ga-disable-UA-' + TRACKING_LIVE_ID] = false
       Analytics()
+    } else {
+      // Disable GA if not allowed
+      window['ga-disable-UA-' + TRACKING_PREVIEW_ID] = true
+      window['ga-disable-UA-' + TRACKING_LIVE_ID] = true
     }
 
-    // Delete cookies of that type if consent is false
     if (!options[cookieType]) {
-      for (var cookie in COOKIE_CATEGORIES) {
-        if (COOKIE_CATEGORIES[cookie] === cookieType) {
-          Cookie(cookie, null)
+      // Fetch the cookies in that category
+      var cookiesInCategory = COOKIE_CATEGORIES[cookieType]
 
-          if (Cookie(cookie)) {
-            document.cookie = cookie + '=;expires=' + new Date() + ';domain=' + window.location.hostname.replace(/^www\./, '.') + ';path=/'
-          }
-        }
-      }
+      cookiesInCategory.forEach(function (cookie) {
+        // Delete cookie
+        Cookie(cookie, null)
+      })
     }
   }
 }
@@ -198,22 +199,24 @@ function userAllowsCookie (cookieName) {
     return true
   }
 
-  if (COOKIE_CATEGORIES[cookieName]) {
-    var cookieCategory = COOKIE_CATEGORIES[cookieName]
+  // Get the current cookie preferences
+  var cookiePreferences = getConsentCookie()
 
-    // Get the current cookie preferences
-    var cookiePreferences = getConsentCookie()
-
-    // If no preferences or old version use the default
-    if (!isValidConsentCookie(cookiePreferences)) {
-      cookiePreferences = DEFAULT_COOKIE_CONSENT
-    }
-
-    return userAllowsCookieCategory(cookieCategory, cookiePreferences)
-  } else {
-    // Deny the cookie if it is not known to us
-    return false
+  // If no preferences or old version use the default
+  if (!isValidConsentCookie(cookiePreferences)) {
+    cookiePreferences = DEFAULT_COOKIE_CONSENT
   }
+
+  for (var category in COOKIE_CATEGORIES) {
+    var cookiesInCategory = COOKIE_CATEGORIES[category]
+
+    if (cookiesInCategory.indexOf(cookieName) !== '-1') {
+      return userAllowsCookieCategory(category, cookiePreferences)
+    }
+  }
+
+  // Deny the cookie if it is not known to us
+  return false
 }
 
 function getCookie (name) {
@@ -250,6 +253,13 @@ function setCookie (name, value, options) {
 }
 
 function deleteCookie (name) {
-  document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT'
-  return null
+  if (Cookie(name)) {
+    // Cookies need to be deleted in the same level of specificity in which they were set
+    // If a cookie was set with a specified domain, it needs to be specified when deleted
+    // If a cookie wasn't set with the domain attribute, it shouldn't be there when deleted
+    // You can't tell if a cookie was set with a domain attribute or not, so try both options
+    document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/'
+    document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;domain=' + window.location.hostname + ';path=/'
+    document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;domain=.' + window.location.hostname + ';path=/'
+  }
 }
