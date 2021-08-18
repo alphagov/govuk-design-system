@@ -269,7 +269,7 @@ describe('Site search', () => {
         expect.arrayContaining([
           expect.objectContaining({
             eventDetails: expect.objectContaining({
-              label: '[blocked]'
+              label: '[REDACTED EMAIL]'
             })
           })
         ])
@@ -289,7 +289,7 @@ describe('Site search', () => {
         expect.arrayContaining([
           expect.objectContaining({
             eventDetails: expect.objectContaining({
-              label: '[blocked][blocked][blocked][blocked][blocked][blocked][blocked][blocked][blocked]'
+              label: '[REDACTED NUMBER]'
             })
           })
         ])
