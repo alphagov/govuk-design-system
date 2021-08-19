@@ -50,7 +50,6 @@ Search.prototype.fetchSearchIndex = function (indexUrl, callback) {
         callback(json)
       } else {
         statusMessage = 'Failed to load the search index'
-        // Log to analytics?
       }
     }
   }
