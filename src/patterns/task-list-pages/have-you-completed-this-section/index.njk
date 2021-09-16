@@ -1,0 +1,37 @@
+---
+layout: layout-example.njk
+title: Have you completed this section – Task list pages
+---
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+<form action="/form-handler" method="post" novalidate>
+
+  {{ govukRadios({
+    idPrefix: "have-you-completed-this-section",
+    name: "have-you-completed-this-section",
+    fieldset: {
+      legend: {
+        text: "Have you completed this section?",
+        isPageHeading: false,
+        classes: "govuk-fieldset__legend--m"
+      }
+    },
+    items: [
+      {
+        value: "yes",
+        text: "Yes, I’ve completed this section"
+      },
+      {
+        value: "no",
+        text: "No, I’ll come back to it later"
+      }
+    ]
+  }) }}
+
+  {{ govukButton({
+    text: "Continue"
+  }) }}
+
+</form>
