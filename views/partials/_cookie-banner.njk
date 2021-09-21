@@ -1,16 +1,16 @@
 {% from "govuk/components/cookie-banner/macro.njk" import govukCookieBanner %}
 
 {% set html %}
-  <p>We’d like to use analytics cookies so we can understand how you use the Design System and make improvements.</p>
-  <p>We also use essential cookies to remember if you’ve accepted analytics cookies.</p>
+  <p class="govuk-body">We’d like to use analytics cookies so we can understand how you use the Design System and make improvements.</p>
+  <p class="govuk-body">We also use essential cookies to remember if you’ve accepted analytics cookies.</p>
 {% endset %}
 
 {% set acceptHtml %}
-  <p>You’ve accepted analytics cookies. You can <a class="govuk-link" href="/cookies">change your cookie settings</a> at any time.</p>
+  <p class="govuk-body">You’ve accepted analytics cookies. You can <a class="govuk-link" href="/cookies">change your cookie settings</a> at any time.</p>
 {% endset %}
 
 {% set rejectHtml %}
-  <p>You’ve rejected analytics cookies. You can <a class="govuk-link" href="/cookies">change your cookie settings</a> at any time.</p>
+  <p class="govuk-body">You’ve rejected analytics cookies. You can <a class="govuk-link" href="/cookies">change your cookie settings</a> at any time.</p>
 {% endset %}
 
 {{ govukCookieBanner({
