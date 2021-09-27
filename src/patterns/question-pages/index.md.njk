@@ -83,11 +83,18 @@ For example, ‘About you’
 
 You can also learn more about how starting with [one thing per page](https://www.gov.uk/service-manual/design/form-structure#start-with-one-thing-per-page) helps users in the GOV.UK Service Manual.
 
-#### Asking filter questions to simplify a complex question
+#### Asking complex questions without using hint text
 
-A series of simple questions can be easier to answer than one complex question. Especially if parts of it are not relevant to all users. A 'filter question' will let the user skip parts of a question that do not apply to them so they do not get confused.
+Do not use hint text if you need to give a lengthy explanation with lists and paragraphs. Screen readers read out the entire text when users interact with the form element. This could frustrate users if the text is long.
 
-For example, you could ask the user if they've travelled outside the UK before you ask them which countries they've travelled to. This would let the user skip looking at a list of countries when they do not need to.
+Do not use links in hint text. While screen readers will read out the link text when describing the field, they will not tell users the text is a link.
+
+If you're asking a question that needs a detailed explanation, use:
+* a `h1` heading that's a statement (for example, 'Interview needs') rather than a question
+* whatever mix of text, paragraphs, lists and examples best explains your question to users
+* a label, above the form input, that asks users a specific question – for example, 'Do you have any interview needs?'
+
+{{ example({group: "patterns", item: "question-pages", example: "explanatory-text", html: true, nunjucks: true, open: false}) }}
 
 #### Asking multiple questions on a page
 
