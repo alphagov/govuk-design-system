@@ -79,3 +79,9 @@ interface.
 
 - [How the Design System is deployed to production](docs/deployment/production.md)
 - [How branch and PR previews are deployed](docs/deployment/previews.md)
+
+## Security
+
+GDS is an advocate of responsible vulnerability disclosure. If you’ve found a vulnerability, we would like to know so we can fix it.
+
+To learn how to report a security vulnerability, [see our security policy](https://github.com/alphagov/govuk-design-system/security/policy).
