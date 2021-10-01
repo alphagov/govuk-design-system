@@ -19,9 +19,10 @@ jobs:
         run: echo "##[set-output name=NVMRC;]$(cat .nvmrc)"
 
       - name: Setup node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           node-version: "${{ steps.nvm.outputs.NVMRC }}"
+          cache: 'npm'
 
       - name: Install dependencies
         run: npm install --no-optional
