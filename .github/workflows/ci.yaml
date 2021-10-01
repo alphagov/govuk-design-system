@@ -37,6 +37,7 @@ jobs:
       # Upload the deploy folder as an artifact so it can be downloaded and used in the deploy job
       - name: Upload artifact
         uses: actions/upload-artifact@v2
+        if: ${{ github.ref == 'refs/heads/main' }}
         with:
             name: build
             path: deploy/**
