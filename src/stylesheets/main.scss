@@ -322,6 +322,11 @@ p code {
 
   a {
     @extend %govuk-link;
+
+    &:focus code {
+      color: $govuk-focus-text-colour;
+      background: transparent;
+    }
   }
 
   hr {
