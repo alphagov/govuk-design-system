@@ -1,13 +1,14 @@
 {% from "phase-banner/macro.njk" import govukPhaseBanner %}
+{% set phaseBannerClasses = "app-phase-banner govuk-width-container" %}
+{% if masthead %}
+  {% set phaseBannerClasses = phaseBannerClasses + " app-phase-banner--no-border" %}
+{% endif %}
+
 <div class="app-phase-banner__wrapper">
-{% if PULL_REQUEST %}
+{% if PULL_REQUEST === "true" %}
   {% set phaseBannerText %}
     This is a preview of
-    {% if REVIEW_ID %}
-      a <a class="govuk-link" href="https://github.com/alphagov/govuk-design-system/pull/{{ REVIEW_ID  }}">proposed change</a> to the
-    {% else %}
-      the <a class="govuk-link" href="https://github.com/alphagov/govuk-design-system/tree/{{ BRANCH }}">{{ BRANCH }}</a> branch for the
-    {% endif %}
+    a <a class="govuk-link" href="https://github.com/alphagov/govuk-design-system/pull/{{ REVIEW_ID  }}">proposed change</a> to the
     <a class="govuk-link" href="https://design-system.service.gov.uk">Design System</a>.
   {% endset %}
 
@@ -16,16 +17,31 @@
       "text": "preview",
       "classes": "app-tag--review"
     },
-    "classes": "app-phase-banner govuk-width-container",
+    "classes": phaseBannerClasses,
     "html": phaseBannerText
   }) }}
-{% else %}
-    {{ govukPhaseBanner({
-      "tag": {
-        "text": "beta"
-      },
-      "classes": "app-phase-banner govuk-width-container",
-      "html": "This is a new service – your <a class=\"govuk-link\" href=\"/get-in-touch\">feedback</a> will help us to improve it."
-    }) }}
-  {% endif %}
+{% elif PULL_REQUEST === "false" %}
+  {% set phaseBannerText %}
+    This is an archived version of
+    the <a class="govuk-link" href="https://github.com/alphagov/govuk-design-system/tree/{{ BRANCH }}">{{ BRANCH }}</a> branch for the
+    <a class="govuk-link" href="https://design-system.service.gov.uk">Design System</a>.
+  {% endset %}
+
+  {{ govukPhaseBanner({
+    "tag": {
+      "text": "archive",
+      "classes": "app-tag--review"
+    },
+    "classes": phaseBannerClasses,
+    "html": phaseBannerText
+  }) }}
+{% else %} {# in production the envvar PULL_REQUEST is not set #}
+  {{ govukPhaseBanner({
+    "tag": {
+      "text": "beta"
+    },
+    "classes": phaseBannerClasses,
+    "html": "This is a new service – your <a class=\"govuk-link\" href=\"/get-in-touch\">feedback</a> will help us to improve it."
+  }) }}
+{% endif %}
 </div>
