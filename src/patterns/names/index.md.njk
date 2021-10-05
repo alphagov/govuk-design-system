@@ -55,7 +55,7 @@ Make it clear whether you need someone’s common name, or their name as it's wr
 
 #### Middle names
 
-Only ask for middle names if your service requires them. 
+Only ask for middle names if your service requires them.
 
 Use the label:
 
@@ -69,11 +69,11 @@ The label should not include `(optional)`. Users will enter their middle names i
 
 Use the `autocomplete` attribute on the text input component when you're asking for a user's name. This lets browsers autofill the information on a user's behalf if they’ve entered it previously.
 
-If you are asking for a user's full name in a single field, set the `autocomplete` attribute to `name`. 
+If you are asking for a user's full name in a single field, set the `autocomplete` attribute to `name`.
 
 If you are asking users to enter their name in multiple fields, set the `autocomplete` attribute on both fields using:
 
-- `given-name` for fields labelled 'First name' or 'Given name' 
+- `given-name` for fields labelled 'First name' or 'Given name'
 - `family-name` for fields labelled 'Last name' or 'Family name'
 
 If you are working in production you’ll need to do this to meet [WCAG 2.1 Level AA](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html).
@@ -95,6 +95,16 @@ It’s extra work for them and you’re asking them to potentially reveal their 
 It’s also hard to predict the range of titles your users will have. If you have to ask for someone’s title, use an optional [text input](../../components/text-input) not a [select](../../components/select).
 
 Remember to correctly use people’s names in any resulting correspondence.
+
+### Allow users to change their name
+
+If your service stores personal information, you should allow users to update their details, including their name.
+
+Allowing users to change their name helps your service respect their personal identity. It also means they can continue using your service without having to start over.
+
+People change their name for many reasons. For example, because of a change in marital status, family situation or gender.
+
+Avoid making it hard for users to change their name. As well as causing them distress, it may make them reluctant to use your service.
 
 ### Error messages
 
