@@ -17,39 +17,46 @@ The accordion component lets users show and hide sections of related content on 
 
 ## When to use this component
 
-Only use an accordion if there's evidence it’s helpful for users to:
+Only use an accordion if there's evidence it’s helpful for the user to:
 
 - see an overview of multiple, related sections of content
-- show and hide those sections as needed
+- choose to show and hide sections that are relevant to them
+- look across information that might otherwise be on different pages
 
-Accordions can work well for people who use a service regularly, for example users of caseworking systems who need to perform familiar tasks quickly.
+For example, an accordion can work well if the user needs to choose to reveal and compare information that’s specifically relevant to them.
+
+Accordions can also work well for people who use a service regularly, for example users of caseworking systems who need to perform familiar tasks quickly.
+
+Test with users to decide if using an accordion outweighs the potential problems with hiding content.
 
 ## When not to use this component
 
-Accordions hide content from users and not everyone will notice them or understand how they work. For this reason do not use an accordion for content which is essential to all users.
+Accordions hide content from the user and not everyone will notice them or understand how they work. For this reason, you should only use them in specific situations and if user research supports it. 
 
-Test your content without an accordion first. Consider if it’s better to:
+Do not use an accordion for content that all users need to see.
+
+Test your content without an accordion first. Well-written and structured content, as shown in the [Content design: writing for GOV.UK](https://www.gov.uk/guidance/content-design/writing-for-gov-uk) guidance, can usually remove the need to use an accordion. 
+
+It’s usually better to:
 
 - simplify and reduce the amount of content
 - split the content across multiple pages
 - keep the content on a single page, separated by headings
-- use a list of links to let users navigate quickly to specific sections of content
-
-Do not use the accordion component if the amount of content it would need to contain will make the page slow to load.
+- use a list of links at the start of the page (known as 'jump links') to let the user navigate quickly to specific sections of content
 
 Accordions work best for simple content and links. Do not use accordions to split up a series of questions into sections. Use separate pages instead.
 
-## Accordions, tabs and details
+Do not use the accordion component if the amount of content it would need to contain will make the page slow to load.
 
-Accordions, [tabs](/components/tabs/) and [details](/components/details/) all hide sections of content which a user can choose to reveal.
+## Decide between using accordions, tabs and details
 
-Consider using an accordion instead of tabs if users might need to view more than one section at a time.
+Accordions, [tabs](/components/tabs/) and [details](/components/details/) all work by hiding sections of content which a user can choose to reveal.
 
-You should also take into account the number of sections of content – accordions display vertically, so they can fit more sections than horizontal tabs.
-
-Tabs may work better for users who need to switch quickly between 2 sections. Accordions push other sections down the page when they open, but tabs do not move which makes it easier to switch.
-
-Consider using an accordion instead of the [details](/components/details/) component if there are multiple related sections of content. The details component might be better if you only have one or two sections of content. The details component is less visually prominent than an accordion, so tends to work better for content which is not as important to users.
+If you decide to use one of these components, consider:
+- if the user needs to look at more than one section at a time — an accordion can show multiple sections at a time, unlike tabs
+- if the user needs to switch quickly between sections — tabs can show content without pushing other sections down the page, unlike accordions
+- if there are many sections of content — accordions can fit more sections as they’re arranged vertically, unlike tabs which are arranged horizontally
+- if there’s only one or two pieces of short, less important content — details is more suitable as it’s visually smaller and less prominent than an accordion or tabs
 
 ## How it works
 
@@ -57,19 +64,47 @@ There are 2 ways to use the accordion component. You can use HTML or, if you’r
 
 The accordion component uses JavaScript. When JavaScript is not available, users will see all the content displayed with the section labels as headings.
 
-### Find out how your users interact with the content
+### Section heading buttons
 
-Users might need the sections they have opened to stay open if they leave and then return to the page. You can configure the accordion component to stay open.
+An accordion will usually start with all sections hidden. To show a section, the user can interact anywhere in the heading button.
 
-Do user research to find out the best order for the sections.
+The heading button includes all of these areas:
+- heading text
+- summary text (if you decide to add one)
+- call-to-action text to “show this section/hide this section
 
-### Use clear labels
+To screen reader users, all the text in the button will be read as a single statement (separated by commas to allow for slight pauses). There’s also some hidden extra content in the heading text.
 
-Accordions hide content, so the labels need to be clear. If necessary, you can add a summary line to help users understand what is in the section.
+[EXAMPLE OF ACCORDION, GENERAL]
 
-{{ example({group: "components", item: "accordion", example: "with-summary-section", html: true, nunjucks: true, open: false, size: "xl"}) }}
+#### Write clear button text
 
-If you struggle to come up with clear labels, it might be because the way you’ve separated the content is not clear.
+Heading buttons should be clear and predictable so users know what’s inside a hidden section.
+
+Write the heading and summary text like any other button text and:
+- use sentence case
+- make it clear and predictable
+- keep it short
+
+Together, these should be no longer than 6 words (about 36 characters). Long button text makes it difficult for screen reader users to navigate through the accordion.
+
+If you struggle to come up with clear button text, it might be because the way you’ve separated the content is not clear. Organise sections in a way that makes sense to users, based on their needs.
+
+#### Adding a summary line
+
+Only add a summary line if you’ve decided it’s absolutely needed, as it’s almost certain to make the button text too long.
+
+[EXAMPLE OF ACCORDION WITH SUMMARY LINE]
+
+#### Structure section headings with the rest of the page
+
+The accordion component shows section headings as `<h2>` headings. If needed, change the heading level of the section headings so that they fit within the other headings on the page.
+
+### Change how an accordion starts
+
+Users might need some sections to be open from the start. They might also need sections they opened to stay open if they leave and then return to the page.
+
+The accordion component will remember if sections were opened or closed if the user leaves and then returns to the page. You can configure sections to start and stay open, but not closed.
 
 ### Do not disable sections
 
@@ -77,23 +112,14 @@ Disabling controls is normally confusing for users. If there is no content for a
 
 ## Research on this component
 
-This component is experimental because there are different approaches to accordions in services. More research is needed to determine the best approach, or to know when a different approach works better.
+This component was updated in November 2021 to solve an accessibility issue where the buttons and section labels might be mistaken for links.
 
-The design for this component was originally created and tested by a team at the Government Digital Service (GDS) on the [GOV.UK Service Manual](https://www.gov.uk/service-manual) and [GOV.UK topic pages](https://designnotes.blog.gov.uk/2017/06/29/designing-new-navigation-elements-for-gov-uk/).
+[Read about the research and development that went into improving the accordion component LINK TO BACKLOG POST](https://github.com/alphagov/govuk-design-system-backlog/issues/1).
 
 The team made sure the component is accessible, for example that users can interact with it using just the keyboard.
 
 ### Known issues and gaps
 
-The section headings can be mistaken for links, but are treated as buttons. This fails [WCAG 2.1 success criterion 1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships). We plan to fix this issue by the end of June 2021.
+Using summary text is almost certain to make a section heading’s button text too long for screen reader users.
 
-The plus and minus icon is on the right side of the component, which means users of screen magnifiers might not see it.
-
-The 'Open all' button reads out as 'Open all sections' for screen readers. This is potentially confusing for users as the visual content is different to what screen readers read out.
-
-### Next steps
-Investigate the problem of some users not seeing the plus and minus icons on the right, for example people using screen magnifiers.
-
-The plus and minus icons used in this component are the most commonly used accordion controls in government services.
-
-However, more research is needed to find out how this compares to other approaches. For example [GOV.UK Step by step navigation](https://www.gov.uk/learn-to-drive-a-car) uses the words 'Show' and 'Hide' on the left side. [Check the MOT history of a vehicle](https://www.gov.uk/check-mot-history) uses up and down arrows instead of plus and minus icons.
+However, summary text in accordions is widely used by services so we want get feedback to inform us what to do next.
