@@ -17,17 +17,13 @@ Although browsers have a back button, some sites break when you use it - so many
 
 ## When to use this component
 
-Back links are ideal for services that users interact with on a one-off basis.
-
 Always include the back link component on GOV.UK [question pages](../../patterns/question-pages).
 
 You can include a back link on other pages within a multi-page transaction, if it makes sense to do so.
 
 ## When not to use this component
 
-If a service allows users to interact with it multiple times, use [breadcrumbs](../breadcrumbs) instead.
-
-Never use the back link component together with breadcrumbs. If necessary, you should do research with your users to learn which they find more helpful in your service.
+Never use the back link component together with [breadcrumbs](../breadcrumbs). If necessary, you should do research with your users to learn which they find more helpful in your service.
 
 ## How it works
 
@@ -42,3 +38,7 @@ If it helps users get to where they need to be, you can change the default 'back
 There are 2 ways to use the back link component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://govuk-prototype-kit.herokuapp.com), you can use the Nunjucks macro.
 
 {{ example({group: "components", item: "back-link", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second"}) }}
+
+Using the default link text ('Back') is ideal for services that only contain one 'journey'. For example, [applying for a National Insurance number](https://www.gov.uk/apply-national-insurance-number). This is because users will only ever go back to the previous page in the service.
+
+For more complex user journeys, consider using different link text, like 'Return to [page]'. For example, [users who are starting a business need to navigate multiple services](https://insidegovuk.blog.gov.uk/2021/04/28/scoping-the-starting-and-sustaining-a-business-whole-user-journey/). In this case, if you used 'Back', it might not be clear to users what they are going back to.
