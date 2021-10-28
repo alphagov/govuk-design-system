@@ -1,0 +1,19 @@
+---
+title: Pagination with number labels
+layout: layout-example.njk
+---
+
+{% from "govuk/components/pagination/macro.njk" import govukPagination %}
+
+{{ govukPagination({
+  previous: {
+    text: "Previous page",
+    label: "1 of 3",
+    href: "#"
+  },
+  next: {
+    text: "Next page",
+    label: "3 of 3",
+    href: "#"
+  }
+}) }}

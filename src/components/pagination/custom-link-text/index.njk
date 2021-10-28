@@ -1,0 +1,31 @@
+---
+title: Custom link text
+layout: layout-example.njk
+---
+
+{% from "govuk/components/pagination/macro.njk" import govukPagination %}
+
+{{ govukPagination({
+  previous: {
+    href: "#",
+    text: "Previous team"
+  },
+  next: {
+    href: "#",
+    text: "Next team"
+  },
+  items: [
+    {
+      number: 1,
+      href: "#"
+    },
+    {
+      number: 2,
+      current: true
+    },
+    {
+      number: 3,
+      href: "#"
+    }
+  ]
+}) }}
