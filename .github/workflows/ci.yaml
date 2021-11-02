@@ -58,6 +58,26 @@ jobs:
       CF_SPACE: "design-system"
 
     steps:
+      - name: Pre-deploy checks
+        uses: actions/github-script@v5
+        with:
+          script: |
+
+            // Check that the code to be deployed is the latest code on the branch on GitHub
+            // If you want to rollback changes to prod, consider using a revert commit to main
+            //
+            const response = await github.rest.repos.getCommit({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: 'refs/heads/main',
+            });
+            const mainBranchCommitSha = response.data.sha
+
+            if (context.sha !== mainBranchCommitSha) {
+              core.info(`Workflow run GITHUB_SHA ${context.sha} does not match main branch commit sha ${mainBranchCommitSha}`)
+              core.error('Code to deploy does not match code in main branch')
+              core.setFailed('Refusing to deploy, please do not re-run this workflow run')
+            }
       - uses: actions/checkout@v2
 
       - name: Download build artifact
