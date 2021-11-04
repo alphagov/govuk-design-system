@@ -6,6 +6,11 @@ on:
     branches-ignore:
       - main  # pushes to main are handled by deploy.yaml
   workflow_call:
+    inputs:
+      upload-artifact:
+        default: false
+        required: false
+        type: boolean
 
 jobs:
   build:
@@ -40,7 +45,7 @@ jobs:
       # Upload the deploy folder as an artifact so it can be downloaded and used in the deploy job
       - name: Upload artifact
         uses: actions/upload-artifact@v2
-        if: ${{ github.ref == 'refs/heads/main' }}
+        if: ${{ inputs.upload-artifact }}
         with:
             name: build
             path: deploy/**
