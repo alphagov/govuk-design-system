@@ -1,47 +1,14 @@
-name: CI Workflow
+name: Deploy
 
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
-# Separate build and deploy jobs so we can build all branches and pull requests
-# but only deploy from main
 jobs:
   build:
-    name: Build & Test
-    runs-on: ubuntu-latest
-    env:
-      ENVIRONMENT: production
-
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Read node version from .nvmrc
-        id: nvm
-        run: echo "##[set-output name=NVMRC;]$(cat .nvmrc)"
-
-      - name: Setup node
-        uses: actions/setup-node@v2
-        with:
-          node-version: "${{ steps.nvm.outputs.NVMRC }}"
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm install --no-optional
-
-      - name: Build
-        run: npm run build
-
-      - name: Lint and test
-        run: npm test -- --runInBand
-
-      # Share data between the build and deploy jobs so we don't need to run `npm run build` again on deploy
-      # Upload the deploy folder as an artifact so it can be downloaded and used in the deploy job
-      - name: Upload artifact
-        uses: actions/upload-artifact@v2
-        if: ${{ github.ref == 'refs/heads/main' }}
-        with:
-            name: build
-            path: deploy/**
-            retention-days: 1
+    uses: alphagov/govuk-design-system/.github/workflows/test.yaml
 
   # Deploy the Design System to production when the main branch is changed
   # Github Actions is not involved in deploying PR or branch previews – these are handled by Netlify
@@ -49,9 +16,9 @@ jobs:
   deploy:
     environment: production
     name: Deploy
-    runs-on: ubuntu-latest
     needs: build
-    if: ${{ github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
+
     env:
       CF_API: "https://api.cloud.service.gov.uk"
       CF_ORG: "govuk-design-system"
