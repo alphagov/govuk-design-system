@@ -6,6 +6,8 @@ on:
       - main
   workflow_dispatch:
 
+concurrency: production
+
 jobs:
   build:
     uses: alphagov/govuk-design-system/.github/workflows/test.yaml@fac33297b13e9e4cfa23d88b46a639dc0cbc25d3
@@ -75,11 +77,6 @@ jobs:
       # Parse app name from manifest to ensure it matches up
       - name: Fetch app name from manifest
         run: echo "APP_NAME=$(ruby -e "require 'yaml'; config = YAML.load_file('manifest.yml'); puts config['applications'][0]['name']")" >> $GITHUB_ENV
-
-      - name: Cancel any existing running deploys to avoid conflict
-        run:  |
-          echo "Cancelling any previous deployments in progress"
-          cf cancel-deployment $APP_NAME || true
 
       - name: Deploy to PaaS
         # Deploy app and set up app healthcheck https://docs.cloudfoundry.org/devguide/deploy-apps/healthchecks.html
