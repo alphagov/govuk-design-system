@@ -17,7 +17,7 @@ Use the text input component when you need to let users enter text that’s no l
 
 ## When not to use this component
 
-Do not use the text input component if you need to let users enter longer answers that might span multiple lines. In this case, you should use the [textarea](../textarea) component.
+Do not use the text input component if you need to let users enter longer answers that might span multiple lines. In this case, you should use the [textarea](/components/textarea/) component.
 
 ## How it works
 
@@ -25,9 +25,9 @@ All text inputs must have visible labels; placeholder text is not an acceptable 
 
 Labels should be aligned above the text input they refer to. They should be short, direct and written in sentence case. Do not use colons at the end of labels.
 
-If you’re asking just [one question per page](../../patterns/question-pages/#start-by-asking-one-question-per-page) as recommended, you can set the contents of the `<label>` as the page heading. This is good practice as it means that users of screen readers will only hear the contents once.
+If you’re asking just [one question per page](/patterns/question-pages/#start-by-asking-one-question-per-page) as recommended, you can set the contents of the `<label>` as the page heading. This is good practice as it means that users of screen readers will only hear the contents once.
 
-Read more about [why and how to set legends as headings](../../get-started/labels-legends-headings).
+Read more about [why and how to set legends as headings](/get-started/labels-legends-headings/).
 
 There are 2 ways to use the text input component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://govuk-prototype-kit.herokuapp.com), you can use the Nunjucks macro.
 
@@ -35,7 +35,7 @@ There are 2 ways to use the text input component. You can use HTML or, if you’
 
 ###  If you’re asking more than one question on the page
 
-If you're asking more than one question on the page, do not set the contents of the `<label>` as the page heading. Read more about [asking multiple questions on question pages](../../patterns/question-pages/#asking-multiple-questions-on-a-page).
+If you're asking more than one question on the page, do not set the contents of the `<label>` as the page heading. Read more about [asking multiple questions on question pages](/patterns/question-pages/#asking-multiple-questions-on-a-page).
 
 {{ example({group: "components", item: "text-input", example: "without-heading", html: true, nunjucks: true, open: false, size: "s"}) }}
 
