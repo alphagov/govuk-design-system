@@ -6,9 +6,11 @@ backlog_issue_id: 213
 layout: layout-pane.njk
 ---
 
+{% from "_example.njk" import example %}
+
 This component is currently experimental because more research is needed to validate it.
 
-[ EXAMPLE ]
+{{ example({group: "components", item: "hide-this-page", example: "default", html: true, nunjucks: true, open: false, size: "s"}) }}
 
 ## When to use this component
 
