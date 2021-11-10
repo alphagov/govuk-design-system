@@ -1,0 +1,29 @@
+---
+title: Hide this page - full page example
+layout: layout-example-full-page.njk
+---
+
+{% extends "example-wrappers/full-page.njk" %}
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block beforeContent %}
+{% from "govuk/components/hide-this-page/macro.njk" import govukHideThisPage %}
+{{ govukHideThisPage() }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Hide this page example</h1>
+        <p class="govuk-body">
+          This is an example of a GOV.UK page with the Hide this page component added to it.
+        </p>
+        <p class="govuk-body">
+          The example shows where you should add the component to your page, and how it works.
+        </p>
+        <p class="govuk-body">
+          <a href="../" class="govuk-link">Back to the the Hide this page component guidance</a></p>
+        </p>
+    </div>
+  </div>
+{% endblock %}
