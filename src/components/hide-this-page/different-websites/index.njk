@@ -1,0 +1,10 @@
+---
+title: Different websites
+layout: layout-example.njk
+---
+{% from "govuk/components/hide-this-page/macro.njk" import govukHideThisPage %}
+
+{{ govukHideThisPage({
+  "currentTabURL": "http://www.baidu.com/",
+  "newTabURL": "https://www.cgtn.com/nature/weathermap.html"
+}) }}

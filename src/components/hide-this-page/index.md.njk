@@ -8,90 +8,62 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 
-This component is currently experimental because more research is needed to validate it.
+Help users to exit a service quickly and safely.
 
 {{ example({group: "components", item: "hide-this-page", example: "default", html: true, nunjucks: true, open: false, size: "s"}) }}
 
 ## When to use this component
 
-The ‘Hide this page’ component helps users to exit a service, website or application quickly and safely.
-
-Use the component when use of a service could put people in danger or at risk of harm. For example, a service about domestic abuse being used by a potential victim.
+Use the hide this page component when some people's use of your service could put them in danger or at risk of harm.
+For example, a service about domestic abuse.
 
 ## When to not use this component
 
-Do not use this component if the service or part of the service is unlikely to put a user at risk.
+Do not use this component if the service or part of the service is unlikely to put some users at risk.
 
 ## How it works
 
-There are 2 ways to use the warning text component. You can use HTML or, if you are using Nunjucks or the GOV.UK Prototype Kit, you can use the Nunjucks macro.
+There are 2 ways to use the hide this page component.
+You can use HTML or, if you are using Nunjucks or the GOV.UK Prototype Kit, you can use the Nunjucks macro.
 
-### Help users cover their tracks
+{{ example({group: "components", item: "hide-this-page", example: "default", html: true, nunjucks: true, open: false, size: "s"}) }}
 
-Using the component, should help obscure any evidence that a user has visited the service or website.
+Add the component to any page where a user could be at risk.
+This could be across a whole service or just the pages where information is particularly sensitive.
 
-When a user opts to ‘Hide this page’, this should:
+Position the component immediately below the header of your page.
+It's position is sticky so it remains visible and easy to activate.
 
- - change the current tab to a frequently visited website, for example Google obscure the previous page history
- - open a new tab as the active tab. This should be a frequently visited website, for example the BBC Weather website
+When activated the component loads a frequently visited website into the current browser tab.
+If Javascript is available the browser will also switch to a new tab, and load a second website into it.
 
-### Use in every place where users are at risk
+Doing this disabled the current browser tab back button, providing an additional level of protection.
 
-Add the ‘Hide this page’ component wherever a user could be at risk. This could cover a whole service or parts of a journey where the information is sensitive and could alert a perpetrator.
 
-### Make the component clearly visible
+### Choosing different websites to load
 
-Add the ‘Hide this page’ component to the top of every screen you identify as having the potential to put a user at risk.
+By default, the two websites loaded are www.google.com and www.bbc.co.uk/weather,
+but these can be changed if there is a more appropriate site for your users.
 
-The component is made up of two parts:
+{{ example({group: "components", item: "hide-this-page", example: "different-websites", html: true, nunjucks: true, open: false, size: "s"}) }}
 
-**1. Visible button**
 
-This should be placed just beneath the header or phase banner.
+## Research on this component
 
-The button component should always be clearly visible and easy to reach so a user can hide the page immediately when needed.
+The design of this component is based on research from a specialist provider of services to survivors of domestic abuse, and in
+consultation with the Ministry of Justice, Department for Work and Pensions and the Scottish Government.
 
-Use the recommended colour to highlight the importance of the button and make it easy to locate in an emergency situation.
+Live examples of similar components can be found on these websites:
 
-The component can be enabled/disabled by adding or removing the class ```govuk-quick-exit__enabled```.
+ - [GOV.UK: Check if you can get legal aid](https://www.gov.uk/check-legal-aid)
+ - [GOV.UK: Apply for help arranging child maintenance](https://child-maintenance.service.gov.uk/apply/eligibility/info)
+ - [mygov.scot: Domestic abuse support](https://www.mygov.scot/domestic-abuse/)
+ - [Women's aid website](https://www.womensaid.org.uk/)
+ - [Refuge website](https://www.nationaldahelpline.org.uk/)
 
-**2. Screen reader and spacing for mobile devices**
+More research is needed to find out:
 
-This should be at the very top of the page, above the skip to main content link.
-
-The component can be enabled/disabled by adding or removing the class ```govuk-quick-exit__enabled``` from the main button, and adding the class ```govuk-visually-hidden``` from the screen reader information part.
-
-### Clearly communicate what will happen
-
-The ‘Hide the page’ text for the button clearly communicates what the component does. It helps users to recognise instantly what happens if they click the button.
-
-### Create an alternative keyboard shortcut
-
-You should also offer a keyboard shortcut, for example, using the Escape key. This is necessary for accessibility.
-
-Initial research also suggests that speed is critical for keeping users safe and avoiding potential harm. It may be quicker for users to press a keyboard button than move a mouse pointer.
-
-### Add a warning for assistive technology users
-
-Every page where the component is used should have a hidden warning for assistive technologies such as screen readers.
-
-This is done by adding code above the ```Skip to main content``` element that is announced when the user using assistive technology arrives on the page.
-
-### Use cases (examples of uses)
-
- - [MoJ: LAA Check if you can get legal aid service](https://www.gov.uk/check-legal-aid)
- - [DWP: Apply for help arranging child maintenance](https://child-maintenance.service.gov.uk/apply/eligibility/info)
- - [Cabinet Office](https://www.gov.uk/find-coronavirus-support/s/need-help-with)
- - [Scottish Government](https://www.mygov.scot/domestic-abuse/)
- - [Women's aid](https://www.womensaid.org.uk/)
- - [Refuge](https://www.nationaldahelpline.org.uk/)
-
-## Research and testing
-
-This component is experimental because there has been limited user research into its usage.
-
-The design, placement and language for this component has evolved through iterations from the Ministry of Justice, Department for Work and Pensions, GOV.UK and the Scottish Government.
-
-There has also been [research with a subject matter expert](https://miro.com/app/board/o9J_ktl_oUE=/?moveToWidget=3074457347613659921&cot=12) from a specialist provider of services to survivors of domestic abuse.
-
-The component has been tested as part of an accessibility audit by the Digital Accessibility Centre.
+ - how best to safely announce the component using a screenreader
+ - whether any additional information is required to explain the purpose of the component
+ - whether a keyboard shortcut would help some users, and be safely implemented
+ - whether the browser history can safely be manipulated, to further reduce the risks
