@@ -37,7 +37,7 @@ This app exists within the `govuk-design-system` organisation and the
 `production` space, and is deployed by the `design-system-deploy-production@digital.cabinet-office.gov.uk` user, the
 credentials for which can be found in our credential store.
 
-We use an [application manifest](../../manifest.yml) to configure the app name
+We use an [application manifest](/deploy/manifest.yml) to configure the app name
 and the type of buildpack that we want to use.
 
 See [PaaS documentation](https://docs.cloud.service.gov.uk/) for how to sign in and deploy apps.
