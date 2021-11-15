@@ -49,7 +49,6 @@ jobs:
               core.error('Code to deploy does not match code in main branch')
               core.setFailed('Refusing to deploy, please do not re-run this workflow run')
             }
-      - uses: actions/checkout@v2
 
       - name: Download build artifact
         uses: actions/download-artifact@v2
