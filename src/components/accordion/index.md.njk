@@ -23,7 +23,7 @@ Only use an accordion if there's evidence it’s helpful for the user to:
 - choose to show and hide sections that are relevant to them
 - look across information that might otherwise be on different pages
 
-For example, an accordion can work well if the user needs to choose to reveal and compare information that’s specifically relevant to them.
+For example, an accordion can work well if the user needs to reveal and compare information that’s relevant to them.
 
 Accordions can also work well for people who use a service regularly. For example, users of caseworking systems who need to do familiar tasks quickly.
 
@@ -44,13 +44,15 @@ It’s usually better to:
 - keep the content on a single page, separated by headings
 - use a list of links at the start of the page (known as 'anchor links') to take the user to particular sections of a page
 
-Accordions work best for simple content and links. Do not use accordions to split up a series of questions into sections. Use separate pages instead.
+Accordions work best for simple content and links. Do not use accordions to split up a series of questions. Use separate pages instead.
+
+Avoid putting accordions within accordions, as it will make content difficult to find.
 
 Do not use the accordion component if the amount of content it would need to contain will make the page slow to load.
 
 ## Decide between using accordions, tabs and details
 
-Accordions, [tabs](/components/tabs/) and [details](/components/details/) all work by hiding sections of content which a user can choose to reveal.
+Accordions, [tabs](/components/tabs/) and [details](/components/details/) all work by hiding sections of content which a user can choose to reveal. Be careful when using any of these components within one another.
 
 If you decide to use one of these components, consider:
 - if the user needs to look at more than one section at a time — an accordion can show multiple sections at a time, unlike tabs
@@ -84,13 +86,13 @@ Write the heading and summary text like any other button text and:
 - describe the content that will show
 - keep it short
 
-Users of screen readers will find it difficult to navigate the accordion if the button text is too long.
+Users of screen readers might find it difficult to navigate the accordion if the button text is too long.
 
 If you struggle to come up with clear button text, it might be because the way you’ve separated the content is not clear. Organise sections in a way that makes sense to users, based on their needs.
 
 #### Adding a summary line
 
-Only add a summary line if you’ve decided it’s absolutely needed, as it’s almost certain to make the button text too long.
+Only add a summary line if it’s absolutely needed, as it's likely to make the button text too long.
 
 [EXAMPLE OF ACCORDION WITH SUMMARY LINE]
 
@@ -118,6 +120,8 @@ The team made sure the component is accessible, for example that users can inter
 
 ### Known issues and gaps
 
-Using summary text is almost certain to make a section heading’s button text too long for screen reader users.
+An accordion button that includes a summary line is likely to be too long, according to general best practice for button text.
+
+We need to better understand when service teams use summary lines and how this affects users of screen readers. [Share your findings and research with us](https://github.com/alphagov/govuk-design-system-backlog/issues/1).
 
 However, summary text in accordions is widely used by services so we want to get feedback to inform us what to do next.
