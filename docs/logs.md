@@ -10,8 +10,8 @@ However, we do not currently cache HTML requests (pages) so router logs are stil
 The GOV.UK Design System website's logs are sent to
 the [`GOV.UK Design System Production` Logstash stack (Logit.io)](https://logit.io/a/1c6b2316-16e2-4ca5-a3df-ff18631b0e74) using the `logit-ssl-drain` service.
 
-- the `logit-ssl-drain` service is bound to the website application in the [manifest services config option](/deploy/manifest.yml).
-- the hosted Logstash (Logit.io) is maintained by the Reliability Engineering team, we followed the [Logit setup guidance to configure our stack](https://reliability-engineering.cloudapps.digital/logging.html#get-started-with-logit).
+- The `logit-ssl-drain` service is bound to the website application in the [manifest services config option](/deploy/manifest.yml). The GOV.UK PaaS team should be able to help with questions about how data is sent to Logit.
+- The hosted Logstash (Logit.io) is maintained by the Reliability Engineering team. We followed the [Logit setup guidance to configure our stack](https://reliability-engineering.cloudapps.digital/logging.html#get-started-with-logit).
 
 When the raw logs are sent to Logstash they are transformed using Logstash Filters so they can be queried in Kibana for visualisations and querying.
 
