@@ -23,14 +23,17 @@
   <script src="/javascripts/vendor/modernizr.js"></script>
 {% endblock %}
 
+{% block bodyStart %}
+  <!--[if gte IE 9]><!-->
+  {% include "_cookie-banner.njk" %}
+  <!--<![endif]-->
+{% endblock %}
+
 {# We provide our own header, so blank the one provided by the template #}
 {% block header %}{% endblock %}
 
 {% block main %}
 <div class="app-pane {% block appPaneClasses %}{% endblock %}" id="top">
-  <!--[if gte IE 9]><!-->
-    {% include "_cookie-banner.njk" %}
-  <!--<![endif]-->
   {% include "_header.njk" %}
   {% include "_mobile-navigation.njk" %}
   {% include "_banner.njk" %}
