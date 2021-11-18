@@ -4,7 +4,7 @@ const serveStatic = require('serve-static')
 
 const metalsmith = require('../lib/metalsmith')
 
-const paths = require('../config/paths.json')
+const paths = require('../lib/paths.js')
 
 const runServer = () => {
   // Create a simple server for serving static files

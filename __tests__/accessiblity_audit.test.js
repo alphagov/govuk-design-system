@@ -3,7 +3,7 @@
 const { AxePuppeteer } = require('axe-puppeteer')
 
 const { setupPage } = require('../lib/jest-utilities.js')
-const configPaths = require('../config/paths.json')
+const configPaths = require('../lib/paths.js')
 const PORT = configPaths.testPort
 
 let page
