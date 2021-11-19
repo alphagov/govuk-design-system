@@ -4,8 +4,8 @@
   {% set phaseBannerClasses = phaseBannerClasses + " app-phase-banner--no-border" %}
 {% endif %}
 
-<div class="app-phase-banner__wrapper">
 {% if PULL_REQUEST === "true" %}
+<div class="app-phase-banner__wrapper">
   {% set phaseBannerText %}
     This is a preview of
     a <a class="govuk-link" href="https://github.com/alphagov/govuk-design-system/pull/{{ REVIEW_ID  }}">proposed change</a> to the
@@ -20,7 +20,9 @@
     "classes": phaseBannerClasses,
     "html": phaseBannerText
   }) }}
+</div>
 {% elif PULL_REQUEST === "false" %}
+<div class="app-phase-banner__wrapper">
   {% set phaseBannerText %}
     This is an archived version of
     the <a class="govuk-link" href="https://github.com/alphagov/govuk-design-system/tree/{{ BRANCH }}">{{ BRANCH }}</a> branch for the
@@ -35,13 +37,5 @@
     "classes": phaseBannerClasses,
     "html": phaseBannerText
   }) }}
-{% else %} {# in production the envvar PULL_REQUEST is not set #}
-  {{ govukPhaseBanner({
-    "tag": {
-      "text": "beta"
-    },
-    "classes": phaseBannerClasses,
-    "html": "This is a new service – your <a class=\"govuk-link\" href=\"/get-in-touch/\">feedback</a> will help us to improve it."
-  }) }}
-{% endif %}
 </div>
+{% endif %}
