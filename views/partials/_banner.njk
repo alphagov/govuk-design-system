@@ -1,41 +1,36 @@
-{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
-{% set phaseBannerClasses = "app-phase-banner app-width-container" %}
-{% if masthead %}
-  {% set phaseBannerClasses = phaseBannerClasses + " app-phase-banner--no-border" %}
-{% endif %}
-
 {% if PULL_REQUEST === "true" %}
-<div class="app-phase-banner__wrapper">
-  {% set phaseBannerText %}
+  {% set bannerTag = "preview" %}
+  {% set bannerText %}
     This is a preview of
     a <a class="govuk-link" href="https://github.com/alphagov/govuk-design-system/pull/{{ REVIEW_ID  }}">proposed change</a> to the
     <a class="govuk-link" href="https://design-system.service.gov.uk">Design System</a>.
   {% endset %}
-
-  {{ govukPhaseBanner({
-    "tag": {
-      "text": "preview",
-      "classes": "app-tag--review"
-    },
-    "classes": phaseBannerClasses,
-    "html": phaseBannerText
-  }) }}
-</div>
 {% elif PULL_REQUEST === "false" %}
-<div class="app-phase-banner__wrapper">
-  {% set phaseBannerText %}
+  {% set bannerTag = "archive" %}
+  {% set bannerText %}
     This is an archived version of
     the <a class="govuk-link" href="https://github.com/alphagov/govuk-design-system/tree/{{ BRANCH }}">{{ BRANCH }}</a> branch for the
     <a class="govuk-link" href="https://design-system.service.gov.uk">Design System</a>.
   {% endset %}
+{% endif %}
 
-  {{ govukPhaseBanner({
-    "tag": {
-      "text": "archive",
-      "classes": "app-tag--review"
-    },
-    "classes": phaseBannerClasses,
-    "html": phaseBannerText
-  }) }}
-</div>
+{% if bannerText %}
+  {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+  <div class="app-phase-banner__wrapper">
+
+    {% set bannerClasses = "app-phase-banner app-width-container" %}
+    {% if masthead %}
+      {% set bannerClasses = bannerClasses + " app-phase-banner--no-border" %}
+    {% endif %}
+
+    {{ govukPhaseBanner({
+      "tag": {
+        "text": bannerTag,
+        "classes": "app-tag--review"
+      },
+      "classes": bannerClasses,
+      "html": bannerText
+    }) }}
+  </div>
 {% endif %}
