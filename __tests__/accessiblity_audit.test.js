@@ -13,7 +13,7 @@ async function audit (page) {
   const axe = new AxePuppeteer(page)
     .include('body')
     .exclude('#app-site-search__input') // axe reports there is "no label associated with the text field", when there is one.
-    .exclude('.app-phase-banner__wrapper') // axe reports that the phase banner is not inside a landmark, which is intentional.
+    .exclude('.app-phase-banner') // axe reports that the phase banner is not inside a landmark, which is intentional.
 
   const results = await axe.analyze()
 

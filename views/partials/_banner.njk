@@ -17,8 +17,6 @@
 {% if bannerText %}
   {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
 
-  <div class="app-phase-banner__wrapper">
-
     {% set bannerClasses = "app-phase-banner app-width-container" %}
     {% if masthead %}
       {% set bannerClasses = bannerClasses + " app-phase-banner--no-border" %}
@@ -32,5 +30,4 @@
       "classes": bannerClasses,
       "html": bannerText
     }) }}
-  </div>
 {% endif %}
