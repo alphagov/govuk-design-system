@@ -39,6 +39,14 @@ If you're asking more than one question on the page, do not set the contents of 
 
 {{ example({group: "components", item: "text-input", example: "without-heading", html: true, nunjucks: true, open: false, size: "s"}) }}
 
+### If there is a list of common answers
+
+If the question is asking something factual and there is a list of common answers to the question, it can be helpful to provide these answers as suggestions. Once the user has typed 2 or more characters, any matching suggestions are shown, and can be selected to save typing out a full answer.
+
+{{ example({group: "components", item: "text-input", example: "with-suggestions", html: true, nunjucks: true, open: false, size: "s"}) }}
+
+Synonyms can be provided for each suggestion. For example, you could add alternative names, abbreviations, previous names or common misspellings.
+
 ### Use appropriately-sized text inputs
 
 Help users understand what they should enter by making text inputs the right size for the content they’re intended for.

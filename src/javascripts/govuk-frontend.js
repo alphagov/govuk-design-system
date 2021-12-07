@@ -9,6 +9,7 @@ import NotificationBanner from 'govuk-frontend/govuk/components/notification-ban
 import Radios from 'govuk-frontend/govuk/components/radios/radios'
 import Header from 'govuk-frontend/govuk/components/header/header'
 import Tabs from 'govuk-frontend/govuk/components/tabs/tabs'
+import Input from 'govuk-frontend/govuk/components/input/input'
 
 var nodeListForEach = common.nodeListForEach
 
@@ -67,4 +68,9 @@ nodeListForEach($headers, function ($header) {
 var $tabs = document.querySelectorAll('[data-module="govuk-tabs"]')
 nodeListForEach($tabs, function ($tab) {
   new Tabs($tab).init()
+})
+
+var $inputs = document.querySelectorAll('[data-module="govuk-input"]')
+nodeListForEach($inputs, function ($input) {
+  new Input($input).init()
 })

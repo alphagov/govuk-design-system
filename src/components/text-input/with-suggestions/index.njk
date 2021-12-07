@@ -1,0 +1,32 @@
+---
+title: Text input with suggestions
+layout: layout-example.njk
+---
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "Which university did you go to?",
+    isPageHeading: true
+  },
+  id: "event-name",
+  name: "event-name",
+  attributes: {
+    "data-module": "govuk-input"
+  },
+  suggestions: {
+    items: [
+      {
+        text: "University College London",
+        synonyms: [
+          "UCL"
+        ]
+      },
+      {
+        text: "Imperial College London"
+      }
+    ]
+  }
+
+}) }}
