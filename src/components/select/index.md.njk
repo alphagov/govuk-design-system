@@ -15,11 +15,15 @@ layout: layout-pane.njk
 
 The select component should only be used as a last resort in public-facing services because research shows that some users find selects very difficult to use.
 
+The enhanced [select component with search](#select-with-search) can be used where users must select an option from a defined list, and are likely to already know their answer.
+
 ## When not to use this component
 
 The select component allows users to choose an option from a long list. Before using the select component, try asking users questions which will allow you to present them with fewer options.
 
 Asking questions means you’re less likely to need to use the select component, and can consider using a different solution, such as [radios](/components/radios/).
+
+Do not use this component where you cannot be confident that your list of options includes all possible answers. If you need to be able to allow users to enter an answer not in your list, use the [Text input with suggestions](/components/text-input/) component instead.
 
 ## How it works
 
@@ -35,9 +39,15 @@ There are 2 ways to use the select component. You can use HTML or, if you’re u
 
 When users need to select one of the options, and the list contains less than 500 items, you can use a variant which allows users to filter the list by typing in some search text.
 
-Do not use this variant if users should be able to type their own answer if it is not in the list.
+Do not use this component if users should be able to type their own answer when it is not in the list.
 
 {{ example({group: "components", item: "select", example: "with-search", html: true, nunjucks: true, open: false}) }}
+
+You can help users to find their answer using the search by providing synonyms for each option. For example, this may include previous names, acronyms or common misspellings.
+
+If none of the options match the user’s seach term, a "No results" message will be shown. You can customise this if some other wording makes more sense for your context.
+
+You should monitor how people use this component in your service through research and analytics, and regularly review whether there are some options or synonyms which should be added to your list.
 
 ## Research on this component
 
