@@ -46,13 +46,13 @@ It’s usually better to:
 
 Accordions work best for simple content and links. Do not use accordions to split up a series of questions. Use separate pages instead.
 
-Avoid putting accordions within accordions, as it will make content difficult to find.
+Do not put accordions within accordions, as it will make content difficult to find.
 
 Do not use the accordion component if the amount of content it would need to contain will make the page slow to load.
 
 ## Decide between using accordions, tabs and details
 
-Accordions, [tabs](/components/tabs/) and [details](/components/details/) all work by hiding sections of content which a user can choose to reveal. Be careful when using any of these components within one another.
+Accordions, [tabs](/components/tabs/) and [details](/components/details/) all work by hiding sections of content which a user can choose to reveal. Avoid using any of these components within one another.
 
 If you decide to use one of these components, consider if:
 - the user needs to look at more than one section at a time — an accordion can show multiple sections at a time, unlike tabs
@@ -75,17 +75,13 @@ The heading button includes all of these areas:
 - summary text (if you decide to add one)
 - call-to-action text to 'show' or 'hide'
 
-For users of screen readers, all the text in the button will be read as a single statement (separated by commas to allow for slight pauses). There’s also some visually hidden content in the heading text to help announce the call-to-action as 'show this section' or 'hide this section'
+For users of screen readers, all the text in the button will be read as a single statement (separated by commas to allow for slight pauses). There’s also some visually hidden content in the heading text to help announce the call-to-action as 'show this section' or 'hide this section'.
 
 {{ example({group: "components", item: "accordion", example: "default", html: true, nunjucks: true, open: false, size: "xl"}) }}
 
 #### Write clear button text
 
-Write the heading and summary text like any other button text and:
-- use sentence case
-- describe the content that will show
-- keep it short
-
+Write the heading and summary text like any other button text. Use sentence case, describe the content that will show, and keep it short.
 Users of screen readers might find it difficult to navigate the accordion if the button text is too long.
 
 If you struggle to come up with clear button text, it might be because the way you’ve separated the content is not clear. Organise sections in a way that makes sense to users, based on their needs.
@@ -94,7 +90,7 @@ If you struggle to come up with clear button text, it might be because the way y
 
 Only add a summary line if it’s actually needed, as it's likely to make the button text too long.
 
-If you’ve decided that the summary line is needed, you must make it as short as possible.
+If you’ve decided that you need the summary line, you must make it as short as possible.
 
 {{ example({group: "components", item: "accordion", example: "with-summary-section", html: true, nunjucks: true, open: false, size: "xl"}) }}
 
@@ -104,9 +100,9 @@ The accordion component shows section headings as `<h2>` headings. If needed, ch
 
 ### Change how an accordion starts
 
-Users might need some sections to be open from the start. They might also need sections they opened to stay open if they leave and then return to the page.
+Users might need some sections to be open from the start. If they leave and then return to the page, they might also need sections they opened to stay open.
 
-The accordion component will remember if sections were opened or closed if the user leaves and then returns to the page. You can configure sections to start and stay open, but not closed.
+If the user leaves and then returns to the page, the accordion component will remember if sections were opened or closed. You can configure sections to start and stay open, but not stay closed.
 
 ### Do not disable sections
 
@@ -124,15 +120,15 @@ The team made sure the component is accessible, for example that users can inter
 
 We need to find out more about users that navigate using ‘elements lists’ of headings, buttons, links and other elements — such as users of speech recognition software and partially-sighted users of screen readers.
 
-For these users, it might not be clear enough that the section headings are considered buttons, misleading them to navigate (less efficiently) using the show/hide labels.
+For these users, it might not be clear enough that the section headings are considered buttons. This could mislead them to navigate (less efficiently) using the show or hide labels.
 
-While inconvenient at first, it’s likely the user will better understand the button area once they interact with it and see its focus state. [See ‘Testing with Dragon’ in the accessibility clinic summary](https://github.com/alphagov/govuk-frontend/issues/2295#issuecomment-906449543).
+While this experience is inconvenient at first, it's likely the user will better understand the button area once they interact with it and see its focus state. [See ‘Testing with Dragon’ in the accessibility clinic summary](https://github.com/alphagov/govuk-frontend/issues/2295#issuecomment-906449543). 
 
-We want to hear about any user research teams have done in this area so we can identify potential issues.
+We want to hear about any user research done in this area so we can identify potential issues.
 
 ### Known issues and gaps
 
-Adding a summary line with more than a few short words will likely make the button text too long, particularly for users of x readers.```
+Adding a summary line with more than a few short words will likely make the button text too long, particularly for users of screen readers.```
 
 We need to better understand when service teams use summary lines and how this affects users of screen readers. [Share your findings and research with us](https://github.com/alphagov/govuk-design-system-backlog/issues/1).
 
