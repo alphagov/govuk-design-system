@@ -9,6 +9,7 @@ import NotificationBanner from 'govuk-frontend/govuk/components/notification-ban
 import Radios from 'govuk-frontend/govuk/components/radios/radios'
 import Header from 'govuk-frontend/govuk/components/header/header'
 import Tabs from 'govuk-frontend/govuk/components/tabs/tabs'
+import SkipLink from 'govuk-frontend/govuk/components/skip-link/skip-link'
 
 var nodeListForEach = common.nodeListForEach
 
@@ -68,3 +69,7 @@ var $tabs = document.querySelectorAll('[data-module="govuk-tabs"]')
 nodeListForEach($tabs, function ($tab) {
   new Tabs($tab).init()
 })
+
+// Find first skip link module to enhance.
+var $skipLink = document.querySelector('[data-module="govuk-skip-link"]')
+new SkipLink($skipLink).init()
