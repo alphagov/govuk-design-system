@@ -1,0 +1,89 @@
+---
+title: Radios with conditionally revealing content showing an error
+layout: layout-example.njk
+---
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{% set emailHtml %}
+{{ govukInput({
+  id: "contact-by-email",
+  name: "contact-by-email",
+  type: "email",
+  autocomplete: "email",
+  spellcheck: false,
+  classes: "govuk-!-width-one-half",
+  label: {
+    text: "Email address"
+  },
+  errorMessage: {
+    text: "Email address cannot be blank"
+  }
+}) }}
+{% endset -%}
+
+{% set phoneHtml %}
+{{ govukInput({
+  id: "contact-by-phone",
+  name: "contact-by-phone",
+  type: "tel",
+  autocomplete: "tel",
+  classes: "govuk-!-width-one-third",
+  label: {
+    text: "Phone number"
+  }
+}) }}
+{% endset -%}
+
+{% set textHtml %}
+{{ govukInput({
+  id: "contact-by-text",
+  name: "contact-by-text",
+  type: "tel",
+  autocomplete: "tel",
+  classes: "govuk-!-width-one-third",
+  label: {
+    text: "Mobile phone number"
+  }
+}) }}
+{% endset -%}
+
+{{ govukRadios({
+  idPrefix: "contact",
+  name: "contact",
+  fieldset: {
+    legend: {
+      text: "How would you prefer to be contacted?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  hint: {
+    text: "Select one option."
+  },
+  items: [
+    {
+      value: "email",
+      text: "Email",
+      checked: true,
+      conditional: {
+        html: emailHtml
+      }
+    },
+    {
+      value: "phone",
+      text: "Phone",
+      conditional: {
+        html: phoneHtml
+      }
+    },
+    {
+      value: "text",
+      text: "Text message",
+      conditional: {
+        html: textHtml
+      }
+    }
+  ]
+}) }}
