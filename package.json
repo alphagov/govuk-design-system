@@ -72,7 +72,7 @@
     "metalsmith-sass": "^2.0.0",
     "metalsmith-tagcleaner": "0.0.2",
     "metalsmith-uglify": "^2.4.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.1",
     "nunjucks": "^3.2.2",
     "puppeteer": "^1.14.0",
     "request": "^2.88.0",
