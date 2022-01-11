@@ -31,11 +31,11 @@ Test with users to decide if using an accordion outweighs the potential problems
 
 ## When not to use this component
 
-Accordions hide content from the user. Not all users will notice them or understand how they work. For this reason, you should only use them in specific situations and if user research supports it. 
+Accordions hide content from the user. Not all users will notice them or understand how they work. For this reason, you should only use them in specific situations and if user research supports it.
 
 Do not use an accordion for content that all users need to see.
 
-Test your content without an accordion first. Well-written and structured content, as shown in the [Content design: writing for GOV.UK](https://www.gov.uk/guidance/content-design/writing-for-gov-uk) guidance, can remove the need to use an accordion. 
+Test your content without an accordion first. Well-written and structured content, as shown in the [Content design: writing for GOV.UK](https://www.gov.uk/guidance/content-design/writing-for-gov-uk) guidance, can remove the need to use an accordion.
 
 It’s usually better to:
 
@@ -98,11 +98,13 @@ If you’ve decided that you need the summary line, you must make it as short as
 
 The accordion component shows section headings as `<h2>` headings. If needed, change the heading level of the section headings to make them fit within the other headings on the page.
 
-### Change how an accordion starts
+### Starting with sections open
 
 Users might need some sections to be open from the start. If they leave and then return to the page, they might also need sections they opened to stay open.
 
-If the user leaves and then returns to the page, the accordion component will remember if sections were opened or closed. You can configure sections to start and stay open, but not stay closed.
+If the user leaves and then returns to the page within the same page session, the accordion component will use ['session storage'](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage) to remember which sections were open. You can configure sections to start and stay open, but not stay closed.
+
+To see the changes you've made, you may need to create a new 'session'. For example, by opening a page in a new tab or window.
 
 ### Do not disable sections
 
@@ -122,7 +124,7 @@ We need to find out more about users that navigate using ‘elements lists’ of
 
 For these users, it might not be clear enough that the section headings are considered buttons. This could mislead them to navigate (less efficiently) using the show or hide labels.
 
-While this experience is inconvenient at first, it's likely the user will better understand the button area once they interact with it and see its focus state. [See ‘Testing with Dragon’ in the accessibility clinic summary](https://github.com/alphagov/govuk-frontend/issues/2295#issuecomment-906449543). 
+While this experience is inconvenient at first, it's likely the user will better understand the button area once they interact with it and see its focus state. [See ‘Testing with Dragon’ in the accessibility clinic summary](https://github.com/alphagov/govuk-frontend/issues/2295#issuecomment-906449543).
 
 We want to hear about any user research done in this area so we can identify potential issues.
 
