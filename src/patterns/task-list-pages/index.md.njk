@@ -10,15 +10,17 @@ status: Experimental
 statusMessage: This pattern is currently experimental because <a class="govuk-link" href="#next-steps">more research</a> is needed to validate it.
 ---
 
+{% from "_example.njk" import example %}
+
 Task list pages help users understand:
 
 - the tasks involved in completing a transaction
 - the order they should complete tasks in
-- when they have completed tasks
+- when they've completed tasks
 
 ![A screenshot showing an example of the task list page, includes a heading, and three grouped sections that each contain tasks, some of these tasks are marked as completed.](task-list-whole.png)
 
-There is a [coded example of a task list page](https://govuk-prototype-kit.herokuapp.com/docs/templates/task-list) in the GOV.UK Prototype Kit. To use the example, get the following code from the Prototype Kit repository on GitHub:
+There’s a [coded example of a task list page](https://govuk-prototype-kit.herokuapp.com/docs/templates/task-list) in the GOV.UK Prototype Kit. To use the example, get the following code from the Prototype Kit repository on GitHub:
 
 - [HTML from the task list page's HTML file](https://github.com/alphagov/govuk-prototype-kit/blob/main/docs/views/templates/task-list.html#L18)
 - [custom styles from the task list page's SCSS file](https://github.com/alphagov/govuk-prototype-kit/blob/main/app/assets/sass/patterns/_task-list.scss)
@@ -27,7 +29,7 @@ There is a [coded example of a task list page](https://govuk-prototype-kit.herok
 
 Only use a task list page for longer transactions involving multiple tasks that users may need to complete over a number of sessions.
 
-Try to simplify the transaction before you use a task list page. If you’re able to reduce the number of tasks or steps involved, you may not need one.
+Try to simplify the transaction before you use a task list page. If you’re able to reduce the number of tasks or steps involved, you might not need one.
 
 ## How it works
 
@@ -36,12 +38,12 @@ You should show a task list page:
 - at the start of the transaction
 - at the start of each returning session
 
-When using a task list page in your service you need to:
+If you use a task list page in your service, you'll need to:
 
 - group related actions into tasks
 - show the status of the tasks
 
-If there are lots of tasks to complete, you might also need to group them into sub-sections.
+If there are lots of tasks to complete, you might also need to group them further into steps.
 
 ### Group related actions into tasks
 
@@ -54,9 +56,11 @@ Where possible, task names should:
 
 ### Show the status of the tasks
 
-Include a summary above the task list to say how many tasks or sections have been completed.
+Include a summary above the task list to say how many tasks have been completed.
 
-![A screenshot showing a task list summary that says 'Application incomplete. You have completed 3 of 8 sections'](task-list-summary.png)
+You might find a better word to describe what a ‘task’ is for your users. If your service is an application form, each task might be a ‘section’ of questions to complete.
+
+![A screenshot showing a task list summary that says 'Application incomplete. You've completed 3 of 8 sections'](task-list-summary.png)
 
 Make it clear to users which tasks they’ve completed and which still need their attention, by labelling them using the [Tag component](/components/tag/).
 
@@ -70,13 +74,42 @@ Use the following labels to describe the different states of a task:
 - 'Completed' (in blue) if the user has completed the task
 
 
-### Group tasks into sections
+### Group tasks into steps
 
-If your transaction involves lots of tasks, make it manageable by splitting it up into sections that represent stages in the process.
+If your transaction involves lots of tasks, make it manageable by splitting it up into steps that represent stages in the process.
 
-For example, you could group all tasks which help users find out if your service is right for them in a section called ‘Check before you start’.
+For example, you could group all tasks which help users find out if your service is right for them in a step called ‘Check before you start’.
 
 Where possible, allow users to complete tasks in any order. This will help them plan their time and complete sections as and when they can.
+
+### Marking tasks as completed
+
+Sometimes, it’s better to let the user decide when a task is completed.
+
+This can be helpful when a task involves:
+
+* some questions that are optional
+* writing a long answer (such as in a [textarea](/components/textarea/))
+* looking up information, such as details about previous jobs
+* answers that need to be checked carefully with someone else
+
+Do this by asking a radio question at the end of the task — either as the last question (if the task is a single page) or on the [‘Check answers’ page](/patterns/check-answers/) (if the task uses multiple [question pages](/patterns/question-pages/)).
+
+Ask ‘Have you completed this section?’ with the radio options ‘Yes, I’ve completed this section’ or ‘No, I’ll come back later.’
+
+If the user selects ‘No, I’ll come back to it later,’ mark the task as 'Incomplete' or 'In progress.'
+
+If the user selects ‘Yes, I’ve completed this section,’ mark the task as 'Complete.'
+
+{{ example({group: "patterns", item: "task-list-pages", example: "have-you-completed-this-section", html: true, nunjucks: true, open: false}) }}
+
+Always allow users to go back into a task to change their answer.
+
+#### Error messages
+
+If the user does not select an option, show an [error message](/components/error-message/) to say: ‘Select whether you’ve completed this section.’
+
+{{ example({group: "patterns", item: "task-list-pages", example: "have-you-completed-this-section-error", html: true, nunjucks: true, open: false}) }}
 
 ## Research on this pattern
 
@@ -91,7 +124,6 @@ You can read more about [testing and iterating the task list page pattern](https
 In the original pattern only completed tasks were labelled. Some users did not realise they had to complete all the tasks before they could continue, or [thought that they had completed the whole transaction](https://github.com/alphagov/govuk-design-system-backlog/issues/72#issuecomment-413159884).
 
 The pattern has now been iterated to include labels for all statuses and a summary above the list.
-
 
 ### Known issues and gaps
 
