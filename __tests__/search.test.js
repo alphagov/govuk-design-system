@@ -1,7 +1,7 @@
 /* eslint-env jest */
 
 const { setupPage } = require('../lib/jest-utilities.js')
-const configPaths = require('../config/paths.json')
+const configPaths = require('../lib/paths.js')
 const PORT = configPaths.testPort
 
 // Regex that can be used to match on fingerprinted search index files
