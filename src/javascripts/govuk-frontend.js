@@ -31,12 +31,6 @@ nodeListForEach($details, function ($detail) {
 var $errorSummaries = document.querySelectorAll('[data-module="govuk-error-summary"]')
 nodeListForEach($errorSummaries, function ($errorSummary) {
   var errorSummary = new ErrorSummary($errorSummary)
-  // Override the `init` method since it automatically focuses the ErrorSummary.
-  // This is not ideal when showing examples for this component
-  // TODO: Allow option for ErrorSummary to avoid this hack
-  errorSummary.init = function () {
-    this.$module.addEventListener('click', ErrorSummary.prototype.handleClick.bind(this))
-  }
   errorSummary.init()
 })
 
