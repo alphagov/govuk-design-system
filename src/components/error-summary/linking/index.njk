@@ -7,12 +7,12 @@ layout: layout-example.njk
 {% from "govuk/components/input/macro.njk" import govukInput %}
 
 {{ govukErrorSummary({
-  "titleText": "There is a problem",
-  "disableAutoFocus": true,
-  "errorList": [
+  titleText: "There is a problem",
+  disableAutoFocus: true,
+  errorList: [
     {
-      "text": "Enter your full name",
-      "href": "#full-name-input"
+      text: "Enter your full name",
+      href: "#full-name-input"
     }
   ]
 }) }}
@@ -21,13 +21,13 @@ layout: layout-example.njk
 
 {{ govukInput({
   label: {
-    "text": 'Full name'
+    text: 'Full name'
   },
   id: "full-name-input",
   name: "name",
   autocomplete: "name",
   errorMessage: {
-    "text": "Enter your full name"
+    text: "Enter your full name"
   }
 }) }}
 

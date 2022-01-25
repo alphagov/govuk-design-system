@@ -21,12 +21,12 @@ layout: layout-example-full-page.njk
     <div class="govuk-grid-column-two-thirds">
       <form action="/form-handler" method="post" novalidate>
         {{ govukErrorSummary({
-          "titleText": "There is a problem",
-          "disableAutoFocus": true,
-          "errorList": [
+          titleText: "There is a problem",
+          disableAutoFocus: true,
+          errorList: [
             {
-              "text": "Passport issue date must include a year",
-              "href": "#passport-issued-year"
+              text: "Passport issue date must include a year",
+              href: "#passport-issued-year"
             }
           ]
         }) }}
