@@ -15,7 +15,13 @@ on:
 jobs:
   build:
     name: Build & Test
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        include:
+          - os: ubuntu-latest
+            upload-artifact: ${{ inputs.upload-artifact }}
+    runs-on: ${{ matrix.os }}
     env:
       ENVIRONMENT: production
 
@@ -45,7 +51,7 @@ jobs:
       # Upload the deploy folder as an artifact so it can be downloaded and used in the deploy job
       - name: Upload artifact
         uses: actions/upload-artifact@v2
-        if: ${{ inputs.upload-artifact }}
+        if: ${{ matrix.upload-artifact }}
         with:
             name: build
             path: deploy/**
