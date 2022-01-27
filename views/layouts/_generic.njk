@@ -1,9 +1,12 @@
 {% extends "govuk/template.njk" %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
 
 {% set htmlClasses = 'no-js' %}
 {% set assetUrl = 'https://design-system.service.gov.uk/assets' %}
+{% set bannerTag = 'alpha' %}
+{% set bannerText = 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.' %}
 
-{% block pageTitle %}{{ title }} – GOV.UK Design System{% endblock %}
+{% block pageTitle %}{{ title }} – HMLR Design System{% endblock %}
 
 {% block head %}
   {% if not ENVIRONMENT or ENVIRONMENT != 'production' %}
@@ -34,9 +37,9 @@
 
 {% block main %}
 <div class="app-pane {% block appPaneClasses %}{% endblock %}" id="top">
-  {% include "_header.njk" %}
+  {% include "hmlr/_header.njk" %}
   {% include "_mobile-navigation.njk" %}
-  {% include "_banner.njk" %}
+  {% include "hmlr/_banner.njk" %}
   {% include "_navigation.njk" %}
   {% block body %}
     {{ contents | safe }}

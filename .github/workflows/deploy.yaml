@@ -10,7 +10,7 @@ concurrency: production
 
 jobs:
   build:
-    uses: alphagov/govuk-design-system/.github/workflows/test.yaml@fac33297b13e9e4cfa23d88b46a639dc0cbc25d3
+    uses: LandRegistry/hmlr-design-system-2/.github/workflows/test.yaml@fac33297b13e9e4cfa23d88b46a639dc0cbc25d3
     with:
       upload-artifact: true
 

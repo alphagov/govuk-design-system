@@ -1,9 +1,9 @@
 .app-masthead {
   @include govuk-responsive-padding(6, "top");
   @include govuk-responsive-padding(6, "bottom");
-  border-bottom: 1px solid govuk-colour("blue");
+  border-bottom: 1px solid $govuk-brand-colour;
   color: govuk-colour("white");
-  background-color: govuk-colour("blue");
+  background-color: $govuk-brand-colour;
 }
 
 .app-masthead__title {

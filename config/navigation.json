@@ -19,6 +19,11 @@
     "includeInSearch": true
   },
   {
+    "label": "Accessibility",
+    "url": "accessibility",
+    "includeInSearch": true
+  },
+  {
     "label": "Community",
     "url": "community"
   }

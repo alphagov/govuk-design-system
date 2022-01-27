@@ -1,5 +1,8 @@
 $govuk-new-link-styles: true;
 
+$govuk-brand-colour: #006637;
+$govuk-font-family: Arial, sans-serif;
+
 @import "govuk-frontend/govuk/all";
 
 // App-specific variables
@@ -355,3 +358,5 @@ p code {
   border-bottom: 1px solid $govuk-border-colour;
   background-color: $app-light-grey;
 }
+
+@import "hmlr";

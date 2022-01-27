@@ -1,17 +1,17 @@
 {
-  "name": "govuk_design_system",
+  "name": "hmlr-design-system",
   "private": true,
-  "description": "GOV.UK Design System",
+  "description": "HMLR Design System",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alphagov/govuk-design-system.git"
+    "url": "git+https://github.com/landregistry/hmlr-design-system-2.git"
   },
   "author": "Government Digital Service developers",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/alphagov/govuk-design-system/issues"
+    "url": "https://github.com/landregistry/hmlr-design-system-2/issues"
   },
-  "homepage": "https://github.com/alphagov/govuk-design-system#readme",
+  "homepage": "https://github.com/landregistry/hmlr-design-system-2#readme",
   "scripts": {
     "preinstall": "node bin/check-nvmrc.js",
     "prestart": "node bin/check-nvmrc.js",
