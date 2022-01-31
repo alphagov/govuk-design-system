@@ -118,7 +118,10 @@ In services like these, the risk that they will not be noticed is lower because 
 
 ### Error messages
 
-Display an error message if none of the radios are selected.
+Display an error message if the user has not:
+
+- selected any radios
+- answered a conditionally revealed question
 
 Error messages should be styled like this:
 
@@ -137,6 +140,12 @@ Say ‘Select if [whatever it is]’. For example, ‘Select if you are employed
 #### If there are more than two options
 
 Say ‘Select [whatever it is]’. For example, ‘Select the day of the week you pay your rent’.
+
+#### If it's a conditionally revealed question
+
+Include an [error message](/components/error-message/) that is clearly related to the initial question.
+
+{{ example({group: "components", item: "radios", example: "conditional-reveal-error", html: true, nunjucks: true, open: false, size: "s"}) }}
 
 ## Research on this component
 
