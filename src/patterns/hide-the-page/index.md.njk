@@ -4,11 +4,11 @@ description: Help users to hide the page quickly if they’re at risk of harm
 section: Patterns
 theme: Help users to…
 aliases:
-backlog_issue_id: 35
+backlog_issue_id: 213
 layout: layout-pane.njk
 ---
 
-This pattern gives the user a way to quickly hide the page from a potential perpetrator if they’re nearby.
+This pattern gives the user a way to quickly hide the page from someone that's watching them and invading their privacy. For example, if the user is a victim of domestic abuse.
 
 ![Screenshot of a question page on GOV.UK. On the right hand side of the page there is a red button saying "Hide this page".](hide-this-page-example.png)
 
@@ -22,9 +22,11 @@ To help the user successfully use a ‘Hide this page’ button in high-risk sit
 
 ### Showing the button
 
-The button should be styled as a red [warning button](/components/button/#warning-buttons) and say ‘Hide this page’.
+The button should be a HTML link, styled as a red [warning button](/components/button/#warning-buttons). It should say ‘Hide this page’.
 
-Position the button on the right hand side of the page. Make its position on the page ‘sticky’ so that as the user scrolls down the page, it remains visible and easy to activate.
+Align the button to the top and right margins of the column grid. Make its position on the page ‘sticky’ so that as the user scrolls down the page, it remains visible at the top of the viewport and easy to activate.
+
+Avoid layouts that use the right hand area of the page, as the button might cover content.
 
 <div class="app-video">
   <video class="app-video__player" role="region" aria-labelledby="hide-this-page-video-description" controls muted>
@@ -37,14 +39,23 @@ Position the button on the right hand side of the page. Make its position on the
 
 On mobile devices, position the button so it’s fixed at the button of the screen, so it can easily be activated by a thumb or hidden by a hand.
 
+<div class="app-video">
+  <video class="app-video__player" role="region" aria-labelledby="hide-this-page-video-description" controls muted>
+    <source src="hide-this-page-mobile.mp4" type="video/mp4">
+  </video>
+  <p class="app-video__description" id="hide-this-page-video-description">
+    This video shows a page with a 'Hide this page' button on a mobile device . It sticks to the bottom of the screen as the user scrolls. The video does not have any audio.
+  </p>
+</div>
+
 In the HTML code, the button should be ordered immediately after the header. This helps screen reader users to notice it. It also helps keyboard users easily activate the component by returning to the top of the page and pushing the tab button once.
 
 ### Setting the button’s action
 
-Set the button so that when activated, it takes the user to a frequently visited website.
+The link should take the user to a frequently visited website.
 
-To further help the user hide their activity, also add JavaScript code to:
-- open a new tab
+To further help the user hide their activity, add JavaScript code to:
+- open a new tab and focus to it
 - set the new tab to take the user to a 2nd website 
 
 If JavaScript is available, this will help the user hide their activity by greying out the back button.
@@ -55,23 +66,23 @@ Do not ask users to confirm if they want to leave the page. If the user might lo
 
 ### Choosing appropriate websites to load
 
-Choose to load websites that most users could realistically be browsing, such as www.google.com and www.bbc.co.uk/weather. But change them if there are more appropriate sites for your users.
+Link to websites that your users could realistically be browsing. Good defaults are www.google.com and www.bbc.co.uk/weather, but change them if there are more appropriate sites for your users.
 
 Avoid websites that show personalised homepages (such as frequently visited, last visited, or suggested results), as this content might put the user at risk.
 
-### Teach users how to cover their tracks
+### Teach users how to stay safe online
 
-Near the start of your service, add a text link to a page that explains what the ‘Hide this page’ button is and how to use it and how it can help them.
+If possible, create a page that explains what the ‘Hide this page’ button is and how it can help the user.
 
-The user should know that a potential perpetrator can use many different methods to find out about web pages they’ve visited.
+Include safety information to explain how browser history works and steps they can take to protect themselves, such as using a private browsing window. 
 
-Include safety information that explains how browser history works and steps they can take to protect themselves, such as using a private browsing window. 
+For an example, see [Staying safe online](https://www.mygov.scot/staying-safe-online) on mygov.scot.
 
-Alternatively, you can link to a page on another website that’s relevant to your users, such as:
-- ‘[Cover your tracks online](https://www.womensaid.org.uk/cover-your-tracks-online/)’ on Women’s Aid
-- ‘[Keeping yourself safe online](http://swanseawomensaid.com/cover-your-tracks-online/)’ on Swansea Women’s Aid
+Link to this page at the start of your service, or where the button first appears.
+
+Alternatively you can link to another website that’s relevant to your users, such as:
+- [Women’s Aid: Cover your tracks online](https://www.womensaid.org.uk/cover-your-tracks-online/)
 - [Refuge Tech Safety](https://refugetechsafety.org/)
-- ‘[Staying safe online](https://www.mygov.scot/staying-safe-online)’ on mygov.scot
 
 ## Research on this pattern
 
