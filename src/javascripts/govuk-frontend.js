@@ -8,6 +8,7 @@ import ErrorSummary from 'govuk-frontend/govuk/components/error-summary/error-su
 import NotificationBanner from 'govuk-frontend/govuk/components/notification-banner/notification-banner'
 import Radios from 'govuk-frontend/govuk/components/radios/radios'
 import Header from 'govuk-frontend/govuk/components/header/header'
+import HideThisPage from 'govuk-frontend/govuk/components/hide-this-page/hide-this-page'
 import Tabs from 'govuk-frontend/govuk/components/tabs/tabs'
 import SkipLink from 'govuk-frontend/govuk/components/skip-link/skip-link'
 
@@ -58,6 +59,9 @@ var $headers = document.querySelectorAll('[data-module="govuk-header"]')
 nodeListForEach($headers, function ($header) {
   new Header($header).init()
 })
+
+var $hideThisPageButtons = document.querySelectorAll('[data-module="govuk-hide-this-page"]')
+new HideThisPage($hideThisPageButtons).init()
 
 var $tabs = document.querySelectorAll('[data-module="govuk-tabs"]')
 nodeListForEach($tabs, function ($tab) {

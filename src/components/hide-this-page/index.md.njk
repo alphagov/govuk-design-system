@@ -1,0 +1,71 @@
+---
+title: Hide this page
+description: Help users quickly hide the current page
+section: Components
+backlog_issue_id: 213
+layout: layout-pane.njk
+---
+
+{% from "_example.njk" import example %}
+
+Help users to exit a service quickly and safely.
+
+{{ example({group: "components", item: "hide-this-page", example: "default", html: true, nunjucks: true, open: false, size: "s"}) }}
+
+## When to use this component
+
+Use the hide this page component when some people could be put in danger or at risk of harm by using your service.
+For example, a service about domestic abuse.
+
+
+## How it works
+
+There are 2 ways to use the hide this page component.
+You can use HTML or, if you are using Nunjucks or the GOV.UK Prototype Kit, you can use the Nunjucks macro.
+
+{{ example({group: "components", item: "hide-this-page", example: "default", html: true, nunjucks: true, open: false, size: "s"}) }}
+
+Add the component to any page where a user could be at risk.
+This could be across a whole service or just the pages where information is particularly sensitive.
+
+Position the component immediately below the header of your page.
+It's position is sticky so it remains visible and easy to activate.
+On mobile devices the button is fixed to the bottom of the screen, so it can quickly be activated or hidden by the user.
+
+[View a full page example of this component](full-page/)
+
+When activated the component loads a frequently visited website into the current browser tab.
+If Javascript is available the browser will also switch to a new tab, and load a second website into it.
+
+Doing this disables the current browser tab back button, providing an additional level of protection.
+
+
+### Choosing different websites to load
+
+By default, the two websites loaded are www.google.com and www.bbc.co.uk/weather,
+but these can be changed if there are more appropriate sites for your users.
+
+{{ example({group: "components", item: "hide-this-page", example: "different-websites", html: true, nunjucks: true, open: false, size: "s"}) }}
+
+
+## Research on this component
+
+The design of this component is based on research from a specialist provider of services to survivors of domestic abuse, and in
+consultation with the Ministry of Justice, Department for Work and Pensions and the Scottish Government.
+
+Live examples of similar components can be found on these websites:
+
+ - [GOV.UK: Check if you can get legal aid](https://www.gov.uk/check-legal-aid)
+ - [GOV.UK: Apply for help arranging child maintenance](https://child-maintenance.service.gov.uk/apply/eligibility/info)
+ - [mygov.scot: Domestic abuse support](https://www.mygov.scot/domestic-abuse/)
+ - [Women's aid website](https://www.womensaid.org.uk/)
+ - [Refuge website](https://www.nationaldahelpline.org.uk/)
+
+More research is needed to find out:
+
+ - how best to safely announce the component using a screenreader
+ - whether the right alignment causes issues for users of screen zoom
+ - whether any additional information is required to explain the purpose of the component
+ - whether a keyboard shortcut could help some users, and be safely implemented
+ - whether the browser history can safely be manipulated, to further reduce the risks
+ 

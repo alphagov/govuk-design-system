@@ -1,0 +1,12 @@
+---
+title: Hide this Page
+layout: layout-example.njk
+---
+{% from "govuk/components/hide-this-page/macro.njk" import govukHideThisPage %}
+
+{{ govukHideThisPage({
+  text: "Hide this page",
+  currentTabURL: "https://www.google.com/",
+  newTabURL: "https://www.cgtn.com/nature/weathermap.html",
+  fakePageTitle: "How to prevent the spread of Coronavirus - GOV.UK"
+}) }}

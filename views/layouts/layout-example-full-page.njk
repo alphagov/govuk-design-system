@@ -16,6 +16,10 @@
   <script src="/javascripts/vendor/modernizr.js"></script>
 {% endblock %}
 
+{% block skipLink %}
+  {{ super() }}
+{% endblock %}
+
 {% block header %}
   {{ govukHeader({
     homepageUrl: "#",

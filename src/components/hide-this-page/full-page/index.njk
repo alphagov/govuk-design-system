@@ -1,0 +1,32 @@
+---
+title: Hide this page - full page example
+layout: layout-example-full-page-hide-this-page.njk
+---
+
+{% extends "example-wrappers/full-page.njk" %}
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block content %}
+  {% from "govuk/components/hide-this-page/macro.njk" import govukHideThisPage %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Hide this page example</h1>
+        <p class="govuk-body">
+          This is an example of a GOV.UK page with the Hide this page component added to it.
+        </p>
+        <p class="govuk-body">
+          The example shows where you should add the component to your page, and how it works.
+        </p>
+        <p class="govuk-body">
+          <a href="../" class="govuk-link">Back to the the Hide this page component guidance</a></p>
+        </p>
+    </div>
+
+    {{ govukHideThisPage({
+      text: "Hide this page",
+      currentTabURL: "https://www.google.com/",
+      newTabURL: "https://www.cgtn.com/nature/weathermap.html",
+      fakePageTitle: "How to prevent the spread of Coronavirus - GOV.UK"
+    }) }}
+  </div>
+{% endblock %}
