@@ -1,0 +1,92 @@
+---
+title: Hide the page
+description: Help users to hide the page quickly if they’re at risk of harm
+section: Patterns
+theme: Help users to…
+aliases:
+backlog_issue_id: 35
+layout: layout-pane.njk
+---
+
+This pattern gives the user a way to quickly hide the page from a potential perpetrator if they’re nearby.
+
+![Screenshot of a question page on GOV.UK. On the right hand side of the page there is a red button saying "Hide this page".](hide-this-page-example.png)
+
+## When to use this pattern
+
+Show a ‘Hide this page’ button on any page where a user could be at risk while using the service. This could be across a whole service or just the pages where information is particularly sensitive.
+
+To help the user successfully use a ‘Hide this page’ button in high-risk situations, you might choose to add or link to guidance to explain how it works and its limitations.
+
+## How it works
+
+### Showing the button
+
+The button should be styled as a red [warning button](/components/button/#warning-buttons) and say ‘Hide this page’.
+
+Position the button on the right hand side of the page. Make its position on the page ‘sticky’ so that as the user scrolls down the page, it remains visible and easy to activate.
+
+<div class="app-video">
+  <video class="app-video__player" role="region" aria-labelledby="hide-this-page-video-description" controls muted>
+    <source src="hide-this-page-desktop.mp4" type="video/mp4">
+  </video>
+  <p class="app-video__description" id="hide-this-page-video-description">
+    This video shows a desktop page with a 'Hide this page' button. It sticks to the top of the screen as the user scrolls. The video does not have any audio.
+  </p>
+</div>
+
+On mobile devices, position the button so it’s fixed at the button of the screen, so it can easily be activated by a thumb or hidden by a hand.
+
+In the HTML code, the button should be ordered immediately after the header. This helps screen reader users to notice it. It also helps keyboard users easily activate the component by returning to the top of the page and pushing the tab button once.
+
+### Setting the button’s action
+
+Set the button so that when activated, it takes the user to a frequently visited website.
+
+To further help the user hide their activity, also add JavaScript code to:
+- open a new tab
+- set the new tab to take the user to a 2nd website 
+
+If JavaScript is available, this will help the user hide their activity by greying out the back button.
+
+Use JavaScript code to insert hidden text saying ‘and open a new tab’. A screen reader would then read ‘Hide this page and open a new tab’ to warn users of the tab behaviour. Consider that a potential perpetrator might be able to hear the user’s screen reader.
+
+Do not ask users to confirm if they want to leave the page. If the user might lose their progress if they leave, explain this near the start of the journey.
+
+### Choosing appropriate websites to load
+
+Choose to load websites that most users could realistically be browsing, such as www.google.com and www.bbc.co.uk/weather. But change them if there are more appropriate sites for your users.
+
+Avoid websites that show personalised homepages (such as frequently visited, last visited, or suggested results), as this content might put the user at risk.
+
+### Teach users how to cover their tracks
+
+Near the start of your service, add a text link to a page that explains what the ‘Hide this page’ button is and how to use it and how it can help them.
+
+The user should know that a potential perpetrator can use many different methods to find out about web pages they’ve visited.
+
+Include safety information that explains how browser history works and steps they can take to protect themselves, such as using a private browsing window. 
+
+Alternatively, you can link to a page on another website that’s relevant to your users, such as:
+- ‘[Cover your tracks online](https://www.womensaid.org.uk/cover-your-tracks-online/)’ on Women’s Aid
+- ‘[Keeping yourself safe online](http://swanseawomensaid.com/cover-your-tracks-online/)’ on Swansea Women’s Aid
+- [Refuge Tech Safety](https://refugetechsafety.org/)
+- ‘[Staying safe online](https://www.mygov.scot/staying-safe-online)’ on mygov.scot
+
+## Research on this pattern
+
+The design of this pattern is based on research from a specialist provider of services to survivors of domestic abuse, and in consultation with the Ministry of Justice, Department for Work and Pensions and the Scottish Government.
+
+Live examples of similar components can be found on these websites:
+- [GOV.UK: Check if you can get legal aid](https://www.gov.uk/check-legal-aid)
+- [GOV.UK: Apply for help arranging child maintenance](https://child-maintenance.service.gov.uk/apply/eligibility/info)
+- [mygov.scot: Domestic abuse support](https://www.mygov.scot/domestic-abuse)
+- [Women’s aid website](https://www.womensaid.org.uk/)
+- [Refuge website](https://www.nationaldahelpline.org.uk/)
+
+More research is needed to find out:
+- how best to safely announce the component using a screen reader
+- whether the right alignment causes issues for users of screen zoom
+- whether any additional information is required to explain the purpose of the component
+- whether a keyboard shortcut could help some users, and be safely implemented
+- whether the browser history can safely be manipulated, to further reduce the risks
