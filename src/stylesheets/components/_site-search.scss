@@ -49,14 +49,13 @@ $icon-size: 40px;
   .app-site-search__wrapper {
     display: block;
     position: relative;
-    height: $icon-size;
   }
 
   .app-site-search__hint,
   .app-site-search__input {
     box-sizing: border-box;
     width: 100%;
-    height: $icon-size;
+    height: govuk-px-to-rem($icon-size);
     margin-bottom: 0; // BUG: Safari 10 on macOS seems to add an implicit margin.
     padding: govuk-spacing(1);
     padding-left: $icon-size - govuk-spacing(1);
