@@ -34,10 +34,6 @@
   @include govuk-typography-weight-bold; // Override .govuk-link weight
   font-size: 19px; // We do not have a font mixin that produces 19px on mobile
   font-size: govuk-px-to-rem(19px); // sass-lint:disable-line no-duplicate-properties
-
-  &:not(:focus):hover {
-    color: $govuk-link-colour;
-  }
 }
 
 .app-mobile-nav-subnav-toggler__link,
