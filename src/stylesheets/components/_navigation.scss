@@ -1,9 +1,4 @@
-$navigation-height: 50px;
-
 .app-navigation {
-  @include govuk-font(19, $weight: bold);
-  box-sizing: border-box;
-  width: 100%;
   background-color: $app-light-grey;
 
   @include govuk-media-query($until: tablet) {
@@ -20,13 +15,17 @@ $navigation-height: 50px;
 }
 
 .app-navigation__list-item {
+  $navigation-height: 50px;
+
+  @include govuk-font(19, $weight: bold, $line-height: $navigation-height);
+
   box-sizing: border-box;
   display: block;
   position: relative;
   height: $navigation-height;
+  height: govuk-px-to-rem($navigation-height); // sass-lint:disable-line no-duplicate-properties
   padding: 0 govuk-spacing(3);
   float: left;
-  line-height: $navigation-height;
 }
 
 .app-navigation__list-item--current {
