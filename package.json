@@ -29,7 +29,6 @@
   },
   "dependencies": {
     "acorn": "^6.4.1",
-    "ajv": "^6.12.3",
     "autoprefixer": "^9.5.1",
     "clipboard": "^2.0.4",
     "connect": "^3.6.6",
