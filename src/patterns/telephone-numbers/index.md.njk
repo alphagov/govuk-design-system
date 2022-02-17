@@ -76,11 +76,14 @@ It’s possible to mark up telephone numbers as links, like this:
 <a href="tel:+442079476330">020 7947 6330</a>
 ```
 
-However, doing this will style telephone numbers as links, which is confusing on devices that do not support telephone calls, like most desktop machines.
+However, doing this will style telephone numbers as links, which is confusing on devices that do not support telephone calls.
 
-It’s also not necessary - most modern mobile browsers automatically detect telephone numbers and display them as links anyway.
+It might also not be necessary - some modern mobile browsers automatically detect telephone numbers and display them as links anyway.
 
-If you do need to mark up your telephone number as links, for example, to support a device that cannot automatically detect them, make sure they do not display as links on devices that cannot make calls.
+If you do need to mark up your telephone numbers as links, for example, to support a device that cannot automatically detect them, make sure they do not display as links on devices that cannot make calls.
+
+When you look at your service's user journey, remember that telephone numbers as links might behave in unexpected ways for the user. For example, unless the user sets a default app to handle `tel:` links, some browsers and operating systems will automatically start a setup process.
+
 ### Write telephone numbers in the GOV.UK style
 See the [GOV.UK style for writing telephone numbers](https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#telephone-numbers).
 
