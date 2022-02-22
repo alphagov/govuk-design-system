@@ -9,8 +9,8 @@ const PORT = configPaths.testPort
 let page
 let baseUrl = 'http://localhost:' + PORT
 
-const mobileNav = '.app-mobile-nav'
-const mobileNavToggler = '.js-app-mobile-nav__toggler'
+const mobileNav = '.app-navigation'
+const mobileNavToggler = '.js-app-navigation__toggler'
 
 beforeAll(async () => {
   page = await setupPage(iPhone)
@@ -25,8 +25,8 @@ describe('Homepage', () => {
     it('falls back to making the navigation visible', async () => {
       await page.setJavaScriptEnabled(false)
       await page.goto(baseUrl, { waitUntil: 'load' })
-      const isMobileNavigationVisible = await page.waitForSelector('.js-app-mobile-nav', { visible: true, timeout: 1000 })
-      expect(isMobileNavigationVisible).toBeTruthy()
+      const isAppNavigationVisible = await page.waitForSelector('.js-app-navigation', { visible: true, timeout: 1000 })
+      expect(isAppNavigationVisible).toBeTruthy()
     })
   })
 
@@ -35,7 +35,6 @@ describe('Homepage', () => {
       it('should apply the corresponding open state class to the menu button', async () => {
         await page.setJavaScriptEnabled(true)
         await page.goto(baseUrl, { waitUntil: 'load' })
-
         await page.click(mobileNavToggler)
 
         const toggleButtonIsOpen = await page.evaluate((mobileNavToggler) =>
@@ -47,7 +46,6 @@ describe('Homepage', () => {
 
       it('should indicate the expanded state of the toggle button using aria-expanded', async () => {
         await page.goto(baseUrl, { waitUntil: 'load' })
-
         await page.click(mobileNavToggler)
 
         const toggleButtonAriaExpanded = await page.evaluate((mobileNavToggler) =>
@@ -59,11 +57,10 @@ describe('Homepage', () => {
 
       it('should indicate the open state of the navigation', async () => {
         await page.goto(baseUrl, { waitUntil: 'load' })
-
         await page.click(mobileNavToggler)
 
         const navigationIsOpen = await page.evaluate((mobileNav) =>
-          document.body.querySelector(mobileNav).classList.contains('app-mobile-nav--active'),
+          document.body.querySelector(mobileNav).classList.contains('app-navigation--active'),
         mobileNav)
 
         expect(navigationIsOpen).toBeTruthy()
@@ -71,7 +68,6 @@ describe('Homepage', () => {
 
       it('should indicate the visible state of the navigation using the hidden attribute', async () => {
         await page.goto(baseUrl, { waitUntil: 'load' })
-
         await page.click(mobileNavToggler)
 
         const navigationIsHidden = await page.evaluate((mobileNav) =>

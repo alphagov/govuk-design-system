@@ -3,19 +3,19 @@ import 'govuk-frontend/govuk/vendor/polyfills/Element/prototype/classList'
 import common from 'govuk-frontend/govuk/common'
 var nodeListForEach = common.nodeListForEach
 
-var navActiveClass = 'app-mobile-nav--active'
+var navActiveClass = 'app-navigation--active'
 var navMenuButtonActiveClass = 'app-header-mobile-nav-toggler--active'
-var subNavActiveClass = 'app-mobile-nav__subnav--active'
+var subNavActiveClass = 'app-navigation__subnav--active'
 // This one has the query dot at the beginning because it's only ever used in querySelector calls
-var subNavJSClass = '.js-app-mobile-nav__subnav'
+var subNavJSClass = '.js-app-navigation__subnav'
 
-function MobileNav ($module) {
+function Navigation ($module) {
   this.$module = $module || document
 
-  this.$nav = this.$module.querySelector('.js-app-mobile-nav')
-  this.$navToggler = this.$module.querySelector('.js-app-mobile-nav__toggler')
-  this.$navButtons = this.$module.querySelectorAll('.js-app-mobile-nav__button')
-  this.$navLinks = this.$module.querySelectorAll('.js-app-mobile-nav__link')
+  this.$nav = this.$module.querySelector('.js-app-navigation')
+  this.$navToggler = this.$module.querySelector('.js-app-navigation__toggler')
+  this.$navButtons = this.$module.querySelectorAll('.js-app-navigation__button')
+  this.$navLinks = this.$module.querySelectorAll('.js-app-navigation__link')
 
   // Save the opened/closed state for the nav in memory so that we can accurately maintain state when the screen is changed from small to big and back to small
   this.mobileNavOpen = false
@@ -28,7 +28,8 @@ function MobileNav ($module) {
 // Checks if the saved window size has changed between now and when it was last recorded (on load and on viewport width changes)
 // Reapplies hidden attributes based on if the viewport has changed from big to small or vice verca
 // Saves the new window size
-MobileNav.prototype.setHiddenStates = function () {
+
+Navigation.prototype.setHiddenStates = function () {
   if (this.mql === null || !this.mql.matches) {
     if (!this.mobileNavOpen) {
       this.$nav.setAttribute('hidden', '')
@@ -58,7 +59,7 @@ MobileNav.prototype.setHiddenStates = function () {
   }
 }
 
-MobileNav.prototype.setInitialAriaStates = function () {
+Navigation.prototype.setInitialAriaStates = function () {
   this.$navToggler.setAttribute('aria-expanded', 'false')
 
   nodeListForEach(this.$navButtons, function ($button, index) {
@@ -76,7 +77,7 @@ MobileNav.prototype.setInitialAriaStates = function () {
   })
 }
 
-MobileNav.prototype.bindUIEvents = function () {
+Navigation.prototype.bindUIEvents = function () {
   var $nav = this.$nav
   var $navToggler = this.$navToggler
   var $navButtons = this.$navButtons
@@ -122,7 +123,7 @@ MobileNav.prototype.bindUIEvents = function () {
   })
 }
 
-MobileNav.prototype.init = function () {
+Navigation.prototype.init = function () {
   // Since the Mobile navigation is not included in IE8
   // We detect features we need to use only available in IE9+ https://caniuse.com/#feat=addeventlistener
   // http://responsivenews.co.uk/post/18948466399/cutting-the-mustard
@@ -145,4 +146,4 @@ MobileNav.prototype.init = function () {
   this.bindUIEvents()
 }
 
-export default MobileNav
+export default Navigation
