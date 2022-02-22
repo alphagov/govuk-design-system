@@ -1,35 +1,35 @@
-<nav id="app-mobile-nav" class="app-mobile-nav js-app-mobile-nav" role="navigation" aria-labelledby="app-mobile-navigation-heading">
+<nav id="app-mobile-nav" class="app-mobile-nav js-app-mobile-nav govuk-clearfix" role="navigation" aria-labelledby="app-mobile-navigation-heading">
   <h2 class="govuk-visually-hidden" id="app-mobile-navigation-heading">Menu</h2>
-  <ul class="app-mobile-nav__list">
+  <ul class="app-mobile-nav__list app-width-container">
     {% for item in navigation %}
-      <li>
-        <div class="app-mobile-nav-subnav-toggler{% if path.startsWith(item.url) %} app-mobile-nav__subnav-toggler--active{% endif %}">
-          <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-mobile-nav-subnav-toggler__link js-mobile-nav-subnav-toggler" href="/{{ item.url }}/">
-            {% if item.items %}
-              <!-- When JavaScript is enabled, the menu links expand a section below with more content, so we should make them headings -->
-              <span class="js-app-mobile-nav-subnav__link-heading">{{ item.label }}</span>
-            {% else %}
-              {{ item.label }}
-            {% endif %}
-
-          </a>
-        </div>
+      <li class="app-mobile-nav__list-item {% if path == item.url or item.url and path.startsWith(item.url) %} app-navigation__list-item--current{% endif %}">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-mobile-nav__link js-app-mobile-nav__link" href="/{{ item.url }}/">
+          {{ item.label }}
+        </a>
         {% if item.items %}
-          <ul class="app-mobile-nav__list app-mobile-nav__subnav js-app-mobile-nav-subnav {% if path.startsWith(item.url) %}app-mobile-nav__subnav--active{% endif %}" aria-label="{{ item.label }}">
+          <button hidden class="app-mobile-nav__button js-app-mobile-nav__button">
+            {{ item.label }}
+          </button>
+        {% endif %}
+        {% if item.items %}
+          <ul class="app-mobile-nav__subnav js-app-mobile-nav__subnav {% if path.startsWith(item.url) %}app-mobile-nav__subnav--active{% endif %}"
+            aria-label="{{ item.label }}"
+            hidden
+          >
             <li class="app-mobile-nav__subnav-item{% if path == item.url %} app-mobile-nav__subnav-item--current{% endif %}">
-              <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-mobile-nav__link" href="/{{ item.url }}/">
+              <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/{{ item.url }}/">
                 {{ item.label }} overview
               </a>
             </li>
             {% for theme, items in item.items | groupby("theme") %}
               <li>
                 {% if theme != 'undefined' %}
-                  <h4 class="app-mobile-nav__theme">{{ theme }}</h4>
+                  <h3 class="app-mobile-nav__theme">{{ theme }}</h3>
                 {% endif %}
                 <ul class="app-mobile-nav__list">
                   {% for subitem in items %}
                     <li class="app-mobile-nav__subnav-item{% if path == subitem.url %} app-mobile-nav__subnav-item--current{% endif %}">
-                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-mobile-nav__link" href="/{{ subitem.url }}/">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/{{ subitem.url }}/">
                         {{ subitem.label }}
                       </a>
                     </li>

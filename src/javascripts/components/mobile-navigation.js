@@ -4,99 +4,121 @@ import common from 'govuk-frontend/govuk/common'
 var nodeListForEach = common.nodeListForEach
 
 var navActiveClass = 'app-mobile-nav--active'
-var navTogglerActiveClass = 'app-header-mobile-nav-toggler--active'
+var navMenuButtonActiveClass = 'app-header-mobile-nav-toggler--active'
 var subNavActiveClass = 'app-mobile-nav__subnav--active'
-var subNavTogglerActiveClass = 'app-mobile-nav__subnav-toggler--active'
+// This one has the query dot at the beginning because it's only ever used in querySelector calls
+var subNavJSClass = '.js-app-mobile-nav__subnav'
 
 function MobileNav ($module) {
   this.$module = $module || document
+
   this.$nav = this.$module.querySelector('.js-app-mobile-nav')
-  this.$navToggler = this.$module.querySelector('.js-app-mobile-nav-toggler')
+  this.$navToggler = this.$module.querySelector('.js-app-mobile-nav__toggler')
+  this.$navButtons = this.$module.querySelectorAll('.js-app-mobile-nav__button')
+  this.$navLinks = this.$module.querySelectorAll('.js-app-mobile-nav__link')
+
+  // Save the opened/closed state for the nav in memory so that we can accurately maintain state when the screen is changed from small to big and back to small
+  this.mobileNavOpen = false
+
+  // A global const for storing a matchMedia instance which we'll use to detect when a screen size change happens
+  // We set this later during the init function and rely on it being null if the feature isn't available to initially apply hidden attributes
+  this.mql = null
+}
+
+// Checks if the saved window size has changed between now and when it was last recorded (on load and on viewport width changes)
+// Reapplies hidden attributes based on if the viewport has changed from big to small or vice verca
+// Saves the new window size
+MobileNav.prototype.setHiddenStates = function () {
+  if (this.mql === null || !this.mql.matches) {
+    if (!this.mobileNavOpen) {
+      this.$nav.setAttribute('hidden', '')
+    }
+
+    nodeListForEach(this.$navLinks, function ($navLink, index) {
+      $navLink.setAttribute('hidden', '')
+    })
+
+    nodeListForEach(this.$navButtons, function ($navButton, index) {
+      $navButton.removeAttribute('hidden')
+    })
+
+    this.$navToggler.removeAttribute('hidden')
+  } else if (this.mql === null || this.mql.matches) {
+    this.$nav.removeAttribute('hidden')
+
+    nodeListForEach(this.$navLinks, function ($navLink, index) {
+      $navLink.removeAttribute('hidden')
+    })
+
+    nodeListForEach(this.$navButtons, function ($navButton, index) {
+      $navButton.setAttribute('hidden', '')
+    })
+
+    this.$navToggler.setAttribute('hidden', '')
+  }
+}
+
+MobileNav.prototype.setInitialAriaStates = function () {
+  this.$navToggler.setAttribute('aria-expanded', 'false')
+
+  nodeListForEach(this.$navButtons, function ($button, index) {
+    var $nextSubNav = $button.parentNode.querySelector(subNavJSClass)
+
+    if ($nextSubNav) {
+      var subNavTogglerId = 'js-mobile-nav-subnav-toggler-' + index
+      var nextSubNavId = 'js-mobile-nav__subnav-' + index
+
+      $nextSubNav.setAttribute('id', nextSubNavId)
+      $button.setAttribute('id', subNavTogglerId)
+      $button.setAttribute('aria-expanded', $nextSubNav.hasAttribute('hidden') ? 'false' : 'true')
+      $button.setAttribute('aria-controls', nextSubNavId)
+    }
+  })
 }
 
 MobileNav.prototype.bindUIEvents = function () {
   var $nav = this.$nav
   var $navToggler = this.$navToggler
+  var $navButtons = this.$navButtons
 
   $navToggler.addEventListener('click', function (event) {
-    if ($nav.classList.contains(navActiveClass)) {
+    if (this.mobileNavOpen) {
       $nav.classList.remove(navActiveClass)
-      $nav.setAttribute('aria-hidden', 'true')
+      $navToggler.classList.remove(navMenuButtonActiveClass)
+      $nav.setAttribute('hidden', '')
 
-      $navToggler.classList.remove(navTogglerActiveClass)
       $navToggler.setAttribute('aria-expanded', 'false')
+
+      this.mobileNavOpen = false
     } else {
       $nav.classList.add(navActiveClass)
-      $nav.setAttribute('aria-hidden', 'false')
+      $navToggler.classList.add(navMenuButtonActiveClass)
+      $nav.removeAttribute('hidden')
 
       $navToggler.setAttribute('aria-expanded', 'true')
-      $navToggler.classList.add(navTogglerActiveClass)
+
+      this.mobileNavOpen = true
     }
-  })
+  }.bind(this))
 
-  $nav.addEventListener('click', function (event) {
-    var $toggler = event.target
-    if (!$toggler.classList.contains('js-mobile-nav-subnav-toggler')) {
-      return
-    }
-    // The presentational touch area of the toggler is on it's parent.
-    var $togglerLinkArea = $toggler.parentNode
+  nodeListForEach($navButtons, function ($button, index) {
+    $button.addEventListener('click', function (event) {
+      var $nextSubNav = $button.parentNode.querySelector(subNavJSClass)
 
-    var $nextSubNav = $togglerLinkArea.parentNode.querySelector('.js-app-mobile-nav-subnav')
+      if ($nextSubNav) {
+        if ($nextSubNav.hasAttribute('hidden')) {
+          $nextSubNav.classList.add(subNavActiveClass)
 
-    if ($nextSubNav) {
-      if ($nextSubNav.classList.contains(subNavActiveClass)) {
-        $nextSubNav.classList.remove(subNavActiveClass)
-        $togglerLinkArea.classList.remove(subNavTogglerActiveClass)
+          $nextSubNav.removeAttribute('hidden')
+          $button.setAttribute('aria-expanded', 'true')
+        } else {
+          $nextSubNav.classList.remove(subNavActiveClass)
 
-        $nextSubNav.setAttribute('aria-hidden', 'true')
-        $toggler.setAttribute('aria-expanded', 'false')
-      } else {
-        $nextSubNav.classList.add(subNavActiveClass)
-        $togglerLinkArea.classList.add(subNavTogglerActiveClass)
-
-        $nextSubNav.setAttribute('aria-hidden', 'false')
-        $toggler.setAttribute('aria-expanded', 'true')
+          $nextSubNav.setAttribute('hidden', '')
+          $button.setAttribute('aria-expanded', 'false')
+        }
       }
-      event.preventDefault()
-    }
-  })
-}
-
-MobileNav.prototype.addHeadings = function () {
-  var $headings = this.$nav.querySelectorAll('.js-app-mobile-nav-subnav__link-heading')
-
-  nodeListForEach($headings, function ($headingText) {
-    var $heading = document.createElement('h3')
-    $heading.classList.add('app-mobile-nav-subnav__link-heading')
-    $headingText.parentNode.appendChild($heading)
-    $heading.appendChild($headingText)
-  })
-}
-
-MobileNav.prototype.includeAria = function () {
-  this.$nav.setAttribute('aria-hidden', 'true')
-
-  var $navToggler = this.$navToggler
-  $navToggler.setAttribute('aria-expanded', 'false')
-
-  var $subNavTogglers = this.$module.querySelectorAll('.js-mobile-nav-subnav-toggler')
-
-  nodeListForEach($subNavTogglers, function ($toggler, index) {
-    var $nextSubNav = $toggler.parentNode.parentNode.querySelector('.js-app-mobile-nav-subnav')
-
-    if ($nextSubNav) {
-      var navIsOpen = $nextSubNav.classList.contains(subNavActiveClass)
-      var subNavTogglerId = 'js-mobile-nav-subnav-toggler-' + index
-      var nextSubNavId = 'js-mobile-nav__subnav-' + index
-
-      $nextSubNav.setAttribute('id', nextSubNavId)
-      $nextSubNav.setAttribute('aria-hidden', navIsOpen ? 'false' : 'true')
-
-      $toggler.setAttribute('id', subNavTogglerId)
-      $toggler.setAttribute('aria-expanded', navIsOpen ? 'true' : 'false')
-      $toggler.setAttribute('aria-controls', nextSubNavId)
-    }
+    })
   })
 }
 
@@ -113,8 +135,13 @@ MobileNav.prototype.init = function () {
     return
   }
 
-  this.addHeadings()
-  this.includeAria()
+  if (typeof window.matchMedia === 'function') {
+    this.mql = window.matchMedia('(min-width: 40.0625em)')
+    this.mql.addEventListener('change', this.setHiddenStates.bind(this))
+  }
+
+  this.setHiddenStates()
+  this.setInitialAriaStates()
   this.bindUIEvents()
 }
 

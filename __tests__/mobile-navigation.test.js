@@ -9,6 +9,9 @@ const PORT = configPaths.testPort
 let page
 let baseUrl = 'http://localhost:' + PORT
 
+const mobileNav = '.app-mobile-nav'
+const mobileNavToggler = '.js-app-mobile-nav__toggler'
+
 beforeAll(async () => {
   page = await setupPage(iPhone)
 })
@@ -25,67 +28,57 @@ describe('Homepage', () => {
       const isMobileNavigationVisible = await page.waitForSelector('.js-app-mobile-nav', { visible: true, timeout: 1000 })
       expect(isMobileNavigationVisible).toBeTruthy()
     })
-
-    it('does not wrap the navigation links in a heading element', async () => {
-      await page.setJavaScriptEnabled(false)
-      await page.goto(baseUrl, { waitUntil: 'load' })
-      const isMobileNavigationLinkVisible = await page.waitForSelector('.app-mobile-nav-subnav-toggler__link', { visible: true, timeout: 1000 })
-      expect(isMobileNavigationLinkVisible).toBeTruthy()
-
-      const mobileNavigationWrappingHeading = await page.evaluate(() => document.body.querySelector('.app-mobile-nav-subnav__link-heading'))
-      expect(mobileNavigationWrappingHeading).toBeNull()
-    })
   })
 
   describe('when JavaScript is available', () => {
     describe('when menu button is pressed', () => {
-      it('should indicate the open state of the toggle button', async () => {
+      it('should apply the corresponding open state class to the menu button', async () => {
         await page.setJavaScriptEnabled(true)
         await page.goto(baseUrl, { waitUntil: 'load' })
 
-        await page.click('.js-app-mobile-nav-toggler')
+        await page.click(mobileNavToggler)
 
-        const toggleButtonIsOpen = await page.evaluate(() => document.body.querySelector('.app-header-mobile-nav-toggler').classList.contains('app-header-mobile-nav-toggler--active'))
+        const toggleButtonIsOpen = await page.evaluate((mobileNavToggler) =>
+          document.body.querySelector(mobileNavToggler).classList.contains('app-header-mobile-nav-toggler--active'),
+        mobileNavToggler)
+
         expect(toggleButtonIsOpen).toBeTruthy()
       })
 
       it('should indicate the expanded state of the toggle button using aria-expanded', async () => {
         await page.goto(baseUrl, { waitUntil: 'load' })
 
-        await page.click('.js-app-mobile-nav-toggler')
+        await page.click(mobileNavToggler)
 
-        const toggleButtonAriaExpanded = await page.evaluate(() => document.body.querySelector('.app-header-mobile-nav-toggler').getAttribute('aria-expanded'))
+        const toggleButtonAriaExpanded = await page.evaluate((mobileNavToggler) =>
+          document.body.querySelector(mobileNavToggler).getAttribute('aria-expanded'),
+        mobileNavToggler)
+
         expect(toggleButtonAriaExpanded).toBe('true')
       })
 
       it('should indicate the open state of the navigation', async () => {
         await page.goto(baseUrl, { waitUntil: 'load' })
 
-        await page.click('.js-app-mobile-nav-toggler')
+        await page.click(mobileNavToggler)
 
-        const navigationIsOpen = await page.evaluate(() => document.body.querySelector('.app-mobile-nav').classList.contains('app-mobile-nav--active'))
+        const navigationIsOpen = await page.evaluate((mobileNav) =>
+          document.body.querySelector(mobileNav).classList.contains('app-mobile-nav--active'),
+        mobileNav)
+
         expect(navigationIsOpen).toBeTruthy()
       })
 
-      it('should indicate the visible state of the navigation using aria-hidden', async () => {
+      it('should indicate the visible state of the navigation using the hidden attribute', async () => {
         await page.goto(baseUrl, { waitUntil: 'load' })
 
-        await page.click('.js-app-mobile-nav-toggler')
+        await page.click(mobileNavToggler)
 
-        const navigationAriaHidden = await page.evaluate(() => document.body.querySelector('.app-mobile-nav').getAttribute('aria-hidden'))
-        expect(navigationAriaHidden).toBe('false')
-      })
+        const navigationIsHidden = await page.evaluate((mobileNav) =>
+          document.body.querySelector(mobileNav).hasAttribute('hidden'),
+        mobileNav)
 
-      it('should wrap the navigation links in a heading element', async () => {
-        await page.goto(baseUrl, { waitUntil: 'load' })
-
-        await page.click('.js-app-mobile-nav-toggler')
-
-        const isMobileNavigationLinkVisible = await page.waitForSelector('.app-mobile-nav-subnav-toggler__link', { visible: true, timeout: 1000 })
-        expect(isMobileNavigationLinkVisible).toBeTruthy()
-
-        const isMobileNavigationWrappingHeading = await page.waitForSelector('.app-mobile-nav-subnav__link-heading', { visible: true, timeout: 1000 })
-        expect(isMobileNavigationWrappingHeading).toBeTruthy()
+        expect(navigationIsHidden).toBe(false)
       })
     })
   })

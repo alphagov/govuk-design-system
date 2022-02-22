@@ -29,7 +29,9 @@
 }
 
 .app-navigation__list-item--current {
-  border-bottom: 4px solid govuk-colour("blue");
+  @include govuk-media-query($from: tablet) {
+    border-bottom: 4px solid govuk-colour("blue");
+  }
 }
 
 .app-navigation__link {

@@ -24,7 +24,6 @@
   }
 
   .app-header-mobile-nav-toggler {
-    display: none;
     min-height: 40px; // match the height of the search box
     margin-top: govuk-spacing(2);
     margin-bottom: govuk-spacing(2);
@@ -50,10 +49,12 @@
       border-bottom-color: currentColor;
     }
 
-    .js-enabled & {
-      @include govuk-media-query($until: tablet) {
-        display: inline;
-      }
+    @include govuk-media-query($from: tablet) {
+      display: none;
+    }
+
+    &[hidden] {
+      display: none;
     }
   }
 }
