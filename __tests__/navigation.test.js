@@ -38,13 +38,14 @@ describe('Homepage', () => {
         await page.click(mobileNavToggler)
 
         const toggleButtonIsOpen = await page.evaluate((mobileNavToggler) =>
-          document.body.querySelector(mobileNavToggler).classList.contains('app-header-mobile-nav-toggler--active'),
+          document.body.querySelector(mobileNavToggler).classList.contains('govuk-header__menu-button--open'),
         mobileNavToggler)
 
         expect(toggleButtonIsOpen).toBeTruthy()
       })
 
       it('should indicate the expanded state of the toggle button using aria-expanded', async () => {
+        await page.setJavaScriptEnabled(true)
         await page.goto(baseUrl, { waitUntil: 'load' })
         await page.click(mobileNavToggler)
 

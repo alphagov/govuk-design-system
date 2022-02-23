@@ -4,7 +4,7 @@ import common from 'govuk-frontend/govuk/common'
 var nodeListForEach = common.nodeListForEach
 
 var navActiveClass = 'app-navigation--active'
-var navMenuButtonActiveClass = 'app-header-mobile-nav-toggler--active'
+var navMenuButtonActiveClass = 'govuk-header__menu-button--open'
 var subNavActiveClass = 'app-navigation__subnav--active'
 // This one has the query dot at the beginning because it's only ever used in querySelector calls
 var subNavJSClass = '.js-app-navigation__subnav'

@@ -128,3 +128,14 @@
   font-size: govuk-px-to-rem(19px); // sass-lint:disable-line no-duplicate-properties
   font-weight: normal;
 }
+
+// overwrite govuk-header__menu-button's position and it displaying on tablet
+.app-navigation__menu-button {
+  top: auto;
+  right: govuk-spacing(1);
+  bottom: govuk-spacing(5);
+
+  &[hidden] {
+    display: none;
+  }
+}

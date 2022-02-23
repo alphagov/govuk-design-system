@@ -17,44 +17,4 @@
   .app-header__logo {
     width: auto;
   }
-
-  .app-header-mobile-nav-toggler-wrapper {
-    display: block;
-    float: right;
-  }
-
-  .app-header-mobile-nav-toggler {
-    min-height: 40px; // match the height of the search box
-    margin-top: govuk-spacing(2);
-    margin-bottom: govuk-spacing(2);
-    padding-right: govuk-spacing(1);
-    padding-left: govuk-spacing(1);
-    border: 1px solid transparent; // Override the button default border, keep this around for when users change their colours
-    box-shadow: none; // Override the button default box shadow
-
-    &,
-    &:hover {
-      background-color: transparent; // Override the button default green
-    }
-
-    &::after {
-      @include govuk-shape-arrow($direction: down, $base: 10px, $display: inline-block);
-      content: "";
-      margin-left: govuk-spacing(1);
-      border-top-color: currentColor;
-    }
-
-    &--active::after {
-      @include govuk-shape-arrow($direction: up, $base: 10px, $display: inline-block);
-      border-bottom-color: currentColor;
-    }
-
-    @include govuk-media-query($from: tablet) {
-      display: none;
-    }
-
-    &[hidden] {
-      display: none;
-    }
-  }
 }
