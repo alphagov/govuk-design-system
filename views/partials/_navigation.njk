@@ -6,12 +6,12 @@
         <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/{{ item.url }}/">
           {{ item.label }}
         </a>
+
         {% if item.items %}
           <button hidden class="app-navigation__button js-app-navigation__button">
             {{ item.label }}
           </button>
-        {% endif %}
-        {% if item.items %}
+
           <ul class="app-navigation__subnav js-app-navigation__subnav {% if path.startsWith(item.url) %}app-navigation__subnav--active{% endif %}"
             aria-label="{{ item.label }}"
             hidden
@@ -24,7 +24,7 @@
             {% for theme, items in item.items | groupby("theme") %}
               <li>
                 {% if theme != 'undefined' %}
-                  <h3 class="app-navigation__theme">{{ theme }}</h3>
+                  <h3 class="app-navigation__theme">{{ theme }}</h2>
                 {% endif %}
                 <ul class="app-navigation__list">
                   {% for subitem in items %}
