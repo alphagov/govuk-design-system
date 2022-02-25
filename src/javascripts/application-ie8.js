@@ -1,9 +1,8 @@
-import common from 'govuk-frontend/govuk/common'
+import { nodeListForEach }  from 'govuk-frontend/govuk-esm/common'
 import Example from './components/example.js'
 import AppTabs from './components/tabs.js'
 import OptionsTable from './components/options-table.js'
 
-var nodeListForEach = common.nodeListForEach
 
 // Initialise example frames
 var $examples = document.querySelectorAll('[data-module="app-example-frame"]')

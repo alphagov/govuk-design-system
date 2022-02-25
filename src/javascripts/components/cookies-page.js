@@ -1,7 +1,6 @@
 import { getConsentCookie, setConsentCookie } from './cookie-functions.js'
-import common from 'govuk-frontend/govuk/common'
+import { nodeListForEach }  from 'govuk-frontend/govuk-esm/common'
 
-var nodeListForEach = common.nodeListForEach
 
 function CookiesPage ($module) {
   this.$module = $module
