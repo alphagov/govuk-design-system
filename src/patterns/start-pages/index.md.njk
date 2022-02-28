@@ -1,41 +1,70 @@
 ---
-title: Start pages
-description: A starting point for your digital service on GOV.UK
+title: Start using a service
+description: Create a starting point for your digital service on GOV.UK
 section: Patterns
-theme: Pages
-aliases:
+theme: Help users to
+aliases: start page, start pages
 backlog_issue_id: 111
 layout: layout-pane.njk
 ---
 
-{% from "_example.njk" import example %}
-
-Use this pattern to test a start page in your prototype.
-
-To get a start page for your public beta or live service, you need to [contact the GDS content team](https://www.gov.uk/service-manual/service-assessments/get-your-service-on-govuk) before your alpha assessment.
-
-{{ example({group: "patterns", item: "start-pages", example: "default", html: true, nunjucks: true, open: false}) }}
+GOV.UK services must start on a GOV.UK content page. This links your service to the rest of GOV.UK, and means that users can find it using search or through GOV.UK’s navigation.
 
 ## When to use this pattern
 
-If your service is in public beta or live, you must have a starting point hosted on GOV.UK. This will link your service to the rest of GOV.UK.
+Use this pattern to help you prototype a start point for your service, so you can test as much of the user journey as possible.
 
-You can use the coded example here to test what works best for your users in prototypes.
+The public-facing version of your service will need to start on a GOV.UK content page, published using one of the GOV.UK publishing apps. You’ll usually need to agree content for this GOV.UK content page with the GDS content team. Read [guidance on how to get your service on GOV.UK](https://www.gov.uk/service-manual/service-assessments/get-your-service-on-govuk).
 
 ## How it works
 
-Start pages include 4 main elements:
+A service start point should:
+- give the user just enough information to help them understand what the service does and whether it will meet their need - including [giving the service an name that reflects the problem it solves for users](https://www.gov.uk/service-manual/design/naming-your-service)
+- include a ‘button’ linking into the service, with text that’s consistent with the action you’re asking users to take - for example, ‘Start now’, ‘Sign in’ or ‘Register or update your details’ (if you need a secondary call to action, use a standard link)
+- let users sign in, resume an application they’ve already started or update their details (if relevant)
+- include any other information that most users are likely to need before they start using the service online - for example, how much it costs to use the service and roughly how long it will take
+- include details of other ways to access the service — for example, by telephone or by completing a paper form
 
-1. The service name: this should help people understand what your service does and whether they need to use it - [learn more about naming your service](https://www.gov.uk/service-manual/design/naming-your-service).
+You’ll also need to list any documents or information the user will need to help them complete the service (there’s no need to list information that a user is likely to know from memory — for example, their own date of birth).
 
-2. A short introduction to list things that most users will need to know, for example, what your service will let them do or how much it’ll cost.
+You can list the documents or information at the start point, if it doesn’t make the page too complicated. Or you can move these details to a separate ‘What you’ll need’ page, served within the service subdomain.
 
-3. The ‘Start now’ call-to-action button.
+## Eligibility
 
-4. A list of other ways to access your service.
+Avoid using the start point to provide complex eligibility information — instead, ask questions inside the service to establish whether the user is eligible.
 
-This is a set pattern, so you will not be able to customise it.
+Read [guidance on designing how GOV.UK content and transactions work together](https://www.gov.uk/service-manual/design/govuk-content-transactions).
 
-Read guidance on [what information should go on a start page](https://www.gov.uk/service-manual/design/govuk-content-transactions) in the Service Manual.
+## Choosing a format for a start point on GOV.UK
 
-{{ example({group: "patterns", item: "start-pages", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second"}) }}
+The options available depend on whether the start point will be published as ‘mainstream’ or ‘Whitehall’ content.
+
+The content team at GDS is responsible for creating mainstream start points (as with other mainstream content). ‘Mainstream’ content is content aimed at the general public — or at meeting business needs that aren’t sector-specific.
+
+### Mainstream start points
+
+For a mainstream start point, the options are:
+- a simple start page
+- a start point within a multipart guide
+
+Use a simple start page if users can start using the service without needing much context.
+
+[SCREENSHOT OF SIMPLE START PAGE]
+
+If the start point is linked to a wider process that needs more explanation, create an ‘Apply’ section within a multipart guide. 
+
+For example, before a user applies for probate (the right to manage someone’s estate after they die) they need to understand whether probate is required, whether they’re the right person to apply, how the details of the will and the tax situation affect what they’re supposed to do, how to get the relevant information together and how the different outcomes affect what they'll need to do next.
+
+It’s important that users have this context, so it makes sense to embed the start point within the multipart guide — rather than creating the start point as a separate start page, allowing users to miss the context and potentially do the wrong thing.
+
+[SCREENSHOT OF MULTIPART GUIDE WITH START POINT]
+
+The Carer’s Allowance team found that for their servicet, [providing a start point within a multipart guide helped get users to the right information without overwhelming them](https://dwpdigital.blog.gov.uk/2014/07/24/improving-to-the-carers-allowance-guide/).
+
+## Creating a start point using Whitehall Publisher
+
+For non-mainstream services, publishers in departments with access to the ‘Whitehall’ app can create a simple start page using the ‘detailed guide’ format.
+
+Use this markdown to create a button within a detailed guide:
+
+`{button start}[Button text goes here](https://servicename.service.gov.uk/first-page-within-service){/button}`
