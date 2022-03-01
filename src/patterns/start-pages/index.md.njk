@@ -18,26 +18,26 @@ The public-facing version of your service will need to start on a GOV.UK content
 
 ## How it works
 
-A service start point should:
-- give the user just enough information to help them understand what the service does and whether it will meet their need - including [giving the service an name that reflects the problem it solves for users](https://www.gov.uk/service-manual/design/naming-your-service)
+A service's start point should:
+- give the user just enough information to help them understand what the service does and whether it will meet their need - including [giving the service a name that reflects the problem it solves for users](https://www.gov.uk/service-manual/design/naming-your-service)
 - include a ‘button’ linking into the service, with text that’s consistent with the action you’re asking users to take - for example, ‘Start now’, ‘Sign in’ or ‘Register or update your details’ (if you need a secondary call to action, use a standard link)
 - let users sign in, resume an application they’ve already started or update their details (if relevant)
 - include any other information that most users are likely to need before they start using the service online - for example, how much it costs to use the service and roughly how long it will take
-- include details of other ways to access the service — for example, by telephone or by completing a paper form
+- include details of other ways to access the service - for example, by telephone or by completing a paper form
 
 You’ll also need to list any documents or information the user will need to help them complete the service (there’s no need to list information that a user is likely to know from memory — for example, their own date of birth).
 
-You can list the documents or information at the start point, if it doesn’t make the page too complicated. Or you can move these details to a separate ‘What you’ll need’ page, served within the service subdomain.
+You can list the documents or information at the start point, if it does not make the page too complicated. Or you can move these details to a separate ‘What you’ll need’ page, served within the service subdomain.
 
 ## Eligibility
 
-Avoid using the start point to provide complex eligibility information — instead, ask questions inside the service to establish whether the user is eligible.
+Avoid using the start point to provide complex eligibility information. Instead, ask questions inside the service to find out whether the user is eligible.
 
 Read [guidance on designing how GOV.UK content and transactions work together](https://www.gov.uk/service-manual/design/govuk-content-transactions).
 
 ## Choosing a format for a start point on GOV.UK
 
-The options available depend on whether the start point will be published as ‘mainstream’ or ‘Whitehall’ content.
+The options available depend on whether you're publishing the start point as ‘mainstream’ or ‘Whitehall’ content.
 
 The content team at GDS is responsible for creating mainstream start points (as with other mainstream content). ‘Mainstream’ content is content aimed at the general public — or at meeting business needs that aren’t sector-specific.
 
@@ -59,7 +59,7 @@ It’s important that users have this context, so it makes sense to embed the st
 
 <img src="multipart-guide-start-point.png" alt="A screenshot showing an example of a start point within a multipart guide. The page is shown as page 4 of 5 of a guide and its body includes a heading, a few simple paragraphs and bullet points to explain what the user will need to start using the service, and a start button labelled 'Apply now'.">
 
-The Carer’s Allowance team found that for their servicet, [providing a start point within a multipart guide helped get users to the right information without overwhelming them](https://dwpdigital.blog.gov.uk/2014/07/24/improving-to-the-carers-allowance-guide/).
+The Carer’s Allowance team found that, for their service, [providing a start point within a multipart guide helped users get to the right information without feeling overwhelmed](https://dwpdigital.blog.gov.uk/2014/07/24/improving-to-the-carers-allowance-guide/).
 
 ## Creating a start point using Whitehall Publisher
 
@@ -67,6 +67,4 @@ For non-mainstream services, publishers in departments with access to the ‘Whi
 
 Use this Markdown to create a button within a detailed guide:
 
-```
-{button start}[Button text goes here](https://servicename.service.gov.uk/first-page-within-service){/button}
-```
+`{button start}[Button text goes here](https://servicename.service.gov.uk/first-page-within-service){/button}`
