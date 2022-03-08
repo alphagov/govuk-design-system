@@ -41,7 +41,7 @@ The options available depend on whether the start point will be published as ‘
 
 ‘Mainstream’ content is content aimed at the general public - or at meeting business needs that are not sector-specific.
 
-The content team at GDS is responsible for creating mainstream start points on [GOV.UK](http://gov.uk/), as with other mainstream content. They’ll work with you to make sure the journey from [GOV.UK](http://gov.uk/) into the service works as well as possible. It’s a good idea to [talk to your organisation’s content team during alpha](https://www.gov.uk/service-manual/service-assessments/get-your-service-on-govuk#before-your-alpha-assessment) - if necessary, they can put you in touch with the team at GDS.
+The content team at GDS is responsible for creating mainstream start points on GOV.UK, as with other mainstream content. They’ll work with you to make sure the journey from GOV.UK into the service works as well as possible. It’s a good idea to [talk to your organisation’s content team during alpha](https://www.gov.uk/service-manual/service-assessments/get-your-service-on-govuk#before-your-alpha-assessment) - if necessary, they can put you in touch with the team at GDS.
 
 
 ### Mainstream start points
@@ -52,7 +52,7 @@ For a mainstream start point, the options are:
 
 Use a simple start page if users can start using the service without needing much context.
 
-<img src="simple-start-page.png" alt="A screenshot showing an example of a simple start page from the coronavirus shielding support service. The page includes a heading, text to explain who can use the service, and a start button labelled 'Register or update your details'.">
+![A screenshot showing an example of a simple start page from the coronavirus shielding support service. The page includes a heading, text to explain who can use the service, and a start button labelled 'Register or update your details'.](simple-start-page.png)
 
 If the start point is linked to a wider process that needs more explanation, create an ‘Apply’ section within a multipart guide. 
 
@@ -60,14 +60,17 @@ For example, before a user applies for probate (the right to manage someone’s 
 
 It’s important that users have this context, so it makes sense to embed the start point within the multipart guide — rather than creating the start point as a separate start page, allowing users to miss the context and potentially do the wrong thing.
 
-<img src="multipart-guide-start-point.png" alt="A screenshot showing an example of a start point within a multipart guide. The page is shown as page 4 of 5 and its body text explains what the user will need to start using the service, followed by a start button labelled 'Apply now'.">
+![A screenshot showing an example of a start point within a multipart guide. The page is shown as page 4 of 5 and its body text explains what the user will need to start using the service, followed by a start button labelled 'Apply now'.](multipart-guide-start-point.png)
 
 The Carer’s Allowance team found that, for their service, [providing a start point within a multipart guide helped users get to the right information without feeling overwhelmed](https://dwpdigital.blog.gov.uk/2014/07/24/improving-to-the-carers-allowance-guide/).
 
-## Creating a start point using Whitehall Publisher
+### Creating a start point using Whitehall Publisher
 
 For non-mainstream services, publishers in departments with access to the ‘Whitehall’ app can create a simple start page using the ‘detailed guide’ format.
 
 Use this Markdown to create a button within a detailed guide:
 
-`{button start}[Button text goes here](https://servicename.service.gov.uk/first-page-within-service){/button}`
+```plaintext
+{button start}[Button text goes here](https://servicename.service.gov.uk/first-page-within-service){/button}
+```
+
