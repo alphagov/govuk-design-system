@@ -6,8 +6,8 @@ theme: Pages
 aliases:
 backlog_issue_id: 72
 layout: layout-pane.njk
-status: Experimental
-statusMessage: This pattern is currently experimental because <a class="govuk-link" href="#next-steps">more research</a> is needed to validate it.
+status: Being worked on
+statusMessage: This pattern is <a class="govuk-link" href="#next-steps">being worked on</a> to resolve some issues and introduce a component.
 ---
 
 {% from "_example.njk" import example %}
@@ -130,11 +130,18 @@ The pattern has now been iterated to include labels for all statuses and a summa
 User research and feedback on this pattern has shown that:
 
 - some screen reader users are frustrated by having to tab through every section each time they return to the task list after completing a task
+- some users currently click on task statuses, thinking they are buttons are links
+- the use of uppercase in task statuses may make them harder to read
 - some services need users to complete tasks in a particular order, for example, a user must fill in an application before they can pay
 - once a few tasks have been completed it becomes harder to scan the page and spot incomplete tasks
 
-More research is required to establish whether or not users of screen readers struggle to perceive tasks that cannot be started yet, because they are not marked up with hyperlinks.
+More user research is needed to find out:
 
+- whether or not users of screen readers struggle to perceive tasks that cannot be started yet, because they are not marked up with hyperlinks
+- how to help screen reader users to get an overview of the progress they have made through the task list
+- whether to return users to the task list after each task or take them straight to the next task in the sequence
+- the best way to show when tasks must be completed in a fixed order
+- how to ensure users can see which tasks have been completed and which they still need to do
 
 ### Services using this pattern
 
@@ -149,13 +156,6 @@ Register as a childminder
 
 ### Next steps
 
-Work is needed to ensure that users can understand the difference between completing a task and completing the whole service.
+A cross-government team are collaborating on work to update this pattern, and to introduce a component.
 
-In addition, more user research is needed to find out:
-
-- how to help screen reader users to get an overview of the progress they have made through the task list
-- whether to return users to the task list after each task or take them straight to the next task in the sequence
-- the best way to show when tasks must be completed in a fixed order
-- how to ensure users can see which tasks have been completed and which they still need to do
-
-If you’ve used this component, get in touch to share your user research findings.
+If you’ve used this pattern, [get in touch](/get-in-touch/) to share your user research findings.
