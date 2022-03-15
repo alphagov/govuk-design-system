@@ -20,7 +20,7 @@ Ask users to enter a security code when they need to sign in or complete a highe
 
 Asking users to enter a security code sent to their mobile phone gives a second layer of security over a [password](/patterns/passwords/).
 
-You can ask for a security code every time a user signs in or only once per device, depending upon the risk of your service.
+You can ask for a security code every time a user signs in or only once per device, depending on the risk level of your service.
 
 ## How it works
 
@@ -30,7 +30,7 @@ Send and ask the user for the security code when they:
 
 ### When creating an account
 
-When the user creates an account, ask for their password and mobile phone number at the same time. Make it clear if you will only use the mobile number for sending security codes, or if you will use it for other purposes.
+When the user creates an account, ask for their password and mobile phone number at the same time. Make it clear if you'll only use the mobile number for sending security codes, or if you'll also use it for other purposes.
 
 After saving the user’s password and mobile phone number, verify their mobile phone number by sending them a text message with a 5 digit code in this format:
 
@@ -43,15 +43,15 @@ Then ask the user to enter this code:
 
 {{ example({group: "patterns", item: "security-code", example: "default", html: true, nunjucks: true, open: false}) }}
 
-Ignore any formatting or punctuation such as spaces, hyphens and dashes.
+Let users enter the code in whatever format is familiar to them. Allow additional spaces, hyphens and dashes.
 
-Give a time limit of 15 minutes for users to enter the code. If this time limit expires, display a ‘code has expired’ error message and send the user a new code.
+Give a time limit of 15 minutes for users to enter the code. If this time limit expires when the user correctly enters the code, display a ‘code has expired’ error message and send the user a new code.
 
 If the user follows the ‘Not received a text message?’ link, allow them to check which mobile number they entered, and to change it if necessary. This prevents the user becoming stuck if they entered a mobile number incorrectly. Do not allow users to change the number when signing in.
 
 {{ example({group: "patterns", item: "security-code", example: "resend-first-time", html: true, nunjucks: true, open: false}) }}
 
-This should send a new code, with its own 15 minute expiry window. The previous code should remain valid within its own expiry time.
+This should send a new code, with its own 15 minute time limit. The previous code should remain valid within its original time limit.
 
 ### When signing in
 
@@ -70,11 +70,11 @@ If they follow the ‘Not received a text message?’ link, show them a page all
 
 You should tell users what to do if they no longer have access to the phone used to sign up.
 
-Depending upon your service, they may need to contact a support address, or may be able to ask a colleague to update their phone number.
+For example, you might tell them to contact a support address.
 
 ### Domain-bound codes
 
-You can also follow the [domain-bound codes](https://developer.apple.com/news/?id=z0i801mg) standard. This improves security by associating the code with a specific domain, allowing browsers to safely autofill it. 
+You can also follow the [domain-bound codes](https://developer.apple.com/news/?id=z0i801mg) standard. This improves security by restricting the code to a specific domain.
 
 Include the domain of the service on a new line, prefixed with an `@`, followed by a `#` symbol and the code, like this:
 
@@ -89,10 +89,10 @@ Style error messages like this:
 {{ example({group: "patterns", item: "security-code", example: "error-incorrect", html: true, nunjucks: true, open: false}) }}
 
 If the user doesn’t enter enough digits:
-<br>Say ‘You haven’t entered enough numbers’.
+<br>Say ‘You've not entered enough numbers, the code must be 5 numbers’.
 
 If the user enters too many digits:
-<br>Say ‘You’ve entered too many numbers’.
+<br>Say ‘You’ve entered too many numbers, the code must be 5 numbers’.
 
 If the user enters non-numeric characters, other than spaces:
 <br>Say ‘The code must be 5 numbers’.
@@ -103,7 +103,7 @@ If the code has expired, show this message:
 
 ### Technical security measures
 
-Use [technical measures to prevent automated attacks](https://www.ncsc.gov.uk/collection/passwords/updating-your-approach#tip2-password-collection), such as introducing a time delay after 10 incorrect number entries.
+Use [technical measures to prevent automated attacks](https://www.ncsc.gov.uk/collection/passwords/updating-your-approach#tip2-password-collection), such as adding a time delay after 10 incorrect number entries.
 
 Set up monitoring for potentially malicious behaviour, such as activity from unexpected geographical areas.
 
