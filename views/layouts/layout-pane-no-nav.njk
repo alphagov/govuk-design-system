@@ -8,11 +8,6 @@
 
 {% block body %}
 <div class="app-pane__body app-width-container">
-	{% if show_subnav %}
-	  <div class="app-pane__subnav">
-	    {% include "_subnav.njk" %}
-	  </div>
-	{% endif %}
   <div class="app-pane__content">
     <main id="main-content" class="app-content" role="main" {% if not show_subnav %}style="padding-left:0px;"{% endif %}>
       {% if not includeThemeInPageHeading %}
@@ -51,8 +46,12 @@
         </ul>
       {% endif %}
 
-      <div class="app-prose-scope">
-        {{ contents | safe }}
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <div class="app-prose-scope">
+            {{ contents | safe }}
+          </div>
+        </div>
       </div>
 
       {# No JS fallback to show overview #}

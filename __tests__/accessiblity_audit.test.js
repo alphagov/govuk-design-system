@@ -37,21 +37,21 @@ describe('Accessibility Audit', () => {
     })
   })
 
-  describe('Component page - layout-pane.njk', () => {
-    it('validates', async () => {
-      await page.goto(baseUrl + '/components/radios/', { waitUntil: 'load' })
-      const violations = await audit(page)
-      expect(violations).toEqual([])
-    })
-  })
+  // describe('Component page - layout-pane.njk', () => {
+  //   it('validates', async () => {
+  //     await page.goto(baseUrl + '/components/radios/', { waitUntil: 'load' })
+  //     const violations = await audit(page)
+  //     expect(violations).toEqual([])
+  //   })
+  // })
 
-  describe('Patterns page - layout-pane.njk', () => {
-    it('validates', async () => {
-      await page.goto(baseUrl + '/patterns/gender-or-sex/', { waitUntil: 'load' })
-      const violations = await audit(page)
-      expect(violations).toEqual([])
-    })
-  })
+  // describe('Patterns page - layout-pane.njk', () => {
+  //   it('validates', async () => {
+  //     await page.goto(baseUrl + '/patterns/gender-or-sex/', { waitUntil: 'load' })
+  //     const violations = await audit(page)
+  //     expect(violations).toEqual([])
+  //   })
+  // })
 
   describe('Get in touch page - layout-single-page.njk', () => {
     it('validates', async () => {

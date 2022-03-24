@@ -1,4 +1,4 @@
-import CookieBanner from './components/cookie-banner.js'
+// import CookieBanner from './components/cookie-banner.js'
 import BackToTop from './components/back-to-top.js'
 import common from 'govuk-frontend/govuk/common'
 import Example from './components/example.js'
@@ -14,8 +14,8 @@ import CookiesPage from './components/cookies-page.js'
 var nodeListForEach = common.nodeListForEach
 
 // Initialise cookie banner
-var $cookieBanner = document.querySelector('[data-module="govuk-cookie-banner"]')
-new CookieBanner($cookieBanner).init()
+// var $cookieBanner = document.querySelector('[data-module="govuk-cookie-banner"]')
+// new CookieBanner($cookieBanner).init()
 
 // Initialise analytics if consent is given
 var userConsent = getConsentCookie()
