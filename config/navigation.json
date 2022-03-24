@@ -11,13 +11,15 @@
   },
   {
     "label": "Components",
-    "url": "components",
-    "includeInSearch": true
+    "url": "components"
   },
   {
     "label": "Patterns",
-    "url": "patterns",
-    "includeInSearch": true
+    "url": "patterns"
+  },
+  {
+    "label": "Content",
+    "url": "content"
   },
   {
     "label": "Accessibility",
