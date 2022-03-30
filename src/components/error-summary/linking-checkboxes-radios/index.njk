@@ -7,11 +7,12 @@ layout: layout-example.njk
 {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
 {{ govukErrorSummary({
-  "titleText": "There is a problem",
-  "errorList": [
+  titleText: "There is a problem",
+  disableAutoFocus: true,
+  errorList: [
     {
-      "text": "Select if you are British, Irish or a citizen of a different country",
-      "href": "#nationality"
+      text: "Select if you are British, Irish or a citizen of a different country",
+      href: "#nationality"
     }
   ]
 }) }}

@@ -16,10 +16,6 @@
 
   .app-subnav__link {
     padding: 2px 0;
-
-    &:not(:focus):hover {
-      color: $govuk-link-colour;
-    }
   }
 
   .app-subnav__section-item {

@@ -7,11 +7,12 @@ layout: layout-example.njk
 {% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
 
 {{ govukErrorSummary({
-  "titleText": "There is a problem",
-  "errorList": [
+  titleText: "There is a problem",
+  disableAutoFocus: true,
+  errorList: [
     {
-      "text": "Passport issue date must include a year",
-      "href": "#passport-issued-year"
+      text: "Passport issue date must include a year",
+      href: "#passport-issued-year"
     }
   ]
 }) }}

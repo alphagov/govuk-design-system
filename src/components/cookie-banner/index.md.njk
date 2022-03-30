@@ -39,7 +39,7 @@ This component page shows several options for using a cookie banner, based on th
 You must not take the information on this page as legal advice. Your organisation is responsible and accountable for what they do to comply with data protection legislation, such as:
 - Privacy and Electronic Communications Regulations (PECR)
 - General Data Protection Regulation (GDPR)
- 
+
 Check with your organisation's privacy expert to see how data protection legislation affects your website and service.
 
 ## How it works
@@ -106,8 +106,8 @@ Here's the same example of a progressively enhanced cookie banner, with the conf
 ### Option 3: If you set non-essential cookies, but only on the client
 
 You can choose to make your banner only work with JavaScript if your service only needs to set non-essential cookies on the client.
- 
-When the page loads, include all the cookie banner messages that the user might see, but hide these with the `hidden` HTML attribute.
+
+When the page loads, the `hidden` html attribute hides the component, as well as all the cookie banner messages it contains, which the user might otherwise see.
 
 #### Show the cookie banner only to users that have enabled JavaScript
 
@@ -129,7 +129,7 @@ Show a confirmation message confirming that the user has either accepted or reje
 
 {{ example({group: "components", item: "cookie-banner", example: "client-side-accepted", html: true, nunjucks: true, open: false}) }}
 
-#### When the user has rejected cookies 
+#### When the user has rejected cookies
 
 {{ example({group: "components", item: "cookie-banner", example: "client-side-rejected", html: true, nunjucks: true, open: false}) }}
 
@@ -144,13 +144,13 @@ You’ll need to change the example cookie banner text if your service:
 
 Keep the text as short as possible while making sure it’s an accurate description of how you use cookies. For example, if you use more than one ‘functional’ cookie and there’s not enough space to mention what each of them does, you could ask for permission to set cookies so ‘you can use as many of the service’s features as possible’.
 
-[See the cookies page for more advice on writing about cookies](/patterns/cookies-page/)].
+[See the cookies page for more advice on writing about cookies](/patterns/cookies-page/).
 
 ### If you’re using essential cookies and analytics cookies
 
 You can use this example text for a service which sets essential and analytics cookies. Analytics cookies are those set by your organisation to collect information about how people are using your digital service.
 
-{{ example({group: "components", item: "cookie-banner", example: "default", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "components", item: "cookie-banner", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second"}) }}
 
 ### If you’re using more than one type of non-essential cookie
 

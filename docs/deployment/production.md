@@ -14,20 +14,28 @@ We use nginx as a simple web server.
 
 ## Github Actions
 
-### Configuration
+There are two workflows used to test and deploy the Design System website.
 
-The Github Actions CI workflow is configured in [.github/workflows/ci.yaml](../../.github/workflows/ci.yaml).
-It will attempt to build the Design System, run the linter and run tests for every branch,
-but will only run the deploy step when on the main branch.
+### Testing
 
-Most of the environment variables needed are set within each Github Action script. Any secrets can be viewed and changed within the Github UI (requires admin access).
+The test workflow is configured in [.github/workflows/test.yaml](/.github/workflows/test.yaml).
+
+This workflow is set to run on every branch except main, where it is instead run as a dependency on the deployment workflow.
+
+The workflow will ensure the Design System website can be built successfully, then run the linter and the tests.
 
 ### Deployment
 
-The Github Actions deployment script is detailed in [.github/workflows/ci.yaml](../../.github/workflows/ci.yaml)
+The deployment workflow is configured in [.github/workflows/deploy.yaml](/.github/workflows/deploy.yaml).
 
-We log into CloudFoundry using the configured environment variables. Before deploying, we cancel any existing deployments to prevent conflicts. When deploying, we use healthchecks to check that the /__canary__ path returns
-a 200 response, which indicates that the app has been built successfully.
+This workflow only runs on the main branch, as a deployment to the [production environment][gh-env]. It uses a [concurrency group][gh-concurrency] to prevent multiple workflows from trying to deploy at the same time.
+
+Before deploying, the workflow will:
+
+- run the test workflow, passing the built site from that workflow as an artefact to be deployed
+- check that the version of the site being deployed matches the current main branch, to prevent an old job being re-run and an old version of the site being deployed
+
+We define healthchecks in the manifest file to check that the `/__canary__` path returns a 200 response, which indicates that the deployed instance is running correctly.
 
 ## Hosting on GOV.UK Platform as a Service (PaaS)
 
@@ -123,3 +131,5 @@ trailing-slashed URLs, but decided against it because:
 [cname]: https://serverfault.com/questions/613829/why-cant-a-cname-record-be-used-at-the-apex-aka-root-of-a-domain
 [cdn-route]: https://docs.cloud.service.gov.uk/#set-up-a-custom-domain-using-the-cdn-route-service
 [varnish-strip]: https://github.com/alphagov/govuk-puppet/blob/22e8fd6ab532febd4a5df30381d3fc215f6e0153/modules/varnish/templates/default.vcl.erb#L31-L37
+[gh-env]: https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment
+[gh-concurrency]: https://docs.github.com/en/actions/using-jobs/using-concurrency
