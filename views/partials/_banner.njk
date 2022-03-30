@@ -3,14 +3,14 @@
   {% set bannerText %}
     This is a preview of
     a <a class="govuk-link" href="https://github.com/LandRegistry/hmlr-design-system-2/pull/{{ HEROKU_PR_NUMBER }}">proposed change</a> to the
-    <a class="govuk-link" href="https://hmlr-design-system-staging-2.herokuapp.com/">Design System</a>.
+    <a class="govuk-link" href="https://hmlr-design-system-2.herokuapp.com/">Design System</a>.
   {% endset %}
 {% elif STAGING_SITE === "true" %}
   {% set bannerTag = "beta" %}
   {% set bannerText %}
     This is a beta version of
     the <a class="govuk-link" href="https://github.com/LandRegistry/hmlr-design-system-2/tree/staging">staging</a> branch for the
-    <a class="govuk-link" href="https://hmlr-design-system-staging-2.herokuapp.com/">Design System</a>.
+    <a class="govuk-link" href="https://hmlr-design-system-2.herokuapp.com/">Design System</a>.
   {% endset %}
 {% endif %}
 
