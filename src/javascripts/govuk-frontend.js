@@ -9,6 +9,7 @@ import NotificationBanner from 'govuk-frontend/govuk/components/notification-ban
 import Radios from 'govuk-frontend/govuk/components/radios/radios'
 import Header from 'govuk-frontend/govuk/components/header/header'
 import Tabs from 'govuk-frontend/govuk/components/tabs/tabs'
+import SkipLink from 'govuk-frontend/govuk/components/skip-link/skip-link'
 
 var nodeListForEach = common.nodeListForEach
 
@@ -30,12 +31,6 @@ nodeListForEach($details, function ($detail) {
 var $errorSummaries = document.querySelectorAll('[data-module="govuk-error-summary"]')
 nodeListForEach($errorSummaries, function ($errorSummary) {
   var errorSummary = new ErrorSummary($errorSummary)
-  // Override the `init` method since it automatically focuses the ErrorSummary.
-  // This is not ideal when showing examples for this component
-  // TODO: Allow option for ErrorSummary to avoid this hack
-  errorSummary.init = function () {
-    this.$module.addEventListener('click', ErrorSummary.prototype.handleClick.bind(this))
-  }
   errorSummary.init()
 })
 
@@ -68,3 +63,7 @@ var $tabs = document.querySelectorAll('[data-module="govuk-tabs"]')
 nodeListForEach($tabs, function ($tab) {
   new Tabs($tab).init()
 })
+
+// Find first skip link module to enhance.
+var $skipLink = document.querySelector('[data-module="govuk-skip-link"]')
+new SkipLink($skipLink).init()

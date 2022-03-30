@@ -4,7 +4,7 @@ import common from 'govuk-frontend/govuk/common'
 import Example from './components/example.js'
 import AppTabs from './components/tabs.js'
 import Copy from './components/copy.js'
-import MobileNav from './components/mobile-navigation.js'
+import Navigation from './components/navigation.js'
 import Search from './components/search.js'
 import OptionsTable from './components/options-table.js'
 import { getConsentCookie, isValidConsentCookie } from './components/cookie-functions.js'
@@ -45,7 +45,7 @@ nodeListForEach($codeBlocks, function ($codeBlock) {
 })
 
 // Initialise mobile navigation
-new MobileNav().init()
+new Navigation().init()
 
 // Initialise search
 var $searchContainer = document.querySelector('[data-module="app-search"]')

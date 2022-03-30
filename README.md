@@ -1,7 +1,6 @@
 # HMLR Design System
 
-**One place for service teams to find styles, components and patterns for
-designing government services.**
+This repository contains the code for the GOV.UK Design System website. To find the code we provide for reuse by services, go to the [govuk-frontend repository](https://github.com/alphagov/govuk-frontend).
 
 ## Run locally
 
