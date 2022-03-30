@@ -2,15 +2,15 @@
   {% set bannerTag = "preview" %}
   {% set bannerText %}
     This is a preview of
-    a <a class="govuk-link" href="https://github.com/LandRegistry/hmlr-design-system-2/pull/{{ HEROKU_PR_NUMBER }}">proposed change</a> to the
-    <a class="govuk-link" href="https://design-system.service.gov.uk">Design System</a>.
+    a <a class="govuk-link" href="https://github.com/LandRegistry/hmlr-design-system-2/pull/{{ REVIEW_ID  }}">proposed change</a> to the
+    <a class="govuk-link" href="https://hmlr-design-system-staging-2.herokuapp.com/">Design System</a>.
   {% endset %}
-{% elif PULL_REQUEST === "false" %}
-  {% set bannerTag = "archive" %}
+{% elif STAGING_SITE === "true" %}
+  {% set bannerTag = "beta" %}
   {% set bannerText %}
-    This is an archived version of
-    the <a class="govuk-link" href="https://github.com/LandRegistry/hmlr-design-system-2/tree/{{ BRANCH }}">{{ BRANCH }}</a> branch for the
-    <a class="govuk-link" href="https://design-system.service.gov.uk">Design System</a>.
+    This is a beta version of
+    the <a class="govuk-link" href="https://github.com/LandRegistry/hmlr-design-system-2/tree/staging">staging</a> branch for the
+    <a class="govuk-link" href="https://hmlr-design-system-staging-2.herokuapp.com/">Design System</a>.
   {% endset %}
 {% endif %}
 
@@ -24,8 +24,7 @@
 
     {{ govukPhaseBanner({
       "tag": {
-        "text": bannerTag,
-        "classes": "govuk-tag--red"
+        "text": bannerTag
       },
       "classes": bannerClasses,
       "html": bannerText
