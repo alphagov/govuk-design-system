@@ -1,6 +1,6 @@
 import 'govuk-frontend/govuk/vendor/polyfills/Element/prototype/classList'
 
-import { nodeListForEach }  from 'govuk-frontend/govuk-esm/common'
+import { nodeListForEach } from 'govuk-frontend/govuk-esm/common'
 
 var navActiveClass = 'app-mobile-nav--active'
 var navTogglerActiveClass = 'app-header-mobile-nav-toggler--active'

@@ -1,6 +1,6 @@
 import CookieBanner from './components/cookie-banner.js'
 import BackToTop from './components/back-to-top.js'
-import { nodeListForEach }  from 'govuk-frontend/govuk-esm/common'
+import { nodeListForEach } from 'govuk-frontend/govuk-esm/common'
 import Example from './components/example.js'
 import AppTabs from './components/tabs.js'
 import Copy from './components/copy.js'
@@ -10,7 +10,6 @@ import OptionsTable from './components/options-table.js'
 import { getConsentCookie, isValidConsentCookie } from './components/cookie-functions.js'
 import Analytics from './components/analytics.js'
 import CookiesPage from './components/cookies-page.js'
-
 
 // Initialise cookie banner
 var $cookieBanner = document.querySelector('[data-module="govuk-cookie-banner"]')
