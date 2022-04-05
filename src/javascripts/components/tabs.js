@@ -1,9 +1,7 @@
 import 'govuk-frontend/govuk/vendor/polyfills/Function/prototype/bind'
 import 'govuk-frontend/govuk/vendor/polyfills/Element/prototype/classList'
 import 'govuk-frontend/govuk/vendor/polyfills/Event'
-import common from 'govuk-frontend/govuk/common'
-
-var nodeListForEach = common.nodeListForEach
+import { nodeListForEach } from './helpers.js'
 
 var tabsItemClass = 'app-tabs__item'
 var tabsItemCurrentClass = tabsItemClass + '--current'

@@ -1,6 +1,6 @@
 import CookieBanner from './components/cookie-banner.js'
 import BackToTop from './components/back-to-top.js'
-import { nodeListForEach } from 'govuk-frontend/govuk-esm/common'
+import { nodeListForEach } from './components/helpers.js'
 import Example from './components/example.js'
 import AppTabs from './components/tabs.js'
 import Copy from './components/copy.js'
