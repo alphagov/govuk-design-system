@@ -1,16 +1,4 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="robots" content="noindex, nofollow">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ title }} – Example – HMLR Design System</title>
-    <link href="{{ getFingerprint('stylesheets/main.css') }}" rel="stylesheet" media="all" />
-    {#- Include any additional stylesheets specified in the example frontmatter #}
-    {% for stylesheet in stylesheets %}
-    <link href="{{ getFingerprint(stylesheet) }}" rel="stylesheet" media="all" />
-    {%- endfor %}
-{# {% extends "govuk/template.njk" %} #}
+{% extends "govuk/template.njk" %}
 
 {% set htmlClasses = 'app-example-page__wrapper' %}
 {% set assetUrl = 'https://hmlr-design-system-staging-2.herokuapp.com/assets' %}
