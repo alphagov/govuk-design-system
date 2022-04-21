@@ -1,4 +1,4 @@
-import common from 'govuk-frontend/govuk/common'
+import { nodeListForEach } from './components/helpers.js'
 import Accordion from 'govuk-frontend/govuk/components/accordion/accordion'
 import Button from 'govuk-frontend/govuk/components/button/button'
 import Details from 'govuk-frontend/govuk/components/details/details'
@@ -10,8 +10,6 @@ import Radios from 'govuk-frontend/govuk/components/radios/radios'
 import Header from 'govuk-frontend/govuk/components/header/header'
 import Tabs from 'govuk-frontend/govuk/components/tabs/tabs'
 import SkipLink from 'govuk-frontend/govuk/components/skip-link/skip-link'
-
-var nodeListForEach = common.nodeListForEach
 
 var $buttons = document.querySelectorAll('[data-module="govuk-button"]')
 nodeListForEach($buttons, function ($button) {
