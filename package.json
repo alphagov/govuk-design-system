@@ -47,6 +47,7 @@
   },
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.14.0",
+    "@metalsmith/sass": "^1.0.0",
     "accessible-autocomplete": "^2.0.2",
     "axe-puppeteer": "^1.0.0",
     "fs-extra": "^7.0.1",
