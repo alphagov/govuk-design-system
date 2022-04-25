@@ -31,6 +31,17 @@ To enable this we use [nvm (Node Version Manager)](https://github.com/creationix
 npm install
 ```
 
+### Fixing Node 16+ errors
+If you've previously installed `govuk-design-system` locally using Node v14 or earlier, you may see `node-sass`-related errors when updating to Node v16.
+
+To get rid of these errors, delete the `node_modules` folder, then run:
+
+```
+nvm use
+npm uninstall node-sass -g && npm cache clean -force && npm install node-sass
+npm install
+```
+
 ### Start a local server
 This will build sources, serve pages and watch for changes.
 ```
