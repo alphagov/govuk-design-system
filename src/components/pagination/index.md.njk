@@ -9,7 +9,7 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 
-Help users navigate a series of pages like search results or guides.
+Help the user navigate a series of pages like search results or guides.
 
 {{ example({group: "components", item: "pagination", example: "default", html: true, nunjucks: true }) }}
 
@@ -19,12 +19,12 @@ Use this component when you need to present content, such as guidance or search 
 
 You might do this when:
 - showing all the content on a single page makes the page take too long to load
-- users may benefit from bookmarking or linking to specific pages of the content
-- most users will only need the content on the first pages
+- the user may benefit from bookmarking or linking to specific pages of the content
+- most users will only need the content on the first few pages
 
 ## When not to use this component
 
-Only break up content into pages if it improves the performance or usability of your service.
+Only break up content into pages if it makes your service faster or easier to use.
 
 Avoid using the 'infinite scroll' technique to automatically load content when the user approaches the bottom of the page. This causes problems for keyboard users.
 
@@ -32,11 +32,11 @@ Avoid using the 'infinite scroll' technique to automatically load content when t
 
 Add the pagination component after the content on each page that you have broken up.
 
-[View an example of the component in a standard GOV.UK page template](in-page/index.html).
+[View an example of Pagination in a standard GOV.UK page template](in-page/index.html).
 
 ### For pages in a sequence
 
-For pages the user would usually navigate page by page, only show the previous and next links. Stack them  vertically, like this:
+For pages the user would usually navigate page by page, only show the previous and next links. Stack them vertically, like this:
 
 {{ example({group: "components", item: "pagination", example: "labels", html: true, nunjucks: true }) }}
 
@@ -48,26 +48,26 @@ You can use the link labels to give more context.
 
 ### For pages in a list
 
-For pages where users might need to jump back and forth, add numbered page links, as well as the previous and next links, like this:
+For pages where the user might need to jump back and forth, add numbered page links, as well as the previous and next links, like this:
 
 {{ example({group: "components", item: "pagination", example: "default", html: true, nunjucks: true, titleSuffix: "second" }) }}
 
-Show the page number in the title of the page so the user can see it in browser tabs and bookmarks. For example 'Search results (page 1 of 4)'.
+Show the page number in the page title so the user can see it in browser tabs and bookmarks. For example 'Search results (page 1 of 4)'.
 
 Do not show pagination if there's only one page of content.
 
-Redirect users to the first page if they enter a URL of a page that no longer exists.
+Redirect the user to the first page if they enter a URL of a page that no longer exists.
 
 #### Previous and next links
 
-Previous and next links are labelled 'Previous page' and 'Next page'. The word
-'page' can be visually hidden to conserve horizontal space.
+Previous and next links are labelled 'Previous page' and 'Next page'. You can
+visually hide the word 'page' to save horizontal space.
 
 {{ example({group: "components", item: "pagination", example: "default", html: true, nunjucks: true, titleSuffix: "third" }) }}
 
 #### Customise link titles
 
-You can use custom text for previous and next links, if they're more appropiate and help add context.
+You can use custom text for previous and next links, if they're more appropriate and help add context.
 
 {{ example({group: "components", item: "pagination", example: "custom-link-text", html: true, nunjucks: true }) }}
 
@@ -81,7 +81,7 @@ Do not show the previous page link on the first page — and do not show the nex
 
 ### For large numbers of pages
 
-Show an appropriate number of pages to fit the horizontal space available.
+Depending on the screen size, show an appropriate number of pages to fit the horizontal space available.
 
 {{ example({group: "components", item: "pagination", example: "ellipses", html: true, nunjucks: true }) }}
 
@@ -109,7 +109,7 @@ For example:
 
 ### Filtering and sorting lists
 
-If the user filters or sorts the list, apply this to the whole list (not just the current page) and redirect them back to the first page of the new results.
+If the user filters or sorts the list, apply their choice to the whole list, and not just the current page. Also redirect them back to the first page of the new results.
 
 Set the number of items per page and the sorting algorithm so that most users find what they need on the first page.
 
