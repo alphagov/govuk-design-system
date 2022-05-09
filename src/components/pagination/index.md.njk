@@ -9,81 +9,61 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 
-Help the user navigate a series of pages like search results or guides.
+Help users navigate forwards and backwards through a series of pages. For example, search results or guidance that's divided into multiple website pages - like [the GOV.UK mainstream guide format](https://govuk-prototype-kit.herokuapp.com/docs/templates/mainstream-guide).
 
 {{ example({group: "components", item: "pagination", example: "default", html: true, nunjucks: true }) }}
 
 ## When to use this component
 
-Use this component when you need to present content, such as guidance or search results, across multiple pages.
-
-You might do this when:
+Consider using pagination when:
 - showing all the content on a single page makes the page take too long to load
-- the user may benefit from bookmarking or linking to specific pages of the content
-- most users will only need the content on the first few pages
+- most users will only need the content on the first page or first few pages
 
 ## When not to use this component
 
-Only break up content into pages if it makes your service faster or easier to use.
+Only break up content onto separate pages if it improves the performance or usability of your service.
 
 Avoid using the 'infinite scroll' technique to automatically load content when the user approaches the bottom of the page. This causes problems for keyboard users.
 
+Don't use this Pagination component for linear journeys - for example, where you’re asking the user to complete a form. Instead, use the [Button component](/components/button/) (usually a 'Continue' button) to let the user move to the next page - and a [Back link](/components/back-link/) to let them move to the previous page.
+
 ## How it works
 
-Add the pagination component after the content on each page that you have broken up.
+Add the pagination component after the content on each page that you're paginating.
 
 [View an example of Pagination in a standard GOV.UK page template](in-page/index.html).
 
-### For pages in a sequence
+Don’t show pagination if there's only one page of content.
 
-For pages the user would usually navigate page by page, only show the previous and next links. Stack them vertically, like this:
+Redirect users to the first page if they enter a URL of a page that no longer exists.
+
+## For smaller numbers of pages
+
+Use 'Previous' and 'Next' links to let users navigate through a small number of pages. Stack the links vertically, so they’re more obvious to screen magnifier users when they’re zoomed in:
 
 {{ example({group: "components", item: "pagination", example: "labels", html: true, nunjucks: true }) }}
 
-#### Add link labels to describe pages
+### Labelling ’Previous’ and ’Next’ links
 
-You can use the link labels to give more context.
-
-{{ example({group: "components", item: "pagination", example: "labels-2", html: true, nunjucks: true }) }}
-
-### For pages in a list
-
-For pages where the user might need to jump back and forth, add numbered page links, as well as the previous and next links, like this:
-
-{{ example({group: "components", item: "pagination", example: "default", html: true, nunjucks: true, titleSuffix: "second" }) }}
-
-Show the page number in the page title so the user can see it in browser tabs and bookmarks. For example 'Search results (page 1 of 4)'.
-
-Do not show pagination if there's only one page of content.
-
-Redirect the user to the first page if they enter a URL of a page that no longer exists.
-
-#### Previous and next links
-
-Previous and next links are labelled 'Previous page' and 'Next page'. You can
-visually hide the word 'page' to save horizontal space.
+Label the links ’Previous page’ and ’Next page’. The word 'page' can be visually hidden to save horizontal space.
 
 {{ example({group: "components", item: "pagination", example: "default", html: true, nunjucks: true, titleSuffix: "third" }) }}
 
-#### Customise link titles
+### Add link labels to describe pages 
 
-You can use custom text for previous and next links, if they're more appropriate and help add context.
+You can use link labels to give more context:
 
-{{ example({group: "components", item: "pagination", example: "custom-link-text", html: true, nunjucks: true }) }}
+{{ example({group: "components", item: "pagination", example: "labels-2", html: true, nunjucks: true }) }}
 
-#### First and last pages
+## For larger numbers of pages
 
-Do not show the previous page link on the first page — and do not show the next page link on the last page.
+Use a list-type layout if users need to navigate through large numbers of pages. For example, long lists of search results.
 
-{{ example({group: "components", item: "pagination", example: "first-page", html: true, nunjucks: true }) }}
+{{ example({group: "components", item: "pagination", example: "default", html: true, nunjucks: true, titleSuffix: "second" }) }}
 
-{{ example({group: "components", item: "pagination", example: "last-page", html: true, nunjucks: true }) }}
+Show the page number in the page `<title>` so that screen reader users know they’ve navigated to a different page. For example, 'Search results (page 1 of 4)'.
 
-### For large numbers of pages
-
-Depending on the screen size, show an appropriate number of pages to fit the horizontal space available.
-
-{{ example({group: "components", item: "pagination", example: "ellipses", html: true, nunjucks: true }) }}
+Show an appropriate number of pages to fit the horizontal space available.
 
 For smaller screens, show page numbers for:
 - the current page
@@ -107,11 +87,27 @@ For example:
 - 1 … 98 **[99]** 100
 - 1 … 99 **[100]**
 
-### Filtering and sorting lists
+### First and last pages
 
-If the user filters or sorts the list, apply their choice to the whole list, and not just the current page. Also redirect them back to the first page of the new results.
+Do not show the previous page link on the first page — and do not show the next page link on the last page.
 
-Set the number of items per page and the sorting algorithm so that most users find what they need on the first page.
+{{ example({group: "components", item: "pagination", example: "first-page", html: true, nunjucks: true }) }}
+
+{{ example({group: "components", item: "pagination", example: "last-page", html: true, nunjucks: true }) }}
+
+### Customising link text
+
+Use custom text for previous and next links if the additional context helps users. For example, if the user is navigating through pages which are part of the same piece of guidance, you may want to include the `h1` of the pages you’re linking to as well as the words ‘Previous‘ and ’Next’.
+
+{{ example({group: "components", item: "pagination", example: "custom-link-text", html: true, nunjucks: true }) }}
+
+### Filtering and sorting
+
+Consider adding filtering or sorting options if it helps users to find what they need in a long list of pages. For example, [the business support finder on GOV.UK](https://www.gov.uk/business-finance-support) has filtering options.
+
+If the user filters or sorts the list of pages, apply this to the whole list (not just the current page) and redirect them back to the first page of the new results.
+
+Set defaults to minimise how many pages most uses have to click through to find what they need.
 
 ## Research on this component
 
