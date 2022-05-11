@@ -22,7 +22,7 @@ Always test your service without a character count first.
 Only use the character count component when there is a good reason for limiting the number of characters users can enter. For example, if there is:
 
 - evidence that users are likely to enter more information than they need to
-- a legal reason where an entry must be under a certain number of characters
+- a legal or technical reason that means an entry must be no more than a certain number of characters
 
 ## When not to use this component
 
@@ -32,14 +32,17 @@ If your users keep hitting the character limit imposed by the backend of your se
 
 It tells users how many characters they have remaining as they type into a [textarea](/components/textarea/) with a character limit.
 
-Sighted users will see a count message that updates as they type. Screen reader users will hear the count message when they stop typing.
+Users will get updates at a pace that works best for the way they interact with the textarea. This means:
+
+- sighted users will see a count message that updates as they type
+- screen reader users will hear the count message when they stop typing.
 
 Users can enter more than the character limit, but are told they’ve entered too many characters. This lets them type or copy and paste their full answer, then edit it down.
 
 The count message appears below the textarea so that:
 
 - it’s clearly separate from any hint text or error message above the textarea
-- if it’s below the bottom of the screen, users will still see it again when they scroll down to send their response
+- if it’s below the visible screen area, users will still see it again when they scroll down to send their response
 
 This component uses JavaScript. If JavaScript is not available, users will see a static message in place of the count message, telling them how many characters they can enter.
 
@@ -70,6 +73,8 @@ If the limit is much higher than most users are likely to reach, you can choose 
 
 To do this, set a threshold in the component markup. For example, `data-threshold="75"` will show the count message only when users have entered 75% of the limit.
 
+Screen reader users will hear a character limit when they first interact with a textarea using the threshold option. Sighted users will not see anything until the count message is shown — though you might choose to include the character limit in the hint text.
+
 {% from "_example.njk" import example %}
 {{ example({group: "components", item: "character-count", example: "threshold", html: true, nunjucks: true, open: false}) }}
 
@@ -94,8 +99,8 @@ For example, ‘Enter a summary’.
 
 #### If the input is too long
 
-Say ‘[whatever it is] must be [number] characters or fewer’.<br>
-For example, ‘Summary must be 400 characters or fewer’.
+Say ‘[whatever it is] must be [number] characters or less’.<br>
+For example, ‘Summary must be 400 characters or less’.
 
 ## Research on this component
 
@@ -107,9 +112,7 @@ During this research, the component was tested with 17 users, including those wi
 
 ### Known issues and gaps
 
-There is a known issue with JAWS where the field’s label is repeated every time the count message is played. This is repetitive and likely to be disruptive for users.
-
-Also, this component [counts some characters as multiple characters](https://github.com/alphagov/govuk-frontend/issues/1104). For example, emojis and some non-Latin characters.
+This component [counts some characters as multiple characters](https://github.com/alphagov/govuk-frontend/issues/1104). For example, emojis and some non-Latin characters.
 
 ### Services using this component
 
@@ -122,8 +125,6 @@ Publish teacher training courses
 Content publisher application
 
 ### Next steps
-
-Work is needed to fix the issue with JAWS.
 
 More user research is needed to find out:
 
