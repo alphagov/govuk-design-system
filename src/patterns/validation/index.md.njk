@@ -77,11 +77,14 @@ There are 2 ways to carry out validation:
 + server side validation
 + client side validation (in the browser, using either JavaScript or HTML)
 
-You’ll always need to carry out server side validation, even if you use client side validation. This is because there’s no guarantee that client side validation will work in all circumstances. For example users can bypass client side validation, or [JavaScript can fail to load](https://www.gov.uk/service-manual/technology/using-progressive-enhancement).
+You’ll always need to carry out server side validation, even if you use client side validation. This is because there’s no guarantee that client side validation will work in all circumstances. For example, the user can bypass client side validation, or [JavaScript can fail to load](https://www.gov.uk/service-manual/technology/using-progressive-enhancement).
 
-Avoid adding client side validation unless you can establish that there’s a need for it. For example, because user research shows it’s helpful to users if you validate the information they’re providing as they type.
+Only add client side validation if you find a user need for it. For example, because research shows it helps the user if you validate the information they're providing as they type.
 
-If you do use client side validation, make sure your client side and server side validation rules do not conflict.
+Before you add client side validation, consider that:
+
++ it's hard to tell the user about errors in a way that works reliably across different browsers and assistive technologies
++ carrying out both kinds of validation means you have to check their rules do not conflict
 
 ## Turn off HTML5 validation
 
