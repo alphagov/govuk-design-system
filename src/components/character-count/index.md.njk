@@ -35,7 +35,7 @@ It tells users how many characters they have remaining as they type into a [text
 Users will get updates at a pace that works best for the way they interact with the textarea. This means:
 
 - sighted users will see a count message that updates as they type
-- screen reader users will hear the count message when they stop typing.
+- screen reader users will hear the count announcement when they stop typing.
 
 Users can enter more than the character limit, but are told they’ve entered too many characters. This lets them type or copy and paste their full answer, then edit it down.
 
@@ -73,7 +73,7 @@ If the limit is much higher than most users are likely to reach, you can choose 
 
 To do this, set a threshold in the component markup. For example, `data-threshold="75"` will show the count message only when users have entered 75% of the limit.
 
-Screen reader users will hear a character limit when they first interact with a textarea using the threshold option. Sighted users will not see anything until the count message is shown — though you might choose to include the character limit in the hint text.
+Screen reader users will hear the character limit when they first interact with a textarea using the threshold option. Sighted users will not see anything until the count message is shown — though you might choose to include the character limit in the hint text.
 
 {% from "_example.njk" import example %}
 {{ example({group: "components", item: "character-count", example: "threshold", html: true, nunjucks: true, open: false}) }}
