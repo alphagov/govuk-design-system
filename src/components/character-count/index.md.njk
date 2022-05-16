@@ -37,7 +37,7 @@ Users will get updates at a pace that works best for the way they interact with 
 - sighted users will see a count message that updates as they type
 - screen reader users will hear the count announcement when they stop typing.
 
-Users can enter more than the character limit, but are told they’ve entered too many characters. This lets them type or copy and paste their full answer, then edit it down.
+This component does not restrict the user from entering information. The user can enter more than the character limit, but are told they've entered too many characters. This lets them type or copy and paste their full answer, then edit it down.
 
 The count message appears below the textarea so that:
 
@@ -99,8 +99,8 @@ For example, ‘Enter a summary’.
 
 #### If the input is too long
 
-Say ‘[whatever it is] must be [number] characters or less’.<br>
-For example, ‘Summary must be 400 characters or less’.
+Say ‘[whatever it is] must be [number] characters or fewer’.<br>
+For example, ‘Summary must be 400 characters or fewer’.
 
 ## Research on this component
 
@@ -112,7 +112,11 @@ During this research, the component was tested with 17 users, including those wi
 
 ### Known issues and gaps
 
-This component [counts some characters as multiple characters](https://github.com/alphagov/govuk-frontend/issues/1104). For example, emojis and some non-Latin characters.
+In Internet Explorer 11, JAWS will ignore any set threshold and announce the character count, even if the user entered less than the threshold.
+
+In Chrome version 99, JAWS will not announce the hint or character count of a pre-populated textarea. This is a known issue in JAWS.
+
+Also, this component [counts some characters as multiple characters](https://github.com/alphagov/govuk-frontend/issues/1104). For example, emojis and some non-Latin characters.
 
 ### Services using this component
 
