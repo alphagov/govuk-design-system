@@ -90,6 +90,8 @@ If a user tries to send their response with too many characters, you must show a
 
 The error message tells users what went wrong and how to fix it. The count message provides live feedback and updates as a user types.
 
+The input shows a red border only when the user tries to enter more than the character limit. If the number of characters is within the limit, the input does not show this border even when there's been an error. We felt it might cause the user difficulty if the border disappeared once they started typing.
+
 Make sure errors follow GOV.UK guidance on [writing error messages](/components/error-message/#be-clear-and-concise) and have specific error messages for specific error states.
 
 #### If the input is empty
