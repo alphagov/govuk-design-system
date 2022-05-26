@@ -20,6 +20,11 @@
     "includeInSearch": true
   },
   {
+    "label": "Content",
+    "url": "content",
+    "includeInSearch": true
+  },
+  {
     "label": "Accessibility",
     "url": "accessibility",
     "includeInSearch": true
