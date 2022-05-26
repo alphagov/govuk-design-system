@@ -33,7 +33,7 @@
     "clipboard": "^2.0.4",
     "connect": "^3.6.6",
     "eslint": "^5.16.0",
-    "govuk-frontend": "^4.0.1",
+    "govuk-frontend": "^4.1.0",
     "gray-matter": "^4.0.2",
     "highlight.js": "^10.4.1",
     "html5shiv": "^3.7.3",
@@ -47,6 +47,7 @@
   },
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.14.0",
+    "@metalsmith/sass": "^1.0.0",
     "accessible-autocomplete": "^2.0.2",
     "axe-puppeteer": "^1.0.0",
     "fs-extra": "^7.0.1",
@@ -57,7 +58,7 @@
     "jstransformer-marked": "^1.0.3",
     "jstransformer-nunjucks": "^0.5.0",
     "marked": "^4.0.10",
-    "metalsmith": "^2.3.0",
+    "metalsmith": "^2.4.2",
     "metalsmith-assets": "^0.1.0",
     "metalsmith-broken-link-checker": "^1.0.1",
     "metalsmith-browser-sync": "^1.1.1",
@@ -68,10 +69,8 @@
     "metalsmith-layouts": "^2.3.1",
     "metalsmith-permalinks": "^2.2.0",
     "metalsmith-rollup": "^2.0.0",
-    "metalsmith-sass": "^2.0.0",
     "metalsmith-tagcleaner": "0.0.2",
     "metalsmith-uglify": "^2.4.0",
-    "node-sass": "^7.0.1",
     "nunjucks": "^3.2.2",
     "puppeteer": "^1.14.0",
     "request": "^2.88.0",
@@ -82,7 +81,7 @@
     "standard": "^12.0.1"
   },
   "engines": {
-    "node": "~14.17.6"
+    "node": "~16.14.2"
   },
   "jest": {
     "preset": "jest-puppeteer",

@@ -1,9 +1,7 @@
 import * as CookieFunctions from './cookie-functions.js'
 import 'govuk-frontend/govuk/vendor/polyfills/Function/prototype/bind'
 import 'govuk-frontend/govuk/vendor/polyfills/Event'
-import common from 'govuk-frontend/govuk/common'
-
-var nodeListForEach = common.nodeListForEach
+import { nodeListForEach } from './helpers.js'
 
 var cookieBannerAcceptSelector = '.js-cookie-banner-accept'
 var cookieBannerRejectSelector = '.js-cookie-banner-reject'

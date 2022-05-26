@@ -34,6 +34,7 @@
 {% endblock %}
 
 {% block bodyStart %}
+  <a id="top"></a>
   <!--[if gte IE 9]><!-->
   {# {% include "_cookie-banner.njk" %} #}
   <!--<![endif]-->
@@ -43,7 +44,7 @@
 {% block header %}{% endblock %}
 
 {% block main %}
-<div class="app-pane {% block appPaneClasses %}{% endblock %}" id="top">
+<div class="app-pane {% block appPaneClasses %}{% endblock %}">
   {% include "hmlr/_header.njk" %}
   {% include "_navigation.njk" %}
   {% include "_banner.njk" %}

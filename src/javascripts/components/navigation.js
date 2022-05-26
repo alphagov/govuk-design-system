@@ -1,7 +1,5 @@
 import 'govuk-frontend/govuk/vendor/polyfills/Element/prototype/classList'
-
-import common from 'govuk-frontend/govuk/common'
-var nodeListForEach = common.nodeListForEach
+import { nodeListForEach } from './helpers.js'
 
 var navActiveClass = 'app-navigation--active'
 var navMenuButtonActiveClass = 'govuk-header__menu-button--open'
