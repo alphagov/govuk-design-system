@@ -32,7 +32,11 @@ This example shows the minimum required for a GOV.UK page.
 
 ## Customised page template
 
-You can customise the page template, for example, by adding a service name and navigation or adding a block before the main container to include a [back link](/components/back-link/) or [phase banner](/components/phase-banner/).
+You can customise the page template, for example, by:
+
+- adding a service name and navigation
+- including a [back link](/components/back-link/) or [phase banner](/components/phase-banner/)
+
 
 {{ example({group: "styles", item: "page-template", example: "custom", customCode: true, html: true, nunjucks: true, open: false, size: "xl" }) }}
 
@@ -49,6 +53,8 @@ To set a 'variable' option, use `set` to pass in a single value or string. For e
 {% set bodyClasses = "EXAMPLE-CLASS" %}
 {% endraw %}
 ```
+
+By default, the template contains a [skip link](/components/skip-link/), [header](/components/header/) and [footer](/components/footer/), all of which require 'blocks' to change.
 
 To set a 'block' option, use `block` to pass in a multiline value or HTML markup. For example, to add a block of HTML before the closing </body> element in the page template using the `bodyEnd` option:
 
