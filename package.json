@@ -1,7 +1,7 @@
 {
   "name": "hmlr-design-system",
   "private": true,
-  "description": "HMLR Design System",
+  "description": "HM Land Registry Design System",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/landregistry/hmlr-design-system-2.git"
