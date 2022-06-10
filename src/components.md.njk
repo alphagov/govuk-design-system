@@ -6,29 +6,27 @@ layout: layout-pane-no-nav.njk
 Components are reusable parts of the user interface. You can use the individual components in different patterns and contexts.
 
 You should:
-
 - use [GOV.UK Design System components](https://design-system.service.gov.uk/components/) where possible
-- create new or adapt Gov components only when you can demonstrate Gov ones do not work in your context
+- create new or adapt GOV.UK components only when you can demonstrate that GOV.UK ones do not work in your context
 - be sharing new and adapted components with the community
 
 Tell us what components you need so we prioritise getting them published.
 
-## Non Gov Design system components
+## Non GOV.UK Design System components
 
-Different patterns may be needed on HM Land Registry services and products depending on what domain they sit in and what kind of service it is.
+Different components may be needed on HM Land Registry services and products depending on what domain they sit in and what kind of service it is.
 
-### Land Registry design components
+### HM Land Registry Design System components
 
-If your service:
-- is internal, such as a caseworking system or admin service
+Use HM Land Registry Design System components if your service is internal, such as a caseworking or admin system.
 
-You should:
-- speak to caseworking designers, as they are documenting components and advice
+You should speak to designers working on casework systems, as they are documenting components and advice.
 
-### GOV.UK design components
+## GOV.UK design components
 
-If your service:
-- is public-facing and transactional, and
+Use GOV.UK design components if your service is all of the following:
+- public-facing
+- transactional
 - sits on a gov.uk or service.gov.uk domain
 
 You should:
@@ -42,7 +40,7 @@ Components that have been identified as needed or exist in more than one service
 {% from "govuk/components/table/macro.njk" import govukTable %}
 
 {{ govukTable({
-  caption: "Pattern backlog",
+  caption: "Component backlog",
   captionClasses: "govuk-table__caption--m",
   firstCellIsHeader: true,
   head: [
