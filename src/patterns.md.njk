@@ -2,200 +2,24 @@
 title: Patterns
 description: Patterns are best practice design solutions for specific user-focused tasks and page types
 layout: layout-pane-no-nav.njk
+backlogListPatterns: true
 ---
 
 Patterns are best practice design solutions for specific user-focused tasks and page types.
 
-Patterns often use one or more [components](/components/) and explain how to adapt them to your context.
+Patterns often use one or more [components](/components/) and explain how to adapt them to the context.
 
 You should:
 
 - use [GOV.UK Design System patterns](https://design-system.service.gov.uk/patterns/) first
-- create new or adapt GOV.UK patterns only when you can demonstrate GOV.UK ones do not work in your context
+- check here and in the design practice for patterns that do not exist elsewhere in government
+- create new or adapt existing patterns only when you can demonstrate existing ones do not work in your context
 - share new and adapted patterns with the [community](/community/)
+
 
 ## Patterns being worked on
 
-Patterns that have been identified as needed or exist in more than one service in production.
-
-
-{% from "govuk/components/table/macro.njk" import govukTable %}
-
-{{ govukTable({
-  caption: "Pattern backlog",
-  captionClasses: "govuk-table__caption--m",
-  firstCellIsHeader: true,
-  head: [
-    {
-      text: "Working title"
-    },
-    {
-      text: "Description"
-    },
-    {
-      text: "Who we've heard from"
-    },
-    {
-      text: "Next steps"
-    }
-  ],
-  rows: [
-    [
-      {
-        text: "Asking users for feedback"
-      },
-      {
-        text: "A feedback page or form in the service. Most commonly a 3rd party product is being used at the moment"
-      },
-      {
-        text: "Directly from 3 services. We believe all services use or need this"
-      },
-      {
-        text: "Working group to review the 1st draft of the guidance"
-      }
-    ],
-    [
-      {
-        text: "Search by map"
-      },
-      {
-        text: "Users can search for a property or location with a visual reference"
-      },
-      {
-        text: "Search for local land charges; Search for land and property information"
-      },
-      {
-        text: "Services to review their own documentation"
-      }
-    ],
-    [
-      {
-        text: "Display results on a map"
-      },
-      {
-        text: "Users can select a result of a search with a visual reference"
-      },
-      {
-        text: "Search for local land charges; Search for land and property information"
-      },
-      {
-        text: "Services to review their own documentation"
-      }
-    ],
-    [
-      {
-        text: "Accessibility statement"
-      },
-      {
-        text: "An easy to understand and accessible accessibility statement"
-      },
-      {
-        text: "All services"
-      },
-      {
-        text: "Form a working group"
-      }
-    ],
-    [
-      {
-        text: "Casework header and page furniture"
-      },
-      {
-        text: "A consistent header and furniture to use across caseworking systems"
-      },
-      {
-        text: "Caseworking services (Application processing, Notices, Workflow)"
-      },
-      {
-        text: "Caseworking teams to work on"
-      }
-    ],
-    [
-      {
-        text: "Add multiple items to an order"
-      },
-      {
-        text: "A way for users to choose and pay for multiple items at once"
-      },
-      {
-        text: "Portal; Search for land and property information"
-      },
-      {
-        text: "Review solutions or initial research. Identify gaps in the research or opportunities for more research"
-      }
-    ],
-    [
-      {
-        text: "Document store"
-      },
-      {
-        text: "A way for users to access the items they’ve bought from a service"
-      },
-      {
-        text: "Search for local land charges; Search for land and property information"
-      },
-      {
-        text: "Review solutions or initial research. Identify gaps in the research or opportunities for more research"
-      }
-    ],
-    [
-      {
-        text: "Update names or change people and organisations"
-      },
-      {
-        text: "Add or change someone's addresses. This could be for a 1 off incident or a permanent change"
-      },
-      {
-        text: "Application processing; Citizen accounts"
-      },
-      {
-        text: "Teams to work on"
-      }
-    ],
-    [
-      {
-        text: "Displaying a register"
-      },
-      {
-        text: "Online display of a register so that the user can carry out further tasks"
-      },
-      {
-        text: "Search for land and property information; Application processing"
-      },
-      {
-        text: "Teams to review own documentation and work on"
-      }
-    ],
-    [
-      {
-        text: "Add or change addresses"
-      },
-      {
-        text: "Add or change someone's addresses. This could be for a 1 off incident or a permanent change"
-      },
-      {
-        text: "Application processing; Citizen accounts"
-      },
-      {
-        text: "Teams to work on"
-      }
-    ],
-    [
-      {
-        text: "API documentation"
-      },
-      {
-        text: "A template to follow to publish API documentation"
-      },
-      {
-        text: "Business Gateway; Use land and property data"
-      },
-      {
-        text: "Teams to work on"
-      }
-    ]
-  ]
-}) }}
+Patterns that have been identified as needed in more than one service in production.
 
 
 ### How to get involved

@@ -1,6 +1,7 @@
 ---
 title: Components
 layout: layout-pane-no-nav.njk
+backlogListComponents: true
 ---
 
 Components are reusable parts of the user interface. You can use the individual components in different patterns and contexts.
@@ -35,76 +36,8 @@ You should:
 
 ## Components being worked on
 
-Components that have been identified as needed or exist in more than one service in production.
+Components that have been identified as needed in more than one service in production.
 
-{% from "govuk/components/table/macro.njk" import govukTable %}
-
-{{ govukTable({
-  caption: "Component backlog",
-  captionClasses: "govuk-table__caption--m",
-  firstCellIsHeader: true,
-  head: [
-    {
-      text: "Working title"
-    },
-    {
-      text: "Description"
-    },
-    {
-      text: "Who we've heard from"
-    },
-    {
-      text: "Next steps"
-    }
-  ],
-
-  rows: [
-    [
-      {
-        text: "Search by title number "
-      },
-      {
-        text: "Users can find information that we have using a title number"
-      },
-      {
-        text: "Search for land and property information and Search for local land charges"
-      },
-      {
-        text: "Services to review their own documentation"
-      }
-    ],
-
-    [
-      {
-        text: "Input monetary values bigger than £999"
-      },
-      {
-        text: "Currency or mortgage input for values bigger than £999. Potentially includes displaying these figures."
-      },
-      {
-        text: "Application processing, Digital Registration Service and Maintain local land charges"
-      },
-      {
-        text: "Need to form a working group"
-      }
-    ],
-
-    [
-      {
-        text: "Search by INSPIRE ID"
-      },
-      {
-        text: "Users can find information that we have using an INSPIRE ID"
-      },
-      {
-        text: "Search for land and property information and Search for local land charges"
-      },
-      {
-        text: "Teams to work on"
-      }
-    ]
-  ]
-}) }}
 
 ### How to get involved
 

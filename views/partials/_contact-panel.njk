@@ -1,8 +1,8 @@
 {%- set fileEditURL = "https://github.com/LandRegistry/hmlr-design-system-2/edit/main/src/" + path + "/index.md.njk" -%}
 {% if section === 'Styles' or section === 'Components' or section === 'Patterns' or section === 'Content' or section === 'Accessibility'%}
-  <h2 class="govuk-heading-l govuk-!-padding-top-7" id="help-improve-this-page">Help improve this page</h2>
-
+  
   {% if backlog_issue_id %}
+  	<h2 class="govuk-heading-l govuk-!-padding-top-7" id="help-improve-this-page">Help improve this page</h2>
     <p class="govuk-body">
     To help make sure that this page is useful, relevant and up to date, you can:
     </p>
@@ -21,6 +21,8 @@
       </li>
     </ul>
   {% else %}
+  	{#
+  		<h2 class="govuk-heading-l govuk-!-padding-top-7" id="help-improve-this-page">Help improve this page</h2>
       <p class="govuk-body">
         If you spot a problem with this guidance you can
         <a class="govuk-link app-contact-panel__link" href="{{ fileEditURL }}">propose a change</a>.
@@ -29,6 +31,7 @@
         If you're not sure how to do this, read guidance on
         <a class="govuk-link app-contact-panel__link" href="https://hmlr-design-system-staging.herokuapp.com/community/propose-a-content-change-using-github/">how to propose changes in GitHub</a>.
       </p>
+    #}
   {% endif %}
 {% endif %}
 

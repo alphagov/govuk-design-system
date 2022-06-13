@@ -1,0 +1,184 @@
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-full govuk-!-margin-top-6">
+
+		{% from "govuk/components/table/macro.njk" import govukTable %}
+
+		{{ govukTable({
+		  caption: "Pattern backlog",
+		  captionClasses: "govuk-table__caption--m",
+		  firstCellIsHeader: true,
+		  head: [
+		    {
+		      text: "Working title"
+		    },
+		    {
+		      text: "Description"
+		    },
+		    {
+		      text: "Who we've heard from"
+		    },
+		    {
+		      text: "Next steps"
+		    }
+		  ],
+		  rows: [
+		    [
+		      {
+		        text: "Asking users for feedback"
+		      },
+		      {
+		        text: "A feedback page or form in the service. Most commonly a 3rd party product is being used at the moment"
+		      },
+		      {
+		        text: "Directly from 3 services. We believe all services use or need this"
+		      },
+		      {
+		        text: "Working group to review the 1st draft of the guidance"
+		      }
+		    ],
+		    [
+		      {
+		        text: "Search by map"
+		      },
+		      {
+		        text: "Users can search for a property or location with a visual reference"
+		      },
+		      {
+		        text: "Search for local land charges; Search for land and property information"
+		      },
+		      {
+		        text: "Services to review their own documentation"
+		      }
+		    ],
+		    [
+		      {
+		        text: "Display results on a map"
+		      },
+		      {
+		        text: "Users can select a result of a search with a visual reference"
+		      },
+		      {
+		        text: "Search for local land charges; Search for land and property information"
+		      },
+		      {
+		        text: "Services to review their own documentation"
+		      }
+		    ],
+		    [
+		      {
+		        text: "Accessibility statement"
+		      },
+		      {
+		        text: "An easy to understand and accessible accessibility statement"
+		      },
+		      {
+		        text: "All services"
+		      },
+		      {
+		        text: "Form a working group"
+		      }
+		    ],
+		    [
+		      {
+		        text: "Casework header and page furniture"
+		      },
+		      {
+		        text: "A consistent header and furniture to use across caseworking systems"
+		      },
+		      {
+		        text: "Caseworking services (Application processing, Notices, Workflow)"
+		      },
+		      {
+		        text: "Caseworking teams to work on"
+		      }
+		    ],
+		    [
+		      {
+		        text: "Add multiple items to an order"
+		      },
+		      {
+		        text: "A way for users to choose and pay for multiple items at once"
+		      },
+		      {
+		        text: "Portal; Search for land and property information"
+		      },
+		      {
+		        text: "Review solutions or initial research. Identify gaps in the research or opportunities for more research"
+		      }
+		    ],
+		    [
+		      {
+		        text: "Document store"
+		      },
+		      {
+		        text: "A way for users to access the items they’ve bought from a service"
+		      },
+		      {
+		        text: "Search for local land charges; Search for land and property information"
+		      },
+		      {
+		        text: "Review solutions or initial research. Identify gaps in the research or opportunities for more research"
+		      }
+		    ],
+		    [
+		      {
+		        text: "Update names or change people and organisations"
+		      },
+		      {
+		        text: "Add or change someone's addresses. This could be for a 1 off incident or a permanent change"
+		      },
+		      {
+		        text: "Application processing; Citizen accounts"
+		      },
+		      {
+		        text: "Teams to work on"
+		      }
+		    ],
+		    [
+		      {
+		        text: "Displaying a register"
+		      },
+		      {
+		        text: "Online display of a register so that the user can carry out further tasks"
+		      },
+		      {
+		        text: "Search for land and property information; Application processing"
+		      },
+		      {
+		        text: "Teams to review own documentation and work on"
+		      }
+		    ],
+		    [
+		      {
+		        text: "Add or change addresses"
+		      },
+		      {
+		        text: "Add or change someone's addresses. This could be for a 1 off incident or a permanent change"
+		      },
+		      {
+		        text: "Application processing; Citizen accounts"
+		      },
+		      {
+		        text: "Teams to work on"
+		      }
+		    ],
+		    [
+		      {
+		        text: "API documentation"
+		      },
+		      {
+		        text: "A template to follow to publish API documentation"
+		      },
+		      {
+		        text: "Business Gateway; Use land and property data"
+		      },
+		      {
+		        text: "Teams to work on"
+		      }
+		    ]
+		  ]
+		}) }}
+
+	</div>
+</div>
+
