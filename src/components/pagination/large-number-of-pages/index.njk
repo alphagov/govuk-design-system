@@ -1,0 +1,44 @@
+---
+title: Large number of pages
+layout: layout-example.njk
+---
+
+{% from "govuk/components/pagination/macro.njk" import govukPagination %}
+
+{{ govukPagination({
+  previous: {
+    href: "#"
+  },
+  next: {
+    href: "#"
+  },
+  items: [
+    {
+      number: 1,
+      href: "#"
+    },
+    {
+      ellipsis: true
+    },
+    {
+      number: 6,
+      href: "#"
+    },
+    {
+      number: 7,
+      current: true,
+      href: "#"
+    },
+    {
+      number: 8,
+      href: "#"
+    },
+    {
+      ellipsis: true
+    },
+    {
+      number: 42,
+      href: "#"
+    }
+  ]
+}) }}
