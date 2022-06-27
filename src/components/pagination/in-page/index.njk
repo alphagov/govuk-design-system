@@ -1,0 +1,111 @@
+---
+title: Pagination - full page examples
+layout: layout-example-full-page.njk
+---
+
+{% extends "example-wrappers/full-page.njk" %}
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% from "govuk/components/panel/macro.njk" import govukPanel %}
+{% from "govuk/components/pagination/macro.njk" import govukPagination %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Search results</h1>
+
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link" href="#">Link to search result</a>
+          <p class="govuk-body">Excerpt from page that matches the search criteria</p>
+          <p class="govuk-body-s">Updated: <time datetime="2021-10-04">4 October 2021</time></p>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Link to search result</a>
+          <p class="govuk-body">Excerpt from page that matches the search criteria</p>
+          <p class="govuk-body-s">Updated: <time datetime="2021-10-04">4 October 2021</time></p>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Link to search result</a>
+          <p class="govuk-body">Excerpt from page that matches the search criteria</p>
+          <p class="govuk-body-s">Updated: <time datetime="2021-10-04">4 October 2021</time></p>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Link to search result</a>
+          <p class="govuk-body">Excerpt from page that matches the search criteria</p>
+          <p class="govuk-body-s">Updated: <time datetime="2021-10-04">4 October 2021</time></p>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Link to search result</a>
+          <p class="govuk-body">Excerpt from page that matches the search criteria</p>
+          <p class="govuk-body-s">Updated: <time datetime="2021-10-04">4 October 2021</time></p>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Link to search result</a>
+          <p class="govuk-body">Excerpt from page that matches the search criteria</p>
+          <p class="govuk-body-s">Updated: <time datetime="2021-10-04">4 October 2021</time></p>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Link to search result</a>
+          <p class="govuk-body">Excerpt from page that matches the search criteria</p>
+          <p class="govuk-body-s">Updated: <time datetime="2021-10-04">4 October 2021</time></p>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Link to search result</a>
+          <p class="govuk-body">Excerpt from page that matches the search criteria</p>
+          <p class="govuk-body-s">Updated: <time datetime="2021-10-04">4 October 2021</time></p>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Link to search result</a>
+          <p class="govuk-body">Excerpt from page that matches the search criteria</p>
+          <p class="govuk-body-s">Updated: <time datetime="2021-10-04">4 October 2021</time></p>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Link to search result</a>
+          <p class="govuk-body">Excerpt from page that matches the search criteria</p>
+          <p class="govuk-body-s">Updated: <time datetime="2021-10-04">4 October 2021</time></p>
+        </li>
+      </ul>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      {{ govukPagination({
+        previous: {
+          href: "#"
+        },
+        next: {
+          href: "#"
+        },
+        items: [
+          {
+            number: 1,
+            href: "#"
+          },
+          {
+            ellipsis: true
+          },
+          {
+            number: 6,
+            href: "#"
+          },
+          {
+            number: 7,
+            current: true,
+            href: "#"
+          },
+          {
+            number: 8,
+            href: "#"
+          },
+          {
+            ellipsis: true
+          },
+          {
+            number: 42,
+            href: "#"
+          }
+        ]
+      }) }}
+    </div>
+  </div>
+{% endblock %}

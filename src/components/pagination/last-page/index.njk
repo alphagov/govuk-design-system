@@ -1,0 +1,27 @@
+---
+title: Last page
+layout: layout-example.njk
+---
+
+{% from "govuk/components/pagination/macro.njk" import govukPagination %}
+
+{{ govukPagination({
+  previous: {
+    href: "#"
+  },
+  items: [
+    {
+      number: 1,
+      href: "#"
+    },
+    {
+      number: 2,
+      href: "#"
+    },
+    {
+      number: 3,
+      current: true,
+      href: "#"
+    }
+  ]
+}) }}
