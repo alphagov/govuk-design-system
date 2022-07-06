@@ -4,11 +4,12 @@ description: Only use images if there’s a real user need
 section: Styles
 backlog_issue_id: 70
 layout: layout-pane.njk
+show_page_nav: true
 ---
 
 {% from "_example.njk" import example %}
 
-Avoid unnecessary decoration. Only use images if there’s a real user need. 
+Avoid unnecessary decoration. Only use images if there’s a real user need.
 
 Make sure any information contained in an image can be understood by someone who cannot see it.
 
@@ -16,34 +17,34 @@ Make sure any information contained in an image can be understood by someone who
 
 Use photography when it’s important to show a lifelike representation of something. For example, when showing a photo of a document a user has uploaded.
 
+Don't use photography to represent abstract concepts, or use clichéd stock photography.
+
 {{ example({group: "styles", item: "images", example: "upload-photo", html: false, open: false, size: "l"}) }}
 
-## Illustrations or representative imagery
+## Illustrations
 
 Use illustrations to show a simplified image of something complex. For example:
 * to demonstrate physical interactions, like scanning a passport
 * to help users find something on a document, like a reference number
 * to explain a complex process
 
-{{ example({group: "styles", item: "images", example: "representative", html: false, open: false, size: "l"}) }}
-
-Don't use illustrations for purely decorative purposes.
-
-Avoid depicting people in illustrations. If you need to show people, don't only show one kind of person. For example, depicting people of a particular age, gender identity or ethnicity using your service can reinforce negative stereotypes or cause offence.
+{{ example({group: "styles", item: "images", example: "illustration", html: false, open: false, size: "l"}) }}
 
 ### Creating illustrations
 
-Use as few visual elements as possible to get the message across.
+Use as few visual elements as possible to communicate your message.
 
-Start by using the [GOV.UK colour palette](/styles/colour/#colour-palette). If you need more colours, try to use tints of the colour palette.
+Start by using the [GOV.UK colour palette](/styles/colour/#colour-palette). If you need more colours, try to use tints of the colour palette. 
 
-Use flat blocks of colour. Avoid using shadows or gradients, except when necessary to communicate layering or depth.
+Use flat blocks of colour. Avoid using shadows or gradients, except when needed to communicate layering or depth.
 
 If creating multiple illustrations for a service, use consistent colours, line widths and border radiuses across them all.
 
 Use the SVG format so that illustrations appear clearly at different sizes.
 
-## Aspect ratio
+Avoid depicting people in illustrations. If you need to show people, don't only represent one kind of person. For example, depicting people of a particular age, gender identity or ethnicity using your service can reinforce negative stereotypes or cause harm.
+
+## Aspect ratios
 
 The aspect ratio for most images should be 3:2.
 
