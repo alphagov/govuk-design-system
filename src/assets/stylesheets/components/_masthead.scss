@@ -1,0 +1,29 @@
+.app-masthead {
+  @include govuk-responsive-padding(6, "top");
+  @include govuk-responsive-padding(6, "bottom");
+  border-bottom: 1px solid govuk-colour("blue");
+  color: govuk-colour("white");
+  background-color: govuk-colour("blue");
+}
+
+.app-masthead__title {
+  color: govuk-colour("white");
+  @include govuk-responsive-margin(6, "bottom");
+}
+
+.app-masthead__description {
+  @include govuk-font(24);
+  margin-bottom: 0;
+}
+
+.app-masthead__image {
+  display: none;
+
+  @include govuk-not-ie8 {
+    @include govuk-media-query($from: desktop) {
+      display: block;
+      width: 100%;
+      margin-top: govuk-spacing(3);
+    }
+  }
+}

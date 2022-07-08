@@ -1,0 +1,57 @@
+{% extends "node_modules/govuk-frontend/govuk/template.njk" %}
+
+{% set htmlClasses = 'no-js' %}
+
+{% block pageTitle %}{{ title }} – GOV.UK Design System{% endblock %}
+
+{% block head %}
+  {% if not ENVIRONMENT or ENVIRONMENT != 'production' %}
+    <meta name="robots" content="noindex, nofollow">
+  {% endif %}
+  <meta name="og:title" content="{{title}}">
+  <meta name="description" content="{{description}}">
+  <meta name="og:description" content="{{description}}">
+  <link rel="canonical" href="{{ canonical }}" />
+  <!--[if lt IE 9]>
+    <link href="stylesheets/main-ie8.css" rel="stylesheet" media="all" />
+    <script src="javascripts/head-ie8.js"></script>
+  <![endif]-->
+  <!--[if !IE 8]><!-->
+    <link href="stylesheets/main.css" rel="stylesheet" media="all" />
+  <!--<![endif]-->
+  <script src="/javascripts/vendor/modernizr.js"></script>
+{% endblock %}
+
+{% block bodyStart %}
+  <a id="top"></a>
+  <!--[if gte IE 9]><!-->
+  {% include "partials/_cookie-banner.njk" %}
+  <!--<![endif]-->
+{% endblock %}
+
+{# We provide our own header, so blank the one provided by the template #}
+{% block header %}{% endblock %}
+
+{% block main %}
+<div class="app-pane {% block appPaneClasses %}{% endblock %}">
+  {% include "partials/_header.njk" %}
+  {% include "partials/_navigation.njk" %}
+  {% include "partials/_banner.njk" %}
+  {% block body %}
+    {{ content | safe }}
+  {% endblock %}
+</div>
+{% endblock %}
+
+{# We provide our own footer, so blank the one provided by the template #}
+{% block footer %}{% endblock %}
+
+{% block bodyEnd %}
+<script src="javascripts/govuk-frontend.js"></script>
+  <!--[if !IE 8]><!-->
+    <script src="javascripts/application.js"></script>
+  <!--<![endif]-->
+  <!--[if lt IE 9]>
+    <script src="javascripts/application-ie8.js}"></script>
+  <![endif]-->
+{% endblock %}
