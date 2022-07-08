@@ -1,0 +1,26 @@
+{
+  "name": "govuk-design-system",
+  "version": "1.0.0",
+  "description": "This repository contains the code for the GOV.UK Design System website. To find the code we provide for reuse by services, go to the [govuk-frontend repository](https://github.com/alphagov/govuk-frontend).",
+  "scripts": {
+    "build-sass": "node-sass src/assets/stylesheets/main.scss deploy/public/stylesheets/main.css",
+    "watch-sass": "node-sass --watch src/assets/stylesheets/main.scss deploy/public/stylesheets/main.css",
+    "watch-eleventy": "./node_modules/.bin/eleventy --serve",
+    "build": "npm run build-sass && ./node_modules/.bin/eleventy",
+    "start": "npm-run-all build-sass --parallel watch-eleventy watch-sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alphagov/govuk-design-system.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alphagov/govuk-design-system/issues"
+  },
+  "homepage": "https://github.com/alphagov/govuk-design-system#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.1",
+    "npm-run-all": "^4.1.5"
+  }
+}
