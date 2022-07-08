@@ -1,5 +1,0 @@
-deploy/public
-/node_modules
-npm-debug.log
-.DS_Store
-.sass-cache

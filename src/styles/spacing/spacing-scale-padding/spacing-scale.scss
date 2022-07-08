@@ -1,9 +1,0 @@
-@import "example-init";
-
-div {
-  background-color: lighten(govuk-colour("light-blue"), 25%);
-}
-
-div:nth-of-type(odd) {
-  background-color: govuk-colour("light-blue");
-}
