@@ -119,10 +119,16 @@ AppTabs.prototype.resetTabs = function () {
 AppTabs.prototype.openPanel = function (panelId) {
   var $mobileTab = this.getMobileTab(panelId)
   var $desktopTab = this.getDesktopTab(panelId)
-  $mobileTab.setAttribute('aria-expanded', 'true')
-  $desktopTab.setAttribute('aria-expanded', 'true')
-  $mobileTab.parentNode.classList.add('app-tabs__heading--current')
-  $desktopTab.parentNode.classList.add('app-tabs__item--current')
+
+  // Panels can exist without associated tabs—for example if there's a single
+  // panel that's open by default—so make sure they actually exist before use
+  if ($mobileTab && $desktopTab) {
+    $mobileTab.setAttribute('aria-expanded', 'true')
+    $mobileTab.parentNode.classList.add('app-tabs__heading--current')
+    $desktopTab.setAttribute('aria-expanded', 'true')
+    $desktopTab.parentNode.classList.add('app-tabs__item--current')
+  }
+
   this.getPanel(panelId).removeAttribute('hidden')
 }
 
