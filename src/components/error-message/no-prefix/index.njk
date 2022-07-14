@@ -1,0 +1,11 @@
+---
+title: Error message with the default visually hidden prefix disabled
+layout: layout-example.njk
+---
+
+{% from "govuk/components/error-message/macro.njk" import govukErrorMessage %}
+
+{{ govukErrorMessage({
+  html: '<span class="govuk-visually-hidden">错误：</span>输入事件名称',
+  visuallyHiddenText: false
+}) }}

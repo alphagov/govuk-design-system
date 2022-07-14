@@ -43,10 +43,6 @@ For each error:
 
 To help screen reader users, the error message component includes a hidden 'Error:' before the error message. These users will hear, for example, "Error: The date your passport was issued must be in the past".
 
-If your error message is written in another language, you can change the prefix as needed, as shown in this example.
-
-{{ example({group: "components", item: "error-message", example: "custom-prefix", html: true, nunjucks: true, open: true, displayExample: false, size: "s"}) }}
-
 Summarise all errors at the top of the page the user is on using an [error summary](/components/error-summary/).
 
 There are 2 ways to use the error message component. You can use HTML or, if you are using Nunjucks or the GOV.UK Prototype Kit, you can use the Nunjucks macro.
@@ -143,6 +139,20 @@ Find out how often people see them. This will let you:
 - improve content
 - A/B test variations
 - redesign a journey
+
+## Use localisation to translate ‘error message’ into other languages
+
+Read how to [set up localisation with Nunjucks and Javascript](/get-started/localisation/).
+
+### Add Nunjucks parameters
+
+If your error message is written in another language, you can change the prefix as needed, as shown in this example.
+
+{{ example({group: "components", item: "error-message", example: "custom-prefix", html: false, nunjucks: true, open: true, displayExample: false, size: "s"}) }}
+
+If visually-hidden text needs to appear elsewhere in the error message string, or without the default colon and space, set `visuallyHiddenText: false` and provide your own HTML using the `html` parameter.
+
+{{ example({group: "components", item: "error-message", example: "no-prefix", html: false, nunjucks: true, open: true, displayExample: false, size: "s"}) }}
 
 ## Research on this component
 

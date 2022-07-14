@@ -106,7 +106,7 @@ For example, ‘Summary must be 400 characters or less’.
 
 ## Use localisation to translate ‘character count’ into other languages
 
-Read how to [set up localisation with Nunjucks and Javascript](../get-started/localisation).
+Read how to [set up localisation with Nunjucks and Javascript](/get-started/localisation/).
 
 ### Add Nunjucks parameter
 
@@ -146,30 +146,6 @@ Choose the keys you need for the character count component from this list:
 - `words_over_limit_two`
 - `words_over_limit_few`
 - `words_over_limit_many`
-
-# Error message
-
-## Use localisation to translate ‘error message’ into other languages
-
-Read how to set up localisation with Nunjucks and Javascript.
-
-### Add Nunjucks parameters
-
-Add the following parameter to the error message component:
-
-- `visuallyHiddenText` – this has a default value that is always applied. A colon (:) and a space are added after the text. For example, the output of `visiallyHiddenText: 'Error'` would be "Error: "
-
-If visually-hidden text needs to appear elsewhere in the error message string, or without the default colon and space, set `visuallyHiddenText: false` and provide your own HTML using the `html` parameter.
-
-```
-
-{{ govukErrorMessage({
-
-visuallyHiddenText: false,
-
-html: '<span class="govuk-visually-hidden">错误：</span>输入事件名称'
-
-}) }}
 
 ## Research on this component
 
