@@ -46,3 +46,15 @@ Use the header with a service name if your service is more than 5 pages long - t
 Use the header with navigation if you need to include basic navigation, contact or account management links.
 
 {{ example({group: "components", item: "header", example: "with-service-name-and-navigation", html: true, nunjucks: true, open: false, size: "s"}) }}
+
+## Use localisation to translate ‘header’ into other languages
+
+Read how to [set up localisation with Nunjucks and Javascript](/get-started/localisation/).
+
+### Add Nunjucks parameters to the header component
+
+Add the following parameter to the header:
+
+- `menuButton` – text of the button that toggles the mobile navigation menu, if one is present. 
+
+There is no enforced character limit, but there is a very limited display space so keep text as short as possible. By default, this is set to  "Menu".

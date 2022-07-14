@@ -58,6 +58,58 @@ If your summary list does not have any actions, you can choose to remove the sep
 
 To remove borders on a single row, use the `govuk-summary-list__row--no-border` class.
 
+## Use localisation to translate ‘summary list’ into other languages
+
+Read how to [set up localisation with Nunjucks and Javascript](/get-started/localisation/).
+
+### Nunjucks parameters
+
+Add the following parameter to the summary list component:
+
+- `rows.actions.visuallyHiddenText` - this has a default value that is always applied. A space is added before the text and to the end of each action link.
+
+If visually-hidden text needs to appear elsewhere in the action link, or without the default space, set `visuallyHiddenText: false` and provide your own HTML using the `html` parameter.
+
+```
+
+{{ govukSummaryList({
+
+rows: [
+
+{
+
+key: {
+
+text: "Namen"
+
+},
+
+value: {
+
+text: "Norman Nescio"
+
+},
+
+actions: [
+
+{
+
+visuallyHiddenText: false,
+
+html: '<span class="govuk-visually-hidden">Namen </span>ändern'
+
+}
+
+]
+
+}
+
+]
+
+}) }}
+
+```
+
 ## Research on this component
 
 This component was developed and tested by the Government Digital Services as part of the [check answers pattern](/patterns/check-answers/).
