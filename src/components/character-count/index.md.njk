@@ -104,6 +104,73 @@ For example, ‘Enter a summary’.
 Say ‘[whatever it is] must be [number] characters or less’.<br>
 For example, ‘Summary must be 400 characters or less’.
 
+## Use localisation to translate ‘character count’ into other languages
+
+Read how to [set up localisation with Nunjucks and Javascript](../get-started/localisation).
+
+### Add Nunjucks parameter
+
+Add `limitHint` to the character count component. `limitHint` is the fallback character or word limit string available to assistive technologies. It is also shown visibly when JavaScript is unavailable. This has special functionality to find and replace the text `%{count}` with the value of the `maxlength` or `maxwords` parameter.
+
+### Add JavaScript keys
+
+You’ll only need the 'words_' keys if you’re using a word counter. 
+
+For all languages you must use  '_other' for plural forms. In some languages, such as Japanese or Chinese, you will only need to use `_other`,  but you will need to choose additional keys for other languages. 
+
+You should refer to the [Unicode Common Locale Data Repository (CLDR) documentation for guidance on which languages use which plural forms, and how they determine `few` and `many`](https://unicode-org.github.io/cldr-staging/charts/latest/supplemental/language_plural_rules.html).
+
+Choose the keys you need for the character count component from this list: 
+
+- `characters_under_limit_other`
+- `characters_under_limit_zero`
+- `characters_under_limit_one`
+- `characters_under_limit_two`
+- `characters_under_limit_few`
+- `characters_under_limit_many`
+- `characters_over_limit_other`
+- `characters_over_limit_zero`
+- `characters_over_limit_one`
+- `characters_over_limit_two`
+- `characters_over_limit_few`
+- `characters_over_limit_many`
+- `words_under_limit_other`
+- `words_under_limit_zero`
+- `words_under_limit_one`
+- `words_under_limit_two`
+- `words_under_limit_few`
+- `words_under_limit_many`
+- `words_over_limit_other`
+- `words_over_limit_zero`
+- `words_over_limit_one`
+- `words_over_limit_two`
+- `words_over_limit_few`
+- `words_over_limit_many`
+
+# Error message
+
+## Use localisation to translate ‘error message’ into other languages
+
+Read how to set up localisation with Nunjucks and Javascript.
+
+### Add Nunjucks parameters
+
+Add the following parameter to the error message component:
+
+- `visuallyHiddenText` – this has a default value that is always applied. A colon (:) and a space are added after the text. For example, the output of `visiallyHiddenText: 'Error'` would be "Error: "
+
+If visually-hidden text needs to appear elsewhere in the error message string, or without the default colon and space, set `visuallyHiddenText: false` and provide your own HTML using the `html` parameter.
+
+```
+
+{{ govukErrorMessage({
+
+visuallyHiddenText: false,
+
+html: '<span class="govuk-visually-hidden">错误：</span>输入事件名称'
+
+}) }}
+
 ## Research on this component
 
 The Government Digital Service (GDS) developed and tested this component in a prototype of the ‘Apply for a temporary event notice’ service.
