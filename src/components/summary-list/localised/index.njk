@@ -1,0 +1,46 @@
+---
+title: Summary list with localised content
+layout: layout-example.njk
+---
+
+
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "Namen"
+      },
+      value: {
+        text: "Sarah Philips"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            html: '<span class="govuk-visually-hidden">Namen </span>ändern',
+            visuallyHiddenText: false
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Geburtsdatum"
+      },
+      value: {
+        text: "5. Januar 1978"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            html: '<span class="govuk-visually-hidden">Geburtsdatum </span>ändern',
+            visuallyHiddenText: false
+          }
+        ]
+      }
+    }
+  ]
+}) }}

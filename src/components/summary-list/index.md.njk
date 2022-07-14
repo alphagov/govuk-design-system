@@ -70,45 +70,7 @@ Add the following parameter to the summary list component:
 
 If visually-hidden text needs to appear elsewhere in the action link, or without the default space, set `visuallyHiddenText: false` and provide your own HTML using the `html` parameter.
 
-```
-
-{{ govukSummaryList({
-
-rows: [
-
-{
-
-key: {
-
-text: "Namen"
-
-},
-
-value: {
-
-text: "Norman Nescio"
-
-},
-
-actions: [
-
-{
-
-visuallyHiddenText: false,
-
-html: '<span class="govuk-visually-hidden">Namen </span>ändern'
-
-}
-
-]
-
-}
-
-]
-
-}) }}
-
-```
+{{ example({group: "components", item: "summary-list", example: "localised", html: false, nunjucks: true }) }}
 
 ## Research on this component
 
