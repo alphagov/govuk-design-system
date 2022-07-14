@@ -1,0 +1,101 @@
+---
+layout: layout-pane.njk
+title: Using localisation with GOV.UK Frontend
+section: Get started
+theme: How to guides
+order: 5
+description: Localisation allows you to translate GOV.UK Frontend components into other languages
+---
+
+Localisation allows you to translate GOV.UK Frontend components into other languages
+
+## Set up localisation using Nunjucks
+
+If you’re using the Nunjucks macros provided by GOV.UK Frontend, you can localise the UI text that appears within components by passing translation strings as named parameters.
+
+The individual components using these parameters include:
+
+* accordion
+* character count
+* error message
+* footer
+* header
+* summary list
+
+## Set up localisation with Javascript
+
+You can only pass translation strings to JavaScript with a list of key-value pairs.
+
+When using a list of key-value pairs, the keys must be in quote marks, for example, “YOUR_KEY”.
+
+You can also pass a `locale` property containing a [two-letter ISO 639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), which determines which plural forms and number formatting rules you use. If you do not include this, the `locale` defaults to the document language specified on the `html` element.
+
+### Passing translation strings through `initAll`
+
+You can pass translation strings for multiple components when initialising GOV.UK Frontend. All Frontend components will automatically use these translations, unless initialised separately.
+
+
+```
+window.GOVUKFrontend.initAll({
+    accordion: {
+   	 i18n: {
+   		 locale: "cy",
+   		 translations: {
+   			 show_all_sections: "Dangoswch bob adran",
+   			 hide_all_sections: "Cuddiwch bob adran",
+   			 show_this_section: "Dangoswch yr adran hon",
+   			 hide_this_section: "Cuddio'r adran hon"
+   		 }
+   	 }
+    },
+    character_count: {
+   	 i18n: {
+   		 locale: "en",
+   		 translations: {
+   			 characters_over_limit_one: "Thou have writen %{count} letter too many",
+   			 characters_over_limit_other: "Thou have writen %{count} letters too many",
+   			 characters_under_limit_one: "Thou have %{count} letter remainen",
+   			 characters_under_limit_other: "Thou have %{count} letters remainen"
+   		 }
+   	 }
+    }
+})
+```
+
+### Passing translation strings directly to a component
+
+You can use the same format when initialising components individually or collectively:
+
+```
+
+new window.GOVUKFrontend.Accordion(
+
+document.getElementById('#custom-accordion'), {
+
+i18n: {
+
+locale: 'cy',
+
+translations: {
+
+'show_all_sections': 'Dangoswch bob adran',
+
+'hide_all_sections': 'Cuddiwch bob adran'
+
+}
+
+}
+
+}).init()
+
+```
+
+### Handling plural forms
+
+Different languages have different rules for pluralisation.
+
+English only has 2 forms, singular and plural. Other languages often have more forms. For example, Welsh has 6 possible plural forms, the Romance languages (French, Spanish, Italian) have 3 and many East Asian languages (Chinese, Japanese, Malaysian) do not have any plural forms.
+
+You can account for these forms by adding any one of 6 suffixes to a key: `_zero`, `_one`, `_two`, `_few`, `_many`, and `_other`. You’ll always need to add `_other` as it’s required for every language, but you’ll also have to choose from the other suffixes depending on the language you're using.
+
+You should refer to the [Unicode Common Locale Data Repository (CLDR) documentation for guidance on which languages use which plural forms, and how they determine `few` and `many`](https://unicode-org.github.io/cldr-staging/charts/latest/supplemental/language_plural_rules.html).
