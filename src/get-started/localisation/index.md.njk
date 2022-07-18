@@ -35,30 +35,30 @@ You can also pass a `locale` property containing a [two-letter ISO 639-1 code](h
 You can pass translation strings for multiple components when initialising GOV.UK Frontend. All Frontend components will automatically use these translations, unless initialised separately.
 
 
-```
+```javascript
 window.GOVUKFrontend.initAll({
-    accordion: {
-   	 i18n: {
-   		 locale: "cy",
-   		 translations: {
-   			 show_all_sections: "Dangoswch bob adran",
-   			 hide_all_sections: "Cuddiwch bob adran",
-   			 show_this_section: "Dangoswch yr adran hon",
-   			 hide_this_section: "Cuddio'r adran hon"
-   		 }
-   	 }
-    },
-    character_count: {
-   	 i18n: {
-   		 locale: "en",
-   		 translations: {
-   			 characters_over_limit_one: "Thou have writen %{count} letter too many",
-   			 characters_over_limit_other: "Thou have writen %{count} letters too many",
-   			 characters_under_limit_one: "Thou have %{count} letter remainen",
-   			 characters_under_limit_other: "Thou have %{count} letters remainen"
-   		 }
-   	 }
+  accordion: {
+    i18n: {
+      locale: "cy",
+      translations: {
+        show_all_sections: "Dangoswch bob adran",
+        hide_all_sections: "Cuddiwch bob adran",
+        show_this_section: "Dangoswch yr adran hon",
+        hide_this_section: "Cuddio'r adran hon"
+      }
     }
+  },
+  character_count: {
+    i18n: {
+      locale: "en",
+      translations: {
+        characters_over_limit_one: "Thou have writen %{count} letter too many",
+        characters_over_limit_other: "Thou have writen %{count} letters too many",
+        characters_under_limit_one: "Thou have %{count} letter remainen",
+        characters_under_limit_other: "Thou have %{count} letters remainen"
+      }
+    }
+  }
 })
 ```
 
@@ -66,28 +66,20 @@ window.GOVUKFrontend.initAll({
 
 You can use the same format when initialising components individually or collectively:
 
-```
-
+```javascript
 new window.GOVUKFrontend.Accordion(
-
-document.getElementById('#custom-accordion'), {
-
-i18n: {
-
-locale: 'cy',
-
-translations: {
-
-'show_all_sections': 'Dangoswch bob adran',
-
-'hide_all_sections': 'Cuddiwch bob adran'
-
-}
-
-}
-
-}).init()
-
+  document.getElementById("#custom-accordion"), {
+    i18n: {
+      locale: "cy",
+      translations: {
+        show_all_sections: "Dangoswch bob adran",
+        hide_all_sections: "Cuddiwch bob adran",
+        show_this_section: "Dangoswch yr adran hon",
+        hide_this_section: "Cuddio'r adran hon"
+      }
+    }
+  }
+).init()
 ```
 
 ### Handling plural forms
