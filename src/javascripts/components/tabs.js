@@ -22,8 +22,6 @@ function AppTabs ($module) {
 }
 
 AppTabs.prototype.init = function () {
-  var self = this
-
   // Exit if no module has been defined
   if (!this.$module) {
     return
@@ -34,9 +32,9 @@ AppTabs.prototype.init = function () {
 
   // Add bindings to desktop tabs
   nodeListForEach(this.$desktopTabs, function ($tab) {
-    $tab.bindClick = self.onClick.bind(self)
+    $tab.bindClick = this.onClick.bind(this)
     $tab.addEventListener('click', $tab.bindClick)
-  })
+  }.bind(this))
 
   // Reset all tabs and panels to closed state
   // We also add all our default ARIA goodness here
@@ -79,7 +77,6 @@ AppTabs.prototype.onClick = function (event) {
  * buttons than links, so let's use the appropriate element
  */
 AppTabs.prototype.enhanceMobileTabs = function () {
-  var self = this
   // Loop through mobile tabs...
   nodeListForEach(this.$mobileTabs, function ($tab) {
     // ...construct a button equivalent of each anchor...
@@ -89,12 +86,12 @@ AppTabs.prototype.enhanceMobileTabs = function () {
     $button.classList.add('app-tabs__heading-button')
     $button.innerHTML = $tab.innerHTML
     // ...bind controls...
-    $button.bindClick = self.onClick.bind(self)
+    $button.bindClick = this.onClick.bind(this)
     $button.addEventListener('click', $button.bindClick)
     // ...and replace the anchor with the button
     $tab.parentNode.appendChild($button)
     $tab.parentNode.removeChild($tab)
-  })
+  }.bind(this))
 
   // Replace the value of $mobileTabs with the new buttons
   this.$mobileTabs = this.$module.querySelectorAll('.js-tabs__heading button')
@@ -104,13 +101,12 @@ AppTabs.prototype.enhanceMobileTabs = function () {
  * Reset tabs and panels to closed state
  */
 AppTabs.prototype.resetTabs = function () {
-  var self = this
   nodeListForEach(this.$panels, function ($panel) {
     // We don't want to hide the panel if there are no tabs present to show it
     if (!$panel.classList.contains('js-tabs__container--no-tabs')) {
-      self.closePanel($panel.id)
+      this.closePanel($panel.id)
     }
-  })
+  }.bind(this))
 }
 
 /**
