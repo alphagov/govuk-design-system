@@ -9,24 +9,23 @@ description: Localisation allows you to translate GOV.UK Frontend components int
 
 Localisation allows you to translate GOV.UK Frontend components into other languages
 
-## Set up localisation using Nunjucks
+## Localisation using Nunjucks
 
 If you’re using the Nunjucks macros provided by GOV.UK Frontend, you can localise the UI text that appears within components by passing translation strings as named parameters.
 
-The individual components using these parameters include:
+We have provided specific localisation guidance for some of the components. These include:
 
-* accordion
-* character count
-* error message
-* footer
-* header
-* summary list
+* [accordion](/components/accordion/)
+* [character count](/components/character-count/)
+* [error message](/components/error-message/)
+* [footer](/components/footer/)
+* [header](/components/header/)
+* [summary list](/components/summary-list/)
 
 ## Set up localisation with Javascript
 
 You can only pass translation strings to JavaScript with a list of key-value pairs.
 
-When using a list of key-value pairs, the keys must be in quote marks, for example, “YOUR_KEY”.
 
 You can also pass a `locale` property containing a [two-letter ISO 639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), which determines which plural forms and number formatting rules you use. If you do not include this, the `locale` defaults to the document language specified on the `html` element.
 
