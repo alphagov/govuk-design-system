@@ -157,13 +157,11 @@ AppTabs.prototype.getMobileTab = function (panelId) {
  * Helper function to get a specific desktop tab by the associated panel ID
  */
 AppTabs.prototype.getDesktopTab = function (panelId) {
-  var result = null
-  nodeListForEach(this.$desktopTabs, function ($tab) {
-    if ($tab.getAttribute('aria-controls') === panelId) {
-      result = $tab
-    }
-  })
-  return result
+  var $desktopTabContainer = this.$module.querySelector('.app-tabs')
+  if ($desktopTabContainer) {
+    return $desktopTabContainer.querySelector('[aria-controls="' + panelId + '"]')
+  }
+  return null
 }
 
 /**
