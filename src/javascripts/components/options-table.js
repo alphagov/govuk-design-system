@@ -28,14 +28,12 @@ var OptionsTable = {
           var detailsText = optionsDetailsElement.querySelector('.govuk-details__text')
 
           if (detailsSummary && detailsText) {
-            tabLink.setAttribute('aria-expanded', true)
+            tabLink.setAttribute('aria-expanded', 'true')
             tabHeading.className += ' app-tabs__item--current'
-            tabsElement.classList.remove('app-tabs__container--hidden')
-            tabsElement.setAttribute('aria-hidden', false)
+            tabsElement.removeAttribute('hidden')
 
             optionsDetailsElement.setAttribute('open', 'open')
-            detailsSummary.setAttribute('aria-expanded', true)
-            detailsText.setAttribute('aria-hidden', false)
+            detailsSummary.setAttribute('aria-expanded', 'true')
             detailsText.style.display = ''
             window.setTimeout(function () {
               tabLink.focus()
