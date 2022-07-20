@@ -110,13 +110,13 @@ Read how to [use localisation with Nunjucks and Javascript](/get-started/localis
 
 ### Add Nunjucks parameter
 
-Add `limitHint` to the character count component. `limitHint` is the fallback character or word limit string available to assistive technologies. It is also shown visibly when JavaScript is unavailable. This has special functionality to find and replace the text `%{count}` with the value of the `maxlength` or `maxwords` parameter.
+Add 'limitHint' to the character count component. 'limitHint' is the fallback character or word limit string available to assistive technologies. It is also shown visibly when JavaScript is unavailable. This has special functionality to find and replace the text '%{count}' with the value of the 'maxlength' or 'maxwords' parameter.
 
 ### Add JavaScript keys
 
 You’ll only need the 'words_' keys if you’re using a word counter. 
 
-For all languages you must use  '_other' for plural forms. In some languages, such as Japanese or Chinese, you will only need to use `_other`,  but you will need to choose additional keys for other languages. 
+For all languages you must use  '_other' for plural forms. In some languages, such as Japanese or Chinese, you will only need to use '_other',  but you will need to choose additional keys for other languages. 
 
 You should refer to the [Unicode Common Locale Data Repository (CLDR) documentation for guidance on which languages use which plural forms, and how they determine 'few' and 'many'](https://unicode-org.github.io/cldr-staging/charts/latest/supplemental/language_plural_rules.html).
 
