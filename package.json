@@ -47,6 +47,7 @@
   },
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.14.0",
+    "@metalsmith/in-place": "^4.5.0",
     "@metalsmith/sass": "^1.0.0",
     "accessible-autocomplete": "^2.0.2",
     "axe-puppeteer": "^1.0.0",
@@ -65,7 +66,6 @@
     "metalsmith-canonical": "^1.2.0",
     "metalsmith-env": "^2.2.0",
     "metalsmith-fingerprint-ignore": "^2.0.0",
-    "metalsmith-in-place": "^4.4.2",
     "metalsmith-layouts": "^2.3.1",
     "metalsmith-permalinks": "^2.2.0",
     "metalsmith-rollup": "^2.0.0",
