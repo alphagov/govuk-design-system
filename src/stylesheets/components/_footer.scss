@@ -4,7 +4,6 @@
 // GOV.UK Frontend footer adapted for full width
 
 @include govuk-exports("app-footer") {
-
   .app-width-container--full {
     min-width: calc(100% - #{$govuk-gutter * 2});
     max-width: 100%;

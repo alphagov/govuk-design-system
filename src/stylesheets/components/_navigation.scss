@@ -38,7 +38,7 @@
     @include govuk-font(19, $weight: bold, $line-height: $navigation-height);
     box-sizing: border-box;
     height: $navigation-height;
-    height: govuk-px-to-rem($navigation-height); // sass-lint:disable-line no-duplicate-properties
+    height: govuk-px-to-rem($navigation-height);
     padding: 0 govuk-spacing(3);
     float: left;
   }
@@ -56,7 +56,7 @@
   padding: 0;
   @include govuk-typography-weight-bold; // Override .govuk-link weight
   font-size: 19px; // We do not have a font mixin that produces 19px on mobile
-  font-size: govuk-px-to-rem(19px); // sass-lint:disable-line no-duplicate-properties
+  font-size: govuk-px-to-rem(19px);
 
   // Expand the touch area of the link to the full menu width
   &:after {
@@ -89,8 +89,8 @@
 .app-navigation__subnav {
   margin: 0 govuk-spacing(-3);
   padding: govuk-spacing(2) 0;
-  list-style: none;
   background-color: govuk-colour("white");
+  list-style: none;
 }
 
 .js-enabled .app-navigation__subnav--active {
@@ -125,7 +125,7 @@
   // Font is defined as a hard 19px so
   // it does not re-size on mobile viewport
   font-size: 19px;
-  font-size: govuk-px-to-rem(19px); // sass-lint:disable-line no-duplicate-properties
+  font-size: govuk-px-to-rem(19px);
   font-weight: normal;
 }
 

@@ -1,5 +1,4 @@
 @include govuk-exports("app-subnav") {
-
   .app-subnav {
     // Since the back to top link is outside the flow of the document we need to create a space for it.
     // This number is magic and was determined by manually judging the visual spacing.
@@ -42,7 +41,7 @@
     padding-left: govuk-spacing(4);
   }
 
-  .app-subnav__section--nested .app-subnav__section-item::before {
+  .app-subnav__section--nested .app-subnav__section-item:before {
     content: "—";
     margin-left: -(govuk-spacing(4));
     color: govuk-colour("dark-grey");
