@@ -28,6 +28,7 @@
     ]
   },
   "dependencies": {
+    "@metalsmith/postcss": "^5.0.0",
     "acorn": "^6.4.1",
     "autoprefixer": "^9.5.1",
     "clipboard": "^2.0.4",
@@ -38,9 +39,8 @@
     "highlight.js": "^10.4.1",
     "html5shiv": "^3.7.3",
     "lunr": "^2.3.6",
-    "metalsmith-postcss": "^4.2.0",
     "modernizr": "^3.7.1",
-    "postcss": "^6.0.23",
+    "postcss": "^8.4.14",
     "sass-export": "^2.1.0",
     "serve-static": "^1.13.2",
     "slugger": "^1.0.1"
