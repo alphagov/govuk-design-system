@@ -1,0 +1,15 @@
+---
+title: Footer with licence and copyright graphics removed
+layout: layout-example.njk
+---
+
+{% from "govuk/components/footer/macro.njk" import govukFooter %}
+
+{# Pre-release code. Parameters are subject to change. #}
+
+{{ govukFooter({
+  contentLicence: 'Available under a <a class="govuk-footer__link" rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International Licence</a>',
+  hideOpenGovernmentLicenceLogo: true,
+  copyright: '© Megadodo Publications',
+  hideCrownCopyrightArms: true
+}) }}

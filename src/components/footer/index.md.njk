@@ -51,12 +51,19 @@ Read how to [use localisation with Nunjucks and Javascript](/get-started/localis
 
 ### Add Nunjucks parameters
 
-Add the following parameters to the footer:
+Add the following parameters to the footer to localise the licence and copyright notices:
 
 - `contentLicence` – the content licence information, this defaults to Open Government Licence (OGL) v3 licence
-- `hideOpenGovernmentLicenceLogo` – hides the OGL logo and is used if the content licence is not the Open Government Licence
 - `copyright` – the copyright information, this defaults to Crown Copyright
+
+{{ example({group: "components", item: "footer", example: "localised", html: false, nunjucks: true, open: false, size: "xl"}) }}
+
+If your content is not available under the Open Government Licence or Crown copyright, use the following parameters to hide those graphics:
+
+- `hideOpenGovernmentLicenceLogo` – hides the OGL logo and is used if the content licence is not the Open Government Licence
 - `hideCrownCopyrightArms` – hides the royal coat of arms and is used if the document is not covered under Crown Copyright
+
+{{ example({group: "components", item: "footer", example: "with-custom-licence", html: false, nunjucks: true, open: false, size: "xl"}) }}
 
 ## Adding secondary navigation
 
