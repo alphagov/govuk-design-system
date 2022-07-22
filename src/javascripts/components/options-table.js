@@ -33,8 +33,19 @@ var OptionsTable = {
             tabsElement.removeAttribute('hidden')
 
             optionsDetailsElement.setAttribute('open', 'open')
-            detailsSummary.setAttribute('aria-expanded', 'true')
+
+            // If the browser does not natively support the <details> element
+            // the polyfill included with the Details component adds ARIA
+            // attributes and explicit display styles that we need to keep in
+            // sync with the open attribute.
+            if (detailsSummary.hasAttribute('aria-expanded')) {
+              detailsSummary.setAttribute('aria-expanded', 'true')
+            }
+            if (detailsText.hasAttribute('aria-hidden')) {
+              detailsText.setAttribute('aria-hidden', false)
+            }
             detailsText.style.display = ''
+
             window.setTimeout(function () {
               tabLink.focus()
               if (isLinkToTable) document.querySelector(hash).scrollIntoView()
