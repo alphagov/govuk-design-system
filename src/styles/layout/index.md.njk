@@ -124,6 +124,17 @@ The desktop specific classes also allow you to set the width of the tablet break
 
 {{ example({group: "styles", item: "layout", example: "nested", html: true, open: true, size: "m"}) }}
 
+
+## Width override classes
+
+If you need to constrain the width of an element independently of the [grid system](/styles/layout/#grid-system), you can use width override classes.
+
+As with the spacing override classes the width override classes start with `govuk-!-`. The second part of the class name signifies the width on larger screen sizes. For example, `govuk-!-width-one-half`  will apply a width of 50% and `govuk-!-width-two-thirds`will apply a width of 66.66%.
+
+These examples are for the generic width override classes - read specific [guidance on setting text input width](/components/text-input/#use-appropriately-sized-text-inputs).
+
+{{ example({group: "styles", item: "layout", example: "width-overrides", html: true, open: true, size: "xl"}) }}
+
 ## Override how elements display
 
 You can use display override classes if you need to override how elements display on the page.
