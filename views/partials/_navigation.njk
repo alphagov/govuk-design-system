@@ -24,7 +24,7 @@
             {% for theme, items in item.items | groupby("theme") %}
               <li>
                 {% if theme != 'undefined' %}
-                  <h3 class="app-navigation__theme">{{ theme }}</h2>
+                  <h3 class="app-navigation__theme">{{ theme }}</h3>
                 {% endif %}
                 <ul class="app-navigation__list">
                   {% for subitem in items %}
