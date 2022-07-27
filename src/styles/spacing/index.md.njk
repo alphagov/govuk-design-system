@@ -181,19 +181,17 @@ margin-top: govuk-spacing(-3);
 
 Occasionally, you might need to make minor adjustments like adding or removing spacing to elements of your design. You can use the responsive spacing override classes for this.
 
-
 ### Using the override classes
 
-The spacing override classes are structured to allow you to apply any size of the scale, using margin or padding in any direction.
+The spacing override classes start with `govuk-!-` followed by either `margin-` or `padding-`, and then the spacing unit you want to apply.
 
-For example, `govuk-!-margin-9` will set a margin of 60px on large screens and 40px on small screens.
+To apply spacing in a single direction, include `left-`, `right-`, `top-`, or `bottom-` between `margin-` or `padding-` and the spacing unit.
 
-To add padding use `-padding` instead of `-margin`.
+For example:
 
-If you want to add the margin or padding in a particular direction, add `left` for left, `right` for right, `top` for top, or `bottom` for bottom. For example, `-margin-top` will set margin-top, `-padding-right` will set padding-right.
-If you do not specify a direction, the margin or padding will be applied to all sides of the element.
-
-The last part of the class represents the value you want to apply. For example, in `govuk-!-margin-9`, the `-9` represents 9 on the spacing scale.
+- `govuk-!-margin-9` will apply a 40px margin to all sides of the element on small screens, increasing to 60px on large screens
+- `govuk-!-padding-right-5` will apply 15px of padding to the right side of the element on small screens, increasing to 25px on large screens
+- `govuk-!-margin-0` will remove all margins at all screen sizes
 
 ### Examples
 
