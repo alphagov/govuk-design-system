@@ -137,30 +137,6 @@ The static spacing scale is the same as the spacing for 'large screens' in the r
   </tbody>
 </table>
 
-## Overriding spacing
-
-Occasionally, you might need to make minor adjustments like adding or removing spacing to elements of your design. You can use the responsive spacing override classes for this.
-
-
-### Using the override classes
-
-The spacing override classes are structured to allow you to apply any size of the scale, using margin or padding in any direction.
-
-For example, `govuk-!-margin-9` will set a margin of 60px on large screens and 40px on small screens.
-
-To add padding use `-padding` instead of `-margin`.
-
-If you want to add the margin or padding in a particular direction, add `left` for left, `right` for right, `top` for top, or `bottom` for bottom. For example, `-margin-top` will set margin-top, `-padding-right` will set padding-right.
-If you do not specify a direction, the margin or padding will be applied to all sides of the element.
-
-The last part of the class represents the value you want to apply. For example, in `govuk-!-margin-9`, the `-9` represents 9 on the spacing scale.
-
-### Examples
-
-{{ example({group: "styles", item: "spacing", example: "spacing-scale-padding", html: true, open: false, size: "l"}) }}
-
-{{ example({group: "styles", item: "spacing", example: "spacing-scale-margin", html: true, open: false, size: "xl"}) }}
-
 ## Using the spacing scale in your own CSS
 
 If you’re building your own components and want to reference the spacing scale directly in your SCSS file you can use the spacing scale through a mixin or a function.
@@ -200,3 +176,27 @@ For example, to apply spacing unit -3 for a negative 15px top margin on both lar
 ```scss
 margin-top: govuk-spacing(-3);
 ```
+
+## Overriding spacing
+
+Occasionally, you might need to make minor adjustments like adding or removing spacing to elements of your design. You can use the responsive spacing override classes for this.
+
+
+### Using the override classes
+
+The spacing override classes are structured to allow you to apply any size of the scale, using margin or padding in any direction.
+
+For example, `govuk-!-margin-9` will set a margin of 60px on large screens and 40px on small screens.
+
+To add padding use `-padding` instead of `-margin`.
+
+If you want to add the margin or padding in a particular direction, add `left` for left, `right` for right, `top` for top, or `bottom` for bottom. For example, `-margin-top` will set margin-top, `-padding-right` will set padding-right.
+If you do not specify a direction, the margin or padding will be applied to all sides of the element.
+
+The last part of the class represents the value you want to apply. For example, in `govuk-!-margin-9`, the `-9` represents 9 on the spacing scale.
+
+### Examples
+
+{{ example({group: "styles", item: "spacing", example: "spacing-scale-padding", html: true, open: false, size: "l"}) }}
+
+{{ example({group: "styles", item: "spacing", example: "spacing-scale-margin", html: true, open: false, size: "xl"}) }}
