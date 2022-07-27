@@ -10,12 +10,16 @@ show_page_nav: true
 
 {% from "_example.njk" import example %}
 
-## The responsive spacing scale
+The Design System uses two different spacing scales – responsive and static.
 
-The Design System uses a responsive spacing scale which adapts based on screen size. For example, if you apply spacing unit 9 to a margin, it will be 60px on large screens and 40px on small screens.
+## Responsive spacing
+
+The responsive spacing scale adapts based on screen width.
+
+Spacing increases when the screen is wider than the tablet breakpoint (640px), except for the lower end of the scale (0-3) where the spacing is the same at all screen sizes.
 
 <table class="govuk-table app-table--constrained">
-  <caption class="govuk-table__caption small govuk-visually-hidden">GOV.UK Frontend spacing scale</caption>
+  <caption class="govuk-table__caption small govuk-visually-hidden">The responsive spacing scale</caption>
   <thead>
     <tr>
       <th class="govuk-table__header" scope="col">Spacing unit</th>
@@ -72,6 +76,62 @@ The Design System uses a responsive spacing scale which adapts based on screen s
     <tr>
       <th class="govuk-table__header" scope="row">9</th>
       <td class="govuk-table__cell govuk-table__cell--numeric">40px</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">60px</td>
+    </tr>
+  </tbody>
+</table>
+
+## Static spacing
+
+The static spacing scale is the same as the spacing for 'large screens' in the responsive spacing scale, but always uses the same spacing regardless of the screen width.
+
+<table class="govuk-table app-table--constrained">
+  <caption class="govuk-table__caption small govuk-visually-hidden">The static spacing scale</caption>
+  <thead>
+    <tr>
+      <th class="govuk-table__header" scope="col">Spacing unit</th>
+      <th class="govuk-table__header govuk-table__header--numeric" scope="col">All screens</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="govuk-table__header" scope="row">0</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+    </tr>
+    <tr>
+      <th class="govuk-table__header" scope="row">1</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">5px</td>
+    </tr>
+    <tr>
+      <th class="govuk-table__header" scope="row">2</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">10px</td>
+    </tr>
+    <tr>
+      <th class="govuk-table__header" scope="row">3</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">15px</td>
+    </tr>
+    <tr>
+      <th class="govuk-table__header" scope="row">4</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">20px</td>
+    </tr>
+    <tr>
+      <th class="govuk-table__header" scope="row">5</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">25px</td>
+    </tr>
+    <tr>
+      <th class="govuk-table__header" scope="row">6</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">30px</td>
+    </tr>
+    <tr>
+      <th class="govuk-table__header" scope="row">7</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">40px</td>
+    </tr>
+    <tr>
+      <th class="govuk-table__header" scope="row">8</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">50px</td>
+    </tr>
+    <tr>
+      <th class="govuk-table__header" scope="row">9</th>
       <td class="govuk-table__cell govuk-table__cell--numeric">60px</td>
     </tr>
   </tbody>
