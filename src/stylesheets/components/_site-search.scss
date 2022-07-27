@@ -29,7 +29,7 @@ $icon-size: 40px;
 
     @include govuk-media-query($from: desktop) {
       margin: 0;
-      margin-top: -5px; //negative margin to vertically align search in header
+      margin-top: -5px; // negative margin to vertically align search in header
       float: right;
     }
 
@@ -127,7 +127,7 @@ $icon-size: 40px;
     z-index: 100;
     top: 100%;
     left: 0;
-    box-shadow: rgba(govuk-colour("black"), .256863) 0 2px 6px;
+    box-shadow: rgba(govuk-colour("black"), .256863) 0 2px 6px; // stylelint-disable-line number-max-precision
   }
 
   .app-site-search__menu--inline {
@@ -211,11 +211,11 @@ $icon-size: 40px;
   .app-site-search__aliases {
     margin-left: govuk-spacing(1);
 
-    &::before {
+    &:before {
       content: "(";
     }
 
-    &::after {
+    &:after {
       content: ")";
     }
   }

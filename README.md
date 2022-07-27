@@ -45,14 +45,14 @@ npm run build
 
 ## Run the Sass linter
 
-We are using the tool [sass-lint][sass-lint] to lint the Sass files in
+We are using the tool [stylelint][stylelint] to lint the Sass files in
 `source/stylesheets`. You can run the linter from command line by running:
 
 ```
 npm run lint
 ```
 
-[sass-lint]: https://github.com/sasstools/sass-lint
+[stylelint]: https://github.com/stylelint/stylelint
 
 ## GOV.UK Frontend packages
 

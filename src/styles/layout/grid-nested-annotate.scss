@@ -3,7 +3,7 @@
 $grid-nested-annotate-row-background-color: #ffffff;
 
 .govuk-grid-row {
-  [class^="govuk-grid-column"]  {
+  [class^="govuk-grid-column"] {
     padding-bottom: govuk-spacing(2);
     border: 4px solid govuk-colour("blue");
     background-color: $grid-nested-annotate-row-background-color;
@@ -15,7 +15,7 @@ $grid-nested-annotate-row-background-color: #ffffff;
   }
 
   .govuk-grid-row {
-    [class^="govuk-grid-column"]  {
+    [class^="govuk-grid-column"] {
       border: 0;
       background-color: $grid-nested-annotate-row-background-color;
     }
