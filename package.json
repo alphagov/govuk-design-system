@@ -30,7 +30,7 @@
   "dependencies": {
     "@metalsmith/postcss": "^5.0.0",
     "acorn": "^6.4.1",
-    "autoprefixer": "^9.5.1",
+    "autoprefixer": "^10.4.7",
     "clipboard": "^2.0.4",
     "connect": "^3.6.6",
     "eslint": "^5.16.0",
