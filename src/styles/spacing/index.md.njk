@@ -137,11 +137,11 @@ The static spacing scale is the same as the spacing for 'large screens' in the r
   </tbody>
 </table>
 
-## Using the spacing scale in your own CSS
+## Applying spacing in your own CSS
 
-If you’re building your own components and want to reference the spacing scale directly in your SCSS file you can use the spacing scale through a mixin or a function.
+If you want to reference the spacing scale in your CSS, use the spacing helpers.
 
-### Using the responsive spacing mixin
+### Using the responsive spacing helper
 
 To use the responsive spacing scale, include the [`govuk-responsive-margin`](https://frontend.design-system.service.gov.uk/sass-api-reference/#govuk-responsive-margin) or [`govuk-responsive-padding`](https://frontend.design-system.service.gov.uk/sass-api-reference/#govuk-responsive-padding) mixins.
 
@@ -159,11 +159,11 @@ For example, to apply spacing unit 6 for a 30px bottom margin on large screens a
 @include govuk-responsive-margin(6, "bottom");
 ```
 
-### Using the static spacing function
+### Using the static spacing helper
 
-If you want to apply large screen spacing at all breakpoints, use the [`govuk-spacing` function](https://frontend.design-system.service.gov.uk/sass-api-reference/#govuk-spacing) instead.
+For the static spacing scale, use the [`govuk-spacing` function](https://frontend.design-system.service.gov.uk/sass-api-reference/#govuk-spacing).
 
-For example, to apply spacing unit 6 for 30px top padding on both large and small screens, use:
+For example, to apply spacing unit 6 for 30px top padding on all screens, use:
 
 ```scss
 padding-top: govuk-spacing(6);
@@ -171,7 +171,7 @@ padding-top: govuk-spacing(6);
 
 For negative spacing, use a negative spacing unit number.
 
-For example, to apply spacing unit -3 for a negative 15px top margin on both large and small screens, use:
+For example, to apply spacing unit -3 for a negative 15px top margin all screens, use:
 
 ```scss
 margin-top: govuk-spacing(-3);
