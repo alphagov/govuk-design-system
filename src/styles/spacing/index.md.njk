@@ -179,19 +179,29 @@ margin-top: govuk-spacing(-3);
 
 ## Overriding spacing
 
-Occasionally, you might need to make minor adjustments like adding or removing spacing to elements of your design. You can use the responsive spacing override classes for this.
+Occasionally, you might need to make minor adjustments like adding or removing spacing to elements of your design. You can use the spacing override classes for this.
 
-### Using the override classes
+### Responsive spacing override classes
 
-The spacing override classes start with: `govuk-!-`, followed by either `margin-` or `padding-`, and then a spacing unit number.
+The responsive spacing override classes start with: `govuk-!-`, followed by either `margin-` or `padding-`, and then a spacing unit number.
 
 To apply spacing in a single direction, include `left-`, `right-`, `top-`, or `bottom-` just before the spacing unit.
 
-For example:
+For example, use:
 
-- `govuk-!-margin-9` will apply a 40px margin to all sides of the element on small screens, increasing to 60px on large screens
-- `govuk-!-padding-right-5` will apply 15px of padding to the right side of the element on small screens, increasing to 25px on large screens
-- `govuk-!-margin-0` will remove all margins at all screen sizes
+- `govuk-!-margin-9` to apply a 40px margin to all sides of the element on small screens, increasing to 60px on large screens
+- `govuk-!-padding-right-5` to apply 15px of padding to the right side of the element on small screens, increasing to 25px on large screens
+- `govuk-!-margin-0` to remove all margins at all screen sizes
+
+### Static spacing override classes
+
+The static spacing override classes start with `govuk-!-static`. Use them the same way as the responsive spacing override classes.
+
+For example, use:
+
+- `govuk-!-static-margin-9` to apply a 60px margin to all sides of the element at all screen sizes
+- `govuk-!-static-padding-right-5` to apply 25px of padding to the right side of the element at all screen sizes
+- `govuk-!-static-margin-0` to remove all margins at all screen sizes, same as `govuk-!-margin-0`
 
 ### Examples
 
