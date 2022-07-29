@@ -14,9 +14,9 @@ The Design System uses two different spacing scales – responsive and static.
 
 ## Responsive spacing
 
-The responsive spacing scale adapts based on screen width.
+The responsive spacing scale adapts based on screen size.
 
-Spacing increases when the screen is wider than the tablet breakpoint (640px), except for the lower end of the scale (0-3) where the spacing is the same at all screen sizes.
+The spacing for 'large screens' is used when the screen is wider than the tablet breakpoint (640px). Spacing for the smallest units (0-3) stays the same for all screen sizes.
 
 <table class="govuk-table app-table--constrained">
   <caption class="govuk-table__caption small govuk-visually-hidden">The responsive spacing scale</caption>
@@ -83,7 +83,7 @@ Spacing increases when the screen is wider than the tablet breakpoint (640px), e
 
 ## Static spacing
 
-The static spacing scale is the same as the spacing for 'large screens' in the responsive spacing scale, but always uses the same spacing regardless of the screen width.
+The static spacing scale stays the same for all screen sizes, and uses the same spacing as 'large screens' in the responsive spacing scale.
 
 <table class="govuk-table app-table--constrained">
   <caption class="govuk-table__caption small govuk-visually-hidden">The static spacing scale</caption>
@@ -183,9 +183,9 @@ Occasionally, you might need to make minor adjustments like adding or removing s
 
 ### Using the override classes
 
-The spacing override classes start with `govuk-!-` followed by either `margin-` or `padding-`, and then the spacing unit you want to apply.
+The spacing override classes start with: `govuk-!-`, followed by either `margin-` or `padding-`, and then a spacing unit number.
 
-To apply spacing in a single direction, include `left-`, `right-`, `top-`, or `bottom-` between `margin-` or `padding-` and the spacing unit.
+To apply spacing in a single direction, include `left-`, `right-`, `top-`, or `bottom-` just before the spacing unit.
 
 For example:
 
