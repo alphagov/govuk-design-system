@@ -54,14 +54,6 @@
         </div>
       </div>
 
-      {% if backlogListPatterns %}
-        {% include "_patterns-backlog.njk" %}
-      {% endif %}
-
-      {% if backlogListComponents %}
-        {% include "_components-backlog.njk" %}
-      {% endif %}
-
       {# No JS fallback to show overview #}
       {% if show_subnav %}
         {% include "_in-page-subnav.njk" %}
