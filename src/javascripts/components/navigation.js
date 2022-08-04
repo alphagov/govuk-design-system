@@ -136,7 +136,13 @@ Navigation.prototype.init = function () {
 
   if (typeof window.matchMedia === 'function') {
     this.mql = window.matchMedia('(min-width: 40.0625em)')
-    this.mql.addEventListener('change', this.setHiddenStates.bind(this))
+
+    // IE and Safari < 14 do not support MediaQueryList.addEventListener
+    if ('addEventListener' in this.mql) {
+      this.mql.addEventListener('change', this.setHiddenStates.bind(this))
+    } else {
+      this.mql.addListener(this.setHiddenStates.bind(this))
+    }
   }
 
   this.setHiddenStates()
