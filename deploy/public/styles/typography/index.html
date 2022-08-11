@@ -1,0 +1,2043 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Typography – GOV.UK Design System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0b0c0c"> 
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+      <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/assets/images/favicon.ico" type="image/x-icon">
+      <link rel="mask-icon" href="/assets/images/govuk-mask-icon.svg" color="#0b0c0c"> 
+      <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/govuk-apple-touch-icon-180x180.png">
+      <link rel="apple-touch-icon" sizes="167x167" href="/assets/images/govuk-apple-touch-icon-167x167.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/govuk-apple-touch-icon-152x152.png">
+      <link rel="apple-touch-icon" href="/assets/images/govuk-apple-touch-icon.png">
+    
+
+    
+  
+    <meta name="robots" content="noindex, nofollow">
+  
+  <meta name="og:title" content="Typography">
+  <meta name="description" content="If your service is on the service.gov.uk subdomain you must use the GDS Transport font">
+  <meta name="og:description" content="If your service is on the service.gov.uk subdomain you must use the GDS Transport font">
+  <link rel="canonical" href="https://design-system.service.gov.uk/styles/typography/" />
+  <!--[if lt IE 9]>
+    <link href="stylesheets/main-ie8.css" rel="stylesheet" media="all" />
+    <script src="javascripts/head-ie8.js"></script>
+  <![endif]-->
+  <!--[if !IE 8]><!-->
+    <link href="stylesheets/main.css" rel="stylesheet" media="all" />
+  <!--<![endif]-->
+  <script src="/javascripts/vendor/modernizr.js"></script>
+
+
+    
+    
+    <meta property="og:image" content="https://design-system.service.gov.uk/assets/images/govuk-opengraph-image.png">
+    
+  </head>
+  <body class="govuk-template__body ">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    
+  <a id="top"></a>
+  <!--[if gte IE 9]><!-->
+  
+
+
+
+
+
+
+
+<div class="govuk-cookie-banner " data-nosnippet role="region" aria-label="Cookies on GOV.UK Design System" hidden data-module="govuk-cookie-banner">
+    
+    
+      
+    
+
+    <div class="govuk-cookie-banner__message govuk-width-container app-width-container js-cookie-banner-message"
+    >
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        
+        <h2 class="govuk-cookie-banner__heading govuk-heading-m">Cookies on GOV.UK Design System</h2>
+        
+
+        <div class="govuk-cookie-banner__content">
+  <p class="govuk-body">We’d like to use analytics cookies so we can understand how you use the Design System and make improvements.</p>
+  <p class="govuk-body">We also use essential cookies to remember if you’ve accepted analytics cookies.</p>
+</div>
+      </div>
+    </div>
+
+      
+      <div class="govuk-button-group">
+        
+          
+            <button type="button" class="govuk-button js-cookie-banner-accept" data-module="govuk-button">
+              Accept analytics cookies
+            </button>
+          
+        
+          
+            <button type="button" class="govuk-button js-cookie-banner-reject" data-module="govuk-button">
+              Reject analytics cookies
+            </button>
+          
+        
+          
+            
+              
+              
+              <a class="govuk-link" href="/cookies/">View cookies</a>
+            
+          
+        
+      </div>
+      
+    </div>
+  
+    
+    
+      
+    
+
+    <div class="govuk-cookie-banner__message govuk-width-container js-cookie-banner-confirmation-accept app-width-container" role="alert"
+     hidden>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        
+
+        <div class="govuk-cookie-banner__content">
+  <p class="govuk-body">You’ve accepted analytics cookies. You can <a class="govuk-link" href="/cookies/">change your cookie settings</a> at any time.</p>
+</div>
+      </div>
+    </div>
+
+      
+      <div class="govuk-button-group">
+        
+          
+            <button class="govuk-button js-cookie-banner-hide js-cookie-banner-hide--accept" data-module="govuk-button">
+              Hide cookie message
+            </button>
+          
+        
+      </div>
+      
+    </div>
+  
+    
+    
+      
+    
+
+    <div class="govuk-cookie-banner__message govuk-width-container js-cookie-banner-confirmation-reject app-width-container" role="alert"
+     hidden>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        
+
+        <div class="govuk-cookie-banner__content">
+  <p class="govuk-body">You’ve rejected analytics cookies. You can <a class="govuk-link" href="/cookies/">change your cookie settings</a> at any time.</p>
+</div>
+      </div>
+    </div>
+
+      
+      <div class="govuk-button-group">
+        
+          
+            <button class="govuk-button js-cookie-banner-hide js-cookie-banner-hide--reject" data-module="govuk-button">
+              Hide cookie message
+            </button>
+          
+        
+      </div>
+      
+    </div>
+  
+</div>
+
+
+
+<script>
+
+  /* If cookie policy changes and/or the user preferences object format needs to
+  * change, bump this version up afterwards. The user should then be shown the
+  * banner again to consent to the new policy.
+  *
+  * Note that because isValidCookieConsent checks that the version in the user's
+  * cookie is equal to or greater than this number, you should be careful to
+  * check backwards compatibility when changing the object format.
+  *
+  */
+  window.GDS_CONSENT_COOKIE_VERSION = 1;
+
+  (function () {
+    /** Check the cookie preferences object.
+    *
+    * If the consent object is not present, malformed, or incorrect version,
+    * returns false, otherwise returns true.
+    *
+    * This is also duplicated in cookie-functions.js - the two need to be kept in sync
+    */
+    function isValidConsentCookie (options) {
+      return (options && options.version >= window.GDS_CONSENT_COOKIE_VERSION)
+    }
+
+    // Don't show the banner on the cookies page
+    if (window.location.pathname !== "/cookies/") {
+      // Show the banner if there is no consent cookie or if it is outdated
+      var currentConsentCookie = document.cookie.match(new RegExp('(^| )design_system_cookies_policy=([^;]+)'))
+
+      if (!currentConsentCookie || !isValidConsentCookie(JSON.parse(currentConsentCookie[2]))) {
+        var cookieBanner = document.querySelector("[data-module='govuk-cookie-banner']")
+        cookieBanner.removeAttribute('hidden')
+      }
+    }
+  })()
+</script>
+
+  <!--<![endif]-->
+
+
+    
+      <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+
+    
+
+    
+
+    
+  <header class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container app-width-container app-header__container">
+    <div class="govuk-header__logo app-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <!--[if gt IE 8]><!-->
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            class="govuk-header__logotype-crown"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 132 97"
+            height="30"
+            width="36"
+          >
+            <path
+              fill="currentColor" fill-rule="evenodd"
+              d="M25 30.2c3.5 1.5 7.7-.2 9.1-3.7 1.5-3.6-.2-7.8-3.9-9.2-3.6-1.4-7.6.3-9.1 3.9-1.4 3.5.3 7.5 3.9 9zM9 39.5c3.6 1.5 7.8-.2 9.2-3.7 1.5-3.6-.2-7.8-3.9-9.1-3.6-1.5-7.6.2-9.1 3.8-1.4 3.5.3 7.5 3.8 9zM4.4 57.2c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.5-1.5-7.6.3-9.1 3.8-1.4 3.5.3 7.6 3.9 9.1zm38.3-21.4c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.6-1.5-7.6.3-9.1 3.8-1.3 3.6.4 7.7 3.9 9.1zm64.4-5.6c-3.6 1.5-7.8-.2-9.1-3.7-1.5-3.6.2-7.8 3.8-9.2 3.6-1.4 7.7.3 9.2 3.9 1.3 3.5-.4 7.5-3.9 9zm15.9 9.3c-3.6 1.5-7.7-.2-9.1-3.7-1.5-3.6.2-7.8 3.7-9.1 3.6-1.5 7.7.2 9.2 3.8 1.5 3.5-.3 7.5-3.8 9zm4.7 17.7c-3.6 1.5-7.8-.2-9.2-3.8-1.5-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.3 3.5-.4 7.6-3.9 9.1zM89.3 35.8c-3.6 1.5-7.8-.2-9.2-3.8-1.4-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.4 3.6-.3 7.7-3.9 9.1zM69.7 17.7l8.9 4.7V9.3l-8.9 2.8c-.2-.3-.5-.6-.9-.9L72.4 0H59.6l3.5 11.2c-.3.3-.6.5-.9.9l-8.8-2.8v13.1l8.8-4.7c.3.3.6.7.9.9l-5 15.4v.1c-.2.8-.4 1.6-.4 2.4 0 4.1 3.1 7.5 7 8.1h.2c.3 0 .7.1 1 .1.4 0 .7 0 1-.1h.2c4-.6 7.1-4.1 7.1-8.1 0-.8-.1-1.7-.4-2.4V34l-5.1-15.4c.4-.2.7-.6 1-.9zM66 92.8c16.9 0 32.8 1.1 47.1 3.2 4-16.9 8.9-26.7 14-33.5l-9.6-3.4c1 4.9 1.1 7.2 0 10.2-1.5-1.4-3-4.3-4.2-8.7L108.6 76c2.8-2 5-3.2 7.5-3.3-4.4 9.4-10 11.9-13.6 11.2-4.3-.8-6.3-4.6-5.6-7.9 1-4.7 5.7-5.9 8-.5 4.3-8.7-3-11.4-7.6-8.8 7.1-7.2 7.9-13.5 2.1-21.1-8 6.1-8.1 12.3-4.5 20.8-4.7-5.4-12.1-2.5-9.5 6.2 3.4-5.2 7.9-2 7.2 3.1-.6 4.3-6.4 7.8-13.5 7.2-10.3-.9-10.9-8-11.2-13.8 2.5-.5 7.1 1.8 11 7.3L80.2 60c-4.1 4.4-8 5.3-12.3 5.4 1.4-4.4 8-11.6 8-11.6H55.5s6.4 7.2 7.9 11.6c-4.2-.1-8-1-12.3-5.4l1.4 16.4c3.9-5.5 8.5-7.7 10.9-7.3-.3 5.8-.9 12.8-11.1 13.8-7.2.6-12.9-2.9-13.5-7.2-.7-5 3.8-8.3 7.1-3.1 2.7-8.7-4.6-11.6-9.4-6.2 3.7-8.5 3.6-14.7-4.6-20.8-5.8 7.6-5 13.9 2.2 21.1-4.7-2.6-11.9.1-7.7 8.8 2.3-5.5 7.1-4.2 8.1.5.7 3.3-1.3 7.1-5.7 7.9-3.5.7-9-1.8-13.5-11.2 2.5.1 4.7 1.3 7.5 3.3l-4.7-15.4c-1.2 4.4-2.7 7.2-4.3 8.7-1.1-3-.9-5.3 0-10.2l-9.5 3.4c5 6.9 9.9 16.7 14 33.5 14.8-2.1 30.8-3.2 47.7-3.2z"
+            ></path>
+          </svg>
+          <!--<![endif]-->
+          <!--[if IE 8]>
+          <img src="/assets/images/govuk-logotype-crown.png" class="govuk-header__logotype-crown-fallback-image" width="36" height="32">
+          <![endif]-->
+          <span class="govuk-header__logotype-text">
+            GOV.UK
+          </span>
+        </span>
+        <span class="govuk-header__product-name">
+          Design System
+        </span>
+      </a>
+    </div>
+    <div class="app-site-search" data-module="app-search" data-search-index="/">
+      <label class="govuk-visually-hidden" for="app-site-search__input">Search Design system</label>
+      <a class="app-site-search__link govuk-link" href="/sitemap/">Sitemap</a>
+    </div>
+    <button hidden class="govuk-header__menu-button app-navigation__menu-button js-app-navigation__toggler" aria-controls="app-navigation">
+      Menu
+    </button>
+  </div>
+</header>
+
+  <nav id="app-navigation" class="app-navigation js-app-navigation govuk-clearfix" role="navigation" aria-labelledby="app-navigation-heading">
+  <h2 class="govuk-visually-hidden" id="app-navigation-heading">Menu</h2>
+  <ul class="app-navigation__list app-width-container">
+    
+      <li class="app-navigation__list-item ">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/get-started/">
+          Get started
+        </a>
+
+        
+          <button hidden class="app-navigation__button js-app-navigation__button">
+            Get started
+          </button>
+
+          <ul class="app-navigation__subnav js-app-navigation__subnav "
+            aria-label="Get started"
+            hidden
+          >
+            <li class="app-navigation__subnav-item">
+              <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/get-started/">
+                Get started overview
+              </a>
+            </li>
+            
+              <li>
+                
+                  <h3 class="app-navigation__theme">Setup guides</h3>
+                
+                <ul class="app-navigation__list">
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/get-started/prototyping/">
+                        Prototyping
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/get-started/production/">
+                        Production
+                      </a>
+                    </li>
+                  
+                </ul>
+              </li>
+            
+              <li>
+                
+                  <h3 class="app-navigation__theme">How to guides</h3>
+                
+                <ul class="app-navigation__list">
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/get-started/updating-your-code/">
+                        Replace variables, functions and mixins from our old frameworks
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/get-started/labels-legends-headings/">
+                        Making labels and legends headings
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/get-started/extending-and-modifying-components/">
+                        Extending and modifying components in production
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/get-started/focus-states/">
+                        Understanding focus state styles
+                      </a>
+                    </li>
+                  
+                </ul>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li class="app-navigation__list-item  app-navigation__list-item--current">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/styles/">
+          Styles
+        </a>
+
+        
+          <button hidden class="app-navigation__button js-app-navigation__button">
+            Styles
+          </button>
+
+          <ul class="app-navigation__subnav js-app-navigation__subnav app-navigation__subnav--active"
+            aria-label="Styles"
+            hidden
+          >
+            <li class="app-navigation__subnav-item">
+              <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/styles/">
+                Styles overview
+              </a>
+            </li>
+            
+              <li>
+                
+                <ul class="app-navigation__list">
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/styles/colour/">
+                        Colour
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/styles/images/">
+                        Images
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/styles/layout/">
+                        Layout
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/styles/page-template/">
+                        Page template
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/styles/spacing/">
+                        Spacing
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item app-navigation__subnav-item--current">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/styles/typography/">
+                        Typography
+                      </a>
+                    </li>
+                  
+                </ul>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li class="app-navigation__list-item ">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/components/">
+          Components
+        </a>
+
+        
+          <button hidden class="app-navigation__button js-app-navigation__button">
+            Components
+          </button>
+
+          <ul class="app-navigation__subnav js-app-navigation__subnav "
+            aria-label="Components"
+            hidden
+          >
+            <li class="app-navigation__subnav-item">
+              <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/">
+                Components overview
+              </a>
+            </li>
+            
+              <li>
+                
+                <ul class="app-navigation__list">
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/accordion/">
+                        Accordion
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/back-link/">
+                        Back link
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/breadcrumbs/">
+                        Breadcrumbs
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/button/">
+                        Button
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/character-count/">
+                        Character count
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/checkboxes/">
+                        Checkboxes
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/cookie-banner/">
+                        Cookie banner
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/date-input/">
+                        Date input
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/details/">
+                        Details
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/error-message/">
+                        Error message
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/error-summary/">
+                        Error summary
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/fieldset/">
+                        Fieldset
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/file-upload/">
+                        File upload
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/footer/">
+                        Footer
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/header/">
+                        Header
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/inset-text/">
+                        Inset text
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/notification-banner/">
+                        Notification banner
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/pagination/">
+                        Pagination
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/panel/">
+                        Panel
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/phase-banner/">
+                        Phase banner
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/radios/">
+                        Radios
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/select/">
+                        Select
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/skip-link/">
+                        Skip link
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/summary-list/">
+                        Summary list
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/table/">
+                        Table
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/tabs/">
+                        Tabs
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/tag/">
+                        Tag
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/text-input/">
+                        Text input
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/textarea/">
+                        Textarea
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/warning-text/">
+                        Warning text
+                      </a>
+                    </li>
+                  
+                </ul>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li class="app-navigation__list-item ">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/patterns/">
+          Patterns
+        </a>
+
+        
+          <button hidden class="app-navigation__button js-app-navigation__button">
+            Patterns
+          </button>
+
+          <ul class="app-navigation__subnav js-app-navigation__subnav "
+            aria-label="Patterns"
+            hidden
+          >
+            <li class="app-navigation__subnav-item">
+              <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/">
+                Patterns overview
+              </a>
+            </li>
+            
+              <li>
+                
+                  <h3 class="app-navigation__theme">Ask users for…</h3>
+                
+                <ul class="app-navigation__list">
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/addresses/">
+                        Addresses
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/bank-details/">
+                        Bank details
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/dates/">
+                        Dates
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/email-addresses/">
+                        Email addresses
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/equality-information/">
+                        Equality information
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/gender-or-sex/">
+                        Gender or sex
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/names/">
+                        Names
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/national-insurance-numbers/">
+                        National Insurance numbers
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/passwords/">
+                        Passwords
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/payment-card-details/">
+                        Payment card details
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/telephone-numbers/">
+                        Telephone numbers
+                      </a>
+                    </li>
+                  
+                </ul>
+              </li>
+            
+              <li>
+                
+                  <h3 class="app-navigation__theme">Help users to…</h3>
+                
+                <ul class="app-navigation__list">
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/check-a-service-is-suitable/">
+                        Check a service is suitable
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/check-answers/">
+                        Check answers
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/confirm-a-phone-number/">
+                        Confirm a phone number
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/confirm-an-email-address/">
+                        Confirm an email address
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/contact-a-department-or-service-team/">
+                        Contact a department or service team
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/create-a-username/">
+                        Create a username
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/create-accounts/">
+                        Create accounts
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/start-using-a-service/">
+                        Start using a service
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/validation/">
+                        Recover from validation errors
+                      </a>
+                    </li>
+                  
+                </ul>
+              </li>
+            
+              <li>
+                
+                  <h3 class="app-navigation__theme">Pages</h3>
+                
+                <ul class="app-navigation__list">
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/confirmation-pages/">
+                        Confirmation pages
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/cookies-page/">
+                        Cookies page
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/page-not-found-pages/">
+                        Page not found pages
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/problem-with-the-service-pages/">
+                        There is a problem with the service pages
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/question-pages/">
+                        Question pages
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/service-unavailable-pages/">
+                        Service unavailable pages
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/step-by-step-navigation/">
+                        Step by step navigation
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/task-list-pages/">
+                        Task list pages
+                      </a>
+                    </li>
+                  
+                </ul>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li class="app-navigation__list-item ">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/community/">
+          Community
+        </a>
+
+        
+          <button hidden class="app-navigation__button js-app-navigation__button">
+            Community
+          </button>
+
+          <ul class="app-navigation__subnav js-app-navigation__subnav "
+            aria-label="Community"
+            hidden
+          >
+            <li class="app-navigation__subnav-item">
+              <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/community/">
+                Community overview
+              </a>
+            </li>
+            
+              <li>
+                
+                <ul class="app-navigation__list">
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/community/resources-and-tools/">
+                        Resources and tools
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/community/backlog/">
+                        Backlog
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/community/propose-a-content-change-using-github/">
+                        Propose a content change using GitHub
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/community/propose-a-component-or-pattern/">
+                        Propose a component or pattern
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/community/develop-a-component-or-pattern/">
+                        Develop a component or pattern
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/community/contribution-criteria/">
+                        Contribution criteria
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/community/design-system-working-group/">
+                        Design System working group
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/community/blogs-talks-podcasts/">
+                        Blog posts, videos and podcasts
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/community/roadmap/">
+                        Roadmap
+                      </a>
+                    </li>
+                  
+                </ul>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+  
+
+
+
+  
+<div class="app-split-pane app-width-container">
+  <div class="app-split-pane__nav">
+    <nav class="app-subnav" aria-labelledby="app-subnav-heading">
+  <h2 class="govuk-visually-hidden" id="app-subnav-heading">Pages in this section</h2>
+  
+    
+  
+    
+    
+      
+        
+        <ul class="app-subnav__section">
+        
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/styles/colour/">Colour</a>
+            
+          </li>
+        
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/styles/images/">Images</a>
+            
+          </li>
+        
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/styles/layout/">Layout</a>
+            
+          </li>
+        
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/styles/page-template/">Page template</a>
+            
+          </li>
+        
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/styles/spacing/">Spacing</a>
+            
+          </li>
+        
+          <li class="app-subnav__section-item app-subnav__section-item--current">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/styles/typography/">Typography</a>
+            
+              <ul class="app-subnav__section app-subnav__section--nested">
+                
+                  
+                    <li class="app-subnav__section-item">
+                      <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/styles/typography/#font" >
+                        Font
+                      </a>
+                    </li>
+                  
+                
+                  
+                
+                  
+                    <li class="app-subnav__section-item">
+                      <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/styles/typography/#headings" >
+                        Headings
+                      </a>
+                    </li>
+                  
+                
+                  
+                
+                  
+                    <li class="app-subnav__section-item">
+                      <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/styles/typography/#paragraphs" >
+                        Paragraphs
+                      </a>
+                    </li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                    <li class="app-subnav__section-item">
+                      <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/styles/typography/#text-alignment-override-classes" >
+                        Text alignment override classes
+                      </a>
+                    </li>
+                  
+                
+                  
+                    <li class="app-subnav__section-item">
+                      <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/styles/typography/#font-override-classes" >
+                        Font override classes
+                      </a>
+                    </li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                    <li class="app-subnav__section-item">
+                      <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/styles/typography/#links" >
+                        Links
+                      </a>
+                    </li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                    <li class="app-subnav__section-item">
+                      <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/styles/typography/#lists" >
+                        Lists
+                      </a>
+                    </li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                    <li class="app-subnav__section-item">
+                      <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/styles/typography/#section-break" >
+                        Section break
+                      </a>
+                    </li>
+                  
+                
+              </ul>
+            
+          </li>
+        
+        </ul>
+      
+    
+    
+  
+    
+  
+    
+  
+    
+  
+</nav>
+
+  </div>
+  <div class="app-split-pane__content">
+    <main id="main-content" class="app-content" role="main">
+      
+      <span class="govuk-caption-xl">
+        Styles
+      </span>
+      
+      <h1 class="govuk-heading-xl">
+        
+        Typography
+        
+      </h1>
+
+      
+        <ul class="app-page-navigation">
+          
+            
+              <li class="app-page-navigation__item">
+                <a class="govuk-link" href="#font">
+                  Font
+                </a>
+              </li>
+            
+          
+            
+          
+            
+              <li class="app-page-navigation__item">
+                <a class="govuk-link" href="#headings">
+                  Headings
+                </a>
+              </li>
+            
+          
+            
+          
+            
+              <li class="app-page-navigation__item">
+                <a class="govuk-link" href="#paragraphs">
+                  Paragraphs
+                </a>
+              </li>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              <li class="app-page-navigation__item">
+                <a class="govuk-link" href="#text-alignment-override-classes">
+                  Text alignment override classes
+                </a>
+              </li>
+            
+          
+            
+              <li class="app-page-navigation__item">
+                <a class="govuk-link" href="#font-override-classes">
+                  Font override classes
+                </a>
+              </li>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              <li class="app-page-navigation__item">
+                <a class="govuk-link" href="#links">
+                  Links
+                </a>
+              </li>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              <li class="app-page-navigation__item">
+                <a class="govuk-link" href="#lists">
+                  Lists
+                </a>
+              </li>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              <li class="app-page-navigation__item">
+                <a class="govuk-link" href="#section-break">
+                  Section break
+                </a>
+              </li>
+            
+          
+        </ul>
+      
+
+      <div class="app-prose-scope">
+        <h2 id="font">Font</h2>
+<p>If your service is on the service.gov.uk subdomain you must use the GDS Transport font.</p>
+<h3 id="when-not-to-use-the-gds-transport-font">When not to use the GDS Transport font</h3>
+<p>If your service is publicly available on a subdomain other than service.gov.uk, use an alternative typeface like Helvetica or Arial.</p>
+<p>If you’re not sure whether you should use GDS Transport, do one of the following:</p>
+<ul>
+<li><a href="https://www.gov.uk/service-manual/design/making-your-service-look-like-govuk#if-your-service-isnt-on-govuk">read the ‘If your service is not on GOV.UK’ section on ‘Making your service look like GOV.UK’</a></li>
+<li><a href="/get-in-touch/">contact the Design System team</a></li>
+</ul>
+<h2 id="headings">Headings</h2>
+<p>Write all headings in sentence case.</p>
+<p>Use heading tags, such as <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code> and so on, to tag the headings on a page. Apply a heading class, such as <code>govuk-heading-l</code>, to style them visually. Style headings consistently to create a clear content structure throughout your service.</p>
+<p>For a <a href="/patterns/question-pages/">question page</a>, or pages with long headings, start with <code>govuk-heading-l</code> for an <code>&lt;h1&gt;</code>, <code>govuk-heading-m</code> for an <code>&lt;h2&gt;</code> and so on. But change it if your pages feel unbalanced – the heading class you use does not always need to correspond to the heading level.</p>
+<div class="app-example-wrapper" id="headings-typography-example-open" data-module="app-tabs" data-open>
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/styles/typography/headings/index.html" class="app-example__new-window" target="_blank">
+          Open this
+
+          <span class="govuk-visually-hidden">headings – typography</span>
+          example in a new tab
+        </a>
+      </div>
+      <iframe title="Headings – Typography example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable app-example__frame--m" src="/styles/typography/headings/index.html" frameBorder="0" loading="lazy"></iframe>
+    </div>
+      <ul class="app-tabs" role="tablist">
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#headings-typography-example-open-html" role="tab" aria-controls="headings-typography-example-open-html" data-track="tab-html">HTML</a>
+        </li>
+      </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#headings-typography-example-open-html" aria-controls="headings-typography-example-open-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="headings-typography-example-open-html" role="tabpanel">
+      <div class="app-example__code">
+        <pre data-module="app-copy" tabindex="0"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;</span>govuk-heading-l<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-m&quot;</span>&gt;</span>govuk-heading-m<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-s&quot;</span>&gt;</span>govuk-heading-s<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span></code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+<p>If your page has lots of long form content, start with <code>govuk-heading-xl</code> for an <code>&lt;h1&gt;</code>, <code>govuk-heading-l</code> for an <code>&lt;h2&gt;</code>, and so on.</p>
+<div class="app-example-wrapper" id="headings-for-pages-with-long-form-content-typography-example-open" data-module="app-tabs" data-open>
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/styles/typography/headings-xl/index.html" class="app-example__new-window" target="_blank">
+          Open this
+
+          <span class="govuk-visually-hidden">headings for pages with long form content – typography</span>
+          example in a new tab
+        </a>
+      </div>
+      <iframe title="Headings for pages with long form content – Typography example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable app-example__frame--m" src="/styles/typography/headings-xl/index.html" frameBorder="0" loading="lazy"></iframe>
+    </div>
+      <ul class="app-tabs" role="tablist">
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#headings-for-pages-with-long-form-content-typography-example-open-html" role="tab" aria-controls="headings-for-pages-with-long-form-content-typography-example-open-html" data-track="tab-html">HTML</a>
+        </li>
+      </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#headings-for-pages-with-long-form-content-typography-example-open-html" aria-controls="headings-for-pages-with-long-form-content-typography-example-open-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="headings-for-pages-with-long-form-content-typography-example-open-html" role="tabpanel">
+      <div class="app-example__code">
+        <pre data-module="app-copy" tabindex="0"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;</span>govuk-heading-xl<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;</span>govuk-heading-l<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-m&quot;</span>&gt;</span>govuk-heading-m<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-s&quot;</span>&gt;</span>govuk-heading-s<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span></code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+<h3 id="headings-with-captions">Headings with captions</h3>
+<p>Sometimes you may need to make it clear that a page is part of a larger section or group. To do this, you can use a heading with a caption above it.</p>
+<div class="app-example-wrapper" id="headings-with-captions-typography-example-open" data-module="app-tabs" data-open>
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/styles/typography/captions/index.html" class="app-example__new-window" target="_blank">
+          Open this
+
+          <span class="govuk-visually-hidden">headings with captions – typography</span>
+          example in a new tab
+        </a>
+      </div>
+      <iframe title="Headings with captions – Typography example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable app-example__frame--l" src="/styles/typography/captions/index.html" frameBorder="0" loading="lazy"></iframe>
+    </div>
+      <ul class="app-tabs" role="tablist">
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#headings-with-captions-typography-example-open-html" role="tab" aria-controls="headings-with-captions-typography-example-open-html" data-track="tab-html">HTML</a>
+        </li>
+      </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#headings-with-captions-typography-example-open-html" aria-controls="headings-with-captions-typography-example-open-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="headings-with-captions-typography-example-open-html" role="tabpanel">
+      <div class="app-example__code">
+        <pre data-module="app-copy" tabindex="0"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-caption-xl&quot;</span>&gt;</span>govuk-caption-xl<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;</span>govuk-heading-xl<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-caption-l&quot;</span>&gt;</span>govuk-caption-l<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;</span>govuk-heading-l<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-caption-m&quot;</span>&gt;</span>govuk-caption-m<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-m&quot;</span>&gt;</span>govuk-heading-m<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+<p>If the caption should be considered part of the page heading, you can also nest the caption within the <code>&lt;h1&gt;</code>.</p>
+<div class="app-example-wrapper" id="headings-with-captions-nested-typography-example-open" data-module="app-tabs" data-open>
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/styles/typography/captions-inside/index.html" class="app-example__new-window" target="_blank">
+          Open this
+
+          <span class="govuk-visually-hidden">headings with captions nested – typography</span>
+          example in a new tab
+        </a>
+      </div>
+      <iframe title="Headings with captions nested – Typography example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable app-example__frame--l" src="/styles/typography/captions-inside/index.html" frameBorder="0" loading="lazy"></iframe>
+    </div>
+      <ul class="app-tabs" role="tablist">
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#headings-with-captions-nested-typography-example-open-html" role="tab" aria-controls="headings-with-captions-nested-typography-example-open-html" data-track="tab-html">HTML</a>
+        </li>
+      </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#headings-with-captions-nested-typography-example-open-html" aria-controls="headings-with-captions-nested-typography-example-open-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="headings-with-captions-nested-typography-example-open-html" role="tabpanel">
+      <div class="app-example__code">
+        <pre data-module="app-copy" tabindex="0"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-caption-l&quot;</span>&gt;</span>govuk-caption-l<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  govuk-heading-l
+<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+<h2 id="paragraphs">Paragraphs</h2>
+<h3 id="body">Body</h3>
+<p>The default paragraph font size is 19px on large screens and 16px on small screens.</p>
+<div class="app-example-wrapper" id="body-typography-example-open" data-module="app-tabs" data-open>
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/styles/typography/body/index.html" class="app-example__new-window" target="_blank">
+          Open this
+
+          <span class="govuk-visually-hidden">body – typography</span>
+          example in a new tab
+        </a>
+      </div>
+      <iframe title="Body – Typography example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable" src="/styles/typography/body/index.html" frameBorder="0" loading="lazy"></iframe>
+    </div>
+      <ul class="app-tabs" role="tablist">
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#body-typography-example-open-html" role="tab" aria-controls="body-typography-example-open-html" data-track="tab-html">HTML</a>
+        </li>
+      </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#body-typography-example-open-html" aria-controls="body-typography-example-open-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="body-typography-example-open-html" role="tabpanel">
+      <div class="app-example__code">
+        <pre data-module="app-copy" tabindex="0"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>govuk-body<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+<p>You can also add classes to create a lead paragraph or smaller body copy to convey hierarchy in your page.</p>
+<h3 id="lead-paragraph">Lead paragraph</h3>
+<p>A lead paragraph is an introductory paragraph that you can use at the top of a page to summarise the content. Lead paragraphs use 24px type on desktop and should only be used once per page if needed.</p>
+<div class="app-example-wrapper" id="lead-typography-example-open" data-module="app-tabs" data-open>
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/styles/typography/lead/index.html" class="app-example__new-window" target="_blank">
+          Open this
+
+          <span class="govuk-visually-hidden">lead – typography</span>
+          example in a new tab
+        </a>
+      </div>
+      <iframe title="Lead – Typography example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable" src="/styles/typography/lead/index.html" frameBorder="0" loading="lazy"></iframe>
+    </div>
+      <ul class="app-tabs" role="tablist">
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#lead-typography-example-open-html" role="tab" aria-controls="lead-typography-example-open-html" data-track="tab-html">HTML</a>
+        </li>
+      </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#lead-typography-example-open-html" aria-controls="lead-typography-example-open-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="lead-typography-example-open-html" role="tabpanel">
+      <div class="app-example__code">
+        <pre data-module="app-copy" tabindex="0"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body-l&quot;</span>&gt;</span>govuk-body-l<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+<h3 id="body-small">Body small</h3>
+<p>You can use the <code>govuk-body-s</code> class sparingly to make your paragraph font size smaller: 16px on larger screens and 14px on smaller screens.</p>
+<p>The majority of your body copy should use the standard 19px paragraph size.</p>
+<div class="app-example-wrapper" id="body-small-typography-example-open" data-module="app-tabs" data-open>
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/styles/typography/small/index.html" class="app-example__new-window" target="_blank">
+          Open this
+
+          <span class="govuk-visually-hidden">body small – typography</span>
+          example in a new tab
+        </a>
+      </div>
+      <iframe title="Body small – Typography example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable" src="/styles/typography/small/index.html" frameBorder="0" loading="lazy"></iframe>
+    </div>
+      <ul class="app-tabs" role="tablist">
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#body-small-typography-example-open-html" role="tab" aria-controls="body-small-typography-example-open-html" data-track="tab-html">HTML</a>
+        </li>
+      </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#body-small-typography-example-open-html" aria-controls="body-small-typography-example-open-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="body-small-typography-example-open-html" role="tabpanel">
+      <div class="app-example__code">
+        <pre data-module="app-copy" tabindex="0"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body-s&quot;</span>&gt;</span>govuk-body-s<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+<h2 id="text-alignment-override-classes">Text alignment override classes</h2>
+<p>If you need to align text differently to how it usually displays on the page, you can use text alignment override classes.</p>
+<p>Use:</p>
+<ul>
+<li><code>govuk-!-text-align-left</code> to align text to the left</li>
+<li><code>govuk-!-text-align-right</code> to align text to the right</li>
+<li><code>govuk-!-text-align-centre</code> to align text to the centre</li>
+</ul>
+<p>You should usually left-align body copy that’s read left to right. Right-aligned body copy can be hard for users to find and read when they magnify their screen.</p>
+<p>Do not ‘justify’ blocks of body copy so that they’re aligned to both the left and right margins. Doing this creates wider spaces between words, which can make the text hard to read.</p>
+<h2 id="font-override-classes">Font override classes</h2>
+<p>You might need to set the font size or font weight of an element outside of the predefined heading and paragraph classes. For this you can use the font override classes in your HTML or reference the typography mixins in your own components.</p>
+<h3 id="font-size">Font size</h3>
+<p>The full GOV.UK typography scale goes from 14px up to 80px on large screens. You can add these font size override classes to any other typographic class or element and they will change the font size.</p>
+<div class="app-example-wrapper" id="font-size-typography-example-open" data-module="app-tabs" data-open>
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/styles/typography/font-size/index.html" class="app-example__new-window" target="_blank">
+          Open this
+
+          <span class="govuk-visually-hidden">font size – typography</span>
+          example in a new tab
+        </a>
+      </div>
+      <iframe title="Font size – Typography example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable app-example__frame--xl" src="/styles/typography/font-size/index.html" frameBorder="0" loading="lazy"></iframe>
+    </div>
+      <ul class="app-tabs" role="tablist">
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#font-size-typography-example-open-html" role="tab" aria-controls="font-size-typography-example-open-html" data-track="tab-html">HTML</a>
+        </li>
+      </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#font-size-typography-example-open-html" aria-controls="font-size-typography-example-open-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="font-size-typography-example-open-html" role="tabpanel">
+      <div class="app-example__code">
+        <pre data-module="app-copy" tabindex="0"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body govuk-!-font-size-80&quot;</span>&gt;</span>govuk-!-font-size-80<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body govuk-!-font-size-48&quot;</span>&gt;</span>govuk-!-font-size-48<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body govuk-!-font-size-36&quot;</span>&gt;</span>govuk-!-font-size-36<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body govuk-!-font-size-27&quot;</span>&gt;</span>govuk-!-font-size-27<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body govuk-!-font-size-24&quot;</span>&gt;</span>govuk-!-font-size-24<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body govuk-!-font-size-19&quot;</span>&gt;</span>govuk-!-font-size-19<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body govuk-!-font-size-16&quot;</span>&gt;</span>govuk-!-font-size-16<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body govuk-!-font-size-14&quot;</span>&gt;</span>govuk-!-font-size-14<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+<h3 id="font-weight">Font weight</h3>
+<p>As with the font size, you can add a font weight override class to any other typographic class or element to change the font weight to regular or bold weight.</p>
+<div class="app-example-wrapper" id="font-weight-typography-example-open" data-module="app-tabs" data-open>
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/styles/typography/font-weight/index.html" class="app-example__new-window" target="_blank">
+          Open this
+
+          <span class="govuk-visually-hidden">font weight – typography</span>
+          example in a new tab
+        </a>
+      </div>
+      <iframe title="Font weight – Typography example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable" src="/styles/typography/font-weight/index.html" frameBorder="0" loading="lazy"></iframe>
+    </div>
+      <ul class="app-tabs" role="tablist">
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#font-weight-typography-example-open-html" role="tab" aria-controls="font-weight-typography-example-open-html" data-track="tab-html">HTML</a>
+        </li>
+      </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#font-weight-typography-example-open-html" aria-controls="font-weight-typography-example-open-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="font-weight-typography-example-open-html" role="tabpanel">
+      <div class="app-example__code">
+        <pre data-module="app-copy" tabindex="0"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body govuk-!-font-weight-regular&quot;</span>&gt;</span>govuk-!-font-weight-regular<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body govuk-!-font-weight-bold&quot;</span>&gt;</span>govuk-!-font-weight-bold<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+<h4 id="bold-text">Bold text</h4>
+<p>You can use bold to emphasise particular words in a transaction. Use it to highlight critical information that users need to refer to or you’ve seen them miss.</p>
+<p>For example, “Your reference number is <strong>ABC12345678</strong>. Use this to track your application. Updates will be sent to <strong>name<i></i>@example.com</strong>“</p>
+<p>Use bold sparingly. Overuse will make it difficult for users to know which parts of your content they need to pay the most attention to.</p>
+<h2 id="links">Links</h2>
+<p>Links are blue and underlined by default. If your link is at the end of a sentence or paragraph, make sure that the linked text does not include the full stop.</p>
+<div class="app-example-wrapper" id="links-typography-example-open" data-module="app-tabs" data-open>
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/styles/typography/link/index.html" class="app-example__new-window" target="_blank">
+          Open this
+
+          <span class="govuk-visually-hidden">links – typography</span>
+          example in a new tab
+        </a>
+      </div>
+      <iframe title="Links – Typography example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable" src="/styles/typography/link/index.html" frameBorder="0" loading="lazy"></iframe>
+    </div>
+      <ul class="app-tabs" role="tablist">
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#links-typography-example-open-html" role="tab" aria-controls="links-typography-example-open-html" data-track="tab-html">HTML</a>
+        </li>
+      </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#links-typography-example-open-html" aria-controls="links-typography-example-open-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="links-typography-example-open-html" role="tabpanel">
+      <div class="app-example__code">
+        <pre data-module="app-copy" tabindex="0"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>Jump to <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>HTML example<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+<p>Use the <code>govuk-link--no-visited-state</code> modifier class where it is not helpful to distinguish between visited and unvisited states, for example when linking to pages with frequently-changing content such as the dashboard for an admin interface.</p>
+<div class="app-example-wrapper" id="links-with-no-visited-state-typography-example-open" data-module="app-tabs" data-open>
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/styles/typography/link-no-visited-state/index.html" class="app-example__new-window" target="_blank">
+          Open this
+
+          <span class="govuk-visually-hidden">links with no visited state – typography</span>
+          example in a new tab
+        </a>
+      </div>
+      <iframe title="Links with no visited state – Typography example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable" src="/styles/typography/link-no-visited-state/index.html" frameBorder="0" loading="lazy"></iframe>
+    </div>
+      <ul class="app-tabs" role="tablist">
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#links-with-no-visited-state-typography-example-open-html" role="tab" aria-controls="links-with-no-visited-state-typography-example-open-html" data-track="tab-html">HTML</a>
+        </li>
+      </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#links-with-no-visited-state-typography-example-open-html" aria-controls="links-with-no-visited-state-typography-example-open-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="links-with-no-visited-state-typography-example-open-html" role="tabpanel">
+      <div class="app-example__code">
+        <pre data-module="app-copy" tabindex="0"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link govuk-link--no-visited-state&quot;</span>&gt;</span>link text (with no visited state)<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+<h3 id="external-links">External links</h3>
+<p>If it’s an external link to a non-government website, make that clear in the link text. For example, ‘read advice on writing link text from [name of organisation]’. There’s no need to say explicitly that you’re linking to an external site. <a href="https://designnotes.blog.gov.uk/2016/11/28/removing-the-external-link-icon-from-gov-uk/">Do not use an external link icon</a>.</p>
+<h3 id="opening-links-in-a-new-tab">Opening links in a new tab</h3>
+<p>Avoid opening links in a new tab or window. It can be disorienting - and <a href="https://www.w3.org/TR/WCAG20-TECHS/G200.html">can cause accessibility problems for people who cannot visually perceive that the new tab has opened</a>.</p>
+<p>If you need a link to open in a new tab - for example, to stop the user losing information they’ve entered into a form - then include the words ‘opens in new tab’ as part of the link. There’s no need to say ‘tab or window’, since opening in a new tab is the default behaviour for most browsers.</p>
+<p>Include <code>rel=&quot;noreferrer noopener&quot;</code> along with <code>target=&quot;_blank&quot;</code> to reduce the risk of <a href="https://owasp.org/www-community/attacks/Reverse_Tabnabbing">reverse tabnabbing</a>. The following example shows how to do this in HTML.</p>
+<div class="app-example-wrapper" id="links-that-open-in-a-new-tab-typography-example-open" data-module="app-tabs" data-open>
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/styles/typography/link-opening-in-new-tab/index.html" class="app-example__new-window" target="_blank">
+          Open this
+
+          <span class="govuk-visually-hidden">links that open in a new tab  – typography</span>
+          example in a new tab
+        </a>
+      </div>
+      <iframe title="Links that open in a new tab  – Typography example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable" src="/styles/typography/link-opening-in-new-tab/index.html" frameBorder="0" loading="lazy"></iframe>
+    </div>
+      <ul class="app-tabs" role="tablist">
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#links-that-open-in-a-new-tab-typography-example-open-html" role="tab" aria-controls="links-that-open-in-a-new-tab-typography-example-open-html" data-track="tab-html">HTML</a>
+        </li>
+      </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#links-that-open-in-a-new-tab-typography-example-open-html" aria-controls="links-that-open-in-a-new-tab-typography-example-open-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="links-that-open-in-a-new-tab-typography-example-open-html" role="tabpanel">
+      <div class="app-example__code">
+        <pre data-module="app-copy" tabindex="0"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;noreferrer noopener&quot;</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;_blank&quot;</span>&gt;</span>link text (opens in new tab)<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+<p>If you’re displaying lots of links together and want to save space and avoid repetition, consider doing both of the following:</p>
+<ul>
+<li>adding a line of text before the links saying ‘The following links open in a new tab’</li>
+<li>including <code>&lt;span class=&quot;govuk-visually-hidden&quot;&gt;(opens in new tab)&lt;/span&gt;</code> as part of the link text, so that part of the link text is visually hidden but still accessible to screen readers</li>
+</ul>
+<h3 id="links-on-dark-backgrounds">Links on dark backgrounds</h3>
+<p>Use the <code>govuk-link--inverse</code> modifier class to show white links on dark backgrounds — for example, in headers, custom components, and patterns with darker backgrounds.</p>
+<p>Make sure all users can see the links — the white links and background colour <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html">must have a contrast ratio of at least 4.5:1</a>.</p>
+<div class="app-example-wrapper" id="links-on-dark-backgrounds-typography-example-open" data-module="app-tabs" data-open>
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/styles/typography/link-on-dark-background/index.html" class="app-example__new-window" target="_blank">
+          Open this
+
+          <span class="govuk-visually-hidden">links on dark backgrounds – typography</span>
+          example in a new tab
+        </a>
+      </div>
+      <iframe title="Links on dark backgrounds – Typography example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable" src="/styles/typography/link-on-dark-background/index.html" frameBorder="0" loading="lazy"></iframe>
+    </div>
+      <ul class="app-tabs" role="tablist">
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#links-on-dark-backgrounds-typography-example-open-html" role="tab" aria-controls="links-on-dark-backgrounds-typography-example-open-html" data-track="tab-html">HTML</a>
+        </li>
+      </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#links-on-dark-backgrounds-typography-example-open-html" aria-controls="links-on-dark-backgrounds-typography-example-open-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="links-on-dark-backgrounds-typography-example-open-html" role="tabpanel">
+      <div class="app-example__code">
+        <pre data-module="app-copy" tabindex="0"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link govuk-link--inverse&quot;</span>&gt;</span>link text (on dark background)<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+<h3 id="links-without-underlines">Links without underlines</h3>
+<p>Use the <code>govuk-link--no-underline</code> modifier class to remove underlines from links.</p>
+<p>Only do this if the context tells the user that the text is a link, even without the underline.</p>
+<p>For example, links in a header or side navigation might not need underlines. Users will understand that they’re links because of where they are, at the same place, across different pages.</p>
+<div class="app-example-wrapper" id="links-without-underlines-typography-example-open" data-module="app-tabs" data-open>
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/styles/typography/link-no-underline/index.html" class="app-example__new-window" target="_blank">
+          Open this
+
+          <span class="govuk-visually-hidden">links without underlines – typography</span>
+          example in a new tab
+        </a>
+      </div>
+      <iframe title="Links without underlines – Typography example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable" src="/styles/typography/link-no-underline/index.html" frameBorder="0" loading="lazy"></iframe>
+    </div>
+      <ul class="app-tabs" role="tablist">
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#links-without-underlines-typography-example-open-html" role="tab" aria-controls="links-without-underlines-typography-example-open-html" data-track="tab-html">HTML</a>
+        </li>
+      </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#links-without-underlines-typography-example-open-html" aria-controls="links-without-underlines-typography-example-open-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="links-without-underlines-typography-example-open-html" role="tabpanel">
+      <div class="app-example__code">
+        <pre data-module="app-copy" tabindex="0"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link govuk-link--no-underline&quot;</span>&gt;</span>link text (with no underline)<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+<h2 id="lists">Lists</h2>
+<p>Use lists to make blocks of text easier to read, and to break information into manageable chunks.</p>
+<div class="app-example-wrapper" id="lists-typography-example-open" data-module="app-tabs" data-open>
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/styles/typography/list/index.html" class="app-example__new-window" target="_blank">
+          Open this
+
+          <span class="govuk-visually-hidden">lists – typography</span>
+          example in a new tab
+        </a>
+      </div>
+      <iframe title="Lists – Typography example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable app-example__frame--s" src="/styles/typography/list/index.html" frameBorder="0" loading="lazy"></iframe>
+    </div>
+      <ul class="app-tabs" role="tablist">
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#lists-typography-example-open-html" role="tab" aria-controls="lists-typography-example-open-html" data-track="tab-html">HTML</a>
+        </li>
+      </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#lists-typography-example-open-html" aria-controls="lists-typography-example-open-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="lists-typography-example-open-html" role="tabpanel">
+      <div class="app-example__code">
+        <pre data-module="app-copy" tabindex="0"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-list&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>Benefits calculators<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>Benefit overpayments<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>Benefit fraud<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>More<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+<h3 id="bulleted-lists">Bulleted lists</h3>
+<p>Introduce bulleted lists with a lead-in line ending in a colon. Start each item with a lowercase letter, and do not use a full stop at the end.</p>
+<div class="app-example-wrapper" id="bulleted-lists-typography-example-open" data-module="app-tabs" data-open>
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/styles/typography/list-bullet/index.html" class="app-example__new-window" target="_blank">
+          Open this
+
+          <span class="govuk-visually-hidden">bulleted lists – typography</span>
+          example in a new tab
+        </a>
+      </div>
+      <iframe title="Bulleted lists – Typography example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable app-example__frame--s" src="/styles/typography/list-bullet/index.html" frameBorder="0" loading="lazy"></iframe>
+    </div>
+      <ul class="app-tabs" role="tablist">
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#bulleted-lists-typography-example-open-html" role="tab" aria-controls="bulleted-lists-typography-example-open-html" data-track="tab-html">HTML</a>
+        </li>
+      </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#bulleted-lists-typography-example-open-html" aria-controls="bulleted-lists-typography-example-open-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="bulleted-lists-typography-example-open-html" role="tabpanel">
+      <div class="app-example__code">
+        <pre data-module="app-copy" tabindex="0"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>You can buy:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-list govuk-list--bullet&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>apples<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>oranges<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>pears<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+<h3 id="numbered-lists">Numbered lists</h3>
+<p>Use numbered lists instead of bulleted lists when the order of the items is relevant.</p>
+<p>You do not need to use a lead-in line for numbered lists. Items in a numbered list should end in a full stop because each should be a complete sentence.</p>
+<div class="app-example-wrapper" id="numbered-lists-typography-example-open" data-module="app-tabs" data-open>
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/styles/typography/list-number/index.html" class="app-example__new-window" target="_blank">
+          Open this
+
+          <span class="govuk-visually-hidden">numbered lists – typography</span>
+          example in a new tab
+        </a>
+      </div>
+      <iframe title="Numbered lists – Typography example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable app-example__frame--s" src="/styles/typography/list-number/index.html" frameBorder="0" loading="lazy"></iframe>
+    </div>
+      <ul class="app-tabs" role="tablist">
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#numbered-lists-typography-example-open-html" role="tab" aria-controls="numbered-lists-typography-example-open-html" data-track="tab-html">HTML</a>
+        </li>
+      </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#numbered-lists-typography-example-open-html" aria-controls="numbered-lists-typography-example-open-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="numbered-lists-typography-example-open-html" role="tabpanel">
+      <div class="app-example__code">
+        <pre data-module="app-copy" tabindex="0"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">ol</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-list govuk-list--number&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Delivery address.<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Payment.<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Confirmation.<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span></code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+<h3 id="adding-extra-spacing-between-list-items">Adding extra spacing between list items</h3>
+<p>If a list is hard to read because the items run across multiple lines you can add extra spacing.</p>
+<div class="app-example-wrapper" id="spaced-lists-typography-example-open" data-module="app-tabs" data-open>
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/styles/typography/list-spaced/index.html" class="app-example__new-window" target="_blank">
+          Open this
+
+          <span class="govuk-visually-hidden">spaced lists – typography</span>
+          example in a new tab
+        </a>
+      </div>
+      <iframe title="Spaced lists – Typography example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable app-example__frame--s" src="/styles/typography/list-spaced/index.html" frameBorder="0" loading="lazy"></iframe>
+    </div>
+      <ul class="app-tabs" role="tablist">
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#spaced-lists-typography-example-open-html" role="tab" aria-controls="spaced-lists-typography-example-open-html" data-track="tab-html">HTML</a>
+        </li>
+      </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#spaced-lists-typography-example-open-html" aria-controls="spaced-lists-typography-example-open-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="spaced-lists-typography-example-open-html" role="tabpanel">
+      <div class="app-example__code">
+        <pre data-module="app-copy" tabindex="0"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>You will have to apply the reverse charge if you supply any of these services:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-list govuk-list--bullet govuk-list--spaced&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+    constructing, altering, repairing, extending, demolishing or dismantling buildings or structures (whether permanent or not), including offshore installation services
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+    constructing, altering, repairing, extending, demolishing of any works forming, or planned to form, part of the land, including (in particular) walls, roadworks, power lines, electronic communications equipment, aircraft runways, railways, inland waterways, docks and harbours
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+    pipelines, reservoirs, water mains, wells, sewers, industrial plant and installations for purposes of land drainage, coast protection or defence
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+    installing heating, lighting, air-conditioning, ventilation, power supply, drainage, sanitation, water supply or fire protection systems in any building or structure
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+    internal cleaning of buildings and structures, so far as carried out in the course of their construction, alteration, repair, extension or restoration
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+    painting or decorating the inside or the external surfaces of any building or structure
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+    services which form an integral part of, or are part of the preparation or completion of the services described above - including site clearance, earth-moving, excavation, tunnelling and boring, laying of foundations, erection of scaffolding, site restoration, landscaping and the provision of roadways and other access works
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+<h2 id="section-break">Section break</h2>
+<p>You can use the <code>govuk-section-break</code> classes on an <code>&lt;hr&gt;</code> element to create a thematic break between sections of content. <code>govuk-section-break</code> has class-based modifiers for different size margins.</p>
+<p>By default <code>govuk-section-break</code> is only visible by its margin. You can add the <code>govuk-section-break--visible</code> class to make it visible with a separator line.</p>
+<div class="app-example-wrapper" id="section-break-typography-example-open" data-module="app-tabs" data-open>
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/styles/typography/section-break/index.html" class="app-example__new-window" target="_blank">
+          Open this
+
+          <span class="govuk-visually-hidden">section break – typography</span>
+          example in a new tab
+        </a>
+      </div>
+      <iframe title="Section break – Typography example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable app-example__frame--m" src="/styles/typography/section-break/index.html" frameBorder="0" loading="lazy"></iframe>
+    </div>
+      <ul class="app-tabs" role="tablist">
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#section-break-typography-example-open-html" role="tab" aria-controls="section-break-typography-example-open-html" data-track="tab-html">HTML</a>
+        </li>
+      </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#section-break-typography-example-open-html" aria-controls="section-break-typography-example-open-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="section-break-typography-example-open-html" role="tabpanel">
+      <div class="app-example__code">
+        <pre data-module="app-copy" tabindex="0"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">hr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-section-break govuk-section-break--xl govuk-section-break--visible&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">hr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-section-break govuk-section-break--l govuk-section-break--visible&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">hr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-section-break govuk-section-break--m govuk-section-break--visible&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">hr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-section-break govuk-section-break--visible&quot;</span>&gt;</span></code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+      </div>
+
+      
+      
+
+      
+        
+  <h2 class="govuk-heading-l govuk-!-padding-top-7" id="help-improve-this-page">Help improve this style</h2>
+
+  
+    <p class="govuk-body">
+    To help make sure that this page is useful, relevant and up to date, you can:
+    </p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <a class="govuk-link app-contact-panel__link" href="https://github.com/alphagov/govuk-design-system-backlog/issues/64">
+          take part in the 'Typography' discussion on GitHub and share your research
+        </a>
+      </li>
+      <li>
+        <a class="govuk-link app-contact-panel__link" href="https://github.com/alphagov/govuk-design-system/edit/main/src/styles/typography/index.md.njk">propose a change</a>
+         – read more about
+        <a class="govuk-link app-contact-panel__link" href="/community/propose-a-content-change-using-github/">
+          how to propose changes in GitHub
+        </a>
+      </li>
+    </ul>
+  
+
+
+<div class="app-contact-panel">
+  <h2 class="app-contact-panel__heading">Need help?</h2>
+
+  <p class="govuk-body app-contact-panel__body">
+    If you’ve got a question about the GOV.UK Design System, <a class="govuk-link" href="/get-in-touch/">contact the team</a>.
+  </p>
+</div>
+
+      
+    </main>
+  </div>
+  <div class="app-back-to-top app-back-to-top--hidden" data-module="app-back-to-top">
+  <a class="govuk-link govuk-link--no-visited-state app-back-to-top__link" href="#top">
+    <svg role="presentation" focusable="false" class="app-back-to-top__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17">
+      <path fill="currentColor" d="M6.5 0L0 6.5 1.4 8l4-4v12.7h2V4l4.3 4L13 6.4z"></path>
+    </svg>Back to top
+  </a>
+</div>
+
+</div>
+
+
+<footer class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-width-container app-width-container">
+    
+      <div class="govuk-footer__navigation">
+        
+          <div class="govuk-footer__section govuk-grid-column-full">
+            <h2 class="govuk-footer__heading govuk-heading-m">Related resources</h2>
+            
+              
+              <ul class="govuk-footer__list govuk-footer__list--columns-1">
+                
+                  
+                    <li class="govuk-footer__list-item">
+                      <a class="govuk-footer__link" href="https://www.gov.uk/guidance/government-design-principles">
+                        Government Design Principles
+                      </a>
+                    </li>
+                  
+                
+                  
+                    <li class="govuk-footer__list-item">
+                      <a class="govuk-footer__link" href="https://www.gov.uk/service-manual">
+                        GOV.UK Service Manual
+                      </a>
+                    </li>
+                  
+                
+              </ul>
+            
+          </div>
+        
+      </div>
+      <hr class="govuk-footer__section-break">
+    
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+        
+          <h2 class="govuk-visually-hidden">Support links</h2>
+          
+            <ul class="govuk-footer__inline-list">
+              
+                <li class="govuk-footer__inline-list-item">
+                  <a class="govuk-footer__link" href="/accessibility/">
+                    Accessibility
+                  </a>
+                </li>
+              
+                <li class="govuk-footer__inline-list-item">
+                  <a class="govuk-footer__link" href="/sitemap/">
+                    Sitemap
+                  </a>
+                </li>
+              
+                <li class="govuk-footer__inline-list-item">
+                  <a class="govuk-footer__link" href="/cookies/">
+                    Cookies
+                  </a>
+                </li>
+              
+                <li class="govuk-footer__inline-list-item">
+                  <a class="govuk-footer__link" href="/privacy-policy/">
+                    Privacy
+                  </a>
+                </li>
+              
+            </ul>
+          
+          
+            <div class="govuk-footer__meta-custom">
+              Built by the <a href="/design-system-team/" class="govuk-footer__link">GOV.UK Design System team</a>
+            </div>
+          
+        
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          class="govuk-footer__licence-logo"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 483.2 195.7"
+          height="17"
+          width="41"
+        >
+          <path
+            fill="currentColor"
+            d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+          />
+        </svg>
+        <span class="govuk-footer__licence-description">
+          
+            All content is available under the
+            <a
+              class="govuk-footer__link"
+              href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+              rel="license"
+            >Open Government Licence v3.0</a>, except where otherwise stated
+          
+        </span>
+      </div>
+      <div class="govuk-footer__meta-item">
+        <a
+          class="govuk-footer__link govuk-footer__copyright-logo"
+          href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+        >© Crown copyright</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+    
+
+    
+<script src="javascripts/govuk-frontend.js"></script>
+  <!--[if !IE 8]><!-->
+    <script src="javascripts/application.js"></script>
+  <!--<![endif]-->
+  <!--[if lt IE 9]>
+    <script src="javascripts/application-ie8.js"></script>
+  <![endif]-->
+
+  </body>
+</html>

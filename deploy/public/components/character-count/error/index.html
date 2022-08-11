@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template app-example-page__wrapper">
+  <head>
+    <meta charset="utf-8">
+    <title>Error – Character count – Example - GOV.UK Design System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0b0c0c"> 
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+      <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/assets/images/favicon.ico" type="image/x-icon">
+      <link rel="mask-icon" href="/assets/images/govuk-mask-icon.svg" color="#0b0c0c"> 
+      <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/govuk-apple-touch-icon-180x180.png">
+      <link rel="apple-touch-icon" sizes="167x167" href="/assets/images/govuk-apple-touch-icon-167x167.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/govuk-apple-touch-icon-152x152.png">
+      <link rel="apple-touch-icon" href="/assets/images/govuk-apple-touch-icon.png">
+    
+
+    
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="og:title" content="Error – Character count">
+  <meta name="description" content="">
+  <meta name="og:description" content="">
+  <link rel="canonical" href="https://design-system.service.gov.uk/components/character-count/error/" />
+
+  <link href="stylesheets/main.css" rel="stylesheet" media="all" />
+  
+
+  <!--[if lt IE 9]>
+    <script src="javascripts/head-ie8.js"></script>
+  <![endif]-->
+  <script src="/javascripts/vendor/modernizr.js"></script>
+
+
+    
+    
+    <meta property="og:image" content="https://design-system.service.gov.uk/assets/images/govuk-opengraph-image.png">
+    
+  </head>
+  <body class="govuk-template__body app-example-page">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    
+
+    
+
+    
+
+    
+  <!-- Disable browser validation for any examples that include form elements -->
+  <form action="/form-handler" method="post" novalidate>
+    
+      
+
+
+<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="350">
+  <div class="govuk-form-group govuk-form-group--error">
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="exceeding-characters">
+      Enter a job description
+    </label>
+    </h1>
+  <p id="exceeding-characters-error" class="govuk-error-message">
+  <span class="govuk-visually-hidden">Error:</span> Job description must be 350 characters or less
+  </p>
+  <textarea class="govuk-textarea govuk-textarea--error govuk-js-character-count govuk-textarea--error" id="exceeding-characters" name="exceeding" rows="5" aria-describedby="exceeding-characters-info exceeding-characters-error">A content designer works on the end-to-end journey of a service to help users complete their goal and government deliver a policy intent. Their work may involve the creation of, or change to, a transaction, product or single piece of content that stretches across digital and offline channels. They make sure appropriate content is shown to a user in the right place and in the best format.</textarea>
+</div>
+
+  <div id="exceeding-characters-info" class="govuk-hint govuk-character-count__message">
+  You can enter up to 350 characters
+</div>
+
+</div>
+
+
+    
+  </form>
+
+
+    
+
+    
+  <script src="/javascripts/vendor/iframeResizer.contentWindow.js"></script>
+  <script src="javascripts/govuk-frontend.js"></script>
+  <script src="javascripts/example.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,1843 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Confirm a phone number – GOV.UK Design System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0b0c0c"> 
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+      <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/assets/images/favicon.ico" type="image/x-icon">
+      <link rel="mask-icon" href="/assets/images/govuk-mask-icon.svg" color="#0b0c0c"> 
+      <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/govuk-apple-touch-icon-180x180.png">
+      <link rel="apple-touch-icon" sizes="167x167" href="/assets/images/govuk-apple-touch-icon-167x167.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/govuk-apple-touch-icon-152x152.png">
+      <link rel="apple-touch-icon" href="/assets/images/govuk-apple-touch-icon.png">
+    
+
+    
+  
+    <meta name="robots" content="noindex, nofollow">
+  
+  <meta name="og:title" content="Confirm a phone number">
+  <meta name="description" content="Identifying users when they sign in">
+  <meta name="og:description" content="Identifying users when they sign in">
+  <link rel="canonical" href="https://design-system.service.gov.uk/patterns/confirm-a-phone-number/" />
+  <!--[if lt IE 9]>
+    <link href="stylesheets/main-ie8.css" rel="stylesheet" media="all" />
+    <script src="javascripts/head-ie8.js"></script>
+  <![endif]-->
+  <!--[if !IE 8]><!-->
+    <link href="stylesheets/main.css" rel="stylesheet" media="all" />
+  <!--<![endif]-->
+  <script src="/javascripts/vendor/modernizr.js"></script>
+
+
+    
+    
+    <meta property="og:image" content="https://design-system.service.gov.uk/assets/images/govuk-opengraph-image.png">
+    
+  </head>
+  <body class="govuk-template__body ">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    
+  <a id="top"></a>
+  <!--[if gte IE 9]><!-->
+  
+
+
+
+
+
+
+
+<div class="govuk-cookie-banner " data-nosnippet role="region" aria-label="Cookies on GOV.UK Design System" hidden data-module="govuk-cookie-banner">
+    
+    
+      
+    
+
+    <div class="govuk-cookie-banner__message govuk-width-container app-width-container js-cookie-banner-message"
+    >
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        
+        <h2 class="govuk-cookie-banner__heading govuk-heading-m">Cookies on GOV.UK Design System</h2>
+        
+
+        <div class="govuk-cookie-banner__content">
+  <p class="govuk-body">We’d like to use analytics cookies so we can understand how you use the Design System and make improvements.</p>
+  <p class="govuk-body">We also use essential cookies to remember if you’ve accepted analytics cookies.</p>
+</div>
+      </div>
+    </div>
+
+      
+      <div class="govuk-button-group">
+        
+          
+            <button type="button" class="govuk-button js-cookie-banner-accept" data-module="govuk-button">
+              Accept analytics cookies
+            </button>
+          
+        
+          
+            <button type="button" class="govuk-button js-cookie-banner-reject" data-module="govuk-button">
+              Reject analytics cookies
+            </button>
+          
+        
+          
+            
+              
+              
+              <a class="govuk-link" href="/cookies/">View cookies</a>
+            
+          
+        
+      </div>
+      
+    </div>
+  
+    
+    
+      
+    
+
+    <div class="govuk-cookie-banner__message govuk-width-container js-cookie-banner-confirmation-accept app-width-container" role="alert"
+     hidden>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        
+
+        <div class="govuk-cookie-banner__content">
+  <p class="govuk-body">You’ve accepted analytics cookies. You can <a class="govuk-link" href="/cookies/">change your cookie settings</a> at any time.</p>
+</div>
+      </div>
+    </div>
+
+      
+      <div class="govuk-button-group">
+        
+          
+            <button class="govuk-button js-cookie-banner-hide js-cookie-banner-hide--accept" data-module="govuk-button">
+              Hide cookie message
+            </button>
+          
+        
+      </div>
+      
+    </div>
+  
+    
+    
+      
+    
+
+    <div class="govuk-cookie-banner__message govuk-width-container js-cookie-banner-confirmation-reject app-width-container" role="alert"
+     hidden>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        
+
+        <div class="govuk-cookie-banner__content">
+  <p class="govuk-body">You’ve rejected analytics cookies. You can <a class="govuk-link" href="/cookies/">change your cookie settings</a> at any time.</p>
+</div>
+      </div>
+    </div>
+
+      
+      <div class="govuk-button-group">
+        
+          
+            <button class="govuk-button js-cookie-banner-hide js-cookie-banner-hide--reject" data-module="govuk-button">
+              Hide cookie message
+            </button>
+          
+        
+      </div>
+      
+    </div>
+  
+</div>
+
+
+
+<script>
+
+  /* If cookie policy changes and/or the user preferences object format needs to
+  * change, bump this version up afterwards. The user should then be shown the
+  * banner again to consent to the new policy.
+  *
+  * Note that because isValidCookieConsent checks that the version in the user's
+  * cookie is equal to or greater than this number, you should be careful to
+  * check backwards compatibility when changing the object format.
+  *
+  */
+  window.GDS_CONSENT_COOKIE_VERSION = 1;
+
+  (function () {
+    /** Check the cookie preferences object.
+    *
+    * If the consent object is not present, malformed, or incorrect version,
+    * returns false, otherwise returns true.
+    *
+    * This is also duplicated in cookie-functions.js - the two need to be kept in sync
+    */
+    function isValidConsentCookie (options) {
+      return (options && options.version >= window.GDS_CONSENT_COOKIE_VERSION)
+    }
+
+    // Don't show the banner on the cookies page
+    if (window.location.pathname !== "/cookies/") {
+      // Show the banner if there is no consent cookie or if it is outdated
+      var currentConsentCookie = document.cookie.match(new RegExp('(^| )design_system_cookies_policy=([^;]+)'))
+
+      if (!currentConsentCookie || !isValidConsentCookie(JSON.parse(currentConsentCookie[2]))) {
+        var cookieBanner = document.querySelector("[data-module='govuk-cookie-banner']")
+        cookieBanner.removeAttribute('hidden')
+      }
+    }
+  })()
+</script>
+
+  <!--<![endif]-->
+
+
+    
+      <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+
+    
+
+    
+
+    
+  <header class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container app-width-container app-header__container">
+    <div class="govuk-header__logo app-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <!--[if gt IE 8]><!-->
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            class="govuk-header__logotype-crown"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 132 97"
+            height="30"
+            width="36"
+          >
+            <path
+              fill="currentColor" fill-rule="evenodd"
+              d="M25 30.2c3.5 1.5 7.7-.2 9.1-3.7 1.5-3.6-.2-7.8-3.9-9.2-3.6-1.4-7.6.3-9.1 3.9-1.4 3.5.3 7.5 3.9 9zM9 39.5c3.6 1.5 7.8-.2 9.2-3.7 1.5-3.6-.2-7.8-3.9-9.1-3.6-1.5-7.6.2-9.1 3.8-1.4 3.5.3 7.5 3.8 9zM4.4 57.2c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.5-1.5-7.6.3-9.1 3.8-1.4 3.5.3 7.6 3.9 9.1zm38.3-21.4c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.6-1.5-7.6.3-9.1 3.8-1.3 3.6.4 7.7 3.9 9.1zm64.4-5.6c-3.6 1.5-7.8-.2-9.1-3.7-1.5-3.6.2-7.8 3.8-9.2 3.6-1.4 7.7.3 9.2 3.9 1.3 3.5-.4 7.5-3.9 9zm15.9 9.3c-3.6 1.5-7.7-.2-9.1-3.7-1.5-3.6.2-7.8 3.7-9.1 3.6-1.5 7.7.2 9.2 3.8 1.5 3.5-.3 7.5-3.8 9zm4.7 17.7c-3.6 1.5-7.8-.2-9.2-3.8-1.5-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.3 3.5-.4 7.6-3.9 9.1zM89.3 35.8c-3.6 1.5-7.8-.2-9.2-3.8-1.4-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.4 3.6-.3 7.7-3.9 9.1zM69.7 17.7l8.9 4.7V9.3l-8.9 2.8c-.2-.3-.5-.6-.9-.9L72.4 0H59.6l3.5 11.2c-.3.3-.6.5-.9.9l-8.8-2.8v13.1l8.8-4.7c.3.3.6.7.9.9l-5 15.4v.1c-.2.8-.4 1.6-.4 2.4 0 4.1 3.1 7.5 7 8.1h.2c.3 0 .7.1 1 .1.4 0 .7 0 1-.1h.2c4-.6 7.1-4.1 7.1-8.1 0-.8-.1-1.7-.4-2.4V34l-5.1-15.4c.4-.2.7-.6 1-.9zM66 92.8c16.9 0 32.8 1.1 47.1 3.2 4-16.9 8.9-26.7 14-33.5l-9.6-3.4c1 4.9 1.1 7.2 0 10.2-1.5-1.4-3-4.3-4.2-8.7L108.6 76c2.8-2 5-3.2 7.5-3.3-4.4 9.4-10 11.9-13.6 11.2-4.3-.8-6.3-4.6-5.6-7.9 1-4.7 5.7-5.9 8-.5 4.3-8.7-3-11.4-7.6-8.8 7.1-7.2 7.9-13.5 2.1-21.1-8 6.1-8.1 12.3-4.5 20.8-4.7-5.4-12.1-2.5-9.5 6.2 3.4-5.2 7.9-2 7.2 3.1-.6 4.3-6.4 7.8-13.5 7.2-10.3-.9-10.9-8-11.2-13.8 2.5-.5 7.1 1.8 11 7.3L80.2 60c-4.1 4.4-8 5.3-12.3 5.4 1.4-4.4 8-11.6 8-11.6H55.5s6.4 7.2 7.9 11.6c-4.2-.1-8-1-12.3-5.4l1.4 16.4c3.9-5.5 8.5-7.7 10.9-7.3-.3 5.8-.9 12.8-11.1 13.8-7.2.6-12.9-2.9-13.5-7.2-.7-5 3.8-8.3 7.1-3.1 2.7-8.7-4.6-11.6-9.4-6.2 3.7-8.5 3.6-14.7-4.6-20.8-5.8 7.6-5 13.9 2.2 21.1-4.7-2.6-11.9.1-7.7 8.8 2.3-5.5 7.1-4.2 8.1.5.7 3.3-1.3 7.1-5.7 7.9-3.5.7-9-1.8-13.5-11.2 2.5.1 4.7 1.3 7.5 3.3l-4.7-15.4c-1.2 4.4-2.7 7.2-4.3 8.7-1.1-3-.9-5.3 0-10.2l-9.5 3.4c5 6.9 9.9 16.7 14 33.5 14.8-2.1 30.8-3.2 47.7-3.2z"
+            ></path>
+          </svg>
+          <!--<![endif]-->
+          <!--[if IE 8]>
+          <img src="/assets/images/govuk-logotype-crown.png" class="govuk-header__logotype-crown-fallback-image" width="36" height="32">
+          <![endif]-->
+          <span class="govuk-header__logotype-text">
+            GOV.UK
+          </span>
+        </span>
+        <span class="govuk-header__product-name">
+          Design System
+        </span>
+      </a>
+    </div>
+    <div class="app-site-search" data-module="app-search" data-search-index="/">
+      <label class="govuk-visually-hidden" for="app-site-search__input">Search Design system</label>
+      <a class="app-site-search__link govuk-link" href="/sitemap/">Sitemap</a>
+    </div>
+    <button hidden class="govuk-header__menu-button app-navigation__menu-button js-app-navigation__toggler" aria-controls="app-navigation">
+      Menu
+    </button>
+  </div>
+</header>
+
+  <nav id="app-navigation" class="app-navigation js-app-navigation govuk-clearfix" role="navigation" aria-labelledby="app-navigation-heading">
+  <h2 class="govuk-visually-hidden" id="app-navigation-heading">Menu</h2>
+  <ul class="app-navigation__list app-width-container">
+    
+      <li class="app-navigation__list-item ">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/get-started/">
+          Get started
+        </a>
+
+        
+          <button hidden class="app-navigation__button js-app-navigation__button">
+            Get started
+          </button>
+
+          <ul class="app-navigation__subnav js-app-navigation__subnav "
+            aria-label="Get started"
+            hidden
+          >
+            <li class="app-navigation__subnav-item">
+              <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/get-started/">
+                Get started overview
+              </a>
+            </li>
+            
+              <li>
+                
+                  <h3 class="app-navigation__theme">Setup guides</h3>
+                
+                <ul class="app-navigation__list">
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/get-started/prototyping/">
+                        Prototyping
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/get-started/production/">
+                        Production
+                      </a>
+                    </li>
+                  
+                </ul>
+              </li>
+            
+              <li>
+                
+                  <h3 class="app-navigation__theme">How to guides</h3>
+                
+                <ul class="app-navigation__list">
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/get-started/updating-your-code/">
+                        Replace variables, functions and mixins from our old frameworks
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/get-started/labels-legends-headings/">
+                        Making labels and legends headings
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/get-started/extending-and-modifying-components/">
+                        Extending and modifying components in production
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/get-started/focus-states/">
+                        Understanding focus state styles
+                      </a>
+                    </li>
+                  
+                </ul>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li class="app-navigation__list-item ">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/styles/">
+          Styles
+        </a>
+
+        
+          <button hidden class="app-navigation__button js-app-navigation__button">
+            Styles
+          </button>
+
+          <ul class="app-navigation__subnav js-app-navigation__subnav "
+            aria-label="Styles"
+            hidden
+          >
+            <li class="app-navigation__subnav-item">
+              <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/styles/">
+                Styles overview
+              </a>
+            </li>
+            
+              <li>
+                
+                <ul class="app-navigation__list">
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/styles/colour/">
+                        Colour
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/styles/images/">
+                        Images
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/styles/layout/">
+                        Layout
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/styles/page-template/">
+                        Page template
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/styles/spacing/">
+                        Spacing
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/styles/typography/">
+                        Typography
+                      </a>
+                    </li>
+                  
+                </ul>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li class="app-navigation__list-item ">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/components/">
+          Components
+        </a>
+
+        
+          <button hidden class="app-navigation__button js-app-navigation__button">
+            Components
+          </button>
+
+          <ul class="app-navigation__subnav js-app-navigation__subnav "
+            aria-label="Components"
+            hidden
+          >
+            <li class="app-navigation__subnav-item">
+              <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/">
+                Components overview
+              </a>
+            </li>
+            
+              <li>
+                
+                <ul class="app-navigation__list">
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/accordion/">
+                        Accordion
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/back-link/">
+                        Back link
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/breadcrumbs/">
+                        Breadcrumbs
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/button/">
+                        Button
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/character-count/">
+                        Character count
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/checkboxes/">
+                        Checkboxes
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/cookie-banner/">
+                        Cookie banner
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/date-input/">
+                        Date input
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/details/">
+                        Details
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/error-message/">
+                        Error message
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/error-summary/">
+                        Error summary
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/fieldset/">
+                        Fieldset
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/file-upload/">
+                        File upload
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/footer/">
+                        Footer
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/header/">
+                        Header
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/inset-text/">
+                        Inset text
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/notification-banner/">
+                        Notification banner
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/pagination/">
+                        Pagination
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/panel/">
+                        Panel
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/phase-banner/">
+                        Phase banner
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/radios/">
+                        Radios
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/select/">
+                        Select
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/skip-link/">
+                        Skip link
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/summary-list/">
+                        Summary list
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/table/">
+                        Table
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/tabs/">
+                        Tabs
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/tag/">
+                        Tag
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/text-input/">
+                        Text input
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/textarea/">
+                        Textarea
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/warning-text/">
+                        Warning text
+                      </a>
+                    </li>
+                  
+                </ul>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li class="app-navigation__list-item  app-navigation__list-item--current">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/patterns/">
+          Patterns
+        </a>
+
+        
+          <button hidden class="app-navigation__button js-app-navigation__button">
+            Patterns
+          </button>
+
+          <ul class="app-navigation__subnav js-app-navigation__subnav app-navigation__subnav--active"
+            aria-label="Patterns"
+            hidden
+          >
+            <li class="app-navigation__subnav-item">
+              <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/">
+                Patterns overview
+              </a>
+            </li>
+            
+              <li>
+                
+                  <h3 class="app-navigation__theme">Ask users for…</h3>
+                
+                <ul class="app-navigation__list">
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/addresses/">
+                        Addresses
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/bank-details/">
+                        Bank details
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/dates/">
+                        Dates
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/email-addresses/">
+                        Email addresses
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/equality-information/">
+                        Equality information
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/gender-or-sex/">
+                        Gender or sex
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/names/">
+                        Names
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/national-insurance-numbers/">
+                        National Insurance numbers
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/passwords/">
+                        Passwords
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/payment-card-details/">
+                        Payment card details
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/telephone-numbers/">
+                        Telephone numbers
+                      </a>
+                    </li>
+                  
+                </ul>
+              </li>
+            
+              <li>
+                
+                  <h3 class="app-navigation__theme">Help users to…</h3>
+                
+                <ul class="app-navigation__list">
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/check-a-service-is-suitable/">
+                        Check a service is suitable
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/check-answers/">
+                        Check answers
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item app-navigation__subnav-item--current">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/confirm-a-phone-number/">
+                        Confirm a phone number
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/confirm-an-email-address/">
+                        Confirm an email address
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/contact-a-department-or-service-team/">
+                        Contact a department or service team
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/create-a-username/">
+                        Create a username
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/create-accounts/">
+                        Create accounts
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/start-using-a-service/">
+                        Start using a service
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/validation/">
+                        Recover from validation errors
+                      </a>
+                    </li>
+                  
+                </ul>
+              </li>
+            
+              <li>
+                
+                  <h3 class="app-navigation__theme">Pages</h3>
+                
+                <ul class="app-navigation__list">
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/confirmation-pages/">
+                        Confirmation pages
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/cookies-page/">
+                        Cookies page
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/page-not-found-pages/">
+                        Page not found pages
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/problem-with-the-service-pages/">
+                        There is a problem with the service pages
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/question-pages/">
+                        Question pages
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/service-unavailable-pages/">
+                        Service unavailable pages
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/step-by-step-navigation/">
+                        Step by step navigation
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/task-list-pages/">
+                        Task list pages
+                      </a>
+                    </li>
+                  
+                </ul>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li class="app-navigation__list-item ">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/community/">
+          Community
+        </a>
+
+        
+          <button hidden class="app-navigation__button js-app-navigation__button">
+            Community
+          </button>
+
+          <ul class="app-navigation__subnav js-app-navigation__subnav "
+            aria-label="Community"
+            hidden
+          >
+            <li class="app-navigation__subnav-item">
+              <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/community/">
+                Community overview
+              </a>
+            </li>
+            
+              <li>
+                
+                <ul class="app-navigation__list">
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/community/resources-and-tools/">
+                        Resources and tools
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/community/backlog/">
+                        Backlog
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/community/propose-a-content-change-using-github/">
+                        Propose a content change using GitHub
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/community/propose-a-component-or-pattern/">
+                        Propose a component or pattern
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/community/develop-a-component-or-pattern/">
+                        Develop a component or pattern
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/community/contribution-criteria/">
+                        Contribution criteria
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/community/design-system-working-group/">
+                        Design System working group
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/community/blogs-talks-podcasts/">
+                        Blog posts, videos and podcasts
+                      </a>
+                    </li>
+                  
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/community/roadmap/">
+                        Roadmap
+                      </a>
+                    </li>
+                  
+                </ul>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+  
+
+
+
+  
+<div class="app-split-pane app-width-container">
+  <div class="app-split-pane__nav">
+    <nav class="app-subnav" aria-labelledby="app-subnav-heading">
+  <h2 class="govuk-visually-hidden" id="app-subnav-heading">Pages in this section</h2>
+  
+    
+  
+    
+  
+    
+  
+    
+    
+      
+        
+          <h3 class="app-subnav__theme">Ask users for…</h3>
+        
+        <ul class="app-subnav__section">
+        
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/addresses/">Addresses</a>
+            
+          </li>
+        
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/bank-details/">Bank details</a>
+            
+          </li>
+        
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/dates/">Dates</a>
+            
+          </li>
+        
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/email-addresses/">Email addresses</a>
+            
+          </li>
+        
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/equality-information/">Equality information</a>
+            
+          </li>
+        
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/gender-or-sex/">Gender or sex</a>
+            
+          </li>
+        
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/names/">Names</a>
+            
+          </li>
+        
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/national-insurance-numbers/">National Insurance numbers</a>
+            
+          </li>
+        
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/passwords/">Passwords</a>
+            
+          </li>
+        
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/payment-card-details/">Payment card details</a>
+            
+          </li>
+        
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/telephone-numbers/">Telephone numbers</a>
+            
+          </li>
+        
+        </ul>
+      
+        
+          <h3 class="app-subnav__theme">Help users to…</h3>
+        
+        <ul class="app-subnav__section">
+        
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/check-a-service-is-suitable/">Check a service is suitable</a>
+            
+          </li>
+        
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/check-answers/">Check answers</a>
+            
+          </li>
+        
+          <li class="app-subnav__section-item app-subnav__section-item--current">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/confirm-a-phone-number/">Confirm a phone number</a>
+            
+          </li>
+        
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/confirm-an-email-address/">Confirm an email address</a>
+            
+          </li>
+        
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/contact-a-department-or-service-team/">Contact a department or service team</a>
+            
+          </li>
+        
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/create-a-username/">Create a username</a>
+            
+          </li>
+        
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/create-accounts/">Create accounts</a>
+            
+          </li>
+        
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/start-using-a-service/">Start using a service</a>
+            
+          </li>
+        
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/validation/">Recover from validation errors</a>
+            
+          </li>
+        
+        </ul>
+      
+        
+          <h3 class="app-subnav__theme">Pages</h3>
+        
+        <ul class="app-subnav__section">
+        
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/confirmation-pages/">Confirmation pages</a>
+            
+          </li>
+        
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/cookies-page/">Cookies page</a>
+            
+          </li>
+        
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/page-not-found-pages/">Page not found pages</a>
+            
+          </li>
+        
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/problem-with-the-service-pages/">There is a problem with the service pages</a>
+            
+          </li>
+        
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/question-pages/">Question pages</a>
+            
+          </li>
+        
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/service-unavailable-pages/">Service unavailable pages</a>
+            
+          </li>
+        
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/step-by-step-navigation/">Step by step navigation</a>
+            
+          </li>
+        
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/task-list-pages/">Task list pages</a>
+            
+          </li>
+        
+        </ul>
+      
+    
+    
+  
+    
+  
+</nav>
+
+  </div>
+  <div class="app-split-pane__content">
+    <main id="main-content" class="app-content" role="main">
+      
+      <h1 class="govuk-heading-xl">
+        
+        <span class="govuk-caption-xl">
+          Help users to
+        </span>
+        
+        Confirm a phone number
+        
+      </h1>
+
+      
+
+      <div class="app-prose-scope">
+        <p>Check that a user has access to a specific mobile phone number using a security code sent by text message.</p>
+<div class="app-example-wrapper" id="default-confirm-a-phone-number-example" data-module="app-tabs">
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/patterns/confirm-a-phone-number/default/index.html" class="app-example__new-window" target="_blank">
+          Open this
+
+          <span class="govuk-visually-hidden">default – confirm a phone number</span>
+          example in a new tab
+        </a>
+      </div>
+      <iframe title="Default – Confirm a phone number example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable" src="/patterns/confirm-a-phone-number/default/index.html" frameBorder="0" loading="lazy"></iframe>
+    </div>
+    <span id="options-default-confirm-a-phone-number-example"></span>
+    <ul class="app-tabs" role="tablist">
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#default-confirm-a-phone-number-example-html" role="tab" aria-controls="default-confirm-a-phone-number-example-html" data-track="tab-html">HTML</a></li>
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#default-confirm-a-phone-number-example-nunjucks" role="tab" aria-controls="default-confirm-a-phone-number-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></li>
+    </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#default-confirm-a-phone-number-example-html" aria-controls="default-confirm-a-phone-number-example-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="default-confirm-a-phone-number-example-html" role="tabpanel">
+      <div class="app-example__code">
+        <pre data-module="app-copy" tabindex="0"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;</span>Check your phone<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>We’ve sent you a text message with a security code.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;security-code&quot;</span>&gt;</span>
+    Security code
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input govuk-input--width-4&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;security-code&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;security-code&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">autocomplete</span>=<span class="hljs-string">&quot;one-time-code&quot;</span> <span class="hljs-attr">inputmode</span>=<span class="hljs-string">&quot;numeric&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
+  Continue
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>Not received a text message?<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+      </div>
+    </div>
+      <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#default-confirm-a-phone-number-example-nunjucks" aria-controls="default-confirm-a-phone-number-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
+    <div class="app-tabs__container js-tabs__container" id="default-confirm-a-phone-number-example-nunjucks" role="tabpanel">      <div class="app-example__code">
+        <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/input/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukInput %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/button/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukButton %}
+
+&lt;h1 <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;Check your phone&lt;/h1&gt;
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>We’ve sent you a text message with a security code.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>
+
+{{ govukInput({
+  <span class="hljs-attr">label</span>: {
+    <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Security code&quot;</span>
+  },
+  <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;security-code&quot;</span>,
+  <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;security-code&quot;</span>,
+  <span class="hljs-attr">type</span>: <span class="hljs-string">&quot;text&quot;</span>,
+  <span class="hljs-attr">autocomplete</span>: <span class="hljs-string">&quot;one-time-code&quot;</span>,
+  <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;govuk-input--width-4&quot;</span>,
+  <span class="hljs-attr">inputmode</span>: <span class="hljs-string">&quot;numeric&quot;</span>
+}) }}
+
+{{ govukButton({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Continue&quot;</span>
+}) }}
+
+&lt;p <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>Not received a text message?<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></span>&lt;/p&gt;</code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+<h2 id="when-to-use-this-pattern">When to use this pattern</h2>
+<p>Ask the user to enter a security code when they need to sign in or complete a higher-risk task, such as changing a password.</p>
+<p>Asking the user to enter a security code sent to their mobile phone gives a second layer of security over a <a href="/patterns/passwords/">password</a>.</p>
+<p>You can ask for a security code every time a user signs in or only once per device, depending on the risk level of your service.</p>
+<h2 id="how-it-works">How it works</h2>
+<p>Send and ask the user for the security code when they:</p>
+<ul>
+<li>create an account</li>
+<li>sign in later</li>
+</ul>
+<h3 id="when-the-user-creates-an-account">When the user creates an account</h3>
+<p>When the user creates an account, ask for their password and mobile phone number at the same time. Make it clear if you’ll only use the mobile number for sending security codes, or if you’ll also use it for other purposes.</p>
+<p>After saving the user’s password and mobile phone number, verify their mobile phone number by sending them a text message with a 5 digit code in this format:</p>
+<div class="govuk-inset-text">
+  12345 is your [service name] security code
+</div>
+
+
+<p>Then ask the user to enter this code:</p>
+<div class="app-example-wrapper" id="default-confirm-a-phone-number-example" data-module="app-tabs">
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/patterns/confirm-a-phone-number/default/index.html" class="app-example__new-window" target="_blank">
+          Open this
+
+          <span class="govuk-visually-hidden">default – confirm a phone number</span>
+          example in a new tab
+        </a>
+      </div>
+      <iframe title="Default – Confirm a phone number example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable" src="/patterns/confirm-a-phone-number/default/index.html" frameBorder="0" loading="lazy"></iframe>
+    </div>
+    <span id="options-default-confirm-a-phone-number-example"></span>
+    <ul class="app-tabs" role="tablist">
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#default-confirm-a-phone-number-example-html" role="tab" aria-controls="default-confirm-a-phone-number-example-html" data-track="tab-html">HTML</a></li>
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#default-confirm-a-phone-number-example-nunjucks" role="tab" aria-controls="default-confirm-a-phone-number-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></li>
+    </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#default-confirm-a-phone-number-example-html" aria-controls="default-confirm-a-phone-number-example-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="default-confirm-a-phone-number-example-html" role="tabpanel">
+      <div class="app-example__code">
+        <pre data-module="app-copy" tabindex="0"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;</span>Check your phone<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>We’ve sent you a text message with a security code.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;security-code&quot;</span>&gt;</span>
+    Security code
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input govuk-input--width-4&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;security-code&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;security-code&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">autocomplete</span>=<span class="hljs-string">&quot;one-time-code&quot;</span> <span class="hljs-attr">inputmode</span>=<span class="hljs-string">&quot;numeric&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
+  Continue
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>Not received a text message?<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+      </div>
+    </div>
+      <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#default-confirm-a-phone-number-example-nunjucks" aria-controls="default-confirm-a-phone-number-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
+    <div class="app-tabs__container js-tabs__container" id="default-confirm-a-phone-number-example-nunjucks" role="tabpanel">      <div class="app-example__code">
+        <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/input/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukInput %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/button/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukButton %}
+
+&lt;h1 <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;Check your phone&lt;/h1&gt;
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>We’ve sent you a text message with a security code.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>
+
+{{ govukInput({
+  <span class="hljs-attr">label</span>: {
+    <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Security code&quot;</span>
+  },
+  <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;security-code&quot;</span>,
+  <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;security-code&quot;</span>,
+  <span class="hljs-attr">type</span>: <span class="hljs-string">&quot;text&quot;</span>,
+  <span class="hljs-attr">autocomplete</span>: <span class="hljs-string">&quot;one-time-code&quot;</span>,
+  <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;govuk-input--width-4&quot;</span>,
+  <span class="hljs-attr">inputmode</span>: <span class="hljs-string">&quot;numeric&quot;</span>
+}) }}
+
+{{ govukButton({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Continue&quot;</span>
+}) }}
+
+&lt;p <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>Not received a text message?<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></span>&lt;/p&gt;</code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+<p>Let the user enter the code in whatever format is familiar to them. Allow additional spaces, hyphens and dashes.</p>
+<p>Give a time limit of 15 minutes for the user to enter the code — the code should expire after this time limit.</p>
+<p>If the user enters an expired code that was sent more than:</p>
+<ul>
+<li>15 minutes ago, show a ‘code has expired’ error message and send the user a new code</li>
+<li>2 hours ago, show an ‘incorrect security code’ message, even if the code was correct</li>
+</ul>
+<p>If the user follows the ‘Not received a text message?’ link, allow them to check which mobile number they entered, and to change it if necessary. This prevents the user becoming stuck if they entered a mobile number incorrectly. Do not allow the user to change the number when they’re signing in.</p>
+<div class="app-example-wrapper" id="request-a-new-security-code-first-time-security-code-example" data-module="app-tabs">
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/patterns/confirm-a-phone-number/resend-first-time/index.html" class="app-example__new-window" target="_blank">
+          Open this
+
+          <span class="govuk-visually-hidden">request a new security code (first time) – security code</span>
+          example in a new tab
+        </a>
+      </div>
+      <iframe title="Request a new security code (first time) – Security code example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable" src="/patterns/confirm-a-phone-number/resend-first-time/index.html" frameBorder="0" loading="lazy"></iframe>
+    </div>
+    <span id="options-request-a-new-security-code-first-time-security-code-example"></span>
+    <ul class="app-tabs" role="tablist">
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#request-a-new-security-code-first-time-security-code-example-html" role="tab" aria-controls="request-a-new-security-code-first-time-security-code-example-html" data-track="tab-html">HTML</a></li>
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#request-a-new-security-code-first-time-security-code-example-nunjucks" role="tab" aria-controls="request-a-new-security-code-first-time-security-code-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></li>
+    </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#request-a-new-security-code-first-time-security-code-example-html" aria-controls="request-a-new-security-code-first-time-security-code-example-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="request-a-new-security-code-first-time-security-code-example-html" role="tabpanel">
+      <div class="app-example__code">
+        <pre data-module="app-copy" tabindex="0"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-back-link&quot;</span>&gt;</span>Back<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;</span>Request a new security code<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>Text messages sometimes take a few minutes to arrive. If you do not receive the text message, you can request a new one.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-details&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-details&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">summary</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-details__summary&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-details__summary-text&quot;</span>&gt;</span>
+      Change where the text message is sent
+    <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-details__text&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;mobile-number&quot;</span>&gt;</span>
+        Mobile number
+      <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input govuk-input--width-20&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;mobile-number&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;mobile-number&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;tel&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;07700 900000&quot;</span> <span class="hljs-attr">autocomplete</span>=<span class="hljs-string">&quot;tel&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
+  Request a new code
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+      </div>
+    </div>
+      <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#request-a-new-security-code-first-time-security-code-example-nunjucks" aria-controls="request-a-new-security-code-first-time-security-code-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
+    <div class="app-tabs__container js-tabs__container" id="request-a-new-security-code-first-time-security-code-example-nunjucks" role="tabpanel">      <div class="app-example__code">
+        <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/back-link/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukBackLink %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/button/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukButton %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/input/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukInput %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/details/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukDetails %}
+
+
+{{ govukBackLink({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Back&quot;</span>,
+  <span class="hljs-attr">href</span>: <span class="hljs-string">&quot;#&quot;</span>
+}) }}
+
+&lt;h1 <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;Request a <span class="hljs-keyword">new</span> security code&lt;/h1&gt;
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>Text messages sometimes take a few minutes to arrive. If you do not receive the text message, you can request a new one.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>
+
+{% set mobileNumberHtml %}
+  {{ govukInput({
+    <span class="hljs-attr">label</span>: {
+      <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Mobile number&quot;</span>
+    },
+    <span class="hljs-attr">value</span>: <span class="hljs-string">&quot;07700 900000&quot;</span>,
+    <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;mobile-number&quot;</span>,
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;mobile-number&quot;</span>,
+    <span class="hljs-attr">type</span>: <span class="hljs-string">&quot;tel&quot;</span>,
+    <span class="hljs-attr">autocomplete</span>: <span class="hljs-string">&quot;tel&quot;</span>,
+    <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;govuk-input--width-20&quot;</span>
+  }) }}
+{% endset %}
+
+{{ govukDetails({
+  <span class="hljs-attr">summaryText</span>: <span class="hljs-string">&quot;Change where the text message is sent&quot;</span>,
+  <span class="hljs-attr">html</span>: mobileNumberHtml
+}) }}
+
+
+{{ govukButton({<span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Request a new code&quot;</span>}) }}</code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+<p>When the user requests a new code, send them a new one. The new code should have its 15 minute time limit. The previous code should remain valid within its original time limit.</p>
+<h3 id="when-the-user-signs-in">When the user signs in</h3>
+<p>When the user returns to your service, verify their password first. Once they have entered this correctly, send a text message to their mobile phone with a 5 digit code in this format:</p>
+<div class="govuk-inset-text">
+  12345 is your [service name] security code
+</div>
+
+
+<p>Ask the user to enter this code. Use the same pattern and time limit as when creating an account.</p>
+<p>If they follow the ‘Not received a text message?’ link, show them a page allowing them to request a new code. Do not reveal the mobile number you sent it to.</p>
+<div class="app-example-wrapper" id="request-a-new-security-code-security-code-example" data-module="app-tabs">
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/patterns/confirm-a-phone-number/resend/index.html" class="app-example__new-window" target="_blank">
+          Open this
+
+          <span class="govuk-visually-hidden">request a new security code – security code</span>
+          example in a new tab
+        </a>
+      </div>
+      <iframe title="Request a new security code – Security code example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable" src="/patterns/confirm-a-phone-number/resend/index.html" frameBorder="0" loading="lazy"></iframe>
+    </div>
+    <span id="options-request-a-new-security-code-security-code-example"></span>
+    <ul class="app-tabs" role="tablist">
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#request-a-new-security-code-security-code-example-html" role="tab" aria-controls="request-a-new-security-code-security-code-example-html" data-track="tab-html">HTML</a></li>
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#request-a-new-security-code-security-code-example-nunjucks" role="tab" aria-controls="request-a-new-security-code-security-code-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></li>
+    </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#request-a-new-security-code-security-code-example-html" aria-controls="request-a-new-security-code-security-code-example-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="request-a-new-security-code-security-code-example-html" role="tabpanel">
+      <div class="app-example__code">
+        <pre data-module="app-copy" tabindex="0"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-back-link&quot;</span>&gt;</span>Back<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;</span>Request a new security code<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>Text messages sometimes take a few minutes to arrive. If you do not receive the text message, you can request a new one.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-details&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-details&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">summary</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-details__summary&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-details__summary-text&quot;</span>&gt;</span>
+      I do not have access to the phone
+    <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-details__text&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>If you cannot access the phone number for this account, <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>contact the Tax Credits Helpline<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> to get help signing in.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
+  Request a new code
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+      </div>
+    </div>
+      <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#request-a-new-security-code-security-code-example-nunjucks" aria-controls="request-a-new-security-code-security-code-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
+    <div class="app-tabs__container js-tabs__container" id="request-a-new-security-code-security-code-example-nunjucks" role="tabpanel">      <div class="app-example__code">
+        <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/back-link/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukBackLink %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/button/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukButton %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/details/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukDetails %}
+
+
+{{ govukBackLink({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Back&quot;</span>,
+  <span class="hljs-attr">href</span>: <span class="hljs-string">&quot;#&quot;</span>
+}) }}
+
+&lt;h1 <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;Request a <span class="hljs-keyword">new</span> security code&lt;/h1&gt;
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>Text messages sometimes take a few minutes to arrive. If you do not receive the text message, you can request a new one.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>
+
+
+{{ govukDetails({
+  <span class="hljs-attr">summaryText</span>: <span class="hljs-string">&quot;I do not have access to the phone&quot;</span>,
+  <span class="hljs-attr">html</span>: <span class="hljs-string">&#x27;&lt;p class=&quot;govuk-body&quot;&gt;If you cannot access the phone number for this account, &lt;a href=&quot;#&quot; class=&quot;govuk-link&quot;&gt;contact the Tax Credits Helpline&lt;/a&gt; to get help signing in.&lt;/p&gt;&#x27;</span>
+}) }}
+
+{{ govukButton({<span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Request a new code&quot;</span>}) }}</code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+<p>You should tell the user what to do if they no longer have access to the phone used to sign up.</p>
+<p>For example, you might tell them to contact a support address.</p>
+<h3 id="domain-bound-codes">Domain-bound codes</h3>
+<p>You can also follow the <a href="https://developer.apple.com/news/?id=z0i801mg">domain-bound codes</a> standard. This improves security by restricting the code to a specific domain.</p>
+<p>Include the domain of the service on a new line, prefixed with an <code>@</code>, followed by a <code>#</code> symbol and the code, like this:</p>
+<div class="govuk-inset-text">
+  12345 is your [service name] security code<br><br>@www.example.service.gov.uk #12345
+</div>
+
+
+<h3 id="error-messages">Error messages</h3>
+<p>Style error messages like this:</p>
+<div class="app-example-wrapper" id="error-incorrect-security-code-confirm-a-phone-number-example" data-module="app-tabs">
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/patterns/confirm-a-phone-number/error-incorrect/index.html" class="app-example__new-window" target="_blank">
+          Open this
+
+          <span class="govuk-visually-hidden">error, incorrect security code – confirm a phone number</span>
+          example in a new tab
+        </a>
+      </div>
+      <iframe title="Error, incorrect security code – Confirm a phone number example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable" src="/patterns/confirm-a-phone-number/error-incorrect/index.html" frameBorder="0" loading="lazy"></iframe>
+    </div>
+    <span id="options-error-incorrect-security-code-confirm-a-phone-number-example"></span>
+    <ul class="app-tabs" role="tablist">
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#error-incorrect-security-code-confirm-a-phone-number-example-html" role="tab" aria-controls="error-incorrect-security-code-confirm-a-phone-number-example-html" data-track="tab-html">HTML</a></li>
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#error-incorrect-security-code-confirm-a-phone-number-example-nunjucks" role="tab" aria-controls="error-incorrect-security-code-confirm-a-phone-number-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></li>
+    </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#error-incorrect-security-code-confirm-a-phone-number-example-html" aria-controls="error-incorrect-security-code-confirm-a-phone-number-example-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="error-incorrect-security-code-confirm-a-phone-number-example-html" role="tabpanel">
+      <div class="app-example__code">
+        <pre data-module="app-copy" tabindex="0"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;</span>Check your phone<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>We’ve sent you a text message with a security code.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group govuk-form-group--error&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;security-code&quot;</span>&gt;</span>
+    Security code
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;security-code-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> Enter a correct security code
+  <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input govuk-input--width-4 govuk-input--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;security-code&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;security-code&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;security-code-error&quot;</span> <span class="hljs-attr">autocomplete</span>=<span class="hljs-string">&quot;one-time-code&quot;</span> <span class="hljs-attr">inputmode</span>=<span class="hljs-string">&quot;numeric&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
+  Continue
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>Not received a text message?<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+      </div>
+    </div>
+      <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#error-incorrect-security-code-confirm-a-phone-number-example-nunjucks" aria-controls="error-incorrect-security-code-confirm-a-phone-number-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
+    <div class="app-tabs__container js-tabs__container" id="error-incorrect-security-code-confirm-a-phone-number-example-nunjucks" role="tabpanel">      <div class="app-example__code">
+        <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/input/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukInput %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/button/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukButton %}
+
+&lt;h1 <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;Check your phone&lt;/h1&gt;
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>We’ve sent you a text message with a security code.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>
+
+{{ govukInput({
+  <span class="hljs-attr">label</span>: {
+    <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Security code&quot;</span>
+  },
+  <span class="hljs-attr">errorMessage</span>: {
+    <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Enter a correct security code&quot;</span>
+  },
+  <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;security-code&quot;</span>,
+  <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;security-code&quot;</span>,
+  <span class="hljs-attr">type</span>: <span class="hljs-string">&quot;text&quot;</span>,
+  <span class="hljs-attr">autocomplete</span>: <span class="hljs-string">&quot;one-time-code&quot;</span>,
+  <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;govuk-input--width-4&quot;</span>,
+  <span class="hljs-attr">inputmode</span>: <span class="hljs-string">&quot;numeric&quot;</span>
+}) }}
+
+{{ govukButton({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Continue&quot;</span>
+}) }}
+
+&lt;p <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>Not received a text message?<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></span>&lt;/p&gt;</code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+<p>If the user does not enter enough digits:
+<br>Say ‘You’ve not entered enough numbers, the code must be 5 numbers’.</p>
+<p>If the user enters too many digits:
+<br>Say ‘You’ve entered too many numbers, the code must be 5 numbers’.</p>
+<p>If the user enters non-numeric characters, other than spaces:
+<br>Say ‘The code must be 5 numbers’.</p>
+<p>If the code has expired, show this message:</p>
+<div class="app-example-wrapper" id="error-security-code-expired-confirm-a-phone-number-example" data-module="app-tabs">
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/patterns/confirm-a-phone-number/error-expired/index.html" class="app-example__new-window" target="_blank">
+          Open this
+
+          <span class="govuk-visually-hidden">error, security code expired – confirm a phone number</span>
+          example in a new tab
+        </a>
+      </div>
+      <iframe title="Error, security code expired – Confirm a phone number example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable" src="/patterns/confirm-a-phone-number/error-expired/index.html" frameBorder="0" loading="lazy"></iframe>
+    </div>
+    <span id="options-error-security-code-expired-confirm-a-phone-number-example"></span>
+    <ul class="app-tabs" role="tablist">
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#error-security-code-expired-confirm-a-phone-number-example-html" role="tab" aria-controls="error-security-code-expired-confirm-a-phone-number-example-html" data-track="tab-html">HTML</a></li>
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#error-security-code-expired-confirm-a-phone-number-example-nunjucks" role="tab" aria-controls="error-security-code-expired-confirm-a-phone-number-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></li>
+    </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#error-security-code-expired-confirm-a-phone-number-example-html" aria-controls="error-security-code-expired-confirm-a-phone-number-example-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="error-security-code-expired-confirm-a-phone-number-example-html" role="tabpanel">
+      <div class="app-example__code">
+        <pre data-module="app-copy" tabindex="0"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;</span>Check your phone<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>We’ve sent you a text message with a security code.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group govuk-form-group--error&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;security-code&quot;</span>&gt;</span>
+    Security code
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;security-code-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> The security code has expired. New code sent.
+  <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input govuk-input--width-4 govuk-input--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;security-code&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;security-code&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;security-code-error&quot;</span> <span class="hljs-attr">autocomplete</span>=<span class="hljs-string">&quot;one-time-code&quot;</span> <span class="hljs-attr">inputmode</span>=<span class="hljs-string">&quot;numeric&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
+  Continue
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>Not received a text message?<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+      </div>
+    </div>
+      <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#error-security-code-expired-confirm-a-phone-number-example-nunjucks" aria-controls="error-security-code-expired-confirm-a-phone-number-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
+    <div class="app-tabs__container js-tabs__container" id="error-security-code-expired-confirm-a-phone-number-example-nunjucks" role="tabpanel">      <div class="app-example__code">
+        <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/input/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukInput %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/button/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukButton %}
+
+&lt;h1 <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;Check your phone&lt;/h1&gt;
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>We’ve sent you a text message with a security code.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>
+
+{{ govukInput({
+  <span class="hljs-attr">label</span>: {
+    <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Security code&quot;</span>
+  },
+  <span class="hljs-attr">errorMessage</span>: {
+    <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;The security code has expired. New code sent.&quot;</span>
+  },
+  <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;security-code&quot;</span>,
+  <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;security-code&quot;</span>,
+  <span class="hljs-attr">type</span>: <span class="hljs-string">&quot;text&quot;</span>,
+  <span class="hljs-attr">autocomplete</span>: <span class="hljs-string">&quot;one-time-code&quot;</span>,
+  <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;govuk-input--width-4&quot;</span>,
+  <span class="hljs-attr">inputmode</span>: <span class="hljs-string">&quot;numeric&quot;</span>
+}) }}
+
+{{ govukButton({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Continue&quot;</span>
+}) }}
+
+&lt;p <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>Not received a text message?<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></span>&lt;/p&gt;</code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+<p>If the code was sent more than 2 hours ago, show the ‘incorrect security code’ message.</p>
+<h3 id="technical-security-measures">Technical security measures</h3>
+<p>Use <a href="https://www.ncsc.gov.uk/collection/passwords/updating-your-approach#tip2-password-collection">technical measures to prevent automated attacks</a>. For example, add a time delay after 10 incorrect number entries.</p>
+<p>Set up monitoring for potentially malicious behaviour, such as activity from unexpected geographical areas.</p>
+<h2 id="research-on-this-pattern">Research on this pattern</h2>
+<p><a href="https://www.ncsc.gov.uk/guidance/multi-factor-authentication-online-services">Read the National Cyber Security Centre’s guidance on multi-factor authentication</a>.</p>
+<h3 id="services-using-this-pattern">Services using this pattern</h3>
+<p>This pattern has been used in a number of services, including the following:</p>
+<p><strong>Government Digital Service</strong><br>
+GOV.UK Notify<br>
+GOV.UK Pay</p>
+<p><strong>Department for Work and Pensions</strong><br>
+DWP Authenticate</p>
+<p><strong>Home Office</strong><br>
+EU Settlement Service</p>
+<p><strong>Office for Product Safety and Standards</strong><br>
+Product Safety Database</p>
+<h3 id="next-steps">Next steps</h3>
+<p>We need more research to know whether it’s useful to partially show the user the phone number that the security code was sent to.</p>
+<p>If you’ve used this pattern, get in touch to share your user research findings.</p>
+
+      </div>
+
+      
+      
+
+      
+        
+  <h2 class="govuk-heading-l govuk-!-padding-top-7" id="help-improve-this-page">Help improve this pattern</h2>
+
+  
+    <p class="govuk-body">
+    To help make sure that this page is useful, relevant and up to date, you can:
+    </p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <a class="govuk-link app-contact-panel__link" href="https://github.com/alphagov/govuk-design-system-backlog/issues/25">
+          take part in the 'Confirm a phone number' discussion on GitHub and share your research
+        </a>
+      </li>
+      <li>
+        <a class="govuk-link app-contact-panel__link" href="https://github.com/alphagov/govuk-design-system/edit/main/src/patterns/confirm-a-phone-number/index.md.njk">propose a change</a>
+         – read more about
+        <a class="govuk-link app-contact-panel__link" href="/community/propose-a-content-change-using-github/">
+          how to propose changes in GitHub
+        </a>
+      </li>
+    </ul>
+  
+
+
+<div class="app-contact-panel">
+  <h2 class="app-contact-panel__heading">Need help?</h2>
+
+  <p class="govuk-body app-contact-panel__body">
+    If you’ve got a question about the GOV.UK Design System, <a class="govuk-link" href="/get-in-touch/">contact the team</a>.
+  </p>
+</div>
+
+      
+    </main>
+  </div>
+  <div class="app-back-to-top app-back-to-top--hidden" data-module="app-back-to-top">
+  <a class="govuk-link govuk-link--no-visited-state app-back-to-top__link" href="#top">
+    <svg role="presentation" focusable="false" class="app-back-to-top__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17">
+      <path fill="currentColor" d="M6.5 0L0 6.5 1.4 8l4-4v12.7h2V4l4.3 4L13 6.4z"></path>
+    </svg>Back to top
+  </a>
+</div>
+
+</div>
+
+
+<footer class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-width-container app-width-container">
+    
+      <div class="govuk-footer__navigation">
+        
+          <div class="govuk-footer__section govuk-grid-column-full">
+            <h2 class="govuk-footer__heading govuk-heading-m">Related resources</h2>
+            
+              
+              <ul class="govuk-footer__list govuk-footer__list--columns-1">
+                
+                  
+                    <li class="govuk-footer__list-item">
+                      <a class="govuk-footer__link" href="https://www.gov.uk/guidance/government-design-principles">
+                        Government Design Principles
+                      </a>
+                    </li>
+                  
+                
+                  
+                    <li class="govuk-footer__list-item">
+                      <a class="govuk-footer__link" href="https://www.gov.uk/service-manual">
+                        GOV.UK Service Manual
+                      </a>
+                    </li>
+                  
+                
+              </ul>
+            
+          </div>
+        
+      </div>
+      <hr class="govuk-footer__section-break">
+    
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+        
+          <h2 class="govuk-visually-hidden">Support links</h2>
+          
+            <ul class="govuk-footer__inline-list">
+              
+                <li class="govuk-footer__inline-list-item">
+                  <a class="govuk-footer__link" href="/accessibility/">
+                    Accessibility
+                  </a>
+                </li>
+              
+                <li class="govuk-footer__inline-list-item">
+                  <a class="govuk-footer__link" href="/sitemap/">
+                    Sitemap
+                  </a>
+                </li>
+              
+                <li class="govuk-footer__inline-list-item">
+                  <a class="govuk-footer__link" href="/cookies/">
+                    Cookies
+                  </a>
+                </li>
+              
+                <li class="govuk-footer__inline-list-item">
+                  <a class="govuk-footer__link" href="/privacy-policy/">
+                    Privacy
+                  </a>
+                </li>
+              
+            </ul>
+          
+          
+            <div class="govuk-footer__meta-custom">
+              Built by the <a href="/design-system-team/" class="govuk-footer__link">GOV.UK Design System team</a>
+            </div>
+          
+        
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          class="govuk-footer__licence-logo"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 483.2 195.7"
+          height="17"
+          width="41"
+        >
+          <path
+            fill="currentColor"
+            d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+          />
+        </svg>
+        <span class="govuk-footer__licence-description">
+          
+            All content is available under the
+            <a
+              class="govuk-footer__link"
+              href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+              rel="license"
+            >Open Government Licence v3.0</a>, except where otherwise stated
+          
+        </span>
+      </div>
+      <div class="govuk-footer__meta-item">
+        <a
+          class="govuk-footer__link govuk-footer__copyright-logo"
+          href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+        >© Crown copyright</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+    
+
+    
+<script src="javascripts/govuk-frontend.js"></script>
+  <!--[if !IE 8]><!-->
+    <script src="javascripts/application.js"></script>
+  <!--<![endif]-->
+  <!--[if lt IE 9]>
+    <script src="javascripts/application-ie8.js"></script>
+  <![endif]-->
+
+  </body>
+</html>
