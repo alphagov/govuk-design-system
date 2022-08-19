@@ -28,12 +28,6 @@
     }
   }
 
-  .app-pane__subnav-mobile-overview {
-    @include govuk-media-query($from: tablet) {
-      display: none;
-    }
-  }
-
   .app-pane__content {
     @include govuk-media-query($from: tablet) {
       display: flex;
