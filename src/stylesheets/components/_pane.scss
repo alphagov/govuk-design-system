@@ -41,21 +41,17 @@
 
   .no-flexbox.no-flexboxtweener {
     .app-split-pane {
-      height: auto;
-      overflow: visible;
       @include govuk-clearfix;
     }
 
     .app-split-pane__nav {
       width: $toc-width;
       float: left;
-      overflow-x: hidden;
       border-right: 0;
     }
 
     .app-split-pane__content {
-      margin-left: -1px;
-      overflow-x: hidden;
+      margin-left: $toc-width;
     }
   }
 }
