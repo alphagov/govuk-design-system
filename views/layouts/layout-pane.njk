@@ -5,11 +5,11 @@
 {% set includeThemeInPageHeading = theme and "…" in theme %}
 
 {% block body %}
-<div class="app-pane__body app-width-container">
-  <div class="app-pane__subnav">
+<div class="app-split-pane app-width-container">
+  <div class="app-split-pane__nav">
     {% include "_subnav.njk" %}
   </div>
-  <div class="app-pane__content">
+  <div class="app-split-pane__content">
     <main id="main-content" class="app-content" role="main">
       {% if not includeThemeInPageHeading %}
       <span class="govuk-caption-xl">
