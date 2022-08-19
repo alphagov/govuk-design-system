@@ -93,7 +93,9 @@ Do not include links within hint text. While screen readers will read out the li
 
 #### Asking for whole numbers
 
-If you're asking the user to enter a whole number and you want to bring up the numeric keypad on a mobile device, set the `inputmode` attribute to `numeric` and the `pattern` attribute to `[0-9]*`. See how to do this in the HTML and Nunjucks tabs in the following example.
+If you're asking the user to enter a whole number, set the `inputmode` attribute to `numeric` to use the numeric keypad on devices with on-screen keyboards. 
+
+See how to do this by opening the HTML and Nunjucks tabs in this example:
 
 {{ example({group: "components", item: "text-input", example: "number-input", html: true, nunjucks: true, open: false, size: "m"}) }}
 
