@@ -265,16 +265,6 @@ pre {
   @include govuk-responsive-margin(4, "bottom");
 }
 
-.no-js {
-  // Adjustments in app-pane layout as it has toc below
-  .app-pane__content .app-content {
-
-    @include govuk-media-query($until: tablet) {
-      padding-bottom: 10px;
-    }
-  }
-}
-
 // Add styling for inline code
 li code,
 td code,
