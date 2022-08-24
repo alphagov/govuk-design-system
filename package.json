@@ -59,7 +59,7 @@
     "jest-puppeteer": "^4.1.1",
     "js-beautify": "^1.9.1",
     "jstransformer-marked": "^1.2.0",
-    "jstransformer-nunjucks": "^0.5.0",
+    "jstransformer-nunjucks": "^1.1.0",
     "marked": "^4.0.18",
     "metalsmith": "^2.5.0",
     "metalsmith-assets": "^0.1.0",
