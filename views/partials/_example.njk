@@ -32,7 +32,7 @@
       <div class="app-example__toolbar">
         <a href="{{ exampleURL }}" class="app-example__new-window" target="_blank">
           Open this
-          {# Don't use full title visually as the context is shown based on location of this link #}
+          {#- Don't use full title visually as the context is shown based on location of this link #}
           <span class="govuk-visually-hidden">{{ exampleTitle | lower }}</span>
           example in a new tab
         </a>
@@ -82,8 +82,7 @@
       {%- if (params.group == 'components') %}
         {% set macroOptions = getMacroOptions(params.item) %}
   
-        {% set macroOptionsHTML %}
-  
+        {% set macroOptionsHTML -%}
           <p>
           Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
           </p>
@@ -93,8 +92,7 @@
           <p>
           If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
           </p>
-  
-          {% for table in macroOptions %}
+          {% for table in macroOptions -%}
             <table class="govuk-table app-options__table" id="options-{{ exampleId }}--{{ table.id }}">
               <caption class="govuk-table__caption govuk-heading-m {% if table.id == 'primary' %} govuk-visually-hidden{% endif %}">{{ table.name }}</caption>
               <thead class="govuk-table__head">
@@ -105,7 +103,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-  
                 {% for option in table.options %}
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">{{option.name}}</th>
@@ -135,9 +132,9 @@
   
         {% endset %}
   
-        {% from "govuk/components/details/macro.njk" import govukDetails %}
+        {% from "govuk/components/details/macro.njk" import govukDetails -%}
   
-        {{ govukDetails({
+        {{- govukDetails({
           summaryHtml: "<span data-components='github-component-arguments'>Nunjucks macro options</span>",
           html: macroOptionsHTML,
           classes: "app-options",
@@ -145,7 +142,7 @@
             id: "options-" + exampleId + "-details"
           }
         })}}
-      {% endif %}
+      {% endif -%}
       <div class="app-example__code">
         <pre data-module="app-copy" tabindex="0"><code class="hljs js">
           {{- getNunjucksCode(examplePath) | highlight('js') | safe -}}
