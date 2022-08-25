@@ -1131,7 +1131,6 @@
       <div class="app-example__toolbar">
         <a href="/components/character-count/default/index.html" class="app-example__new-window" target="_blank">
           Open this
-
           <span class="govuk-visually-hidden">character count</span>
           example in a new tab
         </a>
@@ -1158,26 +1157,22 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-textarea govuk-js-character-count&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;with-hint&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;with-hint&quot;</span> <span class="hljs-attr">rows</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;with-hint-info with-hint-hint&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;with-hint-info&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint govuk-character-count__message&quot;</span>&gt;</span>
+<p>  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;with-hint-info&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint govuk-character-count__message&quot;</span>&gt;</span>
     You can enter up to 200 characters
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></p>
+<p><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
       </div>
     </div>
       <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#character-count-example-nunjucks" aria-controls="character-count-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
-    <div class="app-tabs__container js-tabs__container" id="character-count-example-nunjucks" role="tabpanel">  
-
-
-        <details class="govuk-details app-options" data-module="govuk-details" id="options-character-count-example-details">
+    <div class="app-tabs__container js-tabs__container" id="character-count-example-nunjucks" role="tabpanel">  </p>
+<details class="govuk-details app-options" data-module="govuk-details" id="options-character-count-example-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
       <span data-components='github-component-arguments'>Nunjucks macro options</span>
     </span>
   </summary>
   <div class="govuk-details__text">
-
-          <p>
+              <p>
           Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
           </p>
           <p>
@@ -1186,8 +1181,7 @@
           <p>
           If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
           </p>
-
-            <table class="govuk-table app-options__table" id="options-character-count-example--primary">
+<table class="govuk-table app-options__table" id="options-character-count-example--primary">
               <caption class="govuk-table__caption govuk-heading-m  govuk-visually-hidden">Primary options</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1197,7 +1191,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">id</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1257,68 +1250,69 @@
                     <td class="govuk-table__cell ">
                         <strong>Required.</strong>
                       Options for the label component.
-
-                          See <a href="#options-character-count-example--label">label</a>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">hint</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      Options for the hint component.
-
-                          See <a href="#options-character-count-example--hint">hint</a>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">errorMessage</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      Options for the error message component. The error message component will not display if you use a falsy value for <code>errorMessage</code>, for example <code>false</code> or <code>null</code>.
-
-                          See <a href="/components/error-message/#options-error-message-example">errorMessage</a>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">formGroup</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      Options for the form-group wrapper.
-                        See <a href="#options-character-count-example--formGroup">formGroup</a>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">classes</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      Classes to add to the textarea.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">attributes</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      HTML attributes (for example data attributes) to add to the textarea.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">spellcheck</th>
-                    <td class="govuk-table__cell ">boolean</td>
-                    <td class="govuk-table__cell ">
-                      Optional field to enable or disable the <code>spellcheck</code> attribute on the character count.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">countMessage</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      Options for the count message.
-                        See <a href="#options-character-count-example--countMessage">countMessage</a>.
-                    </td>
-                  </tr>
-              </tbody>
-            </table>
-            <table class="govuk-table app-options__table" id="options-character-count-example--formGroup">
+                        
+<pre><code>See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#options-character-count-example--label&quot;</span>&gt;</span>label<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>hint<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Options for the hint component.
+                    
+                      See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#options-character-count-example--hint&quot;</span>&gt;</span>hint<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>errorMessage<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Options for the error message component. The error message component will not display if you use a falsy value for <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>errorMessage<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, for example <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>false<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> or <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>null<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.
+                    
+                      See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/components/error-message/#options-error-message-example&quot;</span>&gt;</span>errorMessage<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>formGroup<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Options for the form-group wrapper.
+                    See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#options-character-count-example--formGroup&quot;</span>&gt;</span>formGroup<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>classes<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>string<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Classes to add to the textarea.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>attributes<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  HTML attributes (for example data attributes) to add to the textarea.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>spellcheck<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>boolean<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Optional field to enable or disable the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>spellcheck<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> attribute on the character count.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>countMessage<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Options for the count message.
+                    See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#options-character-count-example--countMessage&quot;</span>&gt;</span>countMessage<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+</code></pre>
+<table class="govuk-table app-options__table" id="options-character-count-example--formGroup">
               <caption class="govuk-table__caption govuk-heading-m ">Options for formGroup</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1328,7 +1322,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">classes</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1338,7 +1331,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-character-count-example--countMessage">
+<table class="govuk-table app-options__table" id="options-character-count-example--countMessage">
               <caption class="govuk-table__caption govuk-heading-m ">Options for countMessage</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1348,7 +1341,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">classes</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1358,7 +1350,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-character-count-example--label">
+<table class="govuk-table app-options__table" id="options-character-count-example--label">
               <caption class="govuk-table__caption govuk-heading-m ">Options for label</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1368,7 +1360,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">text</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1415,7 +1406,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-character-count-example--hint">
+<table class="govuk-table app-options__table" id="options-character-count-example--hint">
               <caption class="govuk-table__caption govuk-heading-m ">Options for hint</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1425,7 +1416,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">text</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1465,14 +1455,13 @@
                   </tr>
               </tbody>
             </table>
-
+  
 
   </div>
 </details>
 
-      <div class="app-example__code">
+<div class="app-example__code">
         <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/character-count/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukCharacterCount %}
-
 {{ govukCharacterCount({
   <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;with-hint&quot;</span>,
   <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;with-hint&quot;</span>,
@@ -1521,7 +1510,6 @@
       <div class="app-example__toolbar">
         <a href="/components/character-count/default/index.html" class="app-example__new-window" target="_blank">
           Open this
-
           <span class="govuk-visually-hidden">character count second</span>
           example in a new tab
         </a>
@@ -1548,26 +1536,22 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-textarea govuk-js-character-count&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;with-hint&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;with-hint&quot;</span> <span class="hljs-attr">rows</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;with-hint-info with-hint-hint&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;with-hint-info&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint govuk-character-count__message&quot;</span>&gt;</span>
+<p>  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;with-hint-info&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint govuk-character-count__message&quot;</span>&gt;</span>
     You can enter up to 200 characters
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></p>
+<p><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
       </div>
     </div>
       <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#character-count-second-example-nunjucks" aria-controls="character-count-second-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
-    <div class="app-tabs__container js-tabs__container" id="character-count-second-example-nunjucks" role="tabpanel">  
-
-
-        <details class="govuk-details app-options" data-module="govuk-details" id="options-character-count-second-example-details">
+    <div class="app-tabs__container js-tabs__container" id="character-count-second-example-nunjucks" role="tabpanel">  </p>
+<details class="govuk-details app-options" data-module="govuk-details" id="options-character-count-second-example-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
       <span data-components='github-component-arguments'>Nunjucks macro options</span>
     </span>
   </summary>
   <div class="govuk-details__text">
-
-          <p>
+              <p>
           Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
           </p>
           <p>
@@ -1576,8 +1560,7 @@
           <p>
           If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
           </p>
-
-            <table class="govuk-table app-options__table" id="options-character-count-second-example--primary">
+<table class="govuk-table app-options__table" id="options-character-count-second-example--primary">
               <caption class="govuk-table__caption govuk-heading-m  govuk-visually-hidden">Primary options</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1587,7 +1570,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">id</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1647,68 +1629,69 @@
                     <td class="govuk-table__cell ">
                         <strong>Required.</strong>
                       Options for the label component.
-
-                          See <a href="#options-character-count-second-example--label">label</a>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">hint</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      Options for the hint component.
-
-                          See <a href="#options-character-count-second-example--hint">hint</a>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">errorMessage</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      Options for the error message component. The error message component will not display if you use a falsy value for <code>errorMessage</code>, for example <code>false</code> or <code>null</code>.
-
-                          See <a href="/components/error-message/#options-error-message-example">errorMessage</a>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">formGroup</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      Options for the form-group wrapper.
-                        See <a href="#options-character-count-second-example--formGroup">formGroup</a>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">classes</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      Classes to add to the textarea.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">attributes</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      HTML attributes (for example data attributes) to add to the textarea.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">spellcheck</th>
-                    <td class="govuk-table__cell ">boolean</td>
-                    <td class="govuk-table__cell ">
-                      Optional field to enable or disable the <code>spellcheck</code> attribute on the character count.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">countMessage</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      Options for the count message.
-                        See <a href="#options-character-count-second-example--countMessage">countMessage</a>.
-                    </td>
-                  </tr>
-              </tbody>
-            </table>
-            <table class="govuk-table app-options__table" id="options-character-count-second-example--formGroup">
+                        
+<pre><code>See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#options-character-count-second-example--label&quot;</span>&gt;</span>label<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>hint<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Options for the hint component.
+                    
+                      See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#options-character-count-second-example--hint&quot;</span>&gt;</span>hint<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>errorMessage<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Options for the error message component. The error message component will not display if you use a falsy value for <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>errorMessage<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, for example <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>false<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> or <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>null<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.
+                    
+                      See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/components/error-message/#options-error-message-example&quot;</span>&gt;</span>errorMessage<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>formGroup<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Options for the form-group wrapper.
+                    See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#options-character-count-second-example--formGroup&quot;</span>&gt;</span>formGroup<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>classes<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>string<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Classes to add to the textarea.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>attributes<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  HTML attributes (for example data attributes) to add to the textarea.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>spellcheck<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>boolean<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Optional field to enable or disable the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>spellcheck<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> attribute on the character count.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>countMessage<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Options for the count message.
+                    See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#options-character-count-second-example--countMessage&quot;</span>&gt;</span>countMessage<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+</code></pre>
+<table class="govuk-table app-options__table" id="options-character-count-second-example--formGroup">
               <caption class="govuk-table__caption govuk-heading-m ">Options for formGroup</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1718,7 +1701,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">classes</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1728,7 +1710,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-character-count-second-example--countMessage">
+<table class="govuk-table app-options__table" id="options-character-count-second-example--countMessage">
               <caption class="govuk-table__caption govuk-heading-m ">Options for countMessage</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1738,7 +1720,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">classes</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1748,7 +1729,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-character-count-second-example--label">
+<table class="govuk-table app-options__table" id="options-character-count-second-example--label">
               <caption class="govuk-table__caption govuk-heading-m ">Options for label</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1758,7 +1739,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">text</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1805,7 +1785,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-character-count-second-example--hint">
+<table class="govuk-table app-options__table" id="options-character-count-second-example--hint">
               <caption class="govuk-table__caption govuk-heading-m ">Options for hint</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1815,7 +1795,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">text</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1855,14 +1834,13 @@
                   </tr>
               </tbody>
             </table>
-
+  
 
   </div>
 </details>
 
-      <div class="app-example__code">
+<div class="app-example__code">
         <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/character-count/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukCharacterCount %}
-
 {{ govukCharacterCount({
   <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;with-hint&quot;</span>,
   <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;with-hint&quot;</span>,
@@ -1882,14 +1860,13 @@
 
 
 
-<h3 id="if-you-re-asking-more-than-one-question-on-the-page">If you’re asking more than one question on the page</h3>
+<h3 id="if-youre-asking-more-than-one-question-on-the-page">If you’re asking more than one question on the page</h3>
 <p>If you’re asking more than one question on the page, do not set the contents of the <code>&lt;label&gt;</code> as the page heading. Read more about <a href="/patterns/question-pages/#asking-multiple-questions-on-a-page">asking multiple questions on question pages</a>.</p>
 <div class="app-example-wrapper" id="character-count-without-a-heading-example" data-module="app-tabs">
     <div class="app-example app-example--tabs">
       <div class="app-example__toolbar">
         <a href="/components/character-count/without-heading/index.html" class="app-example__new-window" target="_blank">
           Open this
-
           <span class="govuk-visually-hidden">character count without a heading</span>
           example in a new tab
         </a>
@@ -1912,26 +1889,22 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-textarea govuk-js-character-count&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;label-as-page-heading&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;label-as-page-heading&quot;</span> <span class="hljs-attr">rows</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;label-as-page-heading-info&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;label-as-page-heading-info&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint govuk-character-count__message&quot;</span>&gt;</span>
+<p>  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;label-as-page-heading-info&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint govuk-character-count__message&quot;</span>&gt;</span>
     You can enter up to 200 characters
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></p>
+<p><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
       </div>
     </div>
       <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#character-count-without-a-heading-example-nunjucks" aria-controls="character-count-without-a-heading-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
-    <div class="app-tabs__container js-tabs__container" id="character-count-without-a-heading-example-nunjucks" role="tabpanel">  
-
-
-        <details class="govuk-details app-options" data-module="govuk-details" id="options-character-count-without-a-heading-example-details">
+    <div class="app-tabs__container js-tabs__container" id="character-count-without-a-heading-example-nunjucks" role="tabpanel">  </p>
+<details class="govuk-details app-options" data-module="govuk-details" id="options-character-count-without-a-heading-example-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
       <span data-components='github-component-arguments'>Nunjucks macro options</span>
     </span>
   </summary>
   <div class="govuk-details__text">
-
-          <p>
+              <p>
           Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
           </p>
           <p>
@@ -1940,8 +1913,7 @@
           <p>
           If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
           </p>
-
-            <table class="govuk-table app-options__table" id="options-character-count-without-a-heading-example--primary">
+<table class="govuk-table app-options__table" id="options-character-count-without-a-heading-example--primary">
               <caption class="govuk-table__caption govuk-heading-m  govuk-visually-hidden">Primary options</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1951,7 +1923,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">id</th>
                     <td class="govuk-table__cell ">string</td>
@@ -2011,68 +1982,69 @@
                     <td class="govuk-table__cell ">
                         <strong>Required.</strong>
                       Options for the label component.
-
-                          See <a href="#options-character-count-without-a-heading-example--label">label</a>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">hint</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      Options for the hint component.
-
-                          See <a href="#options-character-count-without-a-heading-example--hint">hint</a>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">errorMessage</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      Options for the error message component. The error message component will not display if you use a falsy value for <code>errorMessage</code>, for example <code>false</code> or <code>null</code>.
-
-                          See <a href="/components/error-message/#options-error-message-example">errorMessage</a>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">formGroup</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      Options for the form-group wrapper.
-                        See <a href="#options-character-count-without-a-heading-example--formGroup">formGroup</a>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">classes</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      Classes to add to the textarea.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">attributes</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      HTML attributes (for example data attributes) to add to the textarea.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">spellcheck</th>
-                    <td class="govuk-table__cell ">boolean</td>
-                    <td class="govuk-table__cell ">
-                      Optional field to enable or disable the <code>spellcheck</code> attribute on the character count.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">countMessage</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      Options for the count message.
-                        See <a href="#options-character-count-without-a-heading-example--countMessage">countMessage</a>.
-                    </td>
-                  </tr>
-              </tbody>
-            </table>
-            <table class="govuk-table app-options__table" id="options-character-count-without-a-heading-example--formGroup">
+                        
+<pre><code>See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#options-character-count-without-a-heading-example--label&quot;</span>&gt;</span>label<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>hint<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Options for the hint component.
+                    
+                      See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#options-character-count-without-a-heading-example--hint&quot;</span>&gt;</span>hint<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>errorMessage<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Options for the error message component. The error message component will not display if you use a falsy value for <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>errorMessage<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, for example <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>false<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> or <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>null<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.
+                    
+                      See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/components/error-message/#options-error-message-example&quot;</span>&gt;</span>errorMessage<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>formGroup<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Options for the form-group wrapper.
+                    See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#options-character-count-without-a-heading-example--formGroup&quot;</span>&gt;</span>formGroup<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>classes<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>string<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Classes to add to the textarea.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>attributes<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  HTML attributes (for example data attributes) to add to the textarea.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>spellcheck<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>boolean<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Optional field to enable or disable the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>spellcheck<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> attribute on the character count.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>countMessage<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Options for the count message.
+                    See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#options-character-count-without-a-heading-example--countMessage&quot;</span>&gt;</span>countMessage<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+</code></pre>
+<table class="govuk-table app-options__table" id="options-character-count-without-a-heading-example--formGroup">
               <caption class="govuk-table__caption govuk-heading-m ">Options for formGroup</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -2082,7 +2054,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">classes</th>
                     <td class="govuk-table__cell ">string</td>
@@ -2092,7 +2063,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-character-count-without-a-heading-example--countMessage">
+<table class="govuk-table app-options__table" id="options-character-count-without-a-heading-example--countMessage">
               <caption class="govuk-table__caption govuk-heading-m ">Options for countMessage</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -2102,7 +2073,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">classes</th>
                     <td class="govuk-table__cell ">string</td>
@@ -2112,7 +2082,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-character-count-without-a-heading-example--label">
+<table class="govuk-table app-options__table" id="options-character-count-without-a-heading-example--label">
               <caption class="govuk-table__caption govuk-heading-m ">Options for label</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -2122,7 +2092,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">text</th>
                     <td class="govuk-table__cell ">string</td>
@@ -2169,7 +2138,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-character-count-without-a-heading-example--hint">
+<table class="govuk-table app-options__table" id="options-character-count-without-a-heading-example--hint">
               <caption class="govuk-table__caption govuk-heading-m ">Options for hint</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -2179,7 +2148,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">text</th>
                     <td class="govuk-table__cell ">string</td>
@@ -2219,12 +2187,12 @@
                   </tr>
               </tbody>
             </table>
-
+  
 
   </div>
 </details>
 
-      <div class="app-example__code">
+<div class="app-example__code">
         <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/character-count/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukCharacterCount %}
  {{ govukCharacterCount({
   <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;label-as-page-heading&quot;</span>,
@@ -2248,7 +2216,6 @@
       <div class="app-example__toolbar">
         <a href="/components/character-count/word-count/index.html" class="app-example__new-window" target="_blank">
           Open this
-
           <span class="govuk-visually-hidden">word count – character count</span>
           example in a new tab
         </a>
@@ -2272,26 +2239,22 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-textarea govuk-js-character-count&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;word-count&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;word-count&quot;</span> <span class="hljs-attr">rows</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;word-count-info&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;word-count-info&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint govuk-character-count__message&quot;</span>&gt;</span>
+<p>  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;word-count-info&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint govuk-character-count__message&quot;</span>&gt;</span>
     You can enter up to 150 words
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></p>
+<p><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
       </div>
     </div>
       <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#word-count-character-count-example-nunjucks" aria-controls="word-count-character-count-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
-    <div class="app-tabs__container js-tabs__container" id="word-count-character-count-example-nunjucks" role="tabpanel">  
-
-
-        <details class="govuk-details app-options" data-module="govuk-details" id="options-word-count-character-count-example-details">
+    <div class="app-tabs__container js-tabs__container" id="word-count-character-count-example-nunjucks" role="tabpanel">  </p>
+<details class="govuk-details app-options" data-module="govuk-details" id="options-word-count-character-count-example-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
       <span data-components='github-component-arguments'>Nunjucks macro options</span>
     </span>
   </summary>
   <div class="govuk-details__text">
-
-          <p>
+              <p>
           Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
           </p>
           <p>
@@ -2300,8 +2263,7 @@
           <p>
           If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
           </p>
-
-            <table class="govuk-table app-options__table" id="options-word-count-character-count-example--primary">
+<table class="govuk-table app-options__table" id="options-word-count-character-count-example--primary">
               <caption class="govuk-table__caption govuk-heading-m  govuk-visually-hidden">Primary options</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -2311,7 +2273,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">id</th>
                     <td class="govuk-table__cell ">string</td>
@@ -2371,68 +2332,69 @@
                     <td class="govuk-table__cell ">
                         <strong>Required.</strong>
                       Options for the label component.
-
-                          See <a href="#options-word-count-character-count-example--label">label</a>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">hint</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      Options for the hint component.
-
-                          See <a href="#options-word-count-character-count-example--hint">hint</a>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">errorMessage</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      Options for the error message component. The error message component will not display if you use a falsy value for <code>errorMessage</code>, for example <code>false</code> or <code>null</code>.
-
-                          See <a href="/components/error-message/#options-error-message-example">errorMessage</a>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">formGroup</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      Options for the form-group wrapper.
-                        See <a href="#options-word-count-character-count-example--formGroup">formGroup</a>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">classes</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      Classes to add to the textarea.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">attributes</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      HTML attributes (for example data attributes) to add to the textarea.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">spellcheck</th>
-                    <td class="govuk-table__cell ">boolean</td>
-                    <td class="govuk-table__cell ">
-                      Optional field to enable or disable the <code>spellcheck</code> attribute on the character count.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">countMessage</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      Options for the count message.
-                        See <a href="#options-word-count-character-count-example--countMessage">countMessage</a>.
-                    </td>
-                  </tr>
-              </tbody>
-            </table>
-            <table class="govuk-table app-options__table" id="options-word-count-character-count-example--formGroup">
+                        
+<pre><code>See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#options-word-count-character-count-example--label&quot;</span>&gt;</span>label<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>hint<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Options for the hint component.
+                    
+                      See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#options-word-count-character-count-example--hint&quot;</span>&gt;</span>hint<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>errorMessage<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Options for the error message component. The error message component will not display if you use a falsy value for <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>errorMessage<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, for example <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>false<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> or <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>null<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.
+                    
+                      See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/components/error-message/#options-error-message-example&quot;</span>&gt;</span>errorMessage<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>formGroup<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Options for the form-group wrapper.
+                    See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#options-word-count-character-count-example--formGroup&quot;</span>&gt;</span>formGroup<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>classes<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>string<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Classes to add to the textarea.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>attributes<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  HTML attributes (for example data attributes) to add to the textarea.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>spellcheck<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>boolean<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Optional field to enable or disable the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>spellcheck<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> attribute on the character count.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>countMessage<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Options for the count message.
+                    See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#options-word-count-character-count-example--countMessage&quot;</span>&gt;</span>countMessage<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+</code></pre>
+<table class="govuk-table app-options__table" id="options-word-count-character-count-example--formGroup">
               <caption class="govuk-table__caption govuk-heading-m ">Options for formGroup</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -2442,7 +2404,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">classes</th>
                     <td class="govuk-table__cell ">string</td>
@@ -2452,7 +2413,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-word-count-character-count-example--countMessage">
+<table class="govuk-table app-options__table" id="options-word-count-character-count-example--countMessage">
               <caption class="govuk-table__caption govuk-heading-m ">Options for countMessage</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -2462,7 +2423,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">classes</th>
                     <td class="govuk-table__cell ">string</td>
@@ -2472,7 +2432,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-word-count-character-count-example--label">
+<table class="govuk-table app-options__table" id="options-word-count-character-count-example--label">
               <caption class="govuk-table__caption govuk-heading-m ">Options for label</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -2482,7 +2442,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">text</th>
                     <td class="govuk-table__cell ">string</td>
@@ -2529,7 +2488,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-word-count-character-count-example--hint">
+<table class="govuk-table app-options__table" id="options-word-count-character-count-example--hint">
               <caption class="govuk-table__caption govuk-heading-m ">Options for hint</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -2539,7 +2498,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">text</th>
                     <td class="govuk-table__cell ">string</td>
@@ -2579,14 +2537,13 @@
                   </tr>
               </tbody>
             </table>
-
+  
 
   </div>
 </details>
 
-      <div class="app-example__code">
+<div class="app-example__code">
         <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/character-count/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukCharacterCount %}
-
 {{ govukCharacterCount({
   <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;word-count&quot;</span>,
   <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;word-count&quot;</span>,
@@ -2613,7 +2570,6 @@
       <div class="app-example__toolbar">
         <a href="/components/character-count/threshold/index.html" class="app-example__new-window" target="_blank">
           Open this
-
           <span class="govuk-visually-hidden">threshold – character count</span>
           example in a new tab
         </a>
@@ -2637,26 +2593,22 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-textarea govuk-js-character-count&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;threshold&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;threshold&quot;</span> <span class="hljs-attr">rows</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;threshold-info&quot;</span>&gt;</span>Type another letter into this field after this message to see the threshold feature<span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;threshold-info&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint govuk-character-count__message&quot;</span>&gt;</span>
+<p>  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;threshold-info&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint govuk-character-count__message&quot;</span>&gt;</span>
     You can enter up to 112 characters
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></p>
+<p><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
       </div>
     </div>
       <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#threshold-character-count-example-nunjucks" aria-controls="threshold-character-count-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
-    <div class="app-tabs__container js-tabs__container" id="threshold-character-count-example-nunjucks" role="tabpanel">  
-
-
-        <details class="govuk-details app-options" data-module="govuk-details" id="options-threshold-character-count-example-details">
+    <div class="app-tabs__container js-tabs__container" id="threshold-character-count-example-nunjucks" role="tabpanel">  </p>
+<details class="govuk-details app-options" data-module="govuk-details" id="options-threshold-character-count-example-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
       <span data-components='github-component-arguments'>Nunjucks macro options</span>
     </span>
   </summary>
   <div class="govuk-details__text">
-
-          <p>
+              <p>
           Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
           </p>
           <p>
@@ -2665,8 +2617,7 @@
           <p>
           If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
           </p>
-
-            <table class="govuk-table app-options__table" id="options-threshold-character-count-example--primary">
+<table class="govuk-table app-options__table" id="options-threshold-character-count-example--primary">
               <caption class="govuk-table__caption govuk-heading-m  govuk-visually-hidden">Primary options</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -2676,7 +2627,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">id</th>
                     <td class="govuk-table__cell ">string</td>
@@ -2736,68 +2686,69 @@
                     <td class="govuk-table__cell ">
                         <strong>Required.</strong>
                       Options for the label component.
-
-                          See <a href="#options-threshold-character-count-example--label">label</a>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">hint</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      Options for the hint component.
-
-                          See <a href="#options-threshold-character-count-example--hint">hint</a>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">errorMessage</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      Options for the error message component. The error message component will not display if you use a falsy value for <code>errorMessage</code>, for example <code>false</code> or <code>null</code>.
-
-                          See <a href="/components/error-message/#options-error-message-example">errorMessage</a>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">formGroup</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      Options for the form-group wrapper.
-                        See <a href="#options-threshold-character-count-example--formGroup">formGroup</a>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">classes</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      Classes to add to the textarea.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">attributes</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      HTML attributes (for example data attributes) to add to the textarea.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">spellcheck</th>
-                    <td class="govuk-table__cell ">boolean</td>
-                    <td class="govuk-table__cell ">
-                      Optional field to enable or disable the <code>spellcheck</code> attribute on the character count.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">countMessage</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      Options for the count message.
-                        See <a href="#options-threshold-character-count-example--countMessage">countMessage</a>.
-                    </td>
-                  </tr>
-              </tbody>
-            </table>
-            <table class="govuk-table app-options__table" id="options-threshold-character-count-example--formGroup">
+                        
+<pre><code>See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#options-threshold-character-count-example--label&quot;</span>&gt;</span>label<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>hint<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Options for the hint component.
+                    
+                      See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#options-threshold-character-count-example--hint&quot;</span>&gt;</span>hint<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>errorMessage<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Options for the error message component. The error message component will not display if you use a falsy value for <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>errorMessage<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, for example <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>false<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> or <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>null<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.
+                    
+                      See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/components/error-message/#options-error-message-example&quot;</span>&gt;</span>errorMessage<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>formGroup<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Options for the form-group wrapper.
+                    See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#options-threshold-character-count-example--formGroup&quot;</span>&gt;</span>formGroup<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>classes<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>string<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Classes to add to the textarea.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>attributes<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  HTML attributes (for example data attributes) to add to the textarea.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>spellcheck<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>boolean<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Optional field to enable or disable the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>spellcheck<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> attribute on the character count.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>countMessage<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Options for the count message.
+                    See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#options-threshold-character-count-example--countMessage&quot;</span>&gt;</span>countMessage<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+</code></pre>
+<table class="govuk-table app-options__table" id="options-threshold-character-count-example--formGroup">
               <caption class="govuk-table__caption govuk-heading-m ">Options for formGroup</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -2807,7 +2758,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">classes</th>
                     <td class="govuk-table__cell ">string</td>
@@ -2817,7 +2767,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-threshold-character-count-example--countMessage">
+<table class="govuk-table app-options__table" id="options-threshold-character-count-example--countMessage">
               <caption class="govuk-table__caption govuk-heading-m ">Options for countMessage</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -2827,7 +2777,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">classes</th>
                     <td class="govuk-table__cell ">string</td>
@@ -2837,7 +2786,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-threshold-character-count-example--label">
+<table class="govuk-table app-options__table" id="options-threshold-character-count-example--label">
               <caption class="govuk-table__caption govuk-heading-m ">Options for label</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -2847,7 +2796,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">text</th>
                     <td class="govuk-table__cell ">string</td>
@@ -2894,7 +2842,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-threshold-character-count-example--hint">
+<table class="govuk-table app-options__table" id="options-threshold-character-count-example--hint">
               <caption class="govuk-table__caption govuk-heading-m ">Options for hint</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -2904,7 +2852,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">text</th>
                     <td class="govuk-table__cell ">string</td>
@@ -2944,14 +2891,13 @@
                   </tr>
               </tbody>
             </table>
-
+  
 
   </div>
 </details>
 
-      <div class="app-example__code">
+<div class="app-example__code">
         <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/character-count/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukCharacterCount %}
-
 {{ govukCharacterCount({
   <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;threshold&quot;</span>,
   <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;threshold&quot;</span>,
@@ -2977,7 +2923,6 @@
       <div class="app-example__toolbar">
         <a href="/components/character-count/error/index.html" class="app-example__new-window" target="_blank">
           Open this
-
           <span class="govuk-visually-hidden">error – character count</span>
           example in a new tab
         </a>
@@ -3004,26 +2949,22 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-textarea govuk-textarea--error govuk-js-character-count govuk-textarea--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;exceeding-characters&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;exceeding&quot;</span> <span class="hljs-attr">rows</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;exceeding-characters-info exceeding-characters-error&quot;</span>&gt;</span>A content designer works on the end-to-end journey of a service to help users complete their goal and government deliver a policy intent. Their work may involve the creation of, or change to, a transaction, product or single piece of content that stretches across digital and offline channels. They make sure appropriate content is shown to a user in the right place and in the best format.<span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;exceeding-characters-info&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint govuk-character-count__message&quot;</span>&gt;</span>
+<p>  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;exceeding-characters-info&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint govuk-character-count__message&quot;</span>&gt;</span>
     You can enter up to 350 characters
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></p>
+<p><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
       </div>
     </div>
       <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#error-character-count-example-nunjucks" aria-controls="error-character-count-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
-    <div class="app-tabs__container js-tabs__container" id="error-character-count-example-nunjucks" role="tabpanel">  
-
-
-        <details class="govuk-details app-options" data-module="govuk-details" id="options-error-character-count-example-details">
+    <div class="app-tabs__container js-tabs__container" id="error-character-count-example-nunjucks" role="tabpanel">  </p>
+<details class="govuk-details app-options" data-module="govuk-details" id="options-error-character-count-example-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
       <span data-components='github-component-arguments'>Nunjucks macro options</span>
     </span>
   </summary>
   <div class="govuk-details__text">
-
-          <p>
+              <p>
           Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
           </p>
           <p>
@@ -3032,8 +2973,7 @@
           <p>
           If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
           </p>
-
-            <table class="govuk-table app-options__table" id="options-error-character-count-example--primary">
+<table class="govuk-table app-options__table" id="options-error-character-count-example--primary">
               <caption class="govuk-table__caption govuk-heading-m  govuk-visually-hidden">Primary options</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -3043,7 +2983,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">id</th>
                     <td class="govuk-table__cell ">string</td>
@@ -3103,68 +3042,69 @@
                     <td class="govuk-table__cell ">
                         <strong>Required.</strong>
                       Options for the label component.
-
-                          See <a href="#options-error-character-count-example--label">label</a>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">hint</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      Options for the hint component.
-
-                          See <a href="#options-error-character-count-example--hint">hint</a>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">errorMessage</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      Options for the error message component. The error message component will not display if you use a falsy value for <code>errorMessage</code>, for example <code>false</code> or <code>null</code>.
-
-                          See <a href="/components/error-message/#options-error-message-example">errorMessage</a>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">formGroup</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      Options for the form-group wrapper.
-                        See <a href="#options-error-character-count-example--formGroup">formGroup</a>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">classes</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      Classes to add to the textarea.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">attributes</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      HTML attributes (for example data attributes) to add to the textarea.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">spellcheck</th>
-                    <td class="govuk-table__cell ">boolean</td>
-                    <td class="govuk-table__cell ">
-                      Optional field to enable or disable the <code>spellcheck</code> attribute on the character count.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">countMessage</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      Options for the count message.
-                        See <a href="#options-error-character-count-example--countMessage">countMessage</a>.
-                    </td>
-                  </tr>
-              </tbody>
-            </table>
-            <table class="govuk-table app-options__table" id="options-error-character-count-example--formGroup">
+                        
+<pre><code>See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#options-error-character-count-example--label&quot;</span>&gt;</span>label<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>hint<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Options for the hint component.
+                    
+                      See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#options-error-character-count-example--hint&quot;</span>&gt;</span>hint<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>errorMessage<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Options for the error message component. The error message component will not display if you use a falsy value for <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>errorMessage<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, for example <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>false<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> or <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>null<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.
+                    
+                      See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/components/error-message/#options-error-message-example&quot;</span>&gt;</span>errorMessage<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>formGroup<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Options for the form-group wrapper.
+                    See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#options-error-character-count-example--formGroup&quot;</span>&gt;</span>formGroup<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>classes<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>string<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Classes to add to the textarea.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>attributes<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  HTML attributes (for example data attributes) to add to the textarea.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>spellcheck<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>boolean<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Optional field to enable or disable the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>spellcheck<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> attribute on the character count.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>countMessage<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Options for the count message.
+                    See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#options-error-character-count-example--countMessage&quot;</span>&gt;</span>countMessage<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+</code></pre>
+<table class="govuk-table app-options__table" id="options-error-character-count-example--formGroup">
               <caption class="govuk-table__caption govuk-heading-m ">Options for formGroup</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -3174,7 +3114,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">classes</th>
                     <td class="govuk-table__cell ">string</td>
@@ -3184,7 +3123,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-error-character-count-example--countMessage">
+<table class="govuk-table app-options__table" id="options-error-character-count-example--countMessage">
               <caption class="govuk-table__caption govuk-heading-m ">Options for countMessage</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -3194,7 +3133,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">classes</th>
                     <td class="govuk-table__cell ">string</td>
@@ -3204,7 +3142,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-error-character-count-example--label">
+<table class="govuk-table app-options__table" id="options-error-character-count-example--label">
               <caption class="govuk-table__caption govuk-heading-m ">Options for label</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -3214,7 +3152,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">text</th>
                     <td class="govuk-table__cell ">string</td>
@@ -3261,7 +3198,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-error-character-count-example--hint">
+<table class="govuk-table app-options__table" id="options-error-character-count-example--hint">
               <caption class="govuk-table__caption govuk-heading-m ">Options for hint</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -3271,7 +3208,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">text</th>
                     <td class="govuk-table__cell ">string</td>
@@ -3311,14 +3247,13 @@
                   </tr>
               </tbody>
             </table>
-
+  
 
   </div>
 </details>
 
-      <div class="app-example__code">
+<div class="app-example__code">
         <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/character-count/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukCharacterCount %}
-
 {{ govukCharacterCount({
   <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;exceeding-characters&quot;</span>,
   <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;exceeding&quot;</span>,

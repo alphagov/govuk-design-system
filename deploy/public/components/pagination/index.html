@@ -1131,7 +1131,6 @@
       <div class="app-example__toolbar">
         <a href="/components/pagination/default/index.html" class="app-example__new-window" target="_blank">
           Open this
-
           <span class="govuk-visually-hidden">pagination</span>
           example in a new tab
         </a>
@@ -1181,17 +1180,15 @@
     </div>
       <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#pagination-example-nunjucks" aria-controls="pagination-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
     <div class="app-tabs__container js-tabs__container" id="pagination-example-nunjucks" role="tabpanel">  
-
-
-        <details class="govuk-details app-options" data-module="govuk-details" id="options-pagination-example-details">
+  
+<details class="govuk-details app-options" data-module="govuk-details" id="options-pagination-example-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
       <span data-components='github-component-arguments'>Nunjucks macro options</span>
     </span>
   </summary>
   <div class="govuk-details__text">
-
-          <p>
+              <p>
           Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
           </p>
           <p>
@@ -1200,8 +1197,7 @@
           <p>
           If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
           </p>
-
-            <table class="govuk-table app-options__table" id="options-pagination-example--primary">
+<table class="govuk-table app-options__table" id="options-pagination-example--primary">
               <caption class="govuk-table__caption govuk-heading-m  govuk-visually-hidden">Primary options</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1211,7 +1207,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">items</th>
                     <td class="govuk-table__cell ">array</td>
@@ -1259,7 +1254,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-pagination-example--items">
+<table class="govuk-table app-options__table" id="options-pagination-example--items">
               <caption class="govuk-table__caption govuk-heading-m ">Options for items</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1269,7 +1264,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">number</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1315,7 +1309,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-pagination-example--previous">
+<table class="govuk-table app-options__table" id="options-pagination-example--previous">
               <caption class="govuk-table__caption govuk-heading-m ">Options for previous</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1325,7 +1319,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">text</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1357,7 +1350,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-pagination-example--next">
+<table class="govuk-table app-options__table" id="options-pagination-example--next">
               <caption class="govuk-table__caption govuk-heading-m ">Options for next</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1367,7 +1360,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">text</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1399,14 +1391,13 @@
                   </tr>
               </tbody>
             </table>
-
+  
 
   </div>
 </details>
 
-      <div class="app-example__code">
+<div class="app-example__code">
         <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/pagination/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukPagination %}
-
 {{ govukPagination({
   <span class="hljs-attr">previous</span>: {
     <span class="hljs-attr">href</span>: <span class="hljs-string">&quot;#&quot;</span>
@@ -1458,7 +1449,6 @@
       <div class="app-example__toolbar">
         <a href="/components/pagination/labels/index.html" class="app-example__new-window" target="_blank">
           Open this
-
           <span class="govuk-visually-hidden">pagination with number labels</span>
           example in a new tab
         </a>
@@ -1493,17 +1483,15 @@
     </div>
       <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#pagination-with-number-labels-example-nunjucks" aria-controls="pagination-with-number-labels-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
     <div class="app-tabs__container js-tabs__container" id="pagination-with-number-labels-example-nunjucks" role="tabpanel">  
-
-
-        <details class="govuk-details app-options" data-module="govuk-details" id="options-pagination-with-number-labels-example-details">
+  
+<details class="govuk-details app-options" data-module="govuk-details" id="options-pagination-with-number-labels-example-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
       <span data-components='github-component-arguments'>Nunjucks macro options</span>
     </span>
   </summary>
   <div class="govuk-details__text">
-
-          <p>
+              <p>
           Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
           </p>
           <p>
@@ -1512,8 +1500,7 @@
           <p>
           If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
           </p>
-
-            <table class="govuk-table app-options__table" id="options-pagination-with-number-labels-example--primary">
+<table class="govuk-table app-options__table" id="options-pagination-with-number-labels-example--primary">
               <caption class="govuk-table__caption govuk-heading-m  govuk-visually-hidden">Primary options</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1523,7 +1510,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">items</th>
                     <td class="govuk-table__cell ">array</td>
@@ -1571,7 +1557,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-pagination-with-number-labels-example--items">
+<table class="govuk-table app-options__table" id="options-pagination-with-number-labels-example--items">
               <caption class="govuk-table__caption govuk-heading-m ">Options for items</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1581,7 +1567,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">number</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1627,7 +1612,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-pagination-with-number-labels-example--previous">
+<table class="govuk-table app-options__table" id="options-pagination-with-number-labels-example--previous">
               <caption class="govuk-table__caption govuk-heading-m ">Options for previous</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1637,7 +1622,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">text</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1669,7 +1653,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-pagination-with-number-labels-example--next">
+<table class="govuk-table app-options__table" id="options-pagination-with-number-labels-example--next">
               <caption class="govuk-table__caption govuk-heading-m ">Options for next</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1679,7 +1663,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">text</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1711,14 +1694,13 @@
                   </tr>
               </tbody>
             </table>
-
+  
 
   </div>
 </details>
 
-      <div class="app-example__code">
+<div class="app-example__code">
         <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/pagination/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukPagination %}
-
 {{ govukPagination({
   <span class="hljs-attr">previous</span>: {
     <span class="hljs-attr">labelText</span>: <span class="hljs-string">&quot;1 of 3&quot;</span>,
@@ -1742,7 +1724,6 @@
       <div class="app-example__toolbar">
         <a href="/components/pagination/labels-2/index.html" class="app-example__new-window" target="_blank">
           Open this
-
           <span class="govuk-visually-hidden">pagination with text labels</span>
           example in a new tab
         </a>
@@ -1777,17 +1758,15 @@
     </div>
       <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#pagination-with-text-labels-example-nunjucks" aria-controls="pagination-with-text-labels-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
     <div class="app-tabs__container js-tabs__container" id="pagination-with-text-labels-example-nunjucks" role="tabpanel">  
-
-
-        <details class="govuk-details app-options" data-module="govuk-details" id="options-pagination-with-text-labels-example-details">
+  
+<details class="govuk-details app-options" data-module="govuk-details" id="options-pagination-with-text-labels-example-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
       <span data-components='github-component-arguments'>Nunjucks macro options</span>
     </span>
   </summary>
   <div class="govuk-details__text">
-
-          <p>
+              <p>
           Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
           </p>
           <p>
@@ -1796,8 +1775,7 @@
           <p>
           If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
           </p>
-
-            <table class="govuk-table app-options__table" id="options-pagination-with-text-labels-example--primary">
+<table class="govuk-table app-options__table" id="options-pagination-with-text-labels-example--primary">
               <caption class="govuk-table__caption govuk-heading-m  govuk-visually-hidden">Primary options</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1807,7 +1785,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">items</th>
                     <td class="govuk-table__cell ">array</td>
@@ -1855,7 +1832,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-pagination-with-text-labels-example--items">
+<table class="govuk-table app-options__table" id="options-pagination-with-text-labels-example--items">
               <caption class="govuk-table__caption govuk-heading-m ">Options for items</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1865,7 +1842,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">number</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1911,7 +1887,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-pagination-with-text-labels-example--previous">
+<table class="govuk-table app-options__table" id="options-pagination-with-text-labels-example--previous">
               <caption class="govuk-table__caption govuk-heading-m ">Options for previous</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1921,7 +1897,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">text</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1953,7 +1928,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-pagination-with-text-labels-example--next">
+<table class="govuk-table app-options__table" id="options-pagination-with-text-labels-example--next">
               <caption class="govuk-table__caption govuk-heading-m ">Options for next</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1963,7 +1938,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">text</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1995,14 +1969,13 @@
                   </tr>
               </tbody>
             </table>
-
+  
 
   </div>
 </details>
 
-      <div class="app-example__code">
+<div class="app-example__code">
         <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/pagination/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukPagination %}
-
 {{ govukPagination({
   <span class="hljs-attr">previous</span>: {
     <span class="hljs-attr">labelText</span>: <span class="hljs-string">&quot;Applying for a provisional lorry or bus licence&quot;</span>,
@@ -2026,7 +1999,6 @@
       <div class="app-example__toolbar">
         <a href="/components/pagination/large-number-of-pages/index.html" class="app-example__new-window" target="_blank">
           Open this
-
           <span class="govuk-visually-hidden">large number of pages</span>
           example in a new tab
         </a>
@@ -2088,17 +2060,15 @@
     </div>
       <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#large-number-of-pages-example-nunjucks" aria-controls="large-number-of-pages-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
     <div class="app-tabs__container js-tabs__container" id="large-number-of-pages-example-nunjucks" role="tabpanel">  
-
-
-        <details class="govuk-details app-options" data-module="govuk-details" id="options-large-number-of-pages-example-details">
+  
+<details class="govuk-details app-options" data-module="govuk-details" id="options-large-number-of-pages-example-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
       <span data-components='github-component-arguments'>Nunjucks macro options</span>
     </span>
   </summary>
   <div class="govuk-details__text">
-
-          <p>
+              <p>
           Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
           </p>
           <p>
@@ -2107,8 +2077,7 @@
           <p>
           If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
           </p>
-
-            <table class="govuk-table app-options__table" id="options-large-number-of-pages-example--primary">
+<table class="govuk-table app-options__table" id="options-large-number-of-pages-example--primary">
               <caption class="govuk-table__caption govuk-heading-m  govuk-visually-hidden">Primary options</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -2118,7 +2087,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">items</th>
                     <td class="govuk-table__cell ">array</td>
@@ -2166,7 +2134,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-large-number-of-pages-example--items">
+<table class="govuk-table app-options__table" id="options-large-number-of-pages-example--items">
               <caption class="govuk-table__caption govuk-heading-m ">Options for items</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -2176,7 +2144,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">number</th>
                     <td class="govuk-table__cell ">string</td>
@@ -2222,7 +2189,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-large-number-of-pages-example--previous">
+<table class="govuk-table app-options__table" id="options-large-number-of-pages-example--previous">
               <caption class="govuk-table__caption govuk-heading-m ">Options for previous</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -2232,7 +2199,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">text</th>
                     <td class="govuk-table__cell ">string</td>
@@ -2264,7 +2230,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-large-number-of-pages-example--next">
+<table class="govuk-table app-options__table" id="options-large-number-of-pages-example--next">
               <caption class="govuk-table__caption govuk-heading-m ">Options for next</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -2274,7 +2240,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">text</th>
                     <td class="govuk-table__cell ">string</td>
@@ -2306,14 +2271,13 @@
                   </tr>
               </tbody>
             </table>
-
+  
 
   </div>
 </details>
 
-      <div class="app-example__code">
+<div class="app-example__code">
         <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/pagination/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukPagination %}
-
 {{ govukPagination({
   <span class="hljs-attr">previous</span>: {
     <span class="hljs-attr">href</span>: <span class="hljs-string">&quot;#&quot;</span>
@@ -2389,7 +2353,6 @@
       <div class="app-example__toolbar">
         <a href="/components/pagination/first-page/index.html" class="app-example__new-window" target="_blank">
           Open this
-
           <span class="govuk-visually-hidden">first page</span>
           example in a new tab
         </a>
@@ -2432,17 +2395,15 @@
     </div>
       <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#first-page-example-nunjucks" aria-controls="first-page-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
     <div class="app-tabs__container js-tabs__container" id="first-page-example-nunjucks" role="tabpanel">  
-
-
-        <details class="govuk-details app-options" data-module="govuk-details" id="options-first-page-example-details">
+  
+<details class="govuk-details app-options" data-module="govuk-details" id="options-first-page-example-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
       <span data-components='github-component-arguments'>Nunjucks macro options</span>
     </span>
   </summary>
   <div class="govuk-details__text">
-
-          <p>
+              <p>
           Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
           </p>
           <p>
@@ -2451,8 +2412,7 @@
           <p>
           If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
           </p>
-
-            <table class="govuk-table app-options__table" id="options-first-page-example--primary">
+<table class="govuk-table app-options__table" id="options-first-page-example--primary">
               <caption class="govuk-table__caption govuk-heading-m  govuk-visually-hidden">Primary options</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -2462,7 +2422,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">items</th>
                     <td class="govuk-table__cell ">array</td>
@@ -2510,7 +2469,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-first-page-example--items">
+<table class="govuk-table app-options__table" id="options-first-page-example--items">
               <caption class="govuk-table__caption govuk-heading-m ">Options for items</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -2520,7 +2479,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">number</th>
                     <td class="govuk-table__cell ">string</td>
@@ -2566,7 +2524,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-first-page-example--previous">
+<table class="govuk-table app-options__table" id="options-first-page-example--previous">
               <caption class="govuk-table__caption govuk-heading-m ">Options for previous</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -2576,7 +2534,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">text</th>
                     <td class="govuk-table__cell ">string</td>
@@ -2608,7 +2565,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-first-page-example--next">
+<table class="govuk-table app-options__table" id="options-first-page-example--next">
               <caption class="govuk-table__caption govuk-heading-m ">Options for next</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -2618,7 +2575,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">text</th>
                     <td class="govuk-table__cell ">string</td>
@@ -2650,14 +2606,13 @@
                   </tr>
               </tbody>
             </table>
-
+  
 
   </div>
 </details>
 
-      <div class="app-example__code">
+<div class="app-example__code">
         <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/pagination/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukPagination %}
-
 {{ govukPagination({
   <span class="hljs-attr">next</span>: {
     <span class="hljs-attr">href</span>: <span class="hljs-string">&quot;#&quot;</span>
@@ -2695,7 +2650,6 @@
       <div class="app-example__toolbar">
         <a href="/components/pagination/last-page/index.html" class="app-example__new-window" target="_blank">
           Open this
-
           <span class="govuk-visually-hidden">last page</span>
           example in a new tab
         </a>
@@ -2740,17 +2694,15 @@
     </div>
       <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#last-page-example-nunjucks" aria-controls="last-page-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
     <div class="app-tabs__container js-tabs__container" id="last-page-example-nunjucks" role="tabpanel">  
-
-
-        <details class="govuk-details app-options" data-module="govuk-details" id="options-last-page-example-details">
+  
+<details class="govuk-details app-options" data-module="govuk-details" id="options-last-page-example-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
       <span data-components='github-component-arguments'>Nunjucks macro options</span>
     </span>
   </summary>
   <div class="govuk-details__text">
-
-          <p>
+              <p>
           Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
           </p>
           <p>
@@ -2759,8 +2711,7 @@
           <p>
           If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
           </p>
-
-            <table class="govuk-table app-options__table" id="options-last-page-example--primary">
+<table class="govuk-table app-options__table" id="options-last-page-example--primary">
               <caption class="govuk-table__caption govuk-heading-m  govuk-visually-hidden">Primary options</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -2770,7 +2721,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">items</th>
                     <td class="govuk-table__cell ">array</td>
@@ -2818,7 +2768,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-last-page-example--items">
+<table class="govuk-table app-options__table" id="options-last-page-example--items">
               <caption class="govuk-table__caption govuk-heading-m ">Options for items</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -2828,7 +2778,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">number</th>
                     <td class="govuk-table__cell ">string</td>
@@ -2874,7 +2823,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-last-page-example--previous">
+<table class="govuk-table app-options__table" id="options-last-page-example--previous">
               <caption class="govuk-table__caption govuk-heading-m ">Options for previous</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -2884,7 +2833,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">text</th>
                     <td class="govuk-table__cell ">string</td>
@@ -2916,7 +2864,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-last-page-example--next">
+<table class="govuk-table app-options__table" id="options-last-page-example--next">
               <caption class="govuk-table__caption govuk-heading-m ">Options for next</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -2926,7 +2874,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">text</th>
                     <td class="govuk-table__cell ">string</td>
@@ -2958,14 +2905,13 @@
                   </tr>
               </tbody>
             </table>
-
+  
 
   </div>
 </details>
 
-      <div class="app-example__code">
+<div class="app-example__code">
         <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/pagination/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukPagination %}
-
 {{ govukPagination({
   <span class="hljs-attr">previous</span>: {
     <span class="hljs-attr">href</span>: <span class="hljs-string">&quot;#&quot;</span>

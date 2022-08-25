@@ -1136,7 +1136,6 @@
       <div class="app-example__toolbar">
         <a href="/patterns/names/default/index.html" class="app-example__new-window" target="_blank">
           Open this
-
           <span class="govuk-visually-hidden">names</span>
           example in a new tab
         </a>
@@ -1160,9 +1159,8 @@
       </div>
     </div>
       <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#names-example-nunjucks" aria-controls="names-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
-    <div class="app-tabs__container js-tabs__container" id="names-example-nunjucks" role="tabpanel">      <div class="app-example__code">
+    <div class="app-tabs__container js-tabs__container" id="names-example-nunjucks" role="tabpanel"><div class="app-example__code">
         <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/input/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukInput %}
-
 {{ govukInput({
   <span class="hljs-attr">label</span>: {
     <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Full name&quot;</span>
@@ -1188,7 +1186,6 @@ Only ask for people’s names if you need that information to deliver a service.
       <div class="app-example__toolbar">
         <a href="/patterns/names/default/index.html" class="app-example__new-window" target="_blank">
           Open this
-
           <span class="govuk-visually-hidden">names second</span>
           example in a new tab
         </a>
@@ -1212,9 +1209,8 @@ Only ask for people’s names if you need that information to deliver a service.
       </div>
     </div>
       <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#names-second-example-open-nunjucks" aria-controls="names-second-example-open-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
-    <div class="app-tabs__container js-tabs__container" id="names-second-example-open-nunjucks" role="tabpanel">      <div class="app-example__code">
+    <div class="app-tabs__container js-tabs__container" id="names-second-example-open-nunjucks" role="tabpanel"><div class="app-example__code">
         <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/input/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukInput %}
-
 {{ govukInput({
   <span class="hljs-attr">label</span>: {
     <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Full name&quot;</span>
@@ -1270,7 +1266,7 @@ Only ask for people’s names if you need that information to deliver a service.
 </ul>
 <p>If you are working in production you’ll need to do this to meet <a href="https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html">WCAG 2.1 Level AA</a>.</p>
 <p>You will not normally need to use the <code>autocomplete</code> attribute in prototypes, as users will not generally be using their own devices.</p>
-<h3 id="do-not-spellcheck-user-s-names">Do not spellcheck user’s names</h3>
+<h3 id="do-not-spellcheck-users-names">Do not spellcheck user’s names</h3>
 <p>Sometimes, browsers will spellcheck the information a user enters into a text input. To make sure user’s names will not be spellchecked, set the <code>spellcheck</code> attribute to <code>false</code> as shown in this example.</p>
 <div class="app-example-wrapper" id="names-third-example-open" data-module="app-tabs" data-open>
     <span id="options-names-third-example-open"></span>
@@ -1290,9 +1286,8 @@ Only ask for people’s names if you need that information to deliver a service.
       </div>
     </div>
       <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#names-third-example-open-nunjucks" aria-controls="names-third-example-open-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
-    <div class="app-tabs__container js-tabs__container" id="names-third-example-open-nunjucks" role="tabpanel">      <div class="app-example__code">
+    <div class="app-tabs__container js-tabs__container" id="names-third-example-open-nunjucks" role="tabpanel"><div class="app-example__code">
         <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/input/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukInput %}
-
 {{ govukInput({
   <span class="hljs-attr">label</span>: {
     <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Full name&quot;</span>
@@ -1308,7 +1303,7 @@ Only ask for people’s names if you need that information to deliver a service.
 
 
 
-<h3 id="avoid-asking-for-a-person-s-title">Avoid asking for a person’s title</h3>
+<h3 id="avoid-asking-for-a-persons-title">Avoid asking for a person’s title</h3>
 <p>Avoid asking users for their title.</p>
 <p>It’s extra work for them and you’re asking them to potentially reveal their gender and marital status, which they may not want to do.</p>
 <p>It’s also hard to predict the range of titles your users will have. If you have to ask for someone’s title, use an optional <a href="/components/text-input/">text input</a> not a <a href="/components/select/">select</a>.</p>
@@ -1325,7 +1320,6 @@ Only ask for people’s names if you need that information to deliver a service.
       <div class="app-example__toolbar">
         <a href="/patterns/names/error/index.html" class="app-example__new-window" target="_blank">
           Open this
-
           <span class="govuk-visually-hidden">name input with errors</span>
           example in a new tab
         </a>
@@ -1352,9 +1346,8 @@ Only ask for people’s names if you need that information to deliver a service.
       </div>
     </div>
       <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#name-input-with-errors-example-open-nunjucks" aria-controls="name-input-with-errors-example-open-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
-    <div class="app-tabs__container js-tabs__container" id="name-input-with-errors-example-open-nunjucks" role="tabpanel">      <div class="app-example__code">
+    <div class="app-tabs__container js-tabs__container" id="name-input-with-errors-example-open-nunjucks" role="tabpanel"><div class="app-example__code">
         <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/input/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukInput %}
-
 {{ govukInput({
   <span class="hljs-attr">label</span>: {
     <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Full name&quot;</span>

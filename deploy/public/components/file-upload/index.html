@@ -1132,7 +1132,6 @@
       <div class="app-example__toolbar">
         <a href="/components/file-upload/default/index.html" class="app-example__new-window" target="_blank">
           Open this
-
           <span class="govuk-visually-hidden">file upload</span>
           example in a new tab
         </a>
@@ -1157,17 +1156,15 @@
     </div>
       <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#file-upload-example-nunjucks" aria-controls="file-upload-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
     <div class="app-tabs__container js-tabs__container" id="file-upload-example-nunjucks" role="tabpanel">  
-
-
-        <details class="govuk-details app-options" data-module="govuk-details" id="options-file-upload-example-details">
+  
+<details class="govuk-details app-options" data-module="govuk-details" id="options-file-upload-example-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
       <span data-components='github-component-arguments'>Nunjucks macro options</span>
     </span>
   </summary>
   <div class="govuk-details__text">
-
-          <p>
+              <p>
           Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
           </p>
           <p>
@@ -1176,8 +1173,7 @@
           <p>
           If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
           </p>
-
-            <table class="govuk-table app-options__table" id="options-file-upload-example--primary">
+<table class="govuk-table app-options__table" id="options-file-upload-example--primary">
               <caption class="govuk-table__caption govuk-heading-m  govuk-visually-hidden">Primary options</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1187,7 +1183,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">name</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1224,53 +1219,54 @@
                     <td class="govuk-table__cell ">
                         <strong>Required.</strong>
                       Options for the label component.
-
-                          See <a href="#options-file-upload-example--label">label</a>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">hint</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      Options for the hint component.
-
-                          See <a href="#options-file-upload-example--hint">hint</a>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">errorMessage</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      Options for the error message component. The error message component will not display if you use a falsy value for <code>errorMessage</code>, for example <code>false</code> or <code>null</code>.
-
-                          See <a href="/components/error-message/#options-error-message-example">errorMessage</a>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">formGroup</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      Options for the form-group wrapper.
-                        See <a href="#options-file-upload-example--formGroup">formGroup</a>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">classes</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      Classes to add to the file upload component.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">attributes</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      HTML attributes (for example data attributes) to add to the file upload component.
-                    </td>
-                  </tr>
-              </tbody>
-            </table>
-            <table class="govuk-table app-options__table" id="options-file-upload-example--formGroup">
+                        
+<pre><code>See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#options-file-upload-example--label&quot;</span>&gt;</span>label<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>hint<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Options for the hint component.
+                    
+                      See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#options-file-upload-example--hint&quot;</span>&gt;</span>hint<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>errorMessage<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Options for the error message component. The error message component will not display if you use a falsy value for <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>errorMessage<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, for example <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>false<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> or <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>null<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.
+                    
+                      See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/components/error-message/#options-error-message-example&quot;</span>&gt;</span>errorMessage<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>formGroup<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Options for the form-group wrapper.
+                    See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#options-file-upload-example--formGroup&quot;</span>&gt;</span>formGroup<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>classes<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>string<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Classes to add to the file upload component.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>attributes<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  HTML attributes (for example data attributes) to add to the file upload component.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+</code></pre>
+<table class="govuk-table app-options__table" id="options-file-upload-example--formGroup">
               <caption class="govuk-table__caption govuk-heading-m ">Options for formGroup</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1280,7 +1276,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">classes</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1290,7 +1285,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-file-upload-example--label">
+<table class="govuk-table app-options__table" id="options-file-upload-example--label">
               <caption class="govuk-table__caption govuk-heading-m ">Options for label</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1300,7 +1295,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">text</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1347,7 +1341,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-file-upload-example--hint">
+<table class="govuk-table app-options__table" id="options-file-upload-example--hint">
               <caption class="govuk-table__caption govuk-heading-m ">Options for hint</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1357,7 +1351,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">text</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1397,14 +1390,13 @@
                   </tr>
               </tbody>
             </table>
-
+  
 
   </div>
 </details>
 
-      <div class="app-example__code">
+<div class="app-example__code">
         <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/file-upload/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukFileUpload %}
-
 {{ govukFileUpload({
   <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;file-upload-1&quot;</span>,
   <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;file-upload-1&quot;</span>,
@@ -1427,7 +1419,6 @@
       <div class="app-example__toolbar">
         <a href="/components/file-upload/default/index.html" class="app-example__new-window" target="_blank">
           Open this
-
           <span class="govuk-visually-hidden">file upload second</span>
           example in a new tab
         </a>
@@ -1452,17 +1443,15 @@
     </div>
       <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#file-upload-second-example-nunjucks" aria-controls="file-upload-second-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
     <div class="app-tabs__container js-tabs__container" id="file-upload-second-example-nunjucks" role="tabpanel">  
-
-
-        <details class="govuk-details app-options" data-module="govuk-details" id="options-file-upload-second-example-details">
+  
+<details class="govuk-details app-options" data-module="govuk-details" id="options-file-upload-second-example-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
       <span data-components='github-component-arguments'>Nunjucks macro options</span>
     </span>
   </summary>
   <div class="govuk-details__text">
-
-          <p>
+              <p>
           Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
           </p>
           <p>
@@ -1471,8 +1460,7 @@
           <p>
           If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
           </p>
-
-            <table class="govuk-table app-options__table" id="options-file-upload-second-example--primary">
+<table class="govuk-table app-options__table" id="options-file-upload-second-example--primary">
               <caption class="govuk-table__caption govuk-heading-m  govuk-visually-hidden">Primary options</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1482,7 +1470,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">name</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1519,53 +1506,54 @@
                     <td class="govuk-table__cell ">
                         <strong>Required.</strong>
                       Options for the label component.
-
-                          See <a href="#options-file-upload-second-example--label">label</a>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">hint</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      Options for the hint component.
-
-                          See <a href="#options-file-upload-second-example--hint">hint</a>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">errorMessage</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      Options for the error message component. The error message component will not display if you use a falsy value for <code>errorMessage</code>, for example <code>false</code> or <code>null</code>.
-
-                          See <a href="/components/error-message/#options-error-message-example">errorMessage</a>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">formGroup</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      Options for the form-group wrapper.
-                        See <a href="#options-file-upload-second-example--formGroup">formGroup</a>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">classes</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      Classes to add to the file upload component.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">attributes</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      HTML attributes (for example data attributes) to add to the file upload component.
-                    </td>
-                  </tr>
-              </tbody>
-            </table>
-            <table class="govuk-table app-options__table" id="options-file-upload-second-example--formGroup">
+                        
+<pre><code>See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#options-file-upload-second-example--label&quot;</span>&gt;</span>label<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>hint<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Options for the hint component.
+                    
+                      See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#options-file-upload-second-example--hint&quot;</span>&gt;</span>hint<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>errorMessage<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Options for the error message component. The error message component will not display if you use a falsy value for <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>errorMessage<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, for example <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>false<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> or <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>null<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.
+                    
+                      See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/components/error-message/#options-error-message-example&quot;</span>&gt;</span>errorMessage<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>formGroup<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Options for the form-group wrapper.
+                    See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#options-file-upload-second-example--formGroup&quot;</span>&gt;</span>formGroup<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>classes<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>string<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Classes to add to the file upload component.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>attributes<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  HTML attributes (for example data attributes) to add to the file upload component.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+</code></pre>
+<table class="govuk-table app-options__table" id="options-file-upload-second-example--formGroup">
               <caption class="govuk-table__caption govuk-heading-m ">Options for formGroup</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1575,7 +1563,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">classes</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1585,7 +1572,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-file-upload-second-example--label">
+<table class="govuk-table app-options__table" id="options-file-upload-second-example--label">
               <caption class="govuk-table__caption govuk-heading-m ">Options for label</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1595,7 +1582,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">text</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1642,7 +1628,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-file-upload-second-example--hint">
+<table class="govuk-table app-options__table" id="options-file-upload-second-example--hint">
               <caption class="govuk-table__caption govuk-heading-m ">Options for hint</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1652,7 +1638,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">text</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1692,14 +1677,13 @@
                   </tr>
               </tbody>
             </table>
-
+  
 
   </div>
 </details>
 
-      <div class="app-example__code">
+<div class="app-example__code">
         <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/file-upload/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukFileUpload %}
-
 {{ govukFileUpload({
   <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;file-upload-1&quot;</span>,
   <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;file-upload-1&quot;</span>,
@@ -1720,7 +1704,6 @@
       <div class="app-example__toolbar">
         <a href="/components/file-upload/error/index.html" class="app-example__new-window" target="_blank">
           Open this
-
           <span class="govuk-visually-hidden">error – file upload</span>
           example in a new tab
         </a>
@@ -1748,17 +1731,15 @@
     </div>
       <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#error-file-upload-example-nunjucks" aria-controls="error-file-upload-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
     <div class="app-tabs__container js-tabs__container" id="error-file-upload-example-nunjucks" role="tabpanel">  
-
-
-        <details class="govuk-details app-options" data-module="govuk-details" id="options-error-file-upload-example-details">
+  
+<details class="govuk-details app-options" data-module="govuk-details" id="options-error-file-upload-example-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
       <span data-components='github-component-arguments'>Nunjucks macro options</span>
     </span>
   </summary>
   <div class="govuk-details__text">
-
-          <p>
+              <p>
           Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
           </p>
           <p>
@@ -1767,8 +1748,7 @@
           <p>
           If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
           </p>
-
-            <table class="govuk-table app-options__table" id="options-error-file-upload-example--primary">
+<table class="govuk-table app-options__table" id="options-error-file-upload-example--primary">
               <caption class="govuk-table__caption govuk-heading-m  govuk-visually-hidden">Primary options</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1778,7 +1758,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">name</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1815,53 +1794,54 @@
                     <td class="govuk-table__cell ">
                         <strong>Required.</strong>
                       Options for the label component.
-
-                          See <a href="#options-error-file-upload-example--label">label</a>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">hint</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      Options for the hint component.
-
-                          See <a href="#options-error-file-upload-example--hint">hint</a>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">errorMessage</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      Options for the error message component. The error message component will not display if you use a falsy value for <code>errorMessage</code>, for example <code>false</code> or <code>null</code>.
-
-                          See <a href="/components/error-message/#options-error-message-example">errorMessage</a>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">formGroup</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      Options for the form-group wrapper.
-                        See <a href="#options-error-file-upload-example--formGroup">formGroup</a>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">classes</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      Classes to add to the file upload component.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">attributes</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      HTML attributes (for example data attributes) to add to the file upload component.
-                    </td>
-                  </tr>
-              </tbody>
-            </table>
-            <table class="govuk-table app-options__table" id="options-error-file-upload-example--formGroup">
+                        
+<pre><code>See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#options-error-file-upload-example--label&quot;</span>&gt;</span>label<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>hint<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Options for the hint component.
+                    
+                      See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#options-error-file-upload-example--hint&quot;</span>&gt;</span>hint<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>errorMessage<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Options for the error message component. The error message component will not display if you use a falsy value for <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>errorMessage<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, for example <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>false<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> or <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>null<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.
+                    
+                      See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/components/error-message/#options-error-message-example&quot;</span>&gt;</span>errorMessage<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>formGroup<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Options for the form-group wrapper.
+                    See <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#options-error-file-upload-example--formGroup&quot;</span>&gt;</span>formGroup<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>classes<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>string<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Classes to add to the file upload component.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>attributes<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  HTML attributes (for example data attributes) to add to the file upload component.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+</code></pre>
+<table class="govuk-table app-options__table" id="options-error-file-upload-example--formGroup">
               <caption class="govuk-table__caption govuk-heading-m ">Options for formGroup</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1871,7 +1851,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">classes</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1881,7 +1860,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-error-file-upload-example--label">
+<table class="govuk-table app-options__table" id="options-error-file-upload-example--label">
               <caption class="govuk-table__caption govuk-heading-m ">Options for label</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1891,7 +1870,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">text</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1938,7 +1916,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-error-file-upload-example--hint">
+<table class="govuk-table app-options__table" id="options-error-file-upload-example--hint">
               <caption class="govuk-table__caption govuk-heading-m ">Options for hint</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1948,7 +1926,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">text</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1988,14 +1965,13 @@
                   </tr>
               </tbody>
             </table>
-
+  
 
   </div>
 </details>
 
-      <div class="app-example__code">
+<div class="app-example__code">
         <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/file-upload/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukFileUpload %}
-
 {{ govukFileUpload({
   <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;file-upload-1&quot;</span>,
   <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;file-upload-1&quot;</span>,

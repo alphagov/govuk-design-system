@@ -1131,7 +1131,6 @@
       <div class="app-example__toolbar">
         <a href="/components/details/default/index.html" class="app-example__new-window" target="_blank">
           Open this
-
           <span class="govuk-visually-hidden">details</span>
           example in a new tab
         </a>
@@ -1160,17 +1159,15 @@
     </div>
       <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#details-example-nunjucks" aria-controls="details-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
     <div class="app-tabs__container js-tabs__container" id="details-example-nunjucks" role="tabpanel">  
-
-
-        <details class="govuk-details app-options" data-module="govuk-details" id="options-details-example-details">
+  
+<details class="govuk-details app-options" data-module="govuk-details" id="options-details-example-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
       <span data-components='github-component-arguments'>Nunjucks macro options</span>
     </span>
   </summary>
   <div class="govuk-details__text">
-
-          <p>
+              <p>
           Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
           </p>
           <p>
@@ -1179,8 +1176,7 @@
           <p>
           If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
           </p>
-
-            <table class="govuk-table app-options__table" id="options-details-example--primary">
+<table class="govuk-table app-options__table" id="options-details-example--primary">
               <caption class="govuk-table__caption govuk-heading-m  govuk-visually-hidden">Primary options</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1190,7 +1186,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">summaryText</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1260,14 +1255,13 @@
                   </tr>
               </tbody>
             </table>
-
+  
 
   </div>
 </details>
 
-      <div class="app-example__code">
+<div class="app-example__code">
         <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/details/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukDetails %}
-
 {{ govukDetails({
   <span class="hljs-attr">summaryText</span>: <span class="hljs-string">&quot;Help with nationality&quot;</span>,
   <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.&quot;</span>
@@ -1294,7 +1288,6 @@
       <div class="app-example__toolbar">
         <a href="/components/details/default/index.html" class="app-example__new-window" target="_blank">
           Open this
-
           <span class="govuk-visually-hidden">details second</span>
           example in a new tab
         </a>
@@ -1323,17 +1316,15 @@
     </div>
       <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#details-second-example-nunjucks" aria-controls="details-second-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
     <div class="app-tabs__container js-tabs__container" id="details-second-example-nunjucks" role="tabpanel">  
-
-
-        <details class="govuk-details app-options" data-module="govuk-details" id="options-details-second-example-details">
+  
+<details class="govuk-details app-options" data-module="govuk-details" id="options-details-second-example-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
       <span data-components='github-component-arguments'>Nunjucks macro options</span>
     </span>
   </summary>
   <div class="govuk-details__text">
-
-          <p>
+              <p>
           Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
           </p>
           <p>
@@ -1342,8 +1333,7 @@
           <p>
           If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
           </p>
-
-            <table class="govuk-table app-options__table" id="options-details-second-example--primary">
+<table class="govuk-table app-options__table" id="options-details-second-example--primary">
               <caption class="govuk-table__caption govuk-heading-m  govuk-visually-hidden">Primary options</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1353,7 +1343,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">summaryText</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1423,14 +1412,13 @@
                   </tr>
               </tbody>
             </table>
-
+  
 
   </div>
 </details>
 
-      <div class="app-example__code">
+<div class="app-example__code">
         <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/details/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukDetails %}
-
 {{ govukDetails({
   <span class="hljs-attr">summaryText</span>: <span class="hljs-string">&quot;Help with nationality&quot;</span>,
   <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.&quot;</span>

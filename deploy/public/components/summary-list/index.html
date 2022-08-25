@@ -1131,7 +1131,6 @@
       <div class="app-example__toolbar">
         <a href="/components/summary-list/default/index.html" class="app-example__new-window" target="_blank">
           Open this
-
           <span class="govuk-visually-hidden">summary list</span>
           example in a new tab
         </a>
@@ -1205,17 +1204,15 @@
     </div>
       <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#summary-list-example-nunjucks" aria-controls="summary-list-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
     <div class="app-tabs__container js-tabs__container" id="summary-list-example-nunjucks" role="tabpanel">  
-
-
-        <details class="govuk-details app-options" data-module="govuk-details" id="options-summary-list-example-details">
+  
+<details class="govuk-details app-options" data-module="govuk-details" id="options-summary-list-example-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
       <span data-components='github-component-arguments'>Nunjucks macro options</span>
     </span>
   </summary>
   <div class="govuk-details__text">
-
-          <p>
+              <p>
           Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
           </p>
           <p>
@@ -1224,8 +1221,7 @@
           <p>
           If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
           </p>
-
-            <table class="govuk-table app-options__table" id="options-summary-list-example--primary">
+<table class="govuk-table app-options__table" id="options-summary-list-example--primary">
               <caption class="govuk-table__caption govuk-heading-m  govuk-visually-hidden">Primary options</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1235,7 +1231,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">rows</th>
                     <td class="govuk-table__cell ">array</td>
@@ -1261,7 +1256,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-summary-list-example--rows">
+<table class="govuk-table app-options__table" id="options-summary-list-example--rows">
               <caption class="govuk-table__caption govuk-heading-m ">Options for rows</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1271,7 +1266,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">classes</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1292,57 +1286,58 @@
                     <td class="govuk-table__cell ">string</td>
                     <td class="govuk-table__cell ">
                         <strong>Required.</strong>
-
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">key.classes</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      Classes to add to the key wrapper.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">value.text</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                        <strong>Required.</strong>
-                      If <code>html</code> is set, this is not required. Text to use within the each value. If <code>html</code> is provided, the <code>text</code> option will be ignored.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">value.html</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                        <strong>Required.</strong>
-                      If <code>text</code> is set, this is not required. HTML to use within the each value. If <code>html</code> is provided, the <code>text</code> option will be ignored.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">value.classes</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      Classes to add to the value wrapper.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">actions.classes</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      Classes to add to the actions wrapper.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">actions.items</th>
-                    <td class="govuk-table__cell ">array</td>
-                    <td class="govuk-table__cell ">
-                      Array of action item objects.
-                        See <a href="#options-summary-list-example--actions.items">actions.items</a>.
-                    </td>
-                  </tr>
-              </tbody>
-            </table>
-            <table class="govuk-table app-options__table" id="options-summary-list-example--actions.items">
+                      
+<pre><code>&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr <span class="hljs-keyword">class</span>=&quot;govuk-table__row&quot;&gt;
+                &lt;th <span class="hljs-keyword">class</span>=&quot;govuk-table__header&quot; scope=&quot;row&quot;&gt;key.classes&lt;/th&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;string&lt;/td&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;
+                  Classes <span class="hljs-keyword">to</span> <span class="hljs-keyword">add</span> <span class="hljs-keyword">to</span> the key <span class="hljs-keyword">wrapper</span>.
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr <span class="hljs-keyword">class</span>=&quot;govuk-table__row&quot;&gt;
+                &lt;th <span class="hljs-keyword">class</span>=&quot;govuk-table__header&quot; scope=&quot;row&quot;&gt;<span class="hljs-keyword">value</span>.text&lt;/th&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;string&lt;/td&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;
+                    &lt;strong&gt;Required.&lt;/strong&gt;
+                  <span class="hljs-keyword">If</span> &lt;code&gt;html&lt;/code&gt; <span class="hljs-keyword">is</span> <span class="hljs-keyword">set</span>, this <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> required. <span class="hljs-type">Text</span> <span class="hljs-keyword">to</span> use <span class="hljs-keyword">within</span> the <span class="hljs-keyword">each</span> <span class="hljs-keyword">value</span>. <span class="hljs-keyword">If</span> &lt;code&gt;html&lt;/code&gt; <span class="hljs-keyword">is</span> provided, the &lt;code&gt;<span class="hljs-type">text</span>&lt;/code&gt; <span class="hljs-keyword">option</span> will be ignored.
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr <span class="hljs-keyword">class</span>=&quot;govuk-table__row&quot;&gt;
+                &lt;th <span class="hljs-keyword">class</span>=&quot;govuk-table__header&quot; scope=&quot;row&quot;&gt;<span class="hljs-keyword">value</span>.html&lt;/th&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;string&lt;/td&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;
+                    &lt;strong&gt;Required.&lt;/strong&gt;
+                  <span class="hljs-keyword">If</span> &lt;code&gt;<span class="hljs-type">text</span>&lt;/code&gt; <span class="hljs-keyword">is</span> <span class="hljs-keyword">set</span>, this <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> required. HTML <span class="hljs-keyword">to</span> use <span class="hljs-keyword">within</span> the <span class="hljs-keyword">each</span> <span class="hljs-keyword">value</span>. <span class="hljs-keyword">If</span> &lt;code&gt;html&lt;/code&gt; <span class="hljs-keyword">is</span> provided, the &lt;code&gt;<span class="hljs-type">text</span>&lt;/code&gt; <span class="hljs-keyword">option</span> will be ignored.
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr <span class="hljs-keyword">class</span>=&quot;govuk-table__row&quot;&gt;
+                &lt;th <span class="hljs-keyword">class</span>=&quot;govuk-table__header&quot; scope=&quot;row&quot;&gt;<span class="hljs-keyword">value</span>.classes&lt;/th&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;string&lt;/td&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;
+                  Classes <span class="hljs-keyword">to</span> <span class="hljs-keyword">add</span> <span class="hljs-keyword">to</span> the <span class="hljs-keyword">value</span> <span class="hljs-keyword">wrapper</span>.
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr <span class="hljs-keyword">class</span>=&quot;govuk-table__row&quot;&gt;
+                &lt;th <span class="hljs-keyword">class</span>=&quot;govuk-table__header&quot; scope=&quot;row&quot;&gt;actions.classes&lt;/th&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;string&lt;/td&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;
+                  Classes <span class="hljs-keyword">to</span> <span class="hljs-keyword">add</span> <span class="hljs-keyword">to</span> the actions <span class="hljs-keyword">wrapper</span>.
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr <span class="hljs-keyword">class</span>=&quot;govuk-table__row&quot;&gt;
+                &lt;th <span class="hljs-keyword">class</span>=&quot;govuk-table__header&quot; scope=&quot;row&quot;&gt;actions.items&lt;/th&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;<span class="hljs-keyword">array</span>&lt;/td&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;
+                  <span class="hljs-keyword">Array</span> <span class="hljs-keyword">of</span> action item objects.
+                    See &lt;a href=&quot;#options-summary-list-example--actions.items&quot;&gt;actions.items&lt;/a&gt;.
+                &lt;/td&gt;
+              &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/<span class="hljs-keyword">table</span>&gt;
+</code></pre>
+<table class="govuk-table app-options__table" id="options-summary-list-example--actions.items">
               <caption class="govuk-table__caption govuk-heading-m ">Options for actions.items</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1352,7 +1347,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">href</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1400,14 +1394,13 @@
                   </tr>
               </tbody>
             </table>
-
+  
 
   </div>
 </details>
 
-      <div class="app-example__code">
+<div class="app-example__code">
         <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/summary-list/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukSummaryList %}
-
 {{ govukSummaryList({
   <span class="hljs-attr">rows</span>: [
     {
@@ -1499,7 +1492,6 @@
       <div class="app-example__toolbar">
         <a href="/components/summary-list/without-actions/index.html" class="app-example__new-window" target="_blank">
           Open this
-
           <span class="govuk-visually-hidden">without actions – summary list</span>
           example in a new tab
         </a>
@@ -1553,17 +1545,15 @@
     </div>
       <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#without-actions-summary-list-example-nunjucks" aria-controls="without-actions-summary-list-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
     <div class="app-tabs__container js-tabs__container" id="without-actions-summary-list-example-nunjucks" role="tabpanel">  
-
-
-        <details class="govuk-details app-options" data-module="govuk-details" id="options-without-actions-summary-list-example-details">
+  
+<details class="govuk-details app-options" data-module="govuk-details" id="options-without-actions-summary-list-example-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
       <span data-components='github-component-arguments'>Nunjucks macro options</span>
     </span>
   </summary>
   <div class="govuk-details__text">
-
-          <p>
+              <p>
           Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
           </p>
           <p>
@@ -1572,8 +1562,7 @@
           <p>
           If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
           </p>
-
-            <table class="govuk-table app-options__table" id="options-without-actions-summary-list-example--primary">
+<table class="govuk-table app-options__table" id="options-without-actions-summary-list-example--primary">
               <caption class="govuk-table__caption govuk-heading-m  govuk-visually-hidden">Primary options</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1583,7 +1572,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">rows</th>
                     <td class="govuk-table__cell ">array</td>
@@ -1609,7 +1597,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-without-actions-summary-list-example--rows">
+<table class="govuk-table app-options__table" id="options-without-actions-summary-list-example--rows">
               <caption class="govuk-table__caption govuk-heading-m ">Options for rows</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1619,7 +1607,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">classes</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1640,57 +1627,58 @@
                     <td class="govuk-table__cell ">string</td>
                     <td class="govuk-table__cell ">
                         <strong>Required.</strong>
-
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">key.classes</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      Classes to add to the key wrapper.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">value.text</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                        <strong>Required.</strong>
-                      If <code>html</code> is set, this is not required. Text to use within the each value. If <code>html</code> is provided, the <code>text</code> option will be ignored.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">value.html</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                        <strong>Required.</strong>
-                      If <code>text</code> is set, this is not required. HTML to use within the each value. If <code>html</code> is provided, the <code>text</code> option will be ignored.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">value.classes</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      Classes to add to the value wrapper.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">actions.classes</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      Classes to add to the actions wrapper.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">actions.items</th>
-                    <td class="govuk-table__cell ">array</td>
-                    <td class="govuk-table__cell ">
-                      Array of action item objects.
-                        See <a href="#options-without-actions-summary-list-example--actions.items">actions.items</a>.
-                    </td>
-                  </tr>
-              </tbody>
-            </table>
-            <table class="govuk-table app-options__table" id="options-without-actions-summary-list-example--actions.items">
+                      
+<pre><code>&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr <span class="hljs-keyword">class</span>=&quot;govuk-table__row&quot;&gt;
+                &lt;th <span class="hljs-keyword">class</span>=&quot;govuk-table__header&quot; scope=&quot;row&quot;&gt;key.classes&lt;/th&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;string&lt;/td&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;
+                  Classes <span class="hljs-keyword">to</span> <span class="hljs-keyword">add</span> <span class="hljs-keyword">to</span> the key <span class="hljs-keyword">wrapper</span>.
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr <span class="hljs-keyword">class</span>=&quot;govuk-table__row&quot;&gt;
+                &lt;th <span class="hljs-keyword">class</span>=&quot;govuk-table__header&quot; scope=&quot;row&quot;&gt;<span class="hljs-keyword">value</span>.text&lt;/th&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;string&lt;/td&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;
+                    &lt;strong&gt;Required.&lt;/strong&gt;
+                  <span class="hljs-keyword">If</span> &lt;code&gt;html&lt;/code&gt; <span class="hljs-keyword">is</span> <span class="hljs-keyword">set</span>, this <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> required. <span class="hljs-type">Text</span> <span class="hljs-keyword">to</span> use <span class="hljs-keyword">within</span> the <span class="hljs-keyword">each</span> <span class="hljs-keyword">value</span>. <span class="hljs-keyword">If</span> &lt;code&gt;html&lt;/code&gt; <span class="hljs-keyword">is</span> provided, the &lt;code&gt;<span class="hljs-type">text</span>&lt;/code&gt; <span class="hljs-keyword">option</span> will be ignored.
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr <span class="hljs-keyword">class</span>=&quot;govuk-table__row&quot;&gt;
+                &lt;th <span class="hljs-keyword">class</span>=&quot;govuk-table__header&quot; scope=&quot;row&quot;&gt;<span class="hljs-keyword">value</span>.html&lt;/th&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;string&lt;/td&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;
+                    &lt;strong&gt;Required.&lt;/strong&gt;
+                  <span class="hljs-keyword">If</span> &lt;code&gt;<span class="hljs-type">text</span>&lt;/code&gt; <span class="hljs-keyword">is</span> <span class="hljs-keyword">set</span>, this <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> required. HTML <span class="hljs-keyword">to</span> use <span class="hljs-keyword">within</span> the <span class="hljs-keyword">each</span> <span class="hljs-keyword">value</span>. <span class="hljs-keyword">If</span> &lt;code&gt;html&lt;/code&gt; <span class="hljs-keyword">is</span> provided, the &lt;code&gt;<span class="hljs-type">text</span>&lt;/code&gt; <span class="hljs-keyword">option</span> will be ignored.
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr <span class="hljs-keyword">class</span>=&quot;govuk-table__row&quot;&gt;
+                &lt;th <span class="hljs-keyword">class</span>=&quot;govuk-table__header&quot; scope=&quot;row&quot;&gt;<span class="hljs-keyword">value</span>.classes&lt;/th&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;string&lt;/td&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;
+                  Classes <span class="hljs-keyword">to</span> <span class="hljs-keyword">add</span> <span class="hljs-keyword">to</span> the <span class="hljs-keyword">value</span> <span class="hljs-keyword">wrapper</span>.
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr <span class="hljs-keyword">class</span>=&quot;govuk-table__row&quot;&gt;
+                &lt;th <span class="hljs-keyword">class</span>=&quot;govuk-table__header&quot; scope=&quot;row&quot;&gt;actions.classes&lt;/th&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;string&lt;/td&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;
+                  Classes <span class="hljs-keyword">to</span> <span class="hljs-keyword">add</span> <span class="hljs-keyword">to</span> the actions <span class="hljs-keyword">wrapper</span>.
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr <span class="hljs-keyword">class</span>=&quot;govuk-table__row&quot;&gt;
+                &lt;th <span class="hljs-keyword">class</span>=&quot;govuk-table__header&quot; scope=&quot;row&quot;&gt;actions.items&lt;/th&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;<span class="hljs-keyword">array</span>&lt;/td&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;
+                  <span class="hljs-keyword">Array</span> <span class="hljs-keyword">of</span> action item objects.
+                    See &lt;a href=&quot;#options-without-actions-summary-list-example--actions.items&quot;&gt;actions.items&lt;/a&gt;.
+                &lt;/td&gt;
+              &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/<span class="hljs-keyword">table</span>&gt;
+</code></pre>
+<table class="govuk-table app-options__table" id="options-without-actions-summary-list-example--actions.items">
               <caption class="govuk-table__caption govuk-heading-m ">Options for actions.items</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1700,7 +1688,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">href</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1748,14 +1735,13 @@
                   </tr>
               </tbody>
             </table>
-
+  
 
   </div>
 </details>
 
-      <div class="app-example__code">
+<div class="app-example__code">
         <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/summary-list/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukSummaryList %}
-
 {{ govukSummaryList({
   <span class="hljs-attr">rows</span>: [
     {
@@ -1808,7 +1794,6 @@
       <div class="app-example__toolbar">
         <a href="/components/summary-list/default/index.html" class="app-example__new-window" target="_blank">
           Open this
-
           <span class="govuk-visually-hidden">summary list second</span>
           example in a new tab
         </a>
@@ -1882,17 +1867,15 @@
     </div>
       <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#summary-list-second-example-nunjucks" aria-controls="summary-list-second-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
     <div class="app-tabs__container js-tabs__container" id="summary-list-second-example-nunjucks" role="tabpanel">  
-
-
-        <details class="govuk-details app-options" data-module="govuk-details" id="options-summary-list-second-example-details">
+  
+<details class="govuk-details app-options" data-module="govuk-details" id="options-summary-list-second-example-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
       <span data-components='github-component-arguments'>Nunjucks macro options</span>
     </span>
   </summary>
   <div class="govuk-details__text">
-
-          <p>
+              <p>
           Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
           </p>
           <p>
@@ -1901,8 +1884,7 @@
           <p>
           If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
           </p>
-
-            <table class="govuk-table app-options__table" id="options-summary-list-second-example--primary">
+<table class="govuk-table app-options__table" id="options-summary-list-second-example--primary">
               <caption class="govuk-table__caption govuk-heading-m  govuk-visually-hidden">Primary options</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1912,7 +1894,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">rows</th>
                     <td class="govuk-table__cell ">array</td>
@@ -1938,7 +1919,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-summary-list-second-example--rows">
+<table class="govuk-table app-options__table" id="options-summary-list-second-example--rows">
               <caption class="govuk-table__caption govuk-heading-m ">Options for rows</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1948,7 +1929,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">classes</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1969,57 +1949,58 @@
                     <td class="govuk-table__cell ">string</td>
                     <td class="govuk-table__cell ">
                         <strong>Required.</strong>
-
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">key.classes</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      Classes to add to the key wrapper.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">value.text</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                        <strong>Required.</strong>
-                      If <code>html</code> is set, this is not required. Text to use within the each value. If <code>html</code> is provided, the <code>text</code> option will be ignored.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">value.html</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                        <strong>Required.</strong>
-                      If <code>text</code> is set, this is not required. HTML to use within the each value. If <code>html</code> is provided, the <code>text</code> option will be ignored.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">value.classes</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      Classes to add to the value wrapper.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">actions.classes</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      Classes to add to the actions wrapper.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">actions.items</th>
-                    <td class="govuk-table__cell ">array</td>
-                    <td class="govuk-table__cell ">
-                      Array of action item objects.
-                        See <a href="#options-summary-list-second-example--actions.items">actions.items</a>.
-                    </td>
-                  </tr>
-              </tbody>
-            </table>
-            <table class="govuk-table app-options__table" id="options-summary-list-second-example--actions.items">
+                      
+<pre><code>&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr <span class="hljs-keyword">class</span>=&quot;govuk-table__row&quot;&gt;
+                &lt;th <span class="hljs-keyword">class</span>=&quot;govuk-table__header&quot; scope=&quot;row&quot;&gt;key.classes&lt;/th&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;string&lt;/td&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;
+                  Classes <span class="hljs-keyword">to</span> <span class="hljs-keyword">add</span> <span class="hljs-keyword">to</span> the key <span class="hljs-keyword">wrapper</span>.
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr <span class="hljs-keyword">class</span>=&quot;govuk-table__row&quot;&gt;
+                &lt;th <span class="hljs-keyword">class</span>=&quot;govuk-table__header&quot; scope=&quot;row&quot;&gt;<span class="hljs-keyword">value</span>.text&lt;/th&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;string&lt;/td&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;
+                    &lt;strong&gt;Required.&lt;/strong&gt;
+                  <span class="hljs-keyword">If</span> &lt;code&gt;html&lt;/code&gt; <span class="hljs-keyword">is</span> <span class="hljs-keyword">set</span>, this <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> required. <span class="hljs-type">Text</span> <span class="hljs-keyword">to</span> use <span class="hljs-keyword">within</span> the <span class="hljs-keyword">each</span> <span class="hljs-keyword">value</span>. <span class="hljs-keyword">If</span> &lt;code&gt;html&lt;/code&gt; <span class="hljs-keyword">is</span> provided, the &lt;code&gt;<span class="hljs-type">text</span>&lt;/code&gt; <span class="hljs-keyword">option</span> will be ignored.
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr <span class="hljs-keyword">class</span>=&quot;govuk-table__row&quot;&gt;
+                &lt;th <span class="hljs-keyword">class</span>=&quot;govuk-table__header&quot; scope=&quot;row&quot;&gt;<span class="hljs-keyword">value</span>.html&lt;/th&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;string&lt;/td&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;
+                    &lt;strong&gt;Required.&lt;/strong&gt;
+                  <span class="hljs-keyword">If</span> &lt;code&gt;<span class="hljs-type">text</span>&lt;/code&gt; <span class="hljs-keyword">is</span> <span class="hljs-keyword">set</span>, this <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> required. HTML <span class="hljs-keyword">to</span> use <span class="hljs-keyword">within</span> the <span class="hljs-keyword">each</span> <span class="hljs-keyword">value</span>. <span class="hljs-keyword">If</span> &lt;code&gt;html&lt;/code&gt; <span class="hljs-keyword">is</span> provided, the &lt;code&gt;<span class="hljs-type">text</span>&lt;/code&gt; <span class="hljs-keyword">option</span> will be ignored.
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr <span class="hljs-keyword">class</span>=&quot;govuk-table__row&quot;&gt;
+                &lt;th <span class="hljs-keyword">class</span>=&quot;govuk-table__header&quot; scope=&quot;row&quot;&gt;<span class="hljs-keyword">value</span>.classes&lt;/th&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;string&lt;/td&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;
+                  Classes <span class="hljs-keyword">to</span> <span class="hljs-keyword">add</span> <span class="hljs-keyword">to</span> the <span class="hljs-keyword">value</span> <span class="hljs-keyword">wrapper</span>.
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr <span class="hljs-keyword">class</span>=&quot;govuk-table__row&quot;&gt;
+                &lt;th <span class="hljs-keyword">class</span>=&quot;govuk-table__header&quot; scope=&quot;row&quot;&gt;actions.classes&lt;/th&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;string&lt;/td&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;
+                  Classes <span class="hljs-keyword">to</span> <span class="hljs-keyword">add</span> <span class="hljs-keyword">to</span> the actions <span class="hljs-keyword">wrapper</span>.
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr <span class="hljs-keyword">class</span>=&quot;govuk-table__row&quot;&gt;
+                &lt;th <span class="hljs-keyword">class</span>=&quot;govuk-table__header&quot; scope=&quot;row&quot;&gt;actions.items&lt;/th&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;<span class="hljs-keyword">array</span>&lt;/td&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;
+                  <span class="hljs-keyword">Array</span> <span class="hljs-keyword">of</span> action item objects.
+                    See &lt;a href=&quot;#options-summary-list-second-example--actions.items&quot;&gt;actions.items&lt;/a&gt;.
+                &lt;/td&gt;
+              &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/<span class="hljs-keyword">table</span>&gt;
+</code></pre>
+<table class="govuk-table app-options__table" id="options-summary-list-second-example--actions.items">
               <caption class="govuk-table__caption govuk-heading-m ">Options for actions.items</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -2029,7 +2010,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">href</th>
                     <td class="govuk-table__cell ">string</td>
@@ -2077,14 +2057,13 @@
                   </tr>
               </tbody>
             </table>
-
+  
 
   </div>
 </details>
 
-      <div class="app-example__code">
+<div class="app-example__code">
         <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/summary-list/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukSummaryList %}
-
 {{ govukSummaryList({
   <span class="hljs-attr">rows</span>: [
     {
@@ -2169,7 +2148,6 @@
       <div class="app-example__toolbar">
         <a href="/components/summary-list/mixed-actions/index.html" class="app-example__new-window" target="_blank">
           Open this
-
           <span class="govuk-visually-hidden">summary list with a mix of rows with and without actions</span>
           example in a new tab
         </a>
@@ -2238,17 +2216,15 @@
     </div>
       <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#summary-list-with-a-mix-of-rows-with-and-without-actions-example-nunjucks" aria-controls="summary-list-with-a-mix-of-rows-with-and-without-actions-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
     <div class="app-tabs__container js-tabs__container" id="summary-list-with-a-mix-of-rows-with-and-without-actions-example-nunjucks" role="tabpanel">  
-
-
-        <details class="govuk-details app-options" data-module="govuk-details" id="options-summary-list-with-a-mix-of-rows-with-and-without-actions-example-details">
+  
+<details class="govuk-details app-options" data-module="govuk-details" id="options-summary-list-with-a-mix-of-rows-with-and-without-actions-example-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
       <span data-components='github-component-arguments'>Nunjucks macro options</span>
     </span>
   </summary>
   <div class="govuk-details__text">
-
-          <p>
+              <p>
           Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
           </p>
           <p>
@@ -2257,8 +2233,7 @@
           <p>
           If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
           </p>
-
-            <table class="govuk-table app-options__table" id="options-summary-list-with-a-mix-of-rows-with-and-without-actions-example--primary">
+<table class="govuk-table app-options__table" id="options-summary-list-with-a-mix-of-rows-with-and-without-actions-example--primary">
               <caption class="govuk-table__caption govuk-heading-m  govuk-visually-hidden">Primary options</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -2268,7 +2243,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">rows</th>
                     <td class="govuk-table__cell ">array</td>
@@ -2294,7 +2268,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-summary-list-with-a-mix-of-rows-with-and-without-actions-example--rows">
+<table class="govuk-table app-options__table" id="options-summary-list-with-a-mix-of-rows-with-and-without-actions-example--rows">
               <caption class="govuk-table__caption govuk-heading-m ">Options for rows</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -2304,7 +2278,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">classes</th>
                     <td class="govuk-table__cell ">string</td>
@@ -2325,57 +2298,58 @@
                     <td class="govuk-table__cell ">string</td>
                     <td class="govuk-table__cell ">
                         <strong>Required.</strong>
-
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">key.classes</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      Classes to add to the key wrapper.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">value.text</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                        <strong>Required.</strong>
-                      If <code>html</code> is set, this is not required. Text to use within the each value. If <code>html</code> is provided, the <code>text</code> option will be ignored.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">value.html</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                        <strong>Required.</strong>
-                      If <code>text</code> is set, this is not required. HTML to use within the each value. If <code>html</code> is provided, the <code>text</code> option will be ignored.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">value.classes</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      Classes to add to the value wrapper.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">actions.classes</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      Classes to add to the actions wrapper.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">actions.items</th>
-                    <td class="govuk-table__cell ">array</td>
-                    <td class="govuk-table__cell ">
-                      Array of action item objects.
-                        See <a href="#options-summary-list-with-a-mix-of-rows-with-and-without-actions-example--actions.items">actions.items</a>.
-                    </td>
-                  </tr>
-              </tbody>
-            </table>
-            <table class="govuk-table app-options__table" id="options-summary-list-with-a-mix-of-rows-with-and-without-actions-example--actions.items">
+                      
+<pre><code>&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr <span class="hljs-keyword">class</span>=&quot;govuk-table__row&quot;&gt;
+                &lt;th <span class="hljs-keyword">class</span>=&quot;govuk-table__header&quot; scope=&quot;row&quot;&gt;key.classes&lt;/th&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;string&lt;/td&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;
+                  Classes <span class="hljs-keyword">to</span> <span class="hljs-keyword">add</span> <span class="hljs-keyword">to</span> the key <span class="hljs-keyword">wrapper</span>.
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr <span class="hljs-keyword">class</span>=&quot;govuk-table__row&quot;&gt;
+                &lt;th <span class="hljs-keyword">class</span>=&quot;govuk-table__header&quot; scope=&quot;row&quot;&gt;<span class="hljs-keyword">value</span>.text&lt;/th&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;string&lt;/td&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;
+                    &lt;strong&gt;Required.&lt;/strong&gt;
+                  <span class="hljs-keyword">If</span> &lt;code&gt;html&lt;/code&gt; <span class="hljs-keyword">is</span> <span class="hljs-keyword">set</span>, this <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> required. <span class="hljs-type">Text</span> <span class="hljs-keyword">to</span> use <span class="hljs-keyword">within</span> the <span class="hljs-keyword">each</span> <span class="hljs-keyword">value</span>. <span class="hljs-keyword">If</span> &lt;code&gt;html&lt;/code&gt; <span class="hljs-keyword">is</span> provided, the &lt;code&gt;<span class="hljs-type">text</span>&lt;/code&gt; <span class="hljs-keyword">option</span> will be ignored.
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr <span class="hljs-keyword">class</span>=&quot;govuk-table__row&quot;&gt;
+                &lt;th <span class="hljs-keyword">class</span>=&quot;govuk-table__header&quot; scope=&quot;row&quot;&gt;<span class="hljs-keyword">value</span>.html&lt;/th&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;string&lt;/td&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;
+                    &lt;strong&gt;Required.&lt;/strong&gt;
+                  <span class="hljs-keyword">If</span> &lt;code&gt;<span class="hljs-type">text</span>&lt;/code&gt; <span class="hljs-keyword">is</span> <span class="hljs-keyword">set</span>, this <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> required. HTML <span class="hljs-keyword">to</span> use <span class="hljs-keyword">within</span> the <span class="hljs-keyword">each</span> <span class="hljs-keyword">value</span>. <span class="hljs-keyword">If</span> &lt;code&gt;html&lt;/code&gt; <span class="hljs-keyword">is</span> provided, the &lt;code&gt;<span class="hljs-type">text</span>&lt;/code&gt; <span class="hljs-keyword">option</span> will be ignored.
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr <span class="hljs-keyword">class</span>=&quot;govuk-table__row&quot;&gt;
+                &lt;th <span class="hljs-keyword">class</span>=&quot;govuk-table__header&quot; scope=&quot;row&quot;&gt;<span class="hljs-keyword">value</span>.classes&lt;/th&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;string&lt;/td&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;
+                  Classes <span class="hljs-keyword">to</span> <span class="hljs-keyword">add</span> <span class="hljs-keyword">to</span> the <span class="hljs-keyword">value</span> <span class="hljs-keyword">wrapper</span>.
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr <span class="hljs-keyword">class</span>=&quot;govuk-table__row&quot;&gt;
+                &lt;th <span class="hljs-keyword">class</span>=&quot;govuk-table__header&quot; scope=&quot;row&quot;&gt;actions.classes&lt;/th&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;string&lt;/td&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;
+                  Classes <span class="hljs-keyword">to</span> <span class="hljs-keyword">add</span> <span class="hljs-keyword">to</span> the actions <span class="hljs-keyword">wrapper</span>.
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr <span class="hljs-keyword">class</span>=&quot;govuk-table__row&quot;&gt;
+                &lt;th <span class="hljs-keyword">class</span>=&quot;govuk-table__header&quot; scope=&quot;row&quot;&gt;actions.items&lt;/th&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;<span class="hljs-keyword">array</span>&lt;/td&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;
+                  <span class="hljs-keyword">Array</span> <span class="hljs-keyword">of</span> action item objects.
+                    See &lt;a href=&quot;#options-summary-list-with-a-mix-of-rows-with-and-without-actions-example--actions.items&quot;&gt;actions.items&lt;/a&gt;.
+                &lt;/td&gt;
+              &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/<span class="hljs-keyword">table</span>&gt;
+</code></pre>
+<table class="govuk-table app-options__table" id="options-summary-list-with-a-mix-of-rows-with-and-without-actions-example--actions.items">
               <caption class="govuk-table__caption govuk-heading-m ">Options for actions.items</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -2385,7 +2359,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">href</th>
                     <td class="govuk-table__cell ">string</td>
@@ -2433,14 +2406,13 @@
                   </tr>
               </tbody>
             </table>
-
+  
 
   </div>
 </details>
 
-      <div class="app-example__code">
+<div class="app-example__code">
         <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/summary-list/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukSummaryList %}
-
 {{ govukSummaryList({
   <span class="hljs-attr">rows</span>: [
     {
@@ -2518,7 +2490,6 @@
       <div class="app-example__toolbar">
         <a href="/components/summary-list/without-borders/index.html" class="app-example__new-window" target="_blank">
           Open this
-
           <span class="govuk-visually-hidden">without borders – summary list</span>
           example in a new tab
         </a>
@@ -2572,17 +2543,15 @@
     </div>
       <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#without-borders-summary-list-example-nunjucks" aria-controls="without-borders-summary-list-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
     <div class="app-tabs__container js-tabs__container" id="without-borders-summary-list-example-nunjucks" role="tabpanel">  
-
-
-        <details class="govuk-details app-options" data-module="govuk-details" id="options-without-borders-summary-list-example-details">
+  
+<details class="govuk-details app-options" data-module="govuk-details" id="options-without-borders-summary-list-example-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
       <span data-components='github-component-arguments'>Nunjucks macro options</span>
     </span>
   </summary>
   <div class="govuk-details__text">
-
-          <p>
+              <p>
           Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
           </p>
           <p>
@@ -2591,8 +2560,7 @@
           <p>
           If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
           </p>
-
-            <table class="govuk-table app-options__table" id="options-without-borders-summary-list-example--primary">
+<table class="govuk-table app-options__table" id="options-without-borders-summary-list-example--primary">
               <caption class="govuk-table__caption govuk-heading-m  govuk-visually-hidden">Primary options</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -2602,7 +2570,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">rows</th>
                     <td class="govuk-table__cell ">array</td>
@@ -2628,7 +2595,7 @@
                   </tr>
               </tbody>
             </table>
-            <table class="govuk-table app-options__table" id="options-without-borders-summary-list-example--rows">
+<table class="govuk-table app-options__table" id="options-without-borders-summary-list-example--rows">
               <caption class="govuk-table__caption govuk-heading-m ">Options for rows</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -2638,7 +2605,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">classes</th>
                     <td class="govuk-table__cell ">string</td>
@@ -2659,57 +2625,58 @@
                     <td class="govuk-table__cell ">string</td>
                     <td class="govuk-table__cell ">
                         <strong>Required.</strong>
-
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">key.classes</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      Classes to add to the key wrapper.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">value.text</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                        <strong>Required.</strong>
-                      If <code>html</code> is set, this is not required. Text to use within the each value. If <code>html</code> is provided, the <code>text</code> option will be ignored.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">value.html</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                        <strong>Required.</strong>
-                      If <code>text</code> is set, this is not required. HTML to use within the each value. If <code>html</code> is provided, the <code>text</code> option will be ignored.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">value.classes</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      Classes to add to the value wrapper.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">actions.classes</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      Classes to add to the actions wrapper.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">actions.items</th>
-                    <td class="govuk-table__cell ">array</td>
-                    <td class="govuk-table__cell ">
-                      Array of action item objects.
-                        See <a href="#options-without-borders-summary-list-example--actions.items">actions.items</a>.
-                    </td>
-                  </tr>
-              </tbody>
-            </table>
-            <table class="govuk-table app-options__table" id="options-without-borders-summary-list-example--actions.items">
+                      
+<pre><code>&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr <span class="hljs-keyword">class</span>=&quot;govuk-table__row&quot;&gt;
+                &lt;th <span class="hljs-keyword">class</span>=&quot;govuk-table__header&quot; scope=&quot;row&quot;&gt;key.classes&lt;/th&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;string&lt;/td&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;
+                  Classes <span class="hljs-keyword">to</span> <span class="hljs-keyword">add</span> <span class="hljs-keyword">to</span> the key <span class="hljs-keyword">wrapper</span>.
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr <span class="hljs-keyword">class</span>=&quot;govuk-table__row&quot;&gt;
+                &lt;th <span class="hljs-keyword">class</span>=&quot;govuk-table__header&quot; scope=&quot;row&quot;&gt;<span class="hljs-keyword">value</span>.text&lt;/th&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;string&lt;/td&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;
+                    &lt;strong&gt;Required.&lt;/strong&gt;
+                  <span class="hljs-keyword">If</span> &lt;code&gt;html&lt;/code&gt; <span class="hljs-keyword">is</span> <span class="hljs-keyword">set</span>, this <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> required. <span class="hljs-type">Text</span> <span class="hljs-keyword">to</span> use <span class="hljs-keyword">within</span> the <span class="hljs-keyword">each</span> <span class="hljs-keyword">value</span>. <span class="hljs-keyword">If</span> &lt;code&gt;html&lt;/code&gt; <span class="hljs-keyword">is</span> provided, the &lt;code&gt;<span class="hljs-type">text</span>&lt;/code&gt; <span class="hljs-keyword">option</span> will be ignored.
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr <span class="hljs-keyword">class</span>=&quot;govuk-table__row&quot;&gt;
+                &lt;th <span class="hljs-keyword">class</span>=&quot;govuk-table__header&quot; scope=&quot;row&quot;&gt;<span class="hljs-keyword">value</span>.html&lt;/th&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;string&lt;/td&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;
+                    &lt;strong&gt;Required.&lt;/strong&gt;
+                  <span class="hljs-keyword">If</span> &lt;code&gt;<span class="hljs-type">text</span>&lt;/code&gt; <span class="hljs-keyword">is</span> <span class="hljs-keyword">set</span>, this <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> required. HTML <span class="hljs-keyword">to</span> use <span class="hljs-keyword">within</span> the <span class="hljs-keyword">each</span> <span class="hljs-keyword">value</span>. <span class="hljs-keyword">If</span> &lt;code&gt;html&lt;/code&gt; <span class="hljs-keyword">is</span> provided, the &lt;code&gt;<span class="hljs-type">text</span>&lt;/code&gt; <span class="hljs-keyword">option</span> will be ignored.
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr <span class="hljs-keyword">class</span>=&quot;govuk-table__row&quot;&gt;
+                &lt;th <span class="hljs-keyword">class</span>=&quot;govuk-table__header&quot; scope=&quot;row&quot;&gt;<span class="hljs-keyword">value</span>.classes&lt;/th&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;string&lt;/td&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;
+                  Classes <span class="hljs-keyword">to</span> <span class="hljs-keyword">add</span> <span class="hljs-keyword">to</span> the <span class="hljs-keyword">value</span> <span class="hljs-keyword">wrapper</span>.
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr <span class="hljs-keyword">class</span>=&quot;govuk-table__row&quot;&gt;
+                &lt;th <span class="hljs-keyword">class</span>=&quot;govuk-table__header&quot; scope=&quot;row&quot;&gt;actions.classes&lt;/th&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;string&lt;/td&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;
+                  Classes <span class="hljs-keyword">to</span> <span class="hljs-keyword">add</span> <span class="hljs-keyword">to</span> the actions <span class="hljs-keyword">wrapper</span>.
+                &lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr <span class="hljs-keyword">class</span>=&quot;govuk-table__row&quot;&gt;
+                &lt;th <span class="hljs-keyword">class</span>=&quot;govuk-table__header&quot; scope=&quot;row&quot;&gt;actions.items&lt;/th&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;<span class="hljs-keyword">array</span>&lt;/td&gt;
+                &lt;td <span class="hljs-keyword">class</span>=&quot;govuk-table__cell &quot;&gt;
+                  <span class="hljs-keyword">Array</span> <span class="hljs-keyword">of</span> action item objects.
+                    See &lt;a href=&quot;#options-without-borders-summary-list-example--actions.items&quot;&gt;actions.items&lt;/a&gt;.
+                &lt;/td&gt;
+              &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/<span class="hljs-keyword">table</span>&gt;
+</code></pre>
+<table class="govuk-table app-options__table" id="options-without-borders-summary-list-example--actions.items">
               <caption class="govuk-table__caption govuk-heading-m ">Options for actions.items</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -2719,7 +2686,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">href</th>
                     <td class="govuk-table__cell ">string</td>
@@ -2767,14 +2733,13 @@
                   </tr>
               </tbody>
             </table>
-
+  
 
   </div>
 </details>
 
-      <div class="app-example__code">
+<div class="app-example__code">
         <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/summary-list/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukSummaryList %}
-
 {{ govukSummaryList({
   <span class="hljs-attr">classes</span>: <span class="hljs-string">&#x27;govuk-summary-list--no-border&#x27;</span>,
   <span class="hljs-attr">rows</span>: [

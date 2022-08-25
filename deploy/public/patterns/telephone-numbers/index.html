@@ -1144,7 +1144,6 @@
       <div class="app-example__toolbar">
         <a href="/patterns/telephone-numbers/default/index.html" class="app-example__new-window" target="_blank">
           Open this
-
           <span class="govuk-visually-hidden">default – telephone numbers</span>
           example in a new tab
         </a>
@@ -1168,9 +1167,8 @@
       </div>
     </div>
       <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#default-telephone-numbers-example-nunjucks" aria-controls="default-telephone-numbers-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
-    <div class="app-tabs__container js-tabs__container" id="default-telephone-numbers-example-nunjucks" role="tabpanel">      <div class="app-example__code">
+    <div class="app-tabs__container js-tabs__container" id="default-telephone-numbers-example-nunjucks" role="tabpanel"><div class="app-example__code">
         <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/input/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukInput %}
-
 {{ govukInput({
   <span class="hljs-attr">label</span>: {
     <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;UK telephone number&quot;</span>
@@ -1206,7 +1204,6 @@
       <div class="app-example__toolbar">
         <a href="/patterns/telephone-numbers/error-empty-field/index.html" class="app-example__new-window" target="_blank">
           Open this
-
           <span class="govuk-visually-hidden">error, empty field – telephone numbers</span>
           example in a new tab
         </a>
@@ -1233,9 +1230,8 @@
       </div>
     </div>
       <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#error-empty-field-telephone-numbers-example-nunjucks" aria-controls="error-empty-field-telephone-numbers-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
-    <div class="app-tabs__container js-tabs__container" id="error-empty-field-telephone-numbers-example-nunjucks" role="tabpanel">      <div class="app-example__code">
+    <div class="app-tabs__container js-tabs__container" id="error-empty-field-telephone-numbers-example-nunjucks" role="tabpanel"><div class="app-example__code">
         <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/input/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukInput %}
-
 {{ govukInput({
   <span class="hljs-attr">label</span>: {
     <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;UK telephone number&quot;</span>
@@ -1267,7 +1263,6 @@
       <div class="app-example__toolbar">
         <a href="/patterns/telephone-numbers/international/index.html" class="app-example__new-window" target="_blank">
           Open this
-
           <span class="govuk-visually-hidden">international – telephone numbers</span>
           example in a new tab
         </a>
@@ -1294,9 +1289,8 @@
       </div>
     </div>
       <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#international-telephone-numbers-example-nunjucks" aria-controls="international-telephone-numbers-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
-    <div class="app-tabs__container js-tabs__container" id="international-telephone-numbers-example-nunjucks" role="tabpanel">      <div class="app-example__code">
+    <div class="app-tabs__container js-tabs__container" id="international-telephone-numbers-example-nunjucks" role="tabpanel"><div class="app-example__code">
         <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/input/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukInput %}
-
 {{ govukInput({
   <span class="hljs-attr">label</span>: {
     <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Telephone number&quot;</span>
@@ -1327,13 +1321,13 @@
 <p>Tell users why you might contact them and when.</p>
 <h3 id="do-not-display-telephone-numbers-as-links-on-devices-that-cannot-make-calls">Do not display telephone numbers as links on devices that cannot make calls</h3>
 <p>It’s possible to mark up telephone numbers as links, like this:</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;tel:+442079476330&quot;</span>&gt;</span>020 7947 6330<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;tel:+442079476330&quot;</span>&gt;</span>020 7947 6330<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 </code></pre>
 <p>However, doing this will style telephone numbers as links, which is confusing on devices that do not support telephone calls.</p>
 <p>It might also not be necessary - some modern mobile browsers automatically detect telephone numbers and display them as links anyway.</p>
 <p>If you do need to mark up your telephone numbers as links, for example, to support a device that cannot automatically detect them, make sure they do not display as links on devices that cannot make calls.</p>
 <p>When you look at your service’s user journey, remember that telephone numbers as links might behave in unexpected ways for the user. For example, unless the user sets a default app to handle <code>tel:</code> links, some browsers and operating systems will automatically start a setup process.</p>
-<h3 id="write-telephone-numbers-in-the-gov-uk-style">Write telephone numbers in the GOV.UK style</h3>
+<h3 id="write-telephone-numbers-in-the-govuk-style">Write telephone numbers in the GOV.UK style</h3>
 <p>See the <a href="https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#telephone-numbers">GOV.UK style for writing telephone numbers</a>.</p>
 <h3 id="avoid-input-masking">Avoid input masking</h3>
 <p>Avoid <a href="https://css-tricks.com/input-masking/">input masking</a> because it makes it harder for users to:</p>

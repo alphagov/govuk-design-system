@@ -1044,17 +1044,17 @@
 <li>font size with <a href="/styles/typography/#font-override-classes">font override classes</a></li>
 <li>width with <a href="/styles/layout/#width-override-classes">width override classes</a></li>
 </ul>
-<h2 id="avoid-overwriting-gov-uk-design-system-code">Avoid overwriting GOV.UK Design System code</h2>
+<h2 id="avoid-overwriting-govuk-design-system-code">Avoid overwriting GOV.UK Design System code</h2>
 <p>If you make a modification involving CSS you might decide to write a selector that targets a GOV.UK Design System class and change its CSS properties.</p>
 <p>This will work in the short term but may break if you install an update relying on the component’s previous behaviour.</p>
 <p>For example, if you want to override the button component you could do the following.</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;app-interruption-card&quot;</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;app-interruption-card&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
     Inverse button
   <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre>
-<pre><code class="lang-css"><span class="hljs-selector-class">.app-interruption-card</span> <span class="hljs-selector-class">.govuk-button</span> {
+<pre><code class="language-css"><span class="hljs-selector-class">.app-interruption-card</span> <span class="hljs-selector-class">.govuk-button</span> {
   <span class="hljs-attribute">background-color</span>: white;
   <span class="hljs-attribute">color</span>: blue;
 }
@@ -1075,11 +1075,11 @@
 <h2 id="custom-override-classes">Custom override classes</h2>
 <p>If you need to specify some custom override classes which do not belong to a particular component, you can define these using your <a href="#use-a-unique-prefix-for-component-names">prefix</a> and the <code>-!-</code> convention from the GOV.UK Design System.</p>
 <p>For example, to define a custom width for a specific reference number in your services you might do this.</p>
-<pre><code class="lang-css"><span class="hljs-selector-class">.app-</span>\!<span class="hljs-selector-tag">-reference-number-width</span> {
+<pre><code class="language-css"><span class="hljs-selector-class">.app-</span>\!<span class="hljs-selector-tag">-reference-number-width</span> {
   <span class="hljs-attribute">width</span>: <span class="hljs-number">10ch</span> <span class="hljs-meta">!important</span>;
 }
 </code></pre>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;app-!-reference-number-width&quot;</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;app-!-reference-number-width&quot;</span>&gt;</span>
   7446868939
 <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
 </code></pre>
@@ -1087,13 +1087,13 @@
 <p>The GOV.UK Design System uses a naming convention called <a href="http://getbem.com/">Block Element Modifier (BEM)</a> which makes it easier to ensure styling is isolated to individual components. You can use this convention to make modifications to components.</p>
 <p>When making small modifications to components you can make use of the <a href="http://getbem.com/naming/">modifier convention from BEM</a>, which uses a suffix of <code>--</code> plus a name, alongside your own <a href="#use-a-unique-prefix-for-component-names">prefix</a>.</p>
 <p>For example, if you wanted to override the button component you could do the following.</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;app-interruption-card&quot;</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;app-interruption-card&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button app-button--inverse&quot;</span>&gt;</span>
     Inverse button
   <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre>
-<pre><code class="lang-css"><span class="hljs-selector-class">.app-button--inverse</span> {
+<pre><code class="language-css"><span class="hljs-selector-class">.app-button--inverse</span> {
   <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">govuk-colour</span>(<span class="hljs-string">&quot;white&quot;</span>);
   <span class="hljs-attribute">color</span>: <span class="hljs-built_in">govuk-colour</span>(<span class="hljs-string">&quot;blue&quot;</span>);
 }

@@ -1138,12 +1138,11 @@
       <div class="app-example__toolbar">
         <a href="/components/notification-banner/default/index.html" class="app-example__new-window" target="_blank">
           Open this
-
-          <span class="govuk-visually-hidden">default – notification banner</span>
+          <span class="govuk-visually-hidden">default – notification banner</span>
           example in a new tab
         </a>
       </div>
-      <iframe title="Default – notification banner example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable app-example__frame--s" src="/components/notification-banner/default/index.html" frameBorder="0" loading="lazy"></iframe>
+      <iframe title="Default – notification banner example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable app-example__frame--s" src="/components/notification-banner/default/index.html" frameBorder="0" loading="lazy"></iframe>
     </div>
     <span id="options-default-notification-banner-example"></span>
     <ul class="app-tabs" role="tablist">
@@ -1170,17 +1169,15 @@
     </div>
       <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#default-notification-banner-example-nunjucks" aria-controls="default-notification-banner-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
     <div class="app-tabs__container js-tabs__container" id="default-notification-banner-example-nunjucks" role="tabpanel">  
-
-
-        <details class="govuk-details app-options" data-module="govuk-details" id="options-default-notification-banner-example-details">
+  
+<details class="govuk-details app-options" data-module="govuk-details" id="options-default-notification-banner-example-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
       <span data-components='github-component-arguments'>Nunjucks macro options</span>
     </span>
   </summary>
   <div class="govuk-details__text">
-
-          <p>
+              <p>
           Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
           </p>
           <p>
@@ -1189,8 +1186,7 @@
           <p>
           If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
           </p>
-
-            <table class="govuk-table app-options__table" id="options-default-notification-banner-example--primary">
+<table class="govuk-table app-options__table" id="options-default-notification-banner-example--primary">
               <caption class="govuk-table__caption govuk-heading-m  govuk-visually-hidden">Primary options</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1200,7 +1196,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">text</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1234,81 +1229,78 @@
 <li>if you set <code>titleHtml</code>, this option is ignored</li>
 </ul>
 
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">titleHtml</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      The title HTML to use within the notification banner. You can use any string with this option. Use this option to set text that contains HTML. If you set <code>titleHtml</code>, the <code>titleText</code> option is ignored.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">titleHeadingLevel</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      Sets heading level for the title only. You can only use values between <code>1</code> and <code>6</code> with this option. The default is <code>2</code>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">type</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      The type of notification to render. You can use only the <code>success</code> or null values with this option. If you set <code>type</code> to <code>success</code>, the notification banner sets <code>role</code> to <code>alert</code>. JavaScript then moves the keyboard focus to the notification banner when the page loads. If you do not set <code>type</code>, the notification banner sets <code>role</code> to <code>region</code>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">role</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      Overrides the value of the <code>role</code> attribute for the notification banner. Defaults to <code>region</code>. If you set <code>type</code> to <code>success</code>, <code>role</code> defaults to <code>alert</code>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">titleId</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      The <code>id</code> for the banner title, and the <code>aria-labelledby</code> attribute in the banner. Defaults to <code>govuk-notification-banner-title</code>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">disableAutoFocus</th>
-                    <td class="govuk-table__cell ">boolean</td>
-                    <td class="govuk-table__cell ">
-                      If you set <code>type</code> to <code>success</code>, or <code>role</code> to <code>alert</code>, JavaScript moves the keyboard focus to the notification banner when the page loads. To disable this behaviour, set <code>disableAutoFocus</code> to <code>true</code>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">classes</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      The classes that you want to add to the notification banner.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">attributes</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      The HTML attributes that you want to add to the notification banner, for example, data attributes.
-                    </td>
-                  </tr>
-              </tbody>
-            </table>
-
-
+<pre><code><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>titleHtml<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>string<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  The title HTML to use within the notification banner. You can use any string with this option. Use this option to set text that contains HTML. If you set <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>titleHtml<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>titleText<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> option is ignored.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>titleHeadingLevel<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>string<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Sets heading level for the title only. You can only use values between <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> and <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>6<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> with this option. The default is <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>type<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>string<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  The type of notification to render. You can use only the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>success<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> or null values with this option. If you set <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>type<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>success<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, the notification banner sets <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>role<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>alert<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>. JavaScript then moves the keyboard focus to the notification banner when the page loads. If you do not set <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>type<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, the notification banner sets <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>role<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>region<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>role<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>string<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Overrides the value of the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>role<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> attribute for the notification banner. Defaults to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>region<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>. If you set <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>type<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>success<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>role<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> defaults to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>alert<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>titleId<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>string<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  The <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>id<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> for the banner title, and the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>aria-labelledby<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> attribute in the banner. Defaults to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>govuk-notification-banner-title<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>disableAutoFocus<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>boolean<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  If you set <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>type<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>success<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, or <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>role<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>alert<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, JavaScript moves the keyboard focus to the notification banner when the page loads. To disable this behaviour, set <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>disableAutoFocus<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>classes<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>string<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  The classes that you want to add to the notification banner.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>attributes<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  The HTML attributes that you want to add to the notification banner, for example, data attributes.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+</code></pre>
   </div>
 </details>
 
-      <div class="app-example__code">
+<div class="app-example__code">
         <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/notification-banner/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukNotificationBanner %}
-
 {% set html %}
   &lt;p <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-notification-banner__heading&quot;</span>&gt;
     You have <span class="hljs-number">7</span> days left to send your application.
     &lt;a <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-notification-banner__link&quot;</span> href=<span class="hljs-string">&quot;#&quot;</span>&gt;View application&lt;/a&gt;.
   &lt;/p&gt;
 {% endset %}
-
 {{ govukNotificationBanner({
   <span class="hljs-attr">html</span>: html
 }) }}</code></pre>
@@ -1352,12 +1344,11 @@
       <div class="app-example__toolbar">
         <a href="/components/notification-banner/whole-service/index.html" class="app-example__new-window" target="_blank">
           Open this
-
-          <span class="govuk-visually-hidden">whole service – notification banner</span>
+          <span class="govuk-visually-hidden">whole service – notification banner</span>
           example in a new tab
         </a>
       </div>
-      <iframe title="Whole service – notification banner example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable app-example__frame--s" src="/components/notification-banner/whole-service/index.html" frameBorder="0" loading="lazy"></iframe>
+      <iframe title="Whole service – notification banner example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable app-example__frame--s" src="/components/notification-banner/whole-service/index.html" frameBorder="0" loading="lazy"></iframe>
     </div>
     <span id="options-whole-service-notification-banner-example"></span>
     <ul class="app-tabs" role="tablist">
@@ -1381,17 +1372,15 @@
     </div>
       <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#whole-service-notification-banner-example-nunjucks" aria-controls="whole-service-notification-banner-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
     <div class="app-tabs__container js-tabs__container" id="whole-service-notification-banner-example-nunjucks" role="tabpanel">  
-
-
-        <details class="govuk-details app-options" data-module="govuk-details" id="options-whole-service-notification-banner-example-details">
+  
+<details class="govuk-details app-options" data-module="govuk-details" id="options-whole-service-notification-banner-example-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
       <span data-components='github-component-arguments'>Nunjucks macro options</span>
     </span>
   </summary>
   <div class="govuk-details__text">
-
-          <p>
+              <p>
           Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
           </p>
           <p>
@@ -1400,8 +1389,7 @@
           <p>
           If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
           </p>
-
-            <table class="govuk-table app-options__table" id="options-whole-service-notification-banner-example--primary">
+<table class="govuk-table app-options__table" id="options-whole-service-notification-banner-example--primary">
               <caption class="govuk-table__caption govuk-heading-m  govuk-visually-hidden">Primary options</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1411,7 +1399,6 @@
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">text</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1445,74 +1432,72 @@
 <li>if you set <code>titleHtml</code>, this option is ignored</li>
 </ul>
 
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">titleHtml</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      The title HTML to use within the notification banner. You can use any string with this option. Use this option to set text that contains HTML. If you set <code>titleHtml</code>, the <code>titleText</code> option is ignored.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">titleHeadingLevel</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      Sets heading level for the title only. You can only use values between <code>1</code> and <code>6</code> with this option. The default is <code>2</code>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">type</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      The type of notification to render. You can use only the <code>success</code> or null values with this option. If you set <code>type</code> to <code>success</code>, the notification banner sets <code>role</code> to <code>alert</code>. JavaScript then moves the keyboard focus to the notification banner when the page loads. If you do not set <code>type</code>, the notification banner sets <code>role</code> to <code>region</code>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">role</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      Overrides the value of the <code>role</code> attribute for the notification banner. Defaults to <code>region</code>. If you set <code>type</code> to <code>success</code>, <code>role</code> defaults to <code>alert</code>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">titleId</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      The <code>id</code> for the banner title, and the <code>aria-labelledby</code> attribute in the banner. Defaults to <code>govuk-notification-banner-title</code>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">disableAutoFocus</th>
-                    <td class="govuk-table__cell ">boolean</td>
-                    <td class="govuk-table__cell ">
-                      If you set <code>type</code> to <code>success</code>, or <code>role</code> to <code>alert</code>, JavaScript moves the keyboard focus to the notification banner when the page loads. To disable this behaviour, set <code>disableAutoFocus</code> to <code>true</code>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">classes</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      The classes that you want to add to the notification banner.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">attributes</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      The HTML attributes that you want to add to the notification banner, for example, data attributes.
-                    </td>
-                  </tr>
-              </tbody>
-            </table>
-
-
+<pre><code><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>titleHtml<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>string<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  The title HTML to use within the notification banner. You can use any string with this option. Use this option to set text that contains HTML. If you set <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>titleHtml<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>titleText<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> option is ignored.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>titleHeadingLevel<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>string<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Sets heading level for the title only. You can only use values between <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> and <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>6<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> with this option. The default is <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>type<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>string<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  The type of notification to render. You can use only the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>success<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> or null values with this option. If you set <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>type<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>success<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, the notification banner sets <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>role<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>alert<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>. JavaScript then moves the keyboard focus to the notification banner when the page loads. If you do not set <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>type<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, the notification banner sets <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>role<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>region<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>role<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>string<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Overrides the value of the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>role<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> attribute for the notification banner. Defaults to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>region<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>. If you set <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>type<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>success<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>role<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> defaults to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>alert<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>titleId<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>string<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  The <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>id<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> for the banner title, and the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>aria-labelledby<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> attribute in the banner. Defaults to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>govuk-notification-banner-title<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>disableAutoFocus<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>boolean<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  If you set <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>type<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>success<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, or <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>role<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>alert<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, JavaScript moves the keyboard focus to the notification banner when the page loads. To disable this behaviour, set <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>disableAutoFocus<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>classes<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>string<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  The classes that you want to add to the notification banner.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>attributes<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  The HTML attributes that you want to add to the notification banner, for example, data attributes.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+</code></pre>
   </div>
 </details>
 
-      <div class="app-example__code">
+<div class="app-example__code">
         <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/notification-banner/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukNotificationBanner %}
-
 {{ govukNotificationBanner({
   <span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;There may be a delay in processing your application because of the coronavirus outbreak.&#x27;</span>
 }) }}</code></pre>
@@ -1524,7 +1509,7 @@
 
 <p>If your service is on GOV.UK and it’s affected by an emergency, ask your department’s content team to <a href="https://www.gov.uk/guidance/contact-the-government-digital-service/request-a-thing#change-govuk-content">request a change to the service start page</a>.
 If your service is getting more demand than usual, check that you’ve set up <a href="/patterns/problem-with-the-service-pages/">There is a problem with the service pages</a> and <a href="/patterns/service-unavailable-pages/">Service unavailable pages</a>, and the wording is up to date.</p>
-<h2 id="telling-the-user-about-something-that-s-happening-elsewhere">Telling the user about something that’s happening elsewhere</h2>
+<h2 id="telling-the-user-about-something-thats-happening-elsewhere">Telling the user about something that’s happening elsewhere</h2>
 <p>Use a ‘neutral’ notification banner if the user needs to know about something that’s happening elsewhere in the service. For example:</p>
 <ul>
 <li>in a case working system, the user might need to know that there are new cases waiting for their attention</li>
@@ -1535,12 +1520,11 @@ If your service is getting more demand than usual, check that you’ve set up <a
       <div class="app-example__toolbar">
         <a href="/components/notification-banner/default/index.html" class="app-example__new-window" target="_blank">
           Open this
-
-          <span class="govuk-visually-hidden">default – notification banner second</span>
+          <span class="govuk-visually-hidden">default – notification banner second</span>
           example in a new tab
         </a>
       </div>
-      <iframe title="Default – notification banner second example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable app-example__frame--s" src="/components/notification-banner/default/index.html" frameBorder="0" loading="lazy"></iframe>
+      <iframe title="Default – notification banner second example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable app-example__frame--s" src="/components/notification-banner/default/index.html" frameBorder="0" loading="lazy"></iframe>
     </div>
     <span id="options-default-notification-banner-second-example"></span>
     <ul class="app-tabs" role="tablist">
@@ -1567,17 +1551,15 @@ If your service is getting more demand than usual, check that you’ve set up <a
     </div>
       <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#default-notification-banner-second-example-nunjucks" aria-controls="default-notification-banner-second-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
     <div class="app-tabs__container js-tabs__container" id="default-notification-banner-second-example-nunjucks" role="tabpanel">  
-
-
-        <details class="govuk-details app-options" data-module="govuk-details" id="options-default-notification-banner-second-example-details">
+  
+<details class="govuk-details app-options" data-module="govuk-details" id="options-default-notification-banner-second-example-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
       <span data-components='github-component-arguments'>Nunjucks macro options</span>
     </span>
   </summary>
   <div class="govuk-details__text">
-
-          <p>
+              <p>
           Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
           </p>
           <p>
@@ -1586,8 +1568,7 @@ If your service is getting more demand than usual, check that you’ve set up <a
           <p>
           If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
           </p>
-
-            <table class="govuk-table app-options__table" id="options-default-notification-banner-second-example--primary">
+<table class="govuk-table app-options__table" id="options-default-notification-banner-second-example--primary">
               <caption class="govuk-table__caption govuk-heading-m  govuk-visually-hidden">Primary options</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1597,7 +1578,6 @@ If your service is getting more demand than usual, check that you’ve set up <a
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">text</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1631,81 +1611,78 @@ If your service is getting more demand than usual, check that you’ve set up <a
 <li>if you set <code>titleHtml</code>, this option is ignored</li>
 </ul>
 
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">titleHtml</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      The title HTML to use within the notification banner. You can use any string with this option. Use this option to set text that contains HTML. If you set <code>titleHtml</code>, the <code>titleText</code> option is ignored.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">titleHeadingLevel</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      Sets heading level for the title only. You can only use values between <code>1</code> and <code>6</code> with this option. The default is <code>2</code>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">type</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      The type of notification to render. You can use only the <code>success</code> or null values with this option. If you set <code>type</code> to <code>success</code>, the notification banner sets <code>role</code> to <code>alert</code>. JavaScript then moves the keyboard focus to the notification banner when the page loads. If you do not set <code>type</code>, the notification banner sets <code>role</code> to <code>region</code>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">role</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      Overrides the value of the <code>role</code> attribute for the notification banner. Defaults to <code>region</code>. If you set <code>type</code> to <code>success</code>, <code>role</code> defaults to <code>alert</code>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">titleId</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      The <code>id</code> for the banner title, and the <code>aria-labelledby</code> attribute in the banner. Defaults to <code>govuk-notification-banner-title</code>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">disableAutoFocus</th>
-                    <td class="govuk-table__cell ">boolean</td>
-                    <td class="govuk-table__cell ">
-                      If you set <code>type</code> to <code>success</code>, or <code>role</code> to <code>alert</code>, JavaScript moves the keyboard focus to the notification banner when the page loads. To disable this behaviour, set <code>disableAutoFocus</code> to <code>true</code>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">classes</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      The classes that you want to add to the notification banner.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">attributes</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      The HTML attributes that you want to add to the notification banner, for example, data attributes.
-                    </td>
-                  </tr>
-              </tbody>
-            </table>
-
-
+<pre><code><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>titleHtml<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>string<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  The title HTML to use within the notification banner. You can use any string with this option. Use this option to set text that contains HTML. If you set <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>titleHtml<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>titleText<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> option is ignored.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>titleHeadingLevel<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>string<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Sets heading level for the title only. You can only use values between <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> and <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>6<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> with this option. The default is <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>type<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>string<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  The type of notification to render. You can use only the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>success<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> or null values with this option. If you set <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>type<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>success<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, the notification banner sets <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>role<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>alert<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>. JavaScript then moves the keyboard focus to the notification banner when the page loads. If you do not set <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>type<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, the notification banner sets <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>role<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>region<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>role<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>string<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Overrides the value of the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>role<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> attribute for the notification banner. Defaults to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>region<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>. If you set <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>type<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>success<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>role<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> defaults to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>alert<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>titleId<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>string<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  The <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>id<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> for the banner title, and the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>aria-labelledby<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> attribute in the banner. Defaults to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>govuk-notification-banner-title<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>disableAutoFocus<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>boolean<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  If you set <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>type<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>success<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, or <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>role<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>alert<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, JavaScript moves the keyboard focus to the notification banner when the page loads. To disable this behaviour, set <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>disableAutoFocus<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>classes<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>string<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  The classes that you want to add to the notification banner.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>attributes<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  The HTML attributes that you want to add to the notification banner, for example, data attributes.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+</code></pre>
   </div>
 </details>
 
-      <div class="app-example__code">
+<div class="app-example__code">
         <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/notification-banner/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukNotificationBanner %}
-
 {% set html %}
   &lt;p <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-notification-banner__heading&quot;</span>&gt;
     You have <span class="hljs-number">7</span> days left to send your application.
     &lt;a <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-notification-banner__link&quot;</span> href=<span class="hljs-string">&quot;#&quot;</span>&gt;View application&lt;/a&gt;.
   &lt;/p&gt;
 {% endset %}
-
 {{ govukNotificationBanner({
   <span class="hljs-attr">html</span>: html
 }) }}</code></pre>
@@ -1724,12 +1701,11 @@ If your service is getting more demand than usual, check that you’ve set up <a
       <div class="app-example__toolbar">
         <a href="/components/notification-banner/success/index.html" class="app-example__new-window" target="_blank">
           Open this
-
-          <span class="govuk-visually-hidden">success banner – notification banner</span>
+          <span class="govuk-visually-hidden">success banner – notification banner</span>
           example in a new tab
         </a>
       </div>
-      <iframe title="Success banner – notification banner example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable app-example__frame--s" src="/components/notification-banner/success/index.html" frameBorder="0" loading="lazy"></iframe>
+      <iframe title="Success banner – notification banner example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable app-example__frame--s" src="/components/notification-banner/success/index.html" frameBorder="0" loading="lazy"></iframe>
     </div>
     <span id="options-success-banner-notification-banner-example"></span>
     <ul class="app-tabs" role="tablist">
@@ -1756,17 +1732,15 @@ If your service is getting more demand than usual, check that you’ve set up <a
     </div>
       <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#success-banner-notification-banner-example-nunjucks" aria-controls="success-banner-notification-banner-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
     <div class="app-tabs__container js-tabs__container" id="success-banner-notification-banner-example-nunjucks" role="tabpanel">  
-
-
-        <details class="govuk-details app-options" data-module="govuk-details" id="options-success-banner-notification-banner-example-details">
+  
+<details class="govuk-details app-options" data-module="govuk-details" id="options-success-banner-notification-banner-example-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
       <span data-components='github-component-arguments'>Nunjucks macro options</span>
     </span>
   </summary>
   <div class="govuk-details__text">
-
-          <p>
+              <p>
           Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
           </p>
           <p>
@@ -1775,8 +1749,7 @@ If your service is getting more demand than usual, check that you’ve set up <a
           <p>
           If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
           </p>
-
-            <table class="govuk-table app-options__table" id="options-success-banner-notification-banner-example--primary">
+<table class="govuk-table app-options__table" id="options-success-banner-notification-banner-example--primary">
               <caption class="govuk-table__caption govuk-heading-m  govuk-visually-hidden">Primary options</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -1786,7 +1759,6 @@ If your service is getting more demand than usual, check that you’ve set up <a
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-
                   <tr class="govuk-table__row">
                     <th class="govuk-table__header" scope="row">text</th>
                     <td class="govuk-table__cell ">string</td>
@@ -1820,81 +1792,78 @@ If your service is getting more demand than usual, check that you’ve set up <a
 <li>if you set <code>titleHtml</code>, this option is ignored</li>
 </ul>
 
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">titleHtml</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      The title HTML to use within the notification banner. You can use any string with this option. Use this option to set text that contains HTML. If you set <code>titleHtml</code>, the <code>titleText</code> option is ignored.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">titleHeadingLevel</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      Sets heading level for the title only. You can only use values between <code>1</code> and <code>6</code> with this option. The default is <code>2</code>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">type</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      The type of notification to render. You can use only the <code>success</code> or null values with this option. If you set <code>type</code> to <code>success</code>, the notification banner sets <code>role</code> to <code>alert</code>. JavaScript then moves the keyboard focus to the notification banner when the page loads. If you do not set <code>type</code>, the notification banner sets <code>role</code> to <code>region</code>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">role</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      Overrides the value of the <code>role</code> attribute for the notification banner. Defaults to <code>region</code>. If you set <code>type</code> to <code>success</code>, <code>role</code> defaults to <code>alert</code>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">titleId</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      The <code>id</code> for the banner title, and the <code>aria-labelledby</code> attribute in the banner. Defaults to <code>govuk-notification-banner-title</code>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">disableAutoFocus</th>
-                    <td class="govuk-table__cell ">boolean</td>
-                    <td class="govuk-table__cell ">
-                      If you set <code>type</code> to <code>success</code>, or <code>role</code> to <code>alert</code>, JavaScript moves the keyboard focus to the notification banner when the page loads. To disable this behaviour, set <code>disableAutoFocus</code> to <code>true</code>.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">classes</th>
-                    <td class="govuk-table__cell ">string</td>
-                    <td class="govuk-table__cell ">
-                      The classes that you want to add to the notification banner.
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">attributes</th>
-                    <td class="govuk-table__cell ">object</td>
-                    <td class="govuk-table__cell ">
-                      The HTML attributes that you want to add to the notification banner, for example, data attributes.
-                    </td>
-                  </tr>
-              </tbody>
-            </table>
-
-
+<pre><code><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>titleHtml<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>string<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  The title HTML to use within the notification banner. You can use any string with this option. Use this option to set text that contains HTML. If you set <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>titleHtml<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>titleText<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> option is ignored.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>titleHeadingLevel<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>string<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Sets heading level for the title only. You can only use values between <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> and <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>6<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> with this option. The default is <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>type<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>string<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  The type of notification to render. You can use only the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>success<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> or null values with this option. If you set <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>type<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>success<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, the notification banner sets <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>role<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>alert<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>. JavaScript then moves the keyboard focus to the notification banner when the page loads. If you do not set <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>type<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, the notification banner sets <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>role<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>region<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>role<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>string<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  Overrides the value of the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>role<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> attribute for the notification banner. Defaults to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>region<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>. If you set <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>type<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>success<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>role<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> defaults to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>alert<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>titleId<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>string<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  The <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>id<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> for the banner title, and the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>aria-labelledby<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> attribute in the banner. Defaults to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>govuk-notification-banner-title<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>disableAutoFocus<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>boolean<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  If you set <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>type<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>success<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, or <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>role<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>alert<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>, JavaScript moves the keyboard focus to the notification banner when the page loads. To disable this behaviour, set <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>disableAutoFocus<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>classes<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>string<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  The classes that you want to add to the notification banner.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__header&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>attributes<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>object<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell &quot;</span>&gt;</span>
+                  The HTML attributes that you want to add to the notification banner, for example, data attributes.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+</code></pre>
   </div>
 </details>
 
-      <div class="app-example__code">
+<div class="app-example__code">
         <pre data-module="app-copy" tabindex="0"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/notification-banner/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukNotificationBanner %}
-
 {% set html %}
   &lt;h3 <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-notification-banner__heading&quot;</span>&gt;
     Training outcome recorded and trainee withdrawn
   &lt;/h3&gt;
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>Contact <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-notification-banner__link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>example@department.gov.uk<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> if you think there&#x27;s a problem.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>
 {% endset %}
-
 {{ govukNotificationBanner({
   <span class="hljs-attr">html</span>: html,
   <span class="hljs-attr">type</span>: <span class="hljs-string">&#x27;success&#x27;</span>
