@@ -1,57 +1,55 @@
-@include govuk-exports("app-split-pane") {
-  $toc-width: 260px;
-  $toc-width-tablet: 210px;
+$toc-width: 260px;
+$toc-width-tablet: 210px;
 
+.app-split-pane {
+  @include govuk-media-query($from: tablet) {
+    display: flex;
+    position: relative;
+    min-height: 0;
+    overflow: inherit;
+  }
+
+  @include govuk-media-query(1160px) {
+    width: 100%;
+  }
+}
+
+.app-split-pane__nav {
+  @include govuk-media-query($until: tablet) {
+    display: none;
+  }
+
+  @include govuk-media-query($from: tablet) {
+    width: $toc-width-tablet;
+    flex: 0 0 auto;
+  }
+
+  @include govuk-media-query($from: desktop) {
+    width: $toc-width;
+  }
+}
+
+.app-split-pane__content {
+  @include govuk-media-query($from: tablet) {
+    display: flex;
+    min-width: 0;
+    flex: 1 1 100%;
+    flex-direction: column;
+  }
+}
+
+.no-flexbox.no-flexboxtweener {
   .app-split-pane {
-    @include govuk-media-query($from: tablet) {
-      display: flex;
-      position: relative;
-      min-height: 0;
-      overflow: inherit;
-    }
-
-    @include govuk-media-query(1160px) {
-      width: 100%;
-    }
+    @include govuk-clearfix;
   }
 
   .app-split-pane__nav {
-    @include govuk-media-query($until: tablet) {
-      display: none;
-    }
-
-    @include govuk-media-query($from: tablet) {
-      width: $toc-width-tablet;
-      flex: 0 0 auto;
-    }
-
-    @include govuk-media-query($from: desktop) {
-      width: $toc-width;
-    }
+    width: $toc-width;
+    float: left;
+    border-right: 0;
   }
 
   .app-split-pane__content {
-    @include govuk-media-query($from: tablet) {
-      display: flex;
-      min-width: 0;
-      flex: 1 1 100%;
-      flex-direction: column;
-    }
-  }
-
-  .no-flexbox.no-flexboxtweener {
-    .app-split-pane {
-      @include govuk-clearfix;
-    }
-
-    .app-split-pane__nav {
-      width: $toc-width;
-      float: left;
-      border-right: 0;
-    }
-
-    .app-split-pane__content {
-      margin-left: $toc-width;
-    }
+    margin-left: $toc-width;
   }
 }
