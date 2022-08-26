@@ -34,14 +34,12 @@
 {% block header %}{% endblock %}
 
 {% block main %}
-<div class="app-pane {% block appPaneClasses %}{% endblock %}">
   {% include "_header.njk" %}
   {% include "_navigation.njk" %}
   {% include "_banner.njk" %}
   {% block body %}
     {{ contents | safe }}
   {% endblock %}
-</div>
 {% endblock %}
 
 {# We provide our own footer, so blank the one provided by the template #}

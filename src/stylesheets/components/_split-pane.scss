@@ -1,15 +1,8 @@
-@include govuk-exports("app-pane") {
+@include govuk-exports("app-split-pane") {
   $toc-width: 260px;
   $toc-width-tablet: 210px;
 
-  .app-pane.app-pane--enabled {
-    @include govuk-media-query($from: tablet) {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-
-  .app-pane__body {
+  .app-split-pane {
     @include govuk-media-query($from: tablet) {
       display: flex;
       position: relative;
@@ -22,26 +15,22 @@
     }
   }
 
-  .app-pane__subnav {
+  .app-split-pane__nav {
     @include govuk-media-query($until: tablet) {
       display: none;
     }
+
     @include govuk-media-query($from: tablet) {
       width: $toc-width-tablet;
       flex: 0 0 auto;
     }
+
     @include govuk-media-query($from: desktop) {
       width: $toc-width;
     }
   }
 
-  .app-pane__subnav-mobile-overview {
-    @include govuk-media-query($from: tablet) {
-      display: none;
-    }
-  }
-
-  .app-pane__content {
+  .app-split-pane__content {
     @include govuk-media-query($from: tablet) {
       display: flex;
       min-width: 0;
@@ -51,26 +40,18 @@
   }
 
   .no-flexbox.no-flexboxtweener {
-    .app-pane {
-      height: auto;
-      overflow: visible;
+    .app-split-pane {
       @include govuk-clearfix;
     }
 
-    .app-pane__body {
-      display: block;
-    }
-
-    .app-pane__subnav {
+    .app-split-pane__nav {
       width: $toc-width;
       float: left;
-      overflow-x: hidden;
       border-right: 0;
     }
 
-    .app-pane__content {
-      margin-left: -1px;
-      overflow-x: hidden;
+    .app-split-pane__content {
+      margin-left: $toc-width;
     }
   }
 }

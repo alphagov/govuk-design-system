@@ -17,17 +17,12 @@
 {% if bannerText %}
   {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
 
-    {% set bannerClasses = "app-phase-banner app-width-container" %}
-    {% if masthead %}
-      {% set bannerClasses = bannerClasses + " app-phase-banner--no-border" %}
-    {% endif %}
-
-    {{ govukPhaseBanner({
-      "tag": {
-        "text": bannerTag,
-        "classes": "govuk-tag--red"
-      },
-      "classes": bannerClasses,
-      "html": bannerText
-    }) }}
+  {{ govukPhaseBanner({
+    "tag": {
+      "text": bannerTag,
+      "classes": "govuk-tag--red"
+    },
+    "classes": 'app-width-container' + (' app-phase-banner--no-border' if masthead),
+    "html": bannerText
+  }) }}
 {% endif %}

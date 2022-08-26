@@ -1,0 +1,26 @@
+{# If the user is on a top level category page on mobile, show a list of pages
+in this section.
+
+This is mostly to support non-JS browsing on a mobile viewport, where the 'top'
+navigation doesn't expand and so the user can only access the top level category
+pages. #}
+<nav class="category-nav">
+  {% for item in navigation %}
+    {% if path.startsWith(item.url) %}
+    {% if item.items %}
+      {% for theme, items in item.items | groupby("theme") %}
+        {% if theme != 'undefined' %}
+          <h2 class="govuk-heading-m">{{ theme }}</h2>
+        {% endif %}
+        <ul class="govuk-list">
+        {% for subitem in items %}
+          <li class="govuk-!-margin-bottom-2">
+            <a class="govuk-link" href="/{{ subitem.url }}/">{{ subitem.label }}</a>
+          </li>
+        {% endfor %}
+        </ul>
+      {% endfor %}
+    {% endif %}
+    {% endif %}
+  {% endfor %}
+</nav>

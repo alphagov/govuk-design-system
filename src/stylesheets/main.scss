@@ -8,6 +8,7 @@ $app-code-color: #d13118;
 
 // App-specific components
 @import "components/back-to-top";
+@import "components/category-nav";
 @import "components/contact-panel";
 @import "components/cookies-page";
 @import "components/example";
@@ -19,9 +20,9 @@ $app-code-color: #d13118;
 @import "components/navigation";
 @import "components/options";
 @import "components/page-navigation";
-@import "components/pane";
 @import "components/phase-banner";
 @import "components/site-search";
+@import "components/split-pane";
 @import "components/subnav";
 @import "components/tabs";
 @import "components/table";
@@ -262,16 +263,6 @@ pre {
   background-color: $app-light-grey;
   font-size: 16px;
   @include govuk-responsive-margin(4, "bottom");
-}
-
-.no-js {
-  // Adjustments in app-pane layout as it has toc below
-  .app-pane__content .app-content {
-
-    @include govuk-media-query($until: tablet) {
-      padding-bottom: 10px;
-    }
-  }
 }
 
 // Add styling for inline code

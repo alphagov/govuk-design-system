@@ -1,0 +1,7 @@
+.category-nav {
+  padding-top: govuk-spacing(5);
+
+  @include govuk-media-query($from: tablet) {
+    display: none;
+  }
+}
