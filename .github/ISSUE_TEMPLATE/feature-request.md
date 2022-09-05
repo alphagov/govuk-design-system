@@ -11,7 +11,7 @@ assignees: ''
   Please fill in as much of the template below as you’re able to. If you're unsure whether the issue already exists or how to fill in the template, open an issue anyway. Our team will help you to complete the rest.
 
   Your issue might already exist. If so, add a comment to the existing issue instead of creating a new one. You can find existing issues here:
-  - the community backlog: https://design-system.service.gov.uk/community/backlog/
+  - the discussion space on GitHub: https://github.com/orgs/alphagov/projects/43/views/1/
   - an existing Github issue: https://github.com/alphagov/govuk-design-system/issues
 
   If you are proposing a new component or pattern, please follow the instructions here: https://design-system.service.gov.uk/community/propose-a-component-or-pattern/
