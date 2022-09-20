@@ -99,8 +99,6 @@ See how to do this by opening the HTML and Nunjucks tabs in this example:
 
 {{ example({group: "components", item: "text-input", example: "number-input", html: true, nunjucks: true, open: false, size: "m"}) }}
 
-You should also [turn off HTML5 validation](/patterns/validation/#turn-off-html5-validation) to prevent browsers from validating the `pattern` attribute.
-
 There is specific guidance on how to ask for:
 
 - [dates](/patterns/dates/)
@@ -108,7 +106,7 @@ There is specific guidance on how to ask for:
 
 #### Asking for decimal numbers
 
-If you're asking the user to enter a number that might include decimal places, use `input type="text"` without `inputmode` or `pattern` attributes.
+If you're asking the user to enter a number that might include decimal places, use `input type="text"`.
 
 Do not set the `inputmode` attribute to `decimal` as it causes some devices to bring up a keypad without a key for the decimal separator.
 
