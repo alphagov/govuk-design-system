@@ -13,8 +13,6 @@
   },
   "homepage": "https://github.com/alphagov/govuk-design-system#readme",
   "scripts": {
-    "preinstall": "node bin/check-nvmrc.js",
-    "prestart": "node bin/check-nvmrc.js",
     "build": "node tasks/build.js",
     "start": "node tasks/serve.js",
     "test": "npm run lint && jest",
