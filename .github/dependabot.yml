@@ -12,3 +12,10 @@ updates:
     allow:
       - dependency-type: all
 
+  # Update GitHub Actions
+  - package-ecosystem: github-actions
+    directory: /
+    reviewers:
+      - alphagov/design-system-developers
+    schedule:
+      interval: daily
