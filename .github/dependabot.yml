@@ -1,0 +1,14 @@
+version: 2
+
+updates:
+
+  # Update npm packages
+  - package-ecosystem: npm
+    directory: /
+    reviewers:
+      - alphagov/design-system-developers
+    schedule:
+      interval: daily
+    allow:
+      - dependency-type: all
+
