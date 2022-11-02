@@ -12,6 +12,11 @@ updates:
     allow:
       - dependency-type: all
 
+    ignore:
+      # Ignore major/minor updates (Marked parser changes output)
+      - dependency-name: jstransformer-marked
+        update-types: ['version-update:semver-major', 'version-update:semver-minor']
+
   # Update GitHub Actions
   - package-ecosystem: github-actions
     directory: /
