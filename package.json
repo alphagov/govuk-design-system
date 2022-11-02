@@ -54,7 +54,7 @@
     "jest-environment-jsdom": "^29.3.1",
     "jest-puppeteer": "^6.1.1",
     "js-beautify": "^1.14.7",
-    "jstransformer-marked": "~1.0.3",
+    "jstransformer-marked": "1.2.0",
     "jstransformer-nunjucks": "^1.1.0",
     "marked": "^4.2.2",
     "metalsmith": "^2.5.1",
