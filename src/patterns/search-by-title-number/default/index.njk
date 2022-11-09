@@ -1,0 +1,22 @@
+---
+title: Search by title number
+layout: layout-example.njk
+---
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukInput({
+  label: {
+    text: "Search by title number",
+    classes: "govuk-label--l",
+    isPageHeading: true
+  },
+  classes: "govuk-input--width-10",
+  id: "title-number",
+  name: "title-number",
+  spellcheck: false
+}) }}
+{{ govukButton({
+  text: "Search"
+}) }}

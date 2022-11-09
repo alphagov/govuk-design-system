@@ -1,6 +1,8 @@
-# GOV.UK Design System
+<img src="https://raw.githubusercontent.com/LandRegistry/hmlr-frontend/staging/src/hmlr/assets/images/hmlr_icon.svg" alt="HM Land Registry logo" title="HM Land Registry" align="right" width="80" />
 
-This repository contains the code for the GOV.UK Design System website. To find the code we provide for reuse by services, go to the [govuk-frontend repository](https://github.com/alphagov/govuk-frontend).
+# HM Land Registry Design System
+
+This repository contains the code for the HM Land Regitry Design System website. To find the code we provide for reuse by services, go to the [hmlr-frontend repository](https://github.com/LandRegistry/hmlr-frontend).
 
 ## Run locally
 
@@ -13,7 +15,7 @@ If you're an external contributor make sure to [fork this project first](https:/
 
 ### Clone repository
 ```
-git clone git@github.com:alphagov/govuk-design-system.git # or clone your own fork
+git clone git@github.com:LandRegistry/hmlr-design-system.git # or clone your own fork
 
 cd govuk-design-system
 ```
@@ -45,18 +47,18 @@ npm run build
 
 ## Run the Sass linter
 
-We are using the tool [sass-lint][sass-lint] to lint the Sass files in
+We are using the tool [stylelint][stylelint] to lint the Sass files in
 `source/stylesheets`. You can run the linter from command line by running:
 
 ```
 npm run lint
 ```
 
-[sass-lint]: https://github.com/sasstools/sass-lint
+[stylelint]: https://github.com/stylelint/stylelint
 
-## GOV.UK Frontend packages
+## Frontend packages
 
-Design System consumes the [GOV.UK Frontend](https://github.com/alphagov/govuk-frontend) package via [NPM](https://www.npmjs.com/).
+Design System consumes the [GOV.UK Frontend](https://github.com/alphagov/govuk-frontend) and the [HMLR Frontend](https://github.com/LandRegistry/hmlr-frontend) packages via [NPM](https://www.npmjs.com/).
 This is defined in the [package.json](package.json) file.
 
 --------------------
@@ -72,7 +74,7 @@ When changes are pushed to GitHub, [Github Actions][github-actions] will:
 If any of these fail, this will be reported in the GitHub status checks
 interface.
 
-[github-actions]: https://github.com/alphagov/govuk-design-system/actions
+[github-actions]: https://github.com/LandRegistry/hmlr-design-system/actions
 
 ## Deployment
 
@@ -83,7 +85,7 @@ interface.
 
 GDS is an advocate of responsible vulnerability disclosure. If you’ve found a vulnerability, we would like to know so we can fix it.
 
-To learn how to report a security vulnerability, [see our security policy](https://github.com/alphagov/govuk-design-system/security/policy).
+To learn how to report a security vulnerability, [see our security policy](https://github.com/LandRegistry/hmlr-design-system/security/policy).
 
 ## Contributing
 

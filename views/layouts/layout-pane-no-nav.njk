@@ -1,0 +1,70 @@
+{% extends "_generic.njk" %}
+
+{# If the theme ends in '…', then we nest the caption inside the H1 so that the
+  H1 becomes e.g. 'Ask users for dates'. Otherwise, we put it before the H1. #}
+{% set includeThemeInPageHeading = theme and "…" in theme %}
+
+{% block appPaneClasses %}app-pane--enabled{% endblock %}
+
+{% block body %}
+<div class="app-pane__body app-width-container">
+  <div class="app-pane__content">
+    <main id="main-content" class="app-content" role="main" {% if not show_subnav %}style="padding-left:0px;"{% endif %}>
+      {% if not includeThemeInPageHeading %}
+      <span class="govuk-caption-xl">
+        {{ theme if theme else section }}
+      </span>
+      {% endif %}
+      <h1 class="govuk-heading-xl">
+        {% if includeThemeInPageHeading %}
+        <span class="govuk-caption-xl">
+          {{ theme | replace("…", "") }}
+        </span>
+        {% endif %}
+        {{ title }}
+        {% if status %}
+        <div>
+          <strong class="govuk-tag govuk-!-margin-top-4 govuk-!-margin-bottom-2">
+            {{ status }}
+          </strong>
+          <p class="govuk-body">{{ statusMessage | safe }}</p>
+        </div>
+        {% endif %}
+      </h1>
+
+      {% if show_page_nav %}
+        <ul class="app-page-navigation">
+          {% for heading in headings %}
+            {% if heading.depth == 2 %}
+              <li class="app-page-navigation__item">
+                <a class="govuk-link" href="#{{ heading.url}}">
+                  {{ heading.text }}
+                </a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <div class="app-prose-scope">
+            {{ contents | safe }}
+          </div>
+        </div>
+      </div>
+
+      {# No JS fallback to show overview #}
+      {% if show_subnav %}
+        {% include "_in-page-subnav.njk" %}
+      {% endif %}
+
+      {% if section %}
+        {% include "_contact-panel.njk" %}
+      {% endif %}
+    </main>
+  </div>
+  {% include "_back-to-top.njk" %}
+</div>
+{% include "_footer.njk" %}
+{% endblock %}

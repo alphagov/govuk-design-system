@@ -1,15 +1,3 @@
-.app-phase-banner {
-  @include govuk-media-query($until: tablet) {
-    margin-right: 0;
-    margin-left: 0;
-  }
-
-  @include govuk-media-query($from: tablet) {
-    width: 100%;
-    border-bottom: 0;
-  }
-}
-
 .app-phase-banner--no-border {
   border-bottom: 0;
 }

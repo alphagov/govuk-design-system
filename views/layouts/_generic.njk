@@ -1,9 +1,19 @@
 {% extends "govuk/template.njk" %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
 
 {% set htmlClasses = 'no-js' %}
-{% set assetUrl = 'https://design-system.service.gov.uk/assets' %}
+{% set assetUrl = 'https://hmlr-design-system-staging.herokuapp.com/assets' %}
 
-{% block pageTitle %}{{ title }} – GOV.UK Design System{% endblock %}
+{% block pageTitle %}{{ title }} – HM Land Registry Design System{% endblock %}
+
+{% block headIcons %}
+  <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="{{ assetPath | default('/assets') }}/images/favicon.ico" type="image/x-icon">
+  <link rel="mask-icon" href="{{ assetPath | default('/assets') }}/images/mask-icon.svg" color="{{ themeColor | default('#0b0c0c') }}"> {# Hardcoded value of $govuk-black #}
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ assetPath | default('/assets') }}/images/apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="{{ assetPath | default('/assets') }}/images/apple-touch-icon-167x167.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ assetPath | default('/assets') }}/images/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" href="{{ assetPath | default('/assets') }}/images/apple-touch-icon.png">
+{% endblock %}
 
 {% block head %}
   {% if not ENVIRONMENT or ENVIRONMENT != 'production' %}
@@ -21,11 +31,13 @@
     <link href="{{ getFingerprint('stylesheets/main.css') }}" rel="stylesheet" media="all" />
   <!--<![endif]-->
   <script src="/javascripts/vendor/modernizr.js"></script>
+  <meta property="og:image" content="{{ assetUrl | default('/assets') }}/images/hmlr-opengraph-image.png">
 {% endblock %}
 
 {% block bodyStart %}
+  <a id="top"></a>
   <!--[if gte IE 9]><!-->
-  {% include "_cookie-banner.njk" %}
+  {# {% include "_cookie-banner.njk" %} #}
   <!--<![endif]-->
 {% endblock %}
 
@@ -33,14 +45,12 @@
 {% block header %}{% endblock %}
 
 {% block main %}
-<div class="app-pane {% block appPaneClasses %}{% endblock %}" id="top">
-  {% include "_header.njk" %}
+  {% include "hmlr/_header.njk" %}
   {% include "_navigation.njk" %}
   {% include "_banner.njk" %}
   {% block body %}
     {{ contents | safe }}
   {% endblock %}
-</div>
 {% endblock %}
 
 {# We provide our own footer, so blank the one provided by the template #}

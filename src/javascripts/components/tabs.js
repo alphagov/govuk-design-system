@@ -1,132 +1,174 @@
 import 'govuk-frontend/govuk/vendor/polyfills/Function/prototype/bind'
 import 'govuk-frontend/govuk/vendor/polyfills/Element/prototype/classList'
 import 'govuk-frontend/govuk/vendor/polyfills/Event'
-import common from 'govuk-frontend/govuk/common'
+import { nodeListForEach } from './helpers.js'
 
-var nodeListForEach = common.nodeListForEach
-
-var tabsItemClass = 'app-tabs__item'
-var tabsItemCurrentClass = tabsItemClass + '--current'
-var tabsItemJsClass = 'js-tabs__item'
-var headingItemClass = 'app-tabs__heading'
-var headingItemCurrentClass = headingItemClass + '--current'
-var headingItemJsClass = 'js-tabs__heading'
-var headingItemJsLinkSelector = '.js-tabs__heading a'
-var tabContainerHiddenClass = 'app-tabs__container--hidden'
-var tabContainerJsClass = '.js-tabs__container'
-var tabContainerNoTabsJsClass = 'js-tabs__container--no-tabs'
-var allTabTogglers = '.' + tabsItemJsClass + ' a'
-var tabTogglersMarkedOpenClass = '.js-tabs__item--open a'
+/**
+ * The naming of things is a little complicated in here.
+ * For reference:
+ *
+ * - AppTabs - this JS module
+ * - app-tabs, js-tabs - groups of classes used by the tabs component
+ * - mobile tabs - the controls to show or hide panels on mobile; these are functionally closer to being an accordion than tabs
+ * - desktop tabs - the controls to show, hide or switch panels on tablet/desktop
+ * - panels - the content that is shown/hidden/switched; same across all breakpoints
+ */
 
 function AppTabs ($module) {
   this.$module = $module
-  this.$allTabContainers = this.$module.querySelectorAll(tabContainerJsClass)
-  this.$allTabTogglers = this.$module.querySelectorAll(allTabTogglers)
-  this.$allTabTogglersMarkedOpen = this.$module.querySelectorAll(tabTogglersMarkedOpenClass)
-  this.$mobileTabs = this.$module.querySelectorAll(headingItemJsLinkSelector)
+  this.$mobileTabs = this.$module.querySelectorAll('.js-tabs__heading a')
+  this.$desktopTabs = this.$module.querySelectorAll('.js-tabs__item a')
+  this.$panels = this.$module.querySelectorAll('.js-tabs__container')
 }
 
 AppTabs.prototype.init = function () {
+  // Exit if no module has been defined
   if (!this.$module) {
     return
   }
 
-  // Enhance tab links to buttons on mobile if JS enabled
-  this.enhanceMobileButtons(this.$mobileTabs)
+  // Enhance mobile tabs into buttons
+  this.enhanceMobileTabs()
 
-  // reset all tabs
+  // Add bindings to desktop tabs
+  nodeListForEach(this.$desktopTabs, function ($tab) {
+    $tab.addEventListener('click', this.onClick.bind(this))
+  }.bind(this))
+
+  // Reset all tabs and panels to closed state
+  // We also add all our default ARIA goodness here
   this.resetTabs()
-  // add close to each tab
-  this.$module.addEventListener('click', this.handleClick.bind(this))
 
-  nodeListForEach(this.$allTabTogglersMarkedOpen, function ($tabToggler) {
-    $tabToggler.click()
-  })
+  // Show the first panel already open if the `open` attribute is present
+  if (this.$module.hasAttribute('data-open')) {
+    this.openPanel(this.$panels[0].id)
+  }
 }
 
-// expand and collapse functionality
-AppTabs.prototype.activateAndToggle = function (event) {
+/**
+ *
+ */
+AppTabs.prototype.onClick = function (event) {
   event.preventDefault()
-  var $currentToggler = event.target
-  var $currentTogglerSiblings = this.$module.querySelectorAll('[aria-controls="' + $currentToggler.getAttribute('aria-controls') + '"]')
-  var $tabContainer
+  var $currentTab = event.target
+  var panelId = $currentTab.getAttribute('aria-controls')
+  var $panel = this.getPanel(panelId)
+  var isTabAlreadyOpen = $currentTab.getAttribute('aria-expanded') === 'true'
 
-  try {
-    $tabContainer = this.$module.querySelector('#' + $currentToggler.getAttribute('aria-controls'))
-  } catch (exception) {
-    throw new Error('Invalid example ID given: ' + exception)
-  }
-  var isTabAlreadyOpen = $currentToggler.getAttribute('aria-expanded') === 'true'
-
-  if (!$tabContainer) {
-    return
+  if (!$panel) {
+    throw new Error('Invalid example ID given: ' + panelId)
   }
 
+  // If the panel that's been called is already open, close it.
+  // Otherwise, close all panels and open the one requested.
   if (isTabAlreadyOpen) {
-    $tabContainer.classList.add(tabContainerHiddenClass)
-    $tabContainer.setAttribute('aria-hidden', 'true')
-    nodeListForEach($currentTogglerSiblings, function ($tabToggler) {
-      $tabToggler.setAttribute('aria-expanded', 'false')
-      // desktop and mobile
-      $tabToggler.parentNode.classList.remove(tabsItemCurrentClass, headingItemCurrentClass)
-    })
+    this.closePanel(panelId)
   } else {
-    // Reset tabs
     this.resetTabs()
-    // make current active
-    $tabContainer.classList.remove(tabContainerHiddenClass)
-    $tabContainer.setAttribute('aria-hidden', 'false')
-
-    nodeListForEach($currentTogglerSiblings, function ($tabToggler) {
-      $tabToggler.setAttribute('aria-expanded', 'true')
-      if ($tabToggler.parentNode.classList.contains(tabsItemClass)) {
-        $tabToggler.parentNode.classList.add(tabsItemCurrentClass)
-      } else if ($tabToggler.parentNode.classList.contains(headingItemClass)) {
-        $tabToggler.parentNode.classList.add(headingItemCurrentClass)
-      }
-    })
+    this.openPanel(panelId)
   }
 }
 
-// We progressively enhance the mobile tab links to buttons
-// to make sure we're using semantic HTML to describe the behaviour of the tabs
-AppTabs.prototype.enhanceMobileButtons = function (mobileTabs) {
-  nodeListForEach(mobileTabs, function (mobileTab) {
-    var button = document.createElement('button')
-    button.setAttribute('aria-controls', mobileTab.getAttribute('aria-controls'))
-    button.setAttribute('data-track', mobileTab.getAttribute('data-track'))
-    button.classList.add('app-tabs__heading-button')
-    button.innerHTML = mobileTab.innerHTML
-    mobileTab.parentNode.appendChild(button)
-    mobileTab.parentNode.removeChild(mobileTab)
-  })
+/**
+ * Enhances mobile tab anchors to buttons elements
+ *
+ * On mobile, tabs act like an accordion and are semantically more similar to
+ * buttons than links, so let's use the appropriate element
+ */
+AppTabs.prototype.enhanceMobileTabs = function () {
+  // Loop through mobile tabs...
+  nodeListForEach(this.$mobileTabs, function ($tab) {
+    // ...construct a button equivalent of each anchor...
+    var $button = document.createElement('button')
+    $button.setAttribute('aria-controls', $tab.getAttribute('aria-controls'))
+    $button.setAttribute('data-track', $tab.getAttribute('data-track'))
+    $button.classList.add('app-tabs__heading-button')
+    $button.innerHTML = $tab.innerHTML
+    // ...bind controls...
+    $button.bindClick = this.onClick.bind(this)
+    $button.addEventListener('click', $button.bindClick)
+    // ...and replace the anchor with the button
+    $tab.parentNode.appendChild($button)
+    $tab.parentNode.removeChild($tab)
+  }.bind(this))
 
-  this.$allTabTogglers = this.$module.querySelectorAll(allTabTogglers)
+  // Replace the value of $mobileTabs with the new buttons
+  this.$mobileTabs = this.$module.querySelectorAll('.js-tabs__heading button')
 }
 
-// reset aria attributes to default and close the tab content container
+/**
+ * Reset tabs and panels to closed state
+ */
 AppTabs.prototype.resetTabs = function () {
-  nodeListForEach(this.$allTabContainers, function ($tabContainer) {
-    // unless the tab content has not tabs and it's been set as open
-    if (!$tabContainer.classList.contains(tabContainerNoTabsJsClass)) {
-      $tabContainer.classList.add(tabContainerHiddenClass)
-      $tabContainer.setAttribute('aria-hidden', 'true')
+  nodeListForEach(this.$panels, function ($panel) {
+    // We don't want to hide the panel if there are no tabs present to show it
+    if (!$panel.classList.contains('js-tabs__container--no-tabs')) {
+      this.closePanel($panel.id)
+    }
+  }.bind(this))
+}
+
+/**
+ * Open a panel and set the associated controls and styles
+ */
+AppTabs.prototype.openPanel = function (panelId) {
+  var $mobileTab = this.getMobileTab(panelId)
+  var $desktopTab = this.getDesktopTab(panelId)
+
+  // Panels can exist without associated tabs—for example if there's a single
+  // panel that's open by default—so make sure they actually exist before use
+  if ($mobileTab && $desktopTab) {
+    $mobileTab.setAttribute('aria-expanded', 'true')
+    $mobileTab.parentNode.classList.add('app-tabs__heading--current')
+    $desktopTab.setAttribute('aria-expanded', 'true')
+    $desktopTab.parentNode.classList.add('app-tabs__item--current')
+  }
+
+  this.getPanel(panelId).removeAttribute('hidden')
+}
+
+/**
+ * Close a panel and set the associated controls and styles
+ */
+AppTabs.prototype.closePanel = function (panelId) {
+  var $mobileTab = this.getMobileTab(panelId)
+  var $desktopTab = this.getDesktopTab(panelId)
+  $mobileTab.setAttribute('aria-expanded', 'false')
+  $desktopTab.setAttribute('aria-expanded', 'false')
+  $mobileTab.parentNode.classList.remove('app-tabs__heading--current')
+  $desktopTab.parentNode.classList.remove('app-tabs__item--current')
+  this.getPanel(panelId).setAttribute('hidden', 'hidden')
+}
+
+/**
+ * Helper function to get a specific mobile tab by the associated panel ID
+ */
+AppTabs.prototype.getMobileTab = function (panelId) {
+  var result = null
+  nodeListForEach(this.$mobileTabs, function ($tab) {
+    if ($tab.getAttribute('aria-controls') === panelId) {
+      result = $tab
     }
   })
-
-  nodeListForEach(this.$allTabTogglers, function ($tabToggler) {
-    $tabToggler.setAttribute('aria-expanded', 'false')
-    // desktop and mobile
-    $tabToggler.parentNode.classList.remove(tabsItemCurrentClass, headingItemCurrentClass)
-  })
+  return result
 }
 
-AppTabs.prototype.handleClick = function (event) {
-  // toggle and active selected tab and heading (on mobile)
-  if (event.target.parentNode.classList.contains(tabsItemJsClass) ||
-    event.target.parentNode.classList.contains(headingItemJsClass)) {
-    this.activateAndToggle(event)
+/**
+ * Helper function to get a specific desktop tab by the associated panel ID
+ */
+AppTabs.prototype.getDesktopTab = function (panelId) {
+  var $desktopTabContainer = this.$module.querySelector('.app-tabs')
+  if ($desktopTabContainer) {
+    return $desktopTabContainer.querySelector('[aria-controls="' + panelId + '"]')
   }
+  return null
+}
+
+/**
+ * Helper function to get a specific panel by ID
+ */
+AppTabs.prototype.getPanel = function (panelId) {
+  return document.getElementById(panelId)
 }
 
 export default AppTabs

@@ -1,7 +1,7 @@
-{% from "govuk/components/footer/macro.njk" import govukFooter %}
+{% from "hmlr/components/footer/macro.njk" import hmlrFooter %}
 
-{{ govukFooter({
-  "classes": "app-footer app-footer--full",
+{{ hmlrFooter({
+  "classes": "app-footer",
   "containerClasses" : "app-width-container",
   "navigation": [
     {
@@ -22,8 +22,8 @@
   "meta": {
     "items": [
       {
-        "href": "/accessibility/",
-        "text": "Accessibility"
+        "href": "/accessibility-statement/",
+        "text": "Accessibility statement"
       },
       {
         "href": "/sitemap/",
@@ -38,6 +38,6 @@
         "text": "Privacy"
       }
     ],
-    "html": 'Built by the <a href="/design-system-team/" class="govuk-footer__link">GOV.UK Design System team</a>'
+    "html": 'Built by the <a href="/design-system-team/" class="govuk-footer__link">HM Land Registry Design System team</a>'
   }
 }) }}

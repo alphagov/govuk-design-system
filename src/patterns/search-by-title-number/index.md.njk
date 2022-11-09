@@ -1,0 +1,99 @@
+---
+title: Search by title number
+description: A pattern for searching for a title deed by title the number
+section: Patterns
+layout: layout-pane.njk
+---
+
+{% from "_example.njk" import example %}
+
+Use the ‘Search by title number’ pattern to help a user find information that we hold about an individual property title.
+
+{{ example({group: "patterns", item: "search-by-title-number", example: "default", html: true, nunjucks: true, open: false}) }}
+
+## When to use this pattern
+
+Use this pattern on public facing services.
+
+This guidance applies whether a user is signed into an account or not.
+
+There will be separate guidance for business customers.
+
+## Who needs this pattern
+
+About 6% of users who interact with our GOV.UK service[s] use this method to find land and property information.
+
+This seems like a small number, but we've seen that many users choose to use this method even if they have other ways to find the land or property they need.
+
+We believe this is because a title number relates to one title. An address may return multiple titles which increases the risk of a user making the wrong choice.
+
+## When not to use this pattern
+
+Do not use this pattern unless you have evidence that your users:
+* know what a title number is
+* know where to find one
+* understand the information that we return when they use it
+
+## How to use with hint text
+If you need to include hint text, then we can let a user know where they can find a title number – to help them make an informed decision of whether this method is suitable for them to use.
+
+{{ example({group: "patterns", item: "search-by-title-number", example: "hint", html: true, nunjucks: true, open: false}) }}
+
+Do not include:
+
+* real title numbers in any hint text
+* the format of a title number as the hint
+
+This is because:
+* the format could change
+* your example could become a title number in the future
+
+Read more about hint text on the [GOV.UK design system](https://design-system.service.gov.uk/components/text-input#hint-text)
+
+## How to write your error messages
+
+You must not use an error message that tells a user if the title number they have entered is a real title number or not.
+
+We can let a user know that we do not recognise what they have entered and prompt them to try again.
+
+For example:
+* ‘Enter a title number’
+* ‘We do not recognise that title number. Check title number and try again’.
+
+{{ example({group: "patterns", item: "search-by-title-number", example: "error", html: true, nunjucks: true, open: false}) }}
+
+Read more about error messages on the [GOV.UK design system](https://design-system.service.gov.uk/components/error-message/)
+
+## How it works if you have more than 1 search method
+
+Start with 1 search method per page. This means that you can help users recover from errors more easily.
+
+Research shows that this pattern works best when it’s used in conjunction with a search menu that is easy to find and navigate between.
+
+Search method navigation has been tested in both Search for local land charges and Search for land and property information.
+
+For more information about search method navigation – speak to the service teams.
+
+## Research on this pattern
+
+We’ve done research on this pattern with 26 individual users. 5 users stated they had low digital confidence.
+
+The user types were:
+* prospective and recent homeowners
+* leaseholders
+* small businesses – working on behalf of clients or organisations
+* a mixture of users who had previous experience of using HMLR services and those that did not
+
+We also continue to monitor live user feedback and analytics on the use of this pattern.
+
+## Where we’d like to do more research
+
+The small number of users on mobile devices did not find any problems with finding the menu of search methods even though they were stacked rather than in the horizontal position. However, we’d like to do more targeted research with users of mobile devices.
+
+We’d like to do more research with users of assistive technology including:
+* screen readers
+* speech to text software
+
+## Help improve this pattern
+
+Contribute to the discussion about this pattern: https://github.com/LandRegistry/hmlr-design-system-2/issues

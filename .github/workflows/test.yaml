@@ -5,19 +5,13 @@ on:
   push:
     branches-ignore:
       - main  # pushes to main are handled by deploy.yaml
-  workflow_call:
-    inputs:
-      upload-artifact:
-        default: false
-        required: false
-        type: boolean
 
 jobs:
   build:
     name: Build & Test
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest]
+        os: [ubuntu-latest]
         include:
           - os: ubuntu-latest
             upload-artifact: ${{ inputs.upload-artifact }}
@@ -28,14 +22,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Read node version from .nvmrc
-        id: nvm
-        run: echo "##[set-output name=NVMRC;]$(cat .nvmrc)"
-
       - name: Setup node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: "${{ steps.nvm.outputs.NVMRC }}"
+          node-version-file: '.nvmrc'
           cache: 'npm'
 
       - name: Install dependencies
@@ -46,14 +36,3 @@ jobs:
 
       - name: Lint and test
         run: npm test -- --runInBand
-
-      # Share data between the build and deploy jobs so we don't need to run `npm run build` again on deploy
-      # Upload the deploy folder as an artifact so it can be downloaded and used in the deploy job
-      - name: Upload artifact
-        uses: actions/upload-artifact@v2
-        if: ${{ matrix.upload-artifact }}
-        with:
-            name: build
-            path: deploy/**
-            retention-days: 1
-

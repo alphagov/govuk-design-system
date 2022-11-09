@@ -13,7 +13,8 @@ metalsmith.use(browsersync({
   files: [
     path.join(paths.source, '**/*'),
     path.join(paths.views, '**/*'),
-    path.normalize('node_modules/govuk-frontend/**/*')
+    path.normalize('node_modules/govuk-frontend/**/*'),
+    path.normalize('node_modules/@hmlr/frontend/**/*')
   ] // files to watch
 }))
 

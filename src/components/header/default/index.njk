@@ -2,8 +2,9 @@
 title: Header
 layout: layout-example.njk
 ---
-{% from "govuk/components/header/macro.njk" import govukHeader %}
+{% from "hmlr/components/header/macro.njk" import hmlrHeader %}
 
-{{ govukHeader({
-  homepageUrl: "#"
+{{ hmlrHeader({
+  serviceName: "Service name",
+  serviceUrl: "#"
 }) }}

@@ -1,7 +1,8 @@
 [
   {
     "label": "Get started",
-    "url": "get-started"
+    "url": "get-started",
+    "includeInSearch": true
   },
   {
     "label": "Styles",
@@ -19,7 +20,18 @@
     "includeInSearch": true
   },
   {
+    "label": "Content",
+    "url": "content",
+    "includeInSearch": true
+  },
+  {
+    "label": "Accessibility",
+    "url": "accessibility",
+    "includeInSearch": true
+  },
+  {
     "label": "Community",
-    "url": "community"
+    "url": "community",
+    "includeInSearch": true
   }
 ]

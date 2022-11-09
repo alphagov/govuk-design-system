@@ -5,6 +5,8 @@
   "nodemodules": "node_modules/",
     "govukfrontend": "node_modules/govuk-frontend/",
     "govukfrontendcomponents": "node_modules/govuk-frontend/govuk/components/",
+    "hmlrfrontend": "node_modules/@hmlr/frontend/",
+    "hmlrfrontendcomponents": "node_modules/@hmlr/frontend/hmlr/components/",
     "iframeresizer": "node_modules/iframe-resizer/",
     "clipboard": "node_modules/clipboard/dist/",
   "source": "src/",

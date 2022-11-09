@@ -1,6 +1,10 @@
 $govuk-new-link-styles: true;
 
+$govuk-brand-colour: #789904;
+$govuk-font-family: arial, sans-serif;
+
 @import "govuk-frontend/govuk/all";
+@import "@hmlr/frontend/hmlr/all";
 
 // App-specific variables
 $app-light-grey: #f8f8f8;
@@ -8,6 +12,7 @@ $app-code-color: #d13118;
 
 // App-specific components
 @import "components/back-to-top";
+@import "components/category-nav";
 @import "components/contact-panel";
 @import "components/cookies-page";
 @import "components/example";
@@ -19,9 +24,9 @@ $app-code-color: #d13118;
 @import "components/navigation";
 @import "components/options";
 @import "components/page-navigation";
-@import "components/pane";
 @import "components/phase-banner";
 @import "components/site-search";
+@import "components/split-pane";
 @import "components/subnav";
 @import "components/tabs";
 @import "components/table";
@@ -94,7 +99,6 @@ $app-code-color: #d13118;
     @include govuk-responsive-margin(6, "bottom");
   }
 
-
   // IE8 does not support the video element, so we hide the element entirely.
   @if $govuk-is-ie8 == true {
     .app-video {
@@ -115,7 +119,9 @@ $app-code-color: #d13118;
   // http://code.iamkate.com/html-and-css/fixing-browsers-broken-monospace-font-handling/
   pre,
   code {
+    // stylelint-disable font-family-no-duplicate-names
     font-family: monospace, monospace; // [1]
+    // stylelint-enable font-family-no-duplicate-names
     font-size: 1em; // [2]
   }
 }
@@ -175,7 +181,6 @@ $colour-list-breakpoint: 980px;
 @if $govuk-is-ie8 == true {
   $colour-list-breakpoint: $govuk-ie8-breakpoint;
 }
-
 
 .app-colour-list {
   width: 100%;
@@ -264,16 +269,6 @@ pre {
   @include govuk-responsive-margin(4, "bottom");
 }
 
-.no-js {
-  // Adjustments in app-pane layout as it has toc below
-  .app-pane__content .app-content {
-
-    @include govuk-media-query($until: tablet) {
-      padding-bottom: 10px;
-    }
-  }
-}
-
 // Add styling for inline code
 li code,
 td code,
@@ -284,7 +279,6 @@ p code {
 }
 
 .app-prose-scope {
-
   h1 {
     @extend %govuk-heading-xl;
   }
@@ -359,3 +353,5 @@ p code {
   border-bottom: 1px solid $govuk-border-colour;
   background-color: $app-light-grey;
 }
+
+@import "hmlr";

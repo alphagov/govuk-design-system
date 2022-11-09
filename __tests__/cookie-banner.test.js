@@ -27,150 +27,158 @@ describe('Cookie banner', () => {
     await page.close()
   })
 
-  it('is hidden on the cookies page', async () => {
+  it('is not shown on the home page', async () => {
     await page.setCookie({ name: 'design_system_cookies_policy', value: '{"analytics":true, "version":1}', url: baseUrl })
-    await page.goto(`${baseUrl}/cookies/`, { waitUntil: 'load' })
+    await page.goto(`${baseUrl}/`, { waitUntil: 'load' })
 
-    const isCookieBannerHidden = await page.waitForSelector(COOKIE_BANNER_SELECTOR, { visible: false })
-    expect(isCookieBannerHidden).toBeTruthy()
+    const cookieBanner = await page.$(COOKIE_BANNER_SELECTOR)
+    expect(cookieBanner).toBeFalsy()
   })
 
-  describe('when JavaScript is disabled', () => {
-    it('is hidden', async () => {
-      await page.setJavaScriptEnabled(false)
-      await page.goto(`${baseUrl}`, { waitUntil: 'load' })
-      const isCookieBannerHidden = await page.waitForSelector(COOKIE_BANNER_SELECTOR, { visible: false })
-      expect(isCookieBannerHidden).toBeTruthy()
-    })
-  })
+  // it('is hidden on the cookies page', async () => {
+  //   await page.setCookie({ name: 'design_system_cookies_policy', value: '{"analytics":true, "version":1}', url: baseUrl })
+  //   await page.goto(`${baseUrl}/cookies/`, { waitUntil: 'load' })
 
-  describe('when JavaScript is enabled', () => {
-    it('is visible if there is no consent cookie', async () => {
-      await page.goto(`${baseUrl}`, { waitUntil: 'load' })
-      const isCookieBannerVisible = await page.waitForSelector(COOKIE_BANNER_SELECTOR, { visible: true })
-      expect(isCookieBannerVisible).toBeTruthy()
-    })
+  //   const isCookieBannerHidden = await page.waitForSelector(COOKIE_BANNER_SELECTOR, { visible: false })
+  //   expect(isCookieBannerHidden).toBeTruthy()
+  // })
 
-    it('is visible if the consent cookie version is outdated', async () => {
-      await page.setCookie({ name: 'design_system_cookies_policy', value: '{"analytics":true, "version":0}', url: baseUrl })
-      await page.goto(`${baseUrl}`, { waitUntil: 'load' })
-      const isCookieBannerVisible = await page.waitForSelector(COOKIE_BANNER_SELECTOR, { visible: true })
-      expect(isCookieBannerVisible).toBeTruthy()
-    })
+  // describe('when JavaScript is disabled', () => {
+  //   it('is hidden', async () => {
+  //     await page.setJavaScriptEnabled(false)
+  //     await page.goto(`${baseUrl}`, { waitUntil: 'load' })
+  //     const isCookieBannerHidden = await page.waitForSelector(COOKIE_BANNER_SELECTOR, { visible: false })
+  //     expect(isCookieBannerHidden).toBeTruthy()
+  //   })
+  // })
 
-    it('is hidden if the consent cookie version is valid', async () => {
-      await page.setCookie({ name: 'design_system_cookies_policy', value: '{"analytics":true, "version":1}', url: baseUrl })
-      await page.goto(`${baseUrl}`, { waitUntil: 'load' })
-      const isCookieBannerHidden = await page.waitForSelector(COOKIE_BANNER_SELECTOR, { visible: false })
-      expect(isCookieBannerHidden).toBeTruthy()
-    })
-  })
+  // describe('when JavaScript is enabled', () => {
+  //   it('is visible if there is no consent cookie', async () => {
+  //     await page.goto(`${baseUrl}`, { waitUntil: 'load' })
+  //     const isCookieBannerVisible = await page.waitForSelector(COOKIE_BANNER_SELECTOR, { visible: true })
+  //     expect(isCookieBannerVisible).toBeTruthy()
+  //   })
 
-  describe('accept button', () => {
-    it('sets the consent cookie', async () => {
-      await page.goto(`${baseUrl}`, { waitUntil: 'load' })
+  //   it('is visible if the consent cookie version is outdated', async () => {
+  //     await page.setCookie({ name: 'design_system_cookies_policy', value: '{"analytics":true, "version":0}', url: baseUrl })
+  //     await page.goto(`${baseUrl}`, { waitUntil: 'load' })
+  //     const isCookieBannerVisible = await page.waitForSelector(COOKIE_BANNER_SELECTOR, { visible: true })
+  //     expect(isCookieBannerVisible).toBeTruthy()
+  //   })
 
-      const initialCookie = await page.cookies()
-      expect(initialCookie).toEqual([])
+  //   it('is hidden if the consent cookie version is valid', async () => {
+  //     await page.setCookie({ name: 'design_system_cookies_policy', value: '{"analytics":true, "version":1}', url: baseUrl })
+  //     await page.goto(`${baseUrl}`, { waitUntil: 'load' })
+  //     const isCookieBannerHidden = await page.waitForSelector(COOKIE_BANNER_SELECTOR, { visible: false })
+  //     expect(isCookieBannerHidden).toBeTruthy()
+  //   })
+  // })
 
-      await page.click('.js-cookie-banner-accept')
-      const newCookie = await page.cookies()
-      expect(newCookie[0].name).toEqual('design_system_cookies_policy')
-      expect(newCookie[0].value).toEqual('{"analytics":true,"version":1}')
-    })
+  // describe('accept button', () => {
+  //   it('sets the consent cookie', async () => {
+  //     await page.goto(`${baseUrl}`, { waitUntil: 'load' })
 
-    it('hides the cookie message', async () => {
-      await page.goto(`${baseUrl}`, { waitUntil: 'load' })
-      await page.click('.js-cookie-banner-accept')
+  //     const initialCookie = await page.cookies()
+  //     expect(initialCookie).toEqual([])
 
-      const isCookieMessageHidden = await page.waitForSelector('.js-cookie-banner-message', { visible: false })
-      expect(isCookieMessageHidden).toBeTruthy()
-    })
+  //     await page.click('.js-cookie-banner-accept')
+  //     const newCookie = await page.cookies()
+  //     expect(newCookie[0].name).toEqual('design_system_cookies_policy')
+  //     expect(newCookie[0].value).toEqual('{"analytics":true,"version":1}')
+  //   })
 
-    it('shows the confirmation message', async () => {
-      await page.goto(`${baseUrl}`, { waitUntil: 'load' })
-      await page.click('.js-cookie-banner-accept')
+  //   it('hides the cookie message', async () => {
+  //     await page.goto(`${baseUrl}`, { waitUntil: 'load' })
+  //     await page.click('.js-cookie-banner-accept')
 
-      const isConfirmationMessageVisible = await page.waitForSelector('.js-cookie-banner-confirmation-accept', { visible: true })
-      expect(isConfirmationMessageVisible).toBeTruthy()
-    })
+  //     const isCookieMessageHidden = await page.waitForSelector('.js-cookie-banner-message', { visible: false })
+  //     expect(isCookieMessageHidden).toBeTruthy()
+  //   })
 
-    it('moves user focus to the confirmation message', async () => {
-      await page.goto(`${baseUrl}`, { waitUntil: 'load' })
-      await page.click('.js-cookie-banner-accept')
+  //   it('shows the confirmation message', async () => {
+  //     await page.goto(`${baseUrl}`, { waitUntil: 'load' })
+  //     await page.click('.js-cookie-banner-accept')
 
-      const confirmationMessageTabindex = await page.evaluate(() => document.body.querySelector('.js-cookie-banner-confirmation-accept').getAttribute('tabindex'))
-      expect(confirmationMessageTabindex).toEqual('-1')
-    })
-  })
+  //     const isConfirmationMessageVisible = await page.waitForSelector('.js-cookie-banner-confirmation-accept', { visible: true })
+  //     expect(isConfirmationMessageVisible).toBeTruthy()
+  //   })
 
-  describe('reject button', () => {
-    it('sets the consent cookie', async () => {
-      await page.goto(`${baseUrl}`, { waitUntil: 'load' })
+  //   it('moves user focus to the confirmation message', async () => {
+  //     await page.goto(`${baseUrl}`, { waitUntil: 'load' })
+  //     await page.click('.js-cookie-banner-accept')
 
-      const initialCookie = await page.cookies()
-      expect(initialCookie).toEqual([])
+  //     const confirmationMessageTabindex = await page.evaluate(() => document.body.querySelector('.js-cookie-banner-confirmation-accept').getAttribute('tabindex'))
+  //     expect(confirmationMessageTabindex).toEqual('-1')
+  //   })
+  // })
 
-      await page.click('.js-cookie-banner-reject')
-      const newCookie = await page.cookies()
-      expect(newCookie[0].name).toEqual('design_system_cookies_policy')
-      expect(newCookie[0].value).toEqual('{"analytics":false,"version":1}')
-    })
+  // describe('reject button', () => {
+  //   it('sets the consent cookie', async () => {
+  //     await page.goto(`${baseUrl}`, { waitUntil: 'load' })
 
-    it('hides the cookie message', async () => {
-      await page.goto(`${baseUrl}`, { waitUntil: 'load' })
-      await page.click('.js-cookie-banner-reject')
+  //     const initialCookie = await page.cookies()
+  //     expect(initialCookie).toEqual([])
 
-      const isCookieMessageHidden = await page.waitForSelector('.js-cookie-banner-message', { visible: false })
-      expect(isCookieMessageHidden).toBeTruthy()
-    })
+  //     await page.click('.js-cookie-banner-reject')
+  //     const newCookie = await page.cookies()
+  //     expect(newCookie[0].name).toEqual('design_system_cookies_policy')
+  //     expect(newCookie[0].value).toEqual('{"analytics":false,"version":1}')
+  //   })
 
-    it('shows the confirmation message', async () => {
-      await page.goto(`${baseUrl}`, { waitUntil: 'load' })
-      await page.click('.js-cookie-banner-reject')
+  //   it('hides the cookie message', async () => {
+  //     await page.goto(`${baseUrl}`, { waitUntil: 'load' })
+  //     await page.click('.js-cookie-banner-reject')
 
-      const isConfirmationMessageVisible = await page.waitForSelector('.js-cookie-banner-confirmation-reject', { visible: true })
-      expect(isConfirmationMessageVisible).toBeTruthy()
-    })
+  //     const isCookieMessageHidden = await page.waitForSelector('.js-cookie-banner-message', { visible: false })
+  //     expect(isCookieMessageHidden).toBeTruthy()
+  //   })
 
-    it('moves user focus to the confirmation message', async () => {
-      await page.goto(`${baseUrl}`, { waitUntil: 'load' })
-      await page.click('.js-cookie-banner-reject')
+  //   it('shows the confirmation message', async () => {
+  //     await page.goto(`${baseUrl}`, { waitUntil: 'load' })
+  //     await page.click('.js-cookie-banner-reject')
 
-      const confirmationMessageTabindex = await page.evaluate(() => document.body.querySelector('.js-cookie-banner-confirmation-reject').getAttribute('tabindex'))
-      expect(confirmationMessageTabindex).toEqual('-1')
-    })
-  })
+  //     const isConfirmationMessageVisible = await page.waitForSelector('.js-cookie-banner-confirmation-reject', { visible: true })
+  //     expect(isConfirmationMessageVisible).toBeTruthy()
+  //   })
 
-  describe('hide button', () => {
-    it('hides the accept confirmation message', async () => {
-      // Accept cookies
-      await page.goto(`${baseUrl}`, { waitUntil: 'load' })
-      await page.click('.js-cookie-banner-accept')
+  //   it('moves user focus to the confirmation message', async () => {
+  //     await page.goto(`${baseUrl}`, { waitUntil: 'load' })
+  //     await page.click('.js-cookie-banner-reject')
 
-      // Click the hide button
-      await page.click('.js-cookie-banner-hide--accept')
+  //     const confirmationMessageTabindex = await page.evaluate(() => document.body.querySelector('.js-cookie-banner-confirmation-reject').getAttribute('tabindex'))
+  //     expect(confirmationMessageTabindex).toEqual('-1')
+  //   })
+  // })
 
-      const isConfirmationMessageHidden = await page.waitForSelector('.js-cookie-banner-confirmation-accept', { visible: false })
-      const isCookieBannerHidden = await page.waitForSelector(COOKIE_BANNER_SELECTOR, { visible: false })
+  // describe('hide button', () => {
+  //   it('hides the accept confirmation message', async () => {
+  //     // Accept cookies
+  //     await page.goto(`${baseUrl}`, { waitUntil: 'load' })
+  //     await page.click('.js-cookie-banner-accept')
 
-      expect(isConfirmationMessageHidden).toBeTruthy()
-      expect(isCookieBannerHidden).toBeTruthy()
-    })
+  //     // Click the hide button
+  //     await page.click('.js-cookie-banner-hide--accept')
 
-    it('hides the reject confirmation message', async () => {
-      // Reject cookies
-      await page.goto(`${baseUrl}`, { waitUntil: 'load' })
-      await page.click('.js-cookie-banner-reject')
+  //     const isConfirmationMessageHidden = await page.waitForSelector('.js-cookie-banner-confirmation-accept', { visible: false })
+  //     const isCookieBannerHidden = await page.waitForSelector(COOKIE_BANNER_SELECTOR, { visible: false })
 
-      // Click the hide button
-      await page.click('.js-cookie-banner-hide--reject')
+  //     expect(isConfirmationMessageHidden).toBeTruthy()
+  //     expect(isCookieBannerHidden).toBeTruthy()
+  //   })
 
-      const isConfirmationMessageHidden = await page.waitForSelector('.js-cookie-banner-confirmation-reject', { visible: false })
-      const isCookieBannerHidden = await page.waitForSelector(COOKIE_BANNER_SELECTOR, { visible: false })
+  //   it('hides the reject confirmation message', async () => {
+  //     // Reject cookies
+  //     await page.goto(`${baseUrl}`, { waitUntil: 'load' })
+  //     await page.click('.js-cookie-banner-reject')
 
-      expect(isConfirmationMessageHidden).toBeTruthy()
-      expect(isCookieBannerHidden).toBeTruthy()
-    })
-  })
+  //     // Click the hide button
+  //     await page.click('.js-cookie-banner-hide--reject')
+
+  //     const isConfirmationMessageHidden = await page.waitForSelector('.js-cookie-banner-confirmation-reject', { visible: false })
+  //     const isCookieBannerHidden = await page.waitForSelector(COOKIE_BANNER_SELECTOR, { visible: false })
+
+  //     expect(isConfirmationMessageHidden).toBeTruthy()
+  //     expect(isCookieBannerHidden).toBeTruthy()
+  //   })
+  // })
 })

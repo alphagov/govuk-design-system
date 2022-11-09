@@ -1,0 +1,78 @@
+---
+title: Populated footer
+layout: layout-example.njk
+---
+{% from "hmlr/components/footer/macro.njk" import hmlrFooter %}
+
+{{ hmlrFooter({
+  meta: {
+    visuallyHiddenTitle: "Other links",
+    html: "Meta <em>HTML</em>",
+    text: "Meta text",
+    items: [
+      {
+        text: "Meta item 1",
+        href: "#"
+      },
+      {
+        text: "Meta item 2",
+        href: "#"
+      },
+      {
+        text: "Meta item 3",
+        href: "#"
+      }
+    ]
+  },
+  navigation: [
+    {
+      title: "Navigation 1",
+      width: "one-third",
+      items: [
+        {
+          text: "Item 1.1",
+          href: "#"
+        },
+        {
+          text: "Item 1.2",
+          href: "#"
+        },
+        {
+          text: "Item 1.3",
+          href: "#"
+        }
+      ]
+    },
+    {
+      title: "Navigation 2",
+      width: "two-thirds",
+      columns: 2,
+      items: [
+        {
+          text: "Item 2.1",
+          href: "#"
+        },
+        {
+          text: "Item 2.2",
+          href: "#"
+        },
+        {
+          text: "Item 2.3",
+          href: "#"
+        },
+        {
+          text: "Item 2.4",
+          href: "#"
+        },
+        {
+          text: "Item 2.5",
+          href: "#"
+        },
+        {
+          text: "Item 2.6",
+          href: "#"
+        }
+      ]
+    }
+  ]
+}) }}

@@ -2,7 +2,6 @@
 title: Footer
 layout: layout-example.njk
 ---
+{% from "hmlr/components/footer/macro.njk" import hmlrFooter %}
 
-{% from "govuk/components/footer/macro.njk" import govukFooter %}
-
-{{ govukFooter({}) }}
+{{ hmlrFooter() }}

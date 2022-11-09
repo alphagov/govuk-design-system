@@ -122,7 +122,7 @@ trailing-slashed URLs, but decided against it because:
 - other parts of GOV.UK's infrastructure (such as their mirroring) make
   assumptions based on the lack of a trailing slash and relative URLs.
 
-[github-actions]: https://github.com/alphagov/govuk-design-system/actions
+[github-actions]: https://github.com/LandRegistry/hmlr-design-system/actions
 [paas]: https://www.cloud.service.gov.uk/
 [nginx-bp]: https://github.com/cloudfoundry/nginx-buildpack
 [govuk-dns-config]: https://github.com/alphagov/govuk-dns-config/blob/master/service.gov.uk.yaml

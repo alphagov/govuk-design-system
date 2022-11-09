@@ -1,0 +1,39 @@
+---
+title: Error while searching by title number
+layout: layout-example.njk
+---
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+
+{{ govukErrorSummary({
+  titleText: "There is a problem",
+  errorList: [
+    {
+      text: "Check title number and try again",
+      href: "#title-number"
+    }
+  ],
+  disableAutoFocus: true
+}) }}
+{{ govukInput({
+  label: {
+    text: "Search by title number",
+    classes: "govuk-label--l",
+    isPageHeading: true
+  },
+  classes: "govuk-input--width-10",
+  hint: {
+    text: "You can find the title number on HM Land Registry documents, like copies of the register"
+  },
+  id: "title-number",
+  name: "title-number",
+  spellcheck: false,
+  errorMessage: {
+    text: "Check title number and try again"
+  }
+}) }}
+{{ govukButton({
+  text: "Search"
+}) }}

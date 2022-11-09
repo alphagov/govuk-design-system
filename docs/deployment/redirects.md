@@ -14,4 +14,4 @@ buildpack to redirects any requests to the service domain.
 
 This app was deployed manually using the CloudFoundry command line tools.
 
-[app]: https://github.com/alphagov/govuk-design-system-redirect
+[app]: https://github.com/LandRegistry/hmlr-design-system-redirect
