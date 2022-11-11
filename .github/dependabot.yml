@@ -1,0 +1,28 @@
+version: 2
+
+updates:
+
+  # Update npm packages
+  - package-ecosystem: npm
+    directory: /
+    reviewers:
+      - alphagov/design-system-developers
+    schedule:
+      interval: daily
+    versioning-strategy: increase
+
+    allow:
+      - dependency-type: all
+
+    ignore:
+      # Ignore major/minor updates (Marked parser changes output)
+      - dependency-name: jstransformer-marked
+        update-types: ['version-update:semver-major', 'version-update:semver-minor']
+
+  # Update GitHub Actions
+  - package-ecosystem: github-actions
+    directory: /
+    reviewers:
+      - alphagov/design-system-developers
+    schedule:
+      interval: daily
