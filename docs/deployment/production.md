@@ -42,8 +42,9 @@ We define healthchecks in the manifest file to check that the `/__canary__` path
 We deploy to the `govuk-design-system-origin` app.
 
 This app exists within the `govuk-design-system` organisation and the
-`production` space, and is deployed by the `design-system-deploy-production@digital.cabinet-office.gov.uk` user, the
-credentials for which can be found in our credential store.
+`design-system` space, and is deployed by the
+`design-system-deploy+design-system@digital.cabinet-office.gov.uk` user, the
+credentials for which can be found in BitWarden.
 
 We use an [application manifest](/deploy/manifest.yml) to configure the app name
 and the type of buildpack that we want to use.
