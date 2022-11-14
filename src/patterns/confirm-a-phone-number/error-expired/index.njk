@@ -1,0 +1,32 @@
+---
+layout: layout-example.njk
+title: Error, security code expired – Confirm a phone number
+---
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<h1 class="govuk-heading-l">Check your phone</h1>
+
+<p class="govuk-body">We’ve sent you a text message with a security code.</p>
+
+{{ govukInput({
+  label: {
+    text: "Security code"
+  },
+  errorMessage: {
+    text: "The security code has expired. New code sent."
+  },
+  id: "security-code",
+  name: "security-code",
+  type: "text",
+  autocomplete: "one-time-code",
+  classes: "govuk-input--width-4",
+  inputmode: "numeric"
+}) }}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
+
+<p class="govuk-body"><a href="#" class="govuk-link">Not received a text message?</a></p>

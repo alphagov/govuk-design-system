@@ -1,0 +1,17 @@
+---
+title: Pagination with text labels
+layout: layout-example.njk
+---
+
+{% from "govuk/components/pagination/macro.njk" import govukPagination %}
+
+{{ govukPagination({
+  previous: {
+    labelText: "Applying for a provisional lorry or bus licence",
+    href: "#"
+  },
+  next: {
+    labelText: "Driver CPC part 1 test: theory",
+    href: "#"
+  }
+}) }}

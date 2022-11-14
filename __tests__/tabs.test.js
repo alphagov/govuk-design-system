@@ -81,14 +81,14 @@ describe('Component page', () => {
 //     describe('when "hideTab" parameter is set to true', () => {
 //       it('the tab list is not rendered', async () => {
 //         await page.goto(baseUrl + '/patterns/question-pages/', { waitUntil: 'load' })
-//         const expandedTabContentWithNoTab = await page.evaluate(() => document.body.querySelector('#example-section-headings-open .app-tabs'))
-//         expect(expandedTabContentWithNoTab).toBeFalsy()
+//         const expandedTabContentWithNoTab = await page.evaluate(() => document.body.querySelector('#section-headings-question-pages-example-open .app-tabs'))
+//         expect(expandedTabContentWithNoTab).toBeNull()
 //       })
 
 //       it('close button is not shown on the code block', async () => {
 //         await page.goto(baseUrl + '/patterns/question-pages/', { waitUntil: 'load' })
 //         const expandedTabContentWithNoTabCloseButton = await page.evaluate(() => document.body.querySelector('.js-tabs__container--no-tabs .js-tabs__close'))
-//         expect(expandedTabContentWithNoTabCloseButton).toBeFalsy()
+//         expect(expandedTabContentWithNoTabCloseButton).toBeNull()
 //       })
 //     })
 //   })
