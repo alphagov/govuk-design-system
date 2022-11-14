@@ -42,8 +42,9 @@ We define healthchecks in the manifest file to check that the `/__canary__` path
 We deploy to the `govuk-design-system-origin` app.
 
 This app exists within the `govuk-design-system` organisation and the
-`production` space, and is deployed by the `design-system-deploy-production@digital.cabinet-office.gov.uk` user, the
-credentials for which can be found in our credential store.
+`design-system` space, and is deployed by the
+`design-system-deploy+design-system@digital.cabinet-office.gov.uk` user, the
+credentials for which can be found in BitWarden.
 
 We use an [application manifest](/deploy/manifest.yml) to configure the app name
 and the type of buildpack that we want to use.
@@ -73,9 +74,10 @@ confusion. The username is `origin` and the password is `badidea`.
 
 ## DNS
 
-design-system.service.gov.uk is a subdomain of the service.gov.uk zone and is
-defined in [`alphagov/govuk-dns-config`][govuk-dns-config] and deployed by the
-[reliability engineering team][re-team] using [`alphagov/govuk-dns`][govuk-dns].
+`design-system.service.gov.uk` is a subdomain of the `service.gov.uk` zone and
+is defined in [`alphagov/govuk-dns-config`][govuk-dns-config] (private repo) and
+deployed by the GOV.UK 2nd Line team using [`alphagov/govuk-dns`][govuk-dns].
+Support queries relating to DNS are best sent to `hostmaster@digit...`.
 
 Most other services are delegated as their own zones so that the service team
 have control over their own DNS, but we have opted to set up a subdomain instead
@@ -127,7 +129,6 @@ trailing-slashed URLs, but decided against it because:
 [nginx-bp]: https://github.com/cloudfoundry/nginx-buildpack
 [govuk-dns-config]: https://github.com/alphagov/govuk-dns-config/blob/master/service.gov.uk.yaml
 [govuk-dns]: https://github.com/alphagov/govuk-dns
-[re-team]: https://reliability-engineering.cloudapps.digital/
 [cname]: https://serverfault.com/questions/613829/why-cant-a-cname-record-be-used-at-the-apex-aka-root-of-a-domain
 [cdn-route]: https://docs.cloud.service.gov.uk/#set-up-a-custom-domain-using-the-cdn-route-service
 [varnish-strip]: https://github.com/alphagov/govuk-puppet/blob/22e8fd6ab532febd4a5df30381d3fc215f6e0153/modules/varnish/templates/default.vcl.erb#L31-L37
