@@ -50,7 +50,7 @@
     "@metalsmith/sass": "^1.2.0",
     "accessible-autocomplete": "^2.0.2",
     "axe-puppeteer": "^1.0.0",
-    "fs-extra": "^7.0.1",
+    "fs-extra": "^10.1.0",
     "iframe-resizer": "^3.6.6",
     "jest": "^27.2.3",
     "jest-puppeteer": "^4.1.1",
