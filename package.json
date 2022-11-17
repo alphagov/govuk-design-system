@@ -68,7 +68,7 @@
     "metalsmith-uglify": "^2.4.1",
     "nunjucks": "^3.2.2",
     "puppeteer": "^1.14.0",
-    "request": "^2.88.0",
+    "request": "^2.88.2",
     "rollup-plugin-commonjs": "^9.3.4",
     "rollup-plugin-node-resolve": "^4.2.3",
     "sitemap": "^2.1.0",
