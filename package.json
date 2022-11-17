@@ -35,7 +35,7 @@
     "highlight.js": "^10.4.1",
     "html5shiv": "^3.7.3",
     "lunr": "^2.3.6",
-    "modernizr": "^3.7.1",
+    "modernizr": "^3.12.0",
     "sass-export": "^2.1.0",
     "serve-static": "^1.13.2",
     "slugger": "^1.0.1"
