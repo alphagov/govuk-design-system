@@ -49,7 +49,7 @@
     "accessible-autocomplete": "^2.0.2",
     "axe-puppeteer": "^1.0.0",
     "fs-extra": "^10.1.0",
-    "iframe-resizer": "^3.6.6",
+    "iframe-resizer": "^4.3.2",
     "jest": "^27.2.3",
     "jest-puppeteer": "^6.1.1",
     "js-beautify": "^1.14.7",
