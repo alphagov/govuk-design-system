@@ -46,7 +46,7 @@
     "@metalsmith/layouts": "^2.6.0",
     "@metalsmith/permalinks": "^2.4.1",
     "@metalsmith/sass": "^1.2.0",
-    "accessible-autocomplete": "^2.0.2",
+    "accessible-autocomplete": "^2.0.4",
     "axe-puppeteer": "^1.0.0",
     "fs-extra": "^10.1.0",
     "iframe-resizer": "^3.6.6",
