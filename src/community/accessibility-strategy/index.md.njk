@@ -57,7 +57,7 @@ Progressive enhancement assists in web accessibility by encouraging teams to bui
 
 [Learn more about progressive enhancement in the Service Manual](https://www.gov.uk/service-manual/technology/using-progressive-enhancement).
 
-## Prioritising, testing and recording accessibility concerns
+## Prioritising accessibility concerns
 
 An ‘accessibility concern’ is our umbrella term for any question about the accessibility of a portion of a product.
 
@@ -69,15 +69,13 @@ Accessibility concerns can surface in any product, including:
 -   the [GOV.UK Frontend technical documentation website](https://frontend.design-system.service.gov.uk/)
 -   other content produced by the GOV.UK Design System team
 
-### Prioritising accessibility concerns
-
 The GOV.UK Design System’s top focus for accessibility is on styles and components included in GOV.UK Frontend and patterns built using GOV.UK Frontend.
 
 When the team encounters multiple accessibility concerns across multiple products, we prioritise work based on the impact on users of government services. Due to the broad reach of GOV.UK Frontend, the team are likely to prioritise accessibility concerns above concerns in other products they manage.
 
 Our goal is to focus first on high-risk and high-impact accessibility concerns in the products that directly impact end-users and the public.
 
-#### Accessibility concern types
+### Accessibility concern types
 
 The team puts accessibility concerns in 2 categories:
 
@@ -166,7 +164,7 @@ When disagreement involves multiple parties, the decision-making hierarchy is:
 
 It is not regularly the role of the GDS accessibility monitoring team to make decisions like these, and this decision-making process is unique to the GOV.UK Design System team. This is due to the centralised nature of the GOV.UK Design System and the limited capacity of the GDS accessibility monitoring team. Other service teams will need to determine their decision-making method when disagreements over accessibility concerns arise.
 
-### Baseline WCAG accessibility compliance
+## Baseline WCAG accessibility compliance
 
 We aim to meet level AA WCAG for:
 
@@ -186,7 +184,7 @@ The one year gap between a WCAG version’s release and when we support it allow
 
 If regulations require updates to occur at an earlier date or to meet a newer version of WCAG, the regulatory requirement will take precedence.
 
-#### Improving baseline compliance
+### Improving baseline compliance
 
 Where feasible, the team aims to identify areas where they can surpass WCAG AA guidelines to provide a more accessible design system. WCAG does not cover all aspects of accessibility, and when the team identifies an opportunity to go beyond compliance to improve accessibility, they will explore that opportunity.
 
@@ -208,11 +206,11 @@ When feasible, the team aims to pursue the additional level of AAA compliance wh
 
 If the factors above are not met, the team should document which AAA criteria were discussed, but not pursued and which factors led to the decision.
 
-### Testing accessibility
+## Testing accessibility concerns
 
 The team uses the [GOV.UK Service Manual guidance on testing for accessibility](https://www.gov.uk/service-manual/helping-people-to-use-your-service/testing-for-accessibility) and tests the accessibility of each component using a mix of testing tools, automated testing during deployment and manual testing.
 
-#### Testing tools
+### Testing tools
 
 The team uses a variety of tools during the development process, including, but not limited to:
 
@@ -226,7 +224,7 @@ The team also uses general inspection techniques, including:
 -   HTML inspection using [browser developer tools](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools)
 -   [accessibility tree](https://developer.mozilla.org/en-US/docs/Glossary/Accessibility_tree) inspection
 
-#### Automated testing
+### Automated testing
 
 The team currently uses [jest-axe](https://github.com/nickcolley/jest-axe) as part of our deployment process. This tool tests the example code snippets in the GOV.UK Design System against [axe-core](https://github.com/dequelabs/axe-core).
 
@@ -239,7 +237,7 @@ As of November 2022, there are limitations to how the team implements jest-axe a
 
 These limitations may be addressed by the proposed ‘[Enhance automated testing in our development pipeline](https://docs.google.com/document/d/1lIPb1X075bguXlVl34kND43V0QZ3SD2Iga4xZQissXo/edit#heading=h.xud2usps7mcg)’ activity.
 
-#### Manual testing
+### Manual testing
 
 Manual testing for a style, component or pattern follows our own [accessibility acceptance criteria](https://github.com/alphagov/govuk-frontend/blob/main/docs/contributing/test-components-using-accessibility-acceptance-criteria.md).
 
@@ -256,7 +254,7 @@ Currently, the team uses desktop-type devices to access assistive technologies i
 
 As of November 2022, there are limitations to how the team performs and records manual testing. These limitations may be addressed by the proposed ‘[Standardise and improve our manual testing methodology](https://docs.google.com/document/d/1lIPb1X075bguXlVl34kND43V0QZ3SD2Iga4xZQissXo/edit#heading=h.e6apsnwmekac)’ activity.
 
-#### User research and usability testing
+### User research and usability testing
 
 Accessibility user research often includes activities such as:
 
@@ -278,7 +276,7 @@ Examples of when the team and other service teams have completed additional acce
 -   [General component accessibility research](https://github.com/alphagov/govuk-design-system/issues/1377) (2020)
 -   [Hide this Page component](https://github.com/alphagov/govuk-design-system/issues/2195) (2022)
 
-### Recording accessibility concerns
+## Recording accessibility concerns
 
 Individuals and teams can raise an accessibility concern as either a GitHub issue or a query from any other supported channel.
 
