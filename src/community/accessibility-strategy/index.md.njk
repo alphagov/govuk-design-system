@@ -84,7 +84,7 @@ The team puts accessibility concerns in 2 categories:
 
 The team will usually prioritise evidenced issues and queries over theoretical ones.
 
-Feedback from users and other proof of real-world impact provides much stronger evidence for the team, especially when determining priority and urgency. When resolving an accessibility concern involves a solution that causes a [breaking change](https://docs.google.com/document/d/1lIPb1X075bguXlVl34kND43V0QZ3SD2Iga4xZQissXo/edit#heading=h.5ctel9k976du), strong evidence helps justify the change.
+Feedback from users and other proof of real-world impact provides much stronger evidence for the team, especially when determining priority and urgency. When resolving an accessibility concern involves a solution that causes a [breaking change](#breaking-releases-and-breaking-changes), strong evidence helps justify the change.
 
 #### Theoretical accessibility concerns
 
@@ -148,7 +148,7 @@ If the GOV.UK Design System team can confirm the accessibility concern internall
 If the GOV.UK Design System team is unable to confirm the accessibility concern or disagrees with the raised concern, then the following steps are taken to resolve the disagreement:
 
 1.  Assess the severity of the accessibility concern (as defined in the section above)
-2.  If the accessibility concern is not [high-severity](https://docs.google.com/document/d/1lIPb1X075bguXlVl34kND43V0QZ3SD2Iga4xZQissXo/edit#heading=h.ugf177uvvbpy), continue to hold discussions within the team and any frontend and accessibility communities where applicable
+2.  If the accessibility concern is not [high-severity](#determining-severity-of-an-accessibility-concern), continue to hold discussions within the team and any frontend and accessibility communities where applicable
 
 #### Level 3 for disagreement escalation
 
@@ -235,7 +235,7 @@ As of November 2022, there are limitations to how the team implements jest-axe a
 1.  The team only tests the first example code snippet for each component and pattern – most of our components and patterns have multiple example code snippets.
 2.  The team only tests the static HTML version of example code snippets, as found in the HTML tab – some components and patterns include JavaScript that modifies the HTML, which tests do not capture.
 
-These limitations may be addressed by the proposed ‘[Enhance automated testing in our development pipeline](https://docs.google.com/document/d/1lIPb1X075bguXlVl34kND43V0QZ3SD2Iga4xZQissXo/edit#heading=h.xud2usps7mcg)’ activity.
+These limitations may be addressed by the proposed ‘[Enhance automated testing in our development pipeline](https://github.com/alphagov/govuk-frontend/issues/3041)’ activity.
 
 ### Manual testing
 
@@ -243,7 +243,7 @@ Manual testing for a style, component or pattern follows our own [accessibility 
 
 Additionally, the team follows the [GOV.UK Service manual guidance on testing with assistive technologies](https://www.gov.uk/service-manual/technology/testing-with-assistive-technologies).
 
-The team records results on our [accessibility testing spreadsheet](https://docs.google.com/spreadsheets/d/1O0rWoH3ah_rj2iJ2We9VfyHNOr0gOVItXRy3vKzuYSw/edit?usp=sharing), which lists the specific browser and assistive technology combinations with which we test.
+The team records results on our [accessibility testing spreadsheet (Google Sheet)](https://docs.google.com/spreadsheets/d/1O0rWoH3ah_rj2iJ2We9VfyHNOr0gOVItXRy3vKzuYSw/edit?usp=sharing), which lists the specific browser and assistive technology combinations with which we test.
 
 Currently, the team uses desktop-type devices to access assistive technologies in the following ways:
 
@@ -252,7 +252,7 @@ Currently, the team uses desktop-type devices to access assistive technologies i
 -   high contrast and other display modes through Assistiv Labs and browsers
 -   speech recognition software through Windows testing computers and macOS
 
-As of November 2022, there are limitations to how the team performs and records manual testing. These limitations may be addressed by the proposed ‘[Standardise and improve our manual testing methodology](https://docs.google.com/document/d/1lIPb1X075bguXlVl34kND43V0QZ3SD2Iga4xZQissXo/edit#heading=h.e6apsnwmekac)’ activity.
+As of November 2022, there are limitations to how the team performs and records manual testing. These limitations may be addressed by the proposed ‘[Standardise and improve our manual testing methodology](https://github.com/alphagov/govuk-design-system/issues/2456)’ activity.
 
 ### User research and usability testing
 
@@ -291,6 +291,14 @@ We also will record relevant accessibility concerns for specific styles, compone
 ### Recording WCAG compliance status
 
 If the GOV.UK Design System does not meet the requirements of level AA accessibility compliance, the team will update the [GOV.UK Design System accessibility statement](https://design-system.service.gov.uk/accessibility/) and keep the records of changes required until compliance is met.
+
+## Proposed accessibility activities
+
+One of the goals of this strategy is to outline the work needed to improve the accessibility of the GOV.UK Design System. We document this work as a set of proposed activities, presented in a GitHub project.
+
+[Accessibility strategy: proposed activities](https://github.com/orgs/alphagov/projects/46)
+
+This GitHub project allows service teams to see the areas of work under consideration, and is intended to enhance the success of the included activities. The project will be reviewed quarterly, to align with quarterly planning.
 
 ## Performance measurement
 
