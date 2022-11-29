@@ -56,7 +56,7 @@
     "js-beautify": "^1.14.7",
     "jstransformer-marked": "1.2.0",
     "jstransformer-nunjucks": "^1.1.0",
-    "marked": "^4.2.2",
+    "marked": "^4.2.3",
     "metalsmith": "^2.5.1",
     "metalsmith-broken-link-checker": "^1.0.2",
     "metalsmith-browser-sync": "^1.1.1",
