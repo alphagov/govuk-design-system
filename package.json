@@ -17,13 +17,8 @@
     "start": "node tasks/serve.js",
     "test": "npm run lint && jest",
     "lint": "npm run lint:js && npm run lint:scss",
-    "lint:js": "standard",
+    "lint:js": "eslint --cache --cache-location .cache/eslint --cache-strategy content --color --ignore-path .gitignore \"**/*.{cjs,js,mjs}\"",
     "lint:scss": "stylelint \"**/*.scss\""
-  },
-  "standard": {
-    "ignore": [
-      "/src/javascripts/vendor/"
-    ]
   },
   "dependencies": {
     "@metalsmith/postcss": "^5.1.0",
