@@ -23,4 +23,4 @@ For example, if a branch is called `staging`, it will deploy to `staging--govuk-
 ## Configuration
 
 The Netlify account is tied to the govuk-design-system-ci GitHub user, the
-credentials for which can be found in our credential store.
+credentials for which can be found in BitWarden.

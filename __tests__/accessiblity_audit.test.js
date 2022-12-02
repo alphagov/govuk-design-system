@@ -12,8 +12,15 @@ let baseUrl = 'http://localhost:' + PORT
 async function audit (page) {
   const axe = new AxePuppeteer(page)
     .include('body')
-    .exclude('#app-site-search__input') // axe reports there is "no label associated with the text field", when there is one.
-    .exclude('.app-phase-banner') // axe reports that the phase banner is not inside a landmark, which is intentional.
+    // axe reports there is "no label associated with the text field", when there is one.
+    .exclude('#app-site-search__input')
+    // axe reports that the phase banner is not inside a landmark, which is intentional.
+    .exclude('.app-phase-banner')
+    // axe reports that the skip link is not inside a landmark, which is intentional.
+    // https://design-system.service.gov.uk/components/skip-link/#when-to-use-this-component
+    .exclude('.govuk-skip-link')
+    // axe reports that the back to top button is not inside a landmark, which is intentional.
+    .exclude('.app-back-to-top')
 
   const results = await axe.analyze()
 
