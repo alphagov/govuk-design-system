@@ -1,11 +1,10 @@
-/* eslint-env jest */
 
 const { setupPage } = require('../lib/jest-utilities.js')
 const configPaths = require('../lib/paths.js')
 const PORT = configPaths.testPort
 
 let page
-let baseUrl = 'http://localhost:' + PORT
+const baseUrl = 'http://localhost:' + PORT
 
 beforeAll(async () => {
   page = await setupPage()
@@ -22,7 +21,7 @@ describe('Example page', () => {
       await page.goto(defaultExampleUrl, { waitUntil: 'load' })
       await page.waitForSelector('form[action="/form-handler"]')
       await page.click('.govuk-button')
-      let url = await page.url()
+      const url = await page.url()
       // url should stay the same as the form shouldn't submit
       expect(url).toBe(defaultExampleUrl)
     })

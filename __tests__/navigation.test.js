@@ -1,4 +1,3 @@
-/* eslint-env jest */
 const devices = require('puppeteer/DeviceDescriptors')
 const iPhone = devices['iPhone 6']
 
@@ -7,7 +6,7 @@ const configPaths = require('../lib/paths.js')
 const PORT = configPaths.testPort
 
 let page
-let baseUrl = 'http://localhost:' + PORT
+const baseUrl = 'http://localhost:' + PORT
 
 const mobileNav = '.app-navigation'
 const mobileNavToggler = '.js-app-navigation__toggler'
