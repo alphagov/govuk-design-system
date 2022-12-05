@@ -1,11 +1,10 @@
-/* eslint-env jest */
 
 const { setupPage } = require('../lib/jest-utilities.js')
 const configPaths = require('../lib/paths.js')
 const PORT = configPaths.testPort
 
 let page
-let baseUrl = 'http://localhost:' + PORT
+const baseUrl = 'http://localhost:' + PORT
 
 beforeAll(async () => {
   page = await setupPage()

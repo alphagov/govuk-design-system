@@ -1,4 +1,3 @@
-/* eslint-env jest */
 
 const { setupPage } = require('../lib/jest-utilities.js')
 // const configPaths = require('../lib/paths.js')

@@ -1,4 +1,3 @@
-/* eslint-env jest */
 
 const { setupPage } = require('../lib/jest-utilities.js')
 const configPaths = require('../lib/paths.js')
@@ -8,7 +7,7 @@ const PORT = configPaths.testPort
 const isSearchIndex = /.*\/search-index-[0-9a-f]{32}.json$/
 
 let page
-let baseUrl = 'http://localhost:' + PORT
+const baseUrl = 'http://localhost:' + PORT
 
 beforeEach(async () => {
   page = await setupPage()
@@ -79,7 +78,7 @@ describe('Site search', () => {
       page.waitForNavigation(),
       page.keyboard.press('Enter')
     ])
-    let url = await page.url()
+    const url = await page.url()
 
     expect(url).toBe(baseUrl + '/get-started/prototyping/')
   })
