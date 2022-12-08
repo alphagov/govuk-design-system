@@ -43,7 +43,7 @@
     "@metalsmith/sass": "^1.2.0",
     "accessible-autocomplete": "^2.0.4",
     "axe-puppeteer": "^1.1.1",
-    "eslint": "8.28.0",
+    "eslint": "8.29.0",
     "eslint-config-standard": "17.0.0",
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-n": "15.5.1",
