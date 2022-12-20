@@ -48,5 +48,8 @@
     "stylelint": "^14.16.0",
     "stylelint-config-gds": "^0.2.0",
     "stylelint-order": "^5.0.0"
+  },
+  "dependencies": {
+    "govuk-frontend": "^4.4.1"
   }
 }
