@@ -12,7 +12,7 @@ updates:
     versioning-strategy: increase
 
     allow:
-      - dependency-type: all
+      - dependency-type: direct
 
     ignore:
       # Ignore major/minor updates (Marked parser changes output)
