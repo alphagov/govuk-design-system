@@ -66,9 +66,7 @@
     "metalsmith-fingerprint-ignore": "^2.0.0",
     "metalsmith-include-files": "^0.2.1",
     "metalsmith-renamer": "^0.5.217",
-    "metalsmith-uglify": "^2.4.1",
     "nunjucks": "^3.2.2",
-    "outdent": "^0.8.0",
     "puppeteer": "^18.2.1",
     "rollup": "0.59.4",
     "rollup-plugin-commonjs": "^9.3.4",
@@ -77,7 +75,8 @@
     "standard": "^17.0.0",
     "stylelint": "^14.16.1",
     "stylelint-config-gds": "^0.2.0",
-    "stylelint-order": "^6.0.1"
+    "stylelint-order": "^6.0.1",
+    "terser": "^5.16.1"
   },
   "engines": {
     "node": "^18.12.0",
