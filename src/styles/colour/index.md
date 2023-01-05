@@ -19,7 +19,7 @@ your service meets [level AA of the Web Content Accessibility Guidelines
 If you are using GOV.UK Frontend or the GOV.UK Prototype Kit, use the [Sass
 variables](https://frontend.design-system.service.gov.uk/sass-api-reference/#colours) provided rather than copying the
 hexadecimal (hex) colour values. For example, use `$govuk-brand-colour` rather
-than `{{ colours.applied['Brand colour'][0]['colour'] | trim }}`.
+than `{% raw %}{{ colours.applied['Brand colour'][0]['colour'] | trim }}{% endraw %}`.
 This means that your service will always use the most recent colour palette
 whenever you update.
 
