@@ -44,7 +44,7 @@
     "accessible-autocomplete": "^2.0.4",
     "axe-puppeteer": "^1.1.1",
     "browser-sync": "2.27.11",
-    "eslint": "^8.30.0",
+    "eslint": "^8.31.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.6.0",
@@ -71,7 +71,7 @@
     "rollup-plugin-node-resolve": "^4.2.4",
     "sitemap": "^2.2.0",
     "standard": "^17.0.0",
-    "stylelint": "^14.16.0",
+    "stylelint": "^14.16.1",
     "stylelint-config-gds": "^0.2.0",
     "stylelint-order": "^5.0.0"
   },
