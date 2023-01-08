@@ -1,6 +1,6 @@
 {% extends "layout-single-page.njk" %}
 
-{% set contents %}
+{% set content %}
   <h1 class="govuk-heading-xl">Sitemap</h1>
   {% for item in navigation %}
     <h2 class="govuk-heading-l"><a class="govuk-link" href="/{{ item.url }}/">{{ item.label }}</a></h2>
