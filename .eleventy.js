@@ -30,6 +30,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.setLibrary('njk', nunjucksEnvironment)
 
   return {
+    markdownTemplateEngine: 'njk',
     dir: {
       input: 'src',
       includes: '../views/partials',
