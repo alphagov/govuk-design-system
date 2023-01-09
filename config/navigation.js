@@ -1,7 +1,8 @@
 module.exports = [
   {
     label: 'Get started',
-    url: 'get-started'
+    url: 'get-started',
+    includeInSearch: true
   },
   {
     label: 'Styles',
@@ -20,6 +21,7 @@ module.exports = [
   },
   {
     label: 'Community',
-    url: 'community'
+    url: 'community',
+    includeInSearch: true
   }
 ]

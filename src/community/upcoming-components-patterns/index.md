@@ -2,6 +2,7 @@
 title: Upcoming components and patterns
 description: Anyone can propose, develop or contribute to new patterns and components, or improvements to existing ones.
 section: Community
+aliases: exit this page, maps, task list, autocomplete, choosing a date, navigation
 theme: What we’re working on
 layout: layout-pane.njk
 order: 1
