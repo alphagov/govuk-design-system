@@ -107,6 +107,6 @@ You can download GOV.UK Frontend Nunjucks macro snippets for:
 
 ## Help improve this page
 
-To help make sure that this page is useful, relevant and up to date, you can [propose a change](https://github.com/alphagov/govuk-design-system/edit/main/src/community/resources-and-tools/index.md.njk) – read more about [how to propose changes in GitHub](/community/propose-a-content-change-using-github/).
+To help make sure that this page is useful, relevant and up to date, you can [propose a change](https://github.com/alphagov/govuk-design-system/edit/main/src/community/resources-and-tools/index.md) – read more about [how to propose changes in GitHub](/community/propose-a-content-change-using-github/).
 
 If you want to submit a resource or tool, check that it meets the [contribution criteria for resources](/community/contribution-criteria/#developing-a-community-resource-or-tool) first.
