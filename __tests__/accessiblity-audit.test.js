@@ -1,16 +1,9 @@
 const { AxePuppeteer } = require('@axe-core/puppeteer')
 
-const { setupPage } = require('../lib/jest-utilities.js')
-const configPaths = require('../lib/paths.js')
-const PORT = configPaths.testPort
+const { goTo } = require('../lib/puppeteer-helpers.js')
 
-let page
-const baseUrl = 'http://localhost:' + PORT
-
-async function analyze (path) {
-  const { href } = new URL(path, baseUrl)
-
-  await page.goto(href, { waitUntil: 'load' })
+async function analyze (page, path) {
+  await goTo(page, path)
 
   const axe = new AxePuppeteer(page)
     .include('body')
@@ -31,46 +24,38 @@ async function analyze (path) {
   return axe.analyze()
 }
 
-beforeAll(async () => {
-  page = await setupPage()
-})
-
-afterAll(async () => {
-  await page.close()
-})
-
 describe('Accessibility Audit', () => {
   describe('Home page - layout.njk', () => {
     it('validates', async () => {
-      const results = await analyze('/')
+      const results = await analyze(page, '/')
       expect(results).toHaveNoViolations()
     })
   })
 
   describe('Component page - layout-pane.njk', () => {
     it('validates', async () => {
-      const results = await analyze('/components/radios/')
+      const results = await analyze(page, '/components/radios/')
       expect(results).toHaveNoViolations()
     })
   })
 
   describe('Patterns page - layout-pane.njk', () => {
     it('validates', async () => {
-      const results = await analyze('/patterns/gender-or-sex/')
+      const results = await analyze(page, '/patterns/gender-or-sex/')
       expect(results).toHaveNoViolations()
     })
   })
 
   describe('Get in touch page - layout-single-page.njk', () => {
     it('validates', async () => {
-      const results = await analyze('/get-in-touch/')
+      const results = await analyze(page, '/get-in-touch/')
       expect(results).toHaveNoViolations()
     })
   })
 
   describe('Site Map page - layout-sitemap.njk', () => {
     it('validates', async () => {
-      const results = await analyze('/sitemap/')
+      const results = await analyze(page, '/sitemap/')
       expect(results).toHaveNoViolations()
     })
   })
