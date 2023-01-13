@@ -3,7 +3,7 @@ When removing or renaming a page or folder previously associated with a URL rout
 
 For example:
 
-Renaming `community/juggling.md.njk` to `community/circus-performance.md.njk` means that the URL **design-system.service.gov.uk/community/juggling/** no longer exists. You need to provide a redirect to the correct URL.
+Renaming `community/juggling.md` to `community/circus-performance.md` means that the URL **design-system.service.gov.uk/community/juggling/** no longer exists. You need to provide a redirect to the correct URL.
 
 The archive page is a content page that is not indexed by search engines and typically doesn't appear in our sitemap. It will give a brief explanation to users that:
 
@@ -27,7 +27,7 @@ The team has chosen to do this instead of explicitly redirecting pages using 301
 ## How to create an archived page
 Along with the pull request to delete or rename the URL you want to change, you will need to do the following:
 
-1. If the URL being archived is from a folder with an `index.md.njk` file, you will need to replace the folder with a `.md.njk file` of the same name - for example `/juggling/index.md.njk` becomes `juggling.md.njk`.
+1. If the URL being archived is from a folder with an `index.md` file, you will need to replace the folder with a `.md file` of the same name - for example `/juggling/index.md` becomes `juggling.md`.
 2. In the file you want to archive, keep it in the same location, but replace the contents with the following code:
 
 
