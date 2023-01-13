@@ -41,7 +41,7 @@ jobs:
         run: npm run build
 
       - name: Lint and test
-        run: npm test -- --runInBand
+        run: npm test -- --color --maxWorkers=2
 
       # Share data between the build and deploy jobs so we don't need to run `npm run build` again on deploy
       # Upload the deploy folder as an artifact so it can be downloaded and used in the deploy job
@@ -52,4 +52,3 @@ jobs:
             name: build
             path: deploy/**
             retention-days: 1
-

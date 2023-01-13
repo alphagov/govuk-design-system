@@ -81,15 +81,6 @@
     "node": "^18.12.0",
     "npm": "^8.1.0 || ^9.1.0"
   },
-  "jest": {
-    "preset": "jest-puppeteer",
-    "setupFilesAfterEnv": [
-      "./jest.setup.js"
-    ],
-    "testEnvironmentOptions": {
-      "url": "https://design-system.service.gov.uk"
-    }
-  },
   "browserslist": [
     "last 2 versions",
     "ie 8",
