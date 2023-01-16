@@ -23,7 +23,7 @@ If you want to contact the team you can
 - Calvin Lau – Senior Content Designer
 - Charlotte Downs – Interaction Designer
 - Chris Ballantine-Thomas – Senior Interaction Designer
-- Ciandelle Scollan – Interaction Designer
+- Ciandelle Hughes – Interaction Designer
 - David Cox – Senior Accessibility Specialist
 - Imran Hussain – Community Designer
 - Katrina Birch – User Researcher
@@ -43,6 +43,5 @@ If you want to contact the team you can
 - Ben Surgison – Senior Node.js Developer
 - Izabela Podralska – Delivery Manager
 - Joe Lanman – Lead Interaction Designer
-- Laurence de Bruxelles – Developer
 - Natalie Carey – Senior Developer (Tech Lead)
 - Ruth Hammond – Product Manager
