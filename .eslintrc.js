@@ -5,6 +5,10 @@ module.exports = {
       files: ['**/*.test.{cjs,js,mjs}'],
       env: {
         jest: true
+      },
+      globals: {
+        page: true,
+        browser: true
       }
     }
   ]

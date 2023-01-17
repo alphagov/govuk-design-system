@@ -36,13 +36,13 @@
     "slugger": "^1.0.1"
   },
   "devDependencies": {
+    "@axe-core/puppeteer": "^4.5.2",
     "@babel/plugin-transform-modules-commonjs": "^7.20.11",
     "@metalsmith/in-place": "^4.5.0",
     "@metalsmith/layouts": "^2.6.0",
     "@metalsmith/permalinks": "^2.4.1",
     "@metalsmith/sass": "^1.2.0",
     "accessible-autocomplete": "^2.0.4",
-    "axe-puppeteer": "^1.1.1",
     "browser-sync": "2.27.11",
     "eslint": "^8.31.0",
     "eslint-config-standard": "^17.0.0",
@@ -51,6 +51,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "iframe-resizer": "^3.6.6",
     "jest": "^29.3.1",
+    "jest-axe": "^7.0.0",
     "jest-environment-jsdom": "^29.3.1",
     "jest-puppeteer": "^6.2.0",
     "js-beautify": "^1.14.7",
@@ -67,7 +68,7 @@
     "metalsmith-rollup": "^2.0.0",
     "metalsmith-uglify": "^2.4.1",
     "nunjucks": "^3.2.2",
-    "puppeteer": "^1.14.0",
+    "puppeteer": "^18.2.1",
     "rollup-plugin-commonjs": "^9.3.4",
     "rollup-plugin-node-resolve": "^4.2.4",
     "sitemap": "^2.2.0",
@@ -79,15 +80,6 @@
   "engines": {
     "node": "^18.12.0",
     "npm": "^8.1.0 || ^9.1.0"
-  },
-  "jest": {
-    "preset": "jest-puppeteer",
-    "setupFilesAfterEnv": [
-      "./jest.setup.js"
-    ],
-    "testEnvironmentOptions": {
-      "url": "https://design-system.service.gov.uk"
-    }
   },
   "browserslist": [
     "last 2 versions",
