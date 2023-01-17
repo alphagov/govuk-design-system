@@ -44,7 +44,7 @@
     "@metalsmith/sass": "^1.2.0",
     "accessible-autocomplete": "^2.0.4",
     "browser-sync": "2.27.11",
-    "eslint": "^8.31.0",
+    "eslint": "^8.32.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.6.0",
