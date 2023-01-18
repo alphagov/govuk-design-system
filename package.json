@@ -13,6 +13,7 @@
   },
   "homepage": "https://github.com/alphagov/govuk-design-system#readme",
   "scripts": {
+    "postinstall": "npm ls --depth=0",
     "build": "node tasks/build.js",
     "start": "node tasks/serve.js",
     "test": "npm run lint && jest",
@@ -69,6 +70,7 @@
     "metalsmith-uglify": "^2.4.1",
     "nunjucks": "^3.2.2",
     "puppeteer": "^18.2.1",
+    "rollup": "0.59.4",
     "rollup-plugin-commonjs": "^9.3.4",
     "rollup-plugin-node-resolve": "^4.2.4",
     "sitemap": "^2.2.0",
