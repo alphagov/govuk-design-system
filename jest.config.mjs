@@ -13,5 +13,8 @@ export default {
   reporters: ['default', 'github-actions'],
 
   // Test timeout increased (5s to 15s)
-  testTimeout: 15000
+  testTimeout: 15000,
+
+  // Ignore built fixtures during `--watch`
+  watchPathIgnorePatterns: ['fixtures/build']
 }
