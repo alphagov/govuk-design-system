@@ -1,7 +1,7 @@
 <nav class="app-subnav" aria-labelledby="app-subnav-heading">
   <h2 class="govuk-visually-hidden" id="app-subnav-heading">Pages in this section</h2>
   {% for item in navigation %}
-    {% if path.startsWith(item.url) %}
+    {% if permalink.startsWith(item.url) %}
     {% if item.items %}
       {% for theme, items in item.items | groupby("theme") %}
         {% if theme != 'undefined' %}
@@ -9,9 +9,9 @@
         {% endif %}
         <ul class="app-subnav__section">
         {% for subitem in items %}
-          <li class="app-subnav__section-item{% if subitem.url == path %} app-subnav__section-item--current{% endif %}">
+          <li class="app-subnav__section-item{% if subitem.url == permalink %} app-subnav__section-item--current{% endif %}">
             <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/{{ subitem.url }}/">{{ subitem.label }}</a>
-            {% if (subitem.headings) and (subitem.url == path) %}
+            {% if (subitem.headings) and (subitem.url == permalink) %}
               <ul class="app-subnav__section app-subnav__section--nested">
                 {% for link in subitem.headings %}
                   {% if link.depth == 2 %}
