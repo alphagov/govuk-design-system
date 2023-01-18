@@ -2,15 +2,20 @@ name: Test
 
 on:
   pull_request:
+
   push:
-    branches-ignore:
-      - main  # pushes to main are handled by deploy.yaml
+    branches:
+      - 'feature/**'
+      - 'v[0-9]'
+
   workflow_call:
     inputs:
       upload-artifact:
         default: false
         required: false
         type: boolean
+
+  workflow_dispatch:
 
 jobs:
   build:
