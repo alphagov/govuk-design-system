@@ -47,7 +47,7 @@
     "browser-sync": "2.27.11",
     "eslint": "^8.32.0",
     "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-n": "^15.6.1",
     "eslint-plugin-promise": "^6.1.1",
     "iframe-resizer": "^3.6.6",
