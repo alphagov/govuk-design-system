@@ -68,7 +68,7 @@
     "metalsmith-renamer": "^0.5.217",
     "nunjucks": "^3.2.2",
     "puppeteer": "^18.2.1",
-    "rollup": "0.59.4",
+    "rollup": "3.10.0",
     "rollup-plugin-commonjs": "^9.3.4",
     "rollup-plugin-node-resolve": "^4.2.4",
     "sitemap": "^7.1.1",
