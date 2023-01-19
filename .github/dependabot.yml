@@ -22,6 +22,9 @@ updates:
       # Ignore major/minor updates (Marked parser changes output)
       - dependency-name: jstransformer-marked
         update-types: ['version-update:semver-major', 'version-update:semver-minor']
+      
+      # Always ignore legacy packages (Maintain rollup's IE8 compatibility)
+      - dependency-name: rollup
 
   # Update GitHub Actions
   - package-ecosystem: github-actions
