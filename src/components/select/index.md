@@ -43,9 +43,9 @@ User research has shown that some users struggle with selects.
 
 ### Known issues and gaps
 
-Users have:
+Research shows that users can struggle with selects, particularly when users have:
   - been unable to close the select
-  - typed into the select
+  - tried to type into the select
   - confused focused items with selected items
   - tried to pinch zoom select options on smaller devices
 
