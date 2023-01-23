@@ -64,7 +64,7 @@
     "metalsmith-canonical": "^1.2.0",
     "metalsmith-env": "^2.2.0",
     "metalsmith-fingerprint-ignore": "^2.0.0",
-    "metalsmith-include-files": "^0.2.1",
+    "metalsmith-include-files": "^1.0.0",
     "metalsmith-renamer": "^0.5.217",
     "nunjucks": "^3.2.2",
     "puppeteer": "^18.2.1",
