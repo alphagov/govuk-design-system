@@ -39,4 +39,16 @@ You can add hint text to help the user understand the options and choose one of 
 
 ## Research on this component
 
-Watch a video about how some [users struggle with selects](https://www.youtube.com/watch?v=CUkMCQR4TpY).
+User research has shown that some users struggle with selects.
+
+### Known issues and gaps
+
+Research shows that users can struggle with selects, particularly when users have:
+  - been unable to close the select
+  - tried to type into the select
+  - confused focused items with selected items
+  - tried to pinch zoom select options on smaller devices
+
+ For more detail watch this video with [examples of users struggling with selects](https://www.youtube.com/watch?v=CUkMCQR4TpY).
+
+ This blog shows [an example where a text input is used over a select](https://designnotes.blog.gov.uk/2013/12/05/asking-for-a-date-of-birth/) for asking a user for a date.
