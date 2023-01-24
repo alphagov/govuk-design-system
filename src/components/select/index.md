@@ -48,6 +48,7 @@ Research shows that users can struggle with selects, particularly when users hav
   - tried to type into the select
   - confused focused items with selected items
   - tried to pinch zoom select options on smaller devices
+  - not understood that they can scroll down to see more items, or how to
 
  For more detail watch this video with [examples of users struggling with selects](https://www.youtube.com/watch?v=CUkMCQR4TpY).
 
