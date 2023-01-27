@@ -35,6 +35,7 @@ We're working to:
 - release the [Hide this page](https://github.com/alphagov/govuk-design-system-backlog/issues/213) component
 - improve how [JavaScript works in GOV.UK Frontend](https://github.com/alphagov/govuk-frontend/issues/1389)
 - iterate on alt text guidance for the images style page
+- make it easier for teams to share their findings from user research
 
 ## Coming up next
 
@@ -42,6 +43,7 @@ We're getting ready to:
 
 - implement our [proposal](https://github.com/alphagov/govuk-frontend/discussions/2607) for reducing browser support
 - investigate where technical documentation belongs on the website
+- start working on the next component or pattern
 
 ## Future plans
 
