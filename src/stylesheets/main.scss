@@ -1,6 +1,7 @@
 $govuk-new-link-styles: true;
 
 @import "govuk-frontend/govuk/all";
+@import "highlight.js/scss/github";
 
 // App-specific variables
 $app-light-grey: #f8f8f8;
@@ -14,7 +15,6 @@ $app-code-color: #d13118;
 @import "components/example";
 @import "components/footer";
 @import "components/header";
-@import "components/highlight";
 @import "components/image-card";
 @import "components/inverted-button";
 @import "components/masthead";
