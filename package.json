@@ -22,6 +22,7 @@
     "lint:scss": "stylelint \"**/*.scss\""
   },
   "dependencies": {
+    "@metalsmith/markdown": "^1.8.0",
     "@metalsmith/postcss": "^5.2.0",
     "autoprefixer": "^10.4.13",
     "clipboard": "^2.0.11",
@@ -56,7 +57,6 @@
     "jest-environment-jsdom": "^29.4.1",
     "jest-puppeteer": "^6.2.0",
     "js-beautify": "^1.14.7",
-    "jstransformer-marked": "1.2.0",
     "jstransformer-nunjucks": "^1.1.0",
     "marked": "^4.2.12",
     "metalsmith": "^2.5.1",
