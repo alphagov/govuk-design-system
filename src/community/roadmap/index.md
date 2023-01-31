@@ -13,17 +13,18 @@ Some things on the roadmap might change — the purpose is to tell you what’s 
 
 See our [Github team board](https://github.com/orgs/alphagov/projects/4) for more details on our plans and day-to-day activities.
 
-Last updated 6 December 2022.
+Last updated 31 January 2023.
 
 ## Recently shipped
 
 We recently:
 
-- published the [Pagination](https://design-system.service.gov.uk/components/pagination) component
-- completed our investigation into potential changes to [browser support](https://github.com/alphagov/govuk-frontend/discussions/2607)
-- released [GOV.UK Frontend v4.4.1](https://github.com/alphagov/govuk-frontend/releases/tag/v4.4.1) which fixes a WCAG-failing accessibility issue with focus styles
-- hosted Design System Day 2022
-- published an [accessibility strategy for the GOV.UK Design System](https://design-system.service.gov.uk/community/accessibility-strategy/)
+- published an [accessibility strategy for the GOV.UK Design System](/community/accessibility-strategy/)
+- released the [Summary card](https://github.com/alphagov/govuk-design-system-backlog/issues/210) variant
+- made it easier to find information about [contributing and the community](/community/)
+- improved [how contributions are prioritised](https://design-system.service.gov.uk/community/upcoming-components-patterns/)
+- added functionality for browsers to ‘find in page’ within the Accordion component`
+- added support for ‘source maps’ for precompiled GOV.UK Frontend Javascript files
 
 ## Working on now
 
@@ -34,16 +35,15 @@ We're working to:
 - release the [Hide this page](https://github.com/alphagov/govuk-design-system-backlog/issues/213) component
 - improve how [JavaScript works in GOV.UK Frontend](https://github.com/alphagov/govuk-frontend/issues/1389)
 - iterate on alt text guidance for the images style page
+- make it easier for teams to share their findings from user research
 
 ## Coming up next
 
 We're getting ready to:
 
 - implement our [proposal](https://github.com/alphagov/govuk-frontend/discussions/2607) for reducing browser support
-- release the [Summary Card](https://github.com/alphagov/govuk-design-system-backlog/issues/210) variant
-- make it easier to find information about contributing and the community
-- improve how contributions are prioritised
 - investigate where technical documentation belongs on the website
+- start working on the next component or pattern
 
 ## Future plans
 
