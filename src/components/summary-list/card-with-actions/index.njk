@@ -1,0 +1,86 @@
+---
+title: Summary in a card with a title and actions
+layout: layout-example.njk
+---
+
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+{{ govukSummaryList({
+  card: {
+    title: {
+      text: "University of Gloucestershire"
+    },
+    actions: {
+      items: [
+        {
+          href: "#",
+          text: "Delete choice",
+          visuallyHiddenText: "of University of Gloucestershire"
+        },
+        {
+          href: "#",
+          text: "Withdraw",
+          visuallyHiddenText: "from University of Gloucestershire"
+        }
+      ]
+    }
+  },
+  rows: [
+    {
+      key: {
+        text: "Course"
+      },
+      value: {
+        html: "English (3DMD)<br>PGCE with QTS full time"
+      }
+    },
+    {
+      key: {
+        text: "Location"
+      },
+      value: {
+        html: "School name<br>Road, City, SW1 1AA"
+      }
+    }
+  ]
+}) }}
+
+{{ govukSummaryList({
+  card: {
+    title: {
+      text: "University of Bristol"
+    },
+    actions: {
+      items: [
+        {
+          href: "#",
+          text: "Delete choice",
+          visuallyHiddenText: "of University of Bristol"
+        },
+        {
+          href: "#",
+          text: "Withdraw",
+          visuallyHiddenText: "from University of Bristol"
+        }
+      ]
+    }
+  },
+  rows: [
+    {
+      key: {
+        text: "Course"
+      },
+      value: {
+        html: "English (Q3X1)<br>PGCE with QTS full time"
+      }
+    },
+    {
+      key: {
+        text: "Location"
+      },
+      value: {
+        html: "School name<br>Road, City, SW2 1AA"
+      }
+    }
+  ]
+}) }}

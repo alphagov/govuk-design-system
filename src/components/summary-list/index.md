@@ -2,22 +2,24 @@
 title: Summary list
 description: Use the summary list to summarise information, for example, a user’s responses at the end of a form.
 section: Components
-aliases:
+aliases: Summary card
 backlog_issue_id: 182
 layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
 
-Use the summary list to summarise information, for example, a user’s responses at the end of a form.
+Use a summary list to summarise information, for example, a user’s responses at the end of a form.
 
 {{ example({group: "components", item: "summary-list", example: "default", html: true, nunjucks: true, open: false}) }}
 
 ## When to use this component
 
-Use the summary list component to present pairs of related information, known as key-value pairs, in a list. The key is a description or label of a piece of information, like ‘Name’, and the value is the piece of information itself, like ‘John Smith’.
+Use a summary list to show information as a list of key facts.
 
 You can use it to display metadata like ‘Last updated’ with a date like ‘22 June 2018’, or to summarise a user’s responses at the end of a form like the [check answers](/patterns/check-answers/) pattern.
+
+[Summary cards](#summary-cards) are a variant within this component. You can use summary cards to show multiple summary lists that describe the same type of thing, such as people. You can also add card actions that apply to the entire summary list.
 
 ## When not to use this component
 
@@ -25,8 +27,14 @@ The summary list uses the description list (`<dl>`) HTML element, so only use it
 
 Do not use it for tabular data or a simple list of information or tasks, like a [task list](/patterns/task-list-pages/). For those use a `<table>`, `<ul>` or `<ol>`.
 
-
 ## How it works
+
+Each row of a summary list is made up of a:
+ - ‘key’ that’s a description or label of a piece of information, like
+   “Name”
+ - ‘value’ which is the piece of information itself, such as “John Smith”
+
+You can show a single or multiple summary lists on a page. If you’re showing multiple summary lists on a page, you can add structure by using headings or summary cards.
 
 There are 2 ways to use the summary list component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 
@@ -34,23 +42,25 @@ There are 2 ways to use the summary list component. You can use HTML or, if you�
 
 ###  Adding actions to each row
 
-You can add actions to a summary list, like a ‘Change’ link to let users go back and edit their answer.
+You can add ‘row actions’ to a summary list. For example, you can help users go back and edit an answer by adding a ‘change’ link.
 
-For sighted users, the actions get their context from the other content in the row they appear in.
+When navigating visually, the borders above and below each row help to show which row action is tied to which piece of information.
 
-Assistive technology users, like those who use a screen reader, may hear the links out of context and not know what they do.
+Assistive technology users, including those who use a screen reader, might hear a row action link out of context and might not know what it will do.
 
-To give more context, add visually hidden text to the links. This means a screen reader user will hear a meaningful action, like ‘Change name’ or ‘Change date of birth’.
+To give more context, add visually hidden text to the links. This means a screen reader user will hear the row action and the ‘key’ label for the information it will affect, like ‘Change name’ or ‘Change date of birth’.
 
 {{ example({group: "components", item: "summary-list", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second"}) }}
 
-If you have a mix of rows with and without actions, add the `govuk-summary-list__row--no-actions` modifier class to the rows without actions.
+If you’re showing a mix of rows (where some rows include actions and some do not), add the `govuk-summary-list__row--no-actions` modifier class to the rows without actions. This is to ensure the bottom border is drawn correctly in some browsers.
 
 {{ example({group: "components", item: "summary-list", example: "mixed-actions", html: true, nunjucks: true, open: false}) }}
 
 ### Removing the borders
 
-The summary list includes some separating borders to help users read each row and its action.
+The summary list includes separating borders to help users by joining the information on each row and its action together.
+
+Think carefully before you remove row borders. Borders help many users find and read information that’s laid out in rows, especially users who zoom in on pages or use assistive technologies to magnify their screen.
 
 If your summary list does not have any actions, you can choose to remove the separating borders with the `govuk-summary-list--no-border` class.
 
@@ -58,12 +68,67 @@ If your summary list does not have any actions, you can choose to remove the sep
 
 To remove borders on a single row, use the `govuk-summary-list__row--no-border` class.
 
+## Summary cards
+
+
+If you’re showing multiple summary lists on a page, you can show each list within a summary card. This lets you visually separate each summary list and give each a title and some actions.
+
+Use summary cards when you need to show:
+ - multiple summary lists that all describe the same type of thing, such as people
+ - actions that will apply to all the items in a list
+
+Summary cards are often used in case working systems to help users quickly view a set of information and related actions.
+
+Do not use summary cards if you only need to show a small amount of related information. Use summary lists instead, and structure them with headings if needed.
+
+If you’re showing summary cards at the end of a longer journey, you might want to familiarise the user with them earlier on — such as when the user reviews individual sections.
+
+### Card titles
+
+Use the summary card’s header area to give each summary list a title.
+
+Each title must be unique and help identify what the summary list describes. For example, this could be the name of a specific person, organisation or professional qualification.
+
+Try to keep titles short and relevant. You can use one or two important values in the summary list — such as the first and last name of a person.
+
+{{ example({group: "components", item: "summary-list", example: "card-with-title", html: true, nunjucks: true, open: false}) }}
+
+### Adding card actions
+
+You can add card actions in the header, which will be shown after the summary card's title.
+
+For example, if you have multiple rows with "change" actions that all take the user to the same place, you can show a single “change” card action instead. This helps avoid repeating the same row action on every row.
+
+Link text for card actions should tell the user what it will do and that it will apply to the entire in the summary card. It should also be as short as possible, usually 2 words.
+
+Example card actions include:
+
+ - Remove tenant
+ - Edit qualification
+ - Update issue
+ - Approve application
+ - Cancel order
+
+Keep it short and do not add more than 2 to 3 actions in a header.
+
+If a card action cannot easily be undone or might have serious consequences, consider adding a warning or asking the user for confirmation.
+
+{{ example({group: "components", item: "summary-list", example: "card-with-actions", html: true, nunjucks: true, open: false}) }}
+
 ## Research on this component
 
-This component was developed and tested by the Government Digital Services as part of the [check answers pattern](/patterns/check-answers/).
+This component was developed and tested by the Government Digital Service as part of the [check answers pattern](/patterns/check-answers/).
+
+The Department for Education contributed the summary card. It’s being used in some of their services, such as:
+- [apply for teacher training](https://www.gov.uk/apply-for-teacher-training), used by the general public
+- [register trainee teachers](https://www.register-trainee-teachers.service.gov.uk/), used by people that work for training providers
+
+The summary card is also used in services run by other departments, such us:
+- manage supervisions (Ministry of Justice)
+- submit social housing lettings and sales data (Department for Levelling Up, Housing & Communities)
 
 ### Next steps
 
-More research is needed to find out how well this component works outside the check answers pattern, for example, to present summaries within caseworking systems.
+We still want to learn more about when this component works well. 
 
-If you use this component in your service, get in touch to share your research findings.
+If you use this component in your service, we'd like to hear about how you use the summary list and summary card, as well as any research findings you might have.
