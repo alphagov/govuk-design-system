@@ -18,7 +18,7 @@ Task list pages help users understand:
 - the order they should complete tasks in
 - when they've completed tasks
 
-![A screenshot showing an example of the task list page, includes a heading, and three grouped sections that each contain tasks, some of these tasks are marked as completed.](task-list-whole.png)
+![A screenshot showing an example of the task list page, includes a heading, and three grouped sections that each contain tasks, some of these tasks are marked as completed.](task-list-whole.svg)
 
 There’s a [coded example of a task list page](https://prototype-kit.service.gov.uk/docs/templates/task-list) in the GOV.UK Prototype Kit. To use the example, get the following code from the Prototype Kit repository on GitHub:
 
