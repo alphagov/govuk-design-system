@@ -64,8 +64,8 @@
       <div class="app-tabs__heading js-tabs__heading"><a href="#{{ exampleId }}-html" aria-controls="{{ exampleId }}-html" data-track="tab-html">HTML</a></div>
     {% endif %}
     <div class="app-tabs__container js-tabs__container{{ " js-tabs__container--no-tabs" if (params.hideTab) }}" id="{{ exampleId }}-html" role="tabpanel">
-      <div class="app-example__code">
-        <pre data-module="app-copy" tabindex="0"><code class="hljs html">
+      <div class="app-example__code" data-module="app-copy">
+        <pre tabindex="0"><code class="hljs html">
           {{- getHTMLCode(examplePath) | highlight('html') | safe -}}
         </code></pre>
       </div>
@@ -143,8 +143,8 @@
           }
         })}}
       {% endif -%}
-      <div class="app-example__code">
-        <pre data-module="app-copy" tabindex="0"><code class="hljs js">
+      <div class="app-example__code" data-module="app-copy">
+        <pre tabindex="0"><code class="hljs js">
           {{- getNunjucksCode(examplePath) | highlight('js') | safe -}}
         </code></pre>
       </div>
