@@ -19,10 +19,6 @@ updates:
       - dependency-name: puppeteer
         update-types: ['version-update:semver-major']
 
-      # Ignore major/minor updates (Marked parser changes output)
-      - dependency-name: jstransformer-marked
-        update-types: ['version-update:semver-major', 'version-update:semver-minor']
-      
       # Always ignore legacy packages
       - dependency-name: iframe-resizer
       - dependency-name: rollup
