@@ -23,7 +23,8 @@ updates:
       - dependency-name: jstransformer-marked
         update-types: ['version-update:semver-major', 'version-update:semver-minor']
       
-      # Always ignore legacy packages (Maintain rollup's IE8 compatibility)
+      # Always ignore legacy packages
+      - dependency-name: iframe-resizer
       - dependency-name: rollup
 
   # Update GitHub Actions
