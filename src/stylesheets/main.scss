@@ -249,6 +249,23 @@ $colour-list-breakpoint: 980px;
   }
 }
 
+// Add styling for system monospace font family
+
+// ui-monospace - https://drafts.csswg.org/css-fonts-4/#ui-monospace-def
+// Menlo, Monaco - Fonts for older macOS / OSX versions
+// Cascadia Mono, Segoe UI Mono - Fonts for Windows Terminal, Kernel
+// Consolas, Lucida Console - Fonts for older Windows versions
+pre,
+code {
+  font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", Consolas, "Lucida Console", monospace;
+}
+
+code {
+  @include govuk-typography-responsive($size: 19, $override-line-height: 1.4);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 // Add styling for inline code
 li code,
 td code,
@@ -268,7 +285,6 @@ pre code {
   border: $govuk-focus-width solid transparent;
   outline: 1px solid $govuk-border-colour;
   background-color: $app-light-grey;
-  font-size: 16px;
   @include govuk-responsive-margin(4, "bottom");
 
   &:focus {
