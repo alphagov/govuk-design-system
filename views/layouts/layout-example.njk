@@ -44,9 +44,9 @@
   <script src="{{ getFingerprint('javascripts/example.js') }}"></script>
 
   <!--[if lt IE 9]>
-    <script src="/javascripts/vendor/ie8.polyfils.min.js"></script>
+    <script src="{{ getFingerprint('javascripts/vendor/ie8.polyfils.min.js') }}"></script>
   <![endif]-->
-  <script src="/javascripts/vendor/iframeResizer.contentWindow.min.js"></script>
+  <script src="{{ getFingerprint('javascripts/vendor/iframeResizer.contentWindow.min.js') }}"></script>
 {% endblock %}
 
 {# Example pages shouldn't have a footer, so blank the one provided by the template #}
