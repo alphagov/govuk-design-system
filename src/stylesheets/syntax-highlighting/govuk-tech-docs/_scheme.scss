@@ -1,0 +1,126 @@
+/// Theme: Technical Documentation Template (GOV.UK style)
+/// Author: Government Digital Service developers
+
+.hljs {
+  color: $app-code-base05;
+  background: $app-code-base00;
+}
+
+.hljs::selection,
+.hljs ::selection {
+  color: $app-code-base05;
+  background-color: $app-code-base02;
+}
+
+// base03 - Comments, Invisibles, Line Highlighting
+.hljs-comment {
+  color: $app-code-base03;
+}
+
+// base04 - Dark Foreground (Used for status bars)
+// ---
+
+// base05 - Default Foreground, Caret, Delimiters, Operators
+.hljs-subst,
+.hljs-punctuation,
+.hljs-operator {
+  color: $app-code-base05;
+}
+
+.hljs-operator {
+  opacity: .7;
+}
+
+// base08 - Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted
+.hljs-bullet,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-selector-tag,
+.hljs-name,
+.hljs-deletion {
+  color: $app-code-base08;
+}
+
+// base09 - Integers, Boolean, Constants, XML Attributes, Markup Link Url
+.hljs-tag,
+.hljs-tag .hljs-name,
+.hljs-symbol,
+.hljs-number,
+.hljs-link,
+.hljs-variable.constant_,
+.hljs-literal {
+  color: $app-code-base09;
+}
+
+// base0A - Classes, Markup Bold, Search Text Background
+.hljs-title,
+.hljs-class .hljs-title,
+.hljs-title.class_ {
+  color: $app-code-base0A;
+}
+
+.hljs-strong {
+  color: $app-code-base0A;
+  font-weight: bold;
+}
+
+// base0B - Strings, Inherited Class, Markup Code, Diff Inserted
+.hljs-code,
+.hljs-addition,
+.hljs-title.class_.inherited__,
+.hljs-string {
+  color: $app-code-base0B;
+}
+
+// base0C - Support, Regular Expressions, Escape Characters, Markup Quotes
+.hljs-built_in,
+.hljs-doctag, // guessing
+.hljs-quote,
+.hljs-keyword.hljs-atrule,
+.hljs-regexp {
+  color: $app-code-base0C;
+}
+
+// base0D - Functions, Methods, Attribute IDs, Headings
+.hljs-function .hljs-title,
+.hljs-attr,
+.hljs-attribute,
+.ruby .hljs-property,
+.hljs-title.function_,
+.hljs-section {
+  color: $app-code-base0D;
+}
+
+// base0E - Keywords, Storage, Selector, Markup Italic, Diff Changed
+.hljs-type,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-template-tag,
+.diff .hljs-meta,
+.hljs-keyword {
+  color: $app-code-base0E;
+}
+
+.hljs-emphasis {
+  color: $app-code-base0E;
+  font-style: italic;
+}
+
+// base0F - Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>
+.hljs-meta,
+/*
+  prevent top level .keyword and .string scopes
+  from leaking into meta by accident
+*/
+.hljs-meta .hljs-keyword,
+.hljs-meta .hljs-string {
+  color: $app-code-base0F;
+}
+
+.hljs-meta .hljs-keyword,
+// for v10 compatible themes
+.hljs-meta-keyword {
+  font-weight: bold;
+}

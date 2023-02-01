@@ -1,11 +1,15 @@
 $govuk-new-link-styles: true;
 
 @import "govuk-frontend/govuk/all";
-@import "highlight.js/scss/github";
+@import "syntax-highlighting/govuk-tech-docs/palette";
+@import "syntax-highlighting/govuk-tech-docs/scheme";
 
 // App-specific variables
 $app-light-grey: #f8f8f8;
-$app-code-color: #d13118;
+$app-code-color: $app-code-base05;
+$app-code-color-inline: $app-code-base0E;
+$app-code-background: $app-code-base00;
+$app-code-background-inline: $app-code-base01;
 
 // App-specific components
 @import "components/back-to-top";
@@ -270,9 +274,9 @@ code {
 li code,
 td code,
 p code {
-  padding: 0 govuk-spacing(1);
-  color: $app-code-color;
-  background-color: govuk-colour("light-grey");
+  padding: 3px govuk-spacing(1);
+  color: $app-code-color-inline;
+  background-color: $app-code-background-inline;
 }
 
 // Add styling for block code
@@ -284,7 +288,8 @@ pre code {
   overflow-x: auto;
   border: $govuk-focus-width solid transparent;
   outline: 1px solid $govuk-border-colour;
-  background-color: $app-light-grey;
+  color: $app-code-color;
+  background: $app-code-background;
   @include govuk-responsive-margin(4, "bottom");
 
   &:focus {
