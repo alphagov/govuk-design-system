@@ -1,6 +1,4 @@
-// The iframe-resizer module seems to export it's methods in an odd way
-// So we use an underscore here.
-import _ from 'iframe-resizer'
+import iFrameResize from 'iframe-resizer/js/iframeResizer'
 
 function Example ($module) {
   this.$module = $module
@@ -18,7 +16,7 @@ Example.prototype.resize = function () {
 
   try {
     // Example iframe; set the height equal to the body height
-    _.iframeResizer({ scrolling: 'auto', autoResize: true }, $module)
+    iFrameResize({ scrolling: 'auto', autoResize: true }, $module)
   } catch (err) {
     if (err) {
       console.error(err.message)

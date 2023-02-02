@@ -88,7 +88,11 @@ stylesheets:
     <span class="app-annotate-block__label">block: bodyEnd</span>
     {{ super() }}
     {# Since we’re not extending the Design System layout we need to add this manually #}
-    <script src="/javascripts/vendor/iframeResizer.contentWindow.js"></script>
     <script src="{{ getFingerprint('javascripts/govuk-frontend.js') }}"></script>
+
+    <!--[if lt IE 9]>
+      <script src="{{ getFingerprint('javascripts/vendor/ie8.polyfils.min.js') }}"></script>
+    <![endif]-->
+    <script src="{{ getFingerprint('javascripts/vendor/iframeResizer.contentWindow.min.js') }}"></script>
   </div>
 {%- endblock %}
