@@ -137,8 +137,11 @@ For example, ‘Select your nationality or nationalities’.
 
 #### If users check both a 'none' checkbox and another checkbox
 
-Say ‘Select [option label text] or select “[none of the above label text]”’<br>
-For example, ‘Select countries you will be travelling to, or select “No, I will not be travelling to any of these countries”’
+Say:
+>Select [option label text] or select ‘[none of the above label text]’
+
+For example:
+>Select countries you will be travelling to, or select ‘No, I will not be travelling to any of these countries’
 
 ## Research on this component
 
