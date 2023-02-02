@@ -51,7 +51,7 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-n": "^15.6.1",
     "eslint-plugin-promise": "^6.1.1",
-    "iframe-resizer": "^3.6.6",
+    "iframe-resizer": "3.5.15",
     "jest": "^29.4.1",
     "jest-axe": "^7.0.0",
     "jest-environment-jsdom": "^29.4.1",
