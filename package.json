@@ -63,7 +63,7 @@
     "metalsmith-broken-link-checker": "^1.0.2",
     "metalsmith-canonical": "^1.2.0",
     "metalsmith-env": "^2.2.0",
-    "metalsmith-include-files": "^1.0.0",
+    "metalsmith-include-files": "^1.0.1",
     "metalsmith-renamer": "^0.5.217",
     "nunjucks": "^3.2.2",
     "outdent": "^0.8.0",
