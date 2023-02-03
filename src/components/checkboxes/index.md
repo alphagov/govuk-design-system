@@ -138,10 +138,10 @@ For example, ‘Select your nationality or nationalities’.
 #### If users check both a 'none' checkbox and another checkbox
 
 Say:
->Select [option label text] or select ‘[none of the above label text]’
+<div class="govuk-inset-text">Select [option label text] or select ‘[none of the above label text]’</div>
 
 For example:
->Select countries you will be travelling to, or select ‘No, I will not be travelling to any of these countries’
+<div class="govuk-inset-text">Select countries you will be travelling to, or select ‘No, I will not be travelling to any of these countries’</div>
 
 ## Research on this component
 
