@@ -91,8 +91,8 @@ A set of non-form Rails components using GOV.UK Frontend. You can use these toge
 [GOV.UK Frontend Rails](https://github.com/dxw/dxw_govuk_frontend_rails) -
 A Ruby gem that adds the GOV.UK Frontend to Rails applications.
 
-[GOV.UK Rails Boilerplate](https://github.com/DFE-Digital/govuk-rails-boilerplate) -
-A complete Rails starter application using GOV.UK Frontend.
+[GOV.UK Rails Template](https://github.com/DFE-Digital/rails-template) -
+A complete Rails application template using GOV.UK Frontend.
 
 
 
