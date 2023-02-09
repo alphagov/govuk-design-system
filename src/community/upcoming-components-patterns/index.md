@@ -11,7 +11,7 @@ These are the components and patterns we’re working on right now, and the ones
 
 We regularly ask our community to help us decide the things we need to work on the most. [Read a blog post about how we prioritise new additions to the Design System](https://designnotes.blog.gov.uk/2022/09/07/how-we-prioritise-additions-to-the-gov-uk-design-system/).
 
-To get a wider look at our work, see our [Roadmap](/community/roadmap/).
+To get a wider look at our work and see what we released recently, see our [Roadmap](/community/roadmap/).
 
 ## Working on now
 
@@ -51,23 +51,6 @@ If you’d like to help us build these components and patterns, join the convers
           {
             href: "https://join.slack.com/t/mapsinservices/shared_invite/zt-163npa168-e5EREuQZU3NqwfdojWw2ew",
             text: "Join the Maps Slack group"
-          }
-        ]
-      }
-    },
-    {
-      key: {
-        text: "Summary card"
-      },
-      value: {
-        text: "A new variant of the summary list component that allows you to visually group lists together."
-      },
-      actions: {
-        classes: "govuk-!-text-align-left",
-        items: [
-          {
-            href: "https://github.com/alphagov/govuk-design-system-backlog/issues/210",
-            text: "Discuss Summary card"
           }
         ]
       }
