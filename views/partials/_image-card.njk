@@ -1,7 +1,7 @@
 {% macro imageCard(params) %}
   <div class="app-image-card {{- ' app-image-card--large' if params.large }}">
     <figure class="app-image-card__image-wrapper">
-      <img src="{{ params.src }}" alt="{{ params.alt }}" class="app-image--no-border" loading="lazy" />
+      <img src="{{ params.src }}" alt="{{ params.alt }}" class="app-image--no-border" loading="lazy">
     </figure>
     <div class="app-image-card__text">
       <h3>{{ params.title }}</h3>
