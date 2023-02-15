@@ -51,10 +51,16 @@ module.exports = {
     // spec.
     'valid-id': ['error', { relaxed: true }],
 
-    // Flags our back to top anchor (/views/layouts/_generic.njk#L27) for not
+    // Flags our back to top anchor (views/layouts/_generic.njk#L27) for not
     // having descriptive text. Automated accessibility testing doesn't flag,
     // so turning this off until we review our navigation.
-    'wcag/h30': 'off'
+    'wcag/h30': 'off',
+
+    // Flags the form in views/layouts/layout-example.njk#L35 when the example
+    // code does not have a submit button. This is because we wrap our
+    // examples in <form> elements to disable browser validation:
+    // https://github.com/alphagov/govuk-design-system/pull/522
+    'wcag/h32': 'off'
   },
   elements: [
     'html5',
