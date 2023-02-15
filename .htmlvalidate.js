@@ -50,8 +50,8 @@ module.exports = {
   elements: [
     'html5',
     {
-    // Allow textarea autocomplete attribute to be street-address
-    // (html-validate only allows on/off in default rules)
+      // Allow textarea autocomplete attribute to be street-address
+      // (html-validate only allows on/off in default rules)
       textarea: {
         attributes: {
           autocomplete: { enum: ['on', 'off', 'street-address'] }
@@ -61,6 +61,15 @@ module.exports = {
       button: {
         attributes: {
           type: { required: false }
+        }
+      },
+      // "frameborder" is required for IE8 support
+      // https://github.com/alphagov/govuk-design-system/pull/116
+      iframe: {
+        attributes: {
+          frameborder: {
+            deprecated: false
+          }
         }
       }
     }
