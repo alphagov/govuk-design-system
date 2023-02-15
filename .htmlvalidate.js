@@ -16,6 +16,10 @@ module.exports = {
     // Allow pattern attribute on input type="number"
     'input-attributes': 'off',
 
+    // Flags most of our page titles because we append "- GOV.UK Design System"
+    // to all of them.
+    'long-title': 'off',
+
     // Allow for conditional comments (used in header for fallback png)
     'no-conditional-comment': 'off',
 
