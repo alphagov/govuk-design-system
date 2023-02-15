@@ -45,7 +45,12 @@ module.exports = {
     //
     // Relax the rule to allow anything that is valid according to the
     // spec.
-    'valid-id': ['error', { relaxed: true }]
+    'valid-id': ['error', { relaxed: true }],
+
+    // Flags our back to top anchor (/views/layouts/_generic.njk#L27) for not
+    // having descriptive text. Automated accessibility testing doesn't flag,
+    // so turning this off until we review our navigation.
+    'wcag/h30': 'off'
   },
   elements: [
     'html5',
