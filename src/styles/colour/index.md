@@ -82,7 +82,7 @@ You can find departmental colours in the GOV.UK Frontend [_colours-organisations
   <tbody>
   {% for name, colour in colours.palette %}
     <tr class="app-colour-list-row">
-      <th class="app-colour-list-column app-colour-list-column--name">
+      <th class="app-colour-list-column app-colour-list-column--name" scope="row">
         <span class="app-swatch {% if colour == "#ffffff" %}app-swatch-border{% endif %}" style="background-color:{{colour}}"></span>
         <code>govuk-colour("{{name}}")</code>
       </th>
