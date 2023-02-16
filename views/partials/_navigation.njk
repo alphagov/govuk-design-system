@@ -11,7 +11,7 @@
           <button hidden class="app-navigation__button js-app-navigation__button">
             {{ item.label }}
           </button>
-
+          <!-- [html-validate-disable-next aria-label-misuse --- inline fix for html-validate rule, rather than disable it entirely] -->
           <ul class="app-navigation__subnav js-app-navigation__subnav {% if permalink.startsWith(item.url) %}app-navigation__subnav--active{% endif %}"
             aria-label="{{ item.label }}"
             hidden
