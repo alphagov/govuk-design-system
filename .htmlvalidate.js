@@ -96,6 +96,16 @@ module.exports = {
             deprecated: false
           }
         }
+      },
+      // We added a summary to fix an accessibility issue, though we could
+      // probably revisit.
+      // https://github.com/alphagov/govuk-design-system/pull/301
+      table: {
+        attributes: {
+          summary: {
+            deprecated: false
+          }
+        }
       }
     }
   ]
