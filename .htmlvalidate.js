@@ -82,6 +82,12 @@ module.exports = {
           type: { required: false }
         }
       },
+      // Allow h1 to have children. This is because we have status tags within
+      // the <h1>. There's an issue to fix this:
+      // https://github.com/alphagov/govuk-design-system/issues/2606
+      h1: {
+        permittedContent: ['div', 'label', 'span']
+      },
       // "frameborder" is required for IE8 support
       // https://github.com/alphagov/govuk-design-system/pull/116
       iframe: {
