@@ -11,7 +11,10 @@ module.exports = {
 
     // Allow for multiple buttons in the same form to have the same name
     // (as in the cookie banner examples)
-    'form-dup-name': ['error', { shared: ['radio', 'checkbox', 'submit'] }],
+    'form-dup-name': [
+      'error',
+      { shared: ['radio', 'checkbox', 'submit', 'button'] }
+    ],
 
     // Allow pattern attribute on input type="number"
     'input-attributes': 'off',
