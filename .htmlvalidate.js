@@ -85,6 +85,11 @@ module.exports = {
           type: { required: false }
         }
       },
+      // Horrible hack to allow nested form elements for 3 current instances:
+      // https://github.com/alphagov/govuk-design-system/issues/2609
+      form: {
+        permittedDescendants: [{}]
+      },
       // Allow h1 to have children. This is because we have status tags within
       // the <h1>. There's an issue to fix this:
       // https://github.com/alphagov/govuk-design-system/issues/2606
