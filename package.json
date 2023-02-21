@@ -22,7 +22,7 @@
     "lint:scss": "stylelint \"**/*.scss\""
   },
   "dependencies": {
-    "@hmlr/frontend": "1.0.0",
+    "@hmlr/frontend": "1.2.0",
     "acorn": "^6.4.1",
     "eslint": "^5.16.0",
     "@metalsmith/markdown": "^1.9.0",
