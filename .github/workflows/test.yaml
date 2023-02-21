@@ -2,6 +2,7 @@ name: Test
 
 on:
   pull_request:
+
   push:
     branches-ignore:
       - main  # pushes to main are handled by deploy.yaml
@@ -14,7 +15,6 @@ jobs:
         os: [ubuntu-latest]
         include:
           - os: ubuntu-latest
-            upload-artifact: ${{ inputs.upload-artifact }}
     runs-on: ${{ matrix.os }}
     env:
       ENVIRONMENT: production
@@ -29,21 +29,10 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install --no-optional
+        run: npm ci
 
       - name: Build
         run: npm run build
 
       - name: Lint and test
-        run: npm test -- --runInBand
-
-      # Share data between the build and deploy jobs so we don't need to run `npm run build` again on deploy
-      # Upload the deploy folder as an artifact so it can be downloaded and used in the deploy job
-      - name: Upload artifact
-        uses: actions/upload-artifact@v3
-        if: ${{ matrix.upload-artifact }}
-        with:
-            name: build
-            path: deploy/**
-            retention-days: 1
-
+        run: npm test -- --color --maxWorkers=2

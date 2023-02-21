@@ -1,4 +1,4 @@
-{%- set fileEditURL = "https://github.com/LandRegistry/hmlr-design-system/edit/main/src/" + path + "/index.md.njk" -%}
+{%- set fileEditURL = "https://github.com/LandRegistry/hmlr-design-system/edit/main/src/" + permalink + "/index.md.njk" -%}
 {% if section === 'Styles' or section === 'Components' or section === 'Patterns'%}
   <h2 class="govuk-heading-l govuk-!-padding-top-7" id="help-improve-this-page">Help improve this {{ section.slice(0, -1) | lower }}</h2>
 
@@ -8,8 +8,8 @@
     </p>
     <ul class="govuk-list govuk-list--bullet">
       <li>
-        <a class="govuk-link app-contact-panel__link" href="https://github.com/LandRegistry/hmlr-design-system-backlog/issues/{{ backlog_issue_id }}">
-          share your research or feedback on GitHub
+        <a class="govuk-link app-contact-panel__link" href="https://github.com/alphagov/govuk-design-system-backlog/issues/{{ backlog_issue_id }}">
+          take part in the '{{ title }}' discussion on GitHub and share your research
         </a>
       </li>
       <li>
@@ -21,14 +21,14 @@
       </li>
     </ul>
   {% else %}
-    <p class="govuk-body">
-      If you spot a problem with this guidance you can
-      <a class="govuk-link app-contact-panel__link" href="{{ fileEditURL }}">propose a change</a>.
-    </p>
-    <p class="govuk-body">
-      If you're not sure how to do this, read guidance on
-      <a class="govuk-link app-contact-panel__link" href="https://design-system.service.gov.uk/community/propose-a-content-change-using-github/">how to propose changes in GitHub</a>.
-    </p>
+      <p class="govuk-body">
+        If you spot a problem with this guidance you can
+        <a class="govuk-link app-contact-panel__link" href="{{ fileEditURL }}">propose a change</a>.
+      </p>
+      <p class="govuk-body">
+        If you’re not sure how to do this, read guidance on
+        <a class="govuk-link app-contact-panel__link" href="https://design-system.service.gov.uk/community/propose-a-content-change-using-github/">how to propose changes in GitHub</a>.
+      </p>
   {% endif %}
 {% endif %}
 

@@ -1,0 +1,21 @@
+.app-image-card {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.app-image-card--large {
+  @include govuk-media-query($from: desktop) {
+    flex-wrap: nowrap;
+
+    .app-image-card__image-wrapper {
+      max-width: 50%;
+      margin-right: govuk-spacing(4);
+    }
+  }
+}
+
+.app-image-card__image-wrapper {
+  width: 100%;
+  margin: 0;
+  @include govuk-responsive-margin(2, "bottom");
+}

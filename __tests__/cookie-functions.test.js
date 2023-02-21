@@ -2,8 +2,6 @@
  * @jest-environment jsdom
  */
 
-/* eslint-env jest */
-
 import * as CookieHelpers from '../src/javascripts/components/cookie-functions'
 import * as Analytics from '../src/javascripts/components/analytics'
 jest.mock('../src/javascripts/components/analytics')
@@ -15,9 +13,9 @@ describe('Cookie settings', () => {
 
   afterEach(() => {
     // Delete test cookies
-    var cookies = document.cookie.split(';')
+    const cookies = document.cookie.split(';')
     cookies.forEach(function (cookie) {
-      var name = cookie.split('=')[0]
+      const name = cookie.split('=')[0]
       document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/'
       document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;domain=' + window.location.hostname + ';path=/'
     })
@@ -231,25 +229,25 @@ describe('Cookie settings', () => {
 
   describe('isValidConsentCookie', () => {
     it('isValidConsentCookie returns true if consent cookie is current version', async () => {
-      var cookieOptions = { analytics: true, version: 1 }
+      const cookieOptions = { analytics: true, version: 1 }
 
       expect(CookieHelpers.isValidConsentCookie(cookieOptions)).toEqual(true)
     })
 
     it('isValidConsentCookie returns true if consent cookie is newer than current version', async () => {
-      var cookieOptions = { analytics: true, version: 2 }
+      const cookieOptions = { analytics: true, version: 2 }
 
       expect(CookieHelpers.isValidConsentCookie(cookieOptions)).toEqual(true)
     })
 
     it('isValidConsentCookie returns false if consent cookie is older than current version', async () => {
-      var cookieOptions = { analytics: true, version: 0 }
+      const cookieOptions = { analytics: true, version: 0 }
 
       expect(CookieHelpers.isValidConsentCookie(cookieOptions)).toEqual(false)
     })
 
     it('isValidConsentCookie returns false if consent cookie version is not a number', async () => {
-      var cookieOptions = { analytics: true, version: 'foobar' }
+      const cookieOptions = { analytics: true, version: 'foobar' }
 
       expect(CookieHelpers.isValidConsentCookie(cookieOptions)).toEqual(false)
     })

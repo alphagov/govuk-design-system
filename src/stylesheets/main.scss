@@ -19,6 +19,7 @@ $app-code-color: #d13118;
 @import "components/footer";
 @import "components/header";
 @import "components/highlight";
+@import "components/image-card";
 @import "components/inverted-button";
 @import "components/masthead";
 @import "components/navigation";
@@ -83,6 +84,13 @@ $app-code-color: #d13118;
   img {
     padding: govuk-spacing(2);
     @include govuk-responsive-margin(6, "bottom");
+  }
+
+  // img modifier class used to remove the default border around images
+  .app-image--no-border {
+    margin: 0;
+    padding: 0;
+    border: none;
   }
 
   .app-video__player {

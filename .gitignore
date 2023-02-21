@@ -1,5 +1,6 @@
 deploy/public
-/node_modules
+node_modules/
 npm-debug.log
 .DS_Store
 .sass-cache
+.cache
