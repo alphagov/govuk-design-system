@@ -32,19 +32,19 @@ describe('Accessibility Audit', () => {
     })
   })
 
-  // describe('Component page - layout-pane.njk', () => {
-  //   it('validates', async () => {
-  //     const results = await analyze(page, '/components/radios/')
-  //     expect(results).toHaveNoViolations()
-  //   })
-  // })
+  describe('Component page - layout-pane.njk', () => {
+    it('validates', async () => {
+      const results = await analyze(page, '/components/header/')
+      expect(results).toHaveNoViolations()
+    })
+  })
 
-  // describe('Patterns page - layout-pane.njk', () => {
-  //   it('validates', async () => {
-  //     const results = await analyze(page, '/patterns/gender-or-sex/')
-  //     expect(results).toHaveNoViolations()
-  //   })
-  // })
+  describe('Patterns page - layout-pane.njk', () => {
+    it('validates', async () => {
+      const results = await analyze(page, '/patterns/search-by-title-number/')
+      expect(results).toHaveNoViolations()
+    })
+  })
 
   describe('Get in touch page - layout-single-page.njk', () => {
     it('validates', async () => {

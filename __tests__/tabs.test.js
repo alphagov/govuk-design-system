@@ -1,110 +1,122 @@
 
-const { setupPage } = require('../lib/jest-utilities.js')
-// const configPaths = require('../lib/paths.js')
-// const PORT = configPaths.testPort
+// const { goTo, getAttribute, isVisible } = require('../lib/puppeteer-helpers.js')
 
-let page
-// let baseUrl = 'http://localhost:' + PORT
+// describe('Component page', () => {
+//   let $module
 
-beforeAll(async () => {
-  page = await setupPage()
-})
+//   let $tabsItems
+//   let $tabsLinks
+//   let $tabsContainers
 
-afterAll(async () => {
-  await page.close()
-})
+//   async function setup (page) {
+//     $module = await page.$('[data-module="app-tabs"]')
 
-describe('Component page', () => {
-  // describe('when JavaScript is unavailable or fails', () => {
-  //   it('falls back to making the containers visible', async () => {
-  //     await page.setJavaScriptEnabled(false)
-  //     await page.goto(baseUrl + '/components/back-link/', { waitUntil: 'load' })
-  //     const isContainerVisible = await page.waitForSelector('.js-tabs__container', { visible: true, timeout: 1000 })
-  //     expect(isContainerVisible).toBeTruthy()
-  //   })
-  // })
+//     $tabsItems = await $module.$$('.app-tabs__item')
+//     $tabsLinks = await $module.$$('.app-tabs__item a')
+//     $tabsContainers = await $module.$$('.js-tabs__container')
+//   }
 
-  // describe('when JavaScript is available', () => {
-  //   describe('when tab item is pressed', () => {
-  //     it('should indicate the open state of the tab', async () => {
-  //       await page.setJavaScriptEnabled(true)
-  //       await page.goto(baseUrl + '/components/back-link/', { waitUntil: 'load' })
+//   beforeEach(async () => {
+//     await page.setJavaScriptEnabled(true)
 
-  //       await page.click('.js-tabs__item a')
+//     await goTo(page, '/components/back-link/')
+//     await setup(page)
 
-  //       const toggleButtonIsOpen = await page.evaluate(() => document.body.querySelector('.app-tabs__item').classList.contains('app-tabs__item--current'))
-  //       expect(toggleButtonIsOpen).toBeTruthy()
-  //     })
+//     // Wait for iframe resizer + 32ms page size setInterval
+//     // https://github.com/davidjbradshaw/iframe-resizer/tree/V3#interval
+//     await page.waitForSelector('[data-module="app-example-frame"][style]')
+//     await new Promise((resolve) => setTimeout(resolve, 32))
+//   })
 
-  //     it('should indicate the selected state of the tab using aria-expanded', async () => {
-  //       await page.goto(baseUrl + '/components/back-link/', { waitUntil: 'load' })
+//   describe('when JavaScript is unavailable or fails', () => {
+//     it('falls back to making the containers visible', async () => {
+//       await page.setJavaScriptEnabled(false)
 
-  //       await page.click('.js-tabs__item a')
+//       // Reload page again
+//       await page.reload()
+//       await setup(page)
 
-  //       const toggleButtonAriaExpanded = await page.evaluate(() => document.body.querySelector('.js-tabs__item a').getAttribute('aria-expanded'))
-  //       expect(toggleButtonAriaExpanded).toBe('true')
-  //     })
-  //   })
+//       for await (const isTabVisible of $tabsContainers.map(isVisible)) {
+//         expect(isTabVisible).toBe(true)
+//       }
+//     })
+//   })
 
-  //   describe('when the tab closed and clicked twice', () => {
-  //     it('should indicate the closed state of the tab', async () => {
-  //       await page.setJavaScriptEnabled(true)
-  //       await page.goto(baseUrl + '/components/back-link/', { waitUntil: 'load' })
+//   describe('when JavaScript is available', () => {
+//     describe('when tab item is pressed', () => {
+//       it('should indicate the open state of the tab', async () => {
+//         await $tabsLinks[0].click()
 
-  //       await page.click('.js-tabs__item a')
-  //       await page.click('.js-tabs__item a')
+//         // Tab item marked current
+//         await expect(getAttribute($tabsItems[0], 'class')).resolves
+//           .toContain('app-tabs__item--current')
+//       })
 
-  //       const toggleButtonIsOpen = await page.evaluate(() => document.body.querySelector('.app-tabs__item').classList.contains('app-tabs__item--current'))
-  //       expect(toggleButtonIsOpen).toBeFalsy()
-  //     })
+//       it('should indicate the selected state of the tab using aria-expanded', async () => {
+//         await $tabsLinks[0].click()
 
-  //     it('should indicate the closed state by setting aria-expanded attribute to false', async () => {
-  //       await page.goto(baseUrl + '/components/back-link/', { waitUntil: 'load' })
+//         // Tab link control expanded
+//         await expect(getAttribute($tabsLinks[0], 'aria-expanded')).resolves
+//           .toBe('true')
+//       })
+//     })
 
-  //       await page.click('.js-tabs__item a')
-  //       await page.click('.js-tabs__item a')
+//     describe('when the tab closed and clicked twice', () => {
+//       it('should indicate the closed state of the tab', async () => {
+//         await $tabsLinks[0].click()
+//         await $tabsLinks[0].click()
 
-  //       const toggleButtonAriaExpanded = await page.evaluate(() => document.body.querySelector('.js-tabs__item a').getAttribute('aria-expanded'))
-  //       expect(toggleButtonAriaExpanded).toBe('false')
-  //     })
-  //   })
-  // })
+//         // Tab item not marked current
+//         await expect(getAttribute($tabsItems[0], 'class')).resolves
+//           .not.toContain('app-tabs__item--current')
+//       })
 
-  it('==blank test==', async () => {
-    expect(true).toBe(true)
-  })
-})
+//       it('should indicate the closed state by setting aria-expanded attribute to false', async () => {
+//         await $tabsLinks[0].click()
+//         await $tabsLinks[0].click()
+
+//         // Tab link control expanded
+//         await expect(getAttribute($tabsLinks[0], 'aria-expanded')).resolves
+//           .toBe('false')
+//       })
+//     })
+//   })
+// })
 
 // describe('Patterns page', () => {
+//   beforeEach(async () => {
+//     await goTo(page, '/patterns/question-pages/')
+//   })
+
 //   describe('when JavaScript is available', () => {
 //     describe('when "hideTab" parameter is set to true', () => {
 //       it('the tab list is not rendered', async () => {
-//         await page.goto(baseUrl + '/patterns/question-pages/', { waitUntil: 'load' })
-//         const expandedTabContentWithNoTab = await page.evaluate(() => document.body.querySelector('#section-headings-question-pages-example-open .app-tabs'))
-//         expect(expandedTabContentWithNoTab).toBeNull()
+//         const $expandedTabContentWithNoTab = await page.$('#section-headings-question-pages-example-open .app-tabs')
+//         expect($expandedTabContentWithNoTab).toBeNull()
 //       })
 
 //       it('close button is not shown on the code block', async () => {
-//         await page.goto(baseUrl + '/patterns/question-pages/', { waitUntil: 'load' })
-//         const expandedTabContentWithNoTabCloseButton = await page.evaluate(() => document.body.querySelector('.js-tabs__container--no-tabs .js-tabs__close'))
-//         expect(expandedTabContentWithNoTabCloseButton).toBeNull()
+//         const $expandedTabContentWithNoTabCloseButton = await page.$('.js-tabs__container--no-tabs .js-tabs__close')
+//         expect($expandedTabContentWithNoTabCloseButton).toBeNull()
 //       })
 //     })
 //   })
 // })
 
 // describe('Styles -> Images page', () => {
+//   beforeEach(async () => {
+//     await goTo(page, '/styles/images/')
+//   })
+
 //   describe('when both nunjucks and html parameters are set to "false"', () => {
 //     it('the tab list items are not rendered', async () => {
-//       await page.goto(baseUrl + '/styles/images/', { waitUntil: 'load' })
-//       const tabListItems = await page.evaluate(() => document.body.querySelector('#example-default .app-tabs'))
-//       expect(tabListItems).toBeFalsy()
+//       const $tabListItems = await page.$('#example-default .app-tabs')
+//       expect($tabListItems).toBeNull()
 //     })
 
 //     it('the tab heading items are not rendered', async () => {
-//       await page.goto(baseUrl + '/styles/images/', { waitUntil: 'load' })
-//       const tabHeadingItems = await page.evaluate(() => document.body.querySelector('#example-default .app-tabs__heading'))
-//       expect(tabHeadingItems).toBeFalsy()
+//       const $tabHeadingItems = await page.$('#example-default .app-tabs__heading')
+//       expect($tabHeadingItems).toBeNull()
 //     })
 //   })
 // })
