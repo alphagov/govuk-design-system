@@ -187,101 +187,101 @@ describe('Site search', () => {
   //         .filter(layer => layer.ecommerce)
   //         .map(layer => layer.ecommerce.impressions)[0]
 
-    //   expect(impressions.length).toEqual($searchOptions.length)
-    //   expect(GoogleTagManagerDataLayer).toEqual(
-    //     expect.arrayContaining([
-    //       expect.objectContaining({
-    //         ecommerce: {
-    //           impressions: expect.arrayContaining([
-    //             expect.objectContaining({
-    //               name: expect.any(String),
-    //               category: expect.any(String),
-    //               list: 'g',
-    //               position: expect.any(Number)
-    //             })
-    //           ])
-    //         },
-    //         event: 'site-search',
-    //         eventDetails: {
-    //           action: 'results',
-    //           category: 'site search',
-    //           label: 'g'
-    //         }
-    //       })
-    //     ])
-    //   )
-    // })
+  //   expect(impressions.length).toEqual($searchOptions.length)
+  //   expect(GoogleTagManagerDataLayer).toEqual(
+  //     expect.arrayContaining([
+  //       expect.objectContaining({
+  //         ecommerce: {
+  //           impressions: expect.arrayContaining([
+  //             expect.objectContaining({
+  //               name: expect.any(String),
+  //               category: expect.any(String),
+  //               list: 'g',
+  //               position: expect.any(Number)
+  //             })
+  //           ])
+  //         },
+  //         event: 'site-search',
+  //         eventDetails: {
+  //           action: 'results',
+  //           category: 'site search',
+  //           label: 'g'
+  //         }
+  //       })
+  //     ])
+  //   )
+  // })
 
-    // it('should track if a result is clicked', async () => {
-    //   // Prevent page from unloading so we can check what was tracked.
-    //   // By setting onbeforeunload it forces a dialog to appear that allows a user
-    //   // to cancel leaving the page, so we detect the dialog opening and dismiss it to stop the navigation.
-    //   await page.evaluate(() => { window.onbeforeunload = () => true })
-    //   page.on('dialog', async dialog => { await dialog.dismiss() })
+  // it('should track if a result is clicked', async () => {
+  //   // Prevent page from unloading so we can check what was tracked.
+  //   // By setting onbeforeunload it forces a dialog to appear that allows a user
+  //   // to cancel leaving the page, so we detect the dialog opening and dismiss it to stop the navigation.
+  //   await page.evaluate(() => { window.onbeforeunload = () => true })
+  //   page.on('dialog', async dialog => { await dialog.dismiss() })
 
-    //   await $searchInput.focus()
-    //   await $searchInput.type('g')
+  //   await $searchInput.focus()
+  //   await $searchInput.type('g')
 
-    //   await page.keyboard.press('ArrowDown')
-    //   await page.keyboard.press('Enter')
+  //   await page.keyboard.press('ArrowDown')
+  //   await page.keyboard.press('Enter')
 
   //     const GoogleTagManagerDataLayer = await page.evaluate(() => window.dataLayer)
 
-    //   expect(GoogleTagManagerDataLayer).toEqual(
-    //     expect.arrayContaining([
-    //       expect.objectContaining({
-    //         ecommerce: {
-    //           click: {
-    //             actionField: {
-    //               list: 'g'
-    //             },
-    //             products: expect.arrayContaining([
-    //               expect.objectContaining({
-    //                 name: expect.any(String),
-    //                 category: expect.any(String),
-    //                 list: 'g',
-    //                 position: 2
-    //               })
-    //             ])
-    //           }
-    //         },
-    //         event: 'site-search',
-    //         eventDetails: {
-    //           action: 'click',
-    //           category: 'site search',
-    //           label: expect.stringContaining('g |')
-    //         }
-    //       })
-    //     ])
-    //   )
-    // })
+  //   expect(GoogleTagManagerDataLayer).toEqual(
+  //     expect.arrayContaining([
+  //       expect.objectContaining({
+  //         ecommerce: {
+  //           click: {
+  //             actionField: {
+  //               list: 'g'
+  //             },
+  //             products: expect.arrayContaining([
+  //               expect.objectContaining({
+  //                 name: expect.any(String),
+  //                 category: expect.any(String),
+  //                 list: 'g',
+  //                 position: 2
+  //               })
+  //             ])
+  //           }
+  //         },
+  //         event: 'site-search',
+  //         eventDetails: {
+  //           action: 'click',
+  //           category: 'site search',
+  //           label: expect.stringContaining('g |')
+  //         }
+  //       })
+  //     ])
+  //   )
+  // })
 
-    // it('should block personally identifable information emails', async () => {
-    //   await page.evaluate(() => { window.__SITE_SEARCH_TRACKING_TIMEOUT = 0 })
+  // it('should block personally identifable information emails', async () => {
+  //   await page.evaluate(() => { window.__SITE_SEARCH_TRACKING_TIMEOUT = 0 })
 
-    //   await $searchInput.focus()
-    //   await $searchInput.type('user@example.com')
+  //   await $searchInput.focus()
+  //   await $searchInput.type('user@example.com')
 
-    //   const GoogleTagManagerDataLayer = await page.evaluate(() => window.dataLayer)
+  //   const GoogleTagManagerDataLayer = await page.evaluate(() => window.dataLayer)
 
-    //   expect(GoogleTagManagerDataLayer).toEqual(
-    //     expect.arrayContaining([
-    //       expect.objectContaining({
-    //         eventDetails: expect.objectContaining({
-    //           label: '[REDACTED EMAIL]'
-    //         })
-    //       })
-    //     ])
-    //   )
-    // })
+  //   expect(GoogleTagManagerDataLayer).toEqual(
+  //     expect.arrayContaining([
+  //       expect.objectContaining({
+  //         eventDetails: expect.objectContaining({
+  //           label: '[REDACTED EMAIL]'
+  //         })
+  //       })
+  //     ])
+  //   )
+  // })
 
-    // it('should block personally identifable information numbers', async () => {
-    //   await page.evaluate(() => { window.__SITE_SEARCH_TRACKING_TIMEOUT = 0 })
+  // it('should block personally identifable information numbers', async () => {
+  //   await page.evaluate(() => { window.__SITE_SEARCH_TRACKING_TIMEOUT = 0 })
 
-    //   await $searchInput.focus()
-    //   await $searchInput.type('079460999')
+  //   await $searchInput.focus()
+  //   await $searchInput.type('079460999')
 
-    //   const GoogleTagManagerDataLayer = await page.evaluate(() => window.dataLayer)
+  //   const GoogleTagManagerDataLayer = await page.evaluate(() => window.dataLayer)
 
   //     expect(GoogleTagManagerDataLayer).toEqual(
   //       expect.arrayContaining([

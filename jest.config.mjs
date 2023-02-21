@@ -6,7 +6,7 @@ export default {
 
   // Environment defaults for JSDOM
   testEnvironmentOptions: {
-    url: 'https://design-system.service.gov.uk'
+    url: 'https://design-system-hmlr.service.gov.uk'
   },
 
   // Enable GitHub Actions reporter UI

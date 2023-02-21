@@ -9,7 +9,7 @@ We work to the government service design standards.
 
 The HM Land Registry Design System extends the GOV.UK Design System and Service Manual, to include items that don’t exist there, or for situations unique to Land Registry.
 
-[Why we work to the government standard for design](/get-started/why-gov-standard/)?
+[Why we work to the government standard for design](/get-started/why-gov-standard/)
 
 ## New services and improving existing services
 
