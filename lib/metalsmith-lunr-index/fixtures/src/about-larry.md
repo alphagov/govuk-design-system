@@ -1,6 +1,11 @@
 ---
 title: Larry the cat
 section: Cats
+show_page_nav: true
 ---
 
-Contents
+# Larry (cat)
+
+## Early life
+
+## Career
