@@ -12,11 +12,10 @@ The HM Land Registry Design System team in the HM Land Registry maintains this d
 If you want to contact the team you can
 [get in touch via email](/get-in-touch/).
 
-- Adam Flay – Designer
-- Alun Beynon – Designer
-- Andrew Hosgood – Developer
-- Andy Porter – Designer
-- Erin Tregunna – Designer
+- Adam Flay – DesignOps
+- Andrew Hosgood – Frontend Developer
+- Andy Porter – Interaction Designer
+- Erin Tregunna – Service Designer
 - Gaynor Williams – Accessibility Consultant
-- James Thomas – Designer
+- James Thomas – Content Designer
 - Matt Shaw – Developer

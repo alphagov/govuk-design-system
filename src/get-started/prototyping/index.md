@@ -11,7 +11,11 @@ The GOV.UK guide explains how to create prototypes using the GOV.UK Design Syste
 
 ## Before you start
 
-To make prototypes you will need to install version 7 or later of the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk/docs/create-new-prototype) which has been built to work with the Design System.
+To make prototypes use the link below to navigate to the GOV.UK setup guide.
+
+[GOV.UK Prototyping setup guide](https://design-system.service.gov.uk/get-started/prototyping/).
+
+[Build a basic prototype](https://govuk-prototype-kit.herokuapp.com/docs/make-first-prototype/start) using the GDS Prototype Kit.
 
 ## Using the HM Land Registry components
 
