@@ -1,36 +1,25 @@
 
-const { setupPage } = require('../lib/jest-utilities.js')
-// const configPaths = require('../lib/paths.js')
-// const PORT = configPaths.testPort
-
-let page
-// let baseUrl = 'http://localhost:' + PORT
-
-beforeEach(async () => {
-  page = await setupPage()
-})
-
-afterEach(async () => {
-  await page.close()
-})
+const { goTo } = require('../lib/puppeteer-helpers.js')
 
 describe('Component page', () => {
-  // it('should contain a "Nunjucks" tab heading', async () => {
-  //   await page.goto(baseUrl + '/components/back-link/', { waitUntil: 'load' })
+  it('should contain a "Nunjucks" tab heading', async () => {
+    await goTo(page, '/components/back-link/')
 
-  //   const nunjucksTabHeadings = await page.evaluate(() => Array.from(document.querySelectorAll('.js-tabs__item a'))
-  //     .filter(element => element.textContent === 'Nunjucks'))
+    const nunjucksTabHeadings = await page.evaluate(() => Array.from(document.querySelectorAll('.js-tabs__item a'))
+      .filter(element => element.textContent === 'Nunjucks')
+    )
 
   //   expect(nunjucksTabHeadings[0]).toBeTruthy()
   // })
 
-  // it('"Nunjucks" tab content should contain a details summary with "Nunjucks macro options" text', async () => {
-  //   await page.goto(baseUrl + '/components/back-link/', { waitUntil: 'load' })
+  it('"Nunjucks" tab content should contain a details summary with "Nunjucks macro options" text', async () => {
+    await goTo(page, '/components/back-link/')
 
-  //   // Get "aria-controls" attributes from "Nunjucks" tab headings
-  //   const nunjucksTabHeadingControls = await page.evaluateHandle(() => Array.from(document.querySelectorAll('.js-tabs__item a'))
-  //     .filter(element => element.textContent === 'Nunjucks')
-  //     .map(element => element.getAttribute('aria-controls')))
+    // Get "aria-controls" attributes from "Nunjucks" tab headings
+    const nunjucksTabHeadingControls = await page.evaluateHandle(() => Array.from(document.querySelectorAll('.js-tabs__item a'))
+      .filter(element => element.textContent === 'Nunjucks')
+      .map(element => element.getAttribute('aria-controls'))
+    )
 
   //   const tabContentIds = await nunjucksTabHeadingControls.jsonValue() // Returns Puppeteer JSONHandle
 
@@ -43,8 +32,8 @@ describe('Component page', () => {
   //   expect(nunjucksTabHeadings).toContain('Nunjucks macro options')
   // })
 
-  // it('"Nunjucks" tab content should contain a details element that has a table with "Name", "Type" and "Description" column headings', async () => {
-  //   await page.goto(baseUrl + '/components/back-link/', { waitUntil: 'load' })
+  it('"Nunjucks" tab content should contain a details element that has a table with "Name", "Type" and "Description" column headings', async () => {
+    await goTo(page, '/components/back-link/')
 
   //   // Get "aria-controls" attributes from "Nunjucks" tab headings
   //   const nunjucksTabHeadingControls = await page.evaluateHandle(() => Array.from(document.querySelectorAll('.js-tabs__item a'))
@@ -61,29 +50,25 @@ describe('Component page', () => {
   //   expect(nunjucksTableHeadings.sort()).toEqual(['Name', 'Type', 'Description'].sort())
   // })
 
-  // it('macro options should be opened and in view when linked to', async () => {
-  //   await page.goto(baseUrl + '/components/back-link/#options-back-link-example', { waitUntil: 'load' })
+  it('macro options should be opened and in view when linked to', async () => {
+    await goTo(page, '/components/back-link/#options-back-link-example')
 
   //   // Check if example's macro options details element is open
   //   await page.waitForSelector('#options-back-link-example-details[open=open]')
 
-  //   // Check if the example has been scrolled into the viewport
-  //   const $example = await page.$('#options-back-link-example')
-  //   expect(await $example.isIntersectingViewport()).toBe(true)
-  // })
+    // Check if the example has been scrolled into the viewport
+    const $example = await page.$('#options-back-link-example-details')
+    await expect($example.isIntersectingViewport()).resolves.toBe(true)
+  })
 
-  // it('macro options subtable should be opened and in view when linked to', async () => {
-  //   await page.goto(baseUrl + '/components/text-input/#options-text-input-example--label', { waitUntil: 'load' })
+  it('macro options subtable should be opened and in view when linked to', async () => {
+    await goTo(page, '/components/text-input/#options-text-input-example--label')
 
   //   // Check if example's macro options details element is open
   //   await page.waitForSelector('#options-text-input-example-details[open=open]')
 
-  //   // Check if the example has been scrolled into the viewport
-  //   const $example = await page.$('#options-text-input-example--label')
-  //   expect(await $example.isIntersectingViewport()).toBe(true)
-  // })
-
-  it('==blank test==', async () => {
-    expect(true).toBe(true)
+    // Check if the example has been scrolled into the viewport
+    const $example = await page.$('#options-text-input-example--label')
+    await expect($example.isIntersectingViewport()).resolves.toBe(true)
   })
 })

@@ -3,6 +3,7 @@ title: HM Land Registry Design System team
 description: about the HM Land Registry Design System team and who works on it
 layout: layout-single-page-prose.njk
 ---
+{# The dashes between team member name and role are em dashes (–) not standard hyphens (-) #}
 
 # HM Land Registry Design System team
 

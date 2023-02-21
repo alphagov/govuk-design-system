@@ -1,7 +1,7 @@
 ---
 title: With Permalink
 section: Components
-path: /with-permalink/
+permalink: /with-permalink/
 ---
 
 Contents

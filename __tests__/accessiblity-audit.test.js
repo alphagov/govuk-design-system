@@ -1,14 +1,10 @@
+const { AxePuppeteer } = require('@axe-core/puppeteer')
 
-const { AxePuppeteer } = require('axe-puppeteer')
+const { goTo } = require('../lib/puppeteer-helpers.js')
 
-const { setupPage } = require('../lib/jest-utilities.js')
-const configPaths = require('../lib/paths.js')
-const PORT = configPaths.testPort
+async function analyze (page, path) {
+  await goTo(page, path)
 
-let page
-const baseUrl = 'http://localhost:' + PORT
-
-async function audit (page) {
   const axe = new AxePuppeteer(page)
     .include('body')
     // axe reports there is "no label associated with the text field", when there is one.
@@ -20,58 +16,47 @@ async function audit (page) {
     .exclude('.govuk-skip-link')
     // axe reports that the back to top button is not inside a landmark, which is intentional.
     .exclude('.app-back-to-top')
+    // axe reports that the frame "does not have a main landmark" and example <h1> headings
+    // violate "Heading levels should only increase by one", which is intentional.
+    // https://github.com/alphagov/govuk-design-system/pull/2442#issuecomment-1326600528
+    .exclude('.app-example__frame')
 
-  const results = await axe.analyze()
-
-  return results.violations
+  return axe.analyze()
 }
-
-beforeAll(async () => {
-  page = await setupPage()
-})
-
-afterAll(async () => {
-  await page.close()
-})
 
 describe('Accessibility Audit', () => {
   describe('Home page - layout.njk', () => {
     it('validates', async () => {
-      await page.goto(baseUrl + '/', { waitUntil: 'load' })
-      const violations = await audit(page)
-      expect(violations).toEqual([])
+      const results = await analyze(page, '/')
+      expect(results).toHaveNoViolations()
     })
   })
 
   // describe('Component page - layout-pane.njk', () => {
   //   it('validates', async () => {
-  //     await page.goto(baseUrl + '/components/radios/', { waitUntil: 'load' })
-  //     const violations = await audit(page)
-  //     expect(violations).toEqual([])
+  //     const results = await analyze(page, '/components/radios/')
+  //     expect(results).toHaveNoViolations()
   //   })
   // })
 
   // describe('Patterns page - layout-pane.njk', () => {
   //   it('validates', async () => {
-  //     await page.goto(baseUrl + '/patterns/gender-or-sex/', { waitUntil: 'load' })
-  //     const violations = await audit(page)
-  //     expect(violations).toEqual([])
+  //     const results = await analyze(page, '/patterns/gender-or-sex/')
+  //     expect(results).toHaveNoViolations()
   //   })
   // })
 
   describe('Get in touch page - layout-single-page.njk', () => {
     it('validates', async () => {
-      await page.goto(baseUrl + '/get-in-touch/', { waitUntil: 'load' })
-      const violations = await audit(page)
-      expect(violations).toEqual([])
+      const results = await analyze(page, '/get-in-touch/')
+      expect(results).toHaveNoViolations()
     })
   })
 
   describe('Site Map page - layout-sitemap.njk', () => {
     it('validates', async () => {
-      await page.goto(baseUrl + '/sitemap/', { waitUntil: 'load' })
-      const violations = await audit(page)
-      expect(violations).toEqual([])
+      const results = await analyze(page, '/sitemap/')
+      expect(results).toHaveNoViolations()
     })
   })
 })

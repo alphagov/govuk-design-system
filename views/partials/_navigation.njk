@@ -2,7 +2,7 @@
   <h2 class="govuk-visually-hidden" id="app-navigation-heading">Menu</h2>
   <ul class="app-navigation__list app-width-container">
     {% for item in navigation %}
-      <li class="app-navigation__list-item {% if path == item.url or item.url and path.startsWith(item.url) %} app-navigation__list-item--current{% endif %}">
+      <li class="app-navigation__list-item {% if permalink == item.url or item.url and permalink.startsWith(item.url) %} app-navigation__list-item--current{% endif %}">
         <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/{{ item.url }}/">
           {{ item.label }}
         </a>
@@ -12,11 +12,11 @@
             {{ item.label }}
           </button>
 
-          <ul class="app-navigation__subnav js-app-navigation__subnav {% if path.startsWith(item.url) %}app-navigation__subnav--active{% endif %}"
+          <ul class="app-navigation__subnav js-app-navigation__subnav {% if permalink.startsWith(item.url) %}app-navigation__subnav--active{% endif %}"
             aria-label="{{ item.label }}"
             hidden
           >
-            <li class="app-navigation__subnav-item{% if path == item.url %} app-navigation__subnav-item--current{% endif %}">
+            <li class="app-navigation__subnav-item{% if permalink == item.url %} app-navigation__subnav-item--current{% endif %}">
               <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/{{ item.url }}/">
                 {{ item.label }} overview
               </a>
@@ -28,7 +28,7 @@
                 {% endif %}
                 <ul class="app-navigation__list">
                   {% for subitem in items %}
-                    <li class="app-navigation__subnav-item{% if path == subitem.url %} app-navigation__subnav-item--current{% endif %}">
+                    <li class="app-navigation__subnav-item{% if permalink == subitem.url %} app-navigation__subnav-item--current{% endif %}">
                       <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/{{ subitem.url }}/">
                         {{ subitem.label }}
                       </a>

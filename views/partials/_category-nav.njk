@@ -6,7 +6,7 @@ navigation doesn't expand and so the user can only access the top level category
 pages. #}
 <nav class="category-nav">
   {% for item in navigation %}
-    {% if path.startsWith(item.url) %}
+    {% if permalink.startsWith(item.url) %}
     {% if item.items %}
       {% for theme, items in item.items | groupby("theme") %}
         {% if theme != 'undefined' %}

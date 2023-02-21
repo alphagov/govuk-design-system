@@ -12,12 +12,16 @@ updates:
     versioning-strategy: increase
 
     allow:
-      - dependency-type: all
+      - dependency-type: direct
 
     ignore:
-      # Ignore major/minor updates (Marked parser changes output)
-      - dependency-name: jstransformer-marked
-        update-types: ['version-update:semver-major', 'version-update:semver-minor']
+      # Ignore major updates (@axe-core/puppeteer peer puppeteer <= 18)
+      - dependency-name: puppeteer
+        update-types: ['version-update:semver-major']
+
+      # Always ignore legacy packages
+      - dependency-name: iframe-resizer
+      - dependency-name: rollup
 
   # Update GitHub Actions
   - package-ecosystem: github-actions
