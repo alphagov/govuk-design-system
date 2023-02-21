@@ -74,6 +74,8 @@ GOV.UK Frontend Jinja Macros.
 [GOV.UK Frontend WTForms](https://github.com/LandRegistry/govuk-frontend-wtf) -
 GOV.UK Frontend WTForms Widgets.
 
+[GOV.UK Frontend Flask](https://github.com/LandRegistry/govuk-frontend-flask) - Complete Flask app template that implements the Jinja and WTForms packages to integrate with GOV.UK Frontend.
+
 ### R
 
 [Govdown](https://github.com/ukgovdatascience/govdown) -
