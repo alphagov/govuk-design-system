@@ -19,7 +19,7 @@ In this context, "services" refers to internal, professional and public-facing H
 
 ### Which design system to use
 
-1. Services hosted on `service.gov.uk` will use the GOV.UK Design System as a requirement from the [GOV.UK Service Manual](https://www.gov.uk/service-manual/design/making-your-service-look-like-govuk).
+1. Services hosted on `service.gov.uk` will use the GOV.UK Design System. This is a requirement from the [GOV.UK Service Manual](https://www.gov.uk/service-manual/design/making-your-service-look-like-govuk).
 2. New services not on `.gov.uk` will use the HM Land Registry Design System. This is required as part of the HM Land Registry platform development standards.
 3. Existing services not on `.gov.uk` will aim to adapt to use the HM Land Registry Design System.
 
@@ -39,7 +39,7 @@ Using the [MoSCoW method](https://en.wikipedia.org/wiki/MoSCoW_method) a set of 
 2. All additions and modifications **must** meet the [contribution criteria](/community/contribution-criteria/).
 3. Components, patterns and styles **should** align to the [Government Design Principles](https://www.gov.uk/guidance/government-design-principles).
 4. Anyone **should** be able to contribute to the HM Land Registry Design System.
-5. New components, patterns and styles **could** be shared with GDS and merged into the GOV.UK Design System.
+5. Components, patterns and styles **could** be shared back up to GDS.
 
 ## Feedback
 
