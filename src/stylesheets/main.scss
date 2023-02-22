@@ -294,6 +294,12 @@ pre code {
   }
 }
 
+// Allow text to wrap
+pre .language-markdown,
+pre .language-plaintext {
+  white-space: pre-wrap;
+}
+
 .app-prose-scope {
   h1 {
     @extend %govuk-heading-xl;
