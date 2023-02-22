@@ -46,7 +46,7 @@ How you make focus states accessible depends on if the component is:
 
 If you use Sass, you should include the `govuk-focused-text` mixin in your component's `:focus` selector if that component is focusable text. For example, the component is a link in body text, or the details component:
 
-```
+```scss
 .app-component:focus {
   @include govuk-focused-text;
 }

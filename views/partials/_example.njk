@@ -65,9 +65,11 @@
     {% endif %}
     <div class="app-tabs__container js-tabs__container{{ " js-tabs__container--no-tabs" if (params.hideTab) }}" id="{{ exampleId }}-html" role="tabpanel">
       <div class="app-example__code" data-module="app-copy">
-        <pre><code tabindex="0" class="hljs html">
-          {{- getHTMLCode(examplePath) | highlight('html') | safe -}}
-        </code></pre>
+
+```html
+{{ getHTMLCode(examplePath) | safe }}
+```
+
       </div>
     </div>
   {% endif %}
@@ -144,9 +146,11 @@
         })}}
       {% endif -%}
       <div class="app-example__code" data-module="app-copy">
-        <pre><code tabindex="0" class="hljs js">
-          {{- getNunjucksCode(examplePath) | highlight('js') | safe -}}
-        </code></pre>
+
+```javascript
+{{ getNunjucksCode(examplePath) | safe }}
+```
+
       </div>
     </div>
   {% endif %}
