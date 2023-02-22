@@ -262,17 +262,6 @@ $colour-list-breakpoint: 980px;
   }
 }
 
-pre {
-  max-width: 38em;
-  margin: 0;
-  padding: govuk-spacing(4);
-  overflow: auto;
-  border: 1px solid $govuk-border-colour;
-  background-color: $app-light-grey;
-  font-size: 16px;
-  @include govuk-responsive-margin(4, "bottom");
-}
-
 // Add styling for inline code
 li code,
 td code,
@@ -280,6 +269,29 @@ p code {
   padding: 0 govuk-spacing(1);
   color: $app-code-color;
   background-color: govuk-colour("light-grey");
+}
+
+// Add styling for block code
+pre code {
+  display: block;
+  max-width: 38em;
+  margin: 0;
+  padding: govuk-spacing(4);
+  overflow-x: auto;
+  border: $govuk-focus-width solid transparent;
+  outline: 1px solid $govuk-border-colour;
+  background-color: $app-light-grey;
+  font-size: 16px;
+  @include govuk-responsive-margin(4, "bottom");
+
+  &:focus {
+    border: $govuk-focus-width solid $govuk-input-border-colour;
+    outline: $govuk-focus-width solid $govuk-focus-colour;
+  }
+
+  .js-enabled [data-module="app-copy"] & {
+    padding-top: 45px; // Allow extra space for the copy code button
+  }
 }
 
 .app-prose-scope {

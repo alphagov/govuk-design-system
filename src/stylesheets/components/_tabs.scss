@@ -156,27 +156,8 @@
   }
 }
 
-.app-tabs__container pre {
-  max-width: inherit;
-  margin-bottom: 0;
-  padding: 0;
-  border: $govuk-focus-width solid transparent;
+.app-tabs__container pre code {
   outline: 1px solid transparent;
   color: $govuk-text-colour;
   background-color: govuk-colour("light-grey");
-  font-size: inherit;
-
-  &:focus {
-    border: $govuk-focus-width solid $govuk-input-border-colour;
-    outline: $govuk-focus-width solid $govuk-focus-colour;
-  }
-}
-
-.app-tabs__container pre code {
-  display: inline-block;
-  padding: govuk-spacing(4);
-
-  .js-enabled & {
-    padding-top: 45px; // Allow extra space for the copy code button
-  }
 }

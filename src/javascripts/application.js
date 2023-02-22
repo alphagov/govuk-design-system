@@ -37,7 +37,7 @@ nodeListForEach($tabs, function ($tabs) {
 OptionsTable.init()
 
 // Add copy to clipboard to code blocks inside tab containers
-var $codeBlocks = document.querySelectorAll('[data-module="app-copy"]')
+var $codeBlocks = document.querySelectorAll('[data-module="app-copy"] pre')
 nodeListForEach($codeBlocks, function ($codeBlock) {
   new Copy($codeBlock).init()
 })
