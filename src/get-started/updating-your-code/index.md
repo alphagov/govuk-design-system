@@ -202,7 +202,7 @@ The main change is changing variables from [snake_case](https://en.wikipedia.org
 
 ```javascript
 {% raw %}
-{% block header %}
+{% block footer %}
   {{ govukFooter({ navigation: [] }) }}
 {% endblock %}
 {% endraw %}
@@ -223,7 +223,7 @@ The main change is changing variables from [snake_case](https://en.wikipedia.org
 
 ```javascript
 {% raw %}
-{% block header %}
+{% block footer %}
   {{ govukFooter({ meta: [] }) }}
 {% endblock %}
 {% endraw %}
