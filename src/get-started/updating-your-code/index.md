@@ -61,10 +61,15 @@ The main change is changing variables from [snake_case](https://en.wikipedia.org
           You can now entirely replace the skip link by rendering your own,
           which can include custom <code>text</code>
         </p>
-        <pre><code>{% raw %}
+
+```javascript
+{% raw %}
 {% block skipLink %}
   {{ govukSkipLink({ text: "custom text" }) }}
-{% endblock %}{% endraw %}</code></pre>
+{% endblock %}
+{% endraw %}
+```
+
         <p>
           See the <a class="govuk-link" href="/components/skip-link/">skip link component</a> for more details.
         </p>
@@ -83,10 +88,15 @@ The main change is changing variables from [snake_case](https://en.wikipedia.org
           You can now entirely replace the header component by rendering your own,
           which can include custom <code>classes</code>
         </p>
-        <pre><code>{% raw %}
+
+```javascript
+{% raw %}
 {% block header %}
-    {{ govukHeader({ classes: "app-custom-classes" }) }}
-{% endblock %}{% endraw %}</code></pre>
+  {{ govukHeader({ classes: "app-custom-classes" }) }}
+{% endblock %}
+{% endraw %}
+```
+
         <p>
           See the <a class="govuk-link" href="/components/header/">header component</a> for more details.
         </p>
@@ -99,10 +109,15 @@ The main change is changing variables from [snake_case](https://en.wikipedia.org
           You can now entirely replace the header component by rendering your own,
           which can include custom <code>homepageUrl</code>
         </p>
-        <pre><code>{% raw %}
+
+```javascript
+{% raw %}
 {% block header %}
-    {{ govukHeader({ homepageUrl: "/custom-url" }) }}
-{% endblock %}{% endraw %}</code></pre>
+  {{ govukHeader({ homepageUrl: "/custom-url" }) }}
+{% endblock %}
+{% endraw %}
+```
+
         <p>
           See the <a class="govuk-link" href="/components/header/">header component</a> for more details.
         </p>
@@ -121,10 +136,15 @@ The main change is changing variables from [snake_case](https://en.wikipedia.org
           You can now entirely replace the header component by rendering your own,
           which can include a custom <code>serviceName</code>
         </p>
-        <pre><code>{% raw %}
+
+```javascript
+{% raw %}
 {% block header %}
-    {{ govukHeader({ serviceName: "Custom service name" }) }}
-{% endblock %}{% endraw %}</code></pre>
+  {{ govukHeader({ serviceName: "Custom service name" }) }}
+{% endblock %}
+{% endraw %}
+```
+
         <p>
           See the <a class="govuk-link" href="/components/header/">header component</a> for more details.
         </p>
@@ -137,10 +157,15 @@ The main change is changing variables from [snake_case](https://en.wikipedia.org
           You can now entirely replace the header component by rendering your own,
           which can include a custom <code>navigation</code>
         </p>
-        <pre><code>{% raw %}
+
+```javascript
+{% raw %}
 {% block header %}
-    {{ govukHeader({ navigation: [] }) }}
-{% endblock %}{% endraw %}</code></pre>
+  {{ govukHeader({ navigation: [] }) }}
+{% endblock %}
+{% endraw %}
+```
+
         <p>
           See the <a class="govuk-link" href="/components/header/">header component</a> for more details.
         </p>
@@ -174,10 +199,15 @@ The main change is changing variables from [snake_case](https://en.wikipedia.org
           You can now entirely replace the footer component by rendering your own,
           which can include a custom <code>navigation</code>
         </p>
-        <pre><code>{% raw %}
+
+```javascript
+{% raw %}
 {% block header %}
-    {{ govukFooter({ navigation: [] }) }}
-{% endblock %}{% endraw %}</code></pre>
+  {{ govukFooter({ navigation: [] }) }}
+{% endblock %}
+{% endraw %}
+```
+
         <p>
           See the <a class="govuk-link" href="/components/footer/">footer component</a> for more details.
         </p>
@@ -190,10 +220,15 @@ The main change is changing variables from [snake_case](https://en.wikipedia.org
           You can now entirely replace the footer component by rendering your own,
           which can include custom <code>meta</code> links
         </p>
-        <pre><code>{% raw %}
+
+```javascript
+{% raw %}
 {% block header %}
-    {{ govukFooter({ meta: [] }) }}
-{% endblock %}{% endraw %}</code></pre>
+  {{ govukFooter({ meta: [] }) }}
+{% endblock %}
+{% endraw %}
+```
+
         <p>
           See the <a class="govuk-link" href="/components/footer/">footer component</a> for more details.
         </p>
