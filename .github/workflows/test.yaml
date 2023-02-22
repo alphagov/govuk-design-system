@@ -42,10 +42,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build
-        run: npm run build
-
-      - name: Lint and test
+      - name: Build, lint and test
         run: npm test -- --color --maxWorkers=2
 
       # Share data between the build and deploy jobs so we don't need to run `npm run build` again on deploy
