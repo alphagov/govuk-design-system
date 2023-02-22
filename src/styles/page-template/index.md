@@ -56,7 +56,7 @@ To set a 'variable' option, use `set` to pass in a single value or string. For e
 
 By default, the template contains a [skip link](/components/skip-link/), [header](/components/header/) and [footer](/components/footer/), all of which require 'blocks' to change.
 
-To set a 'block' option, use `block` to pass in a multiline value or HTML markup. For example, to add a block of HTML before the closing </body> element in the page template using the `bodyEnd` option:
+To set a 'block' option, use `block` to pass in a multiline value or HTML markup. For example, to add a block of HTML before the closing `</body>` element in the page template using the `bodyEnd` option:
 
 ```javascript
 {% raw %}

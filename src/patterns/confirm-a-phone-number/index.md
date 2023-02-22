@@ -42,7 +42,7 @@ After saving the user’s password and mobile phone number, verify their mobile 
 
 Then ask the user to enter this code:
 
-{{ example({group: "patterns", item: "confirm-a-phone-number", example: "default", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "patterns", item: "confirm-a-phone-number", example: "default", titleSuffix: "second", html: true, nunjucks: true, open: false}) }}
 
 Let the user enter the code in whatever format is familiar to them. Allow additional spaces, hyphens and dashes.
 

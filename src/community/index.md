@@ -115,12 +115,12 @@ We’ve also formed cross-government groups to co-design new additions to the De
 <div class="govuk-grid-row govuk-!-margin-bottom-8">
   <div class="govuk-grid-column-full govuk-grid-column-one-half-from-desktop">
     <h3>Maps in services</h3>
-    <p>Help us explore best practices for the use of maps across the public sector so we can make them more accessible and consistent.<p>
+    <p>Help us explore best practices for the use of maps across the public sector so we can make them more accessible and consistent.</p>
     <p><a href="https://join.slack.com/t/mapsinservices/shared_invite/zt-163npa168-e5EREuQZU3NqwfdojWw2ew">Join the Maps Slack group</a>.</p>
   </div>
   <div class="govuk-grid-column-full govuk-grid-column-one-half-from-desktop">
     <h3>Task list component</h3>
-    <p>Share your experience, research and skills to help us reiterate the Task list pages pattern into a component.<p>
+    <p>Share your experience, research and skills to help us reiterate the Task list pages pattern into a component.</p>
     <p><a href="https://join.slack.com/t/task-list-collab/shared_invite/zt-1gfbxa78k-Ql8885Iuan17w5v26F6yVQ">Join the Task list Slack group</a>.</p>
   </div>
 </div>
