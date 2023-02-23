@@ -11,7 +11,7 @@ This roadmap shows what we’re working on and planning to do.
 
 Some things on the roadmap might change — the purpose is to tell you what’s coming up and help service teams prepare and plan their own work.
 
-See our [Github team board](https://github.com/orgs/alphagov/projects/4) for more details on our plans and day-to-day activities.
+See our [Github team board](https://github.com/orgs/alphagov/projects/53) for more details on our plans and day-to-day activities.
 
 Last updated 31 January 2023.
 
