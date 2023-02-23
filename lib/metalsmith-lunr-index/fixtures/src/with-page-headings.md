@@ -1,5 +1,6 @@
 ---
 title: Page with headings
+section: Components
 show_page_nav: true
 headingAliases:
     Heading level 2: two
