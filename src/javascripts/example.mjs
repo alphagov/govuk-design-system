@@ -1,5 +1,3 @@
-import 'govuk-frontend/govuk/vendor/polyfills/Event'
-
 function ExamplePage ($module) {
   this.$module = $module
 }

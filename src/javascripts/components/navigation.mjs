@@ -1,4 +1,3 @@
-import 'govuk-frontend/govuk/vendor/polyfills/Element/prototype/classList'
 import { nodeListForEach } from './helpers.mjs'
 
 var navActiveClass = 'app-navigation--active'
@@ -122,27 +121,18 @@ Navigation.prototype.bindUIEvents = function () {
 }
 
 Navigation.prototype.init = function () {
-  // Since the Mobile navigation is not included in IE8
-  // We detect features we need to use only available in IE9+ https://caniuse.com/#feat=addeventlistener
-  // http://responsivenews.co.uk/post/18948466399/cutting-the-mustard
-  var featuresNeeded = (
-    'querySelector' in document &&
-    'addEventListener' in window
-  )
-
-  if (!featuresNeeded) {
-    return
-  }
-
-  if (typeof window.matchMedia === 'function') {
+  if ('matchMedia' in window) {
+    // Set the matchMedia to the govuk-frontend tablet breakpoint
     this.mql = window.matchMedia('(min-width: 40.0625em)')
 
-    // IE and Safari < 14 do not support MediaQueryList.addEventListener
-    if ('addEventListener' in this.mql) {
-      this.mql.addEventListener('change', this.setHiddenStates.bind(this))
-    } else {
-      this.mql.addListener(this.setHiddenStates.bind(this))
-    }
+    var listenerMethod = 'addEventListener' in this.mql
+      ? 'addEventListener'
+      : 'addListener'
+
+    // addListener is a deprecated function, however addEventListener
+    // isn't supported by Safari < 14. We therefore add this in as
+    // a fallback for those browsers
+    this.mql[listenerMethod]('change', this.setHiddenStates.bind(this))
   }
 
   this.setHiddenStates()

@@ -96,15 +96,6 @@ module.exports = {
       h1: {
         permittedContent: ['div', 'label', 'span']
       },
-      // "frameborder" is required for IE8 support
-      // https://github.com/alphagov/govuk-design-system/pull/116
-      iframe: {
-        attributes: {
-          frameborder: {
-            deprecated: false
-          }
-        }
-      },
       // We added a summary to fix an accessibility issue, though we could
       // probably revisit.
       // https://github.com/alphagov/govuk-design-system/pull/301

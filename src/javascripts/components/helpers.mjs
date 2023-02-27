@@ -1,5 +1,5 @@
 /**
- * This seems to fail in IE8, requires more investigation.
+ * TODO: Ideally this would be a NodeList.prototype.forEach polyfill
  * See: https://github.com/imagitama/nodelist-foreach-polyfill
  */
 export function nodeListForEach (nodes, callback) {

@@ -1,5 +1,3 @@
-import 'govuk-frontend/govuk/vendor/polyfills/Function/prototype/bind'
-
 function BackToTop ($module) {
   this.$module = $module
 }

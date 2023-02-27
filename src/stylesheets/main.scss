@@ -103,13 +103,6 @@ $app-code-color: #d13118;
     @include govuk-responsive-margin(6, "bottom");
   }
 
-  // IE8 does not support the video element, so we hide the element entirely.
-  @if $govuk-is-ie8 == true {
-    .app-video {
-      display: none;
-    }
-  }
-
   // Fix monospace font size when used with relative typography
   //
   // Browsers automatically reduce monospace font size
@@ -179,12 +172,6 @@ $app-code-color: #d13118;
 }
 
 $colour-list-breakpoint: 980px;
-
-// for IE8 we need to set that to 'desktop' so media queries get rasterised
-// $govuk-ie8-breakpoint is set in Frontend
-@if $govuk-is-ie8 == true {
-  $colour-list-breakpoint: $govuk-ie8-breakpoint;
-}
 
 .app-colour-list {
   width: 100%;

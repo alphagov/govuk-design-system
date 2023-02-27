@@ -6,13 +6,7 @@ layout: false
 
 {% block head %}
   <meta name="robots" content="noindex, nofollow">
-  <!--[if !IE 8]><!-->
-    <link href="{{ getFingerprint('stylesheets/main.css') }}" rel="stylesheet" media="all">
-  <!--<![endif]-->
-  <!--[if lt IE 9]>
-    <link href="{{ getFingerprint('stylesheets/main-ie8.css') }}" rel="stylesheet" media="all">
-    <script src="{{ getFingerprint('javascripts/head-ie8.js') }}"></script>
-  <![endif]-->
+  <link href="{{ getFingerprint('stylesheets/main.css') }}" rel="stylesheet" media="all">
   <script src="{{ getFingerprint('javascripts/vendor/modernizr.js') }}"></script>
 {% endblock %}
 
@@ -22,9 +16,5 @@ layout: false
 
 {% block bodyEnd %}
   <script src="{{ getFingerprint('javascripts/govuk-frontend.js') }}"></script>
-
-  <!--[if lt IE 9]>
-    <script src="{{ getFingerprint('javascripts/vendor/ie8.polyfils.min.js') }}"></script>
-  <![endif]-->
   <script src="{{ getFingerprint('javascripts/vendor/iframeResizer.contentWindow.min.js') }}"></script>
 {% endblock %}

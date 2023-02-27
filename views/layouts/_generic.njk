@@ -13,21 +13,13 @@
   <meta name="description" content="{{description}}">
   <meta name="og:description" content="{{description}}">
   <link rel="canonical" href="{{ canonical }}">
-  <!--[if lt IE 9]>
-    <link href="{{ getFingerprint('stylesheets/main-ie8.css') }}" rel="stylesheet" media="all">
-    <script src="{{ getFingerprint('javascripts/head-ie8.js') }}"></script>
-  <![endif]-->
-  <!--[if !IE 8]><!-->
-    <link href="{{ getFingerprint('stylesheets/main.css') }}" rel="stylesheet" media="all">
-  <!--<![endif]-->
+  <link href="{{ getFingerprint('stylesheets/main.css') }}" rel="stylesheet" media="all">
   <script src="{{ getFingerprint('javascripts/vendor/modernizr.js') }}"></script>
 {% endblock %}
 
 {% block bodyStart %}
   <a id="top"></a>
-  <!--[if gte IE 9]><!-->
   {% include "_cookie-banner.njk" %}
-  <!--<![endif]-->
 {% endblock %}
 
 {# We provide our own header, so blank the one provided by the template #}
@@ -47,11 +39,5 @@
 
 {% block bodyEnd %}
   <script src="{{ getFingerprint('javascripts/govuk-frontend.js') }}"></script>
-  <!--[if !IE 8]><!-->
-    <script src="{{ getFingerprint('javascripts/application.js') }}"></script>
-  <!--<![endif]-->
-  <!--[if lt IE 9]>
-    <script src="{{ getFingerprint('javascripts/vendor/ie8.polyfils.min.js') }}"></script>
-    <script src="{{ getFingerprint('javascripts/application-ie8.js') }}"></script>
-  <![endif]-->
+  <script src="{{ getFingerprint('javascripts/application.js') }}"></script>
 {% endblock %}
