@@ -80,7 +80,7 @@
     "stylelint": "^14.16.1",
     "stylelint-config-gds": "^0.2.0",
     "stylelint-order": "^6.0.2",
-    "terser": "^5.16.4"
+    "terser": "^5.16.5"
   },
   "engines": {
     "node": "^18.12.0",
