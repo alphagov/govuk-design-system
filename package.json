@@ -21,7 +21,8 @@
     "prelint:html": "npm run build",
     "lint:html": "html-validate \"deploy/public/**/index.html\"",
     "lint:js": "eslint --cache --cache-location .cache/eslint --cache-strategy content --color --ignore-path .gitignore \"**/*.{cjs,js,mjs}\"",
-    "lint:scss": "stylelint \"**/*.scss\""
+    "lint:scss": "stylelint \"**/*.scss\"",
+    "check-links": "hyperlink --canonicalroot https://design-system.service.gov.uk/ --internal --recursive --source-maps deploy/public/sitemap.xml | tap-mocha-reporter min"
   },
   "dependencies": {
     "@metalsmith/markdown": "^1.9.1",
@@ -55,6 +56,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "glob": "^8.1.0",
     "html-validate": "^7.13.2",
+    "hyperlink": "^5.0.4",
     "iframe-resizer": "3.5.15",
     "jest": "^29.4.3",
     "jest-axe": "^7.0.0",
@@ -64,7 +66,6 @@
     "jstransformer-nunjucks": "^1.1.0",
     "marked": "^4.2.12",
     "metalsmith": "^2.5.1",
-    "metalsmith-broken-link-checker": "^1.0.2",
     "metalsmith-canonical": "^1.2.0",
     "metalsmith-env": "^2.2.0",
     "metalsmith-renamer": "^0.5.217",
@@ -80,6 +81,7 @@
     "stylelint": "^14.16.1",
     "stylelint-config-gds": "^0.2.0",
     "stylelint-order": "^6.0.2",
+    "tap-mocha-reporter": "^5.0.3",
     "terser": "^5.16.5"
   },
   "engines": {

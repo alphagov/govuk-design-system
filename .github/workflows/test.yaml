@@ -45,6 +45,9 @@ jobs:
       - name: Build, lint and test
         run: npm test -- --color --maxWorkers=2
 
+      - name: Check broken links
+        run: npm run check-links
+
       # Share data between the build and deploy jobs so we don't need to run `npm run build` again on deploy
       # Upload the deploy folder as an artifact so it can be downloaded and used in the deploy job
       - name: Upload artifact

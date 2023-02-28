@@ -23,7 +23,7 @@ When you extend or modify components in the GOV.UK Design System you create pote
 You can help reduce potential risk to your code by:
 
 - using [override classes](#start-with-override-classes)
-- not [overwriting GOV.UK Design System code](#avoid-overwriting-gov-uk-design-system-code)
+- not [overwriting GOV.UK Design System code](#avoid-overwriting-govuk-design-system-code)
 - using a [unique prefix for component names][prefix]
 - creating [custom override classes for multiple components](#custom-override-classes)
 - using BEM for [small modifications to components](#small-modifications-to-components)
@@ -37,7 +37,7 @@ Check the [styles section](/styles/) to see if there’s a CSS class you can use
 
 For example, you can make changes to:
 
-- spacing with [spacing override classes](/styles/spacing/#spacing-override-classes)
+- spacing with [spacing override classes](/styles/spacing/#overriding-spacing)
 - font size with [font override classes](/styles/typography/#font-override-classes)
 - width with [width override classes](/styles/layout/#width-override-classes)
 
