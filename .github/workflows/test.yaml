@@ -38,23 +38,29 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Restore build
+        uses: actions/cache@v3
+        id: build-cache
+
+        with:
+          key: build-cache-${{ runner.os }}-${{ github.sha }}
+          path: deploy/public
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
+        if: steps.build-cache.outputs.cache-hit != 'true'
+
         with:
           cache: npm
           node-version-file: .nvmrc
 
       - name: Install dependencies
+        if: steps.build-cache.outputs.cache-hit != 'true'
         run: npm ci
 
       - name: Build
+        if: steps.build-cache.outputs.cache-hit != 'true'
         run: npm run build
-
-      - name: Cache build
-        uses: actions/cache/save@v3
-        with:
-          key: build-cache-${{ runner.os }}-${{ github.sha }}
-          path: deploy/public
 
         # Share data between the build and deploy jobs so we don't need to run `npm run build` again on deploy
         # Upload the deploy folder as an artifact so it can be downloaded and used in the deploy job
