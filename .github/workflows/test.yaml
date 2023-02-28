@@ -19,41 +19,99 @@ on:
 
 jobs:
   build:
-    name: Build & Test
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest]
-        include:
-          - os: ubuntu-latest
-            upload-artifact: ${{ inputs.upload-artifact }}
+    name: Build
     runs-on: ${{ matrix.os }}
+
     env:
       ENVIRONMENT: production
 
-    steps:
-      - uses: actions/checkout@v3
+    strategy:
+      fail-fast: false
 
-      - name: Setup node
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+
+        include:
+          - os: ubuntu-latest
+            upload-artifact: ${{ inputs.upload-artifact }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version-file: '.nvmrc'
-          cache: 'npm'
+          cache: npm
+          node-version-file: .nvmrc
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Build, lint and test
-        run: npm test -- --color --maxWorkers=2
+      - name: Build
+        run: npm run build
 
-      - name: Check broken links
-        run: npm run check-links
+      - name: Cache build
+        uses: actions/cache/save@v3
+        with:
+          key: build-cache-${{ runner.os }}-${{ github.sha }}
+          path: deploy/public
 
-      # Share data between the build and deploy jobs so we don't need to run `npm run build` again on deploy
-      # Upload the deploy folder as an artifact so it can be downloaded and used in the deploy job
+        # Share data between the build and deploy jobs so we don't need to run `npm run build` again on deploy
+        # Upload the deploy folder as an artifact so it can be downloaded and used in the deploy job
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         if: ${{ matrix.upload-artifact }}
         with:
-            name: build
-            path: deploy/**
-            retention-days: 1
+          name: build
+          path: deploy/**
+          retention-days: 1
+
+  test:
+    name: ${{ matrix.task.description }} (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    needs: [build]
+
+    strategy:
+      fail-fast: false
+
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+
+        task:
+          - description: Lint Sass
+            run: npm run lint:scss
+
+          - description: Lint JavaScript
+            run: npm run lint:js
+
+          - description: Lint HTML
+            run: npm run lint:html --ignore-scripts
+
+          - description: JavaScript tests
+            run: npx jest --color --maxWorkers=2
+
+          - description: Check broken links
+            run: npm run check-links
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          cache: npm
+          node-version-file: .nvmrc
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Restore build
+        uses: actions/cache/restore@v3
+        with:
+          key: build-cache-${{ runner.os }}-${{ github.sha }}
+          path: deploy/public
+
+      - name: Run task
+        run: ${{ matrix.task.run }}
