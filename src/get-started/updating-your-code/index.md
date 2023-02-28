@@ -735,11 +735,11 @@ GOV.UK Frontend uses ["Block, Element, Modifier" (BEM)](http://getbem.com/) and 
     </tr>
     <tr class="govuk-table__row">
       <td class="govuk-table__cell ">$gutter</td>
-      <td class="govuk-table__cell ">$govuk-gutter, only use for the gaps in between grid columns, otherwise use the <a class="govuk-link" href="/styles/spacing/#spacing-on-custom-components">spacing scale</a>.</td>
+      <td class="govuk-table__cell ">$govuk-gutter, only use for the gaps in between grid columns, otherwise use the <a class="govuk-link" href="/styles/spacing/#applying-spacing-in-your-own-css">spacing scale</a>.</td>
     </tr>
     <tr class="govuk-table__row">
       <td class="govuk-table__cell ">$gutter-half</td>
-      <td class="govuk-table__cell ">$govuk-gutter-half, only use for the gaps in between grid columns, otherwise use the <a class="govuk-link" href="/styles/spacing/#spacing-on-custom-components">spacing scale</a>.</td>
+      <td class="govuk-table__cell ">$govuk-gutter-half, only use for the gaps in between grid columns, otherwise use the <a class="govuk-link" href="/styles/spacing/#applying-spacing-in-your-own-css">spacing scale</a>.</td>
     </tr>
   </tbody>
 </table>

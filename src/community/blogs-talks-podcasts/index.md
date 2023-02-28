@@ -87,7 +87,7 @@ Find out how our community works and how to be a part of it.
 
 ## Add a link to this page
 
-To help us make this page better, you can [propose to add a link](https://github.com/alphagov/govuk-design-system/edit/main/src/community/blogs-talks-podcasts/index.md) that you’ve created or think would be useful to the community. Links need to meet the [GOV.UK external link policy](https://www.gov.uk/guidance/content-design/links) and the Design System [community principles](/community/#community-principles).
+To help us make this page better, you can [propose to add a link](https://github.com/alphagov/govuk-design-system/edit/main/src/community/blogs-talks-podcasts/index.md) that you’ve created or think would be useful to the community. Links need to meet the [GOV.UK external link policy](https://www.gov.uk/guidance/content-design/links) and the Design System [community principles](/community/community-principles/).
 
 Before we publish a new link, we’ll make sure that:
 
