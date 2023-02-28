@@ -16,11 +16,20 @@ on:
         type: boolean
 
   workflow_dispatch:
+    inputs:
+      runner:
+        description: Run tests on
+        type: choice
+        default: ubuntu-latest
+        options:
+          - macos-latest
+          - ubuntu-latest
+          - windows-latest
 
 jobs:
   build:
     name: Build
-    runs-on: ubuntu-latest
+    runs-on: ${{ github.event.inputs.runner || 'ubuntu-latest' }}
 
     env:
       ENVIRONMENT: production
@@ -59,7 +68,7 @@ jobs:
 
   test:
     name: ${{ matrix.task.description }}
-    runs-on: ubuntu-latest
+    runs-on: ${{ github.event.inputs.runner || 'ubuntu-latest' }}
     needs: [build]
 
     strategy:
