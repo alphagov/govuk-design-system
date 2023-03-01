@@ -1,6 +1,5 @@
 {% extends "govuk/template.njk" %}
 
-{% set htmlClasses = 'no-js' %}
 {% set assetUrl = 'https://design-system.service.gov.uk/assets' %}
 
 {% block pageTitle %}{{ title }} – GOV.UK Design System{% endblock %}
@@ -14,7 +13,6 @@
   <meta name="og:description" content="{{description}}">
   <link rel="canonical" href="{{ canonical }}">
   <link href="{{ getFingerprint('stylesheets/main.css') }}" rel="stylesheet" media="all">
-  <script src="{{ getFingerprint('javascripts/vendor/modernizr.js') }}"></script>
 {% endblock %}
 
 {% block bodyStart %}

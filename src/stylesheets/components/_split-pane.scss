@@ -37,19 +37,3 @@ $toc-width-tablet: 210px;
     flex-direction: column;
   }
 }
-
-.no-flexbox.no-flexboxtweener {
-  .app-split-pane {
-    @include govuk-clearfix;
-  }
-
-  .app-split-pane__nav {
-    width: $toc-width;
-    float: left;
-    border-right: 0;
-  }
-
-  .app-split-pane__content {
-    margin-left: $toc-width;
-  }
-}

@@ -10,7 +10,6 @@
   {% for stylesheet in stylesheets %}
     <link href="{{ getFingerprint(stylesheet) }}" rel="stylesheet" media="all">
   {%- endfor %}
-  <script src="{{ getFingerprint('javascripts/vendor/modernizr.js') }}"></script>
 {% endblock %}
 
 {% block header %}
