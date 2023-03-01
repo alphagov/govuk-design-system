@@ -1,11 +1,6 @@
 .app-navigation {
   border-bottom: 1px solid $govuk-border-colour;
   background-color: $app-light-grey;
-
-  [hidden],
-  &[hidden] {
-    display: none;
-  }
 }
 
 .app-navigation__list {

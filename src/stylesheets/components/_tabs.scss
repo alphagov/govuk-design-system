@@ -150,10 +150,6 @@
   @include govuk-media-query($from: desktop) {
     margin-top: -2px;
   }
-
-  &[hidden] {
-    display: none;
-  }
 }
 
 .app-tabs__container pre code {

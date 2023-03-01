@@ -1,6 +1,7 @@
 .app-cookies-page {
-  // Support older browsers which don't hide elements with the `hidden` attribute
-  [hidden] {
+  // Restore `display: none` for [hidden] attribute since button styles have
+  // greater specificity and override to `display: inline-block`
+  .govuk-button[hidden] {
     display: none;
   }
 }
