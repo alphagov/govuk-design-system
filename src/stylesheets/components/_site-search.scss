@@ -13,12 +13,17 @@
 $icon-size: 40px;
 
 .app-site-search {
+  display: none;
   position: relative;
   width: 100%;
   max-width: calc(100% - 75px);
   margin-top: govuk-spacing(2);
   margin-bottom: govuk-spacing(2);
   float: left;
+
+  .js-enabled & {
+    display: block;
+  }
 
   @include govuk-media-query($from: tablet) {
     width: 300px;
@@ -30,18 +35,15 @@ $icon-size: 40px;
     margin: 0;
     margin-top: -5px; // negative margin to vertically align search in header
     float: right;
+    text-align: right;
+
+    .js-enabled & {
+      text-align: left;
+    }
   }
 
-  .no-js & {
-    display: none;
-
-    @include govuk-media-query($from: tablet) {
-      display: block;
-    }
-
-    @include govuk-media-query($from: desktop) {
-      text-align: right;
-    }
+  @include govuk-media-query($from: tablet) {
+    display: block;
   }
 }
 
@@ -187,16 +189,24 @@ $icon-size: 40px;
 
 .app-site-search__link {
   display: none;
+  margin-top: 10px;
 
-  .no-js & {
-    @include govuk-media-query($from: tablet) {
-      display: inline-block;
-      margin-top: 10px;
-      color: govuk-colour("white");
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    color: govuk-colour("white");
+  }
 
-      &:focus {
-        color: govuk-colour("black");
-      }
+  &:focus {
+    color: govuk-colour("black");
+  }
+
+  @include govuk-media-query($from: tablet) {
+    display: inline-block;
+
+    .js-enabled & {
+      display: none;
     }
   }
 }

@@ -2,19 +2,9 @@
   border-bottom: 1px solid $govuk-border-colour;
   background-color: $app-light-grey;
 
-  @include govuk-media-query($from: tablet) {
-    display: block;
-  }
-
   [hidden],
   &[hidden] {
     display: none;
-  }
-}
-
-.no-js .app-navigation {
-  @include govuk-media-query($until: tablet) {
-    display: block;
   }
 }
 
@@ -134,8 +124,4 @@
   top: auto;
   right: govuk-spacing(1);
   bottom: govuk-spacing(5);
-
-  &[hidden] {
-    display: none;
-  }
 }
