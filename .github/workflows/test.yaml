@@ -16,44 +16,105 @@ on:
         type: boolean
 
   workflow_dispatch:
+    inputs:
+      runner:
+        description: Run tests on
+        type: choice
+        default: ubuntu-latest
+        options:
+          - macos-latest
+          - ubuntu-latest
+          - windows-latest
 
 jobs:
   build:
-    name: Build & Test
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest]
-        include:
-          - os: ubuntu-latest
-            upload-artifact: ${{ inputs.upload-artifact }}
-    runs-on: ${{ matrix.os }}
+    name: Build
+    runs-on: ${{ github.event.inputs.runner || 'ubuntu-latest' }}
+
     env:
       ENVIRONMENT: production
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      - name: Setup node
+      - name: Restore build
+        uses: actions/cache@v3
+        id: build-cache
+
+        with:
+          key: build-cache-${{ runner.os }}-${{ github.sha }}
+          path: deploy/public
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        if: steps.build-cache.outputs.cache-hit != 'true'
+
+        with:
+          cache: npm
+          node-version-file: .nvmrc
+
+      - name: Install dependencies
+        if: steps.build-cache.outputs.cache-hit != 'true'
+        run: npm ci
+
+      - name: Build
+        if: steps.build-cache.outputs.cache-hit != 'true'
+        run: npm run build
+
+        # Share data between the build and deploy jobs so we don't need to run `npm run build` again on deploy
+        # Upload the deploy folder as an artifact so it can be downloaded and used in the deploy job
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        if: ${{ inputs.upload-artifact }}
+        with:
+          name: build
+          path: deploy/**
+          retention-days: 1
+
+  test:
+    name: ${{ matrix.task.description }}
+    runs-on: ${{ github.event.inputs.runner || 'ubuntu-latest' }}
+    needs: [build]
+
+    strategy:
+      fail-fast: false
+
+      matrix:
+        task:
+          - description: Lint Sass
+            run: npm run lint:scss
+
+          - description: Lint JavaScript
+            run: npm run lint:js
+
+          - description: Lint HTML
+            run: npm run lint:html --ignore-scripts
+
+          - description: JavaScript tests
+            run: npx jest --color --maxWorkers=2
+
+          - description: Check broken links
+            run: npm run check-links
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version-file: '.nvmrc'
-          cache: 'npm'
+          cache: npm
+          node-version-file: .nvmrc
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Build, lint and test
-        run: npm test -- --color --maxWorkers=2
-
-      - name: Check broken links
-        run: npm run check-links
-
-      # Share data between the build and deploy jobs so we don't need to run `npm run build` again on deploy
-      # Upload the deploy folder as an artifact so it can be downloaded and used in the deploy job
-      - name: Upload artifact
-        uses: actions/upload-artifact@v3
-        if: ${{ matrix.upload-artifact }}
+      - name: Restore build
+        uses: actions/cache/restore@v3
         with:
-            name: build
-            path: deploy/**
-            retention-days: 1
+          key: build-cache-${{ runner.os }}-${{ github.sha }}
+          path: deploy/public
+
+      - name: Run task
+        run: ${{ matrix.task.run }}

@@ -1,23 +1,14 @@
-const path = require('path')
+const { createServer } = require('http')
 
-const browsersync = require('../lib/metalsmith-browser-sync') // setup synchronised browser testing
-const metalsmith = require('../lib/metalsmith') // configured static site generator
+const connect = require('connect')
+const serveStatic = require('serve-static')
 
-const paths = require('../lib/paths.js') // specify paths to main working directories
+const paths = require('../lib/paths.js')
 
-// setup synchronised browser testing
-metalsmith.use(browsersync({
-  ghostMode: false, // Ghost mode tries to check the same input across examples.
-  open: false, // When making changes to the server, we don't want multiple windows opening.
-  server: paths.public, // server directory
-  files: [
-    path.join(paths.source, '**/*'),
-    path.join(paths.views, '**/*'),
-    path.normalize('node_modules/govuk-frontend/**/*')
-  ] // files to watch
-}))
+// Create a simple server for serving static files
+const app = connect().use(serveStatic(paths.public))
+const server = createServer(app)
 
-// build to destination directory
-metalsmith.build(function (err, files) {
-  if (err) { throw err }
+server.listen(paths.testPort, () => {
+  console.log(`Server started at http://localhost:${paths.testPort}`)
 })
