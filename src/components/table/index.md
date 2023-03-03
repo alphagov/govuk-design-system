@@ -39,6 +39,36 @@ There are 2 ways to use the table component. You can use HTML or, if you are usi
 
 {{ example({group: "components", item: "table", example: "default", html: true, nunjucks: true, open: false, size: "m", titleSuffix: "second"}) }}
 
+If column one contains headings, you can leave the top left cell empty if you do not need to describe what’s in the column.
+
+<table class="govuk-table">
+    <caption class="govuk-table__caption govuk-table__caption--m">Fruit allocation</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <td></td>
+      <th scope="col" class="govuk-table__header">Alice</th>
+      <th scope="col" class="govuk-table__header">Ben</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Apples</th>
+      <td class="govuk-table__cell">0</td>
+      <td class="govuk-table__cell">3</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Bananas</th>
+      <td class="govuk-table__cell">2</td>
+      <td class="govuk-table__cell">3</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Pears</th>
+      <td class="govuk-table__cell">0</td>
+      <td class="govuk-table__cell">0</td>
+    </tr>
+  </tbody>
+</table>
+
 ## Numbers in a table
 
 When comparing columns of numbers, align the numbers to the right in table cells.
