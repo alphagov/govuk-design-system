@@ -15,7 +15,7 @@
   <link rel="canonical" href="{{ canonical }}">
   <!--[if lt IE 9]>
     <link href="{{ getFingerprint('stylesheets/main-ie8.css') }}" rel="stylesheet" media="all">
-    <script src="{{ getFingerprint('javascripts/head-ie8.mjs') }}"></script>
+    <script src="{{ getFingerprint('javascripts/head-ie8.js') }}"></script>
   <![endif]-->
   <!--[if !IE 8]><!-->
     <link href="{{ getFingerprint('stylesheets/main.css') }}" rel="stylesheet" media="all">
@@ -46,12 +46,12 @@
 {% block footer %}{% endblock %}
 
 {% block bodyEnd %}
-  <script src="{{ getFingerprint('javascripts/govuk-frontend.mjs') }}"></script>
+  <script src="{{ getFingerprint('javascripts/govuk-frontend.js') }}"></script>
   <!--[if !IE 8]><!-->
-    <script src="{{ getFingerprint('javascripts/application.mjs') }}"></script>
+    <script src="{{ getFingerprint('javascripts/application.js') }}"></script>
   <!--<![endif]-->
   <!--[if lt IE 9]>
     <script src="{{ getFingerprint('javascripts/vendor/ie8.polyfils.min.js') }}"></script>
-    <script src="{{ getFingerprint('javascripts/application-ie8.mjs') }}"></script>
+    <script src="{{ getFingerprint('javascripts/application-ie8.js') }}"></script>
   <![endif]-->
 {% endblock %}

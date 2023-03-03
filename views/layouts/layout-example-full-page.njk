@@ -11,7 +11,7 @@
   <link href="{{ getFingerprint(stylesheet) }}" rel="stylesheet" media="all">
   {%- endfor %}
   <!--[if lt IE 9]>
-    <script src="{{ getFingerprint('javascripts/head-ie8.mjs') }}"></script>
+    <script src="{{ getFingerprint('javascripts/head-ie8.js') }}"></script>
   <![endif]-->
   <script src="{{ getFingerprint('javascripts/vendor/modernizr.js') }}"></script>
 {% endblock %}
@@ -28,8 +28,8 @@
   {{ contents | safe }}
 {% endblock %}
 {% block bodyEnd %}
-  <script src="{{ getFingerprint('javascripts/govuk-frontend.mjs') }}"></script>
-  <script src="{{ getFingerprint('javascripts/example.mjs') }}"></script>
+  <script src="{{ getFingerprint('javascripts/govuk-frontend.js') }}"></script>
+  <script src="{{ getFingerprint('javascripts/example.js') }}"></script>
 
   <!--[if lt IE 9]>
     <script src="{{ getFingerprint('javascripts/vendor/ie8.polyfils.min.js') }}"></script>
