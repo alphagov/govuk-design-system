@@ -1,7 +1,7 @@
 import 'govuk-frontend/govuk/vendor/polyfills/Function/prototype/bind'
 import 'govuk-frontend/govuk/vendor/polyfills/Element/prototype/classList'
 import 'govuk-frontend/govuk/vendor/polyfills/Event'
-import { nodeListForEach } from './helpers.js'
+import { nodeListForEach } from './helpers.mjs'
 
 /**
  * The naming of things is a little complicated in here.

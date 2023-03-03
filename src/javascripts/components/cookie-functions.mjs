@@ -12,7 +12,7 @@
  * The consent cookie version is defined in cookie-banner.njk
  */
 
-import Analytics from './analytics.js'
+import Analytics from './analytics.mjs'
 
 /* Name of the cookie to save users cookie preferences to. */
 var CONSENT_COOKIE_NAME = 'design_system_cookies_policy'

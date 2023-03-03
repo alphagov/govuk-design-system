@@ -11,7 +11,7 @@ layout: false
   <!--<![endif]-->
   <!--[if lt IE 9]>
     <link href="{{ getFingerprint('stylesheets/main-ie8.css') }}" rel="stylesheet" media="all">
-    <script src="{{ getFingerprint('javascripts/head-ie8.js') }}"></script>
+    <script src="{{ getFingerprint('javascripts/head-ie8.mjs') }}"></script>
   <![endif]-->
   <script src="{{ getFingerprint('javascripts/vendor/modernizr.js') }}"></script>
 {% endblock %}
@@ -21,7 +21,7 @@ layout: false
 {% endblock %}
 
 {% block bodyEnd %}
-  <script src="{{ getFingerprint('javascripts/govuk-frontend.js') }}"></script>
+  <script src="{{ getFingerprint('javascripts/govuk-frontend.mjs') }}"></script>
 
   <!--[if lt IE 9]>
     <script src="{{ getFingerprint('javascripts/vendor/ie8.polyfils.min.js') }}"></script>

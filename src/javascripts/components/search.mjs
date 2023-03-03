@@ -2,7 +2,7 @@
 import accessibleAutocomplete from 'accessible-autocomplete'
 import lunr from 'lunr'
 
-import { trackSearchResults, trackConfirm } from './search.tracking.js'
+import { trackSearchResults, trackConfirm } from './search.tracking.mjs'
 
 // CONSTANTS
 var TIMEOUT = 10 // Time to wait before giving up fetching the search index
