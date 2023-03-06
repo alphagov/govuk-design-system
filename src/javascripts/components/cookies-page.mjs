@@ -1,5 +1,5 @@
-import { getConsentCookie, setConsentCookie } from './cookie-functions.js'
-import { nodeListForEach } from './helpers.js'
+import { getConsentCookie, setConsentCookie } from './cookie-functions.mjs'
+import { nodeListForEach } from './helpers.mjs'
 
 function CookiesPage ($module) {
   this.$module = $module

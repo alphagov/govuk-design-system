@@ -14,7 +14,7 @@ function stripPossiblePII (string) {
   return string
 }
 
-function trackConfirm (searchQuery, searchResults, result) {
+export function trackConfirm (searchQuery, searchResults, result) {
   if (window.DO_NOT_TRACK_ENABLED) {
     return
   }
@@ -51,7 +51,7 @@ function trackConfirm (searchQuery, searchResults, result) {
   })
 }
 
-function trackSearchResults (searchQuery, searchResults) {
+export function trackSearchResults (searchQuery, searchResults) {
   if (window.DO_NOT_TRACK_ENABLED) {
     return
   }
@@ -81,5 +81,3 @@ function trackSearchResults (searchQuery, searchResults) {
     }
   })
 }
-
-export { trackConfirm, trackSearchResults }

@@ -44,7 +44,8 @@
   },
   "devDependencies": {
     "@axe-core/puppeteer": "^4.6.0",
-    "@babel/plugin-transform-modules-commonjs": "^7.21.2",
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
     "@metalsmith/in-place": "^4.6.0",
     "@metalsmith/layouts": "^2.6.0",
     "@metalsmith/permalinks": "^2.5.1",
@@ -89,11 +90,5 @@
   "engines": {
     "node": "^18.12.0",
     "npm": "^8.1.0 || ^9.1.0"
-  },
-  "browserslist": [
-    "last 2 versions",
-    "ie 8",
-    "ie 9",
-    "iOS 9"
-  ]
+  }
 }

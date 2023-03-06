@@ -1,7 +1,7 @@
-import { nodeListForEach } from './components/helpers.js'
-import Example from './components/example.js'
-import AppTabs from './components/tabs.js'
-import OptionsTable from './components/options-table.js'
+import { nodeListForEach } from './components/helpers.mjs'
+import Example from './components/example.mjs'
+import AppTabs from './components/tabs.mjs'
+import OptionsTable from './components/options-table.mjs'
 
 // Initialise example frames
 var $examples = document.querySelectorAll('[data-module="app-example-frame"]')

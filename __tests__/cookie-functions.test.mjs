@@ -2,8 +2,9 @@
  * @jest-environment jsdom
  */
 
-import * as CookieHelpers from '../src/javascripts/components/cookie-functions'
-import * as Analytics from '../src/javascripts/components/analytics'
+import * as CookieHelpers from '../src/javascripts/components/cookie-functions.mjs'
+import * as Analytics from '../src/javascripts/components/analytics.mjs'
+
 jest.mock('../src/javascripts/components/analytics')
 
 describe('Cookie settings', () => {
