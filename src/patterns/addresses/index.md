@@ -71,15 +71,6 @@ Make sure errors follow the guidance in [error message](/components/error-messag
 
 ## Address lookup
 
-<div class="app-video">
-  <video class="app-video__player" role="region" aria-labelledby="passports-address-lookup-video-description" controls muted>
-    <source src="passports-address-lookup.mp4" type="video/mp4">
-  </video>
-  <p class="app-video__description" id="passports-address-lookup-video-description">
-    This video shows the address lookup in practice. It does not have any audio.
-  </p>
-</div>
-
 ### When to use an address lookup
 
 Use an address lookup when you’re asking users for a UK address.
