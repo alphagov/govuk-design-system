@@ -28,7 +28,10 @@
     {% endif %}
   </head>
   <body class="govuk-template__body {{ bodyClasses }}" {%- for attribute, value in bodyAttributes %} {{attribute}}="{{value}}"{% endfor %}>
-    <script{% if cspNonce %} nonce="{{ cspNonce }}"{% endif %}>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    <script{% if cspNonce %} nonce="{{ cspNonce }}"{% endif %}>
+      ['js-enabled'].concat('noModule' in HTMLScriptElement.prototype ? ['mjs-enabled'] : [])
+        .forEach(function (className) { document.body.classList.add(className) })
+    </script>
     {% block bodyStart %}{% endblock %}
 
     {% block skipLink %}
