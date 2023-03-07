@@ -168,7 +168,7 @@ Visit the UK on a Standard Visitor visa
 **Department for Transport**<br>
 Get a Blue Badge
 
-See a full list of [live services using step by step navigation](https://govuk-formats.herokuapp.com/document-types/step-by-step-nav).
+See a full list of [live services using step by step navigation [Heroku]](https://govuk-formats.herokuapp.com/document-types/step-by-step-nav).
 
 ### Next steps
 
