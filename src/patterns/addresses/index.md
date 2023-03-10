@@ -71,14 +71,7 @@ Make sure errors follow the guidance in [error message](/components/error-messag
 
 ## Address lookup
 
-<div class="app-video">
-  <video class="app-video__player" role="region" aria-labelledby="passports-address-lookup-video-description" controls muted>
-    <source src="passports-address-lookup.mp4" type="video/mp4">
-  </video>
-  <p class="app-video__description" id="passports-address-lookup-video-description">
-    This video shows the address lookup in practice. It does not have any audio.
-  </p>
-</div>
+An address lookup helps users find a full address from partial information such as a postcode.
 
 ### When to use an address lookup
 
