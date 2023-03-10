@@ -71,6 +71,8 @@ Make sure errors follow the guidance in [error message](/components/error-messag
 
 ## Address lookup
 
+An address lookup helps users find a full address from partial information such as a postcode.
+
 ### When to use an address lookup
 
 Use an address lookup when you’re asking users for a UK address.
