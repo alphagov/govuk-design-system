@@ -1,4 +1,3 @@
-import 'govuk-frontend/govuk/vendor/polyfills/Event'
 import ClipboardJS from 'clipboard'
 
 function Copy ($module) {

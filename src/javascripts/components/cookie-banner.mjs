@@ -1,6 +1,4 @@
 import * as CookieFunctions from './cookie-functions.mjs'
-import 'govuk-frontend/govuk/vendor/polyfills/Function/prototype/bind'
-import 'govuk-frontend/govuk/vendor/polyfills/Event'
 import { nodeListForEach } from './helpers.mjs'
 
 var cookieBannerAcceptSelector = '.js-cookie-banner-accept'

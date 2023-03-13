@@ -6,20 +6,7 @@ ignore_in_sitemap: true
 {% extends "govuk/template.njk" %}
 
 {% block head %}
-  <!--[if !IE 8]><!-->
-    <link href="/govuk-frontend/govuk/all.css" rel="stylesheet">
-  <!--<![endif]-->
-
-  {# For Internet Explorer 8, you need to compile specific stylesheet #}
-  {# see https://frontend.design-system.service.gov.uk/supporting-ie8/#support-internet-explorer-8 #}
-  <!--[if IE 8]>
-    <link href="/govuk-frontend/all-ie8.css" rel="stylesheet">
-  <![endif]-->
-
-  {# For older browsers to allow them to recognise HTML5 elements such as `<header>` #}
-  <!--[if lt IE 9]>
-    <script src="/html5-shiv/html5shiv.js"></script>
-  <![endif]-->
+  <link href="/govuk-frontend/govuk/all.css" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
