@@ -73,7 +73,7 @@ Start with the harmonised standards, keeping the categories of responses in the 
 
 ### Collecting other types of equality information
 
-See the [full list of Government Statistical Service harmonised standards](https://gss.civilservice.gov.uk/guidances/harmonised-standards-guidance/) if you want to collect other types of equality information. For example, about income or employment status.
+See the [full list of Government Statistical Service harmonised standards](https://analysisfunction.civilservice.gov.uk/government-statistical-service-and-statistician-group/gss-support/gss-harmonisation-support/harmonised-standards-and-guidance/) if you want to collect other types of equality information. For example, about income or employment status.
 
 ### Asking about date of birth (age)
 
