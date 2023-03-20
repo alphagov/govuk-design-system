@@ -2,8 +2,9 @@
 title: Layout
 description: Organise the layout of the page into blocks
 section: Styles
-backlog_issue_id:
+theme: Design guides
 layout: layout-pane.njk
+order: 5
 show_page_nav: true
 ---
 

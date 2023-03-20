@@ -2,8 +2,10 @@
 title: Typography
 description: If your service is on the service.gov.uk subdomain you must use the GDS Transport font
 section: Styles
+theme: Branding
 backlog_issue_id: 64
 layout: layout-pane.njk
+order: 2
 show_page_nav: true
 headingAliases:
   Section break: horizontal rule, hr
@@ -109,53 +111,6 @@ You can use bold to emphasise particular words in a transaction. Use it to highl
 For example, "Your reference number is **ABC12345678**. Use this to track your application. Updates will be sent to **name<i></i>@example.com**"
 
 Use bold sparingly. Overuse will make it difficult for users to know which parts of your content they need to pay the most attention to.
-
-## Links
-
-Links are blue and underlined by default. If your link is at the end of a sentence or paragraph, make sure that the linked text does not include the full stop.
-
-{{ example({group: "styles", item: "typography", example: "link", html: true, open: true}) }}
-
-Use the `govuk-link--no-visited-state` modifier class where it is not helpful to distinguish between visited and unvisited states, for example when linking to pages with frequently-changing content such as the dashboard for an admin interface.
-
-{{ example({group: "styles", item: "typography", example: "link-no-visited-state", html: true, open: true}) }}
-
-### External links
-
-If it's an external link to a non-government website, make that clear in the link text. For example, 'read advice on writing link text from [name of organisation]'. There's no need to say explicitly that you're linking to an external site. [Do not use an external link icon](https://designnotes.blog.gov.uk/2016/11/28/removing-the-external-link-icon-from-gov-uk/).
-
-### Opening links in a new tab
-
-Avoid opening links in a new tab or window. It can be disorienting - and [can cause accessibility problems for people who cannot visually perceive that the new tab has opened](https://www.w3.org/TR/WCAG20-TECHS/G200.html).
-
-If you need a link to open in a new tab - for example, to stop the user losing information they’ve entered into a form - then include the words ‘opens in new tab’ as part of the link. There's no need to say 'tab or window', since opening in a new tab is the default behaviour for most browsers.
-
-Include `rel="noreferrer noopener"` along with `target="_blank"` to reduce the risk of [reverse tabnabbing](https://owasp.org/www-community/attacks/Reverse_Tabnabbing). The following example shows how to do this in HTML.
-
-{{ example({group: "styles", item: "typography", example: "link-opening-in-new-tab", html: true, open: true}) }}
-
-If you're displaying lots of links together and want to save space and avoid repetition, consider doing both of the following:
-
-- adding a line of text before the links saying 'The following links open in a new tab'
-- including `<span class="govuk-visually-hidden">(opens in new tab)</span>` as part of the link text, so that part of the link text is visually hidden but still accessible to screen readers
-
-### Links on dark backgrounds
-
-Use the `govuk-link--inverse` modifier class to show white links on dark backgrounds — for example, in headers, custom components, and patterns with darker backgrounds.
-
-Make sure all users can see the links — the white links and background colour [must have a contrast ratio of at least 4.5:1](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html).
-
-{{ example({group: "styles", item: "typography", example: "link-on-dark-background", html: true, open: true}) }}
-
-### Links without underlines
-
-Use the `govuk-link--no-underline` modifier class to remove underlines from links.
-
-Only do this if the context tells the user that the text is a link, even without the underline.
-
-For example, links in a header or side navigation might not need underlines. Users will understand that they’re links because of where they are, at the same place, across different pages.
-
-{{ example({group: "styles", item: "typography", example: "link-no-underline", html: true, open: true}) }}
 
 ## Lists
 
