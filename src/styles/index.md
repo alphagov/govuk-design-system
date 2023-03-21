@@ -5,7 +5,7 @@ description: Make your service look and feel like GOV.UK
 show_subnav: true
 ---
 
-Make your service look and feel like GOV.UK.
+Make your government service look and feel like GOV.UK.
 
 If you are using the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk) or have [GOV.UK Frontend](https://frontend.design-system.service.gov.uk/) included in your build, the coded examples in the Design System will not need any additional styling.
 
