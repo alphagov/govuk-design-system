@@ -1,0 +1,19 @@
+---
+title: Example of a text input asking for a code or sequence
+layout: layout-example.njk
+---
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "Company authentication code"
+  },
+  hint: {
+    text: "This is on the company incorporation letter sent to the registered office address."
+  },
+  classes: "govuk-input--width-5 govuk-input--extra-letter-spacing",
+  id: "authentication-code",
+  name: "authentication-code",
+  spellcheck: false
+}) }}
