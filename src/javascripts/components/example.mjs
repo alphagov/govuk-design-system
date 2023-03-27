@@ -16,7 +16,7 @@ Example.prototype.resize = function () {
 
   try {
     // Example iframe; set the height equal to the body height
-    iFrameResize({ scrolling: 'auto', autoResize: true }, $module)
+    iFrameResize({ scrolling: 'auto' }, $module)
   } catch (err) {
     if (err) {
       console.error(err.message)
