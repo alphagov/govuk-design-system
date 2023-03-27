@@ -83,7 +83,7 @@
     "stylelint-config-gds": "^0.2.0",
     "stylelint-order": "^6.0.2",
     "tap-mocha-reporter": "^5.0.3",
-    "terser": "^5.16.6"
+    "terser": "^5.16.8"
   },
   "engines": {
     "node": "^18.12.0",
