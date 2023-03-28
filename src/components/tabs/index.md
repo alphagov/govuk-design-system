@@ -64,6 +64,14 @@ The tabs component uses JavaScript. When JavaScript is not available, users will
 
 This is also how the component currently behaves on small screens, though more research is needed on this.
 
+### The current tab gets stored in the URL
+
+When moving between tabs, the URL gets updated with a fragment (`#id-of-the-tab`) corresponding to the current tab's `id` attribute's value.
+
+If the tab's name is "United Kingdom" then the fragment could be `#tab_united-kingdom`.
+
+Because of this feature, pressing the browser's 'back' button should navigate back to the previous tab.
+
 ### Use clear labels
 
 Tabs hide content, so the tab labels need to make it very clear what they link to, otherwise users will not know if they need to click on them.
