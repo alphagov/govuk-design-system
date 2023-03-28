@@ -60,6 +60,8 @@ When they’ve finished, the ‘Continue’ button should return them to the che
 
 If a user changes their response in a way that means you need to ask them more questions, do this before returning them to the check answers page.
 
+If you have questions that are optional, let users know that they've skipped it without giving an answer by showing their response as ‘Not provided’.
+
 ## Research on this pattern
 
 Read a blog about [how the Carer’s Allowance Service used check answers to improve its users’ experience](https://dwpdigital.blog.gov.uk/2016/07/08/a-live-service-is-not-the-end-of-the-story/).
