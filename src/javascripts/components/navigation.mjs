@@ -125,14 +125,14 @@ Navigation.prototype.init = function () {
     // Set the matchMedia to the govuk-frontend tablet breakpoint
     this.mql = window.matchMedia('(min-width: 40.0625em)')
 
-    var listenerMethod = 'addEventListener' in this.mql
-      ? 'addEventListener'
-      : 'addListener'
-
-    // addListener is a deprecated function, however addEventListener
-    // isn't supported by Safari < 14. We therefore add this in as
-    // a fallback for those browsers
-    this.mql[listenerMethod]('change', this.setHiddenStates.bind(this))
+    if ('addEventListener' in this.mql) {
+      this.mql.addEventListener('change', this.setHiddenStates.bind(this))
+    } else {
+      // addListener is a deprecated function, however addEventListener
+      // isn't supported by Safari < 14. We therefore add this in as
+      // a fallback for those browsers
+      this.mql.addListener(this.setHiddenStates.bind(this))
+    }
   }
 
   this.setHiddenStates()
