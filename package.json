@@ -61,7 +61,7 @@
     "iframe-resizer": "^3.5.15",
     "jest": "^29.5.0",
     "jest-axe": "^7.0.1",
-    "jest-environment-jsdom": "^29.4.3",
+    "jest-environment-jsdom": "^29.5.0",
     "jest-puppeteer": "^6.2.0",
     "js-beautify": "^1.14.7",
     "jstransformer-nunjucks": "^1.1.0",
