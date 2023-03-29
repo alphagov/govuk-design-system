@@ -21,11 +21,6 @@ describe('Component page', () => {
 
     await goTo(page, '/components/back-link/')
     await setup(page)
-
-    // Wait for iframe resizer + 32ms page size setInterval
-    // https://github.com/davidjbradshaw/iframe-resizer/tree/V3#interval
-    await page.waitForSelector('[data-module="app-example-frame"][style]')
-    await new Promise((resolve) => setTimeout(resolve, 32))
   })
 
   describe('when JavaScript is unavailable or fails', () => {
