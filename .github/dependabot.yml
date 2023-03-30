@@ -18,11 +18,6 @@ updates:
     allow:
       - dependency-type: direct
 
-    ignore:
-      # Ignore major updates (@axe-core/puppeteer peer puppeteer <= 18)
-      - dependency-name: puppeteer
-        update-types: ['version-update:semver-major']
-
   # Update GitHub Actions
   - package-ecosystem: github-actions
     directory: /
