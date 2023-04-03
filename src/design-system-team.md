@@ -1,20 +1,18 @@
 ---
-title: GOV.UK Design System and Prototype team
-description: about the GOV.UK Design System and Prototype team and who works on them
+title: GOV.UK Design System team
+description: Who works on the GOV.UK Design System team
 layout: layout-single-page-prose.njk
 ---
 {# The dashes between team member name and role are em dashes (–) not standard hyphens (-) #}
 
-# GOV.UK Design System and Prototype team
+# GOV.UK Design System team
 
-The GOV.UK Design System and Prototype team at the
-[Government Digital Service](https://www.gov.uk/government/organisations/government-digital-service) (GDS) maintains this design system. We also maintain the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk).
+The GOV.UK Design System at the [Government Digital Service](https://www.gov.uk/government/organisations/government-digital-service) (GDS) maintains this design system.
 
-If you want to contact the team you can
-[get in touch via email or Slack](/get-in-touch/).
+If you want to contact the team you can [get in touch via email or Slack](/get-in-touch/).
 
-## GOV.UK Design System team
 - Kelly Lee – Delivery Manager
+- Oliver Byford – Lead Frontend Developer
 - Steve Messer – Senior Product Manager
 - Trang Erskine – Senior Product Manager
 
@@ -28,20 +26,11 @@ If you want to contact the team you can
 - Imran Hussain – Community Designer
 - Katrina Birch – User Researcher
 - Kim 'beeps' Grey – Frontend Developer
-- Owen Jones – Senior Frontend Developer (Tech Lead for Design System squad)
+- Owen Jones – Senior Frontend Developer (Tech Lead)
 
 ### Frontend squad
 
 - Brett Kyle – Frontend Developer
 - Claire Ashworth – Technical Writer
 - Colin Rotherham – Senior Frontend Developer
-- Oliver Byford – Lead Frontend Developer, Digital Service Platforms (Tech Lead for Frontend squad)
-- Romaric Pascal – Senior Frontend Developer
-
-## GOV.UK Prototype team
-
-- Ben Surgison – Senior Node.js Developer
-- Izabela Podralska – Delivery Manager
-- Joe Lanman – Lead Interaction Designer
-- Natalie Carey – Senior Developer (Tech Lead)
-- Ruth Hammond – Product Manager
+- Romaric Pascal – Senior Frontend Developer (Tech Lead)
