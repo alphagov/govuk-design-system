@@ -13,7 +13,7 @@ Some things on the roadmap might change — the purpose is to tell you what’s 
 
 See our [Github team board](https://github.com/orgs/alphagov/projects/53) for more details on our plans and day-to-day activities.
 
-Last updated 23 February 2023.
+Last updated 3 April 2023.
 
 ## Recently shipped
 
@@ -23,25 +23,32 @@ We recently:
 - released the [Summary card](https://github.com/alphagov/govuk-design-system-backlog/issues/210) variant
 - made it easier to find information about [contributing and the community](/community/)
 - improved [how contributions are prioritised](https://design-system.service.gov.uk/community/upcoming-components-patterns/)
-- added functionality for browsers to ‘find in page’ within the Accordion component`
+- added functionality for browsers to ‘find in page’ within the Accordion component
 - added support for ‘source maps’ for precompiled GOV.UK Frontend Javascript files
+- improved the [guidance for images](/styles/images/)
 
 ## Working on now
 
-We're working to:
+We're working on GOV.UK Frontend v5.0 which includes:
 
-- host community co-design work to [turn task-list into a component](/patterns/task-list-pages/)
-- host community co-design work to make maps better
-- release the [Hide this page](https://github.com/alphagov/govuk-design-system-backlog/issues/213) component
-- improve how [JavaScript works in GOV.UK Frontend](https://github.com/alphagov/govuk-frontend/issues/1389)
-- iterate on alt text guidance for the images style page
-- make it easier for teams to share their findings from user research
+- [updating our browser support](https://github.com/alphagov/govuk-frontend/issues/2621), including removing support for Internet Explorer 8 to 10 and reducing support for Internet Explorer 11
+- [providing a clear JavaScript API for our components](https://github.com/alphagov/govuk-frontend/issues/1389)
+- [removing support for compatibility mode](https://github.com/alphagov/govuk-frontend/issues/2769)
+- [updating the typographic scale](https://github.com/alphagov/govuk-design-system/issues/2289), including increasing the minimum text size on mobile
+- [enabling new link styles by default](https://github.com/alphagov/govuk-frontend/issues/2350)
+
+We're also:
+
+- hosting community co-design work to turn the [task list pattern](/patterns/task-list-pages/) into a component
+- hosting community co-design work to make maps better
+- making it easier for teams to share their findings from user research
 
 ## Coming up next
 
 We're getting ready to:
 
-- implement our [proposal](https://github.com/alphagov/govuk-frontend/discussions/2607) for reducing browser support
+- release the [Hide this page](https://github.com/alphagov/govuk-design-system-backlog/issues/213) component
+- make sure the Design System meets WCAG 2.2
 - investigate where technical documentation belongs on the website
 - start working on the next component or pattern
 
@@ -49,6 +56,5 @@ We're getting ready to:
 
 We plan to:
 
-- investigate Sass module system
-- make sure the Design System meets WCAG 2.2
-- investigate removing compatibility mode
+- [drop support for Ruby Sass and LibSass](https://github.com/alphagov/govuk-frontend/issues/2637) and [migrate to the Sass module system](https://github.com/alphagov/govuk-frontend/issues/1791)
+
