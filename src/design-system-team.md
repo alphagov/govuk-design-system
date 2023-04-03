@@ -13,6 +13,7 @@ If you want to contact the team you can [get in touch via email or Slack](/get-i
 
 ## GOV.UK Design System team
 - Kelly Lee – Delivery Manager
+- Oliver Byford – Lead Frontend Developer
 - Steve Messer – Senior Product Manager
 - Trang Erskine – Senior Product Manager
 
@@ -26,15 +27,14 @@ If you want to contact the team you can [get in touch via email or Slack](/get-i
 - Imran Hussain – Community Designer
 - Katrina Birch – User Researcher
 - Kim 'beeps' Grey – Frontend Developer
-- Owen Jones – Senior Frontend Developer (Tech Lead for Design System squad)
+- Owen Jones – Senior Frontend Developer (Tech Lead)
 
 ### Frontend squad
 
 - Brett Kyle – Frontend Developer
 - Claire Ashworth – Technical Writer
 - Colin Rotherham – Senior Frontend Developer
-- Oliver Byford – Lead Frontend Developer, Digital Service Platforms (Tech Lead for Frontend squad)
-- Romaric Pascal – Senior Frontend Developer
+- Romaric Pascal – Senior Frontend Developer (Tech Lead)
 
 ## GOV.UK Prototype team
 
