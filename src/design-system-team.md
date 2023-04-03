@@ -7,11 +7,9 @@ layout: layout-single-page-prose.njk
 
 # GOV.UK Design System and Prototype team
 
-The GOV.UK Design System and Prototype team at the
-[Government Digital Service](https://www.gov.uk/government/organisations/government-digital-service) (GDS) maintains this design system. We also maintain the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk).
+The GOV.UK Design System and Prototype team at the [Government Digital Service](https://www.gov.uk/government/organisations/government-digital-service) (GDS) maintains this design system. We also maintain the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk).
 
-If you want to contact the team you can
-[get in touch via email or Slack](/get-in-touch/).
+If you want to contact the team you can [get in touch via email or Slack](/get-in-touch/).
 
 ## GOV.UK Design System team
 - Kelly Lee – Delivery Manager
