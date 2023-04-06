@@ -74,7 +74,7 @@
     "metalsmith-renamer": "^0.5.217",
     "nunjucks": "^3.2.2",
     "outdent": "^0.8.0",
-    "puppeteer": "^19.8.2",
+    "puppeteer": "^19.8.3",
     "rollup": "^3.20.2",
     "sitemap": "^7.1.1",
     "slash": "^3.0.0",
