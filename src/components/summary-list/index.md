@@ -99,9 +99,9 @@ You can add card actions in the header, which will be shown after the summary ca
 
 For example, if you have multiple rows with "change" actions that all take the user to the same place, you can show a single “change” card action instead. This helps avoid repeating the same row action on every row.
 
-Card actions are bolded to make them visually distinct from row actions. Since card actions can affect the whole summary card, it’s useful to be able to tell them apart from row actions, especially when navigating with a screen magnification tool.
+Card actions are shown in bold text to make them visually distinct from row actions — and help alert the user that the card action will affect the entire summary card.
 
-Link text for card actions should tell the user what it will do and that it will apply to the entire in the summary card. It should also be as short as possible, usually 2 words.
+Write link text for card actions to tell the user what the card action will do and that it will apply to the entire summary card. It should also be as short as possible, usually 2 words.
 
 Example card actions include:
 
