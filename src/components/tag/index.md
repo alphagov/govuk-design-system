@@ -45,11 +45,9 @@ You can use colour to help distinguish between different tags – or to help dra
 
 [Do not use colour alone to convey information](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html) because it’s not accessible. If you use the same tag in more than one place, make sure you keep the colour consistent.
 
-Because tags with solid colours tend to stand out more, it’s usually best to avoid mixing solid colours and tints: use one or the other. This matters less if you’re only using two colours. For example, it's okay to use the tint `govuk-tag--grey` and solid blue tags together if you only need two statuses.
-
 ### Additional colours
 
-If you need more tag colours, you can use the following tints.
+If you need more tag colours, you can use the following colours.
 
 {{ example({ group: "components", item: "tag", example: "all-colours", html: true, nunjucks: true, open: false }) }}
 
@@ -59,3 +57,7 @@ The Department for Education contributed the coloured tags. They’re being used
 
 - apply for teacher training (used by citizens)
 - manage teacher training applications (used by teacher training providers)
+
+The tag component previously used uppercase bold text for the tags. This was changed as some research has shown that uppercase text can be harder to read, particularly for longer tag text.
+
+The tag component previously used white text on a dark coloured background. Research from multiple teams found that some users perceived these as buttons and tried to click on them. The design was changed to try and avoid this, by using a lighter background colour and darker text.
