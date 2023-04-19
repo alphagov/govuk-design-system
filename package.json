@@ -48,7 +48,7 @@
     "@metalsmith/layouts": "^2.7.0",
     "@metalsmith/permalinks": "^2.5.1",
     "@metalsmith/sass": "^1.4.0",
-    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-commonjs": "^24.1.0",
     "@rollup/plugin-node-resolve": "^15.0.2",
     "@rollup/plugin-terser": "^0.4.1",
     "accessible-autocomplete": "^2.0.4",
