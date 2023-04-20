@@ -19,6 +19,12 @@ module.exports = [{
         terser({
           format: { comments: false },
 
+          // Include sources content from source maps
+          // to inspect GOV.UK Frontend code
+          sourceMap: {
+            includeSources: true
+          },
+
           // Compatibility workarounds
           ecma: 5,
           safari10: true
