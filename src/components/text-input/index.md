@@ -43,7 +43,7 @@ There are 2 ways to use the text input component. You can use HTML or, if you’
 
 {{ example({group: "components", item: "text-input", example: "default", html: true, nunjucks: true, open: false, size: "s", titleSuffix: "second"}) }}
 
-###  If you’re asking more than one question on the page
+### If you’re asking more than one question on the page
 
 If you're asking more than one question on the page, do not set the contents of the `<label>` as the page heading. Read more about [asking multiple questions on question pages](/patterns/question-pages/#asking-multiple-questions-on-a-page).
 
@@ -93,7 +93,7 @@ Do not include links within hint text. While screen readers will read out the li
 
 #### Asking for whole numbers
 
-If you're asking the user to enter a whole number, set the `inputmode` attribute to `numeric` to use the numeric keypad on devices with on-screen keyboards. 
+If you're asking the user to enter a whole number, set the `inputmode` attribute to `numeric` to use the numeric keypad on devices with on-screen keyboards.
 
 See how to do this by opening the HTML and Nunjucks tabs in this example:
 
@@ -115,6 +115,20 @@ Do not set the `inputmode` attribute to `decimal` as it causes some devices to b
 #### Avoid using inputs with a type of number
 
 Do not use `<input type="number">` unless your user research shows that there’s a need for it. With `<input type="number">` there’s a risk of users accidentally incrementing a number when they’re trying to do something else - for example, scroll up or down the page. And if the user tries to enter something that’s not a number, there’s no explicit feedback about what they’re doing wrong.
+
+### Codes and sequences
+
+Help the user visually check the code they've typed is correct by styling the input's text to visually separate each character. This is important if you're asking the user to enter a code or sequence they're unlikely to have memorised, such as an application reference ID, account number or security code. 
+
+You do not need to do this for memorable information, such as phone numbers and postcodes.
+
+{{ example({group: "components", item: "text-input", example: "code-sequence", html: true, nunjucks: true, open: false, size: "m"}) }}
+
+There is specific guidance on how to:
+
+- [ask for bank account details](/patterns/bank-details/)
+- [ask for National Insurance numbers](/patterns/national-insurance-numbers/)
+- [confirm a phone number](/patterns/confirm-a-phone-number/)
 
 ### Prefixes and suffixes
 
