@@ -17,6 +17,9 @@ module.exports = [{
       // Output plugins
       plugins: [
         terser({
+          format: { comments: false },
+
+          // Compatibility workarounds
           ecma: 5,
           safari10: true
         })
