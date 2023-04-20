@@ -28,8 +28,6 @@ We recently:
 - improved the [guidance for images](/styles/images/)
 - released [GOV.UK Frontend v4.6.0](https://github.com/alphagov/govuk-frontend/releases/tag/v4.6.0), which includes visual improvements to some components
 
-Read the release notes for more details.
-
 ## Working on now
 
 We're working on GOV.UK Frontend v5.0 which includes:
