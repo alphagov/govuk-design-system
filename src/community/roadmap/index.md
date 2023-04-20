@@ -13,7 +13,7 @@ Some things on the roadmap might change — the purpose is to tell you what’s 
 
 See our [Github team board](https://github.com/orgs/alphagov/projects/53) for more details on our plans and day-to-day activities.
 
-Last updated 3 April 2023.
+Last updated 20 April 2023.
 
 ## Recently shipped
 
@@ -26,6 +26,9 @@ We recently:
 - added functionality for browsers to ‘find in page’ within the Accordion component
 - added support for ‘source maps’ for precompiled GOV.UK Frontend Javascript files
 - improved the [guidance for images](/styles/images/)
+- released [GOV.UK Frontend v4.6.0](https://github.com/alphagov/govuk-frontend/releases/tag/v4.6.0), which includes visual improvements to some components
+
+Read the release notes for more details.
 
 ## Working on now
 
