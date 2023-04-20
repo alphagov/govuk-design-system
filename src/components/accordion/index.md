@@ -104,9 +104,11 @@ The accordion component shows section headings as `<h2>` headings. If needed, ch
 
 Users might need some sections to be open from the start. If they leave and then return to the page, they might also need sections they opened to stay open.
 
-If the user leaves and then returns to the page within the same page session, the accordion component will use ['session storage'](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage) to remember which sections were open. You can configure sections to start and stay open, but not stay closed.
+By default, if the user leaves and then returns to the page within the same page session, the accordion component will use ['session storage'](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage) to remember which sections were open. This functionality can be turned off by adding `rememberExpanded: false` to the Nunjucks macro.
 
 To see the changes you've made, you may need to create a new 'session'. For example, by opening a page in a new tab or window.
+
+You can configure sections to start and stay open, but not stay closed.
 
 ### Do not disable sections
 
