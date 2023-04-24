@@ -75,7 +75,7 @@
     "nunjucks": "^3.2.4",
     "outdent": "^0.8.0",
     "puppeteer": "^19.10.1",
-    "rollup": "^3.20.2",
+    "rollup": "^3.21.0",
     "sitemap": "^7.1.1",
     "slash": "^3.0.0",
     "standard": "^17.0.0",
