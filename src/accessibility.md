@@ -55,7 +55,7 @@ The Design System website at [design-system.service.gov.uk](https://design-syste
 
 The GOV.UK Frontend documentation website at [frontend.design-system.service.gov.uk](https://frontend.design-system.service.gov.uk/) is fully compliant with the Web Content Accessibility Guidelines (<abbr>WCAG</abbr>) version 2.1 AA standard.
 
-The GOV.UK Frontend codebase at [github.com/alphagov/govuk-frontend](https://github.com/alphagov/govuk-frontend) is mostly compliant with the Web Content Accessibility Guidelines (<abbr>WCAG</abbr>) version 2.1 AA standard. Non-accessible content is documented in the next section.
+The GOV.UK Frontend codebase at [github.com/alphagov/govuk-frontend](https://github.com/alphagov/govuk-frontend) is fully compliant with the Web Content Accessibility Guidelines (<abbr>WCAG</abbr>) version 2.1 AA standard. Non-accessible content is documented in the next section.
 
 ### Non-accessible content
 
