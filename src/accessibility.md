@@ -27,7 +27,7 @@ This accessibility statement applies to the GOV.UK Design System website at [des
 The GOV.UK Design System team wants as many people as possible to be able to use this website. For example, you should be able to:
 
 - change colours, contrast levels and fonts
-- zoom in up to 300% without the text spilling off the screen
+- zoom in up to 400% without the text spilling off the screen
 - listen to most of the website using a screen reader (including the most recent versions of JAWS, NVDA, TalkBack and VoiceOver)
 - navigate most of the website using just a keyboard
 - navigate most of the website using just a mouse and on-screen keyboard
@@ -35,7 +35,7 @@ The GOV.UK Design System team wants as many people as possible to be able to use
 
 The team has also made the website text as simple as possible to understand.
 
-[AbilityNet](https://mcmw.abilitynet.org.uk/) has advice on making your device easier to use if you have a disability.
+AbilityNet has [advice on making your device easier to use](https://mcmw.abilitynet.org.uk/) if you have a disability.
 
 ### Feedback and contact information
 
@@ -51,7 +51,7 @@ The Equality and Human Rights Commission (<abbr>EHRC</abbr>) is responsible for 
 
 ### Compliance status
 
-The Design System website at [design-system.service.gov.uk](https://design-system.service.gov.uk/) is mostly compliant with the Web Content Accessibility Guidelines (<abbr>WCAG</abbr>) version 2.1 AA standard. Non-accessible content is documented in the next section.
+The Design System website at [design-system.service.gov.uk](https://design-system.service.gov.uk/) is partially compliant with the Web Content Accessibility Guidelines (<abbr>WCAG</abbr>) version 2.1 AA standard. Non-accessible content is documented in the next section.
 
 The GOV.UK Frontend documentation website at [frontend.design-system.service.gov.uk](https://frontend.design-system.service.gov.uk/) is fully compliant with the Web Content Accessibility Guidelines (<abbr>WCAG</abbr>) version 2.1 AA standard.
 
@@ -121,7 +121,7 @@ The accordion component is currently using an `aria-labelledby` ARIA attribute o
 
 ### Testing our products for accessibility
 
-The [GOV.UK Design System website](https://design-system.service.gov.uk/) was last last audited for accessibility issues by an external group on 7 October 2019. The test was carried out by the [Digital Accessibility Centre (DAC)](https://digitalaccessibilitycentre.org/).
+The [GOV.UK Design System website](https://design-system.service.gov.uk/) was last audited for accessibility issues by an external group on 7 October 2019. The test was carried out by the [Digital Accessibility Centre (DAC)](https://digitalaccessibilitycentre.org/).
 
 DAC tested a sample of pages to cover the different content types in the GOV.UK Design System website. They were:
 
