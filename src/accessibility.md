@@ -173,7 +173,7 @@ This statement was prepared on 23 October 2019. It was last reviewed on 26 April
 
 While the GOV.UK Design System team takes steps to ensure the Design System is as accessible as possible by default, you still need to carry out contextual research.
 
-Using only the code supplied in the GOV.UK Frontend codebase is not enough to accessibly implement the GOV.UK Design System. There is important written guidance in the [GOV.UK Design System website](https://design-system.service.gov.uk/) on how to implement styles, components and patterns in an accessible way. 
+Simply using code from the GOV.UK Frontend codebase is not enough to accessibly implement the GOV.UK Design System. There is important written guidance in the [GOV.UK Design System website](https://design-system.service.gov.uk/) on how to implement styles, components and patterns in an accessible way. 
 
 Using the Design System guidance and Frontend codebase does not mean your service automatically meets level AA of WCAG 2.1. You’ll still need to make sure your service as a whole meets accessibility requirements.
 
