@@ -195,6 +195,6 @@ If you’re using these products, you should [update your service to use the lat
 
 If you have any questions or need help, contact the GOV.UK Design System team:
 
-using the #govuk-design-system channel on the cross-government [UK Government Digital Slack](https://ukgovernmentdigital.slack.com/app_redirect?channel=govuk-design-system)
-by email at <govuk-design-system-support@digital.cabinet-office.gov.uk>
+- using the #govuk-design-system channel on the cross-government [UK Government Digital Slack](https://ukgovernmentdigital.slack.com/app_redirect?channel=govuk-design-system)
+- by email at <govuk-design-system-support@digital.cabinet-office.gov.uk>
 
