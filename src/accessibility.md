@@ -161,7 +161,7 @@ The GOV.UK Design System team works to make sure the Design System and Frontend 
 
 Where possible, the team aims to research components and patterns with a representative range of users, including those with disabilities.
 
-We also test components to make sure they work with a broad range of browsers, devices and assistive technologies - including screen magnifiers, screen readers and speech recognition tools.
+We also test components to make sure they work with a broad range of browsers, devices and assistive technologies — including screen magnifiers, screen readers and speech recognition tools.
 
 When we publish new content, we’ll continue to make sure that it meets accessibility standards.
 
