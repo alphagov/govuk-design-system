@@ -92,7 +92,13 @@ There is currently no known non-compliant content in the GOV.UK Frontend codebas
 
 We do not currently make any claims of disproportionate burden for any of our products.
 
-#### Accessibility concerns not within the scope of the accessibility regulations
+#### Content that’s not within the scope of the accessibility regulations
+
+The accessibility regulations apply to all portions of the GOV.UK Design System website, GOV.UK Frontend Documentation website and GOV.UK Frontend codebase.
+
+We do not have any content within these products which we consider to be outside the scope of the accessibility regulations.
+
+#### Other identified and tracked accessibility concerns
 
 Above and beyond non-compliant content, we also track accessibility concerns which:
 
