@@ -1,0 +1,12 @@
+---
+title: Inverse button
+layout: layout-example.njk
+stylesheets:
+- ../../../stylesheets/example-inverse.css
+---
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Create an account",
+  classes: "govuk-button--inverse"
+}) }}
