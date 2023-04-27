@@ -167,7 +167,7 @@ When we publish new content, we’ll continue to make sure that it meets accessi
 
 ### Preparation of this accessibility statement
 
-This statement was prepared on 23 October 2019. It was last reviewed on 26 April 2023.
+This statement was prepared on 23 October 2019. It was last reviewed on 27 April 2023.
 
 ## Using the Design System and Frontend in your service
 
