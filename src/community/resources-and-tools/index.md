@@ -61,7 +61,7 @@ Sketch wireframes based on the GOV.UK Design System.
 Guidance on [bringing the GOV.UK Design System into a .NET MVC Project](https://github.com/nouriach/compile-gds-runtime-dotnet) -
 A walkthrough for how to import the GOV.UK Design System into a MVC project and compile the sass at runtime using gulp.
 
-[govuk-frontend-aspnetcore-extensions](https://github.com/thepensionsregulator/govuk-frontend-aspnetcore-extensions)
+[GOV.UK Design System for ASP.NET MVC and Umbraco](https://github.com/thepensionsregulator/govuk-frontend-aspnetcore-extensions)
 GOV.UK Frontend ASP.NET tag helpers, and Umbraco CMS support.
 
 ### Node.js
