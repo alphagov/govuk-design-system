@@ -34,7 +34,7 @@
     "connect": "^3.7.0",
     "govuk-frontend": "^4.6.0",
     "gray-matter": "^4.0.2",
-    "highlight.js": "^11.7.0",
+    "highlight.js": "^11.8.0",
     "lunr": "^2.3.9",
     "sass-export": "^2.1.2",
     "serve-static": "^1.15.0",
