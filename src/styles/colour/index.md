@@ -76,7 +76,7 @@ should use the `$govuk-error-colour` Sass variable rather than
 
 If you need to use tints of this palette, use either 25% or 50%.
 
-You can find departmental colours in the GOV.UK Frontend [_colours-organisations](https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/settings/_colours-organisations.scss) file.
+You can find departmental colours in the GOV.UK Frontend [_colours-organisations](https://github.com/alphagov/govuk-frontend/blob/main/packages/govuk-frontend/src/govuk/settings/_colours-organisations.scss) file.
 
 <table class="govuk-body app-colour-list" summary="Table of extended colours">
   <tbody>
