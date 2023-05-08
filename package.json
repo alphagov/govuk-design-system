@@ -41,7 +41,7 @@
     "slugger": "^1.0.1"
   },
   "devDependencies": {
-    "@axe-core/puppeteer": "^4.6.1",
+    "@axe-core/puppeteer": "^4.7.0",
     "@babel/core": "^7.21.4",
     "@babel/preset-env": "^7.21.5",
     "@metalsmith/in-place": "^4.6.0",
