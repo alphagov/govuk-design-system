@@ -16,6 +16,8 @@ async function analyze (page, path) {
     .exclude('.govuk-skip-link')
     // axe reports that the back to top button is not inside a landmark, which is intentional.
     .exclude('.app-back-to-top')
+    // axe reports that the Browsersync banner is not inside a landmark, which is intentional.
+    .exclude('#__bs_notify__')
     // axe reports that the frame "does not have a main landmark" and example <h1> headings
     // violate "Heading levels should only increase by one", which is intentional.
     // https://github.com/alphagov/govuk-design-system/pull/2442#issuecomment-1326600528

@@ -4,6 +4,9 @@ module.exports = {
   browserContext: 'incognito',
   server: {
     command: 'npm run serve',
-    port: configPaths.testPort
+    port: configPaths.port,
+
+    // Skip when already running
+    usedPortAction: 'ignore'
   }
 }

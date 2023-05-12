@@ -9,6 +9,6 @@ const paths = require('../lib/paths.js')
 const app = connect().use(serveStatic(paths.public))
 const server = createServer(app)
 
-server.listen(paths.testPort, () => {
-  console.log(`Server started at http://localhost:${paths.testPort}`)
+server.listen(paths.port, () => {
+  console.log(`Server started at http://localhost:${paths.port}`)
 })

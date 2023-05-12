@@ -17,7 +17,7 @@ describe('Cookie banner', () => {
   const cookieParam = {
     name: 'design_system_cookies_policy',
     value: JSON.stringify({ analytics: true, version: 1 }),
-    url: `http://localhost:${configPaths.testPort}`
+    url: `http://localhost:${configPaths.port}`
   }
 
   async function setup (page) {
