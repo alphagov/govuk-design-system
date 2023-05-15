@@ -58,7 +58,7 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-n": "^15.7.0",
     "eslint-plugin-promise": "^6.1.1",
-    "glob": "^10.2.2",
+    "glob": "^10.2.4",
     "html-validate": "^7.17.0",
     "hyperlink": "^5.0.4",
     "iframe-resizer": "^4.3.6",
