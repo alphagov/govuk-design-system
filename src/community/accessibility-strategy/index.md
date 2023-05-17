@@ -235,7 +235,7 @@ The team does not solely rely on automated testing processes, as a 2017 study fr
 As of May 2023, we have improved our automated accessibility testing processes:
 
 1.  We now run JavaScript in our test example code snippets.
-2.  We now test every example code snippet, instead of just the first example per component.
+2.  We now test every example code snippet for each component, instead of just the first example per component.
 3.  We now run our tests in [@axe-core/puppeteer](https://github.com/dequelabs/axe-core-npm/blob/develop/packages/puppeteer) to include colour contrast checks, but we still use [jest-axe](https://github.com/nickcolley/jest-axe) to report issues.
 4.  We added [html-validate](https://html-validate.org/) to our automated tests. This helps us test for HTML compliance, including [various WCAG 2.1 checks available through html-validate](https://html-validate.org/wcag.html).
 
