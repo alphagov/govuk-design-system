@@ -236,7 +236,7 @@ As of May 2023, we have improved our automated accessibility testing processes:
 
 1.  We now run JavaScript in our test example code snippets.
 2.  We now test every example code snippet, instead of just the first example per component.
-3.  We replaced our [jest-axe](https://github.com/nickcolley/jest-axe) analysis code with [@axe-core/puppeteer](https://github.com/dequelabs/axe-core-npm/blob/develop/packages/puppeteer), but kept jest-axe for outputting pass/fail test results. This change allows axe-core to now also check for colour contrast.
+3.  We now run our tests in [@axe-core/puppeteer](https://github.com/dequelabs/axe-core-npm/blob/develop/packages/puppeteer) to include colour contrast checks, but we still use [jest-axe](https://github.com/nickcolley/jest-axe) to report issues.
 4.  We added [html-validate](https://html-validate.org/) to our automated tests. This helps us test for HTML compliance, including [various WCAG 2.1 checks available through html-validate](https://html-validate.org/wcag.html).
 
 We have an accessibility activity issue in GitHub where we track our efforts to [enhance automated testing in our development pipeline](https://github.com/alphagov/govuk-frontend/issues/3041).
