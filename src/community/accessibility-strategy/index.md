@@ -228,16 +228,18 @@ The team also uses general inspection techniques, including:
 
 ### Automated testing
 
-The team currently uses [jest-axe](https://github.com/nickcolley/jest-axe) as part of our deployment process. This tool tests the example code snippets in the GOV.UK Design System against [axe-core](https://github.com/dequelabs/axe-core).
+The team currently uses [jest-axe](https://github.com/nickcolley/jest-axe) as part of our deployment process, along with [@axe-core/puppeteer](https://github.com/dequelabs/axe-core-npm/blob/develop/packages/puppeteer). These tools test the example code snippets in the GOV.UK Design System against [axe-core](https://github.com/dequelabs/axe-core).
 
 The team does not solely rely on automated testing processes, as a 2017 study from GDS concluded that [only ~30% of issues are found by automated testing tools](https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage), such as axe-core.
 
-As of November 2022, there are limitations to how the team implements jest-axe as part of our automated testing:
+As of May 2023, we have improved our automated accessibility testing processes:
 
-1.  The team only tests the first example code snippet for each component and pattern – most of our components and patterns have multiple example code snippets.
-2.  The team only tests the static HTML version of example code snippets, as found in the HTML tab – some components and patterns include JavaScript that modifies the HTML, which tests do not capture.
+1.  We now run JavaScript in our test example code snippets.
+2.  We now test every example code snippet, instead of just the first example per component.
+3.  We replaced our [jest-axe](https://github.com/nickcolley/jest-axe) analysis code with [@axe-core/puppeteer](https://github.com/dequelabs/axe-core-npm/blob/develop/packages/puppeteer), but kept jest-axe for outputting pass/fail test results. This change allows axe-core to now also check for colour contrast.
+4.  We added [html-validate](https://html-validate.org/) to our automated tests. This helps us test for HTML compliance, including [various WCAG 2.1 checks available through html-validate](https://html-validate.org/wcag.html).
 
-These limitations may be addressed by the proposed ‘[Enhance automated testing in our development pipeline](https://github.com/alphagov/govuk-frontend/issues/3041)’ activity.
+We have an accessibility activity issue in GitHub where we track our efforts to [enhance automated testing in our development pipeline](https://github.com/alphagov/govuk-frontend/issues/3041).
 
 ### Manual testing
 
