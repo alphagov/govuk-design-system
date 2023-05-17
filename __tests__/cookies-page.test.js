@@ -19,7 +19,7 @@ describe('Cookies page', () => {
   beforeEach(async () => {
     await page.deleteCookie({
       name: 'design_system_cookies_policy',
-      url: `http://localhost:${configPaths.testPort}`
+      url: `http://localhost:${configPaths.port}`
     })
 
     await page.setJavaScriptEnabled(true)
