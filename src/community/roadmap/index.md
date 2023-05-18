@@ -35,7 +35,6 @@ We're working on GOV.UK Frontend v5.0 which includes:
 - [updating our browser support](https://github.com/alphagov/govuk-frontend/issues/2621), including removing support for Internet Explorer 8 to 10 and reducing support for Internet Explorer 11
 - [providing a clear JavaScript API for our components](https://github.com/alphagov/govuk-frontend/issues/1389)
 - [removing support for compatibility mode](https://github.com/alphagov/govuk-frontend/issues/2769)
-- [updating the typographic scale](https://github.com/alphagov/govuk-design-system/issues/2289), including increasing the minimum text size on mobile
 - [enabling new link styles by default](https://github.com/alphagov/govuk-frontend/issues/2350)
 
 We're also:
@@ -50,6 +49,7 @@ We're getting ready to:
 
 - release the [Hide this page](https://github.com/alphagov/govuk-design-system-backlog/issues/213) component
 - make sure the Design System meets WCAG 2.2
+- [update the typographic scale](https://github.com/alphagov/govuk-design-system/issues/2289), including increasing the minimum text size on mobile
 - investigate where technical documentation belongs on the website
 - start working on the next component or pattern
 
