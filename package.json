@@ -52,7 +52,7 @@
     "@rollup/plugin-node-resolve": "^15.0.2",
     "@rollup/plugin-terser": "^0.4.1",
     "accessible-autocomplete": "^2.0.4",
-    "browser-sync": "2.29.1",
+    "browser-sync": "2.29.3",
     "eslint": "^8.41.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.27.5",
