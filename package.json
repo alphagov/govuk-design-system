@@ -50,7 +50,7 @@
     "@metalsmith/sass": "^1.4.0",
     "@rollup/plugin-commonjs": "^25.0.0",
     "@rollup/plugin-node-resolve": "^15.0.2",
-    "@rollup/plugin-terser": "^0.4.1",
+    "@rollup/plugin-terser": "^0.4.3",
     "accessible-autocomplete": "^2.0.4",
     "browser-sync": "2.29.3",
     "eslint": "^8.41.0",
