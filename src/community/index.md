@@ -95,7 +95,8 @@ Join one of our regular events where we share ideas and work together to solve c
       large: true
     }) %}
       <p>Every year, we host an online conference to collaborate and share knowledge about design systems with like-minded people, covering topics like accessibility, community and decision-making.</p>
-      <p>Design System Day 2022 took place on 15 and 16 November. <a href="https://www.youtube.com/playlist?list=PL5tovFCB3CsDXeEhPWk_FM89oMFQMrY2W">Watch the keynote and panel discussion from the event on YouTube</a>.</p>
+      <p>Design System Day 2023 will take place on 10 and 11 October. Find out about the <a href='/community/design-system-day/'>speakers and sessions at Design System Day 2023</a>.</p>
+      <p>View the videos, slides and notes for <a href='/community/design-system-day-2022/'>Design System Day 2022</a>.</p>
     {% endcall %}
   </div>
 </div>
