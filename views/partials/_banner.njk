@@ -1,12 +1,12 @@
 {% if PULL_REQUEST === "true" %}
-  {% set bannerTag = "preview" %}
+  {% set bannerTag = "Preview" %}
   {% set bannerText %}
     This is a preview of
     a <a class="govuk-link" href="https://github.com/alphagov/govuk-design-system/pull/{{ REVIEW_ID  }}">proposed change</a> to the
     <a class="govuk-link" href="https://design-system.service.gov.uk">Design System</a>.
   {% endset %}
 {% elif PULL_REQUEST === "false" %}
-  {% set bannerTag = "archive" %}
+  {% set bannerTag = "Archive" %}
   {% set bannerText %}
     This is an archived version of
     the <a class="govuk-link" href="https://github.com/alphagov/govuk-design-system/tree/{{ BRANCH }}">{{ BRANCH }}</a> branch for the
