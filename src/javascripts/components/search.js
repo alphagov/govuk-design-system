@@ -84,12 +84,12 @@ Search.prototype.handleSearchQuery = function (query, callback) {
 }
 
 Search.prototype.handleOnConfirm = function (result) {
-  var path = result.path
-  if (!path) {
+  var permalink = result.permalink
+  if (!permalink) {
     return
   }
   trackConfirm(searchQuery, searchResults, result)
-  window.location.href = '/' + path
+  window.location.href = '/' + permalink
 }
 
 Search.prototype.inputValueTemplate = function (result) {

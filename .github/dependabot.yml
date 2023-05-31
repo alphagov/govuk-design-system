@@ -1,0 +1,32 @@
+version: 2
+
+updates:
+
+  # Update npm packages
+  - package-ecosystem: npm
+    directory: /
+    reviewers:
+      - alphagov/design-system-developers
+    schedule:
+      interval: daily
+    versioning-strategy: increase
+
+    allow:
+      - dependency-type: direct
+
+    ignore:
+      # Ignore major updates (@axe-core/puppeteer peer puppeteer <= 18)
+      - dependency-name: puppeteer
+        update-types: ['version-update:semver-major']
+
+      # Always ignore legacy packages
+      - dependency-name: iframe-resizer
+      - dependency-name: rollup
+
+  # Update GitHub Actions
+  - package-ecosystem: github-actions
+    directory: /
+    reviewers:
+      - alphagov/design-system-developers
+    schedule:
+      interval: daily

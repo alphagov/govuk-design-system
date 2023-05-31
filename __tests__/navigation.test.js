@@ -1,81 +1,78 @@
-/* eslint-env jest */
-const devices = require('puppeteer/DeviceDescriptors')
-const iPhone = devices['iPhone 6']
+const { devices } = require('puppeteer')
 
-const { setupPage } = require('../lib/jest-utilities.js')
-const configPaths = require('../lib/paths.js')
-const PORT = configPaths.testPort
-
-let page
-let baseUrl = 'http://localhost:' + PORT
-
-const mobileNav = '.app-navigation'
-const mobileNavToggler = '.js-app-navigation__toggler'
-
-beforeAll(async () => {
-  page = await setupPage(iPhone)
-})
-
-afterAll(async () => {
-  await page.close()
-})
+const { goTo, getAttribute, isVisible } = require('../lib/puppeteer-helpers.js')
 
 describe('Homepage', () => {
+  let $navigation
+  let $navigationToggler
+
+  async function setup (page) {
+    $navigation = await page.$('.js-app-navigation')
+    $navigationToggler = await page.$('.js-app-navigation__toggler')
+  }
+
+  beforeAll(async () => {
+    await page.emulate(devices['iPhone 6'])
+  })
+
+  beforeEach(async () => {
+    await page.setJavaScriptEnabled(true)
+
+    await goTo(page, '/')
+    await setup(page)
+  })
+
   describe('when JavaScript is unavailable or fails', () => {
     it('falls back to making the navigation visible', async () => {
       await page.setJavaScriptEnabled(false)
-      await page.goto(baseUrl, { waitUntil: 'load' })
-      const isAppNavigationVisible = await page.waitForSelector('.js-app-navigation', { visible: true, timeout: 1000 })
-      expect(isAppNavigationVisible).toBeTruthy()
+
+      // Reload page again
+      await page.reload()
+      await setup(page)
+
+      // Menu open state (visually)
+      await expect(isVisible($navigation)).resolves.toBe(true)
     })
   })
 
   describe('when JavaScript is available', () => {
     describe('when menu button is pressed', () => {
       it('should apply the corresponding open state class to the menu button', async () => {
-        await page.setJavaScriptEnabled(true)
-        await page.goto(baseUrl, { waitUntil: 'load' })
-        await page.click(mobileNavToggler)
+        await expect(getAttribute($navigationToggler, 'class')).resolves
+          .not.toContain('govuk-header__menu-button--open')
 
-        const toggleButtonIsOpen = await page.evaluate((mobileNavToggler) =>
-          document.body.querySelector(mobileNavToggler).classList.contains('govuk-header__menu-button--open'),
-        mobileNavToggler)
+        await $navigationToggler.click()
 
-        expect(toggleButtonIsOpen).toBeTruthy()
+        // Menu button open state
+        await expect(getAttribute($navigationToggler, 'class')).resolves
+          .toContain('govuk-header__menu-button--open')
       })
 
       it('should indicate the expanded state of the toggle button using aria-expanded', async () => {
-        await page.setJavaScriptEnabled(true)
-        await page.goto(baseUrl, { waitUntil: 'load' })
-        await page.click(mobileNavToggler)
+        await expect(getAttribute($navigationToggler, 'aria-expanded')).resolves.toBe('false')
 
-        const toggleButtonAriaExpanded = await page.evaluate((mobileNavToggler) =>
-          document.body.querySelector(mobileNavToggler).getAttribute('aria-expanded'),
-        mobileNavToggler)
+        await $navigationToggler.click()
 
-        expect(toggleButtonAriaExpanded).toBe('true')
+        // Menu button control expanded
+        await expect(getAttribute($navigationToggler, 'aria-expanded')).resolves.toBe('true')
       })
 
       it('should indicate the open state of the navigation', async () => {
-        await page.goto(baseUrl, { waitUntil: 'load' })
-        await page.click(mobileNavToggler)
+        await expect(getAttribute($navigation, 'class')).resolves.not.toContain('app-navigation--active')
 
-        const navigationIsOpen = await page.evaluate((mobileNav) =>
-          document.body.querySelector(mobileNav).classList.contains('app-navigation--active'),
-        mobileNav)
+        await $navigationToggler.click()
 
-        expect(navigationIsOpen).toBeTruthy()
+        // Menu open state
+        await expect(getAttribute($navigation, 'class')).resolves.toContain('app-navigation--active')
       })
 
       it('should indicate the visible state of the navigation using the hidden attribute', async () => {
-        await page.goto(baseUrl, { waitUntil: 'load' })
-        await page.click(mobileNavToggler)
+        await expect(isVisible($navigation)).resolves.toBe(false)
 
-        const navigationIsHidden = await page.evaluate((mobileNav) =>
-          document.body.querySelector(mobileNav).hasAttribute('hidden'),
-        mobileNav)
+        await $navigationToggler.click()
 
-        expect(navigationIsHidden).toBe(false)
+        // Menu open state (visually)
+        await expect(isVisible($navigation)).resolves.toBe(true)
       })
     })
   })

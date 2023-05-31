@@ -2,6 +2,7 @@ name: Test
 
 on:
   pull_request:
+
   push:
     branches-ignore:
       - main  # pushes to main are handled by deploy.yaml
@@ -14,13 +15,12 @@ jobs:
         os: [ubuntu-latest]
         include:
           - os: ubuntu-latest
-            upload-artifact: ${{ inputs.upload-artifact }}
     runs-on: ${{ matrix.os }}
     env:
       ENVIRONMENT: production
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Setup node
         uses: actions/setup-node@v3
@@ -29,10 +29,10 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install --no-optional
+        run: npm ci
 
       - name: Build
         run: npm run build
 
       - name: Lint and test
-        run: npm test -- --runInBand
+        run: npm test -- --color --maxWorkers=2
