@@ -75,6 +75,8 @@ Get some practical advice on how to use the Design System and Prototype Kit.
 
 Find out how our community works and how to be a part of it.
 
+[Iterating the GOV.UK Design System contribution model](https://designnotes.blog.gov.uk/2023/05/31/iterating-the-gov-uk-design-system-contribution-model/) (blog post) - 31 May 2023
+
 [Why I contribute to the GOV.UK Design System (and why you should too)](https://x-govuk.github.io/posts/contributing-to-govuk-design-system/) (blog post) - 7 April 2022
 
 [GDS Podcast, Maps in services](https://gds.blog.gov.uk/2021/11/30/podcast-maps-in-services/) (podcast) - 30 November 2021
