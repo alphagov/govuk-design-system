@@ -37,7 +37,7 @@ Here’s a few places to join the discussions that help shape the Design System.
       alt: "Github issue illustration.",
       title: "Discuss and give feedback"
     }) %}
-      <p>Tell us your experience using our components and patterns. Look for the ‘Help improve this page’ section at the end of each page to see its issue discussion, or <a href="https://github.com/alphagov/govuk-design-system-backlog/issues">see a list of all discussions</a></p>
+      <p>Tell us your experience using our components and patterns. Look for the ‘Help improve this page’ section at the end of each page to see its issue discussion, or <a href="https://github.com/alphagov/govuk-design-system-backlog/issues">see a list of all discussions</a>.</p>
     {% endcall %}
   </div>
   <div class="govuk-grid-column-full govuk-grid-column-one-half-from-desktop">
@@ -55,7 +55,7 @@ Here’s a few places to join the discussions that help shape the Design System.
       alt: "Github propose a change illustration.",
       title: "Propose a change to pages"
     }) %}
-      <p>Anyone can suggest an improvement, report a bug or correct an error on our pages. Look for the ‘Help improve this page’ section at the end of each page to <a href='https://design-system.service.gov.uk/community/propose-a-content-change-using-github/'>propose a change using GitHub</a></p>
+      <p>Anyone can suggest an improvement, report a bug or correct an error on our pages. Look for the ‘Help improve this page’ section at the end of each page to <a href='https://design-system.service.gov.uk/community/propose-a-content-change-using-github/'>propose a change using GitHub</a>.</p>
     {% endcall %}
   </div>
 </div>
@@ -95,7 +95,7 @@ Join one of our regular events where we share ideas and work together to solve c
       title: "Join a Workshop",
       large: true
     }) %}
-        <p>We often organise workshops to gather ideas and feedback about work we’re doing, particularly when we know it will affect service teams. If you’d like to help the next time we do, <a href="https://mailchi.mp/707ce8dec373/get-updated-by-email-govuk-design-system">sign up to our mailing list</a></p>
+        <p>We often organise workshops to gather ideas and feedback about work we’re doing, particularly when we know it will affect service teams. If you’d like to help the next time we do, <a href="https://mailchi.mp/707ce8dec373/get-updated-by-email-govuk-design-system">sign up to our mailing list</a>.</p>
     {% endcall %}
   </div>
   <div class="govuk-grid-column-full">
