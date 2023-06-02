@@ -98,7 +98,7 @@ Join one of our regular events where we share ideas and work together to solve c
       alt: "Design System Day 2022 Logo.",
       title: "Design System Day",
       content: "<p>Every year, we host an online conference to collaborate and share knowledge about design systems with like-minded people, covering topics like accessibility, community and decision-making.</p>
-      <p>Design System Day 2022 took place on 15 and 16 November. We're working to share videos, slides and notes with everyone soon.</p>",
+      <p>Design System Day 2022 took place on 15 and 16 November. <a href='https://www.youtube.com/playlist?list=PL5tovFCB3CsDXeEhPWk_FM89oMFQMrY2W'>Watch the keynote and panel discussion from the event on YouTube</a>.</p>",
       large: true
     }) }}
   </div>
