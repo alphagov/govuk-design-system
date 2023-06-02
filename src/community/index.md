@@ -60,17 +60,6 @@ Here’s a few places to join the discussions that help shape the Design System.
   </div>
 </div>
 
-<!-- Commenting out this item to give even number, and cover it in the mailing list CTA instead.
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-half">
-    <img src="/styles/images/default/3by2.jpg" alt="Three Olympic cyclists overlayed with a 3 by 2 grid to show the 3 by 2 ratio.">
-    <h3>Complete surveys and test releases</h3>
-    <p>We regularly ask our community to help guide our work or test new features before they’re released. To find out the next time we do, <a href="https://mailchi.mp/707ce8dec373/get-updated-by-email-govuk-design-system">sign up to our mailing list</a></p>
-  </div>
-  <div class="govuk-grid-column-one-half">
-  </div>
-</div>
--->
 <hr class="govuk-section-break govuk-section-break--visible">
 
 ## Attend our events
