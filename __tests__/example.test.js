@@ -1,4 +1,3 @@
-
 const { goTo } = require('../lib/puppeteer-helpers.js')
 
 describe('Example page', () => {
