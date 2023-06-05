@@ -1,4 +1,3 @@
-
 const { goTo, getProperty } = require('../lib/puppeteer-helpers.js')
 
 // Regex that can be used to match on fingerprinted search index files

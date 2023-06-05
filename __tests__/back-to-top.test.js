@@ -1,4 +1,3 @@
-
 const { goTo, isVisible } = require('../lib/puppeteer-helpers.js')
 
 describe('Back to top', () => {

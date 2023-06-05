@@ -1,4 +1,3 @@
-
 const { goTo, getAttribute, isVisible } = require('../lib/puppeteer-helpers.js')
 
 const configPaths = require('../lib/paths.js')
