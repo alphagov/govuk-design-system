@@ -53,7 +53,7 @@
     "@rollup/plugin-terser": "^0.4.3",
     "accessible-autocomplete": "^2.0.4",
     "browser-sync": "2.29.3",
-    "eslint": "^8.41.0",
+    "eslint": "^8.42.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-n": "^15.7.0",
