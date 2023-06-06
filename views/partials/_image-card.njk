@@ -5,7 +5,7 @@
     </figure>
     <div class="app-image-card__text">
       <h3>{{ params.title }}</h3>
-      {{- params.content | safe -}}
+      {{- caller() if caller else params.content | safe -}}
     </div>
   </div>
 {% endmacro %}
