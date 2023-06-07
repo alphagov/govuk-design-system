@@ -13,6 +13,8 @@ To learn more about the GOV.UK Design System and Prototype Kit, check out these 
 
 Find out how the Design System and Prototype Kit work and what they do to make services more accessible and inclusive.
 
+[A new accessibility strategy for the GOV.UK Design System](https://accessibility.blog.gov.uk/2023/01/06/a-new-accessibility-strategy-for-the-gov-uk-design-system/) (blog post) — 6 January 2023
+
 [Making the GOV.UK Frontend typography scale more accessible](https://designnotes.blog.gov.uk/2022/12/12/making-the-gov-uk-frontend-typography-scale-more-accessible/) (blog post) — 12 December 2022
 
 [How we prioritise additions to the GOV.UK Design System](https://designnotes.blog.gov.uk/2022/09/07/how-we-prioritise-additions-to-the-gov-uk-design-system/) (blog post) — 7 September 2022
