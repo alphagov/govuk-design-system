@@ -1,4 +1,4 @@
-import iFrameResize from 'iframe-resizer/js/iframeResizer'
+import iFrameResize from 'iframe-resizer/js/iframeResizer.js'
 
 function Example ($module) {
   this.$module = $module
