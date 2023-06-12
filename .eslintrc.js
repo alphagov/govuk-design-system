@@ -37,6 +37,24 @@ module.exports = {
       }
     },
     {
+      // Extensions required for ESM import
+      files: ['**/*.mjs'],
+      rules: {
+        'import/extensions': [
+          'error',
+          'always',
+          {
+            ignorePackages: true,
+            pattern: {
+              cjs: 'always',
+              js: 'always',
+              mjs: 'always'
+            }
+          }
+        ]
+      }
+    },
+    {
       files: ['**/*.test.{cjs,js,mjs}'],
       env: {
         jest: true
