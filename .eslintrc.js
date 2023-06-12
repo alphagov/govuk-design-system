@@ -24,7 +24,17 @@ module.exports = {
         'import',
         'n',
         'promise'
-      ]
+      ],
+      rules: {
+        // Check import or require statements are A-Z ordered
+        'import/order': [
+          'error',
+          {
+            alphabetize: { order: 'asc' },
+            'newlines-between': 'always'
+          }
+        ]
+      }
     },
     {
       files: ['**/*.test.{cjs,js,mjs}'],
