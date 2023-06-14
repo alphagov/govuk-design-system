@@ -46,5 +46,3 @@ Make the link text short and descriptive so users can quickly work out if they n
 There is [evidence that some users avoid clicking the link to show more details](https://github.com/alphagov/govuk-design-system-backlog/issues/44#issuecomment-629122091), as they think it will take them away from the page.
 
 There are [concerns that some users of voice assist software will not be able to interact with the component](https://github.com/alphagov/govuk-design-system-backlog/issues/44#issuecomment-628082040). Some software might require the user to specifically refer to the link to show more details as a button in order to interact with it.
-
-When printing, there is currently no way to force the page to show details hidden inside a details component. [This issue has been raised with the W3C](https://github.com/w3c/csswg-drafts/issues/2084).
