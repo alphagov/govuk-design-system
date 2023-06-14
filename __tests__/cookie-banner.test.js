@@ -1,6 +1,5 @@
-const { goTo, getAttribute, isVisible } = require('../lib/puppeteer-helpers.js')
-
 const configPaths = require('../lib/paths.js')
+const { goTo, getAttribute, isVisible } = require('../lib/puppeteer-helpers.js')
 
 describe('Cookie banner', () => {
   let $module

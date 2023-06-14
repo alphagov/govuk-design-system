@@ -2,8 +2,8 @@
  * @jest-environment jsdom
  */
 
-import * as CookieHelpers from '../src/javascripts/components/cookie-functions.mjs'
 import * as Analytics from '../src/javascripts/components/analytics.mjs'
+import * as CookieHelpers from '../src/javascripts/components/cookie-functions.mjs'
 
 jest.mock('../src/javascripts/components/analytics')
 
