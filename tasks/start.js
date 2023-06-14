@@ -12,7 +12,7 @@ metalsmith.use(browsersync({
   files: [
     path.join(paths.source, '**/*'),
     path.join(paths.views, '**/*'),
-    path.normalize('node_modules/govuk-frontend/**/*')
+    path.join(path.dirname(require.resolve('govuk-frontend/package.json')), '**/*')
   ] // files to watch
 }))
 

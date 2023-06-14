@@ -6,8 +6,6 @@ module.exports = {
   deploy: 'deploy',
   public: 'deploy/public/',
   nodemodules: 'node_modules/',
-  govukfrontend: 'node_modules/govuk-frontend/',
-  govukfrontendcomponents: 'node_modules/govuk-frontend/govuk/components/',
   iframeresizer: 'node_modules/iframe-resizer/',
   clipboard: 'node_modules/clipboard/dist/',
   source: 'src/',
