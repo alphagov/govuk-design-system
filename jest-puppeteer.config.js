@@ -1,4 +1,4 @@
-const configPaths = require('./lib/paths.js')
+const { ports } = require('./config')
 
 /**
  * @type {import('jest-environment-puppeteer').JestPuppeteerConfig}
@@ -26,7 +26,7 @@ module.exports = {
    */
   server: {
     command: 'npm run serve',
-    port: configPaths.port,
+    port: ports.preview,
 
     // Skip when already running
     usedPortAction: 'ignore'

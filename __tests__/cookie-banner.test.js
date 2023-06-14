@@ -1,4 +1,4 @@
-const configPaths = require('../lib/paths.js')
+const { ports } = require('../config')
 const { goTo, getAttribute, isVisible } = require('../lib/puppeteer-helpers.js')
 
 describe('Cookie banner', () => {
@@ -15,7 +15,7 @@ describe('Cookie banner', () => {
   const cookieParam = {
     name: 'design_system_cookies_policy',
     value: JSON.stringify({ analytics: true, version: 1 }),
-    url: `http://localhost:${configPaths.port}`
+    url: `http://localhost:${ports.preview}`
   }
 
   async function setup (page) {

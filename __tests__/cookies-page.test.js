@@ -1,4 +1,4 @@
-const configPaths = require('../lib/paths.js')
+const { ports } = require('../config')
 const { goTo, getProperty, isVisible } = require('../lib/puppeteer-helpers.js')
 
 describe('Cookies page', () => {
@@ -18,7 +18,7 @@ describe('Cookies page', () => {
   beforeEach(async () => {
     await page.deleteCookie({
       name: 'design_system_cookies_policy',
-      url: `http://localhost:${configPaths.port}`
+      url: `http://localhost:${ports.preview}`
     })
 
     await page.setJavaScriptEnabled(true)
