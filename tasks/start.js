@@ -1,8 +1,7 @@
 const path = require('path')
 
-const browsersync = require('../lib/metalsmith-browser-sync') // setup synchronised browser testing
 const metalsmith = require('../lib/metalsmith') // configured static site generator
-
+const browsersync = require('../lib/metalsmith-browser-sync') // setup synchronised browser testing
 const paths = require('../lib/paths.js') // specify paths to main working directories
 
 // setup synchronised browser testing

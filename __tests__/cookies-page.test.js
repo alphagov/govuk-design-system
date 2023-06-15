@@ -1,6 +1,5 @@
-const { goTo, getProperty, isVisible } = require('../lib/puppeteer-helpers.js')
-
 const configPaths = require('../lib/paths.js')
+const { goTo, getProperty, isVisible } = require('../lib/puppeteer-helpers.js')
 
 describe('Cookies page', () => {
   let $module
