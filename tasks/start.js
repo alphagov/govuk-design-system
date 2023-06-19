@@ -1,8 +1,8 @@
-const path = require('path')
+const { dirname, join } = require('path')
 
+const { paths } = require('../config') // specify paths to main working directories
 const metalsmith = require('../lib/metalsmith') // configured static site generator
 const browsersync = require('../lib/metalsmith-browser-sync') // setup synchronised browser testing
-const paths = require('../lib/paths.js') // specify paths to main working directories
 
 // setup synchronised browser testing
 metalsmith.use(browsersync({
@@ -10,9 +10,9 @@ metalsmith.use(browsersync({
   open: false, // When making changes to the server, we don't want multiple windows opening.
   server: paths.public, // server directory
   files: [
-    path.join(paths.source, '**/*'),
-    path.join(paths.views, '**/*'),
-    path.normalize('node_modules/govuk-frontend/**/*')
+    join(paths.source, '**/*'),
+    join(paths.views, '**/*'),
+    join(dirname(require.resolve('govuk-frontend/package.json')), '**/*')
   ] // files to watch
 }))
 
