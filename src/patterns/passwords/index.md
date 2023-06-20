@@ -69,6 +69,12 @@ To help users meet your password constraints and prevent mistyped passwords, you
 - show the last typed character of their password
 - make them enter their password twice and automatically compare them
 
+#### Showing and hiding passwords
+One common method for helping users type passwords is a show/hide button near the password input. When the password is hidden, the button will change the input styling to 'show' the password. When the password is visible, the button will 'hide' the password again.
+
+When there are two or more password fields on a page, the 'show' and 'hide' labels for each password input must be different.
+For example, you can label the input "Password" as "show first password" and label the second input "Re-enter password" as "show second re-entered password".
+
 ### Allow users to paste their password
 
 Do not disable paste on password fields. People may have very good reasons why they want to paste their password, for example if they’re using a password manager.
