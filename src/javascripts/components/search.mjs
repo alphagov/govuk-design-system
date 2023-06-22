@@ -99,31 +99,44 @@ Search.prototype.inputValueTemplate = function (result) {
 }
 
 Search.prototype.resultTemplate = function (result) {
-  // add rest of the data here to build the item
+  function startsWithFilter (words, query) {
+    return words.filter(function (word) {
+      return word.trim().toLowerCase().indexOf(query.toLowerCase()) === 0
+    })
+  }
+
+  // Add rest of the data here to build the item
   if (result) {
     var elem = document.createElement('span')
-    var resultTitle = result.title
-    elem.textContent = resultTitle
-    if (result.aliases) {
-      var aliases = result.aliases.split(',').map(function (item) {
-        return item.trim()
-      })
-      var matchedAliases = []
-      // only show a matching alias if there are no matches in the title
-      if (resultTitle.toLowerCase().indexOf(searchQuery) === -1) {
-        // it would be confusing to show the user
-        // aliases that don't match the typed query
-        matchedAliases = aliases.filter(function (alias) {
-          return alias.toLowerCase().indexOf(searchQuery.toLowerCase()) !== -1
-        })
-      }
-      if (matchedAliases.length > 0) {
+    elem.textContent = result.title
+
+    // Title split into words
+    var words = result.title.match(/\w+/g) || []
+
+    // Title words that start with the query
+    var matchedWords = startsWithFilter(words, searchQuery)
+
+    // Only show a matching alias if there are no matches in the title
+    if (!matchedWords.length && result.aliases) {
+      var aliases = result.aliases.split(', ')
+
+      // Aliases containing words that start with the query
+      var matchedAliases = aliases.reduce(function (aliasesFiltered, alias) {
+        var aliasWordsMatched = startsWithFilter(alias.match(/\w+/g) || [], searchQuery)
+
+        return aliasWordsMatched.length
+          ? aliasesFiltered.concat([alias])
+          : aliasesFiltered
+      }, [])
+
+      if (matchedAliases.length) {
         var aliasesContainer = document.createElement('span')
         aliasesContainer.className = 'app-site-search__aliases'
         aliasesContainer.textContent = matchedAliases.join(', ')
         elem.appendChild(aliasesContainer)
       }
     }
+
     var section = document.createElement('span')
     section.className = 'app-site-search--section'
     section.innerHTML = result.section
