@@ -42,40 +42,37 @@ describe('Site search', () => {
   it('returns results where a word in the title begins with the letter "d"', async () => {
     await $searchInput.type('d')
 
-    const resultsArray = await page.evaluate(
-      () => [...document.querySelectorAll('.app-site-search__option')]
-        // ignore any results where a match was found in the alias
-        .filter(elem => !elem.querySelector('.app-site-search__aliases'))
-        // only get text, ignore child nodes
-        .map(elem => elem.firstChild.textContent.toLowerCase())
-    )
+    // ignore any results where a match was found in the alias
+    const resultsArray = await page.$$eval('.app-site-search__option:not(:has(.app-site-search__aliases))', results =>
+      results.map(result => result.firstChild.textContent.toLowerCase()))
 
     // regex with word boundary, in our case words that begin with 'd'
-    expect(resultsArray.every(item => (/\b[d]\w*/).test(item))).toBeTruthy()
+    for (const result of resultsArray) {
+      expect(result).toMatch(/\b[d]\w*/)
+    }
+
+    expect.assertions()
   })
 
   it('returns results that contain aliases that start with the letter "d"', async () => {
     await $searchInput.type('d')
 
-    const resultsArray = await page.evaluate(
-      () => [...document.querySelectorAll('.app-site-search__option')]
-        // only get results where a match was found in the alias
-        .filter(elem => elem.querySelector('.app-site-search__aliases'))
-        .map(elem => elem.querySelector('.app-site-search__aliases').textContent)
-    )
+    // only get results where a match was found in the alias
+    const resultsArray = await page.$$eval('.app-site-search__option:has(.app-site-search__aliases)', results =>
+      results.map(result => result.querySelector('.app-site-search__aliases').textContent))
 
     // regex with word boundary, in our case words that begin with 'd'
-    expect(resultsArray.every(item => (/\b[d]\w*/).test(item))).toBeTruthy()
+    for (const result of resultsArray) {
+      expect(result).toMatch(/\b[d]\w*/)
+    }
+
+    expect.assertions()
   })
 
-  it('doesn\'t show any aliases if it finds any matches in the title', async () => {
+  it("doesn't show any aliases if it finds any matches in the title", async () => {
     await $searchInput.type('det')
 
-    const resultsArray = await page.evaluate(
-      () => [...document.querySelectorAll('.app-site-search__aliases')]
-        .map(elem => elem.querySelector('.app-site-search__aliases'))
-    )
-
+    const resultsArray = await page.$$('.app-site-search__aliases')
     expect(resultsArray).toHaveLength(0)
   })
 
