@@ -25,7 +25,7 @@ metalsmith
 
     if (metalsmith.watch()) {
       if (bs) {
-        return
+        return bs.reload()
       }
 
       // Setup synchronised browser testing
@@ -34,6 +34,9 @@ metalsmith
       bs.init({
         // Prevent browser mirroring
         ghostMode: false,
+
+        // Prevent hot reloading
+        injectChanges: false,
 
         // Prevent browser opening
         open: false,
