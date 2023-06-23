@@ -32,13 +32,6 @@ metalsmith
       bs = browserSync.create()
 
       bs.init({
-        // Configure output to watch for reloads
-        files: [
-          join(paths.public, '**/*.html'),
-          join(paths.public, 'javascripts/**/*.js'),
-          join(paths.public, 'stylesheets/**/*.css')
-        ],
-
         // Prevent browser mirroring
         ghostMode: false,
 
