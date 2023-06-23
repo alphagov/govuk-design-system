@@ -11,6 +11,7 @@ The GOV.UK Design System at the [Government Digital Service](https://www.gov.uk/
 
 If you want to contact the team you can [get in touch via email or Slack](/get-in-touch/).
 
+- Izabela Podralska – Delivery Manager
 - Kelly Lee – Delivery Manager
 - Oliver Byford – Lead Frontend Developer
 - Steve Messer – Senior Product Manager
