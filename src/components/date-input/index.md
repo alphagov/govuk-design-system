@@ -35,6 +35,8 @@ Read more about [why and how to set legends as headings](/get-started/labels-leg
 
 Make sure that any example dates you use in hint text are valid for the question being asked.
 
+You should accept month names written out in full or abbreviated form (for example, ‘january’ or ‘jan’) as some users may enter months in this way.
+
 There are 2 ways to use the date input component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 
 {{ example({group: "components", item: "date-input", example: "default", html: true, nunjucks: true, open: false, size: "s", titleSuffix: "second"}) }}
@@ -155,4 +157,5 @@ Say ‘[whatever it is] must be between [date] and [date and optional descriptio
 
 ## Research on this component
 
-More research is needed to determine the extent to which users struggle to enter months as numbers, and whether allowing them to enter months as text is helpful.
+Data from the ‘Apply for teacher training service‘ showed that hundreds of users were inputting months using full or abbreviated month names, and then getting an error. Some users with dyscalculia may struggle to convert month names into numbers. Since changing the service to accept full or abbreviated month names, the number of errors dramatically dropped. 
+
