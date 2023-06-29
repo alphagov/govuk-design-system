@@ -94,3 +94,8 @@ You can find departmental colours in the GOV.UK Frontend [_colours-organisations
   {% endfor %}
  </tbody>
 </table>
+
+### Colour palette for charts
+When creating charts, use the colour palettes and guidance set out in the Government Analysis Function [Data visualisation: colours guidance](https://analysisfunction.civilservice.gov.uk/policy-store/data-visualisation-colours-in-charts/).
+
+The colour palettes recommended by the Government Analysis Function are based on the colours shown on this page. They've made some slight changes to improve colour contrast, in line with the Web Content Accessibility Guidelines (WCAG).
