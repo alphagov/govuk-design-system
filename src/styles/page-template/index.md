@@ -2,8 +2,10 @@
 title: Page template
 description: Template combines the boilerplate markup and components needed for a basic GOV.UK page
 section: Styles
+theme: Design guides
 aliases: boilerplate
 layout: layout-pane.njk
+order: 7
 ---
 
 {% from "_example.njk" import example %}

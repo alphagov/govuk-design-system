@@ -2,9 +2,11 @@
 title: Colour
 description: Always use the GOV.UK colour palette
 section: Styles
+theme: Branding
 aliases: palette
 backlog_issue_id: 38
 layout: layout-pane.njk
+order: 1
 ---
 
 Always use the GOV.UK colour palette.
