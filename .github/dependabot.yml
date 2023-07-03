@@ -6,6 +6,46 @@ updates:
   - package-ecosystem: npm
     directory: /
     open-pull-requests-limit: 10
+
+    # Group packages into shared PR
+    groups:
+      babel:
+        patterns:
+          - '@babel/*'
+
+      lint:
+        patterns:
+          - 'eslint'
+          - 'eslint-*'
+          - 'standard'
+          - 'stylelint'
+          - 'stylelint-*'
+
+      metalsmith:
+        patterns:
+          - '@metalsmith/*'
+          - 'jstransformer-*'
+          - 'metalsmith'
+          - 'metalsmith-*'
+
+      postcss:
+        patterns:
+          - 'autoprefixer'
+          - 'postcss'
+          - 'postcss-*'
+
+      rollup:
+        patterns:
+          - '@rollup/*'
+          - 'rollup'
+
+      test:
+        patterns:
+          - '@axe-core/*'
+          - 'jest'
+          - 'jest-*'
+          - 'puppeteer'
+
     reviewers:
       - alphagov/design-system-developers
 
