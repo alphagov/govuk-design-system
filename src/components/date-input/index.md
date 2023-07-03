@@ -35,7 +35,7 @@ Read more about [why and how to set legends as headings](/get-started/labels-leg
 
 Make sure that any example dates you use in hint text are valid for the question being asked.
 
-You should accept month names written out in full or abbreviated form (for example, ‘january’ or ‘jan’) as some users may enter months in this way.
+Accept month names written out in full or abbreviated form (for example, ‘january’ or ‘jan’) as some users may enter months in this way.
 
 There are 2 ways to use the date input component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 
