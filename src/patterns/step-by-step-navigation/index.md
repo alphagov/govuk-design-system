@@ -56,10 +56,7 @@ Step by step navigation is displayed in 2 ways.
 
     ![A screenshot showing an example of the step by step navigation pattern](step-by-step-standalone-page.png)
 
-You can use the following examples in the GOV.UK Prototype Kit to prototype a step by step:
-
-- [Step by step page](https://prototype-kit.service.gov.uk/docs/templates/step-by-step-navigation)
-- [Start page with step by step navigation as a sidebar](https://prototype-kit.service.gov.uk/docs/templates/start-with-step-by-step)
+You can use [install the 'Step By Step' plugin](https://prototype-kit.service.gov.uk/docs/install-and-use-plugins) in the GOV.UK Prototype Kit to prototype a step by step.
 
 Remember that step by step navigation is not for use within transactional services. We have included it in the Prototype Kit only so you can prototype your end to end journeys. Unlike most other components and patterns in the Design System, we do not provide the code for step by step navigation in `govuk-frontend`.
 
