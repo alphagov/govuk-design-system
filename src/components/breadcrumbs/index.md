@@ -40,3 +40,11 @@ If you have long breadcrumbs you can configure the component to only show the fi
 To do this, add a `govuk-breadcrumbs--collapse-on-mobile` class to the outer `<div>` element of the component HTML. Or if you’re using Nunjucks, add `collapseOnMobile: true` to the Nunjucks macro as shown in this example.
 
 {{ example({group: "components", item: "breadcrumbs", example: "collapse-mobile", html: true, nunjucks: true, open: false}) }}
+
+### Breadcrumbs on dark backgrounds
+
+Use the `govuk-breadcrumbs--inverse` modifier class to show white links and arrows on dark backgrounds — for example, in headers, custom components, and patterns with darker backgrounds.
+
+Make sure all users can see the breadcrumbs — the background colour [must have a contrast ratio of at least 4.5:1](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html) with white.
+
+{{ example({group: "components", item: "breadcrumbs", example: "inverse", html: true, nunjucks: true, open: false}) }}

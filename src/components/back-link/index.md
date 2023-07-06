@@ -40,3 +40,11 @@ There are 2 ways to use the back link component. You can use HTML or, if you are
 Using the default link text ('Back') is ideal for services with a simple journey. For example, [applying for a National Insurance number](https://www.gov.uk/apply-national-insurance-number). Users will only ever go back to the previous page in the service.
 
 For more complex user journeys, consider using different link text, like 'Go back to [page]'. For example, in an admin system with many different areas. In this case, if you used 'Back', it might not be clear to users what they are going back to.
+
+### Back links on dark backgrounds
+
+Use the `govuk-back-link--inverse` modifier class to show a white link on a dark background — for example, in headers, custom components, and patterns with darker backgrounds.
+
+Make sure all users can see the back link — the background colour [must have a contrast ratio of at least 4.5:1](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html) with white.
+
+{{ example({group: "components", item: "back-link", example: "inverse", html: true, nunjucks: true, open: false}) }}
