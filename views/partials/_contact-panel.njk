@@ -1,10 +1,10 @@
 {%- set fileEditURL = "https://github.com/alphagov/govuk-design-system/edit/main/src/" + permalink + "/index.md" -%}
-{% if section === 'Styles' or section === 'Components' or section === 'Patterns'%}
+{% if ["Components", "Patterns", "Styles"].includes(section) %}
   <h2 class="govuk-heading-l govuk-!-padding-top-7" id="help-improve-this-page">Help improve this {{ section.slice(0, -1) | lower }}</h2>
 
   {% if backlog_issue_id %}
     <p class="govuk-body">
-    To help make sure that this page is useful, relevant and up to date, you can:
+      To help make sure that this page is useful, relevant and up to date, you can:
     </p>
     <ul class="govuk-list govuk-list--bullet">
       <li>
@@ -21,14 +21,22 @@
       </li>
     </ul>
   {% else %}
-      <p class="govuk-body">
-        If you spot a problem with this guidance you can
-        <a class="govuk-link app-contact-panel__link" href="{{ fileEditURL }}">propose a change</a>.
-      </p>
-      <p class="govuk-body">
-        If you’re not sure how to do this, read guidance on
-        <a class="govuk-link app-contact-panel__link" href="/community/propose-a-content-change-using-github/">how to propose changes in GitHub</a>.
-      </p>
+    <p class="govuk-body">
+      If you spot a problem with this guidance you can
+      <a class="govuk-link app-contact-panel__link" href="{{ fileEditURL }}">propose a change</a>.
+    </p>
+    <p class="govuk-body">
+      If you’re not sure how to do this, read guidance on
+      <a class="govuk-link app-contact-panel__link" href="/community/propose-a-content-change-using-github/">how to propose changes in GitHub</a>.
+    </p>
+  {% endif %}
+  {% if ["Components", "Patterns"].includes(section) %}
+    <h3 class="govuk-heading-m govuk-!-padding-top-7" id="tell-us-if-your-service-uses">
+      Tell us if your service uses this {{ section.slice(0, -1) | lower }}
+    </h3>
+    <p class="govuk-body">
+      <a class="govuk-link app-contact-panel__link" target="_blank" href="https://surveys.publishing.service.gov.uk/s/MPR0MV/">Take part in our usage survey (opens in a new tab)</a> to help us improve this {{ section.slice(0, -1) | lower }} to better meet the needs of the services that use it.
+    </p>
   {% endif %}
 {% endif %}
 

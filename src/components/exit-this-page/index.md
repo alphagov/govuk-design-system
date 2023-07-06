@@ -104,8 +104,6 @@ However, we decided this was more likely to confuse users. We're also confident 
 
 The design of this component is based on research with people with a lived experience of domestic abuse and people with accessibility needs, and in consultation with the Ministry of Justice, Department for Work and Pensions and the Scottish Government.
 
-Tell us if your service uses this component on our [usage survey (opens in a new tab)](https://surveys.publishing.service.gov.uk/s/MPR0MV/). This will help us improve this component to better meet the needs of the services that use it.
-
 We plan to show more information about how many services use this component.
 
 ### Known issues and gaps
