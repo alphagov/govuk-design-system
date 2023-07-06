@@ -19,6 +19,8 @@ Last updated 20 April 2023.
 
 We recently:
 
+- released [GOV.UK Frontend v4.7.0](https://github.com/alphagov/govuk-frontend/releases/tag/v4.7.0), which includes visual improvements to some components
+- published the [Exit this page](/components/exit-this-page/) component
 - published an [accessibility strategy for the GOV.UK Design System](/community/accessibility-strategy/)
 - released the [Summary card](https://github.com/alphagov/govuk-design-system-backlog/issues/210) variant
 - made it easier to find information about [contributing and the community](/community/)
@@ -47,7 +49,6 @@ We're also:
 
 We're getting ready to:
 
-- release the [Hide this page](https://github.com/alphagov/govuk-design-system-backlog/issues/213) component
 - make sure the Design System meets WCAG 2.2
 - [update the typographic scale](https://github.com/alphagov/govuk-design-system/issues/2289), including increasing the minimum text size on mobile
 - investigate where technical documentation belongs on the website

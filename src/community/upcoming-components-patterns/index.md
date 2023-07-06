@@ -2,7 +2,7 @@
 title: Upcoming components and patterns
 description: Anyone can propose, develop or contribute to new patterns and components, or improvements to existing ones.
 section: Community
-aliases: exit this page, maps, task list, autocomplete, choosing a date, navigation
+aliases: maps, task list, autocomplete, choosing a date, navigation
 theme: What we’re working on
 layout: layout-pane.njk
 order: 1
@@ -22,23 +22,6 @@ If you’d like to help us build these components and patterns, join the convers
 
 {{ govukSummaryList({
   rows: [
-    {
-      key: {
-        text: "Hide this page"
-      },
-      value: {
-        text: "A safety feature to help users exit the page quickly."
-      },
-      actions: {
-        classes: "govuk-!-text-align-left",
-        items: [
-          {
-            href: "https://github.com/alphagov/govuk-design-system-backlog/issues/213",
-            text: "Discuss Hide this page"
-          }
-        ]
-      }
-    },
     {
       key: {
         text: "Maps"
