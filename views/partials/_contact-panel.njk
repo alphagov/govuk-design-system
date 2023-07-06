@@ -1,5 +1,5 @@
 {%- set fileEditURL = "https://github.com/alphagov/govuk-design-system/edit/main/src/" + permalink + "/index.md" -%}
-{% if section === 'Styles' or section === 'Components' or section === 'Patterns'%}
+{% if section === 'Styles' or section === 'Components' or section === 'Patterns' %}
   <h2 class="govuk-heading-l govuk-!-padding-top-7" id="help-improve-this-page">Help improve this {{ section.slice(0, -1) | lower }}</h2>
 
   {% if backlog_issue_id %}
@@ -29,6 +29,12 @@
         If you’re not sure how to do this, read guidance on
         <a class="govuk-link app-contact-panel__link" href="/community/propose-a-content-change-using-github/">how to propose changes in GitHub</a>.
       </p>
+  {% endif %}
+        {% if section === 'Components' or section === 'Patterns' %}
+    <h3 class="govuk-heading-m govuk-!-padding-top-7" id="tell-us-if-your-service-uses">Tell us if your service uses this {{ section.slice(0, -1) | lower }}</h3>
+    <p class="govuk-body"><a class="govuk-link app-contact-panel__link" target="_blank" href="https://surveys.publishing.service.gov.uk/s/MPR0MV/">Take part in our usage survey (opens in a new tab)</a> to help us improve this {{ section.slice(0, -1) | lower }} to better meet the needs of the services that use it.
+    </p>
+  {% elseif section === 'Styles' %}
   {% endif %}
 {% endif %}
 
