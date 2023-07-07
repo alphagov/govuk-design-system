@@ -19,6 +19,8 @@ metalsmith
 
   // Build to destination directory
   .build((err, files) => {
+    console.log('Metalsmith build() callback')
+
     if (err) {
       throw err
     }
