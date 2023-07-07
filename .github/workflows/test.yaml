@@ -31,9 +31,6 @@ jobs:
     name: Build
     runs-on: ${{ github.event.inputs.runner || 'ubuntu-latest' }}
 
-    env:
-      ENVIRONMENT: production
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
