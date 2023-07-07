@@ -1,0 +1,14 @@
+---
+title: Inverse back link
+layout: layout-example.njk
+stylesheets:
+- ../../../stylesheets/example-inverse.css
+---
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  classes: "govuk-back-link--inverse",
+  text: "Back",
+  href: "#"
+}) }}
+
