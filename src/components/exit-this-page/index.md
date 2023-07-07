@@ -94,11 +94,11 @@ In addition to the Exit this page button itself, users have 2 other options to a
 
 The keyboard option, where the user can press shift 3 times, gives users a discreet way to activate the component, particularly keyboard-only users. We considered options that used a single key press (such as the 'esc' key), but we could not be confident that this would not interfere with other user actions.
 
-The 'secondary link' option is a hidden link in the tab order of the page. This gives users of assistive technology and easier way to reliably activate the component.
+The 'secondary link' option is a hidden link in the tab order of the page. This gives users of assistive technology an easier way to reliably activate the component.
 
 To help users of speech recognition software activate the 'secondary link' more discreetly, we considered changing the link text to something else that hid its real purpose. 
 
-However, we decided this was more likely to confuse users. We're also confident about the other ways users can use speech recognition software to activate the 'secondary link' without saying the text out loud, such choosing the link as an item number on a list.
+However, we decided this was more likely to confuse users. We're also confident about the other ways users can use speech recognition software to activate the 'secondary link' without saying the text out loud, such as choosing the link as an item number on a list.
 
 ## Research on this component
 
