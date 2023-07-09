@@ -22,7 +22,7 @@
     "lint": "npm run lint:js && npm run lint:scss && npm run lint:html --ignore-scripts",
     "prelint:html": "npm run build",
     "lint:html": "html-validate \"deploy/public/**/index.html\"",
-    "lint:js": "eslint --cache --cache-location .cache/eslint --cache-strategy content --color --ignore-path .gitignore \"**/*.{cjs,js,mjs}\"",
+    "lint:js": "eslint --color --ignore-path .gitignore \"**/*.{cjs,js,mjs}\"",
     "lint:scss": "stylelint \"**/*.scss\"",
     "check-links": "hyperlink --canonicalroot https://design-system.service.gov.uk/ --internal --recursive --source-maps deploy/public/sitemap.xml | tap-mocha-reporter min"
   },

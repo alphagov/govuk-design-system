@@ -1,0 +1,135 @@
+{% macro example(params) %}
+
+{% set multipleTabs = params.html and params.nunjucks %}
+
+<div class="app-example-wrapper" id="{{ params.id }}" data-module="app-tabs" {%- if params.open %} data-open{% endif %}>
+  {% if params.displayExample %}
+    <div class="app-example {{ "app-example--tabs" if params.html or params.nunjucks }}">
+      <div class="app-example__toolbar">
+        <a href="{{ params.url }}" class="app-example__new-window" target="_blank">
+          Open this
+          {#- Don't use full title visually as the context is shown based on location of this link #}
+          <span class="govuk-visually-hidden">{{ params.title | lower }}</span>
+          example in a new tab
+        </a>
+      </div>
+      <iframe title="{{ params.title + " example" }}" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable{% if params.size %} app-example__frame--{{ params.size }}{% endif %}" src="{{ params.url }}" loading="lazy"></iframe>
+    </div>
+  {% endif %}
+
+  {%- if (multipleTabs) %}
+    <span id="options-{{ params.id }}"></span>
+    <ul class="app-tabs" role="tablist">
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#{{ params.id }}-html" role="tab" aria-controls="{{ params.id }}-html" data-track="tab-html">HTML</a></li>
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#{{ params.id }}-nunjucks" role="tab" aria-controls="{{ params.id }}-nunjucks" data-track="tab-nunjucks">Nunjucks</a></li>
+    </ul>
+  {% elif not (params.hideTab) %}
+    {% set tabType = "html" if params.html else ("nunjucks" if params.nunjucks ) %}
+    {#- if at least one tab is set to true show the list -#}
+    {% if tabType %}
+      <ul class="app-tabs" role="tablist">
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#{{ params.id }}-{{ tabType }}" role="tab" aria-controls="{{ params.id }}-{{ tabType }}" data-track="tab-{{ tabType }}">{{ "HTML" if params.html else ("Nunjucks" if params.nunjucks )}}</a>
+        </li>
+      </ul>
+    {% endif %}
+  {% endif %}
+
+  {%- if (params.html) %}
+    {%- if (multipleTabs) or (not params.hideTab) %}
+      <div class="app-tabs__heading js-tabs__heading"><a href="#{{ params.id }}-html" aria-controls="{{ params.id }}-html" data-track="tab-html">HTML</a></div>
+    {% endif %}
+    <div class="app-tabs__container js-tabs__container{{ " js-tabs__container--no-tabs" if (params.hideTab) }}" id="{{ params.id }}-html" role="tabpanel">
+      <div class="app-example__code" data-module="app-copy">
+
+```html
+{{ params.html | safe }}
+```
+
+      </div>
+    </div>
+  {% endif %}
+
+  {%- if (params.nunjucks) %}
+    {%- if (multipleTabs) %}
+      <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#{{ params.id }}-nunjucks" aria-controls="{{ params.id }}-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
+    {% elif not (params.hideTab) %}
+      <div class="app-tabs__heading js-tabs__heading"><a href="#{{ params.id }}-nunjucks" role="tab" aria-controls="{{ params.id }}-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
+    {% endif -%}
+    <div class="app-tabs__container js-tabs__container{{ " js-tabs__container--no-tabs" if (params.hideTab) }}" id="{{ params.id }}-nunjucks" role="tabpanel">
+      {%- if (params.group == 'components') %}
+        {% set macroOptions = getMacroOptions(params.item) %}
+
+        {% set macroOptionsHTML %}
+          <p>
+          Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
+          </p>
+          <p>
+          Some options are required for the macro to work; these are marked as "Required" in the option description.
+          </p>
+          <p>
+          If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
+          </p>
+          {% for table in macroOptions %}
+            <table class="govuk-table app-options__table" id="options-{{ params.id }}--{{ table.id }}">
+              <caption class="govuk-table__caption govuk-heading-m {% if table.id == 'primary' %} govuk-visually-hidden{% endif %}">{{ table.name }}</caption>
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th class="govuk-table__header app-options__limit-table-cell" scope="col">Name</th>
+                  <th class="govuk-table__header app-options__limit-table-cell" scope="col">Type</th>
+                  <th class="govuk-table__header" scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                {% for option in table.options -%}
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">{{option.name}}</th>
+                    <td class="govuk-table__cell ">{{option.type}}</td>
+                    <td class="govuk-table__cell ">
+                      {% if (option.required === true) %}
+                        <strong>Required.</strong>
+                      {% endif %}
+                      {{ option.description | safe }}
+                      {% if (option.isComponent) -%}
+                        {# Create separate table data for components that are hidden in the Design System -#}
+                        {% if (option.name === "hint" or option.name === "label") %}
+                          See <a href="#options-{{ params.id }}--{{ option.name }}">{{ option.name }}</a>.
+                        {% else %}
+                          See <a href="/components/{{ option.slug }}/#options-{{ option.name | kebabCase }}-example">{{ option.name }}</a>.
+                        {% endif %}
+                      {% endif %}
+                      {% if (option.params) %}
+                        See <a href="#options-{{ params.id }}--{{ option.name }}">{{ option.name }}</a>.
+                      {% endif -%}
+                    </td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          {% endfor %}
+
+        {%- endset %}
+
+        {%- from "govuk/components/details/macro.njk" import govukDetails %}
+
+        {{- govukDetails({
+          summaryHtml: "<span data-components='github-component-arguments'>Nunjucks macro options</span>",
+          html: macroOptionsHTML,
+          classes: "app-options",
+          attributes:{
+            id: "options-" + params.id + "-details"
+          }
+        })}}
+      {% endif -%}
+      <div class="app-example__code" data-module="app-copy">
+
+```javascript
+{{ params.nunjucks | safe }}
+```
+
+      </div>
+    </div>
+  {% endif %}
+</div>
+
+{% endmacro %}
