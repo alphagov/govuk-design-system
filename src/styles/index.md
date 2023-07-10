@@ -2,7 +2,7 @@
 layout: layout-pane.njk
 title: Styles
 description: Make your service look and feel like GOV.UK
-show_subnav: true
+showSubNav: true
 ---
 
 Make government services look and feel like GOV.UK.

@@ -2,7 +2,7 @@
 layout: layout-pane.njk
 title: Community
 description:  Everyone can help improve the Design System by joining our community discussions, events and co-design collaborations
-show_subnav: true
+showSubNav: true
 ---
 
 {% from "_image-card.njk" import imageCard %}
