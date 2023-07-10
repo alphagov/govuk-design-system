@@ -1,7 +1,7 @@
 ---
 title: Ethnic groups
 layout: layout-archived.njk
-ignore_in_sitemap: true
+ignoreInSitemap: true
 ---
 
 In March 2021, we published a new pattern to [ask users for equality information](/patterns/equality-information/), based on data standards set by the Government Statistical Service (GSS).
