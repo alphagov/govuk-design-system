@@ -4,7 +4,7 @@ description: The Design System uses a responsive spacing scale which adapts base
 section: Styles
 aliases: margin, padding
 layout: layout-pane.njk
-show_page_nav: true
+showPageNav: true
 ---
 
 {% from "_example.njk" import example %}

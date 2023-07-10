@@ -3,7 +3,7 @@ title: Layout
 description: Organise the layout of the page into blocks
 section: Styles
 layout: layout-pane.njk
-show_page_nav: true
+showPageNav: true
 ---
 
 {% from "_example.njk" import example %}

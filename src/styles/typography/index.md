@@ -4,7 +4,7 @@ description: If your service is on the service.gov.uk subdomain you must use the
 section: Styles
 backlogIssueId: 64
 layout: layout-pane.njk
-show_page_nav: true
+showPageNav: true
 headingAliases:
   Section break: horizontal rule, hr
 ---
