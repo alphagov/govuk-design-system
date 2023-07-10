@@ -4,7 +4,7 @@ description: Follow this pattern whenever you need to ask users questions within
 section: Patterns
 theme: Pages
 aliases:
-backlog_issue_id: 58
+backlogIssueId: 58
 layout: layout-pane.njk
 ---
 

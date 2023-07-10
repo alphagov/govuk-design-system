@@ -4,7 +4,7 @@ description: Ask users questions to help them work out if they can or should use
 section: Patterns
 theme: Help users to…
 aliases:
-backlog_issue_id: 35
+backlogIssueId: 35
 layout: layout-pane.njk
 ---
 

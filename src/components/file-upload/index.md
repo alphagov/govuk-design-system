@@ -3,7 +3,7 @@ title: File upload
 description: Help users select and upload a file
 section: Components
 aliases:
-backlog_issue_id: 49
+backlogIssueId: 49
 layout: layout-pane.njk
 ---
 

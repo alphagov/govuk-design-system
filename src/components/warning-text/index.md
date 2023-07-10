@@ -3,7 +3,7 @@ title: Warning text
 description: Use the warning text component when you need to warn users about something important, such as legal consequences of an action, or lack of action, that they might take
 section: Components
 aliases: important text, legal text
-backlog_issue_id: 71
+backlogIssueId: 71
 layout: layout-pane.njk
 ---
 

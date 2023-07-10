@@ -1,7 +1,7 @@
 ---
 layout: layout-pane.njk
 title: Components
-show_subnav: true
+showSubNav: true
 ---
 
 Components are reusable parts of the user interface that have been made to support a variety of applications.

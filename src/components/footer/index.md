@@ -3,7 +3,7 @@ title: Footer
 description: The footer provides copyright, licensing and other information about your service and department
 section: Components
 aliases: privacy notice, accessibility statement, terms and conditions
-backlog_issue_id: 96
+backlogIssueId: 96
 layout: layout-pane.njk
 ---
 
@@ -26,7 +26,7 @@ Use the footer at the bottom of every page of your service.
 Add a copyright notice to the footer to clarify who owns the copyright. For GOV.UK services, add the coat of arms to keep things consistent with the rest of GOV.UK.
 
 Make it clear whether content is available for re-use - and if it is, under what sort of licence. Use an [Open Government Licence](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/) unless you have permission from the National Archives to use a [different type of licence](https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/open-government-licence/other-licences/).
- 
+
 ### Footer without links
 
 {{ example({group: "components", item: "footer", example: "default", titleSuffix: "second", html: true, nunjucks: true, open: false, size: "m", titleSuffix: "second"}) }}

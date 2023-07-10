@@ -3,7 +3,7 @@ title: Exit this page
 description: Give users a way to quickly and safely exit a service, website or application.
 section: Components
 aliases:
-backlog_issue_id: 213
+backlogIssueId: 213
 layout: layout-pane.njk
 status: Experimental
 statusMessage: This component is currently experimental. <a class="govuk-link" href="#known-issues-and-gaps">You'll need to do your own research</a> to decide whether to add this component to your service.
@@ -34,7 +34,7 @@ You can also use this component for standalone content pages, such as dashboards
 
 Do not use this component if the service or content is unlikely to put a user at risk. See the [Exit a page quickly](/patterns/exit-a-page-quickly/) pattern for examples of at-risk and sensitive topics.
 
-The 'Exit this page' component is a [button component](/components/button/) that has been marked up with addtional CSS and JavaScript functionality, to make it work in a specific way. 
+The 'Exit this page' component is a [button component](/components/button/) that has been marked up with addtional CSS and JavaScript functionality, to make it work in a specific way.
 
 Keep in mind that seeing this component might discourage certain users from using your service. If the user does not identify themselves as being at risk, they might see the button on a service and decide it’s not relevant to them.
 
@@ -96,7 +96,7 @@ The keyboard option, where the user can press shift 3 times, gives users a discr
 
 The 'secondary link' option is a hidden link in the tab order of the page. This gives users of assistive technology an easier way to reliably activate the component.
 
-To help users of speech recognition software activate the 'secondary link' more discreetly, we considered changing the link text to something else that hid its real purpose. 
+To help users of speech recognition software activate the 'secondary link' more discreetly, we considered changing the link text to something else that hid its real purpose.
 
 However, we decided this was more likely to confuse users. We're also confident about the other ways users can use speech recognition software to activate the 'secondary link' without saying the text out loud, such as choosing the link as an item number on a list.
 
@@ -114,6 +114,6 @@ Before using this component, you should do research with your users. If you do, 
 
 We're particularly interested in investigations into how well this component works on static pages of information ('flat content').
 
-Share your feedback, use cases and research findings on the [Exit this page discussion space on GitHub](https://github.com/alphagov/govuk-design-system/discussions/categories/exit-this-page). 
+Share your feedback, use cases and research findings on the [Exit this page discussion space on GitHub](https://github.com/alphagov/govuk-design-system/discussions/categories/exit-this-page).
 
 We also share notes about our decisions, work and research in the GitHub discussion space and welcome your feedback on those.

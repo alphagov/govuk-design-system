@@ -4,7 +4,7 @@ description: This is a page that tells someone there is something wrong with the
 section: Patterns
 theme: Pages
 aliases: '500'
-backlog_issue_id: 129
+backlogIssueId: 129
 layout: layout-pane.njk
 status: Experimental
 statusMessage: This pattern is currently experimental because <a class="govuk-link" href="#research-on-this-pattern">more research</a> is needed to validate it.

@@ -3,7 +3,7 @@ title: Character count
 description: Tell users how many characters or words they can enter into a textarea
 section: Components
 aliases: word count
-backlog_issue_id: 67
+backlogIssueId: 67
 layout: layout-pane.njk
 ---
 

@@ -4,13 +4,13 @@ description: Let users know they’ve completed a transaction
 section: Patterns
 theme: Pages
 aliases: completion pages, receipts, finish pages
-backlog_issue_id: 40
+backlogIssueId: 40
 layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
 
-Use this pattern to let users know they’ve completed a transaction. 
+Use this pattern to let users know they’ve completed a transaction.
 
 Include a link to the [GOV.UK feedback page](https://www.gov.uk/service-manual/service-assessments/get-feedback-page) to allow users to tell you what they think of your transaction.
 
@@ -30,7 +30,7 @@ Your confirmation page must include:
 - details of what happens next and when
 - contact details for the service
 - links to information or services that users are likely to need next
-- a link to your [feedback page](https://www.gov.uk/service-manual/service-assessments/get-feedback-page) 
+- a link to your [feedback page](https://www.gov.uk/service-manual/service-assessments/get-feedback-page)
 - a way for users to save a record of the transaction, for example, as a PDF
 
 {{ example({group: "patterns", item: "confirmation-pages", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second", size: "xl"}) }}

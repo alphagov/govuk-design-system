@@ -3,7 +3,7 @@ title: Panel
 description: The panel component is a visible container used on confirmation or results pages
 section: Components
 aliases: confirmation box, results box, reference number, application complete, application number
-backlog_issue_id: 55
+backlogIssueId: 55
 layout: layout-pane.njk
 ---
 

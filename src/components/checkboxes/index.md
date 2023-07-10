@@ -3,7 +3,7 @@ title: Checkboxes
 description: Let users select one or more options by using the checkboxes component
 section: Components
 aliases: check boxes, tickboxes, tick boxes
-backlog_issue_id: 37
+backlogIssueId: 37
 layout: layout-pane.njk
 ---
 

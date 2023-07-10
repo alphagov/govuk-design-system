@@ -4,7 +4,7 @@ description: Give users a way to quickly and safely exit a service, website or a
 section: Patterns
 theme: Help users to…
 aliases:
-backlog_issue_id: 213
+backlogIssueId: 213
 layout: layout-pane.njk
 status: Experimental
 statusMessage: This component is currently experimental. You'll need to do your own research to decide whether to use this pattern and add the <a class="govuk-link" href="/components/exit-this-page/">Exit this page</a> component to your service.
@@ -55,7 +55,7 @@ This pattern is not a complete solution to eliminating all possible risk to the 
 
 Create a page to explain Exit this page to users.
 
-You must show this page after the start point of your service, but before the page where the user will see the Exit this page button for the first time. 
+You must show this page after the start point of your service, but before the page where the user will see the Exit this page button for the first time.
 
 On longer services, you might need more than one interruption page.
 

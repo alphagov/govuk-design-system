@@ -2,9 +2,9 @@
 title: Typography
 description: If your service is on the service.gov.uk subdomain you must use the GDS Transport font
 section: Styles
-backlog_issue_id: 64
+backlogIssueId: 64
 layout: layout-pane.njk
-show_page_nav: true
+showPageNav: true
 headingAliases:
   Section break: horizontal rule, hr
 ---

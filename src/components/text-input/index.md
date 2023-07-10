@@ -3,7 +3,7 @@ title: Text input
 description: Help users enter information with the text input component
 section: Components
 aliases: text box, text field, input field, text entry box
-backlog_issue_id: 51
+backlogIssueId: 51
 layout: layout-pane.njk
 ---
 
@@ -118,7 +118,7 @@ Do not use `<input type="number">` unless your user research shows that there’
 
 ### Codes and sequences
 
-Help the user visually check the code they've typed is correct by styling the input's text to visually separate each character. This is important if you're asking the user to enter a code or sequence they're unlikely to have memorised, such as an application reference ID, account number or security code. 
+Help the user visually check the code they've typed is correct by styling the input's text to visually separate each character. This is important if you're asking the user to enter a code or sequence they're unlikely to have memorised, such as an application reference ID, account number or security code.
 
 You do not need to do this for memorable information, such as phone numbers and postcodes.
 

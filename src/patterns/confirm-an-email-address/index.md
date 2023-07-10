@@ -4,7 +4,7 @@ description: Use an email confirmation loop to check that a user has access to a
 section: Patterns
 theme: Help users to…
 aliases:
-backlog_issue_id: 39
+backlogIssueId: 39
 layout: layout-pane.njk
 ---
 

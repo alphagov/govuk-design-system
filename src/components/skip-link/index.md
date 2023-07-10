@@ -3,7 +3,7 @@ title: Skip link
 description: Use the skip link component to help keyboard-only users skip to the main content on a page
 section: Components
 aliases: Skip navigation link
-backlog_issue_id: 66
+backlogIssueId: 66
 layout: layout-pane.njk
 ---
 

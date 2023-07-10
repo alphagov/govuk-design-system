@@ -4,7 +4,7 @@ description: Help users to create and enter secure and memorable passwords
 section: Patterns
 theme: Ask users for…
 aliases:
-backlog_issue_id: 56
+backlogIssueId: 56
 layout: layout-pane.njk
 ---
 

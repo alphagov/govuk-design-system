@@ -4,7 +4,7 @@ description: A page not found tells someone we cannot find the page they were tr
 section: Patterns
 theme: Pages
 aliases: '404'
-backlog_issue_id: 130
+backlogIssueId: 130
 layout: layout-pane.njk
 status: Experimental
 statusMessage: This pattern is currently experimental because <a class="govuk-link" href="#research-on-this-pattern">more research</a> is needed to validate it.

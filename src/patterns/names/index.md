@@ -4,7 +4,7 @@ description: Help users correctly enter their name
 section: Patterns
 theme: Ask users for…
 aliases:
-backlog_issue_id: 53
+backlogIssueId: 53
 layout: layout-pane.njk
 ---
 

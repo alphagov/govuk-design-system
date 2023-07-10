@@ -4,7 +4,7 @@ description: Outlines the current principles and work needed to improve the acce
 section: Community
 theme: How we work
 layout: layout-pane.njk
-show_page_nav: true
+showPageNav: true
 order: 9
 ---
 
@@ -28,22 +28,22 @@ The GOV.UK Design System team follows 3 sets of principles to increase the acces
 
 We follow the [4 principles of web accessibility](https://www.w3.org/WAI/WCAG21/Understanding/intro#understanding-the-four-principles-of-accessibility) upon which WCAG is based:
 
-1.  Perceivable – Information and user interface components must be presentable to users in ways they can perceive.   
-2.  Operable – User interface components and navigation must be operable.   
-3.  Understandable – Information and the operation of the user interface must be understandable. 
-4.  Robust – Content must be robust enough that it can be interpreted reliably by a wide variety of user agents, including assistive technologies.   
+1.  Perceivable – Information and user interface components must be presentable to users in ways they can perceive.
+2.  Operable – User interface components and navigation must be operable.
+3.  Understandable – Information and the operation of the user interface must be understandable.
+4.  Robust – Content must be robust enough that it can be interpreted reliably by a wide variety of user agents, including assistive technologies.
 
 ### Universal design
 
 When designing accessible styles, components and patterns, we aim to follow [the 7 principles of universal design](https://universaldesign.ie/What-is-Universal-Design/The-7-Principles/):
 
-1.  Equitable use – The design is useful and marketable to people with diverse abilities. 
+1.  Equitable use – The design is useful and marketable to people with diverse abilities.
 2.  Flexibility in use – The design accommodates a wide range of individual preferences and abilities.
 3.  Simple and intuitive use – The design is easy to understand, regardless of the user's experience, knowledge, language skills, or current concentration level.
 4.  Perceptible information – The design communicates necessary information effectively to the user, regardless of ambient conditions or the user's sensory abilities.
 5.  Tolerance for error – The design minimises hazards and the adverse consequences of accidental or unintended actions.
 6.  Low physical and cognitive effort – The design can be used efficiently and comfortably and with minimum fatigue.
-7.  Size and space for approach and use – The design provides appropriate sizing and spacing of elements, allowing the user to interact successfully.    
+7.  Size and space for approach and use – The design provides appropriate sizing and spacing of elements, allowing the user to interact successfully.
 
 Modifications to principles 6 and 7 are to make sure they apply to web-based designs rather than physical spaces.
 
@@ -81,7 +81,7 @@ Our goal is to focus first on high-risk and high-impact accessibility concerns i
 
 The team puts accessibility concerns in 2 categories:
 
-1.  Theoretical: A question or statement regarding the accessibility of an implementation within the Design System without evidence of real-world impact. 
+1.  Theoretical: A question or statement regarding the accessibility of an implementation within the Design System without evidence of real-world impact.
 2.  Evidenced: Sharing new research, data or evidence showing that an implementation within the Design System could cause barriers for disabled people.
 
 The team will usually prioritise evidenced issues and queries over theoretical ones.
@@ -112,7 +112,7 @@ This approach supports the team closing accessibility concerns which do not incl
 
 Many types of evidence can indicate an evidenced accessibility concern, but some of the most common examples are:
 
--   new findings from user research    
+-   new findings from user research
 -   service team usability testing results
 -   new global best-practises or standards
 -   direct feedback from users of a service or product

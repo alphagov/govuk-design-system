@@ -35,8 +35,8 @@ Along with the pull request to delete or rename the URL you want to change, you 
     ---
     title: {Title of the page you are archiving}
     layout: layout-archived.njk
-    ignore_in_sitemap: true
-    —
+    ignoreInSitemap: true
+    ---
     ```
 
 3. Below the new metadata you’ve added, write some brief content explaining to users that you have archived or renamed the page. As a minimum, you should include:

@@ -3,7 +3,7 @@ title: Details
 description: Make a page easier to scan by letting users reveal more detailed information only if they need it
 section: Components
 aliases: reveal, progressive disclosure, hidden text, show and hide, ShowyHideyThing
-backlog_issue_id: 44
+backlogIssueId: 44
 layout: layout-pane.njk
 ---
 

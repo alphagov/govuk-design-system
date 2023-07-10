@@ -4,7 +4,7 @@ description: Task list pages help users understand tasks involved in completing 
 section: Patterns
 theme: Pages
 aliases:
-backlog_issue_id: 72
+backlogIssueId: 72
 layout: layout-pane.njk
 status: Being worked on
 statusMessage: A cross-government group is collaborating on work to <a class="govuk-link" href="#next-steps">update this pattern and build it as a component</a>.

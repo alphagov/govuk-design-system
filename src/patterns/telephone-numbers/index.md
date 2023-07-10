@@ -4,7 +4,7 @@ description: Help users enter a valid telephone number
 section: Patterns
 theme: Ask users for…
 aliases: phone numbers
-backlog_issue_id: 101
+backlogIssueId: 101
 layout: layout-pane.njk
 status: Experimental
 statusMessage: This pattern is currently experimental because <a class="govuk-link" href="#research-on-this-pattern">more research</a> is needed to validate it.

@@ -3,7 +3,7 @@ title: Summary list
 description: Use the summary list to summarise information, for example, a user’s responses at the end of a form.
 section: Components
 aliases: Summary card
-backlog_issue_id: 182
+backlogIssueId: 182
 layout: layout-pane.njk
 ---
 
@@ -131,6 +131,6 @@ The summary card is also used in services run by other departments, such us:
 
 ### Next steps
 
-We still want to learn more about when this component works well. 
+We still want to learn more about when this component works well.
 
 If you use this component in your service, we'd like to hear about how you use the summary list and summary card, as well as any research findings you might have.

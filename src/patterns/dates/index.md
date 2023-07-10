@@ -4,7 +4,7 @@ description: Help users enter or select a date
 section: Patterns
 theme: Ask users for…
 aliases:
-backlog_issue_id: 43
+backlogIssueId: 43
 layout: layout-pane.njk
 ---
 
