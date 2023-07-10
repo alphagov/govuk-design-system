@@ -3,7 +3,7 @@ title: Tabs
 description: Tabs can be a helpful way of letting users quickly switch between related information
 section: Components
 aliases:
-backlog_issue_id: 100
+backlogIssueId: 100
 layout: layout-pane.njk
 status: Experimental
 statusMessage: This component is currently experimental because <a class="govuk-link" href="#next-steps">more research</a> is needed to validate it.

@@ -3,7 +3,7 @@ title: Footer
 description: The footer provides copyright, licensing and other information about your service and department
 section: Components
 aliases: privacy notice, accessibility statement, terms and conditions
-backlog_issue_id: 96
+backlogIssueId: 96
 layout: layout-pane.njk
 ---
 

@@ -4,7 +4,7 @@ description: Tell users about the cookies you’re setting on their device and l
 section: Patterns
 theme: Pages
 aliases: Privacy settings, Cookie settings, tracking settings
-backlog_issue_id: 13
+backlogIssueId: 13
 layout: layout-pane.njk
 status: Experimental
 statusMessage: This pattern is currently experimental because more research is needed to validate it.

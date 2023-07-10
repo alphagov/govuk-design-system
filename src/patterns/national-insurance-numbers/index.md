@@ -4,7 +4,7 @@ description: Ask users to provide their National Insurance number
 section: Patterns
 theme: Ask users for…
 aliases:
-backlog_issue_id: 54
+backlogIssueId: 54
 layout: layout-pane.njk
 ---
 

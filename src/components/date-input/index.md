@@ -3,7 +3,7 @@ title: Date input
 description: Use the date input component to help users enter a memorable date
 section: Components
 aliases:
-backlog_issue_id: 42
+backlogIssueId: 42
 layout: layout-pane.njk
 ---
 

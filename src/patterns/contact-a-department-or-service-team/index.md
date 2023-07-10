@@ -4,7 +4,7 @@ description: Contact a department or service team
 section: Patterns
 theme: Help users to…
 aliases:
-backlog_issue_id: 10
+backlogIssueId: 10
 layout: layout-pane.njk
 status: Experimental
 statusMessage: This pattern is currently experimental because <a class="govuk-link" href="#next-steps">more research</a> is needed to validate it.

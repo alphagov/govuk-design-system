@@ -3,7 +3,7 @@ title: Accordion
 description: The accordion component lets users show and hide sections of related content on a page
 section: Components
 aliases:
-backlog_issue_id: 1
+backlogIssueId: 1
 layout: layout-pane.njk
 status: Experimental
 statusMessage: This component is currently experimental because <a class="govuk-link" href="#known-issues-and-gaps">more research</a> is needed to validate it.

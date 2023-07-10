@@ -4,7 +4,7 @@ description: Give users a way to quickly and safely exit a service, website or a
 section: Patterns
 theme: Help users to…
 aliases:
-backlog_issue_id: 213
+backlogIssueId: 213
 layout: layout-pane.njk
 status: Experimental
 statusMessage: This component is currently experimental. You'll need to do your own research to decide whether to use this pattern and add the <a class="govuk-link" href="/components/exit-this-page/">Exit this page</a> component to your service.

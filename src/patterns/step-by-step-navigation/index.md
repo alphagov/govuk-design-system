@@ -4,7 +4,7 @@ description: A starting point for your digital service on GOV.UK
 section: Patterns
 theme: Pages
 aliases:
-backlog_issue_id: 171
+backlogIssueId: 171
 layout: layout-pane.njk
 ---
 

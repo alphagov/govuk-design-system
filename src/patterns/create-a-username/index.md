@@ -4,7 +4,7 @@ description: Help users to create a unique and memorable username to sign into a
 section: Patterns
 theme: Help users to…
 aliases:
-backlog_issue_id: 63
+backlogIssueId: 63
 layout: layout-pane.njk
 ---
 

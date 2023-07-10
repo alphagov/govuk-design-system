@@ -4,7 +4,7 @@ description: Let users know they’ve completed a transaction
 section: Patterns
 theme: Pages
 aliases: completion pages, receipts, finish pages
-backlog_issue_id: 40
+backlogIssueId: 40
 layout: layout-pane.njk
 ---
 

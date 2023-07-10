@@ -3,7 +3,7 @@ title: Table
 description: Use the table component to make information easier to compare and scan for users
 section: Components
 aliases:
-backlog_issue_id: 61
+backlogIssueId: 61
 layout: layout-pane.njk
 ---
 

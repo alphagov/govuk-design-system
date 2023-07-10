@@ -4,7 +4,7 @@ description: Help users provide an address
 section: Patterns
 theme: Ask users for…
 aliases:
-backlog_issue_id: 31
+backlogIssueId: 31
 layout: layout-pane.njk
 ---
 

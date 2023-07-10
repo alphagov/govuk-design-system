@@ -4,7 +4,7 @@ description: How to ask users for their bank details
 section: Patterns
 theme: Ask users for…
 aliases:
-backlog_issue_id: 149
+backlogIssueId: 149
 layout: layout-pane.njk
 status: Experimental
 statusMessage: This pattern is currently experimental because <a class="govuk-link" href="#next-steps">more research</a> is needed to validate it.

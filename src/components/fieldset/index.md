@@ -3,7 +3,7 @@ title: Fieldset
 description: Use the fieldset component to group related form inputs
 section: Components
 aliases:
-backlog_issue_id: 48
+backlogIssueId: 48
 layout: layout-pane.njk
 ---
 

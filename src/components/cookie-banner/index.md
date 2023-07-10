@@ -3,7 +3,7 @@ title: Cookie banner
 description: Allow users to accept or reject cookies which are not essential to making your service work.
 section: Components
 aliases: Cookies banner, consent banner, GDPR banner, tracking banner, analytics banner
-backlog_issue_id: 12
+backlogIssueId: 12
 layout: layout-pane.njk
 status: Experimental
 statusMessage: This component is currently experimental because <a class="govuk-link" href="#research-on-this-component">more research</a> is needed to validate it.

@@ -3,7 +3,7 @@ title: Exit this page
 description: Give users a way to quickly and safely exit a service, website or application.
 section: Components
 aliases:
-backlog_issue_id: 213
+backlogIssueId: 213
 layout: layout-pane.njk
 status: Experimental
 statusMessage: This component is currently experimental. <a class="govuk-link" href="#known-issues-and-gaps">You'll need to do your own research</a> to decide whether to add this component to your service.

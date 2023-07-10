@@ -4,7 +4,6 @@ description: Check the answers users give to make sure they’re valid - and if 
 section: Patterns
 theme: Help users to…
 aliases:
-backlog_issue_id:
 layout: layout-pane.njk
 ---
 

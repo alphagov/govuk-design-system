@@ -3,7 +3,7 @@ title: Summary list
 description: Use the summary list to summarise information, for example, a user’s responses at the end of a form.
 section: Components
 aliases: Summary card
-backlog_issue_id: 182
+backlogIssueId: 182
 layout: layout-pane.njk
 ---
 

@@ -4,7 +4,7 @@ description: This is a page that tells someone a service is unavailable. It shou
 section: Patterns
 theme: Pages
 aliases: '503'
-backlog_issue_id: 124
+backlogIssueId: 124
 layout: layout-pane.njk
 status: Experimental
 statusMessage: This pattern is currently experimental because <a class="govuk-link" href="#research-on-this-pattern">more research</a> is needed to validate it.

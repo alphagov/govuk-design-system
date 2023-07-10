@@ -3,7 +3,7 @@ title: Notification banner
 description: Use a notification banner to tell the user about something they need to know about, but that’s not directly related to the page content
 section: Components
 aliases: alert, warning, success message, important message, flash message
-backlog_issue_id: 2
+backlogIssueId: 2
 layout: layout-pane.njk
 status: Experimental
 statusMessage: This component is currently experimental because <a class="govuk-link" href="#research-on-this-component">more research</a> is needed to validate it.
