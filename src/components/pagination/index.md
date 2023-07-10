@@ -44,7 +44,7 @@ Use 'Previous' and 'Next' links to let users navigate through a small number of 
 
 {{ example({group: "components", item: "pagination", example: "labels", html: true, nunjucks: true }) }}
 
-### Add link labels to describe pages 
+### Add link labels to describe pages
 
 You can use link labels to give more context:
 
@@ -69,7 +69,7 @@ For smaller screens, show page numbers for:
 For larger screens, show page numbers for:
 
 - the current page
-- at least one page immediately before and after the current page 
+- at least one page immediately before and after the current page
 - first and last pages
 
 Use ellipses (…) to replace any skipped pages. For example:

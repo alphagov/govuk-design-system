@@ -43,9 +43,9 @@ List all the cookies you’re using in the service. Divide the list into:
 - analytics cookies - cookies that let you collect analytics data to use within your own organisation
 - any other types of cookie you’re using
 
-You should also identify if each cookie is set on the server or client. 
+You should also identify if each cookie is set on the server or client.
 
-The result of your audit will guide your cookie policy and how the service should use a cookies page and cookie banner. 
+The result of your audit will guide your cookie policy and how the service should use a cookies page and cookie banner.
 
 The [cookie banner component](/components/cookie-banner/) shows several options for using a cookie banner for services that:
 

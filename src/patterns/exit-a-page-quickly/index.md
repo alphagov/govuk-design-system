@@ -55,7 +55,7 @@ This pattern is not a complete solution to eliminating all possible risk to the 
 
 Create a page to explain Exit this page to users.
 
-You must show this page after the start point of your service, but before the page where the user will see the Exit this page button for the first time. 
+You must show this page after the start point of your service, but before the page where the user will see the Exit this page button for the first time.
 
 On longer services, you might need more than one interruption page.
 

@@ -84,7 +84,7 @@ Examples of unnecessary ‘images of text’ include images that show:
 - the contents of a post from social media
 - an excerpt from a document
 - key facts from a slide presentation
- 
+
 If you do choose to use the image anyway, include written content nearby that conveys the same meaning and context.
 
 [Find out more about ‘images of text’](https://www.w3.org/WAI/tutorials/images/textual/#image-of-styled-text-with-decorative-effect) on the Web Accessibility Initiative website.
@@ -114,7 +114,7 @@ Text in an image is considered essential if:
 
 In other words, you cannot give this same information as written content or any other way.
 
-Essential text must be relevant to the information you need to give. 
+Essential text must be relevant to the information you need to give.
 
 Examples of essential text in images might be:
 - a portion of the Magna Carta, showing its handwriting style
@@ -142,7 +142,7 @@ Be sure to follow the guidance on this page about writing good alt text.
 
 If it's not practical to avoid using an image that contains text (and replace it with written content), there’s a few other ways to replace it.
 
-You should consider these options even if the text in an image is essential, as it will make your information easier to read for users that customise the way they look at web pages. 
+You should consider these options even if the text in an image is essential, as it will make your information easier to read for users that customise the way they look at web pages.
 
 In any case, make sure that the contrast ratio of text colour and all portions of the image that overlap the text [meets level AA of the Web Content Accessibility Guidelines (WCAG 2.1)](https://www.w3.org/TR/WCAG21/#contrast-minimum).
 
