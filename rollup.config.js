@@ -17,7 +17,7 @@ module.exports = defineConfig({
 
       // Output plugins
       plugins: [
-        terser({
+        process.env.NODE_ENV !== 'development' && terser({
           format: { comments: false },
 
           // Include sources content from source maps
