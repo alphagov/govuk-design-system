@@ -1,11 +1,12 @@
 const commonjs = require('@rollup/plugin-commonjs')
 const resolve = require('@rollup/plugin-node-resolve')
 const terser = require('@rollup/plugin-terser')
+const { defineConfig } = require('rollup')
 
 /**
- * @type {import('rollup').MergedRollupOptions[]}
+ * Rollup config
  */
-module.exports = [{
+module.exports = defineConfig({
   output: [
     {
       entryFileNames: '[name].js',
@@ -38,4 +39,4 @@ module.exports = [{
     resolve(),
     commonjs()
   ]
-}]
+})
