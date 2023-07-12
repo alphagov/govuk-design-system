@@ -15,8 +15,8 @@
   "scripts": {
     "postinstall": "npm ls --depth=0",
     "build": "cross-env NODE_ENV=production node tasks/build.js",
-    "serve": "cross-env NODE_ENV=production node tasks/serve.js",
-    "start": "cross-env NODE_ENV=development node tasks/start.js",
+    "serve": "cross-env NODE_ENV=production DEBUG=build* node tasks/serve.js",
+    "start": "cross-env NODE_ENV=development DEBUG=build* node tasks/start.js",
     "pretest": "npm run build",
     "test": "npm run lint && jest",
     "lint": "npm run lint:js && npm run lint:scss && npm run lint:html --ignore-scripts",
