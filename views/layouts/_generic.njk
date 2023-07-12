@@ -5,7 +5,7 @@
 {% block pageTitle %}{{ title }} – GOV.UK Design System{% endblock %}
 
 {% block head %}
-  {% if not ENVIRONMENT or ENVIRONMENT != 'production' %}
+  {% if env("NODE_ENV") != 'production' %}
     <meta name="robots" content="noindex, nofollow">
   {% endif %}
   <meta name="og:title" content="{{title}}">
