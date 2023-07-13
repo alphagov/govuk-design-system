@@ -30,7 +30,7 @@ jobs:
 
     steps:
       - name: Pre-deploy checks
-        uses: actions/github-script@v6
+        uses: actions/github-script@v6.4.1
         with:
           script: |
 
@@ -51,7 +51,7 @@ jobs:
             }
 
       - name: Download build artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v3.0.2
         with:
           name: build
 
