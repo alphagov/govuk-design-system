@@ -64,6 +64,11 @@ A walkthrough for how to import the GOV.UK Design System into a MVC project and 
 [GOV.UK Design System for ASP.NET MVC and Umbraco](https://github.com/thepensionsregulator/govuk-frontend-aspnetcore-extensions) -
 GOV.UK Frontend ASP.NET tag helpers, and Umbraco CMS support.
 
+### Laravel / PHP
+
+[GOV.UK Laravel](https://github.com/AnthonyEdmonds/govuk-laravel) -
+GOV.UK Frontend blade components and classes for Laravel 10 and PHP 8.2.
+
 ### Node.js
 
 Guidance on [building a hapi service using GOV.UK Frontend](https://github.com/DEFRA/hapi-govuk-examples).
