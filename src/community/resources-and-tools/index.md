@@ -81,7 +81,7 @@ GOV.UK Frontend WTForms Widgets.
 ### PHP / Laravel
 
 [GOV.UK Laravel](https://github.com/AnthonyEdmonds/govuk-laravel) -
-A collection of GOV.UK Frontend Laravel blade components, validation rules, and page building templates and helpers.
+A collection of GOV.UK Frontend Laravel Blade components, validation rules, page building templates, and PHP helpers.
 
 ### R
 
