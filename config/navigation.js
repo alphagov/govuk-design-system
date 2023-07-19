@@ -30,8 +30,8 @@ module.exports = [
     includeInSearch: true
   },
   {
-    label: 'Accessibility guidance',
-    url: 'accessibility-guidance',
+    label: 'Accessibility',
+    url: 'accessibility',
     includeInSearch: true
   }
 ]

@@ -1,11 +1,10 @@
 ---
 title: Accessibility strategy
 description: Outlines the current principles and work needed to improve the accessibility of the GOV.UK Design System
-section: Community
-theme: How we work
+section: Accessibility
 layout: layout-pane.njk
 showPageNav: true
-order: 9
+order: 2
 ---
 
 This accessibility strategy outlines the current principles and work needed to improve the accessibility of the GOV.UK Design System.
