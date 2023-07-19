@@ -210,7 +210,7 @@ Do not write alt text that:
 
 In March 2023, we updated this page to help teams make decisions on when to use images in their services.
 
-In particular, we added a section on how to use images and ensure they’re as accessible as possible — giving advice to teams on how to meet or surpass relevant WCAG AA guidelines, in line with the [GOV.UK Design System accessibility strategy](/community/accessibility-strategy/).
+In particular, we added a section on how to use images and ensure they’re as accessible as possible — giving advice to teams on how to meet or surpass relevant WCAG AA guidelines, in line with the [GOV.UK Design System accessibility strategy](/accessibility/accessibility-strategy/).
 
 To help us validate that this guidance is useful and practical for service teams across government, we want to hear from you.
 

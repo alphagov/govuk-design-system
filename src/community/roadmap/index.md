@@ -21,7 +21,7 @@ We recently:
 
 - released [GOV.UK Frontend v4.7.0](https://github.com/alphagov/govuk-frontend/releases/tag/v4.7.0), which includes visual improvements to some components
 - published the [Exit this page](/components/exit-this-page/) component
-- published an [accessibility strategy for the GOV.UK Design System](/community/accessibility-strategy/)
+- published an [accessibility strategy for the GOV.UK Design System](/accessibility/accessibility-strategy/)
 - released the [Summary card](https://github.com/alphagov/govuk-design-system-backlog/issues/210) variant
 - made it easier to find information about [contributing and the community](/community/)
 - improved [how contributions are prioritised](https://design-system.service.gov.uk/community/upcoming-components-patterns/)

@@ -16,7 +16,7 @@ This page explains how the team works to ensure these products are accessible.
 
 The GOV.UK Prototype Kit website has a separate accessibility statement. [Read the GOV.UK Prototype Kit website accessibility statement](https://prototype-kit.service.gov.uk/docs/accessibility).
 
-[Read our accessibility strategy](https://design-system.service.gov.uk/community/accessibility-strategy/) for more information on our current principles and work needed to improve the accessibility of the GOV.UK Design System.
+[Read our accessibility strategy](https://design-system.service.gov.uk/accessibility/accessibility-strategy/) for more information on our current principles and work needed to improve the accessibility of the GOV.UK Design System.
 
 [Read about how we test components using accessibility acceptance criteria](https://github.com/alphagov/govuk-frontend/blob/main/docs/contributing/test-components-using-accessibility-acceptance-criteria.md).
 
