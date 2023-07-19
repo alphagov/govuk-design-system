@@ -100,9 +100,13 @@ Ask the user to enter this code. Use the same pattern and time limit as when cre
 
 If they follow the ‘Not received a text message?’ link, show them a page allowing them to request a new code. Do not reveal the mobile number you sent it to.
 
-<strong class="govuk-tag govuk-tag--grey">
-WCAG 2.2
-</strong>
+<p>
+  {{ govukTag({
+    text: "WCAG 2.2",
+    classes: "govuk-tag--grey"
+  })}}
+</p>
+
 You must include the link for 'Not received a text message?’ so the user can find help in a consistent way. This is to comply with WCAG 2.2 - [3.2.6 Consistent Help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html).
 
 {{ example({group: "patterns", item: "confirm-a-phone-number", example: "resend", html: true, nunjucks: true, open: false}) }}
