@@ -14,7 +14,7 @@ This guidance is for government teams that build online services. [To find infor
 
 {% from "_example.njk" import example %}
 
-{{ example({group: "patterns", item: "bank-details", example: "default", html: true, nunjucks: true, open: false, size: "xl"}) }}
+{{ example({group: "patterns", item: "bank-details", example: "default", html: true, nunjucks: true, open: false, size: "xl", loading: "eager"}) }}
 
 ## When to use this pattern
 

@@ -14,7 +14,7 @@ This guidance is for government teams that build online services. [To find infor
 
 Ask users to provide their National Insurance number.
 
-{{ example({group: "patterns", item: "national-insurance-numbers", example: "default", html: true, nunjucks: true, open: false, size: "s"}) }}
+{{ example({group: "patterns", item: "national-insurance-numbers", example: "default", html: true, nunjucks: true, open: false, size: "s", loading: "eager"}) }}
 
 ## When to use this pattern
 

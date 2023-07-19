@@ -14,7 +14,7 @@ statusMessage: This pattern is currently experimental because <a class="govuk-li
 
 A page not found tells someone we cannot find the page they were trying to view. They are also known as 404 pages.
 
-{{ example({group: "patterns", item: "page-not-found-pages", example: "default", html: true, nunjucks: true, size: "xl"}) }}
+{{ example({group: "patterns", item: "page-not-found-pages", example: "default", html: true, nunjucks: true, size: "xl", loading: "eager"}) }}
 
 ## When to use this pattern
 

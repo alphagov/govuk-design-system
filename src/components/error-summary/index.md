@@ -13,7 +13,7 @@ Use this component at the top of a page to summarise any errors a user has made.
 
 When a user makes an error, you must show both an error summary and an [error message](/components/error-message/) next to each answer that contains an error.
 
-{{ example({group: "components", item: "error-summary", example: "default", html: true, nunjucks: true, open: false, size: "s"}) }}
+{{ example({group: "components", item: "error-summary", example: "default", html: true, nunjucks: true, open: false, size: "s", loading: "eager" }) }}
 
 ## When to use this component
 

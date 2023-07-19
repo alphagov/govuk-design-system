@@ -13,7 +13,7 @@ Use the back link component to help users go back to the previous page in a mult
 
 Although browsers have a back button, some sites break when you use it - so many users avoid it, instead of losing their progress in a service. Also, not all users are aware of the back button.
 
-{{ example({group: "components", item: "back-link", example: "default", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "components", item: "back-link", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 

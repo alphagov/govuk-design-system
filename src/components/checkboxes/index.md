@@ -11,7 +11,7 @@ layout: layout-pane.njk
 
 Let users select one or more options by using the checkboxes component.
 
-{{ example({group: "components", item: "checkboxes", example: "default", html: true, nunjucks: true, open: false, size: "m" }) }}
+{{ example({group: "components", item: "checkboxes", example: "default", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}
 
 ## When to use this component
 

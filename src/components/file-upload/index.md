@@ -13,7 +13,7 @@ This guidance is for government teams that build online services. [To find infor
 
 Help users select and upload a file.
 
-{{ example({group: "components", item: "file-upload", example: "default", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "components", item: "file-upload", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 

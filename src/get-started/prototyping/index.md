@@ -36,7 +36,7 @@ There are 2 ways to use components in the Design System. You can either use HTML
 
 You can copy the code from the HTML or Nunjucks tabs below any examples:
 
-{{ example({group: "components", item: "button", example: "default", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "components", item: "button", example: "default", html: true, nunjucks: true, open: false, loading: "eager"}) }}
 
 ## Using Nunjucks macros
 

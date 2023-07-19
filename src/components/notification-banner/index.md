@@ -13,7 +13,7 @@ statusMessage: This component is currently experimental because <a class="govuk-
 
 Use a notification banner to tell the user about something they need to know about, but that’s not directly related to the page content.
 
-{{ example({group: "components", item: "notification-banner", example: "default", html: true, nunjucks: true, open: false, size: "s"}) }}
+{{ example({group: "components", item: "notification-banner", example: "default", html: true, nunjucks: true, open: false, size: "s", loading: "eager" }) }}
 
 ## When to use this component
 

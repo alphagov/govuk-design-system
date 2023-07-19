@@ -15,7 +15,7 @@ This guidance is for government teams that build online services. [To find infor
 
 Tell the user a service is unavailable on purpose. These are also known as 503 and shutter pages.
 
-{{ example({group: "patterns", item: "service-unavailable-pages", example: "default", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "patterns", item: "service-unavailable-pages", example: "default", html: true, nunjucks: true, open: false, loading: "eager"}) }}
 
 ## When to use this pattern
 

@@ -11,7 +11,7 @@ layout: layout-pane.njk
 
 Help users navigate forwards and backwards through a series of pages. For example, search results or guidance that's divided into multiple website pages — like [the GOV.UK mainstream guide format](https://prototype-kit.service.gov.uk/docs/templates/mainstream-guide).
 
-{{ example({group: "components", item: "pagination", example: "default", html: true, nunjucks: true }) }}
+{{ example({group: "components", item: "pagination", example: "default", html: true, nunjucks: true, loading: "eager" }) }}
 
 ## When to use this component
 

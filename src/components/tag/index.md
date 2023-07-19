@@ -11,7 +11,7 @@ layout: layout-pane.njk
 
 Use the tag component to show users the status of something.
 
-{{ example({group: "components", item: "tag", example: "default", html: true, nunjucks: true, open: false }) }}
+{{ example({group: "components", item: "tag", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 

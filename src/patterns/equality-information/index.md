@@ -37,7 +37,7 @@ For a service that people are likely to use on a one-off basis:
 - place equality questions between the [‘check your answers’ page](/patterns/check-answers/) and the [confirmation page](/patterns/confirmation-pages/)
 - show the user a screen explaining why you’re asking the questions and what you’ll do with the information they provide, like the one below
 
-{{ example({group: "patterns", item: "equality-information", example: "explainer-screen", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "patterns", item: "equality-information", example: "explainer-screen", html: true, nunjucks: true, open: false, loading: "eager"}) }}
 
 #### Longer term services
 

@@ -13,7 +13,7 @@ This guidance is for government teams that build online services. [To find infor
 
 {% from "_example.njk" import example %}
 
-{{ example({group: "patterns", item: "telephone-numbers", example: "default", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "patterns", item: "telephone-numbers", example: "default", html: true, nunjucks: true, open: false, loading: "eager"}) }}
 
 ## When to use this pattern
 

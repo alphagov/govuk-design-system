@@ -11,7 +11,7 @@ layout: layout-pane.njk
 
 Use a summary list to summarise information, for example, a user’s responses at the end of a form.
 
-{{ example({group: "components", item: "summary-list", example: "default", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "components", item: "summary-list", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 
