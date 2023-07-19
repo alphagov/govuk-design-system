@@ -52,14 +52,7 @@ Send and ask the user for the security code when they:
 
 When the user creates an account, ask for their password and mobile phone number at the same time. Make it clear if you'll only use the mobile number for sending security codes, or if you'll also use it for other purposes.
 
-<p>
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "govuk-tag--grey"
-  })}}
-</p>
-
-You must include the link for 'Not received a text message?’ so the user can find help in a consistent way. This is to comply with WCAG 2.2 - [3.2.6 Consistent Help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html).
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> You must include the link for 'Not received a text message?’ so the user can find help in a consistent way. This is to comply with WCAG 2.2 - [3.2.6 Consistent Help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html).
 
 After saving the user’s password and mobile phone number, verify their mobile phone number by sending them a text message with a 5 digit code in this format:
 
@@ -100,14 +93,7 @@ Ask the user to enter this code. Use the same pattern and time limit as when cre
 
 If they follow the ‘Not received a text message?’ link, show them a page allowing them to request a new code. Do not reveal the mobile number you sent it to.
 
-<p>
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "govuk-tag--grey"
-  })}}
-</p>
-
-You must include the link for 'Not received a text message?’ so the user can find help in a consistent way. This is to comply with WCAG 2.2 - [3.2.6 Consistent Help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html).
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> You must include the link for 'Not received a text message?’ so the user can find help in a consistent way. This is to comply with WCAG 2.2 - [3.2.6 Consistent Help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html).
 
 {{ example({group: "patterns", item: "confirm-a-phone-number", example: "resend", html: true, nunjucks: true, open: false}) }}
 
