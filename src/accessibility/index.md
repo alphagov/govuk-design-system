@@ -28,52 +28,52 @@ Make sure there is expertise within your organisation by advocating for people t
 ### Section on community (support groups)
 
 ### Components affected
-The following components have WCAG 2.2 AA changes included. You must check if your service needs amending to align with these changes:
+The following components have WCAG 2.2 AA changes included. You must check if your service needs amending to align with these changes. We’ve made WCAG guideline changes for:
 
-- [Accordion](/components/accordion/) - WCAG guideline change for Focus not obscured (Minimum)
-- [Back link](/components/back-link/) - WCAG guideline change for Redundant entry
-- [Button](/components/button/) - WCAG guideline change for Focus appearance
-- [Breadcrumbs](/components/breadcrumbs/)  - WCAG guideline change for Focus appearance
-- [Checkboxes](/components/checkboxes/) - WCAG guideline change for Focus appearance
-- [Date input](/components/date-input/) - WCAG guideline change for Focus appearance
-- [Details](/components/details/) - WCAG guideline change for Focus appearance and Focus not obscured (Minimum)
-- [Error summary](/components/error-summary/) - WCAG guideline change for Target size (Minimum)
-- [Error message](/components/error-message/) - WCAG guideline change for Redundant entry
-- [Exit this page](/components/exit-this-page/) - WCAG guideline change for Focus not obscured (Minimum)
-- [Fieldset](/components/fieldset/) - WCAG guideline change for Focus appearance
-- [Header](/components/header/) - WCAG guideline change for Focus not obscured (Minimum) and Focus appearance
-- [Panel](/components/panel/) - WCAG guideline change for Focus appearance and Focus not obscured (Minimum)
-- [Pagination](/components/pagination/) - WCAG guideline change for Focus appearance
-- [Radios](/components/radios/) - WCAG guideline change for Focus appearance
-- [Select](/components/select/) - WCAG guideline change for Focus not obscured (Minimum)
-- [Skip link](/components/skip-link/) - WCAG guideline change for Focus appearance
-- [Summary list](/components/summary-list/)  - WCAG guideline change for Redundant entry
-- [Tabs](/components/tabs/) - WCAG guideline change for Focus not obscured (Minimum)
-- [Tag](/components/tag/) - WCAG guideline change for Target size (Minimum)
+- [Accordion](/components/accordion/) - Focus not obscured (Minimum)
+- [Back link](/components/back-link/) - Redundant entry
+- [Button](/components/button/) - Focus appearance
+- [Breadcrumbs](/components/breadcrumbs/)  - Focus appearance
+- [Checkboxes](/components/checkboxes/) - Focus appearance
+- [Date input](/components/date-input/) - Focus appearance
+- [Details](/components/details/) - Focus appearance and Focus not obscured (Minimum)
+- [Error summary](/components/error-summary/) - Target size (Minimum)
+- [Error message](/components/error-message/) - Redundant entry
+- [Exit this page](/components/exit-this-page/) - Focus not obscured (Minimum)
+- [Fieldset](/components/fieldset/) - Focus appearance
+- [Header](/components/header/) - Focus not obscured (Minimum) and Focus appearance
+- [Panel](/components/panel/) - Focus appearance and Focus not obscured (Minimum)
+- [Pagination](/components/pagination/) - Focus appearance
+- [Radios](/components/radios/) - Focus appearance
+- [Select](/components/select/) - Focus not obscured (Minimum)
+- [Skip link](/components/skip-link/) - Focus appearance
+- [Summary list](/components/summary-list/)  - Redundant entry
+- [Tabs](/components/tabs/) - Focus not obscured (Minimum)
+- [Tag](/components/tag/) - Target size (Minimum)
 
 ### Patterns affected
-The following patterns have WCAG 2.2 AA changes included. You must check if your service needs amending to align with these changes:
+The following patterns have WCAG 2.2 AA changes included. You must check if your service needs amending to align with these changes. We’ve made WCAG guideline changes for:
 
-- [Addresses](/patterns/addresses/) - WCAG guideline change for redundant entry
-- [Bank details](/patterns/bank-details/) - WCAG guideline change for redundant entry
-- [Check answers](/patterns/check-answers/) - WCAG guideline change for redundant entry
-- [Confirm an email address](/patterns/confirm-an-email-address/) - WCAG guideline change for accessible authentication and redundant entry
-- [Confirm a phone number](/patterns/confirm-a-phone-number/)  - WCAG guideline changes for accessible authentication and redundant entry
-- [Confirmation pages](/patterns/confirmation-pages/) - WCAG guideline change for focus appearance and redundant entry
-- [Contact a department or service team](/patterns/contact-a-department-or-service-team/) - WCAG guideline change for consistent help
-- [Cookies page](/patterns/cookies-page/) - WCAG guideline change for redundant entry
-- [Create a username](/patterns/create-a-username/) - WCAG guideline change for accessible authentication and redundant entry
-- [Dates](/patterns/dates/) - WCAG guideline change for redundant entry
-- [Email addresses](/patterns/email-addresses/) - WCAG guideline change for accessible authentication and redundant entry
-- [Equality information](/patterns/equality-information/) - WCAG guideline change for redundant entry
-- [Names](/patterns/names/) - WCAG guideline change for redundant entry
-- [National Insurance numbers](/patterns/national-insurance-numbers/) - WCAG guideline change for accessible authentication and redundant entry
-- [Passwords](/patterns/passwords/) - WCAG guideline change for accessible authentication and target size
-- [Payment card details](/patterns/payment-card-details/) - WCAG guideline change for redundant entry
-- [Recover from validation errors](/patterns/validation/) - WCAG guideline change for consistent help
-- [Start using a service](/patterns/start-using-a-service/) - WCAG guideline change for focus appearance
-- [Step by step navigation](/patterns/step-by-step-navigation/) - WCAG guideline change for focus appearance, focus not obscured (minimum) and target size (minimum)
-- [Task list pages](/patterns/task-list-pages/) - WCAG guideline changes for dragging movements, focus appearance and redundant entry
-- [Telephone numbers](/patterns/telephone-numbers/) - WCAG guideline change for redundant entry
-- [There is a problem with the service pages](/patterns/problem-with-the-service-pages/) - WCAG guideline change for redundant entry
-- [Question pages](/patterns/question-pages/) - WCAG guideline change for redundant entry
+- [Addresses](/patterns/addresses/) - Redundant entry
+- [Bank details](/patterns/bank-details/) - Redundant entry
+- [Check answers](/patterns/check-answers/) - Redundant entry
+- [Confirm an email address](/patterns/confirm-an-email-address/) - Accessible authentication and Redundant entry
+- [Confirm a phone number](/patterns/confirm-a-phone-number/)  - Accessible authentication and Redundant entry
+- [Confirmation pages](/patterns/confirmation-pages/) - Focus appearance and Redundant entry
+- [Contact a department or service team](/patterns/contact-a-department-or-service-team/) - Consistent help
+- [Cookies page](/patterns/cookies-page/) - Redundant entry
+- [Create a username](/patterns/create-a-username/) - Accessible authentication and Redundant entry
+- [Dates](/patterns/dates/) - Redundant entry
+- [Email addresses](/patterns/email-addresses/) - Accessible authentication and redundant entry
+- [Equality information](/patterns/equality-information/) - Redundant entry
+- [Names](/patterns/names/) - Redundant entry
+- [National Insurance numbers](/patterns/national-insurance-numbers/) - Accessible authentication and Redundant entry
+- [Passwords](/patterns/passwords/) - Accessible authentication and Target size
+- [Payment card details](/patterns/payment-card-details/) - Redundant entry
+- [Recover from validation errors](/patterns/validation/) - Consistent help
+- [Start using a service](/patterns/start-using-a-service/) - Focus appearance
+- [Step by step navigation](/patterns/step-by-step-navigation/) - Focus appearance, Focus not obscured (minimum) and Target size (minimum)
+- [Task list pages](/patterns/task-list-pages/) - Dragging movements, Focus appearance and Redundant entry
+- [Telephone numbers](/patterns/telephone-numbers/) - Redundant entry
+- [There is a problem with the service pages](/patterns/problem-with-the-service-pages/) - Redundant entry
+- [Question pages](/patterns/question-pages/) - Redundant entry
