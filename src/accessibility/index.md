@@ -5,19 +5,19 @@ description:  tbd
 showSubNav: true
 ---
 
-Our work to make the GOV.UK Design System meet public sector accessibility regulations is a continuous and iterative process. You must make sure your service is accessible. We outline our approach on our accessibility strategy.
+Our work to make the GOV.UK Design System meet public sector accessibility regulations is a continuous and iterative process. You must [make sure your service is accessible](https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps). We outline our approach on our [accessibility strategy](/accessibility/accessibility-strategy/).
 
 Using the GOV.UK Design System in a service does not immediately make that service accessible. You’ll need additional research, design, development and testing work to make sure your service is accessible, even when using accessible styles, components and patterns.
 
 ## Accessibility changes to the Design System to meet WCAG 2.2
-W3C owns and manages WCAG 2.2. The Design System team has updated the Design System to meet WCAG 2.2. Any guidance we provide is to make sure teams using the Design System are aware of the changes and can make the necessary adjustments to their services.
+W3C [owns and manages WCAG 2.2](https://www.w3.org/TR/WCAG22/). The Design System team has updated the Design System to meet WCAG 2.2. Any guidance we provide is to make sure teams using the Design System are aware of the changes and can make the necessary adjustments to their services.
 
 ### Make sure your service meets the new WCAG 2.2 criteria
 WCAG 2.2 is expected to be completed and published between July and September 2023. You’ll need to comply with the new criteria no later than one year after WCAG 2.2 is published.
 
 ### What you need to do
-1. Revisit the GDS guidance on what accessibility is and why your service needs to invest in it
-2. Read the What’s new in WCAG 2.2 draft to understand the new criteria your service will need to comply with
+1. Revisit the [GDS guidance](https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps) on what accessibility is and why your service needs to invest in it
+2. Read the [What’s new in WCAG 2.2 draft](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/) to understand the new criteria your service will need to comply with
 3. Ask your wider organisation for support to prepare for the work needed to meet WCAG 2.2
 4. Review the lists on this page of affected components and patterns in the Design System
 5. Assess your service to see how many affected components and patterns are in use
