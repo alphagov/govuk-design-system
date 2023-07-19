@@ -1,10 +1,10 @@
 ---
-title: Accessibility
+title: Accessibility statement
 description: accessibility in the GOV.UK Design System
 layout: layout-single-page-prose.njk
 ---
 
-# Accessibility
+# Accessibility statement
 
 The GOV.UK Design System team at the Government Digital Service (<abbr>GDS</abbr>) maintains the following products:
 
