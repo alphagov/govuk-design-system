@@ -11,7 +11,7 @@ layout: layout-pane.njk
 
 Make a page easier to scan by letting users reveal more detailed information only if they need it.
 
-{{ example({group: "components", item: "details", example: "default", html: true, nunjucks: true, open: false, size: "s"}) }}
+{{ example({group: "components", item: "details", example: "default", html: true, nunjucks: true, open: false, size: "s", loading: "eager" }) }}
 
 ## When to use this component
 

@@ -21,6 +21,11 @@ Example.prototype.init = function () {
     return
   }
 
+  // Initialise asap for eager iframes or browsers which don't support lazy loading
+  if (!('loading' in $module) || $module.loading !== 'lazy') {
+    return iFrameResize({ scrolling: 'omit' }, $module)
+  }
+
   $module.addEventListener('load', function () {
     try {
       iFrameResize({ scrolling: 'omit' }, $module)

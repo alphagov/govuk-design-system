@@ -32,7 +32,7 @@ To set the contents of a label as the page heading, you need to put the `<label>
 
 You then need to apply classes to the `<label>` to make it look like a heading.
 
-{{ example({group: "get-started", item: "labels-legends-headings", example: "label-h1", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "get-started", item: "labels-legends-headings", example: "label-h1", html: true, nunjucks: true, open: false, loading: "eager"}) }}
 
 ## Legends as page headings
 

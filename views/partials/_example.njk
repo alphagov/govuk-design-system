@@ -37,7 +37,7 @@
           example in a new tab
         </a>
       </div>
-      <iframe title="{{ exampleTitle + " example" }}" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable{% if params.size %} app-example__frame--{{ params.size }}{% endif %}" src="{{ exampleURL }}" loading="lazy"></iframe>
+      <iframe title="{{ exampleTitle + " example" }}" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable{% if params.size %} app-example__frame--{{ params.size }}{% endif %}" src="{{ exampleURL }}" loading="{% if params.loading %}{{ params.loading }}{% else %}lazy{% endif %}"></iframe>
     </div>
   {% endif %}
 

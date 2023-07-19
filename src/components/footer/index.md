@@ -13,7 +13,7 @@ layout: layout-pane.njk
 
 The footer provides copyright, licensing and other information about your service.
 
-{{ example({group: "components", item: "footer", example: "default", id: "default-1", html: true, nunjucks: true, open: false, size: "m"}) }}
+{{ example({group: "components", item: "footer", example: "default", id: "default-1", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}
 
 If you use the page template, you'll also get the footer without having to add it, as it's included by default. However, if you want to customise the default footer, read the [page template guidance about customising components](/styles/page-template/#changing-template-content).
 

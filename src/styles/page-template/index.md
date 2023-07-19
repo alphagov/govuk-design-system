@@ -28,7 +28,7 @@ You’ll get updates to the page template when we update GOV.UK Frontend.
 
 This example shows the minimum required for a GOV.UK page.
 
-{{ example({group: "styles", item: "page-template", example: "default", customCode: true, html: true, nunjucks: true, open: false, size: "l" }) }}
+{{ example({group: "styles", item: "page-template", example: "default", customCode: true, html: true, nunjucks: true, open: false, size: "l", loading: "eager"}) }}
 
 ## Customised page template
 

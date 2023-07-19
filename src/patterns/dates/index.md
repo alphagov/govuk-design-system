@@ -33,7 +33,7 @@ In some cases you might need users to pick a date from a given selection.
 
 Ask for memorable dates, like dates of birth, using the [date input](/components/date-input/) component.
 
-{{ example({group: "patterns", item: "dates", example: "default", html: true, nunjucks: true, open: false, size: "s"}) }}
+{{ example({group: "patterns", item: "dates", example: "default", html: true, nunjucks: true, open: false, size: "s", loading: "eager"}) }}
 
 ### Asking for dates from documents and cards
 

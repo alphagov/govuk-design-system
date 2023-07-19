@@ -20,7 +20,7 @@ Help users provide an address using one of the following:
 
 ## Multiple text inputs
 
-{{ example({group: "patterns", item: "addresses", example: "multiple", html: true, nunjucks: true, open: true, size: "xl"}) }}
+{{ example({group: "patterns", item: "addresses", example: "multiple", html: true, nunjucks: true, open: true, size: "xl", loading: "eager"}) }}
 
 ### When to use multiple text inputs
 

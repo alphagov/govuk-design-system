@@ -15,7 +15,7 @@ Use the fieldset component to group related form inputs.
 
 Use the fieldset component when you need to show a relationship between multiple form inputs. For example, you may need to group a set of text inputs into a single fieldset when [asking for an address](/patterns/addresses/).
 
-{{ example({group: "components", item: "fieldset", example: "address-group", html: true, nunjucks: true, open: false, size: "xl"}) }}
+{{ example({group: "components", item: "fieldset", example: "address-group", html: true, nunjucks: true, open: false, size: "xl", loading: "eager" }) }}
 
 If you’re using the examples or macros for [radios](/components/radios/), [checkboxes](/components/checkboxes/) or [date input](/components/date-input/), the fieldset will already be included.
 

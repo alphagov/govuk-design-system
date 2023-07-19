@@ -11,7 +11,7 @@ layout: layout-pane.njk
 
 Use the phase banner component to show users your service is still being worked on.
 
-{{ example({group: "components", item: "phase-banner", example: "default", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "components", item: "phase-banner", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 

@@ -12,7 +12,7 @@ layout: layout-pane.njk
 
 Check that a user has access to a specific mobile phone number using a security code sent by text message.
 
-{{ example({group: "patterns", item: "confirm-a-phone-number", example: "default", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "patterns", item: "confirm-a-phone-number", example: "default", html: true, nunjucks: true, open: false, loading: "eager"}) }}
 
 ## When to use this pattern
 

@@ -9,7 +9,7 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 
-{{ example({group: "components", item: "inset-text", example: "default", html: true, nunjucks: true, size: "s"}) }}
+{{ example({group: "components", item: "inset-text", example: "default", html: true, nunjucks: true, size: "s", loading: "eager" }) }}
 
 ## When to use this component
 

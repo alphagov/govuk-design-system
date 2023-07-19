@@ -13,7 +13,7 @@ statusMessage: This component is currently experimental because <a class="govuk-
 
 The tabs component lets users navigate between related sections of content, displaying one section at a time.
 
-{{ example({group: "components", item: "tabs", example: "default", html: true, nunjucks: true, open: false, size: "xl"}) }}
+{{ example({group: "components", item: "tabs", example: "default", html: true, nunjucks: true, open: false, size: "xl", loading: "eager" }) }}
 
 ## When to use this component
 

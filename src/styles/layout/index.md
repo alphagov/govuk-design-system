@@ -24,7 +24,7 @@ The default maximum page width is 1020px, but you can make it wider if your cont
 
 ### Two-thirds
 
-{{ example({group: "styles", item: "layout", example: "common-two-thirds", html: true, open: true, size: "m"}) }}
+{{ example({group: "styles", item: "layout", example: "common-two-thirds", html: true, open: true, size: "m", loading: "eager"}) }}
 
 ### Two-thirds and one-third
 

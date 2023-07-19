@@ -13,7 +13,7 @@ statusMessage: This component is currently experimental because <a class="govuk-
 
 Allow users to accept or reject cookies which are not essential to making your service work.
 
-{{ example({group: "components", item: "cookie-banner", example: "default", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "components", item: "cookie-banner", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 

@@ -11,7 +11,7 @@ layout: layout-pane.njk
 
 The breadcrumbs component helps users to understand where they are within a website’s structure and move between levels.
 
-{{ example({group: "components", item: "breadcrumbs", example: "default", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "components", item: "breadcrumbs", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 

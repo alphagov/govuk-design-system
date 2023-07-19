@@ -11,7 +11,7 @@ layout: layout-pane.njk
 
 Use the date input component to help users enter a memorable date or one they can easily look up.
 
-{{ example({group: "components", item: "date-input", example: "default", html: true, nunjucks: true, open: false, size: "s"}) }}
+{{ example({group: "components", item: "date-input", example: "default", html: true, nunjucks: true, open: false, size: "s", loading: "eager" }) }}
 
 ## When to use this component
 
