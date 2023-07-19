@@ -9,8 +9,27 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
 
 Check that a user has access to a specific mobile phone number using a security code sent by text message.
+
+{% set wcagCallout %}
+  <p>
+    {{ govukTag({
+      text: "WCAG 2.2",
+      classes: "govuk-tag--grey"
+    })}}
+  </p>
+
+  Read the Web Content Accessibility Guidelines (WCAG) 2.2 changes on this page to make sure your service complies with the latest guidance.
+
+  [See the full list of components and patterns affected.](/accessibility/)
+{% endset %}
+
+{{ govukInsetText({
+  html: wcagCallout
+})}}
 
 {{ example({group: "patterns", item: "confirm-a-phone-number", example: "default", html: true, nunjucks: true, open: false}) }}
 
@@ -21,14 +40,6 @@ Ask the user to enter a security code when they need to sign in or complete a hi
 Asking the user to enter a security code sent to their mobile phone gives a second layer of security over a [password](/patterns/passwords/).
 
 You can ask for a security code every time a user signs in or only once per device, depending on the risk level of your service.
-
-<div class="govuk-inset-text">
-<strong class="govuk-tag govuk-tag--grey">
-WCAG 2.2
-</strong>
-<p>Read the Web Content Accessibility Guidelines (WCAG) 2.2 changes on this page to make sure your service complies with the latest guidance.</p>
-<p><a href="/accessibility/" class="govuk-link">See the full list of components and patterns affected.</a></p>
-</div>
 
 ## How it works
 
@@ -41,9 +52,13 @@ Send and ask the user for the security code when they:
 
 When the user creates an account, ask for their password and mobile phone number at the same time. Make it clear if you'll only use the mobile number for sending security codes, or if you'll also use it for other purposes.
 
-<strong class="govuk-tag govuk-tag--grey">
-WCAG 2.2
-</strong>
+<p>
+  {{ govukTag({
+    text: "WCAG 2.2",
+    classes: "govuk-tag--grey"
+  })}}
+</p>
+
 You must include the link for 'Not received a text message?’ so the user can find help in a consistent way. This is to comply with WCAG 2.2 - [3.2.6 Consistent Help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html).
 
 After saving the user’s password and mobile phone number, verify their mobile phone number by sending them a text message with a 5 digit code in this format:
