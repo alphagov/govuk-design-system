@@ -44,7 +44,7 @@ const OptionsTable = {
             }
             detailsText.style.display = ''
 
-            window.setTimeout(function () {
+            window.setTimeout(() => {
               tabLink.focus()
               if (isLinkToTable) document.querySelector(hash).scrollIntoView()
             }, 0)

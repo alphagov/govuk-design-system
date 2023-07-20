@@ -27,7 +27,7 @@ Copy.prototype.copyAction = function () {
     }).on('success', function (e) {
       e.trigger.textContent = 'Code copied'
       e.clearSelection()
-      setTimeout(function () {
+      setTimeout(() => {
         e.trigger.textContent = 'Copy code'
       }, 5000)
     })
