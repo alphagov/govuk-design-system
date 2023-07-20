@@ -23,7 +23,7 @@ const TRACKING_LIVE_ID = '116229859-1'
 
 /* Users can (dis)allow different groups of cookies. */
 const COOKIE_CATEGORIES = {
-  analytics: ['_ga', '_gid', '_gat_UA-' + TRACKING_PREVIEW_ID, '_gat_UA-' + TRACKING_LIVE_ID],
+  analytics: ['_ga', '_gid', `_gat_UA-${TRACKING_PREVIEW_ID}`, `_gat_UA-${TRACKING_LIVE_ID}`],
   /* Essential cookies
    *
    * Essential cookies cannot be deselected, but we want our cookie code to
@@ -157,13 +157,13 @@ export function resetCookies () {
     // Initialise analytics if allowed
     if (cookieType === 'analytics' && options[cookieType]) {
       // Enable GA if allowed
-      window['ga-disable-UA-' + TRACKING_PREVIEW_ID] = false
-      window['ga-disable-UA-' + TRACKING_LIVE_ID] = false
+      window[`ga-disable-UA-${TRACKING_PREVIEW_ID}`] = false
+      window[`ga-disable-UA-${TRACKING_LIVE_ID}`] = false
       Analytics()
     } else {
       // Disable GA if not allowed
-      window['ga-disable-UA-' + TRACKING_PREVIEW_ID] = true
-      window['ga-disable-UA-' + TRACKING_LIVE_ID] = true
+      window[`ga-disable-UA-${TRACKING_PREVIEW_ID}`] = true
+      window[`ga-disable-UA-${TRACKING_LIVE_ID}`] = true
     }
 
     if (!options[cookieType]) {
@@ -220,7 +220,7 @@ function userAllowsCookie (cookieName) {
 }
 
 function getCookie (name) {
-  const nameEQ = name + '='
+  const nameEQ = `${name}=`
   const cookies = document.cookie.split(';')
   for (let i = 0, len = cookies.length; i < len; i++) {
     let cookie = cookies[i]
@@ -239,14 +239,14 @@ function setCookie (name, value, options) {
     if (typeof options === 'undefined') {
       options = {}
     }
-    let cookieString = name + '=' + value + '; path=/'
+    let cookieString = `${name}=${value}; path=/`
     if (options.days) {
       const date = new Date()
       date.setTime(date.getTime() + (options.days * 24 * 60 * 60 * 1000))
-      cookieString = cookieString + '; expires=' + date.toGMTString()
+      cookieString = `${cookieString}; expires=${date.toGMTString()}`
     }
     if (document.location.protocol === 'https:') {
-      cookieString = cookieString + '; Secure'
+      cookieString = `${cookieString}; Secure`
     }
     document.cookie = cookieString
   }
@@ -258,8 +258,8 @@ function deleteCookie (name) {
     // If a cookie was set with a specified domain, it needs to be specified when deleted
     // If a cookie wasn't set with the domain attribute, it shouldn't be there when deleted
     // You can't tell if a cookie was set with a domain attribute or not, so try both options
-    document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/'
-    document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;domain=' + window.location.hostname + ';path=/'
-    document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;domain=.' + window.location.hostname + ';path=/'
+    document.cookie = `${name}=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/`
+    document.cookie = `${name}=;expires=Thu, 01 Jan 1970 00:00:00 GMT;domain=${window.location.hostname};path=/`
+    document.cookie = `${name}=;expires=Thu, 01 Jan 1970 00:00:00 GMT;domain=.${window.location.hostname};path=/`
   }
 }

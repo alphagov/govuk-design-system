@@ -51,7 +51,7 @@ AppTabs.prototype.onClick = function (event) {
   const isTabAlreadyOpen = $currentTab.getAttribute('aria-expanded') === 'true'
 
   if (!$panel) {
-    throw new Error('Invalid example ID given: ' + panelId)
+    throw new Error(`Invalid example ID given: ${panelId}`)
   }
 
   // If the panel that's been called is already open, close it.
@@ -154,7 +154,7 @@ AppTabs.prototype.getMobileTab = function (panelId) {
 AppTabs.prototype.getDesktopTab = function (panelId) {
   const $desktopTabContainer = this.$module.querySelector('.app-tabs')
   if ($desktopTabContainer) {
-    return $desktopTabContainer.querySelector('[aria-controls="' + panelId + '"]')
+    return $desktopTabContainer.querySelector(`[aria-controls="${panelId}"]`)
   }
   return null
 }

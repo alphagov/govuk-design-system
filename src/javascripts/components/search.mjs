@@ -89,7 +89,7 @@ Search.prototype.handleOnConfirm = function (result) {
     return
   }
   trackConfirm(searchQuery, searchResults, result)
-  window.location.href = '/' + permalink
+  window.location.href = `/${permalink}`
 }
 
 Search.prototype.inputValueTemplate = function (result) {
