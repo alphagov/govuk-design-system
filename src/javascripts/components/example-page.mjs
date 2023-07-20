@@ -4,16 +4,19 @@ class ExamplePage {
   }
 
   init () {
-    const $module = this.$module
-
-    if (!$module) {
+    if (!this.$module) {
       return
     }
 
-    const $form = $module.querySelector('form[action="/form-handler"]')
+    /** @satisfies {HTMLFormElement | null} */
+    const $form = this.$module.querySelector('form[action="/form-handler"]')
     this.preventFormSubmission($form)
   }
 
+  /**
+   * @param {HTMLFormElement | null} $form - Form
+   * @returns {false | void} Returns false for examples without forms
+   */
   preventFormSubmission ($form) {
     // we should only have one form per example
     if (!$form) {
