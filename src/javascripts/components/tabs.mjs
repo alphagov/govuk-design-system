@@ -26,9 +26,9 @@ AppTabs.prototype.init = function () {
   this.enhanceMobileTabs()
 
   // Add bindings to desktop tabs
-  this.$desktopTabs.forEach(function ($tab) {
+  this.$desktopTabs.forEach(($tab) => {
     $tab.addEventListener('click', this.onClick.bind(this))
-  }.bind(this))
+  })
 
   // Reset all tabs and panels to closed state
   // We also add all our default ARIA goodness here
@@ -72,7 +72,7 @@ AppTabs.prototype.onClick = function (event) {
  */
 AppTabs.prototype.enhanceMobileTabs = function () {
   // Loop through mobile tabs...
-  this.$mobileTabs.forEach(function ($tab) {
+  this.$mobileTabs.forEach(($tab) => {
     // ...construct a button equivalent of each anchor...
     const $button = document.createElement('button')
     $button.setAttribute('aria-controls', $tab.getAttribute('aria-controls'))
@@ -85,7 +85,7 @@ AppTabs.prototype.enhanceMobileTabs = function () {
     // ...and replace the anchor with the button
     $tab.parentNode.appendChild($button)
     $tab.parentNode.removeChild($tab)
-  }.bind(this))
+  })
 
   // Replace the value of $mobileTabs with the new buttons
   this.$mobileTabs = this.$module.querySelectorAll('.js-tabs__heading button')
@@ -95,12 +95,12 @@ AppTabs.prototype.enhanceMobileTabs = function () {
  * Reset tabs and panels to closed state
  */
 AppTabs.prototype.resetTabs = function () {
-  this.$panels.forEach(function ($panel) {
+  this.$panels.forEach(($panel) => {
     // We don't want to hide the panel if there are no tabs present to show it
     if (!$panel.classList.contains('js-tabs__container--no-tabs')) {
       this.closePanel($panel.id)
     }
-  }.bind(this))
+  })
 }
 
 /**
@@ -140,7 +140,7 @@ AppTabs.prototype.closePanel = function (panelId) {
  */
 AppTabs.prototype.getMobileTab = function (panelId) {
   let result = null
-  this.$mobileTabs.forEach(function ($tab) {
+  this.$mobileTabs.forEach(($tab) => {
     if ($tab.getAttribute('aria-controls') === panelId) {
       result = $tab
     }

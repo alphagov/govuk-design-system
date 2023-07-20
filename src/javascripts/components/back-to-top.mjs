@@ -26,14 +26,10 @@ BackToTop.prototype.init = function () {
   let subNavIsIntersecting = false
   let subNavIntersectionRatio = 0
 
-  const observer = new window.IntersectionObserver(function (entries) {
+  const observer = new window.IntersectionObserver((entries) => {
     // Find the elements we care about from the entries
-    const footerEntry = entries.find(function (entry) {
-      return entry.target === $footer
-    })
-    const subNavEntry = entries.find(function (entry) {
-      return entry.target === $subNav
-    })
+    const footerEntry = entries.find((entry) => entry.target === $footer)
+    const subNavEntry = entries.find((entry) => entry.target === $subNav)
 
     // If there is an entry this means the element has changed so lets check if it's intersecting.
     if (footerEntry) {
@@ -58,7 +54,7 @@ BackToTop.prototype.init = function () {
     } else {
       this.$module.classList.remove('app-back-to-top--hidden')
     }
-  }.bind(this))
+  })
 
   observer.observe($footer)
   observer.observe($subNav)

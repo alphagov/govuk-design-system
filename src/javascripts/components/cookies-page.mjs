@@ -15,10 +15,10 @@ CookiesPage.prototype.init = function () {
   this.$cookieFormFieldsets = this.$cookieForm.querySelectorAll('.js-cookies-page-form-fieldset')
   this.$successNotification = this.$cookiePage.querySelector('.js-cookies-page-success')
 
-  this.$cookieFormFieldsets.forEach(function ($cookieFormFieldset) {
+  this.$cookieFormFieldsets.forEach(($cookieFormFieldset) => {
     this.showUserPreference($cookieFormFieldset, getConsentCookie())
     $cookieFormFieldset.removeAttribute('hidden')
-  }.bind(this))
+  })
 
   // Show submit button
   this.$cookieForm.querySelector('.js-cookies-form-button').removeAttribute('hidden')
@@ -32,12 +32,12 @@ CookiesPage.prototype.savePreferences = function (event) {
 
   const preferences = {}
 
-  this.$cookieFormFieldsets.forEach(function ($cookieFormFieldset) {
+  this.$cookieFormFieldsets.forEach(($cookieFormFieldset) => {
     const cookieType = this.getCookieType($cookieFormFieldset)
     const selectedItem = $cookieFormFieldset.querySelector(`input[name=${cookieType}]:checked`).value
 
     preferences[cookieType] = selectedItem === 'yes'
-  }.bind(this))
+  })
 
   // Save preferences to cookie and show success notification
   setConsentCookie(preferences)
