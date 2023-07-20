@@ -1,80 +1,82 @@
 import { getConsentCookie, setConsentCookie } from './cookie-functions.mjs'
 
-function CookiesPage ($module) {
-  this.$module = $module
-}
-
-CookiesPage.prototype.init = function () {
-  this.$cookiePage = this.$module
-
-  if (!this.$cookiePage) {
-    return
+class CookiesPage {
+  constructor ($module) {
+    this.$module = $module
   }
 
-  this.$cookieForm = this.$cookiePage.querySelector('.js-cookies-page-form')
-  this.$cookieFormFieldsets = this.$cookieForm.querySelectorAll('.js-cookies-page-form-fieldset')
-  this.$successNotification = this.$cookiePage.querySelector('.js-cookies-page-success')
+  init () {
+    this.$cookiePage = this.$module
 
-  this.$cookieFormFieldsets.forEach(($cookieFormFieldset) => {
-    this.showUserPreference($cookieFormFieldset, getConsentCookie())
-    $cookieFormFieldset.removeAttribute('hidden')
-  })
+    if (!this.$cookiePage) {
+      return
+    }
 
-  // Show submit button
-  this.$cookieForm.querySelector('.js-cookies-form-button').removeAttribute('hidden')
+    this.$cookieForm = this.$cookiePage.querySelector('.js-cookies-page-form')
+    this.$cookieFormFieldsets = this.$cookieForm.querySelectorAll('.js-cookies-page-form-fieldset')
+    this.$successNotification = this.$cookiePage.querySelector('.js-cookies-page-success')
 
-  this.$cookieForm.addEventListener('submit', (event) => this.savePreferences(event))
-}
+    this.$cookieFormFieldsets.forEach(($cookieFormFieldset) => {
+      this.showUserPreference($cookieFormFieldset, getConsentCookie())
+      $cookieFormFieldset.removeAttribute('hidden')
+    })
 
-CookiesPage.prototype.savePreferences = function (event) {
-  // Stop default form submission behaviour
-  event.preventDefault()
+    // Show submit button
+    this.$cookieForm.querySelector('.js-cookies-form-button').removeAttribute('hidden')
 
-  const preferences = {}
+    this.$cookieForm.addEventListener('submit', (event) => this.savePreferences(event))
+  }
 
-  this.$cookieFormFieldsets.forEach(($cookieFormFieldset) => {
+  savePreferences (event) {
+    // Stop default form submission behaviour
+    event.preventDefault()
+
+    const preferences = {}
+
+    this.$cookieFormFieldsets.forEach(($cookieFormFieldset) => {
+      const cookieType = this.getCookieType($cookieFormFieldset)
+      const selectedItem = $cookieFormFieldset.querySelector(`input[name=${cookieType}]:checked`).value
+
+      preferences[cookieType] = selectedItem === 'yes'
+    })
+
+    // Save preferences to cookie and show success notification
+    setConsentCookie(preferences)
+    this.showSuccessNotification()
+  }
+
+  showUserPreference ($cookieFormFieldset, preferences) {
     const cookieType = this.getCookieType($cookieFormFieldset)
-    const selectedItem = $cookieFormFieldset.querySelector(`input[name=${cookieType}]:checked`).value
+    let preference = false
 
-    preferences[cookieType] = selectedItem === 'yes'
-  })
+    if (cookieType && preferences && preferences[cookieType] !== undefined) {
+      preference = preferences[cookieType]
+    }
 
-  // Save preferences to cookie and show success notification
-  setConsentCookie(preferences)
-  this.showSuccessNotification()
-}
-
-CookiesPage.prototype.showUserPreference = function ($cookieFormFieldset, preferences) {
-  const cookieType = this.getCookieType($cookieFormFieldset)
-  let preference = false
-
-  if (cookieType && preferences && preferences[cookieType] !== undefined) {
-    preference = preferences[cookieType]
+    const radioValue = preference ? 'yes' : 'no'
+    const radio = $cookieFormFieldset.querySelector(`input[name=${cookieType}][value=${radioValue}]`)
+    radio.checked = true
   }
 
-  const radioValue = preference ? 'yes' : 'no'
-  const radio = $cookieFormFieldset.querySelector(`input[name=${cookieType}][value=${radioValue}]`)
-  radio.checked = true
-}
+  showSuccessNotification () {
+    this.$successNotification.removeAttribute('hidden')
 
-CookiesPage.prototype.showSuccessNotification = function () {
-  this.$successNotification.removeAttribute('hidden')
+    // Set tabindex to -1 to make the element focusable with JavaScript.
+    // GOV.UK Frontend will remove the tabindex on blur as the component doesn't
+    // need to be focusable after the user has read the text.
+    if (!this.$successNotification.getAttribute('tabindex')) {
+      this.$successNotification.setAttribute('tabindex', '-1')
+    }
 
-  // Set tabindex to -1 to make the element focusable with JavaScript.
-  // GOV.UK Frontend will remove the tabindex on blur as the component doesn't
-  // need to be focusable after the user has read the text.
-  if (!this.$successNotification.getAttribute('tabindex')) {
-    this.$successNotification.setAttribute('tabindex', '-1')
+    this.$successNotification.focus()
+
+    // scroll to the top of the page
+    window.scrollTo(0, 0)
   }
 
-  this.$successNotification.focus()
-
-  // scroll to the top of the page
-  window.scrollTo(0, 0)
-}
-
-CookiesPage.prototype.getCookieType = function ($cookieFormFieldset) {
-  return $cookieFormFieldset.id
+  getCookieType ($cookieFormFieldset) {
+    return $cookieFormFieldset.id
+  }
 }
 
 export default CookiesPage
