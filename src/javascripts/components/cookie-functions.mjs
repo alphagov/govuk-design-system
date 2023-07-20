@@ -276,7 +276,7 @@ function setCookie (name, value, options) {
     if (options.days) {
       const date = new Date()
       date.setTime(date.getTime() + (options.days * 24 * 60 * 60 * 1000))
-      cookieString = `${cookieString}; expires=${date.toGMTString()}`
+      cookieString = `${cookieString}; expires=${date.toUTCString()}`
     }
     if (document.location.protocol === 'https:') {
       cookieString = `${cookieString}; Secure`
