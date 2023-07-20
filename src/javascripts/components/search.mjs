@@ -60,12 +60,12 @@ Search.prototype.renderResults = function () {
   if (!searchIndex || !documentStore) {
     return searchCallback(searchResults)
   }
-  const lunrSearchResults = searchIndex.query(function (q) {
+  const lunrSearchResults = searchIndex.query((q) => {
     q.term(lunr.tokenizer(searchQuery), {
       wildcard: lunr.Query.wildcard.TRAILING
     })
   })
-  searchResults = lunrSearchResults.map(function (result) {
+  searchResults = lunrSearchResults.map((result) => {
     return documentStore[result.ref]
   })
   searchCallback(searchResults)
@@ -100,7 +100,7 @@ Search.prototype.inputValueTemplate = function (result) {
 
 Search.prototype.resultTemplate = function (result) {
   function startsWithFilter (words, query) {
-    return words.filter(function (word) {
+    return words.filter((word) => {
       return word.trim().toLowerCase().indexOf(query.toLowerCase()) === 0
     })
   }
@@ -121,7 +121,7 @@ Search.prototype.resultTemplate = function (result) {
       const aliases = result.aliases.split(', ')
 
       // Aliases containing words that start with the query
-      const matchedAliases = aliases.reduce(function (aliasesFiltered, alias) {
+      const matchedAliases = aliases.reduce((aliasesFiltered, alias) => {
         const aliasWordsMatched = startsWithFilter(alias.match(/\w+/g) || [], searchQuery)
 
         return aliasWordsMatched.length
@@ -177,9 +177,9 @@ Search.prototype.init = function () {
   })
 
   const searchIndexUrl = $module.getAttribute('data-search-index')
-  this.fetchSearchIndex(searchIndexUrl, function () {
+  this.fetchSearchIndex(searchIndexUrl, () => {
     this.renderResults()
-  }.bind(this))
+  })
 }
 
 export default Search

@@ -30,11 +30,11 @@ Navigation.prototype.setHiddenStates = function () {
       this.$nav.setAttribute('hidden', '')
     }
 
-    this.$navLinks.forEach(function ($navLink) {
+    this.$navLinks.forEach(($navLink) => {
       $navLink.setAttribute('hidden', '')
     })
 
-    this.$navButtons.forEach(function ($navButton) {
+    this.$navButtons.forEach(($navButton) => {
       $navButton.removeAttribute('hidden')
     })
 
@@ -42,11 +42,11 @@ Navigation.prototype.setHiddenStates = function () {
   } else if (this.mql === null || this.mql.matches) {
     this.$nav.removeAttribute('hidden')
 
-    this.$navLinks.forEach(function ($navLink) {
+    this.$navLinks.forEach(($navLink) => {
       $navLink.removeAttribute('hidden')
     })
 
-    this.$navButtons.forEach(function ($navButton) {
+    this.$navButtons.forEach(($navButton) => {
       $navButton.setAttribute('hidden', '')
     })
 
@@ -57,7 +57,7 @@ Navigation.prototype.setHiddenStates = function () {
 Navigation.prototype.setInitialAriaStates = function () {
   this.$navToggler.setAttribute('aria-expanded', 'false')
 
-  this.$navButtons.forEach(function ($button, index) {
+  this.$navButtons.forEach(($button, index) => {
     const $nextSubNav = $button.parentNode.querySelector(subNavJSClass)
 
     if ($nextSubNav) {
@@ -97,7 +97,7 @@ Navigation.prototype.bindUIEvents = function () {
     }
   }.bind(this))
 
-  $navButtons.forEach(function ($button) {
+  $navButtons.forEach(($button) => {
     $button.addEventListener('click', function (event) {
       const $nextSubNav = $button.parentNode.querySelector(subNavJSClass)
 
