@@ -27,7 +27,7 @@ AppTabs.prototype.init = function () {
 
   // Add bindings to desktop tabs
   this.$desktopTabs.forEach(($tab) => {
-    $tab.addEventListener('click', this.onClick.bind(this))
+    $tab.addEventListener('click', (event) => this.onClick(event))
   })
 
   // Reset all tabs and panels to closed state
@@ -80,8 +80,7 @@ AppTabs.prototype.enhanceMobileTabs = function () {
     $button.classList.add('app-tabs__heading-button')
     $button.innerHTML = $tab.innerHTML
     // ...bind controls...
-    $button.bindClick = this.onClick.bind(this)
-    $button.addEventListener('click', $button.bindClick)
+    $button.addEventListener('click', (event) => this.onClick(event))
     // ...and replace the anchor with the button
     $tab.parentNode.appendChild($button)
     $tab.parentNode.removeChild($tab)
