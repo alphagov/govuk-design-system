@@ -45,10 +45,10 @@ AppTabs.prototype.init = function () {
  */
 AppTabs.prototype.onClick = function (event) {
   event.preventDefault()
-  var $currentTab = event.target
-  var panelId = $currentTab.getAttribute('aria-controls')
-  var $panel = this.getPanel(panelId)
-  var isTabAlreadyOpen = $currentTab.getAttribute('aria-expanded') === 'true'
+  const $currentTab = event.target
+  const panelId = $currentTab.getAttribute('aria-controls')
+  const $panel = this.getPanel(panelId)
+  const isTabAlreadyOpen = $currentTab.getAttribute('aria-expanded') === 'true'
 
   if (!$panel) {
     throw new Error('Invalid example ID given: ' + panelId)
@@ -74,7 +74,7 @@ AppTabs.prototype.enhanceMobileTabs = function () {
   // Loop through mobile tabs...
   this.$mobileTabs.forEach(function ($tab) {
     // ...construct a button equivalent of each anchor...
-    var $button = document.createElement('button')
+    const $button = document.createElement('button')
     $button.setAttribute('aria-controls', $tab.getAttribute('aria-controls'))
     $button.setAttribute('data-track', $tab.getAttribute('data-track'))
     $button.classList.add('app-tabs__heading-button')
@@ -107,8 +107,8 @@ AppTabs.prototype.resetTabs = function () {
  * Open a panel and set the associated controls and styles
  */
 AppTabs.prototype.openPanel = function (panelId) {
-  var $mobileTab = this.getMobileTab(panelId)
-  var $desktopTab = this.getDesktopTab(panelId)
+  const $mobileTab = this.getMobileTab(panelId)
+  const $desktopTab = this.getDesktopTab(panelId)
 
   // Panels can exist without associated tabs—for example if there's a single
   // panel that's open by default—so make sure they actually exist before use
@@ -126,8 +126,8 @@ AppTabs.prototype.openPanel = function (panelId) {
  * Close a panel and set the associated controls and styles
  */
 AppTabs.prototype.closePanel = function (panelId) {
-  var $mobileTab = this.getMobileTab(panelId)
-  var $desktopTab = this.getDesktopTab(panelId)
+  const $mobileTab = this.getMobileTab(panelId)
+  const $desktopTab = this.getDesktopTab(panelId)
   $mobileTab.setAttribute('aria-expanded', 'false')
   $desktopTab.setAttribute('aria-expanded', 'false')
   $mobileTab.parentNode.classList.remove('app-tabs__heading--current')
@@ -139,7 +139,7 @@ AppTabs.prototype.closePanel = function (panelId) {
  * Helper function to get a specific mobile tab by the associated panel ID
  */
 AppTabs.prototype.getMobileTab = function (panelId) {
-  var result = null
+  let result = null
   this.$mobileTabs.forEach(function ($tab) {
     if ($tab.getAttribute('aria-controls') === panelId) {
       result = $tab
@@ -152,7 +152,7 @@ AppTabs.prototype.getMobileTab = function (panelId) {
  * Helper function to get a specific desktop tab by the associated panel ID
  */
 AppTabs.prototype.getDesktopTab = function (panelId) {
-  var $desktopTabContainer = this.$module.querySelector('.app-tabs')
+  const $desktopTabContainer = this.$module.querySelector('.app-tabs')
   if ($desktopTabContainer) {
     return $desktopTabContainer.querySelector('[aria-controls="' + panelId + '"]')
   }

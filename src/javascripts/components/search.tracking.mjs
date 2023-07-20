@@ -19,8 +19,8 @@ export function trackConfirm (searchQuery, searchResults, result) {
     return
   }
 
-  var searchTerm = stripPossiblePII(searchQuery)
-  var products =
+  const searchTerm = stripPossiblePII(searchQuery)
+  const products =
     searchResults
       .map(function (result, key) {
         return {
@@ -56,11 +56,11 @@ export function trackSearchResults (searchQuery, searchResults) {
     return
   }
 
-  var searchTerm = stripPossiblePII(searchQuery)
+  const searchTerm = stripPossiblePII(searchQuery)
 
-  var hasResults = (searchResults.length > 0)
+  const hasResults = (searchResults.length > 0)
   // Impressions is Google Analytics lingo for what people have seen.
-  var impressions = searchResults.map(function (result, key) {
+  const impressions = searchResults.map(function (result, key) {
     return {
       name: result.title,
       category: result.section,

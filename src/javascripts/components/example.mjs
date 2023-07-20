@@ -16,7 +16,7 @@ function Example ($module) {
 }
 
 Example.prototype.init = function () {
-  var $module = this.$module
+  const $module = this.$module
   if (!$module) {
     return
   }
