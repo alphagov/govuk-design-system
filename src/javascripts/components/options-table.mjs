@@ -33,7 +33,7 @@ const OptionsTable = {
         optionsDetailsElement.parentNode.removeAttribute('hidden')
         optionsDetailsElement.open = true
 
-        window.setTimeout(function () {
+        window.setTimeout(() => {
           tabLink.focus()
           if (isLinkToTable) document.querySelector(hash).scrollIntoView()
         }, 0)
