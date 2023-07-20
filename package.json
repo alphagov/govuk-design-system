@@ -19,13 +19,14 @@
     "start": "cross-env NODE_ENV=development DEBUG=build* node tasks/start.js",
     "pretest": "npm run build",
     "test": "npm run lint && jest",
-    "lint": "npm run lint:editorconfig && npm run lint:prettier && npm run lint:js && npm run lint:scss && npm run lint:html --ignore-scripts",
+    "lint": "npm run lint:editorconfig && npm run lint:prettier && npm run lint:js && npm run lint:types && npm run lint:scss && npm run lint:html --ignore-scripts",
     "prelint:html": "npm run build",
     "lint:editorconfig": "editorconfig-checker",
     "lint:html": "html-validate \"deploy/public/**/index.html\"",
     "lint:js": "eslint --cache --cache-location .cache/eslint --cache-strategy content --color --ignore-path .gitignore \"**/*.{cjs,js,md,mjs}\"",
     "lint:prettier": "prettier --cache --cache-location .cache/prettier --cache-strategy content --check \"**/*.{cjs,js,json,md,mjs,scss,yaml,yml}\"",
     "lint:scss": "stylelint \"**/*.{md,scss}\"",
+    "lint:types": "tsc --build tsconfig.json",
     "check-links": "hyperlink --canonicalroot https://design-system.service.gov.uk/ --internal --recursive deploy/public/sitemap.xml | tee check-links.log | tap-mocha-reporter min"
   },
   "dependencies": {
@@ -97,7 +98,17 @@
     "stylelint": "^15.10.3",
     "stylelint-config-gds": "^1.0.0",
     "stylelint-order": "^6.0.3",
-    "tap-mocha-reporter": "^5.0.4"
+    "tap-mocha-reporter": "^5.0.4",
+    "typescript": "^5.2.2"
+  },
+  "optionalDependencies": {
+    "@jest/environment": "^29.7.0",
+    "@types/browser-sync": "^2.27.1",
+    "@types/jest": "^29.5.5",
+    "@types/jest-axe": "^3.5.6",
+    "@types/node": "^20.8.0",
+    "@types/nunjucks": "^3.2.4",
+    "@types/slug": "^5.0.5"
   },
   "engines": {
     "node": "^18.12.0",
