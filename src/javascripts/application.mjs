@@ -1,3 +1,5 @@
+import { initAll } from 'govuk-frontend'
+
 import Analytics from './components/analytics.mjs'
 import BackToTop from './components/back-to-top.mjs'
 import CookieBanner from './components/cookie-banner.mjs'
@@ -10,6 +12,9 @@ import Navigation from './components/navigation.mjs'
 import OptionsTable from './components/options-table.mjs'
 import Search from './components/search.mjs'
 import AppTabs from './components/tabs.mjs'
+
+// Initialise GOV.UK Frontend
+initAll()
 
 // Initialise cookie banner
 var $cookieBanner = document.querySelector('[data-module="govuk-cookie-banner"]')
