@@ -36,7 +36,11 @@ module.exports = {
             alphabetize: { order: 'asc' },
             'newlines-between': 'always'
           }
-        ]
+        ],
+
+        // Automatically use template strings
+        'no-useless-concat': 'error',
+        'prefer-template': 'error'
       }
     },
     {
