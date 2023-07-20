@@ -1,37 +1,41 @@
 import ClipboardJS from 'clipboard'
 
-function Copy($module) {
-  this.$module = $module
-}
-
-Copy.prototype.init = function () {
-  const $module = this.$module
-  if (!$module) {
-    return
+class Copy {
+  constructor($module) {
+    this.$module = $module
+    this.$button = null
   }
-  const $button = document.createElement('button')
-  $button.className = 'app-copy-button js-copy-button'
-  $button.setAttribute('aria-live', 'assertive')
-  $button.textContent = 'Copy code'
 
-  $module.insertAdjacentElement('beforebegin', $button)
-  this.copyAction()
-}
-Copy.prototype.copyAction = function () {
-  // Copy to clipboard
-  try {
-    new ClipboardJS('.js-copy-button', {
-      target: (trigger) => trigger.nextElementSibling
-    }).on('success', (event) => {
-      event.trigger.textContent = 'Code copied'
-      event.clearSelection()
-      setTimeout(() => {
-        event.trigger.textContent = 'Copy code'
-      }, 5000)
-    })
-  } catch (err) {
-    if (err) {
-      console.log(err.message)
+  init() {
+    if (!this.$module) {
+      return
+    }
+
+    this.$button = document.createElement('button')
+    this.$button.className = 'app-copy-button'
+    this.$button.setAttribute('aria-live', 'assertive')
+    this.$button.textContent = 'Copy code'
+
+    this.$module.insertAdjacentElement('beforebegin', this.$button)
+    this.copyAction()
+  }
+
+  copyAction() {
+    // Copy to clipboard
+    try {
+      new ClipboardJS(this.$button, {
+        target: (trigger) => trigger.nextElementSibling
+      }).on('success', (event) => {
+        this.$button.textContent = 'Code copied'
+        event.clearSelection()
+        setTimeout(() => {
+          this.$button.textContent = 'Copy code'
+        }, 5000)
+      })
+    } catch (err) {
+      if (err) {
+        console.log(err.message)
+      }
     }
   }
 }
