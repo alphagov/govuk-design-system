@@ -29,7 +29,9 @@ CookiesPage.prototype.init = function () {
     .querySelector('.js-cookies-form-button')
     .removeAttribute('hidden')
 
-  this.$cookieForm.addEventListener('submit', this.savePreferences.bind(this))
+  this.$cookieForm.addEventListener('submit', (event) =>
+    this.savePreferences(event)
+  )
 }
 
 CookiesPage.prototype.savePreferences = function (event) {
