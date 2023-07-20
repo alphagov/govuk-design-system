@@ -16,8 +16,8 @@ ExamplePage.prototype.preventFormSubmission = function ($form) {
   if (!$form) {
     return false
   }
-  $form.addEventListener('submit', function (e) {
-    e.preventDefault()
+  $form.addEventListener('submit', (event) => {
+    event.preventDefault()
   })
 }
 
