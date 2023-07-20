@@ -1,11 +1,11 @@
 import * as CookieFunctions from './cookie-functions.mjs'
 
-var cookieBannerAcceptSelector = '.js-cookie-banner-accept'
-var cookieBannerRejectSelector = '.js-cookie-banner-reject'
-var cookieBannerHideButtonSelector = '.js-cookie-banner-hide'
-var cookieMessageSelector = '.js-cookie-banner-message'
-var cookieConfirmationAcceptSelector = '.js-cookie-banner-confirmation-accept'
-var cookieConfirmationRejectSelector = '.js-cookie-banner-confirmation-reject'
+const cookieBannerAcceptSelector = '.js-cookie-banner-accept'
+const cookieBannerRejectSelector = '.js-cookie-banner-reject'
+const cookieBannerHideButtonSelector = '.js-cookie-banner-hide'
+const cookieMessageSelector = '.js-cookie-banner-message'
+const cookieConfirmationAcceptSelector = '.js-cookie-banner-confirmation-accept'
+const cookieConfirmationRejectSelector = '.js-cookie-banner-confirmation-reject'
 
 function CookieBanner($module) {
   this.$module = $module
@@ -34,7 +34,7 @@ CookieBanner.prototype.init = function () {
 
   // Show the cookie banner to users who have not consented or have an
   // outdated consent cookie
-  var currentConsentCookie = CookieFunctions.getConsentCookie()
+  const currentConsentCookie = CookieFunctions.getConsentCookie()
 
   if (
     !currentConsentCookie ||

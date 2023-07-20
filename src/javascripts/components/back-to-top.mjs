@@ -14,25 +14,25 @@ BackToTop.prototype.init = function () {
     return this.$module.classList.remove('app-back-to-top--hidden')
   }
 
-  var $footer = document.querySelector('.app-footer')
-  var $subNav = document.querySelector('.app-subnav')
+  const $footer = document.querySelector('.app-footer')
+  const $subNav = document.querySelector('.app-subnav')
 
   // Check if there is anything to observe
   if (!$footer || !$subNav) {
     return
   }
 
-  var footerIsIntersecting = false
-  var subNavIsIntersecting = false
-  var subNavIntersectionRatio = 0
+  let footerIsIntersecting = false
+  let subNavIsIntersecting = false
+  let subNavIntersectionRatio = 0
 
-  var observer = new window.IntersectionObserver(
+  const observer = new window.IntersectionObserver(
     function (entries) {
       // Find the elements we care about from the entries
-      var footerEntry = entries.find(function (entry) {
+      const footerEntry = entries.find(function (entry) {
         return entry.target === $footer
       })
-      var subNavEntry = entries.find(function (entry) {
+      const subNavEntry = entries.find(function (entry) {
         return entry.target === $subNav
       })
 
