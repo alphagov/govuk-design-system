@@ -17,36 +17,36 @@ class OptionsTable {
       }
 
       if (exampleName) {
-        const tabLink = document.querySelector(`a[href="#${exampleName}-nunjucks"]`)
-        const tabHeading = tabLink ? tabLink.parentNode : null
-        const optionsDetailsElement = document.getElementById(`options-${exampleName}-details`)
+        const $tabLink = document.querySelector(`a[href="#${exampleName}-nunjucks"]`)
+        const $tabHeading = $tabLink ? $tabLink.parentNode : null
+        const $optionsDetailsElement = document.getElementById(`options-${exampleName}-details`)
 
-        if (tabHeading && optionsDetailsElement) {
-          const tabsElement = optionsDetailsElement.parentNode
-          const detailsSummary = optionsDetailsElement.querySelector('.govuk-details__summary')
-          const detailsText = optionsDetailsElement.querySelector('.govuk-details__text')
+        if ($tabHeading && $optionsDetailsElement) {
+          const $tabsElement = $optionsDetailsElement.parentNode
+          const $detailsSummary = $optionsDetailsElement.querySelector('.govuk-details__summary')
+          const $detailsText = $optionsDetailsElement.querySelector('.govuk-details__text')
 
-          if (detailsSummary && detailsText) {
-            tabLink.setAttribute('aria-expanded', 'true')
-            tabHeading.className += ' app-tabs__item--current'
-            tabsElement.removeAttribute('hidden')
+          if ($detailsSummary && $detailsText) {
+            $tabLink.setAttribute('aria-expanded', 'true')
+            $tabHeading.className += ' app-tabs__item--current'
+            $tabsElement.removeAttribute('hidden')
 
-            optionsDetailsElement.setAttribute('open', 'open')
+            $optionsDetailsElement.setAttribute('open', 'open')
 
             // If the browser does not natively support the <details> element
             // the polyfill included with the Details component adds ARIA
             // attributes and explicit display styles that we need to keep in
             // sync with the open attribute.
-            if (detailsSummary.hasAttribute('aria-expanded')) {
-              detailsSummary.setAttribute('aria-expanded', 'true')
+            if ($detailsSummary.hasAttribute('aria-expanded')) {
+              $detailsSummary.setAttribute('aria-expanded', 'true')
             }
-            if (detailsText.hasAttribute('aria-hidden')) {
-              detailsText.setAttribute('aria-hidden', false)
+            if ($detailsText.hasAttribute('aria-hidden')) {
+              $detailsText.setAttribute('aria-hidden', false)
             }
-            detailsText.style.display = ''
+            $detailsText.style.display = ''
 
             window.setTimeout(() => {
-              tabLink.focus()
+              $tabLink.focus()
               if (isLinkToTable) document.querySelector(hash).scrollIntoView()
             }, 0)
           }

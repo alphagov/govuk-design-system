@@ -154,13 +154,12 @@ class Search {
   }
 
   init () {
-    const $module = this.$module
-    if (!$module) {
+    if (!this.$module) {
       return
     }
 
     accessibleAutocomplete({
-      element: $module,
+      element: this.$module,
       id: 'app-site-search__input',
       cssNamespace: 'app-site-search',
       displayMenu: 'overlay',
@@ -176,14 +175,14 @@ class Search {
       tNoResults: function () { return statusMessage }
     })
 
-    const $input = $module.querySelector('.app-site-search__input')
+    const $input = this.$module.querySelector('.app-site-search__input')
 
     // Ensure if the user stops using the search that we do not send tracking events
     $input.addEventListener('blur', () => {
       clearTimeout(inputDebounceTimer)
     })
 
-    const searchIndexUrl = $module.getAttribute('data-search-index')
+    const searchIndexUrl = this.$module.getAttribute('data-search-index')
     this.fetchSearchIndex(searchIndexUrl, () => {
       this.renderResults()
     })

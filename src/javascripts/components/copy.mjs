@@ -6,9 +6,7 @@ class Copy {
   }
 
   init () {
-    const $module = this.$module
-
-    if (!$module) {
+    if (!this.$module) {
       return
     }
 
@@ -17,7 +15,7 @@ class Copy {
     $button.setAttribute('aria-live', 'assertive')
     $button.textContent = 'Copy code'
 
-    $module.insertAdjacentElement('beforebegin', $button)
+    this.$module.insertAdjacentElement('beforebegin', $button)
     this.copyAction()
   }
 

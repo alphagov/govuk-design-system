@@ -18,20 +18,18 @@ class Example {
   }
 
   init () {
-    const $module = this.$module
-
-    if (!$module) {
+    if (!this.$module) {
       return
     }
 
     // Initialise asap for eager iframes or browsers which don't support lazy loading
-    if (!('loading' in $module) || $module.loading !== 'lazy') {
-      return iFrameResize({ scrolling: 'omit' }, $module)
+    if (!('loading' in this.$module) || this.$module.loading !== 'lazy') {
+      return iFrameResize({ scrolling: 'omit' }, this.$module)
     }
 
-    $module.addEventListener('load', () => {
+    this.$module.addEventListener('load', () => {
       try {
-        iFrameResize({ scrolling: 'omit' }, $module)
+        iFrameResize({ scrolling: 'omit' }, this.$module)
       } catch (err) {
         if (err) {
           console.error(err.message)
