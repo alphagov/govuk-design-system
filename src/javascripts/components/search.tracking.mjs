@@ -50,7 +50,7 @@ export function trackConfirm(searchQuery, searchResults, result) {
     ecommerce: {
       click: {
         actionField: { list: searchTerm },
-        products: products
+        products
       }
     }
   })
@@ -82,7 +82,7 @@ export function trackSearchResults(searchQuery, searchResults) {
       label: searchTerm
     },
     ecommerce: {
-      impressions: impressions
+      impressions
     }
   })
 }
