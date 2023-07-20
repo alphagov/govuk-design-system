@@ -10,8 +10,8 @@ export default function loadAnalytics() {
         'event': 'gtm.js'
       })
 
-      var j = d.createElement(s)
-      var dl = l !== 'dataLayer' ? '&l=' + l : ''
+      const j = d.createElement(s)
+      const dl = l !== 'dataLayer' ? '&l=' + l : ''
 
       j.async = true
       j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl

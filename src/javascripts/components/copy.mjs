@@ -5,11 +5,11 @@ function Copy($module) {
 }
 
 Copy.prototype.init = function () {
-  var $module = this.$module
+  const $module = this.$module
   if (!$module) {
     return
   }
-  var $button = document.createElement('button')
+  const $button = document.createElement('button')
   $button.className = 'app-copy-button js-copy-button'
   $button.setAttribute('aria-live', 'assertive')
   $button.textContent = 'Copy code'
