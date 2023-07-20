@@ -1,25 +1,25 @@
-var OptionsTable = {
+const OptionsTable = {
   init: function () {
     OptionsTable.expandMacroOptions()
   },
   // Open Nunjucks tab and expand macro options details when URL hash is '#options-[exampleName]'
   expandMacroOptions: function () {
-    var hash = window.location.hash
+    const hash = window.location.hash
 
     if (hash.match('^#options-')) {
-      var exampleName = hash.split('#options-')[1]
+      let exampleName = hash.split('#options-')[1]
 
       // Is hash for a specific options table? eg. #options-checkboxes-example--hint
-      var isLinkToTable = hash.indexOf('--') > -1
+      const isLinkToTable = hash.indexOf('--') > -1
       if (isLinkToTable) {
         exampleName = exampleName.split('--')[0]
       }
 
       if (exampleName) {
-        var tabLink = document.querySelector(
+        const tabLink = document.querySelector(
           'a[href="#' + exampleName + '-nunjucks"]'
         )
-        var optionsDetailsElement = document.getElementById(
+        const optionsDetailsElement = document.getElementById(
           'options-' + exampleName + '-details'
         )
 
