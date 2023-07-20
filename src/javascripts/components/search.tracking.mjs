@@ -40,7 +40,7 @@ export function trackConfirm (searchQuery, searchResults, result) {
     eventDetails: {
       category: 'site search',
       action: 'click',
-      label: searchTerm + ' | ' + result.title
+      label: `${searchTerm} | ${result.title}`
     },
     ecommerce: {
       click: {

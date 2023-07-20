@@ -10,10 +10,10 @@ export default function loadAnalytics () {
       })
 
       const j = d.createElement(s)
-      const dl = l !== 'dataLayer' ? '&l=' + l : ''
+      const dl = l !== 'dataLayer' ? `&l=${l}` : ''
 
       j.async = true
-      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+      j.src = `https://www.googletagmanager.com/gtm.js?id=${i}${dl}`
       document.head.appendChild(j)
     })(window, document, 'script', 'dataLayer', 'GTM-53XG2JT')
   }
