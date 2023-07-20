@@ -47,14 +47,11 @@ CookieBanner.prototype.init = function () {
     this.$cookieBanner.removeAttribute('hidden')
   }
 
-  this.$acceptButton.addEventListener('click', this.acceptCookies.bind(this))
-  this.$rejectButton.addEventListener('click', this.rejectCookies.bind(this))
+  this.$acceptButton.addEventListener('click', () => this.acceptCookies())
+  this.$rejectButton.addEventListener('click', () => this.rejectCookies())
 
   this.$cookieBannerHideButtons.forEach(($cookieBannerHideButton) => {
-    $cookieBannerHideButton.addEventListener(
-      'click',
-      this.hideBanner.bind(this)
-    )
+    $cookieBannerHideButton.addEventListener('click', () => this.hideBanner())
   })
 }
 
@@ -89,7 +86,7 @@ CookieBanner.prototype.revealConfirmationMessage = function (
   if (!confirmationMessage.getAttribute('tabindex')) {
     confirmationMessage.setAttribute('tabindex', '-1')
 
-    confirmationMessage.addEventListener('blur', function () {
+    confirmationMessage.addEventListener('blur', () => {
       confirmationMessage.removeAttribute('tabindex')
     })
   }
