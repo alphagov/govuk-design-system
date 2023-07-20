@@ -38,12 +38,12 @@ CookiesPage.prototype.savePreferences = function (event) {
   // Stop default form submission behaviour
   event.preventDefault()
 
-  var preferences = {}
+  const preferences = {}
 
   this.$cookieFormFieldsets.forEach(
     function ($cookieFormFieldset) {
-      var cookieType = this.getCookieType($cookieFormFieldset)
-      var selectedItem = $cookieFormFieldset.querySelector(
+      const cookieType = this.getCookieType($cookieFormFieldset)
+      const selectedItem = $cookieFormFieldset.querySelector(
         'input[name="cookies[' + cookieType + ']"]:checked'
       ).value
 
@@ -60,15 +60,15 @@ CookiesPage.prototype.showUserPreference = function (
   $cookieFormFieldset,
   preferences
 ) {
-  var cookieType = this.getCookieType($cookieFormFieldset)
-  var preference = false
+  const cookieType = this.getCookieType($cookieFormFieldset)
+  let preference = false
 
   if (cookieType && preferences && preferences[cookieType] !== undefined) {
     preference = preferences[cookieType]
   }
 
-  var radioValue = preference ? 'yes' : 'no'
-  var radio = $cookieFormFieldset.querySelector(
+  const radioValue = preference ? 'yes' : 'no'
+  const radio = $cookieFormFieldset.querySelector(
     'input[name="cookies[' + cookieType + ']"][value=' + radioValue + ']'
   )
   radio.checked = true

@@ -5,28 +5,28 @@ import lunr from 'lunr'
 import { trackSearchResults, trackConfirm } from './search.tracking.mjs'
 
 // CONSTANTS
-var TIMEOUT = 10 // Time to wait before giving up fetching the search index
-var STATE_DONE = 4 // XHR client readyState DONE
+const TIMEOUT = 10 // Time to wait before giving up fetching the search index
+const STATE_DONE = 4 // XHR client readyState DONE
 
 // LunrJS Search index
-var searchIndex = null
-var documentStore = null
+let searchIndex = null
+let documentStore = null
 
-var statusMessage = null
-var searchQuery = ''
-var searchCallback = function () {}
+let statusMessage = null
+let searchQuery = ''
+let searchCallback = function () {}
 // Results that are rendered by the autocomplete
-var searchResults = []
+let searchResults = []
 
 // Timer that allows us to only fire events after a user has finished typing
-var inputDebounceTimer = null
+let inputDebounceTimer = null
 
 // We want to wait a bit before firing events to indicate that
 // someone is looking at a result and not that it's come up in passing.
-var DEBOUNCE_TIME_TO_WAIT = function () {
+const DEBOUNCE_TIME_TO_WAIT = function () {
   // We want to be able to reduce this timeout in order to make sure
   // our tests do not run very slowly.
-  var timeout = window.__SITE_SEARCH_TRACKING_TIMEOUT
+  const timeout = window.__SITE_SEARCH_TRACKING_TIMEOUT
   return typeof timeout !== 'undefined' ? timeout : 2000 // milliseconds
 }
 
@@ -35,15 +35,15 @@ function Search($module) {
 }
 
 Search.prototype.fetchSearchIndex = function (indexUrl, callback) {
-  var request = new XMLHttpRequest()
+  const request = new XMLHttpRequest()
   request.open('GET', indexUrl, true)
   request.timeout = TIMEOUT * 1000
   statusMessage = 'Loading search index'
   request.onreadystatechange = function () {
     if (request.readyState === STATE_DONE) {
       if (request.status === 200) {
-        var response = request.responseText
-        var json = JSON.parse(response)
+        const response = request.responseText
+        const json = JSON.parse(response)
         statusMessage = 'No results found'
         searchIndex = lunr.Index.load(json.index)
         documentStore = json.store
@@ -60,7 +60,7 @@ Search.prototype.renderResults = function () {
   if (!searchIndex || !documentStore) {
     return searchCallback(searchResults)
   }
-  var lunrSearchResults = searchIndex.query(function (q) {
+  const lunrSearchResults = searchIndex.query(function (q) {
     q.term(lunr.tokenizer(searchQuery), {
       wildcard: lunr.Query.wildcard.TRAILING
     })
@@ -84,7 +84,7 @@ Search.prototype.handleSearchQuery = function (query, callback) {
 }
 
 Search.prototype.handleOnConfirm = function (result) {
-  var permalink = result.permalink
+  const permalink = result.permalink
   if (!permalink) {
     return
   }
@@ -107,22 +107,22 @@ Search.prototype.resultTemplate = function (result) {
 
   // Add rest of the data here to build the item
   if (result) {
-    var elem = document.createElement('span')
+    const elem = document.createElement('span')
     elem.textContent = result.title
 
     // Title split into words
-    var words = result.title.match(/\w+/g) || []
+    const words = result.title.match(/\w+/g) || []
 
     // Title words that start with the query
-    var matchedWords = startsWithFilter(words, searchQuery)
+    const matchedWords = startsWithFilter(words, searchQuery)
 
     // Only show a matching alias if there are no matches in the title
     if (!matchedWords.length && result.aliases) {
-      var aliases = result.aliases.split(', ')
+      const aliases = result.aliases.split(', ')
 
       // Aliases containing words that start with the query
-      var matchedAliases = aliases.reduce(function (aliasesFiltered, alias) {
-        var aliasWordsMatched = startsWithFilter(
+      const matchedAliases = aliases.reduce(function (aliasesFiltered, alias) {
+        const aliasWordsMatched = startsWithFilter(
           alias.match(/\w+/g) || [],
           searchQuery
         )
@@ -133,14 +133,14 @@ Search.prototype.resultTemplate = function (result) {
       }, [])
 
       if (matchedAliases.length) {
-        var aliasesContainer = document.createElement('span')
+        const aliasesContainer = document.createElement('span')
         aliasesContainer.className = 'app-site-search__aliases'
         aliasesContainer.textContent = matchedAliases.join(', ')
         elem.appendChild(aliasesContainer)
       }
     }
 
-    var section = document.createElement('span')
+    const section = document.createElement('span')
     section.className = 'app-site-search--section'
     section.innerHTML = result.section
 
@@ -150,7 +150,7 @@ Search.prototype.resultTemplate = function (result) {
 }
 
 Search.prototype.init = function () {
-  var $module = this.$module
+  const $module = this.$module
   if (!$module) {
     return
   }
@@ -174,14 +174,14 @@ Search.prototype.init = function () {
     }
   })
 
-  var $input = $module.querySelector('.app-site-search__input')
+  const $input = $module.querySelector('.app-site-search__input')
 
   // Ensure if the user stops using the search that we do not send tracking events
   $input.addEventListener('blur', function (event) {
     clearTimeout(inputDebounceTimer)
   })
 
-  var searchIndexUrl = $module.getAttribute('data-search-index')
+  const searchIndexUrl = $module.getAttribute('data-search-index')
   this.fetchSearchIndex(
     searchIndexUrl,
     function () {
