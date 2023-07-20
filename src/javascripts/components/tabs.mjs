@@ -118,9 +118,9 @@ class AppTabs {
     // panel that's open by default—so make sure they actually exist before use
     if ($mobileTab && $desktopTab) {
       $mobileTab.setAttribute('aria-expanded', 'true')
-      $mobileTab.parentNode.classList.add('app-tabs__heading--current')
+      $mobileTab.parentElement.classList.add('app-tabs__heading--current')
       $desktopTab.setAttribute('aria-expanded', 'true')
-      $desktopTab.parentNode.classList.add('app-tabs__item--current')
+      $desktopTab.parentElement.classList.add('app-tabs__item--current')
     }
 
     this.getPanel(panelId).removeAttribute('hidden')
@@ -136,8 +136,8 @@ class AppTabs {
     const $desktopTab = this.getDesktopTab(panelId)
     $mobileTab.setAttribute('aria-expanded', 'false')
     $desktopTab.setAttribute('aria-expanded', 'false')
-    $mobileTab.parentNode.classList.remove('app-tabs__heading--current')
-    $desktopTab.parentNode.classList.remove('app-tabs__item--current')
+    $mobileTab.parentElement.classList.remove('app-tabs__heading--current')
+    $desktopTab.parentElement.classList.remove('app-tabs__item--current')
     this.getPanel(panelId).setAttribute('hidden', 'hidden')
   }
 
