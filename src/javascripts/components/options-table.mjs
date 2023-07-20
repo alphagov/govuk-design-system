@@ -1,9 +1,10 @@
-const OptionsTable = {
-  init: function () {
-    OptionsTable.expandMacroOptions()
-  },
+class OptionsTable {
+  init() {
+    this.expandMacroOptions()
+  }
+
   // Open Nunjucks tab and expand macro options details when URL hash is '#options-[exampleName]'
-  expandMacroOptions: function () {
+  expandMacroOptions() {
     const hash = window.location.hash
 
     if (hash.match('^#options-')) {
@@ -16,25 +17,25 @@ const OptionsTable = {
       }
 
       if (exampleName) {
-        const tabLink = document.querySelector(
+        const $tabLink = document.querySelector(
           `a[href="#${exampleName}-nunjucks"]`
         )
-        const optionsDetailsElement = document.getElementById(
+        const $optionsDetailsElement = document.getElementById(
           `options-${exampleName}-details`
         )
 
-        if (!tabLink || !optionsDetailsElement) {
+        if (!$tabLink || !$optionsDetailsElement) {
           return
         }
 
-        tabLink.setAttribute('aria-expanded', 'true')
-        tabLink.parentNode.className += ' app-tabs__item--current'
+        $tabLink.setAttribute('aria-expanded', 'true')
+        $tabLink.parentNode.className += ' app-tabs__item--current'
 
-        optionsDetailsElement.parentNode.removeAttribute('hidden')
-        optionsDetailsElement.open = true
+        $optionsDetailsElement.parentNode.removeAttribute('hidden')
+        $optionsDetailsElement.open = true
 
         window.setTimeout(() => {
-          tabLink.focus()
+          $tabLink.focus()
           if (isLinkToTable) document.querySelector(hash).scrollIntoView()
         }, 0)
       }
