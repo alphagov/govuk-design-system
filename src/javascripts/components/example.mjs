@@ -8,33 +8,35 @@ import iFrameResize from 'iframe-resizer/js/iframeResizer.js'
  *
  * @param {Element} $module - HTML element to use for example
  */
-function Example($module) {
-  if (!($module instanceof HTMLIFrameElement)) {
-    return
-  }
-  this.$module = $module
-}
-
-Example.prototype.init = function () {
-  const $module = this.$module
-  if (!$module) {
-    return
-  }
-
-  // Initialise asap for eager iframes or browsers which don't support lazy loading
-  if (!('loading' in $module) || $module.loading !== 'lazy') {
-    return iFrameResize({ scrolling: 'omit' }, $module)
-  }
-
-  $module.addEventListener('load', () => {
-    try {
-      iFrameResize({ scrolling: 'omit' }, $module)
-    } catch (err) {
-      if (err) {
-        console.error(err.message)
-      }
+class Example {
+  constructor($module) {
+    if (!($module instanceof HTMLIFrameElement)) {
+      return
     }
-  })
+
+    this.$module = $module
+  }
+
+  init() {
+    if (!this.$module) {
+      return
+    }
+
+    // Initialise asap for eager iframes or browsers which don't support lazy loading
+    if (!('loading' in this.$module) || this.$module.loading !== 'lazy') {
+      return iFrameResize({ scrolling: 'omit' }, this.$module)
+    }
+
+    this.$module.addEventListener('load', () => {
+      try {
+        iFrameResize({ scrolling: 'omit' }, this.$module)
+      } catch (err) {
+        if (err) {
+          console.error(err.message)
+        }
+      }
+    })
+  }
 }
 
 export default Example
