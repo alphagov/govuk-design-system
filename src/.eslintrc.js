@@ -13,8 +13,7 @@ module.exports = {
       },
       plugins: ['es-x'],
       rules: {
-        'object-shorthand': 'off',
-        'quote-props': 'off'
+        'object-shorthand': 'off'
       }
     }
   ]
