@@ -1,24 +1,29 @@
-function ExamplePage ($module) {
-  this.$module = $module
-}
-
-ExamplePage.prototype.init = function () {
-  const $module = this.$module
-  if (!$module) {
-    return
+class ExamplePage {
+  constructor ($module) {
+    this.$module = $module
   }
-  const $form = $module.querySelector('form[action="/form-handler"]')
-  this.preventFormSubmission($form)
-}
 
-ExamplePage.prototype.preventFormSubmission = function ($form) {
-  // we should only have one form per example
-  if (!$form) {
-    return false
+  init () {
+    const $module = this.$module
+
+    if (!$module) {
+      return
+    }
+
+    const $form = $module.querySelector('form[action="/form-handler"]')
+    this.preventFormSubmission($form)
   }
-  $form.addEventListener('submit', (event) => {
-    event.preventDefault()
-  })
+
+  preventFormSubmission ($form) {
+    // we should only have one form per example
+    if (!$form) {
+      return false
+    }
+
+    $form.addEventListener('submit', (event) => {
+      event.preventDefault()
+    })
+  }
 }
 
 export default ExamplePage

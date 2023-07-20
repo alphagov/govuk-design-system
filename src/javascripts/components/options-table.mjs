@@ -1,9 +1,10 @@
-const OptionsTable = {
-  init: function () {
-    OptionsTable.expandMacroOptions()
-  },
+class OptionsTable {
+  init () {
+    this.expandMacroOptions()
+  }
+
   // Open Nunjucks tab and expand macro options details when URL hash is '#options-[exampleName]'
-  expandMacroOptions: function () {
+  expandMacroOptions () {
     const hash = window.location.hash
 
     if (hash.match('^#options-')) {
