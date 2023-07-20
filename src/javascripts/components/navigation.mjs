@@ -67,7 +67,7 @@ class Navigation {
     this.$navToggler.setAttribute('aria-expanded', 'false')
 
     this.$navButtons.forEach(($button, index) => {
-      const $nextSubNav = $button.parentNode.querySelector(subNavJSClass)
+      const $nextSubNav = $button.parentElement.querySelector(subNavJSClass)
 
       if ($nextSubNav) {
         const subNavTogglerId = `js-mobile-nav-subnav-toggler-${index}`
@@ -110,7 +110,7 @@ class Navigation {
 
     this.$navButtons.forEach(($button) => {
       $button.addEventListener('click', () => {
-        const $nextSubNav = $button.parentNode.querySelector(subNavJSClass)
+        const $nextSubNav = $button.parentElement.querySelector(subNavJSClass)
 
         if ($nextSubNav) {
           if ($nextSubNav.hasAttribute('hidden')) {
