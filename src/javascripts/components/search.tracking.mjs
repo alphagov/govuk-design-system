@@ -22,18 +22,14 @@ export function trackConfirm (searchQuery, searchResults, result) {
   const searchTerm = stripPossiblePII(searchQuery)
   const products =
     searchResults
-      .map(function (result, key) {
-        return {
-          name: result.title,
-          category: result.section,
-          list: searchTerm, // Used to match an searchTerm with results
-          position: (key + 1)
-        }
-      })
-      .filter(function (product) {
-        // Only return the product that matches what was clicked
-        return product.name === result.title
-      })
+      .map((result, key) => ({
+        name: result.title,
+        category: result.section,
+        list: searchTerm, // Used to match an searchTerm with results
+        position: (key + 1)
+      }))
+      // Only return the product that matches what was clicked
+      .filter((product) => product.name === result.title)
 
   addToDataLayer({
     event: 'site-search',
@@ -60,14 +56,12 @@ export function trackSearchResults (searchQuery, searchResults) {
 
   const hasResults = (searchResults.length > 0)
   // Impressions is Google Analytics lingo for what people have seen.
-  const impressions = searchResults.map(function (result, key) {
-    return {
-      name: result.title,
-      category: result.section,
-      list: searchTerm, // Used to match an searchTerm with results
-      position: (key + 1)
-    }
-  })
+  const impressions = searchResults.map((result, key) => ({
+    name: result.title,
+    category: result.section,
+    list: searchTerm, // Used to match an searchTerm with results
+    position: (key + 1)
+  }))
 
   addToDataLayer({
     event: 'site-search',
