@@ -115,18 +115,16 @@ class Navigation {
   }
 
   init () {
-    if ('matchMedia' in window) {
-      // Set the matchMedia to the govuk-frontend tablet breakpoint
-      this.mql = window.matchMedia('(min-width: 40.0625em)')
+    // Set the matchMedia to the govuk-frontend tablet breakpoint
+    this.mql = window.matchMedia('(min-width: 40.0625em)')
 
-      if ('addEventListener' in this.mql) {
-        this.mql.addEventListener('change', () => this.setHiddenStates())
-      } else {
-        // addListener is a deprecated function, however addEventListener
-        // isn't supported by Safari < 14. We therefore add this in as
-        // a fallback for those browsers
-        this.mql.addListener(() => this.setHiddenStates())
-      }
+    // MediaQueryList.addEventListener isn't supported by Safari < 14 so we need
+    // to be able to fall back to the deprecated MediaQueryList.addListener
+    if ('addEventListener' in this.mql) {
+      this.mql.addEventListener('change', () => this.setHiddenStates())
+    } else {
+      // @ts-expect-error Property 'addListener' does not exist
+      this.mql.addListener(() => this.setHiddenStates())
     }
 
     this.setHiddenStates()
