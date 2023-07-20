@@ -24,5 +24,5 @@
   {{ contents | safe }}
 {% endblock %}
 {% block bodyEnd %}
-  <script src="{{ getFingerprint('javascripts/application-example.js') }}"></script>
+  <script type="module" src="{{ getFingerprint('javascripts/application-example.js') }}"></script>
 {% endblock %}
