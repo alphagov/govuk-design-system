@@ -60,7 +60,7 @@ class CookieBanner {
    * Hide banner
    */
   hideBanner() {
-    this.$cookieBanner.setAttribute('hidden', true)
+    this.$cookieBanner.setAttribute('hidden', 'true')
   }
 
   /**
@@ -71,7 +71,7 @@ class CookieBanner {
     CookieFunctions.setConsentCookie({ analytics: true })
 
     // Hide banner and show confirmation message
-    this.$cookieMessage.setAttribute('hidden', true)
+    this.$cookieMessage.setAttribute('hidden', 'true')
     this.revealConfirmationMessage(this.$cookieConfirmationAccept)
   }
 
@@ -83,7 +83,7 @@ class CookieBanner {
     CookieFunctions.setConsentCookie({ analytics: false })
 
     // Hide banner and show confirmation message
-    this.$cookieMessage.setAttribute('hidden', true)
+    this.$cookieMessage.setAttribute('hidden', 'true')
     this.revealConfirmationMessage(this.$cookieConfirmationReject)
   }
 
