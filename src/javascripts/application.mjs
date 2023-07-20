@@ -38,7 +38,7 @@ $tabs.forEach(($tabs) => {
 })
 
 // Do this after initialising tabs
-OptionsTable.init()
+new OptionsTable().init()
 
 // Add copy to clipboard to code blocks inside tab containers
 const $codeBlocks = document.querySelectorAll('[data-module="app-copy"] pre')
