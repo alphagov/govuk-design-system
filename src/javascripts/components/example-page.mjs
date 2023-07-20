@@ -3,11 +3,11 @@ function ExamplePage($module) {
 }
 
 ExamplePage.prototype.init = function () {
-  var $module = this.$module
+  const $module = this.$module
   if (!$module) {
     return
   }
-  var $form = $module.querySelector('form[action="/form-handler"]')
+  const $form = $module.querySelector('form[action="/form-handler"]')
   this.preventFormSubmission($form)
 }
 
