@@ -26,7 +26,7 @@ Example.prototype.init = function () {
     return iFrameResize({ scrolling: 'omit' }, $module)
   }
 
-  $module.addEventListener('load', function () {
+  $module.addEventListener('load', () => {
     try {
       iFrameResize({ scrolling: 'omit' }, $module)
     } catch (err) {

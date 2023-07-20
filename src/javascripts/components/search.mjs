@@ -172,7 +172,7 @@ Search.prototype.init = function () {
   const $input = $module.querySelector('.app-site-search__input')
 
   // Ensure if the user stops using the search that we do not send tracking events
-  $input.addEventListener('blur', function (event) {
+  $input.addEventListener('blur', () => {
     clearTimeout(inputDebounceTimer)
   })
 

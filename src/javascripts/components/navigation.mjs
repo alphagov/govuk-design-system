@@ -77,7 +77,7 @@ Navigation.prototype.bindUIEvents = function () {
   const $navToggler = this.$navToggler
   const $navButtons = this.$navButtons
 
-  $navToggler.addEventListener('click', function (event) {
+  $navToggler.addEventListener('click', () => {
     if (this.mobileNavOpen) {
       $nav.classList.remove(navActiveClass)
       $navToggler.classList.remove(navMenuButtonActiveClass)
@@ -95,10 +95,10 @@ Navigation.prototype.bindUIEvents = function () {
 
       this.mobileNavOpen = true
     }
-  }.bind(this))
+  })
 
   $navButtons.forEach(($button) => {
-    $button.addEventListener('click', function (event) {
+    $button.addEventListener('click', () => {
       const $nextSubNav = $button.parentNode.querySelector(subNavJSClass)
 
       if ($nextSubNav) {
@@ -124,12 +124,12 @@ Navigation.prototype.init = function () {
     this.mql = window.matchMedia('(min-width: 40.0625em)')
 
     if ('addEventListener' in this.mql) {
-      this.mql.addEventListener('change', this.setHiddenStates.bind(this))
+      this.mql.addEventListener('change', () => this.setHiddenStates())
     } else {
       // addListener is a deprecated function, however addEventListener
       // isn't supported by Safari < 14. We therefore add this in as
       // a fallback for those browsers
-      this.mql.addListener(this.setHiddenStates.bind(this))
+      this.mql.addListener(() => this.setHiddenStates())
     }
   }
 
