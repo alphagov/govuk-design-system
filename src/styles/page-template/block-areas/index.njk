@@ -83,6 +83,6 @@ stylesheets:
     <span class="app-annotate-block__label">block: bodyEnd</span>
     {{ super() }}
     {# Since we’re not extending the Design System layout we need to add this manually #}
-    <script src="{{ getFingerprint('javascripts/application-example.js') }}"></script>
+    <script type="module" src="{{ getFingerprint('javascripts/application-example.js') }}"></script>
   </div>
 {%- endblock %}
