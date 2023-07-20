@@ -76,7 +76,7 @@ Search.prototype.handleSearchQuery = function (query, callback) {
   searchCallback = callback
 
   clearTimeout(inputDebounceTimer)
-  inputDebounceTimer = setTimeout(function () {
+  inputDebounceTimer = setTimeout(() => {
     trackSearchResults(searchQuery, searchResults)
   }, DEBOUNCE_TIME_TO_WAIT())
 
