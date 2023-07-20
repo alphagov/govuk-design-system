@@ -73,31 +73,27 @@ class Navigation {
   }
 
   bindUIEvents () {
-    const $nav = this.$nav
-    const $navToggler = this.$navToggler
-    const $navButtons = this.$navButtons
-
-    $navToggler.addEventListener('click', () => {
+    this.$navToggler.addEventListener('click', () => {
       if (this.mobileNavOpen) {
-        $nav.classList.remove(navActiveClass)
-        $navToggler.classList.remove(navMenuButtonActiveClass)
-        $nav.setAttribute('hidden', '')
+        this.$nav.classList.remove(navActiveClass)
+        this.$navToggler.classList.remove(navMenuButtonActiveClass)
+        this.$nav.setAttribute('hidden', '')
 
-        $navToggler.setAttribute('aria-expanded', 'false')
+        this.$navToggler.setAttribute('aria-expanded', 'false')
 
         this.mobileNavOpen = false
       } else {
-        $nav.classList.add(navActiveClass)
-        $navToggler.classList.add(navMenuButtonActiveClass)
-        $nav.removeAttribute('hidden')
+        this.$nav.classList.add(navActiveClass)
+        this.$navToggler.classList.add(navMenuButtonActiveClass)
+        this.$nav.removeAttribute('hidden')
 
-        $navToggler.setAttribute('aria-expanded', 'true')
+        this.$navToggler.setAttribute('aria-expanded', 'true')
 
         this.mobileNavOpen = true
       }
     })
 
-    $navButtons.forEach(($button) => {
+    this.$navButtons.forEach(($button) => {
       $button.addEventListener('click', () => {
         const $nextSubNav = $button.parentNode.querySelector(subNavJSClass)
 
