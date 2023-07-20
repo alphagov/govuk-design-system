@@ -11,10 +11,7 @@ module.exports = {
         // Note: Allow ES2015 for import/export syntax
         ecmaVersion: '2015'
       },
-      plugins: ['es-x'],
-      rules: {
-        'object-shorthand': 'off'
-      }
+      plugins: ['es-x']
     }
   ]
 }
