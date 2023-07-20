@@ -35,9 +35,9 @@ class OptionsTable {
         }
 
         $tabLink.setAttribute('aria-expanded', 'true')
-        $tabLink.parentNode.className += ' app-tabs__item--current'
+        $tabLink.parentElement.className += ' app-tabs__item--current'
 
-        $optionsDetailsElement.parentNode.removeAttribute('hidden')
+        $optionsDetailsElement.parentElement.removeAttribute('hidden')
         $optionsDetailsElement.open = true
 
         window.setTimeout(() => {
