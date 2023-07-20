@@ -80,31 +80,28 @@ Navigation.prototype.bindUIEvents = function () {
   const $navToggler = this.$navToggler
   const $navButtons = this.$navButtons
 
-  $navToggler.addEventListener(
-    'click',
-    function (event) {
-      if (this.mobileNavOpen) {
-        $nav.classList.remove(navActiveClass)
-        $navToggler.classList.remove(navMenuButtonActiveClass)
-        $nav.setAttribute('hidden', '')
+  $navToggler.addEventListener('click', () => {
+    if (this.mobileNavOpen) {
+      $nav.classList.remove(navActiveClass)
+      $navToggler.classList.remove(navMenuButtonActiveClass)
+      $nav.setAttribute('hidden', '')
 
-        $navToggler.setAttribute('aria-expanded', 'false')
+      $navToggler.setAttribute('aria-expanded', 'false')
 
-        this.mobileNavOpen = false
-      } else {
-        $nav.classList.add(navActiveClass)
-        $navToggler.classList.add(navMenuButtonActiveClass)
-        $nav.removeAttribute('hidden')
+      this.mobileNavOpen = false
+    } else {
+      $nav.classList.add(navActiveClass)
+      $navToggler.classList.add(navMenuButtonActiveClass)
+      $nav.removeAttribute('hidden')
 
-        $navToggler.setAttribute('aria-expanded', 'true')
+      $navToggler.setAttribute('aria-expanded', 'true')
 
-        this.mobileNavOpen = true
-      }
-    }.bind(this)
-  )
+      this.mobileNavOpen = true
+    }
+  })
 
   $navButtons.forEach(($button) => {
-    $button.addEventListener('click', function (event) {
+    $button.addEventListener('click', () => {
       const $nextSubNav = $button.parentNode.querySelector(subNavJSClass)
 
       if ($nextSubNav) {
@@ -130,12 +127,12 @@ Navigation.prototype.init = function () {
     this.mql = window.matchMedia('(min-width: 40.0625em)')
 
     if ('addEventListener' in this.mql) {
-      this.mql.addEventListener('change', this.setHiddenStates.bind(this))
+      this.mql.addEventListener('change', () => this.setHiddenStates())
     } else {
       // addListener is a deprecated function, however addEventListener
       // isn't supported by Safari < 14. We therefore add this in as
       // a fallback for those browsers
-      this.mql.addListener(this.setHiddenStates.bind(this))
+      this.mql.addListener(() => this.setHiddenStates())
     }
   }
 
