@@ -15,14 +15,14 @@
 import Analytics from './analytics.mjs'
 
 /* Name of the cookie to save users cookie preferences to. */
-var CONSENT_COOKIE_NAME = 'design_system_cookies_policy'
+const CONSENT_COOKIE_NAME = 'design_system_cookies_policy'
 
 /* Google Analytics tracking IDs for preview and live environments. */
-var TRACKING_PREVIEW_ID = '26179049-17'
-var TRACKING_LIVE_ID = '116229859-1'
+const TRACKING_PREVIEW_ID = '26179049-17'
+const TRACKING_LIVE_ID = '116229859-1'
 
 /* Users can (dis)allow different groups of cookies. */
-var COOKIE_CATEGORIES = {
+const COOKIE_CATEGORIES = {
   analytics: ['_ga', '_gid', '_gat_UA-' + TRACKING_PREVIEW_ID, '_gat_UA-' + TRACKING_LIVE_ID],
   /* Essential cookies
    *
@@ -40,7 +40,7 @@ var COOKIE_CATEGORIES = {
  * cookies cannot be disallowed. If the object contains { essential: false }
  * this will be ignored.
  */
-var DEFAULT_COOKIE_CONSENT = {
+const DEFAULT_COOKIE_CONSENT = {
   analytics: false
 }
 
@@ -80,8 +80,8 @@ export function Cookie (name, value, options) {
  * returns null.
  */
 export function getConsentCookie () {
-  var consentCookie = getCookie(CONSENT_COOKIE_NAME)
-  var consentCookieObj
+  const consentCookie = getCookie(CONSENT_COOKIE_NAME)
+  let consentCookieObj
 
   if (consentCookie) {
     try {
@@ -109,14 +109,14 @@ export function isValidConsentCookie (options) {
 
 /** Update the user's cookie preferences. */
 export function setConsentCookie (options) {
-  var cookieConsent = getConsentCookie()
+  let cookieConsent = getConsentCookie()
 
   if (!cookieConsent) {
     cookieConsent = JSON.parse(JSON.stringify(DEFAULT_COOKIE_CONSENT))
   }
 
   // Merge current cookie preferences and new preferences
-  for (var option in options) {
+  for (const option in options) {
     cookieConsent[option] = options[option]
   }
 
@@ -137,14 +137,14 @@ export function setConsentCookie (options) {
  * Deletes any cookies the user has not consented to.
  */
 export function resetCookies () {
-  var options = getConsentCookie()
+  let options = getConsentCookie()
 
   // If no preferences or old version use the default
   if (!isValidConsentCookie(options)) {
     options = JSON.parse(JSON.stringify(DEFAULT_COOKIE_CONSENT))
   }
 
-  for (var cookieType in options) {
+  for (const cookieType in options) {
     if (cookieType === 'version') {
       continue
     }
@@ -168,7 +168,7 @@ export function resetCookies () {
 
     if (!options[cookieType]) {
       // Fetch the cookies in that category
-      var cookiesInCategory = COOKIE_CATEGORIES[cookieType]
+      const cookiesInCategory = COOKIE_CATEGORIES[cookieType]
 
       cookiesInCategory.forEach(function (cookie) {
         // Delete cookie
@@ -200,15 +200,15 @@ function userAllowsCookie (cookieName) {
   }
 
   // Get the current cookie preferences
-  var cookiePreferences = getConsentCookie()
+  let cookiePreferences = getConsentCookie()
 
   // If no preferences or old version use the default
   if (!isValidConsentCookie(cookiePreferences)) {
     cookiePreferences = DEFAULT_COOKIE_CONSENT
   }
 
-  for (var category in COOKIE_CATEGORIES) {
-    var cookiesInCategory = COOKIE_CATEGORIES[category]
+  for (const category in COOKIE_CATEGORIES) {
+    const cookiesInCategory = COOKIE_CATEGORIES[category]
 
     if (cookiesInCategory.indexOf(cookieName) !== '-1') {
       return userAllowsCookieCategory(category, cookiePreferences)
@@ -220,10 +220,10 @@ function userAllowsCookie (cookieName) {
 }
 
 function getCookie (name) {
-  var nameEQ = name + '='
-  var cookies = document.cookie.split(';')
-  for (var i = 0, len = cookies.length; i < len; i++) {
-    var cookie = cookies[i]
+  const nameEQ = name + '='
+  const cookies = document.cookie.split(';')
+  for (let i = 0, len = cookies.length; i < len; i++) {
+    let cookie = cookies[i]
     while (cookie.charAt(0) === ' ') {
       cookie = cookie.substring(1, cookie.length)
     }
@@ -239,9 +239,9 @@ function setCookie (name, value, options) {
     if (typeof options === 'undefined') {
       options = {}
     }
-    var cookieString = name + '=' + value + '; path=/'
+    let cookieString = name + '=' + value + '; path=/'
     if (options.days) {
-      var date = new Date()
+      const date = new Date()
       date.setTime(date.getTime() + (options.days * 24 * 60 * 60 * 1000))
       cookieString = cookieString + '; expires=' + date.toGMTString()
     }

@@ -1,8 +1,8 @@
-var navActiveClass = 'app-navigation--active'
-var navMenuButtonActiveClass = 'govuk-header__menu-button--open'
-var subNavActiveClass = 'app-navigation__subnav--active'
+const navActiveClass = 'app-navigation--active'
+const navMenuButtonActiveClass = 'govuk-header__menu-button--open'
+const subNavActiveClass = 'app-navigation__subnav--active'
 // This one has the query dot at the beginning because it's only ever used in querySelector calls
-var subNavJSClass = '.js-app-navigation__subnav'
+const subNavJSClass = '.js-app-navigation__subnav'
 
 function Navigation ($module) {
   this.$module = $module || document
@@ -58,11 +58,11 @@ Navigation.prototype.setInitialAriaStates = function () {
   this.$navToggler.setAttribute('aria-expanded', 'false')
 
   this.$navButtons.forEach(function ($button, index) {
-    var $nextSubNav = $button.parentNode.querySelector(subNavJSClass)
+    const $nextSubNav = $button.parentNode.querySelector(subNavJSClass)
 
     if ($nextSubNav) {
-      var subNavTogglerId = 'js-mobile-nav-subnav-toggler-' + index
-      var nextSubNavId = 'js-mobile-nav__subnav-' + index
+      const subNavTogglerId = 'js-mobile-nav-subnav-toggler-' + index
+      const nextSubNavId = 'js-mobile-nav__subnav-' + index
 
       $nextSubNav.setAttribute('id', nextSubNavId)
       $button.setAttribute('id', subNavTogglerId)
@@ -73,9 +73,9 @@ Navigation.prototype.setInitialAriaStates = function () {
 }
 
 Navigation.prototype.bindUIEvents = function () {
-  var $nav = this.$nav
-  var $navToggler = this.$navToggler
-  var $navButtons = this.$navButtons
+  const $nav = this.$nav
+  const $navToggler = this.$navToggler
+  const $navButtons = this.$navButtons
 
   $navToggler.addEventListener('click', function (event) {
     if (this.mobileNavOpen) {
@@ -99,7 +99,7 @@ Navigation.prototype.bindUIEvents = function () {
 
   $navButtons.forEach(function ($button) {
     $button.addEventListener('click', function (event) {
-      var $nextSubNav = $button.parentNode.querySelector(subNavJSClass)
+      const $nextSubNav = $button.parentNode.querySelector(subNavJSClass)
 
       if ($nextSubNav) {
         if ($nextSubNav.hasAttribute('hidden')) {
