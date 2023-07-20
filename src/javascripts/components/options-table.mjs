@@ -41,7 +41,7 @@ class OptionsTable {
               $detailsSummary.setAttribute('aria-expanded', 'true')
             }
             if ($detailsText.hasAttribute('aria-hidden')) {
-              $detailsText.setAttribute('aria-hidden', false)
+              $detailsText.setAttribute('aria-hidden', 'false')
             }
             $detailsText.style.display = ''
 
