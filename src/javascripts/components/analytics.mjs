@@ -6,7 +6,7 @@ export default function loadAnalytics () {
       w[l] = w[l] || []
       w[l].push({
         'gtm.start': new Date().getTime(),
-        'event': 'gtm.js'
+        event: 'gtm.js'
       })
 
       const j = d.createElement(s)
