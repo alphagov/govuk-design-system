@@ -38,23 +38,19 @@ Do not show pagination if there's only one page of content.
 
 Redirect users to the first page if they enter a URL of a page that no longer exists.
 
-## For smaller numbers of pages
+## For navigating between content pages
 
-Use 'Previous' and 'Next' links to let users navigate through a small number of pages. Stack the links vertically, so they’re more obvious to screen magnifier users when they’re zoomed in:
+Use the 'block' style of pagination to let users navigate through related content that has been split across multiple pages. Stack the links vertically, so they’re more obvious to screen magnifier users when they’re zoomed in.
 
-{{ example({group: "components", item: "pagination", example: "labels", html: true, nunjucks: true }) }}
+You can use link labels to give context on what the neighbouring pages are about.
 
-### Add link labels to describe pages
+{{ example({group: "components", item: "pagination", example: "for-content-pages", html: true, nunjucks: true }) }}
 
-You can use link labels to give more context:
+## For navigating been pages of items
 
-{{ example({group: "components", item: "pagination", example: "labels-2", html: true, nunjucks: true }) }}
+Use a list-type layout if users need to navigate through pages of similar items. For example, a list of search results or a list of cases in a case working system.
 
-## For larger numbers of pages
-
-Use a list-type layout if users need to navigate through large numbers of pages. For example, long lists of search results.
-
-{{ example({group: "components", item: "pagination", example: "large-number-of-pages", html: true, nunjucks: true }) }}
+{{ example({group: "components", item: "pagination", example: "for-list-pages", html: true, nunjucks: true }) }}
 
 Show the page number in the page `<title>` so that screen reader users know they’ve navigated to a different page. For example, 'Search results (page 1 of 4)'.
 
