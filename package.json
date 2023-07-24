@@ -72,7 +72,6 @@
     "marked": "^5.0.2",
     "metalsmith": "^2.6.1",
     "metalsmith-canonical": "^1.2.0",
-    "metalsmith-renamer": "^0.5.217",
     "multimatch": "^6.0.0",
     "nunjucks": "^3.2.4",
     "outdent": "^0.8.0",
