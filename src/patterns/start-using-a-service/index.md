@@ -24,7 +24,7 @@ A service's start point should:
 - include a ‘button’ linking into the service, with text that’s consistent with the action you’re asking users to take — for example, ‘Start now’, ‘Sign in’ or ‘Register or update your details’ (if you need a secondary call to action, use a standard link)
 - let users sign in, resume an application they’ve already started or update their details (if relevant)
 - include any other information that most users are likely to need before they start using the service online — for example, how much it costs to use the service and roughly how long it will take
-- include details of other ways to access the service — for example, by telephone or by completing a paper form
+- include details of other ways to access the service — for example, by phone or by completing a paper form
 
 You’ll also need to list any documents or information the user will need to help them complete the service (there’s no need to list information that a user is likely to know from memory — for example, their own date of birth).
 
