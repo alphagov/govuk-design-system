@@ -46,7 +46,7 @@ You can use link labels to give context on what the neighbouring pages are about
 
 {{ example({group: "components", item: "pagination", example: "for-content-pages", html: true, nunjucks: true }) }}
 
-## For navigating been pages of items
+## For navigating between pages of items
 
 Use a list-type layout if users need to navigate through pages of similar items. For example, a list of search results or a list of cases in a case working system.
 
