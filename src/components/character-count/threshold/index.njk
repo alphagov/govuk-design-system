@@ -5,12 +5,20 @@ layout: layout-example.njk
 
 {% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
 
+{% set textareaValue -%}
+This example of a textarea has a character limit of 1000 characters. The character count is hidden, but will appear when there are more than 850 characters entered into this textarea. Type some more text into this textarea to see the character count appear. This paragraph is repeated below.
+  
+This example of a textarea has a character limit of 1000 characters. The character count is hidden, but will appear when there are more than 850 characters entered into this textarea. Type some more text into this textarea to see the character count appear. This paragraph is repeated below.
+
+This example of a textarea has a character limit of 1000 characters. The character count is hidden, but will appear when there are more than 850 characters entered into this textarea. Type some more text into this textarea to see the character count appear.
+{%- endset %}
+
 {{ govukCharacterCount({
   name: "threshold",
   id: "threshold",
-  maxlength: 112,
-  threshold: 75,
-  value: "Type another letter into this field after this message to see the threshold feature",
+  maxlength: 1000,
+  threshold: 85,
+  value: textareaValue,
   label: {
     text: "Can you provide more detail?",
     classes: "govuk-label--l",
