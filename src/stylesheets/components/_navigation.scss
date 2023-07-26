@@ -78,12 +78,12 @@
   list-style: none;
 }
 
-.js-enabled .app-navigation__subnav--active {
+.govuk-frontend-supported .app-navigation__subnav--active {
   display: block;
 }
 
 .app-navigation__subnav,
-.js-enabled .app-navigation__subnav--active {
+.govuk-frontend-supported .app-navigation__subnav--active {
   @include govuk-media-query($from: tablet) {
     display: none;
   }
