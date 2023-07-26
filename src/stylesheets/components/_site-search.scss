@@ -21,7 +21,7 @@ $icon-size: 40px;
   margin-bottom: govuk-spacing(2);
   float: left;
 
-  .js-enabled & {
+  .govuk-frontend-supported & {
     display: block;
   }
 
@@ -37,7 +37,7 @@ $icon-size: 40px;
     float: right;
     text-align: right;
 
-    .js-enabled & {
+    .govuk-frontend-supported & {
       text-align: left;
     }
   }
@@ -205,7 +205,7 @@ $icon-size: 40px;
   @include govuk-media-query($from: tablet) {
     display: inline-block;
 
-    .js-enabled & {
+    .govuk-frontend-supported & {
       display: none;
     }
   }
