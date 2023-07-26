@@ -12,14 +12,14 @@
     margin-bottom: govuk-spacing(8);
   }
 
-  .js-enabled .app-back-to-top--fixed {
+  .govuk-frontend-supported .app-back-to-top--fixed {
     position: fixed;
     top: calc(100% - #{govuk-spacing(8)});
     bottom: auto;
     left: auto;
   }
 
-  .js-enabled .app-back-to-top--hidden .app-back-to-top__link {
+  .govuk-frontend-supported .app-back-to-top--hidden .app-back-to-top__link {
     @include govuk-visually-hidden-focusable;
   }
 }
