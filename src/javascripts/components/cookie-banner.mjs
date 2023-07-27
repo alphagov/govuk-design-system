@@ -17,6 +17,7 @@ class CookieBanner {
   constructor($module) {
     if (
       !($module instanceof HTMLElement) ||
+      !document.body.classList.contains('govuk-frontend-supported') ||
       // Exit if we're on the cookies page to avoid circular journeys
       this.onCookiesPage()
     ) {
