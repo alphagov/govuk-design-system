@@ -13,7 +13,7 @@ class Example {
    * @param {Element} $module - HTML element
    */
   constructor ($module) {
-    if (!($module instanceof HTMLIFrameElement)) {
+    if (!($module instanceof HTMLIFrameElement) || !document.body.classList.contains('govuk-frontend-supported')) {
       return
     }
 
