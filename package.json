@@ -31,7 +31,7 @@
     "autoprefixer": "^10.4.14",
     "clipboard": "^2.0.11",
     "connect": "^3.7.0",
-    "govuk-frontend": "^4.7.0",
+    "govuk-frontend": "github:alphagov/govuk-frontend#0f5c7975f",
     "gray-matter": "^4.0.2",
     "highlight.js": "^11.8.0",
     "lunr": "^2.3.9",
