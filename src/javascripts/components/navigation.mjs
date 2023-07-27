@@ -12,7 +12,10 @@ class Navigation {
    * @param {Document} $module - HTML document
    */
   constructor($module) {
-    if (!($module instanceof Document)) {
+    if (
+      !($module instanceof Document) ||
+      !document.body.classList.contains('govuk-frontend-supported')
+    ) {
       return this
     }
 
