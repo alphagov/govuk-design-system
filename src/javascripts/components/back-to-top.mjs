@@ -8,18 +8,13 @@ class BackToTop {
     }
 
     this.$module = $module
-  }
-
-  init () {
-    if (!this.$module) {
-      return
-    }
 
     // Check if we can use Intersection Observers
     if (!('IntersectionObserver' in window)) {
       // If there's no support fallback to regular behaviour
       // Since JavaScript is enabled we can remove the default hidden state
-      return this.$module.classList.remove('app-back-to-top--hidden')
+      this.$module.classList.remove('app-back-to-top--hidden')
+      return this
     }
 
     const $footer = document.querySelector('.app-footer')
@@ -27,7 +22,7 @@ class BackToTop {
 
     // Check if there is anything to observe
     if (!$footer || !$subNav) {
-      return
+      return this
     }
 
     let footerIsIntersecting = false

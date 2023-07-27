@@ -8,12 +8,6 @@ class ExamplePage {
     }
 
     this.$module = $module
-  }
-
-  init () {
-    if (!this.$module) {
-      return
-    }
 
     /** @satisfies {HTMLFormElement | null} */
     const $form = this.$module.querySelector('form[action="/form-handler"]')
