@@ -1,3 +1,5 @@
+/* eslint-disable no-new */
+
 import { initAll } from 'govuk-frontend'
 
 import Analytics from './components/analytics.mjs'
@@ -18,7 +20,7 @@ initAll()
 // Initialise cookie banner
 const $cookieBanner = document.querySelector('[data-module="govuk-cookie-banner"]')
 if ($cookieBanner) {
-  new CookieBanner($cookieBanner).init()
+  new CookieBanner($cookieBanner)
 }
 
 // Initialise analytics if consent is given
@@ -30,41 +32,41 @@ if (userConsent && isValidConsentCookie(userConsent) && userConsent.analytics) {
 // Initialise example frames
 const $examples = document.querySelectorAll('[data-module="app-example-frame"]')
 $examples.forEach(($example) => {
-  new Example($example).init()
+  new Example($example)
 })
 
 // Initialise tabs
 const $tabs = document.querySelectorAll('[data-module="app-tabs"]')
 $tabs.forEach(($tabs) => {
-  new AppTabs($tabs).init()
+  new AppTabs($tabs)
 })
 
 // Do this after initialising tabs
-new OptionsTable().init()
+new OptionsTable()
 
 // Add copy to clipboard to code blocks inside tab containers
 const $codeBlocks = document.querySelectorAll('[data-module="app-copy"] pre')
 $codeBlocks.forEach(($codeBlock) => {
-  new Copy($codeBlock).init()
+  new Copy($codeBlock)
 })
 
 // Initialise mobile navigation
-new Navigation(document).init()
+new Navigation(document)
 
 // Initialise search
 const $searchContainer = document.querySelector('[data-module="app-search"]')
 if ($searchContainer) {
-  new Search($searchContainer).init()
+  new Search($searchContainer)
 }
 
 // Initialise back to top
 const $backToTop = document.querySelector('[data-module="app-back-to-top"]')
 if ($backToTop) {
-  new BackToTop($backToTop).init()
+  new BackToTop($backToTop)
 }
 
 // Initialise cookie page
 const $cookiesPage = document.querySelector('[data-module="app-cookies-page"]')
 if ($cookiesPage) {
-  new CookiesPage($cookiesPage).init()
+  new CookiesPage($cookiesPage)
 }
