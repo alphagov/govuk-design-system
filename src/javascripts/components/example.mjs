@@ -18,12 +18,6 @@ class Example {
     }
 
     this.$module = $module
-  }
-
-  init () {
-    if (!this.$module) {
-      return
-    }
 
     // Initialise asap for eager iframes or browsers which don't support lazy loading
     if (!('loading' in this.$module) || this.$module.loading !== 'lazy') {

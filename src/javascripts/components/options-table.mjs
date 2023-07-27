@@ -1,5 +1,5 @@
 class OptionsTable {
-  init () {
+  constructor () {
     this.expandMacroOptions()
   }
 

@@ -17,12 +17,6 @@ class CookieBanner {
     }
 
     this.$module = $module
-  }
-
-  init () {
-    if (!this.$module) {
-      return
-    }
 
     this.$cookieBanner = this.$module
     this.$acceptButton = this.$module.querySelector(cookieBannerAcceptSelector)

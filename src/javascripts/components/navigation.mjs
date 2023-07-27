@@ -24,15 +24,28 @@ class Navigation {
     this.mobileNavOpen = false
 
     // A global const for storing a matchMedia instance which we'll use to detect when a screen size change happens
-    // We set this later during the init function and rely on it being null if the feature isn't available to initially apply hidden attributes
-    this.mql = null
+    // Set the matchMedia to the govuk-frontend tablet breakpoint
+    this.mql = window.matchMedia('(min-width: 40.0625em)')
+
+    // MediaQueryList.addEventListener isn't supported by Safari < 14 so we need
+    // to be able to fall back to the deprecated MediaQueryList.addListener
+    if ('addEventListener' in this.mql) {
+      this.mql.addEventListener('change', () => this.setHiddenStates())
+    } else {
+      // @ts-expect-error Property 'addListener' does not exist
+      this.mql.addListener(() => this.setHiddenStates())
+    }
+
+    this.setHiddenStates()
+    this.setInitialAriaStates()
+    this.bindUIEvents()
   }
 
   // Checks if the saved window size has changed between now and when it was last recorded (on load and on viewport width changes)
   // Reapplies hidden attributes based on if the viewport has changed from big to small or vice verca
   // Saves the new window size
   setHiddenStates () {
-    if (this.mql === null || !this.mql.matches) {
+    if (!this.mql.matches) {
       if (!this.mobileNavOpen) {
         this.$nav.setAttribute('hidden', '')
       }
@@ -46,7 +59,7 @@ class Navigation {
       })
 
       this.$navToggler.removeAttribute('hidden')
-    } else if (this.mql === null || this.mql.matches) {
+    } else {
       this.$nav.removeAttribute('hidden')
 
       this.$navLinks.forEach(($navLink) => {
@@ -119,24 +132,6 @@ class Navigation {
         }
       })
     })
-  }
-
-  init () {
-    // Set the matchMedia to the govuk-frontend tablet breakpoint
-    this.mql = window.matchMedia('(min-width: 40.0625em)')
-
-    // MediaQueryList.addEventListener isn't supported by Safari < 14 so we need
-    // to be able to fall back to the deprecated MediaQueryList.addListener
-    if ('addEventListener' in this.mql) {
-      this.mql.addEventListener('change', () => this.setHiddenStates())
-    } else {
-      // @ts-expect-error Property 'addListener' does not exist
-      this.mql.addListener(() => this.setHiddenStates())
-    }
-
-    this.setHiddenStates()
-    this.setInitialAriaStates()
-    this.bindUIEvents()
   }
 }
 
