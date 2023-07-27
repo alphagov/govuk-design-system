@@ -10,4 +10,5 @@ initAll({
   notificationBanner: { disableAutoFocus: true }
 })
 
-new ExamplePage(document).init()
+// eslint-disable-next-line no-new
+new ExamplePage(document)
