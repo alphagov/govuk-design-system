@@ -1,0 +1,10 @@
+{%- macro heading(params) -%}
+<h{{ params.level }} class="app-heading{% if params.classes %} {{ params.classes }}{% endif %}" id="{{ params.text | slugger }}">
+  <a class="app-heading__anchor govuk-link" href="#{{ params.text | slugger }}">
+    <svg height="25" width="25" viewBox="0 0 512 512" class="app-heading__icon" aria-hidden="true" focusable="false">
+      <use xlink:href="/images/icons.svg#link" />
+    </svg>
+    {{- params.text -}}
+  </a>
+</h{{- params.level -}}>
+{%- endmacro -%}

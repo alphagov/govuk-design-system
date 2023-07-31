@@ -14,6 +14,7 @@ $app-code-color: #d13118;
 @import "components/example";
 @import "components/footer";
 @import "components/header";
+@import "components/heading";
 @import "components/highlight";
 @import "components/image-card";
 @import "components/masthead";
@@ -325,7 +326,7 @@ pre .language-plaintext {
     @extend %govuk-list--bullet;
   }
 
-  a {
+  a:not([class]) {
     @extend %govuk-link;
 
     &:focus code {

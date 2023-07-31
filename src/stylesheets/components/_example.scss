@@ -1,7 +1,12 @@
 // Example styles
 .app-example-wrapper {
   @include govuk-responsive-margin(6, "top");
-  @include govuk-responsive-margin(6, "bottom");
+  @include govuk-font(19);
+}
+
+.app-example-wrapper + * {
+  margin-top: 0;
+  @include govuk-responsive-padding(6, "top");
 }
 
 .app-example {

@@ -1,0 +1,41 @@
+$app-heading-icon-size: .6em;
+$app-heading-icon-gutter: .15em;
+
+@include govuk-exports("app-heading") {
+  // Anchored headings
+  .app-heading {
+    position: relative;
+    left: -($app-heading-icon-size + $app-heading-icon-gutter);
+    padding-left: $app-heading-icon-size + $app-heading-icon-gutter;
+  }
+
+  .app-heading__icon {
+    margin-left: -($app-heading-icon-size + $app-heading-icon-gutter);
+    padding-right: $app-heading-icon-gutter;
+  }
+
+  .app-heading__anchor:link,
+  .app-heading__anchor:visited {
+    color: inherit;
+  }
+
+  .app-heading__anchor:not(:hover):not(:active) {
+    text-decoration: none;
+  }
+
+
+  // Only show icon with pointers that have hover (desktop)
+  // Prevents mobile from accidentally having icons appear when pressing headings.
+  @media (hover: hover) {
+    .app-heading__anchor:where(:hover, :focus) .app-heading__icon {
+        opacity: 1;
+    }
+  }
+
+  .app-heading__icon {
+    width: $app-heading-icon-size;
+    height: $app-heading-icon-size;
+    opacity: 0;
+    fill: govuk-colour("dark-grey");
+  }
+}
