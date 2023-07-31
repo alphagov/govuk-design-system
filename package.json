@@ -73,7 +73,7 @@
     "nunjucks": "^3.2.4",
     "outdent": "^0.8.0",
     "puppeteer": "^20.9.0",
-    "rollup": "^3.26.3",
+    "rollup": "^3.27.0",
     "sass-export": "^2.1.2",
     "serve-static": "^1.15.0",
     "sitemap": "^7.1.1",
