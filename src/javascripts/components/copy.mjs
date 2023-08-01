@@ -1,7 +1,14 @@
 import ClipboardJS from 'clipboard'
 
 class Copy {
+  /**
+   * @param {Element} $module - HTML element
+   */
   constructor ($module) {
+    if (!($module instanceof HTMLElement)) {
+      return this
+    }
+
     this.$module = $module
   }
 

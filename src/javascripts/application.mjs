@@ -17,7 +17,9 @@ initAll()
 
 // Initialise cookie banner
 const $cookieBanner = document.querySelector('[data-module="govuk-cookie-banner"]')
-new CookieBanner($cookieBanner).init()
+if ($cookieBanner) {
+  new CookieBanner($cookieBanner).init()
+}
 
 // Initialise analytics if consent is given
 const userConsent = getConsentCookie()
@@ -47,16 +49,22 @@ $codeBlocks.forEach(($codeBlock) => {
 })
 
 // Initialise mobile navigation
-new Navigation().init()
+new Navigation(document).init()
 
 // Initialise search
 const $searchContainer = document.querySelector('[data-module="app-search"]')
-new Search($searchContainer).init()
+if ($searchContainer) {
+  new Search($searchContainer).init()
+}
 
 // Initialise back to top
 const $backToTop = document.querySelector('[data-module="app-back-to-top"]')
-new BackToTop($backToTop).init()
+if ($backToTop) {
+  new BackToTop($backToTop).init()
+}
 
 // Initialise cookie page
 const $cookiesPage = document.querySelector('[data-module="app-cookies-page"]')
-new CookiesPage($cookiesPage).init()
+if ($cookiesPage) {
+  new CookiesPage($cookiesPage).init()
+}

@@ -1,5 +1,12 @@
 class BackToTop {
+  /**
+   * @param {Element} $module - HTML element
+   */
   constructor ($module) {
+    if (!($module instanceof HTMLElement)) {
+      return this
+    }
+
     this.$module = $module
   }
 

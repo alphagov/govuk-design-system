@@ -8,11 +8,22 @@ const cookieConfirmationAcceptSelector = '.js-cookie-banner-confirmation-accept'
 const cookieConfirmationRejectSelector = '.js-cookie-banner-confirmation-reject'
 
 class CookieBanner {
+  /**
+   * @param {Element} $module - HTML element
+   */
   constructor ($module) {
+    if (!($module instanceof HTMLElement)) {
+      return this
+    }
+
     this.$module = $module
   }
 
   init () {
+    if (!this.$module) {
+      return
+    }
+
     this.$cookieBanner = this.$module
     this.$acceptButton = this.$module.querySelector(cookieBannerAcceptSelector)
     this.$rejectButton = this.$module.querySelector(cookieBannerRejectSelector)
