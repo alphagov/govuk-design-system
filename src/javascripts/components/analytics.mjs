@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 export default function loadAnalytics () {
   if (!window.ga || !window.ga.loaded) {
     // Load gtm script
