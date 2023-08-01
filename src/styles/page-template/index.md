@@ -12,7 +12,7 @@ Use this template to keep your pages consistent with the rest of GOV.UK.
 
 This page template combines the boilerplate markup and [components](/components/) needed for a basic GOV.UK page. It includes:
 
-- JavaScript that adds a `.js-enabled` class, which is required by components with JavaScript behaviour
+- JavaScript that adds a `.govuk-frontend-supported` class, which is required by components with JavaScript behaviour
 - the [skip link](/components/skip-link/), [header](/components/header/) and [footer](/components/footer/) components
 - the favicon, and other related theme icons
 
