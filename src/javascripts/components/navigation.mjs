@@ -5,8 +5,15 @@ const subNavActiveClass = 'app-navigation__subnav--active'
 const subNavJSClass = '.js-app-navigation__subnav'
 
 class Navigation {
+  /**
+   * @param {Document} $module - HTML document
+   */
   constructor ($module) {
-    this.$module = $module || document
+    if (!($module instanceof Document)) {
+      return this
+    }
+
+    this.$module = $module
 
     this.$nav = this.$module.querySelector('.js-app-navigation')
     this.$navToggler = this.$module.querySelector('.js-app-navigation__toggler')

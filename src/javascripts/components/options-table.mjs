@@ -18,7 +18,11 @@ class OptionsTable {
 
       if (exampleName) {
         const $tabLink = document.querySelector(`a[href="#${exampleName}-nunjucks"]`)
-        const $tabHeading = $tabLink ? $tabLink.parentElement : null
+        if (!($tabLink instanceof HTMLAnchorElement)) {
+          return
+        }
+
+        const $tabHeading = $tabLink.parentElement
         const $optionsDetailsElement = document.getElementById(`options-${exampleName}-details`)
 
         if ($tabHeading && $optionsDetailsElement) {
@@ -26,7 +30,7 @@ class OptionsTable {
           const $detailsSummary = $optionsDetailsElement.querySelector('.govuk-details__summary')
           const $detailsText = $optionsDetailsElement.querySelector('.govuk-details__text')
 
-          if ($detailsSummary && $detailsText) {
+          if ($detailsSummary && $detailsText instanceof HTMLElement) {
             $tabLink.setAttribute('aria-expanded', 'true')
             $tabHeading.className += ' app-tabs__item--current'
             $tabsElement.removeAttribute('hidden')

@@ -14,7 +14,7 @@ let documentStore = null
 
 let statusMessage = null
 let searchQuery = ''
-let searchCallback = function () {}
+let searchCallback = function (searchResults) {}
 // Results that are rendered by the autocomplete
 let searchResults = []
 
@@ -32,7 +32,14 @@ const DEBOUNCE_TIME_TO_WAIT = function () {
 }
 
 class Search {
+  /**
+   * @param {Element} $module - HTML element
+   */
   constructor ($module) {
+    if (!($module instanceof HTMLElement)) {
+      return this
+    }
+
     this.$module = $module
   }
 

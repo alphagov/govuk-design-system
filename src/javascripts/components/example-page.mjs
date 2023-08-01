@@ -1,5 +1,12 @@
 class ExamplePage {
+  /**
+   * @param {Document} $module - HTML document
+   */
   constructor ($module) {
+    if (!($module instanceof Document)) {
+      return this
+    }
+
     this.$module = $module
   }
 

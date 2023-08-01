@@ -10,7 +10,14 @@
  */
 
 class AppTabs {
+  /**
+   * @param {Element} $module - HTML element
+   */
   constructor ($module) {
+    if (!($module instanceof HTMLElement)) {
+      return this
+    }
+
     this.$module = $module
     this.$mobileTabs = this.$module.querySelectorAll('.js-tabs__heading a')
     this.$desktopTabs = this.$module.querySelectorAll('.js-tabs__item a')
@@ -48,7 +55,12 @@ class AppTabs {
    */
   onClick (event) {
     event.preventDefault()
+
     const $currentTab = event.target
+    if (!($currentTab instanceof HTMLElement)) {
+      return
+    }
+
     const panelId = $currentTab.getAttribute('aria-controls')
     const $panel = this.getPanel(panelId)
     const isTabAlreadyOpen = $currentTab.getAttribute('aria-expanded') === 'true'
