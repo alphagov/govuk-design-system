@@ -1,5 +1,7 @@
 function addToDataLayer (payload) {
+  // @ts-expect-error Property does not exist on window
   window.dataLayer = window.dataLayer || []
+  // @ts-expect-error Property does not exist on window
   window.dataLayer.push(payload)
 }
 
@@ -15,7 +17,7 @@ function stripPossiblePII (string) {
 }
 
 export function trackConfirm (searchQuery, searchResults, result) {
-  if (window.DO_NOT_TRACK_ENABLED) {
+  if ('DO_NOT_TRACK_ENABLED' in window && window.DO_NOT_TRACK_ENABLED) {
     return
   }
 
@@ -48,7 +50,7 @@ export function trackConfirm (searchQuery, searchResults, result) {
 }
 
 export function trackSearchResults (searchQuery, searchResults) {
-  if (window.DO_NOT_TRACK_ENABLED) {
+  if ('DO_NOT_TRACK_ENABLED' in window && window.DO_NOT_TRACK_ENABLED) {
     return
   }
 

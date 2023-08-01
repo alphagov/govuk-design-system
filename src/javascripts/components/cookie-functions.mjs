@@ -114,6 +114,7 @@ export function getConsentCookie () {
  * @returns {boolean} True if consent cookie is valid
  */
 export function isValidConsentCookie (options) {
+  // @ts-expect-error Property does not exist on window
   return (options && options.version >= window.GDS_CONSENT_COOKIE_VERSION)
 }
 
@@ -137,6 +138,7 @@ export function setConsentCookie (options) {
   // Essential cookies cannot be deselected, ignore this cookie type
   delete cookieConsent.essential
 
+  // @ts-expect-error Property does not exist on window
   cookieConsent.version = window.GDS_CONSENT_COOKIE_VERSION
 
   // Set the consent cookie
