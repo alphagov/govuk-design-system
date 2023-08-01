@@ -30,8 +30,7 @@ Do not use it for tabular data or a simple list of information or tasks, like a 
 ## How it works
 
 Each row of a summary list is made up of a:
- - ‘key’ that’s a description or label of a piece of information, like
-   “Name”
+ - ‘key’ that’s a description or label of a piece of information, like “Name”
  - ‘value’ which is the piece of information itself, such as “John Smith”
 
 You can show a single or multiple summary lists on a page. If you’re showing multiple summary lists on a page, you can add structure by using headings or summary cards.
