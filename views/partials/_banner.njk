@@ -9,7 +9,7 @@
   {% set bannerTag = "Archive" %}
   {% set bannerText %}
     This is an archived version of
-    the <a class="govuk-link" href="https://github.com/alphagov/govuk-design-system/tree/{{ BRANCH }}">{{ BRANCH }}</a> branch for the
+    the <a class="govuk-link" href="https://github.com/alphagov/govuk-design-system/tree/{{ env("BRANCH") }}">{{ env("BRANCH") }}</a> branch for the
     <a class="govuk-link" href="https://design-system.service.gov.uk">Design System</a>.
   {% endset %}
 {% endif %}
