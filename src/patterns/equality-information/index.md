@@ -69,7 +69,7 @@ This pattern covers:
 
 ### Collecting more detailed information
 
-Start with the harmonised standards, keeping the categories of responses in the same order. Break them down into subcategories if necessary. For example if your service is aimed at a disabled people in particular, you may want to collect more detailed information about their disability.  But make sure any categories you use map back to a ‘parent’ category in the harmonised standard.
+Start with the harmonised standards, keeping the categories of responses in the same order. Break them down into subcategories if necessary. For example if your service is aimed at a disabled people in particular, you may want to collect more detailed information about their disability. But make sure any categories you use map back to a ‘parent’ category in the harmonised standard.
 
 ### Collecting other types of equality information
 

@@ -15,8 +15,8 @@ Use validation to identify when the user tried to provide information that you'r
 
 But minimise your chances of needing to show an error message in the first place by:
 
-+ [making sure your questions are well designed](https://www.gov.uk/service-manual/design/designing-good-questions)
-+ accepting information in different formats, as long as it’s not ambiguous (for example, accept postcodes with or without spaces - and names that include a non-alphabetical character or an apostrophe, accent or other diacritic)
+- [making sure your questions are well designed](https://www.gov.uk/service-manual/design/designing-good-questions)
+- accepting information in different formats, as long as it’s not ambiguous (for example, accept postcodes with or without spaces - and names that include a non-alphabetical character or an apostrophe, accent or other diacritic)
 
 ## When not to use this pattern
 
@@ -24,17 +24,17 @@ Do not use validation to check whether the user is eligible to use the service o
 
 There are separate patterns for:
 
-+ [‘there is a problem with the service’ pages](/patterns/problem-with-the-service-pages/)
-+ [‘page not found’ pages](/patterns/page-not-found-pages/)
-+ [‘service unavailable’ pages](/patterns/service-unavailable-pages/)
+- [‘there is a problem with the service’ pages](/patterns/problem-with-the-service-pages/)
+- [‘page not found’ pages](/patterns/page-not-found-pages/)
+- [‘service unavailable’ pages](/patterns/service-unavailable-pages/)
 
 ## How it works
 
 Validation should refuse to accept:
 
-+ information that cannot be correct
-+ information that’s too ambiguous for you to use
-+ missing information, if the information is required
+- information that cannot be correct
+- information that’s too ambiguous for you to use
+- missing information, if the information is required
 
 For example, if you’re asking for someone’s date of birth you should not accept ‘13’ in the month field.
 
@@ -44,18 +44,18 @@ If these characters caused a validation error, it would be difficult for the use
 
 You should ignore unwanted characters entered:
 
-+ as part of numbers and codes, such as postcodes or card details
-+ before or after an answer, as users might have copied and pasted them in by accident
-+ by dictation software — this is particularly common when dictating numbers
+- as part of numbers and codes, such as postcodes or card details
+- before or after an answer, as users might have copied and pasted them in by accident
+- by dictation software — this is particularly common when dictating numbers
 
 ### How to tell the user about validation errors
 
 If the user's answers fail validation:
 
-+ show them the page again, with the form fields as the user filled them in
-+ add ‘Error: ’ to the beginning of the page `<title>` so screen readers read it out as soon as possible
-+ show an [error summary](/components/error-summary/) at the top of the page, and move keyboard focus to it
-+ show [error messages](/components/error-message/) next to fields with errors
+- show them the page again, with the form fields as the user filled them in
+- add ‘Error: ’ to the beginning of the page `<title>` so screen readers read it out as soon as possible
+- show an [error summary](/components/error-summary/) at the top of the page, and move keyboard focus to it
+- show [error messages](/components/error-message/) next to fields with errors
 
 Read guidance on [writing good error messages](/components/error-message/#be-clear-and-concise).
 
@@ -73,8 +73,8 @@ If you do use this sort of validation, [make sure you do it in a way that’s ac
 
 There are 2 ways to carry out validation:
 
-+ server side validation
-+ client side validation (in the browser, using either JavaScript or HTML)
+- server side validation
+- client side validation (in the browser, using either JavaScript or HTML)
 
 You’ll always need to carry out server side validation, even if you use client side validation. This is because there’s no guarantee that client side validation will work in all circumstances. For example, the user can bypass client side validation, or [JavaScript can fail to load](https://www.gov.uk/service-manual/technology/using-progressive-enhancement).
 
@@ -82,15 +82,15 @@ Only add client side validation if you find a user need for it. For example, bec
 
 Before you add client side validation, consider that:
 
-+ it's hard to tell the user about errors in a way that works reliably across different browsers and assistive technologies
-+ carrying out both kinds of validation means you have to check their rules do not conflict
+- it's hard to tell the user about errors in a way that works reliably across different browsers and assistive technologies
+- carrying out both kinds of validation means you have to check their rules do not conflict
 
 ## Turn off HTML5 validation
 
 HTML5 validation is a type of client side validation built into browsers. Do not use it because:
 
-+ the visual style, placement and content of HTML5 error messages cannot be made consistent with the GOV.UK Design System
-+ we know that the GOV.UK Design System error message and error summary components are accessible
+- the visual style, placement and content of HTML5 error messages cannot be made consistent with the GOV.UK Design System
+- we know that the GOV.UK Design System error message and error summary components are accessible
 
 To turn off HTML5 validation, add ‘[novalidate](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attr-novalidate)’ to your form tags.
 

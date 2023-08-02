@@ -9,9 +9,11 @@ You'll need [Git](https://help.github.com/articles/set-up-git/) and [Node.js](ht
 Note: You will need the [active LTS (Long-term support)](https://github.com/nodejs/Release#release-schedule) Node.js version for this project (as specified in [.nvmrc](./.nvmrc))
 
 ### Fork repository (optional)
+
 If you're an external contributor make sure to [fork this project first](https://help.github.com/articles/fork-a-repo/)
 
 ### Clone repository
+
 ```
 git clone git@github.com:alphagov/govuk-design-system.git # or clone your own fork
 
@@ -19,6 +21,7 @@ cd govuk-design-system
 ```
 
 ### Using nvm (optional)
+
 If you work across multiple Node.js projects there's a good chance they require different Node.js and npm versions.
 
 To enable this we use [nvm (Node Version Manager)](https://github.com/creationix/nvm) to switch between versions easily.
@@ -27,18 +30,23 @@ To enable this we use [nvm (Node Version Manager)](https://github.com/creationix
 2. Run `nvm install` in the project directory (this will use [.nvmrc](./.nvmrc))
 
 ### Install npm dependencies
+
 ```
 npm install
 ```
 
 ### Start a local server
+
 This will build sources, serve pages and watch for changes.
+
 ```
 npm start
 ```
 
 ## Build
+
 Build `./src` to `./deploy/public`
+
 ```
 npm run build
 ```
@@ -59,7 +67,7 @@ npm run lint
 Design System consumes the [GOV.UK Frontend](https://github.com/alphagov/govuk-frontend) package via [NPM](https://www.npmjs.com/).
 This is defined in the [package.json](package.json) file.
 
---------------------
+---
 
 ## Continuous integration
 

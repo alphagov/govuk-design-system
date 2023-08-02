@@ -16,7 +16,6 @@ The contents of the Design System must be of a high quality and meet user needs.
 
 To be successful, proposals need to show that the component or pattern being suggested would be useful and unique.
 
-
 {{ govukTable({
   caption: "New proposals criteria",
   captionClasses: "govuk-visually-hidden",
@@ -51,7 +50,6 @@ To be successful, proposals need to show that the component or pattern being sug
     ]
   ]
 }) }}
-
 
 The [Design System working group](/community/design-system-working-group/) reviews proposals to check they meet these criteria. Proposals that meet the criteria then move to the next step to show they're ready to publish.
 
@@ -104,7 +102,6 @@ Before a new component or pattern is published the working group reviews the imp
     ]
   ]
 }) }}
-
 
 ## Developing a community resource or tool
 

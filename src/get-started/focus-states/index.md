@@ -51,6 +51,7 @@ If you use Sass, you should include the `govuk-focused-text` mixin in your compo
   @include govuk-focused-text;
 }
 ```
+
 ### Make other focusable elements accessible
 
 If you use Sass, you can use 3 GOV.UK Frontend variables if your component has a background colour or border. For example a text input or checkbox.

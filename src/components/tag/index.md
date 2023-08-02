@@ -41,7 +41,7 @@ Tags should be helpful to users. The more you add, the harder it is for users to
 
 ## Using colour with tags
 
-You can use colour to help distinguish between different tags – or to help draw the user’s attention to a tag if it’s especially important. For example, it probably makes sense to use  `govuk-tag--red` for a tag that reads ‘Urgent’.
+You can use colour to help distinguish between different tags – or to help draw the user’s attention to a tag if it’s especially important. For example, it probably makes sense to use `govuk-tag--red` for a tag that reads ‘Urgent’.
 
 [Do not use colour alone to convey information](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html) because it’s not accessible. If you use the same tag in more than one place, make sure you keep the colour consistent.
 

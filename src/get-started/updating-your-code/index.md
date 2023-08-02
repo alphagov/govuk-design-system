@@ -244,6 +244,7 @@ The main change is changing variables from [snake_case](https://en.wikipedia.org
       <td class="govuk-table__cell">:body_end</td>
       <td class="govuk-table__cell">bodyEnd</td>
     </tr>
+
   </tbody>
 </table>
 
@@ -414,7 +415,6 @@ GOV.UK Frontend uses ["Block, Element, Modifier" (BEM)](http://getbem.com/) and 
   </tbody>
 </table>
 
-
 ### Layout and grid system class names
 
 <table class="govuk-table app-table--fixed">
@@ -457,7 +457,6 @@ GOV.UK Frontend uses ["Block, Element, Modifier" (BEM)](http://getbem.com/) and 
 
   </tbody>
 </table>
-
 
 ### Form related class names
 
@@ -504,7 +503,6 @@ GOV.UK Frontend uses ["Block, Element, Modifier" (BEM)](http://getbem.com/) and 
     </tr>
   </tbody>
 </table>
-
 
 ### Helper class names
 
@@ -593,8 +591,8 @@ GOV.UK Frontend uses ["Block, Element, Modifier" (BEM)](http://getbem.com/) and 
 
 ## Mixins and variables
 
-
 ### Typography
+
 <table class="govuk-table app-table--fixed">
   <caption class="govuk-table__caption govuk-visually-hidden">Helper class names</caption>
   <thead class="govuk-table__head">
@@ -700,6 +698,7 @@ GOV.UK Frontend uses ["Block, Element, Modifier" (BEM)](http://getbem.com/) and 
 </table>
 
 ### Layout
+
 <table class="govuk-table app-table--fixed">
   <caption class="govuk-table__caption govuk-visually-hidden">Helper class names</caption>
   <thead class="govuk-table__head">
@@ -745,6 +744,7 @@ GOV.UK Frontend uses ["Block, Element, Modifier" (BEM)](http://getbem.com/) and 
 </table>
 
 ### Media queries
+
 <table class="govuk-table app-table--fixed">
   <caption class="govuk-table__caption govuk-visually-hidden">Helper class names</caption>
   <thead class="govuk-table__head">
@@ -770,6 +770,7 @@ GOV.UK Frontend uses ["Block, Element, Modifier" (BEM)](http://getbem.com/) and 
 </table>
 
 ### Images
+
 <table class="govuk-table app-table--fixed">
   <caption class="govuk-table__caption govuk-visually-hidden">Helper class names</caption>
   <thead class="govuk-table__head">
@@ -809,6 +810,7 @@ GOV.UK Frontend uses ["Block, Element, Modifier" (BEM)](http://getbem.com/) and 
 </table>
 
 ### Internet Explorer
+
 <table class="govuk-table app-table--fixed">
   <caption class="govuk-table__caption govuk-visually-hidden">Helper class names</caption>
   <thead class="govuk-table__head">

@@ -2,8 +2,8 @@
 title: Character count without a heading
 layout: layout-example.njk
 ---
- {% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
- {{ govukCharacterCount({
+{% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
+{{ govukCharacterCount({
   id: "label-as-page-heading",
   name: "label-as-page-heading",
   maxlength: 200,

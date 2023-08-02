@@ -11,7 +11,6 @@ description: This guide explains how to create prototypes using the GOV.UK Desig
 
 This guide explains how to create prototypes using the GOV.UK Design System and GOV.UK Prototype Kit.
 
-
 ## Before you start
 
 To make prototypes you will need to install version 7 or later of the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk/docs/create-new-prototype) which has been built to work with the Design System.
@@ -20,13 +19,11 @@ Version 7 of the Prototype Kit works in the same way as previous versions except
 
 This means that any code that you copy across from old prototypes will not display correctly. Instead, you should use the code provided in the Design System.
 
-
 ## Styling page elements
 
 The Design System provides lots of new CSS classes for styling page elements, so you should not need to write as much of your own Sass or CSS.
 
 Explore the [Styles](/styles/) section of the Design System to see what classes are available and how to apply them.
-
 
 ## Using components
 

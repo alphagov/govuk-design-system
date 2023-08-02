@@ -23,7 +23,6 @@ If you have to ask about gender, you should:
 - list the fields in alphabetical order
 - do research to test that this works for your users
 
-
 ### Avoid using pronouns
 
 You should address the user as ‘you’ where possible and avoid using gendered pronouns like ‘he’ and ‘she’.

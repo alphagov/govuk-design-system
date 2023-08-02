@@ -108,6 +108,7 @@ If the code has expired, show this message:
 {{ example({group: "patterns", item: "confirm-a-phone-number", example: "error-expired", html: true, nunjucks: true, open: false}) }}
 
 If the code was sent more than 2 hours ago, show the 'incorrect security code' message.
+
 ### Technical security measures
 
 Use [technical measures to prevent automated attacks](https://www.ncsc.gov.uk/collection/passwords/updating-your-approach#tip2-password-collection). For example, add a time delay after 10 incorrect number entries.

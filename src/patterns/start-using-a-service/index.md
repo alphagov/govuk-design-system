@@ -44,7 +44,6 @@ Mainstream content is content aimed at the general public — or at meeting busi
 
 The content team at GDS is responsible for creating mainstream start points on GOV.UK, as with other mainstream content. They’ll work with you to make sure the journey from GOV.UK into the service works as well as possible. It’s a good idea to [talk to your organisation’s content team during alpha](https://www.gov.uk/service-manual/service-assessments/get-your-service-on-govuk#before-your-alpha-assessment) — if necessary, they can put you in touch with the team at GDS.
 
-
 ### Mainstream start points
 
 For a mainstream start point, the options are:
