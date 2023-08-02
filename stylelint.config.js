@@ -3,6 +3,10 @@ module.exports = {
   ignoreFiles: ['**/?(.)*.{cjs,js,mjs}', 'deploy/public/**/*'],
   overrides: [
     {
+      customSyntax: 'postcss-markdown',
+      files: ['**/*.md']
+    },
+    {
       customSyntax: 'postcss-scss',
       files: ['**/*.scss']
     }
