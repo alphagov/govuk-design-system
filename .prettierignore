@@ -1,0 +1,14 @@
+# Temporary only
+.cache/
+
+# Node.js modules
+node_modules/
+
+# Test coverage
+coverage/
+
+# Build output
+deploy/public/
+
+# Files to ignore
+package-lock.json
