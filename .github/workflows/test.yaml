@@ -88,6 +88,9 @@ jobs:
           - description: Lint HTML
             run: npm run lint:html --ignore-scripts
 
+          - description: EditorConfig
+            run: npm run lint:editorconfig
+
           - description: Prettier
             run: npm run lint:prettier
 
