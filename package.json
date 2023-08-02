@@ -85,8 +85,8 @@
     "slash": "^3.0.0",
     "slugger": "^1.0.1",
     "standard": "^17.1.0",
-    "stylelint": "^14.16.1",
-    "stylelint-config-gds": "^0.3.0",
+    "stylelint": "^15.10.2",
+    "stylelint-config-gds": "^1.0.0",
     "stylelint-order": "^6.0.3",
     "tap-mocha-reporter": "^5.0.3"
   },
