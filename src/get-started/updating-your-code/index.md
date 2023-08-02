@@ -62,7 +62,7 @@ The main change is changing variables from [snake_case](https://en.wikipedia.org
           which can include custom <code>text</code>
         </p>
 
-```javascript
+```njk
 {% raw %}
 {% block skipLink %}
   {{ govukSkipLink({ text: "custom text" }) }}
@@ -89,7 +89,7 @@ The main change is changing variables from [snake_case](https://en.wikipedia.org
           which can include custom <code>classes</code>
         </p>
 
-```javascript
+```njk
 {% raw %}
 {% block header %}
   {{ govukHeader({ classes: "app-custom-classes" }) }}
@@ -110,7 +110,7 @@ The main change is changing variables from [snake_case](https://en.wikipedia.org
           which can include custom <code>homepageUrl</code>
         </p>
 
-```javascript
+```njk
 {% raw %}
 {% block header %}
   {{ govukHeader({ homepageUrl: "/custom-url" }) }}
@@ -137,7 +137,7 @@ The main change is changing variables from [snake_case](https://en.wikipedia.org
           which can include a custom <code>serviceName</code>
         </p>
 
-```javascript
+```njk
 {% raw %}
 {% block header %}
   {{ govukHeader({ serviceName: "Custom service name" }) }}
@@ -158,7 +158,7 @@ The main change is changing variables from [snake_case](https://en.wikipedia.org
           which can include a custom <code>navigation</code>
         </p>
 
-```javascript
+```njk
 {% raw %}
 {% block header %}
   {{ govukHeader({ navigation: [] }) }}
@@ -200,7 +200,7 @@ The main change is changing variables from [snake_case](https://en.wikipedia.org
           which can include a custom <code>navigation</code>
         </p>
 
-```javascript
+```njk
 {% raw %}
 {% block footer %}
   {{ govukFooter({ navigation: [] }) }}
@@ -221,7 +221,7 @@ The main change is changing variables from [snake_case](https://en.wikipedia.org
           which can include custom <code>meta</code> links
         </p>
 
-```javascript
+```njk
 {% raw %}
 {% block footer %}
   {{ govukFooter({ meta: [] }) }}
