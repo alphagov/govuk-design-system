@@ -40,7 +40,7 @@
   padding-left: govuk-spacing(4);
 }
 
-.app-subnav__section--nested .app-subnav__section-item:before {
+.app-subnav__section--nested .app-subnav__section-item::before {
   content: "—";
   margin-left: -(govuk-spacing(4));
   color: govuk-colour("dark-grey");

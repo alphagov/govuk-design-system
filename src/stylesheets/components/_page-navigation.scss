@@ -14,7 +14,7 @@
   }
 }
 
-.app-page-navigation__item:before {
+.app-page-navigation__item::before {
   content: "\2014 "; // "— "
   margin-left: -(govuk-spacing(4));
   padding-right: govuk-spacing(1);

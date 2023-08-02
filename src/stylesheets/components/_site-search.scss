@@ -220,11 +220,11 @@ $icon-size: 40px;
 .app-site-search__aliases {
   margin-left: govuk-spacing(1);
 
-  &:before {
+  &::before {
     content: "(";
   }
 
-  &:after {
+  &::after {
     content: ")";
   }
 }
