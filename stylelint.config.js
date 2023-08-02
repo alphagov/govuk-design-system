@@ -7,6 +7,14 @@ module.exports = {
       files: ['**/*.md']
     },
     {
+      customSyntax: 'postcss-markdown',
+      files: ['**/extending-and-modifying-components/index.md'],
+      rules: {
+        // Allow markdown `*.md` CSS example with !important
+        'declaration-no-important': null
+      }
+    },
+    {
       customSyntax: 'postcss-scss',
       files: ['**/*.scss']
     }
