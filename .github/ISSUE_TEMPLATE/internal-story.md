@@ -1,10 +1,9 @@
 ---
 name: "Internal story template"
 about: For internal use only
-title: ''
+title: ""
 labels: "awaiting triage"
-assignees: ''
-
+assignees: ""
 ---
 
 <!--

@@ -1,10 +1,9 @@
 ---
 name: "✨ Feature request"
 about: Suggest a new feature or idea
-title: ''
+title: ""
 labels: "feature request, awaiting triage"
-assignees: ''
-
+assignees: ""
 ---
 
 <!--

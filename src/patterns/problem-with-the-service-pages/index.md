@@ -3,7 +3,7 @@ title: There is a problem with the service pages
 description: This is a page that tells someone there is something wrong with the service. They are also known as 500 pages
 section: Patterns
 theme: Pages
-aliases: '500'
+aliases: "500"
 backlogIssueId: 129
 layout: layout-pane.njk
 status: Experimental

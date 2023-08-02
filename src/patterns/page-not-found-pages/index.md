@@ -3,7 +3,7 @@ title: Page not found pages
 description: A page not found tells someone we cannot find the page they were trying to view. They are also known as 404 pages.
 section: Patterns
 theme: Pages
-aliases: '404'
+aliases: "404"
 backlogIssueId: 130
 layout: layout-pane.njk
 status: Experimental
