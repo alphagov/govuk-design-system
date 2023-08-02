@@ -32,10 +32,10 @@
       <div class="app-example__toolbar">
         <a href="{{ exampleURL }}" class="app-example__new-window" target="_blank">
           {#- Don't use full title visually as the context is shown based on location of this link #}
-          Open this example in a new tab<span class="govuk-visually-hidden">: {{ exampleTitle | lower }}</span>
+          Open this example in a new tab<span class="govuk-visually-hidden">: {{ exampleTitle | lower | smartypants }}</span>
         </a>
       </div>
-      <iframe title="{{ exampleTitle + " example" }}" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable{% if params.size %} app-example__frame--{{ params.size }}{% endif %}" src="{{ exampleURL }}" loading="{% if params.loading %}{{ params.loading }}{% else %}lazy{% endif %}"></iframe>
+      <iframe title="{{ exampleTitle | smartypants + " example" }}" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable{% if params.size %} app-example__frame--{{ params.size }}{% endif %}" src="{{ exampleURL }}" loading="{% if params.loading %}{{ params.loading }}{% else %}lazy{% endif %}"></iframe>
     </div>
   {% endif %}
 
