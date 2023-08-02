@@ -10,6 +10,7 @@ layout: layout-pane.njk
 Always use the GOV.UK colour palette.
 
 ## Colour contrast
+
 You must make sure that the contrast ratio of text and interactive elements in
 your service meets [level AA of the Web Content Accessibility Guidelines
 (WCAG 2.1)](https://www.w3.org/TR/WCAG21/#contrast-minimum).
@@ -76,7 +77,7 @@ should use the `$govuk-error-colour` Sass variable rather than
 
 If you need to use tints of this palette, use either 25% or 50%.
 
-You can find departmental colours in the GOV.UK Frontend [_colours-organisations](https://github.com/alphagov/govuk-frontend/blob/main/packages/govuk-frontend/src/govuk/settings/_colours-organisations.scss) file.
+You can find departmental colours in the GOV.UK Frontend [\_colours-organisations](https://github.com/alphagov/govuk-frontend/blob/main/packages/govuk-frontend/src/govuk/settings/_colours-organisations.scss) file.
 
 <table class="govuk-body app-colour-list" summary="Table of extended colours">
   <tbody>
@@ -96,6 +97,7 @@ You can find departmental colours in the GOV.UK Frontend [_colours-organisations
 </table>
 
 ### Colour palette for charts
+
 When creating charts, use the colour palettes and guidance set out in the Government Analysis Function [Data visualisation: colours guidance](https://analysisfunction.civilservice.gov.uk/policy-store/data-visualisation-colours-in-charts/).
 
 The colour palettes recommended by the Government Analysis Function are based on the colours shown on this page. They've made some slight changes to improve colour contrast, in line with the Web Content Accessibility Guidelines (WCAG).

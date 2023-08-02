@@ -124,7 +124,6 @@ From the GOV.UK Frontend codebase:
 
 The accordion component is currently using an `aria-labelledby` ARIA attribute on an unsupported `<div>` element. This is an incorrect implementation of [WAI-ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/), but is not a failure of WCAG success criterion [4.1.2 Name, Role, Value](https://www.w3.org/TR/WCAG21/#name-role-value). We plan to fix this within 2023. Track our progress on the [GitHub issue: ‘Accordion - Elements must only use allowed ARIA attributes’](https://github.com/alphagov/govuk-frontend/issues/2472).
 
-
 ### Testing our products for accessibility
 
 The [GOV.UK Design System website](https://design-system.service.gov.uk/) was last audited for accessibility issues by an external group on 7 October 2019. The test was carried out by the [Digital Accessibility Centre (DAC)](https://digitalaccessibilitycentre.org/).
@@ -173,7 +172,7 @@ This statement was prepared on 23 October 2019. It was last reviewed on 27 April
 
 While the GOV.UK Design System team takes steps to ensure the Design System is as accessible as possible by default, you still need to carry out contextual research.
 
-Simply using code from the GOV.UK Frontend codebase is not enough to accessibly implement the GOV.UK Design System. There is important written guidance in the [GOV.UK Design System website](https://design-system.service.gov.uk/) on how to implement styles, components and patterns in an accessible way. 
+Simply using code from the GOV.UK Frontend codebase is not enough to accessibly implement the GOV.UK Design System. There is important written guidance in the [GOV.UK Design System website](https://design-system.service.gov.uk/) on how to implement styles, components and patterns in an accessible way.
 
 Using the Design System guidance and Frontend codebase does not mean your service automatically meets level AA of WCAG 2.1. You’ll still need to make sure your service as a whole meets accessibility requirements.
 
@@ -197,4 +196,3 @@ If you have any questions or need help, contact the GOV.UK Design System team:
 
 - using the #govuk-design-system channel on the cross-government [UK Government Digital Slack](https://ukgovernmentdigital.slack.com/app_redirect?channel=govuk-design-system)
 - by email at <govuk-design-system-support@digital.cabinet-office.gov.uk>
-

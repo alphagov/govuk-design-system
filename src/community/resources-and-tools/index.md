@@ -14,7 +14,6 @@ The GOV.UK Design System team is not responsible for these resources and tools a
 
 To find information about other design systems across government, see a community-managed [list of design systems created by different departments](https://github.com/ctdesign/gov-design-systems-list).
 
-
 ## Create flow diagrams
 
 [GOV.UK Design System Flow Diagrams](https://github.com/dashouse/govuk-design-system-flow-diagrams) -
@@ -38,7 +37,6 @@ Google Drawings templates for creating flow diagrams, based on GOV Flow.
 [GOV.UK Userflow Icons](https://github.com/alirawashdeh/govuk-userflow-icons) -
 SVG images for creating flow diagrams of GOV.UK services.
 
-
 ## Create prototypes and wireframes
 
 [Adobe XD wireframes](https://github.com/SulimanK/gds-adobexd-wireframing-kit) -
@@ -52,7 +50,6 @@ Figma library of styles and components based on the GOV.UK Design System.
 
 [Sketch Wireframing Kit](https://github.com/dwp/sketch_wireframing_kit) -
 Sketch wireframes based on the GOV.UK Design System.
-
 
 ## Build front ends
 
@@ -88,7 +85,6 @@ A collection of GOV.UK Frontend Laravel Blade components, validation rules, page
 [Govdown](https://github.com/ukgovdatascience/govdown) -
 A GOV.UK Design System theme for R Markdown.
 
-
 ### Ruby on Rails
 
 [GOV.UK Design System Formbuilder](https://github.com/DFE-Digital/govuk_design_system_formbuilder) -
@@ -103,8 +99,6 @@ A Ruby gem that adds the GOV.UK Frontend to Rails applications.
 [GOV.UK Rails Template](https://github.com/DFE-Digital/rails-template) -
 A complete Rails application template using GOV.UK Frontend.
 
-
-
 ## Write code
 
 You can download GOV.UK Frontend Nunjucks macro snippets for:
@@ -112,8 +106,6 @@ You can download GOV.UK Frontend Nunjucks macro snippets for:
 - [Atom](https://atom.io/packages/govuk-design-system-snippets)
 - [Nova](https://extensions.panic.com/extensions/ca/ca.GOVUKDesignSystemSnippets/)
 - [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=simonwhatley.govuk-design-system-snippets)
-
-
 
 ## Help improve this page
 

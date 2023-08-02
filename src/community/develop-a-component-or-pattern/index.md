@@ -7,7 +7,7 @@ layout: layout-pane.njk
 order: 4
 ---
 
-The Design System team focuses on developing [prioritised components and patterns](/community/upcoming-components-patterns/) with the community. However, anyone can choose to work on something from the [list of discussions on GitHub](https://github.com/orgs/alphagov/projects/43/views/2). 
+The Design System team focuses on developing [prioritised components and patterns](/community/upcoming-components-patterns/) with the community. However, anyone can choose to work on something from the [list of discussions on GitHub](https://github.com/orgs/alphagov/projects/43/views/2).
 
 If you see something you'd like to work on, join the discussion in the contribution's issue page or email the Design System team at <govuk-design-system-support@digital.cabinet-office.gov.uk>.
 

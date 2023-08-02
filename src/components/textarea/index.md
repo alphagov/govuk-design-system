@@ -43,7 +43,7 @@ Make the height of a textarea proportional to the amount of text you expect user
 
 Users will often need to copy and paste information into a textarea, so do not stop them from doing this.
 
-###  If you’re asking more than one question on the page
+### If you’re asking more than one question on the page
 
 If you're asking more than one question on the page, do not set the contents of the `<label>` as the page heading. Read more about [asking multiple questions on question pages](/patterns/question-pages/#asking-multiple-questions-on-a-page).
 

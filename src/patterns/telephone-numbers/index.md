@@ -9,6 +9,7 @@ layout: layout-pane.njk
 status: Experimental
 statusMessage: This pattern is currently experimental because <a class="govuk-link" href="#research-on-this-pattern">more research</a> is needed to validate it.
 ---
+
 This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
 
 {% from "_example.njk" import example %}
@@ -22,9 +23,11 @@ Only collect telephone numbers from people if you genuinely need them. Not every
 ## How it works
 
 ### Allow different formats
+
 Let users enter telephone numbers in whatever format is familiar to them. Allow for additional spaces, hyphens, dashes and brackets, and be able to accommodate country and area codes.
 
 ### Validate telephone numbers
+
 You should validate telephone numbers so you can let users know if they have entered one incorrectly. Google’s [libphonenumber](https://github.com/googlei18n/libphonenumber) library can validate telephone numbers from most countries.
 
 ### Use the autocomplete attribute
@@ -54,18 +57,21 @@ Say ‘Enter a telephone number, like 01632 960 001, 07700 900 982 or +44 808 15
 Say ‘Enter a telephone number in the correct format’.
 
 ### Make it clear what type of telephone number you need
+
 Use the form label or hint text to tell users if you specifically need a UK, international or mobile telephone number.
 
 {{ example({group: "patterns", item: "telephone-numbers", example: "international", html: true, nunjucks: true, open: false, size: "s"}) }}
 
 ### Using example telephone numbers
+
 If you wish to include an example telephone number (in hint text for example), [Ofcom maintains a list of numbers](https://www.ofcom.org.uk/phones-telecoms-and-internet/information-for-industry/numbering/numbers-for-drama) that are reserved for use in media. These are:
 
 - UK non-geographic: 01632 960000 to 960999
-- UK London:  020 7946 0000 to 7946 0999
+- UK London: 020 7946 0000 to 7946 0999
 - UK mobile: 07700 900000 to 900999
 
 ### Explain why you need a telephone number
+
 Tell users why you might contact them and when.
 
 ### Do not display telephone numbers as links on devices that cannot make calls
@@ -85,6 +91,7 @@ If you do need to mark up your telephone numbers as links, for example, to suppo
 When you look at your service's user journey, remember that telephone numbers as links might behave in unexpected ways for the user. For example, unless the user sets a default app to handle `tel:` links, some browsers and operating systems will automatically start a setup process.
 
 ### Write telephone numbers in the GOV.UK style
+
 See the [GOV.UK style for writing telephone numbers](https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#telephone-numbers).
 
 ### Avoid input masking
@@ -97,7 +104,6 @@ Avoid [input masking](https://css-tricks.com/input-masking/) because it makes it
 ### Avoid reformatting telephone numbers
 
 The GOV.UK Notify team have observed some users becoming confused when presented with a reformatted version of a telephone number that they provided, for example, with the +44 country code added.
-
 
 ## Research on this pattern
 

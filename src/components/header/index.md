@@ -26,7 +26,6 @@ You must use the GOV.UK header at the top of every page if your service is being
 
 You must not use the GOV.UK header if your service is not being hosted on one of the above domains.
 
-
 ## How it works
 
 ### Default header

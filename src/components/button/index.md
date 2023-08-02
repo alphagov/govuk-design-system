@@ -123,7 +123,6 @@ This feature will prevent double clicks for users that have JavaScript enabled, 
 
 In the case of slow connections, aim to give the user information about what’s happening, for example, by showing a loading spinner or a modal, before using `data-prevent-double-click`.
 
-
 ## Research on this component
 
 Testing on GOV.UK has shown that [the green colour of start buttons has improved click-through rates](https://github.com/alphagov/govuk-design-system-backlog/issues/34#issuecomment-699537400).

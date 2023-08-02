@@ -48,7 +48,7 @@ There are 2 ways to use the character count component. You can use HTML or, if y
 
 {{ example({group: "components", item: "character-count", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second"}) }}
 
-###  If you’re asking more than one question on the page
+### If you’re asking more than one question on the page
 
 If you're asking more than one question on the page, do not set the contents of the `<label>` as the page heading. Read more about [asking multiple questions on question pages](/patterns/question-pages/#asking-multiple-questions-on-a-page).
 

@@ -173,7 +173,6 @@ You can use this example text for a service that set:
 
 You’ll need a [cookies page](/patterns/cookies-page/) as well as a cookie banner.
 
-
 ## Research on this component
 
 When the user accepts or rejects cookies, a confirmation message will display. For example, "Your cookie preferences have been saved." The focus also shifts to this new message.

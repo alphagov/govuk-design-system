@@ -65,11 +65,11 @@ An ‘accessibility concern’ is our umbrella term for any question about the a
 
 Accessibility concerns can surface in any product, including:
 
--   [GOV.UK Frontend](https://design-system.service.gov.uk/get-started/production/)
--   the [GOV.UK Design System website](https://design-system.service.gov.uk/)
--   the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk/)
--   the [GOV.UK Frontend technical documentation website](https://frontend.design-system.service.gov.uk/)
--   other content produced by the GOV.UK Design System team
+- [GOV.UK Frontend](https://design-system.service.gov.uk/get-started/production/)
+- the [GOV.UK Design System website](https://design-system.service.gov.uk/)
+- the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk/)
+- the [GOV.UK Frontend technical documentation website](https://frontend.design-system.service.gov.uk/)
+- other content produced by the GOV.UK Design System team
 
 The GOV.UK Design System’s top focus for accessibility is on styles and components included in GOV.UK Frontend and patterns built using GOV.UK Frontend.
 
@@ -94,17 +94,17 @@ Theoretical issues and queries are more difficult to address as they do not prov
 
 For accessibility concerns about the theoretical accessibility of an implementation, the team will check for:
 
--   existing decisions documented regarding the current implementation
--   overlap with other raised issues and queries
--   additional community resources related to the accessibility concern
+- existing decisions documented regarding the current implementation
+- overlap with other raised issues and queries
+- additional community resources related to the accessibility concern
 
 If there is no documentation or confirmation that the current implementation is an evidenced accessibility concern, the team may:
 
--   check for existing evidence or research within the GOV.UK Design System
--   request additional evidence or research from the group who submitted the accessibility concern
--   assume that the reasoning behind existing decisions and implementations was sound until further evidence is found
--   assume that previous decisions for the GOV.UK Design System were made in good faith
--   wait for new evidence or factors to emerge before questioning previous decisions
+- check for existing evidence or research within the GOV.UK Design System
+- request additional evidence or research from the group who submitted the accessibility concern
+- assume that the reasoning behind existing decisions and implementations was sound until further evidence is found
+- assume that previous decisions for the GOV.UK Design System were made in good faith
+- wait for new evidence or factors to emerge before questioning previous decisions
 
 This approach supports the team closing accessibility concerns which do not include enough evidence to be meaningfully acted upon, allowing the team to focus on evidenced accessibility concerns.
 
@@ -112,26 +112,26 @@ This approach supports the team closing accessibility concerns which do not incl
 
 Many types of evidence can indicate an evidenced accessibility concern, but some of the most common examples are:
 
--   new findings from user research
--   service team usability testing results
--   new global best-practises or standards
--   direct feedback from users of a service or product
--   a demonstration of unintended behaviour from an assistive technology
--   results from an internal or external accessibility audit
+- new findings from user research
+- service team usability testing results
+- new global best-practises or standards
+- direct feedback from users of a service or product
+- a demonstration of unintended behaviour from an assistive technology
+- results from an internal or external accessibility audit
 
 When presented with new evidence of a potential accessibility concern, the team will analyse and determine whether the concern:
 
--   has been addressed or assessed before
--   breaks WCAG AA compliance
--   is high-severity (as defined in the section below)
+- has been addressed or assessed before
+- breaks WCAG AA compliance
+- is high-severity (as defined in the section below)
 
 ### Determining severity of an accessibility concern
 
 There are 3 factors to determine a high-severity concern:
 
--   there is reasonable evidence that it makes it difficult or impossible for some people to complete certain tasks
--   it affects the accessibility of essential services or critical infrastructure
--   individual service teams cannot efficiently resolve it on their own
+- there is reasonable evidence that it makes it difficult or impossible for some people to complete certain tasks
+- it affects the accessibility of essential services or critical infrastructure
+- individual service teams cannot efficiently resolve it on their own
 
 If the accessibility concern does not meet all 3 factors listed, the team will determine the severity on a case-by-case basis.
 
@@ -160,9 +160,9 @@ If the GDS accessibility monitoring team confirms the accessibility concern, set
 
 When disagreement involves multiple parties, the decision-making hierarchy is:
 
--   Top: GDS accessibility monitoring team
--   Second: GOV.UK Design System team (including any accessibility specialists on the team)
--   Third: External auditing groups and teams
+- Top: GDS accessibility monitoring team
+- Second: GOV.UK Design System team (including any accessibility specialists on the team)
+- Third: External auditing groups and teams
 
 It is not regularly the role of the GDS accessibility monitoring team to make decisions like these, and this decision-making process is unique to the GOV.UK Design System team. This is due to the centralised nature of the GOV.UK Design System and the limited capacity of the GDS accessibility monitoring team. Other service teams will need to determine their decision-making method when disagreements over accessibility concerns arise.
 
@@ -170,15 +170,15 @@ It is not regularly the role of the GDS accessibility monitoring team to make de
 
 We aim to meet level AA WCAG for:
 
--   styles, components and patterns
--   the GOV.UK Design System website
--   the GOV.UK Frontend technical documentation website
--   other content produced by the GOV.UK Design System team
+- styles, components and patterns
+- the GOV.UK Design System website
+- the GOV.UK Frontend technical documentation website
+- other content produced by the GOV.UK Design System team
 
 We aim to maintain this level AA rating for the version of WCAG which:
 
--   is considered the ‘latest published version’
--   has been published for at least a year
+- is considered the ‘latest published version’
+- has been published for at least a year
 
 For example, in August 2022, we would follow the [WCAG 2.1 recommendation from 05 June 2018](https://www.w3.org/TR/2018/REC-WCAG21-20180605/).
 
@@ -216,15 +216,15 @@ The team uses the [GOV.UK Service Manual guidance on testing for accessibility](
 
 The team uses a variety of tools during the development process, including, but not limited to:
 
--   WAVE browser plugin
--   Axe browser plugin
--   browser accessibility reports
+- WAVE browser plugin
+- Axe browser plugin
+- browser accessibility reports
 
 The team also uses general inspection techniques, including:
 
--   [sensory inspection](https://web.dev/a11y-tips-for-web-dev/) (visual, auditory, etc.)
--   HTML inspection using [browser developer tools](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools)
--   [accessibility tree](https://developer.mozilla.org/en-US/docs/Glossary/Accessibility_tree) inspection
+- [sensory inspection](https://web.dev/a11y-tips-for-web-dev/) (visual, auditory, etc.)
+- HTML inspection using [browser developer tools](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools)
+- [accessibility tree](https://developer.mozilla.org/en-US/docs/Glossary/Accessibility_tree) inspection
 
 ### Automated testing
 
@@ -251,10 +251,10 @@ The team records results on our [accessibility testing spreadsheet (Google Sheet
 
 Currently, the team uses desktop-type devices to access assistive technologies in the following ways:
 
--   screen readers through Assistiv Labs and macOS
--   screen magnifiers through Assistiv Labs and macOS
--   high contrast and other display modes through Assistiv Labs and browsers
--   speech recognition software through Windows testing computers and macOS
+- screen readers through Assistiv Labs and macOS
+- screen magnifiers through Assistiv Labs and macOS
+- high contrast and other display modes through Assistiv Labs and browsers
+- speech recognition software through Windows testing computers and macOS
 
 As of November 2022, there are limitations to how the team performs and records manual testing. These limitations may be addressed by the proposed ‘[Standardise and improve our manual testing methodology](https://github.com/alphagov/govuk-design-system/issues/2456)’ activity.
 
@@ -262,9 +262,9 @@ As of November 2022, there are limitations to how the team performs and records 
 
 Accessibility user research often includes activities such as:
 
--   usability testing of prototypes
--   user interviews
--   surveys
+- usability testing of prototypes
+- user interviews
+- surveys
 
 [User research must include disabled people](https://www.gov.uk/service-manual/helping-people-to-use-your-service/making-your-service-accessible-an-introduction#meeting-government-accessibility-requirements) and should also include people with a variety of access needs and impairment types.
 
@@ -276,9 +276,9 @@ The team might determine that further accessibility user research is necessary f
 
 Examples of when the team and other service teams have completed additional accessibility user research include:
 
--   [Focus state](https://designnotes.blog.gov.uk/2019/07/29/weve-made-the-gov-uk-design-system-more-accessible/) (2019)
--   [General component accessibility research](https://github.com/alphagov/govuk-design-system/issues/1377) (2020)
--   [Hide this Page component](https://github.com/alphagov/govuk-design-system/issues/2195) (2022)
+- [Focus state](https://designnotes.blog.gov.uk/2019/07/29/weve-made-the-gov-uk-design-system-more-accessible/) (2019)
+- [General component accessibility research](https://github.com/alphagov/govuk-design-system/issues/1377) (2020)
+- [Hide this Page component](https://github.com/alphagov/govuk-design-system/issues/2195) (2022)
 
 ## Recording accessibility concerns
 
@@ -332,31 +332,31 @@ To help the team manage the number of activities, there are 4 main areas where t
 
 Three of the goals of this strategy are to:
 
--   inform decision-making and prioritisation of accessibility-related matters within the GOV.UK Design System team
--   improve the success, speed, and scope of accessibility-related issues within the GOV.UK Design System team
--   increase awareness, understanding, transparency and participation in accessibility-related cases within government communities and service teams
+- inform decision-making and prioritisation of accessibility-related matters within the GOV.UK Design System team
+- improve the success, speed, and scope of accessibility-related issues within the GOV.UK Design System team
+- increase awareness, understanding, transparency and participation in accessibility-related cases within government communities and service teams
 
 ### Performance indicators
 
 Initially, the team will assess the performance of this accessibility strategy by measuring the:
 
--   increase in community engagement with the accessibility strategy’s content
--   use of the strategy to guide and improve the GOV.UK Design System team’s decision-making
--   progress and completion of activities mentioned in the strategy
--   number of accessibility concerns recorded as GitHub issues in the team’s repositories
--   number of accessibility concerns listed in the [GOV.UK Design System accessibility statement](https://design-system.service.gov.uk/accessibility/)
+- increase in community engagement with the accessibility strategy’s content
+- use of the strategy to guide and improve the GOV.UK Design System team’s decision-making
+- progress and completion of activities mentioned in the strategy
+- number of accessibility concerns recorded as GitHub issues in the team’s repositories
+- number of accessibility concerns listed in the [GOV.UK Design System accessibility statement](https://design-system.service.gov.uk/accessibility/)
 
 #### Additional indicators
 
 If capacity is available to expand measurement efforts, additional performance indicators might include:
 
--   accessibility testing template use – completion rate, regularity and consistency
--   accessible implementation by service teams – accessibility audit result patterns, service accessibility statement patterns, service team satisfaction
--   service team satisfaction – responses to accessibility-specific questions in surveys and research
--   accessibility concern average time to resolution – the time it takes from the initial recording or reporting of an accessibility concern to its resolution
--   the number of accessibility regressions – checking the robustness of our quality assurance / testing process by measuring how many accessibility bugs make it into a release
--   number of accessibility concerns raised by service teams versus concerns raised internally – to gauge how heavily we rely on users to surface accessibility concerns
--   overall impact of the GOV.UK Design System or the strategy on web accessibility across UK government services – this would require additional resources and expertise, or collaboration with other teams who have the necessary resources and expertise
+- accessibility testing template use – completion rate, regularity and consistency
+- accessible implementation by service teams – accessibility audit result patterns, service accessibility statement patterns, service team satisfaction
+- service team satisfaction – responses to accessibility-specific questions in surveys and research
+- accessibility concern average time to resolution – the time it takes from the initial recording or reporting of an accessibility concern to its resolution
+- the number of accessibility regressions – checking the robustness of our quality assurance / testing process by measuring how many accessibility bugs make it into a release
+- number of accessibility concerns raised by service teams versus concerns raised internally – to gauge how heavily we rely on users to surface accessibility concerns
+- overall impact of the GOV.UK Design System or the strategy on web accessibility across UK government services – this would require additional resources and expertise, or collaboration with other teams who have the necessary resources and expertise
 
 ### Recording performance measurement results
 
@@ -402,9 +402,9 @@ Breaking releases for GOV.UK Frontend are identified by an increment in the firs
 
 Throughout this document, ‘service teams’ refers to all individuals, teams, organisations and groups that directly use any GOV.UK Design System products, including:
 
--   the GOV.UK Design System
--   GOV.UK Frontend code
--   the Prototype Kit
+- the GOV.UK Design System
+- GOV.UK Frontend code
+- the Prototype Kit
 
 The term ‘service teams’ is intended to be inclusive of all groups that use GOV.UK Design System products, even if those groups are not specifically working on a service or structured as a distinct team.
 
@@ -418,9 +418,9 @@ Support is a service provided to users of the GOV.UK Design System, GOV.UK Front
 
 We provide support to users through 3 channels:
 
--   email
--   slack
--   GitHub issues
+- email
+- slack
+- GitHub issues
 
 The team member assigned to support on a given workday will help triage requests and gather information from the team to answer questions.
 

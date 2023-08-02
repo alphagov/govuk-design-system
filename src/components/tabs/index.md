@@ -78,21 +78,17 @@ Tabs hide content, so the tab labels need to make it very clear what they link t
 
 If you struggle to come up with clear labels, it might be because the way you’ve separated the content is not clear.
 
-
 ### Order the tabs according to user needs
 
 The first tab should be the most commonly-needed section. Arrange the other tabs in the order that makes most sense for your users.
-
 
 ### Do not disable tabs
 
 Disabling elements is normally confusing for users. If there is no content for a tab, either remove the tab or, if that would be confusing for your users, explain why there is no content when the tab is selected.
 
-
 ### Avoid tabs that wrap over more than one line
 
 If you use too many tabs or they have long labels then they may wrap over more than one line. This makes it harder for users to see the connection between the selected tab and its content.
-
 
 ## Research and testing
 

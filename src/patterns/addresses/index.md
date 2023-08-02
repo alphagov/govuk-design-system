@@ -79,7 +79,7 @@ Use an address lookup when you’re asking users for a UK address.
 
 ### When not to use an address lookup
 
-Address lookups generally only work for UK addresses. Use a manual option such as  multiple text inputs or a textarea when you are collecting mostly or only international&nbsp;addresses
+Address lookups generally only work for UK addresses. Use a manual option such as multiple text inputs or a textarea when you are collecting mostly or only international&nbsp;addresses
 
 ### How an address lookup works
 

@@ -18,7 +18,7 @@ It can also help reduce time and money spent processing queries from users confu
 
 ## When to use this pattern
 
-If you have complicated eligibility requirements you should follow this pattern. This will save  users from having to read through large amounts of documentation outside of your service to work out if they can use it.
+If you have complicated eligibility requirements you should follow this pattern. This will save users from having to read through large amounts of documentation outside of your service to work out if they can use it.
 
 Use this pattern to help users work out:
 

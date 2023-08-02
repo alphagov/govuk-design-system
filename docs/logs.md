@@ -155,9 +155,11 @@ If the match is successful we end up with a document that looks like the followi
 ```
 
 ## Filter plugins
+
 Logit.io allows you to use use all the [official plugins](https://www.elastic.co/guide/en/logstash/current/filter-plugins.html).
 
 ## Using grok regex patterns
+
 When using the [`grok plugin`](https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html) you can reference global 'patterns' which are aliases for common regex patterns, for example such as ‘IP’, these are defined in [logstash-patterns-core/patterns/grok-patterns](https://github.com/logstash-plugins/logstash-patterns-core/blob/master/patterns/grok-patterns).
 
 ## Updating the Logstash Filters
@@ -165,16 +167,16 @@ When using the [`grok plugin`](https://www.elastic.co/guide/en/logstash/current/
 1. go to the [Logit dashboard Logstash Filters page](https://logit.io/a/1c6b2316-16e2-4ca5-a3df-ff18631b0e74/s/c5df6a7b-07bb-483a-a69b-49c9629309b6/filters).
 2. make updates as required.
 3. select Validate.
-If something goes wrong and the interface fails to respond, Logit support are proactive and can help you out, they have a support live chat you can also use.
+   If something goes wrong and the interface fails to respond, Logit support are proactive and can help you out, they have a support live chat you can also use.
 4. select Apply once the code is valid.
-When you've successfully applied a filter change Kibana wont show events coming in for a minute or so.
+   When you've successfully applied a filter change Kibana wont show events coming in for a minute or so.
 5. update the [configuration](#configuration) with your changes.
 
 If you've added new fields and want to use them in a Kibana filter / visualisation you'll need to [refresh the index pattern](#refreshing-index-patterns).
 
 ## Querying and visualising logs with Kibana
 
-Transformed logs can be accessed in the [Logit Kibana dashboard](https://kibana.logit.io/app/kibana#/discover?_g=()).
+Transformed logs can be accessed in the [Logit Kibana dashboard](<https://kibana.logit.io/app/kibana#/discover?_g=()>).
 
 ### Dashboards
 
@@ -190,7 +192,7 @@ Transformed logs can be accessed in the [Logit Kibana dashboard](https://kibana.
 
 #### Create a new visualisation
 
-1. Go to the [visualisations page](https://kibana.logit.io/app/kibana#/visualize?_g=()).
+1. Go to the [visualisations page](<https://kibana.logit.io/app/kibana#/visualize?_g=()>).
 2. Press `Create new visualisation`.
 3. Pick type of visualisation eg. `Vertical Bar`.
 4. Choose the `*-*` index pattern.
@@ -224,16 +226,18 @@ You might wish to do this for testing purposes, rather than changing the Design 
 3. Press `Add`.
 4. Search for `Design System-`.
 5. Click on the visualisation you want to add to the dashboard.
-5. Save the dashboard, do not make it a new dashboard.
+6. Save the dashboard, do not make it a new dashboard.
 
 ### Refreshing index patterns
+
 In order to use some fields in visualisations / filters you need to refresh the field list index.
 
-1. go to the [index pattern page](https://kibana.logit.io/app/kibana#/management/kibana/index_patterns/8ac115c0-aac1-11e8-88ea-0383c11b333a?_g=()&_a=(tab:indexedFields))
+1. go to the [index pattern page](<https://kibana.logit.io/app/kibana#/management/kibana/index_patterns/8ac115c0-aac1-11e8-88ea-0383c11b333a?_g=()&_a=(tab:indexedFields)>)
 2. press refresh field list icon at top right of screen.
 
 Refreshing will reset the popularity counters of fields, which is used to display your most popular used fields in the interface, but this is safe to do.
 
 ## Debugging a failed Logstash Filters parse
+
 For some Logstash Filters tags are added to the log which indicate they have failed, for example `_routerparsefailure`.
 You can debug this by looking at the `message` field.

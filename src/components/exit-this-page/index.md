@@ -8,6 +8,7 @@ layout: layout-pane.njk
 status: Experimental
 statusMessage: This component is currently experimental. <a class="govuk-link" href="#known-issues-and-gaps">You'll need to do your own research</a> to decide whether to add this component to your service.
 ---
+
 {% from "_example.njk" import example %}
 
 Give users a way to quickly and safely exit a service, website or application.
@@ -19,12 +20,14 @@ For service journeys, you must use this component with the pattern to help a use
 ## When to use this component
 
 Use the component on pages with sensitive information that could:
+
 - put someone at risk of abuse or retaliation
 - reveal someone’s plans to avoid or escape from harm
 
 For example, when a potential victim is using a service to help them leave a domestic abuser.
 
 You can use this component on either:
+
 - all the pages in a service
 - parts of the journey with sensitive information
 
@@ -51,6 +54,7 @@ Position the component at the top of your page, above the beginning of the grid 
 When activated, the component by default will take the user to the [homepage of BBC Weather](https://www.bbc.co.uk/weather). You can change this if there’s a more appropriate site for your users.
 
 Avoid websites that might show personalised pages (such as frequently visited, last visited or suggested links), as this content could put the user at risk.
+
 ### Adding the secondary link
 
 Add the code for the 'secondary link' into the layout file of your service. The 'secondary link' is an additional `govuk-skip-link` that works in a similar way. Place it under the page template's default skip link at the very top of the body.
@@ -68,9 +72,9 @@ The component will still work if the 'secondary link' is not added, but it'll be
 You’ll need to decide if your service will store the user’s session data after they’ve activated the Exit this page component and left your service.
 
 For example, you could do this in 2 steps:
+
 1. replace the default website link to a URL in your service, that when visited, will clear the user's session data
 2. redirect the user to another website, such as BBC Weather
-
 
 ## Enhancement features
 
