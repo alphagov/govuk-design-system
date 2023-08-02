@@ -23,7 +23,7 @@
     "prelint:html": "npm run build",
     "lint:html": "html-validate \"deploy/public/**/index.html\"",
     "lint:js": "eslint --cache --cache-location .cache/eslint --cache-strategy content --color --ignore-path .gitignore \"**/*.{cjs,js,mjs}\"",
-    "lint:prettier": "prettier --cache --cache-location .cache/prettier --cache-strategy content --check \"**/*.json\"",
+    "lint:prettier": "prettier --cache --cache-location .cache/prettier --cache-strategy content --check \"**/*.{json,md}\"",
     "lint:scss": "stylelint \"**/*.scss\"",
     "check-links": "hyperlink --canonicalroot https://design-system.service.gov.uk/ --internal --recursive --source-maps deploy/public/sitemap.xml | tap-mocha-reporter min"
   },
