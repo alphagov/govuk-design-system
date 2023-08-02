@@ -17,7 +17,13 @@ module.exports = {
         'plugin:promise/recommended',
         'prettier'
       ],
-      files: ['**/*.{cjs,js,mjs}'],
+      files: [
+        '**/*.{cjs,js,mjs}',
+
+        // Check markdown `*.md` contains valid code blocks
+        // https://github.com/eslint/eslint-plugin-markdown#advanced-configuration
+        '**/*.md/*.{cjs,js,mjs}'
+      ],
       parserOptions: {
         ecmaVersion: 'latest'
       },
@@ -60,6 +66,20 @@ module.exports = {
         page: 'readonly',
         browser: 'readonly',
         jestPuppeteer: 'readonly'
+      }
+    },
+    {
+      // Add plugin for markdown `*.md` code blocks
+      extends: ['plugin:markdown/recommended'],
+      files: ['**/*.md'],
+      plugins: ['markdown'],
+      processor: 'markdown/markdown'
+    },
+    {
+      // Assume markdown `*.md` JavaScript code blocks use browser globals
+      files: ['**/*.md/*.{cjs,js,mjs}'],
+      env: {
+        browser: true
       }
     }
   ],
