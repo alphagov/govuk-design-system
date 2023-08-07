@@ -28,7 +28,7 @@ This means that hyperlinks to /community/design-system-day/ can always encourage
 
 Join us for this year's edition of the GOV.UK Design System's flagship event!
 
-Design System Day 2023 is a 2-day conference to collaborate and share knowledge about design systems with like-minded people, covering topics like accessibility, community and decision-making. It's a space for anyone using design systems in government to share ideas and developments, learn from colleagues, and spark conversations on related topics. 
+Design System Day 2023 is a 2-day conference to collaborate and share knowledge about design systems with like-minded people, covering topics like accessibility, community and decision-making. It's a space for anyone using design systems in government to share ideas and developments, learn from colleagues, and spark conversations on related topics.
 
 For the first time, we're running this as a hybrid conference with a mix of in-person and online talks, workshops and panel discussions. Come say hi and meet folks from across the community in Edinburgh, or chat to people in the online channels.
 
@@ -73,8 +73,6 @@ Where we're running the event, how to get there, etc.
 Joining instructions, etc.
 
 -->
-
-
 
 ## About the GOV.UK Design System community
 
