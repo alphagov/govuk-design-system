@@ -76,7 +76,7 @@
     "nunjucks": "^3.2.4",
     "outdent": "^0.8.0",
     "prettier": "^3.0.1",
-    "puppeteer": "^20.9.0",
+    "puppeteer": "^21.0.1",
     "rollup": "^3.27.2",
     "sass-export": "^2.1.2",
     "serve-static": "^1.15.0",
