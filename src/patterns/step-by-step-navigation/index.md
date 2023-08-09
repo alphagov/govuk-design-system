@@ -101,11 +101,15 @@ If there is not a set order, they should be listed in an order that helps the us
 
 For example, ‘Agree a contract and salary’ is listed as step 4 in ‘Employ someone: step by step’ although it can be completed earlier.
 
+Make sure the number of the step is read out to screen-reader users when navigating to information within the `button` element.
+
 ### Use both ‘and’ and ‘or’
 
 Use ‘and’ to show when you can or must complete steps at the same time. You can use ‘and’ for more than 2 steps.
 
 Use ‘or’ to show when there’s a choice between 2 steps, or when a task must be completed in a different way based the user’s circumstances or eligibility.
+
+When adding ‘and‘ or ‘or‘ steps, make sure screen reader users can easily tell the difference between additional information or actions included in this step and the other numbered steps. Do this by nesting non-sequential ‘and‘ or ‘or‘ step names as sub-headings (usually `<h3>`) within the related step.
 
 ![A screenshot showing an example of the step by step navigation pattern with an 'and' step](step-by-step-and.png)
 
