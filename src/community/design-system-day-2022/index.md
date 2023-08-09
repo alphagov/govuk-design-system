@@ -34,4 +34,4 @@ Our accessibility panellists:
 - Shabana Ali, Accessibility frontend developer, HMRC
 - Sophie Beaumont, Accessibility lead, BBC WebCore
 
-<a href='https://www.youtube.com/watch?v=MYtgs7eW_Og'>Watch 'Accessibility in design systems' on YouTube</a>.
+<a href="https://www.youtube.com/watch?v=MYtgs7eW_Og">Watch 'Accessibility in design systems' on YouTube</a>.
