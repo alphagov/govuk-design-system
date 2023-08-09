@@ -37,6 +37,14 @@ You can add hint text to help the user understand the options and choose one of 
 
 {{ example({group: "components", item: "select", example: "with-hint", html: true, nunjucks: true, open: false}) }}
 
+### Error messages
+
+Display an error message if the user has not selected an option.
+
+Style error messages as shown in the example:
+
+{{ example({group: "components", item: "select", example: "error", html: true, nunjucks: true, open: false }) }}
+
 ## Research on this component
 
 User research has shown that some users struggle with selects.
