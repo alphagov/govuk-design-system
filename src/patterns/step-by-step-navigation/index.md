@@ -101,7 +101,7 @@ If there is not a set order, they should be listed in an order that helps the us
 
 For example, ‘Agree a contract and salary’ is listed as step 4 in ‘Employ someone: step by step’ although it can be completed earlier.
 
-Ensure the number of the step is read out to screen-reader users when navigating to information within the `button` element.
+Make sure the number of the step is read out to screen-reader users when navigating to information within the `button` element.
 
 ### Use both ‘and’ and ‘or’
 
