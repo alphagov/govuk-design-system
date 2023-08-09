@@ -8,7 +8,10 @@ layout: layout-example.njk
 <p class="govuk-body">To view the secondary link, tab to or click inside this example and then press tab.</p>
 
 {{ govukSkipLink({
-  text: 'Exit this page',
+  text: "Exit this page",
   href: "https://bbc.co.uk/weather/",
-  classes: "govuk-js-exit-this-page-skiplink"
+  classes: "govuk-js-exit-this-page-skiplink",
+  attributes: {
+    "rel": "nofollow noreferrer"
+  }
 }) }}
