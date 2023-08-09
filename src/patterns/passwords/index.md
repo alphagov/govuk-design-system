@@ -70,6 +70,7 @@ To help users meet your password constraints and prevent mistyped passwords, you
 - make them enter their password twice and automatically compare them
 
 #### Showing and hiding passwords
+
 It's common for services to help users type passwords with a '[show password](https://github.com/alphagov/govuk-design-system-backlog/issues/240)' button to let users see their password if they want to.
 
 When there are two or more password fields on a page, the 'show' and 'hide' labels for each password input must be different.
