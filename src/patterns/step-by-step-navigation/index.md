@@ -109,7 +109,7 @@ Use ‘and’ to show when you can or must complete steps at the same time. You 
 
 Use ‘or’ to show when there’s a choice between 2 steps, or when a task must be completed in a different way based the user’s circumstances or eligibility.
 
-When using ‘and’ or ‘or’ nest the non-sequential steps as sub-headings of the step they relate to as level 3 headings in the list. This will convey that the ‘and’ or ‘or’ steps are not the next steps in the sequential order for screen reader users.
+When adding ‘and‘ or ‘or‘ steps, make sure screen reader users can easily tell the difference between additional information or actions included in this step and the other numbered steps. Do this by nesting non-sequential ‘and‘ or ‘or‘ step names as sub-headings (usually `<h3>`) within the related step.
 
 ![A screenshot showing an example of the step by step navigation pattern with an 'and' step](step-by-step-and.png)
 
