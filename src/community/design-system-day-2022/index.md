@@ -19,7 +19,7 @@ For the past 6 years, Amy has worked on design systems for some of the biggest n
 
 Whether she’s leading systems work or designing content, Amy works to champion simplicity and inclusion in the face of complexity.
 
-<a href='https://www.youtube.com/watch?v=25XuvRqbLEM'>Watch 'Building conscious design systems' on YouTube</a>.
+<a href="https://www.youtube.com/watch?v=25XuvRqbLEM">Watch 'Building conscious design systems' on YouTube</a>.
 
 ## Accessibility in design systems
 
