@@ -92,7 +92,7 @@ If you use too many tabs or they have long labels then they may wrap over more t
 
 ### Add headings to tab content
 
-Use headings within each tab for screen reader users.
+Include a heading at the beginning of each tab that duplicates the information in the tab label. Providing a heading improves navigation on smaller screen sizes and for screen reader users.
 
 ## Research and testing
 
