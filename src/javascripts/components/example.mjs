@@ -21,14 +21,28 @@ Example.prototype.init = function () {
     return
   }
 
+  var options = {
+    // Initial resize only, no event listeners
+    autoResize: false,
+
+    // Calculate height from `data-iframe-height` only
+    heightCalculationMethod: 'taggedElement',
+
+    // Calculate height from iframe contents only
+    resizeFrom: 'child',
+
+    // Skip iframe `scrolling` attribute
+    scrolling: 'omit'
+  }
+
   // Initialise asap for eager iframes or browsers which don't support lazy loading
   if (!('loading' in $module) || $module.loading !== 'lazy') {
-    return iFrameResize({ scrolling: 'omit' }, $module)
+    return iFrameResize(options, $module)
   }
 
   $module.addEventListener('load', function () {
     try {
-      iFrameResize({ scrolling: 'omit' }, $module)
+      iFrameResize(options, $module)
     } catch (err) {
       if (err) {
         console.error(err.message)
