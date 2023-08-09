@@ -19,7 +19,7 @@ For the past 6 years, Amy has worked on design systems for some of the biggest n
 
 Whether she’s leading systems work or designing content, Amy works to champion simplicity and inclusion in the face of complexity.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/25XuvRqbLEM" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<a href="https://www.youtube.com/watch?v=25XuvRqbLEM">Watch 'Building conscious design systems' on YouTube</a>.
 
 ## Accessibility in design systems
 
@@ -34,4 +34,4 @@ Our accessibility panellists:
 - Shabana Ali, Accessibility frontend developer, HMRC
 - Sophie Beaumont, Accessibility lead, BBC WebCore
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MYtgs7eW_Og" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<a href="https://www.youtube.com/watch?v=MYtgs7eW_Og">Watch 'Accessibility in design systems' on YouTube</a>.
