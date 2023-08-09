@@ -69,6 +69,8 @@ To help users meet your password constraints and prevent mistyped passwords, you
 - show the last typed character of their password
 - make them enter their password twice and automatically compare them
 
+If you use a button to show a password make sure that the label is unique to each password input that it relates to.
+
 ### Allow users to paste their password
 
 Do not disable paste on password fields. People may have very good reasons why they want to paste their password, for example if they’re using a password manager.
