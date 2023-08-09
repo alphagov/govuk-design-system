@@ -70,10 +70,11 @@ To help users meet your password constraints and prevent mistyped passwords, you
 - make them enter their password twice and automatically compare them
 
 #### Showing and hiding passwords
-One common method for helping users type passwords is a show/hide button near the password input. When the password is hidden, the button will change the input styling to 'show' the password. When the password is visible, the button will 'hide' the password again.
+It's common for services to help users type passwords with a '[show password](https://github.com/alphagov/govuk-design-system-backlog/issues/240)' button to let users see their password if they want to.
 
 When there are two or more password fields on a page, the 'show' and 'hide' labels for each password input must be different.
-For example, you can label the input "Password" as "show first password" and label the second input "Re-enter password" as "show second re-entered password".
+
+For example, you can label the input "Password" as "show password" and label the second input "Re-enter password" as "show re-entered password".
 
 ### Allow users to paste their password
 
