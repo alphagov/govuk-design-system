@@ -89,8 +89,8 @@ Join one of our regular events where we share ideas and work together to solve c
   </div>
   <div class="govuk-grid-column-full">
     {%- call imageCard({
-      src: "/community/images/dsday22-logo.svg",
-      alt: "Design System Day 2022 Logo.",
+      src: "/community/images/dsday23-logo.svg",
+      alt: "Design System Day 2023 Logo.",
       title: "Design System Day",
       large: true
     }) %}
