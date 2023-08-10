@@ -13,20 +13,34 @@ class Example {
    * @param {Element} $module - HTML element
    */
   constructor ($module) {
-    if (!($module instanceof HTMLIFrameElement) || !document.body.classList.contains('govuk-frontend-supported')) {
+    if (!($module instanceof HTMLElement) || !document.body.classList.contains('govuk-frontend-supported')) {
       return
     }
 
     this.$module = $module
 
-    // Initialise asap for eager iframes or browsers which don't support lazy loading
-    if (!('loading' in this.$module) || this.$module.loading !== 'lazy') {
-      return iFrameResize({ scrolling: 'omit' }, this.$module)
+    const $placeholder = $module.querySelector('.js-example-placeholder')
+    const $iframe = document.createElement('iframe')
+
+    // Configure iframe
+    $iframe.className = 'app-example__frame app-example__frame--resizable'
+    $iframe.title = $placeholder.getAttribute('data-title')
+    $iframe.src = $placeholder.getAttribute('data-src')
+    $iframe.loading = $placeholder.getAttribute('data-lazy')
+
+    // Optional preview size
+    const previewSize = $placeholder.getAttribute('data-size')
+    if (previewSize) {
+      $iframe.className += ` app-example__frame--${previewSize}`
     }
 
-    this.$module.addEventListener('load', () => {
+    // Replace placeholder with preview iframe
+    $placeholder.replaceWith($iframe)
+
+    // Resize once loaded
+    $iframe.addEventListener('load', () => {
       try {
-        iFrameResize({ scrolling: 'omit' }, this.$module)
+        iFrameResize({ scrolling: 'omit' }, $iframe)
       } catch (err) {
         if (err) {
           console.error(err.message)

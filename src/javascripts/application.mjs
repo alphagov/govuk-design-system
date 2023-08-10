@@ -29,8 +29,8 @@ if (userConsent && isValidConsentCookie(userConsent) && userConsent.analytics) {
   Analytics()
 }
 
-// Initialise example frames
-const $examples = document.querySelectorAll('[data-module="app-example-frame"]')
+// Initialise examples
+const $examples = document.querySelectorAll('[data-module="app-example"]')
 $examples.forEach(($example) => {
   new Example($example)
 })

@@ -29,6 +29,14 @@
   @include govuk-font(14);
 }
 
+.app-example__placeholder {
+  padding: govuk-spacing(4);
+
+  .govuk-frontend-supported & .govuk-body {
+    display: none;
+  }
+}
+
 .app-example__frame {
   display: block;
   width: 100%;
@@ -39,6 +47,7 @@
 }
 
 // Default size
+.app-example__placeholder,
 .app-example__frame,
 .app-example__frame--xs {
   height: 150px;
