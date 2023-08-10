@@ -19,8 +19,6 @@ class Example {
 
     this.$module = $module
     this.$placeholder = this.$module.querySelector('.js-example-placeholder')
-
-    this.init()
   }
 
   init () {

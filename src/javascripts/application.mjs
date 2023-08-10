@@ -29,10 +29,41 @@ if (userConsent && isValidConsentCookie(userConsent) && userConsent.analytics) {
   Analytics()
 }
 
+// Register of examples by module
+const exampleRegister = /** @type {Map<Element, Example>} */ (
+  new Map()
+)
+
+// Defer init until viewport intersection
+const exampleObserver = 'IntersectionObserver' in window
+  ? new window.IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) {
+        return
+      }
+
+      console.log('init', { $module: entry.target })
+
+      // Stop observing, initialise
+      exampleObserver.unobserve(entry.target)
+      exampleRegister.get(entry.target).init()
+    }
+  })
+  : undefined
+
 // Initialise examples
 const $examples = document.querySelectorAll('[data-module="app-example"]')
 $examples.forEach(($example) => {
-  new Example($example)
+  const example = new Example($example)
+
+  // Initialise iframes immediately
+  if (!exampleObserver) {
+    return example.init()
+  }
+
+  // Add to register, start observing
+  exampleRegister.set(example.$module, example)
+  exampleObserver.observe(example.$module)
 })
 
 // Initialise tabs
