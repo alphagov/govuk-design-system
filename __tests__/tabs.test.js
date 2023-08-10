@@ -57,8 +57,7 @@ describe('Component page', () => {
 
     describe('when the tab closed and clicked twice', () => {
       it('should indicate the closed state of the tab', async () => {
-        await $tabsLinks[0].click()
-        await $tabsLinks[0].click()
+        await $tabsLinks[0].click({ count: 2 })
 
         // Tab item not marked current
         await expect(getAttribute($tabsItems[0], 'class')).resolves
@@ -66,10 +65,9 @@ describe('Component page', () => {
       })
 
       it('should indicate the closed state by setting aria-expanded attribute to false', async () => {
-        await $tabsLinks[0].click()
-        await $tabsLinks[0].click()
+        await $tabsLinks[0].click({ count: 2 })
 
-        // Tab link control expanded
+        // Tab link control collapsed
         await expect(getAttribute($tabsLinks[0], 'aria-expanded')).resolves
           .toBe('false')
       })
