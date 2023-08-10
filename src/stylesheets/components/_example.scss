@@ -31,10 +31,6 @@
 
 .app-example__placeholder {
   padding: govuk-spacing(4);
-
-  .govuk-frontend-supported & .govuk-body {
-    display: none;
-  }
 }
 
 .app-example__frame {
