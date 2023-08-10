@@ -18,29 +18,38 @@ class Example {
     }
 
     this.$module = $module
+    this.$placeholder = this.$module.querySelector('.js-example-placeholder')
 
-    const $placeholder = $module.querySelector('.js-example-placeholder')
-    const $iframe = document.createElement('iframe')
+    this.init()
+  }
+
+  init () {
+    if (this.$iframe || !this.$placeholder) {
+      return
+    }
+
+    // Create iframe
+    this.$iframe = document.createElement('iframe')
 
     // Configure iframe
-    $iframe.className = 'app-example__frame app-example__frame--resizable'
-    $iframe.title = $placeholder.getAttribute('data-title')
-    $iframe.src = $placeholder.getAttribute('data-src')
-    $iframe.loading = $placeholder.getAttribute('data-lazy')
+    this.$iframe.className = 'app-example__frame app-example__frame--resizable'
+    this.$iframe.title = this.$placeholder.getAttribute('data-title')
+    this.$iframe.src = this.$placeholder.getAttribute('data-src')
+    this.$iframe.loading = this.$placeholder.getAttribute('data-lazy')
 
     // Optional preview size
-    const previewSize = $placeholder.getAttribute('data-size')
+    const previewSize = this.$placeholder.getAttribute('data-size')
     if (previewSize) {
-      $iframe.className += ` app-example__frame--${previewSize}`
+      this.$iframe.className += ` app-example__frame--${previewSize}`
     }
 
     // Replace placeholder with preview iframe
-    $placeholder.replaceWith($iframe)
+    this.$placeholder.replaceWith(this.$iframe)
 
     // Resize once loaded
-    $iframe.addEventListener('load', () => {
+    this.$iframe.addEventListener('load', () => {
       try {
-        iFrameResize({ scrolling: 'omit' }, $iframe)
+        iFrameResize({ scrolling: 'omit' }, this.$iframe)
       } catch (err) {
         if (err) {
           console.error(err.message)
