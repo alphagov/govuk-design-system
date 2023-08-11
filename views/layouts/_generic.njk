@@ -2,16 +2,16 @@
 
 {% set assetUrl = 'https://design-system.service.gov.uk/assets' %}
 
-{% block pageTitle %}{{ title }} – GOV.UK Design System{% endblock %}
+{% block pageTitle %}{{ title | smartypants }} – GOV.UK Design System{% endblock %}
 
 {% block head %}
   {#- Prevent search engine indexing for preview and development builds -#}
   {% if ["deploy-preview", "dev"].includes(env("CONTEXT")) or env("NODE_ENV") != 'production' %}
     <meta name="robots" content="noindex, nofollow">
   {% endif %}
-  <meta name="og:title" content="{{title}}">
-  <meta name="description" content="{{description}}">
-  <meta name="og:description" content="{{description}}">
+  <meta name="og:title" content="{{ title | smartypants }}">
+  <meta name="description" content="{{ description | smartypants }}">
+  <meta name="og:description" content="{{ description | smartypants }}">
   <link rel="canonical" href="{{ canonical }}">
   <link href="{{ getFingerprint('stylesheets/main.css') }}" rel="stylesheet" media="all">
 {% endblock %}
