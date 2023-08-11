@@ -8,6 +8,8 @@ stylesheets:
 
 {% extends "govuk/template.njk" %}
 
+{% block pageTitle %}{{ title }} – Example - GOV.UK Design System{% endblock %}
+
 {% block head -%}
   {# Since we’re not extending the Design System layout we need to add this manually #}
   <meta name="robots" content="noindex, nofollow">

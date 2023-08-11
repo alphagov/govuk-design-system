@@ -4,6 +4,8 @@ layout: false
 ---
 {% extends "govuk/template.njk" %}
 
+{% block pageTitle %}{{ title }} – Example - GOV.UK Design System{% endblock %}
+
 {% block head %}
   <meta name="robots" content="noindex, nofollow">
   <link href="{{ getFingerprint('stylesheets/main.css') }}" rel="stylesheet" media="all">
