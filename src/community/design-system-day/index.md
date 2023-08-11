@@ -40,7 +40,11 @@ We'll also be hosting get-togethers and after-parties for people attending the E
 
 The first day will be hosted in Dynamic Earth, Edinburgh and streamed online. The second day will be online-only.
 
-We'll be releasing our call for speakers soon. <a href='https://mailchi.mp/707ce8dec373/get-updated-by-email-govuk-design-system'>Sign up to our mailing list</a> to find out when it's ready.
+As ever, we want the conference to be a community-driven event. So please take part in making Design System Day 2023 special through our <a href="/community/call-for-speakers-2023/">call for speakers</a>.
+
+We are looking for keynote speakers and panel members to be part of day 1. We are also looking for workshop leads and breakout session hosts for day 2. We appreciate diverse perspectives and would love to hear from first-time speakers.
+
+Find out how to structure and submit your pitch in our <a href="/community/call-for-speakers-2023/">call for speakers</a>.
 
 <!--
 

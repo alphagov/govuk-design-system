@@ -4,7 +4,7 @@ description: Videos, slides and notes from Design System Day 2022.
 section: Community
 theme: Events and workshops
 layout: layout-pane.njk
-order: 12
+order: 13
 ---
 
 ## Inclusivity by design
