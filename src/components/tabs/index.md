@@ -90,6 +90,10 @@ Disabling elements is normally confusing for users. If there is no content for a
 
 If you use too many tabs or they have long labels then they may wrap over more than one line. This makes it harder for users to see the connection between the selected tab and its content.
 
+### Add headings to tab content
+
+Include a heading at the beginning of each tab that duplicates the information in the tab label. Providing a heading improves navigation on smaller screen sizes and for screen reader users.
+
 ## Research and testing
 
 This component is experimental because it has not yet been tried in research with users.
