@@ -157,6 +157,12 @@ For example, links in a header or side navigation might not need underlines. Use
 
 {{ example({group: "styles", item: "typography", example: "link-no-underline", html: true, open: true}) }}
 
+### Links to change a language
+
+Ensure that links that allow a user to change a language are understandable even when out of context.
+
+For example, you can link over 'use [Service name] in [language]'.
+
 ## Lists
 
 Use lists to make blocks of text easier to read, and to break information into manageable chunks.
