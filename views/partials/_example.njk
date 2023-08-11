@@ -114,14 +114,14 @@
                       {{ option.description | safe }}
                       {% if (option.isComponent) -%}
                         {# Create separate table data for components that are hidden in the Design System -#}
-                        {% if (option.name === "hint" or option.name === "label") %}
-                          See <a href="#options-{{ exampleId }}--{{ option.name }}">{{ option.name }}</a>.
+                        {% if ["hint", "label"].includes(option.slug) %}
+                          See <a href="#options-{{ exampleId }}--{{ option.slug }}">{{ option.name }}</a>.
                         {% else %}
-                          See <a href="/components/{{ option.slug }}/#options-{{ option.name | kebabCase }}-example">{{ option.name }}</a>.
+                          See <a href="/components/{{ option.slug }}/#options-{{ option.slug }}-example">{{ option.name }}</a>.
                         {% endif %}
                       {% endif %}
                       {% if (option.params) %}
-                        See <a href="#options-{{ exampleId }}--{{ option.name }}">{{ option.name }}</a>.
+                        See <a href="#options-{{ exampleId }}--{{ option.slug }}">{{ option.name }}</a>.
                       {% endif -%}
                     </td>
                   </tr>
