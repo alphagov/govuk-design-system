@@ -5,6 +5,8 @@ description:  tbd
 showSubNav: true
 ---
 
+{% from "_image-card.njk" import imageCard %}
+
 Our work to make the GOV.UK Design System meet public sector accessibility regulations is a continuous and iterative process. You must [make sure your service is accessible](https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps). We outline our approach on our [accessibility strategy](/accessibility/accessibility-strategy/).
 
 Using the GOV.UK Design System in a service does not immediately make that service accessible. You’ll need additional research, design, development and testing work to make sure your service is accessible, even when using accessible styles, components and patterns.
@@ -25,7 +27,33 @@ WCAG 2.2 is expected to be completed and published between July and September 20
 
 Make sure there is expertise within your organisation by advocating for people to receive training in accessibility. The Design System team is organising peer support groups to help service teams share information. You can see dates and details on how to register on our xxxxxxx page.
 
-### Section on community (support groups)
+### Join our community events and support groups
+
+Join one of our WCAG 2.2 events where we offer support and work together to solve common problems affecting service teams.
+
+<div class="govuk-grid-row govuk-!-padding-bottom-4">
+  <div class="govuk-grid-column-full">
+    {%- call imageCard({
+      src: "/accessibility/images/catchup-call-groupshot.jpg",
+      alt: "Catchup call screenshot.",
+      title: "WCAG 2.2 support events",
+      large: true
+    }) %}
+      <p>We are offering a series of <a href="/accessibility/wcag-2-2-support-events">profession based support events to help your teams and services transform to WCAG 2.2</a>.</p>
+    {% endcall %}
+  </div>
+  <div class="govuk-grid-column-full">
+    {%- call imageCard({
+      src: "/accessibility/images/workshop.jpg",
+      alt: "Table with post-it notes, pens and paper.",
+      title: "WCAG 2.2 peer community support",
+      large: true
+    }) %}
+        <p>We are creating <a href="/accessibility/wcag-2-2-peer-community-support">support groups to help our community to update components in their services to WCAG 2.2</a>. The aim is to “Help one another out”.</p>
+    {% endcall %}
+  </div>
+</div>
+
 
 ### Components affected
 The following components have WCAG 2.2 AA changes included. You must check if your service needs amending to align with these changes. We’ve made WCAG guideline changes for:
