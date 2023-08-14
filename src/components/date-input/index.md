@@ -157,5 +157,7 @@ Say ‘[whatever it is] must be between [date] and [date and optional descriptio
 
 ## Research on this component
 
-Data from the ‘Apply for teacher training service‘ showed that hundreds of users were inputting months using full or abbreviated month names, and then getting an error. Some users with dyscalculia may struggle to convert month names into numbers. Since changing the service to accept full or abbreviated month names, the number of errors dramatically dropped. 
+[Findings from the Apply for teacher training service](https://github.com/alphagov/govuk-design-system-backlog/issues/42#issuecomment-1119724868) showed that hundreds of users were inputting months using full or abbreviated month names and getting an error. They changed the component to accept month names to be consistent with this observed behaviour. Since changing the service the number of errors has dropped dramatically. 
+
+Some users with dyscalculia may struggle to convert month names into numbers, but accepting full or abbreviated month names may help these users.
 
