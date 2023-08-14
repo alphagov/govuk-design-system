@@ -16,7 +16,7 @@ This guidance is for government teams that build online services. [To find infor
 
 Tell the user there is something wrong with the service. These are also known as 500 and internal server error pages.
 
-{{ example({group: "patterns", item: "problem-with-the-service-pages", example: "default", html: true, nunjucks: true, open: false, size: "xl", loading: "eager"}) }}
+{{ example({group: "patterns", item: "problem-with-the-service-pages", example: "offline-support-link", html: true, nunjucks: true, open: false, size: "xl", loading: "eager"}) }}
 
 ## When to use this pattern
 
@@ -51,7 +51,7 @@ Have clear and concise content and do not use:
 
 ### Service has a specific page that includes numbers and opening times
 
-{{ example({group: "patterns", item: "problem-with-the-service-pages", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second", size: "xl"}) }}
+{{ example({group: "patterns", item: "problem-with-the-service-pages", example: "offline-support-link", html: true, nunjucks: true, open: false, titleSuffix: "second", size: "xl"}) }}
 
 ### Service has offline support but no specific page that includes numbers and opening times
 
