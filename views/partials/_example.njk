@@ -15,7 +15,7 @@
 {% if params.id %}
   {% set exampleId = params.id %}
 {% else %}
-  {% set exampleId = (exampleTitle + " example") | slugger %}
+  {% set exampleId = (exampleTitle + " example") | slugify %}
 {% endif %}
 
 {% if params.open %}
