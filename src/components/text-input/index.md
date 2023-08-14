@@ -168,6 +168,16 @@ You will not normally need to use the `autocomplete` attribute in prototypes, as
 
 Users often need to copy and paste information into a text input, so do not stop them from doing this.
 
+### Avoid restricting the length of a user's input
+
+Using the `maxlength` attribute means there is no feedback to users that their text input is truncated. This is especially true where the text has been copied and pasted from elsewhere. This can cause users to accidentally provide incorrect or incomplete information.
+
+A restrictive maximum length can stop users from formatting information in their usual way. For example, putting spaces in a postcode or commas in a large number.
+
+Some assistive technologies do not tell users if an input has a `maxlength` set or if the user has passed the limit. Voice control software may insert additional spaces into the input.
+
+If you must enforce a maximum length for technical reasons, inform the user of the limit in the hint, but allow them to provide more information. Only return an error if the value is longer than allowed after normalisation. For longer values, consider using the [character count component](/components/character-count/) instead.
+
 ### How and when to spellcheck a user’s input
 
 Sometimes, browsers will spellcheck the information a user puts into a text input. If a user enters something which is recognised as a spelling error, sighted users will see a red line under the word.
