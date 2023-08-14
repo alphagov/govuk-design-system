@@ -44,7 +44,7 @@
   font-size: govuk-px-to-rem(19px);
 
   // Expand the touch area of the link to the full menu width
-  &:after {
+  &::after {
     content: "";
     position: absolute;
     top: 0;

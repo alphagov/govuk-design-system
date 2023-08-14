@@ -33,7 +33,6 @@ $app-code-color: #d13118;
 }
 
 .app-content {
-
   padding: govuk-spacing(3) govuk-spacing(0) govuk-spacing(4);
 
   @include govuk-media-query($from: tablet) {

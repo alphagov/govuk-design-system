@@ -13,7 +13,8 @@
     display: none;
   }
 
-  .app-prose-scope & { // A specific selector to reset .app-prose-scope ul
+  .app-prose-scope & {
+    // A specific selector to reset .app-prose-scope ul
     margin-bottom: 0;
     padding: 0;
     font-size: 0; // Prevent white space taking up space between tabs
@@ -38,7 +39,7 @@
     }
 
     // Extend the touch area of the <a> to fill the entire tab
-    &:after {
+    &::after {
       content: "";
       position: absolute;
       top: 0;
@@ -48,7 +49,8 @@
     }
   }
 
-  .app-prose-scope & { // A specific selector to reset .app-prose-scope ul li
+  // A specific selector to reset .app-prose-scope ul li
+  .app-prose-scope & {
     margin: 0;
   }
 }
@@ -110,7 +112,7 @@
   .app-tabs__heading-link,
   .app-tabs__heading-button {
     // Extend the touch area of the <a> to fill the entire heading
-    &:after {
+    &::after {
       content: "";
       position: absolute;
       top: 0;
