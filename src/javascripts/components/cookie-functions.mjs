@@ -23,7 +23,12 @@ var TRACKING_LIVE_ID = '116229859-1'
 
 /* Users can (dis)allow different groups of cookies. */
 var COOKIE_CATEGORIES = {
-  analytics: ['_ga', '_gid', '_gat_UA-' + TRACKING_PREVIEW_ID, '_gat_UA-' + TRACKING_LIVE_ID],
+  analytics: [
+    '_ga',
+    '_gid',
+    '_gat_UA-' + TRACKING_PREVIEW_ID,
+    '_gat_UA-' + TRACKING_LIVE_ID
+  ],
   /* Essential cookies
    *
    * Essential cookies cannot be deselected, but we want our cookie code to
@@ -58,7 +63,7 @@ var DEFAULT_COOKIE_CONSENT = {
  *   Deleting a cookie:
  *   Cookie('hobnob', null)
  */
-export function Cookie (name, value, options) {
+export function Cookie(name, value, options) {
   if (typeof value !== 'undefined') {
     if (value === false || value === null) {
       deleteCookie(name)
@@ -79,7 +84,7 @@ export function Cookie (name, value, options) {
  * If the consent cookie is malformed, or not present,
  * returns null.
  */
-export function getConsentCookie () {
+export function getConsentCookie() {
   var consentCookie = getCookie(CONSENT_COOKIE_NAME)
   var consentCookieObj
 
@@ -103,12 +108,12 @@ export function getConsentCookie () {
  *
  * This is also duplicated in cookie-banner.njk - the two need to be kept in sync
  */
-export function isValidConsentCookie (options) {
-  return (options && options.version >= window.GDS_CONSENT_COOKIE_VERSION)
+export function isValidConsentCookie(options) {
+  return options && options.version >= window.GDS_CONSENT_COOKIE_VERSION
 }
 
 /** Update the user's cookie preferences. */
-export function setConsentCookie (options) {
+export function setConsentCookie(options) {
   var cookieConsent = getConsentCookie()
 
   if (!cookieConsent) {
@@ -136,7 +141,7 @@ export function setConsentCookie (options) {
  *
  * Deletes any cookies the user has not consented to.
  */
-export function resetCookies () {
+export function resetCookies() {
   var options = getConsentCookie()
 
   // If no preferences or old version use the default
@@ -178,7 +183,7 @@ export function resetCookies () {
   }
 }
 
-function userAllowsCookieCategory (cookieCategory, cookiePreferences) {
+function userAllowsCookieCategory(cookieCategory, cookiePreferences) {
   // Essential cookies are always allowed
   if (cookieCategory === 'essential') {
     return true
@@ -193,7 +198,7 @@ function userAllowsCookieCategory (cookieCategory, cookiePreferences) {
   }
 }
 
-function userAllowsCookie (cookieName) {
+function userAllowsCookie(cookieName) {
   // Always allow setting the consent cookie
   if (cookieName === CONSENT_COOKIE_NAME) {
     return true
@@ -219,7 +224,7 @@ function userAllowsCookie (cookieName) {
   return false
 }
 
-function getCookie (name) {
+function getCookie(name) {
   var nameEQ = name + '='
   var cookies = document.cookie.split(';')
   for (var i = 0, len = cookies.length; i < len; i++) {
@@ -234,7 +239,7 @@ function getCookie (name) {
   return null
 }
 
-function setCookie (name, value, options) {
+function setCookie(name, value, options) {
   if (userAllowsCookie(name)) {
     if (typeof options === 'undefined') {
       options = {}
@@ -242,7 +247,7 @@ function setCookie (name, value, options) {
     var cookieString = name + '=' + value + '; path=/'
     if (options.days) {
       var date = new Date()
-      date.setTime(date.getTime() + (options.days * 24 * 60 * 60 * 1000))
+      date.setTime(date.getTime() + options.days * 24 * 60 * 60 * 1000)
       cookieString = cookieString + '; expires=' + date.toGMTString()
     }
     if (document.location.protocol === 'https:') {
@@ -252,14 +257,22 @@ function setCookie (name, value, options) {
   }
 }
 
-function deleteCookie (name) {
+function deleteCookie(name) {
   if (Cookie(name)) {
     // Cookies need to be deleted in the same level of specificity in which they were set
     // If a cookie was set with a specified domain, it needs to be specified when deleted
     // If a cookie wasn't set with the domain attribute, it shouldn't be there when deleted
     // You can't tell if a cookie was set with a domain attribute or not, so try both options
     document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/'
-    document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;domain=' + window.location.hostname + ';path=/'
-    document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;domain=.' + window.location.hostname + ';path=/'
+    document.cookie =
+      name +
+      '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;domain=' +
+      window.location.hostname +
+      ';path=/'
+    document.cookie =
+      name +
+      '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;domain=.' +
+      window.location.hostname +
+      ';path=/'
   }
 }

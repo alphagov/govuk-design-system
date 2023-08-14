@@ -2,7 +2,7 @@ const { AxePuppeteer } = require('@axe-core/puppeteer')
 
 const { goTo } = require('../lib/puppeteer-helpers.js')
 
-async function analyze (page, path) {
+async function analyze(page, path) {
   await goTo(page, path)
 
   const axe = new AxePuppeteer(page)

@@ -11,7 +11,7 @@ import { nodeListForEach } from './helpers.mjs'
  * - panels - the content that is shown/hidden/switched; same across all breakpoints
  */
 
-function AppTabs ($module) {
+function AppTabs($module) {
   this.$module = $module
   this.$mobileTabs = this.$module.querySelectorAll('.js-tabs__heading a')
   this.$desktopTabs = this.$module.querySelectorAll('.js-tabs__item a')
@@ -28,9 +28,12 @@ AppTabs.prototype.init = function () {
   this.enhanceMobileTabs()
 
   // Add bindings to desktop tabs
-  nodeListForEach(this.$desktopTabs, function ($tab) {
-    $tab.addEventListener('click', this.onClick.bind(this))
-  }.bind(this))
+  nodeListForEach(
+    this.$desktopTabs,
+    function ($tab) {
+      $tab.addEventListener('click', this.onClick.bind(this))
+    }.bind(this)
+  )
 
   // Reset all tabs and panels to closed state
   // We also add all our default ARIA goodness here
@@ -74,20 +77,23 @@ AppTabs.prototype.onClick = function (event) {
  */
 AppTabs.prototype.enhanceMobileTabs = function () {
   // Loop through mobile tabs...
-  nodeListForEach(this.$mobileTabs, function ($tab) {
-    // ...construct a button equivalent of each anchor...
-    var $button = document.createElement('button')
-    $button.setAttribute('aria-controls', $tab.getAttribute('aria-controls'))
-    $button.setAttribute('data-track', $tab.getAttribute('data-track'))
-    $button.classList.add('app-tabs__heading-button')
-    $button.innerHTML = $tab.innerHTML
-    // ...bind controls...
-    $button.bindClick = this.onClick.bind(this)
-    $button.addEventListener('click', $button.bindClick)
-    // ...and replace the anchor with the button
-    $tab.parentNode.appendChild($button)
-    $tab.parentNode.removeChild($tab)
-  }.bind(this))
+  nodeListForEach(
+    this.$mobileTabs,
+    function ($tab) {
+      // ...construct a button equivalent of each anchor...
+      var $button = document.createElement('button')
+      $button.setAttribute('aria-controls', $tab.getAttribute('aria-controls'))
+      $button.setAttribute('data-track', $tab.getAttribute('data-track'))
+      $button.classList.add('app-tabs__heading-button')
+      $button.innerHTML = $tab.innerHTML
+      // ...bind controls...
+      $button.bindClick = this.onClick.bind(this)
+      $button.addEventListener('click', $button.bindClick)
+      // ...and replace the anchor with the button
+      $tab.parentNode.appendChild($button)
+      $tab.parentNode.removeChild($tab)
+    }.bind(this)
+  )
 
   // Replace the value of $mobileTabs with the new buttons
   this.$mobileTabs = this.$module.querySelectorAll('.js-tabs__heading button')
@@ -97,12 +103,15 @@ AppTabs.prototype.enhanceMobileTabs = function () {
  * Reset tabs and panels to closed state
  */
 AppTabs.prototype.resetTabs = function () {
-  nodeListForEach(this.$panels, function ($panel) {
-    // We don't want to hide the panel if there are no tabs present to show it
-    if (!$panel.classList.contains('js-tabs__container--no-tabs')) {
-      this.closePanel($panel.id)
-    }
-  }.bind(this))
+  nodeListForEach(
+    this.$panels,
+    function ($panel) {
+      // We don't want to hide the panel if there are no tabs present to show it
+      if (!$panel.classList.contains('js-tabs__container--no-tabs')) {
+        this.closePanel($panel.id)
+      }
+    }.bind(this)
+  )
 }
 
 /**
@@ -156,7 +165,9 @@ AppTabs.prototype.getMobileTab = function (panelId) {
 AppTabs.prototype.getDesktopTab = function (panelId) {
   var $desktopTabContainer = this.$module.querySelector('.app-tabs')
   if ($desktopTabContainer) {
-    return $desktopTabContainer.querySelector('[aria-controls="' + panelId + '"]')
+    return $desktopTabContainer.querySelector(
+      '[aria-controls="' + panelId + '"]'
+    )
   }
   return null
 }

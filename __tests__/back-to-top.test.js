@@ -5,15 +5,16 @@ describe('Back to top', () => {
   let $backToTopLink
   let pageHeight
 
-  async function setup (page) {
+  async function setup(page) {
     $module = await page.$('[data-module="app-back-to-top"]')
     $backToTopLink = await $module.$('a')
 
     // Scrollable height of body
-    pageHeight = await page.$eval('body', ($element) => $element.scrollHeight) ?? 0
+    pageHeight =
+      (await page.$eval('body', ($element) => $element.scrollHeight)) ?? 0
   }
 
-  function scrollTo (page, scrollY) {
+  function scrollTo(page, scrollY) {
     return page.evaluate((y) => window.scroll(0, y), scrollY)
   }
 

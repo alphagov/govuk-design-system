@@ -2,5 +2,7 @@ const metalsmith = require('../lib/metalsmith') // configured static site genera
 
 // build to destination directory
 metalsmith.build(function (err, files) {
-  if (err) { throw err }
+  if (err) {
+    throw err
+  }
 })

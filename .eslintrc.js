@@ -21,11 +21,7 @@ module.exports = {
       parserOptions: {
         ecmaVersion: 'latest'
       },
-      plugins: [
-        'import',
-        'n',
-        'promise'
-      ],
+      plugins: ['import', 'n', 'promise'],
       rules: {
         // Check import or require statements are A-Z ordered
         'import/order': [

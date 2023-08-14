@@ -6,7 +6,7 @@ var subNavActiveClass = 'app-navigation__subnav--active'
 // This one has the query dot at the beginning because it's only ever used in querySelector calls
 var subNavJSClass = '.js-app-navigation__subnav'
 
-function Navigation ($module) {
+function Navigation($module) {
   this.$module = $module || document
 
   this.$nav = this.$module.querySelector('.js-app-navigation')
@@ -68,7 +68,10 @@ Navigation.prototype.setInitialAriaStates = function () {
 
       $nextSubNav.setAttribute('id', nextSubNavId)
       $button.setAttribute('id', subNavTogglerId)
-      $button.setAttribute('aria-expanded', $nextSubNav.hasAttribute('hidden') ? 'false' : 'true')
+      $button.setAttribute(
+        'aria-expanded',
+        $nextSubNav.hasAttribute('hidden') ? 'false' : 'true'
+      )
       $button.setAttribute('aria-controls', nextSubNavId)
     }
   })
@@ -79,25 +82,28 @@ Navigation.prototype.bindUIEvents = function () {
   var $navToggler = this.$navToggler
   var $navButtons = this.$navButtons
 
-  $navToggler.addEventListener('click', function (event) {
-    if (this.mobileNavOpen) {
-      $nav.classList.remove(navActiveClass)
-      $navToggler.classList.remove(navMenuButtonActiveClass)
-      $nav.setAttribute('hidden', '')
+  $navToggler.addEventListener(
+    'click',
+    function (event) {
+      if (this.mobileNavOpen) {
+        $nav.classList.remove(navActiveClass)
+        $navToggler.classList.remove(navMenuButtonActiveClass)
+        $nav.setAttribute('hidden', '')
 
-      $navToggler.setAttribute('aria-expanded', 'false')
+        $navToggler.setAttribute('aria-expanded', 'false')
 
-      this.mobileNavOpen = false
-    } else {
-      $nav.classList.add(navActiveClass)
-      $navToggler.classList.add(navMenuButtonActiveClass)
-      $nav.removeAttribute('hidden')
+        this.mobileNavOpen = false
+      } else {
+        $nav.classList.add(navActiveClass)
+        $navToggler.classList.add(navMenuButtonActiveClass)
+        $nav.removeAttribute('hidden')
 
-      $navToggler.setAttribute('aria-expanded', 'true')
+        $navToggler.setAttribute('aria-expanded', 'true')
 
-      this.mobileNavOpen = true
-    }
-  }.bind(this))
+        this.mobileNavOpen = true
+      }
+    }.bind(this)
+  )
 
   nodeListForEach($navButtons, function ($button, index) {
     $button.addEventListener('click', function (event) {

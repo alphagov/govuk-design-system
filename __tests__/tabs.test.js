@@ -7,7 +7,7 @@ describe('Component page', () => {
   let $tabsLinks
   let $tabsContainers
 
-  async function setup (page) {
+  async function setup(page) {
     $module = await page.$('[data-module="app-tabs"]')
 
     $tabsItems = await $module.$$('.app-tabs__item')
@@ -42,16 +42,18 @@ describe('Component page', () => {
         await $tabsLinks[0].click()
 
         // Tab item marked current
-        await expect(getAttribute($tabsItems[0], 'class')).resolves
-          .toContain('app-tabs__item--current')
+        await expect(getAttribute($tabsItems[0], 'class')).resolves.toContain(
+          'app-tabs__item--current'
+        )
       })
 
       it('should indicate the selected state of the tab using aria-expanded', async () => {
         await $tabsLinks[0].click()
 
         // Tab link control expanded
-        await expect(getAttribute($tabsLinks[0], 'aria-expanded')).resolves
-          .toBe('true')
+        await expect(
+          getAttribute($tabsLinks[0], 'aria-expanded')
+        ).resolves.toBe('true')
       })
     })
 
@@ -60,16 +62,18 @@ describe('Component page', () => {
         await $tabsLinks[0].click({ count: 2 })
 
         // Tab item not marked current
-        await expect(getAttribute($tabsItems[0], 'class')).resolves
-          .not.toContain('app-tabs__item--current')
+        await expect(
+          getAttribute($tabsItems[0], 'class')
+        ).resolves.not.toContain('app-tabs__item--current')
       })
 
       it('should indicate the closed state by setting aria-expanded attribute to false', async () => {
         await $tabsLinks[0].click({ count: 2 })
 
         // Tab link control collapsed
-        await expect(getAttribute($tabsLinks[0], 'aria-expanded')).resolves
-          .toBe('false')
+        await expect(
+          getAttribute($tabsLinks[0], 'aria-expanded')
+        ).resolves.toBe('false')
       })
     })
   })
@@ -83,12 +87,16 @@ describe('Patterns page', () => {
   describe('when JavaScript is available', () => {
     describe('when "hideTab" parameter is set to true', () => {
       it('the tab list is not rendered', async () => {
-        const $expandedTabContentWithNoTab = await page.$('#section-headings-question-pages-example-open .app-tabs')
+        const $expandedTabContentWithNoTab = await page.$(
+          '#section-headings-question-pages-example-open .app-tabs'
+        )
         expect($expandedTabContentWithNoTab).toBeNull()
       })
 
       it('close button is not shown on the code block', async () => {
-        const $expandedTabContentWithNoTabCloseButton = await page.$('.js-tabs__container--no-tabs .js-tabs__close')
+        const $expandedTabContentWithNoTabCloseButton = await page.$(
+          '.js-tabs__container--no-tabs .js-tabs__close'
+        )
         expect($expandedTabContentWithNoTabCloseButton).toBeNull()
       })
     })
@@ -107,7 +115,9 @@ describe('Styles -> Images page', () => {
     })
 
     it('the tab heading items are not rendered', async () => {
-      const $tabHeadingItems = await page.$('#example-default .app-tabs__heading')
+      const $tabHeadingItems = await page.$(
+        '#example-default .app-tabs__heading'
+      )
       expect($tabHeadingItems).toBeNull()
     })
   })

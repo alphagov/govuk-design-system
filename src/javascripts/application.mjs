@@ -1,7 +1,10 @@
 import Analytics from './components/analytics.mjs'
 import BackToTop from './components/back-to-top.mjs'
 import CookieBanner from './components/cookie-banner.mjs'
-import { getConsentCookie, isValidConsentCookie } from './components/cookie-functions.mjs'
+import {
+  getConsentCookie,
+  isValidConsentCookie
+} from './components/cookie-functions.mjs'
 import CookiesPage from './components/cookies-page.mjs'
 import Copy from './components/copy.mjs'
 import Example from './components/example.mjs'
@@ -12,7 +15,9 @@ import Search from './components/search.mjs'
 import AppTabs from './components/tabs.mjs'
 
 // Initialise cookie banner
-var $cookieBanner = document.querySelector('[data-module="govuk-cookie-banner"]')
+var $cookieBanner = document.querySelector(
+  '[data-module="govuk-cookie-banner"]'
+)
 new CookieBanner($cookieBanner).init()
 
 // Initialise analytics if consent is given

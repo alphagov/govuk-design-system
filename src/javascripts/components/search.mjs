@@ -27,10 +27,10 @@ var DEBOUNCE_TIME_TO_WAIT = function () {
   // We want to be able to reduce this timeout in order to make sure
   // our tests do not run very slowly.
   var timeout = window.__SITE_SEARCH_TRACKING_TIMEOUT
-  return (typeof timeout !== 'undefined') ? timeout : 2000 // milliseconds
+  return typeof timeout !== 'undefined' ? timeout : 2000 // milliseconds
 }
 
-function Search ($module) {
+function Search($module) {
   this.$module = $module
 }
 
@@ -99,7 +99,7 @@ Search.prototype.inputValueTemplate = function (result) {
 }
 
 Search.prototype.resultTemplate = function (result) {
-  function startsWithFilter (words, query) {
+  function startsWithFilter(words, query) {
     return words.filter(function (word) {
       return word.trim().toLowerCase().indexOf(query.toLowerCase()) === 0
     })
@@ -122,7 +122,10 @@ Search.prototype.resultTemplate = function (result) {
 
       // Aliases containing words that start with the query
       var matchedAliases = aliases.reduce(function (aliasesFiltered, alias) {
-        var aliasWordsMatched = startsWithFilter(alias.match(/\w+/g) || [], searchQuery)
+        var aliasWordsMatched = startsWithFilter(
+          alias.match(/\w+/g) || [],
+          searchQuery
+        )
 
         return aliasWordsMatched.length
           ? aliasesFiltered.concat([alias])
@@ -166,7 +169,9 @@ Search.prototype.init = function () {
       inputValue: this.inputValueTemplate,
       suggestion: this.resultTemplate
     },
-    tNoResults: function () { return statusMessage }
+    tNoResults: function () {
+      return statusMessage
+    }
   })
 
   var $input = $module.querySelector('.app-site-search__input')
@@ -177,9 +182,12 @@ Search.prototype.init = function () {
   })
 
   var searchIndexUrl = $module.getAttribute('data-search-index')
-  this.fetchSearchIndex(searchIndexUrl, function () {
-    this.renderResults()
-  }.bind(this))
+  this.fetchSearchIndex(
+    searchIndexUrl,
+    function () {
+      this.renderResults()
+    }.bind(this)
+  )
 }
 
 export default Search

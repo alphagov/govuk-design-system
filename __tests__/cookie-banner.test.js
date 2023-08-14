@@ -18,7 +18,7 @@ describe('Cookie banner', () => {
     url: `http://localhost:${ports.preview}`
   }
 
-  async function setup (page) {
+  async function setup(page) {
     $module = await page.$('[data-module="govuk-cookie-banner"]')
     $message = await $module.$('.js-cookie-banner-message')
 
@@ -27,8 +27,12 @@ describe('Cookie banner', () => {
     $buttonReject = await $module.$('.js-cookie-banner-reject')
 
     // Accept or reject confirmation messages
-    $confirmationAccept = await $module.$('.js-cookie-banner-confirmation-accept')
-    $confirmationReject = await $module.$('.js-cookie-banner-confirmation-reject')
+    $confirmationAccept = await $module.$(
+      '.js-cookie-banner-confirmation-accept'
+    )
+    $confirmationReject = await $module.$(
+      '.js-cookie-banner-confirmation-reject'
+    )
   }
 
   beforeEach(async () => {
@@ -117,7 +121,9 @@ describe('Cookie banner', () => {
 
     it('moves user focus to the confirmation message', async () => {
       await $buttonAccept.click()
-      await expect(getAttribute($confirmationAccept, 'tabindex')).resolves.toEqual('-1')
+      await expect(
+        getAttribute($confirmationAccept, 'tabindex')
+      ).resolves.toEqual('-1')
     })
   })
 
@@ -148,13 +154,17 @@ describe('Cookie banner', () => {
 
     it('moves user focus to the confirmation message', async () => {
       await $buttonReject.click()
-      await expect(getAttribute($confirmationReject, 'tabindex')).resolves.toEqual('-1')
+      await expect(
+        getAttribute($confirmationReject, 'tabindex')
+      ).resolves.toEqual('-1')
     })
   })
 
   describe('hide button', () => {
     it('hides the accept confirmation message', async () => {
-      const $buttonAcceptHide = await $module.$('.js-cookie-banner-hide--accept')
+      const $buttonAcceptHide = await $module.$(
+        '.js-cookie-banner-hide--accept'
+      )
 
       // Accept cookies
       await $buttonAccept.click()
@@ -172,7 +182,9 @@ describe('Cookie banner', () => {
     })
 
     it('hides the reject confirmation message', async () => {
-      const $buttonRejectHide = await $module.$('.js-cookie-banner-hide--reject')
+      const $buttonRejectHide = await $module.$(
+        '.js-cookie-banner-hide--reject'
+      )
 
       // Reject cookies
       await $buttonReject.click()
