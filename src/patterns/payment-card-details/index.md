@@ -4,7 +4,7 @@ description: How to ask users for their payment card details
 section: Patterns
 theme: Ask users for…
 aliases:
-backlog_issue_id: 80
+backlogIssueId: 80
 layout: layout-pane.njk
 ---
 
@@ -102,4 +102,3 @@ Local Land Charges
 
 **Environment Agency**<br>
 Waste Permitting
-

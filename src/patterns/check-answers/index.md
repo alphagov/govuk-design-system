@@ -4,14 +4,15 @@ description: Let users check their answers before submitting information to a se
 section: Patterns
 theme: Help users to…
 aliases:
-backlog_issue_id: 36
+backlogIssueId: 36
 layout: layout-pane.njk
 ---
+
 {% from "_example.njk" import example %}
 
 Let users check their answers before submitting information to a service.
 
-{{ example({group: "patterns", item: "check-answers", example: "default", html: true, nunjucks: true, open: false, size: "xl"}) }}
+{{ example({group: "patterns", item: "check-answers", example: "default", html: true, nunjucks: true, open: false, size: "xl", loading: "eager"}) }}
 
 ## When to use this pattern
 

@@ -2,9 +2,8 @@
 title: Layout
 description: Organise the layout of the page into blocks
 section: Styles
-backlog_issue_id:
 layout: layout-pane.njk
-show_page_nav: true
+showPageNav: true
 ---
 
 {% from "_example.njk" import example %}
@@ -19,23 +18,19 @@ Never make assumptions about what devices people are using. Design for different
 
 The default maximum page width is 1020px, but you can make it wider if your content requires it.
 
-
 ## Common layouts
-
 
 ### Two-thirds
 
-{{ example({group: "styles", item: "layout", example: "common-two-thirds", html: true, open: true, size: "m"}) }}
+{{ example({group: "styles", item: "layout", example: "common-two-thirds", html: true, open: true, size: "m", loading: "eager"}) }}
 
 ### Two-thirds and one-third
 
 {{ example({group: "styles", item: "layout", example: "common-two-thirds-one-third", html: true, open: true, size: "m"}) }}
 
-
 ### Row 1: Two-thirds <br>Row 2: Two-thirds and one-third
 
 {{ example({group: "styles", item: "layout", example: "common-two-thirds-two-thirds-one-third", html: true, open: true, size: "l"}) }}
-
 
 ## Building your own layout
 
@@ -45,7 +40,7 @@ If you want to build your layout from scratch, or understand what each of the pa
 
 ### Limiting width of content
 
-To set up your layout you will need to create 2 wrappers. The first should have the class  `govuk-width-container`, which sets the maximum width of the content but does not add any vertical margin or padding.
+To set up your layout you will need to create 2 wrappers. The first should have the class `govuk-width-container`, which sets the maximum width of the content but does not add any vertical margin or padding.
 
 If your design requires them, you should place components such as [breadcrumbs](/components/breadcrumbs/), [back link](/components/back-link/) and [phase banner](/components/phase-banner/) inside this wrapper so that they sit directly underneath the header.
 
@@ -123,7 +118,6 @@ The desktop specific classes also allow you to set the width of the tablet break
 ### Nested grids
 
 {{ example({group: "styles", item: "layout", example: "nested", html: true, open: true, size: "m"}) }}
-
 
 ## Width override classes
 

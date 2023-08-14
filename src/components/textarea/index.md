@@ -3,13 +3,13 @@ title: Textarea
 description: Help users provide detailed information using the textarea component
 section: Components
 aliases: multi-line text box, multi-line text field
-backlog_issue_id: 65
+backlogIssueId: 65
 layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
 
-{{ example({group: "components", item: "textarea", example: "default", html: true, nunjucks: true, open: false, size: "m"}) }}
+{{ example({group: "components", item: "textarea", example: "default", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}
 
 ## When to use this component
 
@@ -43,7 +43,7 @@ Make the height of a textarea proportional to the amount of text you expect user
 
 Users will often need to copy and paste information into a textarea, so do not stop them from doing this.
 
-###  If you’re asking more than one question on the page
+### If you’re asking more than one question on the page
 
 If you're asking more than one question on the page, do not set the contents of the `<label>` as the page heading. Read more about [asking multiple questions on question pages](/patterns/question-pages/#asking-multiple-questions-on-a-page).
 

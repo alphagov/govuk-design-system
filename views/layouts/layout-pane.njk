@@ -33,7 +33,7 @@
         {% endif %}
       </h1>
 
-      {% if show_page_nav %}
+      {% if showPageNav %}
         <ul class="app-page-navigation">
           {% for heading in headings %}
             {% if heading.depth == 2 %}
@@ -52,7 +52,7 @@
       </div>
 
       {# No JS fallback to show overview #}
-      {% if show_subnav %}
+      {% if showSubNav %}
         {% include "_category-nav.njk" %}
       {% endif %}
 

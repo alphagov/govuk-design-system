@@ -4,7 +4,6 @@ description: We collect certain information and data about you when you use the 
 layout: layout-single-page-prose.njk
 ---
 
-
 # Privacy notice: how we use your data
 
 The [GOV.UK Design System](/) brings together the latest research, design and development from across government to make sure it’s representative and relevant for its users.
@@ -93,6 +92,7 @@ We will not:
 We will share your data if we’re required to do so by law — for example, by court order, or to prevent fraud or other crime.
 
 ## How we protect your data and keep it secure
+
 We are committed to doing all that we can to keep your data secure. We set up systems and processes to prevent unauthorised access to or disclosure of the data we collect about you – for example, we protect your data using varying levels of encryption. All third parties that process personal data for GDS are required to keep that data secure.
 
 ## Your rights
@@ -135,6 +135,7 @@ If you consider that your personal data has been misused or mishandled, you may 
 Any complaint to the Information Commissioner is without prejudice to your right to seek redress through the courts.
 
 ## Changes to this notice
+
 We may change this privacy notice. When we make changes to this notice, the ‘last updated’ date at the bottom of this page will also change. Any changes to this privacy notice will apply to you and your data immediately. If these changes affect how your personal data is processed, GDS will take reasonable steps to make sure you know.
 
 <p class="govuk-body govuk-!-font-size-16">Last updated 15 September 2021</p>

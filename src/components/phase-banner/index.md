@@ -3,7 +3,7 @@ title: Phase banner
 description: Use the phase banner component to show users your service is still being worked on
 section: Components
 aliases: alpha banner, beta banner, prototype banner, status banner, feedback banner
-backlog_issue_id: 57
+backlogIssueId: 57
 layout: layout-pane.njk
 ---
 
@@ -11,7 +11,7 @@ layout: layout-pane.njk
 
 Use the phase banner component to show users your service is still being worked on.
 
-{{ example({group: "components", item: "phase-banner", example: "default", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "components", item: "phase-banner", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 

@@ -3,7 +3,7 @@ title: Character count
 description: Tell users how many characters or words they can enter into a textarea
 section: Components
 aliases: word count
-backlog_issue_id: 67
+backlogIssueId: 67
 layout: layout-pane.njk
 ---
 
@@ -11,9 +11,7 @@ layout: layout-pane.njk
 
 Help users know how much text they can enter when there is a limit on the number of characters.
 
-{% from "_example.njk" import example %}
-
-{{ example({group: "components", item: "character-count", example: "default", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "components", item: "character-count", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 
@@ -50,7 +48,7 @@ There are 2 ways to use the character count component. You can use HTML or, if y
 
 {{ example({group: "components", item: "character-count", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second"}) }}
 
-###  If you’re asking more than one question on the page
+### If you’re asking more than one question on the page
 
 If you're asking more than one question on the page, do not set the contents of the `<label>` as the page heading. Read more about [asking multiple questions on question pages](/patterns/question-pages/#asking-multiple-questions-on-a-page).
 
@@ -69,9 +67,11 @@ Do this by setting `data-maxwords` in the component markup. For example, `data-m
 
 When using a character count, try to set the limit higher than most users will need. Find out what this is by doing user research and data analysis.
 
-If the limit is much higher than most users are likely to reach, you can choose to only display the message after a user has entered a certain amount.
+#### If the limit is far higher than users are likely to reach
 
-To do this, set a threshold in the component markup. For example, `data-threshold="75"` will show the count message only when users have entered 75% of the limit.
+You can choose to display a character count message when the length of text within the textarea passes a certain 'threshold' of characters. This is useful when a character limit is needed due to the technical limitations of the service, but users are unlikely to reach that limit.
+
+To do this, set the threshold in the component markup as a percentage. For example, `data-threshold="75"` will show the count message only when the user has entered a length of text that's 75% of the limit or more.
 
 Screen reader users will hear the character limit when they first interact with a textarea using the threshold option. Sighted users will not see anything until the count message is shown — though you might choose to include the character limit in the hint text.
 

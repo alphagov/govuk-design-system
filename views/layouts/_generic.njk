@@ -5,7 +5,8 @@
 {% block pageTitle %}{{ title }} – GOV.UK Design System{% endblock %}
 
 {% block head %}
-  {% if not ENVIRONMENT or ENVIRONMENT != 'production' %}
+  {#- Prevent search engine indexing for preview and development builds -#}
+  {% if ["deploy-preview", "dev"].includes(env("CONTEXT")) or env("NODE_ENV") != 'production' %}
     <meta name="robots" content="noindex, nofollow">
   {% endif %}
   <meta name="og:title" content="{{title}}">

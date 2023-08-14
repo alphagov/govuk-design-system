@@ -6,7 +6,6 @@ async function analyze (page, path) {
   await goTo(page, path)
 
   const axe = new AxePuppeteer(page)
-    .setLegacyMode(true) // Share single page via iframe
     .include('body')
     // axe reports there is "no label associated with the text field", when there is one.
     .exclude('#app-site-search__input')

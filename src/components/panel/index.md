@@ -3,7 +3,7 @@ title: Panel
 description: The panel component is a visible container used on confirmation or results pages
 section: Components
 aliases: confirmation box, results box, reference number, application complete, application number
-backlog_issue_id: 55
+backlogIssueId: 55
 layout: layout-pane.njk
 ---
 
@@ -11,7 +11,7 @@ layout: layout-pane.njk
 
 The panel component is a visible container used on confirmation or results pages to highlight important content.
 
-{{ example({group: "components", item: "panel", example: "default", html: true, nunjucks: true, open: false, size: "m"}) }}
+{{ example({group: "components", item: "panel", example: "default", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}
 
 ## When to use this component
 

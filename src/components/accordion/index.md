@@ -3,7 +3,7 @@ title: Accordion
 description: The accordion component lets users show and hide sections of related content on a page
 section: Components
 aliases:
-backlog_issue_id: 1
+backlogIssueId: 1
 layout: layout-pane.njk
 status: Experimental
 statusMessage: This component is currently experimental because <a class="govuk-link" href="#known-issues-and-gaps">more research</a> is needed to validate it.
@@ -13,7 +13,7 @@ statusMessage: This component is currently experimental because <a class="govuk-
 
 The accordion component lets users show and hide sections of related content on a page.
 
-{{ example({group: "components", item: "accordion", example: "default", html: true, nunjucks: true, open: false, size: "xl"}) }}
+{{ example({group: "components", item: "accordion", example: "default", html: true, nunjucks: true, open: false, size: "xl", loading: "eager" }) }}
 
 ## When to use this component
 

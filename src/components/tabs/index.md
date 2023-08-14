@@ -3,7 +3,7 @@ title: Tabs
 description: Tabs can be a helpful way of letting users quickly switch between related information
 section: Components
 aliases:
-backlog_issue_id: 100
+backlogIssueId: 100
 layout: layout-pane.njk
 status: Experimental
 statusMessage: This component is currently experimental because <a class="govuk-link" href="#next-steps">more research</a> is needed to validate it.
@@ -13,7 +13,7 @@ statusMessage: This component is currently experimental because <a class="govuk-
 
 The tabs component lets users navigate between related sections of content, displaying one section at a time.
 
-{{ example({group: "components", item: "tabs", example: "default", html: true, nunjucks: true, open: false, size: "xl"}) }}
+{{ example({group: "components", item: "tabs", example: "default", html: true, nunjucks: true, open: false, size: "xl", loading: "eager" }) }}
 
 ## When to use this component
 
@@ -78,21 +78,21 @@ Tabs hide content, so the tab labels need to make it very clear what they link t
 
 If you struggle to come up with clear labels, it might be because the way you’ve separated the content is not clear.
 
-
 ### Order the tabs according to user needs
 
 The first tab should be the most commonly-needed section. Arrange the other tabs in the order that makes most sense for your users.
-
 
 ### Do not disable tabs
 
 Disabling elements is normally confusing for users. If there is no content for a tab, either remove the tab or, if that would be confusing for your users, explain why there is no content when the tab is selected.
 
-
 ### Avoid tabs that wrap over more than one line
 
 If you use too many tabs or they have long labels then they may wrap over more than one line. This makes it harder for users to see the connection between the selected tab and its content.
 
+### Add headings to tab content
+
+Include a heading at the beginning of each tab that duplicates the information in the tab label. Providing a heading improves navigation on smaller screen sizes and for screen reader users.
 
 ## Research and testing
 

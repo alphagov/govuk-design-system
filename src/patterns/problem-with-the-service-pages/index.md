@@ -4,18 +4,19 @@ description: This is a page that tells someone there is something wrong with the
 section: Patterns
 theme: Pages
 aliases: '500'
-backlog_issue_id: 129
+backlogIssueId: 129
 layout: layout-pane.njk
 status: Experimental
 statusMessage: This pattern is currently experimental because <a class="govuk-link" href="#research-on-this-pattern">more research</a> is needed to validate it.
 ---
+
 This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
 
 {% from "_example.njk" import example %}
 
 Tell the user there is something wrong with the service. These are also known as 500 and internal server error pages.
 
-{{ example({group: "patterns", item: "problem-with-the-service-pages", example: "default", html: true, nunjucks: true, open: false, size: "xl"}) }}
+{{ example({group: "patterns", item: "problem-with-the-service-pages", example: "default", html: true, nunjucks: true, open: false, size: "xl", loading: "eager"}) }}
 
 ## When to use this pattern
 

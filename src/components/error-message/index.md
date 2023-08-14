@@ -3,7 +3,7 @@ title: Error message
 description: When there's a validation error, use an error message to explain what went wrong and how to fix it
 section: Components
 aliases: validation message
-backlog_issue_id: 47
+backlogIssueId: 47
 layout: layout-pane.njk
 ---
 
@@ -13,7 +13,7 @@ This guidance is for government teams that build online services. [To find infor
 
 Follow the [validation pattern](/patterns/validation/) and show an error message when there is a validation error. In the error message explain what went wrong and how to fix it.
 
-{{ example({group: "components", item: "error-message", example: "default", html: true, nunjucks: true, open: false, size: "m"}) }}
+{{ example({group: "components", item: "error-message", example: "default", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}
 
 ## When to use this component
 

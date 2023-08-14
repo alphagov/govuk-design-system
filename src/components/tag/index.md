@@ -3,7 +3,7 @@ title: Tag
 description: The tag component indicates the status of something, such as an item on a task list or a phase banner
 section: Components
 aliases: chip, badge, flag, token
-backlog_issue_id: 62
+backlogIssueId: 62
 layout: layout-pane.njk
 ---
 
@@ -11,7 +11,7 @@ layout: layout-pane.njk
 
 Use the tag component to show users the status of something.
 
-{{ example({group: "components", item: "tag", example: "default", html: true, nunjucks: true, open: false }) }}
+{{ example({group: "components", item: "tag", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 
@@ -41,7 +41,7 @@ Tags should be helpful to users. The more you add, the harder it is for users to
 
 ## Using colour with tags
 
-You can use colour to help distinguish between different tags – or to help draw the user’s attention to a tag if it’s especially important. For example, it probably makes sense to use  `govuk-tag--red` for a tag that reads ‘Urgent’.
+You can use colour to help distinguish between different tags – or to help draw the user’s attention to a tag if it’s especially important. For example, it probably makes sense to use `govuk-tag--red` for a tag that reads ‘Urgent’.
 
 [Do not use colour alone to convey information](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html) because it’s not accessible. If you use the same tag in more than one place, make sure you keep the colour consistent.
 

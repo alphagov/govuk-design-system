@@ -69,16 +69,16 @@ For this section, we define an ‘accessibility concern’ as any question about
 
 #### Non-compliance with the accessibility regulations
 
-These accessibility concerns have been classified as being non-compliant, due to a failure in one or more WCAG 2.1 Level AA criteria.
+These accessibility concerns have been classified as being non-compliant, due to a failure in one or more WCAG 2.1 Level A and AA criteria.
 
-WCAG 2.1 AA failures are documented in two of our repositories under the ‘accessibility-regulations-failure’ issue label:
+WCAG 2.1 A and AA failures are documented in two of our repositories under the ‘accessibility-regulations-failure’ issue label:
 
 - [GOV.UK Design System website label for accessibility regulations failures](https://github.com/alphagov/govuk-design-system/labels/accessibility-regulations-failure)
 - [GOV.UK Frontend codebase label for accessibility regulations failures](https://github.com/alphagov/govuk-frontend/labels/accessibility-regulations-failure)
 
 From the GOV.UK Design System website:
 
-1. The example summary card on our ‘Summary list’ component page includes different links with the same link text. There is no programmatically determinable link context to differentiate between the links. This is technically a failure of WCAG success criterion [2.4.4 Link Purpose (In Context)](https://www.w3.org/TR/WCAG21/#link-purpose-in-context). We plan to fix this within 2023. Track our progress on the [GitHub issue: ‘Duplicate links on example for summary cards’](https://github.com/alphagov/govuk-design-system/issues/2680).
+1. The example summary card on our ‘Summary list’ component page includes different links with the same link text. There is no programmatically determinable link context to differentiate between the links. This is technically a failure of WCAG success criterion [2.4.4 Link Purpose (In Context)](https://www.w3.org/TR/WCAG21/#link-purpose-in-context). We plan to fix this within 2023. Track our progress on the [GitHub issue: ‘Summary list row actions within summary cards must specify which summary card they're part of'](https://github.com/alphagov/govuk-frontend/issues/3674) and [GitHub issue: ‘Summary card actions must specify which card they are for’](https://github.com/alphagov/govuk-frontend/issues/3673).
 
 From the GOV.UK Frontend Documentation website:
 
@@ -122,8 +122,9 @@ There are currently no known accessibility concerns in the GOV.UK Frontend Docum
 
 From the GOV.UK Frontend codebase:
 
-The accordion component is currently using an `aria-labelledby` ARIA attribute on an unsupported `<div>` element. This is an incorrect implementation of [WAI-ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/), but is not a failure of WCAG success criterion [4.1.2 Name, Role, Value](https://www.w3.org/TR/WCAG21/#name-role-value). We plan to fix this within 2023. Track our progress on the [GitHub issue: ‘Accordion - Elements must only use allowed ARIA attributes’](https://github.com/alphagov/govuk-frontend/issues/2472).
-
+1. The accordion component is currently using an `aria-labelledby` ARIA attribute on an unsupported `<div>` element. This is an incorrect implementation of [WAI-ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/), but is not a failure of WCAG success criterion [4.1.2 Name, Role, Value](https://www.w3.org/TR/WCAG21/#name-role-value). We plan to fix this within 2023. Track our progress on the [GitHub issue: ‘Accordion - Elements must only use allowed ARIA attributes’](https://github.com/alphagov/govuk-frontend/issues/2472).
+2. The details component doesn't work well with Dragon and VoiceOver. This is a known issue with the assistive tech and the `<details>` HTML element, rather than an issue with our details component specifically. Track our progress on the [GitHub issue: 'Details component does not work well with Dragon and VoiceOver'](https://github.com/alphagov/govuk-frontend/issues/3693).
+3. [A bug within Dragon means no action is taken when trying to activate the file upload component](https://github.com/alphagov/reported-bugs/issues/35) through the command 'click choose file'. This is a usability issue originating from the assistive technology. We don’t plan on fixing this, as it’s something which would need to be resolved within the assistive technology itself. Track our progress on the [GitHub issue: ‘Upload file component doesn't respond to 'click choose file' due to Dragon / browser bugs’](https://github.com/alphagov/govuk-frontend/issues/3686).
 
 ### Testing our products for accessibility
 
@@ -153,6 +154,8 @@ To learn more, read the [Technical Documentation Template accessibility statemen
 
 The GOV.UK Frontend codebase is not a website but a [code repository](https://github.com/alphagov/govuk-frontend) and [npm package](https://www.npmjs.com/package/govuk-frontend).
 
+Examples using the GOV.UK Frontend codebase were last audited for accessibility issues by an external group in May 2023. The audit was carried out by the [Digital Accessibility Centre (DAC)](https://digitalaccessibilitycentre.org/).
+
 Read more about the codebase’s accessibility in the [GOV.UK Frontend GitHub repository readme](https://github.com/alphagov/govuk-frontend#accessibility).
 
 ### How the GOV.UK Design System team makes their websites accessible
@@ -167,13 +170,13 @@ When we publish new content, we’ll continue to make sure that it meets accessi
 
 ### Preparation of this accessibility statement
 
-This statement was prepared on 23 October 2019. It was last reviewed on 27 April 2023.
+This statement was prepared on 23 October 2019. It was last reviewed on 2 August 2023.
 
 ## Using the Design System and Frontend in your service
 
 While the GOV.UK Design System team takes steps to ensure the Design System is as accessible as possible by default, you still need to carry out contextual research.
 
-Simply using code from the GOV.UK Frontend codebase is not enough to accessibly implement the GOV.UK Design System. There is important written guidance in the [GOV.UK Design System website](https://design-system.service.gov.uk/) on how to implement styles, components and patterns in an accessible way. 
+Simply using code from the GOV.UK Frontend codebase is not enough to accessibly implement the GOV.UK Design System. There is important written guidance in the [GOV.UK Design System website](https://design-system.service.gov.uk/) on how to implement styles, components and patterns in an accessible way.
 
 Using the Design System guidance and Frontend codebase does not mean your service automatically meets level AA of WCAG 2.1. You’ll still need to make sure your service as a whole meets accessibility requirements.
 
@@ -197,4 +200,3 @@ If you have any questions or need help, contact the GOV.UK Design System team:
 
 - using the #govuk-design-system channel on the cross-government [UK Government Digital Slack](https://ukgovernmentdigital.slack.com/app_redirect?channel=govuk-design-system)
 - by email at <govuk-design-system-support@digital.cabinet-office.gov.uk>
-

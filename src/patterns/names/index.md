@@ -4,13 +4,13 @@ description: Help users correctly enter their name
 section: Patterns
 theme: Ask users for…
 aliases:
-backlog_issue_id: 53
+backlogIssueId: 53
 layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
 
-{{ example({group: "patterns", item: "names", example: "default", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "patterns", item: "names", example: "default", html: true, nunjucks: true, open: false, loading: "eager"}) }}
 
 ## When to use this pattern
 

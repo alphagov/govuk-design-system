@@ -1,0 +1,25 @@
+---
+title: Inverse breadcrumbs
+layout: layout-example.njk
+stylesheets:
+- ../../../stylesheets/example-inverse.css
+---
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+{{ govukBreadcrumbs({
+  classes: "govuk-breadcrumbs--inverse",
+  items: [
+    {
+      text: "Home",
+      href: "#"
+    },
+    {
+      text: "Passports, travel and living abroad",
+      href: "#"
+    },
+    {
+      text: "Travel abroad",
+      href: "#"
+    }
+  ]
+}) }}

@@ -3,7 +3,7 @@ title: Table
 description: Use the table component to make information easier to compare and scan for users
 section: Components
 aliases:
-backlog_issue_id: 61
+backlogIssueId: 61
 layout: layout-pane.njk
 ---
 
@@ -11,7 +11,7 @@ layout: layout-pane.njk
 
 Use the table component to make information easier to compare and scan for users.
 
-{{ example({group: "components", item: "table", example: "default", html: true, nunjucks: true, open: false, size: "m"}) }}
+{{ example({group: "components", item: "table", example: "default", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}
 
 ## When to use this component
 

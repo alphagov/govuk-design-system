@@ -4,7 +4,7 @@ description: Help users enter or select a date
 section: Patterns
 theme: Ask users for…
 aliases:
-backlog_issue_id: 43
+backlogIssueId: 43
 layout: layout-pane.njk
 ---
 
@@ -33,7 +33,7 @@ In some cases you might need users to pick a date from a given selection.
 
 Ask for memorable dates, like dates of birth, using the [date input](/components/date-input/) component.
 
-{{ example({group: "patterns", item: "dates", example: "default", html: true, nunjucks: true, open: false, size: "s"}) }}
+{{ example({group: "patterns", item: "dates", example: "default", html: true, nunjucks: true, open: false, size: "s", loading: "eager"}) }}
 
 ### Asking for dates from documents and cards
 
@@ -65,7 +65,7 @@ Never make a calendar control that depends on JavaScript as the only input optio
 
 ### How to write dates
 
-See the [GOV.UK style for writing dates](https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#dates) and [date ranges]( https://www.gov.uk/guidance/content-design/writing-for-gov-uk#date-ranges).
+See the [GOV.UK style for writing dates](https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#dates) and [date ranges](https://www.gov.uk/guidance/content-design/writing-for-gov-uk#date-ranges).
 
 If you give an example date, use 13 or more for the day and 9 or less for the month - for example ‘27 3 2007’. This helps users enter the date in the correct order and shows them they do not need to include leading zeroes.
 

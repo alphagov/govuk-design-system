@@ -4,7 +4,7 @@ description: This pattern explains how to ask users about gender or sex
 section: Patterns
 theme: Ask users for…
 aliases: title, titles, pronoun, pronouns
-backlog_issue_id: 69
+backlogIssueId: 69
 layout: layout-pane.njk
 ---
 
@@ -22,7 +22,6 @@ If you have to ask about gender, you should:
 
 - list the fields in alphabetical order
 - do research to test that this works for your users
-
 
 ### Avoid using pronouns
 

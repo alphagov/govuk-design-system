@@ -17,12 +17,11 @@ This guide explains how to set up your project so you can start using the styles
   html: "If you’ve used GOV.UK Elements, GOV.UK Template or the GOV.UK Frontend Toolkit before, you might also find it useful to read the guide on <a href=\"/get-started/updating-your-code/\">updating your code</a>."
 }) }}
 
-
 ## Include GOV.UK Frontend in your project
 
 To start using GOV.UK styles, components and patterns contained here, you’ll need to include GOV.UK Frontend in your project.
 
-There are 2 ways to include GOV.UK Frontend in your project. You can either install it using  node package manager (npm) or include the compiled files in your application.
+There are 2 ways to include GOV.UK Frontend in your project. You can either install it using node package manager (npm) or include the compiled files in your application.
 
 ### Option 1: install using npm
 
@@ -43,7 +42,6 @@ Using this option, you will be able to include all the CSS and JavaScript of GOV
 
 You will not be able to:
 
-
 - selectively [include the CSS or JavaScript](https://frontend.design-system.service.gov.uk/importing-css-assets-and-javascript/) for individual components
 - build your own styles or components based on the palette or typography and spacing mixins
 - customise the build, for example, overriding colours or enabling global styles
@@ -60,7 +58,6 @@ The Design System provides CSS classes for styling content, instead of global st
 The class names follow the Block Element Modifier (BEM) naming convention. This can look a bit daunting at first, but it makes robust code that’s easy to maintain.
 
 Explore the [Styles](/styles/) section of the Design System to see what classes are available.
-
 
 ## Using components
 

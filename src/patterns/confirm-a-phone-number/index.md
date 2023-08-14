@@ -3,8 +3,8 @@ title: Confirm a phone number
 description: Identifying users when they sign in
 section: Patterns
 theme: Help users to…
-aliases: 2FA, MFA, multi-factor authentication, security code, text message, two-factor authentication
-backlog_issue_id: 25
+aliases: 2FA, MFA, multi-factor authentication, security code, telephone number, text message, two-factor authentication
+backlogIssueId: 25
 layout: layout-pane.njk
 ---
 
@@ -12,7 +12,7 @@ layout: layout-pane.njk
 
 Check that a user has access to a specific mobile phone number using a security code sent by text message.
 
-{{ example({group: "patterns", item: "confirm-a-phone-number", example: "default", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "patterns", item: "confirm-a-phone-number", example: "default", html: true, nunjucks: true, open: false, loading: "eager"}) }}
 
 ## When to use this pattern
 
@@ -108,6 +108,7 @@ If the code has expired, show this message:
 {{ example({group: "patterns", item: "confirm-a-phone-number", example: "error-expired", html: true, nunjucks: true, open: false}) }}
 
 If the code was sent more than 2 hours ago, show the 'incorrect security code' message.
+
 ### Technical security measures
 
 Use [technical measures to prevent automated attacks](https://www.ncsc.gov.uk/collection/passwords/updating-your-approach#tip2-password-collection). For example, add a time delay after 10 incorrect number entries.

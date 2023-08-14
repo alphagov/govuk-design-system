@@ -31,13 +31,11 @@
     <div class="app-example {{ "app-example--tabs" if params.html or params.nunjucks }}">
       <div class="app-example__toolbar">
         <a href="{{ exampleURL }}" class="app-example__new-window" target="_blank">
-          Open this
           {#- Don't use full title visually as the context is shown based on location of this link #}
-          <span class="govuk-visually-hidden">{{ exampleTitle | lower }}</span>
-          example in a new tab
+          Open this example in a new tab<span class="govuk-visually-hidden">: {{ exampleTitle | lower }}</span>
         </a>
       </div>
-      <iframe title="{{ exampleTitle + " example" }}" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable{% if params.size %} app-example__frame--{{ params.size }}{% endif %}" src="{{ exampleURL }}" loading="lazy"></iframe>
+      <iframe title="{{ exampleTitle + " example" }}" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable{% if params.size %} app-example__frame--{{ params.size }}{% endif %}" src="{{ exampleURL }}" loading="{% if params.loading %}{{ params.loading }}{% else %}lazy{% endif %}"></iframe>
     </div>
   {% endif %}
 

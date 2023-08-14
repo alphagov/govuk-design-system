@@ -1,7 +1,7 @@
 ---
 title: Larry the cat
 section: Cats
-show_page_nav: true
+showPageNav: true
 ---
 
 # Larry (cat)

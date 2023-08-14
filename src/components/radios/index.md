@@ -3,13 +3,13 @@ title: Radios
 description: Let users select a single option from a list using the radios component
 section: Components
 aliases: radio buttons, option buttons
-backlog_issue_id: 59
+backlogIssueId: 59
 layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
 
-{{ example({group: "components", item: "radios", example: "default", html: true, nunjucks: true, open: false, size: "m"}) }}
+{{ example({group: "components", item: "radios", example: "default", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}
 
 ## When to use this component
 
@@ -42,7 +42,7 @@ However you should do this with extreme caution as it can reinforce bias in your
 
 Group radios together in a `<fieldset>` with a `<legend>` that describes them, as shown in the examples on this page. This is usually a question, like ‘Where do you live?’.
 
-###  If you’re asking one question on the page
+### If you’re asking one question on the page
 
 If you are asking just [one question per page](/patterns/question-pages/#start-by-asking-one-question-per-page) as recommended, you can set the contents of the `<legend>` as the page heading. This is good practice as it means that users of screen readers will only hear the contents once.
 
@@ -52,7 +52,7 @@ There are 2 ways to use the radios component. You can use HTML or, if you are us
 
 {{ example({group: "components", item: "radios", example: "default", html: true, nunjucks: true, open: false, size: "s", titleSuffix: "second"}) }}
 
-###  If you’re asking more than one question on the page
+### If you’re asking more than one question on the page
 
 If you're asking more than one question on the page, do not set the contents of the `<legend>` as the page heading. Read more about [asking multiple questions on question pages](/patterns/question-pages/#asking-multiple-questions-on-a-page).
 

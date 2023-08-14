@@ -4,7 +4,7 @@ description: Follow this pattern whenever you need to ask users questions within
 section: Patterns
 theme: Pages
 aliases:
-backlog_issue_id: 58
+backlogIssueId: 58
 layout: layout-pane.njk
 ---
 
@@ -12,7 +12,7 @@ layout: layout-pane.njk
 
 This pattern explains when to use question pages and what elements they need to include.
 
-{{ example({group: "patterns", item: "question-pages", example: "default", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "patterns", item: "question-pages", example: "default", html: true, nunjucks: true, open: false, loading: "eager"}) }}
 
 ## When to use this pattern
 

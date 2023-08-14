@@ -3,13 +3,13 @@ title: Inset text
 description: Use the inset text component to differentiate a block of text from the content that surrounds it
 section: Components
 aliases: highlighted text, callout
-backlog_issue_id: 136
+backlogIssueId: 136
 layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
 
-{{ example({group: "components", item: "inset-text", example: "default", html: true, nunjucks: true, size: "s"}) }}
+{{ example({group: "components", item: "inset-text", example: "default", html: true, nunjucks: true, size: "s", loading: "eager" }) }}
 
 ## When to use this component
 

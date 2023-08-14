@@ -3,7 +3,7 @@ title: Summary list
 description: Use the summary list to summarise information, for example, a user’s responses at the end of a form.
 section: Components
 aliases: Summary card
-backlog_issue_id: 182
+backlogIssueId: 182
 layout: layout-pane.njk
 ---
 
@@ -11,7 +11,7 @@ layout: layout-pane.njk
 
 Use a summary list to summarise information, for example, a user’s responses at the end of a form.
 
-{{ example({group: "components", item: "summary-list", example: "default", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "components", item: "summary-list", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 
@@ -30,9 +30,9 @@ Do not use it for tabular data or a simple list of information or tasks, like a 
 ## How it works
 
 Each row of a summary list is made up of a:
- - ‘key’ that’s a description or label of a piece of information, like
-   “Name”
- - ‘value’ which is the piece of information itself, such as “John Smith”
+
+- ‘key’ that’s a description or label of a piece of information, like “Name”
+- ‘value’ which is the piece of information itself, such as “John Smith”
 
 You can show a single or multiple summary lists on a page. If you’re showing multiple summary lists on a page, you can add structure by using headings or summary cards.
 
@@ -40,7 +40,7 @@ There are 2 ways to use the summary list component. You can use HTML or, if you�
 
 {{ example({group: "components", item: "summary-list", example: "without-actions", html: true, nunjucks: true, open: false}) }}
 
-###  Adding actions to each row
+### Adding actions to each row
 
 You can add ‘row actions’ to a summary list. For example, you can help users go back and edit an answer by adding a ‘change’ link.
 
@@ -70,12 +70,12 @@ To remove borders on a single row, use the `govuk-summary-list__row--no-border` 
 
 ## Summary cards
 
-
 If you’re showing multiple summary lists on a page, you can show each list within a summary card. This lets you visually separate each summary list and give each a title and some actions.
 
 Use summary cards when you need to show:
- - multiple summary lists that all describe the same type of thing, such as people
- - actions that will apply to all the items in a list
+
+- multiple summary lists that all describe the same type of thing, such as people
+- actions that will apply to all the items in a list
 
 Summary cards are often used in case working systems to help users quickly view a set of information and related actions.
 
@@ -105,11 +105,11 @@ Write link text for card actions to tell the user what the card action will do a
 
 Example card actions include:
 
- - Remove tenant
- - Edit qualification
- - Update issue
- - Approve application
- - Cancel order
+- Remove tenant
+- Edit qualification
+- Update issue
+- Approve application
+- Cancel order
 
 Keep it short and do not add more than 2 to 3 actions in a header.
 
@@ -122,15 +122,17 @@ If a card action cannot easily be undone or might have serious consequences, con
 This component was developed and tested by the Government Digital Service as part of the [check answers pattern](/patterns/check-answers/).
 
 The Department for Education contributed the summary card. It’s being used in some of their services, such as:
+
 - [apply for teacher training](https://www.gov.uk/apply-for-teacher-training), used by the general public
 - [register trainee teachers](https://www.register-trainee-teachers.service.gov.uk/), used by people that work for training providers
 
 The summary card is also used in services run by other departments, such us:
+
 - manage supervisions (Ministry of Justice)
 - submit social housing lettings and sales data (Department for Levelling Up, Housing & Communities)
 
 ### Next steps
 
-We still want to learn more about when this component works well. 
+We still want to learn more about when this component works well.
 
 If you use this component in your service, we'd like to hear about how you use the summary list and summary card, as well as any research findings you might have.

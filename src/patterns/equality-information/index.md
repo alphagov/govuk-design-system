@@ -4,7 +4,7 @@ description: This pattern explains how to ask users for equality information
 section: Patterns
 theme: Ask users for…
 aliases: protected characteristics, ethnic group, diversity, demographic, age, disability, marriage, civil partnership, religion, sex, gender identity, sexual orientation
-backlog_issue_id: 180
+backlogIssueId: 180
 layout: layout-pane.njk
 ---
 
@@ -37,7 +37,7 @@ For a service that people are likely to use on a one-off basis:
 - place equality questions between the [‘check your answers’ page](/patterns/check-answers/) and the [confirmation page](/patterns/confirmation-pages/)
 - show the user a screen explaining why you’re asking the questions and what you’ll do with the information they provide, like the one below
 
-{{ example({group: "patterns", item: "equality-information", example: "explainer-screen", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "patterns", item: "equality-information", example: "explainer-screen", html: true, nunjucks: true, open: false, loading: "eager"}) }}
 
 #### Longer term services
 
@@ -69,7 +69,7 @@ This pattern covers:
 
 ### Collecting more detailed information
 
-Start with the harmonised standards, keeping the categories of responses in the same order. Break them down into subcategories if necessary. For example if your service is aimed at a disabled people in particular, you may want to collect more detailed information about their disability.  But make sure any categories you use map back to a ‘parent’ category in the harmonised standard.
+Start with the harmonised standards, keeping the categories of responses in the same order. Break them down into subcategories if necessary. For example if your service is aimed at a disabled people in particular, you may want to collect more detailed information about their disability. But make sure any categories you use map back to a ‘parent’ category in the harmonised standard.
 
 ### Collecting other types of equality information
 

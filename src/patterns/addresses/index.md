@@ -4,7 +4,7 @@ description: Help users provide an address
 section: Patterns
 theme: Ask users for…
 aliases:
-backlog_issue_id: 31
+backlogIssueId: 31
 layout: layout-pane.njk
 ---
 
@@ -20,7 +20,7 @@ Help users provide an address using one of the following:
 
 ## Multiple text inputs
 
-{{ example({group: "patterns", item: "addresses", example: "multiple", html: true, nunjucks: true, open: true, size: "xl"}) }}
+{{ example({group: "patterns", item: "addresses", example: "multiple", html: true, nunjucks: true, open: true, size: "xl", loading: "eager"}) }}
 
 ### When to use multiple text inputs
 
@@ -79,7 +79,7 @@ Use an address lookup when you’re asking users for a UK address.
 
 ### When not to use an address lookup
 
-Address lookups generally only work for UK addresses. Use a manual option such as  multiple text inputs or a textarea when you are collecting mostly or only international&nbsp;addresses
+Address lookups generally only work for UK addresses. Use a manual option such as multiple text inputs or a textarea when you are collecting mostly or only international&nbsp;addresses
 
 ### How an address lookup works
 

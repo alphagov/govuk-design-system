@@ -4,7 +4,7 @@ description: Help users enter a valid email address
 section: Patterns
 theme: Ask users for…
 aliases:
-backlog_issue_id: 45
+backlogIssueId: 45
 layout: layout-pane.njk
 ---
 
@@ -12,7 +12,7 @@ This guidance is for government teams that build online services. [To find infor
 
 {% from "_example.njk" import example %}
 
-{{ example({group: "patterns", item: "email-addresses", example: "default", html: true, nunjucks: true, open: false, size: "s"}) }}
+{{ example({group: "patterns", item: "email-addresses", example: "default", html: true, nunjucks: true, open: false, size: "s", loading: "eager"}) }}
 
 ## When to use this pattern
 

@@ -2,11 +2,11 @@
 title: Images
 description: Only use images if there’s a real user need
 section: Styles
-backlog_issue_id: 70
+backlogIssueId: 70
 layout: layout-pane.njk
 status: Experimental
 statusMessage: This guidance is currently experimental because <a class="govuk-link" href="#research-on-images">we want to get feedback</a> to validate how useful it is for service teams.
-show_page_nav: true
+showPageNav: true
 ---
 
 {% from "_example.njk" import example %}
@@ -34,6 +34,7 @@ Do not use photography to represent abstract concepts, such as to convey an impr
 ## Illustrations
 
 Use illustrations to show a simplified image of something complex. For example:
+
 - to demonstrate a physical interaction, like scanning a passport
 - to help users find something on a document, like a reference number
 
@@ -66,6 +67,7 @@ Do not use a single icon to represent more than one thing. For example, the sear
 Generally, you should avoid using images that contain any sort of text. Use written content or other alternatives wherever possible.
 
 Any text inside an image will be difficult to read, especially for users that need to read text using:
+
 - screen readers
 - copy and paste
 - highlight
@@ -81,10 +83,11 @@ It’s usually unnecessary to use an image to merely show some text (known as an
 Give the information as written content instead, or use other alternatives.
 
 Examples of unnecessary ‘images of text’ include images that show:
+
 - the contents of a post from social media
 - an excerpt from a document
 - key facts from a slide presentation
- 
+
 If you do choose to use the image anyway, include written content nearby that conveys the same meaning and context.
 
 [Find out more about ‘images of text’](https://www.w3.org/WAI/tutorials/images/textual/#image-of-styled-text-with-decorative-effect) on the Web Accessibility Initiative website.
@@ -96,6 +99,7 @@ It’s okay to use an image that just happens to have text in it.
 So if you choose to use an image to visually show something, and there’s text in it that’s not meant to be the focus of attention, it’s fine to leave the text in the image.
 
 Examples of images that just happen to have text:
+
 - a photo of a library with book covers and signs in the background
 - a collage to promote UK tourism that includes the Brighton Palace Pier sign
 - an illustration of a Manchester street with store signs in the background
@@ -109,20 +113,23 @@ However, make sure the image actually benefits the user and is not just for deco
 There are some rare cases where you can use an image that contains text.
 
 Text in an image is considered essential if:
+
 - the text provides an intentional meaning and context
 - removing the text would cause the image to lose that intended meaning and context
 
 In other words, you cannot give this same information as written content or any other way.
 
-Essential text must be relevant to the information you need to give. 
+Essential text must be relevant to the information you need to give.
 
 Examples of essential text in images might be:
+
 - a portion of the Magna Carta, showing its handwriting style
 - showing what a store’s sign looks like on their shopfront
 
 There can also be essential text when the text needs to be shown in a specific way to communicate an identity.
 
 Examples of these might be:
+
 - text within an organisation’s logo (known as logotype)
 - a signature, signed in a distinctive way
 
@@ -142,7 +149,7 @@ Be sure to follow the guidance on this page about writing good alt text.
 
 If it's not practical to avoid using an image that contains text (and replace it with written content), there’s a few other ways to replace it.
 
-You should consider these options even if the text in an image is essential, as it will make your information easier to read for users that customise the way they look at web pages. 
+You should consider these options even if the text in an image is essential, as it will make your information easier to read for users that customise the way they look at web pages.
 
 In any case, make sure that the contrast ratio of text colour and all portions of the image that overlap the text [meets level AA of the Web Content Accessibility Guidelines (WCAG 2.1)](https://www.w3.org/TR/WCAG21/#contrast-minimum).
 
@@ -179,6 +186,7 @@ All images should include the alt attribute, even if it’s left empty without a
 Only add alt text when you need to describe visual details you cannot practically include in the written content.
 
 There are some cases when an empty `alt=""` attribute is more appropriate. These include:
+
 - a decorative image that does not include important content
 - an icon with a text label, where the alt text would repeat the text label
 - an image used in a link, where the image is not needed to understand the link
@@ -215,6 +223,7 @@ In particular, we added a section on how to use images and ensure they’re as a
 To help us validate that this guidance is useful and practical for service teams across government, we want to hear from you.
 
 We’re looking for feedback about any of these areas:
+
 - how you use images to give information to users
 - examples of the types of images used in services
 - how you create and choose images to use in your service

@@ -2,7 +2,7 @@
 title: Header
 description: The GOV.UK header shows users that they are on GOV.UK and which service they are using
 section: Components
-backlog_issue_id: 97
+backlogIssueId: 97
 layout: layout-pane.njk
 ---
 
@@ -10,7 +10,7 @@ layout: layout-pane.njk
 
 The GOV.UK header shows users that they are on GOV.UK and which service they are using.
 
-{{ example({group: "components", item: "header", example: "default", id: "default-1", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "components", item: "header", example: "default", id: "default-1", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 If you use the page template, you'll also get the header without having to add it, as it's included by default. However, if you want to customise the default header, read the [page template guidance about customising components](/styles/page-template/#changing-template-content).
 
@@ -25,7 +25,6 @@ You must use the GOV.UK header at the top of every page if your service is being
 ## When not to use this component
 
 You must not use the GOV.UK header if your service is not being hosted on one of the above domains.
-
 
 ## How it works
 

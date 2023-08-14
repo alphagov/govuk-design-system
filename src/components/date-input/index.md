@@ -3,7 +3,7 @@ title: Date input
 description: Use the date input component to help users enter a memorable date
 section: Components
 aliases:
-backlog_issue_id: 42
+backlogIssueId: 42
 layout: layout-pane.njk
 ---
 
@@ -11,7 +11,7 @@ layout: layout-pane.njk
 
 Use the date input component to help users enter a memorable date or one they can easily look up.
 
-{{ example({group: "components", item: "date-input", example: "default", html: true, nunjucks: true, open: false, size: "s"}) }}
+{{ example({group: "components", item: "date-input", example: "default", html: true, nunjucks: true, open: false, size: "s", loading: "eager" }) }}
 
 ## When to use this component
 
@@ -43,7 +43,7 @@ There are 2 ways to use the date input component. You can use HTML or, if you’
 
 Never automatically tab users between the fields of the date input because this can be confusing and may clash with normal keyboard controls.
 
-###  If you’re asking more than one question on the page
+### If you’re asking more than one question on the page
 
 If you're asking more than one question on the page, do not set the contents of the `<legend>` as the page heading. Read more about [asking multiple questions on question pages](/patterns/question-pages/#asking-multiple-questions-on-a-page).
 
@@ -141,7 +141,7 @@ Say ‘[whatever it is] must be after [date and optional description]’. For ex
 
 Highlight the date input as a whole.<br>
 
-Say ‘[whatever it is] must be  the same as or before [date and optional description]’. For example, ‘The date of Gordon’s last exam must be the same as or before 31 August 2017 when they left school’.
+Say ‘[whatever it is] must be the same as or before [date and optional description]’. For example, ‘The date of Gordon’s last exam must be the same as or before 31 August 2017 when they left school’.
 
 #### If the date must be before another date
 
@@ -153,7 +153,7 @@ Say ‘[whatever it is] must be before [date and optional description]’. For e
 
 Highlight the date input as a whole.<br>
 
-Say ‘[whatever it is] must be between [date] and [date and optional description]’. For example, ‘The date your contract started must be between 1 September 2017 and 30 September  2017 when you were self-employed’.
+Say ‘[whatever it is] must be between [date] and [date and optional description]’. For example, ‘The date your contract started must be between 1 September 2017 and 30 September 2017 when you were self-employed’.
 
 ## Research on this component
 

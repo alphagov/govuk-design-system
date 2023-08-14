@@ -3,7 +3,7 @@ title: Checkboxes
 description: Let users select one or more options by using the checkboxes component
 section: Components
 aliases: check boxes, tickboxes, tick boxes
-backlog_issue_id: 37
+backlogIssueId: 37
 layout: layout-pane.njk
 ---
 
@@ -11,7 +11,7 @@ layout: layout-pane.njk
 
 Let users select one or more options by using the checkboxes component.
 
-{{ example({group: "components", item: "checkboxes", example: "default", html: true, nunjucks: true, open: false, size: "m" }) }}
+{{ example({group: "components", item: "checkboxes", example: "default", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}
 
 ## When to use this component
 
@@ -43,7 +43,7 @@ In some cases, it can be helpful to order them from most-to-least common options
 
 Group checkboxes together in a `<fieldset>` with a `<legend>` that describes them, as shown in the examples on this page. This is usually a question, like ‘How would you like to be contacted?’.
 
-###  If you’re asking one question on the page
+### If you’re asking one question on the page
 
 If you're asking just [one question per page](/patterns/question-pages/#start-by-asking-one-question-per-page) as recommended, you can set the contents of the `<legend>` as the page heading. This is good practice as it means that users of screen readers will only hear the contents once.
 
@@ -53,7 +53,7 @@ There are 2 ways to use the checkboxes component. You can use HTML or, if you’
 
 {{ example({group: "components", item: "checkboxes", example: "default", html: true, nunjucks: true, open: false, size: "m", titleSuffix: "second"}) }}
 
-###  If you’re asking more than one question on the page
+### If you’re asking more than one question on the page
 
 If you're asking more than one question on the page, do not set the contents of the `<legend>` as the page heading. Read more about [asking multiple questions on question pages](/patterns/question-pages/#asking-multiple-questions-on-a-page).
 
@@ -138,9 +138,11 @@ For example, ‘Select your nationality or nationalities’.
 #### If users check both a 'none' checkbox and another checkbox
 
 Say:
+
 <div class="govuk-inset-text">Select [option label text] or select ‘[none of the above label text]’</div>
 
 For example:
+
 <div class="govuk-inset-text">Select countries you will be travelling to, or select ‘No, I will not be travelling to any of these countries’</div>
 
 ## Research on this component

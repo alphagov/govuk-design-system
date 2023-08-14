@@ -3,13 +3,13 @@ title: Button
 description: Use the button component to help users carry out an action
 section: Components
 aliases:
-backlog_issue_id: 34
+backlogIssueId: 34
 layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
 
-{{ example({group: "components", item: "button", example: "default", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "components", item: "button", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 
@@ -75,6 +75,14 @@ In this instance, use another style of button for the initial call to action, an
 
 Do not only rely on the red colour of a warning button to communicate the serious nature of the action. This is because not all users will be able to see the colour or will understand what it signifies. Make sure the context and button text make clear what will happen if the user selects it.
 
+### Buttons on dark backgrounds
+
+Use the `govuk-button--inverse` modifier class to show white buttons on dark backgrounds — for example, in headers, custom components, and patterns with darker backgrounds.
+
+Make sure all users can see the button — the white button and background colour [must have a contrast ratio of at least 3:1](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html).
+
+{{ example({group: "components", item: "button", example: "inverse", html: true, nunjucks: true, open: false}) }}
+
 ### Disabled buttons
 
 Disabled buttons have poor contrast and can confuse some users, so avoid them if&nbsp;possible.
@@ -114,7 +122,6 @@ To do this, set the `data-prevent-double-click` attribute to `true`. You can do 
 This feature will prevent double clicks for users that have JavaScript enabled, however you should also think about the issue server-side to protect against attacks.
 
 In the case of slow connections, aim to give the user information about what’s happening, for example, by showing a loading spinner or a modal, before using `data-prevent-double-click`.
-
 
 ## Research on this component
 

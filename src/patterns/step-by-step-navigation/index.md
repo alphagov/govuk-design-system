@@ -4,7 +4,7 @@ description: A starting point for your digital service on GOV.UK
 section: Patterns
 theme: Pages
 aliases:
-backlog_issue_id: 171
+backlogIssueId: 171
 layout: layout-pane.njk
 ---
 
@@ -22,27 +22,27 @@ If you want to suggest new step by step navigation for the GOV.UK live site, ask
 
 GOV.UK uses step by step navigation to represent end to end journeys:
 
-+ that have a specific start and end point
-+ that require the user to interact with several pieces of guidance or transactions on GOV.UK
-+ where it’s helpful for the user to complete tasks in a specific order
+- that have a specific start and end point
+- that require the user to interact with several pieces of guidance or transactions on GOV.UK
+- where it’s helpful for the user to complete tasks in a specific order
 
 ## When not to use this pattern
 
 Do not use the step by step pattern:
 
-+ when most of the guidance or services that make up the journey are not on GOV.UK
-+ when the user only needs to read guidance and not take an action
-+ when there’s no logical or helpful order to complete the tasks - for example, when you’re mostly presenting the user with a series of options
-+ inside a transactional service – use the [task list pattern](/patterns/task-list-pages/) instead
+- when most of the guidance or services that make up the journey are not on GOV.UK
+- when the user only needs to read guidance and not take an action
+- when there’s no logical or helpful order to complete the tasks - for example, when you’re mostly presenting the user with a series of options
+- inside a transactional service – use the [task list pattern](/patterns/task-list-pages/) instead
 
 ## How it works
 
 A step by step navigation journey can:
 
-+ bring together guidance and transactions from different departments, agencies, services and topics
-+ be completed in one go, or require the user to return to at different times
-+ link to content and services outside government
-+ include both online and offline actions
+- bring together guidance and transactions from different departments, agencies, services and topics
+- be completed in one go, or require the user to return to at different times
+- link to content and services outside government
+- include both online and offline actions
 
 When you prototype a step by step journey, do not customise the design. If you did, it would not be a realistic representation of the pattern as it would eventually appear on the GOV.UK live site.
 
@@ -50,16 +50,13 @@ Step by step navigation is displayed in 2 ways.
 
 1. On the right hand sidebar of content pages that are part of the step by step navigation.
 
-    ![A screenshot showing an example of the step by step as a sidebar](step-by-step-sidebar.png)
+   ![A screenshot showing an example of the step by step as a sidebar](step-by-step-sidebar.png)
 
 2. As a standalone page.
 
-    ![A screenshot showing an example of the step by step navigation pattern](step-by-step-standalone-page.png)
+   ![A screenshot showing an example of the step by step navigation pattern](step-by-step-standalone-page.png)
 
-You can use the following examples in the GOV.UK Prototype Kit to prototype a step by step:
-
-- [Step by step page](https://prototype-kit.service.gov.uk/docs/templates/step-by-step-navigation)
-- [Start page with step by step navigation as a sidebar](https://prototype-kit.service.gov.uk/docs/templates/start-with-step-by-step)
+You can use [install the 'Step By Step' plugin](https://prototype-kit.service.gov.uk/docs/install-and-use-plugins) in the GOV.UK Prototype Kit to prototype a step by step.
 
 Remember that step by step navigation is not for use within transactional services. We have included it in the Prototype Kit only so you can prototype your end to end journeys. Unlike most other components and patterns in the Design System, we do not provide the code for step by step navigation in `govuk-frontend`.
 
@@ -91,8 +88,8 @@ Different tasks can link to the same service or piece of content.
 
 You can present tasks in bullet points if you need to show:
 
-+ different ways to perform the same task - for example, different versions of a form to download
-+ different conditions that change how the user should complete the task
+- different ways to perform the same task - for example, different versions of a form to download
+- different conditions that change how the user should complete the task
 
 ![A screenshot showing an example of the step by step navigation task](step-by-step-task.png)
 
@@ -104,11 +101,15 @@ If there is not a set order, they should be listed in an order that helps the us
 
 For example, ‘Agree a contract and salary’ is listed as step 4 in ‘Employ someone: step by step’ although it can be completed earlier.
 
+Make sure the step number is read out to screen reader users when they navigate to a step's main `button` element.
+
 ### Use both ‘and’ and ‘or’
 
 Use ‘and’ to show when you can or must complete steps at the same time. You can use ‘and’ for more than 2 steps.
 
 Use ‘or’ to show when there’s a choice between 2 steps, or when a task must be completed in a different way based the user’s circumstances or eligibility.
+
+When adding ‘and‘ or ‘or‘ steps, make sure screen reader users can easily tell the difference between additional information or actions included in this step and the other numbered steps. Do this by nesting non-sequential ‘and‘ or ‘or‘ step names as sub-headings (usually `<h3>`) within the related step.
 
 ![A screenshot showing an example of the step by step navigation pattern with an 'and' step](step-by-step-and.png)
 
@@ -124,8 +125,8 @@ If there is a cost for completing a task, show it after the link text.
 
 Only include text in the step if it gives:
 
-+ essential context that the user needs before they click on the link
-+ the conditions the user needs to meet to complete the task - for example, if only some users can do it
+- essential context that the user needs before they click on the link
+- the conditions the user needs to meet to complete the task - for example, if only some users can do it
 
 ![A screenshot showing an example of a step with instructions](step-by-step-instructions.png)
 
@@ -168,7 +169,7 @@ Visit the UK on a Standard Visitor visa
 **Department for Transport**<br>
 Get a Blue Badge
 
-See a full list of [live services using step by step navigation [Heroku]](https://govuk-formats.herokuapp.com/document-types/step-by-step-nav).
+See a list of [live services using step by step navigation [GOV.UK Developer docs]](https://docs.publishing.service.gov.uk/document-types/step_by_step_nav.html#example-pages)).
 
 ### Next steps
 

@@ -23,12 +23,11 @@ You can use the HTML examples if you are not able to use Nunjucks. If you use HT
 If you're using Nunjucks you can get this page template by installing GOV.UK Frontend.
 You’ll get updates to the page template when we update GOV.UK Frontend.
 
-
 ## Default
 
 This example shows the minimum required for a GOV.UK page.
 
-{{ example({group: "styles", item: "page-template", example: "default", customCode: true, html: true, nunjucks: true, open: false, size: "l" }) }}
+{{ example({group: "styles", item: "page-template", example: "default", customCode: true, html: true, nunjucks: true, open: false, size: "l", loading: "eager"}) }}
 
 ## Customised page template
 
@@ -36,7 +35,6 @@ You can customise the page template, for example, by:
 
 - adding a service name and navigation
 - including a [back link](/components/back-link/) or [phase banner](/components/phase-banner/)
-
 
 {{ example({group: "styles", item: "page-template", example: "custom", customCode: true, html: true, nunjucks: true, open: false, size: "xl" }) }}
 

@@ -4,7 +4,7 @@ description: Task list pages help users understand tasks involved in completing 
 section: Patterns
 theme: Pages
 aliases:
-backlog_issue_id: 72
+backlogIssueId: 72
 layout: layout-pane.njk
 status: Being worked on
 statusMessage: A cross-government group is collaborating on work to <a class="govuk-link" href="#next-steps">update this pattern and build it as a component</a>.
@@ -73,7 +73,6 @@ Use the following labels to describe the different states of a task:
 - 'In progress' (in light blue) if the user has started but not completed the task
 - 'Completed' (in blue) if the user has completed the task
 
-
 ### Group tasks into steps
 
 If your transaction involves lots of tasks, make it manageable by splitting it up into steps that represent stages in the process.
@@ -88,10 +87,10 @@ Sometimes, it’s better to let the user decide when a task is completed.
 
 This can be helpful when a task involves:
 
-* some questions that are optional
-* writing a long answer (such as in a [textarea](/components/textarea/))
-* looking up information, such as details about previous jobs
-* answers that need to be checked carefully with someone else
+- some questions that are optional
+- writing a long answer (such as in a [textarea](/components/textarea/))
+- looking up information, such as details about previous jobs
+- answers that need to be checked carefully with someone else
 
 Do this by asking a radio question at the end of the task — either as the last question (if the task is a single page) or on the [‘Check answers’ page](/patterns/check-answers/) (if the task uses multiple [question pages](/patterns/question-pages/)).
 

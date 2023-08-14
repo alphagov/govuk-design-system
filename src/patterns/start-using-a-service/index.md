@@ -4,7 +4,7 @@ description: Create a starting point for your digital service on GOV.UK
 section: Patterns
 theme: Help users to…
 aliases: start page, start pages
-backlog_issue_id: 111
+backlogIssueId: 111
 layout: layout-pane.njk
 ---
 
@@ -44,7 +44,6 @@ Mainstream content is content aimed at the general public — or at meeting busi
 
 The content team at GDS is responsible for creating mainstream start points on GOV.UK, as with other mainstream content. They’ll work with you to make sure the journey from GOV.UK into the service works as well as possible. It’s a good idea to [talk to your organisation’s content team during alpha](https://www.gov.uk/service-manual/service-assessments/get-your-service-on-govuk#before-your-alpha-assessment) — if necessary, they can put you in touch with the team at GDS.
 
-
 ### Mainstream start points
 
 For a mainstream start point, the options are:
@@ -56,7 +55,7 @@ Use a simple start page if users can start using the service without needing muc
 
 ![A screenshot showing an example of a simple start page from the coronavirus shielding support service. The page includes a heading, text to explain who can use the service, and a start button labelled 'Register or update your details'.](simple-start-page.png)
 
-If the start point is linked to a wider process that needs more explanation, create an ‘Apply’ section within a multipart guide. 
+If the start point is linked to a wider process that needs more explanation, create an ‘Apply’ section within a multipart guide.
 
 For example, before a user applies for probate (the right to manage someone’s estate after they die) they need to understand whether probate is required, whether they’re the right person to apply, how the details of the will and the tax situation affect what they’re supposed to do, how to get the relevant information together and how the different outcomes affect what they'll need to do next.
 

@@ -6,6 +6,7 @@ theme: How to guides
 order: 4
 description: How to markup and style labels, legends and headings
 ---
+
 {% from "_example.njk" import example %}
 
 Whenever you design a form, you should start by splitting it across multiple pages with each page containing just one thing, for example:
@@ -28,11 +29,11 @@ To prevent this, set the contents of the `<label>` or `<legend>` as the page hea
 
 ## Labels as page headings
 
-To set the contents of a label as the page heading, you need to put the `<label>` tag inside  the `<h1>` tag. You can either do this in HTML, or by using the Nunjucks macro and setting `isPageHeading: true`.
+To set the contents of a label as the page heading, you need to put the `<label>` tag inside the `<h1>` tag. You can either do this in HTML, or by using the Nunjucks macro and setting `isPageHeading: true`.
 
 You then need to apply classes to the `<label>` to make it look like a heading.
 
-{{ example({group: "get-started", item: "labels-legends-headings", example: "label-h1", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "get-started", item: "labels-legends-headings", example: "label-h1", html: true, nunjucks: true, open: false, loading: "eager"}) }}
 
 ## Legends as page headings
 

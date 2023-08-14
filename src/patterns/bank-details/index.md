@@ -4,7 +4,7 @@ description: How to ask users for their bank details
 section: Patterns
 theme: Ask users for…
 aliases:
-backlog_issue_id: 149
+backlogIssueId: 149
 layout: layout-pane.njk
 status: Experimental
 statusMessage: This pattern is currently experimental because <a class="govuk-link" href="#next-steps">more research</a> is needed to validate it.
@@ -14,7 +14,7 @@ This guidance is for government teams that build online services. [To find infor
 
 {% from "_example.njk" import example %}
 
-{{ example({group: "patterns", item: "bank-details", example: "default", html: true, nunjucks: true, open: false, size: "xl"}) }}
+{{ example({group: "patterns", item: "bank-details", example: "default", html: true, nunjucks: true, open: false, size: "xl", loading: "eager"}) }}
 
 ## When to use this pattern
 

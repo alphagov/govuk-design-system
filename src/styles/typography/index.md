@@ -2,9 +2,9 @@
 title: Typography
 description: If your service is on the service.gov.uk subdomain you must use the GDS Transport font
 section: Styles
-backlog_issue_id: 64
+backlogIssueId: 64
 layout: layout-pane.njk
-show_page_nav: true
+showPageNav: true
 headingAliases:
   Section break: horizontal rule, hr
 ---
@@ -32,7 +32,7 @@ Use heading tags, such as `<h1>`, `<h2>` and so on, to tag the headings on a pag
 
 For a [question page](/patterns/question-pages/), or pages with long headings, start with `govuk-heading-l` for an `<h1>`, `govuk-heading-m` for an `<h2>` and so on. But change it if your pages feel unbalanced – the heading class you use does not always need to correspond to the heading level.
 
-{{ example({group: "styles", item: "typography", example: "headings", html: true, open: true, size: "m"}) }}
+{{ example({group: "styles", item: "typography", example: "headings", html: true, open: true, size: "m", loading: "eager"}) }}
 
 If your page has lots of long form content, start with `govuk-heading-xl` for an `<h1>`, `govuk-heading-l` for an `<h2>`, and so on.
 

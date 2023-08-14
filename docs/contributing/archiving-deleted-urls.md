@@ -1,4 +1,5 @@
 # Archiving and renaming deleted URLs
+
 When removing or renaming a page or folder previously associated with a URL route on the website, you need to replace it with an archived page.
 
 For example:
@@ -25,20 +26,20 @@ The team has chosen to do this instead of explicitly redirecting pages using 301
 - the archived page might not have a perfect match in terms of content still on the website so a redirect without explanation could confuse users
 
 ## How to create an archived page
+
 Along with the pull request to delete or rename the URL you want to change, you will need to do the following:
 
 1. If the URL being archived is from a folder with an `index.md` file, you will need to replace the folder with a `.md file` of the same name - for example `/juggling/index.md` becomes `juggling.md`.
 2. In the file you want to archive, keep it in the same location, but replace the contents with the following code:
 
-
-    ```
-    ---
-    title: {Title of the page you are archiving}
-    layout: layout-archived.njk
-    ignore_in_sitemap: true
-    —
-    ```
+   ```
+   ---
+   title: {Title of the page you are archiving}
+   layout: layout-archived.njk
+   ignoreInSitemap: true
+   ---
+   ```
 
 3. Below the new metadata you’ve added, write some brief content explaining to users that you have archived or renamed the page. As a minimum, you should include:
-    - why the page has been archived
-    - the new location of the current or updated information
+   - why the page has been archived
+   - the new location of the current or updated information

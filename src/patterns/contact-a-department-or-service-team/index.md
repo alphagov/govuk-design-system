@@ -4,7 +4,7 @@ description: Contact a department or service team
 section: Patterns
 theme: Help users to…
 aliases:
-backlog_issue_id: 10
+backlogIssueId: 10
 layout: layout-pane.njk
 status: Experimental
 statusMessage: This pattern is currently experimental because <a class="govuk-link" href="#next-steps">more research</a> is needed to validate it.
@@ -28,7 +28,7 @@ Read about how and why to [set up user support](https://www.gov.uk/service-manua
 
 ### Order contact channels consistently
 
-List contact channels in the same order throughout your service.  This helps users to find what they need more easily.
+List contact channels in the same order throughout your service. This helps users to find what they need more easily.
 
 Order contact channels based on what research shows your users need, and what your service or department can best support.
 
