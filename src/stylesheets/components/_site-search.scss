@@ -128,7 +128,7 @@ $icon-size: 40px;
   z-index: 100;
   top: 100%;
   left: 0;
-  box-shadow: rgba(govuk-colour("black"), .256863) 0 2px 6px; // stylelint-disable-line number-max-precision
+  box-shadow: rgba(govuk-colour("black"), 0.256863) 0 2px 6px; // stylelint-disable-line number-max-precision
 }
 
 .app-site-search__menu--inline {
