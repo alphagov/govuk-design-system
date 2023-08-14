@@ -1,5 +1,5 @@
 module.exports = {
-  extends: 'standard',
+  extends: ['standard', 'prettier'],
   ignorePatterns: [
     '**/fixtures/build/**',
 
@@ -14,7 +14,8 @@ module.exports = {
         'eslint:recommended',
         'plugin:import/recommended',
         'plugin:n/recommended',
-        'plugin:promise/recommended'
+        'plugin:promise/recommended',
+        'prettier'
       ],
       files: ['**/*.{cjs,js,mjs}'],
       parserOptions: {
