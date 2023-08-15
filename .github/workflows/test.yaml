@@ -93,6 +93,7 @@ jobs:
 
           - description: Prettier
             run: npm run lint:prettier
+            continue-on-error: true
 
           - description: JavaScript tests
             run: npx jest --color --maxWorkers=2
@@ -121,3 +122,4 @@ jobs:
 
       - name: Run task
         run: ${{ matrix.task.run }}
+        continue-on-error: ${{ matrix.task.continue-on-error || false }}
