@@ -452,7 +452,7 @@ GOV.UK Frontend uses ["Block, Element, Modifier" (BEM)](http://getbem.com/) and 
     </tr>
     <tr class="govuk-table__row">
       <td class="govuk-table__cell ">#content</td>
-      <td class="govuk-table__cell "><a class="govuk-link" href="/styles/layout/#page-wrappers">Page wrappers</a></td>
+      <td class="govuk-table__cell "><a class="govuk-link" href="/styles/layout/#setting-up-page-wrappers">Page wrappers</a></td>
     </tr>
 
   </tbody>

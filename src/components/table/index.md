@@ -19,7 +19,7 @@ Use the table component to let users compare information in rows and columns.
 
 ## When not to use this component
 
-Never use the table component to layout content on a page. Instead, use the [grid system](/styles/layout/#grid-system).
+Never use the table component to layout content on a page. Instead, use the [grid system](/styles/layout/#using-the-grid-system).
 
 ## How it works
 
