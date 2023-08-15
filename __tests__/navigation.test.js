@@ -6,7 +6,7 @@ describe('Homepage', () => {
   let $navigation
   let $navigationToggler
 
-  async function setup (page) {
+  async function setup(page) {
     $navigation = await page.$('.js-app-navigation')
     $navigationToggler = await page.$('.js-app-navigation__toggler')
   }
@@ -38,32 +38,42 @@ describe('Homepage', () => {
   describe('when JavaScript is available', () => {
     describe('when menu button is pressed', () => {
       it('should apply the corresponding open state class to the menu button', async () => {
-        await expect(getAttribute($navigationToggler, 'class')).resolves
-          .not.toContain('govuk-header__menu-button--open')
+        await expect(
+          getAttribute($navigationToggler, 'class')
+        ).resolves.not.toContain('govuk-header__menu-button--open')
 
         await $navigationToggler.click()
 
         // Menu button open state
-        await expect(getAttribute($navigationToggler, 'class')).resolves
-          .toContain('govuk-header__menu-button--open')
+        await expect(
+          getAttribute($navigationToggler, 'class')
+        ).resolves.toContain('govuk-header__menu-button--open')
       })
 
       it('should indicate the expanded state of the toggle button using aria-expanded', async () => {
-        await expect(getAttribute($navigationToggler, 'aria-expanded')).resolves.toBe('false')
+        await expect(
+          getAttribute($navigationToggler, 'aria-expanded')
+        ).resolves.toBe('false')
 
         await $navigationToggler.click()
 
         // Menu button control expanded
-        await expect(getAttribute($navigationToggler, 'aria-expanded')).resolves.toBe('true')
+        await expect(
+          getAttribute($navigationToggler, 'aria-expanded')
+        ).resolves.toBe('true')
       })
 
       it('should indicate the open state of the navigation', async () => {
-        await expect(getAttribute($navigation, 'class')).resolves.not.toContain('app-navigation--active')
+        await expect(getAttribute($navigation, 'class')).resolves.not.toContain(
+          'app-navigation--active'
+        )
 
         await $navigationToggler.click()
 
         // Menu open state
-        await expect(getAttribute($navigation, 'class')).resolves.toContain('app-navigation--active')
+        await expect(getAttribute($navigation, 'class')).resolves.toContain(
+          'app-navigation--active'
+        )
       })
 
       it('should indicate the visible state of the navigation using the hidden attribute', async () => {

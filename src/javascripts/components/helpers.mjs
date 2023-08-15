@@ -2,7 +2,7 @@
  * TODO: Ideally this would be a NodeList.prototype.forEach polyfill
  * See: https://github.com/imagitama/nodelist-foreach-polyfill
  */
-export function nodeListForEach (nodes, callback) {
+export function nodeListForEach(nodes, callback) {
   if (window.NodeList.prototype.forEach) {
     return nodes.forEach(callback)
   }

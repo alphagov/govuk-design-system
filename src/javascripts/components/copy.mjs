@@ -1,6 +1,6 @@
 import ClipboardJS from 'clipboard'
 
-function Copy ($module) {
+function Copy($module) {
   this.$module = $module
 }
 

@@ -17,26 +17,24 @@ module.exports = defineConfig({
 
       // Output plugins
       plugins: [
-        process.env.NODE_ENV !== 'development' && terser({
-          format: { comments: false },
+        process.env.NODE_ENV !== 'development' &&
+          terser({
+            format: { comments: false },
 
-          // Include sources content from source maps
-          // to inspect GOV.UK Frontend code
-          sourceMap: {
-            includeSources: true
-          },
+            // Include sources content from source maps
+            // to inspect GOV.UK Frontend code
+            sourceMap: {
+              includeSources: true
+            },
 
-          // Compatibility workarounds
-          ecma: 5,
-          safari10: true
-        })
+            // Compatibility workarounds
+            ecma: 5,
+            safari10: true
+          })
       ]
     }
   ],
 
   // Input plugins
-  plugins: [
-    resolve(),
-    commonjs()
-  ]
+  plugins: [resolve(), commonjs()]
 })

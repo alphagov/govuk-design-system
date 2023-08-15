@@ -6,7 +6,7 @@ module.exports = {
       env: {
         browser: true
       },
-      extends: ['plugin:es-x/restrict-to-es2015'],
+      extends: ['plugin:es-x/restrict-to-es2015', 'prettier'],
       parserOptions: {
         // Note: Allow ES2015 for import/export syntax
         ecmaVersion: '2015'

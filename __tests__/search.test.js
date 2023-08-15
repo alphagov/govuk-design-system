@@ -9,7 +9,7 @@ describe('Site search', () => {
   let $wrapper
   let $searchInput
 
-  async function setup (page) {
+  async function setup(page) {
     $module = await page.$('[data-module="app-search"]')
 
     $wrapper = await $module.$('.app-site-search__wrapper')
@@ -29,22 +29,29 @@ describe('Site search', () => {
 
   afterEach(async () => {
     // Reset 'onbeforeunload' to continue navigation
-    await page.evaluate(() => { window.onbeforeunload = null })
+    await page.evaluate(() => {
+      window.onbeforeunload = null
+    })
   })
 
   it('does not return any results when searching for something that does not exist', async () => {
     await $searchInput.type('lorem ipsum')
 
     const $searchOptions = await $module.$$('.app-site-search__option')
-    await expect(getProperty($searchOptions[0], 'textContent')).resolves.toBe('No results found')
+    await expect(getProperty($searchOptions[0], 'textContent')).resolves.toBe(
+      'No results found'
+    )
   })
 
   it('returns results where a word in the title begins with the letter "d"', async () => {
     await $searchInput.type('d')
 
     // ignore any results where a match was found in the alias
-    const resultsArray = await page.$$eval('.app-site-search__option:not(:has(.app-site-search__aliases))', results =>
-      results.map(result => result.firstChild.textContent.toLowerCase()))
+    const resultsArray = await page.$$eval(
+      '.app-site-search__option:not(:has(.app-site-search__aliases))',
+      (results) =>
+        results.map((result) => result.firstChild.textContent.toLowerCase())
+    )
 
     // regex with word boundary, in our case words that begin with 'd'
     for (const result of resultsArray) {
@@ -58,8 +65,14 @@ describe('Site search', () => {
     await $searchInput.type('d')
 
     // only get results where a match was found in the alias
-    const resultsArray = await page.$$eval('.app-site-search__option:has(.app-site-search__aliases)', results =>
-      results.map(result => result.querySelector('.app-site-search__aliases').textContent))
+    const resultsArray = await page.$$eval(
+      '.app-site-search__option:has(.app-site-search__aliases)',
+      (results) =>
+        results.map(
+          (result) =>
+            result.querySelector('.app-site-search__aliases').textContent
+        )
+    )
 
     // regex with word boundary, in our case words that begin with 'd'
     for (const result of resultsArray) {
@@ -80,10 +93,7 @@ describe('Site search', () => {
     await $searchInput.click()
     await $searchInput.type('details')
 
-    await Promise.all([
-      page.waitForNavigation(),
-      page.keyboard.press('Enter')
-    ])
+    await Promise.all([page.waitForNavigation(), page.keyboard.press('Enter')])
 
     const url = new URL(await page.url())
     expect(url.pathname).toBe('/components/details/')
@@ -93,10 +103,8 @@ describe('Site search', () => {
     await page.setRequestInterception(true)
 
     // Abort requests to search index
-    page.on('request', request =>
-      isSearchIndex.test(request.url())
-        ? request.abort()
-        : request.continue()
+    page.on('request', (request) =>
+      isSearchIndex.test(request.url()) ? request.abort() : request.continue()
     )
 
     // Reload page again
@@ -107,14 +115,19 @@ describe('Site search', () => {
     await $searchInput.type('lorem')
 
     const $searchOptions = await $module.$$('.app-site-search__option')
-    await expect(getProperty($searchOptions[0], 'textContent')).resolves.toBe('Failed to load the search index')
+    await expect(getProperty($searchOptions[0], 'textContent')).resolves.toBe(
+      'Failed to load the search index'
+    )
   })
 
   it('shows user a message that the search index is loading', async () => {
     await page.setRequestInterception(true)
 
     // Intentionally make the search-index request hang
-    page.on('request', request => isSearchIndex.test(request.url()) || request.continue())
+    page.on(
+      'request',
+      (request) => isSearchIndex.test(request.url()) || request.continue()
+    )
 
     // Reload page again
     await page.reload()
@@ -124,32 +137,41 @@ describe('Site search', () => {
     await $searchInput.type('d')
 
     const $searchOptions = await $module.$$('.app-site-search__option')
-    await expect(getProperty($searchOptions[0], 'textContent')).resolves.toBe('Loading search index')
+    await expect(getProperty($searchOptions[0], 'textContent')).resolves.toBe(
+      'Loading search index'
+    )
   })
 
   it('should focus the input when clicking the button', async () => {
     // The button is actually a background on the left most part of the wrapper element.
     const { top, left } = await $wrapper.evaluate(($element) =>
-      $element.getBoundingClientRect().toJSON())
+      $element.getBoundingClientRect().toJSON()
+    )
 
     // Click the top left side of the element.
     await page.mouse.click(left, top)
 
     // Get the active focused element to compare with the actual expected input.
     const $activeElement = await page.evaluate(() => document.activeElement)
-    const $searchInput = await page.evaluate(() => document.querySelector('.app-site-search__input'))
+    const $searchInput = await page.evaluate(() =>
+      document.querySelector('.app-site-search__input')
+    )
 
     expect($activeElement).toEqual($searchInput)
   })
 
   describe('tracking', () => {
     it('should track if there are no results', async () => {
-      await page.evaluate(() => { window.__SITE_SEARCH_TRACKING_TIMEOUT = 0 })
+      await page.evaluate(() => {
+        window.__SITE_SEARCH_TRACKING_TIMEOUT = 0
+      })
 
       await $searchInput.focus()
       await $searchInput.type('lorem ipsum')
 
-      const GoogleTagManagerDataLayer = await page.evaluate(() => window.dataLayer)
+      const GoogleTagManagerDataLayer = await page.evaluate(
+        () => window.dataLayer
+      )
 
       expect(GoogleTagManagerDataLayer).toEqual(
         expect.arrayContaining([
@@ -169,19 +191,22 @@ describe('Site search', () => {
     })
 
     it('should track if there are results', async () => {
-      await page.evaluate(() => { window.__SITE_SEARCH_TRACKING_TIMEOUT = 0 })
+      await page.evaluate(() => {
+        window.__SITE_SEARCH_TRACKING_TIMEOUT = 0
+      })
 
       await $searchInput.focus()
       await $searchInput.type('g')
 
       const $searchOptions = await $module.$$('.app-site-search__option')
-      const GoogleTagManagerDataLayer = await page.evaluate(() => window.dataLayer)
+      const GoogleTagManagerDataLayer = await page.evaluate(
+        () => window.dataLayer
+      )
 
       // Find layer that has the impressions to test.
-      const impressions =
-        GoogleTagManagerDataLayer
-          .filter(layer => layer.ecommerce)
-          .map(layer => layer.ecommerce.impressions)[0]
+      const impressions = GoogleTagManagerDataLayer.filter(
+        (layer) => layer.ecommerce
+      ).map((layer) => layer.ecommerce.impressions)[0]
 
       expect(impressions.length).toEqual($searchOptions.length)
       expect(GoogleTagManagerDataLayer).toEqual(
@@ -212,8 +237,12 @@ describe('Site search', () => {
       // Prevent page from unloading so we can check what was tracked.
       // By setting onbeforeunload it forces a dialog to appear that allows a user
       // to cancel leaving the page, so we detect the dialog opening and dismiss it to stop the navigation.
-      await page.evaluate(() => { window.onbeforeunload = () => true })
-      page.on('dialog', async dialog => { await dialog.dismiss() })
+      await page.evaluate(() => {
+        window.onbeforeunload = () => true
+      })
+      page.on('dialog', async (dialog) => {
+        await dialog.dismiss()
+      })
 
       await $searchInput.focus()
       await $searchInput.type('g')
@@ -221,7 +250,9 @@ describe('Site search', () => {
       await page.keyboard.press('ArrowDown')
       await page.keyboard.press('Enter')
 
-      const GoogleTagManagerDataLayer = await page.evaluate(() => window.dataLayer)
+      const GoogleTagManagerDataLayer = await page.evaluate(
+        () => window.dataLayer
+      )
 
       expect(GoogleTagManagerDataLayer).toEqual(
         expect.arrayContaining([
@@ -253,12 +284,16 @@ describe('Site search', () => {
     })
 
     it('should block personally identifable information emails', async () => {
-      await page.evaluate(() => { window.__SITE_SEARCH_TRACKING_TIMEOUT = 0 })
+      await page.evaluate(() => {
+        window.__SITE_SEARCH_TRACKING_TIMEOUT = 0
+      })
 
       await $searchInput.focus()
       await $searchInput.type('user@example.com')
 
-      const GoogleTagManagerDataLayer = await page.evaluate(() => window.dataLayer)
+      const GoogleTagManagerDataLayer = await page.evaluate(
+        () => window.dataLayer
+      )
 
       expect(GoogleTagManagerDataLayer).toEqual(
         expect.arrayContaining([
@@ -272,12 +307,16 @@ describe('Site search', () => {
     })
 
     it('should block personally identifable information numbers', async () => {
-      await page.evaluate(() => { window.__SITE_SEARCH_TRACKING_TIMEOUT = 0 })
+      await page.evaluate(() => {
+        window.__SITE_SEARCH_TRACKING_TIMEOUT = 0
+      })
 
       await $searchInput.focus()
       await $searchInput.type('079460999')
 
-      const GoogleTagManagerDataLayer = await page.evaluate(() => window.dataLayer)
+      const GoogleTagManagerDataLayer = await page.evaluate(
+        () => window.dataLayer
+      )
 
       expect(GoogleTagManagerDataLayer).toEqual(
         expect.arrayContaining([

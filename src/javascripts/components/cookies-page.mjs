@@ -1,7 +1,7 @@
 import { getConsentCookie, setConsentCookie } from './cookie-functions.mjs'
 import { nodeListForEach } from './helpers.mjs'
 
-function CookiesPage ($module) {
+function CookiesPage($module) {
   this.$module = $module
 }
 
@@ -13,16 +13,25 @@ CookiesPage.prototype.init = function () {
   }
 
   this.$cookieForm = this.$cookiePage.querySelector('.js-cookies-page-form')
-  this.$cookieFormFieldsets = this.$cookieForm.querySelectorAll('.js-cookies-page-form-fieldset')
-  this.$successNotification = this.$cookiePage.querySelector('.js-cookies-page-success')
+  this.$cookieFormFieldsets = this.$cookieForm.querySelectorAll(
+    '.js-cookies-page-form-fieldset'
+  )
+  this.$successNotification = this.$cookiePage.querySelector(
+    '.js-cookies-page-success'
+  )
 
-  nodeListForEach(this.$cookieFormFieldsets, function ($cookieFormFieldset) {
-    this.showUserPreference($cookieFormFieldset, getConsentCookie())
-    $cookieFormFieldset.removeAttribute('hidden')
-  }.bind(this))
+  nodeListForEach(
+    this.$cookieFormFieldsets,
+    function ($cookieFormFieldset) {
+      this.showUserPreference($cookieFormFieldset, getConsentCookie())
+      $cookieFormFieldset.removeAttribute('hidden')
+    }.bind(this)
+  )
 
   // Show submit button
-  this.$cookieForm.querySelector('.js-cookies-form-button').removeAttribute('hidden')
+  this.$cookieForm
+    .querySelector('.js-cookies-form-button')
+    .removeAttribute('hidden')
 
   this.$cookieForm.addEventListener('submit', this.savePreferences.bind(this))
 }
@@ -33,19 +42,27 @@ CookiesPage.prototype.savePreferences = function (event) {
 
   var preferences = {}
 
-  nodeListForEach(this.$cookieFormFieldsets, function ($cookieFormFieldset) {
-    var cookieType = this.getCookieType($cookieFormFieldset)
-    var selectedItem = $cookieFormFieldset.querySelector('input[name=' + cookieType + ']:checked').value
+  nodeListForEach(
+    this.$cookieFormFieldsets,
+    function ($cookieFormFieldset) {
+      var cookieType = this.getCookieType($cookieFormFieldset)
+      var selectedItem = $cookieFormFieldset.querySelector(
+        'input[name=' + cookieType + ']:checked'
+      ).value
 
-    preferences[cookieType] = selectedItem === 'yes'
-  }.bind(this))
+      preferences[cookieType] = selectedItem === 'yes'
+    }.bind(this)
+  )
 
   // Save preferences to cookie and show success notification
   setConsentCookie(preferences)
   this.showSuccessNotification()
 }
 
-CookiesPage.prototype.showUserPreference = function ($cookieFormFieldset, preferences) {
+CookiesPage.prototype.showUserPreference = function (
+  $cookieFormFieldset,
+  preferences
+) {
   var cookieType = this.getCookieType($cookieFormFieldset)
   var preference = false
 
@@ -54,7 +71,9 @@ CookiesPage.prototype.showUserPreference = function ($cookieFormFieldset, prefer
   }
 
   var radioValue = preference ? 'yes' : 'no'
-  var radio = $cookieFormFieldset.querySelector('input[name=' + cookieType + '][value=' + radioValue + ']')
+  var radio = $cookieFormFieldset.querySelector(
+    'input[name=' + cookieType + '][value=' + radioValue + ']'
+  )
   radio.checked = true
 }
 

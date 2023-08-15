@@ -16,14 +16,22 @@ var OptionsTable = {
       }
 
       if (exampleName) {
-        var tabLink = document.querySelector('a[href="#' + exampleName + '-nunjucks"]')
+        var tabLink = document.querySelector(
+          'a[href="#' + exampleName + '-nunjucks"]'
+        )
         var tabHeading = tabLink ? tabLink.parentNode : null
-        var optionsDetailsElement = document.getElementById('options-' + exampleName + '-details')
+        var optionsDetailsElement = document.getElementById(
+          'options-' + exampleName + '-details'
+        )
 
         if (tabHeading && optionsDetailsElement) {
           var tabsElement = optionsDetailsElement.parentNode
-          var detailsSummary = optionsDetailsElement.querySelector('.govuk-details__summary')
-          var detailsText = optionsDetailsElement.querySelector('.govuk-details__text')
+          var detailsSummary = optionsDetailsElement.querySelector(
+            '.govuk-details__summary'
+          )
+          var detailsText = optionsDetailsElement.querySelector(
+            '.govuk-details__text'
+          )
 
           if (detailsSummary && detailsText) {
             tabLink.setAttribute('aria-expanded', 'true')

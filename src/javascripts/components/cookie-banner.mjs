@@ -8,7 +8,7 @@ var cookieMessageSelector = '.js-cookie-banner-message'
 var cookieConfirmationAcceptSelector = '.js-cookie-banner-confirmation-accept'
 var cookieConfirmationRejectSelector = '.js-cookie-banner-confirmation-reject'
 
-function CookieBanner ($module) {
+function CookieBanner($module) {
   this.$module = $module
 }
 
@@ -17,9 +17,15 @@ CookieBanner.prototype.init = function () {
   this.$acceptButton = this.$module.querySelector(cookieBannerAcceptSelector)
   this.$rejectButton = this.$module.querySelector(cookieBannerRejectSelector)
   this.$cookieMessage = this.$module.querySelector(cookieMessageSelector)
-  this.$cookieConfirmationAccept = this.$module.querySelector(cookieConfirmationAcceptSelector)
-  this.$cookieConfirmationReject = this.$module.querySelector(cookieConfirmationRejectSelector)
-  this.$cookieBannerHideButtons = this.$module.querySelectorAll(cookieBannerHideButtonSelector)
+  this.$cookieConfirmationAccept = this.$module.querySelector(
+    cookieConfirmationAcceptSelector
+  )
+  this.$cookieConfirmationReject = this.$module.querySelector(
+    cookieConfirmationRejectSelector
+  )
+  this.$cookieBannerHideButtons = this.$module.querySelectorAll(
+    cookieBannerHideButtonSelector
+  )
 
   // Exit if no cookie banner module
   // or if we're on the cookies page to avoid circular journeys
@@ -31,7 +37,10 @@ CookieBanner.prototype.init = function () {
   // outdated consent cookie
   var currentConsentCookie = CookieFunctions.getConsentCookie()
 
-  if (!currentConsentCookie || !CookieFunctions.isValidConsentCookie(currentConsentCookie)) {
+  if (
+    !currentConsentCookie ||
+    !CookieFunctions.isValidConsentCookie(currentConsentCookie)
+  ) {
     // If the consent cookie version is not valid, we need to remove any cookies which have been
     // set previously
     CookieFunctions.resetCookies()
@@ -42,9 +51,15 @@ CookieBanner.prototype.init = function () {
   this.$acceptButton.addEventListener('click', this.acceptCookies.bind(this))
   this.$rejectButton.addEventListener('click', this.rejectCookies.bind(this))
 
-  nodeListForEach(this.$cookieBannerHideButtons, function ($cookieBannerHideButton) {
-    $cookieBannerHideButton.addEventListener('click', this.hideBanner.bind(this))
-  }.bind(this))
+  nodeListForEach(
+    this.$cookieBannerHideButtons,
+    function ($cookieBannerHideButton) {
+      $cookieBannerHideButton.addEventListener(
+        'click',
+        this.hideBanner.bind(this)
+      )
+    }.bind(this)
+  )
 }
 
 CookieBanner.prototype.hideBanner = function () {
@@ -69,7 +84,9 @@ CookieBanner.prototype.rejectCookies = function () {
   this.revealConfirmationMessage(this.$cookieConfirmationReject)
 }
 
-CookieBanner.prototype.revealConfirmationMessage = function (confirmationMessage) {
+CookieBanner.prototype.revealConfirmationMessage = function (
+  confirmationMessage
+) {
   confirmationMessage.removeAttribute('hidden')
 
   // Set tabindex to -1 to make the confirmation banner focusable with JavaScript

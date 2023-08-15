@@ -1,5 +1,5 @@
 module.exports = {
-  extends: 'standard',
+  extends: ['standard', 'prettier'],
   ignorePatterns: [
     '**/fixtures/build/**',
 
@@ -14,17 +14,14 @@ module.exports = {
         'eslint:recommended',
         'plugin:import/recommended',
         'plugin:n/recommended',
-        'plugin:promise/recommended'
+        'plugin:promise/recommended',
+        'prettier'
       ],
       files: ['**/*.{cjs,js,mjs}'],
       parserOptions: {
         ecmaVersion: 'latest'
       },
-      plugins: [
-        'import',
-        'n',
-        'promise'
-      ],
+      plugins: ['import', 'n', 'promise'],
       rules: {
         // Check import or require statements are A-Z ordered
         'import/order': [

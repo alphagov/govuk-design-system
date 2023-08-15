@@ -1,4 +1,4 @@
-function ExamplePage ($module) {
+function ExamplePage($module) {
   this.$module = $module
 }
 ExamplePage.prototype.init = function () {

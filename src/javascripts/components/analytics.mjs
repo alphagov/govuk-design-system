@@ -1,8 +1,9 @@
-export default function loadAnalytics () {
+export default function loadAnalytics() {
   if (!window.ga || !window.ga.loaded) {
     // Load gtm script
     // Script based on snippet at https://developers.google.com/tag-manager/quickstart
-    (function (w, d, s, l, i) {
+    // prettier-ignore
+    ;(function (w, d, s, l, i) {
       w[l] = w[l] || []
       w[l].push({
         'gtm.start': new Date().getTime(),

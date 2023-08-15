@@ -24,7 +24,7 @@
     "lint:editorconfig": "editorconfig-checker",
     "lint:html": "html-validate \"deploy/public/**/index.html\"",
     "lint:js": "eslint --cache --cache-location .cache/eslint --cache-strategy content --color --ignore-path .gitignore \"**/*.{cjs,js,mjs}\"",
-    "lint:prettier": "prettier --cache --cache-location .cache/prettier --cache-strategy content --check \"**/*.{json,md,scss,yaml,yml}\"",
+    "lint:prettier": "prettier --cache --cache-location .cache/prettier --cache-strategy content --check \"**/*.{cjs,js,json,md,mjs,scss,yaml,yml}\"",
     "lint:scss": "stylelint \"**/*.scss\"",
     "check-links": "hyperlink --canonicalroot https://design-system.service.gov.uk/ --internal --recursive --source-maps deploy/public/sitemap.xml | tap-mocha-reporter min"
   },
@@ -53,6 +53,7 @@
     "cross-env": "^7.0.3",
     "editorconfig-checker": "^5.1.1",
     "eslint": "^8.47.0",
+    "eslint-config-prettier": "^9.0.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.28.0",
     "eslint-plugin-n": "^16.0.1",

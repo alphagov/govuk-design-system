@@ -8,7 +8,7 @@ describe('Cookies page', () => {
   let $radioNo
   let $buttonSave
 
-  async function setup (page) {
+  async function setup(page) {
     $module = await page.$('[data-module="app-cookies-page"]')
     $radioYes = await $module.$('input[name="analytics"][value="yes"]')
     $radioNo = await $module.$('input[name="analytics"][value="no"]')

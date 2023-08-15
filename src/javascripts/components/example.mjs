@@ -8,7 +8,7 @@ import iFrameResize from 'iframe-resizer/js/iframeResizer.js'
  *
  * @param {Element} $module - HTML element to use for example
  */
-function Example ($module) {
+function Example($module) {
   if (!($module instanceof HTMLIFrameElement)) {
     return
   }
