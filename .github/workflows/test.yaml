@@ -121,5 +121,10 @@ jobs:
           path: deploy/public
 
       - name: Run task
+        id: task
         run: ${{ matrix.task.run }}
         continue-on-error: ${{ matrix.task.continue-on-error || false }}
+
+      - name: Task warnings
+        if: steps.task.outcome == 'failure'
+        run: echo "::warning title=${{ matrix.task.description }} task failed::Check has been temporarily ignored"
