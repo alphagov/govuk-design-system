@@ -159,15 +159,15 @@ For example, links in a header or side navigation might not need underlines. Use
 
 ### Links to change a language
 
-Links can be used to allow a user to access the current content in a different language.
+You can use links to allow a user to access the current content in a different language.
 
 When offering links to content in other languages, make sure:
 
-- the link's content includes the language name in both English and the source language
+- the link's text includes the name of the alternative language in both English and the source language
 - the link's purpose is always clear, even when taken out of context
 - the link element includes an [hreflang attribute](https://www.w3schools.com/tags/att_a_hreflang.asp) that identifies the language of the linked page.
 
-For example, you can link over 'use [Service name] in [language]'.
+For example, your link text could be 'use [Service name] in [language]'.
 
 ## Lists
 
