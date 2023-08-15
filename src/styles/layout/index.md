@@ -4,6 +4,8 @@ description: Organise the layout of the page into blocks
 section: Styles
 layout: layout-pane.njk
 showPageNav: true
+headingAliases:
+  Hide elements and keep them accessible to screen readers: visually hidden
 ---
 
 {% from "_example.njk" import example %}
@@ -141,3 +143,9 @@ Use:
 - `govuk-!-display-none` to remove the element from the page
 
 You can also remove elements from the printed version of the page using `govuk-!-display-none-print`.
+
+## Hide elements and keep them accessible to screen readers
+
+You can stop elements from being displayed on the page and keep their contents available to screen readers using `govuk-visually-hidden`. You can use this to present content to screen reader users that sighted users do not need.
+
+If the element is focusable, such as a link, you can make it become visible when receiving keyboard focus using `govuk-visually-hidden-focusable`.
