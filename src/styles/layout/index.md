@@ -34,11 +34,9 @@ The default maximum page width is 1020px, but you can make it wider if your cont
 
 {{ example({group: "styles", item: "layout", example: "common-two-thirds-two-thirds-one-third", html: true, open: true, size: "l"}) }}
 
-## Building your own layout
+## Setting up page wrappers
 
-If you want to build your layout from scratch, or understand what each of the parts are responsible for, here’s an explanation of how the page wrappers and grid system works.
-
-## Page wrappers
+If you want to build your layout from scratch, or understand what each of the parts are responsible for, here’s an explanation of how the page wrappers work.
 
 ### Limiting width of content
 
@@ -63,7 +61,7 @@ If you’re not using the [breadcrumbs](/components/breadcrumbs/), [back link](/
 
 {{ example({group: "styles", item: "layout", example: "layout-wrappers-l", html: true, open: true, size: "l"}) }}
 
-## Grid system
+## Using the grid system
 
 Use the grid system to lay out the content on your service’s pages.
 
