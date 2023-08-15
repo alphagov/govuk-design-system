@@ -16,7 +16,10 @@
     .govuk-table__header,
     .govuk-table__cell {
       padding-right: govuk-spacing(2);
-      word-break: break-word;
+
+      // Automatic wrapping for unbreakable option names
+      word-wrap: break-word; // Fallback for older browsers only
+      overflow-wrap: break-word;
     }
   }
 }

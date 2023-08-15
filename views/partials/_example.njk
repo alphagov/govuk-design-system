@@ -94,7 +94,7 @@
           </p>
           {% for table in macroOptions %}
             <table class="govuk-table app-options__table" id="options-{{ exampleId }}--{{ table.id }}">
-              <caption class="govuk-table__caption govuk-heading-m {% if table.id == 'primary' %} govuk-visually-hidden{% endif %}">{{ table.name }}</caption>
+              <caption class="govuk-table__caption govuk-heading-m {% if table.id == 'primary' %} govuk-visually-hidden{% endif %}">{{ table.name | safe }}</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
                   <th class="govuk-table__header app-options__limit-table-cell" scope="col">Name</th>
@@ -105,23 +105,23 @@
               <tbody class="govuk-table__body">
                 {% for option in table.options -%}
                   <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">{{option.name}}</th>
-                    <td class="govuk-table__cell ">{{option.type}}</td>
-                    <td class="govuk-table__cell ">
+                    <th class="govuk-table__header" scope="row">{{ option.name | safe }}</th>
+                    <td class="govuk-table__cell">{{ option.type }}</td>
+                    <td class="govuk-table__cell">
                       {% if (option.required === true) %}
                         <strong>Required.</strong>
                       {% endif %}
                       {{ option.description | safe }}
                       {% if (option.isComponent) -%}
                         {# Create separate table data for components that are hidden in the Design System -#}
-                        {% if (option.name === "hint" or option.name === "label") %}
-                          See <a href="#options-{{ exampleId }}--{{ option.name }}">{{ option.name }}</a>.
+                        {% if ["hint", "label"].includes(option.slug) %}
+                          See <a href="#options-{{ exampleId }}--{{ option.slug }}">{{ option.name | safe }}</a>.
                         {% else %}
-                          See <a href="/components/{{ option.slug }}/#options-{{ option.name | kebabCase }}-example">{{ option.name }}</a>.
+                          See <a href="/components/{{ option.slug }}/#options-{{ option.slug }}-example">{{ option.name | safe }}</a>.
                         {% endif %}
                       {% endif %}
                       {% if (option.params) %}
-                        See <a href="#options-{{ exampleId }}--{{ option.name }}">{{ option.name }}</a>.
+                        See <a href="#options-{{ exampleId }}--{{ option.slug }}">{{ option.name | safe }}</a>.
                       {% endif -%}
                     </td>
                   </tr>
