@@ -18,14 +18,14 @@ W3C [owns and manages WCAG 2.2](https://www.w3.org/TR/WCAG22/). The Design Syste
 WCAG 2.2 is expected to be completed and published between July and September 2023. You’ll need to comply with the new criteria no later than one year after WCAG 2.2 is published.
 
 ### What you need to do
-1. Revisit the [GDS guidance](https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps) on what accessibility is and why your service needs to invest in it
+1. Revisit the [GDS guidance](https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps) on accessibility is and why your service needs to invest in it
 2. Read the [What’s new in WCAG 2.2 draft](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/) to understand the new criteria your service will need to comply with
-3. Ask your wider organisation for support to prepare for the work needed to meet WCAG 2.2
+3. Ask your wider organisation for support to prepare for work needed to meet WCAG 2.2
 4. Review the lists on this page of affected components and patterns in the Design System
 5. Assess your service to see how many affected components and patterns are in use
 6. Plan and implement the changes needed to your service
 
-Make sure there is expertise within your organisation by advocating for people to receive training in accessibility. The Design System team is organising peer support groups to help service teams share information. You can see dates and details on how to register on our xxxxxxx page.
+Make sure there's expertise within your organisation by advocating for people to receive training in accessibility. To provide some help with this, the Design System team is organising peer support groups for service teams to share information with each other.
 
 ### Join our community events and support groups
 
@@ -39,7 +39,7 @@ Join one of our WCAG 2.2 events where we offer support and work together to solv
       title: "WCAG 2.2 support events",
       large: true
     }) %}
-      <p>We are offering a series of <a href="/accessibility/wcag-2-2-support-events">profession based support events to help your teams and services transform to WCAG 2.2</a>.</p>
+      <p>We are offering a series of <a href="/accessibility/wcag-2-2-support-events">profession-based support events to help your teams and services transform to WCAG 2.2</a>.</p>
     {% endcall %}
   </div>
   <div class="govuk-grid-column-full">
@@ -55,7 +55,7 @@ Join one of our WCAG 2.2 events where we offer support and work together to solv
 </div>
 
 
-### Components affected
+### Components affected in the Design System
 The following components have WCAG 2.2 AA changes included. You must check if your service needs amending to align with these changes. We’ve made WCAG guideline changes for:
 
 - [Accordion](/components/accordion/) - Focus not obscured (Minimum)
@@ -79,7 +79,7 @@ The following components have WCAG 2.2 AA changes included. You must check if yo
 - [Tabs](/components/tabs/) - Focus not obscured (Minimum)
 - [Tag](/components/tag/) - Target size (Minimum)
 
-### Patterns affected
+### Patterns affected in the Design System
 The following patterns have WCAG 2.2 AA changes included. You must check if your service needs amending to align with these changes. We’ve made WCAG guideline changes for:
 
 - [Addresses](/patterns/addresses/) - Redundant entry

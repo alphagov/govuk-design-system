@@ -7,13 +7,17 @@ showPageNav: false
 order: 4
 ---
 
-W3C owns and manages the Web Content Accessibility Guidelines, which are used in the UK as the minimum standard for web accessibility. WCAG 2.2, a new version was released in [month]. <a href='/accessibility/'>Learn more on our main accessibility page</a>.
+W3C owns and manages the Web Content Accessibility Guidelines, which are used in the UK as the minimum standard for web accessibility. WCAG 2.2, a new version will be released in late 2023. <a href='/accessibility/'>Learn more on our Accessibility page</a>.
 
 Community support is intended for UK Government departments and groups working with the UK Government to build online services.
 
 ## What is peer support?
 
-Peer support is a form of assistance offered where individuals facing similar challenges provide help and support for one another based on their shared experiences with WCAG 2.2. It allows for empathetic connections, empowering individuals and offers advice and strategies in a non-judgemental environment. When addressing WCAG 2.2 it can be a daunting and confusing transition to try and implement all the required formats, tools and interfaces to be beneficial for individuals with diverse abilities and needs. Therefore, the ultimate goal for peer support is to integrate WCAG 2.2 to promote inclusivity and community whilst also ensuring that everyone can access and participate in online support regardless of their abilities.
+We're working to connect people who work on service teams working to meet WCAG 2.2 together, so they can provide help and support for one another based on their shared experiences. 
+
+We'd like to form a supportive environment for people to connect and offer advise and strategies to one another. Understanding how to improve a service to meet accessibility requirements and account for the diverse needs its users can daunting and confusing.
+
+Our intention is to promote adoption of WCAG 2.2 and build an inclusive community that everyone can access, where everyone give and receive support regardless of their abilities.
 
 [introduction video]
 
