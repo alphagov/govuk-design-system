@@ -44,7 +44,7 @@ CookiesPage.prototype.savePreferences = function (event) {
     function ($cookieFormFieldset) {
       const cookieType = this.getCookieType($cookieFormFieldset)
       const selectedItem = $cookieFormFieldset.querySelector(
-        'input[name="cookies[' + cookieType + ']"]:checked'
+        `input[name="cookies[${cookieType}]"]:checked`
       ).value
 
       preferences[cookieType] = selectedItem === 'yes'
@@ -69,7 +69,7 @@ CookiesPage.prototype.showUserPreference = function (
 
   const radioValue = preference ? 'yes' : 'no'
   const radio = $cookieFormFieldset.querySelector(
-    'input[name="cookies[' + cookieType + ']"][value=' + radioValue + ']'
+    `input[name="cookies[${cookieType}]"][value=${radioValue}]`
   )
   radio.checked = true
 }
