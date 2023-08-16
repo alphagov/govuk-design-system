@@ -434,7 +434,7 @@ Throughout this document, ‘the team’, ‘our team’ and ‘we’ refer to t
 
 WCAG 2.2 published a new ‘Candidate recommendation’ version on 6 September 2022. At this stage, “<abbr title="World Wide Web Consortium">W3C</abbr> encourages developers to use the technical report in their projects”.
 
-### Early 2023
+### 2023
 
 WCAG 2.2 is scheduled to be published by <abbr title="World Wide Web Consortium">W3C</abbr>. At this stage, it’s a final and official web standard. WCAG 2.2 is backwards compatible and includes all existing WCAG 2.1 criteria.
 
