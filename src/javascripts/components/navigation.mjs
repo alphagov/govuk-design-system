@@ -61,8 +61,8 @@ Navigation.prototype.setInitialAriaStates = function () {
     const $nextSubNav = $button.parentNode.querySelector(subNavJSClass)
 
     if ($nextSubNav) {
-      const subNavTogglerId = 'js-mobile-nav-subnav-toggler-' + index
-      const nextSubNavId = 'js-mobile-nav__subnav-' + index
+      const subNavTogglerId = `js-mobile-nav-subnav-toggler-${index}`
+      const nextSubNavId = `js-mobile-nav__subnav-${index}`
 
       $nextSubNav.setAttribute('id', nextSubNavId)
       $button.setAttribute('id', subNavTogglerId)
