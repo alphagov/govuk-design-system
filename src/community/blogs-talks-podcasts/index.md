@@ -13,6 +13,8 @@ To learn more about the GOV.UK Design System and Prototype Kit, check out these 
 
 Find out how the Design System and Prototype Kit work and what they do to make services more accessible and inclusive.
 
+[Exit this page fast with the Design System’s new component](https://designnotes.blog.gov.uk/2023/08/14/exit-this-page-fast-with-the-design-systems-new-component/) (blog post) — 14 August 2023
+
 [A new accessibility strategy for the GOV.UK Design System](https://accessibility.blog.gov.uk/2023/01/06/a-new-accessibility-strategy-for-the-gov-uk-design-system/) (blog post) — 6 January 2023
 
 [Making the GOV.UK Frontend typography scale more accessible](https://designnotes.blog.gov.uk/2022/12/12/making-the-gov-uk-frontend-typography-scale-more-accessible/) (blog post) — 12 December 2022
@@ -62,6 +64,10 @@ See how the Design System helps service teams across government.
 ## How to use the Design System
 
 Get some practical advice on how to use the Design System and Prototype Kit.
+
+[Testing a component's accessibility](https://www.youtube.com/watch?v=C770bSvGr_E) (video) — 26 July 2023
+
+[Inspecting WCAG 2.2: Focus Not Obscured](https://www.youtube.com/watch?v=_fi7SsSkBtM) (video) — 18 July 2023
 
 [Going beyond the GOV.UK Design System for MoJ Forms professional users](https://designnotes.blog.gov.uk/2022/03/21/going-beyond-the-gov-uk-design-system-for-moj-forms-professional-users/) (blog post) - 21 March 2022
 
