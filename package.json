@@ -23,9 +23,9 @@
     "prelint:html": "npm run build",
     "lint:editorconfig": "editorconfig-checker",
     "lint:html": "html-validate \"deploy/public/**/index.html\"",
-    "lint:js": "eslint --cache --cache-location .cache/eslint --cache-strategy content --color --ignore-path .gitignore \"**/*.{cjs,js,mjs}\"",
+    "lint:js": "eslint --cache --cache-location .cache/eslint --cache-strategy content --color --ignore-path .gitignore \"**/*.{cjs,js,md,mjs}\"",
     "lint:prettier": "prettier --cache --cache-location .cache/prettier --cache-strategy content --check \"**/*.{cjs,js,json,md,mjs,scss,yaml,yml}\"",
-    "lint:scss": "stylelint \"**/*.scss\"",
+    "lint:scss": "stylelint \"**/*.{md,scss}\"",
     "check-links": "hyperlink --canonicalroot https://design-system.service.gov.uk/ --internal --recursive --source-maps deploy/public/sitemap.xml | tap-mocha-reporter min"
   },
   "dependencies": {
@@ -56,6 +56,7 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.28.0",
+    "eslint-plugin-markdown": "^3.0.1",
     "eslint-plugin-n": "^16.0.1",
     "eslint-plugin-promise": "^6.1.1",
     "glob": "^10.3.3",
@@ -76,6 +77,7 @@
     "multimatch": "^6.0.0",
     "nunjucks": "^3.2.4",
     "outdent": "^0.8.0",
+    "postcss-markdown": "^1.2.0",
     "postcss-scss": "^4.0.6",
     "prettier": "^3.0.1",
     "puppeteer": "^21.0.3",

@@ -1,10 +1,9 @@
 ---
 name: "📖 Documentation"
 about: Add new documentation, or report missing, incorrect or unclear documentation
-title: ''
+title: ""
 labels: "documentation, awaiting triage"
-assignees: ''
-
+assignees: ""
 ---
 
 <!--

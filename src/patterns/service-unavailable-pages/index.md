@@ -3,7 +3,7 @@ title: Service unavailable pages
 description: This is a page that tells someone a service is unavailable. It should say when the service will be available or what to do if it is permanently closed
 section: Patterns
 theme: Pages
-aliases: '503'
+aliases: "503"
 backlogIssueId: 124
 layout: layout-pane.njk
 status: Experimental

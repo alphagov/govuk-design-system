@@ -32,7 +32,7 @@ Along with the pull request to delete or rename the URL you want to change, you 
 1. If the URL being archived is from a folder with an `index.md` file, you will need to replace the folder with a `.md file` of the same name - for example `/juggling/index.md` becomes `juggling.md`.
 2. In the file you want to archive, keep it in the same location, but replace the contents with the following code:
 
-   ```
+   ```plaintext
    ---
    title: {Title of the page you are archiving}
    layout: layout-archived.njk

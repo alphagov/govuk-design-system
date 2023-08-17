@@ -59,8 +59,8 @@ For example, if you want to override the button component you could do the follo
 
 ```css
 .app-interruption-card .govuk-button {
-  background-color: white;
-  color: blue;
+  color: govuk-colour("blue");
+  background-color: govuk-colour("white");
 }
 ```
 
@@ -120,8 +120,8 @@ For example, if you wanted to override the button component you could do the fol
 
 ```css
 .app-button--inverse {
-  background-color: govuk-colour("white");
   color: govuk-colour("blue");
+  background-color: govuk-colour("white");
 }
 ```
 

@@ -14,7 +14,7 @@ If you're an external contributor make sure to [fork this project first](https:/
 
 ### Clone repository
 
-```
+```shell
 git clone git@github.com:alphagov/govuk-design-system.git # or clone your own fork
 
 cd govuk-design-system
@@ -31,7 +31,7 @@ To enable this we use [nvm (Node Version Manager)](https://github.com/creationix
 
 ### Install npm dependencies
 
-```
+```shell
 npm install
 ```
 
@@ -39,7 +39,7 @@ npm install
 
 This will build sources, serve pages and watch for changes.
 
-```
+```shell
 npm start
 ```
 
@@ -47,7 +47,7 @@ npm start
 
 Build `./src` to `./deploy/public`
 
-```
+```shell
 npm run build
 ```
 
@@ -56,7 +56,7 @@ npm run build
 We are using the tool [stylelint][stylelint] to lint the Sass files in
 `source/stylesheets`. You can run the linter from command line by running:
 
-```
+```shell
 npm run lint
 ```
 

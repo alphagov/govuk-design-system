@@ -46,7 +46,7 @@ How you set an option depends on whether it's a 'variable' option or a 'block' o
 
 To set a 'variable' option, use `set` to pass in a single value or string. For example, to add a class to the `<body>` element using the `bodyClasses` option:
 
-```javascript
+```njk
 {% raw %}
 {% set bodyClasses = "EXAMPLE-CLASS" %}
 {% endraw %}
@@ -56,7 +56,7 @@ By default, the template contains a [skip link](/components/skip-link/), [header
 
 To set a 'block' option, use `block` to pass in a multiline value or HTML markup. For example, to add a block of HTML before the closing `</body>` element in the page template using the `bodyEnd` option:
 
-```javascript
+```njk
 {% raw %}
 {% block bodyEnd %}
   <div>
@@ -68,7 +68,7 @@ To set a 'block' option, use `block` to pass in a multiline value or HTML markup
 
 To change the components that are included in the page template by default, set their equivalent blocks. For example:
 
-```javascript
+```njk
 {% raw %}
 {% block header %}
   {{ govukHeader ({
