@@ -10,7 +10,7 @@ layout: layout-example.njk
 {% set ethnicityHtml %}
   {{ govukInput({
     id: "other-description",
-    name: "other-description",
+    name: "otherDescription",
     type: "text",
     classes: "govuk-!-width-one-half",
     label: {
@@ -20,7 +20,7 @@ layout: layout-example.njk
 {% endset -%}
 
 {{ govukRadios({
-  name: "ethnicity-detail",
+  name: "ethnicityDetail",
   fieldset: {
     legend: {
       text: "Which of the following best describes your background?",

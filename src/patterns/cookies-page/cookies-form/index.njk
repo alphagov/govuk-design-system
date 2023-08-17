@@ -11,7 +11,7 @@ layout: layout-example.njk
     <h2 class="govuk-heading-l">Change your cookie settings</h2>
     <form action="/form-handler" method="post" novalidate>
       {{ govukRadios({
-          name: "functional-cookies",
+          name: "functionalCookies",
           fieldset: {
             legend: {
               text: "Do you want to accept functional cookies?",
@@ -32,7 +32,7 @@ layout: layout-example.njk
         }) }}
 
         {{ govukRadios({
-          name: "analytics-cookies",
+          name: "analyticsCookies",
           fieldset: {
             legend: {
               text: "Do you want to accept analytics cookies?",
