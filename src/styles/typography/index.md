@@ -157,6 +157,18 @@ For example, links in a header or side navigation might not need underlines. Use
 
 {{ example({group: "styles", item: "typography", example: "link-no-underline", html: true, open: true}) }}
 
+### Links to change a language
+
+You can use links to allow a user to access the current content in a different language.
+
+When offering links to content in other languages, make sure:
+
+- the link's text includes the name of the alternative language in both English and the source language
+- the link's purpose is always clear, even when taken out of context
+- the link element includes an [`hreflang` attribute](https://www.w3schools.com/tags/att_a_hreflang.asp) that identifies the language of the linked page.
+
+For example, your link text could be 'use [Service name] in [language]'.
+
 ## Section break
 
 You can use the `govuk-section-break` classes on an `<hr>` element to create a thematic break between sections of content. `govuk-section-break` has class-based modifiers for different size margins.
