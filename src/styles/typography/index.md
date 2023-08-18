@@ -158,44 +158,6 @@ For example, links in a header or side navigation might not need underlines. Use
 
 {{ example({ group: "styles", item: "typography", example: "link-no-underline", html: true, open: true }) }}
 
-### Links to change a language
-
-You can use links to allow a user to access the current content in a different language.
-
-When offering links to content in other languages, make sure:
-
-- the link's text includes the name of the alternative language in both English and the source language
-- the link's purpose is always clear, even when taken out of context
-- the link element includes an [`hreflang` attribute](https://www.w3schools.com/tags/att_a_hreflang.asp) that identifies the language of the linked page.
-
-For example, your link text could be 'use [Service name] in [language]'.
-
-## Lists
-
-Use lists to make blocks of text easier to read, and to break information into manageable chunks.
-
-{{ example({ group: "styles", item: "typography", example: "list", html: true, open: true, size: "s" }) }}
-
-### Bulleted lists
-
-Introduce bulleted lists with a lead-in line ending in a colon. Start each item with a lowercase letter, and do not use a full stop at the end.
-
-{{ example({ group: "styles", item: "typography", example: "list-bullet", html: true, open: true, size: "s" }) }}
-
-### Numbered lists
-
-Use numbered lists instead of bulleted lists when the order of the items is relevant.
-
-You do not need to use a lead-in line for numbered lists. Items in a numbered list should end in a full stop because each should be a complete sentence.
-
-{{ example({ group: "styles", item: "typography", example: "list-number", html: true, open: true, size: "s" }) }}
-
-### Adding extra spacing between list items
-
-If a list is hard to read because the items run across multiple lines you can add extra spacing.
-
-{{ example({ group: "styles", item: "typography", example: "list-spaced", html: true, open: true, size: "s" }) }}
-
 ## Section break
 
 You can use the `govuk-section-break` classes on an `<hr>` element to create a thematic break between sections of content. `govuk-section-break` has class-based modifiers for different size margins.
