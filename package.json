@@ -55,7 +55,7 @@
     "eslint": "^8.47.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-import": "^2.28.0",
+    "eslint-plugin-import": "^2.28.1",
     "eslint-plugin-markdown": "^3.0.1",
     "eslint-plugin-n": "^16.0.1",
     "eslint-plugin-promise": "^6.1.1",
@@ -88,7 +88,7 @@
     "slash": "^3.0.0",
     "slugger": "^1.0.1",
     "standard": "^17.1.0",
-    "stylelint": "^15.10.2",
+    "stylelint": "^15.10.3",
     "stylelint-config-gds": "^1.0.0",
     "stylelint-order": "^6.0.3",
     "tap-mocha-reporter": "^5.0.3"
