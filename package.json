@@ -80,7 +80,7 @@
     "postcss-markdown": "^1.2.0",
     "postcss-scss": "^4.0.6",
     "prettier": "^3.0.1",
-    "puppeteer": "^21.0.3",
+    "puppeteer": "^21.1.0",
     "rollup": "^3.28.0",
     "sass-export": "^2.1.2",
     "serve-static": "^1.15.0",
