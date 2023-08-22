@@ -3,6 +3,7 @@ title: Speak at Design System Day 2023
 description: Design System Day is a community-driven event, and we want to hear diverse perspectives from new and seasoned speakers.
 section: Community
 theme: Events and workshops
+opengraphImageUrl: /community/images/dsd23-announcement-banner.png
 layout: layout-pane.njk
 order: 12
 ---
