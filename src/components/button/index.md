@@ -9,7 +9,7 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 
-{{ example({group: "components", item: "button", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
+{{ example({group: "components", item: "button", example: "default", html: true, nunjucks: true, rails: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 
@@ -49,7 +49,7 @@ Avoid using multiple default buttons on a single page. Having more than one main
 Use a start button for the main call to action on your service’s [start page](/patterns/start-using-a-service/).
 Start buttons do not usually submit form data, so use a link tag instead of a button tag.
 
-{{ example({group: "components", item: "button", example: "start", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "components", item: "button", example: "start", html: true, nunjucks: true, rails: true, open: false}) }}
 
 ### Secondary buttons
 

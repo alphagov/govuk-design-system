@@ -11,7 +11,7 @@ layout: layout-pane.njk
 
 Help users know how much text they can enter when there is a limit on the number of characters.
 
-{{ example({group: "components", item: "character-count", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
+{{ example({group: "components", item: "character-count", example: "default", html: true, nunjucks: true, rails: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 

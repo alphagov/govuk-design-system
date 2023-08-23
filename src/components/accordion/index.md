@@ -13,7 +13,7 @@ statusMessage: This component is currently experimental because <a class="govuk-
 
 The accordion component lets users show and hide sections of related content on a page.
 
-{{ example({group: "components", item: "accordion", example: "default", html: true, nunjucks: true, open: false, size: "xl", loading: "eager" }) }}
+{{ example({group: "components", item: "accordion", example: "default", html: true, nunjucks: true, rails: true, open: false, size: "xl", loading: "eager" }) }}
 
 ## When to use this component
 
