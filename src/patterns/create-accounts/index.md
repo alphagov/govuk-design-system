@@ -8,6 +8,8 @@ backlogIssueId: 41
 layout: layout-pane.njk
 ---
 
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+
 Help users create an account for your service.
 
 ## When to use this pattern
@@ -48,11 +50,23 @@ Make it clear what you need users to do when they create an account.
 
 Show a clear difference between creating an account and signing in. Presenting the options side by side is not enough because users might miss one of them or not understand the&nbsp;difference.
 
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Make sure users do not need to enter the same information more than once when creating an account, unless the information is no longer valid or it’s necessary for security reasons. Use the [HTML autocomplete attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete) to allow password managers and user agents to automatically populate fields. This is to comply with WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
+
 ### Make the sign-up process clear
 
 If a user fails to create an account they might not be able to use your service at all.
 
 Make sure the account creation screen is solely about that task. Do not add any distracting content or links.
+
+### Avoid using security measures such as CAPTCHAs
+
+CAPTCHAs (Completely Automated Public Turing Test to Tell Computers and Humans Apart) and similar tests require users to recognise words or pictures.
+
+These are tests of cognitive function, which might be difficult for some users. Users can also struggle to recognise specific words or pictures due to differences in culture and locale.
+
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Avoid making users do a cognitive test to use your service. If you do, you must also offer an alternative method. This is to comply with WCAG 2.2 success criterion [3.3.8 Accessible Authentication (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum).
+
+[WCAG lists some other security measures](https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum#object-recognition) you can implement to prevent misuse and automated abuse in your service.
 
 ### Never use National Insurance numbers to verify a user’s identity
 

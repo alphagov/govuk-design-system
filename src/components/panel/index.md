@@ -8,6 +8,7 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
 
 The panel component is a visible container used on confirmation or results pages to highlight important content.
 
@@ -36,3 +37,13 @@ Keep your panel text brief, as it's only meant for a high-level explanation of w
 Aim to use short words and phrases to make sure highlighted information is easy to read at different screen sizes. For example, shorter amounts of information is less likely to wrap around the panel, which can happen when using the zoom function on mobiles.
 
 If you need to give detailed information, or more context, use the description text under the heading text.
+
+### Selecting and copying information
+
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Allow users to select and copy text within a [confirmation page](patterns/confirmation-page/) as well as its panel component. For example, users should be able to select and copy a booking number. This relates to WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
+
+Consider offering an option for the user to copy information in the panel component area into their device’s clipboard if there’s information that the user is expected:
+
+- save
+- remember
+- copy

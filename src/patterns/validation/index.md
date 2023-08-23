@@ -7,6 +7,8 @@ aliases:
 layout: layout-pane.njk
 ---
 
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+
 Check the information the user gives you to make sure it’s valid. If there's a validation error, tell the user what's gone wrong and how to fix it. Turn off HTML5 validation.
 
 ## When to use this pattern
@@ -58,6 +60,14 @@ If the user's answers fail validation:
 - show [error messages](/components/error-message/) next to fields with errors
 
 Read guidance on [writing good error messages](/components/error-message/#be-clear-and-concise).
+
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Do not clear any form fields when validating users’ answers. Keep both passing and failing answers. This is to comply with WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
+
+Keeping information that failed validation helps users to:
+
+- see what went wrong
+- edit their previous answer
+- avoid re-entering information
 
 ### When to tell the user about validation errors
 

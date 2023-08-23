@@ -8,6 +8,7 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
 
 The breadcrumbs component helps users to understand where they are within a website’s structure and move between levels.
 
@@ -27,7 +28,9 @@ If you’re using other navigational elements on the page, such as a sidebar, co
 
 Always place breadcrumbs at the top of a page, before the `<main>` element. Placing them here means that the 'Skip to main content' link allows the user to skip all navigation links, including breadcrumbs.
 
-The breadcrumb should start with your 'home' page and end with the parent section of the current page.
+The breadcrumbs should start with your 'home' page and end with the parent section of the current page.
+
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Make sure no other interactive elements are too close to the breadcrumbs. This is to make sure users can easily interact with the breadcrumbs. This relates to WCAG 2.2 success criterion [2.5.8 Target Size (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).
 
 There are 2 ways to use the breadcrumbs component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 

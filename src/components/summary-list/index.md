@@ -8,8 +8,34 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
 
 Use a summary list to summarise information, for example, a user’s responses at the end of a form.
+
+{% set wcagCallout %}
+  <p class="govuk-!-margin-bottom-2">
+    {{ govukTag({
+      text: "WCAG 2.2"
+    })}}
+  </p>
+
+  ### Accessibility considerations for Summary list
+
+  To meet WCAG 2.2, make sure that users can successfully:
+
+  - [interact with row actions](/components/summary-list/#:~:text=Keep%20card%20and%20row%20actions%20as%20%E2%80%98inline%20links%E2%80%99.%20This%20is%20to%20make%20sure%20that%20sets%20of%20actions%20reflow%20properly%20on%20different%20screen%20sizes.%20This%20relates%20to%20WCAG%202.2%20success%20criterion%202.5.8%20Target%20Size%20(minimum).)
+  - [change information they've previously given in an answer](/components/summary-list/#:~:text=Do%20not%20pre%2Dpopulate%20if%20the%20information%20is%20no%20longer%20valid%2C%20or%20when%20pre%2Dpopulating%20would%20be%20a%20major%20safety%20or%20security%20concern.%20This%20is%20to%20comply%20with%20WCAG%202.2%20success%20criterion%203.3.7%20Redundant%20Entry.)
+
+  [See the full list of components and patterns affected on our 'Changes to meet WCAG 2.2 page'.](/accessibility/WCAG-2.2/#components-affected-in-the-design-system)
+{% endset %}
+
+{{ govukInsetText({
+  html: wcagCallout,
+  attributes: {
+    style: 'border-left-color: #1d70b8;'
+  }
+})}}
 
 {{ example({ group: "components", item: "summary-list", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
@@ -46,11 +72,21 @@ You can add ‘row actions’ to a summary list. For example, you can help users
 
 When navigating visually, the borders above and below each row help to show which row action is tied to which piece of information.
 
+There's a few things to keep in mind to ensure that users can successfully use row actions.
+
+<strong class="govuk-tag">WCAG 2.2</strong> Keep card and row actions as ‘[inline links](https://developer.mozilla.org/en-US/docs/Glossary/Inline-level_content)’. This is to make sure that sets of actions reflow properly on different screen sizes. This relates to WCAG 2.2 success criterion [2.5.8 Target Size (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).
+
+If a user decides to go back to a previous answer through a card or row action, make sure information they have already entered is pre-populated.
+
+<strong class="govuk-tag">WCAG 2.2</strong> Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
+
 Assistive technology users, including those who use a screen reader, might hear a row action link out of context and might not know what it will do.
 
 To give more context, add visually hidden text to the links. This means a screen reader user will hear the row action and the ‘key’ label for the information it will affect, like ‘Change name’ or ‘Change date of birth’.
 
 {{ example({ group: "components", item: "summary-list", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
+
+#### Showing rows with and without actions
 
 If you’re showing a mix of rows (where some rows include actions and some do not), add the `govuk-summary-list__row--no-actions` modifier class to the rows without actions. This is to ensure the bottom border is drawn correctly in some browsers.
 
