@@ -11,6 +11,8 @@ statusMessage: This pattern is currently experimental because <a class="govuk-li
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+
 
 This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
 
@@ -48,6 +50,17 @@ Have clear and concise content and do not use:
 - jargon like 500 or bad request
 - ‘We are experiencing technical difficulties’
 - red text to warn people
+
+### Showing contact information
+
+Contact information should either:
+
+- include all numbers and opening times in one place on the page
+- be a link out to a page that includes numbers and opening times
+
+You might choose to link to a ‘contact information’ page, such as one shown in the ‘[Contact a department or service team](https://design-system.service.gov.uk/patterns/contact-a-department-or-service-team/)’ pattern.
+
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Make sure contact information is written in a consistent way throughout your service. This is to comply with WCAG 2.2 success criterion [3.2.6 Consistent Help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html).
 
 ### Service has a specific page that includes numbers and opening times
 

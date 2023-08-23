@@ -9,6 +9,7 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
 
 Use this pattern to let users know they’ve completed a transaction.
 
@@ -33,7 +34,9 @@ Your confirmation page must include:
 - a link to your [feedback page](https://www.gov.uk/service-manual/service-assessments/get-feedback-page)
 - a way for users to save a record of the transaction, for example, as a PDF
 
-{{ example({ group: "patterns", item: "confirmation-pages", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second", size: "xl" }) }}
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Do not include links, buttons or other interactive elements in the green confirmation panel box, as the focus state will not have a minimum contrast ratio of 3:1 with the panel’s background colour.
+
+{{ example({group: "patterns", item: "confirmation-pages", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second", size: "xl"}) }}
 
 ### Help users who bookmark the page
 
@@ -44,6 +47,8 @@ If you cannot, make sure your service responds in a helpful way when users retur
 - tracking an application
 - starting a new application
 - what to do or who to contact if they have a problem with their application
+
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> You must also make sure not to prevent users from copying, saving or retrieving information found on the confirmation page. For example, users should be able to select and copy the text of a booking number. This is to comply with WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
 
 ## Research on this pattern
 

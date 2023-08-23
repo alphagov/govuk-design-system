@@ -10,6 +10,8 @@ layout: layout-pane.njk
 
 {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 {% from "_example.njk" import example %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+
 
 Check that a user has access to a specific mobile phone number using a security code sent by text message.
 
@@ -33,6 +35,8 @@ Send and ask the user for the security code when they:
 ### When the user creates an account
 
 When the user creates an account, ask for their password and mobile phone number at the same time. Make it clear if you'll only use the mobile number for sending security codes, or if you'll also use it for other purposes.
+
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> You must include the link for 'Not received a text message?’ so the user can find help in a consistent way. This is related to WCAG 2.2 success criterion [3.2.6 Consistent Help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html).
 
 After saving the user’s password and mobile phone number, verify their mobile phone number by sending them a text message with a 5 digit code in this format:
 
@@ -71,7 +75,9 @@ Ask the user to enter this code. Use the same pattern and time limit as when cre
 
 If they follow the ‘Not received a text message?’ link, show them a page allowing them to request a new code. Do not reveal the mobile number you sent it to.
 
-{{ example({ group: "patterns", item: "confirm-a-phone-number", example: "resend", html: true, nunjucks: true, open: false }) }}
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> You must include the link for 'Not received a text message?’ so the user can find help in a consistent way. This is related to WCAG 2.2 success criterion [3.2.6 Consistent Help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html).
+
+{{ example({group: "patterns", item: "confirm-a-phone-number", example: "resend", html: true, nunjucks: true, open: false}) }}
 
 You should tell the user what to do if they no longer have access to the phone used to sign up.
 

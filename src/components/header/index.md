@@ -7,6 +7,7 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
 
 The GOV.UK header shows users that they are on GOV.UK and which service they are using.
 
@@ -44,4 +45,8 @@ Use the header with a service name if your service is more than 5 pages long - t
 
 Use the header with navigation if you need to include basic navigation, contact or account management links.
 
-{{ example({ group: "components", item: "header", example: "with-service-name-and-navigation", html: true, nunjucks: true, open: false, size: "s" }) }}
+{{ example({group: "components", item: "header", example: "with-service-name-and-navigation", html: true, nunjucks: true, open: false, size: "s"}) }}
+
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> You can add a link to a ‘help’ page in your service’s header. If you do, the link must be positioned consistently within the header, and must always link to the same place. 
+
+For example, a header link to “Get help with this service” must go to the same place as similar header links elsewhere in your service. This is to comply with WCAG 2.2 success criterion [3.2.6 Consistent Help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html).

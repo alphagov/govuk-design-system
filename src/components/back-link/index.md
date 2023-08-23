@@ -8,6 +8,8 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+
 
 Use the back link component to help users go back to the previous page in a multi-page transaction.
 
@@ -32,6 +34,8 @@ Always place back links at the top of a page, before the `<main>` element. Placi
 Make sure the link takes users to the previous page they were on, in the state they last saw it. Where possible, ensure it works even when JavaScript is not available.
 
 If this is not possible, you should hide the back link when JavaScript is not available.
+
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> To make the back link easier to activate, make sure no other elements are placed too closely. Also, make sure it has margins and an overall height of 50 pixels. This is related to WCAG 2.2 success criterion [2.5.8 Target Size (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).
 
 There are 2 ways to use the back link component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 

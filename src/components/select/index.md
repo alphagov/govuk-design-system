@@ -8,6 +8,8 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+
 
 {{ example({ group: "components", item: "select", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
@@ -30,6 +32,12 @@ If you use the component for questions, you should not pre-select any of the opt
 There are 2 ways to use the select component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 
 {{ example({ group: "components", item: "select", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
+
+The select component does not support selecting multiple options, as [there’s a history of poor usability and assistive technology support for `<select multiple>]`](https://www.24a11y.com/2019/select-your-poison/). If you need to ask the user to pick more than one item from a list, it’s almost always better to use another method, such as a list of checkboxes.
+
+Avoid adding functionality to allow selecting multiple options.
+
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Any input that’s designed to let a user select multiple options must offer a way to do so without relying on ‘click and drag’ movements or keyboard and mouse combined actions (such as ‘control’ and clicking at the same time). This is to comply with WCAG 2.2 success criterion [2.5.7 Dragging Movements](https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html).
 
 ### Select with hint
 

@@ -8,6 +8,10 @@ backlogIssueId: 45
 layout: layout-pane.njk
 ---
 
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+
+This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
+
 {% from "_example.njk" import example %}
 
 This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
@@ -29,6 +33,15 @@ When asking users for their email address, you must:
 You may also need to check that users have access to the email account they give you.
 
 {{ example({ group: "patterns", item: "email-addresses", example: "default", html: true, nunjucks: true, open: true, size: "s", titleSuffix: "second" }) }}
+
+### Help users enter an email address more than once
+
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Make sure that users do not need to enter the same email multiple times in the same journey. If you need to ask for an email address again after the first time, give the option to use the previously entered email address, or enter a new one. This is to comply with WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
+
+You can either:
+
+- pre-populate the email field with the previously entered email address
+- give the user a way to select one of the previously entered email addresses
 
 ### Tell users why you want the email address
 

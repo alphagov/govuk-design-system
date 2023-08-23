@@ -8,6 +8,8 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+
 
 Use the tag component to show users the status of something.
 
@@ -21,7 +23,11 @@ Use the tag component when it’s possible for something to have more than one s
 
 There are two ways to use the tag component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 
-Tags are just used to indicate a status, so do not add links. Use adjectives rather than verbs for the names of your tags. Using a verb might make a user think that clicking on them will do something.
+Tags are only used to indicate a status. Do not make a tag interactive by making it into a link or button.
+
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Do not use tags to create links, buttons or other interactive elements, as users:
+- are unlikely to identify the tags as something they’re meant to interact with
+- would see no visual difference between interactive and non-interactive tags
 
 ## Showing one or two statuses
 

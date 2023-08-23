@@ -8,6 +8,8 @@ backlogIssueId: 80
 layout: layout-pane.njk
 ---
 
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+
 This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
 
 ![A form entitled enter card details which asks for a card number, an expiry date, a name on the card and the card security code.](enter-card-details.jpg)
@@ -27,6 +29,8 @@ Let users enter payment card numbers in whatever format is familiar to them. All
 ### Help users enter valid card information
 
 Present all fields on a single page, in the order in which they appear on a credit or debit card. This makes it easy for users to transcribe the information from their payment card.
+
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Make sure you leave adequate spacing between the month and year inputs. Ideally, leave at least 24px of space between the inputs, when stacked either horizontally (inline) or vertically. This will make the inputs easier to select with a mouse, touch or other input method. This is related to WCAG 2.2 success criterion [2.5.8 Target Size (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).
 
 Show logos for the cards you accept as icons so users can see whether their card is supported.
 
