@@ -11,24 +11,21 @@ This roadmap shows what we’re working on and planning to do.
 
 Some things on the roadmap might change — the purpose is to tell you what’s coming up and help service teams prepare and plan their own work.
 
-See our [Github team board](https://github.com/orgs/alphagov/projects/53) for more details on our plans and day-to-day activities.
+See our [GitHub team board](https://github.com/orgs/alphagov/projects/53) for more details on our plans and day-to-day activities.
 
-Last updated 20 April 2023.
+Last updated 24 August 2023.
 
 ## Recently shipped
 
 We recently:
 
+- launched a [call for speakers](https://design-system.service.gov.uk/community/call-for-speakers-2023/) at our 2-day conference, [Design System Day 2023](https://design-system.service.gov.uk/community/design-system-day/)
+- recommended changes to validation rules that make it easier for users to [input dates](https://design-system.service.gov.uk/components/date-input/) (thanks to Frankie Roberto)
+- recommended not using a `maxlength` attribute on [text inputs](https://design-system.service.gov.uk/components/text-input/) (thanks to beeps)
 - released [GOV.UK Frontend v4.7.0](https://github.com/alphagov/govuk-frontend/releases/tag/v4.7.0), which includes visual improvements to some components
 - published the [Exit this page](/components/exit-this-page/) component
 - published an [accessibility strategy for the GOV.UK Design System](/community/accessibility-strategy/)
 - released the [Summary card](https://github.com/alphagov/govuk-design-system-backlog/issues/210) variant
-- made it easier to find information about [contributing and the community](/community/)
-- improved [how contributions are prioritised](https://design-system.service.gov.uk/community/upcoming-components-patterns/)
-- added functionality for browsers to ‘find in page’ within the Accordion component
-- added support for ‘source maps’ for precompiled GOV.UK Frontend Javascript files
-- improved the [guidance for images](/styles/images/)
-- released [GOV.UK Frontend v4.6.0](https://github.com/alphagov/govuk-frontend/releases/tag/v4.6.0), which includes visual improvements to some components
 
 ## Working on now
 
@@ -38,21 +35,25 @@ We're working on GOV.UK Frontend v5.0 which includes:
 - [providing a clear JavaScript API for our components](https://github.com/alphagov/govuk-frontend/issues/1389)
 - [removing support for compatibility mode](https://github.com/alphagov/govuk-frontend/issues/2769)
 - [enabling new link styles by default](https://github.com/alphagov/govuk-frontend/issues/2350)
+- [updating the crown](https://github.com/alphagov/govuk-frontend/issues/4019)
 
 We're also:
 
-- hosting community co-design work to turn the [task list pattern](/patterns/task-list-pages/) into a component
-- hosting community co-design work to make maps better
 - making it easier for teams to share their findings from user research
+- updating the components, patterns and styles to be compliant with WCAG 2.2
+- making it easier for teams to understand what's changed in WCAG 2.2 and what they need to do
+- running more workshops on accessibility
+- organising [Design System Day 2023](https://design-system.service.gov.uk/community/design-system-day/)
+- [updating the typographic scale](https://github.com/alphagov/govuk-design-system/issues/2289), including increasing the minimum text size on mobile
 
 ## Coming up next
 
 We're getting ready to:
 
-- make sure the Design System meets WCAG 2.2
-- [update the typographic scale](https://github.com/alphagov/govuk-design-system/issues/2289), including increasing the minimum text size on mobile
-- investigate where technical documentation belongs on the website
-- start working on the next component or pattern
+- add the [Show password](https://github.com/alphagov/govuk-design-system-backlog/issues/240) component to the Design System (thanks to Andy Sellick)
+- improve the way we organise technical documentation on the website
+- start working on the next pattern, [Navigation](https://github.com/alphagov/govuk-design-system-backlog/issues/76)
+- run a discovery to understand how the Design System might better support teams on what they’re building today and in the future
 
 ## Future plans
 
