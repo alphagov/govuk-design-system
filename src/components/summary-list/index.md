@@ -70,9 +70,12 @@ To remove borders on a single row, use the `govuk-summary-list__row--no-border` 
 
 ### Showing missing information
 
-There may be some contexts where users see a summary list where there is some missing information, for instance if they are returning to a partially-completed form, or if you have added some additional questions since they first answered.
+In some contexts, you might need to show rows that have missing information. This can happen when: 
 
-Where there are missing answers, display a link to the question page within the `value` column instead of as a "Change" action:
+- a user returns to an incomplete journey
+- you've added or changed the questions in a service.
+
+Show a link to the appropriate question page in the `value` column so the user can enter the missing information, instead of showing a 'change' link on that row.
 
 {{ example({group: "components", item: "summary-list", example: "with-missing-information", html: true, nunjucks: true, open: false}) }}
 
