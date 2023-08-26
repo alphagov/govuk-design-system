@@ -1,0 +1,14 @@
+<%= govuk_cookie_banner do |cookie_banner|
+  cookie_banner.with_message(heading_text: "Cookies on [name of service]") do |messages|
+  messages.with_action { govuk_button_link_to("Accept analytics cookies", "#") }
+  messages.with_action { govuk_button_link_to("Reject analytics cookies", "#") }
+  messages.with_action { govuk_link_to("View cookies", "#") }
+ %>
+<p class="govuk-body">
+  We use some essential cookies to make this service work.
+</p>
+<p class="govuk-body">
+  We’d also like to use analytics cookies so we can understand
+  how you use the service and make improvements.
+</p>
+<% end; end %>
