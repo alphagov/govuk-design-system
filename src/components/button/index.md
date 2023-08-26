@@ -42,7 +42,7 @@ Use a default button for the main call to action on a page.
 
 Avoid using multiple default buttons on a single page. Having more than one main call to action reduces their impact, and makes it harder for users to know what to do next.
 
-{{ example({group: "components", item: "button", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second"}) }}
+{{ example({group: "components", item: "button", example: "default", html: true, nunjucks: true, rails: true, open: false, titleSuffix: "second"}) }}
 
 ### Start buttons
 
@@ -57,7 +57,7 @@ Use secondary buttons for secondary calls to action on a page.
 
 Pages with too many calls to action make it hard for users to know what to do next. Before adding lots of secondary buttons, try to simplify the page or break the content down across multiple pages.
 
-{{ example({group: "components", item: "button", example: "secondary", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "components", item: "button", example: "secondary", html: true, nunjucks: true, rails: true, open: false}) }}
 
 You can also [group default and secondary buttons together](#grouping-buttons).
 
@@ -65,7 +65,7 @@ You can also [group default and secondary buttons together](#grouping-buttons).
 
 Warning buttons are designed to make users think carefully before they use them. They only work if used very sparingly. Most services should not need one.
 
-{{ example({group: "components", item: "button", example: "warning", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "components", item: "button", example: "warning", html: true, nunjucks: true, rails: true, open: false}) }}
 
 Only use warning buttons for actions with serious destructive consequences that cannot be easily undone by a user. For example, permanently deleting an account.
 
@@ -81,7 +81,7 @@ Use the `govuk-button--inverse` modifier class to show white buttons on dark bac
 
 Make sure all users can see the button — the white button and background colour [must have a contrast ratio of at least 3:1](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html).
 
-{{ example({group: "components", item: "button", example: "inverse", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "components", item: "button", example: "inverse", html: true, nunjucks: true, rails: true, open: false}) }}
 
 ### Disabled buttons
 
@@ -89,17 +89,17 @@ Disabled buttons have poor contrast and can confuse some users, so avoid them if
 
 Only use disabled buttons if research shows it makes the user interface easier to&nbsp;understand.
 
-{{ example({group: "components", item: "button", example: "disabled", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "components", item: "button", example: "disabled", html: true, nunjucks: true, rails: true, open: false}) }}
 
 ### Grouping buttons
 
 Use a button group when two or more buttons are placed together.
 
-{{ example({group: "components", item: "button", example: "secondary-combo", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "components", item: "button", example: "secondary-combo", html: true, nunjucks: true, rails: true, open: false}) }}
 
 Any links within a button group will automatically align with the buttons.
 
-{{ example({group: "components", item: "button", example: "button-group", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "components", item: "button", example: "button-group", html: true, nunjucks: true, rails: true, open: false}) }}
 
 ### Stop users from accidentally sending information more than once
 
@@ -117,7 +117,7 @@ If you are working in production and research shows that users are frequently se
 
 To do this, set the `data-prevent-double-click` attribute to `true`. You can do this directly in the HTML or, if you’re using Nunjucks, you can use the Nunjucks macro as shown in this example.
 
-{{ example({group: "components", item: "button", example: "prevent-double-click", html: true, nunjucks: true, open: false}) }}
+{{ example({group: "components", item: "button", example: "prevent-double-click", html: true, nunjucks: true, rails: true, open: false}) }}
 
 This feature will prevent double clicks for users that have JavaScript enabled, however you should also think about the issue server-side to protect against attacks.
 
