@@ -93,8 +93,8 @@
           If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
           </p>
           {% for table in macroOptions %}
-            <table class="govuk-table app-options__table" id="options-{{ exampleId }}--{{ table.id }}">
-              <caption class="govuk-table__caption govuk-heading-m {% if table.id == 'primary' %} govuk-visually-hidden{% endif %}">{{ table.name | safe }}</caption>
+            <table class="govuk-table app-options__table" id="options-{{ exampleId }}--{{ table.slug }}">
+              <caption class="govuk-table__caption govuk-heading-m {% if table.slug == 'primary' %} govuk-visually-hidden{% endif %}">{{ table.name | safe }}</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
                   <th class="govuk-table__header app-options__limit-table-cell" scope="col">Name</th>
