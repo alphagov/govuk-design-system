@@ -12,6 +12,8 @@ Links are blue and underlined by default. If your link is at the end of a senten
 
 {{ example({group: "styles", item: "links", example: "default", html: true, open: true}) }}
 
+## Links without a visited state
+
 Use the `govuk-link--no-visited-state` modifier class where it is not helpful to distinguish between visited and unvisited states, for example when linking to pages with frequently-changing content such as the dashboard for an admin interface.
 
 {{ example({group: "styles", item: "links", example: "no-visited-state", html: true, open: true}) }}
