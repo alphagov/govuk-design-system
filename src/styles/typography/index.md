@@ -8,6 +8,14 @@ showPageNav: true
 headings:
   - text: Section break
     aliases: horizontal rule, hr
+
+  - text: Links
+    ignoreInPageNav: true
+    ignoreInSearch: true
+
+  - text: Lists
+    ignoreInPageNav: true
+    ignoreInSearch: true
 ---
 
 {% from "_example.njk" import example %}
@@ -110,6 +118,14 @@ You can use bold to emphasise particular words in a transaction. Use it to highl
 For example, "Your reference number is **ABC12345678**. Use this to track your application. Updates will be sent to **name<i></i>@example.com**"
 
 Use bold sparingly. Overuse will make it difficult for users to know which parts of your content they need to pay the most attention to.
+
+## Links
+
+See [links](/styles/links).
+
+## Lists
+
+See [lists](/styles/lists).
 
 ## Section break
 
