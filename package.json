@@ -86,7 +86,7 @@
     "serve-static": "^1.15.0",
     "sitemap": "^7.1.1",
     "slash": "^3.0.0",
-    "slugger": "^1.0.1",
+    "slug": "^8.2.3",
     "standard": "^17.1.0",
     "stylelint": "^15.10.3",
     "stylelint-config-gds": "^1.0.0",
