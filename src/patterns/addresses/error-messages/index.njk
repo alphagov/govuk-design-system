@@ -1,0 +1,75 @@
+---
+title: Pattern error – Addresses
+layout: layout-example.njk
+stylesheets:
+- address-wrapper.css
+---
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/fieldset/macro.njk" import govukFieldset %}
+
+{% call govukFieldset({
+  legend: {
+    text: "What is your address?",
+    classes: "govuk-fieldset__legend--l",
+    isPageHeading: true
+  }
+}) %}
+
+  {{ govukInput({
+    label: {
+      text: 'Address line 1'
+    },
+    id: "address-line-1",
+    name: "address-line-1",
+    errorMessage: {
+    text: "Enter address line 1"
+    },
+    autocomplete: "address-line1"
+  }) }}
+
+  {{ govukInput({
+    label: {
+      text: 'Address line 2 (optional)'
+    },
+    id: "address-line-2",
+    name: "address-line-2",
+    autocomplete: "address-line2"
+  }) }}
+
+  {{ govukInput({
+    label: {
+      text: "Town or city"
+    },
+    classes: "govuk-!-width-two-thirds",
+    id: "address-town",
+    name: "address-town",
+    errorMessage: {
+    text: "Enter town or city"
+    },
+    autocomplete: "address-level2"
+  }) }}
+
+  {{ govukInput({
+    label: {
+      text: "County (optional)"
+    },
+    classes: "govuk-!-width-two-thirds",
+    id: "address-county",
+    name: "address-county"
+  }) }}
+
+  {{ govukInput({
+    label: {
+      text: "Postcode"
+    },
+    classes: "govuk-input--width-10",
+    id: "address-postcode",
+    name: "address-postcode",
+    errorMessage: {
+    text: "Enter postcode"
+    },
+    autocomplete: "postal-code"
+  }) }}
+
+{% endcall %}
