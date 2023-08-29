@@ -71,7 +71,7 @@
     "js-beautify": "^1.14.9",
     "jstransformer-marked": "^1.4.0",
     "jstransformer-nunjucks": "^1.2.0",
-    "marked": "^7.0.4",
+    "marked": "^7.0.5",
     "metalsmith": "^2.6.1",
     "metalsmith-canonical": "^1.2.0",
     "multimatch": "^6.0.0",
