@@ -65,7 +65,11 @@ In production, you’ll need to do this to meet [WCAG 2.1 Level AA](https://www.
 
 Error messages should be styled like this:
 
-{{ example({group: "patterns", item: "addresses", example: "error", html: true, nunjucks: true, open: false, size: "s"}) }}
+{{ example({group: "patterns", item: "addresses", example: "error-messages", html: true, nunjucks: true, open: false, size: "xl"}) }}
+
+If a postcode entered is not a real postcode, use a message like this: 
+
+{{ example({group: "patterns", item: "addresses", example: "error-postcode", html: true, nunjucks: true, open: false, size: "s"}) }}
 
 Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
 
