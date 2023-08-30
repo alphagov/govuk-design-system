@@ -7,8 +7,6 @@ backlogIssueId: 96
 layout: layout-pane.njk
 ---
 
-<!-- [html-validate-disable no-dup-id -- See https://github.com/alphagov/govuk-design-system/issues/2260] -->
-
 {% from "_example.njk" import example %}
 
 The footer provides copyright, licensing and other information about your service.
@@ -58,5 +56,3 @@ Only add secondary GOV.UK navigation if you’re creating a GOV.UK service, and 
 ### Footer with links and secondary navigation
 
 {{ example({group: "components", item: "footer", example: "full", html: true, nunjucks: true, open: false, size: "xl"}) }}
-
-<!-- [html-validate-enable no-dup-id] -->
