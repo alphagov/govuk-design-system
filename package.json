@@ -43,7 +43,7 @@
     "@metalsmith/layouts": "^2.7.0",
     "@metalsmith/permalinks": "^2.5.1",
     "@metalsmith/postcss": "^5.4.1",
-    "@metalsmith/sass": "^1.6.0",
+    "@metalsmith/sass": "^1.7.0",
     "@rollup/plugin-commonjs": "^25.0.4",
     "@rollup/plugin-node-resolve": "^15.2.1",
     "@rollup/plugin-terser": "^0.4.3",
