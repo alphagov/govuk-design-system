@@ -14,6 +14,8 @@ Location: Online and <a href='https://dynamicearth.org.uk/plan-your-visit/gettin
 
 We plan to release tickets at the start of September. <a href='https://mailchi.mp/707ce8dec373/get-updated-by-email-govuk-design-system'>Sign up to our mailing list</a> to get updates.
 
+If you have any questions regarding this year's event, get in contact with team by emailing <a class="govuk-link" href="mailto:design-system-day-enquiries@digital.cabinet-office.gov.uk" data-hsupport="email">design-system-day-enquiries@digital.cabinet-office.gov.uk</a>.
+
 <!--
 
 Setting the following convention:
