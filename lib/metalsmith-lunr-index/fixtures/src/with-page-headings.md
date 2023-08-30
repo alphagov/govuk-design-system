@@ -2,8 +2,9 @@
 title: Page with headings
 section: Components
 showPageNav: true
-headingAliases:
-  Heading level 2: two
+headings:
+  - text: Heading level 2
+    aliases: two
 ---
 
 # Heading level 1
