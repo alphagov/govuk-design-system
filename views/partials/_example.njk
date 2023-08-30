@@ -104,8 +104,10 @@
               </thead>
               <tbody class="govuk-table__body">
                 {% for option in table.options -%}
+                  {# Option name only, without parent prefix -#}
+                  {% set optionName = option.name.split(" ") | last %}
                   <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">{{ option.name | safe }}</th>
+                    <th class="govuk-table__header" scope="row">{{ optionName | safe }}</th>
                     <td class="govuk-table__cell">{{ option.type }}</td>
                     <td class="govuk-table__cell">
                       {% if (option.required === true) %}
