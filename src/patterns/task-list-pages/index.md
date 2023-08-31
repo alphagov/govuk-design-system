@@ -22,7 +22,7 @@ Task list pages help users understand:
 
 There’s a [coded example of a task list page](https://prototype-kit.service.gov.uk/docs/templates/task-list) in the GOV.UK Prototype Kit. To use the example, get the following code from the Prototype Kit repository on GitHub:
 
-- [HTML from the task list page's HTML file](https://github.com/alphagov/govuk-prototype-kit/blob/main/lib/nunjucks/templates/task-list.html)
+- [HTML from the task list page's HTML file](https://github.com/alphagov/govuk-prototype-kit-task-list/blob/main/templates/task-list.html)
 - [custom styles from the task list page's SCSS file](https://github.com/alphagov/govuk-prototype-kit/blob/main/lib/assets/sass/patterns/_task-list.scss)
 
 ## When to use this pattern
