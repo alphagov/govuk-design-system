@@ -7,6 +7,8 @@ headings:
     aliases: two
   - text: Heading excluded in page nav
     ignoreInPageNav: true
+  - text: Heading excluded in search
+    ignoreInSearch: true
 ---
 
 # Heading level 1
@@ -18,3 +20,7 @@ headings:
 ## Heading included in page nav
 
 ## Heading excluded in page nav
+
+## Heading included in search
+
+## Heading excluded in search
