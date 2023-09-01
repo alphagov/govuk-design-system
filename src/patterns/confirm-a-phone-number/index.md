@@ -8,11 +8,12 @@ backlogIssueId: 25
 layout: layout-pane.njk
 ---
 
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 {% from "_example.njk" import example %}
 
 Check that a user has access to a specific mobile phone number using a security code sent by text message.
 
-{{ example({group: "patterns", item: "confirm-a-phone-number", example: "default", html: true, nunjucks: true, open: false, loading: "eager"}) }}
+{{ example({ group: "patterns", item: "confirm-a-phone-number", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 ## When to use this pattern
 
@@ -35,14 +36,13 @@ When the user creates an account, ask for their password and mobile phone number
 
 After saving the user’s password and mobile phone number, verify their mobile phone number by sending them a text message with a 5 digit code in this format:
 
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 {{ govukInsetText({
   text: "12345 is your [service name] security code"
 }) }}
 
 Then ask the user to enter this code:
 
-{{ example({group: "patterns", item: "confirm-a-phone-number", example: "default", titleSuffix: "second", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "patterns", item: "confirm-a-phone-number", example: "default", titleSuffix: "second", html: true, nunjucks: true, open: false }) }}
 
 Let the user enter the code in whatever format is familiar to them. Allow additional spaces, hyphens and dashes.
 
@@ -55,7 +55,7 @@ If the user enters an expired code that was sent more than:
 
 If the user follows the ‘Not received a text message?’ link, allow them to check which mobile number they entered, and to change it if necessary. This prevents the user becoming stuck if they entered a mobile number incorrectly. Do not allow the user to change the number when they're signing in.
 
-{{ example({group: "patterns", item: "confirm-a-phone-number", example: "resend-first-time", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "patterns", item: "confirm-a-phone-number", example: "resend-first-time", html: true, nunjucks: true, open: false }) }}
 
 When the user requests a new code, send them a new one. The new code should have its 15 minute time limit. The previous code should remain valid within its original time limit.
 
@@ -63,7 +63,6 @@ When the user requests a new code, send them a new one. The new code should have
 
 When the user returns to your service, verify their password first. Once they have entered this correctly, send a text message to their mobile phone with a 5 digit code in this format:
 
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 {{ govukInsetText({
   text: "12345 is your [service name] security code"
 }) }}
@@ -72,7 +71,7 @@ Ask the user to enter this code. Use the same pattern and time limit as when cre
 
 If they follow the ‘Not received a text message?’ link, show them a page allowing them to request a new code. Do not reveal the mobile number you sent it to.
 
-{{ example({group: "patterns", item: "confirm-a-phone-number", example: "resend", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "patterns", item: "confirm-a-phone-number", example: "resend", html: true, nunjucks: true, open: false }) }}
 
 You should tell the user what to do if they no longer have access to the phone used to sign up.
 
@@ -85,14 +84,14 @@ You can also follow the [domain-bound codes](https://developer.apple.com/news/?i
 Include the domain of the service on a new line, prefixed with an `@`, followed by a `#` symbol and the code, like this:
 
 {{ govukInsetText({
-html: "12345 is your [service name] security code<br><br>@www.example.service.gov.uk #12345"
+  html: "12345 is your [service name] security code<br><br>@www.example.service.gov.uk #12345"
 }) }}
 
 ### Error messages
 
 Style error messages like this:
 
-{{ example({group: "patterns", item: "confirm-a-phone-number", example: "error-incorrect", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "patterns", item: "confirm-a-phone-number", example: "error-incorrect", html: true, nunjucks: true, open: false }) }}
 
 If the user does not enter enough digits:
 <br>Say ‘You've not entered enough numbers, the code must be 5 numbers’.
@@ -105,7 +104,7 @@ If the user enters non-numeric characters, other than spaces:
 
 If the code has expired, show this message:
 
-{{ example({group: "patterns", item: "confirm-a-phone-number", example: "error-expired", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "patterns", item: "confirm-a-phone-number", example: "error-expired", html: true, nunjucks: true, open: false }) }}
 
 If the code was sent more than 2 hours ago, show the 'incorrect security code' message.
 

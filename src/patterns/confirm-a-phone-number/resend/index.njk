@@ -7,7 +7,6 @@ title: Request a new security code – Confirm a phone number
 {% from "govuk/components/button/macro.njk" import govukButton %}
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
-
 {{ govukBackLink({
   text: "Back",
   href: "#"
@@ -17,13 +16,11 @@ title: Request a new security code – Confirm a phone number
 
 <p class="govuk-body">Text messages sometimes take a few minutes to arrive. If you do not receive the text message, you can request a new one.</p>
 
-
 {{ govukDetails({
   summaryText: "I do not have access to the phone",
   html: '<p class="govuk-body">If you cannot access the phone number for this account, <a href="#" class="govuk-link">contact the Tax Credits Helpline</a> to get help signing in.</p>'
 }) }}
 
-{{ govukButton({text: "Request a new code"}) }}
-
-
-
+{{ govukButton({
+  text: "Request a new code"
+}) }}

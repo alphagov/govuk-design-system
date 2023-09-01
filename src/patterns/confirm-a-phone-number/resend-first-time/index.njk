@@ -8,7 +8,6 @@ title: Request a new security code (first time) – Confirm a phone number
 {% from "govuk/components/input/macro.njk" import govukInput %}
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
-
 {{ govukBackLink({
   text: "Back",
   href: "#"
@@ -37,5 +36,6 @@ title: Request a new security code (first time) – Confirm a phone number
   html: mobileNumberHtml
 }) }}
 
-
-{{ govukButton({text: "Request a new code"}) }}
+{{ govukButton({
+  text: "Request a new code"
+}) }}

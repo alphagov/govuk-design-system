@@ -12,7 +12,7 @@ layout: layout-pane.njk
 
 Let users check their answers before submitting information to a service.
 
-{{ example({group: "patterns", item: "check-answers", example: "default", html: true, nunjucks: true, open: false, size: "xl", loading: "eager"}) }}
+{{ example({ group: "patterns", item: "check-answers", example: "default", html: true, nunjucks: true, open: false, size: "xl", loading: "eager" }) }}
 
 ## When to use this pattern
 

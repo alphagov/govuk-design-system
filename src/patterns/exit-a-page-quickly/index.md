@@ -90,7 +90,7 @@ What you include will depend on your service and who uses it. But wherever pract
 
 ### Example of a safety content page
 
-{{ example({group: "patterns", item: "exit-a-page-quickly", example: "safety-content-example", html: true, nunjucks: true, open: false, size: "xl"}) }}
+{{ example({ group: "patterns", item: "exit-a-page-quickly", example: "safety-content-example", html: true, nunjucks: true, open: false, size: "xl" }) }}
 
 Useful resources to help write this safety advice include:
 

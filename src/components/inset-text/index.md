@@ -9,7 +9,7 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 
-{{ example({group: "components", item: "inset-text", example: "default", html: true, nunjucks: true, size: "s", loading: "eager" }) }}
+{{ example({ group: "components", item: "inset-text", example: "default", html: true, nunjucks: true, size: "s", loading: "eager" }) }}
 
 ## When to use this component
 
@@ -31,4 +31,4 @@ Use inset text very sparingly - it’s less effective if it’s overused.
 
 There are 2 ways to use the inset text component. You can use HTML or, if you’re using Nunjucks or the GOV.UK Prototype Kit, you can use the Nunjucks macro.
 
-{{ example({group: "components", item: "inset-text", example: "default", html: true, nunjucks: true, open: false, size: "s", titleSuffix: "second"}) }}
+{{ example({ group: "components", item: "inset-text", example: "default", html: true, nunjucks: true, open: false, size: "s", titleSuffix: "second" }) }}

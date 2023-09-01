@@ -11,7 +11,7 @@ layout: layout-pane.njk
 
 Use the skip link component to help keyboard-only users skip to the main content on a page.
 
-{{ example({group: "components", item: "skip-link", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
+{{ example({ group: "components", item: "skip-link", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 If you use the page template, you'll also get the skip link without having to add it, as it's included by default. However, if you want to customise the default skip link, read the [page template guidance about customising components](/styles/page-template/#changing-template-content).
 
@@ -31,4 +31,4 @@ The skip link component is visually hidden until a keyboard press activates it.
 
 There are 2 ways to use the skip link component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 
-{{ example({group: "components", item: "skip-link", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second"}) }}
+{{ example({ group: "components", item: "skip-link", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}

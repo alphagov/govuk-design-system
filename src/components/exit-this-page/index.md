@@ -15,7 +15,7 @@ Give users a way to quickly and safely exit a service, website or application.
 
 For service journeys, you must use this component with the pattern to help a user [Exit a page quickly](/patterns/exit-a-page-quickly/).
 
-{{ example({group: "components", item: "exit-this-page", example: "default", html: true, nunjucks: true, open: false, size: "s", loading: "eager" }) }}
+{{ example({ group: "components", item: "exit-this-page", example: "default", html: true, nunjucks: true, open: false, size: "s", loading: "eager" }) }}
 
 ## When to use this component
 
@@ -61,7 +61,7 @@ Add the code for the 'secondary link' into the layout file of your service. The 
 
 When the user interacts with the 'secondary link', it will perform the same action as pressing the button to activate Exit this Page.
 
-{{ example({group: "components", item: "exit-this-page", example: "secondary-link", html: true, nunjucks: true, open: false, size: "s"}) }}
+{{ example({ group: "components", item: "exit-this-page", example: "secondary-link", html: true, nunjucks: true, open: false, size: "s" }) }}
 
 The `href` for the 'secondary link' should be the same as the URL used for the button.
 

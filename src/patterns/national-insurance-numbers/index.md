@@ -8,13 +8,13 @@ backlogIssueId: 54
 layout: layout-pane.njk
 ---
 
-This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
-
 {% from "_example.njk" import example %}
+
+This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
 
 Ask users to provide their National Insurance number.
 
-{{ example({group: "patterns", item: "national-insurance-numbers", example: "default", html: true, nunjucks: true, open: false, size: "s", loading: "eager"}) }}
+{{ example({ group: "patterns", item: "national-insurance-numbers", example: "default", html: true, nunjucks: true, open: false, size: "s", loading: "eager" }) }}
 
 ## When to use this pattern
 
@@ -40,13 +40,13 @@ When asking for a National Insurance number:
 - avoid using ‘AB 12 34 56 C’ as an example because it belongs to a real person and use ‘QQ 12 34 56 C’ instead
 - set the `spellcheck` attribute to `false` so that browsers do not spellcheck the National Insurance number
 
-{{ example({group: "patterns", item: "national-insurance-numbers", example: "default", html: true, nunjucks: true, open: true, size: "s", titleSuffix: "second"}) }}
+{{ example({ group: "patterns", item: "national-insurance-numbers", example: "default", html: true, nunjucks: true, open: true, size: "s", titleSuffix: "second" }) }}
 
 ### Error messages
 
 Error messages should be styled like this:
 
-{{ example({group: "patterns", item: "national-insurance-numbers", example: "error", html: true, nunjucks: true, open: true, size: "s"}) }}
+{{ example({ group: "patterns", item: "national-insurance-numbers", example: "error", html: true, nunjucks: true, open: true, size: "s" }) }}
 
 Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
 

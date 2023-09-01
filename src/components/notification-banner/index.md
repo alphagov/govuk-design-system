@@ -13,7 +13,7 @@ statusMessage: This component is currently experimental because <a class="govuk-
 
 Use a notification banner to tell the user about something they need to know about, but that’s not directly related to the page content.
 
-{{ example({group: "components", item: "notification-banner", example: "default", html: true, nunjucks: true, open: false, size: "s", loading: "eager" }) }}
+{{ example({ group: "components", item: "notification-banner", example: "default", html: true, nunjucks: true, open: false, size: "s", loading: "eager" }) }}
 
 ## When to use this component
 
@@ -57,7 +57,7 @@ For example:
 - in a service that lets the user register or apply for something, they might need to know that it’s taking longer than usual to process applications because of an emergency
 - in an account-type service, the user might need to know that the service will be down for scheduled maintenance
 
-{{ example({group: "components", item: "notification-banner", example: "whole-service", html: true, nunjucks: true, open: false, size: "s"}) }}
+{{ example({ group: "components", item: "notification-banner", example: "whole-service", html: true, nunjucks: true, open: false, size: "s" }) }}
 
 If your service is on GOV.UK and it’s affected by an emergency, ask your department’s content team to [request a change to the service start page](https://www.gov.uk/guidance/contact-the-government-digital-service/request-a-thing#change-govuk-content).
 If your service is getting more demand than usual, check that you’ve set up [There is a problem with the service pages](/patterns/problem-with-the-service-pages/) and [Service unavailable pages](/patterns/service-unavailable-pages/), and the wording is up to date.
@@ -69,7 +69,7 @@ Use a ‘neutral’ notification banner if the user needs to know about somethin
 - in a case working system, the user might need to know that there are new cases waiting for their attention
 - in an account-type service, you might need to tell the user that there’s a deadline approaching or that a payment is overdue
 
-{{ example({group: "components", item: "notification-banner", example: "default", html: true, nunjucks: true, open: false, size: "s", titleSuffix: "second"}) }}
+{{ example({ group: "components", item: "notification-banner", example: "default", html: true, nunjucks: true, open: false, size: "s", titleSuffix: "second" }) }}
 
 ## Reacting to something the user has done
 
@@ -79,7 +79,7 @@ Using a notification banner is unlikely to be the right approach in a linear ser
 
 Use the green version of the notification banner to confirm that something they’re expecting to happen has happened.
 
-{{ example({group: "components", item: "notification-banner", example: "success", html: true, nunjucks: true, open: false, size: "s"}) }}
+{{ example({ group: "components", item: "notification-banner", example: "success", html: true, nunjucks: true, open: false, size: "s" }) }}
 
 Since you’re using the notification banner to tell the user about the outcome of something they’ve just done, add `role="alert"` so focus shifts to the notification banner on page load.
 

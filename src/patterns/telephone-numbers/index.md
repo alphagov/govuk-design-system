@@ -10,11 +10,11 @@ status: Experimental
 statusMessage: This pattern is currently experimental because <a class="govuk-link" href="#research-on-this-pattern">more research</a> is needed to validate it.
 ---
 
-This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
-
 {% from "_example.njk" import example %}
 
-{{ example({group: "patterns", item: "telephone-numbers", example: "default", html: true, nunjucks: true, open: false, loading: "eager"}) }}
+This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
+
+{{ example({ group: "patterns", item: "telephone-numbers", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 ## When to use this pattern
 
@@ -44,7 +44,7 @@ You will not normally need to use the `autocomplete` attribute in prototypes, as
 
 Error messages should be styled like this:
 
-{{ example({group: "patterns", item: "telephone-numbers", example: "error-empty-field", html: true, nunjucks: true, open: false, size: "s"}) }}
+{{ example({ group: "patterns", item: "telephone-numbers", example: "error-empty-field", html: true, nunjucks: true, open: false, size: "s" }) }}
 
 Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
 
@@ -60,7 +60,7 @@ Say ‘Enter a telephone number in the correct format’.
 
 Use the form label or hint text to tell users if you specifically need a UK, international or mobile telephone number.
 
-{{ example({group: "patterns", item: "telephone-numbers", example: "international", html: true, nunjucks: true, open: false, size: "s"}) }}
+{{ example({ group: "patterns", item: "telephone-numbers", example: "international", html: true, nunjucks: true, open: false, size: "s" }) }}
 
 ### Using example telephone numbers
 

@@ -9,7 +9,7 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 
-{{ example({group: "components", item: "select", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
+{{ example({ group: "components", item: "select", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 
@@ -29,13 +29,13 @@ If you use the component for questions, you should not pre-select any of the opt
 
 There are 2 ways to use the select component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 
-{{ example({group: "components", item: "select", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second"}) }}
+{{ example({ group: "components", item: "select", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
 
 ### Select with hint
 
 You can add hint text to help the user understand the options and choose one of them.
 
-{{ example({group: "components", item: "select", example: "with-hint", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "components", item: "select", example: "with-hint", html: true, nunjucks: true, open: false }) }}
 
 ### Error messages
 
@@ -43,7 +43,7 @@ Display an error message if the user has not selected an option.
 
 Style error messages as shown in the example:
 
-{{ example({group: "components", item: "select", example: "error", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "components", item: "select", example: "error", html: true, nunjucks: true, open: false }) }}
 
 ## Research on this component
 

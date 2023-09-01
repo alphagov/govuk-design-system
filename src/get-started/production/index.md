@@ -70,4 +70,4 @@ You can use them in your live application as either:
 
 You can get the code from the HTML or Nunjucks tabs below any examples:
 
-{{ example({group: "components", item: "button", example: "default", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "components", item: "button", example: "default", html: true, nunjucks: true, open: false }) }}

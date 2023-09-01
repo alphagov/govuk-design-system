@@ -13,7 +13,7 @@ Use the back link component to help users go back to the previous page in a mult
 
 Although browsers have a back button, some sites break when you use it - so many users avoid it, instead of losing their progress in a service. Also, not all users are aware of the back button.
 
-{{ example({group: "components", item: "back-link", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
+{{ example({ group: "components", item: "back-link", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 
@@ -35,7 +35,7 @@ If this is not possible, you should hide the back link when JavaScript is not av
 
 There are 2 ways to use the back link component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 
-{{ example({group: "components", item: "back-link", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second"}) }}
+{{ example({ group: "components", item: "back-link", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
 
 Using the default link text ('Back') is ideal for services with a simple journey. For example, [applying for a National Insurance number](https://www.gov.uk/apply-national-insurance-number). Users will only ever go back to the previous page in the service.
 
@@ -47,4 +47,4 @@ Use the `govuk-back-link--inverse` modifier class to show a white link on a dark
 
 Make sure all users can see the back link — the background colour [must have a contrast ratio of at least 4.5:1](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html) with white.
 
-{{ example({group: "components", item: "back-link", example: "inverse", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "components", item: "back-link", example: "inverse", html: true, nunjucks: true, open: false }) }}

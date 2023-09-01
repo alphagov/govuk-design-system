@@ -27,7 +27,7 @@ You’ll get updates to the page template when we update GOV.UK Frontend.
 
 This example shows the minimum required for a GOV.UK page.
 
-{{ example({group: "styles", item: "page-template", example: "default", customCode: true, html: true, nunjucks: true, open: false, size: "l", loading: "eager"}) }}
+{{ example({ group: "styles", item: "page-template", example: "default", customCode: true, html: true, nunjucks: true, open: false, size: "l", loading: "eager" }) }}
 
 ## Customised page template
 
@@ -36,7 +36,7 @@ You can customise the page template, for example, by:
 - adding a service name and navigation
 - including a [back link](/components/back-link/) or [phase banner](/components/phase-banner/)
 
-{{ example({group: "styles", item: "page-template", example: "custom", customCode: true, html: true, nunjucks: true, open: false, size: "xl" }) }}
+{{ example({ group: "styles", item: "page-template", example: "custom", customCode: true, html: true, nunjucks: true, open: false, size: "xl" }) }}
 
 ## Changing template content
 
@@ -256,4 +256,4 @@ To change the components that are included in the page template by default, set 
 
 #### Exploded view of the page template block areas
 
-{{ example({group: "styles", item: "page-template", example: "block-areas", html: false, open: false }) }}
+{{ example({ group: "styles", item: "page-template", example: "block-areas", html: false, open: false }) }}

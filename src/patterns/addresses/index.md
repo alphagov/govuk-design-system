@@ -8,9 +8,9 @@ backlogIssueId: 31
 layout: layout-pane.njk
 ---
 
-This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
-
 {% from "_example.njk" import example %}
+
+This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
 
 Help users provide an address using one of the following:
 
@@ -20,7 +20,7 @@ Help users provide an address using one of the following:
 
 ## Multiple text inputs
 
-{{ example({group: "patterns", item: "addresses", example: "multiple", html: true, nunjucks: true, open: true, size: "xl", loading: "eager"}) }}
+{{ example({ group: "patterns", item: "addresses", example: "multiple", html: true, nunjucks: true, open: true, size: "xl", loading: "eager" }) }}
 
 ### When to use multiple text inputs
 
@@ -65,11 +65,11 @@ In production, you’ll need to do this to meet [WCAG 2.1 Level AA](https://www.
 
 Error messages should be styled like this:
 
-{{ example({group: "patterns", item: "addresses", example: "error-messages", html: true, nunjucks: true, open: false, size: "xl"}) }}
+{{ example({ group: "patterns", item: "addresses", example: "error-messages", html: true, nunjucks: true, open: false, size: "xl" }) }}
 
-If a postcode entered is not a real postcode, use a message like this: 
+If a postcode entered is not a real postcode, use a message like this:
 
-{{ example({group: "patterns", item: "addresses", example: "error-postcode", html: true, nunjucks: true, open: false, size: "s"}) }}
+{{ example({ group: "patterns", item: "addresses", example: "error-postcode", html: true, nunjucks: true, open: false, size: "s" }) }}
 
 Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
 
@@ -108,7 +108,7 @@ You should let users enter postcodes that contain:
 
 ## Textarea
 
-{{ example({group: "patterns", item: "addresses", example: "textarea", html: true, nunjucks: true, open: true, size: "s"}) }}
+{{ example({ group: "patterns", item: "addresses", example: "textarea", html: true, nunjucks: true, open: true, size: "s" }) }}
 
 ### When to use textarea
 

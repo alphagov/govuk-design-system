@@ -7,13 +7,14 @@ layout: layout-pane.njk
 order: 5
 ---
 
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
 The GOV.UK Design System team uses a service called GitHub to manage content in the GOV.UK Design System.
 
 This guide explains how to propose a change to the Design System's content. You'll need a GitHub account to do this.
 
 If you do not have one already, you can [create a GitHub account for free](https://github.com/).
 
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 {{ govukInsetText({
   text: "Rest assured that it's impossible for you to break the Design System by proposing changes. The GOV.UK Design System team reviews all changes before publishing."
 }) }}

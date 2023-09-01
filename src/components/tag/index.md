@@ -11,7 +11,7 @@ layout: layout-pane.njk
 
 Use the tag component to show users the status of something.
 
-{{ example({group: "components", item: "tag", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
+{{ example({ group: "components", item: "tag", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 
@@ -31,13 +31,13 @@ The [task list pattern](/patterns/task-list-pages/) has an example of how to sho
 
 Or it can make sense to have two statuses. For example you may find that there’s a need to have one tag for ‘Active’ users and one for ‘Inactive’ users.
 
-{{ example({group: "components", item: "tag", example: "multiple-tags", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "components", item: "tag", example: "multiple-tags", html: true, nunjucks: true, open: false }) }}
 
 ## Showing multiple statuses
 
 Tags should be helpful to users. The more you add, the harder it is for users to remember them. So start with the smallest number of statuses you think might work, then add more if your user research shows there’s a need for them.
 
-{{ example({group: "components", item: "tag", example: "coloured-tags", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "components", item: "tag", example: "coloured-tags", html: true, nunjucks: true, open: false }) }}
 
 ## Using colour with tags
 
@@ -51,7 +51,7 @@ Because tags with solid colours tend to stand out more, it’s usually best to a
 
 If you need more tag colours, you can use the following tints.
 
-{{ example({group: "components", item: "tag", example: "all-colours", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "components", item: "tag", example: "all-colours", html: true, nunjucks: true, open: false }) }}
 
 ## Research on this component
 

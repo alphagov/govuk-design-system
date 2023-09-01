@@ -100,7 +100,7 @@ If the user selects ‘No, I’ll come back to it later,’ mark the task as 'In
 
 If the user selects ‘Yes, I’ve completed this section,’ mark the task as 'Completed'.
 
-{{ example({group: "patterns", item: "task-list-pages", example: "have-you-completed-this-section", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "patterns", item: "task-list-pages", example: "have-you-completed-this-section", html: true, nunjucks: true, open: false }) }}
 
 Always allow users to go back into a task to change their answer.
 
@@ -108,7 +108,7 @@ Always allow users to go back into a task to change their answer.
 
 If the user does not select an option, show an [error message](/components/error-message/) to say: 'Select whether you’ve completed this section'.
 
-{{ example({group: "patterns", item: "task-list-pages", example: "have-you-completed-this-section-error", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "patterns", item: "task-list-pages", example: "have-you-completed-this-section-error", html: true, nunjucks: true, open: false }) }}
 
 ## Research on this pattern
 
