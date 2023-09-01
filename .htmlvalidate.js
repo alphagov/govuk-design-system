@@ -1,8 +1,8 @@
 module.exports = {
   extends: ['html-validate:recommended'],
   rules: {
-    // We don't use boolean attributes consistently – buttons currently
-    // use disabled="disabled"
+    // Allow components to set boolean attributes with empty values
+    // e.g. using `params.attributes` to set <fieldset hidden="">
     'attribute-boolean-style': 'off',
 
     // Allow for multiple buttons in the same form to have the same name
