@@ -9,6 +9,7 @@ coverage/
 
 # Build output
 deploy/public/
+fixtures/build/
 
 # Files to ignore
 package-lock.json
