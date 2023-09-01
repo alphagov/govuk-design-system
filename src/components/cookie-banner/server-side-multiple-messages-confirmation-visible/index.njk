@@ -18,7 +18,6 @@ layout: layout-example.njk
   <p class="govuk-body">You’ve rejected additional cookies. You can <a class="govuk-link" href="#">change your cookie settings</a> at any time.</p>
 {% endset %}
 
-<form method="POST">
 {{ govukCookieBanner({
   ariaLabel: "Cookies on [name of service]",
   messages: [
@@ -68,4 +67,3 @@ layout: layout-example.njk
     }
   ]
 }) }}
-</form>

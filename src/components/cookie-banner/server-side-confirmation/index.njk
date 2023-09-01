@@ -9,20 +9,18 @@ layout: layout-example.njk
   <p class="govuk-body">You’ve accepted additional cookies. You can <a class="govuk-link" href="#">change your cookie settings</a> at any time.</p>
 {% endset %}
 
-<form method="POST">
-  {{ govukCookieBanner({
-    ariaLabel: "Cookies on [name of service]",
-    messages: [
-      {
-        html: acceptHtml,
-        actions: [
+{{ govukCookieBanner({
+  ariaLabel: "Cookies on [name of service]",
+  messages: [
+    {
+      html: acceptHtml,
+      actions: [
         {
           text: "Hide cookie message",
           href: "#",
           type: "button"
         }
-        ]
-      }
-    ]
-  }) }}
-</form>
+      ]
+    }
+  ]
+}) }}
