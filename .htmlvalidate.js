@@ -1,10 +1,6 @@
 module.exports = {
   extends: ['html-validate:recommended'],
   rules: {
-    // In some Nunjucks macro calls, we use single quotes for attributes since
-    // we wrap macro string properties in double quotes.
-    'attr-quotes': ['error', { style: 'any' }],
-
     // We don't use boolean attributes consistently – buttons currently
     // use disabled="disabled"
     'attribute-boolean-style': 'off',
