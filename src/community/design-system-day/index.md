@@ -10,9 +10,9 @@ order: 11
 <img src="/community/images/dsd23-announcement-banner.svg" alt="Design System Day 2023 logo" class="app-image--no-border govuk-!-margin-bottom-6" loading="lazy">
 
 Dates: 10 and 11 October 2023
-Location: Online and <a href='https://dynamicearth.org.uk/plan-your-visit/getting-here/'>Dynamic Earth</a>, Edinburgh
+Location: Online and <a href="https://dynamicearth.org.uk/plan-your-visit/getting-here/">Dynamic Earth</a>, Edinburgh
 
-We plan to release tickets at the start of September. <a href='https://mailchi.mp/707ce8dec373/get-updated-by-email-govuk-design-system'>Sign up to our mailing list</a> to get updates.
+We plan to release tickets at the start of September. <a href="https://mailchi.mp/707ce8dec373/get-updated-by-email-govuk-design-system">Sign up to our mailing list</a> to get updates.
 
 <!--
 
@@ -80,6 +80,6 @@ Joining instructions, etc.
 
 ## About the GOV.UK Design System community
 
-The GOV.UK Design System <a href='/community/'>relies on a strong cross-government community</a> to make sure it represents the latest research, design, and development work used in digital services.
+The GOV.UK Design System <a href="/community/">relies on a strong cross-government community</a> to make sure it represents the latest research, design, and development work used in digital services.
 
 To bring our community together, the GOV.UK Design System team regularly hosts events, workshops, and co-design sprints. Our team is always on the lookout for ways to engage users in different teams and departments to help strengthen the work we do, and to help to build better products.
