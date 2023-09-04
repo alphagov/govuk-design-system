@@ -59,7 +59,7 @@
     "eslint-plugin-markdown": "^3.0.1",
     "eslint-plugin-n": "^16.0.2",
     "eslint-plugin-promise": "^6.1.1",
-    "glob": "^10.3.3",
+    "glob": "^10.3.4",
     "gray-matter": "^4.0.2",
     "highlight.js": "^11.8.0",
     "html-validate": "^8.2.0",
