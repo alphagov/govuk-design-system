@@ -33,7 +33,7 @@ To set the contents of a label as the page heading, you need to put the `<label>
 
 You then need to apply classes to the `<label>` to make it look like a heading.
 
-{{ example({group: "get-started", item: "labels-legends-headings", example: "label-h1", html: true, nunjucks: true, open: false, loading: "eager"}) }}
+{{ example({ group: "get-started", item: "labels-legends-headings", example: "label-h1", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 ## Legends as page headings
 
@@ -41,7 +41,7 @@ To set the contents of a legend as the page heading, you need to put the `<legen
 
 As with labels, you also need to apply classes to the `<legend>` to make it look like a heading.
 
-{{ example({group: "get-started", item: "labels-legends-headings", example: "legend-h1", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "get-started", item: "labels-legends-headings", example: "legend-h1", html: true, nunjucks: true, open: false }) }}
 
 ## Styling options for labels and legends
 
@@ -49,8 +49,8 @@ Instead of styling them as page headings, you can apply other classes to legends
 
 ### Styling labels
 
-{{ example({group: "get-started", item: "labels-legends-headings", example: "label-m-s", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "get-started", item: "labels-legends-headings", example: "label-m-s", html: true, nunjucks: true, open: false }) }}
 
 ### Styling legends
 
-{{ example({group: "get-started", item: "labels-legends-headings", example: "legend-m-s", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "get-started", item: "labels-legends-headings", example: "legend-m-s", html: true, nunjucks: true, open: false }) }}

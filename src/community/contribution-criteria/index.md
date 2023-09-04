@@ -35,8 +35,8 @@ To be successful, proposals need to show that the component or pattern being sug
         text: "Useful"
       },
       {
-        html: "<p> There is evidence that this component or pattern would be useful for many teams or services.</p>
-        <p class='govuk-!-margin-bottom-0'>Evidence could be screenshots or links to versions of it being used in different services.</p>"
+        html: '<p> There is evidence that this component or pattern would be useful for many teams or services.</p>
+          <p class="govuk-!-margin-bottom-0">Evidence could be screenshots or links to versions of it being used in different services.</p>'
       }
     ],
     [
@@ -44,8 +44,8 @@ To be successful, proposals need to show that the component or pattern being sug
         text: "Unique"
       },
       {
-        html: "<p> It does not replicate something already in the Design System. </p>
-        <p class='govuk-!-margin-bottom-0'>If it’s intended to replace an existing component or pattern, there is evidence to show that it’s better than the existing version.</p>"
+        html: '<p> It does not replicate something already in the Design System. </p>
+          <p class="govuk-!-margin-bottom-0">If it’s intended to replace an existing component or pattern, there is evidence to show that it’s better than the existing version.</p>'
       }
     ]
   ]
@@ -76,8 +76,8 @@ Before a new component or pattern is published the working group reviews the imp
         text: "Usable"
       },
       {
-        html: "<p>It has been tested  in user research and shown to work with a representative sample of users, including those with disabilities.</p>
-        <p class='govuk-!-margin-bottom-0'>Components and patterns which are not proven usable can be published as experimental. But they must be clearly based on relevant user research from other organisations and best practice, and meet the other criteria.</p>"
+        html: '<p>It has been tested  in user research and shown to work with a representative sample of users, including those with disabilities.</p>
+          <p class="govuk-!-margin-bottom-0">Components and patterns which are not proven usable can be published as experimental. But they must be clearly based on relevant user research from other organisations and best practice, and meet the other criteria.</p>'
       }
     ],
     [
@@ -85,9 +85,9 @@ Before a new component or pattern is published the working group reviews the imp
         text: "Consistent"
       },
       {
-        html: "<p>It reuses existing styles and components in the Design System where relevant.</p>
-        <p>Both the guidance and any content included in examples must follow the <a href='https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style'>GOV.UK content style guide</a>.</p>
-        <p class='govuk-!-margin-bottom-0'>If there is code, it follows the <a href='https://github.com/alphagov/govuk-frontend/blob/main/CONTRIBUTING.md#conventions-to-follow'>GOV.UK Frontend coding standards</a> and is ready to merge in GOV.UK Frontend.</p>"
+        html: '<p>It reuses existing styles and components in the Design System where relevant.</p>
+          <p>Both the guidance and any content included in examples must follow the <a href="https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style">GOV.UK content style guide</a>.</p>
+          <p class="govuk-!-margin-bottom-0">If there is code, it follows the <a href="https://github.com/alphagov/govuk-frontend/blob/main/CONTRIBUTING.md#conventions-to-follow">GOV.UK Frontend coding standards</a> and is ready to merge in GOV.UK Frontend.</p>'
       }
     ],
     [
@@ -95,9 +95,9 @@ Before a new component or pattern is published the working group reviews the imp
         text: "Versatile"
       },
       {
-        html: "<p>The implementation is versatile enough that the component or pattern can be used in a range of different services that may need it.</p>
-        <p>For example, a versatile date input component could be set up to ask for a year only, a month and year only, a precise date, or any other combination you may need.</p>
-        <p class='govuk-!-margin-bottom-0'>The component or pattern must also have been tested and shown to work with a range of <a href='https://www.gov.uk/service-manual/technology/designing-for-different-browsers-and-devices'>browsers, assistive technologies and devices</a>.</p>"
+        html: '<p>The implementation is versatile enough that the component or pattern can be used in a range of different services that may need it.</p>
+          <p>For example, a versatile date input component could be set up to ask for a year only, a month and year only, a precise date, or any other combination you may need.</p>
+          <p class="govuk-!-margin-bottom-0">The component or pattern must also have been tested and shown to work with a range of <a href="https://www.gov.uk/service-manual/technology/designing-for-different-browsers-and-devices">browsers, assistive technologies and devices</a>.</p>'
       }
     ]
   ]

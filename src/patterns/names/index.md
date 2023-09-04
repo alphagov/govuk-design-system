@@ -10,7 +10,7 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 
-{{ example({group: "patterns", item: "names", example: "default", html: true, nunjucks: true, open: false, loading: "eager"}) }}
+{{ example({ group: "patterns", item: "names", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 ## When to use this pattern
 
@@ -21,7 +21,7 @@ Only ask for people’s names if you need that information to deliver a service.
 
 Make it as easy as possible for a user to enter their name.
 
-{{ example({group: "patterns", item: "names", example: "default", html: true, nunjucks: true, open: true, titleSuffix: "second"}) }}
+{{ example({ group: "patterns", item: "names", example: "default", html: true, nunjucks: true, open: true, titleSuffix: "second" }) }}
 
 ### Make sure the fields work for most of your users
 
@@ -84,7 +84,7 @@ You will not normally need to use the `autocomplete` attribute in prototypes, as
 
 Sometimes, browsers will spellcheck the information a user enters into a text input. To make sure user's names will not be spellchecked, set the `spellcheck` attribute to `false` as shown in this example.
 
-{{ example({group: "patterns", item: "names", example: "default", html: true, nunjucks: true, open: true, displayExample: false, titleSuffix: "third"}) }}
+{{ example({ group: "patterns", item: "names", example: "default", html: true, nunjucks: true, open: true, displayExample: false, titleSuffix: "third" }) }}
 
 ### Avoid asking for a person’s title
 
@@ -110,7 +110,7 @@ Avoid making it hard for users to change their name. As well as causing them dis
 
 Error messages should be styled like this:
 
-{{ example({group: "patterns", item: "names", example: "error", html: true, nunjucks: true, open: true}) }}
+{{ example({ group: "patterns", item: "names", example: "error", html: true, nunjucks: true, open: true }) }}
 
 Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
 

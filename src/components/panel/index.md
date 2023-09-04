@@ -11,7 +11,7 @@ layout: layout-pane.njk
 
 The panel component is a visible container used on confirmation or results pages to highlight important content.
 
-{{ example({group: "components", item: "panel", example: "default", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}
+{{ example({ group: "components", item: "panel", example: "default", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}
 
 ## When to use this component
 
@@ -27,7 +27,7 @@ Never use the panel component to highlight important information within body con
 
 There are 2 ways to use the panel component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 
-{{ example({group: "components", item: "panel", example: "default", html: true, nunjucks: true, open: false, size: "m", titleSuffix: "second"}) }}
+{{ example({ group: "components", item: "panel", example: "default", html: true, nunjucks: true, open: false, size: "m", titleSuffix: "second" }) }}
 
 ### How to write heading text
 

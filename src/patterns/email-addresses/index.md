@@ -8,11 +8,11 @@ backlogIssueId: 45
 layout: layout-pane.njk
 ---
 
-This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
-
 {% from "_example.njk" import example %}
 
-{{ example({group: "patterns", item: "email-addresses", example: "default", html: true, nunjucks: true, open: false, size: "s", loading: "eager"}) }}
+This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
+
+{{ example({ group: "patterns", item: "email-addresses", example: "default", html: true, nunjucks: true, open: false, size: "s", loading: "eager" }) }}
 
 ## When to use this pattern
 
@@ -28,7 +28,7 @@ When asking users for their email address, you must:
 
 You may also need to check that users have access to the email account they give you.
 
-{{ example({group: "patterns", item: "email-addresses", example: "default", html: true, nunjucks: true, open: true, size: "s", titleSuffix: "second"}) }}
+{{ example({ group: "patterns", item: "email-addresses", example: "default", html: true, nunjucks: true, open: true, size: "s", titleSuffix: "second" }) }}
 
 ### Tell users why you want the email address
 
@@ -73,7 +73,7 @@ However, these are disruptive and should be avoided as far as possible.
 
 Error messages should be styled like this:
 
-{{ example({group: "patterns", item: "email-addresses", example: "error", html: true, nunjucks: true, open: false, size: "s"}) }}
+{{ example({ group: "patterns", item: "email-addresses", example: "error", html: true, nunjucks: true, open: false, size: "s" }) }}
 
 Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
 

@@ -11,7 +11,7 @@ layout: layout-pane.njk
 
 Help users know how much text they can enter when there is a limit on the number of characters.
 
-{{ example({group: "components", item: "character-count", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
+{{ example({ group: "components", item: "character-count", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 
@@ -46,13 +46,13 @@ This component uses JavaScript. If JavaScript is not available, users will see a
 
 There are 2 ways to use the character count component. You can use HTML or, if you’re using Nunjucks or the GOV.UK Prototype Kit, you can use the Nunjucks macro.
 
-{{ example({group: "components", item: "character-count", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second"}) }}
+{{ example({ group: "components", item: "character-count", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
 
 ### If you’re asking more than one question on the page
 
 If you're asking more than one question on the page, do not set the contents of the `<label>` as the page heading. Read more about [asking multiple questions on question pages](/patterns/question-pages/#asking-multiple-questions-on-a-page).
 
-{{ example({group: "components", item: "character-count", example: "without-heading", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "components", item: "character-count", example: "without-heading", html: true, nunjucks: true, open: false }) }}
 
 ### Consider if a word count is more helpful
 
@@ -60,8 +60,7 @@ In some cases it may be more helpful to show a word count. For example, if your 
 
 Do this by setting `data-maxwords` in the component markup. For example, `data-maxwords="150"` will set a word limit of 150.
 
-{% from "_example.njk" import example %}
-{{ example({group: "components", item: "character-count", example: "word-count", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "components", item: "character-count", example: "word-count", html: true, nunjucks: true, open: false }) }}
 
 ### Avoid narrow limits
 
@@ -75,16 +74,13 @@ To do this, set the threshold in the component markup as a percentage. For examp
 
 Screen reader users will hear the character limit when they first interact with a textarea using the threshold option. Sighted users will not see anything until the count message is shown — though you might choose to include the character limit in the hint text.
 
-{% from "_example.njk" import example %}
-{{ example({group: "components", item: "character-count", example: "threshold", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "components", item: "character-count", example: "threshold", html: true, nunjucks: true, open: false }) }}
 
 ### Error messages
 
 Error messages should be styled like this:
 
-{% from "_example.njk" import example %}
-
-{{ example({group: "components", item: "character-count", example: "error", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "components", item: "character-count", example: "error", html: true, nunjucks: true, open: false }) }}
 
 If a user tries to send their response with too many characters, you must show an error message above the field as well as the count message below it.
 

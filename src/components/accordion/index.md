@@ -13,7 +13,7 @@ statusMessage: This component is currently experimental because <a class="govuk-
 
 The accordion component lets users show and hide sections of related content on a page.
 
-{{ example({group: "components", item: "accordion", example: "default", html: true, nunjucks: true, open: false, size: "xl", loading: "eager" }) }}
+{{ example({ group: "components", item: "accordion", example: "default", html: true, nunjucks: true, open: false, size: "xl", loading: "eager" }) }}
 
 ## When to use this component
 
@@ -79,7 +79,7 @@ The heading button includes all of these areas:
 
 For users of screen readers, all the text in the button will be read as a single statement (separated by commas to allow for slight pauses). There’s also some visually hidden content in the heading text to help announce the call-to-action as 'show this section' or 'hide this section'.
 
-{{ example({group: "components", item: "accordion", example: "default", html: true, nunjucks: true, open: false, size: "xl", titleSuffix: "second"}) }}
+{{ example({ group: "components", item: "accordion", example: "default", html: true, nunjucks: true, open: false, size: "xl", titleSuffix: "second" }) }}
 
 #### Write clear button text
 
@@ -94,7 +94,7 @@ Only add a summary line if it’s actually needed, as it's likely to make the bu
 
 If you’ve decided that you need the summary line, you must make it as short as possible.
 
-{{ example({group: "components", item: "accordion", example: "with-summary-section", html: true, nunjucks: true, open: false, size: "xl"}) }}
+{{ example({ group: "components", item: "accordion", example: "with-summary-section", html: true, nunjucks: true, open: false, size: "xl" }) }}
 
 #### Structure section headings with the rest of the page
 

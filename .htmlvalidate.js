@@ -1,12 +1,8 @@
 module.exports = {
   extends: ['html-validate:recommended'],
   rules: {
-    // In some Nunjucks macro calls, we use single quotes for attributes since
-    // we wrap macro string properties in double quotes.
-    'attr-quotes': ['error', { style: 'any' }],
-
-    // We don't use boolean attributes consistently – buttons currently
-    // use disabled="disabled"
+    // Allow components to set boolean attributes with empty values
+    // e.g. using `params.attributes` to set <fieldset hidden="">
     'attribute-boolean-style': 'off',
 
     // Allow for multiple buttons in the same form to have the same name
@@ -15,9 +11,6 @@ module.exports = {
       'error',
       { shared: ['radio', 'checkbox', 'submit', 'button'] }
     ],
-
-    // Allow pattern attribute on input type="number"
-    'input-attributes': 'off',
 
     // Flags most of our page titles because we append "- GOV.UK Design System"
     // to all of them.
@@ -36,11 +29,6 @@ module.exports = {
 
     // More hassle than it's worth 👾
     'no-trailing-whitespace': 'off',
-
-    // We still support creating `input type=button` with the button
-    // component, but you have to explicitly choose to use them over
-    // buttons
-    'prefer-button': 'off',
 
     // Allow use of roles where there are native elements that would give
     // us that role automatically, e.g. <section> instead of
@@ -84,17 +72,6 @@ module.exports = {
         attributes: {
           type: { required: false }
         }
-      },
-      // Horrible hack to allow nested form elements for 3 current instances:
-      // https://github.com/alphagov/govuk-design-system/issues/2609
-      form: {
-        permittedDescendants: [{}]
-      },
-      // Allow h1 to have children. This is because we have status tags within
-      // the <h1>. There's an issue to fix this:
-      // https://github.com/alphagov/govuk-design-system/issues/2606
-      h1: {
-        permittedContent: ['div', 'label', 'span']
       },
       // We added a summary to fix an accessibility issue, though we could
       // probably revisit.

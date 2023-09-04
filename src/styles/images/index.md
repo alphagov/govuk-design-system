@@ -212,7 +212,7 @@ Do not write alt text that:
 - repeats information from the page
 - includes extra information not in the image
 
-{{ example({group: "styles", item: "images", example: "alt-text", html: true, open: true, size: "l"}) }}
+{{ example({ group: "styles", item: "images", example: "alt-text", html: true, open: true, size: "l" }) }}
 
 ## Research on images
 

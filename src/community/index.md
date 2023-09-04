@@ -55,7 +55,7 @@ Here’s a few places to join the discussions that help shape the Design System.
       alt: "Github propose a change illustration.",
       title: "Propose a change to pages"
     }) %}
-      <p>Anyone can suggest an improvement, report a bug or correct an error on our pages. Look for the ‘Help improve this page’ section at the end of each page to <a href='https://design-system.service.gov.uk/community/propose-a-content-change-using-github/'>propose a change using GitHub</a>.</p>
+      <p>Anyone can suggest an improvement, report a bug or correct an error on our pages. Look for the ‘Help improve this page’ section at the end of each page to <a href="https://design-system.service.gov.uk/community/propose-a-content-change-using-github/">propose a change using GitHub</a>.</p>
     {% endcall %}
   </div>
 </div>
@@ -97,8 +97,8 @@ Join one of our regular events where we share ideas and work together to solve c
       large: true
     }) %}
       <p>Every year, we host an online conference to collaborate and share knowledge about design systems with like-minded people, covering topics like accessibility, community and decision-making.</p>
-      <p>Design System Day 2023 will take place on 10 and 11 October. Find out about the <a href='/community/design-system-day/'>speakers and sessions at Design System Day 2023</a>.</p>
-      <p>View the videos, slides and notes for <a href='/community/design-system-day-2022/'>Design System Day 2022</a>.</p>
+      <p>Design System Day 2023 will take place on 10 and 11 October. Find out about the <a href="/community/design-system-day/">speakers and sessions at Design System Day 2023</a>.</p>
+      <p>View the videos, slides and notes for <a href="/community/design-system-day-2022/">Design System Day 2022</a>.</p>
     {% endcall %}
   </div>
 </div>

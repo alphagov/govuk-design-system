@@ -10,11 +10,11 @@ status: Experimental
 statusMessage: This pattern is currently experimental because <a class="govuk-link" href="#next-steps">more research</a> is needed to validate it.
 ---
 
-This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
-
 {% from "_example.njk" import example %}
 
-{{ example({group: "patterns", item: "bank-details", example: "default", html: true, nunjucks: true, open: false, size: "xl", loading: "eager"}) }}
+This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
+
+{{ example({ group: "patterns", item: "bank-details", example: "default", html: true, nunjucks: true, open: false, size: "xl", loading: "eager" }) }}
 
 ## When to use this pattern
 
@@ -56,7 +56,7 @@ Let users choose to get paid by an alternative method.
 
 Adapt this question depending on what payment options your users need and what your service can support.
 
-{{ example({group: "patterns", item: "bank-details", example: "branch", html: true, nunjucks: true, open: false, size: "xl"}) }}
+{{ example({ group: "patterns", item: "bank-details", example: "branch", html: true, nunjucks: true, open: false, size: "xl" }) }}
 
 ### International bank account details
 
@@ -76,13 +76,13 @@ Only show the fields that relate to that country.
 
 Most countries need the IBAN and BIC, sometimes known as the SWIFT code.
 
-{{ example({group: "patterns", item: "bank-details", example: "international", html: true, nunjucks: true, open: false, size: "xl"}) }}
+{{ example({ group: "patterns", item: "bank-details", example: "international", html: true, nunjucks: true, open: false, size: "xl" }) }}
 
 ### Error messages
 
 Error messages should be styled like this:
 
-{{ example({group: "patterns", item: "bank-details", example: "error", html: true, nunjucks: true, open: false, size: "s"}) }}
+{{ example({ group: "patterns", item: "bank-details", example: "error", html: true, nunjucks: true, open: false, size: "s" }) }}
 
 Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
 

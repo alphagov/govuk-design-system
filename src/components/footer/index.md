@@ -11,7 +11,7 @@ layout: layout-pane.njk
 
 The footer provides copyright, licensing and other information about your service.
 
-{{ example({group: "components", item: "footer", example: "default", id: "default-1", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}
+{{ example({ group: "components", item: "footer", example: "default", id: "default-1", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}
 
 If you use the page template, you'll also get the footer without having to add it, as it's included by default. However, if you want to customise the default footer, read the [page template guidance about customising components](/styles/page-template/#changing-template-content).
 
@@ -27,11 +27,11 @@ Make it clear whether content is available for re-use - and if it is, under what
 
 ### Footer without links
 
-{{ example({group: "components", item: "footer", example: "default", titleSuffix: "second", html: true, nunjucks: true, open: false, size: "m", titleSuffix: "second"}) }}
+{{ example({ group: "components", item: "footer", example: "default", titleSuffix: "second", html: true, nunjucks: true, open: false, size: "m", titleSuffix: "second" }) }}
 
 ### Footer with links
 
-{{ example({group: "components", item: "footer", example: "with-meta", html: true, nunjucks: true, open: false, size: "m"}) }}
+{{ example({ group: "components", item: "footer", example: "with-meta", html: true, nunjucks: true, open: false, size: "m" }) }}
 
 ## Adding links
 
@@ -51,8 +51,8 @@ Only add secondary GOV.UK navigation if you’re creating a GOV.UK service, and 
 
 ### Footer with secondary navigation
 
-{{ example({group: "components", item: "footer", example: "with-navigation", html: true, nunjucks: true, open: false, size: "xl"}) }}
+{{ example({ group: "components", item: "footer", example: "with-navigation", html: true, nunjucks: true, open: false, size: "xl" }) }}
 
 ### Footer with links and secondary navigation
 
-{{ example({group: "components", item: "footer", example: "full", html: true, nunjucks: true, open: false, size: "xl"}) }}
+{{ example({ group: "components", item: "footer", example: "full", html: true, nunjucks: true, open: false, size: "xl" }) }}

@@ -14,7 +14,7 @@ statusMessage: This pattern is currently experimental because <a class="govuk-li
 
 Give users contact information within your service.
 
-{{ example({group: "patterns", item: "contact-a-department-or-service-team", example: "default", html: true, open: false, size: "s"}) }}
+{{ example({ group: "patterns", item: "contact-a-department-or-service-team", example: "default", html: true, open: false, size: "s" }) }}
 
 ## When to use this pattern
 
@@ -24,7 +24,7 @@ Read about how and why to [set up user support](https://www.gov.uk/service-manua
 
 ## How it works
 
-{{ example({group: "patterns", item: "contact-a-department-or-service-team", example: "all-contact-information", html: true, open: false, size: "xl"}) }}
+{{ example({ group: "patterns", item: "contact-a-department-or-service-team", example: "all-contact-information", html: true, open: false, size: "xl" }) }}
 
 ### Order contact channels consistently
 
@@ -50,7 +50,7 @@ Tell users if they might have to pay to use any of your contact channels.
 
 For telephone call charges, link to the GOV.UK page on [call charges](https://www.gov.uk/call-charges). Include the link after the contact channels list and opening hours.
 
-{{ example({group: "patterns", item: "contact-a-department-or-service-team", example: "default", html: true, open: false, size: "s", titleSuffix: "second"}) }}
+{{ example({ group: "patterns", item: "contact-a-department-or-service-team", example: "default", html: true, open: false, size: "s", titleSuffix: "second" }) }}
 
 ### Give opening hours
 
@@ -73,7 +73,7 @@ For example, tell users how long it'll usually take to:
 
 Use [inset text](/components/inset-text/) to display contact information when you want to differentiate it from the content that surrounds it.
 
-{{ example({group: "patterns", item: "contact-a-department-or-service-team", example: "inset-contact-information", html: true, nunjucks: true, open: false, size: "m"}) }}
+{{ example({ group: "patterns", item: "contact-a-department-or-service-team", example: "inset-contact-information", html: true, nunjucks: true, open: false, size: "m" }) }}
 
 ### Expanding contact information
 
@@ -83,7 +83,7 @@ For example, if you need to provide contact information at the bottom of a form 
 
 Only do this when there’s a lot of contact information to display. When there are only 1 or 2 lines, include the contact information within the body of the page.
 
-{{ example({group: "patterns", item: "contact-a-department-or-service-team", example: "expanding-contact-information", html: true, nunjucks: true, open: false, size: "m"}) }}
+{{ example({ group: "patterns", item: "contact-a-department-or-service-team", example: "expanding-contact-information", html: true, nunjucks: true, open: false, size: "m" }) }}
 
 ## Research on this pattern
 

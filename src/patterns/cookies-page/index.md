@@ -95,11 +95,11 @@ Use [radios](/components/radios/) and a [button](/components/button/) to let use
 
 Load the page with the radios set to ‘no’ on the user’s first visit. If they’ve previously used the service and set their preferences, load the page with those preferences selected.
 
-{{ example({group: "patterns", item: "cookies-page", example: "cookies-form", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "patterns", item: "cookies-page", example: "cookies-form", html: true, nunjucks: true, open: false }) }}
 
 When the user sets or changes their cookie preferences, use a green [notification banner](/components/notification-banner/) to confirm that the service has updated the user’s cookie settings. This is so they can get back to the page they were looking at.
 
-{{ example({group: "patterns", item: "cookies-page", example: "cookies-updated", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "patterns", item: "cookies-page", example: "cookies-updated", html: true, nunjucks: true, open: false }) }}
 
 ## If you depend on JavaScript to ask users to accept or reject cookies
 
@@ -107,7 +107,7 @@ If you depend on JavaScript to ask about cookie preferences and the user’s dev
 
 Replace the radios with a section of text explaining what the user needs to do in order to change their cookie settings.
 
-{{ example({group: "patterns", item: "cookies-page", example: "no-js", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "patterns", item: "cookies-page", example: "no-js", html: true, nunjucks: true, open: false }) }}
 
 ## Keeping your cookies page up to date and asking for new consent
 

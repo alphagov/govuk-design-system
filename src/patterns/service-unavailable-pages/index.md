@@ -10,13 +10,13 @@ status: Experimental
 statusMessage: This pattern is currently experimental because <a class="govuk-link" href="#research-on-this-pattern">more research</a> is needed to validate it.
 ---
 
-This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
-
 {% from "_example.njk" import example %}
+
+This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
 
 Tell the user a service is unavailable on purpose. These are also known as 503 and shutter pages.
 
-{{ example({group: "patterns", item: "service-unavailable-pages", example: "default", html: true, nunjucks: true, open: false, loading: "eager"}) }}
+{{ example({ group: "patterns", item: "service-unavailable-pages", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 ## When to use this pattern
 
@@ -50,15 +50,15 @@ Have clear and concise content and do not use:
 
 ### General page
 
-{{ example({group: "patterns", item: "service-unavailable-pages", example: "general", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "patterns", item: "service-unavailable-pages", example: "general", html: true, nunjucks: true, open: false }) }}
 
 ### When you know when a service will be available
 
-{{ example({group: "patterns", item: "service-unavailable-pages", example: "available-at-known-date", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "patterns", item: "service-unavailable-pages", example: "available-at-known-date", html: true, nunjucks: true, open: false }) }}
 
 ### A link to another service
 
-{{ example({group: "patterns", item: "service-unavailable-pages", example: "link-to-another-service", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "patterns", item: "service-unavailable-pages", example: "link-to-another-service", html: true, nunjucks: true, open: false }) }}
 
 ### Service is closed for part of the year
 
@@ -66,23 +66,23 @@ This is for a service like tax credit renewals.
 
 #### After a service closes
 
-{{ example({group: "patterns", item: "service-unavailable-pages", example: "after-service-closes", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "patterns", item: "service-unavailable-pages", example: "after-service-closes", html: true, nunjucks: true, open: false }) }}
 
 #### Before a service opens
 
 Do not include any contact information.
 
-{{ example({group: "patterns", item: "service-unavailable-pages", example: "before-service-opens", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "patterns", item: "service-unavailable-pages", example: "before-service-opens", html: true, nunjucks: true, open: false }) }}
 
 ### Service is closed forever
 
 #### Nothing has replaced the service
 
-{{ example({group: "patterns", item: "service-unavailable-pages", example: "no-replacement-service", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "patterns", item: "service-unavailable-pages", example: "no-replacement-service", html: true, nunjucks: true, open: false }) }}
 
 #### Something has replaced the service
 
-{{ example({group: "patterns", item: "service-unavailable-pages", example: "service-replaced", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "patterns", item: "service-unavailable-pages", example: "service-replaced", html: true, nunjucks: true, open: false }) }}
 
 ## Research on this pattern
 

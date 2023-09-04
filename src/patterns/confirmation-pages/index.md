@@ -14,7 +14,7 @@ Use this pattern to let users know they’ve completed a transaction.
 
 Include a link to the [GOV.UK feedback page](https://www.gov.uk/service-manual/service-assessments/get-feedback-page) to allow users to tell you what they think of your transaction.
 
-{{ example({group: "patterns", item: "confirmation-pages", example: "default", html: true, nunjucks: true, open: false, size: "xl", loading: "eager"}) }}
+{{ example({ group: "patterns", item: "confirmation-pages", example: "default", html: true, nunjucks: true, open: false, size: "xl", loading: "eager" }) }}
 
 ## When to use this pattern
 
@@ -33,7 +33,7 @@ Your confirmation page must include:
 - a link to your [feedback page](https://www.gov.uk/service-manual/service-assessments/get-feedback-page)
 - a way for users to save a record of the transaction, for example, as a PDF
 
-{{ example({group: "patterns", item: "confirmation-pages", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second", size: "xl"}) }}
+{{ example({ group: "patterns", item: "confirmation-pages", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second", size: "xl" }) }}
 
 ### Help users who bookmark the page
 
