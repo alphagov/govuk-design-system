@@ -37,8 +37,8 @@
   },
   "devDependencies": {
     "@axe-core/puppeteer": "^4.7.3",
-    "@babel/core": "^7.22.11",
-    "@babel/preset-env": "^7.22.10",
+    "@babel/core": "^7.22.15",
+    "@babel/preset-env": "^7.22.15",
     "@metalsmith/in-place": "^5.0.0",
     "@metalsmith/layouts": "^2.7.0",
     "@metalsmith/permalinks": "^2.5.1",
