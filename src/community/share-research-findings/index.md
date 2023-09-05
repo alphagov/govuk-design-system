@@ -1,5 +1,5 @@
 ---
-title: Share user research findings
+title: Share findings about your users
 description: Find out how to share information on how styles, components and patterns are performing
 section: Community
 theme: Ways to get involved
@@ -7,93 +7,92 @@ layout: layout-pane.njk
 order: 2
 ---
 
-<style>
-	code {
-		white-space : pre-wrap !important;
-	}
-</style>
+We want to hear how styles, components and patterns perform in your service – it helps us improve the Design System. You can do this by taking part in discussions on Github.
 
-We rely on feedback from users to improve the Design System – we want to hear how styles, components and patterns are performing in your service. You can do this by sharing your research findings on Github.
+Useful findings to share might be things like:
 
-Your service might be in the alpha or beta phases, or you might be iterating the service after going live. Feedback from any phase helps us keep improving the Design System in line with evolving user needs.
+- summaries of user research you’ve done
+- prototypes or ideas that you’ve tested
+- analytics from your service
+- responses to any calls for information we give in the 'Research on this...' section of our pages
 
-## Adding research findings to Github
+Your service might be in the alpha or beta phases, or you might be iterating the service after going live.
 
-Go to our [list of discussions on Github](https://github.com/orgs/alphagov/projects/43/views/1). Select the component or pattern you want to share findings about. Alternatively, there are links at the bottom of each component or pattern page on the Design System website.
+Feedback from any phase helps us iterate the Design System in line with evolving user needs.
 
-Once you’ve selected the right thing, add your findings in a comment at the bottom of the page. 
+## Where to add findings
+
+Go to our [list of discussions on Github](https://github.com/orgs/alphagov/projects/43/views/1). There are 2 tabs, each showing a list of discussion pages about:
+
+- things already in the Design System
+- things that could be added in the future
+
+Feedback on both is useful to us. You’ll need to [create a GitHub account](https://github.com/join) to add comments.
+
+Select the thing you want to share findings about. If what you’re looking for isn’t on the list, read about [how to propose a component or pattern](https://design-system.service.gov.uk/community/propose-a-component-or-pattern/).
+
+Once you’ve selected the right discussion, use the template below to add your findings.
 
 {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
 
-<p>
 {% set callout %}
-Do not share any personally identifiable information about your participants or sensitive information about your service. All the information on our Github repos is open to the public.
+Share information responsibly. <a href="https://www.gov.uk/service-manual/user-research/getting-users-consent-for-research">You must get informed consent from your participants</a> before you can share findings of any research they’ve participated in.
 {% endset %}
 
 {{ govukWarningText({
-html: callout,
-iconFallbackText: "Warning"
+  html: callout,
+  iconFallbackText: "Warning"
 }) }}
-</p>
 
-If you can't find what you're looking for on the list, read about how to [propose a component or pattern](/community/propose-a-component-or-pattern/). 
+Remember that all the information on Github is open to the public. Do not share any personally identifiable information about your participants or sensitive information about your service.
 
-### Research template
+## Research template
 
-To help you structure your findings, we’ve listed some questions that would help our community understand and learn from your work. Copy and paste the template below and fill in your findings.
+Use this template to give the community useful context about your findings. Copy and paste it into the GitHub comments box and add your findings.
 
 ```markdown
-## Context
+## Key insights
 
-Answer each of the following questions:
+What are your key insights about how people use the style, pattern or component?
 
-### Which service(s) did you test the component in?
-e.g. Apply for a passport
-
-### When did you do it?
-e.g. June 2022
-
-### What were you trying to learn?
-e.g. testing the entire application process
-
-### Did you test with users of assistive technology?
-e.g. Yes
-
-### If yes, which assistive technologies did they use?
-e.g. JAWS, NVDA, screen magnifier
-
+Try to include:
+- how it helped or hindered users’ journeys, using specific observations
+- any metrics or hypotheses that helped you measure success
+- screenshots of how you implemented it in your service
 
 ## Methods
 
-Briefly explain who you researched with and how you did it.
+Give us some context and briefly explain how you gathered the findings.
 
+Try to include:
+- which service you used the pattern or component in
+- when you did your user research or test
+- whether you tested with users with access needs, noting any assistive technologies they - used
 
-## Main findings
+## More information
 
-What have you learned about how end users use and understand the component? Tell us how it helped or hindered users’ journeys, using specific observations. Include any metrics or hypotheses that helped you measure success.
-
-Include screenshots if it helps get your points across.
-
-
-## Remaining questions
-
-If you still have questions that weren’t answered by your research, please note them here.
-
-
-## Further information
-
-Share links to any prototypes you used or in-depth research documents.
-
+Add links to any prototypes or research documents.
 ```
 
-## What happens next
+You can edit your comment after you post it, so do not worry if you get something wrong or want to change it later.
 
-Other members of the community may respond to your findings on Github – feel free to take part in the conversation.
+Community members might respond to your findings on GitHub. Feel free to take part in the conversation.
 
-The Design System team reads all new comments on Github. We usually don’t act immediately on feedback – we need to grow a clear body of evidence before we can be sure that something is a problem.
+For example, you could:
+compare findings
+learn about each other’s users and their needs
+see what’s worked to improve things, and what has not
 
-### Acting on feedback
+You’ll usually be subscribed to get notifications from GitHub when there’s a new comment in the discussion. [Find out how to check your notification settings in GitHub](https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications).
 
-Most additions to the Design System are chosen through a regular prioritisation process with the community. [Read a blog post about how we prioritise new additions to the Design System](https://designnotes.blog.gov.uk/2022/09/07/how-we-prioritise-additions-to-the-gov-uk-design-system/). We share the top priorities on the [Upcoming components and patterns](/community/upcoming-components-patterns/) page.
+## Acting on feedback
 
-We will also prioritise improvements to an existing part of the Design System if we see repeated evidence that it’s not working well. It depends on the severity of the issue, but we will usually investigate something if we hear similar findings from 4 or more different services.
+The Design System team reads all new comments on our Github pages. We do not usually act immediately on feedback – we need to grow a clear body of evidence before we can be sure that something is a problem.
+
+Even if your findings do not lead to a change to the Design System, it’s really useful to share anyway. People across government read the discussions on Github to see how others have approached things and what they’ve learned.
+
+We’ll prioritise improvements to an existing part of the Design System if we see repeated evidence that it’s not working well. It depends on the severity of the issue, but we will usually investigate something if we hear similar findings from 4 or more different services. We also make iterative improvements where we can, but we’ll prioritise fixing known issues first.
+
+Most major additions to the Design System team are chosen through a regular prioritisation process with the community. [Read a blog post about how we prioritise new additions to the Design System](https://designnotes.blog.gov.uk/2022/09/07/how-we-prioritise-additions-to-the-gov-uk-design-system/).
+
+We share the chosen priorities on the [Upcoming components and patterns page](https://design-system.service.gov.uk/community/upcoming-components-patterns/).
