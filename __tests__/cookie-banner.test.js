@@ -49,7 +49,9 @@ describe('Cookie banner', () => {
 
   it('is hidden on the cookies page', async () => {
     await page.setCookie(cookieParam)
+
     await goTo(page, '/cookies/')
+    await setup(page)
 
     await expect(isVisible($module)).resolves.toBe(false)
   })
