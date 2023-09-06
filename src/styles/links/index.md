@@ -10,13 +10,13 @@ showPageNav: true
 
 Links are blue and underlined by default. If your link is at the end of a sentence or paragraph, make sure that the linked text does not include the full stop.
 
-{{ example({group: "styles", item: "links", example: "default", html: true, open: true}) }}
+{{ example({ group: "styles", item: "links", example: "default", html: true, open: true }) }}
 
 ## Links without a visited state
 
 Use the `govuk-link--no-visited-state` modifier class where it is not helpful to distinguish between visited and unvisited states, for example when linking to pages with frequently-changing content such as the dashboard for an admin interface.
 
-{{ example({group: "styles", item: "links", example: "no-visited-state", html: true, open: true}) }}
+{{ example({ group: "styles", item: "links", example: "no-visited-state", html: true, open: true }) }}
 
 ## External links
 
@@ -30,7 +30,7 @@ If you need a link to open in a new tab - for example, to stop the user losing i
 
 Include `rel="noreferrer noopener"` along with `target="_blank"` to reduce the risk of [reverse tabnabbing](https://owasp.org/www-community/attacks/Reverse_Tabnabbing). The following example shows how to do this in HTML.
 
-{{ example({group: "styles", item: "links", example: "opening-in-new-tab", html: true, open: true}) }}
+{{ example({ group: "styles", item: "links", example: "opening-in-new-tab", html: true, open: true }) }}
 
 If you're displaying lots of links together and want to save space and avoid repetition, consider doing both of the following:
 
@@ -43,7 +43,7 @@ Use the `govuk-link--inverse` modifier class to show white links on dark backgro
 
 Make sure all users can see the links — the white links and background colour [must have a contrast ratio of at least 4.5:1](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html).
 
-{{ example({group: "styles", item: "links", example: "on-dark-background", html: true, open: true}) }}
+{{ example({ group: "styles", item: "links", example: "on-dark-background", html: true, open: true }) }}
 
 ## Links without underlines
 
@@ -53,7 +53,7 @@ Only do this if the context tells the user that the text is a link, even without
 
 For example, links in a header or side navigation might not need underlines. Users will understand that they’re links because of where they are, at the same place, across different pages.
 
-{{ example({group: "styles", item: "links", example: "no-underline", html: true, open: true}) }}
+{{ example({ group: "styles", item: "links", example: "no-underline", html: true, open: true }) }}
 
 ## Links to change a language
 
