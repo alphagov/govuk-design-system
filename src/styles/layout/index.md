@@ -4,8 +4,9 @@ description: Organise the layout of the page into blocks
 section: Styles
 layout: layout-pane.njk
 showPageNav: true
-headingAliases:
-  Hide elements and keep them accessible to screen readers: visually hidden
+headings:
+  - text: Hide elements and keep them accessible to screen readers
+    aliases: visually hidden
 ---
 
 {% from "_example.njk" import example %}

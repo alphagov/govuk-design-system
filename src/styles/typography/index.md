@@ -5,8 +5,9 @@ section: Styles
 backlogIssueId: 64
 layout: layout-pane.njk
 showPageNav: true
-headingAliases:
-  Section break: horizontal rule, hr
+headings:
+  - text: Section break
+    aliases: horizontal rule, hr
 ---
 
 {% from "_example.njk" import example %}

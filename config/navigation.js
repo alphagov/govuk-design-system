@@ -6,28 +6,23 @@
 module.exports = [
   {
     label: 'Get started',
-    url: 'get-started',
-    includeInSearch: true
+    url: 'get-started'
   },
   {
     label: 'Styles',
-    url: 'styles',
-    includeInSearch: true
+    url: 'styles'
   },
   {
     label: 'Components',
-    url: 'components',
-    includeInSearch: true
+    url: 'components'
   },
   {
     label: 'Patterns',
-    url: 'patterns',
-    includeInSearch: true
+    url: 'patterns'
   },
   {
     label: 'Community',
-    url: 'community',
-    includeInSearch: true
+    url: 'community'
   }
 ]
 
@@ -35,7 +30,7 @@ module.exports = [
  * @typedef {object} NavigationItem
  * @property {string} label - Navigation item text
  * @property {string} url - URL path without leading slash
- * @property {boolean} includeInSearch - Include in search index
+ * @property {boolean} [ignoreInSearch] - Ignore in search index
  * @property {NavigationSubItem[]} [items] - Navigation sub items
  */
 
