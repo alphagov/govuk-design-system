@@ -29,10 +29,10 @@ There are 2 ways to use the panel component. You can use HTML or, if you are usi
 
 {{ example({ group: "components", item: "panel", example: "default", html: true, nunjucks: true, open: false, size: "m", titleSuffix: "second" }) }}
 
-### How to write heading text
+### How to write panel text
 
-Keep your heading text brief, as it's only meant for a high-level explanation of what has happened. For example, 'Application complete'.
+Keep your panel text brief, as it's only meant for a high-level explanation of what has happened. For example, 'Application complete'.
 
-If you can, use shorter words instead of longer ones. Shorter words are less likely to wrap around the panel, which can happen when users on mobile zoom in.
+Aim to use short words and phrases to make sure highlighted information is easy to read at different screen sizes. For example, shorter amounts of information is less likely to wrap around the panel, which can happen when using the zoom function on mobiles.
 
 If you need to give detailed information, or more context, use the description text under the heading text.
