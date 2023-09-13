@@ -26,6 +26,7 @@ If you want to contact the team you can [get in touch via email or Slack](/get-i
 - Ciandelle Hughes – Interaction Designer
 - David Cox – Senior Accessibility Specialist
 - Imran Hussain – Community Designer
+- Kam Nijjar – Associate Delivery Manager
 - Katrina Birch – User Researcher
 - Kim 'beeps' Grey – Frontend Developer
 - Owen Jones – Senior Frontend Developer (Tech Lead)
