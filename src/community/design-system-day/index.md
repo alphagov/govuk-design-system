@@ -12,8 +12,6 @@ order: 11
 Dates: 10 and 11 October 2023
 Location: Online and <a href="https://dynamicearth.org.uk/plan-your-visit/getting-here/">Dynamic Earth</a>, Edinburgh
 
-We plan to release tickets at the start of September. <a href="https://mailchi.mp/707ce8dec373/get-updated-by-email-govuk-design-system">Sign up to our mailing list</a> to get updates.
-
 <!--
 
 Setting the following convention:
@@ -40,7 +38,23 @@ We'll also be hosting get-togethers and after-parties for people attending the E
 
 The first day will be hosted in Dynamic Earth, Edinburgh. The second day will be online-only.
 
-As ever, we want the conference to be a community-driven event, so all talks, workshops and sessions have been suggested by the community. We'll announce the final agenda soon.
+As ever, we want the conference to be a community-driven event, so all talks, workshops and sessions have been suggested by the community. 
+
+We'll be covering topics such as
+
+- research operations at scale
+- how design systems manage contributions
+- reflections on trauma-informed design
+- challenges scaling user-centred services
+- building a native app design system from scratch
+- imposter syndrome
+- participatory research and co-design
+- Web Components
+- doing good discoveries
+
+and much more!
+
+Our speakers come from organisations across the UK and international public sector, and we're joined by folks working on design systems from notable companies too.
 
 <!--
 
