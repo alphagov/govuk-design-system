@@ -82,7 +82,7 @@
     "nunjucks": "^3.2.4",
     "outdent": "^0.8.0",
     "postcss-markdown": "^1.2.0",
-    "postcss-scss": "^4.0.7",
+    "postcss-scss": "^4.0.8",
     "prettier": "^3.0.3",
     "puppeteer": "^21.2.1",
     "rollup": "^3.29.2",
