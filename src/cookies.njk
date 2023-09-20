@@ -104,8 +104,8 @@ layout: layout-single-page.njk
         }) }}
 
         {{ govukRadios({
-          name: "analytics",
-          idPrefix: "radio-analytics",
+          name: "cookies[analytics]",
+          idPrefix: "cookies-analytics",
           fieldset: {
             legend: {
               text: "Do you want to accept analytics cookies?",
@@ -113,7 +113,7 @@ layout: layout-single-page.njk
             },
             classes: "js-cookies-page-form-fieldset",
             attributes: {
-              id: "analytics",
+              "data-cookie-type": "analytics",
               hidden: ""
             }
           },
