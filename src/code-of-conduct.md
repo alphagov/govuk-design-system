@@ -12,14 +12,23 @@ In order to establish and maintain an inclusive environment we ask attendees, vo
 * Have respect for all fellow participants. We should all create a harassment-free event for everyone regardless of gender, age, sexual identity, disability, physical appearance, body size, race, ethnicity, religion or belief. Harassment will not be tolerated in any form.
 
 * Expect people to prefer different ways of communicating on a video conference, such as turning off their video or using chat instead of speaking.
+
 * Help create a safe and welcoming environment. We can do this by being open to diverse points of view, by inviting other people to join and by keeping things people share confidential if they specify it.
+
 * Do not assume everyone has the same context. Encourage questions.
+
 * Listen to others, and ensure that all activities are respectful, participatory, and productive.
+
 * Consider your environment and minimise loud noises. Have empathy for others in different situations who may not be able to control their environment. Please mute your microphone when entering a session unless you want to contribute.
-* Provide constructive, helpful feedback rather than criticising. There are some great tips here (you can download the file): [https://github.com/alphagov/govdesign/blob/master/Poster_GivingAskingReceivingFeedback.pdf](https://github.com/alphagov/govdesign/blob/master/Poster_GivingAskingReceivingFeedback.pdf)
+
+* Provide constructive, helpful feedback rather than criticising. You can [download a poster on giving feedback](https://github.com/alphagov/govdesign/blob/master/Poster_GivingAskingReceivingFeedback.pdf) for tips.
+
 * Stay on topic as we only have a limited amount of time. If a conversation goes off topic we may ask you to hold off on the conversation until a more suitable time.
+
 * Be present – please try to make the most of the event. Engage with discussions and workshops as much as you feel comfortable. We want everyone to learn from others and meet people working on similar challenges. If you’re unable to attend, please cancel your ticket as soon as possible so people on the waitlist can attend. 
+
 * Attendees should not record video or take photographs of sessions run unless specified by session runners. You can take screenshots of presentation slides for personal use or shared within a government context unless stated otherwise by the session runners. 
+
 * Be considerate of what you share on social media. Do not share any content, insights or links from sessions without the explicit permission of the session runners.
 
 The event organisers reserve the right to ask anyone in violation of these policies to not participate in further activities. 
