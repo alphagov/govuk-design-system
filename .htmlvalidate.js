@@ -22,6 +22,10 @@ module.exports = {
     // Allow inline styles for testing purposes
     'no-inline-style': 'off',
 
+    // Allow implicit type="button" (without attribute) until released:
+    // https://github.com/alphagov/govuk-frontend/pull/4113
+    'no-implicit-button-type': 'off',
+
     // Allow for explicit roles on regions that have implict roles
     // We do this to better support AT with older versions of IE that
     // have partial support for HTML5 semantic elements
