@@ -116,7 +116,7 @@ Before linking from the Design System to a [community resource or tool](/communi
 - design resources are consistent with the styles, components and patterns in the GOV.UK Design System
 - development resources output the same markup as GOV.UK Frontend
 - it is not being charged for or used to promote a private business
-- it's compatible with the [Service Standard](https://www.gov.uk/service-manual/service-standard) and [Technology code of practice](https://www.gov.uk/government/publications/technology-code-of-practice/technology-code-of-practice)
+- it's compatible with the [Service Standard](https://www.gov.uk/service-manual/service-standard) and [Technology code of practice](https://www.gov.uk/guidance/the-technology-code-of-practice)
 
 To help users decide whether to use your resource or tool and tell them how to get support for it, add this message to the resource README and after any website links:
 

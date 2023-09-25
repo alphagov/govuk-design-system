@@ -36,7 +36,7 @@ Using this option, you will be able to:
 
 ### Option 2: include compiled files
 
-If your project does not use npm, or if you want to try out GOV.UK Frontend in your project without installing it through npm, you can [download and include compiled stylesheets, JavaScript and the asset files](https://frontend.design-system.service.gov.uk/installing-from-dist/#install-from-dist).
+If your project does not use npm, or if you want to try out GOV.UK Frontend in your project without installing it through npm, you can [download and include compiled stylesheets, JavaScript and the asset files](https://frontend.design-system.service.gov.uk/install-using-precompiled-files/).
 
 Using this option, you will be able to include all the CSS and JavaScript of GOV.UK Frontend in your project.
 

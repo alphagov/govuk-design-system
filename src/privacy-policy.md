@@ -114,7 +114,7 @@ If your personal data is processed on the basis of consent, you have the right t
 - withdraw consent to the processing of your personal data at any time
 - request a copy of your personal data - this copy will be provided in a structured, commonly used and machine-readable format
 
-[Find out more information about your rights](https://ico.org.uk/your-data-matters/).
+[Find out more information about your rights](https://ico.org.uk/for-the-public/).
 
 ## Questions and complaints
 
@@ -122,7 +122,7 @@ Contact the GDS Privacy Office if you:
 
 - have any questions about anything in this document
 - think that your personal data has been misused or mishandled
-- want to make a [subject access request (SAR)](https://ico.org.uk/your-data-matters/your-right-of-access/)
+- want to make a [subject access request (SAR)](https://ico.org.uk/for-the-public/your-right-to-get-copies-of-your-data/)
 
 The contact details for the data controller are: Cabinet Office (Government Digital Service), The White Chapel Building, 10 Whitechapel High Street, London, E1 8QS, or [gds-privacy-office@digital.cabinet-office.gov.uk](mailto:gds-privacy-office@digital.cabinet-office.gov.uk).
 
