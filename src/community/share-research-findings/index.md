@@ -7,7 +7,7 @@ layout: layout-pane.njk
 order: 2
 ---
 
-We want to hear how styles, components and patterns perform in your service – it helps us improve the Design System. You can do this by taking part in discussions on Github.
+We want to hear how styles, components and patterns perform in your service – it helps us improve the Design System. You can do this by taking part in discussions on GitHub.
 
 Useful findings to share might be things like:
 
@@ -22,7 +22,7 @@ Feedback from any phase helps us iterate the Design System in line with evolving
 
 ## Where to add findings
 
-Go to our [list of discussions on Github](https://github.com/orgs/alphagov/projects/43/views/1). There are 2 tabs, each showing a list of discussion pages about:
+Go to our [list of discussions on GitHub](https://github.com/orgs/alphagov/projects/43/views/1). There are 2 tabs, each showing a list of discussion pages about:
 
 - things already in the Design System
 - things that could be added in the future
@@ -44,7 +44,7 @@ Share information responsibly. <a href="https://www.gov.uk/service-manual/user-r
   iconFallbackText: "Warning"
 }) }}
 
-Remember that all the information on Github is open to the public. Do not share any personally identifiable information about your participants or sensitive information about your service.
+Remember that all the information on GitHub is open to the public. Do not share any personally identifiable information about your participants or sensitive information about your service.
 
 ## Research template
 
@@ -87,9 +87,9 @@ You’ll usually be subscribed to get notifications from GitHub when there’s a
 
 ## Acting on feedback
 
-The Design System team reads all new comments on our Github pages. We do not usually act immediately on feedback – we need to grow a clear body of evidence before we can be sure that something is a problem.
+The Design System team reads all new comments on our GitHub pages. We do not usually act immediately on feedback – we need to grow a clear body of evidence before we can be sure that something is a problem.
 
-Even if your findings do not lead to a change to the Design System, it’s really useful to share anyway. People across government read the discussions on Github to see how others have approached things and what they’ve learned.
+Even if your findings do not lead to a change to the Design System, it’s really useful to share anyway. People across government read the discussions on GitHub to see how others have approached things and what they’ve learned.
 
 We’ll prioritise improvements to an existing part of the Design System if we see repeated evidence that it’s not working well. It depends on the severity of the issue, but we will usually investigate something if we hear similar findings from 4 or more different services. We also make iterative improvements where we can, but we’ll prioritise fixing known issues first.
 
