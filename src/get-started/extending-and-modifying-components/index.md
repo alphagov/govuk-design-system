@@ -104,9 +104,9 @@ For example, to define a custom width for a specific reference number in your se
 
 ## Small modifications to components
 
-The GOV.UK Design System uses a naming convention called [Block Element Modifier (BEM)](http://getbem.com/) which makes it easier to ensure styling is isolated to individual components. You can use this convention to make modifications to components.
+The GOV.UK Design System uses a naming convention called [Block Element Modifier (BEM)](https://getbem.com/) which makes it easier to ensure styling is isolated to individual components. You can use this convention to make modifications to components.
 
-When making small modifications to components you can make use of the [modifier convention from BEM](http://getbem.com/naming/), which uses a suffix of `--` plus a name, alongside your own [prefix].
+When making small modifications to components you can make use of the [modifier convention from BEM](https://getbem.com/naming/), which uses a suffix of `--` plus a name, alongside your own [prefix].
 
 For example, if you wanted to override the button component you could do the following.
 
