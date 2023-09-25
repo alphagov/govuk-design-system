@@ -56,4 +56,4 @@ Make sure the account creation screen is solely about that task. Do not add any 
 
 ### Never use National Insurance numbers to verify a user’s identity
 
-If you currently use National Insurance numbers to verify identity, find out how to [protect your service against fraud](https://www.gov.uk/service-manual/technology/protecting-your-service-against-fraud#avoid-using-national-insurance-numbers-to-verify-identity).
+If you currently use National Insurance numbers to verify identity, find out how to [protect your service against fraud](https://www.gov.uk/service-manual/technology/protecting-your-service-against-fraud).
