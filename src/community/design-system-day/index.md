@@ -36,53 +36,57 @@ We'll also be hosting get-togethers and after-parties for people attending the E
 
 ### Speakers and sessions
 
-The first day will be hosted in Dynamic Earth, Edinburgh. The second day will be online-only.
-
-As ever, we want the conference to be a community-driven event, so all talks, workshops and sessions have been suggested by the community. 
-
-We'll be covering topics such as
-
-- research operations at scale
-- how design systems manage contributions
-- reflections on trauma-informed design
-- challenges scaling user-centred services
-- building a native app design system from scratch
-- imposter syndrome
-- participatory research and co-design
-- Web Components
-- doing good discoveries
-
-and much more!
+As ever, this is a community-driven event, so all talks, workshops and sessions have been suggested by the community. 
 
 Our speakers come from organisations across the UK and international public sector, and we're joined by folks working on design systems from notable companies too.
 
+#### Day 1
+
+The first day will be hosted in Dynamic Earth, Edinburgh.
+
+- Reflections on creating the Scottish Government Digital Design System: Samantha Ernstzen and Jennifer I'Anson (Scottish Government)
+- The impact of research operations when conducting user research at scale: Rachel Male (Scottish Government)
+- What we've been up to, where we're headed: Ciandelle Hughes, Calvin Lau and Steve Messer (GOV.UK Design System)
+- How design systems manage contributions: Caroline Jarrett (Effortmark), Frankie Roberto (Department for Education), Julian Thompson (Rooted by Design), and Ellis Capon (Just Eat)
+- Trauma-informed research and design: Katrina Birch (GOV.UK Design System), Janice Hannaway (?), Kate Every (?), and Helen Baron (?)
+- ?, Tash Willcocks (TPXimpact)
+
+There will be breaks throughout the day and an hour for lunch. You'll be able to speak with others in the community and our panellists too. Towards the end of the day, we'll have an optional social for more conversation.
+
+#### Day 2
+
+The second day will be hosted online. 
+
+- We’re feeling ‘appy: Oliver Binns and Chris Choy (GOV.UK One Login)
+- The contributor perspective on design systems: Frankie Roberto (Department for Education)
+- Trauma-informed design: passing trend, or new aspect of accessibility?: Katherine Beer (Department for Education)
+- How brand design systems offer the power of confidence: Abigail Baldwin (Buttercrumble)
+- How GOV.UK Pay is making recurring payments easy for the public sector: Sacha Zarb (GOV.UK Pay)
+- From pixels to paradigm shifts: tailoring a dedicated design system to catalyse innovation in the Italian Ministry of Economy and Finance: Simone di Fresco (DOS Design)
+- The challenges of scaling up a truly user-centred service: Laura Smith (Unboxed)
+- A service designer's approach to human-centered life transitions: Sylvie Abookhire, DC.gov
+- Leading the system: Daniel Fontaneda (Bumble)
+- Imposter syndrome in government and why it's not always a bad thing: Ciandelle Hughes, GOV.UK Design System
+- Web components: a year in the field, Ashley Watson-Nolan (Just Eat)
+- From code to content-first: scaling content production at PayPal: Kate Thomas (PayPal)
+- Design pattern histories: Vicky Teinaki, Student Loans Company
+- How a design API empowers product teams to ensure brand consistency at scale: Louis Chenais (Specify)
+- Responsive design, design systems and 'hyperobjects': Ethan Marcotte (Autogram) and Steve Messer (GOV.UK Design System) 
+- Doing good discovery: Debra Churchill (Ontario Public Service)
+- Using task lists in your services: Frankie Roberto (Department for Education)
+- The iPhone state: simplicity through complexity: Gordon Guthrie (Scottish Government)
+- How participatory research can help us co-design more ethically: Jane Martin and Betty Mwema (Government Digital Service)
+- Designing for underserved audiences: Valentine Makhouleen (Prelude Security/New Media Studio)
+- From chaos to clarity: unlocking the potential of design systems: Hassan Nawaz (FanDuel)
+- Collaborative design systems at scale: James Carleton (PayPal)
+
 <!--
 
-- Person 1, Organisation 1, 'Topic 1'
-- Person 2, Organisation 2, 'Topic 2'
-- Person 3, Organisation 3, 'Topic 3'
-- Person 4, Organisation 4, 'Topic 4'
-- Person 5, Organisation 5, 'Topic 5'
-- Person 6, Organisation 6, 'Topic 6'
-
-### Workshops
-
-- Person 1, Organisation 1, 'Workshop 1'
-- Person 2, Organisation 2, 'Workshop 2'
-- Person 3, Organisation 3, 'Workshop 3'
-- Person 4, Organisation 4, 'Workshop 4'
-- Person 5, Organisation 5, 'Workshop 5'
-- Person 6, Organisation 6, 'Workshop 6'
-
--->
-
-<!--
-
-#### Getting there
+## Getting there
 
 Where we're running the event, how to get there, etc.
 
-#### Online
+## Joining instructions
 
 Joining instructions, etc.
 
