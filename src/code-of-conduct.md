@@ -54,9 +54,11 @@ List of organisers:
 * Dinesh Gnanachchelvam
 * Imran Hussain
 * Izabela Podralska
+* Kara Kane
 * Katrina Birch
 * Kelly Lee
 * Kim 'beeps' Grey
+* Mia Allers
 * Nora Brodian
 * Oliver Byford
 * Owen Jones
