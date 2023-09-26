@@ -3,13 +3,13 @@
 {% set htmlClasses = 'app-example-page__wrapper' %}
 {% set assetUrl = 'https://design-system.service.gov.uk/assets' %}
 
-{% block pageTitle %}{{ title }} – Example – GOV.UK Design System{% endblock %}
+{% block pageTitle %}{{ title | smartypants }} – Example – GOV.UK Design System{% endblock %}
 
 {% block head %}
   <meta name="robots" content="noindex, nofollow">
-  <meta name="og:title" content="{{title}}">
-  <meta name="description" content="{{description}}">
-  <meta name="og:description" content="{{description}}">
+  <meta name="og:title" content="{{ title | smartypants }}">
+  <meta name="description" content="{{ description | smartypants }}">
+  <meta name="og:description" content="{{ description | smartypants }}">
   <link rel="canonical" href="{{ canonical }}">
 
   <link href="{{ getFingerprint('stylesheets/main.css') }}" rel="stylesheet" media="all">
@@ -26,12 +26,9 @@
 {% set bodyClasses = "app-example-page" %}
 
 {% block main %}
-  <!-- Disable browser validation for any examples that include form elements -->
-  <form action="/form-handler" method="post" novalidate>
-    {% block body %}
-      {{ contents | safe }}
-    {% endblock %}
-  </form>
+  {% block body %}
+    {{ contents | safe }}
+  {% endblock %}
 {% endblock %}
 
 {% block bodyEnd %}

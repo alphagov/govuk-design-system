@@ -37,7 +37,7 @@ For a service that people are likely to use on a one-off basis:
 - place equality questions between the [‘check your answers’ page](/patterns/check-answers/) and the [confirmation page](/patterns/confirmation-pages/)
 - show the user a screen explaining why you’re asking the questions and what you’ll do with the information they provide, like the one below
 
-{{ example({group: "patterns", item: "equality-information", example: "explainer-screen", html: true, nunjucks: true, open: false, loading: "eager"}) }}
+{{ example({ group: "patterns", item: "equality-information", example: "explainer-screen", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 #### Longer term services
 
@@ -79,17 +79,17 @@ See the [full list of Government Statistical Service harmonised standards](https
 
 Use this approach to ask for the user’s date of birth.
 
-{{ example({group: "patterns", item: "equality-information", example: "date-of-birth", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "patterns", item: "equality-information", example: "date-of-birth", html: true, nunjucks: true, open: false }) }}
 
 ### Asking about disability
 
 Use this approach to ask about disability.
 
-{{ example({group: "patterns", item: "equality-information", example: "disability", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "patterns", item: "equality-information", example: "disability", html: true, nunjucks: true, open: false }) }}
 
 If the user answers ‘yes’, ask about the impact of their condition or illness.
 
-{{ example({group: "patterns", item: "equality-information", example: "disability-impact", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "patterns", item: "equality-information", example: "disability-impact", html: true, nunjucks: true, open: false }) }}
 
 ### Asking about ethnic group
 
@@ -99,21 +99,21 @@ If your service covers more than one of England, Wales, Scotland or Northern Ire
 
 First ask about the user’s broad ethnic group.
 
-{{ example({group: "patterns", item: "equality-information", example: "ethnic-group", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "patterns", item: "equality-information", example: "ethnic-group", html: true, nunjucks: true, open: false }) }}
 
 Then ask for a more detailed category, depending on which broad ethnic group the user selects. Always give the user the option to enter their own description of their background.
 
-{{ example({group: "patterns", item: "equality-information", example: "white", html: true, nunjucks: true, open: false}) }}
-{{ example({group: "patterns", item: "equality-information", example: "multiple", html: true, nunjucks: true, open: false}) }}
-{{ example({group: "patterns", item: "equality-information", example: "asian", html: true, nunjucks: true, open: false}) }}
-{{ example({group: "patterns", item: "equality-information", example: "black", html: true, nunjucks: true, open: false}) }}
-{{ example({group: "patterns", item: "equality-information", example: "other", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "patterns", item: "equality-information", example: "white", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "patterns", item: "equality-information", example: "multiple", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "patterns", item: "equality-information", example: "asian", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "patterns", item: "equality-information", example: "black", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "patterns", item: "equality-information", example: "other", html: true, nunjucks: true, open: false }) }}
 
 ### Asking about marriage or civil partnership status
 
 Use this approach to ask about marriage or civil partnership status.
 
-{{ example({group: "patterns", item: "equality-information", example: "marriage-status", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "patterns", item: "equality-information", example: "marriage-status", html: true, nunjucks: true, open: false }) }}
 
 ### Asking about religion
 
@@ -121,19 +121,19 @@ The categories used here are for England. The Government Statistical Service har
 
 If your service covers more than one of England, Wales, Scotland or Northern Ireland, you should accommodate these differences in your design. For example, by changing the categories shown depending on where the user is based. Where this is not possible, use the English categories.
 
-{{ example({group: "patterns", item: "equality-information", example: "religion", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "patterns", item: "equality-information", example: "religion", html: true, nunjucks: true, open: false }) }}
 
 ### Asking about sex and gender identity
 
 Use this approach to ask about sex and gender identity.
 
-{{ example({group: "patterns", item: "equality-information", example: "sex-gender", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "patterns", item: "equality-information", example: "sex-gender", html: true, nunjucks: true, open: false }) }}
 
 ### Asking about sexual orientation
 
 Use this approach to ask about sexual orientation.
 
-{{ example({group: "patterns", item: "equality-information", example: "sexual-orientation", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "patterns", item: "equality-information", example: "sexual-orientation", html: true, nunjucks: true, open: false }) }}
 
 ### Validation and error messages
 
@@ -141,9 +141,9 @@ If a user enters information that’s valid but incomplete, accept it. For examp
 
 Error messages should be styled like this -
 
-{{ example({group: "patterns", item: "equality-information", example: "error-ethnicity", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "patterns", item: "equality-information", example: "error-ethnicity", html: true, nunjucks: true, open: false }) }}
 
-{{ example({group: "patterns", item: "equality-information", example: "error-date-of-birth", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "patterns", item: "equality-information", example: "error-date-of-birth", html: true, nunjucks: true, open: false }) }}
 
 ## Research on this pattern
 

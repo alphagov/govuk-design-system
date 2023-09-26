@@ -1,13 +1,13 @@
 ---
 title: Text input with prefix and suffix – Text input
-layout: layout-example.njk
+layout: layout-example-form.njk
 ---
 
 {% from "govuk/components/input/macro.njk" import govukInput %}
 
 {{ govukInput({
   id: "cost-per-item",
-  name: "cost-per-item",
+  name: "costPerItem",
   label: {
     text: "What is the cost per item, in pounds?",
     classes: "govuk-label--l",

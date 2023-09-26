@@ -1,6 +1,6 @@
 ---
 title: Religion equality question – Equality information
-layout: layout-example.njk
+layout: layout-example-form.njk
 ---
 
 {% from "govuk/components/button/macro.njk" import govukButton %}
@@ -10,7 +10,7 @@ layout: layout-example.njk
 {% set religionHtml %}
   {{ govukInput({
     id: "other-description",
-    name: "other-description",
+    name: "otherDescription",
     type: "text",
     classes: "govuk-!-width-one-half",
     label: {

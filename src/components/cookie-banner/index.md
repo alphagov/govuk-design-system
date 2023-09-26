@@ -81,13 +81,13 @@ All users will be able to see the banner as this approach does not rely on JavaS
 
 Here's an example of a cookie banner inside a form:
 
-{{ example({group: "components", item: "cookie-banner", example: "server-side", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "components", item: "cookie-banner", example: "server-side", html: true, nunjucks: true, open: false }) }}
 
 Once the user has accepted or rejected cookies and set their cookie preferences, reload the page to show a confirmation message.
 
 Here's an example of a confirmation message inside a form:
 
-{{ example({group: "components", item: "cookie-banner", example: "server-side-confirmation", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "components", item: "cookie-banner", example: "server-side-confirmation", html: true, nunjucks: true, open: false }) }}
 
 #### Show the same message to all users
 
@@ -103,11 +103,11 @@ Include all possible messages that the user could see in the cookie banner when 
 
 Here's an example of a progressively enhanced cookie banner that includes all possible messages which are hidden using HTML — the cookie banner message is shown using JavaScript to remove the `hidden` attribute:
 
-{{ example({group: "components", item: "cookie-banner", example: "server-side-multiple-messages-question-visible", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "components", item: "cookie-banner", example: "server-side-multiple-messages-question-visible", html: true, nunjucks: true, open: false }) }}
 
 Here's the same example of a progressively enhanced cookie banner, with the confirmation message shown instead:
 
-{{ example({group: "components", item: "cookie-banner", example: "server-side-multiple-messages-confirmation-visible", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "components", item: "cookie-banner", example: "server-side-multiple-messages-confirmation-visible", html: true, nunjucks: true, open: false }) }}
 
 ### Option 3: If you set non-essential cookies, but only on the client
 
@@ -128,17 +128,17 @@ Write your own JavaScript code so that when the user accepts or rejects cookies,
 
 Here’s an example:
 
-{{ example({group: "components", item: "cookie-banner", example: "client-side", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "components", item: "cookie-banner", example: "client-side", html: true, nunjucks: true, open: false }) }}
 
 #### When the user has accepted cookies
 
 Show a confirmation message confirming that the user has either accepted or rejected cookies by removing the `hidden` attribute.
 
-{{ example({group: "components", item: "cookie-banner", example: "client-side-accepted", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "components", item: "cookie-banner", example: "client-side-accepted", html: true, nunjucks: true, open: false }) }}
 
 #### When the user has rejected cookies
 
-{{ example({group: "components", item: "cookie-banner", example: "client-side-rejected", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "components", item: "cookie-banner", example: "client-side-rejected", html: true, nunjucks: true, open: false }) }}
 
 ## What to cover in your cookie banner
 
@@ -167,7 +167,7 @@ You can use this example text for a service that set:
 - analytics cookies
 - functional cookies to remember the user’s settings but are not essential
 
-{{ example({group: "components", item: "cookie-banner", example: "multiple-cookies", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "components", item: "cookie-banner", example: "multiple-cookies", html: true, nunjucks: true, open: false }) }}
 
 ## Creating a cookies page
 

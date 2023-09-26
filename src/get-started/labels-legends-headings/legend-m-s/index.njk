@@ -1,12 +1,12 @@
 ---
 title: Styling legends – Making labels and legends headings
-layout: layout-example.njk
+layout: layout-example-form.njk
 ---
 
 {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
 {{ govukCheckboxes({
-  name: "checkbox-1",
+  name: "checkbox1",
   fieldset: {
     legend: {
       text: "govuk-fieldset__legend--m",
@@ -33,7 +33,7 @@ layout: layout-example.njk
 }) }}
 
 {{ govukCheckboxes({
-  name: "checkbox-2",
+  name: "checkbox2",
   fieldset: {
     legend: {
       text: "govuk-fieldset__legend--s",

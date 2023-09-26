@@ -1,6 +1,6 @@
 ---
 title: Radios with conditionally revealing content showing an error – Radios
-layout: layout-example.njk
+layout: layout-example-form.njk
 ---
 
 {% from "govuk/components/radios/macro.njk" import govukRadios %}
@@ -9,7 +9,7 @@ layout: layout-example.njk
 {% set emailHtml %}
 {{ govukInput({
   id: "contact-by-email",
-  name: "contact-by-email",
+  name: "contactByEmail",
   type: "email",
   autocomplete: "email",
   spellcheck: false,
@@ -26,7 +26,7 @@ layout: layout-example.njk
 {% set phoneHtml %}
 {{ govukInput({
   id: "contact-by-phone",
-  name: "contact-by-phone",
+  name: "contactByPhone",
   type: "tel",
   autocomplete: "tel",
   classes: "govuk-!-width-one-third",
@@ -39,7 +39,7 @@ layout: layout-example.njk
 {% set textHtml %}
 {{ govukInput({
   id: "contact-by-text",
-  name: "contact-by-text",
+  name: "contactByText",
   type: "tel",
   autocomplete: "tel",
   classes: "govuk-!-width-one-third",

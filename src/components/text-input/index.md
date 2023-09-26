@@ -9,7 +9,7 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 
-{{ example({group: "components", item: "text-input", example: "default", html: true, nunjucks: true, open: false, size: "s", loading: "eager" }) }}
+{{ example({ group: "components", item: "text-input", example: "default", html: true, nunjucks: true, open: false, size: "s", loading: "eager" }) }}
 
 ## When to use this component
 
@@ -41,13 +41,13 @@ Read more about [why and how to set legends as headings](/get-started/labels-leg
 
 There are 2 ways to use the text input component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 
-{{ example({group: "components", item: "text-input", example: "default", html: true, nunjucks: true, open: false, size: "s", titleSuffix: "second"}) }}
+{{ example({ group: "components", item: "text-input", example: "default", html: true, nunjucks: true, open: false, size: "s", titleSuffix: "second" }) }}
 
 ### If you’re asking more than one question on the page
 
 If you're asking more than one question on the page, do not set the contents of the `<label>` as the page heading. Read more about [asking multiple questions on question pages](/patterns/question-pages/#asking-multiple-questions-on-a-page).
 
-{{ example({group: "components", item: "text-input", example: "without-heading", html: true, nunjucks: true, open: false, size: "s"}) }}
+{{ example({ group: "components", item: "text-input", example: "without-heading", html: true, nunjucks: true, open: false, size: "s" }) }}
 
 ### Use appropriately-sized text inputs
 
@@ -65,7 +65,7 @@ The widths are designed for specific character lengths and to be consistent acro
 
 On fixed width inputs, the width will remain fixed on all screens unless it is wider than the viewport, in which case it will shrink to fit.
 
-{{ example({group: "components", item: "text-input", example: "input-fixed-width", html: true, nunjucks: true, open: false, size: "l"}) }}
+{{ example({ group: "components", item: "text-input", example: "input-fixed-width", html: true, nunjucks: true, open: false, size: "l" }) }}
 
 #### Fluid width inputs
 
@@ -73,13 +73,13 @@ Use the width override classes to reduce the width of an input in relation to it
 
 Fluid width inputs will resize with the viewport.
 
-{{ example({group: "components", item: "text-input", example: "input-fluid-width", html: true, nunjucks: true, open: false, size: "xl"}) }}
+{{ example({ group: "components", item: "text-input", example: "input-fluid-width", html: true, nunjucks: true, open: false, size: "xl" }) }}
 
 ### Hint text
 
 Use hint text for help that’s relevant to the majority of users, like how their information will be used, or where to find it.
 
-{{ example({group: "components", item: "text-input", example: "input-hint-text", html: true, nunjucks: true, open: false, size: "s"}) }}
+{{ example({ group: "components", item: "text-input", example: "input-hint-text", html: true, nunjucks: true, open: false, size: "s" }) }}
 
 #### When not to use hint text
 
@@ -97,7 +97,7 @@ If you're asking the user to enter a whole number, set the `inputmode` attribute
 
 See how to do this by opening the HTML and Nunjucks tabs in this example:
 
-{{ example({group: "components", item: "text-input", example: "number-input", html: true, nunjucks: true, open: false, size: "m"}) }}
+{{ example({ group: "components", item: "text-input", example: "number-input", html: true, nunjucks: true, open: false, size: "m" }) }}
 
 There is specific guidance on how to ask for:
 
@@ -110,7 +110,7 @@ If you're asking the user to enter a number that might include decimal places, u
 
 Do not set the `inputmode` attribute to `decimal` as it causes some devices to bring up a keypad without a key for the decimal separator.
 
-{{ example({group: "components", item: "text-input", example: "decimal-input", html: true, nunjucks: true, open: false, size: "m"}) }}
+{{ example({ group: "components", item: "text-input", example: "decimal-input", html: true, nunjucks: true, open: false, size: "m" }) }}
 
 #### Avoid using inputs with a type of number
 
@@ -122,7 +122,7 @@ Help the user visually check the code they've typed is correct by styling the in
 
 You do not need to do this for memorable information, such as phone numbers and postcodes.
 
-{{ example({group: "components", item: "text-input", example: "code-sequence", html: true, nunjucks: true, open: false, size: "m"}) }}
+{{ example({ group: "components", item: "text-input", example: "code-sequence", html: true, nunjucks: true, open: false, size: "m" }) }}
 
 There is specific guidance on how to:
 
@@ -134,7 +134,7 @@ There is specific guidance on how to:
 
 Use prefixes and suffixes to help users enter things like currencies and measurements.
 
-{{ example({group: "components", item: "text-input", example: "input-prefix-suffix", html: true, nunjucks: true, closed: true, size: "s"}) }}
+{{ example({ group: "components", item: "text-input", example: "input-prefix-suffix", html: true, nunjucks: true, closed: true, size: "s" }) }}
 
 Prefixes and suffixes are useful when there's a commonly understood symbol or abbreviation for the type of information you're asking for. Do not rely on prefixes or suffixes alone, because screen readers will not read them out.
 
@@ -146,11 +146,11 @@ Some users may miss that the input already has a suffix or prefix, and enter a p
 
 #### Text inputs with a prefix
 
-{{ example({group: "components", item: "text-input", example: "input-prefix", html: true, nunjucks: true, closed: true, size: "s"}) }}
+{{ example({ group: "components", item: "text-input", example: "input-prefix", html: true, nunjucks: true, closed: true, size: "s" }) }}
 
 #### Text inputs with a suffix
 
-{{ example({group: "components", item: "text-input", example: "input-suffix", html: true, nunjucks: true, closed: true, size: "s"}) }}
+{{ example({ group: "components", item: "text-input", example: "input-suffix", html: true, nunjucks: true, closed: true, size: "s" }) }}
 
 ### Use the autocomplete attribute
 
@@ -158,7 +158,7 @@ Use the `autocomplete` attribute on text inputs to help users complete forms mor
 
 For example, to enable autofill on a postcode field, set the `autocomplete` attribute to `postal-code`. See how to do this in the HTML and Nunjucks tabs in the following example.
 
-{{ example({group: "components", item: "text-input", example: "input-autocomplete-attribute", displayExample: false, html: true, nunjucks: true, open: true, size: "s"}) }}
+{{ example({ group: "components", item: "text-input", example: "input-autocomplete-attribute", displayExample: false, html: true, nunjucks: true, open: true, size: "s" }) }}
 
 If you are working in production and there is a relevant [input purpose](https://www.w3.org/TR/WCAG21/#input-purposes), you'll need to use the `autocomplete` attribute to meet [WCAG 2.1 Level AA](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html).
 
@@ -186,7 +186,7 @@ If you are asking users for information which is not appropriate to spellcheck, 
 
 To do this set the `spellcheck` attribute to `false` as shown in this example.
 
-{{ example({group: "components", item: "text-input", example: "input-spellcheck-disabled", html: true, nunjucks: true, displayExample: false, open: true, size: "s"}) }}
+{{ example({ group: "components", item: "text-input", example: "input-spellcheck-disabled", html: true, nunjucks: true, displayExample: false, open: true, size: "s" }) }}
 
 Browsers do not consistently spellcheck user’s input by default. If you are asking a question where spellcheck would be useful, set the `spellcheck` attribute to `true`.
 
@@ -194,11 +194,11 @@ Browsers do not consistently spellcheck user’s input by default. If you are as
 
 Error messages should be styled like this:
 
-{{ example({group: "components", item: "text-input", example: "error", html: true, nunjucks: true, closed: true, size: "s"}) }}
+{{ example({ group: "components", item: "text-input", example: "error", html: true, nunjucks: true, closed: true, size: "s" }) }}
 
 #### If the input has a prefix or a suffix
 
-{{ example({group: "components", item: "text-input", example: "input-prefix-suffix-error", html: true, nunjucks: true, closed: true, size: "s"}) }}
+{{ example({ group: "components", item: "text-input", example: "input-prefix-suffix-error", html: true, nunjucks: true, closed: true, size: "s" }) }}
 
 Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
 

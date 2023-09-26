@@ -16,22 +16,23 @@
         {{ theme if theme else section }}
       </span>
       {% endif %}
-      <h1 class="govuk-heading-xl">
+      <h1 class="govuk-heading-xl {%- if status %} govuk-!-margin-bottom-5{% endif %}">
         {% if includeThemeInPageHeading %}
         <span class="govuk-caption-xl">
           {{ theme | replace("…", "") }}
         </span>
         {% endif %}
         {{ title }}
-        {% if status %}
-        <div>
-          <strong class="govuk-tag govuk-!-margin-top-4 govuk-!-margin-bottom-2">
-            {{ status }}
-          </strong>
-          <p class="govuk-body">{{ statusMessage | safe }}</p>
-        </div>
-        {% endif %}
       </h1>
+
+      {% if status %}
+      <aside class="govuk-!-margin-bottom-8" aria-label="Guidance status">
+        <strong class="govuk-tag govuk-!-margin-bottom-2">
+          {{ status }}
+        </strong>
+        <p class="govuk-body">{{ statusMessage | safe }}</p>
+      </aside>
+      {% endif %}
 
       {% if showPageNav %}
         <ul class="app-page-navigation">

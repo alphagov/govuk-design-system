@@ -12,7 +12,7 @@ layout: layout-pane.njk
 
 This pattern explains when to use question pages and what elements they need to include.
 
-{{ example({group: "patterns", item: "question-pages", example: "default", html: true, nunjucks: true, open: false, loading: "eager"}) }}
+{{ example({ group: "patterns", item: "question-pages", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 ## When to use this pattern
 
@@ -70,11 +70,11 @@ Read more about why and [how to set labels and legends as headings](/get-started
 
 A question page with a legend as the page heading:
 
-{{ example({group: "patterns", item: "question-pages", example: "date-of-birth", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "patterns", item: "question-pages", example: "date-of-birth", html: true, nunjucks: true, open: false }) }}
 
 A question page with a label as the page heading:
 
-{{ example({group: "patterns", item: "question-pages", example: "postcode", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "patterns", item: "question-pages", example: "postcode", html: true, nunjucks: true, open: false }) }}
 
 Do not use the same page heading across multiple pages.
 
@@ -84,7 +84,7 @@ If you need to show the high-level section, you can use the `govuk-caption` styl
 
 For example, ‘About you’
 
-{{ example({group: "patterns", item: "question-pages", example: "section-headings", html: true, open: true, hideTab:true}) }}
+{{ example({ group: "patterns", item: "question-pages", example: "section-headings", html: true, open: true, hideTab:true }) }}
 
 You can also learn more about how starting with [one thing per page](https://www.gov.uk/service-manual/design/form-structure#start-with-one-thing-per-page) helps users in the GOV.UK Service Manual.
 
@@ -100,7 +100,7 @@ If you're asking a question that needs a detailed explanation, use:
 - whatever mix of text, paragraphs, lists and examples best explains your question to users
 - a label, above the form input, that asks users a specific question – for example, 'Do you have any interview needs?'
 
-{{ example({group: "patterns", item: "question-pages", example: "explanatory-text", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "patterns", item: "question-pages", example: "explanatory-text", html: true, nunjucks: true, open: false }) }}
 
 #### Asking multiple questions on a page
 
@@ -112,7 +112,7 @@ If you need to ask for multiple related things on a page, use a statement as the
 
 You can style each `<label>` or `<legend>` to make the questions easier to scan. Read more about why and [how to style labels and legends](/get-started/labels-legends-headings/#styling-options-for-labels-and-legends).
 
-{{ example({group: "patterns", item: "question-pages", example: "passport", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "patterns", item: "question-pages", example: "passport", html: true, nunjucks: true, open: false }) }}
 
 ### Continue button
 
@@ -127,7 +127,7 @@ Start by testing your form without a progress indicator to see if it’s simple 
 
 Try improving the order, type or number of questions before adding a progress indicator. If people still have difficulty, try adding a simple step or question indicator like this one.
 
-{{ example({group: "patterns", item: "question-pages", example: "progress", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "patterns", item: "question-pages", example: "progress", html: true, nunjucks: true, open: false }) }}
 
 Only include the total number of questions if you can do so reliably. As the user moves through the form, make sure the indicator updates to tell them which question they are on and the total number remaining.
 

@@ -10,13 +10,13 @@ status: Experimental
 statusMessage: This pattern is currently experimental because <a class="govuk-link" href="#research-on-this-pattern">more research</a> is needed to validate it.
 ---
 
-This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
-
 {% from "_example.njk" import example %}
+
+This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
 
 Tell the user there is something wrong with the service. These are also known as 500 and internal server error pages.
 
-{{ example({group: "patterns", item: "problem-with-the-service-pages", example: "offline-support-link", html: true, nunjucks: true, open: false, size: "xl", loading: "eager"}) }}
+{{ example({ group: "patterns", item: "problem-with-the-service-pages", example: "offline-support-link", html: true, nunjucks: true, open: false, size: "xl", loading: "eager" }) }}
 
 ## When to use this pattern
 
@@ -51,15 +51,15 @@ Have clear and concise content and do not use:
 
 ### Service has a specific page that includes numbers and opening times
 
-{{ example({group: "patterns", item: "problem-with-the-service-pages", example: "offline-support-link", html: true, nunjucks: true, open: false, titleSuffix: "second", size: "xl"}) }}
+{{ example({ group: "patterns", item: "problem-with-the-service-pages", example: "offline-support-link", html: true, nunjucks: true, open: false, titleSuffix: "second", size: "xl" }) }}
 
 ### Service has offline support but no specific page that includes numbers and opening times
 
-{{ example({group: "patterns", item: "problem-with-the-service-pages", example: "offline-support", html: true, nunjucks: true, open: false, size: "xl"}) }}
+{{ example({ group: "patterns", item: "problem-with-the-service-pages", example: "offline-support", html: true, nunjucks: true, open: false, size: "xl" }) }}
 
 ### A link to another service
 
-{{ example({group: "patterns", item: "problem-with-the-service-pages", example: "link-to-another-service", html: true, nunjucks: true, open: false, size: "xl"}) }}
+{{ example({ group: "patterns", item: "problem-with-the-service-pages", example: "link-to-another-service", html: true, nunjucks: true, open: false, size: "xl" }) }}
 
 ## Research on this pattern
 

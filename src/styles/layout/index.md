@@ -4,8 +4,9 @@ description: Organise the layout of the page into blocks
 section: Styles
 layout: layout-pane.njk
 showPageNav: true
-headingAliases:
-  Hide elements and keep them accessible to screen readers: visually hidden
+headings:
+  - text: Hide elements and keep them accessible to screen readers
+    aliases: visually hidden
 ---
 
 {% from "_example.njk" import example %}
@@ -24,15 +25,15 @@ The default maximum page width is 1020px, but you can make it wider if your cont
 
 ### Two-thirds
 
-{{ example({group: "styles", item: "layout", example: "common-two-thirds", html: true, open: true, size: "m", loading: "eager"}) }}
+{{ example({ group: "styles", item: "layout", example: "common-two-thirds", html: true, open: true, size: "m", loading: "eager" }) }}
 
 ### Two-thirds and one-third
 
-{{ example({group: "styles", item: "layout", example: "common-two-thirds-one-third", html: true, open: true, size: "m"}) }}
+{{ example({ group: "styles", item: "layout", example: "common-two-thirds-one-third", html: true, open: true, size: "m" }) }}
 
 ### Row 1: Two-thirds <br>Row 2: Two-thirds and one-third
 
-{{ example({group: "styles", item: "layout", example: "common-two-thirds-two-thirds-one-third", html: true, open: true, size: "l"}) }}
+{{ example({ group: "styles", item: "layout", example: "common-two-thirds-two-thirds-one-third", html: true, open: true, size: "l" }) }}
 
 ## Setting up page wrappers
 
@@ -55,11 +56,11 @@ If you’re not using the [breadcrumbs](/components/breadcrumbs/), [back link](/
 
 ### Exploded view of page wrappers
 
-{{ example({group: "styles", item: "layout", example: "layout-wrappers", html: true, open: true, size: "l"}) }}
+{{ example({ group: "styles", item: "layout", example: "layout-wrappers", html: true, open: true, size: "l" }) }}
 
 ### Exploded view of page wrappers without a back link, breadcrumbs or phase banner
 
-{{ example({group: "styles", item: "layout", example: "layout-wrappers-l", html: true, open: true, size: "l"}) }}
+{{ example({ group: "styles", item: "layout", example: "layout-wrappers-l", html: true, open: true, size: "l" }) }}
 
 ## Using the grid system
 
@@ -79,45 +80,45 @@ The available widths are:
 
 ### Full width
 
-{{ example({group: "styles", item: "layout", example: "full-width", html: true, open: true, size: "s"}) }}
+{{ example({ group: "styles", item: "layout", example: "full-width", html: true, open: true, size: "s" }) }}
 
 ### One-half
 
-{{ example({group: "styles", item: "layout", example: "one-half", html: true, open: true, size: "s"}) }}
+{{ example({ group: "styles", item: "layout", example: "one-half", html: true, open: true, size: "s" }) }}
 
 ### One-third
 
-{{ example({group: "styles", item: "layout", example: "one-third", html: true, open: true, size: "s"}) }}
+{{ example({ group: "styles", item: "layout", example: "one-third", html: true, open: true, size: "s" }) }}
 
 ### Two-thirds
 
-{{ example({group: "styles", item: "layout", example: "two-thirds", html: true, open: true, size: "s"}) }}
+{{ example({ group: "styles", item: "layout", example: "two-thirds", html: true, open: true, size: "s" }) }}
 
 ### One-quarter
 
-{{ example({group: "styles", item: "layout", example: "one-quarter", html: true, open: true, size: "s"}) }}
+{{ example({ group: "styles", item: "layout", example: "one-quarter", html: true, open: true, size: "s" }) }}
 
 ### Three-quarters
 
-{{ example({group: "styles", item: "layout", example: "three-quarters", html: true, open: true, size: "s"}) }}
+{{ example({ group: "styles", item: "layout", example: "three-quarters", html: true, open: true, size: "s" }) }}
 
 ### Example combinations
 
-{{ example({group: "styles", item: "layout", example: "combinations", html: true, open: true, size: "xl"}) }}
+{{ example({ group: "styles", item: "layout", example: "combinations", html: true, open: true, size: "xl" }) }}
 
 ### Desktop specific grid classes
 
 To specify a width at the desktop breakpoint you can use the desktop specific grid classes. For example `govuk-grid-column-two-thirds-from-desktop` will set your column width to be two-thirds width at the desktop breakpoint only.
 
-{{ example({group: "styles", item: "layout", example: "desktop", html: true, open: true, size: "m"}) }}
+{{ example({ group: "styles", item: "layout", example: "desktop", html: true, open: true, size: "m" }) }}
 
 The desktop specific classes also allow you to set the width of the tablet breakpoint by using them in combination with the standard grid classes. For example using `govuk-grid-column-one-half` and `govuk-grid-column-two-thirds-from-desktop` together will mean the column will be one-half at the tablet breakpoint and two-thirds width at desktop.
 
-{{ example({group: "styles", item: "layout", example: "tablet-desktop", html: true, open: true, size: "m"}) }}
+{{ example({ group: "styles", item: "layout", example: "tablet-desktop", html: true, open: true, size: "m" }) }}
 
 ### Nested grids
 
-{{ example({group: "styles", item: "layout", example: "nested", html: true, open: true, size: "m"}) }}
+{{ example({ group: "styles", item: "layout", example: "nested", html: true, open: true, size: "m" }) }}
 
 ## Width override classes
 
@@ -127,7 +128,7 @@ The width override classes start with `govuk-!-width-`, followed by the width on
 
 These examples are for the generic width override classes - read specific [guidance on setting text input width](/components/text-input/#use-appropriately-sized-text-inputs).
 
-{{ example({group: "styles", item: "layout", example: "width-overrides", html: true, open: true, size: "xl"}) }}
+{{ example({ group: "styles", item: "layout", example: "width-overrides", html: true, open: true, size: "xl" }) }}
 
 ## Override how elements display
 

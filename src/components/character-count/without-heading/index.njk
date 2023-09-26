@@ -1,11 +1,13 @@
 ---
 title: Character count without a heading – Character count
-layout: layout-example.njk
+layout: layout-example-form.njk
 ---
+
 {% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
+
 {{ govukCharacterCount({
   id: "label-as-page-heading",
-  name: "label-as-page-heading",
+  name: "labelAsPageHeading",
   maxlength: 200,
   label: {
     text: "Describe the nature of your event"

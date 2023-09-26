@@ -1,6 +1,6 @@
 ---
 title: Name input with errors – Names
-layout: layout-example.njk
+layout: layout-example-form.njk
 ---
 
 {% from "govuk/components/input/macro.njk" import govukInput %}
@@ -10,7 +10,7 @@ layout: layout-example.njk
     text: "Full name"
   },
   id: "full-name",
-  name: "full-name",
+  name: "fullName",
   autocomplete: "name",
   errorMessage: {
     text: "Enter your full name"

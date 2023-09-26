@@ -204,6 +204,6 @@ For example, use:
 
 ### Examples
 
-{{ example({group: "styles", item: "spacing", example: "spacing-scale-padding", html: true, open: false, size: "l"}) }}
+{{ example({ group: "styles", item: "spacing", example: "spacing-scale-padding", html: true, open: false, size: "l" }) }}
 
-{{ example({group: "styles", item: "spacing", example: "spacing-scale-margin", html: true, open: false, size: "xl"}) }}
+{{ example({ group: "styles", item: "spacing", example: "spacing-scale-margin", html: true, open: false, size: "xl" }) }}

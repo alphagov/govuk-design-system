@@ -14,7 +14,7 @@ This guide explains how to set up your project so you can start using the styles
 
 {{ govukInsetText({
   classes: "app-table--constrained",
-  html: "If you’ve used GOV.UK Elements, GOV.UK Template or the GOV.UK Frontend Toolkit before, you might also find it useful to read the guide on <a href=\"/get-started/updating-your-code/\">updating your code</a>."
+  html: 'If you’ve used GOV.UK Elements, GOV.UK Template or the GOV.UK Frontend Toolkit before, you might also find it useful to read the guide on <a href="/get-started/updating-your-code/">updating your code</a>.'
 }) }}
 
 ## Include GOV.UK Frontend in your project
@@ -70,4 +70,4 @@ You can use them in your live application as either:
 
 You can get the code from the HTML or Nunjucks tabs below any examples:
 
-{{ example({group: "components", item: "button", example: "default", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "components", item: "button", example: "default", html: true, nunjucks: true, open: false }) }}

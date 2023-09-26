@@ -10,9 +10,7 @@ order: 11
 <img src="/community/images/dsd23-announcement-banner.svg" alt="Design System Day 2023 logo" class="app-image--no-border govuk-!-margin-bottom-6" loading="lazy">
 
 Dates: 10 and 11 October 2023
-Location: Online and <a href='https://dynamicearth.org.uk/plan-your-visit/getting-here/'>Dynamic Earth</a>, Edinburgh
-
-We plan to release tickets at the start of September. <a href='https://mailchi.mp/707ce8dec373/get-updated-by-email-govuk-design-system'>Sign up to our mailing list</a> to get updates.
+Location: Online and <a href="https://dynamicearth.org.uk/plan-your-visit/getting-here/">Dynamic Earth</a>, Edinburgh
 
 <!--
 
@@ -38,13 +36,25 @@ We'll also be hosting get-togethers and after-parties for people attending the E
 
 ### Speakers and sessions
 
-The first day will be hosted in Dynamic Earth, Edinburgh and streamed online. The second day will be online-only.
+The first day will be hosted in Dynamic Earth, Edinburgh. The second day will be online-only.
 
-As ever, we want the conference to be a community-driven event. So please take part in making Design System Day 2023 special through our <a href="/community/call-for-speakers-2023/">call for speakers</a>.
+As ever, we want the conference to be a community-driven event, so all talks, workshops and sessions have been suggested by the community. 
 
-We are looking for keynote speakers and panel members to be part of day 1. We are also looking for workshop leads and breakout session hosts for day 2. We appreciate diverse perspectives and would love to hear from first-time speakers.
+We'll be covering topics such as
 
-Find out how to structure and submit your pitch in our <a href="/community/call-for-speakers-2023/">call for speakers</a>.
+- research operations at scale
+- how design systems manage contributions
+- reflections on trauma-informed design
+- challenges scaling user-centred services
+- building a native app design system from scratch
+- imposter syndrome
+- participatory research and co-design
+- Web Components
+- doing good discoveries
+
+and much more!
+
+Our speakers come from organisations across the UK and international public sector, and we're joined by folks working on design systems from notable companies too.
 
 <!--
 
@@ -80,6 +90,6 @@ Joining instructions, etc.
 
 ## About the GOV.UK Design System community
 
-The GOV.UK Design System <a href='/community/'>relies on a strong cross-government community</a> to make sure it represents the latest research, design, and development work used in digital services.
+The GOV.UK Design System <a href="/community/">relies on a strong cross-government community</a> to make sure it represents the latest research, design, and development work used in digital services.
 
 To bring our community together, the GOV.UK Design System team regularly hosts events, workshops, and co-design sprints. Our team is always on the lookout for ways to engage users in different teams and departments to help strengthen the work we do, and to help to build better products.

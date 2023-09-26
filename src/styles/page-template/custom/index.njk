@@ -21,8 +21,8 @@ ignoreInSitemap: true
 {% set themeColor = "blue" %}
 {% set bodyClasses = "app-body-class" %}
 {% set bodyAttributes = {
-  'data-test': 'My value',
-  'data-other': 'report:details'
+  "data-test": "My value",
+  "data-other": "report:details"
 } %}
 {% set containerClasses = "app-width-container" %}
 
@@ -38,34 +38,36 @@ ignoreInSitemap: true
 {% endblock %}
 
 {% block bodyStart %}
-  {{ govukCookieBanner({
-    ariaLabel: "Cookies on [name of service]",
-    messages: [
-      {
-        headingText: "Cookies on [name of service]",
-        html: "<p class=\"govuk-body\">We use some essential cookies to make this service work.</p>
-          <p class=\"govuk-body\">We'd also like to use analytics cookies so we can understand how you use the service and make improvements.</p>",
-        actions: [
-          {
-            text: "Accept analytics cookies",
-            type: "button",
-            name: "cookies",
-            value: "accept"
-          },
-          {
-            text: "Reject analytics cookies",
-            type: "button",
-            name: "cookies",
-            value: "reject"
-          },
-          {
-            text: "View cookies",
-            href: "#"
-          }
-        ]
-      }
-    ]
-  }) }}
+  <form action="/form-handler" method="post" novalidate>
+    {{ govukCookieBanner({
+      ariaLabel: "Cookies on [name of service]",
+      messages: [
+        {
+          headingText: "Cookies on [name of service]",
+          html: '<p class="govuk-body">We use some essential cookies to make this service work.</p>
+            <p class="govuk-body">We’d also like to use analytics cookies so we can understand how you use the service and make improvements.</p>',
+          actions: [
+            {
+              text: "Accept analytics cookies",
+              type: "submit",
+              name: "cookies[analytics]",
+              value: "yes"
+            },
+            {
+              text: "Reject analytics cookies",
+              type: "submit",
+              name: "cookies[analytics]",
+              value: "no"
+            },
+            {
+              text: "View cookies",
+              href: "#"
+            }
+          ]
+        }
+      ]
+    }) }}
+  </form>
 {% endblock %}
 
 {% block skipLink %}
@@ -150,5 +152,6 @@ ignoreInSitemap: true
 
 {% block bodyEnd %}
   <script src="{{ getFingerprint('javascripts/govuk-frontend.js') }}"></script>
+  <script src="{{ getFingerprint('javascripts/example.js') }}"></script>
   <script src="{{ getFingerprint('javascripts/vendor/iframeResizer.contentWindow.min.js') }}"></script>
 {% endblock %}

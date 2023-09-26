@@ -1,6 +1,6 @@
 ---
 title: Number input – Text input
-layout: layout-example.njk
+layout: layout-example-form.njk
 ---
 
 {% from "govuk/components/input/macro.njk" import govukInput %}
@@ -16,7 +16,7 @@ layout: layout-example.njk
     text: "Must be between 6 and 8 digits long"
   },
   id: "account-number",
-  name: "account-number",
+  name: "accountNumber",
   inputmode: "numeric",
   spellcheck: false
 }) }}

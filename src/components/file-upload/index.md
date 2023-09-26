@@ -13,7 +13,7 @@ This guidance is for government teams that build online services. [To find infor
 
 Help users select and upload a file.
 
-{{ example({group: "components", item: "file-upload", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
+{{ example({ group: "components", item: "file-upload", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 
@@ -23,13 +23,13 @@ You should only ask users to upload something if it’s critical to the delivery
 
 There are 2 ways to use the file upload component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 
-{{ example({group: "components", item: "file-upload", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second"}) }}
+{{ example({ group: "components", item: "file-upload", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
 
 ### Error messages
 
 Error messages should be styled like this:
 
-{{ example({group: "components", item: "file-upload", example: "error", html: true, nunjucks: true, open: false, size: "m"}) }}
+{{ example({ group: "components", item: "file-upload", example: "error", html: true, nunjucks: true, open: false, size: "m" }) }}
 
 Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
 

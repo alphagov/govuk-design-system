@@ -19,7 +19,7 @@
 {% if params.id %}
   {% set exampleId = params.id %}
 {% else %}
-  {% set exampleId = (exampleTitle + " example") | slugger %}
+  {% set exampleId = (exampleTitle + " example") | slugify %}
 {% endif %}
 
 {% if params.open %}
@@ -36,10 +36,10 @@
       <div class="app-example__toolbar">
         <a href="{{ exampleURL }}" class="app-example__new-window" target="_blank">
           {#- Don't use full title visually as the context is shown based on location of this link #}
-          Open this example in a new tab<span class="govuk-visually-hidden">: {{ exampleTitle | lower }}</span>
+          Open this example in a new tab<span class="govuk-visually-hidden">: {{ exampleTitle | lower | smartypants }}</span>
         </a>
       </div>
-      <iframe title="{{ exampleTitle + " example" }}" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable{% if params.size %} app-example__frame--{{ params.size }}{% endif %}" src="{{ exampleURL }}" loading="{% if params.loading %}{{ params.loading }}{% else %}lazy{% endif %}"></iframe>
+      <iframe title="{{ exampleTitle | smartypants + " example" }}" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable{% if params.size %} app-example__frame--{{ params.size }}{% endif %}" src="{{ exampleURL }}" loading="{% if params.loading %}{{ params.loading }}{% else %}lazy{% endif %}"></iframe>
     </div>
   {% endif %}
 
@@ -114,8 +114,8 @@
           If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
           </p>
           {% for table in macroOptions %}
-            <table class="govuk-table app-options__table" id="options-{{ exampleId }}--{{ table.id }}">
-              <caption class="govuk-table__caption govuk-heading-m {% if table.id == 'primary' %} govuk-visually-hidden{% endif %}">{{ table.name | safe }}</caption>
+            <table class="govuk-table app-options__table" id="options-{{ exampleId }}--{{ table.slug }}">
+              <caption class="govuk-table__caption govuk-heading-m {% if table.slug == 'primary' %} govuk-visually-hidden{% endif %}">{{ table.name | safe }}</caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
                   <th class="govuk-table__header app-options__limit-table-cell" scope="col">Name</th>
@@ -125,25 +125,22 @@
               </thead>
               <tbody class="govuk-table__body">
                 {% for option in table.options -%}
+                  {# Option name only, without parent prefix -#}
+                  {% set optionName = option.name.split(" ") | last %}
                   <tr class="govuk-table__row">
-                    <th class="govuk-table__header" scope="row">{{ option.name | safe }}</th>
+                    <th class="govuk-table__header" scope="row">{{ optionName | safe }}</th>
                     <td class="govuk-table__cell">{{ option.type }}</td>
                     <td class="govuk-table__cell">
-                      {% if (option.required === true) %}
-                        <strong>Required.</strong>
-                      {% endif %}
+                    {% if (option.required) %}
+                      <strong>Required.</strong>
+                    {% endif %}
                       {{ option.description | safe }}
-                      {% if (option.isComponent) -%}
-                        {# Create separate table data for components that are hidden in the Design System -#}
-                        {% if ["hint", "label"].includes(option.slug) %}
-                          See <a href="#options-{{ exampleId }}--{{ option.slug }}">{{ option.name | safe }}</a>.
-                        {% else %}
-                          See <a href="/components/{{ option.slug }}/#options-{{ option.slug }}-example">{{ option.name | safe }}</a>.
-                        {% endif %}
-                      {% endif %}
-                      {% if (option.params) %}
-                        See <a href="#options-{{ exampleId }}--{{ option.slug }}">{{ option.name | safe }}</a>.
-                      {% endif -%}
+                    {% if (option.params) or ["hint", "label"].includes(option.slug) %}
+                      See <a href="#options-{{ exampleId }}--{{ option.slug }}">{{ option.name | safe }}</a>.
+                    {% elif (option.isComponent) %}
+                      {# Link to Design System component pages for nested components -#}
+                      See <a href="/components/{{ option.slug }}/#options-{{ option.slug }}-example">{{ option.name | safe }}</a>.
+                    {% endif %}
                     </td>
                   </tr>
                 {% endfor %}
@@ -156,7 +153,7 @@
         {%- from "govuk/components/details/macro.njk" import govukDetails %}
 
         {{- govukDetails({
-          summaryHtml: "<span data-components='github-component-arguments'>Nunjucks macro options</span>",
+          summaryHtml: '<span data-components="github-component-arguments">Nunjucks macro options</span>',
           html: macroOptionsHTML,
           classes: "app-options",
           attributes:{

@@ -1,6 +1,6 @@
 ---
 title: Sex and gender equality question – Equality information
-layout: layout-example.njk
+layout: layout-example-form.njk
 ---
 
 {% from "govuk/components/button/macro.njk" import govukButton %}
@@ -12,7 +12,7 @@ layout: layout-example.njk
 {% set genderHtml %}
   {{ govukInput({
     id: "gender-description",
-    name: "gender-description",
+    name: "genderDescription",
     type: "text",
     classes: "govuk-!-width-one-half",
     label: {
@@ -46,7 +46,7 @@ layout: layout-example.njk
 }) }}
 
 {{ govukRadios({
-  name: "gender-identity",
+  name: "genderIdentity",
   fieldset: {
     legend: {
       text: "Is the gender you identify with the same as your sex registered at birth?",

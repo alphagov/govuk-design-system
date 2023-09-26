@@ -22,8 +22,8 @@ Task list pages help users understand:
 
 There’s a [coded example of a task list page](https://prototype-kit.service.gov.uk/docs/templates/task-list) in the GOV.UK Prototype Kit. To use the example, get the following code from the Prototype Kit repository on GitHub:
 
-- [HTML from the task list page's HTML file](https://github.com/alphagov/govuk-prototype-kit/blob/main/lib/nunjucks/templates/task-list.html)
-- [custom styles from the task list page's SCSS file](https://github.com/alphagov/govuk-prototype-kit/blob/main/lib/assets/sass/patterns/_task-list.scss)
+- [HTML from the task list page's HTML file](https://github.com/alphagov/govuk-prototype-kit-task-list/blob/main/templates/task-list.html)
+- [custom styles from the task list page's SCSS file](https://github.com/alphagov/govuk-prototype-kit-task-list/blob/main/sass/_task-list.scss)
 
 ## When to use this pattern
 
@@ -100,7 +100,7 @@ If the user selects ‘No, I’ll come back to it later,’ mark the task as 'In
 
 If the user selects ‘Yes, I’ve completed this section,’ mark the task as 'Completed'.
 
-{{ example({group: "patterns", item: "task-list-pages", example: "have-you-completed-this-section", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "patterns", item: "task-list-pages", example: "have-you-completed-this-section", html: true, nunjucks: true, open: false }) }}
 
 Always allow users to go back into a task to change their answer.
 
@@ -108,7 +108,7 @@ Always allow users to go back into a task to change their answer.
 
 If the user does not select an option, show an [error message](/components/error-message/) to say: 'Select whether you’ve completed this section'.
 
-{{ example({group: "patterns", item: "task-list-pages", example: "have-you-completed-this-section-error", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "patterns", item: "task-list-pages", example: "have-you-completed-this-section-error", html: true, nunjucks: true, open: false }) }}
 
 ## Research on this pattern
 

@@ -8,6 +8,8 @@ layout: layout-pane.njk
 order: 1
 ---
 
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
 These are the components and patterns we’re working on right now, and the ones we plan to work on next.
 
 We regularly ask our community to help us decide the things we need to work on the most. [Read a blog post about how we prioritise new additions to the Design System](https://designnotes.blog.gov.uk/2022/09/07/how-we-prioritise-additions-to-the-gov-uk-design-system/).
@@ -17,8 +19,6 @@ To get a wider look at our work and see what we released recently, see our [Road
 ## Working on now
 
 If you’d like to help us build these components and patterns, join the conversation to see what needs to be done to publish.
-
-{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 
 {{ govukSummaryList({
   rows: [
@@ -62,8 +62,6 @@ If you’d like to help us build these components and patterns, join the convers
 ## Next priorities
 
 We particularly welcome input on the following themes. To contribute, you can add designs, code or research findings to the discussion on GitHub.
-
-{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 
 {{ govukSummaryList({
   rows: [

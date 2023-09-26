@@ -1,6 +1,6 @@
 ---
 title: Explainer screen for equality information questions – Equality information
-layout: layout-example.njk
+layout: layout-example-form.njk
 ---
 
 {% from "govuk/components/radios/macro.njk" import govukRadios %}
@@ -17,7 +17,7 @@ layout: layout-example.njk
 <p class="govuk-body">Before you finish using the service, we’d like to ask some equality questions.</p>
 
 {{ govukRadios({
-  name: "equalities-info",
+  name: "equalitiesInfo",
   fieldset: {
     legend: {
       text: "Do you want to answer the equality questions?",

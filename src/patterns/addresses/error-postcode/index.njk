@@ -1,6 +1,6 @@
 ---
 title: Postcode error – Addresses
-layout: layout-example.njk
+layout: layout-example-form.njk
 ---
 
 {% from "govuk/components/input/macro.njk" import govukInput %}
@@ -11,7 +11,7 @@ layout: layout-example.njk
   },
   classes: "govuk-input--width-10",
   id: "address-postcode",
-  name: "address-postcode",
+  name: "addressPostcode",
   value: "Not a postcode",
   errorMessage: {
     text: "Enter a real postcode"

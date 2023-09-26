@@ -10,7 +10,6 @@ layout: layout-example.njk
   <p class="govuk-body">We’d like to set additional cookies so we can remember your settings, understand how people use the service and make improvements.</p>
 {% endset %}
 
-<form method="POST">
 {{ govukCookieBanner({
   ariaLabel: "Cookies on [name of service]",
   messages: [
@@ -21,14 +20,14 @@ layout: layout-example.njk
         {
           text: "Accept additional cookies",
           type: "submit",
-          name: "cookies",
-          value: "accept"
+          name: "cookies[additional]",
+          value: "yes"
         },
         {
           text: "Reject additional cookies",
           type: "submit",
-          name: "cookies",
-          value: "reject"
+          name: "cookies[additional]",
+          value: "no"
         },
         {
           text: "View cookies",
@@ -38,4 +37,3 @@ layout: layout-example.njk
     }
   ]
 }) }}
-</form>

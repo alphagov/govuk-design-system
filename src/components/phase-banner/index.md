@@ -11,7 +11,7 @@ layout: layout-pane.njk
 
 Use the phase banner component to show users your service is still being worked on.
 
-{{ example({group: "components", item: "phase-banner", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
+{{ example({ group: "components", item: "phase-banner", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 
@@ -25,9 +25,9 @@ Your banner must be directly under the black GOV.UK header and colour bar.
 
 There are 2 ways to use the phase banner component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 
-{{ example({group: "components", item: "phase-banner", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second"}) }}
+{{ example({ group: "components", item: "phase-banner", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
 
-{{ example({group: "components", item: "phase-banner", example: "beta", html: true, nunjucks: true, open: false}) }}
+{{ example({ group: "components", item: "phase-banner", example: "beta", html: true, nunjucks: true, open: false }) }}
 
 ### Add a feedback link
 

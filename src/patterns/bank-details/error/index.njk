@@ -1,6 +1,6 @@
 ---
 title: Errors – Bank details
-layout: layout-example.njk
+layout: layout-example-form.njk
 ---
 
 {% from "govuk/components/input/macro.njk" import govukInput %}
@@ -15,7 +15,7 @@ layout: layout-example.njk
   },
   value: "12",
   id: "sort-code",
-  name: "sort-code",
+  name: "sortCode",
   inputmode: "numeric",
   spellcheck: false,
   errorMessage: {

@@ -1,13 +1,13 @@
 ---
 title: Marriage or civil partnership status equality question – Equality information
-layout: layout-example.njk
+layout: layout-example-form.njk
 ---
 
 {% from "govuk/components/button/macro.njk" import govukButton %}
 {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
 {{ govukRadios({
-  name: "marriage-civil-partnership",
+  name: "marriageCivilPartnership",
   fieldset: {
     legend: {
       text: "What is your legal marital or registered civil partnership status?",
