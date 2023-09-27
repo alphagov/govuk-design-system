@@ -62,9 +62,9 @@ const DEFAULT_COOKIE_CONSENT = {
  *   Cookie('hobnob', null)
  *
  * @param {string} name - Cookie name
- * @param {string | false} [value] - Cookie value
+ * @param {string | false | null} [value] - Cookie value
  * @param {{ days?: number }} [options] - Cookie options
- * @returns {string | void} - Returns value when setting or deleting
+ * @returns {string | null | undefined} - Returns value when setting or deleting
  */
 export function Cookie(name, value, options) {
   if (typeof value !== 'undefined') {
@@ -97,7 +97,7 @@ export function getConsentCookie() {
   if (consentCookie) {
     try {
       consentCookieObj = JSON.parse(consentCookie)
-    } catch (err) {
+    } catch (error) {
       return null
     }
   } else {
@@ -115,7 +115,7 @@ export function getConsentCookie() {
  *
  * This is also duplicated in cookie-banner.njk - the two need to be kept in sync
  *
- * @param {ConsentPreferences} options - Consent preferences
+ * @param {ConsentPreferences | null} options - Consent preferences
  * @returns {boolean} True if consent cookie is valid
  */
 export function isValidConsentCookie(options) {
@@ -129,11 +129,10 @@ export function isValidConsentCookie(options) {
  * @param {ConsentPreferences} options - Consent options to parse
  */
 export function setConsentCookie(options) {
-  let cookieConsent = getConsentCookie()
-
-  if (!cookieConsent) {
-    cookieConsent = JSON.parse(JSON.stringify(DEFAULT_COOKIE_CONSENT))
-  }
+  const cookieConsent =
+    getConsentCookie() ||
+    // If no preferences or old version use the default
+    JSON.parse(JSON.stringify(DEFAULT_COOKIE_CONSENT))
 
   // Merge current cookie preferences and new preferences
   for (const option in options) {
@@ -159,12 +158,10 @@ export function setConsentCookie(options) {
  * Deletes any cookies the user has not consented to.
  */
 export function resetCookies() {
-  let options = getConsentCookie()
-
-  // If no preferences or old version use the default
-  if (!isValidConsentCookie(options)) {
-    options = JSON.parse(JSON.stringify(DEFAULT_COOKIE_CONSENT))
-  }
+  const options =
+    getConsentCookie() ||
+    // If no preferences or old version use the default
+    JSON.parse(JSON.stringify(DEFAULT_COOKIE_CONSENT))
 
   for (const cookieType in options) {
     if (cookieType === 'version') {
@@ -216,8 +213,8 @@ function userAllowsCookieCategory(cookieCategory, cookiePreferences) {
   // Sometimes cookiePreferences is malformed in some of the tests, so we need to handle these
   try {
     return cookiePreferences[cookieCategory]
-  } catch (e) {
-    console.error(e)
+  } catch (error) {
+    console.error(error)
     return false
   }
 }
@@ -258,7 +255,7 @@ function userAllowsCookie(cookieName) {
  * Get cookie by name
  *
  * @param {string} name - Cookie name
- * @returns {string} Cookie value
+ * @returns {string | null} Cookie value
  */
 function getCookie(name) {
   const nameEQ = `${name}=`

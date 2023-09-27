@@ -9,7 +9,14 @@
  * - panels - the content that is shown/hidden/switched; same across all breakpoints
  */
 class AppTabs {
+  /**
+   * @param {Element} $module - HTML element
+   */
   constructor($module) {
+    if (!($module instanceof HTMLElement)) {
+      return this
+    }
+
     this.$module = $module
     this.$mobileTabs = this.$module.querySelectorAll('.js-tabs__heading a')
     this.$desktopTabs = this.$module.querySelectorAll('.js-tabs__item a')
@@ -47,8 +54,17 @@ class AppTabs {
    */
   onClick(event) {
     event.preventDefault()
+
     const $currentTab = event.target
+    if (!($currentTab instanceof HTMLElement)) {
+      return
+    }
+
     const panelId = $currentTab.getAttribute('aria-controls')
+    if (!panelId) {
+      return
+    }
+
     const $panel = this.getPanel(panelId)
     const isTabAlreadyOpen =
       $currentTab.getAttribute('aria-expanded') === 'true'
@@ -111,19 +127,33 @@ class AppTabs {
    * @param {string} panelId - Tab panel ID
    */
   openPanel(panelId) {
+    if (!panelId) {
+      return
+    }
+
+    const $panel = this.getPanel(panelId)
+    if (!$panel) {
+      return
+    }
+
     const $mobileTab = this.getMobileTab(panelId)
     const $desktopTab = this.getDesktopTab(panelId)
 
     // Panels can exist without associated tabs—for example if there's a single
     // panel that's open by default—so make sure they actually exist before use
-    if ($mobileTab && $desktopTab) {
+    if (
+      $mobileTab &&
+      $mobileTab.parentElement &&
+      $desktopTab &&
+      $desktopTab.parentElement
+    ) {
       $mobileTab.setAttribute('aria-expanded', 'true')
       $mobileTab.parentElement.classList.add('app-tabs__heading--current')
       $desktopTab.setAttribute('aria-expanded', 'true')
       $desktopTab.parentElement.classList.add('app-tabs__item--current')
     }
 
-    this.getPanel(panelId).removeAttribute('hidden')
+    $panel.removeAttribute('hidden')
   }
 
   /**
@@ -132,13 +162,33 @@ class AppTabs {
    * @param {string} panelId - Tab panel ID
    */
   closePanel(panelId) {
+    if (!panelId) {
+      return
+    }
+
+    const $panel = this.getPanel(panelId)
+    if (!$panel) {
+      return
+    }
+
     const $mobileTab = this.getMobileTab(panelId)
     const $desktopTab = this.getDesktopTab(panelId)
-    $mobileTab.setAttribute('aria-expanded', 'false')
-    $desktopTab.setAttribute('aria-expanded', 'false')
-    $mobileTab.parentElement.classList.remove('app-tabs__heading--current')
-    $desktopTab.parentElement.classList.remove('app-tabs__item--current')
-    this.getPanel(panelId).setAttribute('hidden', 'hidden')
+
+    // Panels can exist without associated tabs—for example if there's a single
+    // panel that's open by default—so make sure they actually exist before use
+    if (
+      $mobileTab &&
+      $mobileTab.parentElement &&
+      $desktopTab &&
+      $desktopTab.parentElement
+    ) {
+      $mobileTab.setAttribute('aria-expanded', 'false')
+      $mobileTab.parentElement.classList.remove('app-tabs__heading--current')
+      $desktopTab.setAttribute('aria-expanded', 'false')
+      $desktopTab.parentElement.classList.remove('app-tabs__item--current')
+    }
+
+    $panel.setAttribute('hidden', 'hidden')
   }
 
   /**
