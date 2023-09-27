@@ -1,34 +1,66 @@
 import { getConsentCookie, setConsentCookie } from './cookie-functions.mjs'
 
+/**
+ * Website cookies page
+ */
 class CookiesPage {
+  /**
+   * @param {Element} $module - HTML element
+   */
   constructor($module) {
-    this.$module = $module
+    if (!($module instanceof HTMLElement)) {
+      return this
+    }
+
+    this.$page = $module
   }
 
   init() {
-    this.$cookiePage = this.$module
-
-    if (!this.$cookiePage) {
+    if (!this.$page) {
       return
     }
 
-    this.$cookieForm = this.$cookiePage.querySelector('.js-cookies-page-form')
-    this.$cookieFormFieldsets = this.$cookieForm.querySelectorAll(
+    const $cookieForm = this.$page.querySelector('.js-cookies-page-form')
+    if (!($cookieForm instanceof HTMLFormElement)) {
+      return this
+    }
+
+    this.$cookieForm = $cookieForm
+
+    /** @satisfies {NodeListOf<HTMLFieldSetElement>} */
+    const $cookieFormFieldsets = this.$cookieForm.querySelectorAll(
       '.js-cookies-page-form-fieldset'
     )
-    this.$successNotification = this.$cookiePage.querySelector(
-      '.js-cookies-page-success'
+    const $cookieFormButton = this.$cookieForm.querySelector(
+      '.js-cookies-form-button'
     )
 
+    if (
+      !$cookieFormFieldsets.length ||
+      !($cookieFormButton instanceof HTMLButtonElement)
+    ) {
+      return this
+    }
+
+    this.$cookieFormFieldsets = $cookieFormFieldsets
+    this.$cookieFormButton = $cookieFormButton
+
+    const $successNotification = this.$page.querySelector(
+      '.js-cookies-page-success'
+    )
+    if ($successNotification instanceof HTMLElement) {
+      this.$successNotification = $successNotification
+    }
+
+    const cookieConsent = getConsentCookie()
+
     this.$cookieFormFieldsets.forEach(($cookieFormFieldset) => {
-      this.showUserPreference($cookieFormFieldset, getConsentCookie())
+      this.showUserPreference($cookieFormFieldset, cookieConsent)
       $cookieFormFieldset.removeAttribute('hidden')
     })
 
     // Show submit button
-    this.$cookieForm
-      .querySelector('.js-cookies-form-button')
-      .removeAttribute('hidden')
+    this.$cookieFormButton.removeAttribute('hidden')
 
     this.$cookieForm.addEventListener('submit', (event) =>
       this.savePreferences(event)
@@ -48,11 +80,17 @@ class CookiesPage {
 
     this.$cookieFormFieldsets.forEach(($cookieFormFieldset) => {
       const cookieType = this.getCookieType($cookieFormFieldset)
+      if (!cookieType) {
+        return
+      }
+
       const $selectedItem = $cookieFormFieldset.querySelector(
         `input[name="cookies[${cookieType}]"]:checked`
       )
 
-      preferences[cookieType] = $selectedItem.value === 'yes'
+      if ($selectedItem instanceof HTMLInputElement) {
+        preferences[cookieType] = $selectedItem.value === 'yes'
+      }
     })
 
     // Save preferences to cookie and show success notification
@@ -64,7 +102,7 @@ class CookiesPage {
    * Show user preference
    *
    * @param {HTMLFieldSetElement} $cookieFormFieldset - Cookie form fieldset
-   * @param {import('./cookie-functions.mjs').ConsentPreferences} preferences - Consent preferences
+   * @param {import('./cookie-functions.mjs').ConsentPreferences | null} preferences - Consent preferences
    */
   showUserPreference($cookieFormFieldset, preferences) {
     const cookieType = this.getCookieType($cookieFormFieldset)
@@ -75,9 +113,15 @@ class CookiesPage {
     }
 
     const radioValue = preference ? 'yes' : 'no'
+
+    /** @satisfies {HTMLInputElement | null} */
     const $radio = $cookieFormFieldset.querySelector(
       `input[name="cookies[${cookieType}]"][value=${radioValue}]`
     )
+    if (!$radio) {
+      return
+    }
+
     $radio.checked = true
   }
 
@@ -85,6 +129,10 @@ class CookiesPage {
    * Show success notification
    */
   showSuccessNotification() {
+    if (!this.$successNotification) {
+      return
+    }
+
     this.$successNotification.removeAttribute('hidden')
 
     // Set tabindex to -1 to make the element focusable with JavaScript.
@@ -104,7 +152,7 @@ class CookiesPage {
    * Get cookie type
    *
    * @param {HTMLFieldSetElement} $cookieFormFieldset - Cookie form fieldset
-   * @returns {string} Cookie type
+   * @returns {string | null} Cookie type
    */
   getCookieType($cookieFormFieldset) {
     return $cookieFormFieldset.getAttribute('data-cookie-type')
