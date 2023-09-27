@@ -61,6 +61,9 @@ A walkthrough for how to import the GOV.UK Design System into a MVC project and 
 [GOV.UK Design System for ASP.NET MVC and Umbraco](https://github.com/thepensionsregulator/govuk-frontend-aspnetcore-extensions) -
 GOV.UK Frontend ASP.NET tag helpers, and Umbraco CMS support.
 
+[ASP.NET Core integration for GOV.UK Design System](https://github.com/gunndabad/govuk-frontend-aspnetcore) - 
+GOV.UK Frontend asset integration and component library for ASP.NET Core.
+
 ### Node.js
 
 Guidance on [building a hapi service using GOV.UK Frontend](https://github.com/DEFRA/hapi-govuk-examples).
