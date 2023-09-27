@@ -9,9 +9,9 @@ order: 11
 
 <img src="/community/images/dsd23-announcement-banner.svg" alt="Design System Day 2023 logo" class="app-image--no-border govuk-!-margin-bottom-6" loading="lazy">
 
-Dates: 10 and 11 October 2023
-Location: <a href="https://dynamicearth.org.uk/plan-your-visit/getting-here/">Dynamic Earth</a>, Edinburgh, and online
-Get tickets: <a href="https://www.eventbrite.co.uk/e/714571050247?aff=oddtdtcreator">Day 1 in Edinburgh</a> or <a href="https://www.eventbrite.co.uk/e/714592022977?aff=oddtdtcreator">day 2 online</a>
+**Dates:** 10 and 11 October 2023
+**Location:** <a href="https://dynamicearth.org.uk/plan-your-visit/getting-here/">Dynamic Earth</a>, Edinburgh, and online
+**Get tickets:** <a href="https://www.eventbrite.co.uk/e/714571050247?aff=oddtdtcreator">Day 1 in Edinburgh</a> or <a href="https://www.eventbrite.co.uk/e/714592022977?aff=oddtdtcreator">day 2 online</a>
 
 <!--
 
@@ -54,7 +54,7 @@ You can see the speakers and panellists for the first day below.
 - What we've been up to, where we're headed: Ciandelle Hughes, Calvin Lau and Steve Messer (GOV.UK Design System)
 - How design systems manage contributions: Caroline Jarrett (Effortmark), Frankie Roberto (Department for Education), Julian Thompson (Rooted by Design), and Ellis Capon (Just Eat)
 - Trauma-informed research and design: Katrina Birch (GOV.UK Design System), Janice Hannaway (?), Kate Every (?), and Helen Baron (?)
-- ?, Tash Willcocks (TPXimpact)
+- Design systems don’t solve problems, people do: Tash Willcocks (TPXimpact)
 
 There will be breaks throughout the day and an hour for lunch. You'll be able to speak with others in the community and chat with our panellists too. Towards the end of the day, we'll have an optional social for more conversation.
 
@@ -62,28 +62,36 @@ There will be breaks throughout the day and an hour for lunch. You'll be able to
 
 The second day will be hosted online. The event starts at 9:30am and runs until 5:00pm, and we'll break for lunch at 12:30pm. There will be breaks throughout the day but you're free to drop in and out as necessary. Between sessions you can visit booths to hear about other platforms at Government Digital Service, and we'll run speed networking events between sessions too.
 
-- A service designer's approach to human-centered life transitions: Sylvie Abookhire, DC.gov
-- Collaborative design systems at scale: James Carleton (PayPal)
-- Design pattern histories: Vicky Teinaki, Student Loans Company
-- Designing for underserved audiences: Valentine Makhouleen (Prelude Security/New Media Studio)
-- Doing good discovery: Debra Churchill (Ontario Public Service)
-- From chaos to clarity: unlocking the potential of design systems: Hassan Nawaz (FanDuel)
-- From code to content-first: scaling content production at PayPal: Kate Thomas (PayPal)
-- From pixels to paradigm shifts: tailoring a dedicated design system to catalyse innovation in the Italian Ministry of Economy and Finance: Simone di Fresco (DOS Design)
-- How a design API empowers product teams to ensure brand consistency at scale: Louis Chenais (Specify)
+**Morning**
+
+- We’re feeling ‘appy: Oliver Binns and Chris Choy (GOV.UK One Login)
+- The contributor perspective on design systems: Frankie Roberto (Department for Education)
+- Trauma-informed design – passing trend, or new aspect of accessibility?: Katherine Beer (Department for Education)
 - How brand design systems offer the power of confidence: Abigail Baldwin (Buttercrumble)
 - How GOV.UK Pay is making recurring payments easy for the public sector: Sacha Zarb (GOV.UK Pay)
-- How participatory research can help us co-design more ethically: Jane Martin and Betty Mwema (Government Digital Service)
-- Imposter syndrome in government and why it's not always a bad thing: Ciandelle Hughes, GOV.UK Design System
-- Leading the system: Daniel Fontaneda (Bumble)
-- Responsive design, design systems and 'hyperobjects': Ethan Marcotte (Autogram) and Steve Messer (GOV.UK Design System)
+- From pixels to paradigm shifts – tailoring a dedicated design system to catalyse innovation in the Italian Ministry of Economy and Finance: Simone di Fresco (DOS Design)
 - The challenges of scaling up a truly user-centred service: Laura Smith (Unboxed)
-- The contributor perspective on design systems: Frankie Roberto (Department for Education)
-- The iPhone state: simplicity through complexity: Gordon Guthrie (Scottish Government)
-- Trauma-informed design: passing trend, or new aspect of accessibility?: Katherine Beer (Department for Education)
+
+**After lunch**
+
+- A service designer's approach to human-centered life transitions: Sylvie Abookhire (DC.gov)
+- Leading the system: Daniel Fontaneda (Bumble)
+- Imposter syndrome in government and why it's not always a bad thing: Ciandelle Hughes (GOV.UK Design System)
+- Web components – a year in the field: Ashley Watson-Nolan (Just Eat)
+- From code to content-first – scaling content production at PayPal: Kate Thomas (PayPal)
+- Design pattern histories: Vicky Teinaki (Student Loans Company)
+- How a design API empowers product teams to ensure brand consistency at scale: Louis Chenais (Specify)
+- Responsive design, design systems and 'hyperobjects': Ethan Marcotte (Autogram) and Steve Messer (GOV.UK Design System) 
+
+**Afternoon**
+
+- Doing good discovery: Debra Churchill (Ontario Public Service)
 - Using task lists in your services: Frankie Roberto (Department for Education)
-- We’re feeling ‘appy: Oliver Binns and Chris Choy (GOV.UK One Login)
-- Web components: a year in the field, Ashley Watson-Nolan (Just Eat)
+- The iPhone state – simplicity through complexity: Gordon Guthrie (Scottish Government)
+- How participatory research can help us co-design more ethically: Jane Martin and Betty Mwema (Government Digital Service)
+- Designing for underserved audiences: Valentine Makhouleen (Prelude Security/New Media Studio)
+- From chaos to clarity – unlocking the potential of design systems: Hassan Nawaz (FanDuel)
+- Collaborative design systems at scale: James Carleton (PayPal)
 
 ## Getting there
 
@@ -91,10 +99,10 @@ Day 1 will take place on Tuesday 10 October, in-person at Dynamic Earth, Holyroo
 
 The venue is accessible by foot and public transport. 
 
-- Travelling by foot: Dynamic Earth is about 20-minute walk from Edinburgh City Centre. Accessible from Holyrood Road, Holyrood Gait and a public footpath from Horse Wynd
-- Travelling by train: from Edinburgh Waverley station it is about 15 minutes walk
-- Travelling by bus: the venue is serviced by local bus routes: number 35 stops a 3-minute walk away from Dynamic Earth. Alternative routes include the 5, 7, 14, 29, 30, 31, 33, 37, 45 and 49 which stop on North Bridge and are a 10-minute walk away along Holyrood Road
-- Travelling by car: Dynamic Earth has a 24-hour car park located underneath the building. Charges will apply. Spaces are allocated on a first-come-first-serve basis and cannot be reserved beforehand. The car park has a height limit of 2.3 metres.
+- **Travelling by foot:** Dynamic Earth is about 20-minute walk from Edinburgh City Centre. Accessible from Holyrood Road, Holyrood Gait and a public footpath from Horse Wynd
+- **Travelling by train:** from Edinburgh Waverley station it is about 15 minutes walk
+- **Travelling by bus:** the venue is serviced by local bus routes: number 35 stops a 3-minute walk away from Dynamic Earth. Alternative routes include the 5, 7, 14, 29, 30, 31, 33, 37, 45 and 49 which stop on North Bridge and are a 10-minute walk away along Holyrood Road
+- **Travelling by car:** Dynamic Earth has a 24-hour car park located underneath the building. Charges will apply. Spaces are allocated on a first-come-first-serve basis and cannot be reserved beforehand. The car park has a height limit of 2.3 metres.
 
 ## Joining online
 
