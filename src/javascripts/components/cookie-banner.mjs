@@ -15,32 +15,26 @@ class CookieBanner {
    * @param {Element} $module - HTML element
    */
   constructor($module) {
-    if (!($module instanceof HTMLElement)) {
+    if (
+      !($module instanceof HTMLElement) ||
+      // Exit if we're on the cookies page to avoid circular journeys
+      this.onCookiesPage()
+    ) {
       return this
     }
 
-    this.$module = $module
-  }
+    this.$cookieBanner = $module
 
-  init() {
-    // Exit if no cookie banner module
-    // or if we're on the cookies page to avoid circular journeys
-    if (!this.$module || this.onCookiesPage()) {
-      return
-    }
-
-    this.$cookieBanner = this.$module
-
-    const $acceptButton = this.$module.querySelector(cookieBannerAcceptSelector)
-    const $rejectButton = this.$module.querySelector(cookieBannerRejectSelector)
-    const $cookieMessage = this.$module.querySelector(cookieMessageSelector)
-    const $cookieConfirmationAccept = this.$module.querySelector(
+    const $acceptButton = $module.querySelector(cookieBannerAcceptSelector)
+    const $rejectButton = $module.querySelector(cookieBannerRejectSelector)
+    const $cookieMessage = $module.querySelector(cookieMessageSelector)
+    const $cookieConfirmationAccept = $module.querySelector(
       cookieConfirmationAcceptSelector
     )
-    const $cookieConfirmationReject = this.$module.querySelector(
+    const $cookieConfirmationReject = $module.querySelector(
       cookieConfirmationRejectSelector
     )
-    const $cookieBannerHideButtons = this.$module.querySelectorAll(
+    const $cookieBannerHideButtons = $module.querySelectorAll(
       cookieBannerHideButtonSelector
     )
 
