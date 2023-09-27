@@ -1,5 +1,4 @@
 import { getConsentCookie, setConsentCookie } from './cookie-functions.mjs'
-import { nodeListForEach } from './helpers.mjs'
 
 function CookiesPage($module) {
   this.$module = $module
@@ -20,8 +19,7 @@ CookiesPage.prototype.init = function () {
     '.js-cookies-page-success'
   )
 
-  nodeListForEach(
-    this.$cookieFormFieldsets,
+  this.$cookieFormFieldsets.forEach(
     function ($cookieFormFieldset) {
       this.showUserPreference($cookieFormFieldset, getConsentCookie())
       $cookieFormFieldset.removeAttribute('hidden')
@@ -42,8 +40,7 @@ CookiesPage.prototype.savePreferences = function (event) {
 
   var preferences = {}
 
-  nodeListForEach(
-    this.$cookieFormFieldsets,
+  this.$cookieFormFieldsets.forEach(
     function ($cookieFormFieldset) {
       var cookieType = this.getCookieType($cookieFormFieldset)
       var selectedItem = $cookieFormFieldset.querySelector(
