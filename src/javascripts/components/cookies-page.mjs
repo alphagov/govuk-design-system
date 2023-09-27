@@ -13,12 +13,6 @@ class CookiesPage {
     }
 
     this.$page = $module
-  }
-
-  init() {
-    if (!this.$page) {
-      return
-    }
 
     const $cookieForm = this.$page.querySelector('.js-cookies-page-form')
     if (!($cookieForm instanceof HTMLFormElement)) {
