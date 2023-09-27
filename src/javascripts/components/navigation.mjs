@@ -23,9 +23,13 @@ class Navigation {
     this.mql = null
   }
 
-  // Checks if the saved window size has changed between now and when it was last recorded (on load and on viewport width changes)
-  // Reapplies hidden attributes based on if the viewport has changed from big to small or vice verca
-  // Saves the new window size
+  /**
+   * Set hidden states
+   *
+   * Checks if the saved window size has changed between now and when it was last recorded (on load and on viewport width changes)
+   * Reapplies hidden attributes based on if the viewport has changed from big to small or vice versa
+   * Saves the new window size
+   */
   setHiddenStates() {
     if (this.mql === null || !this.mql.matches) {
       if (!this.mobileNavOpen) {
@@ -56,6 +60,9 @@ class Navigation {
     }
   }
 
+  /**
+   * Set initial ARIA states
+   */
   setInitialAriaStates() {
     this.$navToggler.setAttribute('aria-expanded', 'false')
 
@@ -77,6 +84,9 @@ class Navigation {
     })
   }
 
+  /**
+   * Bind UI events
+   */
   bindUIEvents() {
     this.$navToggler.addEventListener('click', () => {
       if (this.mobileNavOpen) {

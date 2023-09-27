@@ -199,6 +199,8 @@ export function resetCookies() {
 }
 
 /**
+ * Check if user allows cookie category
+ *
  * @param {string} cookieCategory - Cookie type
  * @param {ConsentPreferences} cookiePreferences - Consent preferences
  * @returns {string | boolean} Cookie type value
@@ -219,6 +221,8 @@ function userAllowsCookieCategory(cookieCategory, cookiePreferences) {
 }
 
 /**
+ * Check if user allows cookie
+ *
  * @param {string} cookieName - Cookie name
  * @returns {string | boolean} Cookie type value
  */
@@ -249,6 +253,8 @@ function userAllowsCookie(cookieName) {
 }
 
 /**
+ * Get cookie by name
+ *
  * @param {string} name - Cookie name
  * @returns {string} Cookie value
  */
@@ -268,6 +274,8 @@ function getCookie(name) {
 }
 
 /**
+ * Set cookie by name, value and options
+ *
  * @param {string} name - Cookie name
  * @param {string} value - Cookie value
  * @param {{ days?: number }} [options] - Cookie options
@@ -291,6 +299,8 @@ function setCookie(name, value, options) {
 }
 
 /**
+ * Delete cookie by name
+ *
  * @param {string} name - Cookie name
  */
 function deleteCookie(name) {
