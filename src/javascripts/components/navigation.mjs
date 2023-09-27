@@ -4,16 +4,42 @@ const subNavActiveClass = 'app-navigation__subnav--active'
 // This one has the query dot at the beginning because it's only ever used in querySelector calls
 const subNavJSClass = '.js-app-navigation__subnav'
 
+/**
+ * Website navigation
+ */
 class Navigation {
+  /**
+   * @param {Document} $module - HTML document
+   */
   constructor($module) {
-    this.$module = $module || document
+    if (!($module instanceof Document)) {
+      return this
+    }
 
-    this.$nav = this.$module.querySelector('.js-app-navigation')
-    this.$navToggler = this.$module.querySelector('.js-app-navigation__toggler')
-    this.$navButtons = this.$module.querySelectorAll(
+    this.$module = $module
+
+    const $nav = this.$module.querySelector('.js-app-navigation')
+    const $navToggler = this.$module.querySelector(
+      '.js-app-navigation__toggler'
+    )
+    const $navButtons = this.$module.querySelectorAll(
       '.js-app-navigation__button'
     )
-    this.$navLinks = this.$module.querySelectorAll('.js-app-navigation__link')
+    const $navLinks = this.$module.querySelectorAll('.js-app-navigation__link')
+
+    if (
+      !($nav instanceof HTMLElement) ||
+      !($navToggler instanceof HTMLElement) ||
+      !$navButtons.length ||
+      !$navLinks.length
+    ) {
+      return this
+    }
+
+    this.$nav = $nav
+    this.$navToggler = $navToggler
+    this.$navButtons = $navButtons
+    this.$navLinks = $navLinks
 
     // Save the opened/closed state for the nav in memory so that we can accurately maintain state when the screen is changed from small to big and back to small
     this.mobileNavOpen = false
