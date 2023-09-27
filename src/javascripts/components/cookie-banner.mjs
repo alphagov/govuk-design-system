@@ -78,6 +78,11 @@ class CookieBanner {
     this.revealConfirmationMessage(this.$cookieConfirmationReject)
   }
 
+  /**
+   * Reveal confirmation message
+   *
+   * @param {HTMLElement} confirmationMessage - Confirmation message
+   */
   revealConfirmationMessage(confirmationMessage) {
     confirmationMessage.removeAttribute('hidden')
 
