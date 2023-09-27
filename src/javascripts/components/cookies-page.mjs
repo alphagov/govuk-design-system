@@ -35,6 +35,9 @@ class CookiesPage {
     )
   }
 
+  /**
+   * @param {SubmitEvent} event - Form submit event
+   */
   savePreferences(event) {
     // Stop default form submission behaviour
     event.preventDefault()
@@ -55,6 +58,10 @@ class CookiesPage {
     this.showSuccessNotification()
   }
 
+  /**
+   * @param {HTMLFieldSetElement} $cookieFormFieldset - Cookie form fieldset
+   * @param {import('./cookie-functions.mjs').ConsentPreferences} preferences - Consent preferences
+   */
   showUserPreference($cookieFormFieldset, preferences) {
     const cookieType = this.getCookieType($cookieFormFieldset)
     let preference = false
@@ -86,6 +93,10 @@ class CookiesPage {
     window.scrollTo(0, 0)
   }
 
+  /**
+   * @param {HTMLFieldSetElement} $cookieFormFieldset - Cookie form fieldset
+   * @returns {string} Cookie type
+   */
   getCookieType($cookieFormFieldset) {
     return $cookieFormFieldset.getAttribute('data-cookie-type')
   }
