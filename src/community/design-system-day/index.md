@@ -29,21 +29,17 @@ Join us for this year's edition of the GOV.UK Design System's flagship event!
 
 Design System Day 2023 is a 2-day conference to collaborate and share knowledge about design systems with like-minded people, covering topics like accessibility, community and decision-making. It's a space for anyone using design systems in government to share ideas and developments, learn from colleagues, and spark conversations on related topics.
 
-For the first time, we're running this as a hybrid conference with a mix of in-person and online talks, workshops and panel discussions. Come say hi and meet folks from across the community in Edinburgh, or chat to people in the online channels.
-
-We’re expecting that the mix of attendees will lead to some interesting discussions and make the event a great place to network. We’re curating a space for engaging discussions, learning opportunities and future collaboration.
-
-We'll also be hosting get-togethers and after-parties for people attending the Edinburgh event. We advise you to book your travel and accommodation as soon as possible as Edinburgh fills up quickly!
-
 ### Speakers and sessions
 
-As ever, this is a community-driven event, so all talks, workshops and sessions have been suggested by the community. 
+All talks, workshops and sessions have been suggested by the community. 
 
 Our speakers come from organisations across the UK and international public sector, and we're joined by folks working on design systems from notable companies too.
 
 #### Day 1
 
-The first day will be hosted in Dynamic Earth, Edinburgh. The event is open from 9:00am and starts at 9:45am. Talks will close at 4:15pm and a social hour will run until 5:15pm.
+The first day will be hosted in Dynamic Earth, Edinburgh. 
+
+The event is open from 9:00am and starts at 9:45am. There will be breaks throughout the day and an hour for lunch. Talks will close at 4:15pm and a social hour will run until 5:15pm.
 
 Dynamic Earth is an accessible venue, and we'll have a room set aside as a quiet space and prayer room. There will be live transcripts of all sessions.
 
@@ -56,11 +52,15 @@ You can see the speakers and panellists for the first day below.
 - Trauma-informed research and design: Katrina Birch (GOV.UK Design System), Janice Hannaway (?), Kate Every (?), and Helen Baron (?)
 - Design systems don’t solve problems, people do: Tash Willcocks (TPXimpact)
 
-There will be breaks throughout the day and an hour for lunch. You'll be able to speak with others in the community and chat with our panellists too. Towards the end of the day, we'll have an optional social for more conversation.
+You'll be able to speak with others in the community and chat with our panellists too. Towards the end of the day, we'll have an optional social for more conversation.
 
 #### Day 2
 
-The second day will be hosted online. The event starts at 9:30am and runs until 5:00pm, and we'll break for lunch at 12:30pm. There will be breaks throughout the day but you're free to drop in and out as necessary. Between sessions you can visit booths to hear about other platforms at Government Digital Service, and we'll run speed networking events between sessions too.
+The second day will be hosted online. 
+
+The event starts at 9:30am and runs until 5:00pm, and we'll break for lunch at 12:30pm. There will be breaks throughout the day but you're free to drop in and out as necessary. 
+
+Between sessions you can visit booths to hear about other platforms at Government Digital Service, and we'll run speed networking events between sessions too.
 
 **Morning**
 
@@ -106,7 +106,9 @@ The venue is accessible by foot and public transport.
 
 ## Joining online
 
-A link to join will be sent to all attendees before the event. If you email us as the event is starting, it might take us a while to reply to you as we'll be busy running the event, so make sure you save the link in a safe, memorable place for easy access later.
+Day 2 will take online using the Hopin platform. You can use another device if it's blocked on your work computer.
+
+A link to join will be sent to all attendees before the event. If you email us as the event is starting, it might take us a while to reply to you as we'll be busy running the event.
 
 ## About the GOV.UK Design System community
 
