@@ -21,13 +21,6 @@ class AppTabs {
     this.$mobileTabs = this.$module.querySelectorAll('.js-tabs__heading a')
     this.$desktopTabs = this.$module.querySelectorAll('.js-tabs__item a')
     this.$panels = this.$module.querySelectorAll('.js-tabs__container')
-  }
-
-  init() {
-    // Exit if no module has been defined
-    if (!this.$module) {
-      return
-    }
 
     // Enhance mobile tabs into buttons
     this.enhanceMobileTabs()

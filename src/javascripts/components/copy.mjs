@@ -13,13 +13,6 @@ class Copy {
     }
 
     this.$module = $module
-    this.$button = null
-  }
-
-  init() {
-    if (!this.$module) {
-      return
-    }
 
     this.$button = document.createElement('button')
     this.$button.className = 'app-copy-button'

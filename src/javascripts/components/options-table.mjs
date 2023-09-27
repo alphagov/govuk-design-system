@@ -2,15 +2,11 @@
  * Open Nunjucks tab and expand macro options details
  */
 class OptionsTable {
-  init() {
-    this.expandMacroOptions()
-  }
-
   /**
    * Check URL hash is '#options-[exampleName]' and focus
    * known tab link, optionally scrolling to options table
    */
-  expandMacroOptions() {
+  constructor() {
     const hash = window.location.hash
 
     if (hash.match('^#options-')) {
