@@ -14,7 +14,9 @@ let documentStore = null
 
 let statusMessage = null
 let searchQuery = ''
-let searchCallback = function () {}
+
+let searchCallback = (searchResults) => {}
+
 // Results that are rendered by the autocomplete
 let searchResults = []
 
@@ -23,25 +25,34 @@ let inputDebounceTimer = null
 
 // We want to wait a bit before firing events to indicate that
 // someone is looking at a result and not that it's come up in passing.
-const DEBOUNCE_TIME_TO_WAIT = function () {
+const DEBOUNCE_TIME_TO_WAIT = () => {
   // We want to be able to reduce this timeout in order to make sure
   // our tests do not run very slowly.
   const timeout = window.__SITE_SEARCH_TRACKING_TIMEOUT
   return typeof timeout !== 'undefined' ? timeout : 2000 // milliseconds
 }
 
+/**
+ * Website search
+ */
 class Search {
   constructor($module) {
     this.$module = $module
   }
 
+  /**
+   * Fetch search index
+   *
+   * @param {string} indexUrl - Search index URL
+   * @param {(object) => void} callback - Fetch search index callback
+   */
   fetchSearchIndex(indexUrl, callback) {
     const request = new XMLHttpRequest()
     request.open('GET', indexUrl, true)
     request.timeout = TIMEOUT * 1000
     statusMessage = 'Loading search index'
 
-    request.onreadystatechange = function () {
+    request.onreadystatechange = () => {
       if (request.readyState === STATE_DONE) {
         if (request.status === 200) {
           const response = request.responseText
@@ -59,9 +70,13 @@ class Search {
     request.send()
   }
 
+  /**
+   * Render search results
+   */
   renderResults() {
     if (!searchIndex || !documentStore) {
-      return searchCallback(searchResults)
+      searchCallback(searchResults)
+      return
     }
 
     const lunrSearchResults = searchIndex.query((q) => {
@@ -76,6 +91,12 @@ class Search {
     searchCallback(searchResults)
   }
 
+  /**
+   * Handle search query
+   *
+   * @param {string} query - Search query
+   * @param {(object) => void} callback - Search query callback
+   */
   handleSearchQuery(query, callback) {
     searchQuery = query
     searchCallback = callback
@@ -88,6 +109,11 @@ class Search {
     this.renderResults()
   }
 
+  /**
+   * Handle confirmed result
+   *
+   * @param {object} result - Search result
+   */
   handleOnConfirm(result) {
     const permalink = result.permalink
 
@@ -99,13 +125,32 @@ class Search {
     window.location.href = `/${permalink}`
   }
 
+  /**
+   * Format input value
+   *
+   * @param {object} result - Search result
+   * @returns {string | undefined} Formatted value
+   */
   inputValueTemplate(result) {
     if (result) {
       return result.title
     }
   }
 
+  /**
+   * Format result value
+   *
+   * @param {object} result - Search result
+   * @returns {string | undefined} Formatted value
+   */
   resultTemplate(result) {
+    /**
+     * Filter only words starting with query
+     *
+     * @param {string[]} words - Search words
+     * @param {string} query - Search query
+     * @returns {string[]} - Search words starting with query
+     */
     function startsWithFilter(words, query) {
       return words.filter((word) => {
         return word.trim().toLowerCase().indexOf(query.toLowerCase()) === 0
@@ -175,9 +220,7 @@ class Search {
         inputValue: this.inputValueTemplate,
         suggestion: this.resultTemplate
       },
-      tNoResults: function () {
-        return statusMessage
-      }
+      tNoResults: () => statusMessage
     })
 
     const $input = this.$module.querySelector('.app-site-search__input')
