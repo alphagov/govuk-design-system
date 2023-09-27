@@ -58,7 +58,9 @@ The second day will be hosted online.
 
 The event starts at 9:30am and runs until 5pm, and we'll break for lunch at 12:30pm. There will be breaks throughout the day and you're free to drop in and out as you like. 
 
-**Morning**
+Most sessions are talks or show and tells where speakers may take questions at the end. We've highlighted workshops that will ask the audience to participate.
+
+**In the morning**
 
 - We’re feeling ‘appy</br>Oliver Binns and Chris Choy (GOV.UK One Login)
 - The contributor perspective on design systems</br>Frankie Roberto (Department for Education)
@@ -79,12 +81,12 @@ The event starts at 9:30am and runs until 5pm, and we'll break for lunch at 12:3
 - How a design API empowers product teams to ensure brand consistency at scale</br>Louis Chenais (Specify)
 - Responsive design, design systems and 'hyperobjects'</br>Ethan Marcotte (Autogram) and Steve Messer (GOV.UK Design System) 
 
-**Afternoon**
+**In the afternoon**
 
 - Doing good discovery</br>Debra Churchill (Ontario Public Service)
-- Using task lists in your services</br>Frankie Roberto (Department for Education)
+- Workshop: Using task lists in your services</br>Frankie Roberto (Department for Education)
 - The iPhone state – simplicity through complexity</br>Gordon Guthrie (Scottish Government)
-- How participatory research can help us co-design more ethically</br>Jane Martin and Betty Mwema (Government Digital Service)
+- Workshop: How participatory research can help us co-design more ethically</br>Jane Martin and Betty Mwema (Government Digital Service)
 - Designing for underserved audiences</br>Valentine Makhouleen (Prelude Security/New Media Studio)
 - From chaos to clarity – unlocking the potential of design systems</br>Hassan Nawaz (FanDuel)
 - Collaborative design systems at scale</br>James Carleton (PayPal)
