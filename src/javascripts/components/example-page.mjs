@@ -15,6 +15,8 @@ class ExamplePage {
   }
 
   /**
+   * Prevent form submission
+   *
    * @param {HTMLFormElement | null} $form - Form
    * @returns {false | undefined} Returns false for examples without forms
    */

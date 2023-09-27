@@ -20,6 +20,9 @@ class Copy {
     this.copyAction()
   }
 
+  /**
+   * Set up button copy action
+   */
   copyAction() {
     // Copy to clipboard
     try {
