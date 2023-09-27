@@ -23,9 +23,9 @@ This means that hyperlinks to /community/design-system-day/ can always encourage
 
 -->
 
-## 2 days of talks and workshops
+## Two days of talks and workshops
 
-Join us for this year's edition of the GOV.UK Design System's flagship event!
+Join us for the GOV.UK Design System's flagship event!
 
 Design System Day 2023 is a 2-day conference to collaborate and share knowledge about design systems with like-minded people, covering topics like accessibility, community and decision-making. It's a space for anyone using design systems in government to share ideas and developments, learn from colleagues, and spark conversations on related topics.
 
@@ -33,69 +33,65 @@ Design System Day 2023 is a 2-day conference to collaborate and share knowledge 
 
 All talks, workshops and sessions have been suggested by the community. 
 
-Our speakers come from organisations across the UK and international public sector, and we're joined by folks working on design systems from notable companies too.
+Our speakers come from organisations across the UK and international public sector. We're joined by folks working on design systems from notable companies too.
 
 #### Day 1
 
-The first day will be hosted in Dynamic Earth, Edinburgh. 
+The first day will be at Dynamic Earth, Edinburgh. 
 
-The event is open from 9:00am and starts at 9:45am. There will be breaks throughout the day and an hour for lunch. Talks will close at 4:15pm and a social hour will run until 5:15pm.
+The event is open from 9am and starts at 9:45am. There will be breaks throughout the day and an hour for lunch. Talks will close at 4:15pm and a social hour will run until 5:15pm.
 
-Dynamic Earth is an accessible venue, and we'll have a room set aside as a quiet space and prayer room. There will be live transcripts of all sessions.
+Dynamic Earth is an accessible venue, and we'll have a room set aside as a quiet space and prayer room. There will be live captions of all sessions.
 
-You can see the speakers and panellists for the first day below.
+- Reflections on creating the Scottish Government Digital Design System</br>Samantha Ernstzen and Jennifer I'Anson (Scottish Government)
+- The impact of research operations when conducting user research at scale</br>Rachel Male (Scottish Government)
+- What we've been up to, where we're headed</br>Ciandelle Hughes, Calvin Lau and Steve Messer (GOV.UK Design System)
+- How design systems manage contributions</br>Caroline Jarrett (Effortmark), Frankie Roberto (Department for Education), <!-- Julian Thompson (Rooted by Design),--> and Ellis Capon (Just Eat)
+<!-- - Trauma-informed research and design</br>Katrina Birch (GOV.UK Design System), Janice Hannaway (?), Kate Every (?), and Helen Baron (?) -->
+- Design systems don’t solve problems, people do</br>Tash Willcocks (TPXimpact)
 
-- Reflections on creating the Scottish Government Digital Design System: Samantha Ernstzen and Jennifer I'Anson (Scottish Government)
-- The impact of research operations when conducting user research at scale: Rachel Male (Scottish Government)
-- What we've been up to, where we're headed: Ciandelle Hughes, Calvin Lau and Steve Messer (GOV.UK Design System)
-- How design systems manage contributions: Caroline Jarrett (Effortmark), Frankie Roberto (Department for Education), Julian Thompson (Rooted by Design), and Ellis Capon (Just Eat)
-- Trauma-informed research and design: Katrina Birch (GOV.UK Design System), Janice Hannaway (?), Kate Every (?), and Helen Baron (?)
-- Design systems don’t solve problems, people do: Tash Willcocks (TPXimpact)
-
-You'll be able to speak with others in the community and chat with our panellists too. Towards the end of the day, we'll have an optional social for more conversation.
+You'll be able to speak with others in the community and chat with panellists too. Towards the end of the day, we'll have an optional social for more conversation.
 
 #### Day 2
 
 The second day will be hosted online. 
 
-The event starts at 9:30am and runs until 5:00pm, and we'll break for lunch at 12:30pm. There will be breaks throughout the day but you're free to drop in and out as necessary. 
-
-Between sessions you can visit booths to hear about other platforms at Government Digital Service, and we'll run speed networking events between sessions too.
+The event starts at 9:30am and runs until 5pm, and we'll break for lunch at 12:30pm. There will be breaks throughout the day and you're free to drop in and out as you like. 
 
 **Morning**
 
-- We’re feeling ‘appy: Oliver Binns and Chris Choy (GOV.UK One Login)
-- The contributor perspective on design systems: Frankie Roberto (Department for Education)
-- Trauma-informed design – passing trend, or new aspect of accessibility?: Katherine Beer (Department for Education)
-- How brand design systems offer the power of confidence: Abigail Baldwin (Buttercrumble)
-- How GOV.UK Pay is making recurring payments easy for the public sector: Sacha Zarb (GOV.UK Pay)
-- From pixels to paradigm shifts – tailoring a dedicated design system to catalyse innovation in the Italian Ministry of Economy and Finance: Simone di Fresco (DOS Design)
-- The challenges of scaling up a truly user-centred service: Laura Smith (Unboxed)
+- We’re feeling ‘appy</br>Oliver Binns and Chris Choy (GOV.UK One Login)
+- The contributor perspective on design systems</br>Frankie Roberto (Department for Education)
+- Trauma-informed design – passing trend, or new aspect of accessibility?</br>Katharine Beer (Department for Education)
+- How brand design systems offer the power of confidence</br>Abigail Baldwin (Buttercrumble)
+- How GOV.UK Pay is making recurring payments easy for the public sector</br>Sacha Zarb (GOV.UK Pay)
+- From pixels to paradigm shifts – tailoring a dedicated design system to catalyse innovation in the Italian Ministry of Economy and Finance</br>Simone di Fresco (DOS Design)
+- The challenges of scaling up a truly user-centred service</br>Laura Smith (Unboxed)
 
 **After lunch**
 
-- A service designer's approach to human-centered life transitions: Sylvie Abookhire (DC.gov)
-- Leading the system: Daniel Fontaneda (Bumble)
-- Imposter syndrome in government and why it's not always a bad thing: Ciandelle Hughes (GOV.UK Design System)
-- Web components – a year in the field: Ashley Watson-Nolan (Just Eat)
-- From code to content-first – scaling content production at PayPal: Kate Thomas (PayPal)
-- Design pattern histories: Vicky Teinaki (Student Loans Company)
-- How a design API empowers product teams to ensure brand consistency at scale: Louis Chenais (Specify)
-- Responsive design, design systems and 'hyperobjects': Ethan Marcotte (Autogram) and Steve Messer (GOV.UK Design System) 
+- A service designer's approach to human-centered life transitions</br>Sylvie Abookhire (DC.gov)
+- Leading the system</br>Daniel Fontaneda (Bumble)
+- Imposter syndrome in government and why it's not always a bad thing</br>Ciandelle Hughes (GOV.UK Design System)
+- Web components – a year in the field</br>Ashley Watson-Nolan (Just Eat)
+- From code to content-first – scaling content production at PayPal</br>Kate Thomas (PayPal)
+- Design pattern histories</br>Vicky Teinaki (Student Loans Company)
+- How a design API empowers product teams to ensure brand consistency at scale</br>Louis Chenais (Specify)
+- Responsive design, design systems and 'hyperobjects'</br>Ethan Marcotte (Autogram) and Steve Messer (GOV.UK Design System) 
 
 **Afternoon**
 
-- Doing good discovery: Debra Churchill (Ontario Public Service)
-- Using task lists in your services: Frankie Roberto (Department for Education)
-- The iPhone state – simplicity through complexity: Gordon Guthrie (Scottish Government)
-- How participatory research can help us co-design more ethically: Jane Martin and Betty Mwema (Government Digital Service)
-- Designing for underserved audiences: Valentine Makhouleen (Prelude Security/New Media Studio)
-- From chaos to clarity – unlocking the potential of design systems: Hassan Nawaz (FanDuel)
-- Collaborative design systems at scale: James Carleton (PayPal)
+- Doing good discovery</br>Debra Churchill (Ontario Public Service)
+- Using task lists in your services</br>Frankie Roberto (Department for Education)
+- The iPhone state – simplicity through complexity</br>Gordon Guthrie (Scottish Government)
+- How participatory research can help us co-design more ethically</br>Jane Martin and Betty Mwema (Government Digital Service)
+- Designing for underserved audiences</br>Valentine Makhouleen (Prelude Security/New Media Studio)
+- From chaos to clarity – unlocking the potential of design systems</br>Hassan Nawaz (FanDuel)
+- Collaborative design systems at scale</br>James Carleton (PayPal)
 
 ## Getting there
 
-Day 1 will take place on Tuesday 10 October, in-person at Dynamic Earth, Holyrood Road, Edinburgh, EH8 8AS.
+Day 1 will be on Tuesday 10 October, in-person at Dynamic Earth, Holyrood Road, Edinburgh, EH8 8AS.
 
 The venue is accessible by foot and public transport. 
 
@@ -106,7 +102,7 @@ The venue is accessible by foot and public transport.
 
 ## Joining online
 
-Day 2 will take online using the Hopin platform. You can use another device if it's blocked on your work computer.
+Day 2 will take place online using the Hopin platform. You can use another device if it's blocked on your work computer.
 
 A link to join will be sent to all attendees before the event. If you email us as the event is starting, it might take us a while to reply to you as we'll be busy running the event.
 
