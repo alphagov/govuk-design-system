@@ -47,7 +47,7 @@ Dynamic Earth is an accessible venue, and we'll have a room set aside as a quiet
 - The impact of research operations when conducting user research at scale</br>Rachel Male (Scottish Government)
 - What we've been up to, where we're headed</br>Ciandelle Hughes, Calvin Lau and Steve Messer (GOV.UK Design System)
 - How design systems manage contributions</br>Caroline Jarrett (Effortmark), Frankie Roberto (Department for Education), <!-- Julian Thompson (Rooted by Design),--> and Ellis Capon (Just Eat)
-<!-- - Trauma-informed research and design</br>Katrina Birch (GOV.UK Design System), Janice Hannaway (?), Kate Every (?), and Helen Baron (?) -->
+- Trauma-informed research and design</br>Katrina Birch (GOV.UK Design System), Janice Hannaway (ResearchU), Kate Every (Mastek), and Helen Baron (The Emily Davison Centre)
 - Design systems don’t solve problems, people do</br>Tash Willcocks (TPXimpact)
 
 You'll be able to speak with others in the community and chat with panellists too. Towards the end of the day, we'll have an optional social for more conversation.
