@@ -175,7 +175,7 @@ export function resetCookies() {
       // Fetch the cookies in that category
       const cookiesInCategory = COOKIE_CATEGORIES[cookieType]
 
-      cookiesInCategory.forEach(function (cookie) {
+      cookiesInCategory.forEach((cookie) => {
         // Delete cookie
         Cookie(cookie, null)
       })
