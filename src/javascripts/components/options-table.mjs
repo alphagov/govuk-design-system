@@ -14,23 +14,31 @@ class OptionsTable {
     const hash = window.location.hash
 
     if (hash.match('^#options-')) {
-      let exampleName = hash.split('#options-')[1]
+      const $optionsElement = document.querySelector(hash)
+      if (!$optionsElement) {
+        return
+      }
 
       // Is hash for a specific options table? eg. #options-checkboxes-example--hint
       const isLinkToTable = hash.indexOf('--') > -1
-      if (isLinkToTable) {
-        exampleName = exampleName.split('--')[0]
-      }
+
+      const exampleName = isLinkToTable
+        ? hash.split('#options-')[1].split('--')[0]
+        : hash.split('#options-')[1]
 
       if (exampleName) {
         const $tabLink = document.querySelector(
           `a[href="#${exampleName}-nunjucks"]`
         )
+
         const $optionsDetailsElement = document.getElementById(
           `options-${exampleName}-details`
         )
 
-        if (!$tabLink || !$optionsDetailsElement) {
+        if (
+          !($tabLink instanceof HTMLAnchorElement) ||
+          !($optionsDetailsElement instanceof HTMLDetailsElement)
+        ) {
           return
         }
 
@@ -42,7 +50,7 @@ class OptionsTable {
 
         window.setTimeout(() => {
           $tabLink.focus()
-          if (isLinkToTable) document.querySelector(hash).scrollIntoView()
+          if (isLinkToTable) $optionsElement.scrollIntoView()
         }, 0)
       }
     }
