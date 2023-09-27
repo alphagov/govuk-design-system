@@ -14,6 +14,10 @@ class ExamplePage {
     this.preventFormSubmission($form)
   }
 
+  /**
+   * @param {HTMLFormElement | null} $form - Form
+   * @returns {false | undefined} Returns false for examples without forms
+   */
   preventFormSubmission($form) {
     // we should only have one form per example
     if (!$form) {
