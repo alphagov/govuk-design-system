@@ -9,6 +9,9 @@ import iFrameResize from 'iframe-resizer/js/iframeResizer.js'
  * @param {Element} $module - HTML element to use for example
  */
 class Example {
+  /**
+   * @param {Element} $module - HTML element
+   */
   constructor($module) {
     if (!($module instanceof HTMLIFrameElement)) {
       return
@@ -30,9 +33,9 @@ class Example {
     this.$module.addEventListener('load', () => {
       try {
         iFrameResize({ scrolling: 'omit' }, this.$module)
-      } catch (err) {
-        if (err) {
-          console.error(err.message)
+      } catch (error) {
+        if (error instanceof Error) {
+          console.error(error.message)
         }
       }
     })

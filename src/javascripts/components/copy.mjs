@@ -1,7 +1,17 @@
 import ClipboardJS from 'clipboard'
 
+/**
+ * Copy button for code examples
+ */
 class Copy {
+  /**
+   * @param {Element} $module - HTML element
+   */
   constructor($module) {
+    if (!($module instanceof HTMLElement)) {
+      return this
+    }
+
     this.$module = $module
     this.$button = null
   }
@@ -35,9 +45,9 @@ class Copy {
           this.$button.textContent = 'Copy code'
         }, 5000)
       })
-    } catch (err) {
-      if (err) {
-        console.log(err.message)
+    } catch (error) {
+      if (error instanceof Error) {
+        console.log(error.message)
       }
     }
   }
