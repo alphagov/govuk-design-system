@@ -37,7 +37,14 @@ const DEBOUNCE_TIME_TO_WAIT = () => {
  * Website search
  */
 class Search {
+  /**
+   * @param {Element} $module - HTML element
+   */
   constructor($module) {
+    if (!($module instanceof HTMLElement)) {
+      return this
+    }
+
     this.$module = $module
   }
 
@@ -225,6 +232,9 @@ class Search {
     })
 
     const $input = this.$module.querySelector('.app-site-search__input')
+    if (!$input) {
+      return
+    }
 
     // Ensure if the user stops using the search that we do not send tracking events
     $input.addEventListener('blur', () => {

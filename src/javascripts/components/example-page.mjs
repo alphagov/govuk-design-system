@@ -1,7 +1,17 @@
 import 'iframe-resizer/js/iframeResizer.contentWindow.js'
 
+/**
+ * Website example page
+ */
 class ExamplePage {
+  /**
+   * @param {Document} $module - HTML document
+   */
   constructor($module) {
+    if (!($module instanceof Document)) {
+      return this
+    }
+
     this.$module = $module
   }
 
@@ -10,6 +20,7 @@ class ExamplePage {
       return
     }
 
+    /** @satisfies {HTMLFormElement | null} */
     const $form = this.$module.querySelector('form[action="/form-handler"]')
     this.preventFormSubmission($form)
   }
