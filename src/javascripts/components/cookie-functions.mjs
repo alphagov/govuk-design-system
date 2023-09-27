@@ -49,10 +49,8 @@ const DEFAULT_COOKIE_CONSENT = {
   analytics: false
 }
 
-/*
+/**
  * Set, get, and delete cookies.
- *
- * Usage:
  *
  *   Setting a cookie:
  *   Cookie('hobnob', 'tasty', { days: 30 })
@@ -62,6 +60,11 @@ const DEFAULT_COOKIE_CONSENT = {
  *
  *   Deleting a cookie:
  *   Cookie('hobnob', null)
+ *
+ * @param {string} name - Cookie name
+ * @param {string | false} [value] - Cookie value
+ * @param {{ days?: number }} [options] - Cookie options
+ * @returns {string | void} - Returns value when setting or deleting
  */
 export function Cookie(name, value, options) {
   if (typeof value !== 'undefined') {
@@ -79,10 +82,13 @@ export function Cookie(name, value, options) {
   }
 }
 
-/** Return the user's cookie preferences.
+/**
+ * Return the user's cookie preferences.
  *
  * If the consent cookie is malformed, or not present,
  * returns null.
+ *
+ * @returns {ConsentPreferences | null} Consent preferences
  */
 export function getConsentCookie() {
   const consentCookie = getCookie(CONSENT_COOKIE_NAME)
@@ -101,18 +107,26 @@ export function getConsentCookie() {
   return consentCookieObj
 }
 
-/** Check the cookie preferences object.
+/**
+ * Check the cookie preferences object.
  *
  * If the consent object is not present, malformed, or incorrect version,
  * returns false, otherwise returns true.
  *
  * This is also duplicated in cookie-banner.njk - the two need to be kept in sync
+ *
+ * @param {ConsentPreferences} options - Consent preferences
+ * @returns {boolean} True if consent cookie is valid
  */
 export function isValidConsentCookie(options) {
   return options && options.version >= window.GDS_CONSENT_COOKIE_VERSION
 }
 
-/** Update the user's cookie preferences. */
+/**
+ * Update the user's cookie preferences.
+ *
+ * @param {ConsentPreferences} options - Consent options to parse
+ */
 export function setConsentCookie(options) {
   let cookieConsent = getConsentCookie()
 
@@ -137,7 +151,8 @@ export function setConsentCookie(options) {
   resetCookies()
 }
 
-/** Apply the user's cookie preferences
+/**
+ * Apply the user's cookie preferences
  *
  * Deletes any cookies the user has not consented to.
  */
@@ -183,6 +198,11 @@ export function resetCookies() {
   }
 }
 
+/**
+ * @param {string} cookieCategory - Cookie type
+ * @param {ConsentPreferences} cookiePreferences - Consent preferences
+ * @returns {string | boolean} Cookie type value
+ */
 function userAllowsCookieCategory(cookieCategory, cookiePreferences) {
   // Essential cookies are always allowed
   if (cookieCategory === 'essential') {
@@ -198,6 +218,10 @@ function userAllowsCookieCategory(cookieCategory, cookiePreferences) {
   }
 }
 
+/**
+ * @param {string} cookieName - Cookie name
+ * @returns {string | boolean} Cookie type value
+ */
 function userAllowsCookie(cookieName) {
   // Always allow setting the consent cookie
   if (cookieName === CONSENT_COOKIE_NAME) {
@@ -224,6 +248,10 @@ function userAllowsCookie(cookieName) {
   return false
 }
 
+/**
+ * @param {string} name - Cookie name
+ * @returns {string} Cookie value
+ */
 function getCookie(name) {
   const nameEQ = `${name}=`
   const cookies = document.cookie.split(';')
@@ -239,6 +267,11 @@ function getCookie(name) {
   return null
 }
 
+/**
+ * @param {string} name - Cookie name
+ * @param {string} value - Cookie value
+ * @param {{ days?: number }} [options] - Cookie options
+ */
 function setCookie(name, value, options) {
   if (userAllowsCookie(name)) {
     if (typeof options === 'undefined') {
@@ -257,6 +290,9 @@ function setCookie(name, value, options) {
   }
 }
 
+/**
+ * @param {string} name - Cookie name
+ */
 function deleteCookie(name) {
   if (Cookie(name)) {
     // Cookies need to be deleted in the same level of specificity in which they were set
@@ -268,3 +304,10 @@ function deleteCookie(name) {
     document.cookie = `${name}=;expires=Thu, 01 Jan 1970 00:00:00 GMT;domain=.${window.location.hostname};path=/`
   }
 }
+
+/**
+ * @typedef {object} ConsentPreferences
+ * @property {boolean} [analytics] - Accept analytics cookies
+ * @property {boolean} [essential] - Accept essential cookies
+ * @property {string} [version] - Content cookie version
+ */

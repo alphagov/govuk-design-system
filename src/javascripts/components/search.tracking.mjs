@@ -1,8 +1,19 @@
+/**
+ * Push to Google Analytics
+ *
+ * @param {object} payload - Google Analytics payload
+ */
 function addToDataLayer(payload) {
   window.dataLayer = window.dataLayer || []
   window.dataLayer.push(payload)
 }
 
+/**
+ * Strip possible personally identifiable information (PII)
+ *
+ * @param {string} string - Input string
+ * @returns {string} Output string
+ */
 function stripPossiblePII(string) {
   // Try to detect emails, postcodes, and NI numbers, and redact them.
   // Regexes copied from GTM variable 'JS - Remove PII from Hit Payload'
@@ -20,6 +31,13 @@ function stripPossiblePII(string) {
   return string
 }
 
+/**
+ * Track confirmed autocomplete result
+ *
+ * @param {string} searchQuery - Search query
+ * @param {object[]} searchResults - Search results
+ * @param {object} result - Search result
+ */
 export function trackConfirm(searchQuery, searchResults, result) {
   if (window.DO_NOT_TRACK_ENABLED) {
     return
@@ -52,6 +70,12 @@ export function trackConfirm(searchQuery, searchResults, result) {
   })
 }
 
+/**
+ * Track autocomplete results
+ *
+ * @param {string} searchQuery - Search query
+ * @param {object[]} searchResults - Search results
+ */
 export function trackSearchResults(searchQuery, searchResults) {
   if (window.DO_NOT_TRACK_ENABLED) {
     return
