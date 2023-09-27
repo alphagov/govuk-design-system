@@ -56,10 +56,16 @@ class CookieBanner {
     })
   }
 
+  /**
+   * Hide banner
+   */
   hideBanner() {
     this.$cookieBanner.setAttribute('hidden', true)
   }
 
+  /**
+   * Accept cookies
+   */
   acceptCookies() {
     // Do actual cookie consent bit
     CookieFunctions.setConsentCookie({ analytics: true })
@@ -69,6 +75,9 @@ class CookieBanner {
     this.revealConfirmationMessage(this.$cookieConfirmationAccept)
   }
 
+  /**
+   * Reject cookies
+   */
   rejectCookies() {
     // Do actual cookie consent bit
     CookieFunctions.setConsentCookie({ analytics: false })
@@ -98,6 +107,11 @@ class CookieBanner {
     confirmationMessage.focus()
   }
 
+  /**
+   * Check if on the Cookies page
+   *
+   * @returns {boolean} Returns true if on the Cookies page
+   */
   onCookiesPage() {
     return window.location.pathname === '/cookies/'
   }

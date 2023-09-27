@@ -36,6 +36,8 @@ class CookiesPage {
   }
 
   /**
+   * Save preferences
+   *
    * @param {SubmitEvent} event - Form submit event
    */
   savePreferences(event) {
@@ -59,6 +61,8 @@ class CookiesPage {
   }
 
   /**
+   * Show user preference
+   *
    * @param {HTMLFieldSetElement} $cookieFormFieldset - Cookie form fieldset
    * @param {import('./cookie-functions.mjs').ConsentPreferences} preferences - Consent preferences
    */
@@ -77,6 +81,9 @@ class CookiesPage {
     $radio.checked = true
   }
 
+  /**
+   * Show success notification
+   */
   showSuccessNotification() {
     this.$successNotification.removeAttribute('hidden')
 
@@ -94,6 +101,8 @@ class CookiesPage {
   }
 
   /**
+   * Get cookie type
+   *
    * @param {HTMLFieldSetElement} $cookieFormFieldset - Cookie form fieldset
    * @returns {string} Cookie type
    */
