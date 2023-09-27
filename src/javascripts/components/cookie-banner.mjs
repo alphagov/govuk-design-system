@@ -1,5 +1,4 @@
 import * as CookieFunctions from './cookie-functions.mjs'
-import { nodeListForEach } from './helpers.mjs'
 
 var cookieBannerAcceptSelector = '.js-cookie-banner-accept'
 var cookieBannerRejectSelector = '.js-cookie-banner-reject'
@@ -51,8 +50,7 @@ CookieBanner.prototype.init = function () {
   this.$acceptButton.addEventListener('click', this.acceptCookies.bind(this))
   this.$rejectButton.addEventListener('click', this.rejectCookies.bind(this))
 
-  nodeListForEach(
-    this.$cookieBannerHideButtons,
+  this.$cookieBannerHideButtons.forEach(
     function ($cookieBannerHideButton) {
       $cookieBannerHideButton.addEventListener(
         'click',
