@@ -50,14 +50,12 @@ CookieBanner.prototype.init = function () {
   this.$acceptButton.addEventListener('click', this.acceptCookies.bind(this))
   this.$rejectButton.addEventListener('click', this.rejectCookies.bind(this))
 
-  this.$cookieBannerHideButtons.forEach(
-    function ($cookieBannerHideButton) {
-      $cookieBannerHideButton.addEventListener(
-        'click',
-        this.hideBanner.bind(this)
-      )
-    }.bind(this)
-  )
+  this.$cookieBannerHideButtons.forEach(($cookieBannerHideButton) => {
+    $cookieBannerHideButton.addEventListener(
+      'click',
+      this.hideBanner.bind(this)
+    )
+  })
 }
 
 CookieBanner.prototype.hideBanner = function () {
