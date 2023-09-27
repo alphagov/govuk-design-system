@@ -1,5 +1,3 @@
-import { nodeListForEach } from './helpers.mjs'
-
 /**
  * The naming of things is a little complicated in here.
  * For reference:
@@ -28,8 +26,7 @@ AppTabs.prototype.init = function () {
   this.enhanceMobileTabs()
 
   // Add bindings to desktop tabs
-  nodeListForEach(
-    this.$desktopTabs,
+  this.$desktopTabs.forEach(
     function ($tab) {
       $tab.addEventListener('click', this.onClick.bind(this))
     }.bind(this)
@@ -77,8 +74,7 @@ AppTabs.prototype.onClick = function (event) {
  */
 AppTabs.prototype.enhanceMobileTabs = function () {
   // Loop through mobile tabs...
-  nodeListForEach(
-    this.$mobileTabs,
+  this.$mobileTabs.forEach(
     function ($tab) {
       // ...construct a button equivalent of each anchor...
       var $button = document.createElement('button')
@@ -103,8 +99,7 @@ AppTabs.prototype.enhanceMobileTabs = function () {
  * Reset tabs and panels to closed state
  */
 AppTabs.prototype.resetTabs = function () {
-  nodeListForEach(
-    this.$panels,
+  this.$panels.forEach(
     function ($panel) {
       // We don't want to hide the panel if there are no tabs present to show it
       if (!$panel.classList.contains('js-tabs__container--no-tabs')) {
@@ -151,7 +146,7 @@ AppTabs.prototype.closePanel = function (panelId) {
  */
 AppTabs.prototype.getMobileTab = function (panelId) {
   var result = null
-  nodeListForEach(this.$mobileTabs, function ($tab) {
+  this.$mobileTabs.forEach(function ($tab) {
     if ($tab.getAttribute('aria-controls') === panelId) {
       result = $tab
     }

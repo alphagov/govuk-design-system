@@ -10,7 +10,6 @@ import {
 import CookiesPage from './components/cookies-page.mjs'
 import Copy from './components/copy.mjs'
 import Example from './components/example.mjs'
-import { nodeListForEach } from './components/helpers.mjs'
 import Navigation from './components/navigation.mjs'
 import OptionsTable from './components/options-table.mjs'
 import Search from './components/search.mjs'
@@ -33,13 +32,13 @@ if (userConsent && isValidConsentCookie(userConsent) && userConsent.analytics) {
 
 // Initialise example frames
 var $examples = document.querySelectorAll('[data-module="app-example-frame"]')
-nodeListForEach($examples, function ($example) {
+$examples.forEach(($example) => {
   new Example($example).init()
 })
 
 // Initialise tabs
 var $tabs = document.querySelectorAll('[data-module="app-tabs"]')
-nodeListForEach($tabs, function ($tabs) {
+$tabs.forEach(($tabs) => {
   new AppTabs($tabs).init()
 })
 
@@ -48,7 +47,7 @@ OptionsTable.init()
 
 // Add copy to clipboard to code blocks inside tab containers
 var $codeBlocks = document.querySelectorAll('[data-module="app-copy"] pre')
-nodeListForEach($codeBlocks, function ($codeBlock) {
+$codeBlocks.forEach(($codeBlock) => {
   new Copy($codeBlock).init()
 })
 
