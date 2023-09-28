@@ -7,11 +7,40 @@ layout: layout-pane.njk
 order: 11
 ---
 
-<img src="/community/images/dsd23-announcement-banner.svg" alt="Design System Day 2023 logo" class="app-image--no-border govuk-!-margin-bottom-6" loading="lazy">
+<img src="/community/images/dsd23-announcement-banner.svg" alt="Design System Day 2023 logo" class="app-image--no-border" loading="lazy">
 
-**Dates:** 10 and 11 October 2023
-**Location:** <a href="https://dynamicearth.org.uk/plan-your-visit/getting-here/">Dynamic Earth</a>, Edinburgh, and online
-**Get tickets:** <a href="https://www.eventbrite.co.uk/e/714571050247?aff=oddtdtcreator">Day 1 in Edinburgh</a> or <a href="https://www.eventbrite.co.uk/e/714592022977?aff=oddtdtcreator">day 2 online</a>
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+{{ govukSummaryList({
+  classes: "govuk-!-margin-top-3 govuk-!-margin-bottom-9",
+  rows: [
+    {
+      key: {
+        text: "Dates"
+      },
+      value: {
+        text: "10 and 11 October 2023"
+      }
+    },
+    {
+      key: {
+        text: "Location"
+      },
+      value: {
+        html: '<a href="https://dynamicearth.org.uk/plan-your-visit/getting-here/">Dynamic Earth</a>, Edinburgh, and online'
+      }
+    },
+    {
+      classes: "govuk-summary-list__row--no-border",
+      key: {
+        text: "Get tickets"
+      },
+      value: {
+        html: '<a href="https://www.eventbrite.co.uk/e/714571050247?aff=oddtdtcreator">Day 1 in Edinburgh</a> or <a href="https://www.eventbrite.co.uk/e/714592022977?aff=oddtdtcreator">day 2 online</a>'
+      }
+    }
+  ]
+}) }}
 
 <!--
 
