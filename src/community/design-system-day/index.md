@@ -81,7 +81,7 @@ Dynamic Earth is an accessible venue, and we'll have a room set aside as a quiet
 - How design systems manage contributions
   Caroline Jarrett (Effortmark), Frankie Roberto (Department for Education), Vicky Teinaki (Student Loans Company), and Ellis Capon (Just Eat)
 - Trauma-informed research and design
-  Katrina Birch (GOV.UK Design System), Janice Hannaway (ResearchU), Kate Every (Mastek), and Helen Baron (The Emily Davison Centre)
+  Janice Hannaway (ResearchU), Kate Every (Mastek), and Helen Baron (The Emily Davison Centre)
 - Design systems don’t solve problems, people do
   Tash Willcocks (TPXimpact)
 
