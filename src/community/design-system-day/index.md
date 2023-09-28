@@ -154,10 +154,43 @@ Day 1 will be on Tuesday 10 October, in-person at Dynamic Earth, Holyrood Road, 
 
 The venue is accessible by foot and public transport.
 
-- **Travelling by foot:** Dynamic Earth is about 20-minute walk from Edinburgh City Centre. Accessible from Holyrood Road, Holyrood Gait and a public footpath from Horse Wynd
-- **Travelling by train:** from Edinburgh Waverley station it is about 15 minutes walk
-- **Travelling by bus:** the venue is serviced by local bus routes: number 35 stops a 3-minute walk away from Dynamic Earth. Alternative routes include the 5, 7, 14, 29, 30, 31, 33, 37, 45 and 49 which stop on North Bridge and are a 10-minute walk away along Holyrood Road
-- **Travelling by car:** Dynamic Earth has a 24-hour car park located underneath the building. Charges will apply. Spaces are allocated on a first-come-first-serve basis and cannot be reserved beforehand. The car park has a height limit of 2.3 metres.
+{{ govukSummaryList({
+  classes: "govuk-!-margin-top-2 govuk-!-margin-bottom-8",
+  rows: [
+    {
+      key: {
+        text: "Travelling by foot"
+      },
+      value: {
+        text: "Dynamic Earth is about 20-minute walk from Edinburgh City Centre. Accessible from Holyrood Road, Holyrood Gait and a public footpath from Horse Wynd"
+      }
+    },
+    {
+      key: {
+        text: "Travelling by train"
+      },
+      value: {
+        text: "From Edinburgh Waverley station it is about 15 minutes walk"
+      }
+    },
+    {
+      key: {
+        text: "Travelling by bus"
+      },
+      value: {
+        text: "The venue is serviced by local bus routes: number 35 stops a 3-minute walk away from Dynamic Earth. Alternative routes include the 5, 7, 14, 29, 30, 31, 33, 37, 45 and 49 which stop on North Bridge and are a 10-minute walk away along Holyrood Road"
+      }
+    },
+    {
+      key: {
+        text: "Travelling by car"
+      },
+      value: {
+        text: "Dynamic Earth has a 24-hour car park located underneath the building. Charges will apply. Spaces are allocated on a first-come-first-serve basis and cannot be reserved beforehand. The car park has a height limit of 2.3 metres."
+      }
+    }
+  ]
+}) }}
 
 ## Joining online
 
