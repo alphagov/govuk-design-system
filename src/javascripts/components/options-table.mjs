@@ -19,45 +19,24 @@ var OptionsTable = {
         var tabLink = document.querySelector(
           'a[href="#' + exampleName + '-nunjucks"]'
         )
-        var tabHeading = tabLink ? tabLink.parentNode : null
         var optionsDetailsElement = document.getElementById(
           'options-' + exampleName + '-details'
         )
 
-        if (tabHeading && optionsDetailsElement) {
-          var tabsElement = optionsDetailsElement.parentNode
-          var detailsSummary = optionsDetailsElement.querySelector(
-            '.govuk-details__summary'
-          )
-          var detailsText = optionsDetailsElement.querySelector(
-            '.govuk-details__text'
-          )
-
-          if (detailsSummary && detailsText) {
-            tabLink.setAttribute('aria-expanded', 'true')
-            tabHeading.className += ' app-tabs__item--current'
-            tabsElement.removeAttribute('hidden')
-
-            optionsDetailsElement.setAttribute('open', 'open')
-
-            // If the browser does not natively support the <details> element
-            // the polyfill included with the Details component adds ARIA
-            // attributes and explicit display styles that we need to keep in
-            // sync with the open attribute.
-            if (detailsSummary.hasAttribute('aria-expanded')) {
-              detailsSummary.setAttribute('aria-expanded', 'true')
-            }
-            if (detailsText.hasAttribute('aria-hidden')) {
-              detailsText.setAttribute('aria-hidden', false)
-            }
-            detailsText.style.display = ''
-
-            window.setTimeout(function () {
-              tabLink.focus()
-              if (isLinkToTable) document.querySelector(hash).scrollIntoView()
-            }, 0)
-          }
+        if (!tabLink || !optionsDetailsElement) {
+          return
         }
+
+        tabLink.setAttribute('aria-expanded', 'true')
+        tabLink.parentNode.className += ' app-tabs__item--current'
+
+        optionsDetailsElement.parentNode.removeAttribute('hidden')
+        optionsDetailsElement.open = true
+
+        window.setTimeout(function () {
+          tabLink.focus()
+          if (isLinkToTable) document.querySelector(hash).scrollIntoView()
+        }, 0)
       }
     }
   }
