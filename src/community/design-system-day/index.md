@@ -58,13 +58,13 @@ Join us for the GOV.UK Design System's flagship event!
 
 Design System Day 2023 is a 2-day conference to collaborate and share knowledge about design systems with like-minded people, covering topics like accessibility, community and decision-making. It's a space for anyone using design systems in government to share ideas and developments, learn from colleagues, and spark conversations on related topics.
 
-### Speakers and sessions
+## Speakers and sessions
 
 All talks, workshops and sessions have been suggested by the community.
 
 Our speakers come from organisations across the UK and international public sector. We're joined by folks working on design systems from notable companies too.
 
-#### Day 1
+### Day 1
 
 The first day will be at Dynamic Earth, Edinburgh.
 
@@ -87,7 +87,7 @@ Dynamic Earth is an accessible venue, and we'll have a room set aside as a quiet
 
 You'll be able to speak with others in the community and chat with panellists too. Towards the end of the day, we'll have an optional social for more conversation.
 
-#### Day 2
+### Day 2
 
 The second day will be hosted online.
 
@@ -95,7 +95,7 @@ The event starts at 9:30am and runs until 5pm, and we'll break for lunch at 12:3
 
 Most sessions are talks or show and tells where speakers may take questions at the end. We've highlighted workshops that will ask the audience to participate.
 
-**In the morning**
+#### In the morning
 
 - We’re feeling ‘appy
   Oliver Binns and Chris Choy (GOV.UK One Login)
@@ -112,7 +112,7 @@ Most sessions are talks or show and tells where speakers may take questions at t
 - The challenges of scaling up a truly user-centred service
   Laura Smith (Unboxed)
 
-**After lunch**
+#### After lunch
 
 - A service designer's approach to human-centered life transitions
   Sylvie Abookhire (DC.gov)
@@ -131,7 +131,7 @@ Most sessions are talks or show and tells where speakers may take questions at t
 - Responsive design, design systems and 'hyperobjects'
   Ethan Marcotte (Autogram) and Steve Messer (GOV.UK Design System)
 
-**In the afternoon**
+#### In the afternoon
 
 - Doing good discovery
   Debra Churchill (Ontario Public Service)
