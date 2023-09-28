@@ -248,6 +248,7 @@ $colour-list-breakpoint: 980px;
 
 // Add styling for inline code
 li code,
+caption code,
 td code,
 p code {
   padding: 1px 3px;
@@ -257,6 +258,14 @@ p code {
   @include govuk-media-query($from: tablet) {
     padding: 2px 4px;
   }
+}
+
+// Add styling for code in headings
+.govuk-heading-s code,
+.govuk-heading-m code,
+.govuk-heading-l code,
+.govuk-heading-xl code {
+  font-size: inherit;
 }
 
 // Add styling for block code
