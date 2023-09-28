@@ -117,7 +117,6 @@ $app-code-color: #d13118;
   pre,
   code {
     font-family: ui-monospace, Menlo, "Cascadia Mono", "Segoe UI Mono", Consolas, "Liberation Mono", monospace;
-    font-size: 1em;
   }
 }
 
@@ -251,9 +250,13 @@ $colour-list-breakpoint: 980px;
 li code,
 td code,
 p code {
-  padding: 0 govuk-spacing(1);
+  padding: 1px 3px;
   color: $app-code-color;
   background-color: govuk-colour("light-grey");
+  @include govuk-typography-responsive($size: 16);
+  @include govuk-media-query($from: tablet) {
+    padding: 2px 4px;
+  }
 }
 
 // Add styling for block code
@@ -266,7 +269,7 @@ pre code {
   border: $govuk-focus-width solid transparent;
   outline: 1px solid $govuk-border-colour;
   background-color: $app-light-grey;
-  font-size: 16px;
+  @include govuk-typography-responsive($size: 19);
   @include govuk-responsive-margin(4, "bottom");
 
   &:focus {
