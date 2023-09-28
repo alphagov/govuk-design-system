@@ -26,7 +26,7 @@
     "lint:js": "eslint --cache --cache-location .cache/eslint --cache-strategy content --color --ignore-path .gitignore \"**/*.{cjs,js,md,mjs}\"",
     "lint:prettier": "prettier --cache --cache-location .cache/prettier --cache-strategy content --check \"**/*.{cjs,js,json,md,mjs,scss,yaml,yml}\"",
     "lint:scss": "stylelint \"**/*.{md,scss}\"",
-    "check-links": "hyperlink --canonicalroot https://design-system.service.gov.uk/ --internal --recursive deploy/public/sitemap.xml"
+    "check-links": "hyperlink --canonicalroot https://design-system.service.gov.uk/ --internal --recursive deploy/public/sitemap.xml | tap-min"
   },
   "dependencies": {
     "accessible-autocomplete": "^2.0.4",
@@ -95,7 +95,8 @@
     "standard": "^17.1.0",
     "stylelint": "^15.10.3",
     "stylelint-config-gds": "^1.0.0",
-    "stylelint-order": "^6.0.3"
+    "stylelint-order": "^6.0.3",
+    "tap-min": "^3.0.0"
   },
   "engines": {
     "node": "^18.12.0",
