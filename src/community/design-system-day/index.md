@@ -31,13 +31,13 @@ Design System Day 2023 is a 2-day conference to collaborate and share knowledge 
 
 ### Speakers and sessions
 
-All talks, workshops and sessions have been suggested by the community. 
+All talks, workshops and sessions have been suggested by the community.
 
 Our speakers come from organisations across the UK and international public sector. We're joined by folks working on design systems from notable companies too.
 
 #### Day 1
 
-The first day will be at Dynamic Earth, Edinburgh. 
+The first day will be at Dynamic Earth, Edinburgh.
 
 The event is open from 9am and starts at 9:45am. There will be breaks throughout the day and an hour for lunch. Talks will close at 4:15pm and a social hour will run until 5:15pm.
 
@@ -54,9 +54,9 @@ You'll be able to speak with others in the community and chat with panellists to
 
 #### Day 2
 
-The second day will be hosted online. 
+The second day will be hosted online.
 
-The event starts at 9:30am and runs until 5pm, and we'll break for lunch at 12:30pm. There will be breaks throughout the day and you're free to drop in and out as you like. 
+The event starts at 9:30am and runs until 5pm, and we'll break for lunch at 12:30pm. There will be breaks throughout the day and you're free to drop in and out as you like.
 
 Most sessions are talks or show and tells where speakers may take questions at the end. We've highlighted workshops that will ask the audience to participate.
 
@@ -79,7 +79,7 @@ Most sessions are talks or show and tells where speakers may take questions at t
 - From code to content-first – scaling content production at PayPal<br>Kate Thomas (PayPal)
 - Design pattern histories<br>Vicky Teinaki (Student Loans Company)
 - How a design API empowers product teams to ensure brand consistency at scale<br>Louis Chenais (Specify)
-- Responsive design, design systems and 'hyperobjects'<br>Ethan Marcotte (Autogram) and Steve Messer (GOV.UK Design System) 
+- Responsive design, design systems and 'hyperobjects'<br>Ethan Marcotte (Autogram) and Steve Messer (GOV.UK Design System)
 
 **In the afternoon**
 
@@ -95,7 +95,7 @@ Most sessions are talks or show and tells where speakers may take questions at t
 
 Day 1 will be on Tuesday 10 October, in-person at Dynamic Earth, Holyrood Road, Edinburgh, EH8 8AS.
 
-The venue is accessible by foot and public transport. 
+The venue is accessible by foot and public transport.
 
 - **Travelling by foot:** Dynamic Earth is about 20-minute walk from Edinburgh City Centre. Accessible from Holyrood Road, Holyrood Gait and a public footpath from Horse Wynd
 - **Travelling by train:** from Edinburgh Waverley station it is about 15 minutes walk
