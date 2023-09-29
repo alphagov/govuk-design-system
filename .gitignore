@@ -1,6 +1,6 @@
 deploy/public
 node_modules/
-npm-debug.log
+*.log
 .DS_Store
 .sass-cache
 .cache
