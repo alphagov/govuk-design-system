@@ -35,16 +35,6 @@ order: 13
   ]
 }) }}
 
-<!--
-
-Setting the following convention:
-    /community/design-system-day/ always describes the upcoming event or the event in general
-    /community/design-system-day-[year]/ is the archive page for an event which collects the videos, slides and notes for a particular conference
-
-This means that hyperlinks to /community/design-system-day/ can always encourage ticket sales or mailing list subscriptions.
-
--->
-
 ## Speakers 
 
 Our speakers come from organisations across the UK and international public sector. We're joined by folks working on design systems from notable companies too.
@@ -154,10 +144,10 @@ I have several years of experience as a writer and blogger. I began writing  Joh
 Louis is the co-founder and Chief Evangelist at Specify, a DesignOps startup that helps organisations manage their brand identity at scale. Louis is also a contributor of the Design Tokens W3C Community Group (DTCG) whose objective is to create a standard format for design tokens and promote best practices. 
 
 ### Ethan Marcotte (Autogram)
-TBC 
+Ethan is a web designer, speaker, and author who's best known for creating responsive web design. Over the last two decades, his design practice has focused on designing and building beautiful, accessible web experiences, and on helping organisations create more effective design systems. He is a partner and cofounder at Autogram, a strategic consultancy that works at the intersection of design systems and content management.
 
 ### Steve Messer (GOV.UK Design System)
-TBC 
+Steve is a freelance product person, working on the GOV.UK Design System currently. He's passionate about innovation for the public good and open, ethical product design. He's worked at startups, Government Digital Service and NHS Digital, and has taught product management to people from numerous companies through General Assembly. 
 
 ### Debra Churchill (Ontario Public Service)
 Debra’s career has focused on human services. Before leaving New Zealand for Toronto, Canada, Debra worked in operational and policy roles. Since 2015 Debra has used service design methodology to co-create and re-design programs and services. Debra has been part of transformation projects including digital transformation, developmental services transformation, and transfer payment modernisation. 
