@@ -51,7 +51,7 @@ Join the Scottish Government's Head of Design, Samantha Ernstzen, and Product Ow
 Ciandelle Hughes, Calvin Lau and Steve Messer
 11:00 - 11.30
 
-
+In this show and tell you will hear about the work the GOV.UK Design System team have been up to over the last 12 months. You'll hear about the work we have done with amazing contributors and where we are planning to head over next. 
 
 ### How design systems manage contributions
 Caroline Jarrett, Frankie Roberto, Vicky Teinaki and Ellis Capon
@@ -71,7 +71,7 @@ Tash Willcocks
 
 The Design Lead at TPX Impact, Tash will discuss the intricate relationship between people and design systems. She will explore how individuals shape design systems just as profoundly as these systems influence them. From user feedback, ownership, to the organisation's context, she will delve into the dynamic interplay that defines modern design practices.
 
-## Day 2
+## Day 2 sessions
 
 ### We’re feeling ’appy
 Oliver Binns, Chris Choy and Helena Trippe

@@ -41,24 +41,32 @@ Our speakers come from organisations across the UK and international public sect
 
 ## Day 1 speakers
 
+### Kelly Lee (GOV.UK Design System team)
+
+Kelly Lee is a delivery manager on the GOV.UK Design System team. Before joining the Government Digital Service, she worked at Jobcentre Plus in a variety of roles including business coach, performance team leader and financial assessor.
+
+### Imran Hussain (GOV.UK Design System team)
+Imran is a community consultant with over 10 years experience building communities across different sectors. He believes communities can be a force for good in society and loves working with communities that have a positive impact on public life.
+
+He is currently a Community Designer at Government Digital Service, a department in the UK Government. He works on creating the right conditions for a community to thrive around the ever-popular GOV.UK Design System.
+
 ### Rachel Male (Scottish Governement)
 Rachel is User Researcher and works in the Social Security Directorate for the Scottish Government. Rachel helps design disability and low income benefits for the people of Scotland and currently leads research operations focusing on operationalising their user research. Rachel has a passion for ensuring user research is effective, efficient and informative.
 
 ### Samantha Ernstzen (Scottish Governement)
-TBC
+To be confirmed
 
 ### Jennifer I'Anson (Scottish Governement)
-TBC
+To be confirmed
+
+### GOV.UK Design System team 
+The <a href="/design-system-team/" class="govuk-link">GOV.UK Design System team</a> is responsible for the implementation and maintenance of styles, components and patterns on the GOV.UK Design System. 
 
 ### Deborah Dada (Storelab)
 Deborah is a Product Designer with a strong focus on crafting meaningful user experiences and simplifying complex business solutions. Deborah brings a wealth of hands-on experience in UX principles and creating Design Systems with expertise that spans research, design systems and success metrics, underpinned by a design thinking approach. Deborah is currently a Product Designer at StoreLab and contributes to enhancing user satisfaction.
 
 ### Caroline Jarrett (Effortmark)
-Caroline Jarrett is the forms specialist. She advises organisations on how to make forms easier, improve websites and business processes. Her work spans all the types of design that will improve forms. This includes interaction, content and service design. 
-
-Caroline is a sought-after speaker, trainer, and author. Her latest book is Surveys that work: a practical guide for designing and running better surveys.
-
-Caroline has an MA in Mathematics from Oxford University, an MBA and a Diploma in Statistics from the Open University, and is a Chartered Engineer.
+Caroline is the forms specialist. She advises organisations on how to make forms easier, improve websites and business processes. Her work spans all the types of design that will improve forms. Caroline is a sought-after speaker, trainer and author. Her latest book is Surveys that work: a practical guide for designing and running better surveys.
 
 ### Frankie Roberto (Department for Education)
 Frankie Roberto is a lead interaction designer who has worked on several services across different government departments, including 'Apply for teacher training' and 'Ethnicity facts and figures'. 
@@ -66,12 +74,11 @@ Frankie Roberto is a lead interaction designer who has worked on several service
 He's also an experienced contributor to the design community and the GOV.UK Design System. 
 
 ### Vicky Teinaki (Student Loans Company)
-I am a designer currently working as a UX Lead at Student Loans Company. I have worked at Government Digital Service, Department of Work and Pensions and HM Revenue and Customs. I have worked as a user researcher and  more recently as an interaction designer. Since January 2017 I have been a design assessor.
+Vicky is a designer and UX Lead at Student Loans Company. She’s worked at the Government Digital Service, Department of Work and Pensions, and HM Revenue & Customs. Vicky has worked as a user researcher and interaction designer. Vicky has a background as a developer, having done Drupal and WordPress theming and module/plugin development. 
 
-I have several years of experience as a writer and blogger. I began writing  Johnny Holland in 2008, and was one of the chief editors from 2010 to late 2012. 
 
 ### Ellis Capon (Just Eat)
-TBC
+To be confirmed
 
 ### Janice Hannaway (ResearchU)
 Janice is an empathic leader, a trauma-informed user researcher, therapist, and coach with experience working with people who have experienced the effects of trauma. She champions the psychological safety of user-centered design teams and highlights the potential harm from research and design on users. A co-founder of ResearchU Training Academy, she delivers specialist trauma-informed training
@@ -83,13 +90,12 @@ Kate is a Lead Service Designer at Mastek, specialising in inclusive and ethical
 Helen leads the Move-On team and is centre manager at the Emily Davison Centre supporting domestic abuse survivors to access work, education, volunteering and training. Adopting a trauma informed approach within the service has enabled the team to see great leaps in confidence and self-esteem of the women they work with. 
 
 ### Tash Willcocks (TPXimpact)
-Tash has spent over 25 years shaping future change-makers. First as Programme Leader of BA & MA Graphics at Salford University; then as Director of Masters at Hyper Island, working with international students and organisations such as the BBC, UN, NHS, Unilever & Adidas. 
+Tash has spent over 25 years shaping future change-makers. First as Programme Leader of BA and MA Graphics at Salford University, then as Director of Masters at Hyper Island, working with the BBC, UN, NHS, Unilever and Adidas. After joining Snook, Tash created the learning design hub and launched the Snook Design Academy. Her most recent venture is joining TPXImpact to design and build their Design Academy.
 
-Tash later joined Snook, where she created the learning design hub and launched the Snook 
-Design Academy. Her most recent venture is joining TPXImpact to design and build their Design Academy.
+### David Cox (GOV.UK Design System team)
+To be confirmed
 
-
-## Day 2
+## Day 2 speakers
 
 ### Oliver Binns (GOV.UK One Login)
 Oliver is a software engineer from Yorkshire with a master’s degree in Computer Science. He has worked on mobile apps for airlines, healthcare, and government, with a focus on iOS development. 
@@ -98,7 +104,7 @@ Oliver is a software engineer from Yorkshire with a master’s degree in Compute
 Chris is a UX design lead with a Computer Science degree. He worked as an SAP consultant before designing and delivering digital platforms and mobile apps, with a focus on experience design.
  
 ### Helena Trippe (GOV.UK One Login)
-TBC 
+To be confirmed 
 
 ### Frankie Roberto (Department for Education)
 Frankie Roberto is a lead interaction designer who has worked on several services across different government departments, including 'Apply for teacher training' and 'Ethnicity facts and figures'. 
@@ -136,9 +142,7 @@ Ashley is a Principal Engineer at Just Eat Takeaway with over 15 years experienc
 Kate has been unravelling knotty content puzzles for more than 20 years. She's worked in agencies and large institutions and organisations in Australia, the US and the UK, and is currently Content Architect for PayPal. 
 
 ### Vicky Teinaki (Student Loans Company)
-I am a designer currently working as a UX Lead at Student Loans Company. I have worked at Government Digital Service, Department of Work and Pensions and HM Revenue and Customs. I have worked as a user researcher and  more recently as an interaction designer. Since January 2017 I have been a design assessor.
-
-I have several years of experience as a writer and blogger. I began writing  Johnny Holland in 2008, and was one of the chief editors from 2010 to late 2012.  
+Vicky is a designer and UX Lead at Student Loans Company. She’s worked at the Government Digital Service, Department of Work and Pensions, and HM Revenue & Customs. Vicky has worked as a user researcher and interaction designer. Vicky has a background as a developer, having done Drupal and WordPress theming and module/plugin development. 
 
 ### Louis Chenais (Specify)
 Louis is the co-founder and Chief Evangelist at Specify, a DesignOps startup that helps organisations manage their brand identity at scale. Louis is also a contributor of the Design Tokens W3C Community Group (DTCG) whose objective is to create a standard format for design tokens and promote best practices. 
