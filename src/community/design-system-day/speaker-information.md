@@ -66,7 +66,7 @@ The <a href="/design-system-team/" class="govuk-link">GOV.UK Design System team<
 Deborah is a Product Designer with a strong focus on crafting meaningful user experiences and simplifying complex business solutions. Deborah brings a wealth of hands-on experience in UX principles and creating Design Systems with expertise that spans research, design systems and success metrics, underpinned by a design thinking approach. Deborah is currently a Product Designer at StoreLab and contributes to enhancing user satisfaction.
 
 ### Caroline Jarrett (Effortmark)
-Caroline is the forms specialist. She advises organisations on how to make forms easier, improve websites and business processes. Her work spans all the types of design that will improve forms. Caroline is a sought-after speaker, trainer and author. Her latest book is Surveys that work: a practical guide for designing and running better surveys.
+Caroline is the Forms Specialist. She advises organisations on how to make forms easier, improve websites and business processes. Her work spans all the types of design that will improve forms. Caroline is a sought-after speaker, trainer and author. Her latest book is 'Surveys that work: a practical guide for designing and running better surveys'.
 
 ### Frankie Roberto (Department for Education)
 Frankie Roberto is a lead interaction designer who has worked on several services across different government departments, including 'Apply for teacher training' and 'Ethnicity facts and figures'. 
