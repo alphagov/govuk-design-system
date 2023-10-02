@@ -43,7 +43,7 @@ Our speakers come from organisations across the UK and international public sect
 
 ### Kelly Lee (GOV.UK Design System team)
 
-Kelly Lee is a delivery manager on the GOV.UK Design System team. Before joining the Government Digital Service, she worked at Jobcentre Plus in a variety of roles including business coach, performance team leader and financial assessor.
+Kelly is a delivery manager on the GOV.UK Design System team. Before joining the Government Digital Service, she worked at Jobcentre Plus in a variety of roles including business coach, performance team leader and financial assessor.
 
 ### Imran Hussain (GOV.UK Design System team)
 Imran is a community consultant with over 10 years experience building communities across different sectors. He believes communities can be a force for good in society and loves working with communities that have a positive impact on public life.
