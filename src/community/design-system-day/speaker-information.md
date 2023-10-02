@@ -98,7 +98,7 @@ To be confirmed
 ## Day 2 speakers
 
 ### Oliver Binns (GOV.UK One Login)
-Oliver is a software engineer from Yorkshire with a master’s degree in Computer Science. He has worked on mobile apps for airlines, healthcare, and government, with a focus on iOS development. 
+Oliver is a Software Engineer from Yorkshire with a master’s degree in Computer Science. He has worked on mobile apps for airlines, healthcare, and government, with a focus on iOS development. 
 
 ### Chris Choy (GOV.UK One Login)
 Chris is a UX design lead with a Computer Science degree. He worked as an SAP consultant before designing and delivering digital platforms and mobile apps, with a focus on experience design.
