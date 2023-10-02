@@ -98,7 +98,7 @@ Most sessions are talks or show and tells where speakers may take questions at t
 #### In the morning
 
 - We’re feeling ’appy
-  Oliver Binns and Chris Choy (GOV.UK One Login)
+  Oliver Binns, Chris Choy and Helena Trippe (GOV.UK One Login)
 - The contributor perspective on design systems
   Frankie Roberto (Department for Education)
 - Trauma-informed design – passing trend, or new aspect of accessibility?
@@ -115,7 +115,7 @@ Most sessions are talks or show and tells where speakers may take questions at t
 #### After lunch
 
 - A service designer's approach to human-centered life transitions
-  Sylvie Abookhire (DC.gov)
+  Sylvie Abookhire (Independent)
 - Leading the system
   Daniel Fontaneda (Bumble)
 - Imposter syndrome in government and why it's not always a bad thing
@@ -145,7 +145,7 @@ Most sessions are talks or show and tells where speakers may take questions at t
   Valentine Makhouleen (Prelude Security/New Media Studio)
 - From chaos to clarity – unlocking the potential of design systems
   Hassan Nawaz (FanDuel)
-- Collaborative design systems at scale
+- Fostering Collaboration in Design Systems.
   James Carleton (PayPal)
 
 ## Getting there
