@@ -87,7 +87,7 @@ Janice is an empathic leader, a trauma-informed user researcher, therapist, and 
 Kate is a Lead Service Designer at Mastek, specialising in inclusive and ethical design and delivery. She led on accessibility, inclusive and equitable design for the UK's COVID-19 testing roll-out at NHS Digital. Heading up Mastek’s Service Design practice, she champions inclusive, trauma-informed approaches to research and design.  
 
 ### Helen Baron (The Emily Davison Centre)
-Helen leads the Move-On team and is centre manager at the Emily Davison Centre supporting domestic abuse survivors to access work, education, volunteering and training. Adopting a trauma informed approach within the service has enabled the team to see great leaps in confidence and self-esteem of the women they work with. 
+Helen leads the Move-On team and is Centre Manager at the Emily Davison Centre supporting domestic abuse survivors to access work, education, volunteering and training. Adopting a trauma informed approach within the service has enabled the team to see great leaps in confidence and self-esteem of the women they work with. 
 
 ### Tash Willcocks (TPXimpact)
 Tash has spent over 25 years shaping future change-makers. First as Programme Leader of BA and MA Graphics at Salford University, then as Director of Masters at Hyper Island, working with the BBC, UN, NHS, Unilever and Adidas. After joining Snook, Tash created the learning design hub and launched the Snook Design Academy. Her most recent venture is joining TPXImpact to design and build their Design Academy.
