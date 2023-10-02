@@ -63,7 +63,7 @@ To be confirmed
 The <a href="/design-system-team/" class="govuk-link">GOV.UK Design System team</a> is responsible for the implementation and maintenance of styles, components and patterns on the GOV.UK Design System. 
 
 ### Deborah Dada (Storelab)
-Deborah is a Product Designer with a strong focus on crafting meaningful user experiences and simplifying complex business solutions. Deborah brings a wealth of hands-on experience in UX principles and creating Design Systems with expertise that spans research, design systems and success metrics, underpinned by a design thinking approach. Deborah is currently a Product Designer at StoreLab and contributes to enhancing user satisfaction.
+Deborah is a Product Designer with a strong focus on crafting meaningful user experiences and simplifying complex business solutions. Deborah brings a wealth of hands-on experience in UX principles and creating design systems with expertise that spans research, design systems and success metrics, underpinned by a design thinking approach. Deborah is currently a Product Designer at StoreLab and contributes to enhancing user satisfaction.
 
 ### Caroline Jarrett (Effortmark)
 Caroline is the Forms Specialist. She advises organisations on how to make forms easier, improve websites and business processes. Her work spans all the types of design that will improve forms. Caroline is a sought-after speaker, trainer and author. Her latest book is 'Surveys that work: a practical guide for designing and running better surveys'.
