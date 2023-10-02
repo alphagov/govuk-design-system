@@ -107,7 +107,7 @@ Chris is a UX Design Lead with a Computer Science degree. He worked as an SAP co
 To be confirmed 
 
 ### Frankie Roberto (Department for Education)
-Frankie Roberto is a lead interaction designer who has worked on several services across different government departments, including 'Apply for teacher training' and 'Ethnicity facts and figures'. 
+Frankie Roberto is a Lead Interaction Designer who has worked on several services across different government departments, including 'Apply for teacher training' and 'Ethnicity facts and figures'. 
       
 He's also an experienced contributor to the design community and the GOV.UK Design System. 
 
