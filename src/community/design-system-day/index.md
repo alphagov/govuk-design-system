@@ -98,7 +98,7 @@ Most sessions are talks or show and tells where speakers may take questions at t
 #### In the morning
 
 - We’re feeling ’appy
-  Oliver Binns and Chris Choy (GOV.UK One Login)
+  Helena Trippe, Oliver Binns and Chris Choy (GOV.UK One Login)
 - The contributor perspective on design systems
   Frankie Roberto (Department for Education)
 - Trauma-informed design – passing trend, or new aspect of accessibility?
