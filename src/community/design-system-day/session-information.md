@@ -33,16 +33,6 @@ order: 14
   ]
 }) }}
 
-<!--
-
-Setting the following convention:
-    /community/design-system-day/ always describes the upcoming event or the event in general
-    /community/design-system-day-[year]/ is the archive page for an event which collects the videos, slides and notes for a particular conference
-
-This means that hyperlinks to /community/design-system-day/ can always encourage ticket sales or mailing list subscriptions.
-
--->
-
 ## Day 1 sessions
 
 ### The impact of research operations when conducting user research at scale
@@ -172,6 +162,8 @@ How to manage design decisions at scale? How to adopt a shared design language a
 ### Responsive design, design systems and 'hyperobjects'
 Ethan Marcotte and Steve Messer 
 13:45 - 14:45
+
+A fireside talk with Ethan Marcotte, a web designer, speaker and author who's best known for creating responsive web design. Over his career, Ethan has helped people create beautiful, accessible web experiences and design systems, and Steve will be picking Ethan's brain on what makes design system work different.
 
 ### Doing good discovery
 Debra Churchill 
