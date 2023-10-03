@@ -133,7 +133,7 @@ Ciandelle Hughes
 
 Imposter syndrome is something that is often talked about but rarely understood well. This session is designed to talk about the basics of imposter syndrome, including the way in which it can manifest itself. 
 
-We will explore some of the ways imposter syndrome can impact your personal and professional lives. This will be both on a short and longer term basis. We will ask ourselves two key questions:
+We will explore some of the ways imposter syndrome can impact your personal and professional lives. This will be both on a short and longer term basis. We will ask ourselves 2 key questions:
 - Can I overcome imposter syndrome?
 - If I can't, can I learn to live with it?
 
