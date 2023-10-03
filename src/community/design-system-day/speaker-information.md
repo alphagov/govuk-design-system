@@ -68,7 +68,7 @@ Deborah is a Product Designer with a strong focus on crafting meaningful user ex
 ### Caroline Jarrett (Effortmark)
 Caroline is the Forms Specialist. She advises organisations on how to make forms easier, improve websites and business processes. Her work spans all the types of design that will improve forms. Caroline is a sought-after speaker, trainer and author. Her latest book is 'Surveys that work: a practical guide for designing and running better surveys'.
 
-### Frankie Roberto (Department for Education)
+### Frankie Roberto (Independent)
 Frankie Roberto is a lead interaction designer who has worked on several services across different government departments, including 'Apply for teacher training' and 'Ethnicity facts and figures'. 
       
 He's also an experienced contributor to the design community and the GOV.UK Design System. 
