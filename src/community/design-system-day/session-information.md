@@ -175,7 +175,7 @@ Employment Ontario services have a mix of old and current user platforms. 8 mont
 Frankie Roberto
 3:00pm to 4:30pm
 
-This session takes a detailed look at the new Task List component, and will show you how to implement the wider task list pattern within your service through a live demo.
+This session takes a detailed look at the new task list component, and will show you how to implement the wider task list pattern within your service through a live demo.
 
 This will include how to:
 
