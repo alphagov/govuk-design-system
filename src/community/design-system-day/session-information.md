@@ -113,7 +113,7 @@ Unlock the power of dedicated Design Systems with our case study on the Italian 
 Laura Smith
 10:00am to 11:30am
 
-Using two case studies from public healthcare, we'll consider the challenges of maintaining a focus on users when scaling beyond minimum viable product (MVP) into growth and diversification.
+Using 2 case studies from public healthcare, we'll consider the challenges of maintaining a focus on users when scaling beyond minimum viable product (MVP) into growth and diversification.
 
 ### A service designer's approach to human-centered life transitions
 Sylvie Abookire 
