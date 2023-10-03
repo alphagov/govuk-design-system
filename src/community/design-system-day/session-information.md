@@ -119,7 +119,7 @@ Using 2 case studies from public healthcare, we'll consider the challenges of ma
 Sylvie Abookire 
 10:00am to 11:30am
 
-How might we… design our design practice for optimal success and wellbeing? The methods we use every day as designers can help us creatively navigate our own professional journeys. Through reflective, hands-on activities, participants will learn how they can apply human-centered design to navigate personal decisions surrounding life and work.
+How might we design our design practice for optimal success and wellbeing? The methods we use every day as designers can help us creatively navigate our own professional journeys. Through reflective, hands-on activities, participants will learn how they can apply human-centered design to navigate personal decisions surrounding life and work.
 
 ### Leading the system
 Daniel Fontaneda
