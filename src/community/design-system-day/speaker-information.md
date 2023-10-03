@@ -106,7 +106,7 @@ Chris is a UX Design Lead with a Computer Science degree. He worked as an SAP co
 ### Helena Trippe (GOV.UK One Login)
 To be confirmed 
 
-### Frankie Roberto (Department for Education)
+### Frankie Roberto (Independent)
 Frankie Roberto is a Lead Interaction Designer who has worked on several services across different government departments, including 'Apply for teacher training' and 'Ethnicity facts and figures'. 
       
 He's also an experienced contributor to the design community and the GOV.UK Design System. 
@@ -118,7 +118,7 @@ Katharine Beer from the Department for Education is dedicated to crafting access
 Twin sisters, Abigail and Chloe Baldwin founded the award-winning creative studio, Buttercrumble. Their specialist blend of design and strategy helps community-sensitive brands become the go-to choice for their audience, and authority in their industry. This is something they've helped to achieve for clients such as John Lewis and Mamas & Papas.  
 
 ### Sacha Zarb (GOV.UK Pay)
-Sacha is a Product Manager on GOV.UK Pay, working on improving the experience for the 700 services that use Pay. GOV.UK Pay is currently building new features like recurring card payments, mobile wallets and soon Open Banking to make it the default for payments in government. 
+Sacha is a Product Manager on GOV.UK Pay, working on improving the experience for the 700 services that use Pay. GOV.UK Pay is currently building new features like recurring card payments, mobile wallets and soon open banking to make it the default for payments in government. 
 
 ### Simone di Fresco (DOS Design)
 Simone is a Design System specialist and facilitator at DOS Design which is working collaboratively in design with Italy’s Ministry of Economy and Finance. Beyond UX design, Simone is a facilitator in design and research workshops, emphasising co-creation and user-centricity.  
@@ -130,13 +130,13 @@ Laura is a lead designer at Unboxed, specialising in content. With particular ex
 Sylvie is a Service Designer specialising in public health, and a Coach in transitions and life design. Sylvie was formerly a Civic Designer at The Lab @ DC, an applied research team in the Washington DC Government. Some of her previous projects focused on housing stability and emergency responses to mental health crises.
 
 ### Daniel Fontaneda (Bumble)
-After working as a product designer at Vodafone Group and Amazon, Daniel now leads the Design System at Bumble Inc. within a complex environment where the Design System supports 3 products: Bumble Date, Badoo and BFF (Bumble for Friends). Daniel’s role is to lead the definition and implementation of the product. 
+After working as a product designer at Vodafone Group and Amazon, Daniel now leads the design system at Bumble Inc. within a complex environment where the design system supports 3 products: Bumble Date, Badoo and BFF (Bumble for Friends). Daniel’s role is to lead the definition and implementation of the product. 
 
 ### Ciandelle Hughes (GOV.UK Design System)
 Ciandelle is an Interaction Designer on the GOV.UK Design System. She is an advocate for accessible design as well as a strong believer in human-based design. 
 
 ### Ashley Watson-Nolan (Just Eat)
-Ashley is a Principal Engineer at Just Eat Takeaway with over 15 years experience in web development and is a fan of all things visual. He specialises in component-driven development and front-end architecture and is passionate about emerging front-end technologies. He hacks about with CSS and JavaScript, blogs at ashleynolan.co.uk and is @WelshAsh_ on X. 
+Ashley is a Principal Engineer at Just Eat Takeaway with over 15 years experience in web development and is a fan of all things visual. He specialises in component-driven development and front-end architecture and is passionate about emerging frontend technologies. He hacks about with CSS and JavaScript, blogs at [ashleynolan.co.uk](https://ashleynolan.co.uk/) and is [@WelshAsh_](https://twitter.com/WelshAsh_) on X. 
 
 ### Kate Thomas (PayPal)
 Kate has been unravelling knotty content puzzles for more than 20 years. She's worked in agencies and large institutions and organisations in Australia, the US and the UK, and is currently Content Architect for PayPal. 

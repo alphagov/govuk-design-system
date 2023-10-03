@@ -77,7 +77,7 @@ The Design Lead at TPX Impact, Tash will discuss the intricate relationship betw
 Oliver Binns, Chris Choy and Helena Trippe
 10am to 11:30am
 
-We’ll talk about the design system we created for GDS’s first mobile app ‘GOV.UK ID Check’. We’ll cover our work to adapt the GOV.UK Design System for web into a native mobile world, taking guidance from Apple’s Human Interface Guidelines, Google’s Material Design Guidelines and the Web Consortium Accessibility Guidelines.
+We’ll talk about the design system we created for GDS’s first mobile app ‘GOV.UK ID Check’. We’ll cover our work to adapt the GOV.UK Design System for web into a native mobile world, taking guidance from Apple’s Human Interface Guidelines, Google’s Material Design Guidelines and the Web Content Accessibility Guidelines.
 
 ### The contributor perspective on design systems
 Frankie Roberto
@@ -95,31 +95,31 @@ Is trauma-informed design a passing trend or a new facet of accessibility? In th
 Abigail and Chloe Baldwin
 10am to 11:30am
 
-Amid challenges, two young twin designers from humble backgrounds share a relatable tale of creative business beginnings. Design systems alleviate the burden of risk, functioning as a guide, and empowering the creative practice. This talk will provide practical guidance to fledgling designers and business owners to forge their branding systems.
+Amid challenges, 2 young twin designers from humble backgrounds share a relatable tale of creative business beginnings. Design systems alleviate the burden of risk, functioning as a guide, and empowering the creative practice. This talk will provide practical guidance to fledgling designers and business owners to forge their branding systems.
 
 ### How GOV.UK Pay is making recurring payments easy for the public sector
 Sacha Zarb
 10am to 11:30am
 
-The talk will look at how GOV.UK Pay, has brought functionality to the platform, that allows services to quickly and easily add recurring payments. We will talk about the design challenges, how services are using this, and how we've designed this for the future. 
+The talk will look at how GOV.UK Pay has brought functionality to the platform, which allows services to quickly and easily add recurring payments. We will talk about the design challenges, how services are using this and how we've designed this for the future. 
 
 ### From pixels to paradigm shifts – tailoring a dedicated design system to catalyse innovation in the Italian Ministry of Economy and Finance
 Simone di Fresco
 10am to 11:30am
 
-Unlock the power of dedicated Design Systems with our case study on the Italian Ministry of Economy and Finance. Discover how user insights and innovative tools are supporting the accounting operations of hundreds of thousands of users in the major Italian Public administrations, fostering a culture of meaningful change.
+Unlock the power of dedicated design systems with our case study on the Italian Ministry of Economy and Finance. Discover how user insights and innovative tools are supporting the accounting operations of hundreds of thousands of users in the major Italian public administrations, fostering a culture of meaningful change.
 
 ### The challenges of scaling up a truly user-centred service
 Laura Smith
 10am to 11:30am
 
-Using two case studies from public healthcare, we'll consider the challenges of maintaining a focus on users when scaling beyond minimum viable product (MVP) into growth and diversification.
+Using 2 case studies from public healthcare, we'll consider the challenges of maintaining a focus on users when scaling beyond minimum viable product (MVP) into growth and diversification.
 
 ### A service designer's approach to human-centered life transitions
 Sylvie Abookire 
 10am to 11:30am
 
-How might we… design our design practice for optimal success and wellbeing? The methods we use every day as designers can help us creatively navigate our own professional journeys. Through reflective, hands-on activities, participants will learn how they can apply human-centered design to navigate personal decisions surrounding life and work.
+How might we design our design practice for optimal success and wellbeing? The methods we use every day as designers can help us creatively navigate our own professional journeys. Through reflective, hands-on activities, participants will learn how they can apply human-centered design to navigate personal decisions surrounding life and work.
 
 ### Leading the system
 Daniel Fontaneda
@@ -133,7 +133,7 @@ Ciandelle Hughes
 
 Imposter syndrome is something that is often talked about but rarely understood well. This session is designed to talk about the basics of imposter syndrome, including the way in which it can manifest itself. 
 
-We will explore some of the ways imposter syndrome can impact your personal and professional lives. This will be both on a short and longer term basis. We will ask ourselves two key questions:
+We will explore some of the ways imposter syndrome can impact your personal and professional lives. This will be both on a short and longer term basis. We will ask ourselves 2 key questions:
 - Can I overcome imposter syndrome?
 - If I can't, can I learn to live with it?
 
@@ -175,11 +175,11 @@ Employment Ontario services have a mix of old and current user platforms. 8 mont
 Frankie Roberto
 3pm to 4:30pm
 
-This session takes a detailed look at the new Task List component, and will show you how to implement the wider task list pattern within your service through a live demo.
+This session takes a detailed look at the new task list component, and will show you how to implement the wider task list pattern within your service through a live demo.
 
 This will include how to:
 
-- use the new Task List component
+- use the new task list component
 - split up a complex application into smaller tasks
 - give the user control over when tasks are marked as completed
 - allow users to review all their tasks before submitting
@@ -190,7 +190,7 @@ You'll also have the opportunity to share screenshots from your service, and get
 Gordon Guthrie 
 3pm to 4:30pm
 
-iPhones work but no one individual knows how. They are technically, legally and linguistically sophisticated but just work globally.  The modern digital state must embrace simplicity through management of complexity - taking systems view of state capability from manifesto and think tank, through parliamentary oversight to design, delivery and in-service.
+iPhones work but no one individual knows how. They are technically, legally and linguistically sophisticated but just work globally. The modern digital state must embrace simplicity through management of complexity - taking systems view of state capability from manifesto and think tank, through parliamentary oversight to design, delivery and in-service.
 
 ### Workshop: How participatory research can help us co-design more ethically
 Jane Martin and Betty Mwema 
@@ -214,7 +214,7 @@ Experience the evolution from chaos to clarity within design systems. See their 
 
 As we embark on this immersive session, prepare to gain actionable insights that empower you to harness the untapped potential of design systems. Together, let's unlock a united future where the synergy of creativity and clarity gives rise to impactful experiences that resonate and endure.
 
-### Fostering Collaboration in Design Systems.
+### Fostering Collaboration in design systems
 James Carleton 
 3pm to 4:30pm
 
