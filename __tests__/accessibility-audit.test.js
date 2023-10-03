@@ -11,21 +11,28 @@ async function analyze(page, path) {
 
   const axe = new AxePuppeteer(page)
     .include('body')
-    // axe reports there is "no label associated with the text field", when there is one.
-    .exclude('#app-site-search__input')
-    // axe reports that the phase banner is not inside a landmark, which is intentional.
-    .exclude('.app-phase-banner')
-    // axe reports that the skip link is not inside a landmark, which is intentional.
-    // https://design-system.service.gov.uk/components/skip-link/#when-to-use-this-component
-    .exclude('.govuk-skip-link')
-    // axe reports that the back to top button is not inside a landmark, which is intentional.
-    .exclude('.app-back-to-top')
-    // axe reports that the Browsersync banner is not inside a landmark, which is intentional.
-    .exclude('#__bs_notify__')
-    // axe reports that the frame "does not have a main landmark" and example <h1> headings
-    // violate "Heading levels should only increase by one", which is intentional.
-    // https://github.com/alphagov/govuk-design-system/pull/2442#issuecomment-1326600528
-    .exclude('.app-example__frame')
+    .exclude([
+      // Axe reports there is "no label associated with the text field", when there is one.
+      '#app-site-search__input',
+
+      // Axe reports that the phase banner is not inside a landmark, which is intentional.
+      '.app-phase-banner',
+
+      // Axe reports that the skip link is not inside a landmark, which is intentional.
+      // https://design-system.service.gov.uk/components/skip-link/#when-to-use-this-component
+      '.govuk-skip-link',
+
+      // Axe reports that the back to top button is not inside a landmark, which is intentional.
+      '.app-back-to-top',
+
+      // Axe reports that the Browsersync banner is not inside a landmark, which is intentional.
+      '#__bs_notify__',
+
+      // Axe reports that the frame "does not have a main landmark" and example <h1> headings
+      // violate "Heading levels should only increase by one", which is intentional.
+      // https://github.com/alphagov/govuk-design-system/pull/2442#issuecomment-1326600528
+      '.app-example__frame'
+    ])
 
   return axe.analyze()
 }
