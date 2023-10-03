@@ -107,7 +107,7 @@ The talk will look at how GOV.UK Pay has brought functionality to the platform, 
 Simone di Fresco
 10:00am to 11:30am
 
-Unlock the power of dedicated Design Systems with our case study on the Italian Ministry of Economy and Finance. Discover how user insights and innovative tools are supporting the accounting operations of hundreds of thousands of users in the major Italian Public administrations, fostering a culture of meaningful change.
+Unlock the power of dedicated design systems with our case study on the Italian Ministry of Economy and Finance. Discover how user insights and innovative tools are supporting the accounting operations of hundreds of thousands of users in the major Italian public administrations, fostering a culture of meaningful change.
 
 ### The challenges of scaling up a truly user-centred service
 Laura Smith
