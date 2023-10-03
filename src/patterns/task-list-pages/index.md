@@ -18,10 +18,7 @@ Task list pages help users understand:
 
 {{ example({ group: "patterns", item: "task-list-pages", example: "default", html: true, nunjucks: true, open: false }) }}
 
-There’s a [coded example of a task list page](https://prototype-kit.service.gov.uk/docs/templates/task-list) in the GOV.UK Prototype Kit. To use the example, get the following code from the Prototype Kit repository on GitHub:
-
-- [HTML from the task list page's HTML file](https://github.com/alphagov/govuk-prototype-kit-task-list/blob/main/templates/task-list.html)
-- [custom styles from the task list page's SCSS file](https://github.com/alphagov/govuk-prototype-kit-task-list/blob/main/sass/_task-list.scss)
+Task list pages use a [task list component](/components/task-list) for each group of tasks on the page.
 
 ## When to use this pattern
 
