@@ -61,7 +61,7 @@ Hear how designers and developers across the private and public sector prioritis
 
 ### Trauma-informed research and design
 Janice Hannaway, Kate Every and Helen Baron
-13:45 - 14:45
+1:45pm to 2:45pm
 
 Whether you consider yourself well informed about trauma informed approaches to research and design or are curious and want to learn more, this is your opportunity to engage with a multidisciplinary panel and colleagues across the public and private sector who are working towards more compassionate and aware design.
 
