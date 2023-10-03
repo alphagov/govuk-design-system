@@ -6,10 +6,14 @@ const { paths } = require('../config')
 
 const { goTo } = require('./helpers/puppeteer.js')
 
-async function analyze(page, path) {
-  await goTo(page, path)
-
-  const axe = new AxePuppeteer(page)
+/**
+ * Axe Puppeteer reporter
+ *
+ * @param {import('puppeteer').Page} page - Puppeteer page object
+ * @returns {Promise<import('axe-core').AxeResults>} Axe Puppeteer instance
+ */
+async function axe(page) {
+  const reporter = new AxePuppeteer(page)
     .include('body')
     .exclude([
       // Axe reports there is "no label associated with the text field", when there is one.
@@ -34,15 +38,39 @@ async function analyze(page, path) {
       '.app-example__frame'
     ])
 
-  return axe.analyze()
+    .withRules([
+      'best-practice',
+
+      // WCAG 2.x
+      'wcag2a',
+      'wcag2aa',
+      'wcag2aaa',
+
+      // WCAG 2.1
+      'wcag21a',
+      'wcag21aa',
+
+      // WCAG 2.2
+      'wcag22aa'
+    ])
+
+  // Create report
+  const report = await reporter.options({}).analyze()
+
+  // Add preview URL to report violations
+  report.violations.forEach((violation) => {
+    violation.helpUrl = `${violation.helpUrl}\n${page.url()}`
+  })
+
+  return report
 }
 
 describe('Accessibility audit', () => {
   it.each(globSync('**/index.html', { cwd: paths.public }))(
     'validates %s',
     async (path) => {
-      const results = await analyze(page, `/${slash(path)}`)
-      expect(results).toHaveNoViolations()
+      await goTo(page, `/${slash(path)}`)
+      await expect(axe(page)).resolves.toHaveNoViolations()
     },
     10000
   )
