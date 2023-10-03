@@ -190,7 +190,7 @@ You'll also have the opportunity to share screenshots from your service, and get
 Gordon Guthrie 
 3:00pm to 4:30pm
 
-iPhones work but no one individual knows how. They are technically, legally and linguistically sophisticated but just work globally.  The modern digital state must embrace simplicity through management of complexity - taking systems view of state capability from manifesto and think tank, through parliamentary oversight to design, delivery and in-service.
+iPhones work but no one individual knows how. They are technically, legally and linguistically sophisticated but just work globally. The modern digital state must embrace simplicity through management of complexity - taking systems view of state capability from manifesto and think tank, through parliamentary oversight to design, delivery and in-service.
 
 ### Workshop: How participatory research can help us co-design more ethically
 Jane Martin and Betty Mwema 
