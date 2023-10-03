@@ -1,7 +1,8 @@
-const fs = require('fs')
-const path = require('path')
-
 const { AxePuppeteer } = require('@axe-core/puppeteer')
+const { globSync } = require('glob')
+const slash = require('slash')
+
+const { paths } = require('../config')
 
 const { goTo } = require('./helpers/puppeteer.js')
 
@@ -29,42 +30,13 @@ async function analyze(page, path) {
   return axe.analyze()
 }
 
-function getDirectoriesWithIndexHTML (directory) {
-  const result = []
-
-  function traverse (currentDir, depth) {
-    if (depth === 0) {
-      return
-    }
-
-    const files = fs.readdirSync(currentDir)
-
-    if (files.includes('index.html')) {
-      result.push(currentDir)
-    }
-
-    for (const file of files) {
-      const filePath = path.join(currentDir, file)
-      const stat = fs.statSync(filePath)
-
-      if (stat.isDirectory()) {
-        traverse(filePath, depth - 1)
-      }
-    }
-  }
-
-  traverse(directory, 3)
-
-  return result.map((dir) => path.relative(directory, dir))
-}
-
-// Usage example
-const directory = 'deploy/public'
-const relativeDirectories = getDirectoriesWithIndexHTML(directory)
-
-describe('Accessibility Audit', () => {
-  it.each(relativeDirectories)('validates %s', async (path) => {
-    const results = await analyze(page, path)
-    expect(results).toHaveNoViolations()
-  }, 10000)
+describe('Accessibility audit', () => {
+  it.each(globSync('**/index.html', { cwd: paths.public }))(
+    'validates %s',
+    async (path) => {
+      const results = await analyze(page, `/${slash(path)}`)
+      expect(results).toHaveNoViolations()
+    },
+    10000
+  )
 })
