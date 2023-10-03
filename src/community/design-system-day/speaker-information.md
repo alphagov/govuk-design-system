@@ -130,7 +130,7 @@ Laura is a lead designer at Unboxed, specialising in content. With particular ex
 Sylvie is a Service Designer specialising in public health, and a Coach in transitions and life design. Sylvie was formerly a Civic Designer at The Lab @ DC, an applied research team in the Washington DC Government. Some of her previous projects focused on housing stability and emergency responses to mental health crises.
 
 ### Daniel Fontaneda (Bumble)
-After working as a product designer at Vodafone Group and Amazon, Daniel now leads the Design System at Bumble Inc. within a complex environment where the Design System supports 3 products: Bumble Date, Badoo and BFF (Bumble for Friends). Daniel’s role is to lead the definition and implementation of the product. 
+After working as a product designer at Vodafone Group and Amazon, Daniel now leads the design system at Bumble Inc. within a complex environment where the design system supports 3 products: Bumble Date, Badoo and BFF (Bumble for Friends). Daniel’s role is to lead the definition and implementation of the product. 
 
 ### Ciandelle Hughes (GOV.UK Design System)
 Ciandelle is an Interaction Designer on the GOV.UK Design System. She is an advocate for accessible design as well as a strong believer in human-based design. 
