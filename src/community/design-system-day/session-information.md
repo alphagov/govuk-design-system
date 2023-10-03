@@ -214,7 +214,7 @@ Experience the evolution from chaos to clarity within design systems. See their 
 
 As we embark on this immersive session, prepare to gain actionable insights that empower you to harness the untapped potential of design systems. Together, let's unlock a united future where the synergy of creativity and clarity gives rise to impactful experiences that resonate and endure.
 
-### Fostering Collaboration in Design Systems.
+### Fostering Collaboration in design systems
 James Carleton 
 3:00pm to 4:30pm
 
