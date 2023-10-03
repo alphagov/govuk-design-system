@@ -37,7 +37,7 @@ order: 14
 
 ### The impact of research operations when conducting user research at scale
 Rachel Male
-10:00 - 10:30
+10:00am to 10:30am
 
 Rachel will cover the user research context in the Scottish Government’s Social Security Directorate, and how she created a research operations unit that refined processes and added critical value when the team suddenly scaled. She will focus on the lessons she learnt during the process and share some tips on how to create impact.
 
