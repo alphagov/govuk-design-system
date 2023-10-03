@@ -101,7 +101,7 @@ Amid challenges, 2 young twin designers from humble backgrounds share a relatabl
 Sacha Zarb
 10:00am to 11:30am
 
-The talk will look at how GOV.UK Pay, has brought functionality to the platform, that allows services to quickly and easily add recurring payments. We will talk about the design challenges, how services are using this, and how we've designed this for the future. 
+The talk will look at how GOV.UK Pay has brought functionality to the platform, which allows services to quickly and easily add recurring payments. We will talk about the design challenges, how services are using this and how we've designed this for the future. 
 
 ### From pixels to paradigm shifts – tailoring a dedicated design system to catalyse innovation in the Italian Ministry of Economy and Finance
 Simone di Fresco
