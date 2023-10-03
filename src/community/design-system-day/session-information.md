@@ -77,7 +77,7 @@ The Design Lead at TPX Impact, Tash will discuss the intricate relationship betw
 Oliver Binns, Chris Choy and Helena Trippe
 10:00am to 11:30am
 
-We’ll talk about the design system we created for GDS’s first mobile app ‘GOV.UK ID Check’. We’ll cover our work to adapt the GOV.UK Design System for web into a native mobile world, taking guidance from Apple’s Human Interface Guidelines, Google’s Material Design Guidelines and the Web Consortium Accessibility Guidelines.
+We’ll talk about the design system we created for GDS’s first mobile app ‘GOV.UK ID Check’. We’ll cover our work to adapt the GOV.UK Design System for web into a native mobile world, taking guidance from Apple’s Human Interface Guidelines, Google’s Material Design Guidelines and the Web Content Accessibility Guidelines.
 
 ### The contributor perspective on design systems
 Frankie Roberto
