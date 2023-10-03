@@ -51,12 +51,6 @@ Where possible, task names should:
 
 ### Show the status of the tasks
 
-Include a summary above the task list to say how many tasks have been completed.
-
-You might find a better word to describe what a ‘task’ is for your users. If your service is an application form, each task might be a ‘section’ of questions to complete.
-
-![A screenshot showing a task list summary that says 'Application incomplete. You've completed 3 of 8 sections'](task-list-summary.png)
-
 Make it clear to users which tasks they’ve completed and which still need their attention, by labelling them using statuses.
 
 {{ example({ group: "patterns", item: "task-list-pages", example: "task-list-statuses", html: true, nunjucks: true, open: false }) }}
