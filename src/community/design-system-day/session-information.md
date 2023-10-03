@@ -95,7 +95,7 @@ Is trauma-informed design a passing trend or a new facet of accessibility? In th
 Abigail and Chloe Baldwin
 10:00am to 11:30am
 
-Amid challenges, two young twin designers from humble backgrounds share a relatable tale of creative business beginnings. Design systems alleviate the burden of risk, functioning as a guide, and empowering the creative practice. This talk will provide practical guidance to fledgling designers and business owners to forge their branding systems.
+Amid challenges, 2 young twin designers from humble backgrounds share a relatable tale of creative business beginnings. Design systems alleviate the burden of risk, functioning as a guide, and empowering the creative practice. This talk will provide practical guidance to fledgling designers and business owners to forge their branding systems.
 
 ### How GOV.UK Pay is making recurring payments easy for the public sector
 Sacha Zarb
