@@ -136,7 +136,7 @@ After working as a product designer at Vodafone Group and Amazon, Daniel now lea
 Ciandelle is an Interaction Designer on the GOV.UK Design System. She is an advocate for accessible design as well as a strong believer in human-based design. 
 
 ### Ashley Watson-Nolan (Just Eat)
-Ashley is a Principal Engineer at Just Eat Takeaway with over 15 years experience in web development and is a fan of all things visual. He specialises in component-driven development and front-end architecture and is passionate about emerging front-end technologies. He hacks about with CSS and JavaScript, blogs at ashleynolan.co.uk and is @WelshAsh_ on X. 
+Ashley is a Principal Engineer at Just Eat Takeaway with over 15 years experience in web development and is a fan of all things visual. He specialises in component-driven development and front-end architecture and is passionate about emerging frontend technologies. He hacks about with CSS and JavaScript, blogs at [ashleynolan.co.uk](https://ashleynolan.co.uk/) and is [@WelshAsh_](https://twitter.com/WelshAsh_) on X. 
 
 ### Kate Thomas (PayPal)
 Kate has been unravelling knotty content puzzles for more than 20 years. She's worked in agencies and large institutions and organisations in Australia, the US and the UK, and is currently Content Architect for PayPal. 
