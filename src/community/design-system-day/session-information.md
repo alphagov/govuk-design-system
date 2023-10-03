@@ -179,7 +179,7 @@ This session takes a detailed look at the new task list component, and will show
 
 This will include how to:
 
-- use the new Task List component
+- use the new task list component
 - split up a complex application into smaller tasks
 - give the user control over when tasks are marked as completed
 - allow users to review all their tasks before submitting
