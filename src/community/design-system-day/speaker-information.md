@@ -160,7 +160,7 @@ Debra’s career has focused on human services. Before leaving New Zealand for T
 Gordon is a Research Fellow at the Scottish Government on the First Ministers Digital Fellowship Programme. His professional life started as a code monkey in the private sector and has ranged from Chief Technical Architect at if.com, scalability guru at bet365 and ending up as a Silicon Valley VP Engineering. He has worked in public policy in London, Belfast and Scotland.
  
 ### Jane Martin (Government Digital Service)
-Jane is a senior service designer at the Government Digital Service. Before this she worked for 20 years as a theatre producer and specialist in arts-based methods in international development. She's worked in over 20 countries including 10 years in Cambodia, working with some of the most marginalised groups in the country. 
+Jane is a Senior Service Designer at the Government Digital Service. Before this she worked for 20 years as a theatre producer and specialist in arts-based methods in international development. She's worked in over 20 countries including 10 years in Cambodia, working with some of the most marginalised groups in the country. 
 
 ### Betty Mwema (Government Digital Service)
 Betty Mwema is a senior service designer in the GOV.UK Forms team at the Government Digital Service. She has worked in the social and private sectors for 7 years, with a strong emphasis on inclusivity and ethics. Betty enjoys creating and improving design methods, to ensure that we equitably and inclusively meet the needs of users.
