@@ -118,7 +118,7 @@ Katharine Beer from the Department for Education is dedicated to crafting access
 Twin sisters, Abigail and Chloe Baldwin founded the award-winning creative studio, Buttercrumble. Their specialist blend of design and strategy helps community-sensitive brands become the go-to choice for their audience, and authority in their industry. This is something they've helped to achieve for clients such as John Lewis and Mamas & Papas.  
 
 ### Sacha Zarb (GOV.UK Pay)
-Sacha is a Product Manager on GOV.UK Pay, working on improving the experience for the 700 services that use Pay. GOV.UK Pay is currently building new features like recurring card payments, mobile wallets and soon Open Banking to make it the default for payments in government. 
+Sacha is a Product Manager on GOV.UK Pay, working on improving the experience for the 700 services that use Pay. GOV.UK Pay is currently building new features like recurring card payments, mobile wallets and soon open banking to make it the default for payments in government. 
 
 ### Simone di Fresco (DOS Design)
 Simone is a Design System specialist and facilitator at DOS Design which is working collaboratively in design with Italy’s Ministry of Economy and Finance. Beyond UX design, Simone is a facilitator in design and research workshops, emphasising co-creation and user-centricity.  
