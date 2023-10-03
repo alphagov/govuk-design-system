@@ -163,7 +163,7 @@ Gordon is a Research Fellow at the Scottish Government on the First Ministers Di
 Jane is a Senior Service Designer at the Government Digital Service. Before this she worked for 20 years as a theatre producer and specialist in arts-based methods in international development. She's worked in over 20 countries including 10 years in Cambodia, working with some of the most marginalised groups in the country. 
 
 ### Betty Mwema (Government Digital Service)
-Betty Mwema is a senior service designer in the GOV.UK Forms team at the Government Digital Service. She has worked in the social and private sectors for 7 years, with a strong emphasis on inclusivity and ethics. Betty enjoys creating and improving design methods, to ensure that we equitably and inclusively meet the needs of users.
+Betty Mwema is a Senior Service Designer in the GOV.UK Forms team at the Government Digital Service. She has worked in the social and private sectors for 7 years, with a strong emphasis on inclusivity and ethics. Betty enjoys creating and improving design methods, to ensure that we equitably and inclusively meet the needs of users.
  
 ### Valentine Makhouleen (Prelude Security/New Media Studio)
 Valentine is a Canadian designer specialising in interaction design, and application of design to solving complex problems. Over the years he has dedicated his time to projects and people that attempt to make the world a better place.
