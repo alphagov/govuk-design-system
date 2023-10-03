@@ -55,7 +55,7 @@ In this show and tell you will hear about the work the GOV.UK Design System team
 
 ### How design systems manage contributions
 Caroline Jarrett, Frankie Roberto, Vicky Teinaki and Ellis Capon
-11:45 - 12:30
+11:45am to 12:30pm
 
 Hear how designers and developers across the private and public sector prioritise contributions and work with their communities to make the process effective and rewarding for contributors and system curators.
 
