@@ -77,7 +77,7 @@ Before a new component or pattern is published the working group reviews the imp
       },
       {
         html: '<p>It has been tested  in user research and shown to work with a representative sample of users, including those with disabilities.</p>
-          <p class="govuk-!-margin-bottom-0">Components and patterns which are not proven usable can be published as experimental. But they must be clearly based on relevant user research from other organisations and best practice, and meet the other criteria.</p>'
+          <p class="govuk-!-margin-bottom-0">If there isn\'t evidence of usability outside of one or a small number of services, the component or pattern can still be published if it meets other contribution criteria. We will be clear about what contexts the component or pattern has been tested in upon publishing and invite feedback about its performance in a wide range of services.</p>'
       }
     ],
     [

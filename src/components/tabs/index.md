@@ -5,8 +5,6 @@ section: Components
 aliases:
 backlogIssueId: 100
 layout: layout-pane.njk
-status: Experimental
-statusMessage: This component is currently experimental because <a class="govuk-link" href="#next-steps">more research</a> is needed to validate it.
 ---
 
 {% from "_example.njk" import example %}
@@ -96,7 +94,7 @@ Include a heading at the beginning of each tab that duplicates the information i
 
 ## Research and testing
 
-This component is experimental because it has not yet been tried in research with users.
+This component has not yet been tried in research with users.
 
 The design, code and guidance here are based on recommendations from [Inclusive Components](https://inclusive-components.design/tabbed-interfaces/) and the [Nielsen Norman Group](https://www.nngroup.com/articles/tabs-used-right/) as well as user research findings and examples of tabs in the following services:
 

@@ -5,8 +5,6 @@ section: Components
 aliases:
 backlogIssueId: 1
 layout: layout-pane.njk
-status: Experimental
-statusMessage: This component is currently experimental because <a class="govuk-link" href="#known-issues-and-gaps">more research</a> is needed to validate it.
 ---
 
 {% from "_example.njk" import example %}

@@ -5,8 +5,6 @@ section: Components
 aliases: alert, warning, success message, important message, flash message
 backlogIssueId: 2
 layout: layout-pane.njk
-status: Experimental
-statusMessage: This component is currently experimental because <a class="govuk-link" href="#research-on-this-component">more research</a> is needed to validate it.
 ---
 
 {% from "_example.njk" import example %}

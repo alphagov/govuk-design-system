@@ -4,8 +4,6 @@ description: Only use images if there’s a real user need
 section: Styles
 backlogIssueId: 70
 layout: layout-pane.njk
-status: Experimental
-statusMessage: This guidance is currently experimental because <a class="govuk-link" href="#research-on-images">we want to get feedback</a> to validate how useful it is for service teams.
 showPageNav: true
 ---
 

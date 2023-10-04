@@ -5,8 +5,6 @@ section: Components
 aliases: Cookies banner, consent banner, GDPR banner, tracking banner, analytics banner
 backlogIssueId: 12
 layout: layout-pane.njk
-status: Experimental
-statusMessage: This component is currently experimental because <a class="govuk-link" href="#research-on-this-component">more research</a> is needed to validate it.
 ---
 
 {% from "_example.njk" import example %}

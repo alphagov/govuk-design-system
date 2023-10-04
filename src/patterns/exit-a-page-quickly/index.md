@@ -6,8 +6,6 @@ theme: Help users to…
 aliases:
 backlogIssueId: 213
 layout: layout-pane.njk
-status: Experimental
-statusMessage: This component is currently experimental. You'll need to do your own research to decide whether to use this pattern and add the <a class="govuk-link" href="/components/exit-this-page/">Exit this page</a> component to your service.
 ---
 
 {% from "_example.njk" import example %}
