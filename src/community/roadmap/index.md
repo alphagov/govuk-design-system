@@ -13,13 +13,13 @@ Some things on the roadmap might change — the purpose is to tell you what’s 
 
 See our [GitHub team board](https://github.com/orgs/alphagov/projects/53) for more details on our plans and day-to-day activities.
 
-Last updated 24 August 2023.
+Last updated 2 October 2023.
 
 ## Recently shipped
 
 We recently:
 
-- launched a [call for speakers](https://design-system.service.gov.uk/community/call-for-speakers-2023/) at our 2-day conference, [Design System Day 2023](https://design-system.service.gov.uk/community/design-system-day/)
+- published the [programme for Design System Day 2023](https://design-system.service.gov.uk/community/design-system-day/#speakers-and-sessions), our 2-day conference in October
 - recommended changes to validation rules that make it easier for users to [input dates](https://design-system.service.gov.uk/components/date-input/) (thanks to Frankie Roberto)
 - recommended not using a `maxlength` attribute on [text inputs](https://design-system.service.gov.uk/components/text-input/) (thanks to beeps)
 - released [GOV.UK Frontend v4.7.0](https://github.com/alphagov/govuk-frontend/releases/tag/v4.7.0), which includes visual improvements to some components
@@ -45,6 +45,7 @@ We're also:
 - running more workshops on accessibility
 - organising [Design System Day 2023](https://design-system.service.gov.uk/community/design-system-day/)
 - [updating the typographic scale](https://github.com/alphagov/govuk-design-system/issues/2289), including increasing the minimum text size on mobile
+- hosting community co-design work to turn the [task list pattern](/patterns/task-list-pages/) into a component (thanks to the community)
 
 ## Coming up next
 
