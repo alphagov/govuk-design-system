@@ -79,9 +79,9 @@ You can edit your comment after you post it, so do not worry if you get somethin
 Community members might respond to your findings on GitHub. Feel free to take part in the conversation.
 
 For example, you could:
-compare findings
-learn about each other’s users and their needs
-see what’s worked to improve things, and what has not
+- compare findings
+- learn about each other’s users and their needs
+- see what’s worked to improve things, and what has not
 
 You’ll usually be subscribed to get notifications from GitHub when there’s a new comment in the discussion. [Find out how to check your notification settings in GitHub](https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications).
 
