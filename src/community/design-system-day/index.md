@@ -74,7 +74,7 @@ Dynamic Earth is an accessible venue, and we'll have a room set aside as a quiet
 
 You can find out more about what each session will be about by looking up the [session information](/community/design-system-day/session-information/#day-1-sessions).
 
-You can read our [speaker and panelist biographies](/community/design-system-day/speaker-information/#day-1-speakers) for those talking and presenting at the event. 
+You can read our [speaker and panelist biographies](/community/design-system-day/speaker-information/#day-1-speakers) for those talking and presenting at the event.
 
 You'll be able to speak with others in the community and chat with panellists too. Towards the end of the day, we'll have an optional social for more conversation.
 
@@ -130,8 +130,7 @@ The event starts at 9:30am and runs until 5pm, and we'll break for lunch at 12:3
 
 Most sessions are talks or show and tells where speakers may take questions at the end. We've highlighted workshops that will ask the audience to participate.
 
-You can find out more information about each session by looking up the [session information](/community/design-system-day/session-information/#day-2-sessions). 
-
+You can find out more information about each session by looking up the [session information](/community/design-system-day/session-information/#day-2-sessions).
 
 ## About the GOV.UK Design System community
 
