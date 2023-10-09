@@ -42,7 +42,7 @@ The status alongside the task indicates whether they can start it. Users can sel
 
 Users can only move on from the task list when all tasks are shown as ‘Completed’.
 
-Read the [task list pattern guidance](/patterns/complete-multiple-tasks/) for more information on how to use the task list within a service.
+Read the [complete multiple tasks pattern guidance](/patterns/complete-multiple-tasks/) for more information on how to use the task list within a service.
 
 ### Tasks
 
@@ -70,57 +70,17 @@ Do not include links within the hint text. The whole ‘task row’ links users 
 
 If there are a lot of tasks to complete, you might find that grouping them makes it easier for users to understand and plan what they need to do. Tasks can be grouped into separate task lists on a page. Give each task list a short heading that clearly explains the grouping.
 
-Read the [task list pattern guidance](/patterns/complete-multiple-tasks/) for more information on grouping tasks.
+Read the [complete multiple tasks pattern guidance](/patterns/complete-multiple-tasks/) for more information on grouping tasks.
 
 ### Statuses
 
 Statuses use colour and a short descriptor to give users a quick overview of how much of the task list they have completed, and how much is left to do.
 
-Statuses should be helpful to users. The more you add, the harder it is for users to remember them. Start with the smallest number of different statuses you think might work, for example ‘Completed’ and ‘Incomplete’, then add more if your user research shows there’s a need for them.
-
-Once the user has completed the task, the status should show as ‘Completed’ and be black text with no background colour. This will draw more attention to tasks that require action.
-
-#### Tasks that are in progress
-
-You may find you need additional statuses if your user research shows that users want to be able to distinguish between the tasks they haven’t started at all, and those they’ve started but not completed.
-
-In this instance, instead of ‘Incomplete’, you may want to use ‘Not yet started’ to show which tasks they are yet to start. You should then use ‘In progress’ for tasks they have started but are yet to complete.
-
-‘In progress’ is dark blue text on a blue background colour. ‘Not yet started’ is dark blue on a light blue background colour.
-
-{{ example({ group: "components", item: "task-list", example: "in-progress", html: true, nunjucks: true, open: false }) }}
-
-#### Tasks that cannot yet be started
-
-If the user cannot start the task yet, for example because another task must be completed first, use the ‘Cannot start yet’ status. This should be grey text with no background colour, and the ‘task row’ should not be linked.
-
-{{ example({ group: "components", item: "task-list", example: "cannot-start-yet", html: true, nunjucks: true, open: false }) }}
-
-#### Tasks containing an error
-
-You should avoid tasks having an error status by using the [error summary](/components/error-summary/) and [error messages](/components/error-message/) displayed at the point that the error is made, so that the user can fix it straight away.
-
-If it is unavoidable that a task may end up saved but containing an error, use the status text ‘There is a problem’ and a red background.
-
-Do not use the red background colour for any status text except errors.
-
-{{ example({ group: "components", item: "task-list", example: "error", html: true, nunjucks: true, open: false }) }}
-
-#### Status text
-
-Although we recommend using consistent wording across task lists, you can change it if research shows that different text is more suitable to your service or users.
-
-If you are creating your own statuses, use adjectives rather than verbs. Use sentence case, and keep it short, so that it can be easily read and understood.
-
-#### Additional statuses
-
-If your user research shows that there is a need for additional status tags, you can use other colours to help distinguish between them.
-
-{{ example({ group: "components", item: "task-list", example: "all-colours", html: true, nunjucks: true, open: false }) }}
+Read the [complete multiple tasks pattern guidance](/patterns/complete-multiple-tasks/) for more information on status colours and text.
 
 ## Research on this component
 
-This component was created by a cross-government group using research from the existing task list pattern.
+This component was created by a cross-government group using research from the previous task list pattern.
 
 ### Linking the whole ‘task row’ to the task
 
