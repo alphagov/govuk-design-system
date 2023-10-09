@@ -16,8 +16,7 @@ layout: layout-example.njk
           },
           href: "#",
           status: {
-            text: "Completed",
-            classes: "govuk-task-list__status--black"
+            text: "Completed"
           }
         },
         {
@@ -26,8 +25,10 @@ layout: layout-example.njk
           },
           href: "#",
           status: {
-            text: "Not started",
-            classes: "govuk-task-list__status--blue"
+            tag: {
+              text: "Incomplete",
+              classes: "govuk-tag--blue"
+            }
           }
         },
         {
@@ -36,27 +37,10 @@ layout: layout-example.njk
           },
           href: "#",
           status: {
-            text: "In progress",
-            classes: "govuk-task-list__status--light-blue"
-          }
-        },
-        {
-          title: {
-            text: "Provide financial evidence"
-          },
-          href: "#",
-          status: {
-            text: "Not started",
-            classes: "govuk-task-list__status--blue"
-          }
-        },
-        {
-          title: {
-            text: "Give medical information"
-          },
-          status: {
-            text: "Cannot start yet",
-            classes: "govuk-task-list__status--white"
+            tag: {
+              text: "Incomplete",
+              classes: "govuk-tag--blue"
+            }
           }
         }
       ]
