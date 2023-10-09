@@ -2,7 +2,7 @@
 title: Upcoming components and patterns
 description: Anyone can propose, develop or contribute to new patterns and components, or improvements to existing ones.
 section: Community
-aliases: maps, task list, autocomplete, choosing a date, navigation
+aliases: maps, autocomplete, choosing a date, navigation
 theme: What we’re working on
 layout: layout-pane.njk
 order: 1
@@ -35,23 +35,6 @@ If you’d like to help us build these components and patterns, join the convers
           {
             href: "https://join.slack.com/t/mapsinservices/shared_invite/zt-163npa168-e5EREuQZU3NqwfdojWw2ew",
             text: "Join the Maps Slack group"
-          }
-        ]
-      }
-    },
-    {
-      key: {
-        text: "Task list"
-      },
-      value: {
-        html: "A community collaboration to build the existing task list pattern into a component."
-      },
-      actions: {
-        classes: "govuk-!-text-align-left",
-        items: [
-          {
-            href: "https://join.slack.com/t/task-list-collab/shared_invite/zt-1gfbxa78k-Ql8885Iuan17w5v26F6yVQ",
-            text: "Join the Task list Slack group"
           }
         ]
       }
