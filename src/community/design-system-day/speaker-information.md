@@ -56,11 +56,11 @@ Rachel is User Researcher and works in the Social Security Directorate for the S
 
 ### Samantha Ernstzen (Scottish Governement)
 
-To be confirmed
+Sam is the Head of Design in Digital Transformation, Digital Directorate, Scottish Government.  Sam has been at ScotGov for 6 years after nearly 20 years in the private sector. She launched products, services and new brands for HSBC, Virgin and EE.  Sam is a passionate advocate for user centred approaches and taking a design led approach. She loves facilitating and bringing mindfulness approaches from yoga and meditation to enable problem solving.
 
 ### Jennifer I'Anson (Scottish Governement)
 
-To be confirmed
+Jennifer is a Lead Product Manager within the Digital Directorate of the Scottish Government responsible for [mygov.scot](https://mygov.scot) and [gov.scot](https://gov.scot). She is also the Product Owner of the Scottish Government’s Design System from its inception, helping launch it during the pandemic.
 
 ### GOV.UK Design System team
 
@@ -82,11 +82,11 @@ He's also an experienced contributor to the design community and the GOV.UK Desi
 
 ### Vicky Teinaki (Student Loans Company)
 
-Vicky is a designer and UX Lead at Student Loans Company. She’s worked at the Government Digital Service, Department of Work and Pensions, and HM Revenue & Customs. Vicky has worked as a user researcher and interaction designer. Vicky has a background as a developer, having done Drupal and WordPress theming and module/plugin development.
+Vicky is a designer and UX Lead at Student Loans Company. She’s worked across UK Government at Government Digital Service, Department of Work and Pensions, and HM Revenue & Customs as a user researcher and interaction designer. Vicky also has a background as a developer, having done Drupal, WordPress theming, and module/plugin development.
 
 ### Ellis Capon (Just Eat)
 
-To be confirmed
+Ellis is a product person on the design system at Just Eat, making your experience when ordering that post night out Maccy D’s just that little bit better.
 
 ### Janice Hannaway (ResearchU)
 
@@ -106,7 +106,7 @@ Tash has spent over 25 years shaping future change-makers. First as Programme Le
 
 ### David Cox (GOV.UK Design System team)
 
-To be confirmed
+David is Senior Accessibility Specialist on the GOV.UK Design System team, working on accessibility improvements that increase the accessibility of hundreds of government services that use our components. He advocates for a more intentional approach to accessibility, with greater focus on creating good experiences for all users, rather than just creating equivalent experiences for those using assistive technologies.
 
 ## Day 2 speakers
 
@@ -120,7 +120,7 @@ Chris is a UX Design Lead with a Computer Science degree. He worked as an SAP co
 
 ### Helena Trippe (GOV.UK One Login)
 
-To be confirmed
+Helena is the Head of User Centred Design for GOV.UK One Login, looking after user research, design, content design, technical writing and accessibility. She has worked as a service designer and design lead at the Government Digital Service, Department of Housing Communities and Local Government and a number of local authorities.
 
 ### Frankie Roberto (Independent)
 
@@ -182,7 +182,7 @@ Ethan is a web designer, speaker, and author who's best known for creating respo
 
 ### Steve Messer (GOV.UK Design System)
 
-Steve is a freelance product person, working on the GOV.UK Design System currently. He's passionate about innovation for the public good and open, ethical product design. He's worked at startups, Government Digital Service and NHS Digital, and has taught product management to people from numerous companies through General Assembly.
+Steve is a freelance product person, working on the GOV.UK Design System currently. He’s passionate about innovation for the public good and open, ethical product design. He’s worked at startups, Government Digital Service and NHS Digital, and has taught product management to people from numerous companies through General Assembly.
 
 ### Debra Churchill (Ontario Public Service)
 
