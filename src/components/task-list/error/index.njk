@@ -1,0 +1,54 @@
+---
+title: Task list with an error
+layout: layout-example.njk
+---
+
+{% from "govuk/components/task-list/macro.njk" import govukTaskList %}
+
+{{ govukTaskList({
+  idPrefix: "application-details",
+  items: [
+    {
+      title: {
+        text: "Contact details"
+      },
+      href: "#",
+      status: {
+        text: "Completed"
+      }
+    },
+    {
+      title: {
+        text: "Project details"
+      },
+      href: "#",
+      status: {
+        tag: {
+          text: "Incomplete",
+          classes: "govuk-tag--blue"
+        }
+      }
+    },
+    {
+      title: {
+        text: "Funding required"
+      },
+      href: "#",
+      status: {
+        tag: {
+          text: "There is a problem",
+          classes: "govuk-tag--red"
+        }
+      }
+    },
+    {
+      title: {
+        text: "Bank account"
+      },
+      href: "#",
+      status: {
+        text: "Completed"
+      }
+    }
+  ]
+}) }}

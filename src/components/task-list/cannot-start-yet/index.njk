@@ -1,0 +1,45 @@
+---
+title: Task list with cannot start yet
+layout: layout-example.njk
+---
+
+{% from "govuk/components/task-list/macro.njk" import govukTaskList %}
+
+{{ govukTaskList({
+  idPrefix: "application-details",
+  items: [
+    {
+      title: {
+        text: "Company details"
+      },
+      href: "#",
+      status: {
+        text: "Completed"
+      }
+    },
+    {
+      title: {
+        text: "Project details"
+      },
+      href: "#",
+      status: {
+        tag: {
+          text: "Incomplete",
+          classes: "govuk-tag--blue"
+        }
+      }
+    },
+    {
+      title: {
+        text: "Fund applied to"
+      },
+      hint: {
+        text: "The funds will be announced on 1 April 2022"
+      },
+      status: {
+        text: "Cannot start yet",
+        classes: "govuk-task-list__status--cannot-start-yet"
+      }
+    }
+  ]
+}) }}

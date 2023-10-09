@@ -11,7 +11,7 @@ layout: layout-example-full-page.njk
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-l">Service name goes here</h1>
+      <h1 class="govuk-heading-l">Service name</h1>
 
       <h2 class="govuk-heading-m">Check before you start</h2>
 
@@ -20,12 +20,11 @@ layout: layout-example-full-page.njk
         items: [
           {
             title: {
-              text: "Check eligbility"
+              text: "Check eligibility"
             },
             href: "#",
             status: {
-              text: "Completed",
-              classes: "govuk-task-list__status--black"
+              text: "Completed"
             }
           },
           {
@@ -34,8 +33,10 @@ layout: layout-example-full-page.njk
             },
             href: "#",
             status: {
-              text: "Not started",
-              classes: "govuk-task-list__status--blue"
+              tag: {
+                text: "Incomplete",
+                classes: "govuk-tag--blue"
+              }
             }
           }
         ]
@@ -44,6 +45,7 @@ layout: layout-example-full-page.njk
       <h2 class="govuk-heading-m govuk-!-margin-top-5">Prepare application</h2>
 
       {{ govukTaskList({
+        idPrefix: "prepare-application",
         items: [
           {
             title: {
@@ -51,8 +53,7 @@ layout: layout-example-full-page.njk
             },
             href: "#",
             status: {
-              text: "Completed",
-              classes: "govuk-task-list__status--black"
+              text: "Completed"
             }
           },
           {
@@ -61,8 +62,10 @@ layout: layout-example-full-page.njk
             },
             href: "#",
             status: {
-              text: "Not started",
-              classes: "govuk-task-list__status--blue"
+              tag: {
+                text: "Incomplete",
+                classes: "govuk-tag--blue"
+              }
             }
           },
           {
@@ -71,8 +74,7 @@ layout: layout-example-full-page.njk
             },
             href: "#",
             status: {
-              text: "Completed",
-              classes: "govuk-task-list__status--black"
+              text: "Completed"
             }
           },
           {
@@ -81,8 +83,10 @@ layout: layout-example-full-page.njk
             },
             href: "#",
             status: {
-              text: "Not started",
-              classes: "govuk-task-list__status--blue"
+              tag: {
+                text: "Incomplete",
+                classes: "govuk-tag--blue"
+              }
             }
           },
           {
@@ -91,8 +95,10 @@ layout: layout-example-full-page.njk
             },
             href: "#",
             status: {
-              text: "Not started",
-              classes: "govuk-task-list__status--blue"
+              tag: {
+                text: "Incomplete",
+                classes: "govuk-tag--blue"
+              }
             }
           }
         ]
