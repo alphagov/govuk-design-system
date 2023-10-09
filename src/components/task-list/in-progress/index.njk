@@ -1,16 +1,16 @@
 ---
-title: Task list
+title: Task list in progress
 layout: layout-example.njk
 ---
 
 {% from "govuk/components/task-list/macro.njk" import govukTaskList %}
 
 {{ govukTaskList({
-  idPrefix: "company-details",
+  idPrefix: "application-details",
   items: [
     {
       title: {
-        text: "Company Directors"
+        text: "Contact details"
       },
       href: "#",
       status: {
@@ -19,51 +19,36 @@ layout: layout-example.njk
     },
     {
       title: {
-        text: "Registered company details"
+        text: "Work history"
       },
       href: "#",
       status: {
         tag: {
-          text: "Incomplete",
+          text: "In progress",
+          classes: "govuk-tag--light-blue"
+        }
+      }
+    },
+    {
+      title: {
+        text: "Qualifications"
+      },
+      href: "#",
+      status: {
+        tag: {
+          text: "Not yet started",
           classes: "govuk-tag--blue"
         }
       }
     },
     {
       title: {
-        text: "Financial history"
-      },
-      hint: {
-        text: "Include 5 years of the company’s relevant financial information."
+        text: "Supporting statement"
       },
       href: "#",
       status: {
         tag: {
-          text: "Incomplete",
-          classes: "govuk-tag--blue"
-        }
-      }
-    },
-    {
-      title: {
-        text: "Business plan"
-      },
-      href: "#",
-      status: {
-        tag: {
-          text: "Incomplete",
-          classes: "govuk-tag--blue"
-        }
-      }
-    },
-    {
-      title: {
-        text: "References"
-      },
-      href: "#",
-      status: {
-        tag: {
-          text: "Incomplete",
+          text: "Not yet started",
           classes: "govuk-tag--blue"
         }
       }

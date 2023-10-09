@@ -6,8 +6,6 @@ theme: Pages
 aliases:
 backlogIssueId: 72
 layout: layout-pane.njk
-status: Being worked on
-statusMessage: A cross-government group is collaborating on work to <a class="govuk-link" href="#next-steps">update this pattern and build it as a component</a>.
 ---
 
 {% from "_example.njk" import example %}
