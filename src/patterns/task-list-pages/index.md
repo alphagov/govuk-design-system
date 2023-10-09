@@ -18,7 +18,7 @@ Task list pages help users understand:
 - the order they should complete tasks in
 - when they've completed tasks
 
-![A screenshot showing an example of the task list page, includes a heading, and three grouped sections that each contain tasks, some of these tasks are marked as completed.](task-list-whole.svg)
+{{ example({ group: "patterns", item: "task-list-pages", example: "default", html: true, nunjucks: true, open: false }) }}
 
 There’s a [coded example of a task list page](https://prototype-kit.service.gov.uk/docs/templates/task-list) in the GOV.UK Prototype Kit. To use the example, get the following code from the Prototype Kit repository on GitHub:
 
@@ -62,16 +62,16 @@ You might find a better word to describe what a ‘task’ is for your users. If
 
 ![A screenshot showing a task list summary that says 'Application incomplete. You've completed 3 of 8 sections'](task-list-summary.png)
 
-Make it clear to users which tasks they’ve completed and which still need their attention, by labelling them using the [Tag component](/components/tag/).
+Make it clear to users which tasks they’ve completed and which still need their attention, by labelling them using statuses.
 
-![A screenshot showing a completed tag next to a list of tasks](task-list-statuses.png)
+{{ example({ group: "patterns", item: "task-list-pages", example: "task-list-statuses", html: true, nunjucks: true, open: false }) }}
 
 Use the following labels to describe the different states of a task:
 
-- 'Not started' (in grey) if the user can start work on the task, but has not done so yet
+- 'Not started' (in blue) if the user can start work on the task, but has not done so yet
 - 'Cannot start yet' (in grey) if the user cannot start the task yet - for example because another task must be completed first
 - 'In progress' (in light blue) if the user has started but not completed the task
-- 'Completed' (in blue) if the user has completed the task
+- 'Completed' (in black) if the user has completed the task
 
 ### Group tasks into steps
 
