@@ -1,0 +1,120 @@
+---
+title: Task list with all colours
+layout: layout-example.njk
+---
+
+{% from "govuk/components/task-list/macro.njk" import govukTaskList %}
+
+{{ govukTaskList({
+  idPrefix: "all-colours",
+  items: [
+    {
+      title: {
+        text: "Task A"
+      },
+      href: "#",
+      status: {
+        tag: {
+          text: "Grey",
+          classes: "govuk-tag--grey"
+        }
+      }
+    },
+    {
+      title: {
+        text: "Task B"
+      },
+      href: "#",
+      status: {
+        tag: {
+          text: "Green",
+          classes: "govuk-tag--green"
+        }
+      }
+    },
+    {
+      title: {
+        text: "Task C"
+      },
+      href: "#",
+      status: {
+        tag: {
+          text: "Turquoise",
+          classes: "govuk-tag--turquoise"
+        }
+      }
+    },
+    {
+      title: {
+        text: "Task D"
+      },
+      href: "#",
+      status: {
+        tag: {
+          text: "Blue",
+          classes: "govuk-tag--blue"
+        }
+      }
+    },
+    {
+      title: {
+        text: "Task E"
+      },
+      href: "#",
+      status: {
+        tag: {
+          text: "Light blue",
+          classes: "govuk-tag--light-blue"
+        }
+      }
+    },
+    {
+      title: {
+        text: "Task F"
+      },
+      href: "#",
+      status: {
+        tag: {
+          text: "Purple",
+          classes: "govuk-tag--purple"
+        }
+      }
+    },
+    {
+      title: {
+        text: "Task G"
+      },
+      href: "#",
+      status: {
+        tag: {
+          text: "Pink",
+          classes: "govuk-tag--pink"
+        }
+      }
+    },
+    {
+      title: {
+        text: "Task H"
+      },
+      href: "#",
+      status: {
+        tag: {
+          text: "Orange",
+          classes: "govuk-tag--orange"
+        }
+      }
+    },
+    {
+      title: {
+        text: "Task I"
+      },
+      href: "#",
+      status: {
+        tag: {
+          text: "Yellow",
+          classes: "govuk-tag--yellow"
+        }
+      }
+    }
+  ]
+}) }}
