@@ -1,8 +1,8 @@
 ---
-title: Task list pages
-description: Task list pages help users understand tasks involved in completing a transaction, the order they should complete tasks in and when they have completed tasks
+title: Complete multiple tasks
+description: Task lists help users understand tasks involved in completing a transaction, the order they should complete tasks in and when they have completed tasks
 section: Patterns
-theme: Pages
+theme: Help users to…
 aliases:
 backlogIssueId: 72
 layout: layout-pane.njk
@@ -16,7 +16,7 @@ Task list pages help users understand:
 - the order they should complete tasks in
 - when they've completed tasks
 
-{{ example({ group: "patterns", item: "task-list-pages", example: "default", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "patterns", item: "complete-multiple-tasks", example: "default", html: true, nunjucks: true, open: false }) }}
 
 Task list pages use a [task list component](/components/task-list) for each group of tasks on the page.
 
@@ -53,7 +53,7 @@ Where possible, task names should:
 
 Make it clear to users which tasks they’ve completed and which still need their attention, by labelling them using statuses.
 
-{{ example({ group: "patterns", item: "task-list-pages", example: "task-list-statuses", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "patterns", item: "complete-multiple-tasks", example: "task-list-statuses", html: true, nunjucks: true, open: false }) }}
 
 Use the following labels to describe the different states of a task:
 
@@ -89,7 +89,7 @@ If the user selects ‘No, I’ll come back to it later,’ mark the task as 'In
 
 If the user selects ‘Yes, I’ve completed this section,’ mark the task as 'Completed'.
 
-{{ example({ group: "patterns", item: "task-list-pages", example: "have-you-completed-this-section", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "patterns", item: "complete-multiple-tasks", example: "have-you-completed-this-section", html: true, nunjucks: true, open: false }) }}
 
 Always allow users to go back into a task to change their answer.
 
@@ -97,7 +97,7 @@ Always allow users to go back into a task to change their answer.
 
 If the user does not select an option, show an [error message](/components/error-message/) to say: 'Select whether you’ve completed this section'.
 
-{{ example({ group: "patterns", item: "task-list-pages", example: "have-you-completed-this-section-error", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "patterns", item: "complete-multiple-tasks", example: "have-you-completed-this-section-error", html: true, nunjucks: true, open: false }) }}
 
 ## Research on this pattern
 
