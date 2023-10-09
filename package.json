@@ -72,7 +72,7 @@
     "js-beautify": "^1.14.9",
     "jstransformer-marked": "^1.4.0",
     "jstransformer-nunjucks": "^1.2.0",
-    "marked": "^9.0.3",
+    "marked": "^9.1.0",
     "marked-gfm-heading-id": "^3.1.0",
     "marked-highlight": "^2.0.6",
     "marked-smartypants": "^1.1.3",
