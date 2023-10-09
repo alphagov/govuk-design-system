@@ -95,7 +95,7 @@ The process of contributing to a design system, especially when your main job is
 
 ### Trauma-informed design – passing trend, or new aspect of accessibility?
 
-Katharine Beer
+Katharine Beer and Steph Batliner
 10am to 11:30am
 
 Is trauma-informed design a passing trend or a new facet of accessibility? In this session, we aim for participants to deepen their understanding of trauma and its complexities. While we believe that this approach can enhance design practices and results, we welcome diverse perspectives and encourage open discussion. We also welcome anyone who prefers to stay quiet and listen during sessions.
@@ -172,6 +172,10 @@ After 20+ years of managing experiences in code, a new design system + headless 
 
 Vicky Teinaki
 1:45pm to 2:45pm
+
+Design systems are made to scale work, ensure consistency, and reduce duplication of effort. However, you have to be wary of how you utilise them. if you pick and choose elements from several design systems indiscriminately, that can cause problems of its own.
+
+Join Vicky to discuss how you should aim to understand the context that a pattern or element was created, and the pitfalls of not doing so.
 
 ### How a design API empowers product teams to ensure brand consistency at scale
 
