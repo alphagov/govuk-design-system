@@ -25,7 +25,7 @@ You can use it to display metadata like ‘Last updated’ with a date like ‘2
 
 The summary list uses the description list (`<dl>`) HTML element, so only use it to present information that has a key and at least one value.
 
-Do not use it for tabular data or a simple list of information or tasks, like a [task list](/patterns/task-list-pages/). For those use a `<table>`, `<ul>` or `<ol>`.
+Do not use it for tabular data or a simple list of information or tasks, like a [task list](/components/task-list/). For those use a `<table>`, `<ul>` or `<ol>`.
 
 ## How it works
 

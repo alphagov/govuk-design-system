@@ -45,7 +45,6 @@ We're also:
 - running more workshops on accessibility
 - organising [Design System Day 2023](https://design-system.service.gov.uk/community/design-system-day/)
 - [updating the typographic scale](https://github.com/alphagov/govuk-design-system/issues/2289), including increasing the minimum text size on mobile
-- hosting community co-design work to turn the [task list pattern](/patterns/task-list-pages/) into a component (thanks to the community)
 
 ## Coming up next
 

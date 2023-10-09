@@ -1,0 +1,115 @@
+---
+title: Task list
+layout: layout-example-full-page.njk
+---
+
+{% extends "example-wrappers/full-page.njk" %}
+
+{% from "govuk/components/task-list/macro.njk" import govukTaskList %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Service name</h1>
+
+      <h2 class="govuk-heading-m">Check before you start</h2>
+
+      {{ govukTaskList({
+        idPrefix: "before-you-start",
+        items: [
+          {
+            title: {
+              text: "Check eligibility"
+            },
+            href: "#",
+            status: {
+              text: "Completed"
+            }
+          },
+          {
+            title: {
+              text: "Read declaration"
+            },
+            href: "#",
+            status: {
+              tag: {
+                text: "Incomplete",
+                classes: "govuk-tag--blue"
+              }
+            }
+          }
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-m govuk-!-margin-top-5">Prepare application</h2>
+
+      {{ govukTaskList({
+        idPrefix: "prepare-application",
+        items: [
+          {
+            title: {
+              text: "Company information"
+            },
+            href: "#",
+            status: {
+              text: "Completed"
+            }
+          },
+          {
+            title: {
+              text: "Your contact details"
+            },
+            href: "#",
+            status: {
+              tag: {
+                text: "Incomplete",
+                classes: "govuk-tag--blue"
+              }
+            }
+          },
+          {
+            title: {
+              text: "List convictions"
+            },
+            href: "#",
+            status: {
+              text: "Completed"
+            }
+          },
+          {
+            title: {
+              text: "Provide financial evidence"
+            },
+            href: "#",
+            status: {
+              tag: {
+                text: "Incomplete",
+                classes: "govuk-tag--blue"
+              }
+            }
+          },
+          {
+            title: {
+              text: "Give medical information"
+            },
+            href: "#",
+            status: {
+              tag: {
+                text: "Incomplete",
+                classes: "govuk-tag--blue"
+              }
+            }
+          }
+        ]
+      }) }}
+
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Apply"
+        }) }}
+      </div>
+
+    </div>
+  </div>
+{% endblock %}
