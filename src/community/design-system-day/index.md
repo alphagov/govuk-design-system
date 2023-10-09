@@ -23,20 +23,12 @@ order: 11
       }
     },
     {
+      classes: "govuk-summary-list__row--no-border",
       key: {
         text: "Location"
       },
       value: {
         html: '<a href="https://dynamicearth.org.uk/plan-your-visit/getting-here/">Dynamic Earth</a>, Edinburgh, and online'
-      }
-    },
-    {
-      classes: "govuk-summary-list__row--no-border",
-      key: {
-        text: "Get tickets"
-      },
-      value: {
-        html: '<a href="https://www.eventbrite.co.uk/e/714571050247?aff=oddtdtcreator">Day 1 in Edinburgh</a> or <a href="https://www.eventbrite.co.uk/e/714592022977?aff=oddtdtcreator">day 2 online</a>'
       }
     }
   ]
