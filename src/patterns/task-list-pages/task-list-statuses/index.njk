@@ -1,0 +1,66 @@
+---
+title: Task list statuses example
+layout: layout-example.njk
+---
+
+{% from "govuk/components/task-list/macro.njk" import govukTaskList %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {{ govukTaskList({
+      items: [
+        {
+          title: {
+            text: "Company information"
+          },
+          href: "#",
+          status: {
+            text: "Completed",
+            classes: "govuk-task-list__status--black"
+          }
+        },
+        {
+          title: {
+            text: "Your contact details"
+          },
+          href: "#",
+          status: {
+            text: "Not started",
+            classes: "govuk-task-list__status--blue"
+          }
+        },
+        {
+          title: {
+            text: "List convictions"
+          },
+          href: "#",
+          status: {
+            text: "In progress",
+            classes: "govuk-task-list__status--light-blue"
+          }
+        },
+        {
+          title: {
+            text: "Provide financial evidence"
+          },
+          href: "#",
+          status: {
+            text: "Not started",
+            classes: "govuk-task-list__status--blue"
+          }
+        },
+        {
+          title: {
+            text: "Give medical information"
+          },
+          status: {
+            text: "Cannot start yet",
+            classes: "govuk-task-list__status--white"
+          }
+        }
+      ]
+    }) }}
+
+  </div>
+</div>
