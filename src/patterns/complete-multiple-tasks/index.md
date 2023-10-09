@@ -10,7 +10,7 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 
-Task list pages help users understand:
+Complete multiple tasks pages help users understand:
 
 - the tasks involved in completing a transaction
 - the order they should complete tasks in
@@ -18,22 +18,22 @@ Task list pages help users understand:
 
 {{ example({ group: "patterns", item: "complete-multiple-tasks", example: "default", html: true, nunjucks: true, open: false }) }}
 
-Task list pages use a [task list component](/components/task-list) for each group of tasks on the page.
+Complete multiple tasks pages use a [task list component](/components/task-list) for each group of tasks on the page.
 
 ## When to use this pattern
 
-Only use a task list page for longer transactions involving multiple tasks that users may need to complete over a number of sessions.
+Only use a complete multiple tasks page for longer transactions involving multiple tasks that users may need to complete over a number of sessions.
 
-Try to simplify the transaction before you use a task list page. If you’re able to reduce the number of tasks or steps involved, you might not need one.
+Try to simplify the transaction before you use a complete multiple tasks page. If you’re able to reduce the number of tasks or steps involved, you might not need one.
 
 ## How it works
 
-You should show a task list page:
+You should show a complete multiple tasks page:
 
 - at the start of the transaction
 - at the start of each returning session
 
-If you use a task list page in your service, you'll need to:
+If you use a complete multiple tasks page in your service, you'll need to:
 
 - group related actions into tasks
 - show the status of the tasks
@@ -55,12 +55,47 @@ Make it clear to users which tasks they’ve completed and which still need thei
 
 {{ example({ group: "patterns", item: "complete-multiple-tasks", example: "task-list-statuses", html: true, nunjucks: true, open: false }) }}
 
-Use the following labels to describe the different states of a task:
+Statuses should be helpful to users. The more you add, the harder it is for users to remember them. Start with the smallest number of different statuses you think might work, for example ‘Completed’ and ‘Incomplete’, then add more if your user research shows there’s a need for them.
 
-- 'Not started' (in blue) if the user can start work on the task, but has not done so yet
-- 'Cannot start yet' (in grey) if the user cannot start the task yet - for example because another task must be completed first
-- 'In progress' (in light blue) if the user has started but not completed the task
-- 'Completed' (in black) if the user has completed the task
+Once the user has completed the task, the status should show as ‘Completed’ and be black text with no background colour. This will draw more attention to tasks that require action.
+
+#### Tasks that are in progress
+
+You may find you need additional statuses if your user research shows that users want to be able to distinguish between the tasks they haven’t started at all, and those they’ve started but not completed.
+
+In this instance, instead of ‘Incomplete’, you may want to use ‘Not yet started’ to show which tasks they are yet to start. You should then use ‘In progress’ for tasks they have started but are yet to complete.
+
+‘Not yet started’ uses a blue background, and ‘In progress’ uses a light blue background.
+
+{{ example({ group: "components", item: "task-list", example: "in-progress", html: true, nunjucks: true, open: false }) }}
+
+#### Tasks that cannot yet be started
+
+If the user cannot start the task yet, for example because another task must be completed first, use the ‘Cannot start yet’ status. This should be grey text with no background colour, and the ‘task row’ should not be linked.
+
+{{ example({ group: "components", item: "task-list", example: "cannot-start-yet", html: true, nunjucks: true, open: false }) }}
+
+#### Tasks containing an error
+
+You should avoid tasks having an error status by using the [error summary](/components/error-summary/) and [error messages](/components/error-message/) displayed at the point that the error is made, so that the user can fix it straight away.
+
+If it is unavoidable that a task may end up saved but containing an error, use the status text ‘There is a problem’ and a red background.
+
+Do not use the red background colour for any status text except errors.
+
+{{ example({ group: "components", item: "task-list", example: "error", html: true, nunjucks: true, open: false }) }}
+
+#### Status text
+
+Although we recommend using consistent wording across task lists, you can change it if research shows that different text is more suitable to your service or users.
+
+If you are creating your own statuses, use adjectives rather than verbs. Use sentence case, and keep it short, so that it can be easily read and understood.
+
+#### Additional statuses
+
+If your user research shows that there is a need for additional status tags, you can use other colours to help distinguish between them.
+
+{{ example({ group: "components", item: "task-list", example: "all-colours", html: true, nunjucks: true, open: false }) }}
 
 ### Group tasks into steps
 
