@@ -56,7 +56,7 @@ Rachel is User Researcher and works in the Social Security Directorate for the S
 
 ### Samantha Ernstzen (Scottish Governement)
 
-Sam is the Head of Design in Digital Transformation, Digital Directorate, Scottish Government.  Sam has been at ScotGov for 6 years after nearly 20 years in the private sector. She launched products, services and new brands for HSBC, Virgin and EE.  Sam is a passionate advocate for user centred approaches and taking a design led approach. She loves facilitating and bringing mindfulness approaches from yoga and meditation to enable problem solving.
+Sam is the Head of Design in Digital Transformation, Digital Directorate, Scottish Government. Sam has been at ScotGov for 6 years after nearly 20 years in the private sector. She launched products, services and new brands for HSBC, Virgin and EE. Sam is a passionate advocate for user centred approaches and taking a design led approach. She loves facilitating and bringing mindfulness approaches from yoga and meditation to enable problem solving.
 
 ### Jennifer I'Anson (Scottish Governement)
 
