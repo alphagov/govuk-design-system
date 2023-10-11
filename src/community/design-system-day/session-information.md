@@ -135,6 +135,15 @@ Sylvie Abookire
 
 How might we design our design practice for optimal success and wellbeing? The methods we use every day as designers can help us creatively navigate our own professional journeys. Through reflective, hands-on activities, participants will learn how they can apply human-centered design to navigate personal decisions surrounding life and work.
 
+### Design pattern histories
+
+Vicky Teinaki
+11:45am to 12:30pm
+
+Design systems are made to scale work, ensure consistency, and reduce duplication of effort. However, you have to be wary of how you utilise them. if you pick and choose elements from several design systems indiscriminately, that can cause problems of its own.
+
+Join Vicky to discuss how you should aim to understand the context that a pattern or element was created, and the pitfalls of not doing so.
+
 ### Leading the system
 
 Daniel Fontaneda
@@ -167,15 +176,6 @@ Kate Thomas
 1:45pm to 2:45pm
 
 After 20+ years of managing experiences in code, a new design system + headless CMS changed everything about PayPal.com. Kate Thomas, at the forefront of this transformation, will share the highs, lows, and deep dive into how they reduced publishing time from weeks to hours while increasing global reach.
-
-### Design pattern histories
-
-Vicky Teinaki
-1:45pm to 2:45pm
-
-Design systems are made to scale work, ensure consistency, and reduce duplication of effort. However, you have to be wary of how you utilise them. if you pick and choose elements from several design systems indiscriminately, that can cause problems of its own.
-
-Join Vicky to discuss how you should aim to understand the context that a pattern or element was created, and the pitfalls of not doing so.
 
 ### How a design API empowers product teams to ensure brand consistency at scale
 
