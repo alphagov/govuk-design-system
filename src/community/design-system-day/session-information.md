@@ -9,6 +9,8 @@ order: 14
 
 <img src="/community/images/dsd23-announcement-banner.svg" alt="Design System Day 2023 logo" class="app-image--no-border" loading="lazy">
 
+{% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+
 {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 
 {{ govukSummaryList({
@@ -175,6 +177,10 @@ Over the last year, Ashley has been delving into the world of Web Components, ex
 Kate Thomas
 1:45pm to 2:45pm
 
+{{ govukWarningText({
+  text: "This session has been cancelled."
+}) }}
+
 After 20+ years of managing experiences in code, a new design system + headless CMS changed everything about PayPal.com. Kate Thomas, at the forefront of this transformation, will share the highs, lows, and deep dive into how they reduced publishing time from weeks to hours while increasing global reach.
 
 ### How a design API empowers product teams to ensure brand consistency at scale
@@ -225,6 +231,10 @@ iPhones work but no one individual knows how. They are technically, legally and 
 
 Jane Martin and Betty Mwema
 3pm to 4:30pm
+
+{{ govukWarningText({
+  text: "This session has been cancelled."
+}) }}
 
 In this session, we will be looking at how the field of participation has lived a long time and how it has much to offer to co-design, ethics, equity and justice.
 
