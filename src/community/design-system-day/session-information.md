@@ -151,6 +151,10 @@ Join Vicky to discuss how you should aim to understand the context that a patter
 Daniel Fontaneda
 1:45pm to 2:45pm
 
+{{ govukWarningText({
+  text: "This session has been cancelled."
+}) }}
+
 In this talk I will explain what are the key pillars that are helping me and my team to lead the design system in a complex environment, working with multiple products at the same time and being a small team and dealing with many different stakeholders.
 
 ### Imposter syndrome in government and why it's not always a bad thing
