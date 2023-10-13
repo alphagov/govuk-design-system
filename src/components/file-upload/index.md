@@ -28,7 +28,7 @@ To upload a file, the user can either:
 - use the ‘Choose file’ button
 - ‘drag and drop’ a file into the file upload input area
 
-<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Do not use ‘drag and drop’ as the only way to upload files. You must offer other methods, such as the ‘Choose file’ button. This is to comply with WCAG 2.2 success criterion [2.5.7 Dragging Movements](https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html).
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Do not use ‘drag and drop’ as the only way to upload files. You must provide another method, such as the ‘Choose file’ button. This is to comply with WCAG 2.2 success criterion [2.5.7 Dragging Movements](https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html).
 
 There are 2 ways to use the file upload component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 

@@ -59,6 +59,14 @@ If the user's answers fail validation:
 
 Read guidance on [writing good error messages](/components/error-message/#be-clear-and-concise).
 
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Do not clear any form fields when validating users’ answers. Keep both passing and failing answers. This is to comply with WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
+
+Keeping information that failed validation helps users to:
+
+- see what went wrong
+- edit their previous answer
+- avoid re-entering information
+
 ### When to tell the user about validation errors
 
 Do not validate when the user moves away from a field. Wait until they try to move to the next part of the service - usually by clicking the ‘continue’ or ‘submit’ button at the bottom of the page.

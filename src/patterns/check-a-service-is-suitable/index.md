@@ -16,6 +16,17 @@ It can also help reduce time and money spent processing queries from users confu
 
 ![‘Check a service is suitable’ flow diagram. Contains an introduction page followed by a series of simple questions. If at any point a user is deemed not eligible for the service they will be pointed to a page that explains why they are not eligible. Otherwise they will be presented an ‘application complete’ page. ](check-a-service-is-suitable-new.svg)
 
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Make sure to not repeat questions or request information the user will need to re-provide later.
+
+If during the process a service is determined to be suitable, consider offering a secure method to carry forward relevant responses into the service journey, unless carrying forward would be a major safety concern.
+
+You can make it easier to enter the same information within the service through one of these methods:
+
+- pre-populating the relevant fields
+- showing carried-forward responses as an option for the user to select
+
+This is to comply with WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
+
 ## When to use this pattern
 
 If you have complicated eligibility requirements you should follow this pattern. This will save users from having to read through large amounts of documentation outside of your service to work out if they can use it.

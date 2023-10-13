@@ -24,7 +24,7 @@ Use an alpha banner when your service is in alpha, and a beta banner if your ser
 
 Your banner must be directly under the black GOV.UK header and colour bar.
 
-<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Do not make the phase banner ‘sticky’ to the top of the page by using `position: fixed` or any other method. This is to make sure it does not cover or obscure any content which has a focus applied and to comply with WCAG 2.2 success criterion [2.4.11 Focus not Obscured (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html).
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Do not make the phase banner ‘sticky’ to the top of the page by using `position: fixed` or any other method. This is to make sure it does not cover or obscure any content which has a focus applied. This is to comply with WCAG 2.2 success criterion [2.4.11 Focus not Obscured (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html).
 
 There are 2 ways to use the phase banner component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 

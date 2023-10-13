@@ -91,6 +91,8 @@ When helping users who’ve forgotten their password, you should:
 - avoid password reset questions
 - avoid password reminders
 
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> If you include instructions or a link to help users reset their password, make sure to place them consistently on the page. Also make sure any password reset links always perform the same action across each page. This is to comply with WCAG 2.2 success criterion [3.2.6 Consistent Help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html).
+
 ### Send a link to trigger password resets
 
 You should never send passwords by email because it’s not a secure channel.

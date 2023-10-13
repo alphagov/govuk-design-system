@@ -26,6 +26,14 @@ Read about how and why to [set up user support](https://www.gov.uk/service-manua
 
 {{ example({ group: "patterns", item: "contact-a-department-or-service-team", example: "all-contact-information", html: true, open: false, size: "xl" }) }}
 
+### Place contact information consistently
+
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> If you use this pattern across a set of pages, make sure to place the contact information consistently on the page.
+
+For example, if you place a ‘contact us’ section at the end of one page within a set of pages, then you should place any ‘contact us’ sections on other pages within the set at the end of the other pages as well.
+
+This is to comply with WCAG 2.2 success criterion [3.2.6 Consistent Help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html).
+
 ### Order contact channels consistently
 
 List contact channels in the same order throughout your service. This helps users to find what they need more easily.

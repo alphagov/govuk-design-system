@@ -101,6 +101,8 @@ When the user sets or changes their cookie preferences, use a green [notificatio
 
 {{ example({ group: "patterns", item: "cookies-page", example: "cookies-updated", html: true, nunjucks: true, open: false }) }}
 
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Save cookie preferences for returning users whenever technically possible, so they do not need to enter their preferences again. This relates to WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
+
 ## If you depend on JavaScript to ask users to accept or reject cookies
 
 If you depend on JavaScript to ask about cookie preferences and the user’s device is not running JavaScript, show them a different version of the cookies page.

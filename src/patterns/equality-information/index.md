@@ -45,6 +45,22 @@ With a service that you expect users to return to multiple times, you’ll need 
 
 You’ll also need to give users the option to update their equality information in case anything changes.
 
+### Updating equality information
+
+Some categories of equality information can change over time, including changes to:
+
+- marriage or partnership status
+- disability
+- religion
+- sexual orientation
+- gender identity
+
+When possible, offer users the option to update their equality information. Users should be able to update their equality information through an online account, a change request form, or other contact methods. Integrating the option to update equality information directly into your service or user account system is often the most usable and efficient method.
+
+Updating equality information is especially relevant for longer term services and services that use the same equality information multiple times.
+
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> When users are updating equality information, only ask them to enter the information that has changed. Do not ask them to re-enter all existing equality information. This is to comply with WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
+
 ## Get specialist privacy or data protection advice
 
 Some or all of the equality information you collect is likely to be what’s called ‘[special category personal data](https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/special-category-data/what-is-special-category-data/)’, meaning it has special legal protections.

@@ -36,6 +36,19 @@ Do not ask users if they have a bank account or building society account as not 
 
 If your service does not support building society accounts, remove building society from the content and do not ask for a roll number.
 
+### Reusing entered bank details
+
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Do not ask for bank details more than once within a single journey if only one transaction is taking place.
+
+Make sure users can easily reuse previously entered bank details within a single journey, unless the information is no longer valid or doing so would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
+
+You can make it easier to reuse bank details through one of these methods:
+
+- pre-populate fields with the previously entered bank details
+- show any previously entered bank details as an option for the user to select
+
+Continue to give users the option to enter new bank details.
+
 ### Asking for building society roll numbers
 
 Roll numbers are only used by some building societies for certain types of account, so make this field optional.

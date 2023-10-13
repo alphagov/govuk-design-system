@@ -30,7 +30,7 @@ Let users enter payment card numbers in whatever format is familiar to them. All
 
 Present all fields on a single page, in the order in which they appear on a credit or debit card. This makes it easy for users to transcribe the information from their payment card.
 
-<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Make sure you leave adequate spacing between the month and year inputs. Ideally, leave at least 24px of space between the inputs, when stacked either horizontally (inline) or vertically. This will make the inputs easier to select with a mouse, touch or other input method. This is related to WCAG 2.2 success criterion [2.5.8 Target Size (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Make sure to add adequate spacing between the month and year fields. Ideally, leave at least 24px of space between the fields, either horizontally (inline) or vertically. This is to make sure users can easily interact with the fields. This relates to WCAG 2.2 success criterion [2.5.8 Target Size (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).
 
 Show logos for the cards you accept as icons so users can see whether their card is supported.
 

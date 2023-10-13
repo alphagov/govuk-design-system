@@ -41,6 +41,14 @@ For each error:
 - use a red border to visually connect the message and the question it belongs to
 - if the error relates to a specific field within the question, give it a red border and refer to that field in the error message - for example: "you must enter a year"
 
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Do not clear any form fields when adding error messages. This is to comply with WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
+
+Keeping information that caused errors helps users to:
+
+- see what went wrong
+- edit their previous answer
+- avoid re-entering information
+
 To help screen reader users, the error message component includes a hidden 'Error:' before the error message. These users will hear, for example, "Error: The date your passport was issued must be in the past".
 
 If your error message is written in another language, you can change the prefix as needed, as shown in this example.

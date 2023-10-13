@@ -42,6 +42,19 @@ When asking for a National Insurance number:
 
 {{ example({ group: "patterns", item: "national-insurance-numbers", example: "default", html: true, nunjucks: true, open: true, size: "s", titleSuffix: "second" }) }}
 
+### Reusing entered National Insurance numbers
+
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Do not ask for a National Insurance number more than once within a single journey, if only one person’s details are needed.
+
+Make sure users can easily reuse previously entered National Insurance numbers within a single journey, unless doing so would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
+
+You can make it easier to reuse National Insurance numbers through one of these methods:
+
+- pre-populate fields with the previously entered number
+- show any previously entered numbers as an option for the user to select
+
+Continue to give users the option to enter a new National Insurance number.
+
 ### Error messages
 
 Error messages should be styled like this:

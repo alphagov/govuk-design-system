@@ -47,7 +47,7 @@ You can add links to:
 
 Use ‘Privacy’, ‘Accessibility’, ‘Cookies’ and ‘Terms and conditions’ for the link text.
 
-<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> If you add links to ‘help’ pages, such as contact information, make sure those links are always shown consistently in your footer. Use the same link text, information and placement within the footer in every instance. This is to comply with WCAG 2.2 success criterion [3.2.6 Consistent Help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html).
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> If you include links to ‘help’ pages within a footer, make sure to place those links consistently within the footer content. Also make sure that ‘help’ links always function in a similar way across each page. This is to comply with WCAG 2.2 success criterion [3.2.6 Consistent Help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html).
 
 ## Adding secondary navigation
 

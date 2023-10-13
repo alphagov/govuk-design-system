@@ -42,6 +42,8 @@ Contact information should either be:
 - a link to a specific page that includes numbers and opening times
 - include all numbers and opening times
 
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> You must always write contact information in a clear and consistent way across ‘Service unavailable’ pages. This relates to WCAG 2.2 success criterion [3.2.6 Consistent Help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html).
+
 Have clear and concise content and do not use:
 
 - breadcrumbs

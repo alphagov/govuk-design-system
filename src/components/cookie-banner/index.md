@@ -66,7 +66,7 @@ Make sure the cookie banner does not:
 
 Position the cookie banner after the opening `<body>` tag and before the ’skip to main content‘ link. If you're using the Nunjucks page template, use the `bodyStart` block.
 
-<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Do not change the padding or margins of buttons and links within the cookie banner. This is to make sure target sizes are big enough for activating with a mouse, touch or other input method. This is related to WCAG 2.2 success criterion [2.5.8 Target Size (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Do not change the padding or margins of buttons and links within the cookie banner. This is to make sure there’s adequate space for the user to interact with the buttons and links. This relates to WCAG 2.2 success criterion [2.5.8 Target Size (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).
 
 ### Option 1: If you’re only using essential cookies
 

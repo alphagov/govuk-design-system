@@ -43,6 +43,8 @@ Contact information should either:
 
 The content should be clear and concise, not blame the user.
 
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> You must always write contact information in a clear and consistent way across ‘Page not found’ pages. This relates to WCAG 2.2 success criterion [3.2.6 Consistent Help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html).
+
 Do not use:
 
 - breadcrumbs

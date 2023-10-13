@@ -60,7 +60,11 @@ Contact information should either:
 
 You might choose to link to a ‘contact information’ page, such as one shown in the ‘[Contact a department or service team](https://design-system.service.gov.uk/patterns/contact-a-department-or-service-team/)’ pattern.
 
-<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Make sure contact information is written in a consistent way throughout your service. This is to comply with WCAG 2.2 success criterion [3.2.6 Consistent Help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html).
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> You must always write contact information in a clear and consistent way across ‘There is a problem with the service’ pages. This relates to WCAG 2.2 success criterion [3.2.6 Consistent Help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html).
+
+Whenever possible, make sure to save and store any information the user has previously entered, unless doing so would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
+
+Store previously entered information for a reasonable amount of time so users can resume a journey with re-populated information when the service becomes available again.
 
 ### Service has a specific page that includes numbers and opening times
 
