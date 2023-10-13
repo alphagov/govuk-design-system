@@ -1,5 +1,5 @@
 ---
-title: Watch videos from Design System Day 2022
+title: Design System Day 2022
 description: Videos, slides and notes from Design System Day 2022.
 section: Community
 theme: Events and workshops
