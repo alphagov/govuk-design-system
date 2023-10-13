@@ -10,7 +10,7 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 
-Complete multiple tasks pages help users understand:
+Help users understand:
 
 - the tasks involved in completing a transaction
 - the order they should complete tasks in
