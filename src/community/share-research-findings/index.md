@@ -67,7 +67,8 @@ Give us some context and briefly explain how you gathered the findings.
 Try to include:
 - which service you used the pattern or component in
 - when you did your user research or test
-- whether you tested with users with access needs, noting any assistive technologies they - used
+- whether it was a qualitative or quantitative study
+- whether you tested with users with access needs, noting any assistive technologies they used
 
 ## More information
 
