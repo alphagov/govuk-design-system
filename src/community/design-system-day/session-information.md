@@ -4,4 +4,4 @@ layout: layout-archived.njk
 ignoreInSitemap: true
 ---
 
-To find out about Design System Day, see the [Design System Day](/community/design-system-day/) page.
+See the [Design System Day](/community/design-system-day/) page to find out more.
