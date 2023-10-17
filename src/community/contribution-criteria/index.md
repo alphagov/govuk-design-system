@@ -77,7 +77,7 @@ Before a new component or pattern is published the working group reviews the imp
       },
       {
         html: '<p>It has been tested  in user research and shown to work with a representative sample of users, including those with disabilities.</p>
-          <p class="govuk-!-margin-bottom-0">Components and patterns published in a limited number of services can still be published, as long as it meets other contribution criteria. We'll be clear about the specific contexts the component or pattern has been tested in and encourage feedback about its performance in a wide range of services.</p>'        
+          <p class="govuk-!-margin-bottom-0">Components and patterns published in a limited number of services can still be published, as long as it meets other contribution criteria. We\'ll be clear about the specific contexts the component or pattern has been tested in and encourage feedback about its performance in a wide range of services.</p>'
       }
     ],
     [
