@@ -69,8 +69,12 @@ describe('Accessibility audit', () => {
   it.each(globSync('**/index.html', { cwd: paths.public }))(
     'validates %s',
     async (path) => {
+      const page = await browser.newPage()
+
       await goTo(page, `/${slash(path)}`)
       await expect(axe(page)).resolves.toHaveNoViolations()
+
+      await page.close()
     },
     10000
   )
