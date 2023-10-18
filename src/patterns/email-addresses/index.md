@@ -40,8 +40,8 @@ You may also need to check that users have access to the email account they give
 
 You can make it easier to reuse email addresses through one of these methods:
 
-pre-populate the email field with the previously entered email address
-show any previously entered email addresses as an option for the user to select
+- pre-populate the email field with the previously entered email address
+- show any previously entered email addresses as an option for the user to select
 
 Continue to give users the option to enter a new email address. 
 

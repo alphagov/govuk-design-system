@@ -8,6 +8,7 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
 
 The panel component is a visible container used on confirmation or results pages to highlight important content.
 

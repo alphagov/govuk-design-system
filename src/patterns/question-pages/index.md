@@ -9,6 +9,7 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
 
 This pattern explains when to use question pages and what elements they need to include.
 
@@ -161,4 +162,4 @@ A number of GOV.UK services have removed this style of progress indicator withou
 
 ### Using range sliders
 
-Avoid using [range slider](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range) questions, where the user needs to click and drag a selector across a range of answers or values. These types of controls are difficult for some users to interact with. If you do use a range slider, you must provide a method for selecting an answer that doesn’t rely on ‘click and drag’ movements. This relates to WCAG 2.2 success criterion [2.5.1 Pointer Gestures](https://www.w3.org/TR/WCAG22/#pointer-gestures).
+Avoid using [range slider](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range) questions, where the user needs to click and drag a selector across a range of answers or values. These types of controls are difficult for some users to interact with. If you do use a range slider, you must provide a method for selecting an answer that doesn’t rely on ‘click and drag’ movements. This relates to WCAG success criterion [2.5.1 Pointer Gestures](https://www.w3.org/TR/WCAG22/#pointer-gestures).

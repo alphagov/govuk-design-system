@@ -11,6 +11,7 @@ statusMessage: This pattern is currently experimental because more research is n
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
 
 Tell users about the cookies you’re setting on their device and let them accept or reject different types of non-essential cookies.
 

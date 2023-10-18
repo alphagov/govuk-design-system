@@ -11,6 +11,7 @@ statusMessage: This pattern is currently experimental because <a class="govuk-li
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
 
 A page not found tells someone we cannot find the page they were trying to view. They are also known as 404 pages.
 

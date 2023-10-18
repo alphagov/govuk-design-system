@@ -11,6 +11,7 @@ statusMessage: This pattern is currently experimental because <a class="govuk-li
 ---
 
 {%- from "_example.njk" import example -%}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
 
 Give users contact information within your service.
 

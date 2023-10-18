@@ -33,8 +33,6 @@ There are 2 ways to use the select component. You can use HTML or, if you’re u
 
 {{ example({ group: "components", item: "select", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
 
-The select component does not support selecting multiple options, as [there’s a history of poor usability and assistive technology support for `<select multiple>]`](https://www.24a11y.com/2019/select-your-poison/). If you need to ask the user to pick more than one item from a list, it’s almost always better to use another method, such as a list of checkboxes.
-
 ### Select with hint
 
 You can add hint text to help the user understand the options and choose one of them.

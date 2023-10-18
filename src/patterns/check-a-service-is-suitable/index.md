@@ -8,13 +8,13 @@ backlogIssueId: 35
 layout: layout-pane.njk
 ---
 
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+
 Ask users questions to help them work out if they can or should use your service.
 
 Doing this helps users save time as it tells them upfront whether they are eligible to use it and if they need it.
 
 It can also help reduce time and money spent processing queries from users confused about whether they’re eligible to use your service, or if it’s suitable for them.
-
-![‘Check a service is suitable’ flow diagram. Contains an introduction page followed by a series of simple questions. If at any point a user is deemed not eligible for the service they will be pointed to a page that explains why they are not eligible. Otherwise they will be presented an ‘application complete’ page. ](check-a-service-is-suitable-new.svg)
 
 <strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Make sure to not repeat questions or request information the user will need to re-provide later.
 
@@ -26,6 +26,8 @@ You can make it easier to enter the same information within the service through 
 - showing carried-forward responses as an option for the user to select
 
 This is to comply with WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
+
+![‘Check a service is suitable’ flow diagram. Contains an introduction page followed by a series of simple questions. If at any point a user is deemed not eligible for the service they will be pointed to a page that explains why they are not eligible. Otherwise they will be presented an ‘application complete’ page. ](check-a-service-is-suitable-new.svg)
 
 ## When to use this pattern
 

@@ -43,7 +43,7 @@ You can add links to:
 - [cookies page](/patterns/cookies-page/)
 - terms and conditions
 - other language options
-= help content
+- help content
 
 Use ‘Privacy’, ‘Accessibility’, ‘Cookies’ and ‘Terms and conditions’ for the link text.
 

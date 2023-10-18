@@ -8,6 +8,8 @@ backlogIssueId: 41
 layout: layout-pane.njk
 ---
 
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+
 Help users create an account for your service.
 
 ## When to use this pattern

@@ -8,6 +8,7 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
 
 Use a summary list to summarise information, for example, a user’s responses at the end of a form.
 
@@ -46,17 +47,27 @@ You can add ‘row actions’ to a summary list. For example, you can help users
 
 When navigating visually, the borders above and below each row help to show which row action is tied to which piece of information.
 
-<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Keep card and row actions as ‘inline links’. This is to make sure that sets of actions reflow properly on different screen sizes. This relates to WCAG 2.2 success criterion [2.5.8 Target Size (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).
+#### Accessibility considerations for row actions
+
+There's a few things to keep in mind to ensure that users can successfully:
+
+- interact with row action
+- change information they've previously given in an answer
+- understand what a row action will do
+
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Keep card and row actions as ‘[inline links](https://developer.mozilla.org/en-US/docs/Glossary/Inline-level_content)’. This is to make sure that sets of actions reflow properly on different screen sizes. This relates to WCAG 2.2 success criterion [2.5.8 Target Size (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).
 
 If a user decides to go back to a previous answer through a card or row action, make sure information they have already entered is pre-populated.
 
-Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
 
 Assistive technology users, including those who use a screen reader, might hear a row action link out of context and might not know what it will do.
 
 To give more context, add visually hidden text to the links. This means a screen reader user will hear the row action and the ‘key’ label for the information it will affect, like ‘Change name’ or ‘Change date of birth’.
 
 {{ example({ group: "components", item: "summary-list", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
+
+#### Showing rows with and without actions
 
 If you’re showing a mix of rows (where some rows include actions and some do not), add the `govuk-summary-list__row--no-actions` modifier class to the rows without actions. This is to ensure the bottom border is drawn correctly in some browsers.
 

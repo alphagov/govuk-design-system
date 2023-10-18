@@ -8,6 +8,8 @@ backlogIssueId: 56
 layout: layout-pane.njk
 ---
 
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+
 Help users to create and enter secure and memorable passwords.
 
 ## When to use this pattern
