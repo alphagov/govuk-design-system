@@ -6,8 +6,6 @@ theme: Ask users for…
 aliases:
 backlogIssueId: 149
 layout: layout-pane.njk
-status: Experimental
-statusMessage: This pattern is currently experimental because <a class="govuk-link" href="#next-steps">more research</a> is needed to validate it.
 ---
 
 {% from "_example.njk" import example %}
