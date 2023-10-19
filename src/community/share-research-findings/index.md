@@ -51,9 +51,9 @@ Remember that all the information on GitHub is open to the public. Do not share 
 Use this template to give the community useful context about your findings. Copy and paste it into the GitHub comments box and add your findings.
 
 ```markdown
-## Key insights
+## Insights
 
-What are your key insights about how people use the style, pattern or component?
+What are your insights about how people use the style, pattern or component?
 
 Try to include:
 - how it helped or hindered users’ journeys, using specific observations
