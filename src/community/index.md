@@ -28,7 +28,7 @@ Here’s a few places to join the discussions that help shape the Design System.
       alt: "Slack conversation illustration.",
       title: "Chat with us on Slack"
     }) %}
-      <p>If you work in government, find us on the <a href="https://ukgovernmentdigital.slack.com/archives/C6DMEH5R6\">#govuk-design-system Slack channel</a> to get support, give us feedback or share your work with us.</p>
+      <p>If you work in government, find us on the <a href="https://ukgovernmentdigital.slack.com/archives/C6DMEH5R6">#govuk-design-system Slack channel</a> to get support, give us feedback or share your work with us.</p>
     {% endcall %}
   </div>
   <div class="govuk-grid-column-full govuk-grid-column-one-half-from-desktop">
