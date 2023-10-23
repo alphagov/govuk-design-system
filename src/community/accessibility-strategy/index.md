@@ -444,4 +444,4 @@ Release a version of GOV.UK Frontend with WCAG 2.2 AA compliant components.
 
 ### July 2024: 9 months after WCAG 2.2 publishing
 
-Release an updated GOV.UK Design System website that is compliant with WCAG 2.2 AA
+Release an updated GOV.UK Design System website that is compliant with WCAG 2.2 AA.
