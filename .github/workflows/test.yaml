@@ -49,6 +49,7 @@ jobs:
 
         with:
           cache: npm
+          check-latest: true
           node-version-file: .nvmrc
 
       - name: Install dependencies
@@ -112,6 +113,7 @@ jobs:
         uses: actions/setup-node@v3.8.1
         with:
           cache: npm
+          check-latest: true
           node-version-file: .nvmrc
 
       - name: Install dependencies
