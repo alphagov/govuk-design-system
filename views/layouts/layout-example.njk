@@ -1,6 +1,6 @@
 {% extends "govuk/template.njk" %}
 
-{% set htmlClasses = 'app-example-page__wrapper' %}
+{% set htmlClasses = "app-example-page__wrapper" %}
 {% set assetUrl = 'https://design-system.service.gov.uk/assets' %}
 
 {% block pageTitle %}{{ title | smartypants }} – Example – GOV.UK Design System{% endblock %}
@@ -12,7 +12,8 @@
   <meta name="og:description" content="{{ description | smartypants }}">
   <link rel="canonical" href="{{ canonical }}">
 
-  <link href="{{ getFingerprint('stylesheets/main.css') }}" rel="stylesheet" media="all">
+  <link href="{{ getFingerprint('stylesheets/govuk-frontend.min.css') }}" rel="stylesheet" media="all">
+  <link href="{{ getFingerprint('stylesheets/example.css') }}" rel="stylesheet" media="all">
   {#- Include any additional stylesheets specified in the example frontmatter #}
   {% for stylesheet in stylesheets %}
     <link href="{{ getFingerprint(stylesheet) }}" rel="stylesheet" media="all">

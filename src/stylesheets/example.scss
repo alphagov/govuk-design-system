@@ -1,0 +1,10 @@
+@import "example-init";
+
+.app-example-page__wrapper {
+  overflow: auto;
+  background-color: govuk-colour("white");
+}
+
+.app-example-page {
+  padding: govuk-spacing(6);
+}
