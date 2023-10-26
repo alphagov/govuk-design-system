@@ -120,15 +120,6 @@ $app-code-color: #d13118;
   }
 }
 
-.app-example-page__wrapper {
-  overflow: auto;
-  background-color: govuk-colour("white");
-}
-
-.app-example-page {
-  padding: govuk-spacing(6);
-}
-
 // Copy button
 .app-copy-button {
   $copy-button-colour: #00823b;
