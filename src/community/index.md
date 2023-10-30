@@ -46,7 +46,7 @@ Here’s a few places to join the discussions that help shape the Design System.
       alt: "Share your examples and research section illustration.",
       title: "Share your examples and research"
     }) %}
-      <p>‘<a href="https://design-system.service.gov.uk/community/upcoming-components-patterns/">Upcoming components and patterns</a>’ shows what we're working on, and how you can help us develop and publish them. Any examples, use cases and research you can share would be very valuable to us.</p>
+      <p>We want to hear how existing components and patterns perform in your service, not just <a href="https://design-system.service.gov.uk/community/upcoming-components-patterns/">what we’re working on</a>. Follow our research template to <a href="https://design-system.service.gov.uk/community/share-research-findings/">share findings about your users.</a></p>
     {% endcall %}
   </div>
   <div class="govuk-grid-column-full govuk-grid-column-one-half-from-desktop">
