@@ -57,9 +57,9 @@ There's a few things to keep in mind to ensure that users can successfully:
 
 <strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Keep card and row actions as ‘[inline links](https://developer.mozilla.org/en-US/docs/Glossary/Inline-level_content)’. This is to make sure that sets of actions reflow properly on different screen sizes. This relates to WCAG 2.2 success criterion [2.5.8 Target Size (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).
 
-If a user decides to go back to a previous answer through a card or row action, make sure information they have already entered is pre-populated.
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> If a user decides to go back to a previous answer through a card or row action, make sure information they have already entered is pre-populated.
 
-<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
+Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
 
 Assistive technology users, including those who use a screen reader, might hear a row action link out of context and might not know what it will do.
 
