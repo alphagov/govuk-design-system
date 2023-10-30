@@ -434,14 +434,14 @@ Throughout this document, ‘the team’, ‘our team’ and ‘we’ refer to t
 
 WCAG 2.2 published a new ‘Candidate recommendation’ version on 6 September 2022. At this stage, “<abbr title="World Wide Web Consortium">W3C</abbr> encourages developers to use the technical report in their projects”.
 
-### 2023
+### 5 October 2023
 
-WCAG 2.2 is scheduled to be published by <abbr title="World Wide Web Consortium">W3C</abbr>. At this stage, it’s a final and official web standard. WCAG 2.2 is backwards compatible and includes all existing WCAG 2.1 criteria.
+WCAG 2.2 formally published by <abbr title="World Wide Web Consortium">W3C</abbr>. At this stage, it’s a final and official web standard. WCAG 2.2 is backwards compatible with WCAG 2.1, thanks partly to a September 2023 update which helps deprecate [Success Criterion 4.1.1: Parsing for HTML and XML](https://www.w3.org/WAI/WCAG21/Understanding/parsing.html).
 
-### 6 months after WCAG 2.2 publishing
+### April 2024: 6 months after WCAG 2.2 publishing
 
-Release a version of GOV.UK Frontend with WCAG 2.2 AA compliant components
+Release a version of GOV.UK Frontend with WCAG 2.2 AA compliant components.
 
-### 9 months after WCAG 2.2 publishing
+### July 2024: 9 months after WCAG 2.2 publishing
 
-Release an updated GOV.UK Design System website that is compliant with WCAG 2.2 AA
+Release an updated GOV.UK Design System website that is compliant with WCAG 2.2 AA.
