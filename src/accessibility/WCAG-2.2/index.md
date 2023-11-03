@@ -7,7 +7,7 @@ showPageNav: true
 order: 2
 ---
 
-W3C [owns and manages WCAG 2.2](https://www.w3.org/TR/WCAG22/). The Design System team has updated the Design System to meet WCAG 2.2. Any guidance we provide is to make sure teams using the Design System are aware of the changes and can make the necessary adjustments to their services.
+W3C [owns and manages the Web Content Accessibility Guidelines (WCAG) 2.2](https://www.w3.org/TR/WCAG22/). The Design System team has updated the Design System to meet WCAG 2.2. Any guidance we provide is to make sure teams using the Design System are aware of the changes and can make the necessary adjustments to their services.
 
 ### Make sure your service meets the new WCAG 2.2 criteria
 WCAG 2.2 is expected to be completed and published between July and September 2023. You’ll need to comply with the new criteria no later than one year after WCAG 2.2 is published.

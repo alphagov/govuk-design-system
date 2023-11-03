@@ -20,15 +20,14 @@ Use a summary list to summarise information, for example, a user’s responses a
     })}}
   </p>
 
-  ### Accessibility considerations for row actions
+  ### Accessibility considerations for Summary list
 
-  There's a few things to keep in mind to ensure that users can successfully:
+  To meet WCAG 2.2, make sure that users can successfully:
 
-  - [interact with row action](/components/summary-list/#:~:text=Keep%20card%20and%20row%20actions%20as%20%E2%80%98inline%20links%E2%80%99.%20This%20is%20to%20make%20sure%20that%20sets%20of%20actions%20reflow%20properly%20on%20different%20screen%20sizes.%20This%20relates%20to%20WCAG%202.2%20success%20criterion%202.5.8%20Target%20Size%20(minimum).)
+  - [interact with row actions](/components/summary-list/#:~:text=Keep%20card%20and%20row%20actions%20as%20%E2%80%98inline%20links%E2%80%99.%20This%20is%20to%20make%20sure%20that%20sets%20of%20actions%20reflow%20properly%20on%20different%20screen%20sizes.%20This%20relates%20to%20WCAG%202.2%20success%20criterion%202.5.8%20Target%20Size%20(minimum).)
   - [change information they've previously given in an answer](/components/summary-list/#:~:text=Do%20not%20pre%2Dpopulate%20if%20the%20information%20is%20no%20longer%20valid%2C%20or%20when%20pre%2Dpopulating%20would%20be%20a%20major%20safety%20or%20security%20concern.%20This%20is%20to%20comply%20with%20WCAG%202.2%20success%20criterion%203.3.7%20Redundant%20Entry.)
-  - understand what a row action will do
 
-  [See the full list of components and patterns affected.](/accessibility/WCAG-2.2/#components-affected-in-the-design-system)
+  [See the full list of components and patterns affected on our 'Changes to meet WCAG 2.2 page'.](/accessibility/WCAG-2.2/#components-affected-in-the-design-system)
 {% endset %}
 
 {{ govukInsetText({
@@ -72,6 +71,9 @@ There are 2 ways to use the summary list component. You can use HTML or, if you�
 You can add ‘row actions’ to a summary list. For example, you can help users go back and edit an answer by adding a ‘change’ link.
 
 When navigating visually, the borders above and below each row help to show which row action is tied to which piece of information.
+
+
+There's a few things to keep in mind to ensure that users can successfully use row actions.
 
 <strong class="govuk-tag">WCAG 2.2</strong> Keep card and row actions as ‘[inline links](https://developer.mozilla.org/en-US/docs/Glossary/Inline-level_content)’. This is to make sure that sets of actions reflow properly on different screen sizes. This relates to WCAG 2.2 success criterion [2.5.8 Target Size (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).
 

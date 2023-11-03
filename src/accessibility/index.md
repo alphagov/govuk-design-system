@@ -11,7 +11,7 @@ Using the GOV.UK Design System in a service does not immediately make that servi
 
 ### Accessibility changes to the Design System to meet WCAG 2.2
 
-[Read our WCAG 2.2 guidance](/accessibility/WCAG-2.2) to make sure teams using the Design System are aware of the changes and can make the necessary adjustments to their services.
+[Read our guidance on the Web Content Accessibility Guidelines (WCAG) 2.2](/accessibility/WCAG-2.2) to make sure teams using the Design System are aware of the changes and can make the necessary adjustments to their services.
 
 ### Accessibility strategy
 
