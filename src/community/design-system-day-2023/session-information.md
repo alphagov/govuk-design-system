@@ -15,29 +15,26 @@ layout: layout-pane.njk
 ### The impact of research operations when conducting user research at scale
 
 Rachel Male
-Scottish Government
 
 Rachel covered the user research context in the Scottish Government’s Social Security Directorate, and how she created a research operations unit that refined processes and added critical value when the team suddenly scaled. She focused on the lessons she learnt during the process and shared some tips on how to create impact.
 
-[You can watch the video here.](https://www.youtube.com/watch?v=7Q1g5E8TkyU)
+[The impact of research operations when conducting user research at scale (video)](https://www.youtube.com/watch?v=7Q1g5E8TkyU)
 
 ### Reflections on creating the Scottish Government Digital Design System
 
-Samantha Ernstzen and Jennifer I'Anson
-Scottish Government
+Jennifer I'Anson and Samantha Ernstzen
 
 The Scottish Government's Head of Design, Samantha Ernstzen, and Design System Product Owner, Jennifer I'Anson, reflected candidly on creating the Scottish Government Digital Design System. They discussed the challenges of launching during the COVID-19 pandemic, how the design system was being used, and the future plans for the product.
 
-[You can watch the video here.](https://www.youtube.com/watch?v=G3v9uBCgZIs)
+[Reflections on creating the Scottish Government Digital Design System (video)](https://www.youtube.com/watch?v=G3v9uBCgZIs)
 
 ### What we've been up to, where we're headed
 
-Ciandelle Hughes, Calvin Lau and Steve Messer
-Government Digital Service
+Calvin Lau, Ciandelle Hughes and Steve Messer
 
 In this show and tell the audience heard about the work the GOV.UK Design System team have been up to over the last 12 months. They heard about the work we have done with amazing contributors and where we were planning to head next.
 
-[You can watch the video here.](https://www.youtube.com/watch?v=aXgIAtjq7zM)
+[What we've been up to, where we're headed (video)](https://www.youtube.com/watch?v=aXgIAtjq7zM)
 
 ### How design systems manage contributions
 
@@ -45,7 +42,7 @@ Deborah Dada, Caroline Jarrett, Frankie Roberto, Vicky Teinaki and Ellis Capon
 
 We heard how designers and developers across the private and public sector prioritise contributions and work with their communities to make the process effective and rewarding for contributors and design system curators.
 
-[You can watch the video here.](https://www.youtube.com/watch?v=lJbERK58iB4)
+[How design systems manage contributions (video)](https://www.youtube.com/watch?v=lJbERK58iB4)
 
 ### Trauma-informed research and design
 
@@ -53,7 +50,7 @@ Katrina Birch, Janice Hannaway, Kate Every and Helen Baron
 
 Whether you consider yourself well informed about trauma-informed approaches to research and design or were curious and wanted to learn more, this was an opportunity to engage with a multidisciplinary panel and colleagues across the public and private sector who are working towards more compassionate and aware design.
 
-[You can watch the video here.](https://www.youtube.com/watch?v=Ch0FPJNdaHg)
+[Trauma-informed research and design (video)](https://www.youtube.com/watch?v=Ch0FPJNdaHg)
 
 ### Design systems don’t solve problems, people do
 
@@ -62,7 +59,7 @@ TPXImpact
 
 Design Lead at TPXImpact, Tash discussed the intricate relationship between people and design systems. She explored how individuals shape design systems just as profoundly as these systems influence them. From user feedback, ownership, to the organisation's context, she delved into the dynamic interplay that defines modern design practices.
 
-[You can watch the video here.](https://www.youtube.com/watch?v=cTFvg1L_7ug)
+[Design systems don't solve problems, people do (video)](https://www.youtube.com/watch?v=cTFvg1L_7ug)
 
 ## Day 2 sessions
 
