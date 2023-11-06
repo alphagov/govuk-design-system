@@ -38,11 +38,9 @@ order: 14
 
 ### Day 1
 
-You can find out more about each session that happened on day 1 by looking up the [session information](/community/design-system-day-2023/session-information/#day-1-sessions).
+You can now watch (or re-watch) the [talks and panel discussions](/community/design-system-day-2023/session-information/#day-1-sessions) that happened on day 1 of Design System Day 2023 in Edinburgh.
 
 You can also read [speaker and panelist biographies](/community/design-system-day-2023/speaker-information/#day-1-speakers) for those who talked and presented at the event.
-
-Videos from day 1 will be published later. <!-- Maybe link to videos from the session information when ready. -->
 
 ### Day 2
 
