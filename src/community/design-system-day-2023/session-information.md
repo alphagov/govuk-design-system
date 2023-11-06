@@ -1,5 +1,5 @@
 ---
-title: Session information for Design System Day 2023
+title: Design System Day 2023 sessions
 description: An archive of the talks, show and tells, workshops and keynotes that happened at Design System Day 2023.
 section: Community
 theme: Events and workshops
