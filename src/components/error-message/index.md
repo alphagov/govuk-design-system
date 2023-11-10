@@ -61,7 +61,7 @@ There are 2 ways to use the error message component. You can use HTML or, if you
 
 ### Match up error messages to labels
 
-Error messages should directly include language from the question or fieldset label. This helps match up the error message with the form field for which it applies.
+Error messages should directly include language from the question or fieldset label. This helps match up the error message with the relevant form field.
 
 Here are some examples of label and error message pairs.
 
