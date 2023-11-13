@@ -41,6 +41,10 @@ If you use email confirmation loops you must consider:
 - whether to use a blocking or non-blocking loop
 - the design of the ‘activate your account’ page
 
+Most email confirmation loops will send the user a link and ask them to click it to return to the service. Another approach is to send the user a security code, similar to the [Confirm a phone number](/patterns/confirm-a-phone-number/) pattern, and ask the user to enter it.
+
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> You must allow users to copy and paste any security codes. Avoid making the user memorise or transcribe a security code between apps or browser tabs to use your service. This is to comply with WCAG 2.2 success criterion [3.3.8 Accessible Authentication (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum).
+
 ### Set expiry conditions
 
 You must set an expiry date on the email you send so that the link cannot be used after a certain period of time.

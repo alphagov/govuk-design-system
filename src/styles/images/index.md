@@ -76,6 +76,8 @@ Any text inside an image will be difficult to read, especially for users that ne
 
 Remember to avoid using images for unnecessary decoration, even if it’s an 'image of text'.
 
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Make sure any icons and images used in links are at least 24px by 24px in size, with adequate spacing. This is to make sure users can easily interact with the link. This relates to WCAG 2.2 success criterion [2.5.8 Target Size (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).
+
 ### Show text as written content, instead of images
 
 It’s usually unnecessary to use an image to merely show some text (known as an ‘image of text’).

@@ -48,7 +48,7 @@ If you cannot, make sure your service responds in a helpful way when users retur
 - starting a new application
 - what to do or who to contact if they have a problem with their application
 
-<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Allow users to select and copy text within a confirmation page’s [panel component](https://design-system.service.gov.uk/components/panel/). For example, users should be able to select and copy a booking number. This relates to WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Allow users to select and copy text within a confirmation page as well as its [panel component](/components/panel/). For example, users should be able to select and copy a booking number. This relates to WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
 
 Consider offering an option for the user to copy information in the panel component area into their device’s clipboard if there’s information that the user is expected to:
 

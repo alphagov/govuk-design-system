@@ -30,6 +30,12 @@ To upload a file, the user can either:
 
 <strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Do not use ‘drag and drop’ as the only way to upload files. You must provide another method, such as the ‘Choose file’ button. This is to comply with WCAG 2.2 success criterion [2.5.7 Dragging Movements](https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html).
 
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Make sure users can easily reuse a previously uploaded file within a single journey, unless doing so would be a major security concern.
+
+For example, a user might need to upload a photo of their driving licence to prove their identity, and again to prove their address.
+
+You can make it easier for the user to reuse a file by showing it as an option for the user to select instead of the file upload. Consider users on public devices before choosing to make the file available to preview or download. This is to comply with WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
+
 There are 2 ways to use the file upload component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 
 {{ example({ group: "components", item: "file-upload", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}

@@ -45,6 +45,12 @@ Use the header with a service name if your service is more than 5 pages long - t
 
 Use the header with navigation if you need to include basic navigation, contact or account management links.
 
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Do not make header elements, like dropdown menus, ‘sticky’ to the top of the page by using `position: fixed` or any other method. In other words, avoid any implementations that cause menus to sit on top of page content. 
+
+This is to make sure it does not hide or obscure any content which has a focus applied and comply with WCAG 2.2 success criterion [2.4.11 Focus not Obscured (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html).
+
+In November 2021, [the GOV.UK homepage introduced a menu bar](https://insidegovuk.blog.gov.uk/2021/11/11/launching-gov-uks-new-menu-bar/) that avoids obscuring content by shifting the page down.
+
 {{ example({group: "components", item: "header", example: "with-service-name-and-navigation", html: true, nunjucks: true, open: false, size: "s"}) }}
 
 <strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> You can add a link to a ‘help’ page in your service’s header. If you do, the link must be positioned consistently within the header, and must always link to the same place. 

@@ -58,6 +58,16 @@ If a user fails to create an account they might not be able to use your service 
 
 Make sure the account creation screen is solely about that task. Do not add any distracting content or links.
 
+### Avoid using security measures such as CAPTCHAs
+
+CAPTCHAs (Completely Automated Public Turing Test to Tell Computers and Humans Apart) and similar tests require users to recognise words or pictures.
+
+These are tests of cognitive function, which might be difficult for some users. Users can also struggle to recognise specific words or pictures due to differences in culture and locale.
+
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Avoid making users do a cognitive test to use your service. If you do, you must also offer an alternative method. This is to comply with WCAG 2.2 success criterion [3.3.8 Accessible Authentication (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum).
+
+[WCAG lists some other security measures](https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum#object-recognition) you can implement to prevent misuse and automated abuse in your service.
+
 ### Never use National Insurance numbers to verify a user’s identity
 
 If you currently use National Insurance numbers to verify identity, find out how to [protect your service against fraud](https://www.gov.uk/service-manual/technology/protecting-your-service-against-fraud#avoid-using-national-insurance-numbers-to-verify-identity).

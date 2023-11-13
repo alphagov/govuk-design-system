@@ -40,7 +40,7 @@ If you need to give detailed information, or more context, use the description t
 
 ### Selecting and copying information
 	
-<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Allow users to select and copy text within a panel component. For example, users should be able to select and copy a booking number. This relates to WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Allow users to select and copy text within a [confirmation page](patterns/confirmation-page/) as well as its panel component. For example, users should be able to select and copy a booking number. This relates to WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
 
 Consider offering an option for the user to copy information in the panel component area into their device’s clipboard if there’s information that the user is expected:
 
