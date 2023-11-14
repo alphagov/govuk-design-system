@@ -59,6 +59,22 @@ There are 2 ways to use the error message component. You can use HTML or, if you
 
 {{ example({ group: "components", item: "error-message", example: "label", html: true, nunjucks: true, open: false, size: "s" }) }}
 
+### Match up error messages to labels
+
+Error messages should directly include language from the question or fieldset label. This helps match up the error message with the relevant form field.
+
+Here are some examples of label and error message pairs.
+
+Example 1:
+
+- Label: ‘How many hours do you work a week?’
+- Error message: ‘Enter how many hours you work a week’
+
+Example 2:
+
+- Label: ‘Address line 1’
+- Error message: ‘Enter address line 1, typically the building and street’
+
 ### Be clear and concise
 
 Describe what has happened and tell them how to fix it. The message must be in plain English, use positive language and get to the point.
@@ -85,8 +101,6 @@ Use the same message next to the field and in the [error summary](/components/er
 - look, sound and mean the same
 - make sense out of context
 - reduce the cognitive effort needed to understand what has happened
-
-Use the question or form label in the error to provide context. For example, ‘Enter how many hours you work a week’ for ‘How many hours do you work a week?’
 
 ### Be specific
 
