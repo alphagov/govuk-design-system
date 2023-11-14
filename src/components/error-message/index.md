@@ -66,10 +66,12 @@ Error messages should directly include language from the question or fieldset la
 Here are some examples of label and error message pairs.
 
 Example 1:
+
 - Label: ‘How many hours do you work a week?’
 - Error message: ‘Enter how many hours you work a week’
 
 Example 2:
+
 - Label: ‘Address line 1’
 - Error message: ‘Enter address line 1, typically the building and street’
 
