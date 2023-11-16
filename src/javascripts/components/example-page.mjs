@@ -1,3 +1,5 @@
+import 'iframe-resizer/js/iframeResizer.contentWindow.js'
+
 function ExamplePage($module) {
   this.$module = $module
 }
