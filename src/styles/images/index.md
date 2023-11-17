@@ -60,6 +60,8 @@ Icons can be more useful in case working systems, where users are familiar with 
 
 Do not use a single icon to represent more than one thing. For example, the search icon (magnifying glass) should only be used for search functionality, and not also for screen magnification.
 
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Make sure any icons and images used in links are at least 24px by 24px in size, with adequate spacing. This is to make sure users can easily interact with the link. This relates to WCAG 2.2 success criterion [2.5.8 Target Size (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).
+
 ## Avoid images that contain text
 
 Generally, you should avoid using images that contain any sort of text. Use written content or other alternatives wherever possible.
@@ -73,8 +75,6 @@ Any text inside an image will be difficult to read, especially for users that ne
 - recolour
 
 Remember to avoid using images for unnecessary decoration, even if it’s an 'image of text'.
-
-<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Make sure any icons and images used in links are at least 24px by 24px in size, with adequate spacing. This is to make sure users can easily interact with the link. This relates to WCAG 2.2 success criterion [2.5.8 Target Size (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).
 
 ### Show text as written content, instead of images
 
