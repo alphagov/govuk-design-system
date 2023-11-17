@@ -1,17 +1,20 @@
-{% if env("PULL_REQUEST") === "true" %}
-  {% set bannerTag = "Preview" %}
-  {% set bannerText %}
-    This is a preview of
-    a <a class="govuk-link" href="https://github.com/alphagov/govuk-design-system/pull/{{ env("REVIEW_ID")  }}">proposed change</a> to the
-    <a class="govuk-link" href="https://design-system.service.gov.uk">Design System</a>.
-  {% endset %}
-{% elif env("PULL_REQUEST") === "false" %}
-  {% set bannerTag = "Archive" %}
-  {% set bannerText %}
-    This is an archived version of
-    the <a class="govuk-link" href="https://github.com/alphagov/govuk-design-system/tree/{{ env("BRANCH") }}">{{ env("BRANCH") }}</a> branch for the
-    <a class="govuk-link" href="https://design-system.service.gov.uk">Design System</a>.
-  {% endset %}
+{#- Show banner for archive, preview and development builds only -#}
+{% if env("CONTEXT") !== "production" %}
+  {% if env("PULL_REQUEST") === "true" %}
+    {% set bannerTag = "Preview" %}
+    {% set bannerText %}
+      This is a preview of
+      a <a class="govuk-link" href="https://github.com/alphagov/govuk-design-system/pull/{{ env("REVIEW_ID")  }}">proposed change</a> to the
+      <a class="govuk-link" href="https://design-system.service.gov.uk">Design System</a>.
+    {% endset %}
+  {% elif env("PULL_REQUEST") === "false" %}
+    {% set bannerTag = "Archive" %}
+    {% set bannerText %}
+      This is an archived version of
+      the <a class="govuk-link" href="https://github.com/alphagov/govuk-design-system/tree/{{ env("BRANCH") }}">{{ env("BRANCH") }}</a> branch for the
+      <a class="govuk-link" href="https://design-system.service.gov.uk">Design System</a>.
+    {% endset %}
+  {% endif %}
 {% endif %}
 
 {% if bannerText %}
