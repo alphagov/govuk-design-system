@@ -1,6 +1,9 @@
+import 'iframe-resizer/js/iframeResizer.contentWindow.js'
+
 function ExamplePage($module) {
   this.$module = $module
 }
+
 ExamplePage.prototype.init = function () {
   var $module = this.$module
   if (!$module) {
@@ -9,6 +12,7 @@ ExamplePage.prototype.init = function () {
   var $form = $module.querySelector('form[action="/form-handler"]')
   this.preventFormSubmission($form)
 }
+
 ExamplePage.prototype.preventFormSubmission = function ($form) {
   // we should only have one form per example
   if (!$form) {
@@ -19,4 +23,4 @@ ExamplePage.prototype.preventFormSubmission = function ($form) {
   })
 }
 
-new ExamplePage(document).init()
+export default ExamplePage
