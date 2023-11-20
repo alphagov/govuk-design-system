@@ -136,53 +136,6 @@ If the user does not select an option, show an [error message](/components/error
 
 ## Research on this pattern
 
-This pattern was originally developed and tested by a team at the Government Digital Service (GDS).
+This pattern was [originally developed by a team at the Government Digital Service (GDS)](https://designnotes.blog.gov.uk/2017/04/04/weve-published-the-task-list-pattern/). It was then iterated upon by a cross-government collaboration.
 
-The team built prototypes of task lists for 3 services, Register as a childminder, Learn to drive and Transport goods and tested them with 34 users over 5 rounds of research.
-
-The pattern was iterated after each round of testing.
-
-You can read more about [testing and iterating the task list page pattern](https://designnotes.blog.gov.uk/2017/04/04/weve-published-the-task-list-pattern/).
-
-In the original pattern only completed tasks were labelled. Some users did not realise they had to complete all the tasks before they could continue, or [thought that they had completed the whole transaction](https://github.com/alphagov/govuk-design-system-backlog/issues/72#issuecomment-413159884).
-
-The pattern has now been iterated to include labels for all statuses and a summary above the list.
-
-### Known issues and gaps
-
-User research and feedback on this pattern has shown that:
-
-- some screen reader users are frustrated by having to tab through every section each time they return to the task list after completing a task
-- some users currently click on task statuses, thinking they are buttons or links
-- the use of uppercase in task statuses may make them harder to read
-- some services need users to complete tasks in a particular order, for example, a user must fill in an application before they can pay
-- once a few tasks have been completed it becomes harder to scan the page and spot incomplete tasks
-
-More user research is needed to find out:
-
-- whether or not users of screen readers struggle to perceive tasks that cannot be started yet, because they are not marked up with hyperlinks
-- how to help screen reader users to get an overview of the progress they have made through the task list
-- whether to return users to the task list after each task or take them straight to the next task in the sequence
-- the best way to show when tasks must be completed in a fixed order
-- how to ensure users can see which tasks have been completed and which they still need to do
-
-### Services using this pattern
-
-This pattern has been used in a number of services, including the following.
-
-**Ministry of Justice**<br>
-Apply for probate<br>
-Money claims
-
-**Ofsted**<br>
-Register as a childminder
-
-### Next steps
-
-Since September 2021, a cross-government group have been collaborating on work to co-design an update to this pattern and introduce it as a component.
-
-The next step is to [build the prototype component](https://github.com/alphagov/govuk-frontend/pull/2261).
-
-This work is open to anyone that wants to help us. [Join the 'task-list-collab' Slack to find out how you can help](https://join.slack.com/t/task-list-collab/shared_invite/zt-us1bwvm8-VVemg6XFZFhdbCtedNXBSQ).
-
-If you’ve used this pattern, you can also help by [sharing your user research on GitHub](https://github.com/alphagov/govuk-design-system-backlog/issues/72).
+See the [research on the component](/components/task-list#research-on-this-component) for details of research done, and known issues and gaps.
