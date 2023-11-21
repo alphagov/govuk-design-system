@@ -24,8 +24,8 @@ Use a summary list to summarise information, for example, a user’s responses a
 
   To meet WCAG 2.2, make sure that users can successfully:
 
-  - [interact with row actions](/components/summary-list/#:~:text=Keep%20card%20and%20row%20actions%20as%20%E2%80%98inline%20links%E2%80%99.%20This%20is%20to%20make%20sure%20that%20sets%20of%20actions%20reflow%20properly%20on%20different%20screen%20sizes.%20This%20relates%20to%20WCAG%202.2%20success%20criterion%202.5.8%20Target%20Size%20(minimum).)
-  - [change information they've previously given in an answer](/components/summary-list/#:~:text=Do%20not%20pre%2Dpopulate%20if%20the%20information%20is%20no%20longer%20valid%2C%20or%20when%20pre%2Dpopulating%20would%20be%20a%20major%20safety%20or%20security%20concern.%20This%20is%20to%20comply%20with%20WCAG%202.2%20success%20criterion%203.3.7%20Redundant%20Entry.)
+  - [interact with row actions](/components/summary-list/#interact-row-actions)
+  - [change information they've previously given in an answer](/components/summary-list/#change-answers)
 
   [See the full list of components and patterns affected on our 'Changes to meet WCAG 2.2 page'.](/accessibility/WCAG-2.2/#components-affected-in-the-design-system)
 {% endset %}
@@ -74,11 +74,21 @@ When navigating visually, the borders above and below each row help to show whic
 
 There's a few things to keep in mind to ensure that users can successfully use row actions.
 
-<strong class="govuk-tag">WCAG 2.2</strong> Keep card and row actions as ‘[inline links](https://developer.mozilla.org/en-US/docs/Glossary/Inline-level_content)’. This is to make sure that sets of actions reflow properly on different screen sizes. This relates to WCAG 2.2 success criterion [2.5.8 Target Size (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).
+<div class="app-wcag-22" id="interact-row-actions" role="note">
+  <strong class="govuk-tag">WCAG 2.2</strong> 
+  <p>
+    <span>Keep card and row actions as ‘<a href="https://developer.mozilla.org/en-US/docs/Glossary/Inline-level_content">inline links</a>’. This is to make sure that sets of actions reflow properly on different screen sizes. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target Size (minimum)</a>.
+  </p>
+</div>
 
 If a user decides to go back to a previous answer through a card or row action, make sure information they have already entered is pre-populated.
 
-<strong class="govuk-tag">WCAG 2.2</strong> Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
+<div class="app-wcag-22" id="change-answers" role="note">
+  <strong class="govuk-tag">WCAG 2.2</strong> 
+  <p>
+    <span>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</span>
+  </p>
+</div>
 
 Assistive technology users, including those who use a screen reader, might hear a row action link out of context and might not know what it will do.
 
