@@ -20,7 +20,7 @@ Use a summary list to summarise information, for example, a user’s responses a
     })}}
   </p>
 
-  ### WCAG 2.2 criteria might affect this component
+  ### New WCAG 2.2 criteria might affect this component
 
   To use ‘Summary list’ and comply with new success criteria introduced in Web Content Accessibility Guidelines (WCAG) 2.2, make sure that users can successfully:
   
