@@ -20,14 +20,14 @@ Use a summary list to summarise information, for example, a user’s responses a
     })}}
   </p>
 
-  ### Accessibility considerations for Summary list
+  ### WCAG 2.2 criteria might affect this component
 
-  To meet WCAG 2.2, make sure that users can successfully:
-
+  To use ‘Summary list’ and comply with new success criteria introduced in Web Content Accessibility Guidelines (WCAG) 2.2, make sure that users can successfully:
+  
   - [interact with row actions](/components/summary-list/#interact-row-actions)
   - [change information they've previously given in an answer](/components/summary-list/#change-answers)
 
-  [See the full list of components and patterns affected on our 'Changes to meet WCAG 2.2 page'.](/accessibility/WCAG-2.2/#components-affected-in-the-design-system)
+  See the full list of components and patterns affected on our '[Changes to meet WCAG 2.2 page](/accessibility/WCAG-2.2/#components-affected-in-the-design-system)'.
 {% endset %}
 
 {{ govukInsetText({
