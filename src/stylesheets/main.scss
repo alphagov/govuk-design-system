@@ -377,5 +377,10 @@ pre .language-plaintext {
 .app-wcag-22 {
   &:target p span {
   background-color: #FFF3A4;
+
+    &:focus-within {
+      background-color: transparent;
+    }
+    
   }
 }
