@@ -73,23 +73,70 @@ Pages:
 - [Task list pages](/patterns/task-list-pages/) - Dragging movements and Redundant entry
 - [There is a problem with the service pages](/patterns/problem-with-the-service-pages/) - Consistent help and Redundant entry
 
+### [VARIANT DRAFT] Components and patterns affected in the Design System
 
+The following components and patterns have WCAG 2.2 AA changes included. You must check if your service needs amending to align with these changes.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Components</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Component</th>
+      <th scope="col" class="govuk-table__header">Relevant WCAG 2.2 criteria</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="/components/back-link/">Back link</a></th>
+      <td class="govuk-table__cell">Redundant entry<br>Target size (minimum)</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="/components/breadcrumbs/">Breadcrumbs</a></th>
+      <td class="govuk-table__cell">Target size (minimum)</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="/components/button/">Button</a></th>
+      <td class="govuk-table__cell">Target size (minimum)</td>
+    </tr>
+        <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="/components/cookie-banner/">Cookie banner</a></th>
+      <td class="govuk-table__cell">Focus not obscured (minimum)<br>Target size (minimum)</td>
+    </tr>
+        <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="/components/error-message/">Error message</a></th>
+      <td class="govuk-table__cell">Redundant entry</td>
+    </tr>
+        <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="/components/file-upload/">File upload</a></th>
+      <td class="govuk-table__cell">Dragging movements<br>Redundant entry</td>
+    </tr>
+        <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="/components/footer/">Footer</a></th>
+      <td class="govuk-table__cell">Consistent help</td>
+    </tr>
+        <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="/components/header/">Header</a></th>
+      <td class="govuk-table__cell">Focus not obscured (Minimum)<br>Focus appearance</td>
+    </tr>
+        <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="/components/panel/">Panel</a></th>
+      <td class="govuk-table__cell">Redundant entry</td>
+    </tr>
+        <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="/components/phase-banner/">Phase banner</a></th>
+      <td class="govuk-table__cell">Focus not obscured (minimum)</td>
+    </tr>
+        <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="(/components/select/">Selec</a>t</th>
+      <td class="govuk-table__cell">Dragging movements</td>
+    </tr>
+        <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="/components/summary-list/">Summary list</a></th>
+      <td class="govuk-table__cell">Redundant entry<br>Target size (minimum)</td>
+    </tr>
+        <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="/components/tag/">Tag</a></th>
+      <td class="govuk-table__cell">Dragging movements<br>Focus appearance</td>
+    </tr>
+  </tbody>
+</table>
