@@ -140,4 +140,4 @@ This pattern was previously named ‘Task list’ and was [developed by a team a
 
 It was then iterated by a cross-government collaboration and published as a new [task list component](/patterns/equality-information/) with updated guidance and research.
 
-See the [research on the component](/components/task-list#research-on-this-component) for details of research done, and known issues and gaps.
+See the [research on the new task list component](/components/task-list#research-on-this-component) for details of research done, and known issues and gaps.
