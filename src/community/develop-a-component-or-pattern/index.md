@@ -75,5 +75,3 @@ During the meeting, you’ll be able to ask questions, hear recommendations and 
 If the working group recommended some changes to make before publishing, the Design System team will help you work on them.
 
 If the working group agree your contribution meets the criteria, the Design System team will help you get ready to publish. This includes organising any final checks or updates to the design, content, code and guidance.
-
-Most new components and patterns will be published as experimental at first. The Design System team will remove the experimental status once research proves the component or pattern meets user needs. The research must be from different services and with different types of users.

@@ -2,11 +2,13 @@
 .app-example-wrapper {
   @include govuk-responsive-margin(6, "top");
   @include govuk-responsive-margin(6, "bottom");
+  border: 1px solid $govuk-border-colour;
+  border-top: 0;
 }
 
 .app-example {
   position: relative;
-  border: 1px solid $govuk-border-colour;
+  border-top: 1px solid $govuk-border-colour;
   // Add a 'checkerboard' background
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAJUlEQVQoU2P88ePHfwY0wMHBwYguxjgUFKI7GsTH5m4M3w1ChQAZTSeO0/AZpgAAAABJRU5ErkJggg==")
     repeat;
@@ -14,10 +16,6 @@
 
 .app-example--tabs {
   @include govuk-responsive-margin(0, "bottom");
-
-  @include govuk-media-query($from: desktop) {
-    margin-bottom: -1px;
-  }
 }
 
 .app-example__toolbar {
@@ -27,7 +25,7 @@
 }
 
 .app-example__new-window {
-  @include govuk-font(14);
+  @include govuk-font($size: 16);
 }
 
 .app-example__frame {

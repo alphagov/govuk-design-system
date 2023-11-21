@@ -286,7 +286,7 @@ pre code {
     outline: $govuk-focus-width solid $govuk-focus-colour;
   }
 
-  .js-enabled [data-module="app-copy"] & {
+  .govuk-frontend-supported [data-module="app-copy"] & {
     padding-top: 45px; // Allow extra space for the copy code button
   }
 }
@@ -371,4 +371,11 @@ pre .language-plaintext {
 .app-whats-new {
   border-bottom: 1px solid $govuk-border-colour;
   background-color: $app-light-grey;
+}
+
+// Add highlight styling for WCAG 2.2 content
+.app-wcag-22 {
+  &:target p span {
+  background-color: #FFF3A4;
+  }
 }

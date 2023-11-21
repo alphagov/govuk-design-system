@@ -1,13 +1,13 @@
 ---
 title: Share findings about your users
-description: Find out how to share information on how styles, components and patterns are performing
+description: Find out how to share information on how users experience styles, components and patterns in your service
 section: Community
 theme: Ways to get involved
 layout: layout-pane.njk
 order: 2
 ---
 
-We want to hear how styles, components and patterns perform in your service – it helps us improve the Design System. You can do this by taking part in discussions on GitHub.
+We want to hear how users experience styles, components and patterns in your service – it helps us improve the Design System. You can do this by taking part in discussions on GitHub.
 
 Useful findings to share might be things like:
 
@@ -51,9 +51,9 @@ Remember that all the information on GitHub is open to the public. Do not share 
 Use this template to give the community useful context about your findings. Copy and paste it into the GitHub comments box and add your findings.
 
 ```markdown
-## Key insights
+## Insights
 
-What are your key insights about how people use the style, pattern or component?
+What are your insights about how people use the style, pattern or component?
 
 Try to include:
 - how it helped or hindered users’ journeys, using specific observations

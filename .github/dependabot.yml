@@ -19,6 +19,7 @@ updates:
           - 'standard'
           - 'stylelint'
           - 'stylelint-*'
+          - 'typescript'
 
       metalsmith:
         patterns:
@@ -41,9 +42,21 @@ updates:
       test:
         patterns:
           - '@axe-core/*'
+          - '@jest/*'
+          - '@types/jest'
+          - '@types/jest-*'
           - 'jest'
           - 'jest-*'
           - 'puppeteer'
+
+      types:
+        patterns:
+          - '@types/*'
+
+        # Exclude packages in other groups
+        exclude-patterns:
+          - '@types/jest'
+          - '@types/jest-*'
 
     reviewers:
       - alphagov/design-system-developers

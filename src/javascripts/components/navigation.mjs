@@ -1,149 +1,175 @@
-import { nodeListForEach } from './helpers.mjs'
-
-var navActiveClass = 'app-navigation--active'
-var navMenuButtonActiveClass = 'govuk-header__menu-button--open'
-var subNavActiveClass = 'app-navigation__subnav--active'
+const navActiveClass = 'app-navigation--active'
+const navMenuButtonActiveClass = 'govuk-header__menu-button--open'
+const subNavActiveClass = 'app-navigation__subnav--active'
 // This one has the query dot at the beginning because it's only ever used in querySelector calls
-var subNavJSClass = '.js-app-navigation__subnav'
+const subNavJSClass = '.js-app-navigation__subnav'
 
-function Navigation($module) {
-  this.$module = $module || document
-
-  this.$nav = this.$module.querySelector('.js-app-navigation')
-  this.$navToggler = this.$module.querySelector('.js-app-navigation__toggler')
-  this.$navButtons = this.$module.querySelectorAll('.js-app-navigation__button')
-  this.$navLinks = this.$module.querySelectorAll('.js-app-navigation__link')
-
-  // Save the opened/closed state for the nav in memory so that we can accurately maintain state when the screen is changed from small to big and back to small
-  this.mobileNavOpen = false
-
-  // A global const for storing a matchMedia instance which we'll use to detect when a screen size change happens
-  // We set this later during the init function and rely on it being null if the feature isn't available to initially apply hidden attributes
-  this.mql = null
-}
-
-// Checks if the saved window size has changed between now and when it was last recorded (on load and on viewport width changes)
-// Reapplies hidden attributes based on if the viewport has changed from big to small or vice verca
-// Saves the new window size
-
-Navigation.prototype.setHiddenStates = function () {
-  if (this.mql === null || !this.mql.matches) {
-    if (!this.mobileNavOpen) {
-      this.$nav.setAttribute('hidden', '')
+/**
+ * Website navigation
+ */
+class Navigation {
+  /**
+   * @param {Document} $module - HTML document
+   */
+  constructor($module) {
+    if (
+      !($module instanceof Document) ||
+      !document.body.classList.contains('govuk-frontend-supported')
+    ) {
+      return this
     }
 
-    nodeListForEach(this.$navLinks, function ($navLink, index) {
-      $navLink.setAttribute('hidden', '')
-    })
+    this.$module = $module
 
-    nodeListForEach(this.$navButtons, function ($navButton, index) {
-      $navButton.removeAttribute('hidden')
-    })
+    const $nav = this.$module.querySelector('.js-app-navigation')
+    const $navToggler = this.$module.querySelector(
+      '.js-app-navigation__toggler'
+    )
+    const $navButtons = this.$module.querySelectorAll(
+      '.js-app-navigation__button'
+    )
+    const $navLinks = this.$module.querySelectorAll('.js-app-navigation__link')
 
-    this.$navToggler.removeAttribute('hidden')
-  } else if (this.mql === null || this.mql.matches) {
-    this.$nav.removeAttribute('hidden')
-
-    nodeListForEach(this.$navLinks, function ($navLink, index) {
-      $navLink.removeAttribute('hidden')
-    })
-
-    nodeListForEach(this.$navButtons, function ($navButton, index) {
-      $navButton.setAttribute('hidden', '')
-    })
-
-    this.$navToggler.setAttribute('hidden', '')
-  }
-}
-
-Navigation.prototype.setInitialAriaStates = function () {
-  this.$navToggler.setAttribute('aria-expanded', 'false')
-
-  nodeListForEach(this.$navButtons, function ($button, index) {
-    var $nextSubNav = $button.parentNode.querySelector(subNavJSClass)
-
-    if ($nextSubNav) {
-      var subNavTogglerId = 'js-mobile-nav-subnav-toggler-' + index
-      var nextSubNavId = 'js-mobile-nav__subnav-' + index
-
-      $nextSubNav.setAttribute('id', nextSubNavId)
-      $button.setAttribute('id', subNavTogglerId)
-      $button.setAttribute(
-        'aria-expanded',
-        $nextSubNav.hasAttribute('hidden') ? 'false' : 'true'
-      )
-      $button.setAttribute('aria-controls', nextSubNavId)
+    if (
+      !($nav instanceof HTMLElement) ||
+      !($navToggler instanceof HTMLElement) ||
+      !$navButtons.length ||
+      !$navLinks.length
+    ) {
+      return this
     }
-  })
-}
 
-Navigation.prototype.bindUIEvents = function () {
-  var $nav = this.$nav
-  var $navToggler = this.$navToggler
-  var $navButtons = this.$navButtons
+    this.$nav = $nav
+    this.$navToggler = $navToggler
+    this.$navButtons = $navButtons
+    this.$navLinks = $navLinks
 
-  $navToggler.addEventListener(
-    'click',
-    function (event) {
-      if (this.mobileNavOpen) {
-        $nav.classList.remove(navActiveClass)
-        $navToggler.classList.remove(navMenuButtonActiveClass)
-        $nav.setAttribute('hidden', '')
+    // Save the opened/closed state for the nav in memory so that we can accurately maintain state when the screen is changed from small to big and back to small
+    this.mobileNavOpen = false
 
-        $navToggler.setAttribute('aria-expanded', 'false')
-
-        this.mobileNavOpen = false
-      } else {
-        $nav.classList.add(navActiveClass)
-        $navToggler.classList.add(navMenuButtonActiveClass)
-        $nav.removeAttribute('hidden')
-
-        $navToggler.setAttribute('aria-expanded', 'true')
-
-        this.mobileNavOpen = true
-      }
-    }.bind(this)
-  )
-
-  nodeListForEach($navButtons, function ($button, index) {
-    $button.addEventListener('click', function (event) {
-      var $nextSubNav = $button.parentNode.querySelector(subNavJSClass)
-
-      if ($nextSubNav) {
-        if ($nextSubNav.hasAttribute('hidden')) {
-          $nextSubNav.classList.add(subNavActiveClass)
-
-          $nextSubNav.removeAttribute('hidden')
-          $button.setAttribute('aria-expanded', 'true')
-        } else {
-          $nextSubNav.classList.remove(subNavActiveClass)
-
-          $nextSubNav.setAttribute('hidden', '')
-          $button.setAttribute('aria-expanded', 'false')
-        }
-      }
-    })
-  })
-}
-
-Navigation.prototype.init = function () {
-  if ('matchMedia' in window) {
+    // A global const for storing a matchMedia instance which we'll use to detect when a screen size change happens
     // Set the matchMedia to the govuk-frontend tablet breakpoint
     this.mql = window.matchMedia('(min-width: 40.0625em)')
 
+    // MediaQueryList.addEventListener isn't supported by Safari < 14 so we need
+    // to be able to fall back to the deprecated MediaQueryList.addListener
     if ('addEventListener' in this.mql) {
-      this.mql.addEventListener('change', this.setHiddenStates.bind(this))
+      this.mql.addEventListener('change', () => this.setHiddenStates())
     } else {
-      // addListener is a deprecated function, however addEventListener
-      // isn't supported by Safari < 14. We therefore add this in as
-      // a fallback for those browsers
-      this.mql.addListener(this.setHiddenStates.bind(this))
+      // @ts-expect-error Property 'addListener' does not exist
+      this.mql.addListener(() => this.setHiddenStates())
+    }
+
+    this.setHiddenStates()
+    this.setInitialAriaStates()
+    this.bindUIEvents()
+  }
+
+  /**
+   * Set hidden states
+   *
+   * Checks if the saved window size has changed between now and when it was last recorded (on load and on viewport width changes)
+   * Reapplies hidden attributes based on if the viewport has changed from big to small or vice versa
+   * Saves the new window size
+   */
+  setHiddenStates() {
+    if (!this.mql.matches) {
+      if (!this.mobileNavOpen) {
+        this.$nav.setAttribute('hidden', '')
+      }
+
+      this.$navLinks.forEach(($navLink) => {
+        $navLink.setAttribute('hidden', '')
+      })
+
+      this.$navButtons.forEach(($navButton) => {
+        $navButton.removeAttribute('hidden')
+      })
+
+      this.$navToggler.removeAttribute('hidden')
+    } else {
+      this.$nav.removeAttribute('hidden')
+
+      this.$navLinks.forEach(($navLink) => {
+        $navLink.removeAttribute('hidden')
+      })
+
+      this.$navButtons.forEach(($navButton) => {
+        $navButton.setAttribute('hidden', '')
+      })
+
+      this.$navToggler.setAttribute('hidden', '')
     }
   }
 
-  this.setHiddenStates()
-  this.setInitialAriaStates()
-  this.bindUIEvents()
+  /**
+   * Set initial ARIA states
+   */
+  setInitialAriaStates() {
+    this.$navToggler.setAttribute('aria-expanded', 'false')
+
+    this.$navButtons.forEach(($button, index) => {
+      const $nextSubNav = $button.parentElement.querySelector(subNavJSClass)
+
+      if ($nextSubNav) {
+        const subNavTogglerId = `js-mobile-nav-subnav-toggler-${index}`
+        const nextSubNavId = `js-mobile-nav__subnav-${index}`
+
+        $nextSubNav.setAttribute('id', nextSubNavId)
+        $button.setAttribute('id', subNavTogglerId)
+        $button.setAttribute(
+          'aria-expanded',
+          $nextSubNav.hasAttribute('hidden') ? 'false' : 'true'
+        )
+        $button.setAttribute('aria-controls', nextSubNavId)
+      }
+    })
+  }
+
+  /**
+   * Bind UI events
+   */
+  bindUIEvents() {
+    this.$navToggler.addEventListener('click', () => {
+      if (this.mobileNavOpen) {
+        this.$nav.classList.remove(navActiveClass)
+        this.$navToggler.classList.remove(navMenuButtonActiveClass)
+        this.$nav.setAttribute('hidden', '')
+
+        this.$navToggler.setAttribute('aria-expanded', 'false')
+
+        this.mobileNavOpen = false
+      } else {
+        this.$nav.classList.add(navActiveClass)
+        this.$navToggler.classList.add(navMenuButtonActiveClass)
+        this.$nav.removeAttribute('hidden')
+
+        this.$navToggler.setAttribute('aria-expanded', 'true')
+
+        this.mobileNavOpen = true
+      }
+    })
+
+    this.$navButtons.forEach(($button) => {
+      $button.addEventListener('click', () => {
+        const $nextSubNav = $button.parentElement.querySelector(subNavJSClass)
+
+        if ($nextSubNav) {
+          if ($nextSubNav.hasAttribute('hidden')) {
+            $nextSubNav.classList.add(subNavActiveClass)
+
+            $nextSubNav.removeAttribute('hidden')
+            $button.setAttribute('aria-expanded', 'true')
+          } else {
+            $nextSubNav.classList.remove(subNavActiveClass)
+
+            $nextSubNav.setAttribute('hidden', '')
+            $button.setAttribute('aria-expanded', 'false')
+          }
+        }
+      })
+    })
+  }
 }
 
 export default Navigation

@@ -4,8 +4,6 @@ description: Only use images if there’s a real user need
 section: Styles
 backlogIssueId: 70
 layout: layout-pane.njk
-status: Experimental
-statusMessage: This guidance is currently experimental because <a class="govuk-link" href="#research-on-images">we want to get feedback</a> to validate how useful it is for service teams.
 showPageNav: true
 ---
 
@@ -61,6 +59,8 @@ Avoid using icons in most cases. People can understand a single icon to mean dif
 Icons can be more useful in case working systems, where users are familiar with the interface and return to it frequently. In this context, they can help users to scan pages more quickly. In most cases it’s still helpful to include a visible text label alongside any icons.
 
 Do not use a single icon to represent more than one thing. For example, the search icon (magnifying glass) should only be used for search functionality, and not also for screen magnification.
+
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Make sure any icons and images used in links are at least 24px by 24px in size, with adequate spacing. This is to make sure users can easily interact with the link. This relates to WCAG 2.2 success criterion [2.5.8 Target Size (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).
 
 ## Avoid images that contain text
 

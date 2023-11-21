@@ -33,7 +33,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4.1.0
+        uses: actions/checkout@v4.1.1
 
       - name: Restore build
         uses: actions/cache@v3.3.2
@@ -44,11 +44,12 @@ jobs:
           path: deploy/public
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3.8.1
+        uses: actions/setup-node@v4.0.0
         if: steps.build-cache.outputs.cache-hit != 'true'
 
         with:
           cache: npm
+          check-latest: true
           node-version-file: .nvmrc
 
       - name: Install dependencies
@@ -95,6 +96,9 @@ jobs:
             run: npm run lint:prettier
             continue-on-error: true
 
+          - description: TypeScript compiler
+            run: npm run lint:types -- --pretty
+
           - description: JavaScript tests
             run: npx jest --color --maxWorkers=2
 
@@ -103,12 +107,13 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4.1.0
+        uses: actions/checkout@v4.1.1
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3.8.1
+        uses: actions/setup-node@v4.0.0
         with:
           cache: npm
+          check-latest: true
           node-version-file: .nvmrc
 
       - name: Install dependencies

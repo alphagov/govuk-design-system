@@ -6,8 +6,6 @@ theme: Pages
 aliases: "404"
 backlogIssueId: 130
 layout: layout-pane.njk
-status: Experimental
-statusMessage: This pattern is currently experimental because <a class="govuk-link" href="#research-on-this-pattern">more research</a> is needed to validate it.
 ---
 
 {% from "_example.njk" import example %}
