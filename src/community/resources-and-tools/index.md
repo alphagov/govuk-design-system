@@ -105,7 +105,6 @@ A complete Rails application template using GOV.UK Frontend.
 
 You can download GOV.UK Frontend Nunjucks macro snippets for:
 
-- [Atom](https://atom.io/packages/govuk-design-system-snippets)
 - [Nova](https://extensions.panic.com/extensions/ca/ca.GOVUKDesignSystemSnippets/)
 - [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=simonwhatley.govuk-design-system-snippets)
 
