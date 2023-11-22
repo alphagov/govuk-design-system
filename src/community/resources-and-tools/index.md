@@ -90,9 +90,6 @@ A Rails form builder using GOV.UK Frontend.
 [GOV.UK Components](https://github.com/DFE-Digital/govuk-components) -
 A set of non-form Rails components using GOV.UK Frontend. You can use these together with the Design System Formbuilder.
 
-[GOV.UK Frontend Rails](https://github.com/dxw/dxw_govuk_frontend_rails) -
-A Ruby gem that adds the GOV.UK Frontend to Rails applications.
-
 [GOV.UK Rails Template](https://github.com/DFE-Digital/rails-template) -
 A complete Rails application template using GOV.UK Frontend.
 
