@@ -82,11 +82,6 @@ GOV.UK Frontend WTForms Widgets.
 [GOV.UK Laravel](https://github.com/AnthonyEdmonds/govuk-laravel) -
 A collection of GOV.UK Frontend Laravel Blade components, validation rules, page building templates, and PHP helpers.
 
-### R
-
-[Govdown](https://github.com/ukgovdatascience/govdown) -
-A GOV.UK Design System theme for R Markdown.
-
 ### Ruby on Rails
 
 [GOV.UK Design System Formbuilder](https://github.com/DFE-Digital/govuk_design_system_formbuilder) -
