@@ -38,9 +38,6 @@ SVG images for creating flow diagrams of GOV.UK services.
 
 ## Create prototypes and wireframes
 
-[Adobe XD wireframes](https://github.com/SulimanK/gds-adobexd-wireframing-kit) -
-Adobe XD wireframes based on the GOV.UK Design System.
-
 [Balsamiq wireframes](https://github.com/enoranidi/govuk-design-system-balsamiq) -
 Balsamiq wireframes based on the GOV.UK Design System.
 
@@ -82,11 +79,6 @@ GOV.UK Frontend WTForms Widgets.
 [GOV.UK Laravel](https://github.com/AnthonyEdmonds/govuk-laravel) -
 A collection of GOV.UK Frontend Laravel Blade components, validation rules, page building templates, and PHP helpers.
 
-### R
-
-[Govdown](https://github.com/ukgovdatascience/govdown) -
-A GOV.UK Design System theme for R Markdown.
-
 ### Ruby on Rails
 
 [GOV.UK Design System Formbuilder](https://github.com/DFE-Digital/govuk_design_system_formbuilder) -
@@ -95,9 +87,6 @@ A Rails form builder using GOV.UK Frontend.
 [GOV.UK Components](https://github.com/DFE-Digital/govuk-components) -
 A set of non-form Rails components using GOV.UK Frontend. You can use these together with the Design System Formbuilder.
 
-[GOV.UK Frontend Rails](https://github.com/dxw/dxw_govuk_frontend_rails) -
-A Ruby gem that adds the GOV.UK Frontend to Rails applications.
-
 [GOV.UK Rails Template](https://github.com/DFE-Digital/rails-template) -
 A complete Rails application template using GOV.UK Frontend.
 
@@ -105,7 +94,6 @@ A complete Rails application template using GOV.UK Frontend.
 
 You can download GOV.UK Frontend Nunjucks macro snippets for:
 
-- [Atom](https://atom.io/packages/govuk-design-system-snippets)
 - [Nova](https://extensions.panic.com/extensions/ca/ca.GOVUKDesignSystemSnippets/)
 - [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=simonwhatley.govuk-design-system-snippets)
 
