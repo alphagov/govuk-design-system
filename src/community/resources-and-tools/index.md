@@ -38,9 +38,6 @@ SVG images for creating flow diagrams of GOV.UK services.
 
 ## Create prototypes and wireframes
 
-[Adobe XD wireframes](https://github.com/SulimanK/gds-adobexd-wireframing-kit) -
-Adobe XD wireframes based on the GOV.UK Design System.
-
 [Balsamiq wireframes](https://github.com/enoranidi/govuk-design-system-balsamiq) -
 Balsamiq wireframes based on the GOV.UK Design System.
 
