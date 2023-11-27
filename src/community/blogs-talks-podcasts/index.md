@@ -65,6 +65,8 @@ See how the Design System helps service teams across government.
 
 Get some practical advice on how to use the Design System and Prototype Kit.
 
+[Inspecting WCAG 2.2: Target Size](https://www.youtube.com/watch?v=91O_DzoLM3U) (video) – 31 July 2023
+
 [Testing a component's accessibility](https://www.youtube.com/watch?v=C770bSvGr_E) (video) – 26 July 2023
 
 [Inspecting WCAG 2.2: Focus Not Obscured](https://www.youtube.com/watch?v=_fi7SsSkBtM) (video) – 18 July 2023
