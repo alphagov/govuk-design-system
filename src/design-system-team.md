@@ -13,7 +13,7 @@ The GOV.UK Design System at the [Government Digital Service](https://www.gov.uk/
 If you want to contact the team you can [get in touch via email or Slack](/get-in-touch/).
 
 - Izabela Podralska – Delivery Manager
-- Kelly Lee – Delivery Manager
+- Kelly Lee – Senior Delivery Manager
 - Oliver Byford – Lead Frontend Developer
 - Steve Messer – Senior Product Manager
 - Trang Erskine – Senior Product Manager
@@ -33,7 +33,7 @@ If you want to contact the team you can [get in touch via email or Slack](/get-i
 
 ### Frontend squad
 
-- Brett Kyle – Frontend Developer
+- Brett Kyle – Senior Frontend Developer
 - Claire Ashworth – Technical Writer
 - Colin Rotherham – Senior Frontend Developer
 - Romaric Pascal – Senior Frontend Developer (Tech Lead)
