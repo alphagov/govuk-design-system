@@ -1,0 +1,9 @@
+[[redirects]]
+  from = "/.well-known/security.txt"
+  to = "https://vdp.cabinetoffice.gov.uk/.well-known/security.txt"
+  status = 200 # Proxy rather than redirect
+
+[[redirects]]
+  from = "/security.txt"
+  to = "https://vdp.cabinetoffice.gov.uk/.well-known/security.txt"
+  status = 200 # Proxy rather than redirect
