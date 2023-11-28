@@ -1,3 +1,27 @@
+# A number of the examples in the Design System include <form> elements so that
+# users copying the examples have something that requires relatively little
+# tweaking to work out the box (in particular Prototype Kit users, for example)
+#
+# We have some JavaScript to prevent those forms actually being submitted but
+# for users who don’t have JavaScript enabled (or who manage to interact with
+# the form before the JS has run) it’s still possible to submit the form.
+#
+# Handle that gracefully by redirecting to a page that explains what has
+# happened and what the user needs to do next.
+#
+# POST requests work just fine. Requires examples to be set up with an action of
+# `/form-handler`.
+
+[[redirects]]
+  from = "/form-handler"
+  to = "/form-success"
+  status = 301
+
+# Proxy requests for security.txt to the centralised Cabinet Office
+# vulnerability disclosure policy (VDP)
+#
+# https://github.com/alphagov/security.txt
+
 [[redirects]]
   from = "/.well-known/security.txt"
   to = "https://vdp.cabinetoffice.gov.uk/.well-known/security.txt"
