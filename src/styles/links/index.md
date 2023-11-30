@@ -3,8 +3,10 @@ title: Links
 description: Use links to navigate between pages
 section: Styles
 backlogIssueId: 64
+theme: Typography
 layout: layout-pane.njk
 showPageNav: true
+order: 6
 ---
 
 {% from "_example.njk" import example %}

@@ -2,9 +2,11 @@
 title: Images
 description: Only use images if there’s a real user need
 section: Styles
+theme: Identity
 backlogIssueId: 70
 layout: layout-pane.njk
 showPageNav: true
+order: 3
 ---
 
 {% from "_example.njk" import example %}
