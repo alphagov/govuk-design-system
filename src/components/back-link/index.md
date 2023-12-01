@@ -8,10 +8,35 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 {% from "govuk/components/tag/macro.njk" import govukTag %}
 
 
 Use the back link component to help users go back to the previous page in a multi-page transaction.
+
+{% set wcagCallout %}
+  <p class="govuk-!-margin-bottom-2">
+    {{ govukTag({
+      text: "WCAG 2.2"
+    })}}
+  </p>
+
+  ### New WCAG 2.2 criteria might affect this component
+
+  To use the ‘Back link’ and comply with new success criteria introduced in Web Content Accessibility Guidelines (WCAG) 2.2, make sure that users can successfully:
+  
+  - [interact with back links](/components/back-link/#wcag-interact-back-links)
+  - [avoid re-entering information they've previously given when they go back to a page](/components/back-link/#wcag-avoid-information-reentry)
+
+  See the full list of components and patterns affected on our '[Changes to meet WCAG 2.2 page](/accessibility/WCAG-2.2/#components-affected-in-the-design-system)'.
+{% endset %}
+
+{{ govukInsetText({
+  html: wcagCallout,
+  attributes: {
+    style: 'border-left-color: #1d70b8;'
+  }
+})}}
 
 Although browsers have a back button, some sites break when you use it - so many users avoid it, instead of losing their progress in a service. Also, not all users are aware of the back button.
 
@@ -33,11 +58,16 @@ Always place back links at the top of a page, before the `<main>` element. Placi
 
 Make sure the link takes users to the previous page they were on, in the state they last saw it. 
 
-<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> If a user decides to go back to a previous page, make sure information they have already entered is pre-populated.
+<div class="app-wcag-22" id="wcag-interact-back-links" role="note">
+    <strong class="govuk-tag">WCAG 2.2</strong> 
+    <p>If a user decides to go back to a previous page, make sure information they have already entered is pre-populated.</p>
+    <p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
+</div>
 
-Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
-
-<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Make sure no other interactive elements are too close to the back link. This is to make sure users can easily interact with the back link. This relates to WCAG 2.2 success criterion [2.5.8 Target Size (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).
+<div class="app-wcag-22" id="wcag-avoid-information-reentry" role="note">
+    <strong class="govuk-tag">WCAG 2.2</strong> 
+    <p>Make sure no other interactive elements are too close to the back link. This is to make sure users can easily interact with the back link. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target Size (minimum)</a>.</p>
+</div>
 
 Where possible, ensure the back link works even when JavaScript is not available. If this is not possible, you should hide the back link when JavaScript is not available.
 

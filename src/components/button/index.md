@@ -8,7 +8,31 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 {% from "govuk/components/tag/macro.njk" import govukTag %}
+
+{% set wcagCallout %}
+  <p class="govuk-!-margin-bottom-2">
+    {{ govukTag({
+      text: "WCAG 2.2"
+    })}}
+  </p>
+
+  ### New WCAG 2.2 criteria might affect this component
+
+  To use the ‘Button' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
+  
+  - [interact with buttons](/components/button/#wcag-interact-button)
+
+  See the full list of components and patterns affected on our '[Changes to meet WCAG 2.2 page](/accessibility/WCAG-2.2/#components-affected-in-the-design-system)'.
+{% endset %}
+
+{{ govukInsetText({
+  html: wcagCallout,
+  attributes: {
+    style: 'border-left-color: #1d70b8;'
+  }
+})}}
 
 {{ example({ group: "components", item: "button", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
@@ -35,7 +59,10 @@ You may need to include more or different words to better describe the action. F
 
 Align the primary action button to the left edge of your form.
 
-<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Do not decrease the height or target area of buttons. This is to make sure users can easily interact with buttons. This is to comply with WCAG 2.2 success criterion [2.5.8 Target Size (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).
+<div class="app-wcag-22" id="wcag-interact-button" role="note">
+    <strong class="govuk-tag">WCAG 2.2</strong> 
+    <p>Do not decrease the height or target area of buttons. This is to make sure users can easily interact with buttons. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target Size (minimum)</a>.</p>
+</div>
 
 There are 2 ways to use the button component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 

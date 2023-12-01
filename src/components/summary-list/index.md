@@ -84,10 +84,10 @@ There's a few things to keep in mind to ensure that users can successfully use r
 <div class="app-wcag-22" id="wcag-change-answers" role="note">
   <strong class="govuk-tag">WCAG 2.2</strong> 
   <p>
-    <span>If a user decides to go back to a previous answer through a card or row action, make sure information they have already entered is pre-populated.</span>
+    If a user decides to go back to a previous answer through a card or row action, make sure information they have already entered is pre-populated.
   </p>
   <p>
-    <span>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</span>
+    Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.
   </p>
 </div>
 
