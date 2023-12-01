@@ -9,9 +9,33 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 {% from "govuk/components/tag/macro.njk" import govukTag %}
 
 This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
+
+{% set wcagCallout %}
+  <p class="govuk-!-margin-bottom-2">
+    {{ govukTag({
+      text: "WCAG 2.2"
+    })}}
+  </p>
+
+  ### New WCAG 2.2 criteria might affect this pattern
+
+  To ask users for 'Addresses' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
+  
+  - [reuse a previously entered address](/patterns/addresses/#wcag-reuse-addresses)
+
+  See the full list of components and patterns affected on our '[Changes to meet WCAG 2.2 page](/accessibility/WCAG-2.2/#components-affected-in-the-design-system)'.
+{% endset %}
+
+{{ govukInsetText({
+  html: wcagCallout,
+  attributes: {
+    style: 'border-left-color: #1d70b8;'
+  }
+})}}
 
 Help users provide an address using one of the following:
 
@@ -21,7 +45,10 @@ Help users provide an address using one of the following:
 
 ### Reusing entered addresses
 
-<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Make sure users can easily reuse a previously entered address within a single journey, unless doing so would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
+<div class="app-wcag-22" id="wcag-reuse-addresses" role="note">
+    <strong class="govuk-tag">WCAG 2.2</strong> 
+    <p>Make sure users can easily reuse a previously entered address within a single journey, unless doing so would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
+</div>
 
 You can make it easier to reuse addresses through one of these methods:
 

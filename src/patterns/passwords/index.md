@@ -8,9 +8,35 @@ backlogIssueId: 56
 layout: layout-pane.njk
 ---
 
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 {% from "govuk/components/tag/macro.njk" import govukTag %}
 
 Help users to create and enter secure and memorable passwords.
+
+{% set wcagCallout %}
+  <p class="govuk-!-margin-bottom-2">
+    {{ govukTag({
+      text: "WCAG 2.2"
+    })}}
+  </p>
+
+  ### New WCAG 2.2 criteria might affect this pattern
+
+  To ask users for 'Passwords' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
+  
+  - [interact with any 'show password' button](/patterns/passwords/#wcag-interact-show-password)
+  - [copy and paste into a password input](/patterns/passwords/#wcag-copy-paste-password)
+  - [find 'reset password' links in a consistent place on each page](/patterns/passwords/#wcag-consistent-reset)
+
+  See the full list of components and patterns affected on our '[Changes to meet WCAG 2.2 page](/accessibility/WCAG-2.2/#components-affected-in-the-design-system)'.
+{% endset %}
+
+{{ govukInsetText({
+  html: wcagCallout,
+  attributes: {
+    style: 'border-left-color: #1d70b8;'
+  }
+})}}
 
 ## When to use this pattern
 
@@ -79,7 +105,10 @@ When there are two or more password fields on a page, the 'show' and 'hide' labe
 
 For example, you can label the input "Password" as "show password" and label the second input "Re-enter password" as "show re-entered password".
 
-<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Make sure any ‘show password’ button is at least 24px by 24px in size, with adequate spacing. This is to make sure users can easily interact with the button. This relates to WCAG 2.2 success criterion [2.5.8 Target Size (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).
+<div class="app-wcag-22" id="wcag-interact-show-password" role="note">
+    <strong class="govuk-tag">WCAG 2.2</strong> 
+    <p>Make sure any ‘show password’ button is at least 24px by 24px in size, with adequate spacing. This is to make sure users can easily interact with the button. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target Size (minimum)</a>.</p>
+</div>
 
 ### Allow users to paste or autofill their password
 
@@ -87,7 +116,10 @@ Do not disable paste on password fields. People might have good reasons why they
 
 Allow password managers to populate password inputs by adding the autocomplete attribute values for `current-password` and `new-password`.
 
-<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> You must allow users to copy and paste or autofill their password. Avoid making the user memorise or transcribe a password from somewhere else in order to use your service. This is to comply with WCAG 2.2 success criterion [3.3.8 Accessible Authentication (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum).
+<div class="app-wcag-22" id="wcag-copy-paste-password" role="note">
+    <strong class="govuk-tag">WCAG 2.2</strong> 
+    <p>You must allow users to copy and paste or autofill their password. Avoid making the user memorise or transcribe a password from somewhere else in order to use your service. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum">3.3.8 Accessible Authentication (Minimum)</a>.</p>
+</div>
 
 ### Help users who forget their password
 
@@ -99,7 +131,10 @@ When helping users who’ve forgotten their password, you should:
 - avoid password reset questions
 - avoid password reminders
 
-<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> If you include instructions or a link to help users reset their password, make sure to place them consistently on the page. Also make sure any password reset links always perform the same action across each page. This is to comply with WCAG 2.2 success criterion [3.2.6 Consistent Help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html).
+<div class="app-wcag-22" id="wcag-consistent-reset" role="note">
+    <strong class="govuk-tag">WCAG 2.2</strong> 
+    <p>If you include instructions or a link to help users reset their password, make sure to place them consistently on the page. Also make sure any password reset links always perform the same action across each page. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent Help</a>.</p>
+</div>
 
 ### Send a link to trigger password resets
 

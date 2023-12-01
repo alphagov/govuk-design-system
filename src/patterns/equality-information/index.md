@@ -9,9 +9,33 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 {% from "govuk/components/tag/macro.njk" import govukTag %}
 
 Public sector organisations have a duty to consider the need to avoid discrimination and advance equality of opportunity as part of what they do. This is part of what’s called the [public sector equality duty](https://www.gov.uk/guidance/equality-act-2010-guidance#public-sector-equality-duty).
+
+{% set wcagCallout %}
+  <p class="govuk-!-margin-bottom-2">
+    {{ govukTag({
+      text: "WCAG 2.2"
+    })}}
+  </p>
+
+  ### New WCAG 2.2 criteria might affect this pattern
+
+  To ask users for 'Equality information' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
+  
+  - [update their equality information without re-entering existing information](/patterns/equality-information/#wcag-do-not-ask-reentry-equality-info)
+
+  See the full list of components and patterns affected on our '[Changes to meet WCAG 2.2 page](/accessibility/WCAG-2.2/#components-affected-in-the-design-system)'.
+{% endset %}
+
+{{ govukInsetText({
+  html: wcagCallout,
+  attributes: {
+    style: 'border-left-color: #1d70b8;'
+  }
+})}}
 
 Public sector bodies often collect equality information about service users to help them meet this duty.
 
@@ -60,7 +84,10 @@ When possible, offer users the option to update their equality information. User
 
 Updating equality information is especially relevant for longer term services and services that use the same equality information multiple times.
 
-<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> When users are updating equality information, only ask them to enter the information that has changed. Do not ask them to re-enter all existing equality information. This is to comply with WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
+<div class="app-wcag-22" id="wcag-do-not-ask-reentry-equality-info" role="note">
+    <strong class="govuk-tag">WCAG 2.2</strong> 
+    <p>When users are updating equality information, only ask them to enter the information that has changed. Do not ask them to re-enter all existing equality information. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
+</div>
 
 ## Get specialist privacy or data protection advice
 

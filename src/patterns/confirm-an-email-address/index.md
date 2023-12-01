@@ -8,7 +8,34 @@ backlogIssueId: 39
 layout: layout-pane.njk
 ---
 
+{% from "_example.njk" import example %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+
 This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
+
+{% set wcagCallout %}
+  <p class="govuk-!-margin-bottom-2">
+    {{ govukTag({
+      text: "WCAG 2.2"
+    })}}
+  </p>
+
+  ### New WCAG 2.2 criteria might affect this pattern
+
+  To help users to 'Confirm an email address' and meet the new WCAG 2.2 criteria, make sure that users can successfully:
+  
+  - <a href="/patterns/confirm-an-email-address/#wcag-copy-paste-security-codes">copy and paste into a security code input (if you're asking the user to enter a security code you've sent them)</a>
+
+  See the full list of components and patterns affected on our '[Changes to meet WCAG 2.2 page](/accessibility/WCAG-2.2/#components-affected-in-the-design-system)'.
+{% endset %}
+
+{{ govukInsetText({
+  html: wcagCallout,
+  attributes: {
+    style: 'border-left-color: #1d70b8;'
+  }
+})}}
 
 Check that a user has access to a specific email account using an email confirmation&nbsp;loop.
 
@@ -43,7 +70,10 @@ If you use email confirmation loops you must consider:
 
 Most email confirmation loops will send the user a link and ask them to click it to return to the service. Another approach is to send the user a security code, similar to the [Confirm a phone number](/patterns/confirm-a-phone-number/) pattern, and ask the user to enter it.
 
-<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> You must allow users to copy and paste any security codes. Avoid making the user memorise or transcribe a security code between apps or browser tabs to use your service. This is to comply with WCAG 2.2 success criterion [3.3.8 Accessible Authentication (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum).
+<div class="app-wcag-22" id="wcag-copy-paste-security-codes" role="note">
+    <strong class="govuk-tag">WCAG 2.2</strong> 
+    <p>You must allow users to copy and paste any security codes. Avoid making the user memorise or transcribe a security code between apps or browser tabs to use your service. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum">3.3.8 Accessible Authentication (Minimum)</a>.</p>
+</div>
 
 ### Set expiry conditions
 

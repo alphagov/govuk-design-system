@@ -8,24 +8,49 @@ backlogIssueId: 35
 layout: layout-pane.njk
 ---
 
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 {% from "govuk/components/tag/macro.njk" import govukTag %}
 
 Ask users questions to help them work out if they can or should use your service.
+
+{% set wcagCallout %}
+  <p class="govuk-!-margin-bottom-2">
+    {{ govukTag({
+      text: "WCAG 2.2"
+    })}}
+  </p>
+
+  ### New WCAG 2.2 criteria might affect this pattern
+
+  To help users to 'Check a service is suitable' and meet the new WCAG 2.2 criteria, make sure that users can successfully:
+  
+  - [use the service without repeating answers they've already given](/patterns/check-a-service-is-suitable/#wcag-avoid-repeating-questions)
+
+  See the full list of components and patterns affected on our '[Changes to meet WCAG 2.2 page](/accessibility/WCAG-2.2/#components-affected-in-the-design-system)'.
+{% endset %}
+
+{{ govukInsetText({
+  html: wcagCallout,
+  attributes: {
+    style: 'border-left-color: #1d70b8;'
+  }
+})}}
 
 Doing this helps users save time as it tells them upfront whether they are eligible to use it and if they need it.
 
 It can also help reduce time and money spent processing queries from users confused about whether they’re eligible to use your service, or if it’s suitable for them.
 
-<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Make sure to not repeat questions or request information the user will need to re-provide later.
-
-If during the process a service is determined to be suitable, consider offering a secure method to carry forward relevant responses into the service journey, unless carrying forward would be a major safety concern.
-
-You can make it easier to enter the same information within the service through one of these methods:
-
-- pre-populating the relevant fields
-- showing carried-forward responses as an option for the user to select
-
-This is to comply with WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
+<div class="app-wcag-22" id="wcag-avoid-repeating-questions" role="note">
+    <strong class="govuk-tag">WCAG 2.2</strong> 
+    <p>Make sure to not repeat questions or request information the user will need to re-provide later.</p>
+    <p>If during the process a service is determined to be suitable, consider offering a secure method to carry forward relevant responses into the service journey, unless carrying forward would be a major safety concern.</p>
+    <p>You can make it easier to enter the same information within the service through one of these methods:</p>
+    <ul>
+        <li>pre-populating the relevant fields</li>
+        <li>showing carried-forward responses as an option for the user to select</li>
+    </ul>
+    <p>This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
+</div>
 
 ![‘Check a service is suitable’ flow diagram. Contains an introduction page followed by a series of simple questions. If at any point a user is deemed not eligible for the service they will be pointed to a page that explains why they are not eligible. Otherwise they will be presented an ‘application complete’ page. ](check-a-service-is-suitable-new.svg)
 

@@ -8,9 +8,34 @@ backlogIssueId: 41
 layout: layout-pane.njk
 ---
 
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 {% from "govuk/components/tag/macro.njk" import govukTag %}
 
 Help users create an account for your service.
+
+{% set wcagCallout %}
+  <p class="govuk-!-margin-bottom-2">
+    {{ govukTag({
+      text: "WCAG 2.2"
+    })}}
+  </p>
+
+  ### New WCAG 2.2 criteria might affect this pattern
+
+  To help users to 'Create accounts' and meet the new WCAG 2.2 criteria, make sure that users can successfully:
+  
+  - [reuse information they've already entered](/patterns/create-accounts/#wcag-reuse-account-information)
+  - [avoid doing a cognitive test, such as a CAPTCHA, to create an account](/patterns/create-accounts/#wcag-avoid-cognitive-test)
+
+  See the full list of components and patterns affected on our '[Changes to meet WCAG 2.2 page](/accessibility/WCAG-2.2/#components-affected-in-the-design-system)'.
+{% endset %}
+
+{{ govukInsetText({
+  html: wcagCallout,
+  attributes: {
+    style: 'border-left-color: #1d70b8;'
+  }
+})}}
 
 ## When to use this pattern
 
@@ -50,7 +75,10 @@ Make it clear what you need users to do when they create an account.
 
 Show a clear difference between creating an account and signing in. Presenting the options side by side is not enough because users might miss one of them or not understand the&nbsp;difference.
 
-<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Make sure users do not need to enter the same information more than once when creating an account, unless the information is no longer valid or it’s necessary for security reasons. Use the [HTML autocomplete attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete) to allow password managers and user agents to automatically populate fields. This is to comply with WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
+<div class="app-wcag-22" id="wcag-reuse-account-information" role="note">
+    <strong class="govuk-tag">WCAG 2.2</strong>
+    <p>Make sure users do not need to enter the same information more than once when creating an account, unless the information is no longer valid or it’s necessary for security reasons. Use the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete">HTML autocomplete attribute</a> to allow password managers and user agents to automatically populate fields. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
+</div>
 
 ### Make the sign-up process clear
 
@@ -64,9 +92,11 @@ CAPTCHAs (Completely Automated Public Turing Test to Tell Computers and Humans A
 
 These are tests of cognitive function, which might be difficult for some users. Users can also struggle to recognise specific words or pictures due to differences in culture and locale.
 
-<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Avoid making users do a cognitive test to use your service. If you do, you must also offer an alternative method. This is to comply with WCAG 2.2 success criterion [3.3.8 Accessible Authentication (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum).
-
-[WCAG lists some other security measures](https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum#object-recognition) you can implement to prevent misuse and automated abuse in your service.
+<div class="app-wcag-22" id="wcag-avoid-cognitive-test" role="note">
+    <strong class="govuk-tag">WCAG 2.2</strong> 
+    <p>Avoid making users do a cognitive test to use your service. If you do, you must also offer an alternative method. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum">3.3.8 Accessible Authentication (Minimum)</a>.</p>
+    <p><a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum#object-recognition">WCAG lists some other security measures</a> you can implement to prevent misuse and automated abuse in your service.</p>
+</div>
 
 ### Never use National Insurance numbers to verify a user’s identity
 

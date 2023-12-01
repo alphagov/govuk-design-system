@@ -8,8 +8,31 @@ showPageNav: true
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
 
 Avoid using images for unnecessary decoration. Only use images if there’s a real user need.
+
+{% set wcagCallout %}
+  <p class="govuk-!-margin-bottom-2">
+    {{ govukTag({
+      text: "WCAG 2.2"
+    })}}
+  </p>
+
+  ### New WCAG 2.2 criteria might affect how you use images
+
+  To use ‘Breadcrumbs' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
+  
+  To meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, [make sure any icons and images used in links meet the minimum target size. This is to make sure users can easily interact with the link](/styles/images/#wcag-icon-focus).
+{% endset %}
+
+{{ govukInsetText({
+  html: wcagCallout,
+  attributes: {
+    style: 'border-left-color: #1d70b8;'
+  }
+})}}
 
 Make sure any information contained in an image can be understood by someone who cannot see it. Also consider partially-sighted users with visual impairments and the assistive technologies they might use.
 
@@ -78,8 +101,6 @@ Any text inside an image will be difficult to read, especially for users that ne
 - recolour
 
 Remember to avoid using images for unnecessary decoration, even if it’s an 'image of text'.
-
-<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Make sure any icons and images used in links are at least 24px by 24px in size, with adequate spacing. This is to make sure users can easily interact with the link. This relates to WCAG 2.2 success criterion [2.5.8 Target Size (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).
 
 ### Show text as written content, instead of images
 

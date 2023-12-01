@@ -7,9 +7,33 @@ aliases:
 layout: layout-pane.njk
 ---
 
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 {% from "govuk/components/tag/macro.njk" import govukTag %}
 
 Check the information the user gives you to make sure it’s valid. If there's a validation error, tell the user what's gone wrong and how to fix it. Turn off HTML5 validation.
+
+{% set wcagCallout %}
+  <p class="govuk-!-margin-bottom-2">
+    {{ govukTag({
+      text: "WCAG 2.2"
+    })}}
+  </p>
+
+  ### New WCAG 2.2 criteria might affect this pattern
+
+  To help users to 'Recover from validation errors' and meet the new WCAG 2.2 criteria, make sure that users can successfully:
+  
+  - [edit information they've previously given to correct an error](/patterns/validation/#wcag-edit-to-correct-errors)
+
+  See the full list of components and patterns affected on our '[Changes to meet WCAG 2.2 page](/accessibility/WCAG-2.2/#components-affected-in-the-design-system)'.
+{% endset %}
+
+{{ govukInsetText({
+  html: wcagCallout,
+  attributes: {
+    style: 'border-left-color: #1d70b8;'
+  }
+})}}
 
 ## When to use this pattern
 
@@ -61,7 +85,10 @@ If the user's answers fail validation:
 
 Read guidance on [writing good error messages](/components/error-message/#be-clear-and-concise).
 
-<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Do not clear any form fields when validating users’ answers. Keep both passing and failing answers. This is to comply with WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
+<div class="app-wcag-22" id="wcag-edit-to-correct-errors" role="note">
+    <strong class="govuk-tag">WCAG 2.2</strong> 
+    <p>Do not clear any form fields when validating users’ answers. Keep both passing and failing answers. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
+</div>
 
 Keeping information that failed validation helps users to:
 
