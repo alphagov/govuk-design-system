@@ -97,10 +97,10 @@
               <caption class="govuk-table__caption{% if table.slug == 'primary' %} govuk-visually-hidden{% endif %}">
                 <h3 class="govuk-heading-m">
                   {{ table.name | safe }}
+                  {% if table.description %}
+                  <span class="govuk-body govuk-!-display-block govuk-!-margin-top-2">{{ table.description | safe }}</span>
+                  {% endif %}
                 </h3>
-                {% if table.description %}
-                <p class="govuk-body">{{ table.description | safe }}</span>
-                {% endif %}
               </caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
