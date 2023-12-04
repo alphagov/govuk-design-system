@@ -24,7 +24,7 @@ This guidance is for government teams that build online services. [To find infor
 
   To ask users for 'Email addresses' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
   
-  - [can easily reuse a previously entered email address](/patterns/email-addresses/#wcag-reuse-email-addresses)
+  - [reuse a previously entered email address](/patterns/email-addresses/#wcag-reuse-email-addresses)
 
   See the full list of components and patterns affected on our '[Changes to meet WCAG 2.2 page](/accessibility/WCAG-2.2/#components-affected-in-the-design-system)'.
 {% endset %}
