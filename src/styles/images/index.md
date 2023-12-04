@@ -22,7 +22,7 @@ Avoid using images for unnecessary decoration. Only use images if there’s a re
 
   ### New WCAG 2.2 criteria might affect how you use images
 
-  To use ‘Breadcrumbs' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
+  To use ‘Images' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
   
   To meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, [make sure any icons and images used in links meet the minimum target size. This is to make sure users can easily interact with the link](/styles/images/#wcag-icon-focus).
 {% endset %}

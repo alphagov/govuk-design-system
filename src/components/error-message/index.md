@@ -24,7 +24,7 @@ This guidance is for government teams that build online services. [To find infor
 
   To use the ‘Error message' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
   
-  - [edit form information they've previously given to correct an error](/components/error-message/#wcag-clear-answers-error)
+  - [edit form information they've previously given, so that they can correct an error](/components/error-message/#wcag-clear-answers-error)
 
   See the full list of components and patterns affected on our '[Changes to meet WCAG 2.2 page](/accessibility/WCAG-2.2/#components-affected-in-the-design-system)'.
 {% endset %}

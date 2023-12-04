@@ -25,8 +25,8 @@ Use the back link component to help users go back to the previous page in a mult
 
   To use the ‘Back link’ and comply with new success criteria introduced in Web Content Accessibility Guidelines (WCAG) 2.2, make sure that users can successfully:
   
-  - [interact with back links](/components/back-link/#wcag-interact-back-links)
   - [avoid re-entering information they've previously given when they go back to a page](/components/back-link/#wcag-avoid-information-reentry)
+  - [interact with back links](/components/back-link/#wcag-interact-back-links)
 
   See the full list of components and patterns affected on our '[Changes to meet WCAG 2.2 page](/accessibility/WCAG-2.2/#components-affected-in-the-design-system)'.
 {% endset %}
@@ -58,13 +58,13 @@ Always place back links at the top of a page, before the `<main>` element. Placi
 
 Make sure the link takes users to the previous page they were on, in the state they last saw it. 
 
-<div class="app-wcag-22" id="wcag-interact-back-links" role="note">
+<div class="app-wcag-22" id="wcag-avoid-information-reentry" role="note">
     <strong class="govuk-tag">WCAG 2.2</strong> 
     <p>If a user decides to go back to a previous page, make sure information they have already entered is pre-populated.</p>
     <p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
 </div>
 
-<div class="app-wcag-22" id="wcag-avoid-information-reentry" role="note">
+<div class="app-wcag-22" id="wcag-interact-back-links" role="note">
     <strong class="govuk-tag">WCAG 2.2</strong> 
     <p>Make sure no other interactive elements are too close to the back link. This is to make sure users can easily interact with the back link. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target Size (minimum)</a>.</p>
 </div>
