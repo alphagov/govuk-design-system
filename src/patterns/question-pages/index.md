@@ -9,9 +9,34 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 {% from "govuk/components/tag/macro.njk" import govukTag %}
 
 This pattern explains when to use question pages and what elements they need to include.
+
+{% set wcagCallout %}
+  <p class="govuk-!-margin-bottom-2">
+    {{ govukTag({
+      text: "WCAG 2.2"
+    })}}
+  </p>
+
+  ### New WCAG 2.2 criteria might affect this pattern
+
+  To use ‘Question pages' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
+  
+  - [avoid re-entering information they've given in a previous answer](/patterns/question-pages/#wcag-reenter-previous-answer)
+  - [select an answer without relying on 'click and drag' movement](/patterns/question-pages/#wcag-select-without-click-drag)
+
+  See the full list of components and patterns affected on our '[Changes to meet WCAG 2.2 page](/accessibility/WCAG-2.2/#components-affected-in-the-design-system)'.
+{% endset %}
+
+{{ govukInsetText({
+  html: wcagCallout,
+  attributes: {
+    style: 'border-left-color: #1d70b8;'
+  }
+})}}
 
 {{ example({ group: "patterns", item: "question-pages", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
@@ -47,7 +72,10 @@ Question pages must include a:
 
 If research shows it’s helpful for users, you can also include a [progress indicator](#using-progress-indicators).
 
-<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Make sure to only ask for a piece of information once within a single journey. Whenever possible, do not ask a user to re-enter information they’ve already provided. This is to comply with WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
+<div class="app-wcag-22" id="wcag-reenter-previous-answer" role="note">
+    <strong class="govuk-tag">WCAG 2.2</strong> 
+    <p>Make sure to only ask for a piece of information once within a single journey. Whenever possible, do not ask a user to re-enter information they’ve already provided. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
+</div>
 
 If the same type of information is needed more than once, make it easier to reuse previously entered answers through one of these methods:
 
@@ -162,4 +190,7 @@ A number of GOV.UK services have removed this style of progress indicator withou
 
 ### Using range sliders
 
-Avoid using [range slider](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range) questions, where the user needs to click and drag a selector across a range of answers or values. These types of controls are difficult for some users to interact with. If you do use a range slider, you must provide a method for selecting an answer that doesn’t rely on ‘click and drag’ movements. This relates to WCAG success criterion [2.5.1 Pointer Gestures](https://www.w3.org/TR/WCAG22/#pointer-gestures).
+<div class="app-wcag-22" id="wcag-select-without-click-drag" role="note">
+    <strong class="govuk-tag">WCAG 2.2</strong>
+    <p>Avoid using <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range">range slider</a> questions, where the user needs to click and drag a selector across a range of answers or values. These types of controls are difficult for some users to interact with. If you do use a range slider, you must provide a method for selecting an answer that doesn’t rely on ‘click and drag’ movements. This relates to WCAG success criterion <a href="https://www.w3.org/TR/WCAG22/#pointer-gestures">2.5.1 Pointer Gestures</a>.</p>
+</div>

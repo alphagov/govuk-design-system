@@ -74,7 +74,7 @@ Style error messages as shown in the example:
 
 The select component does not support selecting multiple options, [as there’s a history of poor usability and assistive technology support for `<select multiple>`](https://www.24a11y.com/2019/select-your-poison/). If you need to ask the user to pick more than one item from a list, it’s almost always better to use another method, such as a list of checkboxes.
 
-<div class="app-wcag-22" id="wcag-avoid-dragging-multiple options" role="note">
+<div class="app-wcag-22" id="wcag-avoid-dragging-multiple-options" role="note">
     <strong class="govuk-tag">WCAG 2.2</strong> 
     <p>Any input that’s designed to let a user select multiple options must offer a way to do so without relying on ‘click and drag’ movements or keyboard and mouse combination actions. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">2.5.7 Dragging Movements</a>.</p>
 </div>

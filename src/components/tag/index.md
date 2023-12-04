@@ -51,11 +51,10 @@ Tags are only used to indicate a status. Do not make a tag interactive by making
 
 <div class="app-wcag-22" id="wcag-tags-not-interactive" role="note">
     <strong class="govuk-tag">WCAG 2.2</strong> 
-    <p>Do not use tags to create links, buttons or other interactive elements, as users:
+    <p>Do not use tags to create links, buttons or other interactive elements, as users:</p>
     <ul>
     <li>are unlikely to identify the tags as something they’re meant to interact with</li>
     <li>would see no visual difference between interactive and non-interactive tags</li></ul>
-    </p>
 </div>
 
 ## Showing one or two statuses

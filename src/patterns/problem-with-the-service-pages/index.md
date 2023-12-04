@@ -9,10 +9,34 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 {% from "govuk/components/tag/macro.njk" import govukTag %}
 
-
 This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
+
+{% set wcagCallout %}
+  <p class="govuk-!-margin-bottom-2">
+    {{ govukTag({
+      text: "WCAG 2.2"
+    })}}
+  </p>
+
+  ### New WCAG 2.2 criteria might affect this pattern
+
+  To use ‘There is a problem with the service pages' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
+  
+  - [find content info in a consistent place across 'There is a problem with the service pages' pages](/patterns/problem-with-the-service-pages/#wcag-consistent-content-problem-service)
+  - [resume using the service with information they've previously entered, if possible](/patterns/problem-with-the-service-pages/#wcag-resume-previous-entered-information)
+
+  See the full list of components and patterns affected on our '[Changes to meet WCAG 2.2 page](/accessibility/WCAG-2.2/#components-affected-in-the-design-system)'.
+{% endset %}
+
+{{ govukInsetText({
+  html: wcagCallout,
+  attributes: {
+    style: 'border-left-color: #1d70b8;'
+  }
+})}}
 
 Tell the user there is something wrong with the service. These are also known as 500 and internal server error pages.
 
@@ -51,7 +75,10 @@ Have clear and concise content and do not use:
 
 Store previously entered information for a reasonable amount of time so users can resume a journey with re-populated information when the service becomes available again.
 
-<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Whenever possible, make sure to save and store any information the user has previously entered, unless doing so would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
+<div class="app-wcag-22" id="wcag-consistent-content-problem-service" role="note">
+    <strong class="govuk-tag">WCAG 2.2</strong> 
+    <p>Whenever possible, make sure to save and store any information the user has previously entered, unless doing so would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
+</div>
 
 ### Showing contact information
 
@@ -62,7 +89,10 @@ Contact information should either:
 
 You might choose to link to a ‘contact information’ page, such as one shown in the ‘[Contact a department or service team](https://design-system.service.gov.uk/patterns/contact-a-department-or-service-team/)’ pattern.
 
-<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> You must always write contact information in a clear and consistent way across ‘There is a problem with the service’ pages. This relates to WCAG 2.2 success criterion [3.2.6 Consistent Help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html).
+<div class="app-wcag-22" id="wcag-resume-previous-entered-information" role="note">
+    <strong class="govuk-tag">WCAG 2.2</strong> 
+    <p>You must always write contact information in a clear and consistent way across ‘There is a problem with the service’ pages. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent Help</a>.</p>
+</div>
 
 ### Service has a specific page that includes numbers and opening times
 

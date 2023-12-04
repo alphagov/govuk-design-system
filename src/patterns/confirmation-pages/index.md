@@ -9,9 +9,34 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 {% from "govuk/components/tag/macro.njk" import govukTag %}
 
 Use this pattern to let users know they’ve completed a transaction.
+
+{% set wcagCallout %}
+  <p class="govuk-!-margin-bottom-2">
+    {{ govukTag({
+      text: "WCAG 2.2"
+    })}}
+  </p>
+
+  ### New WCAG 2.2 criteria might affect this pattern
+
+  To use ‘Confirmation pages' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
+  
+  - [see and understand all text in the green confirmation panel](/patterns/confirmation-pages/#wcag-see-understand-text)
+  - [select and copy text within a confirmation page as well as its panel](/patterns/confirmation-pages/#wcag-select-copy-confirmation)
+
+  See the full list of components and patterns affected on our '[Changes to meet WCAG 2.2 page](/accessibility/WCAG-2.2/#components-affected-in-the-design-system)'.
+{% endset %}
+
+{{ govukInsetText({
+  html: wcagCallout,
+  attributes: {
+    style: 'border-left-color: #1d70b8;'
+  }
+})}}
 
 Include a link to the [GOV.UK feedback page](https://www.gov.uk/service-manual/service-assessments/get-feedback-page) to allow users to tell you what they think of your transaction.
 
@@ -34,7 +59,10 @@ Your confirmation page must include:
 - a link to your [feedback page](https://www.gov.uk/service-manual/service-assessments/get-feedback-page)
 - a way for users to save a record of the transaction, for example, as a PDF
 
-<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Do not include links, buttons or other interactive elements in the green confirmation panel, as the focus state will not have a minimum contrast ratio of 3:1 with the panel’s background colour. 
+<div class="app-wcag-22" id="wcag-see-understand-text" role="note">
+    <strong class="govuk-tag">WCAG 2.2</strong> 
+    <p>Do not include links, buttons or other interactive elements in the green confirmation panel, as the focus state will not have a minimum contrast ratio of 3:1 with the panel’s background colour.</p>
+</div>
 
 {{ example({group: "patterns", item: "confirmation-pages", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second", size: "xl"}) }}
 
@@ -48,7 +76,10 @@ If you cannot, make sure your service responds in a helpful way when users retur
 - starting a new application
 - what to do or who to contact if they have a problem with their application
 
-<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Allow users to select and copy text within a confirmation page as well as its [panel component](/components/panel/). For example, users should be able to select and copy a booking number. This relates to WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
+<div class="app-wcag-22" id="wcag-select-copy-confirmation" role="note">
+    <strong class="govuk-tag">WCAG 2.2</strong> 
+    <p>Allow users to select and copy text within a confirmation page as well as its <a href="/components/panel/">panel component</a>. For example, users should be able to select and copy a booking number. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
+</div>
 
 Consider offering an option for the user to copy information in the panel component area into their device’s clipboard if there’s information that the user is expected to:
 

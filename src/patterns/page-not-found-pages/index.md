@@ -9,9 +9,33 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 {% from "govuk/components/tag/macro.njk" import govukTag %}
 
 A page not found tells someone we cannot find the page they were trying to view. They are also known as 404 pages.
+
+{% set wcagCallout %}
+  <p class="govuk-!-margin-bottom-2">
+    {{ govukTag({
+      text: "WCAG 2.2"
+    })}}
+  </p>
+
+  ### New WCAG 2.2 criteria might affect this pattern
+
+  To use ‘Page not found pages page' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
+  
+  - [find content info in a consistent place across 'Page not found pages'](/patterns/page-not-found-pages/#wcag-consistent-content-page-not-found)
+
+  See the full list of components and patterns affected on our '[Changes to meet WCAG 2.2 page](/accessibility/WCAG-2.2/#components-affected-in-the-design-system)'.
+{% endset %}
+
+{{ govukInsetText({
+  html: wcagCallout,
+  attributes: {
+    style: 'border-left-color: #1d70b8;'
+  }
+})}}
 
 {{ example({ group: "patterns", item: "page-not-found-pages", example: "default", html: true, nunjucks: true, size: "xl", loading: "eager" }) }}
 
@@ -42,7 +66,10 @@ Contact information should either:
 
 The content should be clear and concise, not blame the user.
 
-<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> You must always write contact information in a clear and consistent way across ‘Page not found’ pages. This relates to WCAG 2.2 success criterion [3.2.6 Consistent Help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html).
+<div class="app-wcag-22" id="wcag-consistent-content-page-not-found" role="note">
+<strong class="govuk-tag">WCAG 2.2</strong>
+<p>You must always write contact information in a clear and consistent way across ‘Page not found’ pages. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent Help</a>.</p>
+</div>
 
 Do not use:
 
