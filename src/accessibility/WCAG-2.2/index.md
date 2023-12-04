@@ -32,6 +32,8 @@ Make sure there's expertise within your organisation by advocating for people to
 
 The following components and patterns have WCAG 2.2 AA changes included. You must check if your service needs amending to align with these changes.
 
+[Images](/styles/images/) also includes guidance to ensure icons and images in your service meet Target Size (minimum).
+
 {{ govukTable({
   caption: "Components",
   captionClasses: "govuk-table__caption--m",
