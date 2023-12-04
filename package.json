@@ -75,7 +75,7 @@
     "marked": "^10.0.0",
     "marked-gfm-heading-id": "^3.1.1",
     "marked-highlight": "^2.0.7",
-    "marked-smartypants": "^1.1.4",
+    "marked-smartypants": "^1.1.5",
     "metalsmith": "^2.6.2",
     "metalsmith-canonical": "^1.2.0",
     "multimatch": "^7.0.0",
