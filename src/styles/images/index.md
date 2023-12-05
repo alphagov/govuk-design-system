@@ -2,7 +2,7 @@
 title: Images
 description: Only use images if there’s a real user need
 section: Styles
-theme: Identity
+theme: Visual elements
 backlogIssueId: 70
 layout: layout-pane.njk
 showPageNav: true

@@ -2,7 +2,7 @@
 title: Colour
 description: Always use the GOV.UK colour palette
 section: Styles
-theme: Identity
+theme: Visual elements
 aliases: palette
 backlogIssueId: 38
 layout: layout-pane.njk
