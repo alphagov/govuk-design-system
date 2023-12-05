@@ -363,3 +363,11 @@ pre .language-plaintext {
   border-bottom: 1px solid $govuk-border-colour;
   background-color: $app-light-grey;
 }
+
+// Add highlight styling for WCAG 2.2 content
+.app-wcag-22 {
+  &:target {
+    outline: 4px solid $govuk-brand-colour;
+    outline-offset: 6px;
+  }
+}

@@ -8,13 +8,17 @@ backlogIssueId: 111
 layout: layout-pane.njk
 ---
 
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+
 GOV.UK services must start on a GOV.UK content page. This links your service to the rest of GOV.UK, and means that users can find it using search or through GOV.UK’s navigation.
 
 ## When to use this pattern
 
 Use this pattern to help you prototype a start point for your service, so you can test as much of the user journey as possible.
 
-The public-facing version of your service will need to start on a GOV.UK content page, published using one of the GOV.UK publishing apps. You’ll usually need to agree content for this GOV.UK content page with the GDS content team. Read [guidance on how to get your service on GOV.UK](https://www.gov.uk/service-manual/service-assessments/get-your-service-on-govuk).
+Public-facing UK government services need to start on a GOV.UK content page. The GDS content team creates these start points using GOV.UK publishing apps, separate from GOV.UK Frontend.
+
+Service teams will usually need to agree content for this GOV.UK content page with the GDS content team. Read guidance on how to get your service on GOV.UK. Read [guidance on how to get your service on GOV.UK](https://www.gov.uk/service-manual/service-assessments/get-your-service-on-govuk).
 
 ## How it works
 

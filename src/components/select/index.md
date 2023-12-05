@@ -8,6 +8,7 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
 
 {{ example({ group: "components", item: "select", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
@@ -44,6 +45,12 @@ Display an error message if the user has not selected an option.
 Style error messages as shown in the example:
 
 {{ example({ group: "components", item: "select", example: "error", html: true, nunjucks: true, open: false }) }}
+
+### Avoid adding functionality to allow selecting multiple options
+
+The select component does not support selecting multiple options, [as there’s a history of poor usability and assistive technology support for `<select multiple>`](https://www.24a11y.com/2019/select-your-poison/). If you need to ask the user to pick more than one item from a list, it’s almost always better to use another method, such as a list of checkboxes.
+
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Any input that’s designed to let a user select multiple options must offer a way to do so without relying on ‘click and drag’ movements or keyboard and mouse combination actions. This is to comply with WCAG 2.2 success criterion [2.5.7 Dragging Movements](https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html).
 
 ## Research on this component
 

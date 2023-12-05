@@ -9,6 +9,7 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
 
 This pattern explains when to use question pages and what elements they need to include.
 
@@ -45,6 +46,13 @@ Question pages must include a:
 - continue button
 
 If research shows it’s helpful for users, you can also include a [progress indicator](#using-progress-indicators).
+
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Make sure to only ask for a piece of information once within a single journey. Whenever possible, do not ask a user to re-enter information they’ve already provided. This is to comply with WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
+
+If the same type of information is needed more than once, make it easier to reuse previously entered answers through one of these methods:
+
+- pre-populating the relevant fields
+- showing carried-forward responses as an option for the user to select
 
 ### Back link
 
@@ -151,3 +159,7 @@ These can be problematic because they:
 - make it hard to handle conditional sections
 
 A number of GOV.UK services have removed this style of progress indicator without any negative effects. Read a blog post about [how the Carer’s Allowance team removed a 12-step progress indicator](https://designnotes.blog.gov.uk/2014/07/07/do-less-problems-as-shared-spaces/) with no effect on completion rates or times.
+
+### Using range sliders
+
+Avoid using [range slider](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range) questions, where the user needs to click and drag a selector across a range of answers or values. These types of controls are difficult for some users to interact with. If you do use a range slider, you must provide a method for selecting an answer that doesn’t rely on ‘click and drag’ movements. This relates to WCAG success criterion [2.5.1 Pointer Gestures](https://www.w3.org/TR/WCAG22/#pointer-gestures).

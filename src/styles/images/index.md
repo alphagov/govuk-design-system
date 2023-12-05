@@ -60,6 +60,8 @@ Icons can be more useful in case working systems, where users are familiar with 
 
 Do not use a single icon to represent more than one thing. For example, the search icon (magnifying glass) should only be used for search functionality, and not also for screen magnification.
 
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Make sure any icons and images used in links are at least 24px by 24px in size, with adequate spacing. This is to make sure users can easily interact with the link. This relates to WCAG 2.2 success criterion [2.5.8 Target Size (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).
+
 ## Avoid images that contain text
 
 Generally, you should avoid using images that contain any sort of text. Use written content or other alternatives wherever possible.
@@ -216,7 +218,7 @@ Do not write alt text that:
 
 In March 2023, we updated this page to help teams make decisions on when to use images in their services.
 
-In particular, we added a section on how to use images and ensure they’re as accessible as possible — giving advice to teams on how to meet or surpass relevant WCAG AA guidelines, in line with the [GOV.UK Design System accessibility strategy](/community/accessibility-strategy/).
+In particular, we added a section on how to use images and ensure they’re as accessible as possible — giving advice to teams on how to meet or surpass relevant WCAG AA guidelines, in line with the [GOV.UK Design System accessibility strategy](/accessibility/accessibility-strategy/).
 
 To help us validate that this guidance is useful and practical for service teams across government, we want to hear from you.
 

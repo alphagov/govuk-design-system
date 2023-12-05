@@ -9,6 +9,7 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
 
 Tell users about the cookies you’re setting on their device and let them accept or reject different types of non-essential cookies.
 
@@ -98,6 +99,8 @@ Load the page with the radios set to ‘no’ on the user’s first visit. If th
 When the user sets or changes their cookie preferences, use a green [notification banner](/components/notification-banner/) to confirm that the service has updated the user’s cookie settings. This is so they can get back to the page they were looking at.
 
 {{ example({ group: "patterns", item: "cookies-page", example: "cookies-updated", html: true, nunjucks: true, open: false }) }}
+
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Save cookie preferences for returning users whenever technically possible, so they do not need to enter their preferences again. This relates to WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
 
 ## If you depend on JavaScript to ask users to accept or reject cookies
 

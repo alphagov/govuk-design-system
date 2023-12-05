@@ -8,6 +8,7 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
 
 The footer provides copyright, licensing and other information about your service.
 
@@ -42,8 +43,11 @@ You can add links to:
 - [cookies page](/patterns/cookies-page/)
 - terms and conditions
 - other language options
+- help content
 
 Use ‘Privacy’, ‘Accessibility’, ‘Cookies’ and ‘Terms and conditions’ for the link text.
+
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> If you include links to ‘help’ pages within a footer, make sure to place those links consistently within the footer content. Also make sure that ‘help’ links always function in a similar way across each page. This is to comply with WCAG 2.2 success criterion [3.2.6 Consistent Help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html).
 
 ## Adding secondary navigation
 

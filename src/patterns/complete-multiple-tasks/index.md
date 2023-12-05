@@ -9,6 +9,7 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
 
 Help users understand:
 
@@ -40,14 +41,16 @@ If you use a complete multiple tasks page in your service, you'll need to:
 
 If there are lots of tasks to complete, you might also need to group them further into steps.
 
-### Group related actions into tasks
+### Show related actions as a task
 
-Group related activities and questions into tasks, for example, ‘Provide financial evidence’ and ‘Give medical information’. This will help users understand and plan what they need to do.
+Summarise a set of related activities and questions into a task, for example, ‘Provide financial evidence’ and ‘Give medical information’. This will help users understand and plan what they need to do.
 
 Where possible, task names should:
 
 - describe what the task or activity will involve
 - start with verbs, for example, ‘check’, ‘declare’, ‘report’
+
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Any task list that allows the user to rearrange the order that tasks are shown must offer a way to do so without relying on ‘click and drag’ movements. This is to comply with [WCAG 2.2 success criterion 2.5.7 Dragging Movements](https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html).
 
 ### Show the status of the tasks
 
@@ -123,6 +126,10 @@ Ask ‘Have you completed this section?’ with the radio options ‘Yes, I’ve
 If the user selects ‘No, I’ll come back to it later,’ mark the task as 'Incomplete' or 'In progress'.
 
 If the user selects ‘Yes, I’ve completed this section,’ mark the task as 'Completed'.
+
+<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> If a user decides to go back to a previous task, make sure information they have already entered is pre-populated.
+
+Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
 
 {{ example({ group: "patterns", item: "complete-multiple-tasks", example: "have-you-completed-this-section", html: true, nunjucks: true, open: false }) }}
 
