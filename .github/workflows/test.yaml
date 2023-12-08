@@ -8,13 +8,6 @@ on:
       - 'feature/**'
       - 'v[0-9]'
 
-  workflow_call:
-    inputs:
-      upload-artifact:
-        default: false
-        required: false
-        type: boolean
-
   workflow_dispatch:
     inputs:
       runner:
@@ -59,16 +52,6 @@ jobs:
       - name: Build
         if: steps.build-cache.outputs.cache-hit != 'true'
         run: npm run build
-
-        # Share data between the build and deploy jobs so we don't need to run `npm run build` again on deploy
-        # Upload the deploy folder as an artifact so it can be downloaded and used in the deploy job
-      - name: Upload artifact
-        uses: actions/upload-artifact@v3.1.3
-        if: ${{ inputs.upload-artifact }}
-        with:
-          name: build
-          path: deploy/**
-          retention-days: 1
 
   test:
     name: ${{ matrix.task.description }}
