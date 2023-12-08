@@ -19,19 +19,20 @@
     "start": "cross-env NODE_ENV=development DEBUG=build* node tasks/start.js",
     "pretest": "npm run build",
     "test": "npm run lint && jest",
-    "lint": "npm run lint:editorconfig && npm run lint:prettier && npm run lint:js && npm run lint:scss && npm run lint:html --ignore-scripts",
+    "lint": "npm run lint:editorconfig && npm run lint:prettier && npm run lint:js && npm run lint:types && npm run lint:scss && npm run lint:html --ignore-scripts",
     "prelint:html": "npm run build",
     "lint:editorconfig": "editorconfig-checker",
     "lint:html": "html-validate \"deploy/public/**/index.html\"",
     "lint:js": "eslint --cache --cache-location .cache/eslint --cache-strategy content --color --ignore-path .gitignore \"**/*.{cjs,js,md,mjs}\"",
     "lint:prettier": "prettier --cache --cache-location .cache/prettier --cache-strategy content --check \"**/*.{cjs,js,json,md,mjs,scss,yaml,yml}\"",
     "lint:scss": "stylelint \"**/*.{md,scss}\"",
+    "lint:types": "tsc --build tsconfig.json",
     "check-links": "hyperlink --canonicalroot https://design-system.service.gov.uk/ --internal --recursive deploy/public/sitemap.xml | tee check-links.log | tap-mocha-reporter min"
   },
   "dependencies": {
     "accessible-autocomplete": "^2.0.4",
     "clipboard": "^2.0.11",
-    "govuk-frontend": "^4.7.0",
+    "govuk-frontend": "^5.0.0-beta.2",
     "iframe-resizer": "^4.3.9",
     "lunr": "^2.3.9"
   },
@@ -57,6 +58,7 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-jsdoc": "^46.9.0",
     "eslint-plugin-markdown": "^3.0.1",
     "eslint-plugin-n": "^16.3.1",
     "eslint-plugin-promise": "^6.1.1",
@@ -96,7 +98,17 @@
     "stylelint": "^15.11.0",
     "stylelint-config-gds": "^1.1.0",
     "stylelint-order": "^6.0.3",
-    "tap-mocha-reporter": "^5.0.4"
+    "tap-mocha-reporter": "^5.0.4",
+    "typescript": "^5.2.2"
+  },
+  "optionalDependencies": {
+    "@jest/environment": "^29.7.0",
+    "@types/browser-sync": "^2.27.4",
+    "@types/jest": "^29.5.8",
+    "@types/jest-axe": "^3.5.8",
+    "@types/node": "^20.9.1",
+    "@types/nunjucks": "^3.2.6",
+    "@types/slug": "^5.0.7"
   },
   "engines": {
     "node": "^20.9.0",

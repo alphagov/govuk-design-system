@@ -1,26 +1,43 @@
 import 'iframe-resizer/js/iframeResizer.contentWindow.js'
 
-function ExamplePage($module) {
-  this.$module = $module
-}
+/**
+ * Website example page
+ */
+class ExamplePage {
+  /**
+   * @param {Document} $module - HTML document
+   */
+  constructor($module) {
+    if (
+      !($module instanceof Document) ||
+      !document.body.classList.contains('govuk-frontend-supported')
+    ) {
+      return this
+    }
 
-ExamplePage.prototype.init = function () {
-  var $module = this.$module
-  if (!$module) {
-    return
-  }
-  var $form = $module.querySelector('form[action="/form-handler"]')
-  this.preventFormSubmission($form)
-}
+    this.$module = $module
 
-ExamplePage.prototype.preventFormSubmission = function ($form) {
-  // we should only have one form per example
-  if (!$form) {
-    return false
+    /** @satisfies {HTMLFormElement | null} */
+    const $form = this.$module.querySelector('form[action="/form-handler"]')
+    this.preventFormSubmission($form)
   }
-  $form.addEventListener('submit', function (e) {
-    e.preventDefault()
-  })
+
+  /**
+   * Prevent form submission
+   *
+   * @param {HTMLFormElement | null} $form - Form
+   * @returns {false | undefined} Returns false for examples without forms
+   */
+  preventFormSubmission($form) {
+    // we should only have one form per example
+    if (!$form) {
+      return false
+    }
+
+    $form.addEventListener('submit', (event) => {
+      event.preventDefault()
+    })
+  }
 }
 
 export default ExamplePage

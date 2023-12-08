@@ -1,40 +1,44 @@
-function BackToTop($module) {
-  this.$module = $module
-}
+/**
+ * Website back to top link
+ */
+class BackToTop {
+  /**
+   * @param {Element} $module - HTML element
+   */
+  constructor($module) {
+    if (
+      !($module instanceof HTMLElement) ||
+      !document.body.classList.contains('govuk-frontend-supported')
+    ) {
+      return this
+    }
 
-BackToTop.prototype.init = function () {
-  if (!this.$module) {
-    return
-  }
+    this.$module = $module
 
-  // Check if we can use Intersection Observers
-  if (!('IntersectionObserver' in window)) {
-    // If there's no support fallback to regular behaviour
-    // Since JavaScript is enabled we can remove the default hidden state
-    return this.$module.classList.remove('app-back-to-top--hidden')
-  }
+    // Check if we can use Intersection Observers
+    if (!('IntersectionObserver' in window)) {
+      // If there's no support fallback to regular behaviour
+      // Since JavaScript is enabled we can remove the default hidden state
+      this.$module.classList.remove('app-back-to-top--hidden')
+      return this
+    }
 
-  var $footer = document.querySelector('.app-footer')
-  var $subNav = document.querySelector('.app-subnav')
+    const $footer = document.querySelector('.app-footer')
+    const $subNav = document.querySelector('.app-subnav')
 
-  // Check if there is anything to observe
-  if (!$footer || !$subNav) {
-    return
-  }
+    // Check if there is anything to observe
+    if (!$footer || !$subNav) {
+      return this
+    }
 
-  var footerIsIntersecting = false
-  var subNavIsIntersecting = false
-  var subNavIntersectionRatio = 0
+    let footerIsIntersecting = false
+    let subNavIsIntersecting = false
+    let subNavIntersectionRatio = 0
 
-  var observer = new window.IntersectionObserver(
-    function (entries) {
+    const observer = new window.IntersectionObserver((entries) => {
       // Find the elements we care about from the entries
-      var footerEntry = entries.find(function (entry) {
-        return entry.target === $footer
-      })
-      var subNavEntry = entries.find(function (entry) {
-        return entry.target === $subNav
-      })
+      const footerEntry = entries.find((entry) => entry.target === $footer)
+      const subNavEntry = entries.find((entry) => entry.target === $subNav)
 
       // If there is an entry this means the element has changed so lets check if it's intersecting.
       if (footerEntry) {
@@ -59,11 +63,11 @@ BackToTop.prototype.init = function () {
       } else {
         this.$module.classList.remove('app-back-to-top--hidden')
       }
-    }.bind(this)
-  )
+    })
 
-  observer.observe($footer)
-  observer.observe($subNav)
+    observer.observe($footer)
+    observer.observe($subNav)
+  }
 }
 
 export default BackToTop

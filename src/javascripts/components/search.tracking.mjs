@@ -1,8 +1,21 @@
+/**
+ * Push to Google Analytics
+ *
+ * @param {object} payload - Google Analytics payload
+ */
 function addToDataLayer(payload) {
+  // @ts-expect-error Property does not exist on window
   window.dataLayer = window.dataLayer || []
+  // @ts-expect-error Property does not exist on window
   window.dataLayer.push(payload)
 }
 
+/**
+ * Strip possible personally identifiable information (PII)
+ *
+ * @param {string} string - Input string
+ * @returns {string} Output string
+ */
 function stripPossiblePII(string) {
   // Try to detect emails, postcodes, and NI numbers, and redact them.
   // Regexes copied from GTM variable 'JS - Remove PII from Hit Payload'
@@ -20,59 +33,66 @@ function stripPossiblePII(string) {
   return string
 }
 
+/**
+ * Track confirmed autocomplete result
+ *
+ * @param {string} searchQuery - Search query
+ * @param {object[]} searchResults - Search results
+ * @param {object} result - Search result
+ */
 export function trackConfirm(searchQuery, searchResults, result) {
-  if (window.DO_NOT_TRACK_ENABLED) {
+  if ('DO_NOT_TRACK_ENABLED' in window && window.DO_NOT_TRACK_ENABLED) {
     return
   }
 
-  var searchTerm = stripPossiblePII(searchQuery)
-  var products = searchResults
-    .map(function (result, key) {
-      return {
-        name: result.title,
-        category: result.section,
-        list: searchTerm, // Used to match an searchTerm with results
-        position: key + 1
-      }
-    })
-    .filter(function (product) {
-      // Only return the product that matches what was clicked
-      return product.name === result.title
-    })
+  const searchTerm = stripPossiblePII(searchQuery)
+  const products = searchResults
+    .map((result, key) => ({
+      name: result.title,
+      category: result.section,
+      list: searchTerm, // Used to match an searchTerm with results
+      position: key + 1
+    }))
+    // Only return the product that matches what was clicked
+    .filter((product) => product.name === result.title)
 
   addToDataLayer({
     event: 'site-search',
     eventDetails: {
       category: 'site search',
       action: 'click',
-      label: searchTerm + ' | ' + result.title
+      label: `${searchTerm} | ${result.title}`
     },
     ecommerce: {
       click: {
         actionField: { list: searchTerm },
-        products: products
+        products
       }
     }
   })
 }
 
+/**
+ * Track autocomplete results
+ *
+ * @param {string} searchQuery - Search query
+ * @param {object[]} searchResults - Search results
+ */
 export function trackSearchResults(searchQuery, searchResults) {
-  if (window.DO_NOT_TRACK_ENABLED) {
+  if ('DO_NOT_TRACK_ENABLED' in window && window.DO_NOT_TRACK_ENABLED) {
     return
   }
 
-  var searchTerm = stripPossiblePII(searchQuery)
+  const searchTerm = stripPossiblePII(searchQuery)
 
-  var hasResults = searchResults.length > 0
+  const hasResults = searchResults.length > 0
   // Impressions is Google Analytics lingo for what people have seen.
-  var impressions = searchResults.map(function (result, key) {
-    return {
-      name: result.title,
-      category: result.section,
-      list: searchTerm, // Used to match an searchTerm with results
-      position: key + 1
-    }
-  })
+  const impressions = searchResults.map((result, key) => ({
+    name: result.title,
+    category: result.section,
+    list: searchTerm, // Used to match an searchTerm with results
+    position: key + 1
+  }))
 
   addToDataLayer({
     event: 'site-search',
@@ -82,7 +102,7 @@ export function trackSearchResults(searchQuery, searchResults) {
       label: searchTerm
     },
     ecommerce: {
-      impressions: impressions
+      impressions
     }
   })
 }

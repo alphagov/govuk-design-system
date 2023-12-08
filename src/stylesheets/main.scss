@@ -120,15 +120,6 @@ $app-code-color: #d13118;
   }
 }
 
-.app-example-page__wrapper {
-  overflow: auto;
-  background-color: govuk-colour("white");
-}
-
-.app-example-page {
-  padding: govuk-spacing(6);
-}
-
 // Copy button
 .app-copy-button {
   $copy-button-colour: #00823b;
@@ -286,7 +277,7 @@ pre code {
     outline: $govuk-focus-width solid $govuk-focus-colour;
   }
 
-  .js-enabled [data-module="app-copy"] & {
+  .govuk-frontend-supported [data-module="app-copy"] & {
     padding-top: 45px; // Allow extra space for the copy code button
   }
 }

@@ -17,7 +17,7 @@ ignoreInSitemap: true
 
 {% set htmlClasses = "app-html-class" %}
 {% set htmlLang = "en" %}
-{% set assetUrl = "<YOUR-DOMAIN>" %}
+{% set assetUrl = "YOUR-DOMAIN" %}
 {% set themeColor = "blue" %}
 {% set bodyClasses = "app-body-class" %}
 {% set bodyAttributes = {
@@ -33,7 +33,7 @@ ignoreInSitemap: true
 {% endblock %}
 
 {% block head %}
-  <link href="/govuk-frontend/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/govuk-frontend.min.css">
 {% endblock %}
 
 {% block bodyStart %}
@@ -149,5 +149,9 @@ ignoreInSitemap: true
 {% endblock %}
 
 {% block bodyEnd %}
-  <script src="/govuk-frontend/all.js"></script>
+  <script type="module" src="/javascripts/govuk-frontend.min.js"></script>
+  <script type="module">
+    import { initAll } from '/javascripts/govuk-frontend.min.js'
+    initAll()
+  </script>
 {% endblock %}

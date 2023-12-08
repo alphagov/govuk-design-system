@@ -1,3 +1,5 @@
+/* eslint-disable no-new */
+
 import { initAll } from 'govuk-frontend'
 
 import Analytics from './components/analytics.mjs'
@@ -10,7 +12,6 @@ import {
 import CookiesPage from './components/cookies-page.mjs'
 import Copy from './components/copy.mjs'
 import Example from './components/example.mjs'
-import { nodeListForEach } from './components/helpers.mjs'
 import Navigation from './components/navigation.mjs'
 import OptionsTable from './components/options-table.mjs'
 import Search from './components/search.mjs'
@@ -20,49 +21,57 @@ import AppTabs from './components/tabs.mjs'
 initAll()
 
 // Initialise cookie banner
-var $cookieBanner = document.querySelector(
+const $cookieBanner = document.querySelector(
   '[data-module="govuk-cookie-banner"]'
 )
-new CookieBanner($cookieBanner).init()
+if ($cookieBanner) {
+  new CookieBanner($cookieBanner)
+}
 
 // Initialise analytics if consent is given
-var userConsent = getConsentCookie()
+const userConsent = getConsentCookie()
 if (userConsent && isValidConsentCookie(userConsent) && userConsent.analytics) {
   Analytics()
 }
 
 // Initialise example frames
-var $examples = document.querySelectorAll('[data-module="app-example-frame"]')
-nodeListForEach($examples, function ($example) {
-  new Example($example).init()
+const $examples = document.querySelectorAll('[data-module="app-example-frame"]')
+$examples.forEach(($example) => {
+  new Example($example)
 })
 
 // Initialise tabs
-var $tabs = document.querySelectorAll('[data-module="app-tabs"]')
-nodeListForEach($tabs, function ($tabs) {
-  new AppTabs($tabs).init()
+const $tabs = document.querySelectorAll('[data-module="app-tabs"]')
+$tabs.forEach(($tabs) => {
+  new AppTabs($tabs)
 })
 
 // Do this after initialising tabs
-OptionsTable.init()
+new OptionsTable()
 
 // Add copy to clipboard to code blocks inside tab containers
-var $codeBlocks = document.querySelectorAll('[data-module="app-copy"] pre')
-nodeListForEach($codeBlocks, function ($codeBlock) {
-  new Copy($codeBlock).init()
+const $codeBlocks = document.querySelectorAll('[data-module="app-copy"] pre')
+$codeBlocks.forEach(($codeBlock) => {
+  new Copy($codeBlock)
 })
 
 // Initialise mobile navigation
-new Navigation().init()
+new Navigation(document)
 
 // Initialise search
-var $searchContainer = document.querySelector('[data-module="app-search"]')
-new Search($searchContainer).init()
+const $searchContainer = document.querySelector('[data-module="app-search"]')
+if ($searchContainer) {
+  new Search($searchContainer)
+}
 
 // Initialise back to top
-var $backToTop = document.querySelector('[data-module="app-back-to-top"]')
-new BackToTop($backToTop).init()
+const $backToTop = document.querySelector('[data-module="app-back-to-top"]')
+if ($backToTop) {
+  new BackToTop($backToTop)
+}
 
 // Initialise cookie page
-var $cookiesPage = document.querySelector('[data-module="app-cookies-page"]')
-new CookiesPage($cookiesPage).init()
+const $cookiesPage = document.querySelector('[data-module="app-cookies-page"]')
+if ($cookiesPage) {
+  new CookiesPage($cookiesPage)
+}
