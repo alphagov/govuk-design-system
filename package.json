@@ -76,7 +76,7 @@
     "jstransformer-nunjucks": "^1.2.0",
     "marked": "^10.0.0",
     "marked-gfm-heading-id": "^3.1.2",
-    "marked-highlight": "^2.0.8",
+    "marked-highlight": "^2.0.9",
     "marked-smartypants": "^1.1.5",
     "metalsmith": "^2.6.2",
     "metalsmith-canonical": "^1.2.0",
