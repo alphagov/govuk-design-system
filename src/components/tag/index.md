@@ -26,7 +26,7 @@ To use the ‘Tag' and meet the new Web Content Accessibility Guidelines (WCAG) 
 
 - <a href="/components/tag/#wcag-tag-no-dragging-reorder">interact with tags without relying on 'click and drag' movements (if you choose to add functionality to reorder tags)</a>
 
-See the full list of components and patterns affected on our '[Changes to meet WCAG 2.2 page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system)'.
+See the full list of components and patterns affected on our ['Changes to meet WCAG 2.2' page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({
@@ -48,17 +48,10 @@ There are two ways to use the tag component. You can use HTML or, if you are usi
 
 Tags are only used to indicate a status. Do not make a tag interactive by making it into a link or button. Use adjectives (descriptive words) and not verbs (action words) for the names of your tags. Using a verb might make a user think that clicking on them will do something.
 
-<div class="app-wcag-22" id="wcag-tags-not-interactive" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>Do not use tags to create links, buttons or other interactive elements, as users:</p>
-  <ul>
-    <li>are unlikely to identify the tags as something they’re meant to interact with</li>
-    <li>would see no visual difference between interactive and non-interactive tags</li>
-  </ul>
-</div>
+Do not use tags to create links, buttons or other interactive elements, as users:
+
+- are unlikely to identify the tags as something they’re meant to interact with
+- would see no visual difference between interactive and non-interactive tags
 
 ## Showing one or two statuses
 

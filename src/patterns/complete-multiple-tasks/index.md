@@ -32,7 +32,7 @@ To help users to 'Complete multiple tasks' and meet the new WCAG 2.2 criteria, m
 - [interact with tasks without relying on 'click and drag' movements (if you choose to add functionality to reorder tasks)](/patterns/complete-multiple-tasks/#wcag-interact-without-click-drag-task)
 - [edit information they've given when going back to a previous task](/patterns/complete-multiple-tasks/#wcag-edit-information-previous-task)
 
-See the full list of components and patterns affected on our '[Changes to meet WCAG 2.2 page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system)'.
+See the full list of components and patterns affected on our ['Changes to meet WCAG 2.2' page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({
@@ -150,7 +150,7 @@ This can be helpful when a task involves:
 - looking up information, such as details about previous jobs
 - answers that need to be checked carefully with someone else
 
-Do this by asking a radio question at the end of the task — either as the last question (if the task is a single page) or on the [‘Check answers’ page](/patterns/check-answers/) (if the task uses multiple [question pages](/patterns/question-pages/)).
+Do this by asking a radio question at the end of the task – either as the last question (if the task is a single page) or on the [‘Check answers’ page](/patterns/check-answers/) (if the task uses multiple [question pages](/patterns/question-pages/)).
 
 Ask ‘Have you completed this section?’ with the radio options ‘Yes, I’ve completed this section’ or ‘No, I’ll come back later’.
 

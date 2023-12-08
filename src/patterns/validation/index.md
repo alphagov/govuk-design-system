@@ -25,7 +25,7 @@ To help users to 'Recover from validation errors' and meet the new WCAG 2.2 crit
 
 - [edit information they've previously given to correct an error](/patterns/validation/#wcag-edit-to-correct-errors)
 
-See the full list of components and patterns affected on our '[Changes to meet WCAG 2.2 page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system)'.
+See the full list of components and patterns affected on our ['Changes to meet WCAG 2.2' page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({
@@ -66,13 +66,13 @@ For example, if you’re asking for someone’s date of birth you should not acc
 
 Use validation to ignore unwanted characters, unless it would make the information too unclear for you to use. For example, any spaces, invisible characters or punctuation, like hyphens, brackets, dashes and full stops.
 
-If these characters caused a validation error, it would be difficult for the user to see and fix — especially if added by accident.
+If these characters caused a validation error, it would be difficult for the user to see and fix – especially if added by accident.
 
 You should ignore unwanted characters entered:
 
 - as part of numbers and codes, such as postcodes or card details
 - before or after an answer, as users might have copied and pasted them in by accident
-- by dictation software — this is particularly common when dictating numbers
+- by dictation software – this is particularly common when dictating numbers
 
 ### How to tell the user about validation errors
 

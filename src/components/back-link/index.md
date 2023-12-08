@@ -27,7 +27,7 @@ To use the ‘Back link’ and comply with new success criteria introduced in We
 - [avoid re-entering information they've previously given when they go back to a page](/components/back-link/#wcag-avoid-information-reentry)
 - [interact with back links](/components/back-link/#wcag-interact-back-links)
 
-See the full list of components and patterns affected on our '[Changes to meet WCAG 2.2 page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system)'.
+See the full list of components and patterns affected on our ['Changes to meet WCAG 2.2' page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({
@@ -86,8 +86,8 @@ For more complex user journeys, consider using different link text, like 'Go bac
 
 ### Back links on dark backgrounds
 
-Use the `govuk-back-link--inverse` modifier class to show a white link on a dark background — for example, in headers, custom components, and patterns with darker backgrounds.
+Use the `govuk-back-link--inverse` modifier class to show a white link on a dark background – for example, in headers, custom components, and patterns with darker backgrounds.
 
-Make sure all users can see the back link — the background colour [must have a contrast ratio of at least 4.5:1](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html) with white.
+Make sure all users can see the back link – the background colour [must have a contrast ratio of at least 4.5:1](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html) with white.
 
 {{ example({ group: "components", item: "back-link", example: "inverse", html: true, nunjucks: true, open: false }) }}

@@ -40,7 +40,7 @@ This guidance is for government teams that build online services. To learn how t
 
 Services usually work best without relying on images. Focus on writing clear, simple content for your service first.
 
-Adding images can sometimes help users better understand instructions. However, images should only be visual aids — written content must contain all the information the user needs to complete the service.
+Adding images can sometimes help users better understand instructions. However, images should only be visual aids – written content must contain all the information the user needs to complete the service.
 
 If you choose to add an image to your service, you’ll need to carefully decide if the image needs to be described with [alternative text (alt text)](#alt-text).
 
@@ -69,7 +69,7 @@ Use flat blocks of colour. Avoid using shadows or gradients, except when needed 
 
 If you're creating multiple illustrations for a service, use consistent colours, line widths and border radiuses across them all.
 
-Avoid depicting people in illustrations. If you need to show people, think carefully about how you represent the people that use your service — do not only show one kind of person.
+Avoid depicting people in illustrations. If you need to show people, think carefully about how you represent the people that use your service – do not only show one kind of person.
 
 For example, only depicting people of a particular age, gender or ethnicity can exclude people and reinforce negative stereotypes.
 
@@ -245,7 +245,7 @@ Do not write alt text that:
 
 In March 2023, we updated this page to help teams make decisions on when to use images in their services.
 
-In particular, we added a section on how to use images and ensure they’re as accessible as possible — giving advice to teams on how to meet or surpass relevant WCAG AA guidelines, in line with the [GOV.UK Design System accessibility strategy](/accessibility/accessibility-strategy/).
+In particular, we added a section on how to use images and ensure they’re as accessible as possible – giving advice to teams on how to meet or surpass relevant WCAG AA guidelines, in line with the [GOV.UK Design System accessibility strategy](/accessibility/accessibility-strategy/).
 
 To help us validate that this guidance is useful and practical for service teams across government, we want to hear from you.
 

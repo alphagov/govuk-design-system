@@ -27,7 +27,7 @@ To help users to 'Check answers' and meet the new WCAG 2.2 criteria, make sure t
 
 - [go back and edit information they've already entered](/patterns/check-answers/#wcag-prepopulate-information)
 
-See the full list of components and patterns affected on our '[Changes to meet WCAG 2.2 page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system)'.
+See the full list of components and patterns affected on our ['Changes to meet WCAG 2.2' page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({
@@ -66,7 +66,7 @@ However, if your service asks users for longer or more detailed answers, a full 
 
 ### Make the page easy to understand
 
-Use the page title to tell the user what they need to do — otherwise, they might miss the 'submit' button at the end of the page.
+Use the page title to tell the user what they need to do – otherwise, they might miss the 'submit' button at the end of the page.
 
 On the page, you should also:
 

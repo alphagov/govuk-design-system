@@ -46,7 +46,7 @@ The legal basis for processing this data is that processing is necessary for the
 
 ## Performance analysis
 
-We also carry out performance analysis to see how you use the GOV.UK Design System and how well the site performs on your device during your visit — we do this to make sure it is meeting the needs of its users and improve it.
+We also carry out performance analysis to see how you use the GOV.UK Design System and how well the site performs on your device during your visit – we do this to make sure it is meeting the needs of its users and improve it.
 
 Where you provide consent, we collect the following information:
 
@@ -89,7 +89,7 @@ We will not:
 - sell or rent your data to third parties
 - share your data with third parties for marketing purposes
 
-We will share your data if we’re required to do so by law — for example, by court order, or to prevent fraud or other crime.
+We will share your data if we’re required to do so by law – for example, by court order, or to prevent fraud or other crime.
 
 ## How we protect your data and keep it secure
 

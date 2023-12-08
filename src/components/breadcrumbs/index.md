@@ -26,7 +26,7 @@ To use ‘Breadcrumbs' and meet the new Web Content Accessibility Guidelines (WC
 
 - [interact with breadcrumbs](/components/breadcrumbs/#wcag-interact-breadcrumbs)
 
-See the full list of components and patterns affected on our '[Changes to meet WCAG 2.2 page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system)'.
+See the full list of components and patterns affected on our ['Changes to meet WCAG 2.2' page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({
@@ -76,8 +76,8 @@ To do this, add a `govuk-breadcrumbs--collapse-on-mobile` class to the outer `<d
 
 ### Breadcrumbs on dark backgrounds
 
-Use the `govuk-breadcrumbs--inverse` modifier class to show white links and arrows on dark backgrounds — for example, in headers, custom components, and patterns with darker backgrounds.
+Use the `govuk-breadcrumbs--inverse` modifier class to show white links and arrows on dark backgrounds – for example, in headers, custom components, and patterns with darker backgrounds.
 
-Make sure all users can see the breadcrumbs — the background colour [must have a contrast ratio of at least 4.5:1](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html) with white.
+Make sure all users can see the breadcrumbs – the background colour [must have a contrast ratio of at least 4.5:1](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html) with white.
 
 {{ example({ group: "components", item: "breadcrumbs", example: "inverse", html: true, nunjucks: true, open: false }) }}

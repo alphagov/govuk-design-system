@@ -28,7 +28,7 @@ To use ‘Confirmation pages' and meet the new Web Content Accessibility Guideli
 - [see and understand text in the green confirmation panel](/patterns/confirmation-pages/#wcag-see-understand-text)
 - [select and copy text within a confirmation page as well as its panel](/patterns/confirmation-pages/#wcag-select-copy-confirmation)
 
-See the full list of components and patterns affected on our '[Changes to meet WCAG 2.2 page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system)'.
+See the full list of components and patterns affected on our ['Changes to meet WCAG 2.2' page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({

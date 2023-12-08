@@ -27,7 +27,7 @@ To ask users for 'National insurance numbers' and meet the new Web Content Acces
 
 - [reuse a previously entered National Insurance number](/patterns/national-insurance-numbers/#wcag-reuse-national-insurance-number)
 
-See the full list of components and patterns affected on our '[Changes to meet WCAG 2.2 page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system)'.
+See the full list of components and patterns affected on our ['Changes to meet WCAG 2.2' page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({
@@ -55,7 +55,7 @@ If you currently use National Insurance numbers to verify identity, find out how
 
 Use a single [text input](/components/text-input/) labelled ‘National Insurance number’. Write it out in full and never use abbreviations such as ‘NINO’ or ‘NI Number’.
 
-Show a National Insurance number using the format ‘QQ 12 34 56 C’ — the spaces will break up the number to make it easier to read, particularly for screen reader users.
+Show a National Insurance number using the format ‘QQ 12 34 56 C’ – the spaces will break up the number to make it easier to read, particularly for screen reader users.
 
 When asking for a National Insurance number:
 

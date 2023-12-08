@@ -27,7 +27,7 @@ To help users to 'Contact a department or service team' and meet the new WCAG 2.
 
 - [find contact details to get help in a consistent place on each page](/patterns/contact-a-department-or-service-team/#wcag-consistent-contact)
 
-See the full list of components and patterns affected on our '[Changes to meet WCAG 2.2 page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system)'.
+See the full list of components and patterns affected on our ['Changes to meet WCAG 2.2' page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({
@@ -49,23 +49,19 @@ Read about how and why to [set up user support](https://www.gov.uk/service-manua
 
 {{ example({ group: "patterns", item: "contact-a-department-or-service-team", example: "all-contact-information", html: true, open: false, size: "xl" }) }}
 
-### Place contact information consistently
+Order contact channels based on what research shows your users need, and what your service or department can best support.
+
+Show contact channels in the same order throughout your service. This helps users to find what they need more easily.
 
 <div class="app-wcag-22" id="wcag-consistent-contact" role="note">
   {{ govukTag({
     text: "WCAG 2.2",
     classes: "app-tag"
   }) }}
-  <p>If you use this pattern across a set of pages, make sure to place the contact information consistently on the page.</p>
+  <p>If you use this pattern across a set of pages, make sure to place the contact information consistently on each page.</p>
   <p>For example, if you place a ‘contact us’ section at the end of one page within a set of pages, then you should place any ‘contact us’ sections on other pages within the set at the end of the other pages as well.</p>
   <p>This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent Help</a>.</p>
 </div>
-
-### Order contact channels consistently
-
-List contact channels in the same order throughout your service. This helps users to find what they need more easily.
-
-Order contact channels based on what research shows your users need, and what your service or department can best support.
 
 ### Social media
 

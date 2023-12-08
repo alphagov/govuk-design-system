@@ -27,7 +27,7 @@ To help users to 'Create accounts' and meet the new WCAG 2.2 criteria, make sure
 - [reuse information they've already entered](/patterns/create-accounts/#wcag-reuse-account-information)
 - [avoid doing a cognitive test, such as a CAPTCHA, to create an account](/patterns/create-accounts/#wcag-avoid-cognitive-test)
 
-See the full list of components and patterns affected on our '[Changes to meet WCAG 2.2 page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system)'.
+See the full list of components and patterns affected on our ['Changes to meet WCAG 2.2' page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({
@@ -91,7 +91,7 @@ Make sure the account creation screen is solely about that task. Do not add any 
 
 ### Avoid using security measures such as CAPTCHAs
 
-CAPTCHAs (Completely Automated Public Turing Test to Tell Computers and Humans Apart) and similar tests require users to recognise words or pictures.
+<abbr title="Completely Automated Public Turing Test to Tell Computers and Humans Apart">CAPTCHAs</abbr> and similar tests require users to recognise words or pictures.
 
 These are tests of cognitive function, which might be difficult for some users. Users can also struggle to recognise specific words or pictures due to differences in culture and locale.
 
@@ -101,7 +101,7 @@ These are tests of cognitive function, which might be difficult for some users. 
     classes: "app-tag"
   }) }}
   <p>Avoid making users do a cognitive test to use your service. If you do, you must also offer an alternative method. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum">3.3.8 Accessible Authentication (Minimum)</a>.</p>
-  <p><a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum#object-recognition">WCAG lists some other security measures</a> you can implement to prevent misuse and automated abuse in your service.</p>
+  <p>See more about <a href="https://www.gov.uk/service-manual/technology/using-captchas">using CAPTCHAs and why they’re problematic</a> in the Service Manual. <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum#object-recognition">WCAG lists some other security measures</a> you can implement to prevent misuse and automated abuse in your service.</p>
 </div>
 
 ### Never use National Insurance numbers to verify a user’s identity

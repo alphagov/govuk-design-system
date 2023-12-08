@@ -24,7 +24,7 @@ To use the ‘Button' and meet the new Web Content Accessibility Guidelines (WCA
 
 - [interact with buttons](/components/button/#wcag-interact-button)
 
-See the full list of components and patterns affected on our '[Changes to meet WCAG 2.2 page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system)'.
+See the full list of components and patterns affected on our ['Changes to meet WCAG 2.2' page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({
@@ -110,9 +110,9 @@ Do not only rely on the red colour of a warning button to communicate the seriou
 
 ### Buttons on dark backgrounds
 
-Use the `govuk-button--inverse` modifier class to show white buttons on dark backgrounds — for example, in headers, custom components, and patterns with darker backgrounds.
+Use the `govuk-button--inverse` modifier class to show white buttons on dark backgrounds – for example, in headers, custom components, and patterns with darker backgrounds.
 
-Make sure all users can see the button — the white button and background colour [must have a contrast ratio of at least 3:1](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html).
+Make sure all users can see the button – the white button and background colour [must have a contrast ratio of at least 3:1](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html).
 
 {{ example({ group: "components", item: "button", example: "inverse", html: true, nunjucks: true, open: false }) }}
 

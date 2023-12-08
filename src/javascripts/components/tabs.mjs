@@ -135,8 +135,8 @@ class AppTabs {
     const $mobileTab = this.getMobileTab(panelId)
     const $desktopTab = this.getDesktopTab(panelId)
 
-    // Panels can exist without associated tabs—for example if there's a single
-    // panel that's open by default—so make sure they actually exist before use
+    // Panels can exist without associated tabs–for example if there's a single
+    // panel that's open by default–so make sure they actually exist before use
     if (
       $mobileTab &&
       $mobileTab.parentElement &&
@@ -170,8 +170,8 @@ class AppTabs {
     const $mobileTab = this.getMobileTab(panelId)
     const $desktopTab = this.getDesktopTab(panelId)
 
-    // Panels can exist without associated tabs—for example if there's a single
-    // panel that's open by default—so make sure they actually exist before use
+    // Panels can exist without associated tabs–for example if there's a single
+    // panel that's open by default–so make sure they actually exist before use
     if (
       $mobileTab &&
       $mobileTab.parentElement &&

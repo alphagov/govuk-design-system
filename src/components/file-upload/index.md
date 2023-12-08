@@ -27,7 +27,7 @@ To use the ‘File upload' and meet the new Web Content Accessibility Guidelines
 - [upload a file without relying on 'drag and drop' movements](/components/file-upload/#wcag-multi-method-drag-drop)
 - [reuse files they've uploaded](/components/file-upload/#wcag-use-previous-uploads)
 
-See the full list of components and patterns affected on our '[Changes to meet WCAG 2.2 page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system)'.
+See the full list of components and patterns affected on our ['Changes to meet WCAG 2.2' page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({
@@ -65,7 +65,7 @@ To upload a file, the user can either:
     text: "WCAG 2.2",
     classes: "app-tag"
   }) }}
-  <p>Make sure users can easily reuse a previously uploaded file within a single journey, unless doing so would be a major security concern.</p>
+  <p>Make sure users can easily reuse a previously uploaded file within a single journey, unless doing so would be a major security or privacy concern.</p>
   <p>For example, a user might need to upload a photo of their driving licence to prove their identity, and again to prove their address.</p>
   <p>You can make it easier for the user to reuse a file by showing it as an option for the user to select instead of the file upload. Consider users on public devices before choosing to make the file available to preview or download. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
 </div>

@@ -27,7 +27,7 @@ To use ‘Summary list’ and comply with new success criteria introduced in Web
 - [interact with row actions](/components/summary-list/#wcag-interact-row-actions)
 - [change information they've previously given in an answer](/components/summary-list/#wcag-change-answers)
 
-See the full list of components and patterns affected on our '[Changes to meet WCAG 2.2 page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system)'.
+See the full list of components and patterns affected on our ['Changes to meet WCAG 2.2' page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({
@@ -139,7 +139,7 @@ Summary cards are often used in case working systems to help users quickly view 
 
 Do not use summary cards if you only need to show a small amount of related information. Use summary lists instead, and structure them with headings if needed.
 
-If you’re showing summary cards at the end of a longer journey, you might want to familiarise the user with them earlier on — such as when the user reviews individual sections.
+If you’re showing summary cards at the end of a longer journey, you might want to familiarise the user with them earlier on – such as when the user reviews individual sections.
 
 ### Card titles
 
@@ -147,7 +147,7 @@ Use the summary card’s header area to give each summary list a title.
 
 Each title must be unique and help identify what the summary list describes. For example, this could be the name of a specific person, organisation or professional qualification.
 
-Try to keep titles short and relevant. You can use one or two important values in the summary list — such as the first and last name of a person.
+Try to keep titles short and relevant. You can use one or two important values in the summary list – such as the first and last name of a person.
 
 {{ example({ group: "components", item: "summary-list", example: "card-with-title", html: true, nunjucks: true, open: false }) }}
 
@@ -157,7 +157,7 @@ You can add card actions in the header, which will be shown after the summary ca
 
 For example, if you have multiple rows with "change" actions that all take the user to the same place, you can show a single “change” card action instead. This helps avoid repeating the same row action on every row.
 
-Card actions are shown in bold text to make them visually distinct from row actions — and help alert the user that the card action will affect the entire summary card.
+Card actions are shown in bold text to make them visually distinct from row actions – and help alert the user that the card action will affect the entire summary card.
 
 Write link text for card actions to tell the user what the card action will do and that it will apply to the entire summary card. It should also be as short as possible, usually 2 words.
 

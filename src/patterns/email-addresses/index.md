@@ -26,7 +26,7 @@ To ask users for 'Email addresses' and meet the new Web Content Accessibility Gu
 
 - [reuse a previously entered email address](/patterns/email-addresses/#wcag-reuse-email-addresses)
 
-See the full list of components and patterns affected on our '[Changes to meet WCAG 2.2 page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system)'.
+See the full list of components and patterns affected on our ['Changes to meet WCAG 2.2' page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({

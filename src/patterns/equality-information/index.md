@@ -27,7 +27,7 @@ To ask users for 'Equality information' and meet the new Web Content Accessibili
 
 - [update their equality information without re-entering existing information](/patterns/equality-information/#wcag-do-not-ask-reentry-equality-info)
 
-See the full list of components and patterns affected on our '[Changes to meet WCAG 2.2 page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system)'.
+See the full list of components and patterns affected on our ['Changes to meet WCAG 2.2' page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({
