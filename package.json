@@ -54,8 +54,8 @@
     "connect": "^3.7.0",
     "cross-env": "^7.0.3",
     "editorconfig-checker": "^5.1.2",
-    "eslint": "^8.54.0",
-    "eslint-config-prettier": "^9.0.0",
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-jsdoc": "^46.9.0",
@@ -95,11 +95,11 @@
     "slug": "^8.2.3",
     "smartypants": "^0.2.2",
     "standard": "^17.1.0",
-    "stylelint": "^15.11.0",
+    "stylelint": "^16.0.1",
     "stylelint-config-gds": "^1.1.0",
     "stylelint-order": "^6.0.3",
     "tap-mocha-reporter": "^5.0.4",
-    "typescript": "^5.2.2"
+    "typescript": "^5.3.3"
   },
   "optionalDependencies": {
     "@jest/environment": "^29.7.0",
