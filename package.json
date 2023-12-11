@@ -60,7 +60,7 @@
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-jsdoc": "^46.9.0",
     "eslint-plugin-markdown": "^3.0.1",
-    "eslint-plugin-n": "^16.3.1",
+    "eslint-plugin-n": "^16.4.0",
     "eslint-plugin-promise": "^6.1.1",
     "glob": "^10.3.10",
     "gray-matter": "^4.0.2",
@@ -97,7 +97,7 @@
     "standard": "^17.1.0",
     "stylelint": "^15.11.0",
     "stylelint-config-gds": "^1.1.0",
-    "stylelint-order": "^6.0.3",
+    "stylelint-order": "^6.0.4",
     "tap-mocha-reporter": "^5.0.4",
     "typescript": "^5.3.3"
   },
