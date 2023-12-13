@@ -115,11 +115,16 @@
                     {% endif %}
                       {{ option.description | safe }}
                     {% if (option.params) or ["hint", "label"].includes(option.slug) %}
-                      {# Link to Nunjucks macro options table only -#}
-                      See <a href="#options-{{ exampleId }}--{{ option.slug }}">{{ option.name | safe }}</a>.
-                    {% elif (option.isComponent) %}
+                      {% if option.isComponent and not ["hint", "label"].includes(option.slug) %}
+                        {# Link to subset of Nunjucks macro options table and Design System component page -#}
+                        See supported <a href="#options-{{ exampleId }}--{{ option.slug }}">{{ option.name | safe }}</a> options for <a href="/components/{{ option.slug }}/#options-{{ option.slug }}-example">{{ optionName | safe }}</a>.
+                      {% else %}
+                        {# Link to Nunjucks macro options table only -#}
+                        See <a href="#options-{{ exampleId }}--{{ option.slug }}">{{ option.name | safe }}</a>.
+                      {% endif %}
+                    {% elif option.isComponent %}
                       {# Link to Design System component page for nested components -#}
-                      See <a href="/components/{{ option.slug }}/#options-{{ option.slug }}-example">{{ option.name | safe }}</a>.
+                      See <a href="/components/{{ option.slug }}/#options-{{ option.slug }}-example">{{ optionName | safe }}</a>.
                     {% endif %}
                     </td>
                   </tr>
