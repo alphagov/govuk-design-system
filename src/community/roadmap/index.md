@@ -28,7 +28,6 @@ We recently shipped GOV.UK Frontend v5.0 which includes:
 
 You can read more about this breaking release in the guide [‘Changes to GOV.UK Frontend v5.0.0’](https://frontend.design-system.service.gov.uk/changes-to-govuk-frontend-v5/) and the [release notes](https://github.com/alphagov/govuk-frontend/releases/tag/v5.0.0).
 
-
 We've also:
 
 - made it easier for teams to [share their findings from user research](/community/share-research-findings/)
