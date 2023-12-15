@@ -13,6 +13,7 @@ import Navigation from './components/navigation.mjs'
 import OptionsTable from './components/options-table.mjs'
 import Search from './components/search.mjs'
 import AppTabs from './components/tabs.mjs'
+import '@zachleat/snow-fall'
 
 // Initialise cookie banner
 var $cookieBanner = document.querySelector(

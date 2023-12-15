@@ -29,6 +29,7 @@
     "check-links": "hyperlink --canonicalroot https://design-system.service.gov.uk/ --internal --recursive --source-maps deploy/public/sitemap.xml | tap-mocha-reporter min"
   },
   "dependencies": {
+    "@zachleat/snow-fall": "^1.0.1",
     "accessible-autocomplete": "^2.0.4",
     "clipboard": "^2.0.11",
     "govuk-frontend": "^4.7.0",
