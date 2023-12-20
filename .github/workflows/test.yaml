@@ -77,7 +77,6 @@ jobs:
 
           - description: Prettier
             run: npm run lint:prettier
-            continue-on-error: true
 
           - description: TypeScript compiler
             run: npm run lint:types -- --pretty
