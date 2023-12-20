@@ -20,13 +20,13 @@ Ask users questions to help them work out if they can or should use your service
   classes: "app-tag"
 }) }}
 
-### New WCAG 2.2 criteria might affect this pattern
+### New WCAG 2.2 criteria affects this pattern
 
 To help users to 'Check a service is suitable' and meet the new WCAG 2.2 criteria, make sure that users can successfully:
 
 - [use the service without repeating answers they've already given](/patterns/check-a-service-is-suitable/#wcag-avoid-repeating-questions)
 
-See the full list of components and patterns affected on our ['Changes to meet WCAG 2.2' page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({

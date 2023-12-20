@@ -18,13 +18,13 @@ layout: layout-pane.njk
   classes: "app-tag"
 }) }}
 
-### New WCAG 2.2 criteria might affect this component
+### New WCAG 2.2 criteria affects this component
 
 To use the ‘Select' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
 
 - <a href="/components/select/#wcag-avoid-dragging-multiple-options">use the select without relying on 'click and drag' movements (if you choose to add functionality to select multiple options)</a>
 
-See the full list of components and patterns affected on our ['Changes to meet WCAG 2.2' page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({

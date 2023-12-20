@@ -21,14 +21,14 @@ This guidance is for government teams that build online services. [To find infor
   classes: "app-tag"
 }) }}
 
-### New WCAG 2.2 criteria might affect this pattern
+### New WCAG 2.2 criteria affects this pattern
 
 To use ‘There is a problem with the service pages' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
 
 - [get contact information in a consistent way across 'There is a problem with the service pages' pages](/patterns/problem-with-the-service-pages/#wcag-consistent-content-problem-service)
 - [resume the service using information they've previously entered, if possible](/patterns/problem-with-the-service-pages/#wcag-resume-previous-entered-information)
 
-See the full list of components and patterns affected on our ['Changes to meet WCAG 2.2' page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({

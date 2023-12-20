@@ -25,14 +25,14 @@ Help users understand:
   classes: "app-tag"
 }) }}
 
-### New WCAG 2.2 criteria might affect this pattern
+### New WCAG 2.2 criteria affects this pattern
 
 To help users to 'Complete multiple tasks' and meet the new WCAG 2.2 criteria, make sure that users can successfully:
 
 - [interact with tasks without relying on 'click and drag' movements (if you choose to add functionality to reorder tasks)](/patterns/complete-multiple-tasks/#wcag-interact-without-click-drag-task)
 - [edit information they've given when going back to a previous task](/patterns/complete-multiple-tasks/#wcag-edit-information-previous-task)
 
-See the full list of components and patterns affected on our ['Changes to meet WCAG 2.2' page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({

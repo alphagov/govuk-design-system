@@ -20,13 +20,13 @@ Use the tag component to show users the status of something.
   classes: "app-tag"
 }) }}
 
-### New WCAG 2.2 criteria might affect this component
+### New WCAG 2.2 criteria affects this component
 
 To use the ‘Tag' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
 
 - <a href="/components/tag/#wcag-tag-no-dragging-reorder">interact with tags without relying on 'click and drag' movements (if you choose to add functionality to reorder tags)</a>
 
-See the full list of components and patterns affected on our ['Changes to meet WCAG 2.2' page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({

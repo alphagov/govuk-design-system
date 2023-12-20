@@ -20,13 +20,13 @@ This guidance is for government teams that build online services. [To find infor
   classes: "app-tag"
 }) }}
 
-### New WCAG 2.2 criteria might affect this pattern
+### New WCAG 2.2 criteria affects this pattern
 
 To ask users for 'Payment card details' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
 
 - [interact the with month and year fields, by adding adequate spacing between them](/patterns/payment-card-details/#wcag-spacing-month-year)
 
-See the full list of components and patterns affected on our ['Changes to meet WCAG 2.2' page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({

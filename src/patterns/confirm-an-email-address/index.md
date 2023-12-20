@@ -21,13 +21,13 @@ This guidance is for government teams that build online services. [To find infor
   classes: "app-tag"
 }) }}
 
-### New WCAG 2.2 criteria might affect this pattern
+### New WCAG 2.2 criteria affects this pattern
 
 To help users to 'Confirm an email address' and meet the new WCAG 2.2 criteria, make sure that users can successfully:
 
 - <a href="/patterns/confirm-an-email-address/#wcag-copy-paste-security-codes">copy and paste a security code (if you're asking the user to enter a security code you've sent them)</a>
 
-See the full list of components and patterns affected on our ['Changes to meet WCAG 2.2' page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({

@@ -21,14 +21,14 @@ This pattern explains when to use question pages and what elements they need to 
   classes: "app-tag"
 }) }}
 
-### New WCAG 2.2 criteria might affect this pattern
+### New WCAG 2.2 criteria affects this pattern
 
 To use ‘Question pages' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
 
 - [avoid re-entering information they've given in a previous answer](/patterns/question-pages/#wcag-reenter-previous-answer)
 - [select an answer without relying on 'click and drag' movement](/patterns/question-pages/#wcag-select-without-click-drag)
 
-See the full list of components and patterns affected on our ['Changes to meet WCAG 2.2' page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({

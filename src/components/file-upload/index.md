@@ -20,14 +20,14 @@ This guidance is for government teams that build online services. [To find infor
   classes: "app-tag"
 }) }}
 
-### New WCAG 2.2 criteria might affect this component
+### New WCAG 2.2 criteria affects this component
 
 To use the ‘File upload' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
 
-- [upload a file without relying on 'drag and drop' movements](/components/file-upload/#wcag-multi-method-drag-drop)
 - [reuse files they've uploaded](/components/file-upload/#wcag-use-previous-uploads)
 
-See the full list of components and patterns affected on our ['Changes to meet WCAG 2.2' page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
+
 {% endset %}
 
 {{ govukInsetText({

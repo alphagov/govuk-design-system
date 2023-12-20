@@ -20,7 +20,7 @@ Avoid using images for unnecessary decoration. Only use images if there’s a re
   classes: "app-tag"
 }) }}
 
-### New WCAG 2.2 criteria might affect how you use images
+### New WCAG 2.2 criteria affects how you use images
 
 To meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, [make sure any icons and images used in links meet the minimum target size](/styles/images/#wcag-icon-focus). This is to make sure users can easily interact with the link.
 {% endset %}

@@ -20,14 +20,14 @@ Use the back link component to help users go back to the previous page in a mult
   classes: "app-tag"
 }) }}
 
-### New WCAG 2.2 criteria might affect this component
+### New WCAG 2.2 criteria affects this component
 
 To use the ‘Back link’ and comply with new success criteria introduced in Web Content Accessibility Guidelines (WCAG) 2.2, make sure that users can successfully:
 
 - [avoid re-entering information they've previously given when they go back to a page](/components/back-link/#wcag-avoid-information-reentry)
 - [interact with back links](/components/back-link/#wcag-interact-back-links)
 
-See the full list of components and patterns affected on our ['Changes to meet WCAG 2.2' page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({

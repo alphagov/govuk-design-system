@@ -20,13 +20,13 @@ Use the phase banner component to show users your service is still being worked 
   classes: "app-tag"
 }) }}
 
-### New WCAG 2.2 criteria might affect this component
+### New WCAG 2.2 criteria affects this component
 
 To use the ‘Phase banner' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
 
 - [see all page content when a phase banner is shown](/components/phase-banner/#wcag-do-not-cover-content)
 
-See the full list of components and patterns affected on our ['Changes to meet WCAG 2.2' page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({
