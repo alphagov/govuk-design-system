@@ -52,6 +52,8 @@ Whether you consider yourself well informed about trauma-informed approaches to 
 
 [Trauma-informed research and design (video)](https://www.youtube.com/watch?v=Ch0FPJNdaHg)
 
+You can access the resources mentioned during the panel discussion in [this document](https://docs.google.com/document/d/e/2PACX-1vTEmIFxxU0ncEcnCmgBV184xBEC_hioE7Yk194NfcJXP2l7ufhWsEchuNK7xL8XtZTWSmKkn4CHJ_C3/pub).
+
 ### Design systems don’t solve problems, people do
 
 Tash Willcocks
