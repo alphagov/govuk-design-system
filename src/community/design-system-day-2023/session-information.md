@@ -252,3 +252,7 @@ James Carleton
 3pm to 4:30pm
 
 Design systems work best when they are collaborative and flexible instead of a strict set of fixed rules. James shared his experience in building a community that encourages collaboration and contribution to their design system.
+
+## Further information
+If you would like to read the slide decks for any of the sessions delivered on day 2, please email the GOV.UK Design System team <a class="govuk-link" href="mailto:govuk-design-system-support@digital.cabinet-office.gov.uk" data-hsupport="email">govuk-design-system-support@digital.cabinet-office.gov.uk</a>.
+
