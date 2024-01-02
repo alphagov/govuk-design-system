@@ -122,4 +122,4 @@ You can also read these articles to learn more about asking for users’ names:
 
 - [Personal names around the world (W3C)](https://www.w3.org/International/questions/qa-personal-names)
 - [Avoid splitting single input entities (Baymard)](https://baymard.com/blog/mobile-form-usability-single-input-fields)
-- [Falsehoods about names (Kalzumeus)](http://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/)
+- [Falsehoods about names (Kalzumeus)](https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/)

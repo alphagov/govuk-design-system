@@ -144,7 +144,7 @@ DAC also tested the global search functionality that appears in the header of th
 
 #### Frontend documentation website
 
-The [GOV.UK Frontend documentation website](http://frontend.design-system.service.gov.uk/) was last audited for accessibility issues by an external group in April 2021. The audit was carried out by the [Digital Accessibility Centre (DAC)](https://digitalaccessibilitycentre.org/).
+The [GOV.UK Frontend documentation website](https://frontend.design-system.service.gov.uk/) was last audited for accessibility issues by an external group in April 2021. The audit was carried out by the [Digital Accessibility Centre (DAC)](https://digitalaccessibilitycentre.org/).
 
 DAC tested the [Technical Documentation Template](https://tdt-documentation.london.cloudapps.digital/), which is the platform that runs the GOV.UK Frontend documentation website.
 

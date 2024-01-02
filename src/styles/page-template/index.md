@@ -248,7 +248,7 @@ To change the components that are included in the page template by default, set 
       <td class="govuk-table__cell">themeColor</td>
       <td class="govuk-table__cell">Variable</td>
       <td class="govuk-table__cell">
-        Set the <a href="https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android">toolbar colour on some devices</a>.
+        Set the <a href="https://developer.chrome.com/blog/support-for-theme-color-in-chrome-39-for-android/">toolbar colour on some devices</a>.
       </td>
     </tr>
   </tbody>

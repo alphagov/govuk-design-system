@@ -26,7 +26,7 @@ Let users enter telephone numbers in whatever format is familiar to them. Allow 
 
 ### Validate telephone numbers
 
-You should validate telephone numbers so you can let users know if they have entered one incorrectly. Google’s [libphonenumber](https://github.com/googlei18n/libphonenumber) library can validate telephone numbers from most countries.
+You should validate telephone numbers so you can let users know if they have entered one incorrectly. Google’s [libphonenumber](https://github.com/google/libphonenumber) library can validate telephone numbers from most countries.
 
 ### Use the autocomplete attribute
 
