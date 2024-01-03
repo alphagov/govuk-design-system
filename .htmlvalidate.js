@@ -1,4 +1,6 @@
-module.exports = {
+const { defineConfig } = require('html-validate')
+
+module.exports = defineConfig({
   extends: ['html-validate:recommended'],
   rules: {
     // Allow components to set boolean attributes with empty values
@@ -89,4 +91,4 @@ module.exports = {
       }
     }
   ]
-}
+})
