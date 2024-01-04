@@ -34,7 +34,7 @@ ignoreInSitemap: true
 
 {% block head %}
   <meta name="robots" content="noindex, nofollow">
-  <link href="{{ getFingerprint('stylesheets/main.css') }}" rel="stylesheet" media="all">
+  <link href="{{ getFingerprint('/stylesheets/main.css') }}" rel="stylesheet" media="all">
 {% endblock %}
 
 {% block bodyStart %}
@@ -151,5 +151,5 @@ ignoreInSitemap: true
 {% endblock %}
 
 {% block bodyEnd %}
-  <script type="module" src="{{ getFingerprint('javascripts/application-example.js') }}"></script>
+  <script type="module" src="{{ getFingerprint('/javascripts/application-example.js') }}"></script>
 {% endblock %}
