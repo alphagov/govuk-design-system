@@ -79,7 +79,7 @@
     "jstransformer-marked": "^1.4.0",
     "jstransformer-nunjucks": "^1.2.0",
     "lint-staged": "^15.2.0",
-    "marked": "^11.1.0",
+    "marked": "^11.1.1",
     "marked-gfm-heading-id": "^3.1.2",
     "marked-highlight": "^2.1.0",
     "marked-smartypants": "^1.1.5",
