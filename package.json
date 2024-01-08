@@ -22,7 +22,7 @@
     "lint": "npm run lint:editorconfig && npm run lint:prettier && npm run lint:js && npm run lint:types && npm run lint:scss && npm run lint:html --ignore-scripts",
     "prelint:html": "npm run build",
     "lint:editorconfig": "editorconfig-checker",
-    "lint:html": "html-validate \"deploy/public/**/index.html\"",
+    "lint:html": "html-validate \"build/**/index.html\"",
     "lint:js": "npm run lint:js:cli -- \"**/*.{cjs,js,md,mjs}\"",
     "lint:js:cli": "eslint --cache --cache-location .cache/eslint --cache-strategy content --color --ignore-path .gitignore",
     "lint:prettier": "npm run lint:prettier:cli -- \"**/*.{cjs,js,json,md,mjs,scss,yaml,yml}\"",
@@ -30,7 +30,7 @@
     "lint:scss": "npm run lint:scss:cli -- \"**/*.{md,scss}\"",
     "lint:scss:cli": "stylelint --cache --cache-location .cache/stylelint --cache-strategy content --color --ignore-path .gitignore --max-warnings 0",
     "lint:types": "tsc --build tsconfig.json",
-    "check-links": "hyperlink --canonicalroot https://design-system.service.gov.uk/ --internal --recursive deploy/public/sitemap.xml | tee check-links.log | tap-mocha-reporter min"
+    "check-links": "hyperlink --canonicalroot https://design-system.service.gov.uk/ --internal --recursive build/sitemap.xml | tee check-links.log | tap-mocha-reporter min"
   },
   "dependencies": {
     "accessible-autocomplete": "^2.0.4",

@@ -1,3 +1,9 @@
+# Override default `deploy/public` build directory used by legacy branches
+# https://app.netlify.com/sites/govuk-design-system-preview/configuration/deploys
+
+[build]
+  publish = "build"
+
 # A number of the examples in the Design System include <form> elements so that
 # users copying the examples have something that requires relatively little
 # tweaking to work out the box (in particular Prototype Kit users, for example)

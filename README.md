@@ -45,7 +45,7 @@ npm start
 
 ## Build
 
-Build `./src` to `./deploy/public`
+Build `./src` to `./build`
 
 ```shell
 npm run build
