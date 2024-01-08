@@ -59,6 +59,11 @@
   status = 302 # We will bring this page back in future so it is not a permanent redirect
 
 [[redirects]]
+  from = "/community/design-system-day/speaker-information/"
+  to = "/community/design-system-day/"
+  status = 302 # We will bring this page back in future so it is not a permanent redirect
+
+[[redirects]]
   from = "/patterns/ethnic-group/"
   to = "/patterns/equality-information/"
   status = 301
