@@ -37,3 +37,43 @@
   from = "/security.txt"
   to = "https://vdp.cabinetoffice.gov.uk/.well-known/security.txt"
   status = 200 # Proxy rather than redirect
+
+[[redirects]]
+  from = "/community/backlog/"
+  to = "/community/upcoming-components-patterns/"
+  status = 301
+
+[[redirects]]
+  from = "/community/how-you-can-contribute/"
+  to = "/community/"
+  status = 301
+
+[[redirects]]
+  from = "/community/call-for-speakers-2023/"
+  to = "/community/design-system-day/"
+  status = 301
+
+[[redirects]]
+  from = "/community/design-system-day/session-information/"
+  to = "/community/design-system-day/"
+  status = 302 # We will bring this page back in future so it is not a permanent redirect
+
+[[redirects]]
+  from = "/patterns/ethnic-group/"
+  to = "/patterns/equality-information/"
+  status = 301
+
+[[redirects]]
+  from = "/patterns/start-pages/"
+  to = "/patterns/start-using-a-service/"
+  status = 301
+
+[[redirects]]
+  from = "/patterns/task-list-pages/"
+  to = "/patterns/complete-multiple-tasks/"
+  status = 301
+
+[[redirects]]
+  from = "/patterns/understand-the-impact-of-an-emergency/"
+  to = "/components/notification-banner/"
+  status = 301
