@@ -4,7 +4,8 @@ in this section.
 This is mostly to support non-JS browsing on a mobile viewport, where the 'top'
 navigation doesn't expand and so the user can only access the top level category
 pages. #}
-<nav class="category-nav">
+<!-- [html-validate-disable-next unique-landmark -- allow 2 navs with the same aria-labelledby because they contain the same information] -->
+<nav class="category-nav" aria-labelledby="app-subnav-heading">
   {% for item in navigation %}
     {% if permalink and permalink.startsWith(item.url) %}
     {% if item.items %}
