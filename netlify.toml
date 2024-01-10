@@ -37,3 +37,38 @@
   from = "/security.txt"
   to = "https://vdp.cabinetoffice.gov.uk/.well-known/security.txt"
   status = 200 # Proxy rather than redirect
+
+# Send different cache-control headers depending on the file path
+#
+# Asset filenames with fingerprint hashes (fonts, stylesheets, javascripts) are
+# given an 'infinite' max-age since the content never changes.
+#
+# Historically, an 'infinite' max-age is the 32-bit maximum 2,147,483,648.
+# https://datatracker.ietf.org/doc/html/rfc9111#section-1.2.2
+
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public,max-age=2147483648,immutable"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public,max-age=2147483648,immutable"
+
+[[headers]]
+  for = "*.map"
+  [headers.values]
+    Cache-Control = "public,max-age=2147483648,immutable"
+
+# Search index JSON with unique fingerprint
+[[headers]]
+  for = "/search-index-*.json"
+  [headers.values]
+    Cache-Control = "public,max-age=2147483648,immutable"
+
+# Fonts from GOV.UK Frontend with unique fingerprints
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public,max-age=2147483648,immutable"
