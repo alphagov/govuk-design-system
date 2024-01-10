@@ -30,6 +30,8 @@ You can read more about this breaking release in the guide [‘Changes to GOV.UK
 
 We've also:
 
+- updated the components, patterns and styles to be compliant with WCAG 2.2
+- made it easier for teams to understand [what's changed in WCAG 2.2 and what they need to do](/accessibility/wcag-2.2)
 - made it easier for teams to [share their findings from user research](/community/share-research-findings/)
 - run [Design System Day 2023](/community/design-system-day/)
 
@@ -37,19 +39,15 @@ We've also:
 
 We're:
 
-- updating the components, patterns and styles to be compliant with WCAG 2.2
-- making it easier for teams to understand what's changed in WCAG 2.2 and what they need to do
-- running more workshops on accessibility
 - [updating the typographic scale](https://github.com/alphagov/govuk-design-system/issues/2289), including increasing the minimum text size on mobile
+- adding the [Password input](https://github.com/alphagov/govuk-design-system-backlog/issues/240) component to the Design System (thanks to Andy Sellick)
 
 ## Coming up next
 
 We're getting ready to:
 
-- add the [Show password](https://github.com/alphagov/govuk-design-system-backlog/issues/240) component to the Design System (thanks to Andy Sellick)
 - improve the way we organise technical documentation on the website
 - start working on the next pattern, [Navigation](https://github.com/alphagov/govuk-design-system-backlog/issues/76)
-- run a discovery to understand how the Design System might better support teams on what they’re building today and in the future
 
 ## Future plans
 
