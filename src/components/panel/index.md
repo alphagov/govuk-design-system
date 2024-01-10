@@ -35,19 +35,3 @@ Keep your panel text brief, as it's only meant for a high-level explanation of w
 Aim to use short words and phrases to make sure highlighted information is easy to read at different screen sizes. For example, shorter amounts of information is less likely to wrap around the panel, which can happen when using the zoom function on mobiles.
 
 If you need to give detailed information, or more context, use the description text under the heading text.
-
-### Selecting and copying information
-
-<div class="app-wcag-22" id="wcag-allow-copy-paste" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>Allow users to select and copy text within a <a href="/patterns/confirmation-pages/">confirmation page</a> as well as its panel component. For example, users should be able to select and copy a booking number. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
-</div>
-
-Consider offering an option for the user to copy information in the panel component area into their device’s clipboard if there’s information that the user is expected to:
-
-- save
-- remember
-- copy
