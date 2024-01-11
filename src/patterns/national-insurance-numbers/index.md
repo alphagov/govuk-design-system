@@ -9,9 +9,33 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 {% from "govuk/components/tag/macro.njk" import govukTag %}
 
 This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
+
+{% set wcagCallout %}
+
+{{ govukTag({
+  text: "WCAG 2.2",
+  classes: "app-tag"
+}) }}
+
+### New WCAG 2.2 criteria might affect this pattern
+
+To ask users for 'National insurance numbers' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
+
+- [reuse a previously entered National Insurance number](/patterns/national-insurance-numbers/#wcag-reuse-national-insurance-number)
+
+See the full list of components and patterns affected on our '[Changes to meet WCAG 2.2 page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system)'.
+{% endset %}
+
+{{ govukInsetText({
+  html: wcagCallout,
+  attributes: {
+    style: 'border-left-color: #1d70b8;'
+  }
+})}}
 
 Ask users to provide their National Insurance number.
 
@@ -45,9 +69,14 @@ When asking for a National Insurance number:
 
 ### Reusing entered National Insurance numbers
 
-<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Do not ask for a National Insurance number more than once within a single journey, if only one person’s details are needed.
-
-Make sure users can easily reuse previously entered National Insurance numbers within a single journey, unless doing so would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
+<div class="app-wcag-22" id="wcag-reuse-national-insurance-number" role="note">
+  {{ govukTag({
+    text: "WCAG 2.2",
+    classes: "app-tag"
+  }) }}
+  <p>Do not ask for a National Insurance number more than once within a single journey, if only one person’s details are needed.</p>
+  <p>Make sure users can easily reuse previously entered National Insurance numbers within a single journey, unless doing so would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
+</div>
 
 You can make it easier to reuse National Insurance numbers through one of these methods:
 

@@ -14,6 +14,30 @@ layout: layout-pane.njk
 
 Check that a user has access to a specific mobile phone number using a security code sent by text message.
 
+{% set wcagCallout %}
+
+{{ govukTag({
+  text: "WCAG 2.2",
+  classes: "app-tag"
+}) }}
+
+### New WCAG 2.2 criteria might affect this pattern
+
+To help users to 'Confirm a phone number' and meet the new WCAG 2.2 criteria, make sure that users can successfully:
+
+- [use a link to resend the security code when the user creates an account](/patterns/confirm-a-phone-number/#wcag-resend-security-code-creation)
+- [use a link to resend the security code when the user signs in](/patterns/confirm-a-phone-number/#wcag-resend-security-code-sign-in)
+
+See the full list of components and patterns affected on our '[Changes to meet WCAG 2.2 page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system)'.
+{% endset %}
+
+{{ govukInsetText({
+  html: wcagCallout,
+  attributes: {
+    style: 'border-left-color: #1d70b8;'
+  }
+})}}
+
 {{ example({ group: "patterns", item: "confirm-a-phone-number", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 ## When to use this pattern
@@ -35,7 +59,13 @@ Send and ask the user for the security code when they:
 
 When the user creates an account, ask for their password and mobile phone number at the same time. Make it clear if you'll only use the mobile number for sending security codes, or if you'll also use it for other purposes.
 
-<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> You must always include the link for 'Not received a text message?’ so the user can find help in a consistent way. This relates to WCAG 2.2 success criterion [3.2.6 Consistent Help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html).
+<div class="app-wcag-22" id="wcag-resend-security-code-creation" role="note">
+  {{ govukTag({
+    text: "WCAG 2.2",
+    classes: "app-tag"
+  }) }}
+  <p>You must always include the link for 'Not received a text message?’ so the user can find help in a consistent way. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent Help</a>.</p>
+</div>
 
 After saving the user’s password and mobile phone number, verify their mobile phone number by sending them a text message with a 5 digit code in this format:
 
@@ -74,7 +104,13 @@ Ask the user to enter this code. Use the same pattern and time limit as when cre
 
 If they follow the ‘Not received a text message?’ link, show them a page allowing them to request a new code. Do not reveal the mobile number you sent it to.
 
-<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> You must always include the link for 'Not received a text message?’ so the user can find help in a consistent way. This relates to WCAG 2.2 success criterion [3.2.6 Consistent Help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html).
+<div class="app-wcag-22" id="wcag-resend-security-code-sign-in" role="note">
+  {{ govukTag({
+    text: "WCAG 2.2",
+    classes: "app-tag"
+  }) }}
+  <p>You must always include the link for 'Not received a text message?’ so the user can find help in a consistent way. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent Help</a>.</p>
+</div>
 
 {{ example({group: "patterns", item: "confirm-a-phone-number", example: "resend", html: true, nunjucks: true, open: false}) }}
 

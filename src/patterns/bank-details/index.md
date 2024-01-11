@@ -9,9 +9,33 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 {% from "govuk/components/tag/macro.njk" import govukTag %}
 
 This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
+
+{% set wcagCallout %}
+
+{{ govukTag({
+  text: "WCAG 2.2",
+  classes: "app-tag"
+}) }}
+
+### New WCAG 2.2 criteria might affect this pattern
+
+To ask users for 'Bank details' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
+
+- [reuse previously entered bank details](/patterns/bank-details/#wcag-reuse-bank-details)
+
+See the full list of components and patterns affected on our '[Changes to meet WCAG 2.2 page](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system)'.
+{% endset %}
+
+{{ govukInsetText({
+  html: wcagCallout,
+  attributes: {
+    style: 'border-left-color: #1d70b8;'
+  }
+})}}
 
 {{ example({ group: "patterns", item: "bank-details", example: "default", html: true, nunjucks: true, open: false, size: "xl", loading: "eager" }) }}
 
@@ -37,9 +61,14 @@ If your service does not support building society accounts, remove building soci
 
 ### Reusing entered bank details
 
-<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Do not ask for bank details more than once within a single journey if only one transaction is taking place.
-
-Make sure users can easily reuse previously entered bank details within a single journey, unless the information is no longer valid or doing so would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion [3.3.7 Redundant Entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
+<div class="app-wcag-22" id="wcag-reuse-bank-details" role="note">
+  {{ govukTag({
+    text: "WCAG 2.2",
+    classes: "app-tag"
+  }) }}
+  <p>Do not ask for bank details more than once within a single journey if only one transaction is taking place.</p>
+  <p>Make sure users can easily reuse previously entered bank details within a single journey, unless the information is no longer valid or doing so would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
+</div>
 
 You can make it easier to reuse bank details through one of these methods:
 

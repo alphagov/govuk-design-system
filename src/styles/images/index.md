@@ -8,8 +8,29 @@ showPageNav: true
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
 
 Avoid using images for unnecessary decoration. Only use images if there’s a real user need.
+
+{% set wcagCallout %}
+
+{{ govukTag({
+  text: "WCAG 2.2",
+  classes: "app-tag"
+}) }}
+
+### New WCAG 2.2 criteria might affect how you use images
+
+To meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, [make sure any icons and images used in links meet the minimum target size](/styles/images/#wcag-icon-focus). This is to make sure users can easily interact with the link.
+{% endset %}
+
+{{ govukInsetText({
+  html: wcagCallout,
+  attributes: {
+    style: 'border-left-color: #1d70b8;'
+  }
+})}}
 
 Make sure any information contained in an image can be understood by someone who cannot see it. Also consider partially-sighted users with visual impairments and the assistive technologies they might use.
 
@@ -60,7 +81,13 @@ Icons can be more useful in case working systems, where users are familiar with 
 
 Do not use a single icon to represent more than one thing. For example, the search icon (magnifying glass) should only be used for search functionality, and not also for screen magnification.
 
-<strong class="govuk-tag govuk-tag--grey">WCAG 2.2</strong> Make sure any icons and images used in links are at least 24px by 24px in size, with adequate spacing. This is to make sure users can easily interact with the link. This relates to WCAG 2.2 success criterion [2.5.8 Target Size (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).
+<div class="app-wcag-22" id="wcag-icon-focus" role="note">
+  {{ govukTag({
+    text: "WCAG 2.2",
+    classes: "app-tag"
+  }) }}
+  <p>Make sure any icons and images used in links are at least 24px by 24px in size, with adequate spacing. This is to make sure users can easily interact with the link. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target Size (minimum)</a>.</p>
+</div>
 
 ## Avoid images that contain text
 
