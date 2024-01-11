@@ -25,7 +25,7 @@ To ask users for 'Names' and meet the new Web Content Accessibility Guidelines (
 
 - [reuse a previously entered name](/patterns/names/#wcag-reuse-name)
 
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({

@@ -26,7 +26,7 @@ To use the ‘Header' and meet the new Web Content Accessibility Guidelines (WCA
 - [see all page content when interacting with a dropdown menu](/components/header/#wcag-do-not-cover-content)
 - [find help links in a consistent place on each page](/components/header/#wcag-consistent-help-links)
 
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({

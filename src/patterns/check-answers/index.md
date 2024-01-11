@@ -27,7 +27,7 @@ To help users to 'Check answers' and meet the new WCAG 2.2 criteria, make sure t
 
 - [go back and edit information they've already entered](/patterns/check-answers/#wcag-prepopulate-information)
 
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({

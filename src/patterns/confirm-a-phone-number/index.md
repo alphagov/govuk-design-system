@@ -28,7 +28,7 @@ To help users to 'Confirm a phone number' and meet the new WCAG 2.2 criteria, ma
 - [use a link to resend the security code when the user creates an account](/patterns/confirm-a-phone-number/#wcag-resend-security-code-creation)
 - [use a link to resend the security code when the user signs in](/patterns/confirm-a-phone-number/#wcag-resend-security-code-sign-in)
 
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({

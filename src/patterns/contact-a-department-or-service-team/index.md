@@ -27,7 +27,7 @@ To help users to 'Contact a department or service team' and meet the new WCAG 2.
 
 - [find contact details in a consistent place across a set of pages](/patterns/contact-a-department-or-service-team/#wcag-consistent-contact)
 
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({

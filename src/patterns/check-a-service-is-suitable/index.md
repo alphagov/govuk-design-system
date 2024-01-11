@@ -26,7 +26,7 @@ To help users to 'Check a service is suitable' and meet the new WCAG 2.2 criteri
 
 - [use the service without repeating answers they've already given](/patterns/check-a-service-is-suitable/#wcag-avoid-repeating-questions)
 
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({

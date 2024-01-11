@@ -27,7 +27,7 @@ To use the ‘Cookie banner' and meet the new Web Content Accessibility Guidelin
 - [see items that are in focus at all times](/components/cookie-banner/#wcag-see-focus)
 - [interact with buttons and links in the cookie banner](/components/cookie-banner/#wcag-interact-cookie-banner)
 
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({

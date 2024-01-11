@@ -27,7 +27,7 @@ To ask users for 'Addresses' and meet the new Web Content Accessibility Guidelin
 
 - [reuse a previously entered address](/patterns/addresses/#wcag-reuse-addresses)
 
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({

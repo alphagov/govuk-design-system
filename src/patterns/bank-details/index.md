@@ -27,7 +27,7 @@ To ask users for 'Bank details' and meet the new Web Content Accessibility Guide
 
 - [reuse previously entered bank details](/patterns/bank-details/#wcag-reuse-bank-details)
 
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({

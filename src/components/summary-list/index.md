@@ -27,7 +27,7 @@ To use ‘Summary list’ and comply with new success criteria introduced in Web
 - [interact with row actions](/components/summary-list/#wcag-interact-row-actions)
 - [change information they've previously given in an answer](/components/summary-list/#wcag-change-answers)
 
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({

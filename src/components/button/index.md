@@ -24,7 +24,7 @@ To use the ‘Button' and meet the new Web Content Accessibility Guidelines (WCA
 
 - [interact with buttons](/components/button/#wcag-interact-button)
 
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({

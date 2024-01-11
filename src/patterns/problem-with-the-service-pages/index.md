@@ -28,7 +28,7 @@ To use ‘There is a problem with the service pages' and meet the new Web Conten
 - [get contact information in a consistent way](/patterns/problem-with-the-service-pages/#wcag-consistent-content-problem-service)
 - [resume the service using information they've previously entered, if possible](/patterns/problem-with-the-service-pages/#wcag-resume-previous-entered-information)
 
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({

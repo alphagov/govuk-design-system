@@ -27,7 +27,7 @@ To help users to 'Create accounts' and meet the new WCAG 2.2 criteria, make sure
 - [reuse information they've already entered](/patterns/create-accounts/#wcag-reuse-account-information)
 - [avoid doing a cognitive test, such as a CAPTCHA, to create an account](/patterns/create-accounts/#wcag-avoid-cognitive-test)
 
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
 
 {{ govukInsetText({
