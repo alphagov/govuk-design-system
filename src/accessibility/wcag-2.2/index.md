@@ -355,7 +355,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
         html: '<a href="/patterns/problem-with-the-service-pages/">There is a problem with the service pages</a>'
       },
       {
-        html: 'Consistent help'
+        html: 'Consistent help<br>Redundant entry'
       }
     ]
   ]

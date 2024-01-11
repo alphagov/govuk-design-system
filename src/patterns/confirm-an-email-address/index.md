@@ -25,7 +25,7 @@ This guidance is for government teams that build online services. [To find infor
 
 To help users to 'Confirm an email address' and meet the new WCAG 2.2 criteria, make sure that users can successfully:
 
-- <a href="/patterns/confirm-an-email-address/#wcag-copy-paste-security-codes">copy and paste a security code (if you're asking the user to enter a security code you've sent them)</a>
+- [copy and paste a security code \(if you're asking the user to enter a security code you've sent them\)](/patterns/confirm-an-email-address/#wcag-copy-paste-security-codes)
 
 See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}

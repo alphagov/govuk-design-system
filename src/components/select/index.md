@@ -22,7 +22,7 @@ layout: layout-pane.njk
 
 To use the ‘Select' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
 
-- <a href="/components/select/#wcag-avoid-dragging-multiple-options">use the select without relying on 'click and drag' movements (if you choose to add functionality to select multiple options)</a>
+- [use the select without relying on 'click and drag' movements \(if you choose to add functionality to select multiple options\)](/components/select/#wcag-avoid-dragging-multiple-options)
 
 See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
