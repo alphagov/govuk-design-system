@@ -32,10 +32,8 @@ See the full list of [components and patterns affected by WCAG 2.2](/accessibili
 
 {{ govukInsetText({
   html: wcagCallout,
-  attributes: {
-    style: 'border-left-color: #1d70b8;'
-  }
-})}}
+  classes: "app-inset-text"
+}) }}
 
 Although browsers have a back button, some sites break when you use it - so many users avoid it, instead of losing their progress in a service. Also, not all users are aware of the back button.
 

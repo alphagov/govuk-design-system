@@ -31,10 +31,8 @@ See the full list of [components and patterns affected by WCAG 2.2](/accessibili
 
 {{ govukInsetText({
   html: wcagCallout,
-  attributes: {
-    style: 'border-left-color: #1d70b8;'
-  }
-})}}
+  classes: "app-inset-text"
+}) }}
 
 Follow the [validation pattern](/patterns/validation/) and show an error message when there is a validation error. In the error message explain what went wrong and how to fix it.
 

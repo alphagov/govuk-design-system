@@ -32,10 +32,8 @@ See the full list of [components and patterns affected by WCAG 2.2](/accessibili
 
 {{ govukInsetText({
   html: wcagCallout,
-  attributes: {
-    style: 'border-left-color: #1d70b8;'
-  }
-})}}
+  classes: "app-inset-text"
+}) }}
 
 {{ example({ group: "patterns", item: "check-answers", example: "default", html: true, nunjucks: true, open: false, size: "xl", loading: "eager" }) }}
 

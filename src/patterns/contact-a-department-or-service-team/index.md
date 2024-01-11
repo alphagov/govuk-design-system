@@ -32,10 +32,8 @@ See the full list of [components and patterns affected by WCAG 2.2](/accessibili
 
 {{ govukInsetText({
   html: wcagCallout,
-  attributes: {
-    style: 'border-left-color: #1d70b8;'
-  }
-})}}
+  classes: "app-inset-text"
+}) }}
 
 {{ example({ group: "patterns", item: "contact-a-department-or-service-team", example: "default", html: true, open: false, size: "s" }) }}
 
@@ -59,7 +57,7 @@ Show contact channels in the same order throughout your service. This helps user
     classes: "app-tag"
   }) }}
   <p>If you repeat a particular set of contact details on different pages, show them in the same place on each page.</p>
-  <p>For example, if you show a ‘contact us’ section at the end of one help page, any other help pages that include the same ‘contact us’ section should have them shown at the end of the page as well.</p>  
+  <p>For example, if you show a ‘contact us’ section at the end of one help page, any other help pages that include the same ‘contact us’ section should have them shown at the end of the page as well.</p>
   <p>This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent Help</a>.</p>
 </div>
 

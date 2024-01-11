@@ -32,10 +32,8 @@ See the full list of [components and patterns affected by WCAG 2.2](/accessibili
 
 {{ govukInsetText({
   html: wcagCallout,
-  attributes: {
-    style: 'border-left-color: #1d70b8;'
-  }
-})}}
+  classes: "app-inset-text"
+}) }}
 
 Tell the user a service is unavailable on purpose. These are also known as 503 and shutter pages.
 

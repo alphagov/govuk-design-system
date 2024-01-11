@@ -374,6 +374,10 @@ pre .language-plaintext {
   }
 }
 
+.app-inset-text {
+  border-left-color: govuk-colour("blue");
+}
+
 .app-tag {
   margin-top: 1px;
   margin-bottom: govuk-spacing(2);

@@ -27,10 +27,8 @@ To meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, [make 
 
 {{ govukInsetText({
   html: wcagCallout,
-  attributes: {
-    style: 'border-left-color: #1d70b8;'
-  }
-})}}
+  classes: "app-inset-text"
+}) }}
 
 Make sure any information contained in an image can be understood by someone who cannot see it. Also consider partially-sighted users with visual impairments and the assistive technologies they might use.
 

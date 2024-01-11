@@ -31,10 +31,8 @@ See the full list of [components and patterns affected by WCAG 2.2](/accessibili
 
 {{ govukInsetText({
   html: wcagCallout,
-  attributes: {
-    style: 'border-left-color: #1d70b8;'
-  }
-})}}
+  classes: "app-inset-text"
+}) }}
 
 ![A form entitled enter card details which asks for a card number, an expiry date, a name on the card and the card security code.](enter-card-details.jpg)
 
