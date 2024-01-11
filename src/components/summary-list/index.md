@@ -8,8 +8,32 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
 
 Use a summary list to summarise information, for example, a user’s responses at the end of a form.
+
+{% set wcagCallout %}
+
+{{ govukTag({
+  text: "WCAG 2.2",
+  classes: "app-tag"
+}) }}
+
+### WCAG 2.2 criteria might affect this component
+
+To use ‘Summary list’ and comply with new success criteria introduced in Web Content Accessibility Guidelines (WCAG) 2.2, make sure that users can successfully:
+
+- [interact with row actions](/components/summary-list/#wcag-interact-row-actions)
+- [change information they've previously given in an answer](/components/summary-list/#wcag-change-answers)
+
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
+{% endset %}
+
+{{ govukInsetText({
+  html: wcagCallout,
+  classes: "app-inset-text"
+}) }}
 
 {{ example({ group: "components", item: "summary-list", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
@@ -46,11 +70,32 @@ You can add ‘row actions’ to a summary list. For example, you can help users
 
 When navigating visually, the borders above and below each row help to show which row action is tied to which piece of information.
 
+There's a few things to keep in mind to ensure that users can successfully use row actions.
+
+<div class="app-wcag-22" id="wcag-interact-row-actions" role="note">
+  {{ govukTag({
+    text: "WCAG 2.2",
+    classes: "app-tag"
+  }) }}
+  <p>Make sure any 'action links' are at least 24px by 24px in size, with adequate spacing. This is to make sure users can easily interact with the links. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target Size (minimum)</a>.</p>
+</div>
+
+<div class="app-wcag-22" id="wcag-change-answers" role="note">
+  {{ govukTag({
+    text: "WCAG 2.2",
+    classes: "app-tag"
+  }) }}
+  <p>If a user decides to go back to a previous answer through a card or row action, make sure information they have already entered is pre-populated.</p>
+  <p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
+</div>
+
 Assistive technology users, including those who use a screen reader, might hear a row action link out of context and might not know what it will do.
 
 To give more context, add visually hidden text to the links. This means a screen reader user will hear the row action and the ‘key’ label for the information it will affect, like ‘Change name’ or ‘Change date of birth’.
 
 {{ example({ group: "components", item: "summary-list", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
+
+#### Showing rows with and without actions
 
 If you’re showing a mix of rows (where some rows include actions and some do not), add the `govuk-summary-list__row--no-actions` modifier class to the rows without actions. This is to ensure the bottom border is drawn correctly in some browsers.
 
@@ -92,7 +137,7 @@ Summary cards are often used in case working systems to help users quickly view 
 
 Do not use summary cards if you only need to show a small amount of related information. Use summary lists instead, and structure them with headings if needed.
 
-If you’re showing summary cards at the end of a longer journey, you might want to familiarise the user with them earlier on — such as when the user reviews individual sections.
+If you’re showing summary cards at the end of a longer journey, you might want to familiarise the user with them earlier on – such as when the user reviews individual sections.
 
 ### Card titles
 
@@ -100,7 +145,7 @@ Use the summary card’s header area to give each summary list a title.
 
 Each title must be unique and help identify what the summary list describes. For example, this could be the name of a specific person, organisation or professional qualification.
 
-Try to keep titles short and relevant. You can use one or two important values in the summary list — such as the first and last name of a person.
+Try to keep titles short and relevant. You can use one or two important values in the summary list – such as the first and last name of a person.
 
 {{ example({ group: "components", item: "summary-list", example: "card-with-title", html: true, nunjucks: true, open: false }) }}
 
@@ -110,7 +155,7 @@ You can add card actions in the header, which will be shown after the summary ca
 
 For example, if you have multiple rows with "change" actions that all take the user to the same place, you can show a single “change” card action instead. This helps avoid repeating the same row action on every row.
 
-Card actions are shown in bold text to make them visually distinct from row actions — and help alert the user that the card action will affect the entire summary card.
+Card actions are shown in bold text to make them visually distinct from row actions – and help alert the user that the card action will affect the entire summary card.
 
 Write link text for card actions to tell the user what the card action will do and that it will apply to the entire summary card. It should also be as short as possible, usually 2 words.
 

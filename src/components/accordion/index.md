@@ -54,10 +54,10 @@ Accordions, [tabs](/components/tabs/) and [details](/components/details/) all wo
 
 If you decide to use one of these components, consider if:
 
-- the user needs to look at more than one section at a time — an accordion can show multiple sections at a time, unlike tabs
-- the user needs to switch quickly between sections — tabs can show content without pushing other sections down the page, unlike accordions
-- there are many sections of content — accordions can fit more sections as they’re arranged vertically, unlike tabs which are arranged horizontally
-- there’s only one or two pieces of short, less important content — the details component is more suitable as it’s visually smaller and less prominent than an accordion or tabs
+- the user needs to look at more than one section at a time – an accordion can show multiple sections at a time, unlike tabs
+- the user needs to switch quickly between sections – tabs can show content without pushing other sections down the page, unlike accordions
+- there are many sections of content – accordions can fit more sections as they’re arranged vertically, unlike tabs which are arranged horizontally
+- there’s only one or two pieces of short, less important content – the details component is more suitable as it’s visually smaller and less prominent than an accordion or tabs
 
 ## How it works
 
@@ -122,7 +122,7 @@ The team made sure the component is accessible, for example that users can inter
 
 #### Users that navigate using ‘elements lists’
 
-We need to find out more about users that navigate using ‘elements lists’ of headings, buttons, links and other elements — such as users of speech recognition software and partially-sighted users of screen readers.
+We need to find out more about users that navigate using ‘elements lists’ of headings, buttons, links and other elements – such as users of speech recognition software and partially-sighted users of screen readers.
 
 For these users, it might not be clear enough that the section headings are considered buttons. This could mislead them to navigate (less efficiently) using the show or hide labels.
 

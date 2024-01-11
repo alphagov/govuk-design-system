@@ -72,7 +72,7 @@ You can choose to display a character count message when the length of text with
 
 To do this, set the threshold in the component markup as a percentage. For example, `data-threshold="75"` will show the count message only when the user has entered a length of text that's 75% of the limit or more.
 
-Screen reader users will hear the character limit when they first interact with a textarea using the threshold option. Sighted users will not see anything until the count message is shown — though you might choose to include the character limit in the hint text.
+Screen reader users will hear the character limit when they first interact with a textarea using the threshold option. Sighted users will not see anything until the count message is shown – though you might choose to include the character limit in the hint text.
 
 {{ example({ group: "components", item: "character-count", example: "threshold", html: true, nunjucks: true, open: false }) }}
 

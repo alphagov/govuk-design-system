@@ -9,7 +9,7 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 
-Help users navigate forwards and backwards through a series of pages. For example, search results or guidance that's divided into multiple website pages — like [the GOV.UK mainstream guide format](https://prototype-kit.service.gov.uk/docs/templates/mainstream-guide).
+Help users navigate forwards and backwards through a series of pages. For example, search results or guidance that's divided into multiple website pages – like [the GOV.UK mainstream guide format](https://prototype-kit.service.gov.uk/docs/templates/mainstream-guide).
 
 {{ example({ group: "components", item: "pagination", example: "default", html: true, nunjucks: true, loading: "eager" }) }}
 
@@ -26,7 +26,7 @@ Only break up content onto separate pages if it improves the performance or usab
 
 Avoid using the 'infinite scroll' technique to automatically load content when the user approaches the bottom of the page. This causes problems for keyboard users.
 
-Do not use this Pagination component for linear journeys — for example, where you’re asking the user to complete a form. Instead, use the [Button component](/components/button/) (usually a 'Continue' button) to let the user move to the next page — and a [Back link](/components/back-link/) to let them move to the previous page.
+Do not use this Pagination component for linear journeys – for example, where you’re asking the user to complete a form. Instead, use the [Button component](/components/button/) (usually a 'Continue' button) to let the user move to the next page – and a [Back link](/components/back-link/) to let them move to the previous page.
 
 ## How it works
 
@@ -81,7 +81,7 @@ Use ellipses (…) to replace any skipped pages. For example:
 
 ### First and last pages
 
-Do not show the previous page link on the first page — and do not show the next page link on the last page.
+Do not show the previous page link on the first page – and do not show the next page link on the last page.
 
 {{ example({ group: "components", item: "pagination", example: "first-page", html: true, nunjucks: true }) }}
 

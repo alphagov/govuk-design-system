@@ -10,7 +10,6 @@ layout: layout-pane.njk
 {% from "_example.njk" import example %}
 
 The panel component is a visible container used on confirmation or results pages to highlight important content.
-
 {{ example({ group: "components", item: "panel", example: "default", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}
 
 ## When to use this component

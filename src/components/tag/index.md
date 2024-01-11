@@ -8,8 +8,31 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
 
 Use the tag component to show users the status of something.
+
+{% set wcagCallout %}
+
+{{ govukTag({
+  text: "WCAG 2.2",
+  classes: "app-tag"
+}) }}
+
+### New WCAG 2.2 criteria affects this component
+
+To use the ‘Tag' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
+
+- <a href="/components/tag/#wcag-tag-no-dragging-reorder">interact with tags without relying on 'click and drag' movements (if you choose to add functionality to reorder tags)</a>
+
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
+{% endset %}
+
+{{ govukInsetText({
+  html: wcagCallout,
+  classes: "app-inset-text"
+}) }}
 
 {{ example({ group: "components", item: "tag", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
@@ -21,7 +44,12 @@ Use the tag component when it’s possible for something to have more than one s
 
 There are two ways to use the tag component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 
-Tags are just used to indicate a status, so do not add links. Use adjectives rather than verbs for the names of your tags. Using a verb might make a user think that clicking on them will do something.
+Tags are only used to indicate a status. Do not make a tag interactive by making it into a link or button. Use adjectives (descriptive words) and not verbs (action words) for the names of your tags. Using a verb might make a user think that clicking on them will do something.
+
+Do not use tags to create links, buttons or other interactive elements, as users:
+
+- are unlikely to identify the tags as something they’re meant to interact with
+- would see no visual difference between interactive and non-interactive tags
 
 ## Showing one or two statuses
 
@@ -38,6 +66,14 @@ Or it can make sense to have two statuses. For example you may find that there�
 Tags should be helpful to users. The more you add, the harder it is for users to remember them. So start with the smallest number of statuses you think might work, then add more if your user research shows there’s a need for them.
 
 {{ example({ group: "components", item: "tag", example: "coloured-tags", html: true, nunjucks: true, open: false }) }}
+
+<div class="app-wcag-22" id="wcag-tag-no-dragging-reorder" role="note">
+  {{ govukTag({
+    text: "WCAG 2.2",
+    classes: "app-tag"
+  }) }}
+  <p>Any tag implementation that allows the user to change the order of tags must offer a way to do so without relying on ‘click and drag’ movements. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">2.5.7 Dragging Movements</a>.</p>
+</div>
 
 ## Using colour with tags
 

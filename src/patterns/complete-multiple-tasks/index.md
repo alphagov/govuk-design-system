@@ -9,12 +9,36 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
 
 Help users understand:
 
 - the tasks involved in completing a transaction
 - the order they should complete tasks in
 - when they've completed tasks
+
+{% set wcagCallout %}
+
+{{ govukTag({
+  text: "WCAG 2.2",
+  classes: "app-tag"
+}) }}
+
+### New WCAG 2.2 criteria affects this pattern
+
+To help users to 'Complete multiple tasks' and meet the new WCAG 2.2 criteria, make sure that users can successfully:
+
+- [interact with tasks without relying on 'click and drag' movements (if you choose to add functionality to reorder tasks)](/patterns/complete-multiple-tasks/#wcag-interact-without-click-drag-task)
+- [edit information they've given when going back to a previous task](/patterns/complete-multiple-tasks/#wcag-edit-information-previous-task)
+
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
+{% endset %}
+
+{{ govukInsetText({
+  html: wcagCallout,
+  classes: "app-inset-text"
+}) }}
 
 {{ example({ group: "patterns", item: "complete-multiple-tasks", example: "default", html: true, nunjucks: true, open: false }) }}
 
@@ -40,14 +64,22 @@ If you use a complete multiple tasks page in your service, you'll need to:
 
 If there are lots of tasks to complete, you might also need to group them further into steps.
 
-### Group related actions into tasks
+### Show related actions as a task
 
-Group related activities and questions into tasks, for example, ‘Provide financial evidence’ and ‘Give medical information’. This will help users understand and plan what they need to do.
+Summarise a set of related activities and questions into a task, for example, ‘Provide financial evidence’ and ‘Give medical information’. This will help users understand and plan what they need to do.
 
 Where possible, task names should:
 
 - describe what the task or activity will involve
 - start with verbs, for example, ‘check’, ‘declare’, ‘report’
+
+<div class="app-wcag-22" id="wcag-interact-without-click-drag-task" role="note">
+    {{ govukTag({
+        text: "WCAG 2.2",
+        classes: "app-tag"
+    }) }}
+    <p>Any task list that allows the user to rearrange the order that tasks are shown must offer a way to do so without relying on ‘click and drag’ movements. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">WCAG 2.2 success criterion 2.5.7 Dragging Movements</a>.</p>
+</div>
 
 ### Show the status of the tasks
 
@@ -116,13 +148,22 @@ This can be helpful when a task involves:
 - looking up information, such as details about previous jobs
 - answers that need to be checked carefully with someone else
 
-Do this by asking a radio question at the end of the task — either as the last question (if the task is a single page) or on the [‘Check answers’ page](/patterns/check-answers/) (if the task uses multiple [question pages](/patterns/question-pages/)).
+Do this by asking a radio question at the end of the task – either as the last question (if the task is a single page) or on the [‘Check answers’ page](/patterns/check-answers/) (if the task uses multiple [question pages](/patterns/question-pages/)).
 
 Ask ‘Have you completed this section?’ with the radio options ‘Yes, I’ve completed this section’ or ‘No, I’ll come back later’.
 
 If the user selects ‘No, I’ll come back to it later,’ mark the task as 'Incomplete' or 'In progress'.
 
 If the user selects ‘Yes, I’ve completed this section,’ mark the task as 'Completed'.
+
+<div class="app-wcag-22" id="wcag-edit-information-previous-task" role="note">
+  {{ govukTag({
+    text: "WCAG 2.2",
+    classes: "app-tag"
+  }) }}
+  <p>If a user decides to go back to a previous task, make sure information they have already entered is pre-populated.</p>
+  <p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
+</div>
 
 {{ example({ group: "patterns", item: "complete-multiple-tasks", example: "have-you-completed-this-section", html: true, nunjucks: true, open: false }) }}
 

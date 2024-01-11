@@ -363,3 +363,26 @@ pre .language-plaintext {
   border-bottom: 1px solid $govuk-border-colour;
   background-color: $app-light-grey;
 }
+
+.app-wcag-22 {
+  margin-top: govuk-spacing(6);
+
+  // Add highlight styling for WCAG 2.2 content
+  &:target {
+    outline: 4px solid $govuk-brand-colour;
+    outline-offset: 6px;
+  }
+}
+
+.app-inset-text {
+  border-left-color: govuk-colour("blue");
+}
+
+.app-tag {
+  margin-top: 1px;
+  margin-bottom: govuk-spacing(2);
+
+  .app-prose-scope & {
+    font-weight: normal;
+  }
+}

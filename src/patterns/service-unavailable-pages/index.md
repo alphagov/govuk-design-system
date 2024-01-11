@@ -9,8 +9,31 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
 
 This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
+
+{% set wcagCallout %}
+
+{{ govukTag({
+  text: "WCAG 2.2",
+  classes: "app-tag"
+}) }}
+
+### New WCAG 2.2 criteria affects this pattern
+
+To use ‘Service unavailable pages' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
+
+- [get contact information in a consistent way](/patterns/service-unavailable-pages/#wcag-consistent-content-service-unavailable)
+
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
+{% endset %}
+
+{{ govukInsetText({
+  html: wcagCallout,
+  classes: "app-inset-text"
+}) }}
 
 Tell the user a service is unavailable on purpose. These are also known as 503 and shutter pages.
 
@@ -39,6 +62,14 @@ Contact information should either be:
 
 - a link to a specific page that includes numbers and opening times
 - include all numbers and opening times
+
+<div class="app-wcag-22" id="wcag-consistent-content-service-unavailable" role="note">
+  {{ govukTag({
+    text: "WCAG 2.2",
+    classes: "app-tag"
+  }) }}
+  <p>You must always write contact information in a clear and consistent way across ‘Service unavailable’ and similar service error pages. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent Help</a>.</p>
+</div>
 
 Have clear and concise content and do not use:
 

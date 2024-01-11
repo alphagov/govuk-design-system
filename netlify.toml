@@ -23,6 +23,13 @@
   to = "/form-success"
   status = 301
 
+# Redirect pages that have moved
+
+[[redirects]]
+  from = "/community/accessibility-strategy/"
+  to = "/accessibility/accessibility-strategy/"
+  status = 301
+
 # Proxy requests for security.txt to the centralised Cabinet Office
 # vulnerability disclosure policy (VDP)
 #

@@ -8,6 +8,29 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+
+{% set wcagCallout %}
+
+{{ govukTag({
+  text: "WCAG 2.2",
+  classes: "app-tag"
+}) }}
+
+### New WCAG 2.2 criteria affects this component
+
+To use the ‘Select' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
+
+- <a href="/components/select/#wcag-avoid-dragging-multiple-options">use the select without relying on 'click and drag' movements (if you choose to add functionality to select multiple options)</a>
+
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
+{% endset %}
+
+{{ govukInsetText({
+  html: wcagCallout,
+  classes: "app-inset-text"
+}) }}
 
 {{ example({ group: "components", item: "select", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
@@ -44,6 +67,18 @@ Display an error message if the user has not selected an option.
 Style error messages as shown in the example:
 
 {{ example({ group: "components", item: "select", example: "error", html: true, nunjucks: true, open: false }) }}
+
+### Avoid adding functionality to allow selecting multiple options
+
+The select component does not support selecting multiple options, [as there’s a history of poor usability and assistive technology support for `<select multiple>`](https://www.24a11y.com/2019/select-your-poison/). If you need to ask the user to pick more than one item from a list, it’s almost always better to use another method, such as a list of checkboxes.
+
+<div class="app-wcag-22" id="wcag-avoid-dragging-multiple-options" role="note">
+  {{ govukTag({
+    text: "WCAG 2.2",
+    classes: "app-tag"
+  }) }}
+  <p>Any input that’s designed to let a user select multiple options must offer a way to do so without relying on ‘click and drag’ movements or keyboard and mouse combination actions. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">2.5.7 Dragging Movements</a>.</p>
+</div>
 
 ## Research on this component
 

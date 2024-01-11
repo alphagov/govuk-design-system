@@ -9,8 +9,31 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
 
 Public sector organisations have a duty to consider the need to avoid discrimination and advance equality of opportunity as part of what they do. This is part of what’s called the [public sector equality duty](https://www.gov.uk/guidance/equality-act-2010-guidance#public-sector-equality-duty).
+
+{% set wcagCallout %}
+
+{{ govukTag({
+  text: "WCAG 2.2",
+  classes: "app-tag"
+}) }}
+
+### New WCAG 2.2 criteria affects this pattern
+
+To ask users for 'Equality information' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
+
+- [update their equality information without re-entering existing information](/patterns/equality-information/#wcag-do-not-ask-reentry-equality-info)
+
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
+{% endset %}
+
+{{ govukInsetText({
+  html: wcagCallout,
+  classes: "app-inset-text"
+}) }}
 
 Public sector bodies often collect equality information about service users to help them meet this duty.
 
@@ -44,6 +67,28 @@ For a service that people are likely to use on a one-off basis:
 With a service that you expect users to return to multiple times, you’ll need to decide where to place the equality questions. For example, with an account-type service with tasks that need to be completed at different times, you might choose to make answering the equality questions an optional task.
 
 You’ll also need to give users the option to update their equality information in case anything changes.
+
+### Updating equality information
+
+Some categories of equality information can change over time, including changes to:
+
+- marriage or partnership status
+- disability
+- religion
+- sexual orientation
+- gender identity
+
+When possible, offer users the option to update their equality information. Users should be able to update their equality information through an online account, a change request form, or other contact methods. Integrating the option to update equality information directly into your service or user account system is often the most usable and efficient method.
+
+Updating equality information is especially relevant for longer term services and services that use the same equality information multiple times.
+
+<div class="app-wcag-22" id="wcag-do-not-ask-reentry-equality-info" role="note">
+  {{ govukTag({
+    text: "WCAG 2.2",
+    classes: "app-tag"
+  }) }}
+  <p>When users are updating equality information, only ask them to enter the information that has changed. Do not ask them to re-enter all existing equality information. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
+</div>
 
 ## Get specialist privacy or data protection advice
 

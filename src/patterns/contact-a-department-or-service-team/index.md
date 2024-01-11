@@ -9,8 +9,31 @@ layout: layout-pane.njk
 ---
 
 {%- from "_example.njk" import example -%}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
 
 Give users contact information within your service.
+
+{% set wcagCallout %}
+
+{{ govukTag({
+  text: "WCAG 2.2",
+  classes: "app-tag"
+}) }}
+
+### New WCAG 2.2 criteria affects this pattern
+
+To help users to 'Contact a department or service team' and meet the new WCAG 2.2 criteria, make sure that users can successfully:
+
+- [find contact details in a consistent place across a set of pages](/patterns/contact-a-department-or-service-team/#wcag-consistent-contact)
+
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
+{% endset %}
+
+{{ govukInsetText({
+  html: wcagCallout,
+  classes: "app-inset-text"
+}) }}
 
 {{ example({ group: "patterns", item: "contact-a-department-or-service-team", example: "default", html: true, open: false, size: "s" }) }}
 
@@ -24,11 +47,19 @@ Read about how and why to [set up user support](https://www.gov.uk/service-manua
 
 {{ example({ group: "patterns", item: "contact-a-department-or-service-team", example: "all-contact-information", html: true, open: false, size: "xl" }) }}
 
-### Order contact channels consistently
-
-List contact channels in the same order throughout your service. This helps users to find what they need more easily.
-
 Order contact channels based on what research shows your users need, and what your service or department can best support.
+
+Show contact channels in the same order throughout your service. This helps users to find what they need more easily.
+
+<div class="app-wcag-22" id="wcag-consistent-contact" role="note">
+  {{ govukTag({
+    text: "WCAG 2.2",
+    classes: "app-tag"
+  }) }}
+  <p>If you repeat a particular set of contact details on different pages, show them in the same place on each page.</p>
+  <p>For example, if you show a ‘contact us’ section at the end of one help page, any other help pages that include the same ‘contact us’ section should have them shown at the end of the page as well.</p>
+  <p>This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent Help</a>.</p>
+</div>
 
 ### Social media
 

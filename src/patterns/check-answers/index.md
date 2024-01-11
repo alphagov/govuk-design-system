@@ -9,8 +9,31 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
 
 Let users check their answers before submitting information to a service.
+
+{% set wcagCallout %}
+
+{{ govukTag({
+  text: "WCAG 2.2",
+  classes: "app-tag"
+}) }}
+
+### New WCAG 2.2 criteria affects this pattern
+
+To help users to 'Check answers' and meet the new WCAG 2.2 criteria, make sure that users can successfully:
+
+- [go back and edit information they've already entered](/patterns/check-answers/#wcag-prepopulate-information)
+
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
+{% endset %}
+
+{{ govukInsetText({
+  html: wcagCallout,
+  classes: "app-inset-text"
+}) }}
 
 {{ example({ group: "patterns", item: "check-answers", example: "default", html: true, nunjucks: true, open: false, size: "xl", loading: "eager" }) }}
 
@@ -41,7 +64,7 @@ However, if your service asks users for longer or more detailed answers, a full 
 
 ### Make the page easy to understand
 
-Use the page title to tell the user what they need to do — otherwise, they might miss the 'submit' button at the end of the page.
+Use the page title to tell the user what they need to do – otherwise, they might miss the 'submit' button at the end of the page.
 
 On the page, you should also:
 
@@ -55,7 +78,16 @@ On the page, you should also:
 
 You should provide a ‘Change’ link next to each section on your check answers page so that users can add or change the information. 'Change' links contain hidden text to make them accessible to screen reader users. Update the hidden text to describe what each 'change' link is for.
 
-The answers pages should look the same way they did when the user last used them, with all their answers pre-populated.
+<div class="app-wcag-22" id="wcag-prepopulate-information" role="note">
+  {{ govukTag({
+    text: "WCAG 2.2",
+    classes: "app-tag"
+  }) }}
+  <p>If a user decides to go back to a previous answer, make sure information they've already entered is pre-populated.</p>
+  <p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
+</div>
+
+The answers pages should look the same way they did when the user last used them.
 
 When they’ve finished, the ‘Continue’ button should return them to the check answers page. They should not need to go through the rest of the transaction again.
 

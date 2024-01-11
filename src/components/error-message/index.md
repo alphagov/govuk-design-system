@@ -8,8 +8,31 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
 
 This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
+
+{% set wcagCallout %}
+
+{{ govukTag({
+  text: "WCAG 2.2",
+  classes: "app-tag"
+}) }}
+
+### New WCAG 2.2 criteria affects this component
+
+To use the ‘Error message' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
+
+- [edit information they've previously given, so that they can correct an error](/components/error-message/#wcag-clear-answers-error)
+
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
+{% endset %}
+
+{{ govukInsetText({
+  html: wcagCallout,
+  classes: "app-inset-text"
+}) }}
 
 Follow the [validation pattern](/patterns/validation/) and show an error message when there is a validation error. In the error message explain what went wrong and how to fix it.
 
@@ -40,6 +63,20 @@ For each error:
 - put the message in red after the question text and hint text
 - use a red border to visually connect the message and the question it belongs to
 - if the error relates to a specific field within the question, give it a red border and refer to that field in the error message - for example: "you must enter a year"
+
+<div class="app-wcag-22" id="wcag-clear-answers-error" role="note">
+  {{ govukTag({
+    text: "WCAG 2.2",
+    classes: "app-tag"
+  }) }}
+  <p>Do not clear any form fields when adding error messages. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
+</div>
+
+Keeping information that caused errors helps users to:
+
+- see what went wrong
+- edit their previous answer
+- avoid re-entering information
 
 To help screen reader users, the error message component includes a hidden 'Error:' before the error message. These users will hear, for example, "Error: The date your passport was issued must be in the past".
 

@@ -47,10 +47,10 @@ Tabs, [accordions](/components/accordion/), and [details](/components/details/) 
 
 If you decide to use one of these components, consider if:
 
-- the user does not need to view more than one section at a time — consider using tabs
-- the user needs to switch quickly between sections — tabs can show content without pushing other sections down the page, unlike accordions
-- there are many pieces of content — tabs can fit fewer sections as they’re arranged horizontally, unlike accordions which are arranged vertically
-- there’s only one or two pieces of short, less important content — the details component is more suitable as it’s visually smaller and less prominent than an accordion or tabs
+- the user does not need to view more than one section at a time – consider using tabs
+- the user needs to switch quickly between sections – tabs can show content without pushing other sections down the page, unlike accordions
+- there are many pieces of content – tabs can fit fewer sections as they’re arranged horizontally, unlike accordions which are arranged vertically
+- there’s only one or two pieces of short, less important content – the details component is more suitable as it’s visually smaller and less prominent than an accordion or tabs
 
 ## How it works
 
