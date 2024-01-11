@@ -12,12 +12,12 @@ This accessibility statement applies to both websites and the components and pat
 
 The team wants to make sure as many people as possible can use their websites. For example, making sure the website text is as clear as possible to understand and making sure you can:
 
--   change colours, contrast levels and fonts
--   zoom in up to 400% without the text spilling off the screen
--   listen to most of the website using a screen reader (including the most recent versions of JAWS, NVDA, TalkBack and VoiceOver)
--   navigate most of the website using just a keyboard
--   navigate most of the website using just a mouse and on-screen keyboard
--   navigate most of the website using speech recognition software
+- change colours, contrast levels and fonts
+- zoom in up to 400% without the text spilling off the screen
+- listen to most of the website using a screen reader (including the most recent versions of JAWS, NVDA, TalkBack and VoiceOver)
+- navigate most of the website using just a keyboard
+- navigate most of the website using just a mouse and on-screen keyboard
+- navigate most of the website using speech recognition software
 
 AbilityNet has [advice on making your device easier to use](https://mcmw.abilitynet.org.uk/), if you have a disability.
 
@@ -27,20 +27,20 @@ The Design System website at [design-system.service.gov.uk](https://design-syste
 
 The GOV.UK Frontend documentation website at [frontend.design-system.service.gov.uk](https://frontend.design-system.service.gov.uk/) is fully compliant with the Web Content Accessibility Guidelines (WCAG) version 2.1 AA standard.
 
-The GOV.UK Frontend codebase at [github.com/alphagov/govuk-frontend](https://github.com/alphagov/govuk-frontend) is fully compliant with the Web Content Accessibility Guidelines (WCAG) versions 2.1 AA and 2.2 AA standards.
+The GOV.UK Frontend codebase at [github.com/alphagov/govuk-frontend](https://github.com/alphagov/govuk-frontend) is fully compliant with the Web Content Accessibility Guidelines (WCAG) version 2.2 AA standard.
 
 ## Non-accessible content
 
 In this section, the team lists non-accessible content that has been reported, verified and tracked in the following repositories:
 
--   [GOV.UK Design System GitHub repository](https://github.com/alphagov/govuk-design-system)    
--   [GOV.UK Frontend Documentation Github repository](https://github.com/alphagov/govuk-frontend-docs)
--   [GOV.UK Frontend GitHub repository](https://github.com/alphagov/govuk-frontend)
+- [GOV.UK Design System GitHub repository](https://github.com/alphagov/govuk-design-system)
+- [GOV.UK Frontend Documentation Github repository](https://github.com/alphagov/govuk-frontend-docs)
+- [GOV.UK Frontend GitHub repository](https://github.com/alphagov/govuk-frontend)
 
 The team document WCAG 2.1 A and AA failures in two repositories under the ‘accessibility-regulations-failure’ issue label:
 
--   [GOV.UK Design System website label for accessibility regulations failures](https://github.com/alphagov/govuk-design-system/labels/accessibility-regulations-failure)    
--   [GOV.UK Frontend codebase label for accessibility regulations failures](https://github.com/alphagov/govuk-frontend/labels/accessibility-regulations-failure)
+- [GOV.UK Design System website label for accessibility regulations failures](https://github.com/alphagov/govuk-design-system/labels/accessibility-regulations-failure)
+- [GOV.UK Frontend codebase label for accessibility regulations failures](https://github.com/alphagov/govuk-frontend/labels/accessibility-regulations-failure)
 
 ### Non-compliance with the accessibility regulations
 
@@ -60,25 +60,23 @@ The team does not have any content within these products outside the scope of th
 
 In addition to non-compliant content, the team also track additional concerns about accessibility which:
 
--   show strong evidence of being accessibility barriers    
--   do not constitute a failure in one or more WCAG 2.1 Level AA criteria
--   are not classified as non-compliance with the accessibility regulations
--   are determined as worth featuring in this accessibility statement
+- show strong evidence of being accessibility barriers
+- do not constitute a failure in one or more WCAG 2.1 Level AA criteria
+- are not classified as non-compliance with the accessibility regulations
+- are determined as worth featuring in this accessibility statement
 
 The team documents these additional concerns in two repositories under the ‘accessibility-concern’ issue label:
 
--   [GOV.UK Design System website label for accessibility concerns](https://github.com/alphagov/govuk-design-system/labels/accessibility-concern)    
--   [GOV.UK Frontend codebase label for accessibility concerns](https://github.com/alphagov/govuk-frontend/labels/accessibility-concern)
+- [GOV.UK Design System website label for accessibility concerns](https://github.com/alphagov/govuk-design-system/labels/accessibility-concern)
+- [GOV.UK Frontend codebase label for accessibility concerns](https://github.com/alphagov/govuk-frontend/labels/accessibility-concern)
 
 For the GOV.UK Design System website and the GOV.UK Frontend Documentation website, the team do not currently know of any additional accessibility concerns to add to this statement.
 
 Additional accessibility concerns from the GOV.UK Frontend codebase include:
 
 1.  The accordion component is currently using an `aria-labelledby` ARIA attribute on an unsupported `<div>` element. This is an incorrect implementation of [WAI-ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/), but is not a failure of WCAG success criterion [4.1.2 Name, Role, Value](https://www.w3.org/TR/WCAG21/#name-role-value). The team does not plan to fix this at present. Track our progress on the [GitHub issue: ‘Accordion - Elements must only use allowed ARIA attributes’](https://github.com/alphagov/govuk-frontend/issues/2472).
-    
 2.  The details component does not work well with Dragon and VoiceOver. This is not an issue with our details component, but is a known issue with the assistive tech and the `<details>` HTML element. Track our progress on the [GitHub issue: ‘Details component does not work well with Dragon and VoiceOver’](https://github.com/alphagov/govuk-frontend/issues/3693).
-    
-3.  [A bug within Dragon means no action is taken when trying to activate the file upload component](https://github.com/alphagov/reported-bugs/issues/35) through the command ‘click choose file’. This is a usability issue originating from the assistive technology. The team does not plan on fixing this, as the assistive technology will need to resolve it. Track our progress on the [GitHub issue: ‘Upload file component doesn’t respond to ‘click choose file’ due to Dragon / browser bugs’](https://github.com/alphagov/govuk-frontend/issues/3686).    
+3.  [A bug within Dragon means no action is taken when trying to activate the file upload component](https://github.com/alphagov/reported-bugs/issues/35) through the command ‘click choose file’. This is a usability issue originating from the assistive technology. The team does not plan on fixing this, as the assistive technology will need to resolve it. Track our progress on the [GitHub issue: ‘Upload file component doesn’t respond to ‘click choose file’ due to Dragon / browser bugs’](https://github.com/alphagov/govuk-frontend/issues/3686).
 
 ## Preparation of this accessibility statement
 
@@ -88,13 +86,13 @@ The [GOV.UK Design System website](https://design-system.service.gov.uk/) was la
 
 DAC tested a sample of pages to cover the different content types in the GOV.UK Design System website. They were:
 
--   [the homepage](https://design-system.service.gov.uk/)    
--   [a short content page](https://design-system.service.gov.uk/community/design-system-working-group/)
--   [a long content page](https://design-system.service.gov.uk/styles/layout/)
--   [an overview page](https://design-system.service.gov.uk/community/)
--   [a styles page](https://design-system.service.gov.uk/styles/typography/)
--   [a component page](https://design-system.service.gov.uk/components/radios/)
--   [a pattern page](https://design-system.service.gov.uk/patterns/question-pages/)
+- [the homepage](https://design-system.service.gov.uk/)
+- [a short content page](https://design-system.service.gov.uk/community/design-system-working-group/)
+- [a long content page](https://design-system.service.gov.uk/styles/layout/)
+- [an overview page](https://design-system.service.gov.uk/community/)
+- [a styles page](https://design-system.service.gov.uk/styles/typography/)
+- [a component page](https://design-system.service.gov.uk/components/radios/)
+- [a pattern page](https://design-system.service.gov.uk/patterns/question-pages/)
 
 DAC also tested the global search functionality that appears in the header of the GOV.UK Design System website.
 

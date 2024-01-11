@@ -79,7 +79,7 @@ There's a few things to keep in mind to ensure that users can successfully use r
     text: "WCAG 2.2",
     classes: "app-tag"
   }) }}
-  <p>Keep card and row actions as ‘<a href="https://developer.mozilla.org/en-US/docs/Glossary/Inline-level_content">inline links</a>’. This is to make sure that sets of actions reflow properly on different screen sizes. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target Size (minimum)</a>.</p>
+  <p>Make sure any 'action links' are at least 24px by 24px in size, with adequate spacing. This is to make sure users can easily interact with the links. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target Size (minimum)</a>.</p>
 </div>
 
 <div class="app-wcag-22" id="wcag-change-answers" role="note">

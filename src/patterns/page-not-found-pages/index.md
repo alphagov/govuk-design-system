@@ -25,7 +25,7 @@ A page not found tells someone we cannot find the page they were trying to view.
 
 To use ‘Page not found pages' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
 
-- [find contact information in a consistent way across 'Page not found pages'](/patterns/page-not-found-pages/#wcag-consistent-content-page-not-found)
+- [find contact information in a consistent way](/patterns/page-not-found-pages/#wcag-consistent-content-page-not-found)
 
 See the full list of [components and patterns affected by WCAG 2.2](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
@@ -71,7 +71,7 @@ The content should be clear and concise, not blame the user.
     text: "WCAG 2.2",
     classes: "app-tag"
   }) }}
-  <p>You must always write contact information in a clear and consistent way across ‘Page not found’ pages. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent Help</a>.</p>
+  <p>You must always write contact information in a clear and consistent way across ‘Page not found’ and similar service error pages. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent Help</a>.</p>
 </div>
 
 Do not use:

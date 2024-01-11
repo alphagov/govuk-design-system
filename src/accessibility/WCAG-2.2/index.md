@@ -13,7 +13,7 @@ W3C owns and manages the [Web Content Accessibility Guidelines (WCAG) 2.2](https
 
 In 2023, the Design System team assessed and updated the GOV.UK Design System to comply with the new criteria and recommendations given in WCAG 2.2.
 
-Any guidance we provide is to make sure teams using the Design System are aware of the changes and can make the necessary adjustments to their services.
+We [included code changes in GOV.UK Frontend v5.0.0](https://frontend.design-system.service.gov.uk/changes-to-govuk-frontend-v5/) to make it easier for services to make changes to comply with WCAG 2.2. We also added guidance to make teams aware of the changes and help them make necessary adjustments to their services.
 
 ### Make sure your service meets the new WCAG 2.2 criteria
 
@@ -24,9 +24,10 @@ WCAG 2.2 was published in October 2023. You’ll need to comply with the new cri
 1. Revisit the [Government Digital Service (GDS) guidance](https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps) on accessibility is and why your service needs to invest in it
 2. Read [What’s new in WCAG 2.2](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/) to understand the new criteria your service will need to comply with
 3. Ask your wider organisation for support to prepare for work needed to meet WCAG 2.2
-4. Review the lists on this page of affected components and patterns in the Design System
-5. Assess your service to see how many affected components and patterns are in use
-6. Plan and implement the changes needed to your service
+4. Update your service to use [GOV.UK Frontend v5.0.0](https://frontend.design-system.service.gov.uk/changes-to-govuk-frontend-v5/) or later, to make it easier to make changes in your service
+5. Review the lists on this page of affected components and patterns in the Design System
+6. Assess your service to see how many affected components and patterns are in use
+7. Plan and implement the changes needed to your service
 
 Make sure there's expertise within your organisation by advocating for people to receive training in accessibility. To provide some help with this, the Design System team is [organising community events](/community/) to help service teams share information with each other.
 
@@ -111,15 +112,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
         html: '<a href="/components/header/">Header</a>'
       },
       {
-        html: 'Focus not obscured (Minimum)<br>Focus appearance'
-      }
-    ],
-    [
-      {
-        html: '<a href="/components/panel/">Panel</a>'
-      },
-      {
-        html: 'Redundant entry'
+        html: 'Focus not obscured (Minimum)<br>Consistent help'
       }
     ],
     [
@@ -151,7 +144,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
         html: '<a href="/components/tag/">Tag</a>'
       },
       {
-        html: 'Dragging movements<br>Focus appearance'
+        html: 'Dragging movements'
       }
     ]
   ]
@@ -232,7 +225,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
         html: '<a href="/patterns/payment-card-details/">Payment card details</a>'
       },
       {
-        html: 'Redundant entry'
+        html: 'Target size (minimum)'
       }
     ]
   ]
@@ -310,14 +303,6 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
     ],
     [
       {
-        html: '<a href="/patterns/start-using-a-service/">Start using a service</a>'
-      },
-      {
-        html: 'Focus appearance'
-      }
-    ],
-    [
-      {
         html: '<a href="/patterns/validation/">Recover from validation errors</a>'
       },
       {
@@ -341,22 +326,6 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
     }
   ],
   rows: [
-    [
-      {
-        html: '<a href="/patterns/confirmation-pages/">Confirmation pages</a>'
-      },
-      {
-        html: 'Dragging movements<br>Focus appearance<br>Redundant entry'
-      }
-    ],
-    [
-      {
-        html: '<a href="/patterns/cookies-page/">Cookies page </a>'
-      },
-      {
-        html: 'Redundant entry'
-      }
-    ],
     [
       {
         html: '<a href="/patterns/page-not-found-pages/">Page not found pages</a>'

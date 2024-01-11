@@ -9,33 +9,8 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-{% from "govuk/components/tag/macro.njk" import govukTag %}
 
 Tell users about the cookies you’re setting on their device and let them accept or reject different types of non-essential cookies.
-
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affects this pattern
-
-To use ‘Cookies page' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
-
-- [avoid needing to enter their cookie preferences again](/patterns/cookies-page/#wcag-avoid-cookie-preferences-reentry)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  attributes: {
-    style: 'border-left-color: #1d70b8;'
-  }
-})}}
 
 ![A screenshot showing an example cookies page, with information about what cookies the site uses.](cookies-page.png)
 
@@ -123,14 +98,6 @@ Load the page with the radios set to ‘no’ on the user’s first visit. If th
 When the user sets or changes their cookie preferences, use a green [notification banner](/components/notification-banner/) to confirm that the service has updated the user’s cookie settings. This is so they can get back to the page they were looking at.
 
 {{ example({ group: "patterns", item: "cookies-page", example: "cookies-updated", html: true, nunjucks: true, open: false }) }}
-
-<div class="app-wcag-22" id="wcag-avoid-cookie-preferences-reentry" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>Save cookie preferences for returning users whenever technically possible, so they do not need to enter their preferences again. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
-</div>
 
 ## If you depend on JavaScript to ask users to accept or reject cookies
 

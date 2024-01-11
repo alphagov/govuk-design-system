@@ -25,7 +25,7 @@ This guidance is for government teams that build online services. [To find infor
 
 To use ‘Service unavailable pages' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
 
-- [get contact information in a consistent way across 'Service unavailable pages'](/patterns/service-unavailable-pages/#wcag-consistent-content-service-unavailable)
+- [get contact information in a consistent way](/patterns/service-unavailable-pages/#wcag-consistent-content-service-unavailable)
 
 See the full list of [components and patterns affected by WCAG 2.2](/accessibility/WCAG-2.2/#components-and-patterns-affected-in-the-design-system).
 {% endset %}
@@ -70,7 +70,7 @@ Contact information should either be:
     text: "WCAG 2.2",
     classes: "app-tag"
   }) }}
-  <p>You must always write contact information in a clear and consistent way across ‘Service unavailable’ pages. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent Help</a>.</p>
+  <p>You must always write contact information in a clear and consistent way across ‘Service unavailable’ and similar service error pages. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent Help</a>.</p>
 </div>
 
 Have clear and concise content and do not use:
