@@ -20,7 +20,7 @@ When creating new components, always start by using the existing typography styl
 
 Like the [spacing](/styles/spacing/) scale, every point on the type scale uses a line height in a multiple of 5px. This creates a consistent vertical rhythm, which makes pages easier to scan and read.
 
-All sizes in the type scale are shown here in pixels (px). GOV.UK Frontend outputs CSS in relative units, like EM or REM. This helps the type resize better when zoomed or magnified. But we've used pixels so it's easier to understand.
+GOV.UK Frontend outputs CSS in relative units like `em` or `rem`. This helps the type resize better when zoomed or magnified. But we've used pixels (px) here so it's easier to understand.
 
 ## Responsive behaviour
 
@@ -451,4 +451,26 @@ In 2024, we updated the type scale to make text easier to read on smaller screen
 </details>
 
 ## Using the type scale in your own CSS
+
+Include the `govuk-font` mixin to use GOV.UK typography in your CSS. 
+
+For example, if you want a custom element to use type scale unit 19, use:
+
+```scss
+@include govuk-font($size: 19);
+``````
+
+You can add additional arguments to control font weight, use tabular font spacing, or to override the line height:
+
+```scss
+@include govuk-font($size 19, $weight: bold, $tabular: true);
+```
+
+### If you only want to set the font size
+
+Do not use `govuk-font` if you only want to change the font size and line height – it includes additional typography-related CSS like the New Transport font family. Instead, you should use `govuk-font-size`:
+
+```scss
+@include govuk-font-size($size: 19);
+```
 
