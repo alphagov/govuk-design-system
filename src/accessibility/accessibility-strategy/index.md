@@ -444,3 +444,7 @@ The GOV.UK Design System team released version 5.0.0 of GOV.UK Frontend with WCA
 ### 11 January 2024
 
 The GOV.UK Design System team published updated accessibility guidance on the GOV.UK Design System website.
+
+### July 2024: 9 months after WCAG 2.2 publishing
+
+Release an updated GOV.UK Design System website that is compliant with WCAG 2.2 AA.
