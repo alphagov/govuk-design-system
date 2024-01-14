@@ -71,7 +71,7 @@ Get some practical advice on how to use the Design System and Prototype Kit.
 
 [Testing a component's accessibility](https://www.youtube.com/watch?v=C770bSvGr_E) (video) – 26 July 2023
 
-[Inspecting WCAG 2.2: Focus Not Obscured](https://www.youtube.com/watch?v=_fi7SsSkBtM) (video) – 18 July 2023
+[Inspecting WCAG 2.2: Focus Not Obscured](https://www.youtube.com/watch?v=_fi7SsSkBtM) (video) – 5 July 2023
 
 [Going beyond the GOV.UK Design System for MoJ Forms professional users](https://designnotes.blog.gov.uk/2022/03/21/going-beyond-the-gov-uk-design-system-for-moj-forms-professional-users/) (blog post) – 21 March 2022
 
