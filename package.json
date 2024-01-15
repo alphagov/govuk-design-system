@@ -63,7 +63,7 @@
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jsdoc": "^48.0.2",
     "eslint-plugin-markdown": "^3.0.1",
-    "eslint-plugin-n": "^16.6.1",
+    "eslint-plugin-n": "^16.6.2",
     "eslint-plugin-promise": "^6.1.1",
     "glob": "^10.3.10",
     "gray-matter": "^4.0.2",
