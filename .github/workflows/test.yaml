@@ -29,7 +29,7 @@ jobs:
         uses: actions/checkout@v4.1.1
 
       - name: Restore build
-        uses: actions/cache@v3.3.2
+        uses: actions/cache@v3.3.3
         id: build-cache
 
         with:
@@ -102,7 +102,7 @@ jobs:
         run: npm ci
 
       - name: Restore build
-        uses: actions/cache/restore@v3.3.2
+        uses: actions/cache/restore@v3.3.3
         with:
           key: build-cache-${{ runner.os }}-${{ github.sha }}
           path: build
