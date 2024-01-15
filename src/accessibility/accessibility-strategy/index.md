@@ -427,7 +427,7 @@ The team member assigned to support on a given workday will help triage requests
 
 Throughout this document, ‘the team’, ‘our team’ and ‘we’ refer to the GOV.UK Design System team. This team is inclusive of members of the Prototype Kit team.
 
-## Tentative WCAG-related dates for 2022 and 2023
+## WCAG-related dates
 
 ### September 2022
 
@@ -437,9 +437,13 @@ WCAG 2.2 published a new ‘Candidate recommendation’ version on 6 September 2
 
 WCAG 2.2 formally published by <abbr title="World Wide Web Consortium">W3C</abbr>. At this stage, it’s a final and official web standard. WCAG 2.2 is backwards compatible with WCAG 2.1, thanks partly to a September 2023 update which helps deprecate [Success Criterion 4.1.1: Parsing for HTML and XML](https://www.w3.org/WAI/WCAG21/Understanding/parsing.html).
 
-### April 2024: 6 months after WCAG 2.2 publishing
+### 8 December 2023
 
-Release a version of GOV.UK Frontend with WCAG 2.2 AA compliant components.
+The GOV.UK Design System team released version 5.0.0 of GOV.UK Frontend with WCAG 2.2 AA compliant components.
+
+### 11 January 2024
+
+The GOV.UK Design System team published updated accessibility guidance on the GOV.UK Design System website.
 
 ### July 2024: 9 months after WCAG 2.2 publishing
 
