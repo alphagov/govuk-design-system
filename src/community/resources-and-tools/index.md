@@ -44,6 +44,9 @@ Balsamiq wireframes based on the GOV.UK Design System.
 [Figma resources](https://www.figma.com/file/NWuFffKvPQhl3aJ9nKU0p3/GOV.UK-Design-System) -
 Figma library of styles and components based on the GOV.UK Design System.
 
+[Mural resources](https://github.com/vickytnz/govuk-elements-mural) -
+Mural template based on the GOV.UK Design System.
+
 [Sketch Wireframing Kit](https://github.com/dwp/sketch_wireframing_kit) -
 Sketch wireframes based on the GOV.UK Design System.
 
