@@ -12,28 +12,29 @@ The GOV.UK Design System at the [Government Digital Service](https://www.gov.uk/
 
 If you want to contact the team you can [get in touch via email or Slack](/get-in-touch/).
 
-- Izabela Podralska – Delivery Manager
+### Team leads
+
+- Chris Ballantine-Thomas – Senior Interaction Designer
 - Kelly Lee – Senior Delivery Manager
 - Oliver Byford – Lead Frontend Developer
 - Steve Messer – Senior Product Manager
 - Trang Erskine – Senior Product Manager
 
-### Design System squad
+### Design System team
 
+- Anika Henke – Senior Accessibility Specialist
+- Brett Kyle – Senior Frontend Developer
 - Calvin Lau – Senior Content Designer
-- Charlotte Downs – Interaction Designer
+- Charlotte Downs – Senior Interaction Designer
 - Chris Ballantine-Thomas – Senior Interaction Designer
 - Ciandelle Hughes – Interaction Designer
+- Claire Ashworth – Technical Writer
+- Colin Rotherham – Senior Frontend Developer
 - Imran Hussain – Community Designer
+- Izabela Podralska – Delivery Manager
 - Kam Nijjar – Associate Delivery Manager
 - Katrina Birch – User Researcher
 - Kim 'beeps' Grey – Frontend Developer
 - Mia Allers – Senior Graphic Designer
-- Owen Jones – Senior Frontend Developer (Tech Lead)
-
-### Frontend squad
-
-- Brett Kyle – Senior Frontend Developer
-- Claire Ashworth – Technical Writer
-- Colin Rotherham – Senior Frontend Developer
-- Romaric Pascal – Senior Frontend Developer (Tech Lead)
+- Owen Jones – Senior Frontend Developer
+- Romaric Pascal – Senior Frontend Developer
