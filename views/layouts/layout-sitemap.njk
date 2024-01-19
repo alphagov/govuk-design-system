@@ -14,7 +14,7 @@
           <li class="govuk-!-margin-bottom-2">
             <a class="govuk-link" href="/{{ subitem.url }}/">{{ subitem.label }}</a>
             {% if subitem.aliases %}
-              &mdash; also known as {% for alias in subitem.aliases %}{{ ", " if not (loop.first or loop.last) }}{{ " or " if loop.last and loop.length > 1 }}{{ alias | lower }}{% endfor %}
+              &mdash; includes {% for alias in subitem.aliases %}{{ ", " if not (loop.first or loop.last) }}{{ " or " if loop.last and loop.length > 1 }}{{ alias | lower }}{% endfor %}
             {% endif %}
           </li>
         {% endfor %}
