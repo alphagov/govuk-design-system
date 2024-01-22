@@ -4,7 +4,7 @@ description: Break up sections of content
 section: Styles
 theme: Page structure
 layout: layout-pane.njk
-order: 12
+order: 4
 ---
 
 {% from "_example.njk" import example %}

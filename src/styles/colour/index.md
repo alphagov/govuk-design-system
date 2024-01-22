@@ -6,7 +6,7 @@ theme: Visual elements
 aliases: palette
 backlogIssueId: 38
 layout: layout-pane.njk
-order: 2
+order: 12
 ---
 
 {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}

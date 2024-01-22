@@ -8,7 +8,7 @@ showPageNav: true
 headings:
   - text: Hide elements and keep them accessible to screen readers
     aliases: visually hidden
-order: 10
+order: 2
 ---
 
 {% from "_example.njk" import example %}

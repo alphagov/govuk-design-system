@@ -5,7 +5,7 @@ section: Styles
 theme: Typography
 layout: layout-pane.njk
 showPageNav: true
-order: 8
+order: 11
 ---
 
 {% from "_example.njk" import example %}

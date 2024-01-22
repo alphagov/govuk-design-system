@@ -6,7 +6,7 @@ backlogIssueId: 64
 theme: Typography
 layout: layout-pane.njk
 showPageNav: true
-order: 7
+order: 10
 ---
 
 {% from "_example.njk" import example %}

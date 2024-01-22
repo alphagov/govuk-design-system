@@ -6,7 +6,7 @@ theme: Page structure
 aliases: boilerplate
 layout: layout-pane.njk
 showPageNav: true
-order: 9
+order: 1
 ---
 
 {% from "_example.njk" import example %}

@@ -4,7 +4,7 @@ description: The type scale underpins all of the text styles on GOV.UK
 section: Styles
 theme: Typography
 layout: layout-pane.njk
-order: 3
+order: 6
 ---
 
 {% from "_example.njk" import example %}

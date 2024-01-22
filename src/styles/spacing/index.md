@@ -6,7 +6,7 @@ theme: Page structure
 aliases: margin, padding
 layout: layout-pane.njk
 showPageNav: true
-order: 11
+order: 3
 ---
 
 {% from "_example.njk" import example %}
