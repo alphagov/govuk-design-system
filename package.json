@@ -46,7 +46,7 @@
     "@metalsmith/in-place": "^5.0.0",
     "@metalsmith/layouts": "^2.7.0",
     "@metalsmith/markdown": "^1.10.0",
-    "@metalsmith/permalinks": "^3.0.0",
+    "@metalsmith/permalinks": "^3.0.1",
     "@metalsmith/postcss": "^5.4.1",
     "@metalsmith/sass": "^1.8.1",
     "@rollup/plugin-commonjs": "^25.0.7",
