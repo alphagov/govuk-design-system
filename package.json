@@ -40,7 +40,7 @@
     "lunr": "^2.3.9"
   },
   "devDependencies": {
-    "@axe-core/puppeteer": "^4.8.2",
+    "@axe-core/puppeteer": "^4.8.3",
     "@babel/core": "^7.23.7",
     "@babel/preset-env": "^7.23.8",
     "@metalsmith/in-place": "^5.0.0",
