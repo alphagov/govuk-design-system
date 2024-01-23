@@ -21,7 +21,7 @@ WCAG 2.2 was published in October 2023. You’ll need to comply with the new cri
 
 ### What you need to do
 
-1. Revisit the [Government Digital Service (GDS) guidance](https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps) on accessibility is and why your service needs to invest in it
+1. Revisit the [Government Digital Service (GDS) guidance](https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps) on what accessibility is and why your service needs to invest in it
 2. Read [What’s new in WCAG 2.2](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/) to understand the new criteria your service will need to comply with
 3. Ask your wider organisation for support to prepare for work needed to meet WCAG 2.2
 4. Update your service to use [GOV.UK Frontend v5.0.0](https://frontend.design-system.service.gov.uk/changes-to-govuk-frontend-v5/) or later, to make it easier to make changes in your service
