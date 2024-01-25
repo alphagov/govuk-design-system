@@ -13,6 +13,8 @@ To learn more about the GOV.UK Design System and Prototype Kit, check out these 
 
 Find out how the Design System and Prototype Kit work and what they do to make services more accessible and inclusive.
 
+[Get to WCAG 2.2 faster with the GOV.UK Design System](https://accessibility.blog.gov.uk/2024/01/11/get-to-wcag-2-2-faster-with-the-gov-uk-design-system/) (blog post) – 11 January 2024
+
 [Exit this page fast with the Design System’s new component](https://designnotes.blog.gov.uk/2023/08/14/exit-this-page-fast-with-the-design-systems-new-component/) (blog post) – 14 August 2023
 
 [A new accessibility strategy for the GOV.UK Design System](https://accessibility.blog.gov.uk/2023/01/06/a-new-accessibility-strategy-for-the-gov-uk-design-system/) (blog post) – 6 January 2023
@@ -86,6 +88,8 @@ Get some practical advice on how to use the Design System and Prototype Kit.
 ## Contributing to the community
 
 Find out how our community works and how to be a part of it.
+
+[Working as a community to iterate the task list pattern](https://designnotes.blog.gov.uk/2023/12/15/working-as-a-community-to-iterate-the-task-list-pattern/) (blog post) – 15 December 2023
 
 [Iterating the GOV.UK Design System contribution model](https://designnotes.blog.gov.uk/2023/05/31/iterating-the-gov-uk-design-system-contribution-model/) (blog post) – 31 May 2023
 
