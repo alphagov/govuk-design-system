@@ -9,8 +9,31 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
 
 This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
+
+{% set wcagCallout %}
+
+{{ govukTag({
+  text: "WCAG 2.2",
+  classes: "app-tag"
+}) }}
+
+### New WCAG 2.2 criteria affects this pattern
+
+To ask users for 'National insurance numbers' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
+
+- [reuse a previously entered National Insurance number](/patterns/national-insurance-numbers/#wcag-reuse-national-insurance-number)
+
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
+{% endset %}
+
+{{ govukInsetText({
+  html: wcagCallout,
+  classes: "app-inset-text"
+}) }}
 
 Ask users to provide their National Insurance number.
 
@@ -30,7 +53,7 @@ If you currently use National Insurance numbers to verify identity, find out how
 
 Use a single [text input](/components/text-input/) labelled ‘National Insurance number’. Write it out in full and never use abbreviations such as ‘NINO’ or ‘NI Number’.
 
-Show a National Insurance number using the format ‘QQ 12 34 56 C’ — the spaces will break up the number to make it easier to read, particularly for screen reader users.
+Show a National Insurance number using the format ‘QQ 12 34 56 C’ – the spaces will break up the number to make it easier to read, particularly for screen reader users.
 
 When asking for a National Insurance number:
 
@@ -41,6 +64,24 @@ When asking for a National Insurance number:
 - set the `spellcheck` attribute to `false` so that browsers do not spellcheck the National Insurance number
 
 {{ example({ group: "patterns", item: "national-insurance-numbers", example: "default", html: true, nunjucks: true, open: true, size: "s", titleSuffix: "second" }) }}
+
+### Reusing entered National Insurance numbers
+
+<div class="app-wcag-22" id="wcag-reuse-national-insurance-number" role="note">
+  {{ govukTag({
+    text: "WCAG 2.2",
+    classes: "app-tag"
+  }) }}
+  <p>Do not ask for a National Insurance number more than once within a single journey, if only one person’s details are needed.</p>
+  <p>Make sure users can easily reuse previously entered National Insurance numbers within a single journey, unless doing so would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
+</div>
+
+You can make it easier to reuse National Insurance numbers through one of these methods:
+
+- pre-populate fields with the previously entered number
+- show any previously entered numbers as an option for the user to select
+
+Continue to give users the option to enter a new National Insurance number.
 
 ### Error messages
 

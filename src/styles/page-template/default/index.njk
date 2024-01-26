@@ -9,7 +9,7 @@ layout: false
 
 {% block head %}
   <meta name="robots" content="noindex, nofollow">
-  <link href="{{ getFingerprint('stylesheets/main.css') }}" rel="stylesheet" media="all">
+  <link href="{{ getFingerprint('/stylesheets/main.css') }}" rel="stylesheet" media="all">
 {% endblock %}
 
 {% block content %}
@@ -17,6 +17,5 @@ layout: false
 {% endblock %}
 
 {% block bodyEnd %}
-  <script src="{{ getFingerprint('javascripts/govuk-frontend.js') }}"></script>
-  <script src="{{ getFingerprint('javascripts/vendor/iframeResizer.contentWindow.min.js') }}"></script>
+  <script type="module" src="{{ getFingerprint('/javascripts/application-example.js') }}"></script>
 {% endblock %}

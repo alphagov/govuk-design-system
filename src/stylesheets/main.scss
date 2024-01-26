@@ -101,33 +101,23 @@ $app-code-color: #d13118;
     @include govuk-responsive-margin(6, "bottom");
   }
 
-  // Fix monospace font size when used with relative typography
-  //
-  // Browsers automatically reduce monospace font size
-  //
-  // [1] restores the normal text size in Mozilla Firefox, Google Chrome,
-  // and Safari; this unusual style rule should also be used anywhere where
-  // you would otherwise set the font-family property to ‘monospace’.
-  // [2] restores the normal text size in Internet Explorer and Opera.
-  //
-  // source:
-  // http://code.iamkate.com/html-and-css/fixing-browsers-broken-monospace-font-handling/
+  /// System ui-monospace font stack
+  ///
+  /// @link https://caniuse.com/extended-system-fonts
+  /// @link https://www.w3.org/TR/css-fonts-4/#ui-monospace-def
+  ///
+  /// Android typically avoids the "Courier" based monospace
+  /// default but we need to specify fallbacks for others:
+  ///
+  /// * SF Mono - Font for Safari 13.1+ via ui-monospace
+  /// * Menlo - Font for older macOS, OS X versions
+  /// * Cascadia Mono, Segoe UI Mono, Consolas - Fonts for Windows 11, 10, 8
+  /// * Consolas - Font for older Windows versions
+  /// * Liberation Mono - Font for Linux used by GitHub
   pre,
   code {
-    // stylelint-disable font-family-no-duplicate-names
-    font-family: monospace, monospace; // [1]
-    // stylelint-enable font-family-no-duplicate-names
-    font-size: 1em; // [2]
+    font-family: ui-monospace, Menlo, "Cascadia Mono", "Segoe UI Mono", Consolas, "Liberation Mono", monospace;
   }
-}
-
-.app-example-page__wrapper {
-  overflow: auto;
-  background-color: govuk-colour("white");
-}
-
-.app-example-page {
-  padding: govuk-spacing(6);
 }
 
 // Copy button
@@ -249,11 +239,24 @@ $colour-list-breakpoint: 980px;
 
 // Add styling for inline code
 li code,
+caption code,
 td code,
 p code {
-  padding: 0 govuk-spacing(1);
+  padding: 1px 3px;
   color: $app-code-color;
   background-color: govuk-colour("light-grey");
+  @include govuk-typography-responsive($size: 16);
+  @include govuk-media-query($from: tablet) {
+    padding: 2px 4px;
+  }
+}
+
+// Add styling for code in headings
+.govuk-heading-s code,
+.govuk-heading-m code,
+.govuk-heading-l code,
+.govuk-heading-xl code {
+  font-size: inherit;
 }
 
 // Add styling for block code
@@ -266,7 +269,7 @@ pre code {
   border: $govuk-focus-width solid transparent;
   outline: 1px solid $govuk-border-colour;
   background-color: $app-light-grey;
-  font-size: 16px;
+  @include govuk-typography-responsive($size: 19);
   @include govuk-responsive-margin(4, "bottom");
 
   &:focus {
@@ -274,7 +277,7 @@ pre code {
     outline: $govuk-focus-width solid $govuk-focus-colour;
   }
 
-  .js-enabled [data-module="app-copy"] & {
+  .govuk-frontend-supported [data-module="app-copy"] & {
     padding-top: 45px; // Allow extra space for the copy code button
   }
 }
@@ -359,4 +362,27 @@ pre .language-plaintext {
 .app-whats-new {
   border-bottom: 1px solid $govuk-border-colour;
   background-color: $app-light-grey;
+}
+
+.app-wcag-22 {
+  margin-top: govuk-spacing(6);
+
+  // Add highlight styling for WCAG 2.2 content
+  &:target {
+    outline: 4px solid $govuk-brand-colour;
+    outline-offset: 6px;
+  }
+}
+
+.app-inset-text {
+  border-left-color: govuk-colour("blue");
+}
+
+.app-tag {
+  margin-top: 1px;
+  margin-bottom: govuk-spacing(2);
+
+  .app-prose-scope & {
+    font-weight: normal;
+  }
 }

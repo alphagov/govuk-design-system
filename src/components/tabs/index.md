@@ -5,8 +5,6 @@ section: Components
 aliases:
 backlogIssueId: 100
 layout: layout-pane.njk
-status: Experimental
-statusMessage: This component is currently experimental because <a class="govuk-link" href="#next-steps">more research</a> is needed to validate it.
 ---
 
 {% from "_example.njk" import example %}
@@ -49,10 +47,10 @@ Tabs, [accordions](/components/accordion/), and [details](/components/details/) 
 
 If you decide to use one of these components, consider if:
 
-- the user does not need to view more than one section at a time — consider using tabs
-- the user needs to switch quickly between sections — tabs can show content without pushing other sections down the page, unlike accordions
-- there are many pieces of content — tabs can fit fewer sections as they’re arranged horizontally, unlike accordions which are arranged vertically
-- there’s only one or two pieces of short, less important content — the details component is more suitable as it’s visually smaller and less prominent than an accordion or tabs
+- the user does not need to view more than one section at a time – consider using tabs
+- the user needs to switch quickly between sections – tabs can show content without pushing other sections down the page, unlike accordions
+- there are many pieces of content – tabs can fit fewer sections as they’re arranged horizontally, unlike accordions which are arranged vertically
+- there’s only one or two pieces of short, less important content – the details component is more suitable as it’s visually smaller and less prominent than an accordion or tabs
 
 ## How it works
 
@@ -96,7 +94,7 @@ Include a heading at the beginning of each tab that duplicates the information i
 
 ## Research and testing
 
-This component is experimental because it has not yet been tried in research with users.
+This component has not yet been tried in research with users.
 
 The design, code and guidance here are based on recommendations from [Inclusive Components](https://inclusive-components.design/tabbed-interfaces/) and the [Nielsen Norman Group](https://www.nngroup.com/articles/tabs-used-right/) as well as user research findings and examples of tabs in the following services:
 

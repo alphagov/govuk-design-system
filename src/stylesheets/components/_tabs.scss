@@ -7,7 +7,7 @@
   padding: 0;
   overflow: visible;
   list-style-type: none;
-  border: 1px solid $govuk-border-colour;
+  border-top: 1px solid $govuk-border-colour;
 
   @include govuk-media-query($until: desktop) {
     display: none;
@@ -91,8 +91,7 @@
   display: none;
   position: relative;
   padding: govuk-spacing(3);
-  border: 1px solid $govuk-border-colour;
-  border-top: 0;
+  border-top: 1px solid $govuk-border-colour;
 
   @include govuk-media-query($until: desktop) {
     display: block;
@@ -145,12 +144,12 @@
 
 .app-tabs__container {
   padding: 20px;
-  border: 1px solid $govuk-border-colour;
+  border-top: 1px solid $govuk-border-colour;
   background-color: govuk-colour("white");
 
   // When used for tabs, position to underlap tabs
   @include govuk-media-query($from: desktop) {
-    margin-top: -2px;
+    margin-top: -1px;
   }
 }
 

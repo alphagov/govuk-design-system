@@ -7,7 +7,31 @@ aliases:
 layout: layout-pane.njk
 ---
 
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+
 Check the information the user gives you to make sure it’s valid. If there's a validation error, tell the user what's gone wrong and how to fix it. Turn off HTML5 validation.
+
+{% set wcagCallout %}
+
+{{ govukTag({
+  text: "WCAG 2.2",
+  classes: "app-tag"
+}) }}
+
+### New WCAG 2.2 criteria affects this pattern
+
+To help users to 'Recover from validation errors' and meet the new WCAG 2.2 criteria, make sure that users can successfully:
+
+- [edit information they've previously given to correct an error](/patterns/validation/#wcag-edit-to-correct-errors)
+
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
+{% endset %}
+
+{{ govukInsetText({
+  html: wcagCallout,
+  classes: "app-inset-text"
+}) }}
 
 ## When to use this pattern
 
@@ -40,13 +64,13 @@ For example, if you’re asking for someone’s date of birth you should not acc
 
 Use validation to ignore unwanted characters, unless it would make the information too unclear for you to use. For example, any spaces, invisible characters or punctuation, like hyphens, brackets, dashes and full stops.
 
-If these characters caused a validation error, it would be difficult for the user to see and fix — especially if added by accident.
+If these characters caused a validation error, it would be difficult for the user to see and fix – especially if added by accident.
 
 You should ignore unwanted characters entered:
 
 - as part of numbers and codes, such as postcodes or card details
 - before or after an answer, as users might have copied and pasted them in by accident
-- by dictation software — this is particularly common when dictating numbers
+- by dictation software – this is particularly common when dictating numbers
 
 ### How to tell the user about validation errors
 
@@ -58,6 +82,20 @@ If the user's answers fail validation:
 - show [error messages](/components/error-message/) next to fields with errors
 
 Read guidance on [writing good error messages](/components/error-message/#be-clear-and-concise).
+
+<div class="app-wcag-22" id="wcag-edit-to-correct-errors" role="note">
+  {{ govukTag({
+    text: "WCAG 2.2",
+    classes: "app-tag"
+  }) }}
+  <p>Do not clear any form fields when validating users’ answers. Keep both passing and failing answers. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
+</div>
+
+Keeping information that failed validation helps users to:
+
+- see what went wrong
+- edit their previous answer
+- avoid re-entering information
 
 ### When to tell the user about validation errors
 

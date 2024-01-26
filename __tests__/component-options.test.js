@@ -77,7 +77,7 @@ describe('Component page', () => {
     await goTo(page, '/components/back-link/#options-back-link-example')
 
     // Check if example's macro options details element is open
-    await page.waitForSelector('#options-back-link-example-details[open=open]')
+    await page.waitForSelector('#options-back-link-example-details[open]')
 
     // Check if the example has been scrolled into the viewport
     const $example = await page.$('#options-back-link-example-details')
@@ -91,7 +91,7 @@ describe('Component page', () => {
     )
 
     // Check if example's macro options details element is open
-    await page.waitForSelector('#options-text-input-example-details[open=open]')
+    await page.waitForSelector('#options-text-input-example-details[open]')
 
     // Check if the example has been scrolled into the viewport
     const $example = await page.$('#options-text-input-example--label')

@@ -8,7 +8,7 @@ const rootPath = resolve(__dirname, '../')
  */
 module.exports = {
   root: rootPath,
-  public: join(rootPath, 'deploy/public'),
+  public: join(rootPath, 'build'),
   source: join(rootPath, 'src'),
   views: join(rootPath, 'views')
 }

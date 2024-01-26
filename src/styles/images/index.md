@@ -4,14 +4,31 @@ description: Only use images if there’s a real user need
 section: Styles
 backlogIssueId: 70
 layout: layout-pane.njk
-status: Experimental
-statusMessage: This guidance is currently experimental because <a class="govuk-link" href="#research-on-images">we want to get feedback</a> to validate how useful it is for service teams.
 showPageNav: true
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
 
 Avoid using images for unnecessary decoration. Only use images if there’s a real user need.
+
+{% set wcagCallout %}
+
+{{ govukTag({
+  text: "WCAG 2.2",
+  classes: "app-tag"
+}) }}
+
+### New WCAG 2.2 criteria affects how you use images
+
+To meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, [make sure any icons and images used in links meet the minimum target size](/styles/images/#wcag-icon-focus). This is to make sure users can easily interact with the link.
+{% endset %}
+
+{{ govukInsetText({
+  html: wcagCallout,
+  classes: "app-inset-text"
+}) }}
 
 Make sure any information contained in an image can be understood by someone who cannot see it. Also consider partially-sighted users with visual impairments and the assistive technologies they might use.
 
@@ -21,7 +38,7 @@ This guidance is for government teams that build online services. To learn how t
 
 Services usually work best without relying on images. Focus on writing clear, simple content for your service first.
 
-Adding images can sometimes help users better understand instructions. However, images should only be visual aids — written content must contain all the information the user needs to complete the service.
+Adding images can sometimes help users better understand instructions. However, images should only be visual aids – written content must contain all the information the user needs to complete the service.
 
 If you choose to add an image to your service, you’ll need to carefully decide if the image needs to be described with [alternative text (alt text)](#alt-text).
 
@@ -50,7 +67,7 @@ Use flat blocks of colour. Avoid using shadows or gradients, except when needed 
 
 If you're creating multiple illustrations for a service, use consistent colours, line widths and border radiuses across them all.
 
-Avoid depicting people in illustrations. If you need to show people, think carefully about how you represent the people that use your service — do not only show one kind of person.
+Avoid depicting people in illustrations. If you need to show people, think carefully about how you represent the people that use your service – do not only show one kind of person.
 
 For example, only depicting people of a particular age, gender or ethnicity can exclude people and reinforce negative stereotypes.
 
@@ -61,6 +78,14 @@ Avoid using icons in most cases. People can understand a single icon to mean dif
 Icons can be more useful in case working systems, where users are familiar with the interface and return to it frequently. In this context, they can help users to scan pages more quickly. In most cases it’s still helpful to include a visible text label alongside any icons.
 
 Do not use a single icon to represent more than one thing. For example, the search icon (magnifying glass) should only be used for search functionality, and not also for screen magnification.
+
+<div class="app-wcag-22" id="wcag-icon-focus" role="note">
+  {{ govukTag({
+    text: "WCAG 2.2",
+    classes: "app-tag"
+  }) }}
+  <p>Make sure any icons and images used in links are at least 24px by 24px in size, with adequate spacing. This is to make sure users can easily interact with the link. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target Size (minimum)</a>.</p>
+</div>
 
 ## Avoid images that contain text
 
@@ -218,7 +243,7 @@ Do not write alt text that:
 
 In March 2023, we updated this page to help teams make decisions on when to use images in their services.
 
-In particular, we added a section on how to use images and ensure they’re as accessible as possible — giving advice to teams on how to meet or surpass relevant WCAG AA guidelines, in line with the [GOV.UK Design System accessibility strategy](/community/accessibility-strategy/).
+In particular, we added a section on how to use images and ensure they’re as accessible as possible – giving advice to teams on how to meet or surpass relevant WCAG AA guidelines, in line with the [GOV.UK Design System accessibility strategy](/accessibility/accessibility-strategy/).
 
 To help us validate that this guidance is useful and practical for service teams across government, we want to hear from you.
 

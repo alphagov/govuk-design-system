@@ -23,6 +23,11 @@ module.exports = [
   {
     label: 'Community',
     url: 'community'
+  },
+  {
+    label: 'Accessibility',
+    url: 'accessibility',
+    includeInSearch: true
   }
 ]
 

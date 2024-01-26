@@ -5,15 +5,15 @@
 {% block pageTitle %}{{ title | smartypants }} – GOV.UK Design System{% endblock %}
 
 {% block head %}
-  {#- Prevent search engine indexing for preview and development builds -#}
-  {% if ["deploy-preview", "dev"].includes(env("CONTEXT")) or env("NODE_ENV") != 'production' %}
+  {#- Prevent search engine indexing for archive, preview and development builds -#}
+  {% if env("CONTEXT") !== "production" %}
     <meta name="robots" content="noindex, nofollow">
   {% endif %}
   <meta name="og:title" content="{{ title | smartypants }}">
   <meta name="description" content="{{ description | smartypants }}">
   <meta name="og:description" content="{{ description | smartypants }}">
   <link rel="canonical" href="{{ canonical }}">
-  <link href="{{ getFingerprint('stylesheets/main.css') }}" rel="stylesheet" media="all">
+  <link href="{{ getFingerprint('/stylesheets/main.css') }}" rel="stylesheet" media="all">
 {% endblock %}
 
 {% block bodyStart %}
@@ -37,6 +37,5 @@
 {% block footer %}{% endblock %}
 
 {% block bodyEnd %}
-  <script src="{{ getFingerprint('javascripts/govuk-frontend.js') }}"></script>
-  <script src="{{ getFingerprint('javascripts/application.js') }}"></script>
+  <script type="module" src="{{ getFingerprint('/javascripts/application.js') }}"></script>
 {% endblock %}

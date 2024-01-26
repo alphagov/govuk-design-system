@@ -12,8 +12,6 @@ There are guides to getting started:
 - [prototyping](prototyping/)
 - [in production](production/)
 
-You may find the [guide on updating your code](updating-your-code/) useful if you’re working with one of our legacy products - GOV.UK Elements, GOV.UK Template or the GOV.UK Frontend Toolkit.
-
 ## Using styles, components and patterns
 
 When something is published in the GOV.UK Design System as a [style](/styles/), [component](/components/) or [pattern](/patterns/) we include details of how and when it’s been tested in user research. This should help you decide whether it’s something you can use or adapt for your service.

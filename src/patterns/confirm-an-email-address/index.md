@@ -8,7 +8,32 @@ backlogIssueId: 39
 layout: layout-pane.njk
 ---
 
+{% from "_example.njk" import example %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+
 This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
+
+{% set wcagCallout %}
+
+{{ govukTag({
+  text: "WCAG 2.2",
+  classes: "app-tag"
+}) }}
+
+### New WCAG 2.2 criteria affects this pattern
+
+To help users to 'Confirm an email address' and meet the new WCAG 2.2 criteria, make sure that users can successfully:
+
+- [copy and paste a security code (if you're asking the user to enter a security code you've sent them)](/patterns/confirm-an-email-address/#wcag-copy-paste-security-codes)
+
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
+{% endset %}
+
+{{ govukInsetText({
+  html: wcagCallout,
+  classes: "app-inset-text"
+}) }}
 
 Check that a user has access to a specific email account using an email confirmation&nbsp;loop.
 
@@ -40,6 +65,16 @@ If you use email confirmation loops you must consider:
 - letting users resend their email
 - whether to use a blocking or non-blocking loop
 - the design of the ‘activate your account’ page
+
+Most email confirmation loops will send the user a link and ask them to click it to return to the service. Another approach is to send the user a security code, similar to the [Confirm a phone number](/patterns/confirm-a-phone-number/) pattern, and ask the user to enter it.
+
+<div class="app-wcag-22" id="wcag-copy-paste-security-codes" role="note">
+  {{ govukTag({
+    text: "WCAG 2.2",
+    classes: "app-tag"
+  }) }}
+  <p>You must allow users to copy and paste any security codes. Avoid making the user memorise or transcribe a security code between apps or browser tabs to use your service. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum">3.3.8 Accessible Authentication (Minimum)</a>.</p>
+</div>
 
 ### Set expiry conditions
 

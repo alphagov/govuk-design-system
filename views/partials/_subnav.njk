@@ -1,7 +1,8 @@
+<!-- [html-validate-disable-next no-unused-disable, unique-landmark -- allow 2 navs with the same aria-labelledby because they contain the same information] -->
 <nav class="app-subnav" aria-labelledby="app-subnav-heading">
   <h2 class="govuk-visually-hidden" id="app-subnav-heading">Pages in this section</h2>
   {% for item in navigation %}
-    {% if permalink.startsWith(item.url) %}
+    {% if permalink and permalink.startsWith(item.url) %}
     {% if item.items %}
       {% for theme, items in item.items | groupby("theme") %}
         {% if theme != 'undefined' %}

@@ -5,7 +5,7 @@
 {% block pageTitle %}{{ title }} – Example – GOV.UK Design System{% endblock %}
 {% block head %}
   <meta name="robots" content="noindex, nofollow">
-  <link href="{{ getFingerprint('stylesheets/main.css') }}" rel="stylesheet" media="all">
+  <link href="{{ getFingerprint('/stylesheets/main.css') }}" rel="stylesheet" media="all">
   {#- Include any additional stylesheets specified in the example frontmatter #}
   {% for stylesheet in stylesheets %}
     <link href="{{ getFingerprint(stylesheet) }}" rel="stylesheet" media="all">
@@ -22,7 +22,5 @@
   {{ contents | safe }}
 {% endblock %}
 {% block bodyEnd %}
-  <script src="{{ getFingerprint('javascripts/govuk-frontend.js') }}"></script>
-  <script src="{{ getFingerprint('javascripts/example.js') }}"></script>
-  <script src="{{ getFingerprint('javascripts/vendor/iframeResizer.contentWindow.min.js') }}"></script>
+  <script type="module" src="{{ getFingerprint('/javascripts/application-example.js') }}"></script>
 {% endblock %}

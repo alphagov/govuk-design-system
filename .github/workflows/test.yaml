@@ -8,13 +8,6 @@ on:
       - 'feature/**'
       - 'v[0-9]'
 
-  workflow_call:
-    inputs:
-      upload-artifact:
-        default: false
-        required: false
-        type: boolean
-
   workflow_dispatch:
     inputs:
       runner:
@@ -33,22 +26,23 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4.1.0
+        uses: actions/checkout@v4.1.1
 
       - name: Restore build
-        uses: actions/cache@v3.3.2
+        uses: actions/cache@v4.0.0
         id: build-cache
 
         with:
           key: build-cache-${{ runner.os }}-${{ github.sha }}
-          path: deploy/public
+          path: build
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3.8.1
+        uses: actions/setup-node@v4.0.1
         if: steps.build-cache.outputs.cache-hit != 'true'
 
         with:
           cache: npm
+          check-latest: true
           node-version-file: .nvmrc
 
       - name: Install dependencies
@@ -58,16 +52,6 @@ jobs:
       - name: Build
         if: steps.build-cache.outputs.cache-hit != 'true'
         run: npm run build
-
-        # Share data between the build and deploy jobs so we don't need to run `npm run build` again on deploy
-        # Upload the deploy folder as an artifact so it can be downloaded and used in the deploy job
-      - name: Upload artifact
-        uses: actions/upload-artifact@v3.1.3
-        if: ${{ inputs.upload-artifact }}
-        with:
-          name: build
-          path: deploy/**
-          retention-days: 1
 
   test:
     name: ${{ matrix.task.description }}
@@ -93,7 +77,9 @@ jobs:
 
           - description: Prettier
             run: npm run lint:prettier
-            continue-on-error: true
+
+          - description: TypeScript compiler
+            run: npm run lint:types -- --pretty
 
           - description: JavaScript tests
             run: npx jest --color --maxWorkers=2
@@ -103,22 +89,23 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4.1.0
+        uses: actions/checkout@v4.1.1
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3.8.1
+        uses: actions/setup-node@v4.0.1
         with:
           cache: npm
+          check-latest: true
           node-version-file: .nvmrc
 
       - name: Install dependencies
         run: npm ci
 
       - name: Restore build
-        uses: actions/cache/restore@v3.3.2
+        uses: actions/cache/restore@v4.0.0
         with:
           key: build-cache-${{ runner.os }}-${{ github.sha }}
-          path: deploy/public
+          path: build
 
       - name: Run task
         id: task

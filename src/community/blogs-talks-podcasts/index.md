@@ -13,6 +13,8 @@ To learn more about the GOV.UK Design System and Prototype Kit, check out these 
 
 Find out how the Design System and Prototype Kit work and what they do to make services more accessible and inclusive.
 
+[Get to WCAG 2.2 faster with the GOV.UK Design System](https://accessibility.blog.gov.uk/2024/01/11/get-to-wcag-2-2-faster-with-the-gov-uk-design-system/) (blog post) – 11 January 2024
+
 [Exit this page fast with the Design System’s new component](https://designnotes.blog.gov.uk/2023/08/14/exit-this-page-fast-with-the-design-systems-new-component/) (blog post) – 14 August 2023
 
 [A new accessibility strategy for the GOV.UK Design System](https://accessibility.blog.gov.uk/2023/01/06/a-new-accessibility-strategy-for-the-gov-uk-design-system/) (blog post) – 6 January 2023
@@ -65,9 +67,13 @@ See how the Design System helps service teams across government.
 
 Get some practical advice on how to use the Design System and Prototype Kit.
 
+[Inspecting WCAG 2.2: Accessible Authentication](https://www.youtube.com/watch?v=9h5aLCS3wJQ) (video) – 26 October 2023
+
+[Inspecting WCAG 2.2: Target Size](https://www.youtube.com/watch?v=91O_DzoLM3U) (video) – 31 July 2023
+
 [Testing a component's accessibility](https://www.youtube.com/watch?v=C770bSvGr_E) (video) – 26 July 2023
 
-[Inspecting WCAG 2.2: Focus Not Obscured](https://www.youtube.com/watch?v=_fi7SsSkBtM) (video) – 18 July 2023
+[Inspecting WCAG 2.2: Focus Not Obscured](https://www.youtube.com/watch?v=_fi7SsSkBtM) (video) – 5 July 2023
 
 [Going beyond the GOV.UK Design System for MoJ Forms professional users](https://designnotes.blog.gov.uk/2022/03/21/going-beyond-the-gov-uk-design-system-for-moj-forms-professional-users/) (blog post) – 21 March 2022
 
@@ -82,6 +88,8 @@ Get some practical advice on how to use the Design System and Prototype Kit.
 ## Contributing to the community
 
 Find out how our community works and how to be a part of it.
+
+[Working as a community to iterate the task list pattern](https://designnotes.blog.gov.uk/2023/12/15/working-as-a-community-to-iterate-the-task-list-pattern/) (blog post) – 15 December 2023
 
 [Iterating the GOV.UK Design System contribution model](https://designnotes.blog.gov.uk/2023/05/31/iterating-the-gov-uk-design-system-contribution-model/) (blog post) – 31 May 2023
 

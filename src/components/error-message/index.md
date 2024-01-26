@@ -8,8 +8,31 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
 
 This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
+
+{% set wcagCallout %}
+
+{{ govukTag({
+  text: "WCAG 2.2",
+  classes: "app-tag"
+}) }}
+
+### New WCAG 2.2 criteria affects this component
+
+To use the ‘Error message' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
+
+- [edit information they've previously given, so that they can correct an error](/components/error-message/#wcag-clear-answers-error)
+
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
+{% endset %}
+
+{{ govukInsetText({
+  html: wcagCallout,
+  classes: "app-inset-text"
+}) }}
 
 Follow the [validation pattern](/patterns/validation/) and show an error message when there is a validation error. In the error message explain what went wrong and how to fix it.
 
@@ -41,6 +64,20 @@ For each error:
 - use a red border to visually connect the message and the question it belongs to
 - if the error relates to a specific field within the question, give it a red border and refer to that field in the error message - for example: "you must enter a year"
 
+<div class="app-wcag-22" id="wcag-clear-answers-error" role="note">
+  {{ govukTag({
+    text: "WCAG 2.2",
+    classes: "app-tag"
+  }) }}
+  <p>Do not clear any form fields when adding error messages. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
+</div>
+
+Keeping information that caused errors helps users to:
+
+- see what went wrong
+- edit their previous answer
+- avoid re-entering information
+
 To help screen reader users, the error message component includes a hidden 'Error:' before the error message. These users will hear, for example, "Error: The date your passport was issued must be in the past".
 
 If your error message is written in another language, you can change the prefix as needed, as shown in this example.
@@ -58,6 +95,22 @@ There are 2 ways to use the error message component. You can use HTML or, if you
 ### Label
 
 {{ example({ group: "components", item: "error-message", example: "label", html: true, nunjucks: true, open: false, size: "s" }) }}
+
+### Match up error messages to labels
+
+Error messages should directly include language from the question or fieldset label. This helps match up the error message with the relevant form field.
+
+Here are some examples of label and error message pairs.
+
+Example 1:
+
+- Label: ‘How many hours do you work a week?’
+- Error message: ‘Enter how many hours you work a week’
+
+Example 2:
+
+- Label: ‘Address line 1’
+- Error message: ‘Enter address line 1, typically the building and street’
 
 ### Be clear and concise
 
@@ -85,8 +138,6 @@ Use the same message next to the field and in the [error summary](/components/er
 - look, sound and mean the same
 - make sense out of context
 - reduce the cognitive effort needed to understand what has happened
-
-Use the question or form label in the error to provide context. For example, ‘Enter how many hours you work a week’ for ‘How many hours do you work a week?’
 
 ### Be specific
 

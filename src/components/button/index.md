@@ -8,6 +8,29 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+
+{% set wcagCallout %}
+
+{{ govukTag({
+  text: "WCAG 2.2",
+  classes: "app-tag"
+}) }}
+
+### New WCAG 2.2 criteria affects this component
+
+To use the ‘Button' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
+
+- [interact with buttons](/components/button/#wcag-interact-button)
+
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
+{% endset %}
+
+{{ govukInsetText({
+  html: wcagCallout,
+  classes: "app-inset-text"
+}) }}
 
 {{ example({group: "components", item: "button", example: "default", html: true, nunjucks: true, rails: true, open: false, loading: "eager" }) }}
 
@@ -33,6 +56,14 @@ Write button text in sentence case, describing the action it performs. For examp
 You may need to include more or different words to better describe the action. For example, ‘Add another address’ and ‘Accept and claim a tax refund’.
 
 Align the primary action button to the left edge of your form.
+
+<div class="app-wcag-22" id="wcag-interact-button" role="note">
+  {{ govukTag({
+    text: "WCAG 2.2",
+    classes: "app-tag"
+  }) }}
+  <p>Do not decrease the height or target area of buttons. This is to make sure users can easily interact with buttons. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target Size (minimum)</a>.</p>
+</div>
 
 There are 2 ways to use the button component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 
@@ -77,9 +108,9 @@ Do not only rely on the red colour of a warning button to communicate the seriou
 
 ### Buttons on dark backgrounds
 
-Use the `govuk-button--inverse` modifier class to show white buttons on dark backgrounds — for example, in headers, custom components, and patterns with darker backgrounds.
+Use the `govuk-button--inverse` modifier class to show white buttons on dark backgrounds – for example, in headers, custom components, and patterns with darker backgrounds.
 
-Make sure all users can see the button — the white button and background colour [must have a contrast ratio of at least 3:1](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html).
+Make sure all users can see the button – the white button and background colour [must have a contrast ratio of at least 3:1](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html).
 
 {{ example({group: "components", item: "button", example: "inverse", html: true, nunjucks: true, rails: true, open: false}) }}
 

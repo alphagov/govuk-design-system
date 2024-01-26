@@ -1,0 +1,57 @@
+---
+title: Task list in progress
+layout: layout-example.njk
+---
+
+{% from "govuk/components/task-list/macro.njk" import govukTaskList %}
+
+{{ govukTaskList({
+  idPrefix: "application-details",
+  items: [
+    {
+      title: {
+        text: "Contact details"
+      },
+      href: "#",
+      status: {
+        text: "Completed"
+      }
+    },
+    {
+      title: {
+        text: "Work history"
+      },
+      href: "#",
+      status: {
+        tag: {
+          text: "In progress",
+          classes: "govuk-tag--light-blue"
+        }
+      }
+    },
+    {
+      title: {
+        text: "Qualifications"
+      },
+      href: "#",
+      status: {
+        tag: {
+          text: "Not yet started",
+          classes: "govuk-tag--blue"
+        }
+      }
+    },
+    {
+      title: {
+        text: "Supporting statement"
+      },
+      href: "#",
+      status: {
+        tag: {
+          text: "Not yet started",
+          classes: "govuk-tag--blue"
+        }
+      }
+    }
+  ]
+}) }}

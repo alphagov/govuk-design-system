@@ -1,3 +1,5 @@
+$navigation-height: 50px;
+
 .app-navigation {
   border-bottom: 1px solid $govuk-border-colour;
   background-color: $app-light-grey;
@@ -10,7 +12,11 @@
 
   @include govuk-media-query($from: tablet) {
     position: relative;
-    left: govuk-spacing(-3);
+
+    // Offset gutter by tablet list-item padding
+    left: $govuk-gutter-half * -1;
+    width: calc(100% - $govuk-gutter);
+    min-height: $navigation-height;
   }
 }
 
@@ -18,8 +24,6 @@
   position: relative;
 
   @include govuk-media-query($from: tablet) {
-    $navigation-height: 50px;
-
     @include govuk-font(19, $weight: bold, $line-height: $navigation-height);
     box-sizing: border-box;
     height: $navigation-height;
@@ -78,12 +82,12 @@
   list-style: none;
 }
 
-.js-enabled .app-navigation__subnav--active {
+.govuk-frontend-supported .app-navigation__subnav--active {
   display: block;
 }
 
 .app-navigation__subnav,
-.js-enabled .app-navigation__subnav--active {
+.govuk-frontend-supported .app-navigation__subnav--active {
   @include govuk-media-query($from: tablet) {
     display: none;
   }

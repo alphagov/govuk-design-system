@@ -33,7 +33,7 @@ Your confirmation page must include:
 - a link to your [feedback page](https://www.gov.uk/service-manual/service-assessments/get-feedback-page)
 - a way for users to save a record of the transaction, for example, as a PDF
 
-{{ example({ group: "patterns", item: "confirmation-pages", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second", size: "xl" }) }}
+If you choose to add links, buttons or other interactive elements in the green confirmation panel, they will not be accessible. You'll need to make changes to the panel or focus state style to make them accessible and meet a minimum contrast ratio of 3:1.
 
 ### Help users who bookmark the page
 

@@ -1,3 +1,6 @@
+// @ts-nocheck
+
+// eslint-disable-next-line jsdoc/require-jsdoc
 export default function loadAnalytics() {
   if (!window.ga || !window.ga.loaded) {
     // Load gtm script
@@ -7,14 +10,14 @@ export default function loadAnalytics() {
       w[l] = w[l] || []
       w[l].push({
         'gtm.start': new Date().getTime(),
-        'event': 'gtm.js'
+        event: 'gtm.js'
       })
 
-      var j = d.createElement(s)
-      var dl = l !== 'dataLayer' ? '&l=' + l : ''
+      const j = d.createElement(s)
+      const dl = l !== 'dataLayer' ? `&l=${l}` : ''
 
       j.async = true
-      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+      j.src = `https://www.googletagmanager.com/gtm.js?id=${i}${dl}`
       document.head.appendChild(j)
     })(window, document, 'script', 'dataLayer', 'GTM-53XG2JT')
   }

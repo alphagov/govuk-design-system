@@ -13,9 +13,24 @@ module.exports = {
       },
       plugins: ['es-x'],
       rules: {
-        'no-var': 'off',
-        'object-shorthand': 'off',
-        'quote-props': 'off'
+        // JSDoc blocks are mandatory in source code
+        'jsdoc/require-jsdoc': [
+          'error',
+          {
+            enableFixer: false,
+            require: {
+              ClassDeclaration: true,
+              ClassExpression: true,
+              FunctionExpression: true,
+              MethodDefinition: true
+            }
+          }
+        ],
+
+        // JSDoc @param required in (mandatory) blocks but
+        // @param description is necessary in source code
+        'jsdoc/require-param-description': 'warn',
+        'jsdoc/require-param': 'error'
       }
     }
   ]

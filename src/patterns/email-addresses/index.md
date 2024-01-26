@@ -8,6 +8,32 @@ backlogIssueId: 45
 layout: layout-pane.njk
 ---
 
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+
+This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
+
+{% set wcagCallout %}
+
+{{ govukTag({
+  text: "WCAG 2.2",
+  classes: "app-tag"
+}) }}
+
+### New WCAG 2.2 criteria affects this pattern
+
+To ask users for 'Email addresses' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
+
+- [reuse a previously entered email address](/patterns/email-addresses/#wcag-reuse-email-addresses)
+
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
+{% endset %}
+
+{{ govukInsetText({
+  html: wcagCallout,
+  classes: "app-inset-text"
+}) }}
+
 {% from "_example.njk" import example %}
 
 This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
@@ -29,6 +55,23 @@ When asking users for their email address, you must:
 You may also need to check that users have access to the email account they give you.
 
 {{ example({ group: "patterns", item: "email-addresses", example: "default", html: true, nunjucks: true, open: true, size: "s", titleSuffix: "second" }) }}
+
+### Reusing entered email addresses
+
+<div class="app-wcag-22" id="wcag-reuse-email-addresses" role="note">
+  {{ govukTag({
+    text: "WCAG 2.2",
+    classes: "app-tag"
+  }) }}
+  <p>Make sure users can easily reuse a previously entered email address within a single journey, unless doing so would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
+</div>
+
+You can make it easier to reuse email addresses through one of these methods:
+
+- pre-populate the email field with the previously entered email address
+- show any previously entered email addresses as an option for the user to select
+
+Continue to give users the option to enter a new email address.
 
 ### Tell users why you want the email address
 

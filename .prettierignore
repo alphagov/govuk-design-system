@@ -8,8 +8,7 @@ node_modules/
 coverage/
 
 # Build output
-deploy/public/
-**/fixtures/build/
+build/
 
 # Files to ignore
 package-lock.json

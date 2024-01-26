@@ -7,13 +7,19 @@ backlogIssueId: 38
 layout: layout-pane.njk
 ---
 
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
 Always use the GOV.UK colour palette.
 
 ## Colour contrast
 
 You must make sure that the contrast ratio of text and interactive elements in
 your service meets [level AA of the Web Content Accessibility Guidelines
-(WCAG 2.1)](https://www.w3.org/TR/WCAG21/#contrast-minimum).
+(WCAG 2.2)](https://www.w3.org/TR/WCAG22/#contrast-minimum).
+
+{{ govukInsetText({
+  text: "The WCAG 2.2 criteria for Contrast (Minimum) is the same as WCAG 2.1."
+}) }}
 
 ## Main colours
 

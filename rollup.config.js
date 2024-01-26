@@ -28,7 +28,6 @@ module.exports = defineConfig({
             },
 
             // Compatibility workarounds
-            ecma: 5,
             safari10: true
           })
       ]

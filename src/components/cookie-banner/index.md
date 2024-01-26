@@ -5,15 +5,38 @@ section: Components
 aliases: Cookies banner, consent banner, GDPR banner, tracking banner, analytics banner
 backlogIssueId: 12
 layout: layout-pane.njk
-status: Experimental
-statusMessage: This component is currently experimental because <a class="govuk-link" href="#research-on-this-component">more research</a> is needed to validate it.
 ---
 
 {% from "_example.njk" import example %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
 
 Allow users to accept or reject cookies which are not essential to making your service work.
 
+{% set wcagCallout %}
+
+{{ govukTag({
+  text: "WCAG 2.2",
+  classes: "app-tag"
+}) }}
+
+### New WCAG 2.2 criteria affects this component
+
+To use the ‘Cookie banner' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
+
+- [see items that are in focus at all times](/components/cookie-banner/#wcag-see-focus)
+- [interact with buttons and links in the cookie banner](/components/cookie-banner/#wcag-interact-cookie-banner)
+
+See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
+{% endset %}
+
+{{ govukInsetText({
+  html: wcagCallout,
+  classes: "app-inset-text"
+}) }}
+
 {{ example({group: "components", item: "cookie-banner", example: "default", html: true, nunjucks: true, rails: true, open: false, loading: "eager" }) }}
+
 
 ## When to use this component
 
@@ -55,7 +78,7 @@ Show the cookie banner every time the user accesses your service until they eith
 Once the user has accepted or rejected cookies, the cookie banner should:
 
 - hide the cookie banner message
-- show a confirmation message — and a 'hide' button to let the user close the banner
+- show a confirmation message – and a 'hide' button to let the user close the banner
 - set a cookie to save the user’s preferences for 1 year
 
 Make sure the cookie banner does not:
@@ -65,15 +88,31 @@ Make sure the cookie banner does not:
 
 Position the cookie banner after the opening `<body>` tag and before the ’skip to main content‘ link. If you're using the Nunjucks page template, use the `bodyStart` block.
 
+<div class="app-wcag-22" id="wcag-see-focus" role="note">
+  {{ govukTag({
+    text: "WCAG 2.2",
+    classes: "app-tag"
+  }) }}
+  <p>Do not make the cookie banner ‘sticky’ to the top of the page by using `position: fixed` or any other method. This is to make sure it does not cover or obscure any content which has a focus applied. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html">2.4.11 Focus not Obscured (minimum)</a>.</p>
+</div>
+
+<div class="app-wcag-22" id="wcag-interact-cookie-banner" role="note">
+  {{ govukTag({
+    text: "WCAG 2.2",
+    classes: "app-tag"
+  }) }}
+  <p>Do not change the padding or margins of buttons and links within the cookie banner. This is to make sure there’s adequate space for the user to interact with the buttons and links. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target Size (minimum)</a>.</p>
+</div>
+
 ### Option 1: If you’re only using essential cookies
 
 You can choose not to have a cookie banner if the service only sets essential or 'strictly necessary' cookies, as these do not need user consent.
 
-However, you must tell users that you set essential cookies. You can do this with a cookies page — link to this page in the footer.
+However, you must tell users that you set essential cookies. You can do this with a cookies page – link to this page in the footer.
 
 ### Option 2: If you set non-essential cookies on the server
 
-You can choose this option if your service sets non-essential cookies on the server — your service may also set non-essential cookies on the client.
+You can choose this option if your service sets non-essential cookies on the server – your service may also set non-essential cookies on the client.
 
 To get consent from the user, display the cookie banner inside a form that lets them submit their choice to accept or reject cookies.
 
@@ -91,7 +130,7 @@ Here's an example of a confirmation message inside a form:
 
 #### Show the same message to all users
 
-In the cookie banner, tell the user about all the cookies you’re using in the service — whether they've enabled JavaScript or not. This way, you will not need to ask the user to give their consent again on their next visit.
+In the cookie banner, tell the user about all the cookies you’re using in the service – whether they've enabled JavaScript or not. This way, you will not need to ask the user to give their consent again on their next visit.
 
 #### Help users keep their place using progressive enhancement
 
@@ -101,7 +140,7 @@ To help users running JavaScript on their device, you can write some JavaScript 
 
 Include all possible messages that the user could see in the cookie banner when the page loads. Hide these with the `hidden` HTML attribute where needed.
 
-Here's an example of a progressively enhanced cookie banner that includes all possible messages which are hidden using HTML — the cookie banner message is shown using JavaScript to remove the `hidden` attribute:
+Here's an example of a progressively enhanced cookie banner that includes all possible messages which are hidden using HTML – the cookie banner message is shown using JavaScript to remove the `hidden` attribute:
 
 {{ example({ group: "components", item: "cookie-banner", example: "server-side-multiple-messages-question-visible", html: true, nunjucks: true, open: false }) }}
 
@@ -123,7 +162,7 @@ Write your own JavaScript code so that when the user accepts or rejects cookies,
 
 - hide the cookie message by adding the hidden attribute
 - show a confirmation message by removing its hidden attribute
-- give the confirmation message the `tabindex="-1"` and `role="alert"` attributes — this will allow the element to be focused so assistive technology can read the message
+- give the confirmation message the `tabindex="-1"` and `role="alert"` attributes – this will allow the element to be focused so assistive technology can read the message
 - shift focus to the confirmation message
 
 Here’s an example:

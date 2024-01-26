@@ -5,7 +5,6 @@ section: Community
 theme: Resources
 layout: layout-pane.njk
 order: 9
-status: Experimental
 ---
 
 You can use these community resources and tools to help you use the GOV.UK Design System in your design tool or development environment.
@@ -39,27 +38,30 @@ SVG images for creating flow diagrams of GOV.UK services.
 
 ## Create prototypes and wireframes
 
-[Adobe XD wireframes](https://github.com/SulimanK/gds-adobexd-wireframing-kit) -
-Adobe XD wireframes based on the GOV.UK Design System.
-
 [Balsamiq wireframes](https://github.com/enoranidi/govuk-design-system-balsamiq) -
 Balsamiq wireframes based on the GOV.UK Design System.
 
 [Figma resources](https://www.figma.com/file/NWuFffKvPQhl3aJ9nKU0p3/GOV.UK-Design-System) -
 Figma library of styles and components based on the GOV.UK Design System.
 
+[Mural resources](https://github.com/vickytnz/govuk-elements-mural) -
+Mural template based on the GOV.UK Design System.
+
 [Sketch Wireframing Kit](https://github.com/dwp/sketch_wireframing_kit) -
 Sketch wireframes based on the GOV.UK Design System.
 
 ## Build front ends
 
-### ASP.NET MVC
+### ASP.NET
 
 Guidance on [bringing the GOV.UK Design System into a .NET MVC Project](https://github.com/nouriach/compile-gds-runtime-dotnet) -
 A walkthrough for how to import the GOV.UK Design System into a MVC project and compile the sass at runtime using gulp.
 
-[GOV.UK Design System for ASP.NET MVC and Umbraco](https://github.com/thepensionsregulator/govuk-frontend-aspnetcore-extensions) -
-GOV.UK Frontend ASP.NET tag helpers, and Umbraco CMS support.
+[GOV.UK Design System for ASP.NET Core](https://github.com/gunndabad/govuk-frontend-aspnetcore) -
+GOV.UK Frontend component library and assets integration for ASP.NET Core
+
+[GOV.UK Design System for Umbraco CMS](https://github.com/thepensionsregulator/govuk-frontend-aspnetcore-extensions) -
+Additional extensions with Umbraco CMS support, based on the ASP.NET Core integration
 
 ### Node.js
 
@@ -80,11 +82,6 @@ GOV.UK Frontend WTForms Widgets.
 [GOV.UK Laravel](https://github.com/AnthonyEdmonds/govuk-laravel) -
 A collection of GOV.UK Frontend Laravel Blade components, validation rules, page building templates, and PHP helpers.
 
-### R
-
-[Govdown](https://github.com/ukgovdatascience/govdown) -
-A GOV.UK Design System theme for R Markdown.
-
 ### Ruby on Rails
 
 [GOV.UK Design System Formbuilder](https://github.com/DFE-Digital/govuk_design_system_formbuilder) -
@@ -93,9 +90,6 @@ A Rails form builder using GOV.UK Frontend.
 [GOV.UK Components](https://github.com/DFE-Digital/govuk-components) -
 A set of non-form Rails components using GOV.UK Frontend. You can use these together with the Design System Formbuilder.
 
-[GOV.UK Frontend Rails](https://github.com/dxw/dxw_govuk_frontend_rails) -
-A Ruby gem that adds the GOV.UK Frontend to Rails applications.
-
 [GOV.UK Rails Template](https://github.com/DFE-Digital/rails-template) -
 A complete Rails application template using GOV.UK Frontend.
 
@@ -103,7 +97,6 @@ A complete Rails application template using GOV.UK Frontend.
 
 You can download GOV.UK Frontend Nunjucks macro snippets for:
 
-- [Atom](https://atom.io/packages/govuk-design-system-snippets)
 - [Nova](https://extensions.panic.com/extensions/ca/ca.GOVUKDesignSystemSnippets/)
 - [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=simonwhatley.govuk-design-system-snippets)
 
