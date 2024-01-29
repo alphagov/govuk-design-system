@@ -1,0 +1,16 @@
+<%
+   # In the associated model, add:
+   # validates description: {
+   #  maximum: 350,
+   #  too_long: "Job description must be #{count} characters or less"
+   # }
+%>
+
+<%= form.govuk_text_area :description,
+  label: {
+    text: "Enter a job description",
+    tag: "h1".
+    size: "l"
+  },
+  max_chars: 350
+%>
