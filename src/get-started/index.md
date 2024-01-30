@@ -10,7 +10,7 @@ The GOV.UK Design System is for everyone that works on government services for G
 {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
 
 {% set callout %}
-  Using the GOV.UK Design System for websites that spoof GOV.UK services and information may result in legal action.
+  Using the GOV.UK Design System to imitate government websites and services may result in legal action.
 {% endset %}
 
 {{ govukWarningText({
