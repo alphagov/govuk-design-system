@@ -17,7 +17,7 @@ Use the fieldset component when you need to show a relationship between multiple
 
 {{ example({ group: "components", item: "fieldset", example: "address-group", html: true, nunjucks: true, open: false, size: "xl", loading: "eager" }) }}
 
-If you’re using the examples or macros for [radios](/components/radios/), [checkboxes](/components/checkboxes/) or [date input](/components/date-input/), the fieldset will already be included.
+If you’re using the examples or macros for [radios][component_radio], [checkboxes][component_checkbox] or [date input](/components/date-input/), the fieldset will already be included.
 
 ## How it works
 

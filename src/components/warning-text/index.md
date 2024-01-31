@@ -17,7 +17,7 @@ Use the warning text component when you need to warn users about something impor
 
 ## How it works
 
-There are 2 ways to use the warning text component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
+There are 2 ways to use the warning text component. You can use HTML or, if you are using [Nunjucks][lib_nunjucks] or the [GOV.UK Prototype Kit][govuk_prototype_kit], you can use the Nunjucks macro.
 
 {{ example({ group: "components", item: "warning-text", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
 

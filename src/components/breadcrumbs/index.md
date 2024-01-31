@@ -60,7 +60,7 @@ The breadcrumbs should start with your 'home' page and end with the parent secti
   <p>Make sure no other interactive elements are too close to the breadcrumbs. This is to make sure users can easily interact with the breadcrumbs. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target Size (minimum)</a>.</p>
 </div>
 
-There are 2 ways to use the breadcrumbs component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
+There are 2 ways to use the breadcrumbs component. You can use HTML or, if you are using [Nunjucks][lib_nunjucks] or the [GOV.UK Prototype Kit][govuk_prototype_kit], you can use the Nunjucks macro.
 
 {{ example({ group: "components", item: "breadcrumbs", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
 

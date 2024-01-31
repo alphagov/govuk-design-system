@@ -49,8 +49,8 @@ Write button text in sentence case, describing the action it performs. For examp
 - ‘Save and come back later’ when a user can save their information and come back later
 - ‘Add another’ to add another item to a list or group
 - ‘Pay’ to make a payment
-- ‘Confirm and send’ on a [check answers](/patterns/check-answers/) page that does not have any legal content a user must agree to
-- ‘Accept and send’ on a [check answers](/patterns/check-answers/) page that has legal content a user must agree to
+- ‘Confirm and send’ on a [check answers][pattern_check_answers] page that does not have any legal content a user must agree to
+- ‘Accept and send’ on a [check answers][pattern_check_answers] page that has legal content a user must agree to
 - ‘Sign out’ when a user is signed in to an account
 
 You may need to include more or different words to better describe the action. For example, ‘Add another address’ and ‘Accept and claim a tax refund’.
@@ -65,7 +65,7 @@ Align the primary action button to the left edge of your form.
   <p>Do not decrease the height or target area of buttons. This is to make sure users can easily interact with buttons. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target Size (minimum)</a>.</p>
 </div>
 
-There are 2 ways to use the button component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
+There are 2 ways to use the button component. You can use HTML or, if you are using [Nunjucks][lib_nunjucks] or the [GOV.UK Prototype Kit][govuk_prototype_kit], you can use the Nunjucks macro.
 
 ### Default buttons
 

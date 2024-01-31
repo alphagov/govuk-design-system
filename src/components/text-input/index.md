@@ -39,7 +39,7 @@ If you’re asking just [one question per page](/patterns/question-pages/#start-
 
 Read more about [why and how to set legends as headings](/get-started/labels-legends-headings/).
 
-There are 2 ways to use the text input component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
+There are 2 ways to use the text input component. You can use HTML or, if you’re using [Nunjucks][lib_nunjucks] or the [GOV.UK Prototype Kit][govuk_prototype_kit], you can use the Nunjucks macro.
 
 {{ example({ group: "components", item: "text-input", example: "default", html: true, nunjucks: true, open: false, size: "s", titleSuffix: "second" }) }}
 

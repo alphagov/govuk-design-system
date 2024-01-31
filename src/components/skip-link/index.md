@@ -29,6 +29,6 @@ Including the skip link component gives users the option to bypass the top-level
 
 The skip link component is visually hidden until a keyboard press activates it.
 
-There are 2 ways to use the skip link component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
+There are 2 ways to use the skip link component. You can use HTML or, if you are using [Nunjucks][lib_nunjucks] or the [GOV.UK Prototype Kit][govuk_prototype_kit], you can use the Nunjucks macro.
 
 {{ example({ group: "components", item: "skip-link", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}

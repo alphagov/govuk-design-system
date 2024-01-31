@@ -17,7 +17,7 @@ Use the radios component when users can only select one option from a list.
 
 ## When not to use this component
 
-Do not use the radios component if users might need to select more than one option. In this case, you should use the [checkboxes](/components/checkboxes/) component instead.
+Do not use the radios component if users might need to select more than one option. In this case, you should use the [checkboxes][component_checkbox] component instead.
 
 ## How it works
 
@@ -48,7 +48,7 @@ If you are asking just [one question per page](/patterns/question-pages/#start-b
 
 Read more about [why and how to set legends as headings](/get-started/labels-legends-headings/).
 
-There are 2 ways to use the radios component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
+There are 2 ways to use the radios component. You can use HTML or, if you are using [Nunjucks][lib_nunjucks] or the [GOV.UK Prototype Kit][govuk_prototype_kit], you can use the Nunjucks macro.
 
 {{ example({ group: "components", item: "radios", example: "default", html: true, nunjucks: true, open: false, size: "s", titleSuffix: "second" }) }}
 

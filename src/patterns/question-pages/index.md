@@ -49,7 +49,7 @@ To help you work out what to ask, you can carry out a [question protocol](https:
 If you ask for optional information:
 
 - in most contexts, add ‘(optional)’ to the labels of optional fields
-- for [radios](/components/radios/) and [checkboxes](/components/checkboxes/), add ‘(optional)’ to the legend
+- for [radios][component_radio] and [checkboxes][component_checkbox], add ‘(optional)’ to the legend
 
 Never mark mandatory fields with asterisks.
 

@@ -17,7 +17,7 @@ Use the textarea component when you need to let users enter an amount of text th
 
 ## When not to use this component
 
-Users can find open-ended questions difficult to answer. It might be better to break up one complex question into a series of simple ones, for example where users can select from options using [radios](/components/radios/).
+Users can find open-ended questions difficult to answer. It might be better to break up one complex question into a series of simple ones, for example where users can select from options using [radios][component_radio].
 
 ### If you need to ask an open question
 
@@ -29,7 +29,7 @@ You must label textareas. Placeholder text is not a suitable substitute for a la
 
 Labels must be aligned above the textarea they refer to. They should be short, direct and written in sentence case. Do not use colons at the end of labels.
 
-There are 2 ways to use the textarea component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
+There are 2 ways to use the textarea component. You can use HTML or, if you’re using [Nunjucks][lib_nunjucks] or the [GOV.UK Prototype Kit][govuk_prototype_kit], you can use the Nunjucks macro.
 
 {{ example({ group: "components", item: "textarea", example: "default", html: true, nunjucks: true, open: false, size: "m", titleSuffix: "second" }) }}
 
