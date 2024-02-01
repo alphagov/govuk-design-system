@@ -35,7 +35,7 @@ Make sure there's expertise within your organisation by advocating for people to
 
 We've made changes to these components and patterns to comply with WCAG 2.2 level AA. You must check if your service needs amending to align with these changes.
 
-See an [explanation about each WCAG 2.2 criteria](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/) on the W3C website.
+See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/) on the W3C website.
 
 [Images](/styles/images/) also includes guidance to help ensure icons and images in your service meet Target Size (minimum).
 
