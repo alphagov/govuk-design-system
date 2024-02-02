@@ -30,7 +30,8 @@
     "lint:scss": "npm run lint:scss:cli -- \"**/*.{md,scss}\"",
     "lint:scss:cli": "stylelint --cache --cache-location .cache/stylelint --cache-strategy content --color --ignore-path .gitignore --max-warnings 0",
     "lint:types": "tsc --build tsconfig.json",
-    "check-links": "hyperlink --canonicalroot https://design-system.service.gov.uk/ --internal --recursive build/sitemap.xml | tee check-links.log | tap-mocha-reporter min"
+    "check-links": "hyperlink --canonicalroot https://design-system.service.gov.uk/ --internal --recursive build/sitemap.xml | tee check-links.log | tap-mocha-reporter min",
+    "prepare": "node -e \"try { (await import('husky')).default() } catch (e) { if (e.code !== 'ERR_MODULE_NOT_FOUND') throw e }\" --input-type module"
   },
   "dependencies": {
     "accessible-autocomplete": "^2.0.4",
