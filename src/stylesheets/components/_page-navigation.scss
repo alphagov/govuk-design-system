@@ -6,7 +6,7 @@
 }
 
 .app-page-navigation__item {
-  @include govuk-font(19);
+  @include govuk-typography-common;
   margin-bottom: govuk-spacing(2);
 
   @include govuk-media-query($from: tablet) {

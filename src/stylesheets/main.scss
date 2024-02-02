@@ -114,7 +114,10 @@ $app-code-color: #d13118;
   /// * Liberation Mono - Font for Linux used by GitHub
   pre,
   code {
-    font-family: ui-monospace, Menlo, "Cascadia Mono", "Segoe UI Mono", Consolas, "Liberation Mono", monospace;
+    // font family in a separate variable to avoid syntax errors when passing
+    // to the common typography mixin
+    $app-code-font: ui-monospace, menlo, "Cascadia Mono", "Segoe UI Mono", consolas, "Liberation Mono", monospace;
+    @include govuk-typography-common($font-family: $app-code-font);
   }
 }
 

@@ -213,7 +213,7 @@ $icon-size: 40px;
 
 .app-site-search--section {
   display: block;
-  @include govuk-font($size: 16);
+  @include govuk-font-size($size: 16);
   color: $govuk-secondary-text-colour;
 }
 
