@@ -17,7 +17,9 @@ Last updated 8 December 2023.
 
 ## Recently shipped
 
-We recently shipped GOV.UK Frontend v5.0 which includes:
+We’ve released GOV.UK Frontend [v5.1.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.1.0), [v4.8.0](https://github.com/alphagov/govuk-frontend/releases/tag/v4.8.0) and [v3.15.0](https://github.com/alphagov/govuk-frontend/releases/tag/v3.15.0) which include the update of the crown logo.
+
+We also recently shipped GOV.UK Frontend v5.0 which includes:
 
 - a new [Task List](/components/task-list) component
 - updates to the [Tag](/components/tag) component
