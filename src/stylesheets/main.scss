@@ -245,7 +245,7 @@ p code {
   padding: 1px 3px;
   color: $app-code-color;
   background-color: govuk-colour("light-grey");
-  @include govuk-typography-responsive($size: 16);
+  @include govuk-font-size($size: 16);
   @include govuk-media-query($from: tablet) {
     padding: 2px 4px;
   }
@@ -269,7 +269,7 @@ pre code {
   border: $govuk-focus-width solid transparent;
   outline: 1px solid $govuk-border-colour;
   background-color: $app-light-grey;
-  @include govuk-typography-responsive($size: 19);
+  @include govuk-font-size($size: 19);
   @include govuk-responsive-margin(4, "bottom");
 
   &:focus {
