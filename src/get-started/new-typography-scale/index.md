@@ -4,7 +4,7 @@ title: Updating your service to use the new typography scale
 section: Get started
 theme: How to guides
 order: 6
-description: The GOV.UK Design System team have been working on updating our typography scale provided with GOV.UK Frontend. This new scale is now available to use and will be enforced by default in GOV.UK Frontend version 6.0.0. Here's how to use it, what's changed and what to expect when implementing it into your service.
+description: The GOV.UK Design System team has updated the GOV.UK Frontend type scale. This new scale is an available option to use now, but will be enforced by default in GOV.UK Frontend version 6.0.0. Here's how to use it, what's changed and what to expect when implementing it into your service.
 ---
 
 {% from "govuk/components/table/macro.njk" import govukTable %}
