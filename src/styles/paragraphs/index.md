@@ -25,7 +25,7 @@ A lead paragraph is an introductory paragraph that you can use at the top of a p
 
 ## Body small
 
-You can use the `govuk-body-s` class sparingly to make your paragraph font size smaller: 16px on larger screens and 14px on smaller screens.
+You can use the `govuk-body-s` class sparingly to make your paragraph font size 16px instead of 19px.
 
 The majority of your body copy should use the standard 19px paragraph size.
 
