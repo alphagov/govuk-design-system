@@ -52,8 +52,9 @@
 }
 
 .app-subnav__theme {
+  @include govuk-font-size($size: 19);
+  @include govuk-typography-weight-regular;
   margin: 0;
   padding: govuk-spacing(2) govuk-spacing(3) govuk-spacing(2) 0;
   color: govuk-colour("dark-grey");
-  @include govuk-font(19);
 }

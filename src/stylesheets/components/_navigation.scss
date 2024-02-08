@@ -24,12 +24,11 @@ $navigation-height: 50px;
   position: relative;
 
   @include govuk-media-query($from: tablet) {
-    @include govuk-font(19, $weight: bold, $line-height: $navigation-height);
     box-sizing: border-box;
-    height: $navigation-height;
     height: govuk-px-to-rem($navigation-height);
     padding: 0 govuk-spacing(3);
     float: left;
+    line-height: $navigation-height;
   }
 }
 
@@ -44,7 +43,8 @@ $navigation-height: 50px;
   margin: govuk-spacing(3) 0;
   padding: 0;
   @include govuk-typography-weight-bold; // Override .govuk-link weight
-  font-size: 19px; // We do not have a font mixin that produces 19px on mobile
+  // Type scale doesn't provide 19 across all screen sizes on mobile so we
+  // override it here
   font-size: govuk-px-to-rem(19px);
 
   // Expand the touch area of the link to the full menu width

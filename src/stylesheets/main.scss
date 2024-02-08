@@ -1,5 +1,3 @@
-$govuk-new-link-styles: true;
-
 @import "govuk/all";
 
 // App-specific variables
@@ -116,7 +114,10 @@ $app-code-color: #d13118;
   /// * Liberation Mono - Font for Linux used by GitHub
   pre,
   code {
-    font-family: ui-monospace, Menlo, "Cascadia Mono", "Segoe UI Mono", Consolas, "Liberation Mono", monospace;
+    // font family in a separate variable to avoid syntax errors when passing
+    // to the common typography mixin
+    $app-code-font: ui-monospace, menlo, "Cascadia Mono", "Segoe UI Mono", consolas, "Liberation Mono", monospace;
+    @include govuk-typography-common($font-family: $app-code-font);
   }
 }
 
@@ -245,7 +246,7 @@ p code {
   padding: 1px 3px;
   color: $app-code-color;
   background-color: govuk-colour("light-grey");
-  @include govuk-typography-responsive($size: 16);
+  @include govuk-font-size($size: 16);
   @include govuk-media-query($from: tablet) {
     padding: 2px 4px;
   }
@@ -269,7 +270,7 @@ pre code {
   border: $govuk-focus-width solid transparent;
   outline: 1px solid $govuk-border-colour;
   background-color: $app-light-grey;
-  @include govuk-typography-responsive($size: 19);
+  @include govuk-font-size($size: 19);
   @include govuk-responsive-margin(4, "bottom");
 
   &:focus {

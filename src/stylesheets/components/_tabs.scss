@@ -22,7 +22,7 @@
 }
 
 .app-tabs__item {
-  @include govuk-font(19);
+  @include govuk-font-size($size: 19);
   display: inline-block;
   position: relative;
   padding: govuk-spacing(4);
@@ -99,8 +99,8 @@
 
   .app-tabs__heading-button {
     @include govuk-link-common;
-    @include govuk-font($size: 19);
     @include govuk-link-decoration;
+    @include govuk-font-size($size: 19);
 
     border: 0;
     outline: 0;

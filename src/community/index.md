@@ -71,12 +71,12 @@ Join one of our regular events where we share ideas and work together to solve c
     {%- call imageCard({
       src: "/community/images/catchup-call-groupshot.jpg",
       alt: "Catchup call screenshot.",
-      title: "Design systems catchup",
+      title: "Design systems monthly catchup",
       large: true
     }) %}
-      <p>We regularly host informal chats with our community.</p>
-      <p>We've currently paused our usual fortnightly catchup call whilst we work on improving the way we have these conversations with our community.</p>
-      <p>We're keen to hear what you'd like to see and encourage you to <a href="https://surveys.publishing.service.gov.uk/s/1YTI43/">take our survey</a>.</p>
+      <p>Every month, we host an informal catchup with our community.</p>
+      <p>Hosted on Zoom, the call usually includes a show and tell from the Design System team and contributors, followed by group discussions where everyone can participate.</p>
+      <p><a href="https://mailchi.mp/707ce8dec373/get-updated-by-email-govuk-design-system">Sign up to our mailing list</a> to find out when we announce the next call, so you can register.</p>
     {% endcall %}
   </div>
   <div class="govuk-grid-column-full">
@@ -97,8 +97,7 @@ Join one of our regular events where we share ideas and work together to solve c
       large: true
     }) %}
       <p>Every year, we host an online conference to collaborate and share knowledge about design systems with like-minded people, covering topics like accessibility, community and decision-making.</p>
-      <p>Design System Day 2023 will take place on 10 and 11 October. Find out about the <a href="/community/design-system-day/">speakers and sessions at Design System Day 2023</a>.</p>
-      <p>View the videos, slides and notes for <a href="/community/design-system-day-2022/">Design System Day 2022</a>.</p>
+      <p>Design System Day 2023 took place on 10 and 11 October. <a href="/community/design-system-day-2023/session-information/">View videos, session information and speaker biographies from the event</a>.</p>
     {% endcall %}
   </div>
 </div>
@@ -112,15 +111,10 @@ We’ve also formed cross-government groups to co-design new additions to the De
 <img src="/community/images/maps-collab-group.jpg" alt="Maps community call screenshot." class="app-image--no-border govuk-!-margin-bottom-6" loading="lazy">
 
 <div class="govuk-grid-row govuk-!-margin-bottom-8">
-  <div class="govuk-grid-column-full govuk-grid-column-one-half-from-desktop">
+  <div class="govuk-grid-column-full">
     <h3>Maps in services</h3>
     <p>Help us explore best practices for the use of maps across the public sector so we can make them more accessible and consistent.</p>
     <p><a href="https://join.slack.com/t/mapsinservices/shared_invite/zt-163npa168-e5EREuQZU3NqwfdojWw2ew">Join the Maps Slack group</a>.</p>
-  </div>
-  <div class="govuk-grid-column-full govuk-grid-column-one-half-from-desktop">
-    <h3>Task list component</h3>
-    <p>Share your experience, research and skills to help us reiterate the Task list pages pattern into a component.</p>
-    <p><a href="https://join.slack.com/t/task-list-collab/shared_invite/zt-1gfbxa78k-Ql8885Iuan17w5v26F6yVQ">Join the Task list Slack group</a>.</p>
   </div>
 </div>
 

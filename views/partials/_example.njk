@@ -137,8 +137,8 @@
                       <strong>Required.</strong>
                     {% endif %}
                       {{ option.description | safe }}
-                    {% if (option.params) or ["hint", "label"].includes(option.slug) %}
-                      {% if option.isComponent and not ["hint", "label"].includes(option.slug) %}
+                    {% if (option.params) or (option.isComponent and ["hint", "label"].includes(option.id)) %}
+                      {% if option.isComponent and not ["hint", "label"].includes(option.id) %}
                         {# Link to subset of Nunjucks macro options table and Design System component page -#}
                         See supported <a href="#options-{{ exampleId }}--{{ option.slug }}">{{ option.name | safe }}</a> options for <a href="/components/{{ option.slug }}/#options-{{ option.slug }}-example">{{ optionName | safe }}</a>.
                       {% else %}
