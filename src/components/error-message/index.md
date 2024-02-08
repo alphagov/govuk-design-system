@@ -36,7 +36,7 @@ See the full list of [components and patterns affected by WCAG 2.2](/accessibili
 
 Follow the [validation pattern](/patterns/validation/) and show an error message when there is a validation error. In the error message explain what went wrong and how to fix it.
 
-{{ example({ group: "components", item: "error-message", example: "default", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}
+{{ example({ group: "components", item: "error-message", example: "default", html: true, nunjucks: true, rails: true, open: false, size: "m", loading: "eager" }) }}
 
 ## When to use this component
 
@@ -90,7 +90,7 @@ There are 2 ways to use the error message component. You can use HTML or, if you
 
 ### Legend
 
-{{ example({ group: "components", item: "error-message", example: "legend", html: true, nunjucks: true, open: false, size: "m" }) }}
+{{ example({ group: "components", item: "error-message", example: "legend", html: true, nunjucks: true, rails: true, open: false, size: "m" }) }}
 
 ### Label
 

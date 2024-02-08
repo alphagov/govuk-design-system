@@ -11,7 +11,7 @@ layout: layout-pane.njk
 
 Make a page easier to scan by letting users reveal more detailed information only if they need it.
 
-{{ example({ group: "components", item: "details", example: "default", html: true, nunjucks: true, open: false, size: "s", loading: "eager" }) }}
+{{ example({ group: "components", item: "details", example: "default", html: true, nunjucks: true, rails: true, open: false, size: "s", loading: "eager" }) }}
 
 ## When to use this component
 
@@ -35,7 +35,7 @@ The details component is a short link that shows more detailed help text when a 
 
 There are 2 ways to use the details component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 
-{{ example({ group: "components", item: "details", example: "default", html: true, nunjucks: true, open: false, size: "s", titleSuffix: "second" }) }}
+{{ example({ group: "components", item: "details", example: "default", html: true, nunjucks: true, rails: true, open: false, size: "s", titleSuffix: "second" }) }}
 
 ### Write clear link text
 

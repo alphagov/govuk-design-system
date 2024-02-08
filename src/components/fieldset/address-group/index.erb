@@ -1,0 +1,30 @@
+<%= f.govuk_fieldset
+  legend: {
+    text: 'What is your address?',
+    size: 'l',
+    tag: 'h1'
+  } do %>
+
+  <%= f.govuk_text_field :address_one,
+    label: {
+      text: 'Address line 1'
+    } %>
+
+  <%= f.govuk_text_field :address_two,
+    label: {
+      text: 'Address line 2 (optional)'
+    } %>
+
+  <%= f.govuk_text_field :address_three,
+    label: {
+      text: 'Town or city'
+    },
+    width: 'two-thirds' %>
+
+  <%= f.govuk_text_field :postcode,
+    label: {
+      text: 'Postcode'
+    },
+    width: 'one-quarter' %>
+
+<% end %>
