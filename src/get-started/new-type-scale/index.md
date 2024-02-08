@@ -32,7 +32,7 @@ The new typography scale includes the following changes from the previous scale:
                 text: "14"
             },
             {
-                text: "Deprecated as a scale value and will be removed in GOV.UK Frontend version 6.0.0"
+                text: "Deprecated as a scale point and will be removed in GOV.UK Frontend version 6.0.0"
             }
         ],
         [
@@ -40,7 +40,7 @@ The new typography scale includes the following changes from the previous scale:
                 text: "16"
             },
             {
-                text: "16px across all screen sizes and no longer drops to 14px on small screens"
+                text: "Now 16px across all screen sizes"
             }
         ],
         [
@@ -48,7 +48,7 @@ The new typography scale includes the following changes from the previous scale:
                 text: "19"
             },
             {
-                text: "19px across all screen sizes and no longer drops to 16px on small screens"
+                text: "Now 19px across all screen sizes"
             }
         ],
         [
@@ -56,7 +56,7 @@ The new typography scale includes the following changes from the previous scale:
                 text: "24"
             },
             {
-                text: "21px instead of 18px on small screens, plus line height adjustment"
+                text: "On small screens, is now font size 21px instead of 18px and line height 25px instead of 20px"
             }
         ],
         [
@@ -64,7 +64,7 @@ The new typography scale includes the following changes from the previous scale:
                 text: "27"
             },
             {
-                text: "21px instead of 18px on small screens, plus line height adjustment"
+                text: "On small screens, is now font size 21px instead of 18px and line height 25px instead of 20px"
             }
         ],
         [
@@ -72,7 +72,7 @@ The new typography scale includes the following changes from the previous scale:
                 text: "36"
             },
             {
-                text: "27px instead of 24px on small screens, plus line height adjustment"
+                text: "On small screens, is now font size 27px instead of 24px and line height 30px instead of 25px"
             }
         ]
     ]

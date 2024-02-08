@@ -301,7 +301,7 @@ The scale for ‘large screens’ is used when the screen is wider than the tabl
 
 ### Updates to the type scale
 
-In 2024, we updated the type scale to make text easier to read on smaller screens. We published this change in v5.2 of GOV.UK Frontend. Read more about [updating your service to use the new type scale](/get-started/new-typography-scale/)
+In 2024, we updated the type scale to make text easier to read on smaller screens. We published this change in v5.2 of GOV.UK Frontend. Read more about [updating your service to use the new type scale](/get-started/new-type-scale/)
 
 <details class="govuk-details">
   <summary class="govuk-details__summary">
