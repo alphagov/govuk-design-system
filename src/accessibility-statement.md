@@ -74,8 +74,8 @@ For the GOV.UK Design System website and the GOV.UK Frontend Documentation websi
 
 Additional accessibility concerns from the GOV.UK Frontend codebase include:
 
-1.  The details component does not work well with Dragon and VoiceOver. This is not an issue with our details component, but is a known issue with the assistive tech and the `<details>` HTML element. Track our progress on the [GitHub issue: ‘Details component does not work well with Dragon and VoiceOver’](https://github.com/alphagov/govuk-frontend/issues/3693).
-2.  [A bug within Dragon means no action is taken when trying to activate the file upload component](https://github.com/alphagov/reported-bugs/issues/35) through the command ‘click choose file’. This is a usability issue originating from the assistive technology. The team does not plan on fixing this, as the assistive technology will need to resolve it. Track our progress on the [GitHub issue: ‘Upload file component doesn’t respond to ‘click choose file’ due to Dragon / browser bugs’](https://github.com/alphagov/govuk-frontend/issues/3686).
+1.  The details component does not work well with Dragon and VoiceOver. This is not an issue with our details component, but is a known issue with the assistive technology and the `<details>` HTML element. Track our progress on the [GitHub issue: ‘Details component does not work well with Dragon and VoiceOver’](https://github.com/alphagov/govuk-frontend/issues/3693).
+2.  [A bug within Dragon means no action is taken when trying to activate the file upload component](https://github.com/alphagov/reported-bugs/issues/35) through the command ‘click choose file’. This is a usability issue originating from the assistive technology. The team does not plan to fix this, as the assistive technology will need to resolve it. Track our progress on the [GitHub issue: ‘Upload file component doesn’t respond to ‘click choose file’ due to Dragon / browser bugs’](https://github.com/alphagov/govuk-frontend/issues/3686).
 
 ## Preparation of this accessibility statement
 
