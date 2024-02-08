@@ -2,6 +2,7 @@
 title: Paragraphs
 description: Use paragraphs for your core content
 section: Styles
+backlogIssueId: 64
 theme: Typography
 layout: layout-pane.njk
 showPageNav: true
