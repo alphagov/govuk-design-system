@@ -306,7 +306,7 @@ In 2024, we updated the type scale to make text easier to read on smaller screen
 <details class="govuk-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
-      View the old typography scale
+      View the old type scale
     </span>
   </summary>
   <div class="govuk-details__text">
