@@ -70,7 +70,7 @@ The scale for ‘large screens’ is used when the screen is wider than the tabl
         text: "48"
       },
       {
-        html: "<code>govuk-heading-xl<code>"
+        html: "<code>govuk-heading-xl</code>"
       },
       {
         text: "48px",
@@ -86,7 +86,7 @@ The scale for ‘large screens’ is used when the screen is wider than the tabl
         text: "36"
       },
       {
-        html: "<code>govuk-heading-l<code>"
+        html: "<code>govuk-heading-l</code>"
       },
       {
         text: "36px",
@@ -150,7 +150,7 @@ The scale for ‘large screens’ is used when the screen is wider than the tabl
         text: "16"
       },
       {
-        html: "<code>govuk-body-s<code>"
+        html: "<code>govuk-body-s</code>"
       },
       {
         text: "16px",
@@ -205,7 +205,7 @@ The scale for ‘large screens’ is used when the screen is wider than the tabl
         text: "48"
       },
       {
-        html: "<code>govuk-heading-xl<code>"
+        html: "<code>govuk-heading-xl</code>"
       },
       {
         text: "32px",
@@ -221,7 +221,7 @@ The scale for ‘large screens’ is used when the screen is wider than the tabl
         text: "36"
       },
       {
-        html: "<code>govuk-heading-l<code>"
+        html: "<code>govuk-heading-l</code>"
       },
       {
         text: "27px",
@@ -285,7 +285,7 @@ The scale for ‘large screens’ is used when the screen is wider than the tabl
         text: "16"
       },
       {
-        html: "<code>govuk-body-s<code>"
+        html: "<code>govuk-body-s</code>"
       },
       {
         text: "16px",
@@ -353,7 +353,7 @@ In 2024, we updated the type scale to make text easier to read on smaller screen
               text: "48"
             },
             {
-              html: "<code>govuk-heading-xl<code>"
+              html: "<code>govuk-heading-xl</code>"
             },
             {
               text: "32px",
@@ -369,7 +369,7 @@ In 2024, we updated the type scale to make text easier to read on smaller screen
               text: "36"
             },
             {
-              html: "<code>govuk-heading-l<code>"
+              html: "<code>govuk-heading-l</code>"
             },
             {
               text: "27px",
@@ -433,7 +433,7 @@ In 2024, we updated the type scale to make text easier to read on smaller screen
               text: "16"
             },
             {
-              html: "<code>govuk-body-s<code>"
+              html: "<code>govuk-body-s</code>"
             },
             {
               text: "16px",
