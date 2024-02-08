@@ -11,7 +11,7 @@ order: 11
 
 {% from "_example.njk" import example %}
 
-Use font override classes sparingly to etc. etc.
+Use font override classes sparingly to change the default styling of text on a page.
 
 You can use the font override classes in your HTML or reference the typography mixins in your own components.
 
