@@ -11,7 +11,7 @@ order: 8
 
 {% from "_example.njk" import example %}
 
-The default paragraph font size is 19px on large screens and 16px on small screens.
+The default paragraph font size is 19px.
 
 {{ example({ group: "styles", item: "paragraphs", example: "body", html: true, open: true }) }}
 
