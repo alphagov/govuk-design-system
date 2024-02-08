@@ -13,7 +13,7 @@ order: 6
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 {% from "govuk/components/table/macro.njk" import govukTable %}
 
-The type scale is a collection of font sizes and line heights that underpin all of the typography styles on GOV.UK. It has been tested and [iterated](https://designnotes.blog.gov.uk/2022/12/12/making-the-gov-uk-frontend-typography-scale-more-accessible/) for readability on different devices.
+The type scale is a collection of font sizes and line heights that underpin all of the typographic styles on GOV.UK. It has been tested and [iterated](https://designnotes.blog.gov.uk/2022/12/12/making-the-gov-uk-frontend-typography-scale-more-accessible/) for readability on different devices.
 
 When creating new components, always start by using the existing typography styles. If you need to create a new style, align it with one of the points on the type scale.
 
