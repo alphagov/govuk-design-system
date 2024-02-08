@@ -11,7 +11,7 @@ layout: layout-pane.njk
 
 Use the date input component to help users enter a memorable date or one they can easily look up.
 
-{{ example({ group: "components", item: "date-input", example: "default", html: true, nunjucks: true, open: false, size: "s", loading: "eager" }) }}
+{{ example({ group: "components", item: "date-input", example: "default", html: true, nunjucks: true, rails: true, open: false, size: "s", loading: "eager" }) }}
 
 ## When to use this component
 
@@ -39,7 +39,7 @@ Accept month names written out in full or abbreviated form (for example, ‘janu
 
 There are 2 ways to use the date input component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 
-{{ example({ group: "components", item: "date-input", example: "default", html: true, nunjucks: true, open: false, size: "s", titleSuffix: "second" }) }}
+{{ example({ group: "components", item: "date-input", example: "default", html: true, nunjucks: true, rails: true, open: false, size: "s", titleSuffix: "second" }) }}
 
 Never automatically tab users between the fields of the date input because this can be confusing and may clash with normal keyboard controls.
 
@@ -55,7 +55,7 @@ Use the `autocomplete` attribute on the date input component when you're asking 
 
 To do this, set the `autocomplete` attribute on the 3 fields to `bday-day`, `bday-month` and `bday-year`. See how to do this in the HTML and Nunjucks tabs in the following example.
 
-{{ example({ group: "components", item: "date-input", example: "date-of-birth", html: true, nunjucks: true, open: true, size: "s", id: "default-2" }) }}
+{{ example({ group: "components", item: "date-input", example: "date-of-birth", html: true, nunjucks: true, rails: true, open: true, size: "s", id: "default-2" }) }}
 
 If you are working in production you’ll need to do this to meet [WCAG 2.1 Level AA](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html).
 
@@ -65,11 +65,11 @@ You will not normally need to use the `autocomplete` attribute in prototypes, as
 
 If you’re highlighting the whole date, style all the fields like this:
 
-{{ example({ group: "components", item: "date-input", example: "error", html: true, nunjucks: true, open: false, size: "m" }) }}
+{{ example({ group: "components", item: "date-input", example: "error", html: true, nunjucks: true, rails: true, open: false, size: "m" }) }}
 
 If you’re highlighting just one field - either the day, month or year - only style the field that has an error. The error message must say which field has an error, like this:
 
-{{ example({ group: "components", item: "date-input", example: "error-single", html: true, nunjucks: true, open: false, size: "m" }) }}
+{{ example({ group: "components", item: "date-input", example: "error-single", html: true, nunjucks: true, rails: true, open: false, size: "m" }) }}
 
 Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
 
