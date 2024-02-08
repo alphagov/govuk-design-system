@@ -2,6 +2,7 @@
 title: Headings
 description: Use headings to structure content on pages
 section: Styles
+backlogIssueId: 64
 theme: Typography
 layout: layout-pane.njk
 showPageNav: true
