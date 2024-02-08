@@ -1,0 +1,34 @@
+<%= govuk_task_list(id_prefix: "company-details") do |task_list| %>
+
+  <%= task_list.with_item(
+    title: "Company Directors",
+    href: '#',
+    status: "Completed"
+  ) %>
+
+  <%= task_list.with_item(
+    title: "Registered company details",
+    href: '#',
+    status: govuk_tag(text: "Incomplete", colour: "blue")
+  ) %>
+
+  <%= task_list.with_item(
+    title: "Financial history",
+    hint: "Include 5 years of the company’s relevant financial information."
+    href: '#',
+    status: govuk_tag(text: "Incomplete", colour: "blue")
+  ) %>
+
+  <%= task_list.with_item(
+    title: "Business plan",
+    href: '#',
+    status: govuk_tag(text: "Incomplete", colour: "blue")
+  ) %>
+
+  <%= task_list.with_item(
+    title: "References",
+    href: '#',
+    status: govuk_tag(text: "Incomplete", colour: "blue")
+  ) %>
+
+end %>
