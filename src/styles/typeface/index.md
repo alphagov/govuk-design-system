@@ -6,21 +6,7 @@ backlogIssueId: 64
 theme: Typography
 layout: layout-pane.njk
 order: 5
-# headings:
-#   - text: Section break
-#     aliases: horizontal rule, hr
-
-#   - text: Links
-#     ignoreInPageNav: true
-#     ignoreInSearch: true
-
-#   - text: Lists
-#     ignoreInPageNav: true
-#     ignoreInSearch: true
 ---
-
-{% from "_example.njk" import example %}
-
 
 If your service is on the service.gov.uk subdomain you must use the GDS Transport font.
 
