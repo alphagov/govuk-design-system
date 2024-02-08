@@ -1,0 +1,17 @@
+---
+title: Password input with errors – Password input
+layout: layout-example-form.njk
+---
+
+{% from "govuk/components/password-input/macro.njk" import govukPasswordInput %}
+
+{{ govukPasswordInput({
+  label: {
+    text: "Password"
+  },
+  id: "password-input-with-error-message",
+  name: "password-input-with-error-message",
+  errorMessage: {
+    text: "Enter a password"
+  }
+}) }}
