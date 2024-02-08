@@ -49,4 +49,3 @@ You can use bold to highlight critical information and emphasise particular word
 
 For example, "Your reference number is **ABC12345678**. Use this to track your application. Updates will be sent to **name<i></i>@example.com**"
 
-Use bold sparingly. Overuse will make it difficult for users to know which parts of your content they need to pay the most attention to.
