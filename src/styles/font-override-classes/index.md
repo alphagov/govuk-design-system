@@ -31,7 +31,7 @@ Do not 'justify' blocks of body copy text so it's aligned to both the left and r
 
 ## Font size
 
-The full GOV.UK typography scale goes from 14px up to 80px on large screens. You can add these font size override classes to any other typographic class or element and they will change the font size.
+The full GOV.UK typography scale goes from 16px up to 80px on large screens. You can add these font size override classes to any other typographic class or element and they will change the font size.
 
 {{ example({ group: "styles", item: "font-override-classes", example: "font-size", html: true, open: true, size: "xl" }) }}
 
