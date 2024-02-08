@@ -1,0 +1,20 @@
+<%
+  # sort_orders would normally be defined in code elsewhere,
+  # as either an activerecord collection or an array of structs:
+
+sort_orders = [
+  OpenStruct.new(id: 'published', name: 'Recently published'),
+  OpenStruct.new(id: 'updated', name: 'Recently updated'),
+  OpenStruct.new(id: 'views', name: 'Most views'),
+  OpenStruct.new(id: 'comments', name: 'Most comments')
+]
+%>
+
+<%= f.govuk_collection_select :sort,
+  sort_orders,
+  :id,
+  :name,
+  label: {
+    text: "Sort by"
+  }
+%>
