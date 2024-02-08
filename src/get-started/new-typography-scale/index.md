@@ -87,7 +87,7 @@ You can opt into the new scale by setting the feature flag variable `$govuk-new-
 $govuk-new-typography-scale: true;
 ```
 
-This will automatically use the new typography scale. You don't need to change any of your Sass to use the new scale.
+This will automatically use the new typography scale. You do not need to change any of your Sass to use the new scale.
 
 {{ govukWarningText({
   text: "Please be aware that this is an early release of the new typography scale. We may release significant changes to the scale in releases between now and GOV.UK Frontend 6.0.0. Please read version release notes to see if you are affected."
