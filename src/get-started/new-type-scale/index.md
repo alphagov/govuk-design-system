@@ -96,5 +96,5 @@ This will automatically use the new typography scale. You do not need to change 
 ## Testing your service against the new typography scale
 If your service uses custom elements made using GOV.UK Frontend, test your service against the new typography scale to assess if you need to make any adjustments. Some key things to look for are:
 
-- Spacing. With the increased font sizes, your custom elements may now look squashed on small screens.
+- spacing – With the increased font sizes, your custom elements may now look squashed on small screens.
 - specific positioning values – you may need to adjust these values, for example an `absolute` positioned element 
