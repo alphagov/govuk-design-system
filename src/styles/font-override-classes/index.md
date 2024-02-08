@@ -27,7 +27,7 @@ Use:
 
 As the most commonly used languages on GOV.UK are written left-to-right, you should usually left-align body copy text. Right-aligned body copy text can be hard for users to find and read when they magnify their screen. Use right-aligned body copy text if you are translating content into a language which is written right-to-left.
 
-Do not 'justify' blocks of body copy so that they're aligned to both the left and right margins. Doing this creates wider spaces between words, which can make the text hard to read.
+Do not 'justify' blocks of body copy text so it's aligned to both the left and right margins. Doing this creates wider spaces between words, which can make the text hard to read.
 
 ## Font size
 
