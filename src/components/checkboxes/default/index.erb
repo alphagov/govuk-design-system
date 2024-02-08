@@ -1,0 +1,22 @@
+<%
+  # waste_types would normally be defined in code elsewhere,
+  # as either an activerecord collection or an array of structs:
+
+  waste_types = [
+    OpenStruct.new(id: "carcasses", name: "Waste from animal carcasses"),
+    OpenStruct.new(id: "mines", name: "Waste from mines or quarries"),
+    OpenStruct.new(id: "farm", name: "Farm or agricultural waste")
+  ]
+%>
+
+<%= f.govuk_collection_check_boxes :waste, waste_types,
+  :id,
+  :name,
+  legend: {
+    text: "Which types of waste do you transport?",
+    tag: "h1",
+    size: "l"
+  },
+  hint: {
+    text: "Select all that apply."
+  } %>

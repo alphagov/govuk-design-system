@@ -11,7 +11,7 @@ layout: layout-pane.njk
 
 Let users select one or more options by using the checkboxes component.
 
-{{ example({ group: "components", item: "checkboxes", example: "default", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}
+{{ example({ group: "components", item: "checkboxes", example: "default", html: true, nunjucks: true, rails: true, open: false, size: "m", loading: "eager" }) }}
 
 ## When to use this component
 
@@ -51,19 +51,19 @@ Read more about [why and how to set legends as headings](/get-started/labels-leg
 
 There are 2 ways to use the checkboxes component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 
-{{ example({ group: "components", item: "checkboxes", example: "default", html: true, nunjucks: true, open: false, size: "m", titleSuffix: "second" }) }}
+{{ example({ group: "components", item: "checkboxes", example: "default", html: true, nunjucks: true, rails: true, open: false, size: "m", titleSuffix: "second" }) }}
 
 ### If you’re asking more than one question on the page
 
 If you're asking more than one question on the page, do not set the contents of the `<legend>` as the page heading. Read more about [asking multiple questions on question pages](/patterns/question-pages/#asking-multiple-questions-on-a-page).
 
-{{ example({ group: "components", item: "checkboxes", example: "without-heading", html: true, nunjucks: true, open: false, size: "m" }) }}
+{{ example({ group: "components", item: "checkboxes", example: "without-heading", html: true, nunjucks: true, rails: true, open: false, size: "m" }) }}
 
 ### Checkbox items with hints
 
 You can add hints to checkbox items to provide additional information about the options.
 
-{{ example({ group: "components", item: "checkboxes", example: "hint", html: true, nunjucks: true, open: false, size: "s" }) }}
+{{ example({ group: "components", item: "checkboxes", example: "hint", html: true, nunjucks: true, rails: true, open: false, size: "s" }) }}
 
 ### Add an option for ‘none’
 
@@ -79,11 +79,11 @@ For example, for the question 'Will you be travelling to any of these countries?
 
 To enable some JavaScript that unchecks all other checkboxes when the user clicks 'None', add the `exclusive` behaviour to the 'none' checkbox.
 
-{{ example({ group: "components", item: "checkboxes", example: "with-none-option", html: true, nunjucks: true, open: false, size: "xl" }) }}
+{{ example({ group: "components", item: "checkboxes", example: "with-none-option", html: true, nunjucks: true, rails: true, open: false, size: "xl" }) }}
 
 If JavaScript is unavailable, and a user selects both the ‘none’ checkbox and another checkbox, display an error message.
 
-{{ example({ group: "components", item: "checkboxes", example: "with-none-option-in-error", html: true, nunjucks: true, open: false, size: "xl" }) }}
+{{ example({ group: "components", item: "checkboxes", example: "with-none-option-in-error", html: true, nunjucks: true, rails: true, open: false, size: "xl" }) }}
 
 ### Conditionally revealing a related question
 
@@ -91,7 +91,7 @@ You can ask the user a related question when they select a particular checkbox, 
 
 This might make 2 related questions easier to answer by grouping them on the same page. For example, you could reveal a phone number input when the user selects the 'Contact me by phone' option.
 
-{{ example({ group: "components", item: "checkboxes", example: "conditional-reveal", html: true, nunjucks: true, open: false, size: "xl" }) }}
+{{ example({ group: "components", item: "checkboxes", example: "conditional-reveal", html: true, nunjucks: true, rails: true, open: false, size: "xl" }) }}
 
 Keep it simple. If the related question is complicated or has more than one part, show it on the next page in the process instead.
 
@@ -111,7 +111,7 @@ Use standard-sized checkboxes in most cases. However, smaller checkboxes work we
 
 For example, on a page of search results, the main user need is to see the results. Using smaller checkboxes lets users see and change search filters without distracting them from the main content.
 
-{{ example({ group: "components", item: "checkboxes", example: "small", html: true, nunjucks: true, open: false, size: "m" }) }}
+{{ example({ group: "components", item: "checkboxes", example: "small", html: true, nunjucks: true, rails: true, open: false, size: "m" }) }}
 
 Small checkboxes can work well on information dense screens in services designed for repeat use, like caseworking systems.
 
@@ -121,7 +121,7 @@ In services like these, the risk that they will not be noticed is lower because 
 
 Error messages should be styled like this:
 
-{{ example({ group: "components", item: "checkboxes", example: "error", html: true, nunjucks: true, open: false, size: "s" }) }}
+{{ example({ group: "components", item: "checkboxes", example: "error", html: true, nunjucks: true, rails: true, open: false, size: "s" }) }}
 
 Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
 
