@@ -448,18 +448,19 @@ In 2024, we updated the type scale to make text easier to read on smaller screen
       }) }}
 
       The scale for large screens has not changed.
+
   </div>
 </details>
 
 ## Using the type scale in your own CSS
 
-Include the [`govuk-font`](https://frontend.design-system.service.gov.uk/sass-api-reference/#govuk-font) mixin to use GOV.UK typography in your CSS. 
+Include the [`govuk-font`](https://frontend.design-system.service.gov.uk/sass-api-reference/#govuk-font) mixin to use GOV.UK typography in your CSS.
 
 For example, if you want a custom element to use type scale point 19, use:
 
 ```scss
 @include govuk-font($size: 19);
-``````
+```
 
 You can add additional arguments to control font weight, use tabular font spacing, or to override the line height:
 
@@ -474,4 +475,3 @@ Do not use `govuk-font` if you only want to change the font size and line height
 ```scss
 @include govuk-font-size($size: 19);
 ```
-

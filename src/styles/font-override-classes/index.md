@@ -48,4 +48,3 @@ Use bold text sparingly - using too much will make it difficult for users to kno
 You can use bold to highlight critical information and emphasise particular words in a transaction.
 
 For example, "Your reference number is **ABC12345678**. Use this to track your application. Updates will be sent to **name<i></i>@example.com**"
-

@@ -13,6 +13,7 @@ description: The GOV.UK Design System team has updated the GOV.UK Frontend type 
 The GOV.UK Design System team has updated the GOV.UK Frontend type scale. This new scale is an available option to use now, but will be enforced by default in GOV.UK Frontend version 6.0.0. Here's how to use it, what's changed and what to expect when implementing it into your service.
 
 ## Changes we've made
+
 The new typography scale includes the following changes from the previous scale:
 
 {{ govukTable({
@@ -81,6 +82,7 @@ The new typography scale includes the following changes from the previous scale:
 [Read more about this work and why we're updating our typography scale](https://designnotes.blog.gov.uk/2022/12/12/making-the-gov-uk-frontend-typography-scale-more-accessible/).
 
 ## How to use the new typography scale
+
 You can opt into the new scale by setting the feature flag variable `$govuk-new-typography-scale` at the root of your service's Sass to `true`:
 
 ```scss
@@ -94,7 +96,8 @@ This will automatically use the new typography scale. You do not need to change 
 }) }}
 
 ## Testing your service against the new typography scale
+
 If your service uses custom elements made using GOV.UK Frontend, test your service against the new typography scale to assess if you need to make any adjustments. Some key things to look for are:
 
 - spacing – With the increased font sizes, your custom elements may now look squashed on small screens.
-- specific positioning values – you may need to adjust these values, for example an `absolute` positioned element 
+- specific positioning values – you may need to adjust these values, for example an `absolute` positioned element
