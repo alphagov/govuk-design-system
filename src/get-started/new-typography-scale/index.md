@@ -20,7 +20,7 @@ The new typography scale includes the following changes from the previous scale:
     captionClasses: "govuk-table__caption--m",
     head: [
         {
-            text: "Typography scale value"
+            text: "Point on type scale"
         },
         {
             text: "Change"
