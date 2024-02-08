@@ -43,7 +43,9 @@ As with the font size, you can add a font weight override class to any other typ
 
 ### Bold text
 
-You can use bold to emphasise particular words in a transaction. Use it to highlight critical information that users need to refer to or you’ve seen them miss.
+Use bold text sparingly - using too much will make it difficult for users to know which parts of your content needs their attention the most.
+
+You can use bold to highlight critical information and emphasise particular words in a transaction.
 
 For example, "Your reference number is **ABC12345678**. Use this to track your application. Updates will be sent to **name<i></i>@example.com**"
 
