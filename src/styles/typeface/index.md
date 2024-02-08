@@ -2,6 +2,7 @@
 title: Typeface
 description: If your service is on the service.gov.uk subdomain you must use the GDS Transport font
 section: Styles
+backlogIssueId: 64
 theme: Typography
 layout: layout-pane.njk
 order: 5
