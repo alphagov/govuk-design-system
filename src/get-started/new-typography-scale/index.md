@@ -1,6 +1,6 @@
 ---
 layout: layout-pane.njk
-title: Updating your service to use the new typography scale
+title: Updating your service to use the new type scale
 section: Get started
 theme: How to guides
 order: 6
