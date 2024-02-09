@@ -37,7 +37,6 @@ See the full list of [components and patterns affected by WCAG 2.2](/accessibili
 
 {{ example({group: "components", item: "cookie-banner", example: "default", html: true, nunjucks: true, rails: true, open: false, loading: "eager" }) }}
 
-
 ## When to use this component
 
 Use this component if your service sets any cookies on a user’s device.
