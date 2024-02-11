@@ -33,7 +33,7 @@ The details component is less visually prominent than tabs and accordions, so te
 
 The details component is a short link that shows more detailed help text when a user clicks on it.
 
-There are 2 ways to use the details component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
+There are 2 ways to use the details component. You can use HTML or, if you are using [Nunjucks][lib_nunjucks] or the [GOV.UK Prototype Kit][govuk_prototype_kit], you can use the Nunjucks macro.
 
 {{ example({ group: "components", item: "details", example: "default", html: true, nunjucks: true, open: false, size: "s", titleSuffix: "second" }) }}
 

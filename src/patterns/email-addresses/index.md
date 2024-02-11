@@ -11,7 +11,7 @@ layout: layout-pane.njk
 {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 {% from "govuk/components/tag/macro.njk" import govukTag %}
 
-This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
+This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK][govuk].
 
 {% set wcagCallout %}
 
@@ -36,7 +36,7 @@ See the full list of [components and patterns affected by WCAG 2.2](/accessibili
 
 {% from "_example.njk" import example %}
 
-This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
+This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK][govuk].
 
 {{ example({ group: "patterns", item: "email-addresses", example: "default", html: true, nunjucks: true, open: false, size: "s", loading: "eager" }) }}
 

@@ -10,7 +10,7 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 
-This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
+This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK][govuk].
 
 {{ example({ group: "patterns", item: "telephone-numbers", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 

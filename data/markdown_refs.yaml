@@ -1,0 +1,11 @@
+govuk: https://www.gov.uk/
+govuk_frontend_design_system: https://frontend.design-system.service.gov.uk/
+govuk_design_system: https://design-system.service.gov.uk/
+govuk_prototype_kit: https://prototype-kit.service.gov.uk
+govuk_design_system_accessibility: https://design-system.service.gov.uk/accessibility/
+
+component_radio: /components/radios/
+component_checkbox: /components/checkbox/
+pattern_check_answers: /patterns/check-answers/
+
+lib_nunjucks: https://mozilla.github.io/nunjucks/

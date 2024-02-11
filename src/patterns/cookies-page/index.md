@@ -89,7 +89,7 @@ Link to the cookies page from the [service footer](/components/footer/) and from
 
 ## Letting users accept or reject cookies on the cookies page
 
-Use [radios](/components/radios/) and a [button](/components/button/) to let users accept or reject non-essential cookies.
+Use [radios][component_radio] and a [button](/components/button/) to let users accept or reject non-essential cookies.
 
 Load the page with the radios set to ‘no’ on the user’s first visit. If they’ve previously used the service and set their preferences, load the page with those preferences selected.
 

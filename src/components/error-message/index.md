@@ -11,7 +11,7 @@ layout: layout-pane.njk
 {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 {% from "govuk/components/tag/macro.njk" import govukTag %}
 
-This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
+This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK][govuk].
 
 {% set wcagCallout %}
 
@@ -181,7 +181,7 @@ Use template messages for common errors on:
 - [file upload](/components/file-upload/#error-messages)
 - [names](/patterns/names/#error-messages)
 - [National Insurance numbers](/patterns/national-insurance-numbers/#error-messages)
-- [radios](/components/radios/#error-messages)
+- [radios][component_radio]
 - [telephone numbers](/patterns/telephone-numbers/#error-messages)
 - [text input](/components/text-input/#error-messages)
 - [textarea](/components/textarea/#error-messages)

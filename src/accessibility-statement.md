@@ -6,7 +6,7 @@ layout: layout-single-page-prose.njk
 
 # Accessibility statement
 
-The GOV.UK Design System team (the team) is committed to making its website at [design-system.service.gov.uk](https://design-system.service.gov.uk/) and the GOV.UK Frontend documentation website at [frontend.design-system.service.gov.uk](https://frontend.design-system.service.gov.uk/) accessible, in accordance with the Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018.
+The GOV.UK Design System team (the team) is committed to making its website at [design-system.service.gov.uk][govuk_frontend_design_system] and the GOV.UK Frontend documentation website at [frontend.design-system.service.gov.uk][govuk_frontend_design_system_] accessible, in accordance with the Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018.
 
 This accessibility statement applies to both websites and the components and patterns from the GOV.UK Frontend codebase which appear in the examples throughout the Design System.
 
@@ -23,9 +23,9 @@ AbilityNet has [advice on making your device easier to use](https://mcmw.ability
 
 ## Compliance status
 
-The Design System website at [design-system.service.gov.uk](https://design-system.service.gov.uk/) is fully compliant with the Web Content Accessibility Guidelines (WCAG) version 2.1 AA standard.
+The Design System website at [design-system.service.gov.uk][govuk_design_system] is fully compliant with the Web Content Accessibility Guidelines (WCAG) version 2.1 AA standard.
 
-The GOV.UK Frontend documentation website at [frontend.design-system.service.gov.uk](https://frontend.design-system.service.gov.uk/) is fully compliant with the Web Content Accessibility Guidelines (WCAG) version 2.1 AA standard.
+The GOV.UK Frontend documentation website at [frontend.design-system.service.gov.uk][govuk_frontend_design_system] is fully compliant with the Web Content Accessibility Guidelines (WCAG) version 2.1 AA standard.
 
 The GOV.UK Frontend codebase at [github.com/alphagov/govuk-frontend](https://github.com/alphagov/govuk-frontend) is fully compliant with the Web Content Accessibility Guidelines (WCAG) version 2.2 AA standard.
 
@@ -81,11 +81,11 @@ Additional accessibility concerns from the GOV.UK Frontend codebase include:
 
 This statement was prepared on 23 October 2019. It was last reviewed and updated on 2 August 2023.
 
-The [GOV.UK Design System website](https://design-system.service.gov.uk/) was last audited for accessibility issues by an external group on 7 October 2019. The test was carried out by the [Digital Accessibility Centre (DAC)](https://digitalaccessibilitycentre.org/).
+The [GOV.UK Design System website][govuk_design_system] was last audited for accessibility issues by an external group on 7 October 2019. The test was carried out by the [Digital Accessibility Centre (DAC)](https://digitalaccessibilitycentre.org/).
 
 DAC tested a sample of pages to cover the different content types in the GOV.UK Design System website. They were:
 
-- [the homepage](https://design-system.service.gov.uk/)
+- [the homepage][govuk_design_system]
 - [a short content page](https://design-system.service.gov.uk/community/design-system-working-group/)
 - [a long content page](https://design-system.service.gov.uk/styles/layout/)
 - [an overview page](https://design-system.service.gov.uk/community/)

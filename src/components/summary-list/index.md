@@ -41,7 +41,7 @@ See the full list of [components and patterns affected by WCAG 2.2](/accessibili
 
 Use a summary list to show information as a list of key facts.
 
-You can use it to display metadata like ‘Last updated’ with a date like ‘22 June 2018’, or to summarise a user’s responses at the end of a form like the [check answers](/patterns/check-answers/) pattern.
+You can use it to display metadata like ‘Last updated’ with a date like ‘22 June 2018’, or to summarise a user’s responses at the end of a form like the [check answers][pattern_check_answers] pattern.
 
 [Summary cards](#summary-cards) are a variant within this component. You can use summary cards to show multiple summary lists that describe the same type of thing, such as people. You can also add card actions that apply to the entire summary list.
 
@@ -60,7 +60,7 @@ Each row of a summary list is made up of a:
 
 You can show a single or multiple summary lists on a page. If you’re showing multiple summary lists on a page, you can add structure by using headings or summary cards.
 
-There are 2 ways to use the summary list component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
+There are 2 ways to use the summary list component. You can use HTML or, if you’re using [Nunjucks][lib_nunjucks] or the [GOV.UK Prototype Kit][govuk_prototype_kit], you can use the Nunjucks macro.
 
 {{ example({ group: "components", item: "summary-list", example: "without-actions", html: true, nunjucks: true, open: false }) }}
 
@@ -175,7 +175,7 @@ If a card action cannot easily be undone or might have serious consequences, con
 
 ## Research on this component
 
-This component was developed and tested by the Government Digital Service as part of the [check answers pattern](/patterns/check-answers/).
+This component was developed and tested by the Government Digital Service as part of the [check answers pattern][pattern_check_answers].
 
 The Department for Education contributed the summary card. It’s being used in some of their services, such as:
 

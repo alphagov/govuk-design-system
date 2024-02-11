@@ -42,7 +42,7 @@ The select component should only be used as a last resort in public-facing servi
 
 The select component allows users to choose an option from a long list. Before using the select component, try asking users questions which will allow you to present them with fewer options.
 
-Asking questions means you’re less likely to need to use the select component, and can consider using a different solution, such as [radios](/components/radios/).
+Asking questions means you’re less likely to need to use the select component, and can consider using a different solution, such as [radios][component_radio].
 
 ## How it works
 
@@ -50,7 +50,7 @@ If you use the component for settings, you can make an option pre-selected by de
 
 If you use the component for questions, you should not pre-select any of the options in case it influences users' answers.
 
-There are 2 ways to use the select component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
+There are 2 ways to use the select component. You can use HTML or, if you’re using [Nunjucks][lib_nunjucks] or the [GOV.UK Prototype Kit][govuk_prototype_kit], you can use the Nunjucks macro.
 
 {{ example({ group: "components", item: "select", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
 

@@ -22,7 +22,7 @@ Use the checkboxes component when you need to help users:
 
 ## When not to use this component
 
-Do not use the checkboxes component if users can only choose one option from a selection. In this case, use the [radios component](/components/radios/).
+Do not use the checkboxes component if users can only choose one option from a selection. In this case, use the [radios component][component_radio].
 
 ## How it works
 
@@ -49,7 +49,7 @@ If you're asking just [one question per page](/patterns/question-pages/#start-by
 
 Read more about [why and how to set legends as headings](/get-started/labels-legends-headings/).
 
-There are 2 ways to use the checkboxes component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
+There are 2 ways to use the checkboxes component. You can use HTML or, if you’re using [Nunjucks][lib_nunjucks] or the [GOV.UK Prototype Kit][govuk_prototype_kit], you can use the Nunjucks macro.
 
 {{ example({ group: "components", item: "checkboxes", example: "default", html: true, nunjucks: true, open: false, size: "m", titleSuffix: "second" }) }}
 

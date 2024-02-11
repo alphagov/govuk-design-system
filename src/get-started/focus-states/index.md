@@ -29,7 +29,7 @@ When form inputs are focused, they have a yellow outline and a thick black borde
 
 ![A text input labelled "What is your name?". The example shows the text input both unfocused and focused.](text-input-focus.png)
 
-[Radios](/components/radios/) and [checkboxes](/components/checkboxes/) use the same style.
+[Radios][component_radio] and [checkboxes][component_checkbox] use the same style.
 
 ![Yes and no radio options to answer the question "Have you changed your name?". In this example, the "No" option is focused.](radios-focus.png)
 

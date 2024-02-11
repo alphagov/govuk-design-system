@@ -11,7 +11,7 @@ layout: layout-pane.njk
 {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 {% from "govuk/components/tag/macro.njk" import govukTag %}
 
-This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
+This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK][govuk].
 
 {% set wcagCallout %}
 
@@ -69,7 +69,7 @@ To upload a file, the user can either:
   <p>You can make it easier for the user to reuse a file by showing it as an option for the user to select instead of the file upload. Consider users on public devices before choosing to make the file available to preview or download. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
 </div>
 
-There are 2 ways to use the file upload component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
+There are 2 ways to use the file upload component. You can use HTML or, if you’re using [Nunjucks][lib_nunjucks] or the [GOV.UK Prototype Kit][govuk_prototype_kit], you can use the Nunjucks macro.
 
 {{ example({ group: "components", item: "file-upload", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
 

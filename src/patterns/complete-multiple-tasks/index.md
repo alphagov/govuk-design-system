@@ -148,7 +148,7 @@ This can be helpful when a task involves:
 - looking up information, such as details about previous jobs
 - answers that need to be checked carefully with someone else
 
-Do this by asking a radio question at the end of the task – either as the last question (if the task is a single page) or on the [‘Check answers’ page](/patterns/check-answers/) (if the task uses multiple [question pages](/patterns/question-pages/)).
+Do this by asking a radio question at the end of the task – either as the last question (if the task is a single page) or on the [‘Check answers’ page][pattern_check_answers] (if the task uses multiple [question pages](/patterns/question-pages/)).
 
 Ask ‘Have you completed this section?’ with the radio options ‘Yes, I’ve completed this section’ or ‘No, I’ll come back later’.
 
