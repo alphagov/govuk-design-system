@@ -77,7 +77,7 @@ There's a few things to keep in mind to ensure that users can successfully use r
     text: "WCAG 2.2",
     classes: "app-tag"
   }) }}
-  <p>Make sure any 'action links' are at least 24px by 24px in size, or have adequate spacing. This is to make sure users can easily interact with the links. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target Size (minimum)</a>.</p>
+  <p>Make sure any 'action links' are at least 24px by 24px in size, or have adequate spacing. This is to make sure users can easily interact with the links. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target Size (Minimum)</a>.</p>
 </div>
 
 <div class="app-wcag-22" id="wcag-change-answers" role="note">

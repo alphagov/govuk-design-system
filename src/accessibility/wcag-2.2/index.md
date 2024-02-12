@@ -35,7 +35,7 @@ Make sure there's expertise within your organisation by advocating for people to
 
 We've made changes to these components and patterns to comply with WCAG 2.2 level AA. You must check if your service needs amending to align with these changes.
 
-[Images](/styles/images/) also includes guidance to help ensure icons and images in your service meet Target Size (minimum).
+[Images](/styles/images/) also includes guidance to help ensure icons and images in your service meet Target Size (Minimum).
 
 {{ govukTable({
   caption: "Components",
@@ -56,7 +56,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
         html: '<a href="/components/back-link/">Back link</a>'
       },
       {
-        html: 'Redundant entry<br>Target size (minimum)'
+        html: 'Redundant Entry<br>Target Size (Minimum)'
       }
     ],
     [
@@ -64,7 +64,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
         html: '<a href="/components/breadcrumbs/">Breadcrumbs</a>'
       },
       {
-        html: 'Target size (minimum)'
+        html: 'Target Size (Minimum)'
       }
     ],
     [
@@ -72,7 +72,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
         html: '<a href="/components/button/">Button</a>'
       },
       {
-        html: 'Target size (minimum)'
+        html: 'Target Size (Minimum)'
       }
     ],
     [
@@ -80,7 +80,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
         html: '<a href="/components/cookie-banner/">Cookie banner</a>'
       },
       {
-        html: 'Focus not obscured (minimum)<br>Target size (minimum)'
+        html: 'Focus Not Obscured (Minimum)<br>Target Size (Minimum)'
       }
     ],
     [
@@ -88,7 +88,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
         html: '<a href="/components/error-message/">Error message</a>'
       },
       {
-        html: 'Redundant entry'
+        html: 'Redundant Entry'
       }
     ],
     [
@@ -96,7 +96,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
         html: '<a href="/components/file-upload/">File upload</a>'
       },
       {
-        html: 'Dragging movements<br>Redundant entry'
+        html: 'Dragging Movements<br>Redundant Entry'
       }
     ],
     [
@@ -104,7 +104,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
         html: '<a href="/components/footer/">Footer</a>'
       },
       {
-        html: 'Consistent help'
+        html: 'Consistent Help'
       }
     ],
     [
@@ -112,7 +112,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
         html: '<a href="/components/header/">Header</a>'
       },
       {
-        html: 'Focus not obscured (Minimum)<br>Consistent help'
+        html: 'Focus Not Obscured (Minimum)<br>Consistent Help'
       }
     ],
     [
@@ -120,7 +120,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
         html: '<a href="/components/phase-banner/">Phase banner</a>'
       },
       {
-        html: 'Focus not obscured (minimum)'
+        html: 'Focus Not Obscured (Minimum)'
       }
     ],
     [
@@ -128,7 +128,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
         html: '<a href="/components/select/">Select</a>'
       },
       {
-        html: 'Dragging movements'
+        html: 'Dragging Movements'
       }
     ],
     [
@@ -136,7 +136,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
         html: '<a href="/components/summary-list/">Summary list</a>'
       },
       {
-        html: 'Redundant entry<br>Target size (minimum)'
+        html: 'Redundant Entry<br>Target Size (Minimum)'
       }
     ],
     [
@@ -144,7 +144,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
         html: '<a href="/components/tag/">Tag</a>'
       },
       {
-        html: 'Dragging movements'
+        html: 'Dragging Movements'
       }
     ]
   ]
@@ -169,7 +169,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
         html: '<a href="/patterns/addresses/">Addresses</a>'
       },
       {
-        html: 'Redundant entry'
+        html: 'Redundant Entry'
       }
     ],
     [
@@ -177,7 +177,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
         html: '<a href="/patterns/bank-details/">Bank details</a>'
       },
       {
-        html: 'Redundant entry'
+        html: 'Redundant Entry'
       }
     ],
     [
@@ -185,7 +185,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
         html: '<a href="/patterns/email-addresses/">Email addresses</a>'
       },
       {
-        html: 'Redundant entry'
+        html: 'Redundant Entry'
       }
     ],
     [
@@ -193,7 +193,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
         html: '<a href="/patterns/equality-information/">Equality information</a>'
       },
       {
-        html: 'Redundant entry'
+        html: 'Redundant Entry'
       }
     ],
     [
@@ -201,7 +201,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
         html: '<a href="/patterns/names/">Names</a>'
       },
       {
-        html: 'Redundant entry'
+        html: 'Redundant Entry'
       }
     ],
     [
@@ -209,7 +209,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
         html: '<a href="/patterns/national-insurance-numbers/">National Insurance Numbers</a>'
       },
       {
-        html: 'Redundant entry'
+        html: 'Redundant Entry'
       }
     ],
     [
@@ -217,7 +217,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
         html: '<a href="/patterns/passwords/">Passwords</a>'
       },
       {
-        html: 'Accessible authentication<br>Consistent help<br>Target size (minimum)'
+        html: 'Accessible Authentication<br>Consistent Help<br>Target Size (Minimum)'
       }
     ],
     [
@@ -225,7 +225,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
         html: '<a href="/patterns/payment-card-details/">Payment card details</a>'
       },
       {
-        html: 'Target size (minimum)'
+        html: 'Target Size (Minimum)'
       }
     ]
   ]
@@ -250,7 +250,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
         html: '<a href="/patterns/check-a-service-is-suitable/">Check a service is suitable</a>'
       },
       {
-        html: 'Redundant entry'
+        html: 'Redundant Entry'
       }
     ],
     [
@@ -258,7 +258,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
         html: '<a href="/patterns/check-answers/">Check answers</a>'
       },
       {
-        html: 'Redundant entry'
+        html: 'Redundant Entry'
       }
     ],
     [
@@ -266,7 +266,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
         html: '<a href="/patterns/complete-multiple-tasks/">Complete multiple tasks</a>'
       },
       {
-        html: 'Dragging movements<br>Redundant entry'
+        html: 'Dragging Movements<br>Redundant Entry'
       }
     ],
     [
@@ -274,7 +274,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
         html: '<a href="/patterns/confirm-a-phone-number/">Confirm a phone number</a>'
       },
       {
-        html: 'Consistent help'
+        html: 'Consistent Help'
       }
     ],
     [
@@ -282,7 +282,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
         html: '<a href="/patterns/confirm-an-email-address/">Confirm an email address</a>'
       },
       {
-        html: 'Accessible authentication'
+        html: 'Accessible Authentication'
       }
     ],
     [
@@ -290,7 +290,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
         html: '<a href="/patterns/contact-a-department-or-service-team/">Contact a department or service team</a>'
       },
       {
-        html: 'Consistent help'
+        html: 'Consistent Help'
       }
     ],
     [
@@ -298,7 +298,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
         html: '<a href="/patterns/create-accounts/">Create accounts</a>'
       },
       {
-        html: 'Accessible authentication<br>Redundant entry'
+        html: 'Accessible Authentication<br>Redundant Entry'
       }
     ],
     [
@@ -306,7 +306,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
         html: '<a href="/patterns/validation/">Recover from validation errors</a>'
       },
       {
-        html: 'Redundant entry'
+        html: 'Redundant Entry'
       }
     ]
   ]
@@ -331,7 +331,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
         html: '<a href="/patterns/page-not-found-pages/">Page not found pages</a>'
       },
       {
-        html: 'Consistent help'
+        html: 'Consistent Help'
       }
     ],
     [
@@ -339,7 +339,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
         html: '<a href="/patterns/question-pages/">Question pages</a>'
       },
       {
-        html: 'Dragging movements<br>Redundant entry'
+        html: 'Dragging Movements<br>Redundant Entry'
       }
     ],
     [
@@ -347,7 +347,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
         html: '<a href="/patterns/service-unavailable-pages/">Service unavailable pages</a>'
       },
       {
-        html: 'Consistent help'
+        html: 'Consistent Help'
       }
     ],
     [
@@ -355,7 +355,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
         html: '<a href="/patterns/problem-with-the-service-pages/">There is a problem with the service pages</a>'
       },
       {
-        html: 'Consistent help<br>Redundant entry'
+        html: 'Consistent Help<br>Redundant Entry'
       }
     ]
   ]
