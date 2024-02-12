@@ -1,4 +1,4 @@
-const { devices } = require('puppeteer')
+const { KnownDevices } = require('puppeteer')
 
 const { goTo, getAttribute, isVisible } = require('../lib/puppeteer-helpers.js')
 
@@ -12,7 +12,7 @@ describe('Homepage', () => {
   }
 
   beforeAll(async () => {
-    await page.emulate(devices['iPhone 6'])
+    await page.emulate(KnownDevices['iPhone 6'])
   })
 
   beforeEach(async () => {
