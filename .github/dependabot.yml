@@ -25,6 +25,8 @@ updates:
         patterns:
           - '@metalsmith/*'
           - 'jstransformer-*'
+          - 'marked'
+          - 'marked-*'
           - 'metalsmith'
           - 'metalsmith-*'
 
