@@ -82,7 +82,7 @@
     "lint-staged": "^15.2.2",
     "marked": "^11.2.0",
     "marked-gfm-heading-id": "^3.1.2",
-    "marked-highlight": "^2.1.0",
+    "marked-highlight": "^2.1.1",
     "marked-smartypants": "^1.1.6",
     "metalsmith": "^2.6.2",
     "metalsmith-canonical": "^1.2.0",
