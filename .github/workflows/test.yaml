@@ -37,7 +37,7 @@ jobs:
           path: build
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4.0.1
+        uses: actions/setup-node@v4.0.2
         if: steps.build-cache.outputs.cache-hit != 'true'
 
         with:
@@ -92,7 +92,7 @@ jobs:
         uses: actions/checkout@v4.1.1
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4.0.1
+        uses: actions/setup-node@v4.0.2
         with:
           cache: npm
           check-latest: true
