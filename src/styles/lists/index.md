@@ -3,8 +3,10 @@ title: Lists
 description: Use lists to make blocks of text easier to read, and to break information into manageable chunks.
 section: Styles
 backlogIssueId: 64
+theme: Typography
 layout: layout-pane.njk
 showPageNav: true
+order: 10
 ---
 
 {% from "_example.njk" import example %}
