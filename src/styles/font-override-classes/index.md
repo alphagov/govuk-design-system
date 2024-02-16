@@ -11,6 +11,8 @@ order: 11
 
 {% from "_example.njk" import example %}
 
+{% include "_new-type-scale.njk" %}
+
 Use font override classes sparingly to change the default styling of text on a page.
 
 You can use the font override classes in your HTML or reference the typography mixins ([`govuk-font`](https://frontend.design-system.service.gov.uk/sass-api-reference/#govuk-font) or [`govuk-font-size`](https://frontend.design-system.service.gov.uk/sass-api-reference/#govuk-font-size)) in your own components.

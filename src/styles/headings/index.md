@@ -11,6 +11,8 @@ order: 7
 
 {% from "_example.njk" import example %}
 
+{% include "_new-type-scale.njk" %}
+
 Use heading tags, such as `<h1>`, `<h2>` and so on, to tag the headings on a page. Apply a heading class, such as `govuk-heading-l`, to style them visually. Style headings consistently to create a clear content structure throughout your service.
 
 For a [question page](/patterns/question-pages/), or pages with long headings, follow the usual hierarchy of heading levels and styles associated with them. For example, `govuk-heading-l` for an `<h1>`, followed by `govuk-heading-m` for an `<h2>` and so on. In rare cases, you might want to alter how you use the headings hierarchy to achieve a better visual balance. An example of this is in [the design system's notification banner](https://design-system.service.gov.uk/components/notification-banner/success/) which uses heading levels in a different order to emphasise the most important information. If you do change the heading hierarchy in a similar way, it needs to go through accessibility testing before use.
