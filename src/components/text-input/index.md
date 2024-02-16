@@ -83,7 +83,9 @@ Use hint text for help that’s relevant to the majority of users, like how thei
 
 #### When not to use hint text
 
-Do not use long paragraphs and lists in hint text. Screen readers read out the entire text when users interact with the form element. This could frustrate users if the text is long.
+Do not use hint text if you need to give a lengthy explanation with lists and paragraphs. Screen readers read out the entire text when users interact with the form element. This could frustrate users if the text is long.
+
+If you’re asking a question that needs a detailed explanation, read more about [asking complex questions without using hint text](/patterns/question-pages/#asking-complex-questions-without-using-hint-text).
 
 #### Avoid links
 
