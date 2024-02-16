@@ -2,9 +2,11 @@
 title: Colour
 description: Always use the GOV.UK colour palette
 section: Styles
+theme: Visual elements
 aliases: palette
 backlogIssueId: 38
 layout: layout-pane.njk
+order: 12
 ---
 
 {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
