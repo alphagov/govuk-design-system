@@ -9,6 +9,8 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
 Use the table component to make information easier to compare and scan for users.
 
 {{ example({ group: "components", item: "table", example: "default", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}
@@ -56,3 +58,17 @@ If the [width override classes](/styles/layout/#width-override-classes) do not m
 To learn more about this, read guidance on [extending and modifying components in production](/get-started/extending-and-modifying-components/).
 
 {{ example({ group: "components", item: "table", example: "column-widths-custom-classes", html: true, nunjucks: true, open: false, size: "m" }) }}
+
+## Tables with a lot of data
+
+If possible, you should aim to have less data in your tables. If you have a lot of data, try to organise it into multiple tables or multiple pages.
+
+If you cannot split your data, you can use the CSS class `govuk-table--small-text-until-tablet`. This class reduces the size of the text on small screens so large amounts of data has more empty space around it. This makes it easier to visually differentiate between each piece of data when read on small screens.
+
+{{ govukInsetText({
+  html: "<p>The CSS class <code>govuk-table--small-text-until-tablet</code> is only available in version 5.2 of GOV.UK Frontend and later.</p><p>Read about <a href=\"/get-started/new-type-scale/\">updating your service to use the new type scale</a>.</p>"
+}) }}
+
+You should not use this class on tables unless your table has a lot of data, because a smaller amount of data is easier to read if the text is larger.
+
+{{ example({ group: "components", item: "table", example: "lots-of-data", html: true, nunjucks: true, open: false, size: "m" }) }}
