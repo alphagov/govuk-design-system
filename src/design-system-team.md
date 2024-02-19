@@ -25,7 +25,6 @@ If you want to contact the team you can [get in touch via email or Slack](/get-i
 - Brett Kyle – Senior Frontend Developer
 - Calvin Lau – Senior Content Designer
 - Charlotte Downs – Senior Interaction Designer
-- Chris Ballantine-Thomas – Senior Interaction Designer
 - Ciandelle Hughes – Interaction Designer
 - Claire Ashworth – Technical Writer
 - Colin Rotherham – Senior Frontend Developer
