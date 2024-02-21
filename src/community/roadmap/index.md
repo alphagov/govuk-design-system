@@ -13,22 +13,11 @@ Some things on the roadmap might change – the purpose is to tell you what’s 
 
 See our [GitHub team board](https://github.com/orgs/alphagov/projects/53) for more details on our plans and day-to-day activities.
 
-Last updated 8 December 2023.
+Last updated 21 February 2024.
 
 ## Recently shipped
 
-We’ve released GOV.UK Frontend [v5.1.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.1.0), [v4.8.0](https://github.com/alphagov/govuk-frontend/releases/tag/v4.8.0) and [v3.15.0](https://github.com/alphagov/govuk-frontend/releases/tag/v3.15.0) which include the update of the crown logo.
-
-We also recently shipped GOV.UK Frontend v5.0 which includes:
-
-- a new [Task List](/components/task-list) component
-- updates to the [Tag](/components/tag) component
-- [updates to browser support](https://github.com/alphagov/govuk-frontend/issues/2621), including the removal of support for Internet Explorer 8 to 10 and reduced support for Internet Explorer 11
-- [a clear JavaScript API for our components](https://github.com/alphagov/govuk-frontend/issues/1389)
-- [removal of support for compatibility mode](https://github.com/alphagov/govuk-frontend/issues/2769)
-- [new link styles enabled by default](https://github.com/alphagov/govuk-frontend/issues/2350)
-
-You can read more about this breaking release in the guide [‘Changes to GOV.UK Frontend v5.0.0’](https://frontend.design-system.service.gov.uk/changes-to-govuk-frontend-v5/) and the [release notes](https://github.com/alphagov/govuk-frontend/releases/tag/v5.0.0).
+We’ve released [GOV.UK Frontend v5.2.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.2.0) which includes the deprecation of the `useTudorCrown` parameter and an adjustment to our responsive type scale.
 
 We've also:
 
@@ -41,15 +30,14 @@ We've also:
 
 We're:
 
-- [updating the typographic scale](https://github.com/alphagov/govuk-design-system/issues/2289), including increasing the minimum text size on mobile
 - adding the [Password input](https://github.com/alphagov/govuk-design-system-backlog/issues/240) component to the Design System (thanks to Andy Sellick)
+- investigating the [Navigation pattern](https://github.com/alphagov/govuk-design-system-backlog/issues/76)
 
 ## Coming up next
 
 We're getting ready to:
 
 - improve the way we organise technical documentation on the website
-- start working on the next pattern, [Navigation](https://github.com/alphagov/govuk-design-system-backlog/issues/76)
 
 ## Future plans
 
