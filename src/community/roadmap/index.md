@@ -30,15 +30,14 @@ We've also:
 
 We're:
 
-- [updating the typographic scale](https://github.com/alphagov/govuk-design-system/issues/2289), including increasing the minimum text size on mobile
 - adding the [Password input](https://github.com/alphagov/govuk-design-system-backlog/issues/240) component to the Design System (thanks to Andy Sellick)
+- investigating the [Navigation pattern](https://github.com/alphagov/govuk-design-system-backlog/issues/76)
 
 ## Coming up next
 
 We're getting ready to:
 
 - improve the way we organise technical documentation on the website
-- start working on the next pattern, [Navigation](https://github.com/alphagov/govuk-design-system-backlog/issues/76)
 
 ## Future plans
 
