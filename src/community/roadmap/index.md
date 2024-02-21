@@ -17,18 +17,7 @@ Last updated 8 December 2023.
 
 ## Recently shipped
 
-We’ve released GOV.UK Frontend [v5.1.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.1.0), [v4.8.0](https://github.com/alphagov/govuk-frontend/releases/tag/v4.8.0) and [v3.15.0](https://github.com/alphagov/govuk-frontend/releases/tag/v3.15.0) which include the update of the crown logo.
-
-We also recently shipped GOV.UK Frontend v5.0 which includes:
-
-- a new [Task List](/components/task-list) component
-- updates to the [Tag](/components/tag) component
-- [updates to browser support](https://github.com/alphagov/govuk-frontend/issues/2621), including the removal of support for Internet Explorer 8 to 10 and reduced support for Internet Explorer 11
-- [a clear JavaScript API for our components](https://github.com/alphagov/govuk-frontend/issues/1389)
-- [removal of support for compatibility mode](https://github.com/alphagov/govuk-frontend/issues/2769)
-- [new link styles enabled by default](https://github.com/alphagov/govuk-frontend/issues/2350)
-
-You can read more about this breaking release in the guide [‘Changes to GOV.UK Frontend v5.0.0’](https://frontend.design-system.service.gov.uk/changes-to-govuk-frontend-v5/) and the [release notes](https://github.com/alphagov/govuk-frontend/releases/tag/v5.0.0).
+We’ve released [GOV.UK Frontend v5.2.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.2.0) which includes the deprecation of the `useTudorCrown` parameter and an adjustment to our responsive type scale.
 
 We've also:
 
