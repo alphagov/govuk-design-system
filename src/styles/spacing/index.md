@@ -2,9 +2,11 @@
 title: Spacing
 description: The Design System uses a responsive spacing scale which adapts based on screen size
 section: Styles
+theme: Page structure
 aliases: margin, padding
 layout: layout-pane.njk
 showPageNav: true
+order: 3
 ---
 
 {% from "_example.njk" import example %}

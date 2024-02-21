@@ -1,0 +1,81 @@
+---
+title: Lots of data – Table
+layout: layout-example.njk
+---
+
+{% from "govuk/components/table/macro.njk" import govukTable %}
+
+{{ govukTable({
+  caption: "Dates and amounts",
+  captionClasses: "govuk-table__caption--m",
+  firstCellIsHeader: true,
+  classes: "govuk-table--small-text-until-tablet",
+  head: [
+    {
+      text: "Date"
+    },
+    {
+      text: "First amount"
+    },
+    {
+      text: "Second amount"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "First 3 weeks"
+      },
+      {
+        text: "£27.45 per week"
+      },
+      {
+        text: "£33.90 per week"
+      }
+    ],
+    [
+      {
+        text: "Next 6 weeks"
+      },
+      {
+        text: "£27.45 per week"
+      },
+      {
+        text: "£33.90 per week"
+      }
+    ],
+    [
+      {
+        text: "Next 24 weeks"
+      },
+      {
+        text: "£27.45 per week"
+      },
+      {
+        text: "£33.90 per week"
+      }
+    ],
+    [
+      {
+        text: "Next 33 weeks"
+      },
+      {
+        text: "£27.45 per week"
+      },
+      {
+        text: "£33.90 per week"
+      }
+    ],
+    [
+      {
+        text: "Total estimated pay"
+      },
+      {
+        text: "£4,282.20"
+      },
+      {
+        text: "£5,288.40"
+      }
+    ]
+  ]
+}) }}

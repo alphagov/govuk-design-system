@@ -38,7 +38,7 @@ Check the [styles section](/styles/) to see if there’s a CSS class you can use
 For example, you can make changes to:
 
 - spacing with [spacing override classes](/styles/spacing/#overriding-spacing)
-- font size with [font override classes](/styles/typography/#font-override-classes)
+- font size with [font override classes](/styles/font-override-classes)
 - width with [width override classes](/styles/layout/#width-override-classes)
 
 ## Avoid overwriting GOV.UK Design System code

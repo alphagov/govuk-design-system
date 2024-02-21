@@ -2,11 +2,13 @@
 title: Layout
 description: Organise the layout of the page into blocks
 section: Styles
+theme: Page structure
 layout: layout-pane.njk
 showPageNav: true
 headings:
   - text: Hide elements and keep them accessible to screen readers
     aliases: visually hidden
+order: 2
 ---
 
 {% from "_example.njk" import example %}

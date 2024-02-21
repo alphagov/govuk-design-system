@@ -89,7 +89,7 @@ DAC tested a sample of pages to cover the different content types in the GOV.UK 
 - [a short content page](https://design-system.service.gov.uk/community/design-system-working-group/)
 - [a long content page](https://design-system.service.gov.uk/styles/layout/)
 - [an overview page](https://design-system.service.gov.uk/community/)
-- [a styles page](https://design-system.service.gov.uk/styles/typography/)
+- [a styles page](https://design-system.service.gov.uk/styles/headings/)
 - [a component page](https://design-system.service.gov.uk/components/radios/)
 - [a pattern page](https://design-system.service.gov.uk/patterns/question-pages/)
 
