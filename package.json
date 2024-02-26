@@ -49,7 +49,7 @@
     "@metalsmith/markdown": "^1.10.0",
     "@metalsmith/permalinks": "^3.0.1",
     "@metalsmith/postcss": "^5.4.1",
-    "@metalsmith/sass": "^1.8.1",
+    "@metalsmith/sass": "^1.9.0",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
