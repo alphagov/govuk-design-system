@@ -38,6 +38,23 @@ If you’d like to help us build these components and patterns, join the convers
           }
         ]
       }
+    },
+    {
+      key: {
+        text: "Navigation"
+      },
+      value: {
+        text: "Exploration into different kinds of navigation, for example sub-navigation and side navigation."
+      },
+      actions: {
+        classes: "govuk-!-text-align-left",
+        items: [
+          {
+            href: "https://github.com/alphagov/govuk-design-system/discussions/2376",
+            text: "Discuss Navigation"
+          }
+        ]
+      }
     }
   ]
 }) }}
@@ -78,23 +95,6 @@ We particularly welcome input on the following themes. To contribute, you can ad
           {
             href: "https://github.com/alphagov/govuk-design-system/discussions/2375",
             text: "Discuss Choosing a date"
-          }
-        ]
-      }
-    },
-    {
-      key: {
-        text: "Navigation"
-      },
-      value: {
-        text: "Exploration into different kinds of navigation, for example sub-navigation and side navigation."
-      },
-      actions: {
-        classes: "govuk-!-text-align-left",
-        items: [
-          {
-            href: "https://github.com/alphagov/govuk-design-system/discussions/2376",
-            text: "Discuss Navigation"
           }
         ]
       }
