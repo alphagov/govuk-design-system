@@ -112,7 +112,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
         html: '<a href="/components/header/">Header</a>'
       },
       {
-        html: 'Focus not obscured (Minimum)<br>Consistent help'
+        html: 'Focus not obscured (minimum)<br>Consistent help'
       }
     ],
     [
