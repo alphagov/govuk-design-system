@@ -102,7 +102,7 @@ We particularly welcome input on the following themes. To contribute, you can ad
   ]
 }) }}
 
-We’ll next review the list of priorities in summer 2023. We’re not committing to publishing all the things on the list before then, but we’ll choose them first when starting new work.
+When we start new work, we'll choose from this list of priorities first.
 
 ## Other components and patterns
 
