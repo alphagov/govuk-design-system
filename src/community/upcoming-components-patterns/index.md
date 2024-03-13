@@ -102,7 +102,7 @@ We particularly welcome input on the following themes. To contribute, you can ad
   ]
 }) }}
 
-When we start new work, we'll choose from this list of priorities first.
+When we start new work, we’ll choose from this list of priorities first.
 
 ## Other components and patterns
 
