@@ -44,7 +44,8 @@ Here’s a few places to join the discussions that help shape the Design System.
     {%- call imageCard({
       src: "/community/images/share-your-examples-and-research.svg",
       alt: "Share your examples and research section illustration.",
-      title: "Share your examples and research"
+      title: "Share your examples and research",
+      classes: "govuk-!-margin-bottom-2"
     }) %}
       <p>We want to hear how existing components and patterns perform in your service, not just <a href="https://design-system.service.gov.uk/community/upcoming-components-patterns/">what we’re working on</a>. Follow our research template to <a href="https://design-system.service.gov.uk/community/share-research-findings/">share findings about your users.</a></p>
     {% endcall %}
@@ -53,7 +54,8 @@ Here’s a few places to join the discussions that help shape the Design System.
     {%- call imageCard({
       src: "/community/images/propose-a-change-to-pages.svg",
       alt: "Github propose a change illustration.",
-      title: "Propose a change to pages"
+      title: "Propose a change to pages",
+      classes: "govuk-!-margin-bottom-2"
     }) %}
       <p>Anyone can suggest an improvement, report a bug or correct an error on our pages. Look for the ‘Help improve this page’ section at the end of each page to <a href="https://design-system.service.gov.uk/community/propose-a-content-change-using-github/">propose a change using GitHub</a>.</p>
     {% endcall %}
