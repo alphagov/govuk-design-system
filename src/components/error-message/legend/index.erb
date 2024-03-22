@@ -1,0 +1,28 @@
+<%
+  # nationalities would normally be defined in code elsewhere,
+  # as either an activerecord collection or an array of structs:
+
+  nationalities = [
+    OpenStruct.new(id: "British", name: "British", hint: "including English, Scottish, Welsh and Northern Irish"),
+    OpenStruct.new(id: "irish", name: "Irish"),
+    OpenStruct.new(id: "other", name: "Citizen of another country")
+  ]
+
+  # In the associated model, add:
+  #
+  # validates :nationality,
+  #   presence: { message: "Select if you are British, Irish or a citizen of a different country" }
+%>
+
+<%= f.govuk_collection_check_boxes :nationality, nationalities,
+  :id,
+  :name,
+  :hint,
+  legend: {
+    text: "What is your nationality?",
+    tag: "h1",
+    size: "l"
+  },
+  hint: {
+    text: "If you have dual nationality, select all options that are relevant to you."
+  } %>

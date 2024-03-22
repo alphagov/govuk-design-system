@@ -1,0 +1,30 @@
+<%= f.govuk_check_boxes_fieldset :contact,
+  legend: {
+    text: "How would you like to be contacted?",
+    size: "l",
+    tag: "h1"
+  },
+  hint: {
+    text: "Select all options that are relevant to you."
+  }
+  do %>
+
+  <%= f.govuk_check_box :contact, :email,
+    label: { text: "Email" },
+    link_errors: true do %>
+    <%= f.govuk_text_field :email_address,
+      label: { text: 'Email address' } %>
+  <% end %>
+
+  <%= f.govuk_check_box :contact, :phone,
+    label: { text: "Phone" } do %>
+    <%= f.govuk_text_field :phone_number,
+      label: { text: 'Phone number' } %>
+  <% end %>
+
+  <%= f.govuk_check_box :contact, :text_message,
+    label: { text: "Text message" } %>
+    <%= f.govuk_text_field :sms_number,
+      label: { text: 'Mobile phone number' } %>
+  <% end %>
+<% end %>

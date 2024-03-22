@@ -9,7 +9,7 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 
-{{ example({ group: "components", item: "text-input", example: "default", html: true, nunjucks: true, open: false, size: "s", loading: "eager" }) }}
+{{ example({ group: "components", item: "text-input", example: "default", html: true, nunjucks: true, rails: true, open: false, size: "s", loading: "eager" }) }}
 
 ## When to use this component
 
@@ -41,13 +41,13 @@ Read more about [why and how to set legends as headings](/get-started/labels-leg
 
 There are 2 ways to use the text input component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 
-{{ example({ group: "components", item: "text-input", example: "default", html: true, nunjucks: true, open: false, size: "s", titleSuffix: "second" }) }}
+{{ example({ group: "components", item: "text-input", example: "default", html: true, nunjucks: true, rails: true, open: false, size: "s", titleSuffix: "second" }) }}
 
 ### If you’re asking more than one question on the page
 
 If you're asking more than one question on the page, do not set the contents of the `<label>` as the page heading. Read more about [asking multiple questions on question pages](/patterns/question-pages/#asking-multiple-questions-on-a-page).
 
-{{ example({ group: "components", item: "text-input", example: "without-heading", html: true, nunjucks: true, open: false, size: "s" }) }}
+{{ example({ group: "components", item: "text-input", example: "without-heading", html: true, nunjucks: true, rails: true, open: false, size: "s" }) }}
 
 ### Use appropriately-sized text inputs
 
