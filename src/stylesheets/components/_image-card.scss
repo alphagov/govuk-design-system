@@ -1,6 +1,7 @@
 .app-image-card {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: govuk-spacing(7);
 }
 
 .app-image-card--large {
@@ -18,4 +19,10 @@
   width: 100%;
   margin: 0;
   @include govuk-responsive-margin(2, "bottom");
+}
+
+.app-image-card__text {
+  *:last-child {
+    margin-bottom: 0;
+  }
 }
