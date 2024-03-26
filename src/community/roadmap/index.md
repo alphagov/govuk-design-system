@@ -13,25 +13,27 @@ Some things on the roadmap might change – the purpose is to tell you what’s 
 
 See our [GitHub team board](https://github.com/orgs/alphagov/projects/53) for more details on our plans and day-to-day activities.
 
-Last updated 21 February 2024.
+Last updated 26 March 2024.
 
 ## Recently shipped
 
-We’ve released [GOV.UK Frontend v5.2.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.2.0) which includes the deprecation of the `useTudorCrown` parameter and an adjustment to our responsive type scale.
+We’ve released [GOV.UK Frontend v5.3.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.3.0) which includes a new [Password input](/components/password-input/) component and an update to the [Character count](/components/character-count/) component’s HTML.
 
 We've also:
 
+- updated the crown in the header, favicon and social share images
 - updated the components, patterns and styles to be compliant with WCAG 2.2
 - made it easier for teams to understand [what's changed in WCAG 2.2 and what they need to do](/accessibility/wcag-2.2)
 - made it easier for teams to [share their findings from user research](/community/share-research-findings/)
-- run [Design System Day 2023](/community/design-system-day/)
 
 ## Working on now
 
 We're:
 
-- adding the [Password input](https://github.com/alphagov/govuk-design-system-backlog/issues/240) component to the Design System (thanks to Andy Sellick)
 - investigating the [Navigation pattern](https://github.com/alphagov/govuk-design-system-backlog/issues/76)
+- making the guidance around form design and validation easier to find
+- working out how the Design System might need to change when used for pages embedded in apps using web views
+- starting to plan Design System Day 2024
 
 ## Coming up next
 
