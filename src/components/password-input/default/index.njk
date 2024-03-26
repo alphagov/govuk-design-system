@@ -1,0 +1,14 @@
+---
+title: Password input
+layout: layout-example.njk
+---
+
+{% from "govuk/components/password-input/macro.njk" import govukPasswordInput %}
+
+{{ govukPasswordInput({
+  label: {
+    text: "Password"
+  },
+  id: "password-input",
+  name: "password"
+}) }}
