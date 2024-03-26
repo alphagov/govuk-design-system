@@ -183,6 +183,6 @@ We found [this happens in some browsers](https://github.com/alphagov/govuk-desig
 
 ## Research on this component
 
-We [decided that having a second field is not helpful for users](https://github.com/alphagov/govuk-design-system-backlog/issues/240), particularly on password inputs with show and hide buttons.
+We [decided that having a second field is not helpful for users](https://github.com/alphagov/govuk-design-system-backlog/issues/240#issuecomment-2020125340), particularly on password inputs with show and hide buttons.
 
 However, we’d like to better support our rationale with real life examples from service teams and get your feedback.
