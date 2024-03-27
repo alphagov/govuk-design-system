@@ -11,7 +11,7 @@ Everyone can help improve the Design System by joining our community discussions
 
 We depend on a strong cross-government community to ensure the Design System includes the latest research, design and development to represent and be relevant for its users. Read our [community principles](/community/community-principles/).
 
-### Sign up to our mailing list
+## Sign up to our mailing list
 
 [Find out when we announce new events, workshops and ask for help from our community](https://mailchi.mp/707ce8dec373/get-updated-by-email-govuk-design-system).
 
