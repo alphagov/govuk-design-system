@@ -113,7 +113,7 @@ Set the `autocomplete` attribute to `new-password` if the user is creating a pas
     text: "WCAG 2.2",
     classes: "app-tag"
   }) }}
-<p>Providing an `autocomplete` attribute is one way to avoid making the user memorise or transcribe a password from somewhere else in order to use your service. This is to help comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum">3.3.8 Accessible Authentication (Minimum)</a>.</p>
+<p>Providing an <code>autocomplete</code> attribute is one way to avoid making the user memorise or transcribe a password from somewhere else in order to use your service. This is to help comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum">3.3.8 Accessible Authentication (Minimum)</a>.</p>
 </div>
 
 Many browsers will autofill password inputs, even when the `autocomplete` attribute is missing or set to `off`.
