@@ -14,7 +14,7 @@ If you want to contact the team you can [get in touch via email or Slack](/get-i
 
 ### Team leads
 
-- Chris Ballantine-Thomas – Senior Interaction Designer
+- Charlotte Downs – Senior Interaction Designer
 - Kelly Lee – Senior Delivery Manager
 - Oliver Byford – Lead Frontend Developer
 - Trang Erskine – Senior Product Manager
@@ -24,7 +24,6 @@ If you want to contact the team you can [get in touch via email or Slack](/get-i
 - Anika Henke – Senior Accessibility Specialist
 - Brett Kyle – Senior Frontend Developer
 - Calvin Lau – Senior Content Designer
-- Charlotte Downs – Senior Interaction Designer
 - Ciandelle Hughes – Interaction Designer
 - Claire Ashworth – Technical Writer
 - Imran Hussain – Community Designer
