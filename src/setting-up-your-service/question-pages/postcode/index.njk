@@ -1,0 +1,40 @@
+---
+title: Postcode – Using question pages in your services
+layout: layout-example-full-page.njk
+---
+
+{% extends "example-wrappers/full-page.njk" %}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="/form-handler" method="post" novalidate>
+      {{ govukInput({
+        label: {
+          text: "What is your home postcode?",
+          isPageHeading: true,
+          classes: "govuk-label--l"
+        },
+        classes: "govuk-input--width-10",
+        id: "postcode",
+        name: "postcode",
+        autocomplete: "postal-code"
+      }) }}
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+    </form>
+  </div>
+</div>
+{% endblock %}
