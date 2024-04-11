@@ -26,8 +26,7 @@ const config = [
   },
   {
     label: 'Accessibility',
-    url: 'accessibility',
-    includeInSearch: true
+    url: 'accessibility'
   }
 ]
 
