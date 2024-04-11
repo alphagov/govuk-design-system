@@ -38,18 +38,6 @@ See the full list of [components and patterns affected by WCAG 2.2](/accessibili
 
 If you use the page template, you'll also get the header without having to add it, as it's included by default. However, if you want to customise the default header, read the [page template guidance about customising components](/styles/page-template/#changing-template-content).
 
-## Update to the new GOV.UK logo between 19&nbsp;February and 1&nbsp;March
-
-The GOV.UK logo has been updated to reflect the changing of the monarch. King Charles&nbsp;III uses the Tudor Crown, rather than the St Edward’s Crown chosen by Queen Elizabeth&nbsp;II.
-
-If your service uses GOV.UK branding, you must update your service between 19 February and 1 March 2024 to use the new logo. You may need to update the version of GOV.UK Frontend your service uses before you can do this.
-
-Read the release notes for the version of Frontend you're using for instructions on how to update the logo.
-
-- [GOV.UK Frontend v5.1.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.1.0)
-- [GOV.UK Frontend v4.8.0](https://github.com/alphagov/govuk-frontend/releases/tag/v4.8.0)
-- [GOV.UK Frontend v3.15.0](https://github.com/alphagov/govuk-frontend/releases/tag/v3.15.0)
-
 ## When to use this component
 
 You must use the GOV.UK header at the top of every page if your service is being hosted on one of these domains:
