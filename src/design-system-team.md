@@ -33,4 +33,5 @@ If you want to contact the team you can [get in touch via email or Slack](/get-i
 - Kim 'beeps' Grey – Frontend Developer
 - Mia Allers – Senior Graphic Designer
 - Owen Jones – Senior Frontend Developer
+- Patrick Cartlidge – Frontend Developer
 - Romaric Pascal – Senior Frontend Developer
