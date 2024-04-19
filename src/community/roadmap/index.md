@@ -13,11 +13,13 @@ Some things on the roadmap might change – the purpose is to tell you what’s 
 
 See our [GitHub team board](https://github.com/orgs/alphagov/projects/53) for more details on our plans and day-to-day activities.
 
-Last updated 26 March 2024.
+Last updated 19 April 2024.
 
 ## Recently shipped
 
-We’ve released [GOV.UK Frontend v5.3.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.3.0) which includes a new [Password input](/components/password-input/) component and an update to the [Character count](/components/character-count/) component’s HTML.
+We've released [GOV.UK Frontend v5.3.1](https://github.com/alphagov/govuk-frontend/releases/tag/v5.3.1) with minor bug fixes.
+
+Previously, we’ve released [GOV.UK Frontend v5.3.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.3.0) which includes a new [Password input](/components/password-input/) component and an update to the [Character count](/components/character-count/) component’s HTML.
 
 We've also:
 
