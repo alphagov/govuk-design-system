@@ -9,7 +9,7 @@ export default {
   plugins: [
     () => async (tree) => {
       visit(tree, (element, index, parent) => {
-        if (matches('app-example-page__wrapper', element)) {
+        if (matches('.app-example-page__wrapper', element)) {
           return EXIT
         }
         if (matches('[class*="govuk-"]', element)) {
