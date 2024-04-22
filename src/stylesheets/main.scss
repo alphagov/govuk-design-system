@@ -1,6 +1,10 @@
 $govuk-new-typography-scale: true;
 
-@import "govuk/all";
+@import "govuk/settings/all";
+@import "govuk/helpers/all";
+@import "govuk/tools/all";
+@import "govuk/core/all";
+@import "govuk/objects/all";
 
 // App-specific variables
 $app-light-grey: #f8f8f8;
