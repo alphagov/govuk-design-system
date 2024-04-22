@@ -5,12 +5,6 @@ $govuk-new-typography-scale: true;
 @import "govuk/tools/all";
 @import "govuk/core/all";
 @import "govuk/objects/all";
-@import "govuk/utilities/all";
-
-@import "govuk/overrides/spacing";
-@import "govuk/overrides/text-align";
-@import "govuk/overrides/typography";
-@import "govuk/overrides/width";
 
 @import "govuk/components/back-link";
 @import "govuk/components/breadcrumbs";
@@ -38,6 +32,13 @@ $govuk-new-typography-scale: true;
 @import "govuk/components/tag";
 @import "govuk/components/task-list";
 @import "govuk/components/warning-text";
+
+@import "govuk/utilities/all";
+
+@import "govuk/overrides/spacing";
+@import "govuk/overrides/text-align";
+@import "govuk/overrides/typography";
+@import "govuk/overrides/width";
 
 // App-specific variables
 $app-light-grey: #f8f8f8;
