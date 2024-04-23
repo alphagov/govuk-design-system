@@ -68,6 +68,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "glob": "^10.3.12",
     "gray-matter": "^4.0.2",
+    "hast-util-select": "^6.0.2",
     "highlight.js": "^11.9.0",
     "html-validate": "^8.18.1",
     "husky": "^9.0.11",
@@ -93,6 +94,7 @@
     "postcss-scss": "^4.0.9",
     "prettier": "^3.2.5",
     "puppeteer": "^22.6.1",
+    "rehype-parse": "^9.0.0",
     "rollup": "^4.13.2",
     "sass-export": "^2.1.2",
     "serve-static": "^1.15.0",
@@ -105,7 +107,9 @@
     "stylelint-config-gds": "^2.0.0",
     "stylelint-order": "^6.0.4",
     "tap-mocha-reporter": "^5.0.4",
-    "typescript": "^5.4.3"
+    "typescript": "^5.4.3",
+    "unified": "^11.0.4",
+    "unist-util-visit": "^5.0.0"
   },
   "optionalDependencies": {
     "@jest/environment": "^29.7.0",
