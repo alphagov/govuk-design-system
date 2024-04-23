@@ -9,6 +9,10 @@ module.exports = [
     url: 'get-started'
   },
   {
+    label: 'Setting up your service',
+    url: 'setting-up-your-service'
+  },
+  {
     label: 'Styles',
     url: 'styles'
   },
