@@ -1,6 +1,12 @@
 /* eslint-disable no-new */
 
-import { initAll } from 'govuk-frontend'
+// Import directly from the modules in govuk-frontend because our treeshaking
+// currently doesn't work when importing directly from govuk-frontend
+//
+// See https://github.com/alphagov/govuk-frontend/issues/4957
+import { Button } from 'govuk-frontend/dist/govuk/components/button/button.mjs'
+import { NotificationBanner } from 'govuk-frontend/dist/govuk/components/notification-banner/notification-banner.mjs'
+import { SkipLink } from 'govuk-frontend/dist/govuk/components/skip-link/skip-link.mjs'
 
 import Analytics from './components/analytics.mjs'
 import BackToTop from './components/back-to-top.mjs'
@@ -18,7 +24,28 @@ import Search from './components/search.mjs'
 import AppTabs from './components/tabs.mjs'
 
 // Initialise GOV.UK Frontend
-initAll()
+// Button
+const $buttons = document.querySelectorAll('[data-module="govuk-button"]')
+
+$buttons.forEach(($button) => {
+  new Button($button)
+})
+
+// Notification Banner
+const $notificationBanner = document.querySelector(
+  '[data-module="govuk-notification-banner"]'
+)
+
+if ($notificationBanner) {
+  new NotificationBanner($notificationBanner)
+}
+
+// Skip link
+const $skipLink = document.querySelector('[data-module="govuk-skip-link"]')
+
+// No checking if it exists because we can safely assume there will always be
+// a skip link on a page
+new SkipLink($skipLink)
 
 // Initialise cookie banner
 const $cookieBanner = document.querySelector(
