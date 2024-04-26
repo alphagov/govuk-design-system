@@ -15,9 +15,7 @@ Always use the GOV.UK colour palette.
 
 ## Colour contrast
 
-You must make sure that the contrast ratio of text and interactive elements in
-your service meets [level AA of the Web Content Accessibility Guidelines
-(WCAG 2.2)](https://www.w3.org/TR/WCAG22/#contrast-minimum).
+You must make sure that the contrast ratio of text and interactive elements in your service meets [level AA of the Web Content Accessibility Guidelines (WCAG 2.2)](https://www.w3.org/TR/WCAG22/#contrast-minimum).
 
 {{ govukInsetText({
   text: "The WCAG 2.2 criteria for Contrast (Minimum) is the same as WCAG 2.1."
@@ -25,17 +23,9 @@ your service meets [level AA of the Web Content Accessibility Guidelines
 
 ## Main colours
 
-If you are using GOV.UK Frontend or the GOV.UK Prototype Kit, use the [Sass
-variables](https://frontend.design-system.service.gov.uk/sass-api-reference/#colours) provided rather than copying the
-hexadecimal (hex) colour values. For example, use `$govuk-brand-colour` rather
-than `{{ colours.applied['Brand colour'][0]['colour'] | trim }}`.
-This means that your service will always use the most recent colour palette
-whenever you update.
+If you are using GOV.UK Frontend or the GOV.UK Prototype Kit, use the [Sass variables](https://frontend.design-system.service.gov.uk/sass-api-reference/#colours) provided rather than copying the hexadecimal (hex) colour values. For example, use `$govuk-brand-colour` rather than `{{ colours.applied['Brand colour'][0]['colour'] | trim }}`. This means that your service will always use the most recent colour palette whenever you update.
 
-Only use the variables in the context they're designed for. In all other cases,
-you should reference the [colour palette](#colour-palette) directly. For
-example, if you wanted to use red, you should
-use `govuk-colour("red")` rather than `$govuk-error-colour`.
+Only use the variables in the context they're designed for. In all other cases, you should reference the [colour palette](#colour-palette) directly. For example, if you wanted to use red, you should use `govuk-colour("red")` rather than `$govuk-error-colour`.
 
 <table class="govuk-body app-colour-list" summary="Table of main colours">
   <tbody>
@@ -75,13 +65,9 @@ use `govuk-colour("red")` rather than `$govuk-error-colour`.
 
 Use these colours for supporting materials like illustrations, or in custom components where appropriate.
 
-To reference colours from the palette directly you should use the `govuk-colour`
-function. For example, `color: govuk-colour("blue")`.
+To reference colours from the palette directly you should use the `govuk-colour` function. For example, `color: govuk-colour("blue")`.
 
-Avoid using the palette colours if there is a Sass variable that is designed for
-your context. For example, if you are styling the error state of a component you
-should use the `$govuk-error-colour` Sass variable rather than
-`govuk-colour("red")`.
+Avoid using the palette colours if there is a Sass variable that is designed for your context. For example, if you are styling the error state of a component you should use the `$govuk-error-colour` Sass variable rather than `govuk-colour("red")`.
 
 If you need to use tints of this palette, use either 25% or 50%.
 
