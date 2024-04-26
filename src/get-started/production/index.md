@@ -29,7 +29,8 @@ We recommend [installing GOV.UK Frontend using npm](https://frontend.design-syst
 
 Using this option, you will be able to:
 
-- selectively [include the CSS or JavaScript](https://frontend.design-system.service.gov.uk/importing-css-assets-and-javascript/) for individual components
+- selectively [include the CSS](https://frontend.design-system.service.gov.uk/import-css/) for individual components
+- selectively [include the JavaScript](https://frontend.design-system.service.gov.uk/import-javascript/) for individual components
 - build your own styles or components based on the palette or typography and spacing mixins
 - customise the build (for example, overriding colours or enabling global styles)
 - use the [Nunjucks template and macros](https://frontend.design-system.service.gov.uk/use-nunjucks/) if your environment supports them
@@ -42,7 +43,8 @@ Using this option, you will be able to include all the CSS and JavaScript of GOV
 
 You will not be able to:
 
-- selectively [include the CSS or JavaScript](https://frontend.design-system.service.gov.uk/importing-css-assets-and-javascript/) for individual components
+- selectively [include the CSS](https://frontend.design-system.service.gov.uk/import-css/) for individual components
+- selectively [include the JavaScript](https://frontend.design-system.service.gov.uk/import-javascript/) for individual components
 - build your own styles or components based on the palette or typography and spacing mixins
 - customise the build, for example, overriding colours or enabling global styles
 - use the component Nunjucks templates
