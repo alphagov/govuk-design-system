@@ -82,6 +82,7 @@ For users of screen readers, all the text in the button will be read as a single
 #### Write clear button text
 
 Write the heading and summary line like any other button text. Use sentence case, describe the content that will show, and keep it short.
+
 Users of screen readers might find it difficult to navigate the accordion if the button text is too long.
 
 If you struggle to come up with clear button text, it might be because the way you’ve separated the content is not clear. Organise sections in a way that makes sense to users, based on their needs.
