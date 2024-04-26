@@ -97,7 +97,7 @@ To change the components that are included in the page template by default, set 
       <td class="govuk-table__cell">assetPath</td>
       <td class="govuk-table__cell">Variable</td>
       <td class="govuk-table__cell">
-        Specify a path to the <a href="https://frontend.design-system.service.gov.uk/importing-css-assets-and-javascript/#font-and-image-assets">GOV.UK Frontend assets</a> (icons, images, font files).
+        Specify a path to the <a href="https://frontend.design-system.service.gov.uk/import-font-and-images-assets/">GOV.UK Frontend assets</a> (icons, images, font files).
       </td>
     </tr>
     <tr class="govuk-table__row">
@@ -157,7 +157,7 @@ To change the components that are included in the page template by default, set 
       <td class="govuk-table__cell">cspNonce</td>
       <td class="govuk-table__cell">Variable</td>
       <td class="govuk-table__cell">
-        Add a <code>nonce</code> attribute to the script for your Content Security Policy (CSP). Provide a nonce that hostile actors cannot guess, as otherwise they can easily find a way around your CSP. However, you should use this attribute only if you’re not able to <a class="govuk-link" href="https://frontend.design-system.service.gov.uk/importing-css-assets-and-javascript/#if-your-javascript-is-not-working-properly">include the hash for the inline scripts in your service’s CSP</a>.
+        Add a <code>nonce</code> attribute to the script for your Content Security Policy (CSP). Provide a nonce that hostile actors cannot guess, as otherwise they can easily find a way around your CSP. However, you should use this attribute only if you’re not able to <a class="govuk-link" href="https://frontend.design-system.service.gov.uk/import-javascript/#if-our-inline-javascript-snippet-is-blocked-by-a-content-security-policy">include the hash for the inline scripts in your service’s CSP</a>.
       </td>
     </tr>
     <tr class="govuk-table__row">
