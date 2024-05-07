@@ -53,10 +53,10 @@ For example, "Your reference number is **ABC12345678**. Use this to track your a
 
 ### Tabular numbers
 
-Tabular numbers are a alternative style where each digit is given equal width.
+Tabular numbers are an alternative style where each digit is given equal width.
 
-Using tabular numbers can make numbers easier to read when that are intended to be compared to one another, such as in data tables, or in reference numbers where the additional spacing makes it easier to read each digit individually.
+Using tabular numbers can make numbers intended for comparison to one another easier to read. For example, numbers in data tables, or reference numbers where the additional spacing makes it easier to read each digit individually.
 
-Tabular numbers can also be used for numbers that dynamically update, such as a counter, as the equal width of each digit prevents the number from moving as it updates.
+You can also use tabular numbers for numbers that dynamically update, such as in a counter. The equal width of each digit prevents the numbers from visually moving towards and away from each other as the counter updates.
 
-Tabular numbers can be activated by using `govuk-!-font-tabular-numbers`.
+Activate tabular numbers by using `govuk-!-font-tabular-numbers`.
