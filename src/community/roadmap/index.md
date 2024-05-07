@@ -33,18 +33,21 @@ We've also:
 We're:
 
 - investigating the [Navigation pattern](https://github.com/alphagov/govuk-design-system-backlog/issues/76)
-- making the guidance around form design and validation easier to find
-- working out how the Design System might need to change when used for pages embedded in apps using web views
-- starting to plan Design System Day 2024
+- planning Design System Day 2024 events
+- making it easier for teams using GOV.UK Frontend to only include the components a service is using
 
 ## Coming up next
 
 We're getting ready to:
 
-- improve the way we organise technical documentation on the website
+- understand how we can better help users find what they need on the GOV.UK Design System website
+- ensure the GOV.UK Design System website is compliant with WCAG 2.2
+- improve the JavaScript of the Chararcter count, Tabs and Accordion components
 
 ## Future plans
 
 We plan to:
 
 - [drop support for Ruby Sass and LibSass](https://github.com/alphagov/govuk-frontend/issues/2637) and [migrate to the Sass module system](https://github.com/alphagov/govuk-frontend/issues/1791)
+- explore how the [accessibile autocomplete component](https://github.com/alphagov/accessible-autocomplete) could be added to the GOV.UK Design System
+- provide conventions, configs, tools and code to help users build build things on top of GOV.UK Frontend
