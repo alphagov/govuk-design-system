@@ -50,3 +50,13 @@ Use bold text sparingly - using too much will make it difficult for users to kno
 You can use bold to highlight critical information and emphasise particular words in a transaction.
 
 For example, "Your reference number is **ABC12345678**. Use this to track your application. Updates will be sent to **name<i></i>@example.com**"
+
+### Tabular numbers
+
+Tabular numbers are a alternative style where each digit is given equal width.
+
+Using tabular numbers can make numbers easier to read when that are intended to be compared to one another, such as in data tables, or in reference numbers where the additional spacing makes it easier to read each digit individually.
+
+Tabular numbers can also be used for numbers that dynamically update, such as a counter, as the equal width of each digit prevents the number from moving as it updates.
+
+Tabular numbers can be activated by using `govuk-!-font-tabular-numbers`.
