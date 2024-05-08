@@ -45,9 +45,7 @@ Vicky Teinaki, Student Loans Company
 
 ### Tickets
 
-Tickets will be released on 29 April 2024 at 14:00 BST.
-
-Tickets for previous events have gone fast so be ready to secure yours! We’ll let you know via [our mailing list](https://mailchi.mp/707ce8dec373/get-updated-by-email-govuk-design-system) and on [cross-government Slack](https://ukgovernmentdigital.slack.com/channels/govuk-design-system) when tickets are available.
+Tickets for this event have now sold out. However you can join the waitlist by [registering on Eventbrite here](https://www.eventbrite.co.uk/e/design-system-day-day-1-tickets-890091496627?aff=oddtdtcreator&lang=en-gb&locale=en_GB&status=30&view=listing).
 
 ## Previous events
 
