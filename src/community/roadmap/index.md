@@ -50,4 +50,4 @@ We plan to:
 
 - [drop support for Ruby Sass and LibSass](https://github.com/alphagov/govuk-frontend/issues/2637) and [migrate to the Sass module system](https://github.com/alphagov/govuk-frontend/issues/1791)
 - explore how the [accessibile autocomplete component](https://github.com/alphagov/accessible-autocomplete) could be added to the GOV.UK Design System
-- provide conventions, configs, tools and code to help users build build things on top of GOV.UK Frontend
+- provide conventions, configs, tools and code to help users build things on top of GOV.UK Frontend
