@@ -31,17 +31,25 @@ The first event this year will be on 21 May 2024. It will be a free, online even
 
 ### Speakers
 
-**What will the GOV.UK Design System look like in 5 years?**
-Trang Erskine, Charlotte Downs & Romaric Pascal, GOV.UK Design System
+**The GOV.UK Design System in 5 years**
+Trang Erskine, Charlotte Downs and Romaric Pascal, GOV.UK Design System
+
+A show & tell exploring the history of the GOV.UK Design System, and our focus for the next few years.
 
 **Leading the system**
 Daniel Fontaneda, Bumble
 
-**The iPhone state – simplicity through complexity**
+A show and tell delving into the principles and actions that contribute to the success of a design system.
+
+**Using the GOV.UK Prototype Kit (intermediate level)**
+Vicky Teinaki, Student Loans Company
+
+A workshop in how to design, code and optimise prototypes using the GOV.UK Prototype Kit.
+
+**Who designs the designers?**
 Gordon Guthrie, Scottish Government
 
-**Designing using the GOV.UK Prototype Kit (intermediate level)**
-Vicky Teinaki, Student Loans Company
+A show and tell examining how to apply system design principles to the system of government.
 
 ### Tickets
 
