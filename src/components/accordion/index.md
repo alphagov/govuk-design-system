@@ -65,7 +65,7 @@ There are 2 ways to use the accordion component. You can use HTML or, if you’r
 
 The accordion component uses JavaScript. When JavaScript is not available, users will see all the content displayed with the section labels as headings.
 
-If you are using HTML, you must add an 'id' attribute to to the `<div>` tag with the `accordion` class. It must be unique across the service's domain to maintain the persistent expanded state of the accordion.
+If you are using HTML, you must add an 'id' attribute to the `<div>` tag with the `govuk-accordion` class. It must be unique across the service's domain to maintain the persistent expanded state of the accordion.
 
 ### Section heading buttons
 
