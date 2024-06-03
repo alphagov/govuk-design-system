@@ -114,7 +114,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
         html: '<a href="/components/header/">Header</a>'
       },
       {
-        html: 'Focus not obscured (Minimum)<br>Consistent help'
+        html: 'Focus not obscured (minimum)<br>Consistent help'
       }
     ],
     [
