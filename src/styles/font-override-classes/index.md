@@ -51,7 +51,7 @@ You can use bold to highlight critical information and emphasise particular word
 
 For example, "Your reference number is **ABC12345678**. Use this to track your application. Updates will be sent to **name<i></i>@example.com**"
 
-### Tabular numbers
+## Tabular numbers
 
 Tabular numbers are an alternative style where each digit is given equal width.
 
