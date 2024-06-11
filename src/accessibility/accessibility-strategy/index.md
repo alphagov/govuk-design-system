@@ -34,7 +34,7 @@ We follow the [4 principles of web accessibility](https://www.w3.org/WAI/WCAG21/
 
 ### Universal design
 
-When designing accessible styles, components and patterns, we aim to follow [the 7 principles of universal design](https://universaldesign.ie/What-is-Universal-Design/The-7-Principles/):
+When designing accessible styles, components and patterns, we aim to follow [the 7 principles of universal design](https://universaldesign.ie/about-universal-design/the-7-principles):
 
 1.  Equitable use – The design is useful and marketable to people with diverse abilities.
 2.  Flexibility in use – The design accommodates a wide range of individual preferences and abilities.
