@@ -1,7 +1,7 @@
 ---
 layout: layout-pane.njk
 title: Accessibility
-description:  tbd
+description: How we make the GOV.UK Design System accessible and our strategy for improving its accessibility over time.
 showSubNav: true
 ---
 

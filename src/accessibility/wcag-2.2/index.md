@@ -1,6 +1,6 @@
 ---
 title: Changes to the Design System to meet WCAG 2.2
-description: Outlines the current principles and work needed to improve the accessibility of the GOV.UK Design System
+description: Outlines the work done to improve the accessibility of the GOV.UK Design System to meet WCAG 2.2 guidelines.
 section: Accessibility
 layout: layout-pane.njk
 showPageNav: true
