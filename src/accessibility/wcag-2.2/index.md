@@ -111,7 +111,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
     ],
     [
       {
-        html: '<a href="/components/header/">Header</a>'
+        html: '<a href="/components/service-header-navigation/">Service header navigation</a>'
       },
       {
         html: 'Focus not obscured (Minimum)<br>Consistent help'
