@@ -12,7 +12,7 @@
  * The consent cookie version is defined in cookie-banner.njk
  */
 
-import Analytics from './analytics.mjs'
+import { loadAnalytics } from './analytics.mjs'
 
 /* Name of the cookie to save users cookie preferences to. */
 const CONSENT_COOKIE_NAME = 'design_system_cookies_policy'
@@ -186,7 +186,7 @@ export function resetCookies() {
       window[`ga-disable-G-${TRACKING_LIVE_ID}`] = false
       window[`ga-disable-UA-${TRACKING_PREVIEW_ID_UA}`] = false
       window[`ga-disable-UA-${TRACKING_LIVE_ID_UA}`] = false
-      Analytics()
+      loadAnalytics()
     } else {
       // Disable GA if not allowed
       window[`ga-disable-G-${TRACKING_PREVIEW_ID}`] = true

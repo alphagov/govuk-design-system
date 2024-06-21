@@ -2,7 +2,7 @@
 
 import { createAll, Button, NotificationBanner, SkipLink } from 'govuk-frontend'
 
-import Analytics from './components/analytics.mjs'
+import { loadAnalytics } from './components/analytics.mjs'
 import BackToTop from './components/back-to-top.mjs'
 import CookieBanner from './components/cookie-banner.mjs'
 import {
@@ -33,7 +33,7 @@ if ($cookieBanner) {
 // Initialise analytics if consent is given
 const userConsent = getConsentCookie()
 if (userConsent && isValidConsentCookie(userConsent) && userConsent.analytics) {
-  Analytics()
+  loadAnalytics()
 }
 
 // Initialise example frames

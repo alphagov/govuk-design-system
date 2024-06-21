@@ -111,7 +111,7 @@ describe('Cookie settings', () => {
   describe('setConsentCookie', () => {
     beforeEach(() => {
       // Clear all instances and calls to constructor and all methods:
-      Analytics.default.mockClear()
+      Analytics.loadAnalytics.mockClear()
     })
 
     afterEach(() => {
@@ -134,7 +134,7 @@ describe('Cookie settings', () => {
       it('does not load the analytics script', async () => {
         CookieHelpers.setConsentCookie({ analytics: false })
 
-        expect(Analytics.default).toHaveBeenCalledTimes(0)
+        expect(Analytics.loadAnalytics).toHaveBeenCalledTimes(0)
       })
 
       it('deletes existing analytics cookies', async () => {
@@ -165,7 +165,7 @@ describe('Cookie settings', () => {
       it('loads analytics script if consenting to analytics cookies', async () => {
         CookieHelpers.setConsentCookie({ analytics: true })
 
-        expect(Analytics.default).toHaveBeenCalledTimes(1)
+        expect(Analytics.loadAnalytics).toHaveBeenCalledTimes(1)
       })
     })
 
@@ -207,7 +207,7 @@ describe('Cookie settings', () => {
 
       CookieHelpers.resetCookies()
 
-      expect(Analytics.default).toHaveBeenCalledTimes(1)
+      expect(Analytics.loadAnalytics).toHaveBeenCalledTimes(1)
     })
 
     it('disables analytics by setting a window property', async () => {
