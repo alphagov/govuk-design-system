@@ -138,7 +138,7 @@ describe('Cookie settings', () => {
       })
 
       it('deletes existing analytics cookies', async () => {
-        document.cookie = '_ga=test;_gid=test;_gat_govuk_shared=test'
+        document.cookie = '_ga=test;_ga_govuk_shared=test'
 
         CookieHelpers.setConsentCookie({ analytics: false })
 
@@ -147,8 +147,7 @@ describe('Cookie settings', () => {
         )
         // Make sure those analytics cookies are definitely gone
         expect(CookieHelpers.Cookie('_ga')).toEqual(null)
-        expect(CookieHelpers.Cookie('_gid')).toEqual(null)
-        expect(CookieHelpers.Cookie('_gat_govuk_shared')).toEqual(null)
+        expect(CookieHelpers.Cookie('_ga_govuk_shared')).toEqual(null)
       })
     })
 
@@ -184,7 +183,6 @@ describe('Cookie settings', () => {
   describe('resetCookies', () => {
     it('deletes cookies the user has not consented to', async () => {
       document.cookie = '_ga=test'
-      document.cookie = '_gid=test'
       document.cookie =
         'design_system_cookies_policy={"analytics":false,"version":1}'
 
@@ -197,7 +195,6 @@ describe('Cookie settings', () => {
 
     it('deletes cookies if the consent cookie is not present', async () => {
       document.cookie = '_ga=test'
-      document.cookie = '_gid=test'
 
       CookieHelpers.resetCookies()
 
@@ -251,7 +248,6 @@ describe('Cookie settings', () => {
 
     it('resetCookies deletes cookies if consent cookie is old version', async () => {
       document.cookie = '_ga=test'
-      document.cookie = '_gid=test'
       document.cookie =
         'design_system_cookies_policy={"analytics":false,"version":0}'
 
