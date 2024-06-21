@@ -17,7 +17,7 @@ Help users know they’re using your service and can navigate around it.
 
 ## How it works
 
-The [GOV.UK header](/components/header/) and [Service header navigation](/components/service-header-navigation/) components work together to assure users that they’re in the right place to use your service. It also helps users understand that GOV.UK functions as one website.
+The [GOV.UK header](/components/header/) and [Service header navigation](/components/service-header-navigation/) components work together to assure users that they’re in the right place to use your service. They also help users understand that GOV.UK functions as one website.
 
 The GOV.UK header (shown as black) has:
 
@@ -36,7 +36,7 @@ The GOV.UK header component should only be used to show the GOV.UK logo and any 
 
 Also see GOV.UK One Login guidance to [Let users navigate to their GOV.UK One Login and sign out easily](https://www.sign-in.service.gov.uk/documentation/design-recommendations/let-users-navigate-sign-out).
 
-Services do not need to duplicate the menu bar used in the[GOV.UK homepage](https://gov.uk) and mainstream guidance pages.
+Services do not need to duplicate the menu bar used in the [GOV.UK homepage](https://gov.uk) and mainstream guidance pages.
 
 ### Plan your service level navigation and links
 
@@ -47,8 +47,8 @@ Use the Service level navigation component to show your service name, navigation
 If your service is more than 5 pages long, show the service name as a link to the homepage of your service.
 
 If your service does not have a homepage, link to either:
-its GOV.UK start page
-the first question of your service
+- its GOV.UK start page
+- the first question of your service
 
 #### Choosing and writing navigation links
 
@@ -60,7 +60,7 @@ Navigation is not a site map and does not need to list every part of your servic
 
 ### Adding other elements alongside navigation
 
-GOV.UK header and Service header navigation components both include ‘slots’ to insert code at the start and end of the container. These can be used to show tools such as language selectors.
+In the component code, there are ‘slots’ to insert code at the start and end of the container. These can be used to show tools such as language selectors.
 
 To help maintain consistency across services on GOV.UK, we provide some advice on how and where to place some common components and elements.
 
@@ -80,7 +80,7 @@ If you use a language navigation that changes your entire service, place it in t
 
 For language navigation that only changes particular pages, consider adding it to the page content.
 
-For examples of language navigation, see the GitHub discussion to [propose adding a language navigation component](https://github.com/alphagov/govuk-design-system-backlog/issues/285) to the Design System.
+See some examples of language navigation in the the GitHub discussion to [propose adding a language navigation component](https://github.com/alphagov/govuk-design-system-backlog/issues/285) to the Design System.
 
 #### Search inputs
 
