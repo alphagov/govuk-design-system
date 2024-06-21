@@ -218,6 +218,8 @@ describe('Cookie settings', () => {
 
       expect(window['ga-disable-UA-26179049-17']).toEqual(true)
       expect(window['ga-disable-UA-116229859-1']).toEqual(true)
+      expect(window['ga-disable-G-8F2EMQL51V']).toEqual(true)
+      expect(window['ga-disable-G-GHT8W0QGD9']).toEqual(true)
     })
 
     it('re-enables analytics by setting a window property', async () => {
@@ -228,6 +230,8 @@ describe('Cookie settings', () => {
 
       expect(window['ga-disable-UA-26179049-17']).toEqual(false)
       expect(window['ga-disable-UA-116229859-1']).toEqual(false)
+      expect(window['ga-disable-G-8F2EMQL51V']).toEqual(false)
+      expect(window['ga-disable-G-GHT8W0QGD9']).toEqual(false)
     })
   })
 
