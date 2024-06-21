@@ -1,7 +1,7 @@
 // @ts-nocheck
 
 // eslint-disable-next-line jsdoc/require-jsdoc
-export default function loadAnalytics() {
+export function loadAnalytics() {
   if (!window.ga || !window.ga.loaded) {
     // Load gtm script
     // Script based on snippet at https://developers.google.com/tag-manager/quickstart
