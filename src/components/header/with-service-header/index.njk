@@ -1,0 +1,15 @@
+---
+title: Header with service header navigation – Header
+layout: layout-example.njk
+---
+
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+{% from "govuk/components/service-header/macro.njk" import govukServiceHeader %}
+
+{{ govukHeader({
+  homepageUrl: "#"
+}) }}
+{{ govukServiceHeader({
+  serviceName: "Service name",
+  serviceUrl: "#/"
+}) }}

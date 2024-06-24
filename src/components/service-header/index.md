@@ -65,13 +65,13 @@ Services do not need to duplicate the menu bar used in the [GOV.UK homepage](htt
 
 ### Default service header without navigation
 
-[EXAMPLE]
+{{ example({ group: "components", item: "service-header", example: "with-header", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 If your service is more than 5 pages long, use the default service header without navigation to help users understand which service they are using.
 
 ### Service header navigation without service name
 
-[EXAMPLE]
+{{ example({ group: "components", item: "service-header", example: "with-header-and-navigation", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 If your service has 5 pages or fewer, you do not need to show the name of your service.
 
@@ -79,7 +79,7 @@ You can use the Service header navigation component to show some basic navigatio
 
 ### Service header navigation with service name
 
-[EXAMPLE]
+{{ example({ group: "components", item: "service-header", example: "with-header-service-name-and-navigation", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 If your service needs more than basic navigation, use the service header navigation with service name.
 

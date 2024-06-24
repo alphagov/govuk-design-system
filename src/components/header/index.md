@@ -50,7 +50,7 @@ Services do not need to duplicate the menu bar used in the [GOV.UK homepage](htt
 
 Use the default header if your service has 5 pages or fewer.
 
-[EXAMPLE]
+{{ example({ group: "components", item: "header", example: "default", titleSuffix: "second", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
 
 #### Showing the name of your service
 
@@ -58,7 +58,7 @@ If your service is more than 5 pages, use the default GOV.UK header. Show the na
 
 Do not show your service name in the GOV.UK header.
 
-[EXAMPLE WITH SERVICE HEADER]
+{{ example({ group: "components", item: "header", example: "with-service-header", html: true, nunjucks: true, open: false }) }}
 
 ### Adding custom header elements
 

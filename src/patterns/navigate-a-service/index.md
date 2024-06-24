@@ -17,7 +17,7 @@ Help users know they’re using your service and can navigate around it.
 
 ## How it works
 
-The [GOV.UK header](/components/header/) and [Service header navigation](/components/service-header-navigation/) components work together to assure users that they’re in the right place to use your service. They also help users understand that GOV.UK functions as one website.
+The [GOV.UK header](/components/header/) and [Service header navigation](/components/service-header/) components work together to assure users that they’re in the right place to use your service. They also help users understand that GOV.UK functions as one website.
 
 The GOV.UK header (shown as black) has:
 
@@ -47,6 +47,7 @@ Use the Service level navigation component to show your service name, navigation
 If your service is more than 5 pages long, show the service name as a link to the homepage of your service.
 
 If your service does not have a homepage, link to either:
+
 - its GOV.UK start page
 - the first question of your service
 
