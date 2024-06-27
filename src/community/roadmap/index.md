@@ -27,6 +27,7 @@ We've also:
 - updated the components, patterns and styles to be compliant with WCAG 2.2
 - made it easier for teams to understand [what's changed in WCAG 2.2 and what they need to do](/accessibility/wcag-2.2)
 - made it easier for teams to [share their findings from user research](/community/share-research-findings/)
+- made it easier for teams using GOV.UK Frontend to only include the components a service is using
 
 ## Working on now
 
@@ -34,7 +35,6 @@ We're:
 
 - developing components and patterns for [Navigation](https://github.com/alphagov/govuk-design-system-backlog/issues/76)
 - planning Design System Day 2024 events
-- making it easier for teams using GOV.UK Frontend to only include the components a service is using
 
 ## Coming up next
 
