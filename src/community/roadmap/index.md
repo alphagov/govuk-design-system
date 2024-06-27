@@ -42,7 +42,7 @@ We're getting ready to:
 
 - understand how we can better help users find what they need on the GOV.UK Design System website
 - ensure the GOV.UK Design System website is compliant with WCAG 2.2
-- improve the JavaScript of the Chararcter count, Tabs and Accordion components
+- improve the JavaScript of the Character count, Tabs and Accordion components
 
 ## Future plans
 
