@@ -32,7 +32,7 @@ We've also:
 
 We're:
 
-- investigating the [Navigation pattern](https://github.com/alphagov/govuk-design-system-backlog/issues/76)
+- developing components and patterns for [Navigation](https://github.com/alphagov/govuk-design-system-backlog/issues/76)
 - planning Design System Day 2024 events
 - making it easier for teams using GOV.UK Frontend to only include the components a service is using
 
