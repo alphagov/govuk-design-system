@@ -24,7 +24,7 @@ export function trackConfirm(searchQuery, searchResults, result) {
     .filter((product) => product.name === result.title)
 
   addToDataLayer({
-    event: 'site-search',
+    event: 'site_search',
     eventDetails: {
       category: 'site search',
       action: 'click',
@@ -62,7 +62,7 @@ export function trackSearchResults(searchQuery, searchResults) {
   }))
 
   addToDataLayer({
-    event: 'site-search',
+    event: 'site_search',
     eventDetails: {
       category: 'site search',
       action: hasResults ? 'results' : 'no result',
