@@ -179,7 +179,7 @@ describe('Site search', () => {
             ecommerce: {
               impressions: []
             },
-            event: 'site-search',
+            event: 'site_search',
             eventDetails: {
               action: 'no result',
               category: 'site search',
@@ -222,7 +222,7 @@ describe('Site search', () => {
                 })
               ])
             },
-            event: 'site-search',
+            event: 'site_search',
             eventDetails: {
               action: 'results',
               category: 'site search',
@@ -272,7 +272,7 @@ describe('Site search', () => {
                 ])
               }
             },
-            event: 'site-search',
+            event: 'site_search',
             eventDetails: {
               action: 'click',
               category: 'site search',
