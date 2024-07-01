@@ -21,20 +21,9 @@ const CONSENT_COOKIE_NAME = 'design_system_cookies_policy'
 const TRACKING_PREVIEW_ID = '8F2EMQL51V'
 const TRACKING_LIVE_ID = 'GHT8W0QGD9'
 
-/* Legacy GA tracking for UA to ensure we're properly deleting cookies */
-const TRACKING_PREVIEW_ID_UA = '26179049-17'
-const TRACKING_LIVE_ID_UA = '116229859-1'
-
 /* Users can (dis)allow different groups of cookies. */
 const COOKIE_CATEGORIES = {
-  analytics: [
-    '_ga',
-    `_ga_${TRACKING_PREVIEW_ID}`,
-    `_ga_${TRACKING_LIVE_ID}`,
-    '_gid',
-    `_gat_UA-${TRACKING_PREVIEW_ID_UA}`,
-    `_gat_UA-${TRACKING_LIVE_ID_UA}`
-  ],
+  analytics: ['_ga', `_ga_${TRACKING_PREVIEW_ID}`, `_ga_${TRACKING_LIVE_ID}`],
   /* Essential cookies
    *
    * Essential cookies cannot be deselected, but we want our cookie code to
@@ -184,15 +173,11 @@ export function resetCookies() {
       // Enable GA if allowed
       window[`ga-disable-G-${TRACKING_PREVIEW_ID}`] = false
       window[`ga-disable-G-${TRACKING_LIVE_ID}`] = false
-      window[`ga-disable-UA-${TRACKING_PREVIEW_ID_UA}`] = false
-      window[`ga-disable-UA-${TRACKING_LIVE_ID_UA}`] = false
       loadAnalytics()
     } else {
       // Disable GA if not allowed
       window[`ga-disable-G-${TRACKING_PREVIEW_ID}`] = true
       window[`ga-disable-G-${TRACKING_LIVE_ID}`] = true
-      window[`ga-disable-UA-${TRACKING_PREVIEW_ID_UA}`] = true
-      window[`ga-disable-UA-${TRACKING_LIVE_ID_UA}`] = true
     }
 
     if (!options[cookieType]) {
