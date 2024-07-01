@@ -174,6 +174,9 @@ export function resetCookies() {
       window[`ga-disable-G-${TRACKING_PREVIEW_ID}`] = false
       window[`ga-disable-G-${TRACKING_LIVE_ID}`] = false
       loadAnalytics()
+
+      // Unset UA cookies if they've been set by GTM
+      removeUACookies()
     } else {
       // Disable GA if not allowed
       window[`ga-disable-G-${TRACKING_PREVIEW_ID}`] = true
@@ -189,6 +192,24 @@ export function resetCookies() {
         Cookie(cookie, null)
       })
     }
+  }
+}
+
+/**
+ * Remove UA cookies for user and prevent Google setting them.
+ *
+ * We've migrated our analytics from UA (Universal Analytics) to GA4, however
+ * users may still have the UA cookie set from our previous implementation.
+ * Additionally, our UA properties are scheduled for deletion but until they are
+ * entirely deleted, GTM is still setting UA cookies.
+ */
+export function removeUACookies() {
+  for (const UACookie of [
+    '_gid',
+    '_gat_UA-26179049-17',
+    '_gat_UA-116229859-1'
+  ]) {
+    Cookie(UACookie, null)
   }
 }
 

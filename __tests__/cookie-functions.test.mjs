@@ -301,4 +301,16 @@ describe('Cookie settings', () => {
       expect(document.cookie).toEqual('')
     })
   })
+
+  describe('removeUACookies', () => {
+    it('removes cookies specifc to UA', () => {
+      document.cookie = '_gid=test'
+      document.cookie = '_gat_UA-26179049-17=test'
+      document.cookie = '_gat_UA-116229859-1=test'
+
+      CookieHelpers.removeUACookies()
+
+      expect(document.cookie).toEqual('')
+    })
+  })
 })
