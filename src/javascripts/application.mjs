@@ -7,7 +7,8 @@ import BackToTop from './components/back-to-top.mjs'
 import CookieBanner from './components/cookie-banner.mjs'
 import {
   getConsentCookie,
-  isValidConsentCookie
+  isValidConsentCookie,
+  removeUACookies
 } from './components/cookie-functions.mjs'
 import CookiesPage from './components/cookies-page.mjs'
 import Copy from './components/copy.mjs'
@@ -34,6 +35,10 @@ if ($cookieBanner) {
 const userConsent = getConsentCookie()
 if (userConsent && isValidConsentCookie(userConsent) && userConsent.analytics) {
   loadAnalytics()
+
+  // Remove UA cookies if the user previously had them set or Google attempts
+  // to set them
+  removeUACookies()
 }
 
 // Initialise example frames
