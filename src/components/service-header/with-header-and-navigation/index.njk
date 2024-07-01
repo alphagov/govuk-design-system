@@ -1,0 +1,20 @@
+---
+title: Header with navigation – Service header navigation
+layout: layout-example.njk
+---
+
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+{% from "govuk/components/service-header/macro.njk" import govukServiceHeader %}
+
+{{ govukHeader({
+  homepageUrl: "#"
+}) }}
+{{ govukServiceHeader({
+  navigationId: "service-header-with-name-and-navigation",
+    navigation: [
+      { href: '#/1', text: "Navigation item 1" },
+      { href: '#/2', text: "Navigation item 2", active: true },
+      { href: '#/3', text: "Navigation item 3" },
+      { href: '#/4', text: "Navigation item 4" }
+    ]
+}) }}
