@@ -13,7 +13,7 @@ export function trackConfirm(searchQuery, searchResults, result) {
   }
 
   const searchTerm = stripPossiblePII(searchQuery)
-  const products = searchResults
+  const items = searchResults
     .map((result, key) => ({
       name: result.title,
       category: result.section,
@@ -29,12 +29,14 @@ export function trackConfirm(searchQuery, searchResults, result) {
       category: 'site search',
       action: 'click',
       label: `${searchTerm} | ${result.title}`
-    },
+    }
+  })
+
+  addToDataLayer({ ecommerce: null })
+  addToDataLayer({
+    event: 'select_item',
     ecommerce: {
-      click: {
-        actionField: { list: searchTerm },
-        products
-      }
+      items
     }
   })
 }
@@ -54,7 +56,7 @@ export function trackSearchResults(searchQuery, searchResults) {
 
   const hasResults = searchResults.length > 0
   // Impressions is Google Analytics lingo for what people have seen.
-  const impressions = searchResults.map((result, key) => ({
+  const items = searchResults.map((result, key) => ({
     name: result.title,
     category: result.section,
     list: searchTerm, // Used to match an searchTerm with results
@@ -67,9 +69,14 @@ export function trackSearchResults(searchQuery, searchResults) {
       category: 'site search',
       action: hasResults ? 'results' : 'no result',
       label: searchTerm
-    },
+    }
+  })
+
+  addToDataLayer({ ecommerce: null })
+  addToDataLayer({
+    event: 'view_item_list',
     ecommerce: {
-      impressions
+      items
     }
   })
 }
