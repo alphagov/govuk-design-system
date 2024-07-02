@@ -1,4 +1,8 @@
-import { addToDataLayer, stripPossiblePII } from './analytics.mjs'
+import {
+  addToDataLayer,
+  stripPossiblePII,
+  translateToItems
+} from './analytics.mjs'
 
 /**
  * Track confirmed autocomplete result
@@ -13,28 +17,30 @@ export function trackConfirm(searchQuery, searchResults, result) {
   }
 
   const searchTerm = stripPossiblePII(searchQuery)
-  const products = searchResults
-    .map((result, key) => ({
-      name: result.title,
-      category: result.section,
-      list: searchTerm, // Used to match an searchTerm with results
-      position: key + 1
-    }))
-    // Only return the product that matches what was clicked
-    .filter((product) => product.name === result.title)
+
+  // Only return the product that matches what was clicked
+  const items = translateToItems(searchResults, searchTerm).filter(
+    (product) => product.name === result.title
+  )
 
   addToDataLayer({
     event: 'site_search',
-    eventDetails: {
-      category: 'site search',
+    event_data: {
       action: 'click',
-      label: `${searchTerm} | ${result.title}`
-    },
+      text: searchTerm,
+      section: result.title
+    }
+  })
+
+  // Each time the ecommerce object is pushed to the dataLayer,
+  // it needs to be nullified first. Nullifying the ecommerce
+  // object clears it and prevents multiple ecommerce events on a
+  // page from affecting each other.
+  addToDataLayer({ ecommerce: null })
+  addToDataLayer({
+    event: 'select_item',
     ecommerce: {
-      click: {
-        actionField: { list: searchTerm },
-        products
-      }
+      items
     }
   })
 }
@@ -51,25 +57,26 @@ export function trackSearchResults(searchQuery, searchResults) {
   }
 
   const searchTerm = stripPossiblePII(searchQuery)
-
   const hasResults = searchResults.length > 0
-  // Impressions is Google Analytics lingo for what people have seen.
-  const impressions = searchResults.map((result, key) => ({
-    name: result.title,
-    category: result.section,
-    list: searchTerm, // Used to match an searchTerm with results
-    position: key + 1
-  }))
+  const items = translateToItems(searchResults, searchTerm)
 
   addToDataLayer({
     event: 'site_search',
-    eventDetails: {
-      category: 'site search',
+    event_data: {
       action: hasResults ? 'results' : 'no result',
-      label: searchTerm
-    },
+      text: searchTerm
+    }
+  })
+
+  // Each time the ecommerce object is pushed to the dataLayer,
+  // it needs to be nullified first. Nullifying the ecommerce
+  // object clears it and prevents multiple ecommerce events on a
+  // page from affecting each other.
+  addToDataLayer({ ecommerce: null })
+  addToDataLayer({
+    event: 'view_item_list',
     ecommerce: {
-      impressions
+      items
     }
   })
 }
