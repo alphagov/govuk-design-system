@@ -57,3 +57,23 @@ export function stripPossiblePII(string) {
   string = string.replace(/[0-9]+/g, '[REDACTED NUMBER]')
   return string
 }
+
+/**
+ * Translate list of search results to
+ * format compatiable with GA4 ecommerce
+ * `items` attribute
+ *
+ * @param {Array} searchResults - Array of search results
+ * @param {string} searchTerm - Search string entered by user
+ * @returns {Array} items - Array of `items`
+ */
+export function translateToItems(searchResults, searchTerm) {
+  const items = searchResults.map((result, key) => ({
+    name: result.title,
+    category: result.section,
+    list: searchTerm, // Used to match an searchTerm with results
+    position: key + 1
+  }))
+
+  return items
+}

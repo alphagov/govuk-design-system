@@ -176,14 +176,16 @@ describe('Site search', () => {
       expect(GoogleTagManagerDataLayer).toEqual(
         expect.arrayContaining([
           expect.objectContaining({
-            ecommerce: {
-              impressions: []
-            },
             event: 'site_search',
-            eventDetails: {
+            event_data: {
               action: 'no result',
-              category: 'site search',
-              label: 'lorem ipsum'
+              text: 'lorem ipsum'
+            }
+          }),
+          expect.objectContaining({
+            event: 'view_item_list',
+            ecommerce: {
+              items: []
             }
           })
         ])
@@ -204,16 +206,24 @@ describe('Site search', () => {
       )
 
       // Find layer that has the impressions to test.
-      const impressions = GoogleTagManagerDataLayer.filter(
+      const items = GoogleTagManagerDataLayer.filter(
         (layer) => layer.ecommerce
-      ).map((layer) => layer.ecommerce.impressions)[0]
+      ).map((layer) => layer.ecommerce.items)[0]
 
-      expect(impressions.length).toEqual($searchOptions.length)
+      expect(items.length).toEqual($searchOptions.length)
       expect(GoogleTagManagerDataLayer).toEqual(
         expect.arrayContaining([
           expect.objectContaining({
+            event: 'site_search',
+            event_data: {
+              action: 'results',
+              text: 'g'
+            }
+          }),
+          expect.objectContaining({
+            event: 'view_item_list',
             ecommerce: {
-              impressions: expect.arrayContaining([
+              items: expect.arrayContaining([
                 expect.objectContaining({
                   name: expect.any(String),
                   category: expect.any(String),
@@ -221,12 +231,6 @@ describe('Site search', () => {
                   position: expect.any(Number)
                 })
               ])
-            },
-            event: 'site_search',
-            eventDetails: {
-              action: 'results',
-              category: 'site search',
-              label: 'g'
             }
           })
         ])
@@ -257,27 +261,28 @@ describe('Site search', () => {
       expect(GoogleTagManagerDataLayer).toEqual(
         expect.arrayContaining([
           expect.objectContaining({
-            ecommerce: {
-              click: {
-                actionField: {
-                  list: 'g'
-                },
-                products: expect.arrayContaining([
-                  expect.objectContaining({
-                    name: expect.any(String),
-                    category: expect.any(String),
-                    list: 'g',
-                    position: 2
-                  })
-                ])
-              }
-            },
             event: 'site_search',
-            eventDetails: {
+            event_data: {
               action: 'click',
-              category: 'site search',
-              label: expect.stringContaining('g |')
+              text: expect.stringContaining('g'),
+              section: expect.any(String)
             }
+          }),
+          expect.objectContaining({
+            ecommerce: null
+          }),
+          expect.objectContaining({
+            ecommerce: {
+              items: expect.arrayContaining([
+                expect.objectContaining({
+                  name: expect.any(String),
+                  category: expect.any(String),
+                  list: 'g',
+                  position: 2
+                })
+              ])
+            },
+            event: 'select_item'
           })
         ])
       )
@@ -298,8 +303,8 @@ describe('Site search', () => {
       expect(GoogleTagManagerDataLayer).toEqual(
         expect.arrayContaining([
           expect.objectContaining({
-            eventDetails: expect.objectContaining({
-              label: '[REDACTED EMAIL]'
+            event_data: expect.objectContaining({
+              text: '[REDACTED EMAIL]'
             })
           })
         ])
@@ -321,8 +326,8 @@ describe('Site search', () => {
       expect(GoogleTagManagerDataLayer).toEqual(
         expect.arrayContaining([
           expect.objectContaining({
-            eventDetails: expect.objectContaining({
-              label: '[REDACTED NUMBER]'
+            event_data: expect.objectContaining({
+              text: '[REDACTED NUMBER]'
             })
           })
         ])
