@@ -1,0 +1,8 @@
+{% macro promoBanner(params) %}
+  <div role="complementary" class="app-promo-banner {% if params.padding %} govuk-!-padding-{{ params.padding }} {% endif %} {% if params.marginBottom %}govuk-!-margin-bottom-{{ params.marginBottom }} {% endif %}">
+    <img class="app-promo-banner__image" src="{{ params.img }}" alt="" role="presentation">
+    <div class="app-promo-banner__text-container">
+      {{- caller() if caller else params.content | safe -}}
+    </div>
+  </div>
+{% endmacro %}
