@@ -21,7 +21,7 @@ This guidance is for government teams that build online services. [To find infor
   classes: "app-tag"
 }) }}
 
-### New WCAG 2.2 criteria affects this pattern
+### New WCAG 2.2 criteria affect this pattern
 
 To use ‘There is a problem with the service pages' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
 
@@ -79,7 +79,7 @@ Store previously entered information for a reasonable amount of time so users ca
     classes: "app-tag"
   }) }}
   <p>Whenever possible, save and store any information the user has previously entered, unless doing so would be a major safety or security concern.</p>
-  <p>This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
+  <p>This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
 </div>
 
 ### Showing contact information
@@ -96,7 +96,7 @@ You might choose to link to a ‘contact information’ page, such as one shown 
     text: "WCAG 2.2",
     classes: "app-tag"
   }) }}
-  <p>You must always write contact information in a clear and consistent way across ‘There is a problem with the service’ and similar service error pages. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent Help</a>.</p>
+  <p>You must always write contact information in a clear and consistent way across ‘There is a problem with the service’ and similar service error pages. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent help</a>.</p>
 </div>
 
 ### Service has a specific page that includes numbers and opening times

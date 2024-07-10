@@ -21,7 +21,7 @@ Let users check their answers before submitting information to a service.
   classes: "app-tag"
 }) }}
 
-### New WCAG 2.2 criteria affects this pattern
+### New WCAG 2.2 criteria affect this pattern
 
 To help users to 'Check answers' and meet the new WCAG 2.2 criteria, make sure that users can successfully:
 
@@ -84,7 +84,7 @@ You should provide a ‘Change’ link next to each section on your check answer
     classes: "app-tag"
   }) }}
   <p>If a user decides to go back to a previous answer, make sure information they've already entered is pre-populated.</p>
-  <p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
+  <p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
 </div>
 
 The answers pages should look the same way they did when the user last used them.

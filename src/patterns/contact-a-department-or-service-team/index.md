@@ -21,7 +21,7 @@ Give users contact information within your service.
   classes: "app-tag"
 }) }}
 
-### New WCAG 2.2 criteria affects this pattern
+### New WCAG 2.2 criteria affect this pattern
 
 To help users to 'Contact a department or service team' and meet the new WCAG 2.2 criteria, make sure that users can successfully:
 
@@ -58,7 +58,7 @@ Show contact channels in the same order throughout your service. This helps user
   }) }}
   <p>If you repeat a particular set of contact details on different pages, show them in the same place on each page.</p>
   <p>For example, if you show a ‘contact us’ section at the end of one help page, any other help pages that include the same ‘contact us’ section should have them shown at the end of the page as well.</p>
-  <p>This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent Help</a>.</p>
+  <p>This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent help</a>.</p>
 </div>
 
 ### Social media

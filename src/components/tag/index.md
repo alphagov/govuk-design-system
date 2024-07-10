@@ -20,7 +20,7 @@ Use the tag component to show users the status of something.
   classes: "app-tag"
 }) }}
 
-### New WCAG 2.2 criteria affects this component
+### New WCAG 2.2 criteria affect this component
 
 To use the ‘Tag' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
 
@@ -72,7 +72,7 @@ Tags should be helpful to users. The more you add, the harder it is for users to
     text: "WCAG 2.2",
     classes: "app-tag"
   }) }}
-  <p>Any tag implementation that allows the user to change the order of tags must offer a way to do so without relying on ‘click and drag’ movements. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">2.5.7 Dragging Movements</a>.</p>
+  <p>Any tag implementation that allows the user to change the order of tags must offer a way to do so without relying on ‘click and drag’ movements. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">2.5.7 Dragging movements</a>.</p>
 </div>
 
 ## Using colour with tags

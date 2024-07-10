@@ -21,7 +21,7 @@ Check that a user has access to a specific mobile phone number using a security 
   classes: "app-tag"
 }) }}
 
-### New WCAG 2.2 criteria affects this pattern
+### New WCAG 2.2 criteria affect this pattern
 
 To help users to 'Confirm a phone number' and meet the new WCAG 2.2 criteria, make sure that users can successfully:
 
@@ -83,7 +83,7 @@ If the user follows the ‘Not received a text message?’ link, allow them to c
     text: "WCAG 2.2",
     classes: "app-tag"
   }) }}
-  <p>You must always include the link for 'Not received a text message?’ so the user can find help in a consistent way. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent Help</a>.</p>
+  <p>You must always include the link for 'Not received a text message?’ so the user can find help in a consistent way. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent help</a>.</p>
 </div>
 
 {{ example({ group: "patterns", item: "confirm-a-phone-number", example: "resend-first-time", html: true, nunjucks: true, open: false }) }}
@@ -107,7 +107,7 @@ If they follow the ‘Not received a text message?’ link, show them a page all
     text: "WCAG 2.2",
     classes: "app-tag"
   }) }}
-  <p>You must always include the link for 'Not received a text message?’ so the user can find help in a consistent way. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent Help</a>.</p>
+  <p>You must always include the link for 'Not received a text message?’ so the user can find help in a consistent way. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent help</a>.</p>
 </div>
 
 {{ example({group: "patterns", item: "confirm-a-phone-number", example: "resend", html: true, nunjucks: true, open: false}) }}

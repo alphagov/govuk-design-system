@@ -37,7 +37,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
 
 See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/) on the W3C website.
 
-[Images](/styles/images/) also includes guidance to help ensure icons and images in your service meet Target Size (minimum).
+[Images](/styles/images/) also includes guidance to help ensure icons and images in your service meet Target size (minimum).
 
 {{ govukTable({
   caption: "Components",

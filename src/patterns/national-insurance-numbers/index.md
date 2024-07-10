@@ -21,7 +21,7 @@ This guidance is for government teams that build online services. [To find infor
   classes: "app-tag"
 }) }}
 
-### New WCAG 2.2 criteria affects this pattern
+### New WCAG 2.2 criteria affect this pattern
 
 To ask users for 'National insurance numbers' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
 
@@ -73,7 +73,7 @@ When asking for a National Insurance number:
     classes: "app-tag"
   }) }}
   <p>Do not ask for a National Insurance number more than once within a single journey, if only one person’s details are needed.</p>
-  <p>Make sure users can easily reuse previously entered National Insurance numbers within a single journey, unless doing so would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
+  <p>Make sure users can easily reuse previously entered National Insurance numbers within a single journey, unless doing so would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
 </div>
 
 You can make it easier to reuse National Insurance numbers through one of these methods:

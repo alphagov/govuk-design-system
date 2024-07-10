@@ -19,7 +19,7 @@ Check the information the user gives you to make sure it’s valid. If there's a
   classes: "app-tag"
 }) }}
 
-### New WCAG 2.2 criteria affects this pattern
+### New WCAG 2.2 criteria affect this pattern
 
 To help users to 'Recover from validation errors' and meet the new WCAG 2.2 criteria, make sure that users can successfully:
 
@@ -88,7 +88,7 @@ Read guidance on [writing good error messages](/components/error-message/#be-cle
     text: "WCAG 2.2",
     classes: "app-tag"
   }) }}
-  <p>Do not clear any form fields when validating users’ answers. Keep both passing and failing answers. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
+  <p>Do not clear any form fields when validating users’ answers. Keep both passing and failing answers. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
 </div>
 
 Keeping information that failed validation helps users to:
