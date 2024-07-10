@@ -21,7 +21,7 @@ Check that a user has access to a specific mobile phone number using a security 
   classes: "app-tag"
 }) }}
 
-### New WCAG 2.2 criteria affects this pattern
+### New WCAG 2.2 criteria affect this pattern
 
 To help users to 'Confirm a phone number' and meet the new WCAG 2.2 criteria, make sure that users can successfully:
 

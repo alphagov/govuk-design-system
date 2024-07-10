@@ -25,7 +25,7 @@ Help users understand:
   classes: "app-tag"
 }) }}
 
-### New WCAG 2.2 criteria affects this pattern
+### New WCAG 2.2 criteria affect this pattern
 
 To help users to 'Complete multiple tasks' and meet the new WCAG 2.2 criteria, make sure that users can successfully:
 

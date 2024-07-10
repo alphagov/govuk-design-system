@@ -21,7 +21,7 @@ Give users contact information within your service.
   classes: "app-tag"
 }) }}
 
-### New WCAG 2.2 criteria affects this pattern
+### New WCAG 2.2 criteria affect this pattern
 
 To help users to 'Contact a department or service team' and meet the new WCAG 2.2 criteria, make sure that users can successfully:
 

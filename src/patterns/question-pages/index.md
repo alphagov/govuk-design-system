@@ -21,7 +21,7 @@ This pattern explains when to use question pages and what elements they need to 
   classes: "app-tag"
 }) }}
 
-### New WCAG 2.2 criteria affects this pattern
+### New WCAG 2.2 criteria affect this pattern
 
 To use ‘Question pages' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
 

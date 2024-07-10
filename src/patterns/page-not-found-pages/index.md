@@ -21,7 +21,7 @@ A page not found tells someone we cannot find the page they were trying to view.
   classes: "app-tag"
 }) }}
 
-### New WCAG 2.2 criteria affects this pattern
+### New WCAG 2.2 criteria affect this pattern
 
 To use ‘Page not found pages' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
 

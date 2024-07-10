@@ -21,7 +21,7 @@ Let users check their answers before submitting information to a service.
   classes: "app-tag"
 }) }}
 
-### New WCAG 2.2 criteria affects this pattern
+### New WCAG 2.2 criteria affect this pattern
 
 To help users to 'Check answers' and meet the new WCAG 2.2 criteria, make sure that users can successfully:
 

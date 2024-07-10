@@ -20,7 +20,7 @@ The breadcrumbs component helps users to understand where they are within a webs
   classes: "app-tag"
 }) }}
 
-### New WCAG 2.2 criteria affects this component
+### New WCAG 2.2 criteria affect this component
 
 To use ‘Breadcrumbs' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
 

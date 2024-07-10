@@ -19,7 +19,7 @@ Check the information the user gives you to make sure it’s valid. If there's a
   classes: "app-tag"
 }) }}
 
-### New WCAG 2.2 criteria affects this pattern
+### New WCAG 2.2 criteria affect this pattern
 
 To help users to 'Recover from validation errors' and meet the new WCAG 2.2 criteria, make sure that users can successfully:
 

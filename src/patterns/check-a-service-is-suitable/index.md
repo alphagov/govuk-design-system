@@ -20,7 +20,7 @@ Ask users questions to help them work out if they can or should use your service
   classes: "app-tag"
 }) }}
 
-### New WCAG 2.2 criteria affects this pattern
+### New WCAG 2.2 criteria affect this pattern
 
 To help users to 'Check a service is suitable' and meet the new WCAG 2.2 criteria, make sure that users can successfully:
 

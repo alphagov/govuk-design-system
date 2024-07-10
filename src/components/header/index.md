@@ -19,7 +19,7 @@ The GOV.UK header shows users that they are on GOV.UK and which service they are
   classes: "app-tag"
 }) }}
 
-### New WCAG 2.2 criteria affects this component
+### New WCAG 2.2 criteria affect this component
 
 To use the ‘Header' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
 
