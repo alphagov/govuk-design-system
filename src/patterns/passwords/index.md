@@ -106,7 +106,7 @@ When helping users who’ve forgotten their password, you should:
     text: "WCAG 2.2",
     classes: "app-tag"
   }) }}
-  <p>If you include instructions or a link to help users reset their password, make sure to place them consistently on the page. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent Help</a>.</p>
+  <p>If you include instructions or a link to help users reset their password, make sure to place them consistently on the page. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent help</a>.</p>
 </div>
 
 Also make sure any password reset links always perform the same action across each page.

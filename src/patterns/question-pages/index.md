@@ -75,7 +75,7 @@ If research shows it’s helpful for users, you can also include a [progress ind
     text: "WCAG 2.2",
     classes: "app-tag"
   }) }}
-  <p>Make sure to only ask for a piece of information once within a single journey. Whenever possible, do not ask a user to re-enter information they’ve already provided. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
+  <p>Make sure to only ask for a piece of information once within a single journey. Whenever possible, do not ask a user to re-enter information they’ve already provided. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
 </div>
 
 If the same type of information is needed more than once, make it easier to reuse previously entered answers through one of these methods:

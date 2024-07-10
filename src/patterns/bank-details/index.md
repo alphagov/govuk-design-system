@@ -65,7 +65,7 @@ If your service does not support building society accounts, remove building soci
     classes: "app-tag"
   }) }}
   <p>Do not ask for bank details more than once within a single journey if only one transaction is taking place.</p>
-  <p>Make sure users can easily reuse previously entered bank details within a single journey, unless the information is no longer valid or doing so would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
+  <p>Make sure users can easily reuse previously entered bank details within a single journey, unless the information is no longer valid or doing so would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
 </div>
 
 You can make it easier to reuse bank details through one of these methods:

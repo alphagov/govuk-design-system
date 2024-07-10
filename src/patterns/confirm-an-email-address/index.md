@@ -73,7 +73,7 @@ Most email confirmation loops will send the user a link and ask them to click it
     text: "WCAG 2.2",
     classes: "app-tag"
   }) }}
-  <p>You must allow users to copy and paste any security codes. Avoid making the user memorise or transcribe a security code between apps or browser tabs to use your service. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum">3.3.8 Accessible Authentication (Minimum)</a>.</p>
+  <p>You must allow users to copy and paste any security codes. Avoid making the user memorise or transcribe a security code between apps or browser tabs to use your service. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum">3.3.8 Accessible authentication (minimum)</a>.</p>
 </div>
 
 ### Set expiry conditions

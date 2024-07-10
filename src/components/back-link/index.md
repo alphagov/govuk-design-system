@@ -61,7 +61,7 @@ Make sure the link takes users to the previous page they were on, in the state t
     classes: "app-tag"
   }) }}
   <p>If a user decides to go back to a previous page, make sure information they have already entered is pre-populated.</p>
-  <p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
+  <p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
 </div>
 
 <div class="app-wcag-22" id="wcag-interact-back-links" role="note">
@@ -69,7 +69,7 @@ Make sure the link takes users to the previous page they were on, in the state t
     text: "WCAG 2.2",
     classes: "app-tag"
   }) }}
-  <p>Make sure no other interactive elements are too close to the back link. This is to make sure users can easily interact with the back link. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target Size (minimum)</a>.</p>
+  <p>Make sure no other interactive elements are too close to the back link. This is to make sure users can easily interact with the back link. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target size (minimum)</a>.</p>
 </div>
 
 Where possible, ensure the back link works even when JavaScript is not available. If this is not possible, you should hide the back link when JavaScript is not available.

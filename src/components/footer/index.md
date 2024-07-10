@@ -74,7 +74,7 @@ Use ‘Privacy’, ‘Accessibility’, ‘Cookies’ and ‘Terms and condition
     text: "WCAG 2.2",
     classes: "app-tag"
   }) }}
-  <p>If you include links to ‘help’ pages within a footer, make sure to place those links consistently within the footer content. Also make sure that ‘help’ links always function in a similar way across each page. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent Help</a>.</p>
+  <p>If you include links to ‘help’ pages within a footer, make sure to place those links consistently within the footer content. Also make sure that ‘help’ links always function in a similar way across each page. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent help</a>.</p>
 </div>
 
 ## Adding secondary navigation

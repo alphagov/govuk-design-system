@@ -18,7 +18,7 @@ Always use the GOV.UK colour palette.
 You must make sure that the contrast ratio of text and interactive elements in your service meets [level AA of the Web Content Accessibility Guidelines (WCAG 2.2)](https://www.w3.org/TR/WCAG22/#contrast-minimum).
 
 {{ govukInsetText({
-  text: "The WCAG 2.2 criteria for Contrast (Minimum) is the same as WCAG 2.1."
+  text: "The WCAG 2.2 criteria for Contrast (minimum) is the same as WCAG 2.1."
 }) }}
 
 ## Main colours

@@ -77,7 +77,7 @@ There's a few things to keep in mind to ensure that users can successfully use r
     text: "WCAG 2.2",
     classes: "app-tag"
   }) }}
-  <p>Make sure any 'action links' are at least 24px by 24px in size, or have adequate spacing. This is to make sure users can easily interact with the links. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target Size (minimum)</a>.</p>
+  <p>Make sure any 'action links' are at least 24px by 24px in size, or have adequate spacing. This is to make sure users can easily interact with the links. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target size (minimum)</a>.</p>
 </div>
 
 <div class="app-wcag-22" id="wcag-change-answers" role="note">
@@ -86,7 +86,7 @@ There's a few things to keep in mind to ensure that users can successfully use r
     classes: "app-tag"
   }) }}
   <p>If a user decides to go back to a previous answer through a card or row action, make sure information they have already entered is pre-populated.</p>
-  <p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
+  <p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
 </div>
 
 Assistive technology users, including those who use a screen reader, might hear a row action link out of context and might not know what it will do.
