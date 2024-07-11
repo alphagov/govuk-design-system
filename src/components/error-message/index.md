@@ -182,7 +182,7 @@ Use template messages for common errors on:
 - [names](/patterns/names/#error-messages)
 - [National Insurance numbers](/patterns/national-insurance-numbers/#error-messages)
 - [radios](/components/radios/#error-messages)
-- [telephone numbers](/patterns/telephone-numbers/#error-messages)
+- [phone numbers](/patterns/phone-numbers/#error-messages)
 - [text input](/components/text-input/#error-messages)
 - [textarea](/components/textarea/#error-messages)
 

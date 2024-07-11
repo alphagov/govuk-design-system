@@ -69,15 +69,15 @@ If you have social media channels:
 - do not include a link to the social media sites you're using - read more about this in [GOV.UK’s external linking policy](https://www.gov.uk/guidance/content-design/links#linking-policy)
 - tell users not to share personal information with you
 
-### Write telephone numbers in the GOV.UK style
+### Write phone numbers in the GOV.UK style
 
-See the [GOV.UK style for writing telephone numbers](https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#telephone-numbers).
+See the [GOV.UK style for writing phone numbers](https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#phone-numbers).
 
 ### Explain any charges
 
 Tell users if they might have to pay to use any of your contact channels.
 
-For telephone call charges, link to the GOV.UK page on [call charges](https://www.gov.uk/call-charges). Include the link after the contact channels list and opening hours.
+For phone call charges, link to the GOV.UK page on [call charges](https://www.gov.uk/call-charges). Include the link after the contact channels list and opening hours.
 
 {{ example({ group: "patterns", item: "contact-a-department-or-service-team", example: "default", html: true, open: false, size: "s", titleSuffix: "second" }) }}
 
