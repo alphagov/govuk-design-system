@@ -87,6 +87,7 @@ Hide passwords by default until the user chooses to show it using the ‘show’
 If you do choose to include two or more password inputs on a page, the ‘show’ and ‘hide’ toggles and labels for each password input must be different.
 
 For example, you can label:
+
 - the first input as 'Password' with a toggle of 'show password'
 - the second input as 'Re-enter password' with a toggle of 'show re-entered password'
 
