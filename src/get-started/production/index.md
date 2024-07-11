@@ -14,7 +14,7 @@ This guide explains how to set up your project so you can start using the styles
 
 {{ govukInsetText({
   classes: "app-table--constrained",
-  html: 'If you’ve used GOV.UK Elements, GOV.UK Template or the GOV.UK Frontend Toolkit before, you might also find it useful to read the guide on <a href="/get-started/updating-your-code/">updating your code</a>.'
+  html: 'If you’ve used GOV.UK Elements, GOV.UK Template or the GOV.UK Frontend Toolkit before, you might also find it useful to read the guide on <a href="https://frontend.design-system.service.gov.uk/staying-up-to-date/">staying up to date with changes</a>.'
 }) }}
 
 ## Include GOV.UK Frontend in your project
