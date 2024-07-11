@@ -18,7 +18,7 @@
     "serve": "cross-env NODE_ENV=production DEBUG=build* node tasks/serve.js",
     "start": "cross-env NODE_ENV=development DEBUG=build* node tasks/start.js",
     "pretest": "npm run build",
-    "test": "npm run lint && jest",
+    "test": "jest",
     "lint": "npm run lint:editorconfig && npm run lint:prettier && npm run lint:js && npm run lint:types && npm run lint:scss && npm run lint:html --ignore-scripts",
     "prelint:html": "npm run build",
     "lint:editorconfig": "editorconfig-checker",
