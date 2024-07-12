@@ -60,6 +60,12 @@ updates:
           - '@types/jest'
           - '@types/jest-*'
 
+    # Ignore eslint and is plugins for now
+    # the time they all get compatible with each other
+    ignore:
+      - dependency-name: 'eslint-*'
+      - dependency-name: 'eslint'
+
     reviewers:
       - alphagov/design-system-developers
 
