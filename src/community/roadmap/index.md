@@ -13,14 +13,15 @@ Some things on the roadmap might change – the purpose is to tell you what’s 
 
 See our [GitHub team board](https://github.com/orgs/alphagov/projects/53) for more details on our plans and day-to-day activities.
 
-Last updated 17 May 2024.
+Last updated 12 July 2024.
 
 ## Recently shipped
 
-We’ve released [GOV.UK Frontend v5.4.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.4.0) which includes new features to help you include only the components your service uses.
+We’ve released [GOV.UK Frontend v5.4.1](https://github.com/alphagov/govuk-frontend/releases/tag/v5.4.1), which improves how the Breadcrumbs component appears on screen readers and fixed some alignment issues with Radio buttons and Checkboxes. We've also refactored some of our code to simplify it.
 
-We've also:
+We've also recently:
 
+- introduced new features to help you include only the components your service uses
 - introduced a new [‘Password input’ component](https://design-system.service.gov.uk/components/password-input/)
 - updated the crown in the header, favicon and social share images
 - updated the components, patterns and styles to be compliant with WCAG 2.2
