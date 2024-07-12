@@ -101,11 +101,11 @@
     "slug": "^9.0.0",
     "smartypants": "^0.2.2",
     "standard": "^17.1.0",
-    "stylelint": "^16.3.1",
+    "stylelint": "^16.7.0",
     "stylelint-config-gds": "^2.0.0",
     "stylelint-order": "^6.0.4",
     "tap-mocha-reporter": "^5.0.4",
-    "typescript": "^5.4.3"
+    "typescript": "^5.5.3"
   },
   "optionalDependencies": {
     "@jest/environment": "^29.7.0",
