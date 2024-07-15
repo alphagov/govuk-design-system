@@ -96,7 +96,7 @@
     "rollup": "^4.18.1",
     "sass-export": "^2.1.2",
     "serve-static": "^1.15.0",
-    "sitemap": "^7.1.1",
+    "sitemap": "^8.0.0",
     "slash": "^3.0.0",
     "slug": "^9.0.0",
     "smartypants": "^0.2.2",
