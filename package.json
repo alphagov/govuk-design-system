@@ -34,7 +34,7 @@
     "prepare": "node -e \"try { (await import('husky')).default() } catch (e) { if (e.code !== 'ERR_MODULE_NOT_FOUND') throw e }\" --input-type module"
   },
   "dependencies": {
-    "accessible-autocomplete": "^2.0.4",
+    "accessible-autocomplete": "^3.0.0",
     "clipboard": "^2.0.11",
     "govuk-frontend": "^5.4.1",
     "iframe-resizer": "^4.4.5",
