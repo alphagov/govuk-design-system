@@ -19,7 +19,7 @@ Use the details component to make a page easier to scan when it contains informa
 
 ## When not to use this component
 
-Do not use the details component to hide information that the majority of your users will need.
+Do not use the details component to hide information that the majority of your users will need. Read our [research on this component to consider how this affects some users of assistive technologies](/#research-on-this-component)
 
 ## Decide between using details, accordions and tabs
 
@@ -45,4 +45,4 @@ Make the link text short and descriptive so users can quickly work out if they n
 
 There is [evidence that some users avoid clicking the link to show more details](https://github.com/alphagov/govuk-design-system-backlog/issues/44#issuecomment-629122091), as they think it will take them away from the page.
 
-There are [concerns that some users of voice assist software will not be able to interact with the component](https://github.com/alphagov/govuk-design-system-backlog/issues/44#issuecomment-628082040). Some software might require the user to specifically refer to the link to show more details as a button in order to interact with it.
+It is known that [some users of voice assist software will not be able to interact with the component](https://github.com/alphagov/govuk-design-system-backlog/issues/44#issuecomment-628082040). Some software might require the user to specifically refer to the link to show more details as a button in order to interact with it.
