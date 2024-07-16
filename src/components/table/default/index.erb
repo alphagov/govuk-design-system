@@ -1,0 +1,29 @@
+<%= govuk_table do |table| %>
+  <%= table.with_caption(size: 'm', text: 'List of Pokémon') %>
+
+  <%= table.with_head do |head| %>
+    <%= head.with_row do |row| %>
+      <%= row.with_cell(text: 'Date') %>
+      <%= row.with_cell(text: 'Amount') %>
+    <% end %>
+  <% end %>
+
+  <%= table.with_body do |body| %>
+
+    <%= body.with_row do |row| %>
+      <%= row.with_cell(text: 'First 6 weeks') %>
+      <%= row.with_cell(text: '£109.80 per week') %>
+    <% end %>
+
+    <%= body.with_row do |row| %>
+      <%= row.with_cell(text: 'Next 33 weeks') %>
+      <%= row.with_cell(text: '£109.80 per week') %>
+    <% end %>
+
+    <%= body.with_row do |row| %>
+      <%= row.with_cell(text: 'Total estimated pay') %>
+      <%= row.with_cell(text: '£4,282.20') %>
+    <% end %>
+
+  <% end %>
+<% end %>

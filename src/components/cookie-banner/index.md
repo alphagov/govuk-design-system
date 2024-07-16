@@ -35,7 +35,7 @@ See the full list of [components and patterns affected by WCAG 2.2](/accessibili
   classes: "app-inset-text"
 }) }}
 
-{{ example({ group: "components", item: "cookie-banner", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
+{{ example({group: "components", item: "cookie-banner", example: "default", html: true, nunjucks: true, rails: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 
@@ -195,7 +195,7 @@ Keep the text as short as possible while making sure it’s an accurate descript
 
 You can use this example text for a service which sets essential and analytics cookies. Analytics cookies are those set by your organisation to collect information about how people are using your digital service.
 
-{{ example({ group: "components", item: "cookie-banner", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
+{{ example({group: "components", item: "cookie-banner", example: "default", html: true, nunjucks: true, rails: true, open: false, titleSuffix: "second"}) }}
 
 ### If you’re using more than one type of non-essential cookie
 

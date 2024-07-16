@@ -34,7 +34,7 @@ See the full list of [components and patterns affected by WCAG 2.2](/accessibili
   classes: "app-inset-text"
 }) }}
 
-{{ example({ group: "components", item: "tag", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
+{{ example({ group: "components", item: "tag", example: "default", html: true, nunjucks: true,rails: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 
@@ -59,13 +59,13 @@ The [complete multiple tasks pattern](/patterns/complete-multiple-tasks/) has an
 
 Or it can make sense to have two statuses. For example you may find that there’s a need to have one tag for ‘Active’ users and one for ‘Inactive’ users.
 
-{{ example({ group: "components", item: "tag", example: "multiple-tags", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "components", item: "tag", example: "multiple-tags", html: true, nunjucks: true, rails: true, open: false }) }}
 
 ## Showing multiple statuses
 
 Tags should be helpful to users. The more you add, the harder it is for users to remember them. So start with the smallest number of statuses you think might work, then add more if your user research shows there’s a need for them.
 
-{{ example({ group: "components", item: "tag", example: "coloured-tags", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "components", item: "tag", example: "coloured-tags", html: true, nunjucks: true, rails: true, open: false }) }}
 
 <div class="app-wcag-22" id="wcag-tag-no-dragging-reorder" role="note">
   {{ govukTag({
@@ -85,7 +85,7 @@ You can use colour to help distinguish between different tags – or to help dra
 
 If you need more tag colours, you can use the following colours.
 
-{{ example({ group: "components", item: "tag", example: "all-colours", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "components", item: "tag", example: "all-colours", html: true, nunjucks: true, rails: true, open: false }) }}
 
 ## Research on this component
 

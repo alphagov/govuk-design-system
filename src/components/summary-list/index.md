@@ -35,7 +35,7 @@ See the full list of [components and patterns affected by WCAG 2.2](/accessibili
   classes: "app-inset-text"
 }) }}
 
-{{ example({ group: "components", item: "summary-list", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
+{{ example({ group: "components", item: "summary-list", example: "default", html: true, nunjucks: true, rails: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 
