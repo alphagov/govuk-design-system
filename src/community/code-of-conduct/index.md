@@ -24,7 +24,7 @@ The event organisers reserve the right to ask anyone in violation of these polic
 
 Organisers will reinforce this code throughout event engagements. If you have any concerns, contact any of our organisers immediately. Organisers will be wearing a Design System Day t-shirt.
 
-Alternatively you can email the Design System Day inbox at [design-system-day-enquiries@digital.cabinet-office.gov.uk](design-system-day-enquiries@digital.cabinet-office.gov.uk) and a member of the team will get back to you.
+Alternatively you can email the Design System Day inbox at [design-system-day-enquiries@digital.cabinet-office.gov.uk](mailto:design-system-day-enquiries@digital.cabinet-office.gov.uk) and a member of the team will get back to you.
 
 List of organisers:
 
