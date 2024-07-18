@@ -28,7 +28,6 @@ Alternatively you can [email the Design System Day inbox](design-system-day-enqu
 
 List of organisers:
 
-- Anika Henke
 - Bee Butler
 - Calvin Lau
 - Chris Ballantine-Thomas
@@ -38,12 +37,10 @@ List of organisers:
 - Katrina Birch
 - Kelly Lee
 - Kim ‘beeps’ Grey
-- Mia Allers
 - Nora Brodian
 - Owen Jones
 - Patrick Cartlidge
 - Romaric Pascal
-- Tim Paul
 - Trang Erskine
 
 (These guidelines are adapted from the [Practical Service Design](http://www.practicalservicedesign.com/getting-started-on-slack/) community guidelines, [Afrotech Fest](https://www.afrotechfest.co.uk/coc/), [Code for America](http://www.cvent.com/events/code-for-america-summit-2018/custom-40-e12d85b157b94d69b80d8911cc641d36.aspx), [UKGovcamp](https://www.ukgovcamp.com/code-of-conduct/), and [Services Week 2021](https://docs.google.com/document/d/1vQchJh-s6Fu6F4bN8UFM4lvRChe8ERgsE5whf9pUfjA/edit?usp=sharing) codes of conduct.)
