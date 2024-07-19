@@ -1,5 +1,5 @@
 ---
-title: Join us for Design System Day
+title: Design System Day Events
 description: A conference to collaborate and share knowledge about design systems with like-minded people.
 section: Community
 theme: Events and workshops
@@ -50,10 +50,6 @@ A workshop in how to design, code and optimise prototypes using the GOV.UK Proto
 Gordon Guthrie, Scottish Government
 
 A show and tell examining how to apply system design principles to the system of government.
-
-### Tickets
-
-Tickets for this event have now sold out. However you can join the waitlist by [registering on Eventbrite here](https://www.eventbrite.co.uk/e/design-system-day-day-1-tickets-890091496627?aff=oddtdtcreator&lang=en-gb&locale=en_GB&status=30&view=listing).
 
 ## Previous events
 
