@@ -20,7 +20,7 @@ This guidance is for government teams that build online services. [To find infor
   classes: "app-tag"
 }) }}
 
-### New WCAG 2.2 criteria affect this pattern
+## New WCAG 2.2 criteria affect this pattern
 
 To ask users for 'Payment card details' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
 
@@ -65,7 +65,7 @@ Show logos for the cards you accept as icons so users can see whether their card
 Use Issuer Identification Number (IIN) lookups to validate the card number as the user enters it. Once you’ve been able to identify the user’s card type, leave only the relevant logo highlighted and grey out the others.
 
 <div class="app-video">
-  <video class="app-video__player" role="region" aria-labelledby="card-number-video-description" controls muted>
+  <video class="app-video__player" aria-labelledby="card-number-video-description" controls muted>
     <source src="card-number.mp4" type="video/mp4">
   </video>
   <p class="app-video__description" id="card-number-video-description">

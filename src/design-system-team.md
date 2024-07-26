@@ -12,7 +12,7 @@ The GOV.UK Design System at the [Government Digital Service](https://www.gov.uk/
 
 If you want to contact the team you can [get in touch via email or Slack](/get-in-touch/).
 
-### Team leads
+## Team leads
 
 - Charlotte Downs – Senior Interaction Designer
 - Kelly Lee – Senior Delivery Manager
@@ -20,7 +20,7 @@ If you want to contact the team you can [get in touch via email or Slack](/get-i
 - Romaric Pascal – Senior Frontend Developer
 - Trang Erskine – Senior Product Manager
 
-### Design System team
+## Design System team
 
 - Anika Henke – Senior Accessibility Specialist
 - Brett Kyle – Senior Frontend Developer
