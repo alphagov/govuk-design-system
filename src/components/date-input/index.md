@@ -35,8 +35,6 @@ Read more about [why and how to set legends as headings](/get-started/labels-leg
 
 Make sure that any example dates you use in hint text are valid for the question being asked.
 
-Accept month names written out in full or abbreviated form (for example, ‘january’ or ‘jan’) as some users may enter months in this way.
-
 There are 2 ways to use the date input component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 
 {{ example({ group: "components", item: "date-input", example: "default", html: true, nunjucks: true, open: false, size: "s", titleSuffix: "second" }) }}
@@ -93,13 +91,43 @@ Say ‘[whatever it is] must include a [whatever is missing]’.<br>
 
 For example, ‘Date of birth must include a month’, ‘Date of birth must include a day and month’ or ‘Year must include 4 numbers’.
 
-#### If the date entered cannot be correct
+#### If the day, month or year cannot be correct
 
-For example, ‘13’ in the month field cannot be correct.<br>
+Accept all unambiguous inputs.
 
-Highlight the day, month or year field with the incorrect information. Or highlight the date as a whole if there’s incorrect information in more than one field, or it's not clear which field is incorrect.<br>
+For day, accept:
+- the numbers 1 to 31
+- single digits with a leading zero, 01 to 09
+- ordinals, 1st, 2nd, ... 31st
+- ordinals written, first, second, ... thirty-first
 
-Say ‘[Whatever it is] must be a real date’. For example, ‘Date of birth must be a real date’.
+For month, accept:
+- the numbers 1 to 12
+- single digits with a leading zero, 01 to 09
+- English long month names, January, February ... December
+- English short month names, Jan, Feb, ... Dec
+
+For day ordinals, and month names, accept any case. For example, 'jan', 'JAN', 'Jan'.
+
+For year, accept any 4 digits.
+
+If day cannot be correct but month and year can, say: ‘Day must be a number between 1 and 31’
+If month cannot be correct, by day and year can, say: ‘Month must be a number between 1 and 12’
+If year cannot be correct, but day and month can, say: ‘Year must include 4 numbers’
+
+If more than one of day, month and year cannot be correct, then combine the error messages. For example, if day and month cannot be correct, but year can say: ‘Day must be a number between 1 and 31. Month must be a number between 1 and 12.’
+
+If day, month and year all cannot be correct, say: ‘Day must be a number between 1 and 31. Month must be a number between 1 and 12. Year must include 4 numbers.’
+
+Highlight the day, month or year fields with the information that cannot be correct.
+
+#### If the date as a whole does not exist
+
+If the month is April, June, September, November, then check the day is between 1 and 30. If not, say ‘Day must be a number between 1 and 30 for [month]’. Highlight the day and month.
+
+If the month is February and the year is a leap year, then check the day is between 1 and 29. If not, say ‘Day must be a number between 1 and 29 for February [year]’.  Highlight the date input as a whole.
+
+If the month is February and the year is not a leap year, then check the day is between 1 and 28. If not, say ‘Day must be a number between 1 and 28 for February [year]’.  Highlight the date input as a whole.
 
 #### If the date is in the future when it needs to be in the past
 
