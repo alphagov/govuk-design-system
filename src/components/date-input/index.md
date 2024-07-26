@@ -91,6 +91,8 @@ Say ‘[whatever it is] must include a [whatever is missing]’.<br>
 
 For example, ‘Date of birth must include a month’, ‘Date of birth must include a day and month’ or ‘Year must include 4 numbers’.
 
+Consider that a user might intentionally leave part of the date blank because they do not know the exact day, or they remember the day and month but not the year. Could you provide more help to these users?
+
 #### If the day, month or year cannot be correct
 
 Accept all unambiguous inputs.
@@ -159,11 +161,15 @@ Highlight the date input as a whole.<br>
 
 Say ‘[whatever it is] must be the same as or after [date and optional description]’. For example, ‘The date your course ends must be the same as or after 1 September 2017 when you started the course’.
 
+Consider that the other date, in this example 1 September 2017, might be wrong instead. If this is possible, provide help to users to change this date too.
+
 #### If the date must be after another date
 
 Highlight the date input as a whole.<br>
 
 Say ‘[whatever it is] must be after [date and optional description]’. For example, ‘The day your course ends must be after 1 September 2017’.
+
+Consider that the other date, in this example 1 September 2017, might be wrong instead. If this is possible, provide help to users to change this date too.
 
 #### If the date must be the same as or before another date
 
@@ -171,17 +177,23 @@ Highlight the date input as a whole.<br>
 
 Say ‘[whatever it is] must be the same as or before [date and optional description]’. For example, ‘The date of Gordon’s last exam must be the same as or before 31 August 2017 when they left school’.
 
+Consider that the other date, in this example 31 August 2017, might be wrong instead. If this is possible, provide help to users to change this date too.
+
 #### If the date must be before another date
 
 Highlight the date input as a whole.<br>
 
 Say ‘[whatever it is] must be before [date and optional description]’. For example, ‘The date of Gordon’s last exam must be the same as or before 31 August 2017’.
 
+Consider that the other date, in this example 31 August 2017, might be wrong instead. If this is possible, provide help to users to change this date too.
+
 #### If the date must be between two dates
 
 Highlight the date input as a whole.<br>
 
 Say ‘[whatever it is] must be between [date] and [date and optional description]’. For example, ‘The date your contract started must be between 1 September 2017 and 30 September 2017 when you were self-employed’.
+
+Consider that these dates, in this example 1 September 2017 and 30 September 2017, might be wrong instead. If this is possible, provide help to users to change these dates too.
 
 ## Research on this component
 
