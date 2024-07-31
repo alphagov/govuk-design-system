@@ -1,117 +1,147 @@
-{% from "govuk/components/cookie-banner/macro.njk" import govukCookieBanner %}
+{% macro cookieBanner(params) %}
 
-{% set html %}
-  <p class="govuk-body">We’d like to use analytics cookies so we can understand how you use the Design System and make improvements.</p>
-  <p class="govuk-body">We also use essential cookies to remember if you’ve accepted analytics cookies.</p>
-{% endset %}
+  {% from "govuk/components/cookie-banner/macro.njk" import govukCookieBanner %}
 
-{% set acceptHtml %}
-  <p class="govuk-body">You’ve accepted analytics cookies. You can <a class="govuk-link" href="/cookies/">change your cookie settings</a> at any time.</p>
-{% endset %}
+  {%- set category -%}
+    {%- if params.category -%}
+      {{ params.category }}
+    {%- else -%}
+      analytics
+    {%- endif -%}
+  {%- endset -%}
 
-{% set rejectHtml %}
-  <p class="govuk-body">You’ve rejected analytics cookies. You can <a class="govuk-link" href="/cookies/">change your cookie settings</a> at any time.</p>
-{% endset %}
+  {%- set title -%}
+    {%- if params.title -%}
+      {{ params.title }}
+    {%- else -%}
+      Cookies on GOV.UK Design System
+    {%- endif -%}
+  {%- endset -%}
 
-{{ govukCookieBanner({
-  ariaLabel: "Cookies on GOV.UK Design System",
-  hidden: true,
-  attributes: {
-    "data-module": "govuk-cookie-banner"
-  },
-  messages: [
-    {
-      headingText: "Cookies on GOV.UK Design System",
-      html: html,
-      actions: [
-        {
-          text: "Accept analytics cookies",
-          type: "button",
-          classes: "js-cookie-banner-accept"
-        },
-        {
-          text: "Reject analytics cookies",
-          type: "button",
-          classes: "js-cookie-banner-reject"
-        },
-        {
-          text: "View cookies",
-          href: "/cookies/"
-        }
-      ],
-      classes: "app-width-container js-cookie-banner-message"
+  {%- set html %}
+    {% if params.html %}
+      {{ params.html | safe }}
+    {% else %}
+      <p class="govuk-body">We’d like to use analytics cookies so we can understand how you use the Design System and make improvements.</p>
+      <p class="govuk-body">We also use essential cookies to remember if you’ve accepted analytics cookies.</p>
+    {% endif %}
+  {% endset %}
+
+  {%- set acceptHtml %}
+    {% if params.acceptHtml %}
+      {{ params.acceptHtml | safe }}
+    {% else %}
+      <p class="govuk-body">You’ve accepted analytics cookies. You can <a class="govuk-link" href="/cookies/">change your cookie settings</a> at any time.</p>
+    {% endif %}
+  {% endset %}
+
+  {%- set rejectHtml %}
+    {% if params.rejectHtml %}
+      {{ params.rejectHtml | safe }}
+    {% else %}
+      <p class="govuk-body">You’ve rejected analytics cookies. You can <a class="govuk-link" href="/cookies/">change your cookie settings</a> at any time.</p>
+    {% endif %}
+  {% endset %}
+
+  {{ govukCookieBanner({
+    ariaLabel: title,
+    hidden: true,
+    classes: params.classes,
+    attributes: {
+      "data-module": "govuk-cookie-banner",
+      "data-cookie-category": category
     },
-    {
-      html: acceptHtml,
-      role: "alert",
-      hidden: true,
-      actions: [
-        {
-          text: "Hide cookie message",
-          type: "button",
-          classes: "js-cookie-banner-hide js-cookie-banner-hide--accept"
-        }
-      ],
-      classes: "js-cookie-banner-confirmation-accept app-width-container"
-    },
-    {
-      html: rejectHtml,
-      role: "alert",
-      hidden: true,
-      actions: [
-        {
-          text: "Hide cookie message",
-          type: "button",
-          classes: "js-cookie-banner-hide js-cookie-banner-hide--reject"
-        }
-      ],
-      classes: "js-cookie-banner-confirmation-reject app-width-container"
-    }
-  ]
-}) }}
-
-{# Inline script to show the cookie banner as soon as possible,
-to avoid a high cumulative layout shift (CLS) score https://web.dev/cls/ #}
-<script>
-
-  /**
-   * If cookie policy changes and/or the user preferences object format needs to
-   * change, bump this version up afterwards. The user should then be shown the
-   * banner again to consent to the new policy.
-   *
-   * Note that because isValidCookieConsent checks that the version in the user's
-   * cookie is equal to or greater than this number, you should be careful to
-   * check backwards compatibility when changing the object format.
-  */
-  window.GDS_CONSENT_COOKIE_VERSION = 1;
-
-  (function () {
-    // Skip early setup when cookie banner component is not supported
-    if (!('noModule' in HTMLScriptElement.prototype)) {
-      return
-    }
-
-    /**
-     * Check the cookie preferences object.
-     *
-     * If the consent object is not present, malformed, or incorrect version,
-     * returns false, otherwise returns true.
-     *
-     * This is also duplicated in cookie-functions.js - the two need to be kept in sync
-     */
-    function isValidConsentCookie (options) {
-      return (options && options.version >= window.GDS_CONSENT_COOKIE_VERSION)
-    }
-
-    // Don't show the banner on the cookies page
-    if (window.location.pathname !== "/cookies/") {
-      // Show the banner if there is no consent cookie or if it is outdated
-      var currentConsentCookie = document.cookie.match(new RegExp('(^| )design_system_cookies_policy=([^;]+)'))
-
-      if (!currentConsentCookie || !isValidConsentCookie(JSON.parse(currentConsentCookie[2]))) {
-        var cookieBanner = document.querySelector("[data-module='govuk-cookie-banner']")
-        cookieBanner.removeAttribute('hidden')
+    messages: [
+      {
+        headingText: title,
+        html: html,
+        actions: [
+          {
+            text: "Accept " + category + " cookies",
+            type: "button",
+            classes: "js-cookie-banner-accept"
+          },
+          {
+            text: "Reject " + category + " cookies",
+            type: "button",
+            classes: "js-cookie-banner-reject"
+          },
+          {
+            text: "View cookies",
+            href: "/cookies/"
+          }
+        ],
+        classes: "app-width-container js-cookie-banner-message"
+      },
+      {
+        html: acceptHtml,
+        role: "alert",
+        hidden: true,
+        actions: [
+          {
+            text: "Hide cookie message",
+            type: "button",
+            classes: "js-cookie-banner-hide js-cookie-banner-hide--accept"
+          }
+        ],
+        classes: "js-cookie-banner-confirmation-accept app-width-container"
+      },
+      {
+        html: rejectHtml,
+        role: "alert",
+        hidden: true,
+        actions: [
+          {
+            text: "Hide cookie message",
+            type: "button",
+            classes: "js-cookie-banner-hide js-cookie-banner-hide--reject"
+          }
+        ],
+        classes: "js-cookie-banner-confirmation-reject app-width-container"
       }
-    }
-  })()
-</script>
+    ]
+  }) }}
+
+  {# Inline script to show the cookie banner as soon as possible,
+  to avoid a high cumulative layout shift (CLS) score https://web.dev/cls/ #}
+  <script>
+    (function () {
+      // Skip early setup when cookie banner component is not supported
+      if (!('noModule' in HTMLScriptElement.prototype)) {
+        return
+      }
+
+      /**
+       * Check the cookie preferences object.
+       *
+       * If the consent object is not present, malformed, or incorrect version,
+       * returns false, otherwise returns true.
+       *
+       * This is also duplicated in cookie-functions.js - the two need to be kept in sync
+       */
+      function isValidConsentCookie (options) {
+        return (options && options.version >= window.GDS_CONSENT_COOKIE_VERSION)
+      }
+
+      function categoryIsNull (options) {
+        return (options && options.{{ params.category }} === null)
+      }
+
+      // Don't show the banner on the cookies page
+      if (window.location.pathname !== "/cookies/") {
+        // Show the banner if there is no consent cookie or if it is outdated
+        var currentConsentCookie = document.cookie.match(new RegExp('(^| )design_system_cookies_policy=([^;]+)'))
+
+        const cookieData = currentConsentCookie && JSON.parse(currentConsentCookie[2]);
+        const cookieNotSet = (!currentConsentCookie || !isValidConsentCookie(cookieData))
+        const categoryNotSet = isValidConsentCookie(cookieData) && categoryIsNull(cookieData)
+
+        if (cookieNotSet || categoryNotSet) {
+          var cookieBanner = document.querySelector("[data-cookie-category='{{ category }}']")
+          cookieBanner.removeAttribute('hidden')
+        }
+      }
+    })()
+  </script>
+
+{% endmacro %}
