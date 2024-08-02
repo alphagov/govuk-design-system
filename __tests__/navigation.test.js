@@ -1,6 +1,6 @@
 const { KnownDevices } = require('puppeteer')
 
-const { goTo, getAttribute, isVisible } = require('../lib/puppeteer-helpers.js')
+const { goTo, getAttribute, isVisible } = require('./helpers/puppeteer.js')
 
 describe('Homepage', () => {
   let $navigation

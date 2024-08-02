@@ -1,9 +1,9 @@
 const { ports } = require('../config')
-const { goTo, getAttribute, isVisible } = require('../lib/puppeteer-helpers.js')
 
 const {
   mockGoogleTagManagerScript
 } = require('./helpers/google-tag-manager.js')
+const { goTo, getAttribute, isVisible } = require('./helpers/puppeteer.js')
 
 describe('Cookie banner', () => {
   let $module

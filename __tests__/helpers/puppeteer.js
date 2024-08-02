@@ -1,4 +1,4 @@
-const { ports } = require('../config')
+const { ports } = require('../../config')
 
 /**
  * Navigate to path
