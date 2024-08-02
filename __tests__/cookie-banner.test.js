@@ -1,6 +1,10 @@
 const { ports } = require('../config')
 const { goTo, getAttribute, isVisible } = require('../lib/puppeteer-helpers.js')
 
+const {
+  mockGoogleTagManagerScript
+} = require('./helpers/google-tag-manager.js')
+
 describe('Cookie banner', () => {
   let $module
   let $message
@@ -137,6 +141,13 @@ describe('Cookie banner', () => {
         getAttribute($confirmationAccept, 'tabindex')
       ).resolves.toEqual('-1')
     })
+
+    it('injects the script for Google Tag Manager', async () => {
+      await $buttonAccept.click()
+      expect(
+        page.$('script[src*="www.googletagmanager.com"]')
+      ).resolves.toBeTruthy()
+    })
   })
 
   describe('reject button', () => {
@@ -169,6 +180,13 @@ describe('Cookie banner', () => {
       await expect(
         getAttribute($confirmationReject, 'tabindex')
       ).resolves.toEqual('-1')
+    })
+
+    it('does not injects the script for Google Tag Manager', async () => {
+      await $buttonReject.click()
+      expect(
+        page.$('script[src*="www.googletagmanager.com"]')
+      ).resolves.toBeNull()
     })
   })
 
@@ -214,26 +232,3 @@ describe('Cookie banner', () => {
     })
   })
 })
-
-/**
- * Mocks requests to Google Tag Manager so our tests are not impacted by
- * possible errors in third party scripts
- *
- * @param {import('puppeteer').HTTPRequest} interceptedRequest
- * @returns
- */
-function mockGoogleTagManagerScript(interceptedRequest) {
-  if (interceptedRequest.isInterceptResolutionHandled()) return
-
-  const requestURL = interceptedRequest.url()
-
-  if (requestURL.startsWith('https://www.googletagmanager.com/')) {
-    return interceptedRequest.respond({
-      status: 200,
-      contentType: 'text/javascript',
-      body: 'window.GTMScriptIncluded=true;'
-    })
-  }
-
-  return interceptedRequest.continue()
-}

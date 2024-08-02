@@ -1,6 +1,10 @@
 const { ports } = require('../config')
 const { goTo, getProperty, isVisible } = require('../lib/puppeteer-helpers.js')
 
+const {
+  mockGoogleTagManagerScript
+} = require('./helpers/google-tag-manager.js')
+
 describe('Cookies page', () => {
   let $module
 
@@ -22,9 +26,18 @@ describe('Cookies page', () => {
     })
 
     await page.setJavaScriptEnabled(true)
+    // Set up network interception
+    // https://pptr.dev/guides/network-interception
+    await page.setRequestInterception(true)
+    page.on('request', mockGoogleTagManagerScript)
 
     await goTo(page, '/cookies')
     await setup(page)
+  })
+
+  afterEach(async () => {
+    page.off('request', mockGoogleTagManagerScript)
+    await page.setRequestInterception(false)
   })
 
   it('without JavaScript it has no visible inputs', async () => {
