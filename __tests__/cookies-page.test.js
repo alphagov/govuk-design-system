@@ -110,6 +110,37 @@ describe('Cookies page', () => {
     )
   })
 
+  it('injects Google Tag Manager script if user accepts cookies', async () => {
+    // Click 'Yes' and submit
+    await $radioYes.click()
+    await $buttonSave.click()
+
+    expect(
+      page.$('script[src*="www.googletagmanager.com"]')
+    ).resolves.toBeTruthy()
+  })
+
+  it('does not inject Google Tag Manager script if user rejects cookies', async () => {
+    await $radioNo.click()
+    await $buttonSave.click()
+
+    expect(
+      page.$('script[src*="www.googletagmanager.com"]')
+    ).resolves.toBeNull()
+  })
+
+  it('immediately disables analytics if user rejects cookies', async () => {
+    await $radioNo.click()
+    await $buttonSave.click()
+
+    expect(
+      page.evaluate(() => window['ga-disable-G-8F2EMQL51V'])
+    ).resolves.toEqual(true)
+    expect(
+      page.evaluate(() => window['ga-disable-G-GHT8W0QGD9'])
+    ).resolves.toEqual(true)
+  })
+
   it('shows the users existing preferences when the page is loaded', async () => {
     // Click 'No' and submit
     await $radioNo.click()
