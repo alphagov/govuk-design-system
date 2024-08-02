@@ -43,8 +43,18 @@ describe('Cookie banner', () => {
 
     await page.setJavaScriptEnabled(true)
 
+    // Set up network interception
+    // https://pptr.dev/guides/network-interception
+    await page.setRequestInterception(true)
+    page.on('request', mockGoogleTagManagerScript)
+
     await goTo(page, '/')
     await setup(page)
+  })
+
+  afterEach(async () => {
+    page.off('request', mockGoogleTagManagerScript)
+    await page.setRequestInterception(false)
   })
 
   it('is hidden on the cookies page', async () => {
@@ -204,3 +214,26 @@ describe('Cookie banner', () => {
     })
   })
 })
+
+/**
+ * Mocks requests to Google Tag Manager so our tests are not impacted by
+ * possible errors in third party scripts
+ *
+ * @param {import('puppeteer').HTTPRequest} interceptedRequest
+ * @returns
+ */
+function mockGoogleTagManagerScript(interceptedRequest) {
+  if (interceptedRequest.isInterceptResolutionHandled()) return
+
+  const requestURL = interceptedRequest.url()
+
+  if (requestURL.startsWith('https://www.googletagmanager.com/')) {
+    return interceptedRequest.respond({
+      status: 200,
+      contentType: 'text/javascript',
+      body: 'window.GTMScriptIncluded=true;'
+    })
+  }
+
+  return interceptedRequest.continue()
+}
