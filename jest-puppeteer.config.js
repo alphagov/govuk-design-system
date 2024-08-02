@@ -7,6 +7,12 @@ module.exports = {
   browserContext: 'incognito',
 
   /**
+   * TEMPORARY: Disable puppeteer exiting when an error happens on the page,
+   * making tests fail when GTM throws an error in its execution
+   */
+  exitOnPageError: false,
+
+  /**
    * Puppeteer launch options
    */
   launch: {
