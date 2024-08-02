@@ -1,4 +1,4 @@
-const { goTo, getProperty } = require('../lib/puppeteer-helpers.js')
+const { goTo, getProperty } = require('./helpers/puppeteer.js')
 
 // Regex that can be used to match on fingerprinted search index files
 const isSearchIndex = /.*\/search-index(-[0-9a-f]{32})?.json$/

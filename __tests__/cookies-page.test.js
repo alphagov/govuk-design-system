@@ -1,5 +1,9 @@
 const { ports } = require('../config')
-const { goTo, getProperty, isVisible } = require('../lib/puppeteer-helpers.js')
+
+const {
+  mockGoogleTagManagerScript
+} = require('./helpers/google-tag-manager.js')
+const { goTo, getProperty, isVisible } = require('./helpers/puppeteer.js')
 
 describe('Cookies page', () => {
   let $module
@@ -22,9 +26,18 @@ describe('Cookies page', () => {
     })
 
     await page.setJavaScriptEnabled(true)
+    // Set up network interception
+    // https://pptr.dev/guides/network-interception
+    await page.setRequestInterception(true)
+    page.on('request', mockGoogleTagManagerScript)
 
     await goTo(page, '/cookies')
     await setup(page)
+  })
+
+  afterEach(async () => {
+    page.off('request', mockGoogleTagManagerScript)
+    await page.setRequestInterception(false)
   })
 
   it('without JavaScript it has no visible inputs', async () => {
@@ -95,6 +108,37 @@ describe('Cookies page', () => {
         })
       ])
     )
+  })
+
+  it('injects Google Tag Manager script if user accepts cookies', async () => {
+    // Click 'Yes' and submit
+    await $radioYes.click()
+    await $buttonSave.click()
+
+    expect(
+      page.$('script[src*="www.googletagmanager.com"]')
+    ).resolves.toBeTruthy()
+  })
+
+  it('does not inject Google Tag Manager script if user rejects cookies', async () => {
+    await $radioNo.click()
+    await $buttonSave.click()
+
+    expect(
+      page.$('script[src*="www.googletagmanager.com"]')
+    ).resolves.toBeNull()
+  })
+
+  it('immediately disables analytics if user rejects cookies', async () => {
+    await $radioNo.click()
+    await $buttonSave.click()
+
+    expect(
+      page.evaluate(() => window['ga-disable-G-8F2EMQL51V'])
+    ).resolves.toEqual(true)
+    expect(
+      page.evaluate(() => window['ga-disable-G-GHT8W0QGD9'])
+    ).resolves.toEqual(true)
   })
 
   it('shows the users existing preferences when the page is loaded', async () => {

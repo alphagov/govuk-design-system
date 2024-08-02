@@ -1,4 +1,4 @@
-const { goTo, getAttribute, isVisible } = require('../lib/puppeteer-helpers.js')
+const { goTo, getAttribute, isVisible } = require('./helpers/puppeteer.js')
 
 describe('Component page', () => {
   let $module

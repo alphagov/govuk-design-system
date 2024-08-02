@@ -1,5 +1,9 @@
 const { ports } = require('../config')
-const { goTo, getAttribute, isVisible } = require('../lib/puppeteer-helpers.js')
+
+const {
+  mockGoogleTagManagerScript
+} = require('./helpers/google-tag-manager.js')
+const { goTo, getAttribute, isVisible } = require('./helpers/puppeteer.js')
 
 describe('Cookie banner', () => {
   let $module
@@ -43,8 +47,18 @@ describe('Cookie banner', () => {
 
     await page.setJavaScriptEnabled(true)
 
+    // Set up network interception
+    // https://pptr.dev/guides/network-interception
+    await page.setRequestInterception(true)
+    page.on('request', mockGoogleTagManagerScript)
+
     await goTo(page, '/')
     await setup(page)
+  })
+
+  afterEach(async () => {
+    page.off('request', mockGoogleTagManagerScript)
+    await page.setRequestInterception(false)
   })
 
   it('is hidden on the cookies page', async () => {
@@ -127,6 +141,13 @@ describe('Cookie banner', () => {
         getAttribute($confirmationAccept, 'tabindex')
       ).resolves.toEqual('-1')
     })
+
+    it('injects the script for Google Tag Manager', async () => {
+      await $buttonAccept.click()
+      expect(
+        page.$('script[src*="www.googletagmanager.com"]')
+      ).resolves.toBeTruthy()
+    })
   })
 
   describe('reject button', () => {
@@ -159,6 +180,13 @@ describe('Cookie banner', () => {
       await expect(
         getAttribute($confirmationReject, 'tabindex')
       ).resolves.toEqual('-1')
+    })
+
+    it('does not injects the script for Google Tag Manager', async () => {
+      await $buttonReject.click()
+      expect(
+        page.$('script[src*="www.googletagmanager.com"]')
+      ).resolves.toBeNull()
     })
   })
 
