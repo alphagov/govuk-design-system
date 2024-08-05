@@ -73,8 +73,6 @@ Avoid using the palette colours if there is a Sass variable that is designed for
 
 If you need to use tints of this palette, use either 25% or 50%.
 
-You can find departmental colours in the GOV.UK Frontend [\_colours-organisations](https://github.com/alphagov/govuk-frontend/blob/main/packages/govuk-frontend/src/govuk/settings/_colours-organisations.scss) file.
-
 <table class="govuk-body app-colour-list" summary="Table of extended colours">
   <tbody>
   {% for name, colour in colours.palette %}
@@ -97,3 +95,14 @@ You can find departmental colours in the GOV.UK Frontend [\_colours-organisation
 When creating charts, use the colour palettes and guidance set out in the Government Analysis Function [Data visualisation: colours guidance](https://analysisfunction.civilservice.gov.uk/policy-store/data-visualisation-colours-in-charts/).
 
 The colour palettes recommended by the Government Analysis Function are based on the colours shown on this page. They've made some slight changes to improve colour contrast, in line with the Web Content Accessibility Guidelines (WCAG).
+
+## Organisation colours
+
+You can find brand colours for government departments and organisations in the GOV.UK Frontend [\_colours-organisations](https://github.com/alphagov/govuk-frontend/blob/main/packages/govuk-frontend/src/govuk/settings/_colours-organisations.scss) file.
+
+This file is maintained on a best effort basis and is assembled from a number of sources, including:
+
+- [HM Government branding portal](https://hmgbrand.gcs.civilservice.gov.uk/)
+- Cabinet Office branding team
+- [Design102](https://design102.co.uk/), the government's in-house design studio
+- Communications teams from individual organisations
