@@ -8,14 +8,26 @@ const { goTo, getProperty, isVisible } = require('./helpers/puppeteer.js')
 describe('Cookies page', () => {
   let $module
 
-  let $radioYes
-  let $radioNo
+  let $radioYesAnalytics
+  let $radioNoAnalytics
+  let $radioYesCampaign
+  let $radioNoCampaign
   let $buttonSave
 
   async function setup(page) {
     $module = await page.$('[data-module="app-cookies-page"]')
-    $radioYes = await $module.$('input[name="cookies[analytics]"][value="yes"]')
-    $radioNo = await $module.$('input[name="cookies[analytics]"][value="no"]')
+    $radioYesAnalytics = await $module.$(
+      'input[name="cookies[analytics]"][value="yes"]'
+    )
+    $radioNoAnalytics = await $module.$(
+      'input[name="cookies[analytics]"][value="no"]'
+    )
+    $radioYesCampaign = await $module.$(
+      'input[name="cookies[campaign]"][value="yes"]'
+    )
+    $radioNoCampaign = await $module.$(
+      'input[name="cookies[campaign]"][value="no"]'
+    )
     $buttonSave = await $module.$('button')
   }
 
@@ -47,21 +59,27 @@ describe('Cookies page', () => {
     await page.reload()
     await setup(page)
 
-    await expect(isVisible($radioYes)).resolves.toBe(false)
-    await expect(isVisible($radioNo)).resolves.toBe(false)
+    await expect(isVisible($radioYesAnalytics)).resolves.toBe(false)
+    await expect(isVisible($radioNoAnalytics)).resolves.toBe(false)
     await expect(isVisible($buttonSave)).resolves.toBe(false)
   })
 
   it('has radios for each cookie type', async () => {
-    await expect(isVisible($radioYes)).resolves.toBe(true)
-    await expect(isVisible($radioNo)).resolves.toBe(true)
+    await expect(isVisible($radioYesAnalytics)).resolves.toBe(true)
+    await expect(isVisible($radioNoAnalytics)).resolves.toBe(true)
+    await expect(isVisible($radioYesCampaign)).resolves.toBe(true)
+    await expect(isVisible($radioNoCampaign)).resolves.toBe(true)
   })
 
   it('sets the default radio selection to "no"', async () => {
     await expect(page.cookies()).resolves.toEqual([])
 
-    await expect(getProperty($radioYes, 'checked')).resolves.toBe(false)
-    await expect(getProperty($radioNo, 'checked')).resolves.toBe(true)
+    await expect(getProperty($radioYesAnalytics, 'checked')).resolves.toBe(
+      false
+    )
+    await expect(getProperty($radioNoAnalytics, 'checked')).resolves.toBe(true)
+    await expect(getProperty($radioYesCampaign, 'checked')).resolves.toBe(false)
+    await expect(getProperty($radioNoCampaign, 'checked')).resolves.toBe(true)
   })
 
   it('has a save button', async () => {
@@ -75,7 +93,7 @@ describe('Cookies page', () => {
     await expect(isVisible($notification)).resolves.toBe(false)
 
     // Click 'Yes' and submit
-    await $radioYes.click()
+    await $radioYesAnalytics.click()
     await $buttonSave.click()
 
     // Notification visible
@@ -84,27 +102,29 @@ describe('Cookies page', () => {
 
   it('saves user preferences to a cookie', async () => {
     // Click 'Yes' and submit
-    await $radioYes.click()
+    await $radioYesAnalytics.click()
+    await $radioYesCampaign.click()
     await $buttonSave.click()
 
     await expect(page.cookies()).resolves.toEqual(
       expect.arrayContaining([
         expect.objectContaining({
           name: 'design_system_cookies_policy',
-          value: '{"analytics":true,"version":1}'
+          value: '{"analytics":true,"campaign":true,"version":2}'
         })
       ])
     )
 
     // Click 'No' and submit
-    await $radioNo.click()
+    await $radioNoAnalytics.click()
+    await $radioNoCampaign.click()
     await $buttonSave.click()
 
     await expect(page.cookies()).resolves.toEqual(
       expect.arrayContaining([
         expect.objectContaining({
           name: 'design_system_cookies_policy',
-          value: '{"analytics":false,"version":1}'
+          value: '{"analytics":false,"campaign":false,"version":2}'
         })
       ])
     )
@@ -112,7 +132,7 @@ describe('Cookies page', () => {
 
   it('injects Google Tag Manager script if user accepts cookies', async () => {
     // Click 'Yes' and submit
-    await $radioYes.click()
+    await $radioYesAnalytics.click()
     await $buttonSave.click()
 
     expect(
@@ -121,7 +141,7 @@ describe('Cookies page', () => {
   })
 
   it('does not inject Google Tag Manager script if user rejects cookies', async () => {
-    await $radioNo.click()
+    await $radioNoAnalytics.click()
     await $buttonSave.click()
 
     expect(
@@ -130,7 +150,7 @@ describe('Cookies page', () => {
   })
 
   it('immediately disables analytics if user rejects cookies', async () => {
-    await $radioNo.click()
+    await $radioNoAnalytics.click()
     await $buttonSave.click()
 
     expect(
@@ -143,25 +163,33 @@ describe('Cookies page', () => {
 
   it('shows the users existing preferences when the page is loaded', async () => {
     // Click 'No' and submit
-    await $radioNo.click()
+    await $radioNoAnalytics.click()
+    await $radioNoCampaign.click()
     await $buttonSave.click()
 
     // Reload page again
     await page.reload()
     await setup(page)
 
-    await expect(getProperty($radioYes, 'checked')).resolves.toBe(false)
-    await expect(getProperty($radioNo, 'checked')).resolves.toBe(true)
+    await expect(getProperty($radioYesAnalytics, 'checked')).resolves.toBe(
+      false
+    )
+    await expect(getProperty($radioNoAnalytics, 'checked')).resolves.toBe(true)
+    await expect(getProperty($radioYesCampaign, 'checked')).resolves.toBe(false)
+    await expect(getProperty($radioNoCampaign, 'checked')).resolves.toBe(true)
 
     // Click 'Yes', submit form
-    await $radioYes.click()
+    await $radioYesAnalytics.click()
+    await $radioYesCampaign.click()
     await $buttonSave.click()
 
     // Reload page again
     await page.reload()
     await setup(page)
 
-    await expect(getProperty($radioYes, 'checked')).resolves.toBe(true)
-    await expect(getProperty($radioNo, 'checked')).resolves.toBe(false)
+    await expect(getProperty($radioYesAnalytics, 'checked')).resolves.toBe(true)
+    await expect(getProperty($radioNoAnalytics, 'checked')).resolves.toBe(false)
+    await expect(getProperty($radioYesCampaign, 'checked')).resolves.toBe(true)
+    await expect(getProperty($radioNoCampaign, 'checked')).resolves.toBe(false)
   })
 })

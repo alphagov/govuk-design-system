@@ -124,6 +124,53 @@ layout: layout-single-page.njk
           ]
         }) }}
 
+        <h2 class="govuk-heading-l govuk-!-margin-top-6">Marketing and Communications Cookies</h2>
+
+        <p class="govuk-body">These cookies may be set by third party websites and do things like measure how you view YouTube videos.</p>
+
+        {{ govukTable({
+          firstCellIsHeader: true,
+          caption: "Marketing and Communications cookies we use",
+          head: [
+            { text: "Name" },
+            { text: "Purpose" },
+            { text: "Expires" }
+          ],
+          rows: [
+            [
+              { text: "campaign" },
+              { text: "Indicates that you consent for cookies to be set by third party websites such as YouTube." },
+              { text: "2 years" }
+            ]
+          ]
+        }) }}
+
+        {{ govukRadios({
+          name: "cookies[campaign]",
+          idPrefix: "cookies-campaign",
+          fieldset: {
+            legend: {
+              text: "Do you want to accept communications and marketing cookies?",
+              classes: "govuk-fieldset__legend--s"
+            },
+            classes: "js-cookies-page-form-fieldset",
+            attributes: {
+              "data-cookie-type": "campaign",
+              hidden: ""
+            }
+          },
+          items: [
+            {
+              text: "Yes",
+              value: "yes"
+            },
+            {
+              text: "No",
+              value: "no"
+            }
+          ]
+        }) }}
+
         {{ govukButton({
           text: "Save cookie settings",
           classes: "js-cookies-form-button",
