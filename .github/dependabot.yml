@@ -8,6 +8,12 @@ updates:
 
     # Group packages into shared PR
     groups:
+      # First in list so Dependabot looks at updating those first
+      design-system:
+        patterns:
+          - 'govuk-frontend'
+          - 'accessible-autocomplete'
+
       babel:
         patterns:
           - '@babel/*'
