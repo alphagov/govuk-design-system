@@ -60,3 +60,19 @@ Using tabular numbers can make numbers intended for comparison to one another ea
 You can also use tabular numbers for numbers that dynamically update, such as in a counter. The equal width of each digit prevents the numbers from visually moving towards and away from each other as the counter updates.
 
 Activate tabular numbers by using `govuk-!-font-tabular-numbers`.
+
+## Breaking up long words
+
+You might need to show long words that cannot be changed or broken into smaller parts, such as:
+
+- technical or scientific terms
+- long email addresses
+- words from other languages
+
+Long words can create issues in constrained spaces such as mobile device screens and data tables. They can 'break out' of the layout, resulting in a broken visual appearance and requiring users to scroll horizontally to view all of your content.
+
+You can help to reduce these issues by surrounding content likely to 'break out' with `govuk-!-text-break-word`.
+
+This class forcibly splits long words onto multiple lines when they become longer than the width of the container. It'll make the split exactly where the word would otherwise 'break out', which might make compound words more difficult to read. You can control where words can be split by inserting [the `wbr` HTML tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr) into your content.
+
+{{ example({ group: "styles", item: "font-override-classes", example: "break-word", html: true, open: true }) }}
