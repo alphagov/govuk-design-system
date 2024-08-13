@@ -10,6 +10,10 @@
   @return "%23" + $output;
 }
 
+@function _search-icon($colour) {
+  @return url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36' width='40' height='40'%3E%3Cpath d='M25.7 24.8L21.9 21c.7-1 1.1-2.2 1.1-3.5 0-3.6-2.9-6.5-6.5-6.5S10 13.9 10 17.5s2.9 6.5 6.5 6.5c1.6 0 3-.6 4.1-1.5l3.7 3.7 1.4-1.4zM12 17.5c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5-2 4.5-4.5 4.5-4.5-2-4.5-4.5z' fill='#{encode-hex($colour)}'%3E%3C/path%3E%3C/svg%3E");
+}
+
 $icon-size: 40px;
 
 .app-site-search {
@@ -72,13 +76,19 @@ $icon-size: 40px;
 
 .app-site-search__input {
   position: relative;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36' width='40' height='40'%3E%3Cpath d='M25.7 24.8L21.9 21c.7-1 1.1-2.2 1.1-3.5 0-3.6-2.9-6.5-6.5-6.5S10 13.9 10 17.5s2.9 6.5 6.5 6.5c1.6 0 3-.6 4.1-1.5l3.7 3.7 1.4-1.4zM12 17.5c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5-2 4.5-4.5 4.5-4.5-2-4.5-4.5z' fill='#{encode-hex(govuk-colour("dark-grey"))}'%3E%3C/path%3E%3C/svg%3E");
+  background-image: _search-icon($colour: govuk-colour("dark-grey"));
   background-repeat: no-repeat;
   background-position: center left -2px;
   background-size: $icon-size $icon-size;
 
   &::placeholder {
     color: govuk-colour("dark-grey");
+  }
+
+  // If the user is in a dark forced colours mode, switch the search icon out
+  // for a light variant.
+  @media (forced-colors: active) and (prefers-color-scheme: dark) {
+    background-image: _search-icon($colour: govuk-colour("white"));
   }
 }
 
