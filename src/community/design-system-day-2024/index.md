@@ -7,71 +7,17 @@ layout: layout-pane.njk
 order: 15
 ---
 
-{% from "_call-to-action.njk" import callToAction %}
-
 {% from "_promo-banner.njk" import promoBanner %}
 
 <img class="app-image--no-border govuk-!-margin-bottom-9" src="/images/dsd24-24.svg" alt="" role="presentation">
 
 <p class="govuk-!-font-size-24">
-  Design System Day is the GOV.UK Design System’s flagship event! It’s an opportunity to collaborate and share knowledge about design systems with like-minded people, covering topics like accessibility, community and decision-making.
+We had a great response to the call for speakers for Design System Day 2024 in Liverpool. We’re grateful to our community for all the effort you put into helping us make these events brillant.  
 </p>
 
-It’s a space for anyone using design systems in government to share ideas and developments, learn from colleagues, and spark conversations on related topics.
+We've now confirmed our speakers [speakers](/community/design-system-day-2024/speaker-information), including a keynote talk from Emily Webber. We have a diverse range of unsung heroes coming together to talk to you about their experiences.
 
-In previous years we covered topics such as:
-
-<ul>
-  <li>design ethics</li>
-  <li>designing for marginalised groups</li>
-  <li>equity in design systems</li>
-  <li>inclusivity by design</li>
-  <li>managing contributions</li>
-  <li>new web capabilities</li>
-  <li>systems thinking</li>
-  <li>working at scale</li>
-</ul>
-
-{% call callToAction({
-  header: "Day 2 call for speakers",
-  imageMobile: "/images/dsd24-tickets-mob.svg",
-  imageDesktop: "/images/dsd24-tickets-desk.svg"
-}) %}
-
-  <table class="govuk-table">
-    <tbody>
-      <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header">
-          Date
-        </th>
-        <td class="govuk-table__cell">
-          Thursday 5 September 2024
-        </td>
-      </tr>
-      <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header">
-          Location
-        </th>
-        <td class="govuk-table__cell">
-          St Georges Hall, Liverpool
-        </td>
-      </tr>
-      <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header">
-          Time
-        </th>
-        <td class="govuk-table__cell">
-          9:45am to 4:30pm
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <p
-    class="govuk-!-padding-bottom-4"
-  >
-    This year our theme is ‘Unsung heroes of the Design System’. We’re looking for people who help keep the design system running without being noticed. If this sounds like something you’d be interested in, <a class="call-to-action-container__link govuk-link" href="/community/call-for-speakers-2024/"> find out how to apply to speak at Design System Day.</a>
-  </p>
-{% endcall %}
+You can also read about the [upcoming sessions](/community/design-system-day-2024/session-information). We have a variety of formats across the day. And some information about how the day will run.
 
 {% call promoBanner({
   img: "/images/dsd24-mail.svg",
