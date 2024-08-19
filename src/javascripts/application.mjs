@@ -24,12 +24,7 @@ createAll(NotificationBanner)
 createAll(SkipLink)
 
 // Initialise cookie banner
-const $cookieBanner = document.querySelector(
-  '[data-module="govuk-cookie-banner"]'
-)
-if ($cookieBanner) {
-  new CookieBanner($cookieBanner)
-}
+createAll(CookieBanner)
 
 // Initialise analytics if consent is given
 const userConsent = getConsentCookie()

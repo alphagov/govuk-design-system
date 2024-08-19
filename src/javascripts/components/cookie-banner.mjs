@@ -11,6 +11,7 @@ const cookieConfirmationRejectSelector = '.js-cookie-banner-confirmation-reject'
  * Website cookie banner
  */
 class CookieBanner {
+  static moduleName = 'govuk-cookie-banner'
   /**
    * @param {Element} $module - HTML element
    */
