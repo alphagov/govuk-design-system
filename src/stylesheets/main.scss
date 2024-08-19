@@ -357,6 +357,12 @@ pre .language-plaintext {
     @include govuk-typography-weight-bold;
   }
 
+  // Govuk tags are strong elements and prose scope reinforces strong's being
+  // bold, so we need to 'override' it back to regular
+  .govuk-tag {
+    @include govuk-typography-weight-regular;
+  }
+
   ul,
   ol {
     @extend %govuk-list;
@@ -424,8 +430,4 @@ pre .language-plaintext {
 .app-tag {
   margin-top: 1px;
   margin-bottom: govuk-spacing(2);
-
-  .app-prose-scope & {
-    font-weight: normal;
-  }
 }
