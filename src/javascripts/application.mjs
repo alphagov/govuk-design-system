@@ -37,10 +37,7 @@ if (userConsent && isValidConsentCookie(userConsent) && userConsent.analytics) {
 }
 
 // Initialise example frames
-const $examples = document.querySelectorAll('[data-module="app-example-frame"]')
-$examples.forEach(($example) => {
-  new Example($example)
-})
+createAll(Example)
 
 // Initialise tabs
 const $tabs = document.querySelectorAll('[data-module="app-tabs"]')

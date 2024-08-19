@@ -9,6 +9,7 @@ import iFrameResize from 'iframe-resizer/js/iframeResizer.js'
  * @param {Element} $module - HTML element to use for example
  */
 class Example {
+  static moduleName = 'app-example-frame'
   /**
    * @param {Element} $module - HTML element
    */
