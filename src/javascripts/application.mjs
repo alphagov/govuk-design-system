@@ -46,10 +46,7 @@ createAll(AppTabs)
 new OptionsTable()
 
 // Add copy to clipboard to code blocks inside tab containers
-const $codeBlocks = document.querySelectorAll('[data-module="app-copy"] pre')
-$codeBlocks.forEach(($codeBlock) => {
-  new Copy($codeBlock)
-})
+createAll(Copy)
 
 // Initialise mobile navigation
 new Navigation(document)

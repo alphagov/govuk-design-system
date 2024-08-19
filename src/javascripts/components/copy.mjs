@@ -4,6 +4,8 @@ import ClipboardJS from 'clipboard'
  * Copy button for code examples
  */
 class Copy {
+  static moduleName = 'app-copy'
+
   /**
    * @param {Element} $module - HTML element
    */
@@ -18,6 +20,9 @@ class Copy {
 
     this.$module = $module
 
+    this.$pre = this.$module.querySelector('pre')
+    // TODO: Throw once GOV.UK Frontend exports its errors
+
     /** @type {number | null} */
     this.resetTimeoutId = null
 
@@ -29,11 +34,11 @@ class Copy {
     this.$status.className = 'govuk-visually-hidden'
     this.$status.setAttribute('aria-live', 'assertive')
 
-    this.$module.insertAdjacentElement('beforebegin', this.$status)
-    this.$module.insertAdjacentElement('beforebegin', this.$button)
+    this.$module.prepend(this.$status)
+    this.$module.prepend(this.$button)
 
     const $clipboard = new ClipboardJS(this.$button, {
-      target: (trigger) => trigger.nextElementSibling
+      target: () => this.$pre
     })
 
     $clipboard.on('success', (event) => this.successAction(event))
