@@ -12,7 +12,7 @@ import {
 } from './components/cookie-functions.mjs'
 import CookiesPage from './components/cookies-page.mjs'
 import Copy from './components/copy.mjs'
-import Example from './components/example.mjs'
+import ExampleFrame from './components/example-frame.mjs'
 import Navigation from './components/navigation.mjs'
 import OptionsTable from './components/options-table.mjs'
 import Search from './components/search.mjs'
@@ -38,7 +38,7 @@ if (userConsent && isValidConsentCookie(userConsent) && userConsent.analytics) {
 }
 
 // Code examples
-createAll(Example)
+createAll(ExampleFrame)
 createAll(AppTabs)
 // Do this after initialising tabs
 createAll(Copy)
