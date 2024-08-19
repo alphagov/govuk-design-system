@@ -37,6 +37,7 @@ const DEBOUNCE_TIME_TO_WAIT = () => {
  * Website search
  */
 class Search {
+  static moduleName = 'app-search'
   /**
    * @param {Element} $module - HTML element
    */

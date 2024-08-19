@@ -55,10 +55,7 @@ $codeBlocks.forEach(($codeBlock) => {
 new Navigation(document)
 
 // Initialise search
-const $searchContainer = document.querySelector('[data-module="app-search"]')
-if ($searchContainer) {
-  new Search($searchContainer)
-}
+createAll(Search)
 
 // Initialise back to top
 const $backToTop = document.querySelector('[data-module="app-back-to-top"]')
