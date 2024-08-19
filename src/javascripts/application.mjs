@@ -23,10 +23,11 @@ createAll(Button)
 createAll(NotificationBanner)
 createAll(SkipLink)
 
-// Initialise cookie banner
+// Cookies and analytics
 createAll(CookieBanner)
+createAll(CookiesPage)
 
-// Initialise analytics if consent is given
+// Check for consent before initialising analytics
 const userConsent = getConsentCookie()
 if (userConsent && isValidConsentCookie(userConsent) && userConsent.analytics) {
   loadAnalytics()
@@ -36,17 +37,12 @@ if (userConsent && isValidConsentCookie(userConsent) && userConsent.analytics) {
   removeUACookies()
 }
 
-// Initialise example frames
+// Code examples
 createAll(Example)
-
-// Initialise tabs
 createAll(AppTabs)
-
 // Do this after initialising tabs
-new OptionsTable()
-
-// Add copy to clipboard to code blocks inside tab containers
 createAll(Copy)
+new OptionsTable()
 
 // Initialise mobile navigation
 new Navigation(document)
@@ -56,6 +52,3 @@ createAll(Search)
 
 // Initialise back to top
 createAll(BackToTop)
-
-// Initialise cookie page
-createAll(CookiesPage)
