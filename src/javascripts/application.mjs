@@ -58,10 +58,7 @@ new Navigation(document)
 createAll(Search)
 
 // Initialise back to top
-const $backToTop = document.querySelector('[data-module="app-back-to-top"]')
-if ($backToTop) {
-  new BackToTop($backToTop)
-}
+createAll(BackToTop)
 
 // Initialise cookie page
 const $cookiesPage = document.querySelector('[data-module="app-cookies-page"]')
