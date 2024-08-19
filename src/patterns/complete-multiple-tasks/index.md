@@ -9,7 +9,7 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "_wcag-callout.njk" import wcagCallout %}
 {% from "govuk/components/tag/macro.njk" import govukTag %}
 
 Help users understand:
@@ -18,26 +18,20 @@ Help users understand:
 - the order they should complete tasks in
 - when they've completed tasks
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affect this pattern
-
-To help users to 'Complete multiple tasks' and meet the new WCAG 2.2 criteria, make sure that users can successfully:
-
-- [interact with tasks without relying on 'click and drag' movements (if you choose to add functionality to reorder tasks)](/patterns/complete-multiple-tasks/#wcag-interact-without-click-drag-task)
-- [edit information they've given when going back to a previous task](/patterns/complete-multiple-tasks/#wcag-edit-information-previous-task)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "pattern",
+  introAction: "help users to",
+  name: "Complete multiple tasks",
+  criteria: [
+    {
+      text: "interact with tasks without relying on 'click and drag' movements (if you choose to add functionality to reorder tasks)",
+      anchor: "wcag-interact-without-click-drag-task"
+    },
+    {
+      text: "edit information they've given when going back to a previous task",
+      anchor: "wcag-edit-information-previous-task"
+    }
+  ]
 }) }}
 
 {{ example({ group: "patterns", item: "complete-multiple-tasks", example: "default", html: true, nunjucks: true, open: false }) }}

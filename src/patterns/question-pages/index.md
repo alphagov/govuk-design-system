@@ -9,31 +9,25 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "_wcag-callout.njk" import wcagCallout %}
 {% from "govuk/components/tag/macro.njk" import govukTag %}
 
 This pattern explains when to use question pages and what elements they need to include.
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affect this pattern
-
-To use ‘Question pages' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
-
-- [avoid re-entering information they've given in a previous answer](/patterns/question-pages/#wcag-reenter-previous-answer)
-- [select an answer without relying on 'click and drag' movement](/patterns/question-pages/#wcag-select-without-click-drag)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "pattern",
+  introAction: "use",
+  name: "Question pages",
+  criteria: [
+    {
+      text: "avoid re-entering information they've given in a previous answer",
+      anchor: "wcag-reenter-previous-answer"
+    },
+    {
+      text: "select an answer without relying on 'click and drag' movement",
+      anchor: "wcag-select-without-click-drag"
+    }
+  ]
 }) }}
 
 {{ example({ group: "patterns", item: "question-pages", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}

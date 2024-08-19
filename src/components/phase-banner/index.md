@@ -8,30 +8,21 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "_wcag-callout.njk" import wcagCallout %}
 {% from "govuk/components/tag/macro.njk" import govukTag %}
 
 Use the phase banner component to show users your service is still being worked on.
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affect this component
-
-To use the ‘Phase banner' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
-
-- [see all page content when a phase banner is shown](/components/phase-banner/#wcag-do-not-cover-content)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "component",
+  introAction: "use the",
+  name: "Phase banner",
+  criteria: [
+    {
+      text: "see all page content when a phase banner is shown",
+      anchor: "wcag-do-not-cover-content"
+    }
+  ]
 }) }}
 
 {{ example({ group: "components", item: "phase-banner", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}

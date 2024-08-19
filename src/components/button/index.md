@@ -8,28 +8,19 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "_wcag-callout.njk" import wcagCallout %}
 {% from "govuk/components/tag/macro.njk" import govukTag %}
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affect this component
-
-To use the ‘Button' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
-
-- [interact with buttons](/components/button/#wcag-interact-button)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "component",
+  introAction: "use the",
+  name: "Button",
+  criteria: [
+    {
+      text: "interact with buttons",
+      anchor: "wcag-interact-button"
+    }
+  ]
 }) }}
 
 {{ example({ group: "components", item: "button", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}

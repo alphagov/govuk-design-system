@@ -8,30 +8,21 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "_wcag-callout.njk" import wcagCallout %}
 {% from "govuk/components/tag/macro.njk" import govukTag %}
 
 The breadcrumbs component helps users to understand where they are within a website’s structure and move between levels.
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affect this component
-
-To use ‘Breadcrumbs' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
-
-- [interact with breadcrumbs](/components/breadcrumbs/#wcag-interact-breadcrumbs)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "component",
+  introAction: "use",
+  name: "Breadcrumbs",
+  criteria: [
+    {
+      text: "interact with breadcrumbs",
+      anchor: "wcag-interact-breadcrumbs"
+    }
+  ]
 }) }}
 
 {{ example({ group: "components", item: "breadcrumbs", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}

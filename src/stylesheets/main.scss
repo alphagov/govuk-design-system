@@ -423,8 +423,15 @@ pre .language-plaintext {
   }
 }
 
-.app-inset-text {
+.app-wcag-callout {
   border-left-color: govuk-colour("blue");
+}
+
+// Change headings in WCAG callouts to look like H3s,
+// even though they semantically are H2s
+.app-wcag-callout h2 {
+  @extend %govuk-heading-m;
+  max-width: 30em;
 }
 
 .app-tag {

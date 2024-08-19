@@ -9,30 +9,21 @@ layout: layout-pane.njk
 ---
 
 {%- from "_example.njk" import example -%}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "_wcag-callout.njk" import wcagCallout %}
 {% from "govuk/components/tag/macro.njk" import govukTag %}
 
 Give users contact information within your service.
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affect this pattern
-
-To help users to 'Contact a department or service team' and meet the new WCAG 2.2 criteria, make sure that users can successfully:
-
-- [find contact details in a consistent place across a set of pages](/patterns/contact-a-department-or-service-team/#wcag-consistent-contact)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "pattern",
+  introAction: "help users to",
+  name: "Contact a department or service team",
+  criteria: [
+    {
+      text: "find contact details in a consistent place across a set of pages",
+      anchor: "wcag-consistent-contact"
+    }
+  ]
 }) }}
 
 {{ example({ group: "patterns", item: "contact-a-department-or-service-team", example: "default", html: true, open: false, size: "s" }) }}

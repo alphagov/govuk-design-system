@@ -7,30 +7,21 @@ aliases:
 layout: layout-pane.njk
 ---
 
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "_wcag-callout.njk" import wcagCallout %}
 {% from "govuk/components/tag/macro.njk" import govukTag %}
 
 Check the information the user gives you to make sure it’s valid. If there's a validation error, tell the user what's gone wrong and how to fix it. Turn off HTML5 validation.
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affect this pattern
-
-To help users to 'Recover from validation errors' and meet the new WCAG 2.2 criteria, make sure that users can successfully:
-
-- [edit information they've previously given to correct an error](/patterns/validation/#wcag-edit-to-correct-errors)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "pattern",
+  introAction: "help users to",
+  name: "Recover from validation errors",
+  criteria: [
+    {
+      text: "edit information they've previously given to correct an error",
+      anchor: "wcag-edit-to-correct-errors"
+    }
+  ]
 }) }}
 
 ## When to use this pattern

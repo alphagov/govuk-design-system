@@ -9,31 +9,25 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "_wcag-callout.njk" import wcagCallout %}
 {% from "govuk/components/tag/macro.njk" import govukTag %}
 
 This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affect this pattern
-
-To use ‘There is a problem with the service pages' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
-
-- [get contact information in a consistent way](/patterns/problem-with-the-service-pages/#wcag-consistent-content-problem-service)
-- [resume the service using information they've previously entered, if possible](/patterns/problem-with-the-service-pages/#wcag-resume-previous-entered-information)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "pattern",
+  introAction: "use",
+  name: "There is a problem with the service pages",
+  criteria: [
+    {
+      text: "get contact information in a consistent way",
+      anchor: "wcag-consistent-content-problem-service"
+    },
+    {
+      text: "resume the service using information they've previously entered, if possible",
+      anchor: "wcag-resume-previous-entered-information"
+    }
+  ]
 }) }}
 
 Tell the user there is something wrong with the service. These are also known as 500 and internal server error pages.

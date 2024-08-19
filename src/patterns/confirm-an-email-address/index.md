@@ -9,30 +9,21 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "_wcag-callout.njk" import wcagCallout %}
 {% from "govuk/components/tag/macro.njk" import govukTag %}
 
 This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affect this pattern
-
-To help users to 'Confirm an email address' and meet the new WCAG 2.2 criteria, make sure that users can successfully:
-
-- [copy and paste a security code (if you're asking the user to enter a security code you've sent them)](/patterns/confirm-an-email-address/#wcag-copy-paste-security-codes)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "pattern",
+  introAction: "help users to",
+  name: "Confirm an email address",
+  criteria: [
+    {
+      text: "copy and paste a security code (if you're asking the user to enter a security code you've sent them)",
+      anchor: "wcag-copy-paste-security-codes"
+    }
+  ]
 }) }}
 
 Check that a user has access to a specific email account using an email confirmation&nbsp;loop.

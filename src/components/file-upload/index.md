@@ -8,32 +8,25 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "_wcag-callout.njk" import wcagCallout %}
 {% from "govuk/components/tag/macro.njk" import govukTag %}
 
 This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affect this component
-
-To use the ‘File upload' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
-
-- [upload a file without relying on 'drag and drop' movements](/components/file-upload/#wcag-multi-method-drag-drop)
-- [reuse files they've uploaded](/components/file-upload/#wcag-use-previous-uploads)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "component",
+  introAction: "use the",
+  name: "File upload",
+  criteria: [
+    {
+      text: "upload a file without relying on 'drag and drop' movements",
+      anchor: "wcag-multi-method-drag-drop"
+    },
+    {
+      text: "reuse files they've uploaded",
+      anchor: "wcag-use-previous-uploads"
+    }
+  ]
 }) }}
 
 Help users select and upload a file.

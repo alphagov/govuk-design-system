@@ -8,32 +8,29 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "_wcag-callout.njk" import wcagCallout %}
 {% from "govuk/components/tag/macro.njk" import govukTag %}
 
 Help users to create and enter passwords.
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affect this component
-
-To use the ‘Password input’ and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
-
-- [interact with any 'show password' button](/components/password-input/#wcag-interact-show-password)
-- [use `autocomplete` to securely create and enter passwords](/components/password-input/#wcag-autocomplete-attribute)
-- [copy and paste into a password input](/components/password-input/#wcag-copy-paste-password)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "component",
+  introAction: "use the",
+  name: "Password input",
+  criteria: [
+    {
+      text: "interact with any 'show password' button",
+      anchor: "wcag-interact-show-password"
+    },
+    {
+      text: "use `autocomplete` to securely create and enter passwords",
+      anchor: "wcag-autocomplete-attribute"
+    },
+    {
+      text: "copy and paste into a password input",
+      anchor: "wcag-copy-paste-password"
+    }
+  ]
 }) }}
 
 {{ example({ group: "components", item: "password-input", example: "default", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}

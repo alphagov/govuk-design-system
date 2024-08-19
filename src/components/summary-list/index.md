@@ -8,31 +8,25 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "_wcag-callout.njk" import wcagCallout %}
 {% from "govuk/components/tag/macro.njk" import govukTag %}
 
 Use a summary list to summarise information, for example, a user’s responses at the end of a form.
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### WCAG 2.2 criteria might affect this component
-
-To use ‘Summary list’ and comply with new success criteria introduced in Web Content Accessibility Guidelines (WCAG) 2.2, make sure that users can successfully:
-
-- [interact with row actions](/components/summary-list/#wcag-interact-row-actions)
-- [change information they've previously given in an answer](/components/summary-list/#wcag-change-answers)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "component",
+  introAction: "use",
+  name: "Summary list",
+  criteria: [
+    {
+      text: "interact with row actions",
+      anchor: "wcag-interact-row-actions"
+    },
+    {
+      text: "change information they've previously given in an answer",
+      anchor: "wcag-change-answers"
+    }
+  ]
 }) }}
 
 {{ example({ group: "components", item: "summary-list", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}

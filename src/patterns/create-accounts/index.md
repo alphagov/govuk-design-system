@@ -8,31 +8,25 @@ backlogIssueId: 41
 layout: layout-pane.njk
 ---
 
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "_wcag-callout.njk" import wcagCallout %}
 {% from "govuk/components/tag/macro.njk" import govukTag %}
 
 Help users create an account for your service.
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affect this pattern
-
-To help users to 'Create accounts' and meet the new WCAG 2.2 criteria, make sure that users can successfully:
-
-- [reuse information they've already entered](/patterns/create-accounts/#wcag-reuse-account-information)
-- [avoid doing a cognitive test, such as a CAPTCHA, to create an account](/patterns/create-accounts/#wcag-avoid-cognitive-test)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "pattern",
+  introAction: "help users to",
+  name: "Create accounts",
+  criteria: [
+    {
+      text: "reuse information they've already entered",
+      anchor: "wcag-reuse-account-information"
+    },
+    {
+      text: "avoid doing a cognitive test, such as a CAPTCHA, to create an account",
+      anchor: "wcag-avoid-cognitive-test"
+    }
+  ]
 }) }}
 
 ## When to use this pattern

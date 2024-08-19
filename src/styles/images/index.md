@@ -10,27 +10,19 @@ order: 13
 ---
 
 {% from "_example.njk" import example %}
+{% from "_wcag-callout.njk" import wcagCallout %}
 {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 {% from "govuk/components/tag/macro.njk" import govukTag %}
 
 Avoid using images for unnecessary decoration. Only use images if there’s a real user need.
 
-{% set wcagCallout %}
+{% call wcagCallout({
+  name: "Images",
+  heading: "New WCAG 2.2 criteria affect how you use images"
+}) %}
 
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affect how you use images
-
-To meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, [make sure any icons and images used in links meet the minimum target size](/styles/images/#wcag-icon-focus). This is to make sure users can easily interact with the link.
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
-}) }}
+  <p>To meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, <a href="#wcag-icon-focus">make sure any icons and images used in links meet the minimum target size</a>. This is to make sure users can easily interact with the link.</p>
+{% endcall %}
 
 Make sure any information contained in an image can be understood by someone who cannot see it. Also consider partially-sighted users with visual impairments and the assistive technologies they might use.
 
@@ -252,6 +244,12 @@ To help us validate that this guidance is useful and practical for service teams
 We’re looking for feedback about any of these areas:
 
 - how you use images to give information to users
+- examples of the types of images used in services
+- how you create and choose images to use in your service
+- how you implement images (for frontend performance)
+
+Give us your feedback and examples by [posting a comment on the ‘Images’ discussion on GitHub](https://github.com/alphagov/govuk-design-system-backlog/issues/70).
+
 - examples of the types of images used in services
 - how you create and choose images to use in your service
 - how you implement images (for frontend performance)

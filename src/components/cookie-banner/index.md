@@ -8,31 +8,25 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "_wcag-callout.njk" import wcagCallout %}
 {% from "govuk/components/tag/macro.njk" import govukTag %}
 
 Allow users to accept or reject cookies which are not essential to making your service work.
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affect this component
-
-To use the ‘Cookie banner' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
-
-- [see items that are in focus at all times](/components/cookie-banner/#wcag-see-focus)
-- [interact with buttons and links in the cookie banner](/components/cookie-banner/#wcag-interact-cookie-banner)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "component",
+  introAction: "use the",
+  name: "Cookie banner",
+  criteria: [
+    {
+      text: "see items that are in focus at all times",
+      anchor: "wcag-see-focus"
+    },
+    {
+      text: "interact with buttons and links in the cookie banner",
+      anchor: "wcag-interact-cookie-banner"
+    }
+  ]
 }) }}
 
 {{ example({ group: "components", item: "cookie-banner", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}

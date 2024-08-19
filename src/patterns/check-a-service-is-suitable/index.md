@@ -8,30 +8,21 @@ backlogIssueId: 35
 layout: layout-pane.njk
 ---
 
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "_wcag-callout.njk" import wcagCallout %}
 {% from "govuk/components/tag/macro.njk" import govukTag %}
 
 Ask users questions to help them work out if they can or should use your service.
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affect this pattern
-
-To help users to 'Check a service is suitable' and meet the new WCAG 2.2 criteria, make sure that users can successfully:
-
-- [use the service without repeating answers they've already given](/patterns/check-a-service-is-suitable/#wcag-avoid-repeating-questions)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "pattern",
+  introAction: "help users to",
+  name: "Check a service is suitable",
+  criteria: [
+    {
+      text: "use the service without repeating answers they've already given",
+      anchor: "wcag-avoid-repeating-questions"
+    }
+  ]
 }) }}
 
 Doing this helps users save time as it tells them upfront whether they are eligible to use it and if they need it.
