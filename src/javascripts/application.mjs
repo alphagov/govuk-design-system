@@ -61,7 +61,4 @@ createAll(Search)
 createAll(BackToTop)
 
 // Initialise cookie page
-const $cookiesPage = document.querySelector('[data-module="app-cookies-page"]')
-if ($cookiesPage) {
-  new CookiesPage($cookiesPage)
-}
+createAll(CookiesPage)

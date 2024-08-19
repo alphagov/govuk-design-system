@@ -4,6 +4,7 @@ import { getConsentCookie, setConsentCookie } from './cookie-functions.mjs'
  * Website cookies page
  */
 class CookiesPage {
+  static moduleName = 'app-cookies-page'
   /**
    * @param {Element} $module - HTML element
    */
