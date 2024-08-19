@@ -9,6 +9,8 @@
  * - panels - the content that is shown/hidden/switched; same across all breakpoints
  */
 class AppTabs {
+  static moduleName = 'app-tabs'
+
   /**
    * @param {Element} $module - HTML element
    */

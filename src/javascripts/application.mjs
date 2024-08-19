@@ -40,10 +40,7 @@ if (userConsent && isValidConsentCookie(userConsent) && userConsent.analytics) {
 createAll(Example)
 
 // Initialise tabs
-const $tabs = document.querySelectorAll('[data-module="app-tabs"]')
-$tabs.forEach(($tabs) => {
-  new AppTabs($tabs)
-})
+createAll(AppTabs)
 
 // Do this after initialising tabs
 new OptionsTable()
