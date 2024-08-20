@@ -2,6 +2,8 @@
  * Website back to top link
  */
 class BackToTop {
+  static moduleName = 'app-back-to-top'
+
   /**
    * @param {Element} $module - HTML element
    */

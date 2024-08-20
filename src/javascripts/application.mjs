@@ -12,7 +12,7 @@ import {
 } from './components/cookie-functions.mjs'
 import CookiesPage from './components/cookies-page.mjs'
 import Copy from './components/copy.mjs'
-import Example from './components/example.mjs'
+import ExampleFrame from './components/example-frame.mjs'
 import Navigation from './components/navigation.mjs'
 import OptionsTable from './components/options-table.mjs'
 import Search from './components/search.mjs'
@@ -23,15 +23,11 @@ createAll(Button)
 createAll(NotificationBanner)
 createAll(SkipLink)
 
-// Initialise cookie banner
-const $cookieBanner = document.querySelector(
-  '[data-module="govuk-cookie-banner"]'
-)
-if ($cookieBanner) {
-  new CookieBanner($cookieBanner)
-}
+// Cookies and analytics
+createAll(CookieBanner)
+createAll(CookiesPage)
 
-// Initialise analytics if consent is given
+// Check for consent before initialising analytics
 const userConsent = getConsentCookie()
 if (userConsent && isValidConsentCookie(userConsent) && userConsent.analytics) {
   loadAnalytics()
@@ -41,44 +37,18 @@ if (userConsent && isValidConsentCookie(userConsent) && userConsent.analytics) {
   removeUACookies()
 }
 
-// Initialise example frames
-const $examples = document.querySelectorAll('[data-module="app-example-frame"]')
-$examples.forEach(($example) => {
-  new Example($example)
-})
-
-// Initialise tabs
-const $tabs = document.querySelectorAll('[data-module="app-tabs"]')
-$tabs.forEach(($tabs) => {
-  new AppTabs($tabs)
-})
-
+// Code examples
+createAll(ExampleFrame)
+createAll(AppTabs)
 // Do this after initialising tabs
+createAll(Copy)
 new OptionsTable()
-
-// Add copy to clipboard to code blocks inside tab containers
-const $codeBlocks = document.querySelectorAll('[data-module="app-copy"] pre')
-$codeBlocks.forEach(($codeBlock) => {
-  new Copy($codeBlock)
-})
 
 // Initialise mobile navigation
 new Navigation(document)
 
 // Initialise search
-const $searchContainer = document.querySelector('[data-module="app-search"]')
-if ($searchContainer) {
-  new Search($searchContainer)
-}
+createAll(Search)
 
 // Initialise back to top
-const $backToTop = document.querySelector('[data-module="app-back-to-top"]')
-if ($backToTop) {
-  new BackToTop($backToTop)
-}
-
-// Initialise cookie page
-const $cookiesPage = document.querySelector('[data-module="app-cookies-page"]')
-if ($cookiesPage) {
-  new CookiesPage($cookiesPage)
-}
+createAll(BackToTop)

@@ -9,10 +9,13 @@ module.exports = {
       extends: ['plugin:es-x/restrict-to-es2015', 'prettier'],
       parserOptions: {
         // Note: Allow ES2015 for import/export syntax
-        ecmaVersion: '2015'
+        ecmaVersion: 'latest'
       },
       plugins: ['es-x'],
       rules: {
+        // Babel transpiles ES2020 class fields
+        'es-x/no-class-fields': 'off',
+
         // JSDoc blocks are mandatory in source code
         'jsdoc/require-jsdoc': [
           'error',
