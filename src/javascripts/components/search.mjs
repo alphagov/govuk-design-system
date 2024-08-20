@@ -235,11 +235,18 @@ class Search {
         }
       }
 
-      const section = document.createElement('span')
-      section.className = 'app-site-search--section'
-      section.innerHTML = result.section
+      const visibleSection = document.createElement('span')
+      const visuallyHiddenSection = document.createElement('span')
 
-      elem.appendChild(section)
+      visibleSection.className = 'app-site-search--section'
+      visibleSection.setAttribute('aria-hidden', 'true')
+      visibleSection.innerHTML = result.section
+
+      visuallyHiddenSection.className = 'govuk-visually-hidden'
+      visuallyHiddenSection.innerHTML = `${result.section}: `
+
+      elem.appendChild(visibleSection)
+      elem.insertBefore(visuallyHiddenSection, elem.firstChild)
       return elem.innerHTML
     }
   }
