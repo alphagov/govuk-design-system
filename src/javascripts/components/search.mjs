@@ -236,10 +236,19 @@ class Search {
       }
 
       const section = document.createElement('span')
+      const hiddenOpenBracket = document.createElement('span')
+      const hiddenClosedBracket = document.createElement('span')
+
       section.className = 'app-site-search--section'
       section.innerHTML = result.section
+      hiddenOpenBracket.className = 'govuk-visually-hidden'
+      hiddenOpenBracket.innerHTML = '('
+      hiddenClosedBracket.className = 'govuk-visually-hidden'
+      hiddenClosedBracket.innerHTML = ')'
 
+      elem.appendChild(hiddenOpenBracket)
       elem.appendChild(section)
+      elem.appendChild(hiddenClosedBracket)
       return elem.innerHTML
     }
   }
