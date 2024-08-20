@@ -24,7 +24,9 @@ Kelly Lee and Trang Erskine, GOV.UK Design System team
 Greg Macoy
 10am to 10:30am
 
-### A talk with: Chikako Masuda from Digital Agency, Government of Japan
+### Curing design allergies in Japan's Government
+
+A prescription from Digital Agency's Design System and Community
 
 Chikako Masuda
 10:30am to 11:15am
@@ -38,7 +40,11 @@ Chikako Masuda
 With Lucy Brennan, Olivia Waring and Chris Lightfoot
 11:35am to 12:20pm
 
-Think about content differently. We’ll show you how an expansive use of content design can influence stakeholders and build trust in services. Sharing examples from government, the NHS and a local council, we’ll show how content provides context to the design system.
+Think about content differently. This panel will take content design beyond its boundaries, sharing examples from government, the NHS, and private sector. We’ll discuss how an expansive and person-centred use of content design can:
+
+- influence stakeholders
+- build trust in services and teams
+- provide context to the design system
 
 ### Lunch
 
