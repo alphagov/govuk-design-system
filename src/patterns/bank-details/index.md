@@ -10,7 +10,7 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 {% from "_wcag-callout.njk" import wcagCallout %}
-{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "_wcag-note.njk" import wcagNote %}
 
 This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
 
@@ -50,14 +50,11 @@ If your service does not support building society accounts, remove building soci
 
 ### Reusing entered bank details
 
-<div class="app-wcag-22" id="wcag-reuse-bank-details" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>Do not ask for bank details more than once within a single journey if only one transaction is taking place.</p>
-  <p>Make sure users can easily reuse previously entered bank details within a single journey, unless the information is no longer valid or doing so would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-reuse-bank-details"}) %}
+
+<p>Do not ask for bank details more than once within a single journey if only one transaction is taking place.</p>
+<p>Make sure users can easily reuse previously entered bank details within a single journey, unless the information is no longer valid or doing so would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
+{% endcall %}
 
 You can make it easier to reuse bank details through one of these methods:
 

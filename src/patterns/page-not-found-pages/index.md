@@ -10,7 +10,7 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 {% from "_wcag-callout.njk" import wcagCallout %}
-{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "_wcag-note.njk" import wcagNote %}
 
 A page not found tells someone we cannot find the page they were trying to view. They are also known as 404 pages.
 
@@ -55,13 +55,10 @@ Contact information should either:
 
 The content should be clear and concise, not blame the user.
 
-<div class="app-wcag-22" id="wcag-consistent-content-page-not-found" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>You must always write contact information in a clear and consistent way across ‘Page not found’ and similar service error pages. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent help</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-consistent-content-page-not-found"}) %}
+
+<p>You must always write contact information in a clear and consistent way across ‘Page not found’ and similar service error pages. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent help</a>.</p>
+{% endcall %}
 
 Do not use:
 

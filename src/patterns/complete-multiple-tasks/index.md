@@ -10,7 +10,7 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 {% from "_wcag-callout.njk" import wcagCallout %}
-{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "_wcag-note.njk" import wcagNote %}
 
 Help users understand:
 
@@ -67,13 +67,10 @@ Where possible, task names should:
 - describe what the task or activity will involve
 - start with verbs, for example, ‘check’, ‘declare’, ‘report’
 
-<div class="app-wcag-22" id="wcag-interact-without-click-drag-task" role="note">
-    {{ govukTag({
-        text: "WCAG 2.2",
-        classes: "app-tag"
-    }) }}
-    <p>Any task list that allows the user to rearrange the order that tasks are shown must offer a way to do so without relying on ‘click and drag’ movements. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">2.5.7 Dragging movements</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-interact-without-click-drag-task"}) %}
+
+<p>Any task list that allows the user to rearrange the order that tasks are shown must offer a way to do so without relying on ‘click and drag’ movements. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">2.5.7 Dragging movements</a>.</p>
+{% endcall %}
 
 ### Show the status of the tasks
 
@@ -150,14 +147,11 @@ If the user selects ‘No, I’ll come back to it later,’ mark the task as 'In
 
 If the user selects ‘Yes, I’ve completed this section,’ mark the task as 'Completed'.
 
-<div class="app-wcag-22" id="wcag-edit-information-previous-task" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>If a user decides to go back to a previous task, make sure information they have already entered is pre-populated.</p>
-  <p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-edit-information-previous-task"}) %}
+
+<p>If a user decides to go back to a previous task, make sure information they have already entered is pre-populated.</p>
+<p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
+{% endcall %}
 
 {{ example({ group: "patterns", item: "complete-multiple-tasks", example: "have-you-completed-this-section", html: true, nunjucks: true, open: false }) }}
 

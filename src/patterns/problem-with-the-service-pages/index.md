@@ -10,7 +10,7 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 {% from "_wcag-callout.njk" import wcagCallout %}
-{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "_wcag-note.njk" import wcagNote %}
 
 This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
 
@@ -67,14 +67,11 @@ Have clear and concise content and do not use:
 
 Store previously entered information for a reasonable amount of time so users can resume a journey with re-populated information when the service becomes available again.
 
-<div class="app-wcag-22" id="wcag-resume-previous-entered-information" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>Whenever possible, save and store any information the user has previously entered, unless doing so would be a major safety or security concern.</p>
-  <p>This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-resume-previous-entered-information"}) %}
+
+<p>Whenever possible, save and store any information the user has previously entered, unless doing so would be a major safety or security concern.</p>
+<p>This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
+{% endcall %}
 
 ### Showing contact information
 
@@ -85,13 +82,10 @@ Contact information should either:
 
 You might choose to link to a ‘contact information’ page, such as one shown in the ‘[Contact a department or service team](https://design-system.service.gov.uk/patterns/contact-a-department-or-service-team/)’ pattern.
 
-<div class="app-wcag-22" id="wcag-consistent-content-problem-service" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>You must always write contact information in a clear and consistent way across ‘There is a problem with the service’ and similar service error pages. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent help</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-consistent-content-problem-service"}) %}
+
+<p>You must always write contact information in a clear and consistent way across ‘There is a problem with the service’ and similar service error pages. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent help</a>.</p>
+{% endcall %}
 
 ### Service has a specific page that includes numbers and opening times
 

@@ -10,7 +10,7 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 {% from "_wcag-callout.njk" import wcagCallout %}
-{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "_wcag-note.njk" import wcagNote %}
 
 This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
 
@@ -54,13 +54,10 @@ Contact information should either be:
 - a link to a specific page that includes numbers and opening times
 - include all numbers and opening times
 
-<div class="app-wcag-22" id="wcag-consistent-content-service-unavailable" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>You must always write contact information in a clear and consistent way across ‘Service unavailable’ and similar service error pages. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent help</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-consistent-content-service-unavailable"}) %}
+
+<p>You must always write contact information in a clear and consistent way across ‘Service unavailable’ and similar service error pages. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent help</a>.</p>
+{% endcall %}
 
 Have clear and concise content and do not use:
 

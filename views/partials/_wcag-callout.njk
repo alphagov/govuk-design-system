@@ -5,7 +5,7 @@
 {% set tagContent -%}
   {{- govukTag({
     text: "WCAG 2.2",
-    classes: "app-tag"
+    classes: "app-wcag-callout__tag"
   }) }}
   <h2>
     {{ params.heading if params.heading else "New WCAG 2.2 criteria affect this " + params.type }}

@@ -8,7 +8,7 @@ layout: layout-pane.njk
 ---
 
 {% from "_wcag-callout.njk" import wcagCallout %}
-{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "_wcag-note.njk" import wcagNote %}
 
 Check the information the user gives you to make sure it’s valid. If there's a validation error, tell the user what's gone wrong and how to fix it. Turn off HTML5 validation.
 
@@ -74,13 +74,10 @@ If the user's answers fail validation:
 
 Read guidance on [writing good error messages](/components/error-message/#be-clear-and-concise).
 
-<div class="app-wcag-22" id="wcag-edit-to-correct-errors" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>Do not clear any form fields when validating users’ answers. Keep both passing and failing answers. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-edit-to-correct-errors"}) %}
+
+<p>Do not clear any form fields when validating users’ answers. Keep both passing and failing answers. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
+{% endcall %}
 
 Keeping information that failed validation helps users to:
 

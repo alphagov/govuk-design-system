@@ -9,7 +9,7 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 {% from "_wcag-callout.njk" import wcagCallout %}
-{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "_wcag-note.njk" import wcagNote %}
 
 Use the phase banner component to show users your service is still being worked on.
 
@@ -39,13 +39,10 @@ Use an alpha banner when your service is in alpha, and a beta banner if your ser
 
 Your banner must be directly under the black GOV.UK header and colour bar.
 
-<div class="app-wcag-22" id="wcag-do-not-cover-content" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>Do not make the phase banner ‘sticky’ to the top of the page by using `position: fixed` or any other method. This is to make sure it does not cover or obscure any content which has a focus applied. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html">2.4.11 Focus not obscured (minimum)</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-do-not-cover-content"}) %}
+
+<p>Do not make the phase banner ‘sticky’ to the top of the page by using `position: fixed` or any other method. This is to make sure it does not cover or obscure any content which has a focus applied. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html">2.4.11 Focus not obscured (minimum)</a>.</p>
+{% endcall %}
 
 ### Add a feedback link
 

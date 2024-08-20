@@ -10,7 +10,7 @@ layout: layout-pane.njk
 
 {% from "_wcag-callout.njk" import wcagCallout %}
 {% from "_example.njk" import example %}
-{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "_wcag-note.njk" import wcagNote %}
 {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 
 Check that a user has access to a specific mobile phone number using a security code sent by text message.
@@ -73,13 +73,10 @@ If the user enters an expired code that was sent more than:
 
 If the user follows the ‘Not received a text message?’ link, allow them to check which mobile number they entered, and to change it if necessary. This prevents the user becoming stuck if they entered a mobile number incorrectly. Do not allow the user to change the number when they're signing in.
 
-<div class="app-wcag-22" id="wcag-resend-security-code-creation" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>You must always include the link for 'Not received a text message?’ so the user can find help in a consistent way. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent help</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-resend-security-code-creation"}) %}
+
+<p>You must always include the link for 'Not received a text message?’ so the user can find help in a consistent way. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent help</a>.</p>
+{% endcall %}
 
 {{ example({ group: "patterns", item: "confirm-a-phone-number", example: "resend-first-time", html: true, nunjucks: true, open: false }) }}
 
@@ -97,13 +94,10 @@ Ask the user to enter this code. Use the same pattern and time limit as when cre
 
 If they follow the ‘Not received a text message?’ link, show them a page allowing them to request a new code. Do not reveal the mobile number you sent it to.
 
-<div class="app-wcag-22" id="wcag-resend-security-code-sign-in" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>You must always include the link for 'Not received a text message?’ so the user can find help in a consistent way. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent help</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-resend-security-code-sign-in"}) %}
+
+<p>You must always include the link for 'Not received a text message?’ so the user can find help in a consistent way. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent help</a>.</p>
+{% endcall %}
 
 {{ example({group: "patterns", item: "confirm-a-phone-number", example: "resend", html: true, nunjucks: true, open: false}) }}
 

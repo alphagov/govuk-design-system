@@ -413,16 +413,6 @@ pre .language-plaintext {
   background-color: $app-light-grey;
 }
 
-.app-wcag-22 {
-  margin-top: govuk-spacing(6);
-
-  // Add highlight styling for WCAG 2.2 content
-  &:target {
-    outline: 4px solid $govuk-brand-colour;
-    outline-offset: 6px;
-  }
-}
-
 .app-wcag-callout {
   border-left-color: govuk-colour("blue");
 }
@@ -434,7 +424,17 @@ pre .language-plaintext {
   max-width: 30em;
 }
 
-.app-tag {
+.app-wcag-callout__tag {
   margin-top: 1px;
   margin-bottom: govuk-spacing(2);
+}
+
+.app-wcag-note {
+  margin-top: govuk-spacing(6);
+
+  // Add highlight styling for WCAG 2.2 content
+  &:target {
+    outline: 4px solid $govuk-brand-colour;
+    outline-offset: 6px;
+  }
 }

@@ -9,7 +9,7 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 {% from "_wcag-callout.njk" import wcagCallout %}
-{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "_wcag-note.njk" import wcagNote %}
 
 Use the tag component to show users the status of something.
 
@@ -58,13 +58,10 @@ Tags should be helpful to users. The more you add, the harder it is for users to
 
 {{ example({ group: "components", item: "tag", example: "coloured-tags", html: true, nunjucks: true, open: false }) }}
 
-<div class="app-wcag-22" id="wcag-tag-no-dragging-reorder" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>Any tag implementation that allows the user to change the order of tags must offer a way to do so without relying on ‘click and drag’ movements. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">2.5.7 Dragging movements</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-tag-no-dragging-reorder"}) %}
+
+<p>Any tag implementation that allows the user to change the order of tags must offer a way to do so without relying on ‘click and drag’ movements. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">2.5.7 Dragging movements</a>.</p>
+{% endcall %}
 
 ## Using colour with tags
 
