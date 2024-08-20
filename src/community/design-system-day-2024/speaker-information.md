@@ -16,7 +16,12 @@ Greg Macoy co-founded Matchstick Creative, a purpose-driven creative agency in L
 
 ### Chikako Masuda, Digital Agency, Government of Japan
 
-TBA
+Chikako Masuda joined the Digital Agency in 2021.
+She is responsible for planning and managing the service design community, as well as leading intelligence research in the Corporate Strategy department. She co-authored an academic paper with the Oxford Internet Institute on the [evolution and current state of digital policy in Japan (2024)](https://ceur-ws.org/Vol-3737/paper40.pdf).
+
+Before joining the Digital Agency, she was a Principal Researcher at the Digital Government Research Institute. She contributed to a [comparative analysis of design systems in foreign governments (2021)](https://www.iais.or.jp/en/contents/design2021/) and wrote a [handbook on promoting design management in the private sector (2020)](https://www.jpo.go.jp/introduction/soshiki/document/design_keiei/handbook_20200319.pdf).
+
+She specialises in linguistics, public policy and service design.
 
 ### Lucy Brennan and Olivia Waring, Department for Education
 
