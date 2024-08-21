@@ -2,6 +2,7 @@
 title: Breadcrumbs
 description: Help users orientate themselves and navigate pages within a hierarchical structure
 section: Components
+item: breadcrumbs
 aliases: navigation path, cookie crumb
 backlogIssueId: 33
 layout: layout-pane.njk
@@ -34,7 +35,7 @@ See the full list of [components and patterns affected by WCAG 2.2](/accessibili
   classes: "app-inset-text"
 }) }}
 
-{{ example({ group: "components", item: "breadcrumbs", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
+{{ example({ group: "components", item: item, example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 
@@ -62,7 +63,7 @@ The breadcrumbs should start with your 'home' page and end with the parent secti
 
 There are 2 ways to use the breadcrumbs component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 
-{{ example({ group: "components", item: "breadcrumbs", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
+{{ example({ group: "components", item: item, example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
 
 ### Collapsing breadcrumbs on mobile devices
 
@@ -70,7 +71,7 @@ If you have long breadcrumbs you can configure the component to only show the fi
 
 To do this, add a `govuk-breadcrumbs--collapse-on-mobile` class to the outer `<div>` element of the component HTML. Or if you’re using Nunjucks, add `collapseOnMobile: true` to the Nunjucks macro as shown in this example.
 
-{{ example({ group: "components", item: "breadcrumbs", example: "collapse-mobile", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "components", item: item, example: "collapse-mobile", html: true, nunjucks: true, open: false }) }}
 
 ### Breadcrumbs on dark backgrounds
 
@@ -78,4 +79,4 @@ Use the `govuk-breadcrumbs--inverse` modifier class to show white links and arro
 
 Make sure all users can see the breadcrumbs – the background colour [must have a contrast ratio of at least 4.5:1](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html) with white.
 
-{{ example({ group: "components", item: "breadcrumbs", example: "inverse", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "components", item: item, example: "inverse", html: true, nunjucks: true, open: false }) }}

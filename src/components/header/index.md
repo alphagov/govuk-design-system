@@ -2,6 +2,7 @@
 title: Header
 description: The GOV.UK header shows users that they are on GOV.UK and which service they are using
 section: Components
+item: header
 backlogIssueId: 97
 layout: layout-pane.njk
 ---
@@ -34,7 +35,7 @@ See the full list of [components and patterns affected by WCAG 2.2](/accessibili
   classes: "app-inset-text"
 }) }}
 
-{{ example({ group: "components", item: "header", example: "default", id: "default-1", html: true, nunjucks: true, open: false, loading: "eager" }) }}
+{{ example({ group: "components", item: item, example: "default", id: "default-1", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 If you use the page template, you'll also get the header without having to add it, as it's included by default. However, if you want to customise the default header, read the [page template guidance about customising components](/styles/page-template/#changing-template-content).
 
@@ -56,13 +57,13 @@ You must not use the GOV.UK header if your service is not being hosted on one of
 
 Use the default header if your service has 5 pages or fewer.
 
-{{ example({ group: "components", item: "header", example: "default", titleSuffix: "second", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
+{{ example({ group: "components", item: item, example: "default", titleSuffix: "second", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
 
 ### Header with service name
 
 Use the header with a service name if your service is more than 5 pages long - this can help users understand which service they are using.
 
-{{ example({ group: "components", item: "header", example: "with-service-name", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "components", item: item, example: "with-service-name", html: true, nunjucks: true, open: false }) }}
 
 ### Header with service name and navigation
 
@@ -79,7 +80,7 @@ Use the header with navigation if you need to include basic navigation, contact 
 
 In November 2021, [the GOV.UK homepage introduced a menu bar](https://insidegovuk.blog.gov.uk/2021/11/11/launching-gov-uks-new-menu-bar/) that avoids obscuring content by shifting the page down.
 
-{{ example({group: "components", item: "header", example: "with-service-name-and-navigation", html: true, nunjucks: true, open: false, size: "s"}) }}
+{{ example({group: "components", item: item, example: "with-service-name-and-navigation", html: true, nunjucks: true, open: false, size: "s"}) }}
 
 <div class="app-wcag-22" id="wcag-consistent-help-links" role="note">
   {{ govukTag({

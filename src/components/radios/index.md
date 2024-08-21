@@ -2,6 +2,7 @@
 title: Radios
 description: Let users select a single option from a list using the radios component
 section: Components
+item: radios
 aliases: radio buttons, option buttons
 backlogIssueId: 59
 layout: layout-pane.njk
@@ -9,7 +10,7 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 
-{{ example({ group: "components", item: "radios", example: "default", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}
+{{ example({ group: "components", item: item, example: "default", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}
 
 ## When to use this component
 
@@ -50,13 +51,13 @@ Read more about [why and how to set legends as headings](/get-started/labels-leg
 
 There are 2 ways to use the radios component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 
-{{ example({ group: "components", item: "radios", example: "default", html: true, nunjucks: true, open: false, size: "s", titleSuffix: "second" }) }}
+{{ example({ group: "components", item: item, example: "default", html: true, nunjucks: true, open: false, size: "s", titleSuffix: "second" }) }}
 
 ### If you’re asking more than one question on the page
 
 If you're asking more than one question on the page, do not set the contents of the `<legend>` as the page heading. Read more about [asking multiple questions on question pages](/patterns/question-pages/#asking-multiple-questions-on-a-page).
 
-{{ example({ group: "components", item: "radios", example: "without-heading", html: true, nunjucks: true, open: false, size: "s" }) }}
+{{ example({ group: "components", item: item, example: "without-heading", html: true, nunjucks: true, open: false, size: "s" }) }}
 
 ### Inline radios
 
@@ -69,19 +70,19 @@ Only use inline radios when:
 
 Remember that on small screens such as mobile devices, the radios will still be 'stacked' on top of one another (vertically).
 
-{{ example({ group: "components", item: "radios", example: "inline", html: true, nunjucks: true, open: false, size: "s" }) }}
+{{ example({ group: "components", item: item, example: "inline", html: true, nunjucks: true, open: false, size: "s" }) }}
 
 ### Radio items with hints
 
 You can add hints to radio items to provide additional information about the options.
 
-{{ example({ group: "components", item: "radios", example: "hint", html: true, nunjucks: true, open: false, size: "s" }) }}
+{{ example({ group: "components", item: item, example: "hint", html: true, nunjucks: true, open: false, size: "s" }) }}
 
 ### Radio items with a text divider
 
 If one or more of your radio options is different from the others, it can help users if you separate them using a text divider. The text is usually the word ‘or’.
 
-{{ example({ group: "components", item: "radios", example: "divider", html: true, nunjucks: true, open: false, size: "s" }) }}
+{{ example({ group: "components", item: item, example: "divider", html: true, nunjucks: true, open: false, size: "s" }) }}
 
 ### Conditionally revealing a related question
 
@@ -89,7 +90,7 @@ You can ask the user a related question when they select a particular radio opti
 
 This might make two related questions easier to answer by grouping them on the same page. For example, you could reveal a phone number input when the user selects the 'Contact me by phone' option.
 
-{{ example({ group: "components", item: "radios", example: "conditional-reveal", html: true, nunjucks: true, open: false, size: "xl" }) }}
+{{ example({ group: "components", item: item, example: "conditional-reveal", html: true, nunjucks: true, open: false, size: "xl" }) }}
 
 Keep it simple. If the related question is complicated or has more than one part, show it on the next page in the process instead.
 
@@ -111,7 +112,7 @@ Use standard-sized radios in nearly all cases. However, smaller versions work we
 
 For example, on a page of search results, the primary user need is to see the results. Using smaller radios lets users see and change search filters without distracting them from the main content.
 
-{{ example({ group: "components", item: "radios", example: "small", html: true, nunjucks: true, open: false, size: "m" }) }}
+{{ example({ group: "components", item: item, example: "small", html: true, nunjucks: true, open: false, size: "m" }) }}
 
 Small radios can work well on information dense screens in services designed for repeat use, like caseworking systems.
 
@@ -126,7 +127,7 @@ Display an error message if the user has not:
 
 Error messages should be styled like this:
 
-{{ example({ group: "components", item: "radios", example: "error", html: true, nunjucks: true, open: false, size: "s" }) }}
+{{ example({ group: "components", item: item, example: "error", html: true, nunjucks: true, open: false, size: "s" }) }}
 
 Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
 
@@ -146,7 +147,7 @@ Say ‘Select [whatever it is]’. For example, ‘Select the day of the week yo
 
 Include an [error message](/components/error-message/) that is clearly related to the initial question.
 
-{{ example({ group: "components", item: "radios", example: "conditional-reveal-error", html: true, nunjucks: true, open: false, size: "s" }) }}
+{{ example({ group: "components", item: item, example: "conditional-reveal-error", html: true, nunjucks: true, open: false, size: "s" }) }}
 
 ## Research on this component
 
