@@ -1,0 +1,81 @@
+{% if ["Components"].includes(section) %}
+  {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+  {% set macroOptions = getMacroOptions(item) %}
+  {% set accordionSections = [] %}
+
+  {# Utility macro for holding all the table code #}
+  {% macro _paramTable(table) %}
+  <table class="govuk-table app-options__table" id="options--{{ table.slug }}">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th class="govuk-table__header app-options__limit-table-cell" scope="col">Name</th>
+        <th class="govuk-table__header app-options__limit-table-cell" scope="col">Type</th>
+        <th class="govuk-table__header" scope="col">Description</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      {% for option in table.options -%}
+        {# Option name only, without parent prefix -#}
+        {% set optionName = option.name.split(" ") | last %}
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">{{ optionName | safe }}</th>
+          <td class="govuk-table__cell">{{ option.type }}</td>
+          <td class="govuk-table__cell">
+          {% if (option.required) %}
+            <strong>Required.</strong>
+          {% endif %}
+            {{ option.description | safe }}
+          {% if (option.params) or (option.isComponent and ["hint", "label"].includes(option.id)) %}
+            {% if option.isComponent and not ["hint", "label"].includes(option.id) %}
+              {# Link to subset of Nunjucks macro options table and Design System component page -#}
+              See supported <a href="#options--{{ option.slug }}">{{ option.name | safe }}</a> options for <a href="/components/{{ option.slug }}/#options-{{ option.slug }}-example">{{ optionName | safe }}</a>.
+            {% else %}
+              {# Link to Nunjucks macro options table only -#}
+              See <a href="#options--{{ option.slug }}">{{ option.name | safe }}</a>.
+            {% endif %}
+          {% elif option.isComponent %}
+            {# Link to Design System component page for nested components -#}
+            See <a href="/components/{{ option.slug }}/#options-{{ option.slug }}-example">{{ optionName | safe }}</a>.
+          {% endif %}
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endmacro %}
+
+  <h2 class="govuk-heading-l govuk-!-padding-top-7" id="nunjucks-options">Nunjucks options for this component</h2>
+  <div class="app-prose-scope">
+    <p>Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.</p>
+    <p>Some options are required for the macro to work; these are marked as "Required" in the option description.</p>
+    <p>If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.</p>
+
+    {# If there is only one table, just output it to the page #}
+    {% if macroOptions.length === 1 %}
+      {{ _paramTable(macroOptions[0]) }}
+
+    {# Otherwise, loop through them all and build out an accordion #}
+    {% else %}
+      {% for table in macroOptions %}
+        {% set tableName %}{{ table.name | safe }}{% endset %}
+        {% set tableHtml %}
+          {{ _paramTable(table) }}
+        {% endset %}
+
+        {# Push content into an array, formatted as needed by the accordion #}
+        {% set accordionSections = (accordionSections.push({
+          heading: { html: tableName },
+          content: { html: tableHtml }
+        }), accordionSections)%}
+      {% endfor %}
+
+      {{ govukAccordion({
+        id: "nunjucks-options-accordion",
+        headingLevel: 3,
+        rememberExpanded: false,
+        items: accordionSections
+      }) }}
+    {% endif %}
+  </div>
+{% endif %}

@@ -6,6 +6,7 @@ $govuk-new-typography-scale: true;
 @import "govuk/core";
 @import "govuk/objects";
 
+@import "govuk/components/accordion";
 @import "govuk/components/back-link";
 @import "govuk/components/breadcrumbs";
 @import "govuk/components/button";
