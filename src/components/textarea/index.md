@@ -35,7 +35,7 @@ There are 2 ways to use the textarea component. You can use HTML or, if you’re
 
 ### Use appropriately-sized textareas
 
-Make the height of a textarea proportional to the amount of text you expect users to enter. You can set the height of a textarea by by specifying the `rows` attribute.
+Make the height of a textarea proportional to the amount of text you expect users to enter. You can set the height of a textarea by specifying the `rows` attribute.
 
 {{ example({ group: "components", item: "textarea", example: "specifying-rows", html: true, nunjucks: true, open: false, size: "l" }) }}
 
