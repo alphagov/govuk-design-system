@@ -9,8 +9,8 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "_wcag-callout.njk" import wcagCallout %}
+{% from "_wcag-note.njk" import wcagNote %}
 
 Help users understand:
 
@@ -18,26 +18,20 @@ Help users understand:
 - the order they should complete tasks in
 - when they've completed tasks
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affect this pattern
-
-To help users to 'Complete multiple tasks' and meet the new WCAG 2.2 criteria, make sure that users can successfully:
-
-- [interact with tasks without relying on 'click and drag' movements (if you choose to add functionality to reorder tasks)](/patterns/complete-multiple-tasks/#wcag-interact-without-click-drag-task)
-- [edit information they've given when going back to a previous task](/patterns/complete-multiple-tasks/#wcag-edit-information-previous-task)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "pattern",
+  introAction: "help users to",
+  name: "Complete multiple tasks",
+  criteria: [
+    {
+      text: "interact with tasks without relying on 'click and drag' movements (if you choose to add functionality to reorder tasks)",
+      anchor: "wcag-interact-without-click-drag-task"
+    },
+    {
+      text: "edit information they've given when going back to a previous task",
+      anchor: "wcag-edit-information-previous-task"
+    }
+  ]
 }) }}
 
 {{ example({ group: "patterns", item: "complete-multiple-tasks", example: "default", html: true, nunjucks: true, open: false }) }}
@@ -73,13 +67,10 @@ Where possible, task names should:
 - describe what the task or activity will involve
 - start with verbs, for example, ‘check’, ‘declare’, ‘report’
 
-<div class="app-wcag-22" id="wcag-interact-without-click-drag-task" role="note">
-    {{ govukTag({
-        text: "WCAG 2.2",
-        classes: "app-tag"
-    }) }}
-    <p>Any task list that allows the user to rearrange the order that tasks are shown must offer a way to do so without relying on ‘click and drag’ movements. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">2.5.7 Dragging movements</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-interact-without-click-drag-task"}) %}
+
+<p>Any task list that allows the user to rearrange the order that tasks are shown must offer a way to do so without relying on ‘click and drag’ movements. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">2.5.7 Dragging movements</a>.</p>
+{% endcall %}
 
 ### Show the status of the tasks
 
@@ -156,14 +147,11 @@ If the user selects ‘No, I’ll come back to it later,’ mark the task as 'In
 
 If the user selects ‘Yes, I’ve completed this section,’ mark the task as 'Completed'.
 
-<div class="app-wcag-22" id="wcag-edit-information-previous-task" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>If a user decides to go back to a previous task, make sure information they have already entered is pre-populated.</p>
-  <p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-edit-information-previous-task"}) %}
+
+<p>If a user decides to go back to a previous task, make sure information they have already entered is pre-populated.</p>
+<p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
+{% endcall %}
 
 {{ example({ group: "patterns", item: "complete-multiple-tasks", example: "have-you-completed-this-section", html: true, nunjucks: true, open: false }) }}
 

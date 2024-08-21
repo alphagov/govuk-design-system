@@ -8,28 +8,19 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "_wcag-callout.njk" import wcagCallout %}
+{% from "_wcag-note.njk" import wcagNote %}
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affect this component
-
-To use the ‘Button' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
-
-- [interact with buttons](/components/button/#wcag-interact-button)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "component",
+  introAction: "use the",
+  name: "Button",
+  criteria: [
+    {
+      text: "interact with buttons",
+      anchor: "wcag-interact-button"
+    }
+  ]
 }) }}
 
 {{ example({ group: "components", item: "button", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
@@ -57,13 +48,10 @@ You may need to include more or different words to better describe the action. F
 
 Align the primary action button to the left edge of your form.
 
-<div class="app-wcag-22" id="wcag-interact-button" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>Do not decrease the height or target area of buttons. This is to make sure users can easily interact with buttons. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target size (minimum)</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-interact-button"}) %}
+
+<p>Do not decrease the height or target area of buttons. This is to make sure users can easily interact with buttons. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target size (minimum)</a>.</p>
+{% endcall %}
 
 There are 2 ways to use the button component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 

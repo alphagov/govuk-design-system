@@ -8,30 +8,21 @@ backlogIssueId: 56
 layout: layout-pane.njk
 ---
 
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "_wcag-callout.njk" import wcagCallout %}
+{% from "_wcag-note.njk" import wcagNote %}
 
 Help users to create and enter secure and memorable passwords.
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affect this pattern
-
-To ask users for 'Passwords' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
-
-- [find 'reset password' links in a consistent place on each page](/patterns/passwords/#wcag-consistent-reset)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "pattern",
+  introAction: "ask users for",
+  name: "Passwords",
+  criteria: [
+    {
+      text: "find 'reset password' links in a consistent place on each page",
+      anchor: "wcag-consistent-reset"
+    }
+  ]
 }) }}
 
 ## When to use this pattern
@@ -101,13 +92,10 @@ When helping users who’ve forgotten their password, you should:
 - avoid password reset questions
 - avoid password reminders
 
-<div class="app-wcag-22" id="wcag-consistent-reset" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>If you include instructions or a link to help users reset their password, make sure to place them consistently on the page. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent help</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-consistent-reset"}) %}
+
+<p>If you include instructions or a link to help users reset their password, make sure to place them consistently on the page. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent help</a>.</p>
+{% endcall %}
 
 Also make sure any password reset links always perform the same action across each page.
 

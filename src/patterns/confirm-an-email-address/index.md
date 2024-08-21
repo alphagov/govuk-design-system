@@ -9,30 +9,21 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "_wcag-callout.njk" import wcagCallout %}
+{% from "_wcag-note.njk" import wcagNote %}
 
 This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affect this pattern
-
-To help users to 'Confirm an email address' and meet the new WCAG 2.2 criteria, make sure that users can successfully:
-
-- [copy and paste a security code (if you're asking the user to enter a security code you've sent them)](/patterns/confirm-an-email-address/#wcag-copy-paste-security-codes)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "pattern",
+  introAction: "help users to",
+  name: "Confirm an email address",
+  criteria: [
+    {
+      text: "copy and paste a security code (if you're asking the user to enter a security code you've sent them)",
+      anchor: "wcag-copy-paste-security-codes"
+    }
+  ]
 }) }}
 
 Check that a user has access to a specific email account using an email confirmation&nbsp;loop.
@@ -68,13 +59,10 @@ If you use email confirmation loops you must consider:
 
 Most email confirmation loops will send the user a link and ask them to click it to return to the service. Another approach is to send the user a security code, similar to the [Confirm a phone number](/patterns/confirm-a-phone-number/) pattern, and ask the user to enter it.
 
-<div class="app-wcag-22" id="wcag-copy-paste-security-codes" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>You must allow users to copy and paste any security codes. Avoid making the user memorise or transcribe a security code between apps or browser tabs to use your service. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum">3.3.8 Accessible authentication (minimum)</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-copy-paste-security-codes"}) %}
+
+<p>You must allow users to copy and paste any security codes. Avoid making the user memorise or transcribe a security code between apps or browser tabs to use your service. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum">3.3.8 Accessible authentication (minimum)</a>.</p>
+{% endcall %}
 
 ### Set expiry conditions
 

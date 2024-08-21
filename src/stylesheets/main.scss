@@ -357,6 +357,12 @@ pre .language-plaintext {
     @include govuk-typography-weight-bold;
   }
 
+  // Govuk tags are strong elements and prose scope reinforces strong's being
+  // bold, so we need to 'override' it back to regular
+  .govuk-tag {
+    @include govuk-typography-weight-regular;
+  }
+
   ul,
   ol {
     @extend %govuk-list;
@@ -407,25 +413,28 @@ pre .language-plaintext {
   background-color: $app-light-grey;
 }
 
-.app-wcag-22 {
+.app-wcag-callout {
+  border-left-color: govuk-colour("blue");
+}
+
+// Change headings in WCAG callouts to look like H3s,
+// even though they semantically are H2s
+.app-wcag-callout h2 {
+  @extend %govuk-heading-m;
+  max-width: 30em;
+}
+
+.app-wcag-callout__tag {
+  margin-top: 1px;
+  margin-bottom: govuk-spacing(2);
+}
+
+.app-wcag-note {
   margin-top: govuk-spacing(6);
 
   // Add highlight styling for WCAG 2.2 content
   &:target {
     outline: 4px solid $govuk-brand-colour;
     outline-offset: 6px;
-  }
-}
-
-.app-inset-text {
-  border-left-color: govuk-colour("blue");
-}
-
-.app-tag {
-  margin-top: 1px;
-  margin-bottom: govuk-spacing(2);
-
-  .app-prose-scope & {
-    font-weight: normal;
   }
 }

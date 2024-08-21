@@ -8,30 +8,21 @@ backlogIssueId: 80
 layout: layout-pane.njk
 ---
 
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "_wcag-callout.njk" import wcagCallout %}
+{% from "_wcag-note.njk" import wcagNote %}
 
 This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affect this pattern
-
-To ask users for 'Payment card details' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
-
-- [interact the with month and year fields, by adding adequate spacing between them](/patterns/payment-card-details/#wcag-spacing-month-year)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "pattern",
+  introAction: "ask users for",
+  name: "Payment card details",
+  criteria: [
+    {
+      text: "interact the with month and year fields, by adding adequate spacing between them",
+      anchor: "wcag-spacing-month-year"
+    }
+  ]
 }) }}
 
 ![A form entitled enter card details which asks for a card number, an expiry date, a name on the card and the card security code.](enter-card-details.jpg)
@@ -52,13 +43,10 @@ Let users enter payment card numbers in whatever format is familiar to them. All
 
 Present all fields on a single page, in the order in which they appear on a credit or debit card. This makes it easy for users to transcribe the information from their payment card.
 
-<div class="app-wcag-22" id="wcag-spacing-month-year" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>Make sure to add adequate spacing between the month and year fields. Ideally, leave at least 24px of space between the fields, either horizontally (inline) or vertically. This is to make sure users can easily interact with the fields. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target size (minimum)</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-spacing-month-year"}) %}
+
+<p>Make sure to add adequate spacing between the month and year fields. Ideally, leave at least 24px of space between the fields, either horizontally (inline) or vertically. This is to make sure users can easily interact with the fields. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target size (minimum)</a>.</p>
+{% endcall %}
 
 Show logos for the cards you accept as icons so users can see whether their card is supported.
 

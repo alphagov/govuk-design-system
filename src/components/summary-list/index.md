@@ -8,31 +8,25 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "_wcag-callout.njk" import wcagCallout %}
+{% from "_wcag-note.njk" import wcagNote %}
 
 Use a summary list to summarise information, for example, a user’s responses at the end of a form.
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### WCAG 2.2 criteria might affect this component
-
-To use ‘Summary list’ and comply with new success criteria introduced in Web Content Accessibility Guidelines (WCAG) 2.2, make sure that users can successfully:
-
-- [interact with row actions](/components/summary-list/#wcag-interact-row-actions)
-- [change information they've previously given in an answer](/components/summary-list/#wcag-change-answers)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "component",
+  introAction: "use",
+  name: "Summary list",
+  criteria: [
+    {
+      text: "interact with row actions",
+      anchor: "wcag-interact-row-actions"
+    },
+    {
+      text: "change information they've previously given in an answer",
+      anchor: "wcag-change-answers"
+    }
+  ]
 }) }}
 
 {{ example({ group: "components", item: "summary-list", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
@@ -72,22 +66,16 @@ When navigating visually, the borders above and below each row help to show whic
 
 There's a few things to keep in mind to ensure that users can successfully use row actions.
 
-<div class="app-wcag-22" id="wcag-interact-row-actions" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>Make sure any 'action links' are at least 24px by 24px in size, or have adequate spacing. This is to make sure users can easily interact with the links. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target size (minimum)</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-interact-row-actions"}) %}
 
-<div class="app-wcag-22" id="wcag-change-answers" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>If a user decides to go back to a previous answer through a card or row action, make sure information they have already entered is pre-populated.</p>
-  <p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
-</div>
+<p>Make sure any 'action links' are at least 24px by 24px in size, or have adequate spacing. This is to make sure users can easily interact with the links. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target size (minimum)</a>.</p>
+{% endcall %}
+
+{% call wcagNote({id: "wcag-change-answers"}) %}
+
+<p>If a user decides to go back to a previous answer through a card or row action, make sure information they have already entered is pre-populated.</p>
+<p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
+{% endcall %}
 
 Assistive technology users, including those who use a screen reader, might hear a row action link out of context and might not know what it will do.
 

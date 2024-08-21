@@ -9,30 +9,21 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "_wcag-callout.njk" import wcagCallout %}
+{% from "_wcag-note.njk" import wcagNote %}
 
 This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affect this pattern
-
-To ask users for 'Addresses' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
-
-- [reuse a previously entered address](/patterns/addresses/#wcag-reuse-addresses)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "pattern",
+  introAction: "ask users for",
+  name: "Addresses",
+  criteria: [
+    {
+      text: "reuse previously entered address",
+      anchor: "wcag-reuse-addresses"
+    }
+  ]
 }) }}
 
 Help users provide an address using one of the following:
@@ -43,13 +34,10 @@ Help users provide an address using one of the following:
 
 ### Reusing entered addresses
 
-<div class="app-wcag-22" id="wcag-reuse-addresses" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>Make sure users can easily reuse a previously entered address within a single journey, unless doing so would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-reuse-addresses"}) %}
+
+<p>Make sure users can easily reuse a previously entered address within a single journey, unless doing so would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
+{% endcall %}
 
 You can make it easier to reuse addresses through one of these methods:
 

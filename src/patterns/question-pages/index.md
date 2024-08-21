@@ -9,31 +9,25 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "_wcag-callout.njk" import wcagCallout %}
+{% from "_wcag-note.njk" import wcagNote %}
 
 This pattern explains when to use question pages and what elements they need to include.
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affect this pattern
-
-To use ‘Question pages' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
-
-- [avoid re-entering information they've given in a previous answer](/patterns/question-pages/#wcag-reenter-previous-answer)
-- [select an answer without relying on 'click and drag' movement](/patterns/question-pages/#wcag-select-without-click-drag)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "pattern",
+  introAction: "use",
+  name: "Question pages",
+  criteria: [
+    {
+      text: "avoid re-entering information they've given in a previous answer",
+      anchor: "wcag-reenter-previous-answer"
+    },
+    {
+      text: "select an answer without relying on 'click and drag' movement",
+      anchor: "wcag-select-without-click-drag"
+    }
+  ]
 }) }}
 
 {{ example({ group: "patterns", item: "question-pages", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
@@ -70,13 +64,10 @@ Question pages must include a:
 
 If research shows it’s helpful for users, you can also include a [progress indicator](#using-progress-indicators).
 
-<div class="app-wcag-22" id="wcag-reenter-previous-answer" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>Make sure to only ask for a piece of information once within a single journey. Whenever possible, do not ask a user to re-enter information they’ve already provided. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-reenter-previous-answer"}) %}
+
+<p>Make sure to only ask for a piece of information once within a single journey. Whenever possible, do not ask a user to re-enter information they’ve already provided. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
+{% endcall %}
 
 If the same type of information is needed more than once, make it easier to reuse previously entered answers through one of these methods:
 
@@ -191,11 +182,8 @@ A number of GOV.UK services have removed this style of progress indicator withou
 
 ### Using range sliders
 
-<div class="app-wcag-22" id="wcag-select-without-click-drag" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>Avoid using <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range">range slider</a> questions, where the user needs to click and drag a selector across a range of answers or values. These types of controls are difficult for some users to interact with.</p>
-  <p>If you do use a range slider, you must provide a method for selecting an answer that doesn’t rely on ‘click and drag’ movements. This relates to WCAG success criterion <a href="https://www.w3.org/TR/WCAG22/#pointer-gestures">2.5.1 Pointer Gestures</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-select-without-click-drag"}) %}
+
+<p>Avoid using <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range">range slider</a> questions, where the user needs to click and drag a selector across a range of answers or values. These types of controls are difficult for some users to interact with.</p>
+<p>If you do use a range slider, you must provide a method for selecting an answer that doesn’t rely on ‘click and drag’ movements. This relates to WCAG success criterion <a href="https://www.w3.org/TR/WCAG22/#pointer-gestures">2.5.1 Pointer Gestures</a>.</p>
+{% endcall %}
