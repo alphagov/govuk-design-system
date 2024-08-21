@@ -51,6 +51,7 @@ $app-code-color: #d13118;
 @import "components/cookies-page";
 @import "components/call-to-action";
 @import "components/promo-banner";
+@import "components/embed-card";
 @import "components/example";
 @import "components/footer";
 @import "components/header";
@@ -437,4 +438,8 @@ pre .language-plaintext {
     outline: 4px solid $govuk-brand-colour;
     outline-offset: 6px;
   }
+}
+
+.app-campaign-cookie-banner .govuk-grid-column-two-thirds {
+  width: 100%;
 }

@@ -26,6 +26,10 @@ class CookieBanner {
     }
 
     this.$cookieBanner = $module
+    this.cookieCategory =
+      (this.$cookieBanner.dataset &&
+        this.$cookieBanner.dataset.cookieCategory) ||
+      'analytics'
 
     const $acceptButton = $module.querySelector(cookieBannerAcceptSelector)
     const $rejectButton = $module.querySelector(cookieBannerRejectSelector)
@@ -93,7 +97,7 @@ class CookieBanner {
    */
   acceptCookies() {
     // Do actual cookie consent bit
-    CookieFunctions.setConsentCookie({ analytics: true })
+    CookieFunctions.setConsentCookie({ [this.cookieCategory]: true })
 
     // Hide banner and show confirmation message
     this.$cookieMessage.setAttribute('hidden', 'true')
@@ -105,7 +109,7 @@ class CookieBanner {
    */
   rejectCookies() {
     // Do actual cookie consent bit
-    CookieFunctions.setConsentCookie({ analytics: false })
+    CookieFunctions.setConsentCookie({ [this.cookieCategory]: false })
 
     // Hide banner and show confirmation message
     this.$cookieMessage.setAttribute('hidden', 'true')
