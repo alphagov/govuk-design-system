@@ -240,6 +240,11 @@ class Search {
       section.className = 'app-site-search--section'
       section.innerHTML = result.section
 
+      const visuallyHiddenComma = document.createElement('span')
+      visuallyHiddenComma.className = 'govuk-visually-hidden'
+      visuallyHiddenComma.innerHTML = ', '
+
+      elem.appendChild(visuallyHiddenComma)
       elem.appendChild(section)
       return elem.innerHTML
     }
