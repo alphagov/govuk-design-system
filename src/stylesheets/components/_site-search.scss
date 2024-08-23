@@ -242,5 +242,7 @@ $icon-size: 40px;
 .app-site-search__separator {
   display: inline-block;
   margin-right: govuk-spacing(1);
-  margin-left: govuk-spacing(1);
+  // Unfortunate magic number here to account for the non-breaking space created
+  // by visually hidden spans being moved onto new lines in the result markup
+  margin-left: 4px;
 }
