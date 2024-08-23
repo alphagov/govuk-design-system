@@ -2,6 +2,7 @@
 title: Summary list
 description: Use the summary list to summarise information, for example, a user’s responses at the end of a form.
 section: Components
+item: summary-list
 aliases: Summary card
 backlogIssueId: 182
 layout: layout-pane.njk
@@ -29,7 +30,7 @@ Use a summary list to summarise information, for example, a user’s responses a
   ]
 }) }}
 
-{{ example({ group: "components", item: "summary-list", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
+{{ example({ group: "components", item: item, example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 
@@ -56,7 +57,7 @@ You can show a single or multiple summary lists on a page. If you’re showing m
 
 There are 2 ways to use the summary list component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 
-{{ example({ group: "components", item: "summary-list", example: "without-actions", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "components", item: item, example: "without-actions", html: true, nunjucks: true, open: false }) }}
 
 ### Adding actions to each row
 
@@ -81,13 +82,13 @@ Assistive technology users, including those who use a screen reader, might hear 
 
 To give more context, add visually hidden text to the links. This means a screen reader user will hear the row action and the ‘key’ label for the information it will affect, like ‘Change name’ or ‘Change date of birth’.
 
-{{ example({ group: "components", item: "summary-list", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
+{{ example({ group: "components", item: item, example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
 
 #### Showing rows with and without actions
 
 If you’re showing a mix of rows (where some rows include actions and some do not), add the `govuk-summary-list__row--no-actions` modifier class to the rows without actions. This is to ensure the bottom border is drawn correctly in some browsers.
 
-{{ example({ group: "components", item: "summary-list", example: "mixed-actions", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "components", item: item, example: "mixed-actions", html: true, nunjucks: true, open: false }) }}
 
 ### Removing the borders
 
@@ -97,7 +98,7 @@ Think carefully before you remove row borders. Borders help many users find and 
 
 If your summary list does not have any actions, you can choose to remove the separating borders with the `govuk-summary-list--no-border` class.
 
-{{ example({ group: "components", item: "summary-list", example: "without-borders", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "components", item: item, example: "without-borders", html: true, nunjucks: true, open: false }) }}
 
 To remove borders on a single row, use the `govuk-summary-list__row--no-border` class.
 
@@ -110,7 +111,7 @@ In some contexts, you might need to show rows that have missing information. Thi
 
 Show a link to the appropriate question page in the `value` column so the user can enter the missing information, instead of showing a 'change' link on that row.
 
-{{ example({ group: "components", item: "summary-list", example: "with-missing-information", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "components", item: item, example: "with-missing-information", html: true, nunjucks: true, open: false }) }}
 
 ## Summary cards
 
@@ -135,7 +136,7 @@ Each title must be unique and help identify what the summary list describes. For
 
 Try to keep titles short and relevant. You can use one or two important values in the summary list – such as the first and last name of a person.
 
-{{ example({ group: "components", item: "summary-list", example: "card-with-title", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "components", item: item, example: "card-with-title", html: true, nunjucks: true, open: false }) }}
 
 ### Adding card actions
 
@@ -159,7 +160,7 @@ Keep it short and do not add more than 2 to 3 actions in a header.
 
 If a card action cannot easily be undone or might have serious consequences, consider adding a warning or asking the user for confirmation.
 
-{{ example({ group: "components", item: "summary-list", example: "card-with-actions", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "components", item: item, example: "card-with-actions", html: true, nunjucks: true, open: false }) }}
 
 ## Research on this component
 

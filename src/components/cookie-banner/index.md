@@ -2,6 +2,7 @@
 title: Cookie banner
 description: Allow users to accept or reject cookies which are not essential to making your service work.
 section: Components
+item: cookie-banner
 aliases: Cookies banner, consent banner, GDPR banner, tracking banner, analytics banner
 backlogIssueId: 12
 layout: layout-pane.njk
@@ -29,7 +30,7 @@ Allow users to accept or reject cookies which are not essential to making your s
   ]
 }) }}
 
-{{ example({ group: "components", item: "cookie-banner", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
+{{ example({ group: "components", item: item, example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 
@@ -107,13 +108,13 @@ All users will be able to see the banner as this approach does not rely on JavaS
 
 Here's an example of a cookie banner inside a form:
 
-{{ example({ group: "components", item: "cookie-banner", example: "server-side", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "components", item: item, example: "server-side", html: true, nunjucks: true, open: false }) }}
 
 Once the user has accepted or rejected cookies and set their cookie preferences, reload the page to show a confirmation message.
 
 Here's an example of a confirmation message inside a form:
 
-{{ example({ group: "components", item: "cookie-banner", example: "server-side-confirmation", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "components", item: item, example: "server-side-confirmation", html: true, nunjucks: true, open: false }) }}
 
 #### Show the same message to all users
 
@@ -129,11 +130,11 @@ Include all possible messages that the user could see in the cookie banner when 
 
 Here's an example of a progressively enhanced cookie banner that includes all possible messages which are hidden using HTML – the cookie banner message is shown using JavaScript to remove the `hidden` attribute:
 
-{{ example({ group: "components", item: "cookie-banner", example: "server-side-multiple-messages-question-visible", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "components", item: item, example: "server-side-multiple-messages-question-visible", html: true, nunjucks: true, open: false }) }}
 
 Here's the same example of a progressively enhanced cookie banner, with the confirmation message shown instead:
 
-{{ example({ group: "components", item: "cookie-banner", example: "server-side-multiple-messages-confirmation-visible", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "components", item: item, example: "server-side-multiple-messages-confirmation-visible", html: true, nunjucks: true, open: false }) }}
 
 ### Option 3: If you set non-essential cookies, but only on the client
 
@@ -154,17 +155,17 @@ Write your own JavaScript code so that when the user accepts or rejects cookies,
 
 Here’s an example:
 
-{{ example({ group: "components", item: "cookie-banner", example: "client-side", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "components", item: item, example: "client-side", html: true, nunjucks: true, open: false }) }}
 
 #### When the user has accepted cookies
 
 Show a confirmation message confirming that the user has either accepted or rejected cookies by removing the `hidden` attribute.
 
-{{ example({ group: "components", item: "cookie-banner", example: "client-side-accepted", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "components", item: item, example: "client-side-accepted", html: true, nunjucks: true, open: false }) }}
 
 #### When the user has rejected cookies
 
-{{ example({ group: "components", item: "cookie-banner", example: "client-side-rejected", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "components", item: item, example: "client-side-rejected", html: true, nunjucks: true, open: false }) }}
 
 ## What to cover in your cookie banner
 
@@ -183,7 +184,7 @@ Keep the text as short as possible while making sure it’s an accurate descript
 
 You can use this example text for a service which sets essential and analytics cookies. Analytics cookies are those set by your organisation to collect information about how people are using your digital service.
 
-{{ example({ group: "components", item: "cookie-banner", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
+{{ example({ group: "components", item: item, example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
 
 ### If you’re using more than one type of non-essential cookie
 
@@ -193,7 +194,7 @@ You can use this example text for a service that set:
 - analytics cookies
 - functional cookies to remember the user’s settings but are not essential
 
-{{ example({ group: "components", item: "cookie-banner", example: "multiple-cookies", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "components", item: item, example: "multiple-cookies", html: true, nunjucks: true, open: false }) }}
 
 ## Creating a cookies page
 

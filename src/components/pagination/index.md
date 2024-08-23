@@ -2,6 +2,7 @@
 title: Pagination
 description: Help users navigate collections of numbered pages like search results
 section: Components
+item: pagination
 aliases:
 backlogIssueId: 77
 layout: layout-pane.njk
@@ -11,7 +12,7 @@ layout: layout-pane.njk
 
 Help users navigate forwards and backwards through a series of pages. For example, search results or guidance that's divided into multiple website pages – like [the GOV.UK mainstream guide format](https://prototype-kit.service.gov.uk/docs/templates/mainstream-guide).
 
-{{ example({ group: "components", item: "pagination", example: "default", html: true, nunjucks: true, loading: "eager" }) }}
+{{ example({ group: "components", item: item, example: "default", html: true, nunjucks: true, loading: "eager" }) }}
 
 ## When to use this component
 
@@ -44,13 +45,13 @@ Use the 'block' style of pagination to let users navigate through related conten
 
 You can use link labels to give context on what the neighbouring pages are about.
 
-{{ example({ group: "components", item: "pagination", example: "for-content-pages", html: true, nunjucks: true }) }}
+{{ example({ group: "components", item: item, example: "for-content-pages", html: true, nunjucks: true }) }}
 
 ## For navigating between pages of items
 
 Use a list-type layout if users need to navigate through pages of similar items. For example, a list of search results or a list of cases in a case working system.
 
-{{ example({ group: "components", item: "pagination", example: "for-list-pages", html: true, nunjucks: true }) }}
+{{ example({ group: "components", item: item, example: "for-list-pages", html: true, nunjucks: true }) }}
 
 Show the page number in the page `<title>` so that screen reader users know they’ve navigated to a different page. For example, 'Search results (page 1 of 4)'.
 
@@ -83,9 +84,9 @@ Use ellipses (…) to replace any skipped pages. For example:
 
 Do not show the previous page link on the first page – and do not show the next page link on the last page.
 
-{{ example({ group: "components", item: "pagination", example: "first-page", html: true, nunjucks: true }) }}
+{{ example({ group: "components", item: item, example: "first-page", html: true, nunjucks: true }) }}
 
-{{ example({ group: "components", item: "pagination", example: "last-page", html: true, nunjucks: true }) }}
+{{ example({ group: "components", item: item, example: "last-page", html: true, nunjucks: true }) }}
 
 ### Filtering and sorting
 

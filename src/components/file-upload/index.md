@@ -2,6 +2,7 @@
 title: File upload
 description: Help users select and upload a file
 section: Components
+item: file-upload
 aliases:
 backlogIssueId: 49
 layout: layout-pane.njk
@@ -31,7 +32,7 @@ This guidance is for government teams that build online services. [To find infor
 
 Help users select and upload a file.
 
-{{ example({ group: "components", item: "file-upload", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
+{{ example({ group: "components", item: item, example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 
@@ -58,13 +59,13 @@ To upload a file, the user can either:
 
 There are 2 ways to use the file upload component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 
-{{ example({ group: "components", item: "file-upload", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
+{{ example({ group: "components", item: item, example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
 
 ### Error messages
 
 Error messages should be styled like this:
 
-{{ example({ group: "components", item: "file-upload", example: "error", html: true, nunjucks: true, open: false, size: "m" }) }}
+{{ example({ group: "components", item: item, example: "error", html: true, nunjucks: true, open: false, size: "m" }) }}
 
 Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
 

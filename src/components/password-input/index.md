@@ -2,6 +2,7 @@
 title: Password input
 description: Help users accessibly enter passwords
 section: Components
+item: password-input
 aliases: pass word, pass phrase
 backlogIssueId: 240
 layout: layout-pane.njk
@@ -33,7 +34,7 @@ Help users to create and enter passwords.
   ]
 }) }}
 
-{{ example({ group: "components", item: "password-input", example: "default", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}
+{{ example({ group: "components", item: item, example: "default", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}
 
 ## When to use this component
 
@@ -61,7 +62,7 @@ This allows users to visually check their password before they submit it, which 
 
 ### Error messages
 
-{{ example({ group: "components", item: "password-input", example: "error", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}
+{{ example({ group: "components", item: item, example: "error", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}
 
 If the user enters their account details incorrectly, do not reveal whether they got the username or password wrong. Clear any information entered into the password input.
 

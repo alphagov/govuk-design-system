@@ -2,6 +2,7 @@
 title: Phase banner
 description: Use the phase banner component to show users your service is still being worked on
 section: Components
+item: phase-banner
 aliases: alpha banner, beta banner, prototype banner, status banner, feedback banner
 backlogIssueId: 57
 layout: layout-pane.njk
@@ -25,7 +26,7 @@ Use the phase banner component to show users your service is still being worked 
   ]
 }) }}
 
-{{ example({ group: "components", item: "phase-banner", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
+{{ example({ group: "components", item: item, example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 
@@ -48,9 +49,9 @@ Your banner must be directly under the black GOV.UK header and colour bar.
 
 Use a ‘feedback’ link to collect on-page feedback about your service. This can open an email or take the user to a dedicated page or form.
 
-{{ example({ group: "components", item: "phase-banner", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
+{{ example({ group: "components", item: item, example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
 
-{{ example({ group: "components", item: "phase-banner", example: "beta", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "components", item: item, example: "beta", html: true, nunjucks: true, open: false }) }}
 
 Whatever option you use, make sure that users do not lose their place in the service and can return to the page they were on.
 

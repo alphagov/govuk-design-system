@@ -2,6 +2,7 @@
 title: Error message
 description: When there's a validation error, use an error message to explain what went wrong and how to fix it
 section: Components
+item: error-message
 aliases: validation message
 backlogIssueId: 47
 layout: layout-pane.njk
@@ -27,7 +28,7 @@ This guidance is for government teams that build online services. [To find infor
 
 Follow the [validation pattern](/patterns/validation/) and show an error message when there is a validation error. In the error message explain what went wrong and how to fix it.
 
-{{ example({ group: "components", item: "error-message", example: "default", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}
+{{ example({ group: "components", item: item, example: "default", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}
 
 ## When to use this component
 
@@ -70,7 +71,7 @@ To help screen reader users, the error message component includes a hidden 'Erro
 
 If your error message is written in another language, you can change the prefix as needed, as shown in this example.
 
-{{ example({ group: "components", item: "error-message", example: "custom-prefix", html: true, nunjucks: true, open: true, displayExample: false, size: "s" }) }}
+{{ example({ group: "components", item: item, example: "custom-prefix", html: true, nunjucks: true, open: true, displayExample: false, size: "s" }) }}
 
 Summarise all errors at the top of the page the user is on using an [error summary](/components/error-summary/).
 
@@ -78,11 +79,11 @@ There are 2 ways to use the error message component. You can use HTML or, if you
 
 ### Legend
 
-{{ example({ group: "components", item: "error-message", example: "legend", html: true, nunjucks: true, open: false, size: "m" }) }}
+{{ example({ group: "components", item: item, example: "legend", html: true, nunjucks: true, open: false, size: "m" }) }}
 
 ### Label
 
-{{ example({ group: "components", item: "error-message", example: "label", html: true, nunjucks: true, open: false, size: "s" }) }}
+{{ example({ group: "components", item: item, example: "label", html: true, nunjucks: true, open: false, size: "s" }) }}
 
 ### Match up error messages to labels
 

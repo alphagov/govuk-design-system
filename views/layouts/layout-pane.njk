@@ -52,6 +52,8 @@
         {{ contents | safe }}
       </div>
 
+      {% include "_nunjucks-params.njk" %}
+
       {# No JS fallback to show overview #}
       {% if showSubNav %}
         {% include "_category-nav.njk" %}
