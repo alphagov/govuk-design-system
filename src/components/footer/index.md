@@ -1,5 +1,5 @@
 ---
-title: Footer
+title: GOV.UK footer
 description: The footer provides copyright, licensing and other information about your service and department
 section: Components
 aliases: privacy notice, accessibility statement, terms and conditions
@@ -11,12 +11,12 @@ layout: layout-pane.njk
 {% from "_wcag-callout.njk" import wcagCallout %}
 {% from "_wcag-note.njk" import wcagNote %}
 
-The footer provides copyright, licensing and other information about your service.
+The GOV.UK footer provides copyright, licensing and other information about your service.
 
 {{ wcagCallout({
   type: "component",
   introAction: "use the",
-  name: "Footer",
+  name: "GOV.UK footer",
   criteria: [
     {
       text: "find help links in a consistent place on each page",
