@@ -74,14 +74,19 @@ To demonstrate why you should add a performance resource to your Design System, 
 
 ### Dual Narrative: Design systems in small versus large organisations
 
+2pm to 2:45pm
+
 #### Prioritised Pixel Pushing: The case for product within design systems
 
 Michael Palmer, BBC
 
-####
+Lessons from a product person's first twelve months in the design system space. Learn how to balance innovation with consistency, foster cross-functional alignment, and drive impactful design changes. Does having a product person in the team lead to a better design system?
+
+#### Perfectly Imperfect: Design Systems for Small Teams and Startups
 
 Alessandra Balliana, GoBubble
-2pm to 2:45pm
+
+Set aside all the rigour and embrace the imperfections of the journey to build a design system that grows with your team. Get practical tips on how to effectively get started in a small team without compromising your overall business goals.
 
 ### Break
 
