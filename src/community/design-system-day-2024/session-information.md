@@ -19,10 +19,14 @@ Welcoming remarks will start at 9:45am in the Great Hall. We will close the chec
 Kelly Lee and Trang Erskine, GOV.UK Design System team
 9:45am to 10am
 
-### Opening keynote
+### Opening keynote: The world on your doorstep: local services with global values
 
 Greg Macoy
 10am to 10:30am
+
+How to think globally and act locally to ensure that businesses and services support their local communities, whilst aligning with national and global objectives.
+
+Embed social impact, ethics, and sustainability into your services from the outset with practical advice to get you started.
 
 ### Curing design allergies in Japan's Government
 
@@ -35,16 +39,21 @@ Chikako Masuda
 
 11:15am to 11:35am
 
-### Content panel discussion
+### Panel: Content for all and all for content
 
-With Lucy Brennan, Olivia Waring and Chris Lightfoot
+With Lucy Brennan, Olivia Waring, Zainab Daodu and Leyla Kee-McParlin
 11:35am to 12:20pm
 
-Think about content differently. This panel will take content design beyond its boundaries, sharing examples from government, the NHS, and private sector. We’ll discuss how an expansive and person-centred use of content design can:
+This panel will discuss how you can take content design beyond its boundaries. We’ll talk about using content design in expansive and innovative ways, to influence stakeholders, services and the design system.
 
-- influence stakeholders
-- build trust in services and teams
-- provide context to the design system
+We’ll give examples from government, the NHS and the private sector. We’ll uncover how we’ve influenced change in services by advocating for:
+
+- person-centred content
+- accessibility beyond WCAG
+- the wider context of the content
+- user-focused use of the design system
+
+We’ll end by reflecting on how this use of content design might shape the future of the discipline.
 
 ### Lunch
 
@@ -63,10 +72,15 @@ When developing a digital service, it's rare to think about how it actually perf
 
 To demonstrate why you should add a performance resource to your Design System, I'll explain how the Scottish Government is tracking captures, user interactions and real questions we've answered.
 
-### Light and dark: product managers in design systems
+### Dual Narrative: Design systems in small versus large organisations
 
-Michael Palmer
-Alessandra Balliana
+#### Prioritised Pixel Pushing: The case for product within design systems
+
+Michael Palmer, BBC
+
+####
+
+Alessandra Balliana, GoBubble
 2pm to 2:45pm
 
 ### Break
@@ -90,4 +104,4 @@ In this talk, Emily, author of Building Successful Communities of Practice, will
 
 4pm to 5pm
 
-Join us for an optional social afterwards where you can mix with other attendees for a chat and a drink.
+Join us for an optional social afterwards where you can mix with other attendees for a chat.

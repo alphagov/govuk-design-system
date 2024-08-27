@@ -23,13 +23,21 @@ Before joining the Digital Agency, she was a Principal Researcher at the Digital
 
 She specialises in linguistics, public policy and service design.
 
-### Lucy Brennan and Olivia Waring, Department for Education
+### Lucy Brennan, Department for Education
 
-Lucy Brennan and Olivia Waring are content designers from the Department for Education, previously working at Stockport Council and the National Institute for Health and Care Excellence. They are both advocates for people-centred, accessible content.
+Lucy is a content designer at the Department for Education. With a diverse background in academia and industry, she designs people-centred content and is always learning. Lucy loves cross-team collaboration, influencing services and inspiring content design advocates.
 
-### Chris Lightfoot, Nomensa
+### Olivia Waring, Department for Education
 
-TBA
+Olivia is a content designer at the Department for Education. She's previously been an academic, designer, editor and teacher at universities, healthcare organisations, schools, charities, and community projects. She wants to help people question established ideas to improve everyday life.
+
+### Zainab Daodu, Writech Hub
+
+Zainab Daodu is a seasoned Software Engineer, Technical Writer and founder of Writetech Hub. She is passionate about open source and a top 10 Continuous Delivery and DevOps contributor who empowers women in tech. She has led initiatives impacting over 300 African women, notably at She Codes Africa 2020.
+
+### Leyla Kee-McParlin, Department for Environment, Food & Rural Affairs
+
+Leyla is a Lead Content Designer at Defra, directing a team working on borders and trade services. She's a service assessor, a Civil Service Social Mobility Ambassador, and does voluntary work with schools in the Liverpool City Region.
 
 ### Duncan MacGruer, Scottish Government
 
@@ -57,4 +65,4 @@ Kelly is a delivery manager on the GOV.UK Design System team. Before joining the
 
 ### Trang Erskine (GOV.UK Design System)
 
-TBA
+Trang is product manager on the GOV.UK Design System team at Government Digital Service (GDS). She leads the team to build and maintain a Design System that helps users design and develop consistent, usable and accessible services on GOV.UK. She is particularly interested in system thinking - making sense of complex parts and making them work as a whole.
