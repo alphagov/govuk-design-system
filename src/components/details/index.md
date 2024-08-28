@@ -19,7 +19,7 @@ Use the details component to make a page easier to scan when it contains informa
 
 ## When not to use this component
 
-Do not use the details component to hide information that the majority of your users will need. [Read our research on this component]((/components/details/#research-on-this-component)) to consider how this affects some users of assistive technologies.
+Do not use the details component to hide information that the majority of your users will need. [Read our research on this component](/components/details/#research-on-this-component) to consider how this affects some users of assistive technologies.
 
 ## Decide between using details, accordions and tabs
 
