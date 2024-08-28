@@ -23,14 +23,6 @@ Before joining the Digital Agency, she was a Principal Researcher at the Digital
 
 She specialises in linguistics, public policy and service design.
 
-### Lucy Brennan, Department for Education
-
-Lucy is a content designer at the Department for Education. With a diverse background in academia and industry, she designs people-centred content and is always learning. Lucy loves cross-team collaboration, influencing services and inspiring content design advocates.
-
-### Olivia Waring, Department for Education
-
-Olivia is a content designer at the Department for Education. She's previously been an academic, designer, editor and teacher at universities, healthcare organisations, schools, charities, and community projects. She wants to help people question established ideas to improve everyday life.
-
 ### Zainab Daodu, Writech Hub
 
 Zainab Daodu is a seasoned Software Engineer, Technical Writer and founder of Writetech Hub. She is passionate about open source and a top 10 Continuous Delivery and DevOps contributor who empowers women in tech. She has led initiatives impacting over 300 African women, notably at She Codes Africa 2020.
@@ -38,6 +30,10 @@ Zainab Daodu is a seasoned Software Engineer, Technical Writer and founder of Wr
 ### Leyla Kee-McParlin, Department for Environment, Food & Rural Affairs
 
 Leyla is a Lead Content Designer at Defra, directing a team working on borders and trade services. She's a service assessor, a Civil Service Social Mobility Ambassador, and does voluntary work with schools in the Liverpool City Region.
+
+### Lammy Jones, His Majesty's Revenue and Customs
+
+TBC
 
 ### Duncan MacGruer, Scottish Government
 
@@ -53,16 +49,14 @@ Michael Palmer is the Product Person on the BBC's WebCore Design System team. He
 
 Alessandra Balliana is the Creative and Product Design Lead at GoBubble, where she develops Emotion AI experiences to create a safer, more inclusive digital world, free from online hate. As a Design Systems Specialist, she has launched design systems for small teams and startups, promoting strong communication and collaboration within cross-functional teams.
 
-### Emily Webber (Tacit)
+### Ishmael Burdeau, Department of Work and Pensions
 
-Emily Webber is a UK-based independent organisational consultant, coach, trainer and speaker. She focuses on creating environments where people thrive so that organisations can thrive.
+TBC
 
-She works with organisations worldwide in the public and private sectors to create conditions that enable effective collaboration and iterative, user-focused delivery. To do this, she works with leadership teams, embeds communities of practice and leads initiatives that allow for learning and growing capabilities, all of which help create sustainable change.
-
-### Kelly Lee (GOV.UK Design System)
+### Kelly Lee, GOV.UK Design System
 
 Kelly is a delivery manager on the GOV.UK Design System team. Before joining the Government Digital Service, she worked at Jobcentre Plus in a variety of roles including business coach, performance team leader and financial assessor.
 
-### Trang Erskine (GOV.UK Design System)
+### Trang Erskine, GOV.UK Design System
 
 Trang is product manager on the GOV.UK Design System team at Government Digital Service (GDS). She leads the team to build and maintain a Design System that helps users design and develop consistent, usable and accessible services on GOV.UK. She is particularly interested in system thinking - making sense of complex parts and making them work as a whole.

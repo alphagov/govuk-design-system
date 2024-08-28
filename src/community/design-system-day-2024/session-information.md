@@ -8,6 +8,10 @@ layout: layout-pane.njk
 
 <img class="app-image--no-border govuk-!-margin-bottom-9" src="/images/dsd24-24.svg" alt="" role="presentation">
 
+<p class="govuk-!-font-size-24">
+Due to unforeseen circumstances we've had to make some changes to our agenda.  
+</p>
+
 Doors at St George’s Hall will be open from 9am and you will need to check in at the reception desk.
 
 Welcoming remarks will start at 9:45am in the Great Hall. We will close the check in desk at 10am.
@@ -39,21 +43,12 @@ Chikako Masuda
 
 11:15am to 11:35am
 
-### Panel: Content for all and all for content
+### Panel: To be confirmed
 
-With Lucy Brennan, Olivia Waring, Zainab Daodu and Leyla Kee-McParlin
+With Zainab Daodu, Leyla Kee-McParlin and Lammy Jones  
 11:35am to 12:20pm
 
-This panel will discuss how you can take content design beyond its boundaries. We’ll talk about using content design in expansive and innovative ways, to influence stakeholders, services and the design system.
-
-We’ll give examples from government, the NHS and the private sector. We’ll uncover how we’ve influenced change in services by advocating for:
-
-- person-centred content
-- accessibility beyond WCAG
-- the wider context of the content
-- user-focused use of the design system
-
-We’ll end by reflecting on how this use of content design might shape the future of the discipline.
+To be confirmed
 
 ### Lunch
 
@@ -92,14 +87,12 @@ Set aside all the rigour and embrace the imperfections of the journey to build a
 
 2:45pm to 3pm
 
-### Closing keynote: The power of connection through communities of practice
+### Closing keynote: To be confirmed
 
-Emily Webber
+Ishmael Burdeau, Department of Work and Pensions
 3pm to 3:45pm
 
-Humans are social beings; we are wired to connect. In a world where we are spending more time apart through hybrid working or just working too much, we need connection more than ever.
-
-In this talk, Emily, author of Building Successful Communities of Practice, will share some of her experience of building communities of practice for around 20 years, how she brought them into the workplace and the power they have to support people, grow confidence and skills, bridge knowledge, create the space for collaboration across silos and generally make people happier.
+TBC
 
 ### Closing remarks
 
