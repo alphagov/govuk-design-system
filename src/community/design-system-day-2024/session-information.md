@@ -12,11 +12,11 @@ layout: layout-pane.njk
 Due to unforeseen circumstances we've had to make some changes to our agenda.  
 </p>
 
+## Agenda
+
 Doors at St George’s Hall will be open from 9am and you will need to check in at the reception desk.
 
 Welcoming remarks will start at 9:45am in the Great Hall. We will close the check in desk at 10am.
-
-## Agenda
 
 ### Welcome
 
