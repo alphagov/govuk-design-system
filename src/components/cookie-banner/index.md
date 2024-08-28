@@ -97,7 +97,7 @@ You can choose not to have a cookie banner if the service only sets essential or
 
 However, you must tell users that you set essential cookies. You can do this with a cookies page – link to this page in the footer.
 
-### Option 2: If you set non-essential cookies on the server
+### Option 2: If you set non-essential cookies for users (with or without JavaScript)
 
 You can choose this option if your service sets non-essential cookies on the server – your service may also set non-essential cookies on the client.
 
@@ -135,7 +135,7 @@ Here's the same example of a progressively enhanced cookie banner, with the conf
 
 {{ example({ group: "components", item: "cookie-banner", example: "server-side-multiple-messages-confirmation-visible", html: true, nunjucks: true, open: false }) }}
 
-### Option 3: If you set non-essential cookies, but only on the client
+### Option 3: If you set non-essential cookies, but only using client-side JavaScript
 
 You can choose to make your banner only work with JavaScript if your service only needs to set non-essential cookies on the client.
 
