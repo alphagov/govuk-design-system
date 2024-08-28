@@ -43,7 +43,7 @@ Chikako Masuda
 
 11:15am to 11:35am
 
-### Panel: To be confirmed
+### Panel: Content for all and all for content
 
 With Zainab Daodu, Leyla Kee-McParlin and Lammy Jones  
 11:35am to 12:20pm

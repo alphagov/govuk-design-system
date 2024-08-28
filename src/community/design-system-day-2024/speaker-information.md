@@ -29,11 +29,11 @@ Zainab Daodu is a seasoned Software Engineer, Technical Writer and founder of Wr
 
 ### Leyla Kee-McParlin, Department for Environment, Food & Rural Affairs
 
-Leyla is a Lead Content Designer at Defra, directing a team working on borders and trade services. She's a service assessor, a Civil Service Social Mobility Ambassador, and does voluntary work with schools in the Liverpool City Region.
+Leyla is a Lead Content Designer at DEFRA, directing a team working on borders and trade services. She's a service assessor, a Civil Service Social Mobility Ambassador, and does voluntary work with schools in the Liverpool City Region.
 
 ### Lammy Jones, His Majesty's Revenue and Customs
 
-TBC
+Lammy is an Accessibility and Content Lead at HMRC. He has previously worked as a content strategist at Leeds City Council, working to make content, forms and services more accessible through good content design and fewer PDFs.TBC
 
 ### Duncan MacGruer, Scottish Government
 
@@ -51,7 +51,7 @@ Alessandra Balliana is the Creative and Product Design Lead at GoBubble, where s
 
 ### Ishmael Burdeau, Department of Work and Pensions
 
-TBC
+Ishmael is the Lead Sustainability Business Architect for DWP. He enjoys working on the intersections of global heating, environmental damage and digital services. He is a vegan, ultra-runner and professional endurance cyclist.
 
 ### Kelly Lee, GOV.UK Design System
 
