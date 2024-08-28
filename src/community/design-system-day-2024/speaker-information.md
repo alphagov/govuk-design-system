@@ -33,7 +33,7 @@ Leyla is a Lead Content Designer at DEFRA, directing a team working on borders a
 
 ### Lammy Jones, His Majesty's Revenue and Customs
 
-Lammy is an Accessibility and Content Lead at HMRC. He has previously worked as a content strategist at Leeds City Council, working to make content, forms and services more accessible through good content design and fewer PDFs.TBC
+Lammy is an accessibility lead at HM Revenue & Customs and former content strategist for Leeds City Council. He introduced open content standards and applied minimalist methods to make [the council's website](https://www.leeds.gov.uk/) a simpler and more inclusive experience.
 
 ### Duncan MacGruer, Scottish Government
 

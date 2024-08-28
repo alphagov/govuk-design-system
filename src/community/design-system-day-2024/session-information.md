@@ -87,7 +87,7 @@ Set aside all the rigour and embrace the imperfections of the journey to build a
 
 2:45pm to 3pm
 
-### Closing keynote: To be confirmed
+### Closing keynote: Using the Design System to fight the climate emergency
 
 Ishmael Burdeau, Department of Work and Pensions
 3pm to 3:45pm
