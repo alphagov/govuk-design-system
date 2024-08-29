@@ -13,14 +13,16 @@ Some things on the roadmap might change – the purpose is to tell you what’s 
 
 See our [GitHub team board](https://github.com/orgs/alphagov/projects/53) for more details on our plans and day-to-day activities.
 
-Last updated 9 August 2024.
+Last updated 29 August 2024.
 
 ## Recently shipped
 
-We’ve released [GOV.UK Frontend v5.5.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.5.0), which includes an updated list of organisations and brand colours. We’ve also added a new feature to [stop long words from ‘breaking’ out of components](/styles/font-override-classes/#breaking-up-long-words).
+We’ve released [GOV.UK Frontend v5.6.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.6.0), which introduces a new [Service navigation](/components/service-navigation/) component. We’ve also published a new pattern to [Help users to navigate a service](/patterns/navigate-a-service).
 
 We’ve also recently:
 
+- updated the list of organisations and brand colours
+- added a new feature to stop long words from ‘breaking’ out of components
 - improved how the Breadcrumbs component appears on screen readers
 - fixed some alignment issues with Radio buttons and Checkboxes
 - introduced new features to help you include only the components your service uses
@@ -28,16 +30,13 @@ We’ve also recently:
 - updated the crown in the header, favicon and social share images
 - updated the components, patterns and styles to be compliant with WCAG 2.2
 - made it easier for teams to understand [what's changed in WCAG 2.2 and what they need to do](/accessibility/wcag-2.2)
-- made it easier for teams to [share their findings from user research](/community/share-research-findings/)
 
 ## Working on now
 
 We're:
 
-- investigating the [Navigation pattern](https://github.com/alphagov/govuk-design-system-backlog/issues/76)
 - making the guidance around form design and validation easier to find
 - working out how the Design System might need to change when used for pages embedded in apps using web views
-- starting to plan Design System Day 2024
 
 ## Coming up next
 
