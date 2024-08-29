@@ -1,0 +1,11 @@
+---
+title: Service navigation with service name – Service navigation
+layout: layout-example.njk
+---
+
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+
+{{ govukServiceNavigation({
+  serviceName: "Service name",
+  serviceUrl: "#"
+}) }}

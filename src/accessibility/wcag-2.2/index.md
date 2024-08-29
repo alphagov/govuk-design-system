@@ -103,7 +103,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
     ],
     [
       {
-        html: '<a href="/components/footer/">Footer</a>'
+        html: '<a href="/components/footer/">GOV.UK footer</a>'
       },
       {
         html: 'Consistent help'
@@ -111,7 +111,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
     ],
     [
       {
-        html: '<a href="/components/header/">Header</a>'
+        html: '<a href="/components/header/">GOV.UK header</a>'
       },
       {
         html: 'Focus not obscured (Minimum)<br>Consistent help'
@@ -131,6 +131,14 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
       },
       {
         html: 'Dragging movements'
+      }
+    ],
+    [
+      {
+        html: '<a href="/components/service-navigation/">Service navigation</a>'
+      },
+      {
+        html: 'Focus not obscured (Minimum)<br>Consistent help'
       }
     ],
     [
@@ -301,6 +309,14 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
       },
       {
         html: 'Accessible authentication<br>Redundant entry'
+      }
+    ],
+    [
+      {
+        html: '<a href="/patterns/navigate-a-service/">Navigate a service</a>'
+      },
+      {
+        html: 'Focus not obscured (Minimum)<br>Consistent help'
       }
     ],
     [
