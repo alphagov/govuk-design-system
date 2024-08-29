@@ -1,17 +1,6 @@
-// Move the blue border from the container to the header so that it spans
-// the full width of the page
-.app-header {
-  border-bottom: 10px solid $govuk-brand-colour;
-}
-
-.app-header__container {
-  margin-bottom: 0;
-  border-bottom: 0;
-}
-
 // Override the default 33% width on the logo in GOV.UK Frontend (prevents
 // unnecessary wrapping of "GOV.UK Design System" on smaller tablet / desktop
 // viewports)
-.app-header__logo {
+.app-header-logo {
   width: auto;
 }
