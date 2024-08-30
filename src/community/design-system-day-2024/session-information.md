@@ -89,7 +89,7 @@ Set aside all the rigour and embrace the imperfections of the journey to build a
 
 ### Closing keynote: Using the Design System to fight the climate emergency
 
-Ishmael Burdeau, Department of Work and Pensions
+Ishmael Burdeau, Department for Work and Pensions
 3pm to 3:45pm
 
 We are all familiar with accessibility statements. But few understand the need for a service level sustainability statement and how the Design System could be a lever for meaningful impact and change.
