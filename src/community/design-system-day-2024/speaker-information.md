@@ -49,7 +49,7 @@ Michael Palmer is the Product Person on the BBC's WebCore Design System team. He
 
 Alessandra Balliana is the Creative and Product Design Lead at GoBubble, where she develops Emotion AI experiences to create a safer, more inclusive digital world, free from online hate. As a Design Systems Specialist, she has launched design systems for small teams and startups, promoting strong communication and collaboration within cross-functional teams.
 
-### Ishmael Burdeau, Department of Work and Pensions
+### Ishmael Burdeau, Department for Work and Pensions
 
 Ishmael is the Lead Sustainability Business Architect for DWP. He enjoys working on the intersections of global heating, environmental damage and digital services. He is a vegan, ultra-runner and professional endurance cyclist.
 
