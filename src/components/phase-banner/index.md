@@ -37,7 +37,14 @@ There are 2 ways to use the phase banner component. You can use HTML or, if you 
 
 Use an alpha banner when your service is in alpha, and a beta banner if your service is in private or public beta.
 
-Your banner must be directly under the black GOV.UK header and colour bar.
+Show the Phase banner directly under either:
+
+- the [Service navigation](/components/service-navigation/) component
+- the [GOV.UK header](/components/header/) and its blue colour bar (if your service does not use the Service navigation component)
+
+Phase banners are shown across all pages of a service, so users should understand it as a service-level message.
+
+You can choose to place the Phase banner in a more appropriate place for your service, however you’ll need to customise the component and provide your own CSS code to make it show correctly.
 
 {% call wcagNote({id: "wcag-do-not-cover-content"}) %}
 

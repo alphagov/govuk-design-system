@@ -102,8 +102,6 @@ In November 2021, [the GOV.UK homepage introduced a menu bar](https://insidegovu
 <p>For example, a header link to “Get help with this service” must go to the same place as similar header links elsewhere in your service. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent help</a>.</p>
 {% endcall %}
 
-Help links must always link to the same place. For example, a header link to “Get help with this service” must go to the same place as similar header links elsewhere in your service.
-
 ### GOV.UK header with One Login
 
 GOV.UK One Login maintains their own header on the [Let users navigate to their GOV.UK One Login and sign out easily](https://www.sign-in.service.gov.uk/documentation/design-recommendations/let-users-navigate-sign-out) page.

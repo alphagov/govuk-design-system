@@ -124,8 +124,6 @@ In November 2021, [the GOV.UK homepage introduced a menu bar](https://insidegovu
 <p>For example, a header link to “Get help with this service” must go to the same place as similar header links elsewhere in your service. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent help</a>.</p>
 {% endcall %}
 
-Help links must always link to the same place. For example, a header link to “Get help with this service” must go to the same place as similar header links elsewhere in your service.
-
 #### External links
 
 Links that go outside of your service should usually:
@@ -143,7 +141,7 @@ GOV.UK One Login [publishes its own header component](https://www.sign-in.servic
 
 To help maintain consistency across services on GOV.UK, we’ve outlined some guidance on how to use the space in your header, and where to add other components and elements.
 
-As a general rule, the ordering of header and navigation elements should start with most general (GOV.UK-wide) elements at the top, with the more specific (service-level) elements further down.
+As a general rule, the ordering of header and navigation elements should start with the most general (GOV.UK-wide) elements at the top, with the more specific (service-level) elements further down.
 
 ### Start with GOV.UK-wide, general elements
 
@@ -153,10 +151,7 @@ In the GOV.UK header, only add GOV.UK-wide elements.
 
 You can add space between the GOV.UK header and Service navigation to insert important elements that apply to your entire service.
 
-Elements you might add here include:
-
-- [Phase banners](/components/phase-banner/)
-- ‘organisation switchers’, or similar tools that help users use your service across a set of things
+Elements you might add here include ‘organisation switchers’, or similar tools that help users use your service across a set of things
 
 See an example of an [organisation switcher](https://design-patterns.service.justice.gov.uk/components/organisation-switcher/) component in the Ministry of Justice Design System.
 
@@ -174,6 +169,17 @@ Elements you might add to Service navigation include:
 - search inputs, if they only search within your service
 
 To help users understand what the search input will cover, include ‘Search [your service]’ as placeholder text within the search input.
+
+#### Phase banners
+
+Show the [Phase banner](/components/phase-banner/) component directly under either:
+
+- the Service navigation component
+- the GOV.UK header and blue colour bar (if your service does not use the Service navigation component)
+
+Phase banners are shown across all pages of a service, so users should understand it as a service-level message.
+
+You can choose to place the Phase banner in a more appropriate place for your service, however you’ll need to customise the component and provide your own CSS code to make it show correctly.
 
 ### Finally, show page-specific elements
 
