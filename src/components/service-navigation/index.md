@@ -43,7 +43,7 @@ This also assures users that they’re in the right place to use your service an
 
 For guidance on how to plan your header and navigation, see the [Help users navigate a service](/patterns/navigate-a-service/) pattern.
 
-### Change the GOV.UK header bottom blue border to full width
+### Change the blue colour bar under the GOV.UK header to full width
 
 To use the GOV.UK header and Service navigation and make them fit together visually, you’ll need to change the bottom blue border of the GOV.UK header to full width.
 
@@ -76,8 +76,6 @@ In November 2021, [the GOV.UK homepage introduced a menu bar](https://insidegovu
 <p>You can add a link to a ‘help’ page in your service’s header. If you do, the link must be positioned consistently within the header, and must always link to the same place.</p>
 <p>For example, a header link to “Get help with this service” must go to the same place as similar header links elsewhere in your service. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent help</a>.</p>
 {% endcall %}
-
-Help links must always link to the same place. For example, a header link to “Get help with this service” must go to the same place as similar header links elsewhere in your service.
 
 ## Use ‘slots’ to add custom elements
 
