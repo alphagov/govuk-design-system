@@ -35,6 +35,10 @@ Leyla is a Lead Content Designer at DEFRA, directing a team working on borders a
 
 Lammy is an accessibility lead at HM Revenue & Customs and former content strategist for Leeds City Council. He introduced open content standards and applied minimalist methods to make [the council's website](https://www.leeds.gov.uk/) a simpler and more inclusive experience.
 
+### Helen Nickols
+
+Helen is a senior content designer for Justice Digital at the Ministry of Justice. She works on the MoJ Design System. Previously she worked at the Government Digital Service on the GOV.UK website.
+
 ### Duncan MacGruer, Scottish Government
 
 Duncan MacGruer has worked with the Scottish Government Digital Publishing team for 2 years and in digital publishing for many years before that.

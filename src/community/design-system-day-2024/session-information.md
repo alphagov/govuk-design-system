@@ -45,7 +45,7 @@ Chikako Masuda
 
 ### Panel: Content for all and all for content
 
-With Zainab Daodu, Leyla Kee-McParlin and Lammy Jones  
+With Zainab Daodu, Leyla Kee-McParlin, Lammy Jones and Helen Nickols
 11:35am to 12:20pm
 
 To be confirmed
@@ -92,7 +92,7 @@ Set aside all the rigour and embrace the imperfections of the journey to build a
 Ishmael Burdeau, Department of Work and Pensions
 3pm to 3:45pm
 
-TBC
+We are all familiar with accessibility statements. But few understand the need for a service level sustainability statement and how the Design System could be a lever for meaningful impact and change.
 
 ### Closing remarks
 
