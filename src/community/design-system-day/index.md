@@ -25,31 +25,17 @@ It’s an opportunity to collaborate and share knowledge about design systems wi
 
 You can [sign up to our mailing list](https://mailchi.mp/707ce8dec373/get-updated-by-email-govuk-design-system) to get the latest information on Design System Day events planned for this year.
 
-## Day 1 event
+## Event 1
 
-The first event this year will be on 21 May 2024. It will be a free, online event hosted on Zoom.
+The first event this year was hosted online on 21 May 2024. Recordings from the event will be available soon.
 
-### Speakers
+## Event 2
 
-**The GOV.UK Design System in 5 years**
-Trang Erskine, Charlotte Downs and Romaric Pascal, GOV.UK Design System
+The second event will be a face to face conference, hosted in Liverpool on Thursday 5 September 2024. You can find out more about this event on [Design System Day 2024](/community/design-system-day-2024) page.
 
-A show & tell exploring the history of the GOV.UK Design System, and our focus for the next few years.
+## Event 3
 
-**Leading the system**
-Daniel Fontaneda, Bumble
-
-A show and tell delving into the principles and actions that contribute to the success of a design system.
-
-**Using the GOV.UK Prototype Kit (intermediate level)**
-Vicky Teinaki, Student Loans Company
-
-A workshop in how to design, code and optimise prototypes using the GOV.UK Prototype Kit.
-
-**Who designs the designers?**
-Gordon Guthrie, Scottish Government
-
-A show and tell examining how to apply system design principles to the system of government.
+We hope to host a third event later in 2024. This will be an online event, hosted on a conferencing platform. Details about this event will be released soon.
 
 ## Previous events
 
