@@ -29,6 +29,8 @@ Service navigation helps users understand that they’re using your service and 
   ]
 }) }}
 
+{{ example({ group: "components", item: "service-navigation", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
+
 ## When to use this component
 
 Use the Service navigation to help users understand that they’re using your service.
@@ -49,11 +51,13 @@ To use the GOV.UK header and Service navigation and make them fit together visua
 
 Apply a class `govuk-header--full-width-border` to the GOV.UK header.
 
+{{ example({ group: "components", item: "service-navigation", example: "with-govuk-header", html: true, nunjucks: true, open: false }) }}
+
 ### Showing your service name only
 
 We recommend that you use the Service navigation component to show your service name, instead of the GOV.UK header, and to start updating existing services.
 
-{{ example({ group: "components", item: "service-navigation", example: "with-service-name", html: true, nunjucks: true, open: false, loading: "eager" }) }}
+{{ example({ group: "components", item: "service-navigation", example: "with-service-name", html: true, nunjucks: true, open: false }) }}
 
 ### Showing service name and navigation links
 
