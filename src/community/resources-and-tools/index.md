@@ -93,6 +93,11 @@ A set of non-form Rails components using GOV.UK Frontend. You can use these toge
 [GOV.UK Rails Template](https://github.com/DFE-Digital/rails-template) -
 A complete Rails application template using GOV.UK Frontend.
 
+### Vue.js
+
+[GOV.UK Vue](https://govukvue.org) -
+A Vue 3 component library for GOV.UK Frontend
+
 ## Write code
 
 You can download GOV.UK Frontend Nunjucks macro snippets for:
