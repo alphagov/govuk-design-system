@@ -12,14 +12,12 @@ order: 15
 <img class="app-image--no-border govuk-!-margin-bottom-9" src="/images/dsd24-24.svg" alt="" role="presentation">
 
 <p class="govuk-!-font-size-24">
-Design System Day is coming to Liverpool!  
+Thanks to all who joined us in Liverpool for this year's face to face event!
 </p>
 
-The event will be taking place on Thursday 5 September 2024 at St George's Hall. Tickets for the event have sold out however all talks will be recorded and shared later in the year. [Sign up to our mailing list](https://mailchi.mp/707ce8dec373/get-updated-by-email-govuk-design-system) to be notified when they become available.
+Our latest event took place on Thursday 5 September 2024 at St George's Hall in Liverpool. 200 members of our community joined us to hear [a wide range of talks](/community/design-system-day-2024/session-information) on this year's theme 'unsung heroes of design systems' from our brilliant [speakers](/community/design-system-day-2024/speaker-information). Each session was recorded and will be shared through [our mailing list](https://mailchi.mp/707ce8dec373/get-updated-by-email-govuk-design-system) in the coming months.
 
-We've now confirmed our [speakers](/community/design-system-day-2024/speaker-information), with speakers coming from across the international community. We have a diverse range of unsung heroes coming together to talk to you about their experiences.
-
-You can also read about the [upcoming sessions](/community/design-system-day-2024/session-information). We have a variety of formats across the day. And some information about how the day will run.
+We plan to run one final online Design System Day later this year. More details on this will be released soon.
 
 {% call promoBanner({
   img: "/images/dsd24-mail.svg",
