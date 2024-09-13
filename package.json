@@ -96,7 +96,7 @@
     "puppeteer": "^23.3.0",
     "rollup": "^4.21.2",
     "sass-export": "^2.1.2",
-    "serve-static": "^1.15.0",
+    "serve-static": "^1.16.0",
     "sitemap": "^8.0.0",
     "slash": "^3.0.0",
     "slug": "^9.1.0",
