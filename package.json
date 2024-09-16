@@ -111,7 +111,7 @@
   "optionalDependencies": {
     "@jest/environment": "^29.7.0",
     "@types/browser-sync": "^2.29.0",
-    "@types/jest": "^29.5.12",
+    "@types/jest": "^29.5.13",
     "@types/jest-axe": "^3.5.9",
     "@types/node": "^22.5.4",
     "@types/nunjucks": "^3.2.6",
