@@ -59,8 +59,6 @@ To do this, set the `autocomplete` attribute on the 3 fields to `bday-day`, `bda
 
 If you are working in production you’ll need to do this to meet [WCAG 2.1 Level AA](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html).
 
-You will not normally need to use the `autocomplete` attribute in prototypes, as users will not generally be using their own devices.
-
 ### Error messages
 
 If you’re highlighting the whole date, style all the fields like this:
