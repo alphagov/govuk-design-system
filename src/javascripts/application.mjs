@@ -16,6 +16,7 @@ import EmbedCard from './components/embed-card.mjs'
 import ExampleFrame from './components/example-frame.mjs'
 import Navigation from './components/navigation.mjs'
 import OptionsTable from './components/options-table.mjs'
+import ScrollContainer from './components/scroll-container.mjs'
 import Search from './components/search.mjs'
 import AppTabs from './components/tabs.mjs'
 
@@ -41,12 +42,16 @@ if (userConsent && isValidConsentCookie(userConsent) && userConsent.analytics) {
 // Code examples
 createAll(ExampleFrame)
 createAll(AppTabs)
+
 // Do this after initialising tabs
 createAll(Copy)
 new OptionsTable()
 
 // Initialise mobile navigation
 new Navigation(document)
+
+// Initialise scrollable container handling
+createAll(ScrollContainer)
 
 // Initialise search
 createAll(Search)
