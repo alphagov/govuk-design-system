@@ -15,11 +15,11 @@ In 2023, the Design System team assessed and updated the GOV.UK Design System to
 
 We [included code changes in GOV.UK Frontend v5.0.0](https://frontend.design-system.service.gov.uk/changes-to-govuk-frontend-v5/) to make it easier for services to make changes to comply with WCAG 2.2. We also added guidance to make teams aware of the changes and help them make necessary adjustments to their services.
 
-### Make sure your service meets the new WCAG 2.2 criteria
+## Make sure your service meets the new WCAG 2.2 criteria
 
 WCAG 2.2 was published in October 2023. You’ll need to comply with the new criteria no later than October 2024. See more about [Meeting government accessibility requirements](https://www.gov.uk/service-manual/helping-people-to-use-your-service/understanding-wcag) in the GOV.UK Service Manual.
 
-### What you need to do
+## What you need to do
 
 1. Revisit the [Government Digital Service (GDS) guidance](https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps) on what accessibility is and why your service needs to invest in it
 2. Read [What’s new in WCAG 2.2](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/) to understand the new criteria your service will need to comply with
@@ -31,7 +31,7 @@ WCAG 2.2 was published in October 2023. You’ll need to comply with the new cri
 
 Make sure there's expertise within your organisation by advocating for people to receive training in accessibility. To provide some help with this, the Design System team is [organising community events](/community/) to help service teams share information with each other.
 
-### Components and patterns affected in the Design System
+## Components and patterns affected in the Design System
 
 We've made changes to these components and patterns to comply with WCAG 2.2 level AA. You must check if your service needs amending to align with these changes.
 
