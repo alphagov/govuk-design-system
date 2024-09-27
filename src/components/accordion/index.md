@@ -123,7 +123,7 @@ We updated this component in December 2021 to solve an accessibility issue where
 
 The team made sure the component is accessible, for example that users can interact with it using just the keyboard.
 
-#### Users that navigate using ‘elements lists’
+### Users that navigate using ‘elements lists’
 
 We need to find out more about users that navigate using ‘elements lists’ of headings, buttons, links and other elements – such as users of speech recognition software and partially-sighted users of screen readers.
 
