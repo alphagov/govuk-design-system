@@ -116,11 +116,17 @@ For example, ‘About you’
 
 You can also learn more about how starting with [one thing per page](https://www.gov.uk/service-manual/design/form-structure#start-with-one-thing-per-page) helps users in the GOV.UK Service Manual.
 
+#### Hint text
+
+Use hint text to show information that helps the majority of users answer the question, like like how their information will be used, or where to find it.
+
+Keep each hint to a single short sentence, without any full stops.
+
+If you need to give a long, detailed explanation, do not use hint text. Screen readers will read out the entire text when users interact with the form element. This could frustrate users if the text is long.
+
+Do not use links in hint text. While screen readers will read out the link text when describing the field, they usually do not tell users the text is a link.
+
 #### Asking complex questions without using hint text
-
-Do not use hint text if you need to give a lengthy explanation with lists and paragraphs. Screen readers read out the entire text when users interact with the form element. This could frustrate users if the text is long.
-
-Do not use links in hint text. While screen readers will read out the link text when describing the field, they will not tell users the text is a link.
 
 If you're asking a question that needs a detailed explanation, use:
 
