@@ -75,6 +75,10 @@ Remember that on small screens such as mobile devices, the radios will still be 
 
 You can add hints to radio items to provide additional information about the options.
 
+Keep each hint to a single short sentence, without any full stops. Screen readers will read out the entire text when users interact with an item. This could frustrate users if the text is long.
+
+Do not use links in hint text. While screen readers will read out the link text when describing the item, they usually do not tell users the text is a link.
+
 {{ example({ group: "components", item: "radios", example: "hint", html: true, nunjucks: true, open: false, size: "s" }) }}
 
 ### Radio items with a text divider
