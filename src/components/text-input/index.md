@@ -79,13 +79,17 @@ Fluid width inputs will resize with the viewport.
 
 Use hint text for help that’s relevant to the majority of users, like how their information will be used, or where to find it.
 
+Keep hint text to a single short sentence, without any full stops.
+
+Do not use links in hint text. While screen readers will read out the link text when describing the field, they usually do not tell users the text is a link.
+
 {{ example({ group: "components", item: "text-input", example: "input-hint-text", html: true, nunjucks: true, open: false, size: "s" }) }}
 
 #### When not to use hint text
 
-Do not use hint text if you need to give a lengthy explanation with lists and paragraphs. Screen readers read out the entire text when users interact with the form element. This could frustrate users if the text is long.
+Do not use hint text to explain anything that's longer than a short, simple sentence. Screen readers read out the entire text when users interact with the form element. This could frustrate users if the text is long.
 
-If you’re asking a question that needs a detailed explanation, read more about [asking complex questions without using hint text](/patterns/question-pages/#asking-complex-questions-without-using-hint-text).
+If you’re asking a question that needs a detailed explanation, see [asking complex questions without using hint text](/patterns/question-pages/#asking-complex-questions-without-using-hint-text).
 
 #### Avoid links
 

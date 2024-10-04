@@ -63,6 +63,10 @@ If you're asking more than one question on the page, do not set the contents of 
 
 You can add hints to checkbox items to provide additional information about the options.
 
+Keep each hint to a single short sentence, without any full stops. Screen readers will read out the entire text when users interact with an item. This could frustrate users if the text is long.
+
+Do not use links in hint text. While screen readers will read out the link text when describing the item, they usually do not tell users the text is a link.
+
 {{ example({ group: "components", item: "checkboxes", example: "hint", html: true, nunjucks: true, open: false, size: "s" }) }}
 
 ### Add an option for ‘none’

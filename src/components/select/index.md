@@ -49,6 +49,10 @@ There are 2 ways to use the select component. You can use HTML or, if you’re u
 
 You can add hint text to help the user understand the options and choose one of them.
 
+Keep hint text to a single short sentence, without any full stops.
+
+Do not use links in hint text. While screen readers will read out the link text, they usually do not tell users the text is a link.
+
 {{ example({ group: "components", item: "select", example: "with-hint", html: true, nunjucks: true, open: false }) }}
 
 ### Error messages
