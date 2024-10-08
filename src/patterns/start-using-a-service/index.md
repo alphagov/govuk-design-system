@@ -67,7 +67,7 @@ It’s important that users have this context, so it makes sense to embed the st
 
 ![A screenshot showing an example of a start point within a multipart guide. The page is shown as part of a set of pages and its body text explains what the user will need to use the service, followed by a start button labelled 'Apply now'.](multipart-guide-start-point.png)
 
-The Carer’s Allowance team found that, for their service, [providing a start point within a multipart guide helped users get to the right information without feeling overwhelmed](https://dwpdigital.blog.gov.uk/2014/07/24/improving-to-the-carers-allowance-guide/).
+[Read a blog post about how DWP's digital team found that providing a start page within a multipart guide for Carer's Allowance improved the journey for users](https://dwpdigital.blog.gov.uk/2014/07/24/improving-to-the-carers-allowance-guide/).
 
 ### Creating a start point using Whitehall Publisher
 
