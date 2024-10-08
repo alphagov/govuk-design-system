@@ -229,7 +229,7 @@ The team also uses general inspection techniques, including:
 
 The team currently uses [jest-axe](https://github.com/nickcolley/jest-axe) as part of our deployment process, along with [@axe-core/puppeteer](https://github.com/dequelabs/axe-core-npm/blob/develop/packages/puppeteer). These tools test the example code snippets in the GOV.UK Design System against [axe-core](https://github.com/dequelabs/axe-core).
 
-The team does not solely rely on automated testing processes, as a 2017 study from GDS concluded that [only ~30% of issues are found by automated testing tools](https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage), such as axe-core.
+The team does not solely rely on automated testing processes, as a 2017 study from GDS concluded that [only about 30% of issues are found by automated testing tools](https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage), such as axe-core.
 
 As of May 2023, we have improved our automated accessibility testing processes:
 
