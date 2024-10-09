@@ -15,10 +15,7 @@ Let users select one or more options by using the checkboxes component.
 
 ## When to use this component
 
-Use the checkboxes component when you need to help users:
-
-- select multiple options from a list
-- toggle a single option on or off
+Use the checkboxes component when you need to help users select multiple options from a list.
 
 ## When not to use this component
 
