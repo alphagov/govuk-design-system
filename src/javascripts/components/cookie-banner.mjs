@@ -1,3 +1,5 @@
+import { Component } from 'govuk-frontend'
+
 import * as CookieFunctions from './cookie-functions.mjs'
 
 const cookieBannerAcceptSelector = '.js-cookie-banner-accept'
@@ -10,22 +12,27 @@ const cookieConfirmationRejectSelector = '.js-cookie-banner-confirmation-reject'
 /**
  * Website cookie banner
  */
-class CookieBanner {
+class CookieBanner extends Component {
+  /**
+   * @type {HTMLElement}
+   */
+  $root
+
   static moduleName = 'govuk-cookie-banner'
   /**
    * @param {Element} $module - HTML element
    */
   constructor($module) {
+    super($module)
+
     if (
-      !($module instanceof HTMLElement) ||
-      !document.body.classList.contains('govuk-frontend-supported') ||
       // Exit if we're on the cookies page to avoid circular journeys
       this.onCookiesPage()
     ) {
       return this
     }
 
-    this.$cookieBanner = $module
+    this.$cookieBanner = this.$root
     this.cookieCategory =
       (this.$cookieBanner.dataset &&
         this.$cookieBanner.dataset.cookieCategory) ||

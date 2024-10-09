@@ -1,21 +1,21 @@
+import { Component } from 'govuk-frontend'
+
 import { getConsentCookie } from './cookie-functions.mjs'
 
 /**
  * Embed Card Youtube functionality
  */
-class EmbedCard {
+class EmbedCard extends Component {
+  /**
+   * @type {HTMLElement}
+   */
+  $root
+
   /**
    * @param {Element} $module - HTML element
    */
   constructor($module) {
-    if (
-      !($module instanceof HTMLElement) ||
-      !document.body.classList.contains('govuk-frontend-supported')
-    ) {
-      return this
-    }
-
-    this.$module = $module
+    super($module)
 
     this.replacePlaceholder()
   }
@@ -26,17 +26,17 @@ class EmbedCard {
    * Replaces the placeholder with the iframe if cookies are set.
    */
   replacePlaceholder() {
-    if (this.$module.querySelector('iframe')) {
+    if (this.$root.querySelector('iframe')) {
       return
     }
 
     const consentCookie = getConsentCookie()
 
     if (consentCookie && consentCookie.campaign) {
-      const placeholder = this.$module.querySelector(
+      const placeholder = this.$root.querySelector(
         '.app-embed-card__placeholder'
       )
-      const placeholderText = this.$module.querySelector(
+      const placeholderText = this.$root.querySelector(
         '.app-embed-card__placeholder-text'
       )
 
@@ -51,7 +51,7 @@ class EmbedCard {
 
       placeholder.remove()
 
-      const iframeContainer = this.$module.querySelector(
+      const iframeContainer = this.$root.querySelector(
         '.app-embed-card__placeholder-iframe-container'
       )
       iframeContainer.appendChild(iframe)
@@ -65,6 +65,7 @@ class EmbedCard {
    *
    * @param {string} ytId - YouTube ID
    * @param {string} title - Title for iFrame (for screen readers)
+   * @returns {HTMLElement} - iframe element
    */
   createIframe(ytId, title) {
     const iframe = document.createElement('IFRAME')

@@ -48,7 +48,7 @@ createAll(Copy)
 new OptionsTable()
 
 // Initialise mobile navigation
-new Navigation(document)
+new Navigation(document.body)
 
 // Initialise scrollable container handling
 createAll(ScrollContainer)
