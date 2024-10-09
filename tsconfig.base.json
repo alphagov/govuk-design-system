@@ -5,9 +5,13 @@
     "module": "NodeNext",
     "noEmit": true,
     "noImplicitThis": true,
+    "typeRoots": ["src/@types", "node_modules/@types"],
     "strict": false,
     "strictBindCallApply": true,
     "strictFunctionTypes": true,
     "target": "ESNext"
+  },
+  "typeAcquisition": {
+    "enable": false
   }
 }

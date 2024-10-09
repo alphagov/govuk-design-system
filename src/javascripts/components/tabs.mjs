@@ -100,7 +100,7 @@ class AppTabs extends Component {
     })
 
     // Replace the value of $mobileTabs with the new buttons
-    this.$mobileTabs = this.$module.querySelectorAll('.js-tabs__heading button')
+    this.$mobileTabs = this.$root.querySelectorAll('.js-tabs__heading button')
   }
 
   /**
@@ -208,7 +208,7 @@ class AppTabs extends Component {
    * @returns {HTMLAnchorElement | null} Desktop tab link
    */
   getDesktopTab(panelId) {
-    const $desktopTabContainer = this.$module.querySelector('.app-tabs')
+    const $desktopTabContainer = this.$root.querySelector('.app-tabs')
     if ($desktopTabContainer) {
       return $desktopTabContainer.querySelector(`[aria-controls="${panelId}"]`)
     }

@@ -5,11 +5,6 @@ import { Component } from 'govuk-frontend'
  * Copy button for code examples
  */
 class Copy extends Component {
-  /**
-   * @type {HTMLElement}
-   */
-  $root
-
   static moduleName = 'app-copy'
 
   /**

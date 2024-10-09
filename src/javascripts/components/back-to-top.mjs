@@ -5,11 +5,6 @@ import { Component } from 'govuk-frontend'
  */
 class BackToTop extends Component {
   /**
-   * @type {HTMLElement}
-   */
-  $root
-
-  /**
    * Check support of something
    *
    * @throws {Error} when component not supported

@@ -11,11 +11,6 @@ import iFrameResize from 'iframe-resizer/js/iframeResizer.js'
  * @augments Component<HTMLIFrameElement>
  */
 class ExampleFrame extends Component {
-  /**
-   * @type {HTMLIFrameElement}
-   */
-  $root
-
   static moduleName = 'app-example-frame'
   /**
    * @param {Element} $module - HTML element

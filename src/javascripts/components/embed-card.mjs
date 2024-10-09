@@ -6,10 +6,7 @@ import { getConsentCookie } from './cookie-functions.mjs'
  * Embed Card Youtube functionality
  */
 class EmbedCard extends Component {
-  /**
-   * @type {HTMLElement}
-   */
-  $root
+  static moduleName = 'app-embed-card'
 
   /**
    * @param {Element} $module - HTML element
