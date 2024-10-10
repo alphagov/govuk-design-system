@@ -1,3 +1,5 @@
+import { Component } from 'govuk-frontend'
+
 const navActiveClass = 'app-navigation--active'
 const navMenuButtonActiveClass = 'govuk-header__menu-button--open'
 const subNavActiveClass = 'app-navigation__subnav--active'
@@ -7,28 +9,36 @@ const subNavJSClass = '.js-app-navigation__subnav'
 /**
  * Website navigation
  */
-class Navigation {
+class Navigation extends Component {
   /**
-   * @param {Document} $module - HTML document
+   * Returns the root element of the component
+   *
+   * @returns {any} - the root element of component
+   */
+  get $root() {
+    // Unfortunately, govuk-frontend does not provide type definitions
+    // so TypeScript does not know of `this._$root`
+    // @ts-expect-error
+    return this._$root
+  }
+
+  /**
+   * Name for the component used when initialising using data-module attributes.
+   */
+  static moduleName = 'app-navigation'
+
+  /**
+   * @param {HTMLElement} $module - HTML document
    */
   constructor($module) {
-    if (
-      !($module instanceof Document) ||
-      !document.body.classList.contains('govuk-frontend-supported')
-    ) {
-      return this
-    }
+    super($module)
 
-    this.$module = $module
-
-    const $nav = this.$module.querySelector('.js-app-navigation')
-    const $navToggler = this.$module.querySelector(
-      '.js-app-navigation__toggler'
-    )
-    const $navButtons = this.$module.querySelectorAll(
+    const $nav = this.$root.querySelector('.js-app-navigation')
+    const $navToggler = this.$root.querySelector('.js-app-navigation__toggler')
+    const $navButtons = this.$root.querySelectorAll(
       '.js-app-navigation__button'
     )
-    const $navLinks = this.$module.querySelectorAll('.js-app-navigation__link')
+    const $navLinks = this.$root.querySelectorAll('.js-app-navigation__link')
 
     if (
       !($nav instanceof HTMLElement) ||

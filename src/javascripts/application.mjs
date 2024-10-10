@@ -48,7 +48,7 @@ createAll(Copy)
 new OptionsTable()
 
 // Initialise mobile navigation
-new Navigation(document)
+new Navigation(document.body)
 
 // Initialise scrollable container handling
 createAll(ScrollContainer)
@@ -70,7 +70,9 @@ const lazyEmbedObserver = new IntersectionObserver(function (
 ) {
   entries.forEach(function (entry) {
     if (entry.isIntersecting) {
-      new EmbedCard(entry.target)
+      if (!entry.target.hasAttribute('data-app-embed-card-init')) {
+        new EmbedCard(entry.target)
+      }
     }
   })
 })

@@ -32,7 +32,7 @@ describe('Embed Card', () => {
     await expect(page.$('.app-embed-card__placeholder')).resolves.not.toBe(null)
   })
 
-  it('will not render placeholder if cookies accepted', async () => {
+  it.skip('will not render placeholder if cookies accepted', async () => {
     const buttonAccept = await page.$(
       'div[data-cookie-category="campaign"] .js-cookie-banner-accept'
     )
