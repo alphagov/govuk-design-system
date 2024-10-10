@@ -13,14 +13,15 @@ Some things on the roadmap might change – the purpose is to tell you what’s 
 
 See our [GitHub team board](https://github.com/orgs/alphagov/projects/53) for more details on our plans and day-to-day activities.
 
-Last updated 29 August 2024.
+Last updated 10 October 2024.
 
 ## Recently shipped
 
-We’ve released [GOV.UK Frontend v5.6.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.6.0), which introduces a new [Service navigation](/components/service-navigation/) component. We’ve also published a new pattern to [Help users to navigate a service](/patterns/navigate-a-service).
+We’ve released [GOV.UK Frontend v5.7.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.7.0), which includes an update to the Royal Arms in the [GOV.UK footer](/components/footer/). We’ve also added new features to help services create their own components using GOV.UK Frontend.
 
 We’ve also recently:
 
+- introduced a new [Service navigation component](/components/service-navigation/) and published a new pattern to [Help users to navigate a service](/patterns/navigate-a-service)
 - updated the list of organisations and brand colours
 - added a new feature to stop long words from ‘breaking’ out of components
 - improved how the Breadcrumbs component appears on screen readers
