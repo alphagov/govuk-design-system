@@ -17,7 +17,7 @@ Last updated 10 October 2024.
 
 ## Recently shipped
 
-We’ve released [GOV.UK Frontend v5.7.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.7.0), which includes an update to the Royal Arms in the [GOV.UK footer](/components/footer/). We’ve also added new features to help services create their own components using GOV.UK Frontend.
+We’ve released [GOV.UK Frontend v5.7.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.7.0), which includes an update to the Royal Arms in the [GOV.UK footer](/components/footer/). We’ve also added new features to help services [create their own JavaScript components using GOV.UK Frontend](https://frontend.design-system.service.gov.uk/building-your-own-javascript-components/).
 
 We’ve also recently:
 
