@@ -1,22 +1,19 @@
+import { Component } from 'govuk-frontend'
+
 import { getConsentCookie, setConsentCookie } from './cookie-functions.mjs'
 
 /**
  * Website cookies page
  */
-class CookiesPage {
+class CookiesPage extends Component {
   static moduleName = 'app-cookies-page'
   /**
    * @param {Element} $module - HTML element
    */
   constructor($module) {
-    if (
-      !($module instanceof HTMLElement) ||
-      !document.body.classList.contains('govuk-frontend-supported')
-    ) {
-      return this
-    }
+    super($module)
 
-    this.$page = $module
+    this.$page = this.$root
 
     const $cookieForm = this.$page.querySelector('.js-cookies-page-form')
     if (!($cookieForm instanceof HTMLFormElement)) {
