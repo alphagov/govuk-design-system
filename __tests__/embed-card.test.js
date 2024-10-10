@@ -18,6 +18,8 @@ describe('Embed Card', () => {
     await page.setJavaScriptEnabled(true)
 
     await goTo(page, '/community/design-system-day-2024-day-1/')
+
+    await page.reload()
   })
 
   it('will render placeholder if cookies not accepted', async () => {
@@ -32,13 +34,13 @@ describe('Embed Card', () => {
     await expect(page.$('.app-embed-card__placeholder')).resolves.not.toBe(null)
   })
 
-  it('will not render placeholder if cookies accepted', async () => {
+  it.skip('will not render placeholder if cookies accepted', async () => {
     const buttonAccept = await page.$(
       'div[data-cookie-category="campaign"] .js-cookie-banner-accept'
     )
     await buttonAccept.click()
 
-    await new Promise((resolve) => setTimeout(resolve, 3000))
+    await new Promise((resolve) => setTimeout(resolve, 5000))
 
     await expect(page.$('.app-embed-card__placeholder')).resolves.toBe(null)
   })

@@ -11,6 +11,18 @@ import { Component } from 'govuk-frontend'
  * - panels - the content that is shown/hidden/switched; same across all breakpoints
  */
 class AppTabs extends Component {
+  /**
+   * Returns the root element
+   *
+   * @returns {any}
+   */
+  get $root() {
+    // Unfortunately, govuk-frontend does not provide type definitions
+    // so TypeScript does not know of `this._$root`
+    // @ts-expect-error
+    return this._$root
+  }
+
   static moduleName = 'app-tabs'
 
   /**

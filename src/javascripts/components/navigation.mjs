@@ -11,6 +11,18 @@ const subNavJSClass = '.js-app-navigation__subnav'
  */
 class Navigation extends Component {
   /**
+   * Returns the root element
+   *
+   * @returns {any}
+   */
+  get $root() {
+    // Unfortunately, govuk-frontend does not provide type definitions
+    // so TypeScript does not know of `this._$root`
+    // @ts-expect-error
+    return this._$root
+  }
+
+  /**
    * Name for the component used when initialising using data-module attributes.
    */
   static moduleName = 'app-navigation'

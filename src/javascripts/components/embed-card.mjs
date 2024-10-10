@@ -6,6 +6,18 @@ import { getConsentCookie } from './cookie-functions.mjs'
  * Embed Card Youtube functionality
  */
 class EmbedCard extends Component {
+  /**
+   * Returns the root element
+   *
+   * @returns {any}
+   */
+  get $root() {
+    // Unfortunately, govuk-frontend does not provide type definitions
+    // so TypeScript does not know of `this._$root`
+    // @ts-expect-error
+    return this._$root
+  }
+
   static moduleName = 'app-embed-card'
 
   /**
