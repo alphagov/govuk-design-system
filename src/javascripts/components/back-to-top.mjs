@@ -4,18 +4,6 @@ import { Component } from 'govuk-frontend'
  * Website back to top link
  */
 class BackToTop extends Component {
-  /**
-   * Returns the root element of the component
-   *
-   * @returns {any} - the root element of component
-   */
-  get $root() {
-    // Unfortunately, govuk-frontend does not provide type definitions
-    // so TypeScript does not know of `this._$root`
-    // @ts-expect-error
-    return this._$root
-  }
-
   static moduleName = 'app-back-to-top'
 
   /**
