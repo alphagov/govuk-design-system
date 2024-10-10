@@ -70,8 +70,10 @@ const lazyEmbedObserver = new IntersectionObserver(function (
 ) {
   entries.forEach(function (entry) {
     if (entry.isIntersecting) {
-      if (!entry.target.hasAttribute('data-app-embed-card-init')) {
+      try {
         new EmbedCard(entry.target)
+      } catch (error) {
+        console.log(error)
       }
     }
   })

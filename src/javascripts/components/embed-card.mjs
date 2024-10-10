@@ -7,6 +7,19 @@ import { getConsentCookie } from './cookie-functions.mjs'
  */
 class EmbedCard extends Component {
   /**
+   * Check EmbedCard support
+   */
+  static checkSupport() {
+    Component.checkSupport()
+
+    const consentCookie = getConsentCookie()
+
+    if (!consentCookie || (consentCookie && !consentCookie.campaign)) {
+      throw Error('Campaign consent cookies not accepted')
+    }
+  }
+
+  /**
    * Returns the root element of the component
    *
    * @returns {any} - the root element of component
