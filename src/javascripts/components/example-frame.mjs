@@ -11,18 +11,6 @@ import iFrameResize from 'iframe-resizer/js/iframeResizer.js'
  * @augments Component<HTMLIFrameElement>
  */
 class ExampleFrame extends Component {
-  /**
-   * Returns the root element of the component
-   *
-   * @returns {any} - the root element of component
-   */
-  get $root() {
-    // Unfortunately, govuk-frontend does not provide type definitions
-    // so TypeScript does not know of `this._$root`
-    // @ts-expect-error
-    return this._$root
-  }
-
   static moduleName = 'app-example-frame'
   /**
    * @param {Element} $module - HTML element
