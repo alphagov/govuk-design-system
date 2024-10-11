@@ -1,3 +1,5 @@
+import { Component } from 'govuk-frontend'
+
 const scrollContainerResizeObserver = new window.ResizeObserver((entries) => {
   for (const entry of entries) {
     if (ScrollContainer.isOverflowing(entry.target)) {
@@ -11,22 +13,38 @@ const scrollContainerResizeObserver = new window.ResizeObserver((entries) => {
 /**
  *
  */
-class ScrollContainer {
+class ScrollContainer extends Component {
+  /**
+   * Returns the root element of the component
+   *
+   * @returns {any} - the root element of component
+   */
+  get $root() {
+    // Unfortunately, govuk-frontend does not provide type definitions
+    // so TypeScript does not know of `this._$root`
+    // @ts-expect-error
+    return this._$root
+  }
+
   static moduleName = 'app-scroll-container'
+
+  /**
+   * Checks if ResizeObserver supported
+   */
+  static isSupported() {
+    Component.checkSupport()
+
+    if (!('ResizeObserver' in window)) {
+      throw Error('Browser does not support ResizeObserver')
+    }
+  }
 
   /**
    * @param {Element} $module - HTML element
    */
   constructor($module) {
-    if (
-      !($module instanceof HTMLElement) ||
-      !document.body.classList.contains('govuk-frontend-supported') ||
-      !('ResizeObserver' in window)
-    ) {
-      return this
-    }
-
-    scrollContainerResizeObserver.observe($module)
+    super($module)
+    scrollContainerResizeObserver.observe(this.$root)
   }
 
   /**
