@@ -1,3 +1,5 @@
+import { Component } from 'govuk-frontend'
+
 import * as CookieFunctions from './cookie-functions.mjs'
 
 const cookieBannerAcceptSelector = '.js-cookie-banner-accept'
@@ -10,26 +12,36 @@ const cookieConfirmationRejectSelector = '.js-cookie-banner-confirmation-reject'
 /**
  * Website cookie banner
  */
-class CookieBanner {
+class CookieBanner extends Component {
+  /**
+   * Check support of CookieBanner
+   */
+  static checkSupport() {
+    Component.checkSupport()
+
+    if (CookieBanner.onCookiesPage()) {
+      throw Error('Cancelled initialisation as on cookie page')
+    }
+  }
+
+  /**
+   * Check if on the Cookies page
+   *
+   * @returns {boolean} Returns true if on the Cookies page
+   */
+  static onCookiesPage() {
+    return window.location.pathname === '/cookies/'
+  }
+
   static moduleName = 'govuk-cookie-banner'
   /**
    * @param {Element} $module - HTML element
    */
   constructor($module) {
-    if (
-      !($module instanceof HTMLElement) ||
-      !document.body.classList.contains('govuk-frontend-supported') ||
-      // Exit if we're on the cookies page to avoid circular journeys
-      this.onCookiesPage()
-    ) {
-      return this
-    }
+    super($module)
 
-    this.$cookieBanner = $module
     this.cookieCategory =
-      (this.$cookieBanner.dataset &&
-        this.$cookieBanner.dataset.cookieCategory) ||
-      'analytics'
+      (this.$root.dataset && this.$root.dataset.cookieCategory) || 'analytics'
 
     const $acceptButton = $module.querySelector(cookieBannerAcceptSelector)
     const $rejectButton = $module.querySelector(cookieBannerRejectSelector)
@@ -60,7 +72,7 @@ class CookieBanner {
     this.$cookieMessage = $cookieMessage
     this.$cookieConfirmationAccept = $cookieConfirmationAccept
     this.$cookieConfirmationReject = $cookieConfirmationReject
-    this.$cookieBannerHideButtons = $cookieBannerHideButtons
+    this.$rootHideButtons = $cookieBannerHideButtons
 
     // Show the cookie banner to users who have not consented or have an
     // outdated consent cookie
@@ -74,13 +86,13 @@ class CookieBanner {
       // set previously
       CookieFunctions.resetCookies()
 
-      this.$cookieBanner.removeAttribute('hidden')
+      this.$root.removeAttribute('hidden')
     }
 
     this.$acceptButton.addEventListener('click', () => this.acceptCookies())
     this.$rejectButton.addEventListener('click', () => this.rejectCookies())
 
-    this.$cookieBannerHideButtons.forEach(($cookieBannerHideButton) => {
+    this.$rootHideButtons.forEach(($cookieBannerHideButton) => {
       $cookieBannerHideButton.addEventListener('click', () => this.hideBanner())
     })
   }
@@ -89,7 +101,7 @@ class CookieBanner {
    * Hide banner
    */
   hideBanner() {
-    this.$cookieBanner.setAttribute('hidden', 'true')
+    this.$root.setAttribute('hidden', 'true')
   }
 
   /**
@@ -134,15 +146,6 @@ class CookieBanner {
     }
 
     confirmationMessage.focus()
-  }
-
-  /**
-   * Check if on the Cookies page
-   *
-   * @returns {boolean} Returns true if on the Cookies page
-   */
-  onCookiesPage() {
-    return window.location.pathname === '/cookies/'
   }
 }
 
