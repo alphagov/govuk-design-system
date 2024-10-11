@@ -54,6 +54,33 @@ $icon-size: 40px;
 .app-site-search__wrapper {
   display: block;
   position: relative;
+
+  // Adds a 'fake border' that's shorter than the width of the menu to create
+  // separation between the input and search items.
+  // This is here on the wrapper element and absolute positioned under the input
+  // rather than on the menu because we can't move a pseudo element out of the
+  // menu eg: using minus margins or absolute positioning without breaking the
+  // menu's overflow conditions.
+  // The use of :has means that this is an enhancement but the 'flowing' input
+  // feature is still visible without this.
+  &:has(
+      .app-site-search__input[aria-expanded="true"],
+      .app-site-search__input[aria-expanded="false"]:not([aria-describedby])
+    )::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 101; // ensure the separator is above the menu
+    bottom: govuk-spacing(-1);
+    width: calc(100% - #{govuk-spacing(6)});
+    height: 1px;
+    margin: 0 0 govuk-spacing(1) govuk-spacing(3);
+    background-color: govuk-colour("black");
+
+    @media (forced-colors: active) {
+      background-color: currentcolor;
+    }
+  }
 }
 
 .app-site-search__hint,
@@ -90,6 +117,21 @@ $icon-size: 40px;
   @media (forced-colors: active) and (prefers-color-scheme: dark) {
     background-image: _search-icon($colour: govuk-colour("white"));
   }
+
+  // If a dropdown is visible ie: there are search results or the 'no results'
+  // dialog, adjust the focus state so that the bottom 'border' focus state
+  // disappears and the input 'flows' into the menu.
+  // The box-shadow from app-site-search__input--focused sets an inset shadow
+  // on all edges of the input ala the standard input focus state. This splits
+  // the box shadow into 2 insets; one that's nudged to the right so that it
+  // appears that only the top and left edges have a shadow and a similar one
+  // for the right edge, leaving the bottom without an indented shadow.
+  &[aria-expanded="true"],
+  &[aria-expanded="false"]:not([aria-describedby]).app-site-search__input--focused {
+    box-shadow:
+      inset $govuk-border-width-form-element $govuk-border-width-form-element 0 0,
+      inset ($govuk-border-width-form-element * -1) 0 0 0;
+  }
 }
 
 .app-site-search__input--focused {
@@ -97,6 +139,20 @@ $icon-size: 40px;
   outline: $govuk-focus-width solid $govuk-focus-colour;
   outline-offset: 0;
   box-shadow: inset 0 0 0 $govuk-border-width-form-element;
+
+  // Reduce the width of the menu when the input is focused so that the edges
+  // line up with the indented box shadow from the input focus state
+  & ~ .app-site-search__menu--visible {
+    width: calc(100% - ($govuk-border-width-form-element * 4));
+    margin-left: ($govuk-border-width-form-element * 2);
+
+    // ...unless forced colours are active. Forced colour modes remove the indented
+    // box shadow meaning the menu's edges don't line up with the input
+    @media (forced-colors: active) {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
 }
 
 .app-site-search__input--show-all-values {
@@ -136,9 +192,18 @@ $icon-size: 40px;
 .app-site-search__menu--overlay {
   position: absolute;
   z-index: 100;
-  top: 100%;
+  top: calc(100% - $govuk-border-width-form-element);
   left: 0;
-  box-shadow: rgba(govuk-colour("black"), 0.256863) 0 2px 6px; // stylelint-disable-line number-max-precision
+  // Creates a fake extra portion of the menu above the scrollable area to
+  // provide some space between the list items highlight-able top edge and the
+  // bottom of the input.
+  border-top: govuk-colour("white") solid govuk-spacing(1);
+  box-shadow: rgba(govuk-colour("black"), 0.256863) 0 govuk-spacing(1) govuk-spacing(1); // stylelint-disable-line number-max-precision
+
+  // Ensure the border still looks like part of the menu in forced color modes
+  @media (forced-colors: active) {
+    border-top-color: Canvas;
+  }
 }
 
 .app-site-search__menu--inline {
