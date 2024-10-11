@@ -1,34 +1,40 @@
+import { Component } from 'govuk-frontend'
+
 /**
  * Website back to top link
  */
-class BackToTop {
+class BackToTop extends Component {
+  /**
+   * Returns the root element of the component
+   *
+   * @returns {any} - the root element of component
+   */
+  get $root() {
+    // Unfortunately, govuk-frontend does not provide type definitions
+    // so TypeScript does not know of `this._$root`
+    // @ts-expect-error
+    return this._$root
+  }
+
   static moduleName = 'app-back-to-top'
 
   /**
    * @param {Element} $module - HTML element
    */
   constructor($module) {
-    if (
-      !($module instanceof HTMLElement) ||
-      !document.body.classList.contains('govuk-frontend-supported')
-    ) {
-      return this
-    }
+    super($module)
 
-    this.$module = $module
+    const $footer = document.querySelector('.app-footer')
+    const $subNav = document.querySelector('.app-subnav')
 
     // Check if we can use Intersection Observers
     if (!('IntersectionObserver' in window)) {
       // If there's no support fallback to regular behaviour
       // Since JavaScript is enabled we can remove the default hidden state
-      this.$module.classList.remove('app-back-to-top--hidden')
+      this.$root.classList.remove('app-back-to-top--hidden')
       return this
     }
 
-    const $footer = document.querySelector('.app-footer')
-    const $subNav = document.querySelector('.app-subnav')
-
-    // Check if there is anything to observe
     if (!$footer || !$subNav) {
       return this
     }
@@ -53,17 +59,17 @@ class BackToTop {
 
       // If the subnav or the footer not visible then fix the back to top link to follow the user
       if (subNavIsIntersecting || footerIsIntersecting) {
-        this.$module.classList.remove('app-back-to-top--fixed')
+        this.$root.classList.remove('app-back-to-top--fixed')
       } else {
-        this.$module.classList.add('app-back-to-top--fixed')
+        this.$root.classList.add('app-back-to-top--fixed')
       }
 
       // If the subnav is visible but you can see it all at once, then a back to top link is likely not as useful.
       // We hide the link but make it focusable for screen readers users who might still find it useful.
       if (subNavIsIntersecting && subNavIntersectionRatio === 1) {
-        this.$module.classList.add('app-back-to-top--hidden')
+        this.$root.classList.add('app-back-to-top--hidden')
       } else {
-        this.$module.classList.remove('app-back-to-top--hidden')
+        this.$root.classList.remove('app-back-to-top--hidden')
       }
     })
 
