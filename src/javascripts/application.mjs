@@ -70,7 +70,11 @@ const lazyEmbedObserver = new IntersectionObserver(function (
 ) {
   entries.forEach(function (entry) {
     if (entry.isIntersecting) {
-      new EmbedCard(entry.target)
+      try {
+        new EmbedCard(entry.target)
+      } catch (error) {
+        console.log(error)
+      }
     }
   })
 })
