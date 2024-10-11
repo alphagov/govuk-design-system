@@ -1,24 +1,19 @@
+import { Component } from 'govuk-frontend'
+
 import { getConsentCookie, setConsentCookie } from './cookie-functions.mjs'
 
 /**
  * Website cookies page
  */
-class CookiesPage {
+class CookiesPage extends Component {
   static moduleName = 'app-cookies-page'
   /**
    * @param {Element} $module - HTML element
    */
   constructor($module) {
-    if (
-      !($module instanceof HTMLElement) ||
-      !document.body.classList.contains('govuk-frontend-supported')
-    ) {
-      return this
-    }
+    super($module)
 
-    this.$page = $module
-
-    const $cookieForm = this.$page.querySelector('.js-cookies-page-form')
+    const $cookieForm = this.$root.querySelector('.js-cookies-page-form')
     if (!($cookieForm instanceof HTMLFormElement)) {
       return this
     }
@@ -43,7 +38,7 @@ class CookiesPage {
     this.$cookieFormFieldsets = $cookieFormFieldsets
     this.$cookieFormButton = $cookieFormButton
 
-    const $successNotification = this.$page.querySelector(
+    const $successNotification = this.$root.querySelector(
       '.js-cookies-page-success'
     )
     if ($successNotification instanceof HTMLElement) {

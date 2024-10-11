@@ -1,26 +1,30 @@
 import ClipboardJS from 'clipboard'
+import { Component } from 'govuk-frontend'
 
 /**
  * Copy button for code examples
  */
-class Copy {
+class Copy extends Component {
   static moduleName = 'app-copy'
+
+  /**
+   * Check if ClipboardJS is supported
+   */
+  static checkSupport() {
+    Component.checkSupport()
+
+    if (!ClipboardJS.isSupported()) {
+      throw Error('ClipboardJS not supported in this browser')
+    }
+  }
 
   /**
    * @param {Element} $module - HTML element
    */
   constructor($module) {
-    if (
-      !($module instanceof HTMLElement) ||
-      !document.body.classList.contains('govuk-frontend-supported') ||
-      !ClipboardJS.isSupported()
-    ) {
-      return this
-    }
+    super($module)
 
-    this.$module = $module
-
-    this.$pre = this.$module.querySelector('pre')
+    this.$pre = this.$root.querySelector('pre')
     // TODO: Throw once GOV.UK Frontend exports its errors
 
     /** @type {number | null} */
@@ -34,8 +38,8 @@ class Copy {
     this.$status.className = 'govuk-visually-hidden'
     this.$status.setAttribute('aria-live', 'assertive')
 
-    this.$module.prepend(this.$status)
-    this.$module.prepend(this.$button)
+    this.$root.prepend(this.$status)
+    this.$root.prepend(this.$button)
 
     const $clipboard = new ClipboardJS(this.$button, {
       target: () => this.$pre
