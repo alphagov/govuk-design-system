@@ -90,6 +90,15 @@ $icon-size: 40px;
   @media (forced-colors: active) and (prefers-color-scheme: dark) {
     background-image: _search-icon($colour: govuk-colour("white"));
   }
+
+  // If a dropdown is visible, adjust the focus state so that the bottom 'border'
+  // focus state disappears and the input 'flows' into the menu
+  &[aria-expanded="true"],
+  &[aria-expanded="false"]:not([aria-describedby]).app-site-search__input--focused {
+    box-shadow:
+      inset $govuk-border-width-form-element $govuk-border-width-form-element 0 0,
+      inset ($govuk-border-width-form-element * -1) 0 0 0;
+  }
 }
 
 .app-site-search__input--focused {
@@ -97,6 +106,20 @@ $icon-size: 40px;
   outline: $govuk-focus-width solid $govuk-focus-colour;
   outline-offset: 0;
   box-shadow: inset 0 0 0 $govuk-border-width-form-element;
+
+  // Reduce the width of the menu when the input is focused so that the edges
+  // line up with the indented box shadow from the input focus state
+  & ~ .app-site-search__menu--visible {
+    width: calc(100% - 8px);
+    margin-left: 4px;
+
+    // ...unless forced colours are active. Forced colour modes remove the indented
+    // box shadow meaning the menu's edges don't line up with the input
+    @media (forced-colors: active) {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
 }
 
 .app-site-search__input--show-all-values {
@@ -123,6 +146,21 @@ $icon-size: 40px;
   border-top: 0;
   color: govuk-colour("black");
   background-color: govuk-colour("white");
+
+  // Adds a fake 'border' that's shorter than the width of the menu to create
+  // separation between the input and search items
+  &::before {
+    content: "";
+    display: block;
+    width: calc(100% - govuk-spacing(6));
+    height: 1px;
+    margin: 0 0 govuk-spacing(1) govuk-spacing(3);
+    background-color: govuk-colour("black");
+
+    @media (forced-colors: active) {
+      background-color: CanvasText;
+    }
+  }
 }
 
 .app-site-search__menu--visible {
@@ -136,9 +174,9 @@ $icon-size: 40px;
 .app-site-search__menu--overlay {
   position: absolute;
   z-index: 100;
-  top: 100%;
+  top: calc(100% - $govuk-border-width-form-element);
   left: 0;
-  box-shadow: rgba(govuk-colour("black"), 0.256863) 0 2px 6px; // stylelint-disable-line number-max-precision
+  box-shadow: rgba(govuk-colour("black"), 0.256863) 0 6px 6px; // stylelint-disable-line number-max-precision
 }
 
 .app-site-search__menu--inline {
