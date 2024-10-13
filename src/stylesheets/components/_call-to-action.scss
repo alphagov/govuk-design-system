@@ -44,7 +44,19 @@
   bottom: 0;
 }
 
+@include govuk-media-query($until: 1023px) {
+  .app-call-to-action__image-container {
+    display: flex;
+    justify-content: end;
+  }
+}
+
 @include govuk-media-query($from: 1024px) {
+  .app-call-to-action__image-container .app-call-to-action__image-desktop--top {
+    position: absolute;
+    top: 0;
+  }
+
   .app-call-to-action__image-container .app-call-to-action__image-desktop {
     display: block;
   }
