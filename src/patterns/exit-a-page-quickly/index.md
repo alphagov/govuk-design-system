@@ -105,7 +105,7 @@ The design of this pattern is based on research from a specialist provider of se
 Live examples of similar components can be found on these websites:
 
 - [GOV.UK: Check if you can get legal aid](https://www.gov.uk/check-legal-aid)
-- [GOV.UK: Apply for help arranging child maintenance](https://child-maintenance.service.gov.uk/apply/eligibility/info)
+- [GOV.UK: Apply for help arranging child maintenance](https://child-maintenance.service.gov.uk/apply/)
 - [mygov.scot: Domestic abuse support](https://www.mygov.scot/domestic-abuse/)
 - [Women’s aid website](https://www.womensaid.org.uk/)
 - [Refuge website](https://www.nationaldahelpline.org.uk/)
