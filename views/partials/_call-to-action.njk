@@ -1,11 +1,16 @@
 {% macro callToAction(params) %}
   <div class="app-call-to-action">
     <div class="app-call-to-action__text-container">
-      <h2 class="app-call-to-action__header">{{ params.header }}</h2>
+      {% if params.header %}
+        <h2 class="app-call-to-action__header">{{ params.header }}</h2>
+      {% endif %}
+      {% if params.subHeader %}
+        <h3 class="app-call-to-action__header">{{ params.subHeader }}</h3>
+      {% endif %}
       {{- caller() if caller else params.content | safe -}}
     </div>
     <div class="app-call-to-action__image-container {% if not params.imageMobile %} app-call-to-action__image-container--same {% endif %}">
-      <img class="app-call-to-action__image-desktop" src="{{ params.imageDesktop }}" alt="" role="presentation" >
+      <img class="app-call-to-action__image-desktop {% if params.imagePosition == 'top' %} app-call-to-action__image-desktop--top {% endif %}" src="{{ params.imageDesktop }}" alt="" role="presentation" >
       <img class="app-call-to-action__image-mobile" src="{{ params.imageMobile or params.imageDesktop }}" alt="" role="presentation" >
     </div>
   </div>
