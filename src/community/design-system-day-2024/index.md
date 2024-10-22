@@ -49,7 +49,7 @@ The hackathon will be hands-on with participants encouraged to work with others 
 
 In-person activities will take place at the Government Digital Service’s office in central London. If you’re unable to make it in person, you can join the event online via Zoom.
 
-Tickets will be released on 04 November 2024 at 14:00 BST. We’ll let you know via our [mailing list](https://mailchi.mp/707ce8dec373/get-updated-by-email-govuk-design-system) and [cross-government Slack](https://ukgovernmentdigital.slack.com/archives/C6DMEH5R6) when tickets are available.
+Tickets will be released on **Thursday 4 November 2024 at 14:00 BST**. We’ll let you know via our [mailing list](https://mailchi.mp/707ce8dec373/get-updated-by-email-govuk-design-system) and [cross-government Slack](https://ukgovernmentdigital.slack.com/archives/C6DMEH5R6) when tickets are available.
 
 Tickets for previous events have gone fast, however we routinely see a 50% drop out rate for our online events. Please be responsible when securing tickets for our events. Please do not order duplicate tickets, and if you can no longer attend, please cancel your ticket so someone else can take your spot. Given the time, effort and money which goes into running these events, we’ll be monitoring this going forward.
 
