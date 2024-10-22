@@ -14,11 +14,15 @@ order: 15
   Thanks to all who joined us in Liverpool for this year's face to face event!
 </p>
 
-Our latest event took place on Thursday 5 September 2024 at St George's Hall in Liverpool. 200 members of our community joined us to hear [a wide range of talks](/community/design-system-day-2024/session-information) on this year's theme 'unsung heroes of design systems' from our brilliant [speakers](/community/design-system-day-2024/speaker-information).
-
-Each session was recorded and will be shared through [our mailing list](https://mailchi.mp/707ce8dec373/get-updated-by-email-govuk-design-system) in the coming months.
+Our latest event took place on Thursday 5 September 2024 at St George's Hall in Liverpool. 200 members of our community joined us to hear a wide range of talks on this year's theme 'unsung heroes of design systems'.
 
 <img class="app-image--no-border govuk-!-margin-bottom-9" src="/images/dsd24-day3-speakers-image.png" alt="Panelists in conversation at the Design Day 2024 held in St. George's Hall, Liverpool">
+
+## Watch the videos from previous events
+
+Recordings are now available from both previous events in 2024.
+
+You can watch the videos, as well as discover more about our speakers on the [Day 1](/community/design-system-day-2024-day-1) and [Day 2](/community/design-system-day-2024-day-2) pages.
 
 ## A Design System "Hack" Day is coming
 
