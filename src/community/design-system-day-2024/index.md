@@ -20,16 +20,9 @@ Each session was recorded and will be shared through [our mailing list](https://
 
 <img class="app-image--no-border govuk-!-margin-bottom-9" src="/images/dsd24-day3-speakers-image.png" alt="Panelists in conversation at the Design Day 2024 held in St. George's Hall, Liverpool">
 
-## Day 3 is coming up in November
+## A Design System "Hack" Day is coming
 
-Join us online for our third and final Design System Day event of 2024.
-
-{% call callToAction({
-  subHeader: "Day 3 call for speakers",
-  imageDesktop: "/images/dsd24-day3.svg",
-  imageMobile: "/images/dsd24-day3-mob.svg",
-  imagePosition: "top"
-}) %}
+Join us for our third and final Design System Day event of 2024. We'll be hosting a hackathon looking at improving the journey between the GOV.UK Design System and other government design systems. 
 
   <table class="govuk-table">
     <tbody>
@@ -46,21 +39,23 @@ Join us online for our third and final Design System Day event of 2024.
           Location
         </th>
         <td class="govuk-table__cell">
-          Online
+          Hybrid
         </td>
       </tr>
     </tbody>
   </table>
-  <p class="govuk-!-font-size-24">
-    This year our theme is ‘Unsung heroes of the Design System’.
+   <p>
+   The hackathon will be hands-on with participants encouraged to work with others to ideate, investigate and prototype. We’re also hoping to have some lightning talks from colleagues in other government departments.
   </p>
   <p>
-    We’re looking for people who help keep the design system running without being noticed.
+   In-person activities will take place at the Government Digital Service’s office in central London. If you’re unable to make it in person, you can join the event online via Zoom.
   </p>
   <p>
-    If this sounds like something you’d be interested in, <a href="/community/call-for-speakers-2024">find out how to apply to speak at Design System Day</a>.
+    Tickets will be released on 04 November 2024 at 14:00 BST. We’ll let you know via our [mailing list](https://mailchi.mp/707ce8dec373/get-updated-by-email-govuk-design-system) and [cross-government Slack](https://ukgovernmentdigital.slack.com/archives/C6DMEH5R6) when tickets are available.
+
+Tickets for previous events have gone fast, however we routinely see a 50% drop out rate for our online events. Please be responsible when securing tickets for our events. Please do not order duplicate tickets, and if you can no longer attend, please cancel your ticket so someone else can take your spot. Given the time, effort and money which goes into running these events, we’ll be monitoring this going forward.
+</a>.
   </p>
-{% endcall %}
 
 {% call promoBanner({
   img: "/images/dsd24-mail.svg",
@@ -68,6 +63,6 @@ Join us online for our third and final Design System Day event of 2024.
 }) %}
 
   <p>
-    You can <a class="govuk-link" href="https://mailchi.mp/707ce8dec373/get-updated-by-email-govuk-design-system">sign up to our mailing list</a> to get the latest information on Design System Day events planned for this year.
+    You can <a class="govuk-link" href="https://mailchi.mp/707ce8dec373/get-updated-by-email-govuk-design-system">sign up to our mailing list</a> to get the latest information on future Design System Day events.
   </p>
 {% endcall %}
