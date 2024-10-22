@@ -27,7 +27,7 @@ You can [sign up to our mailing list](https://mailchi.mp/707ce8dec373/get-update
 
 ## Event 1
 
-The first event this year was hosted online on 21 May 2024. Recordings from the event are available on the [Design System Day 2024 Day 1]((/community/design-system-day-2024-day-1) page.
+The first event this year was hosted online on 21 May 2024. Recordings from the event are available on the [Design System Day 2024 Day 1](/community/design-system-day-2024-day-1) page.
 
 ## Event 2
 
