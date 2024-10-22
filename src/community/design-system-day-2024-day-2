@@ -1,0 +1,81 @@
+---
+title: Design System Day 2024 day 2 sessions 
+description: Recordings, session descriptions and speaker bios for Design System Day 2024 day 2.
+section: Community
+theme: Events and workshops
+layout: layout-pane.njk
+---
+
+<img class="app-image--no-border govuk-!-margin-bottom-9" src="/images/dsd24-24.svg" alt="" role="presentation">
+
+{% set html %}
+
+  <p class="govuk-body">You'll need to accept cookies to watch the videos on this page.</p>
+  <p class="govuk-body">If you don't want to accept cookies, the videos and transcripts are also available on YouTube.</p>
+{% endset %}
+
+{% set acceptHtml %}
+
+  <p class="govuk-body">You’ve accepted campaign cookies. You can <a class="govuk-link" href="/cookies/">change your cookie settings</a> at any time.</p>
+{% endset %}
+
+{% set rejectHtml %}
+
+  <p class="govuk-body">You’ve rejected campiagn cookies. You can <a class="govuk-link" href="/cookies/">change your cookie settings</a> at any time.</p>
+{% endset %}
+
+{% call cookieBanner({
+  html: html,
+  acceptHtml: acceptHtml,
+  rejectHtml: rejectHtml,
+  category: "campaign",
+  classes: "app-campaign-cookie-banner govuk-!-padding-right-5 govuk-!-padding-left-5 govuk-!-margin-bottom-5",
+  title: "Accept additional cookies to watch videos of Design System Day"
+}) %}{% endcall %}
+
+### The world on your doorstep: local services with global values
+
+How to think globally and act locally to ensure that businesses and services support their local communities, whilst aligning with national and global objectives.
+
+Embed social impact, ethics, and sustainability into your services from the outset with practical advice to get you started.
+
+{% call embedCard({
+  ytId: "x91MPoITQ3I",
+  transcriptHref: "https://www.google.com",
+  authorImgSrc: "/images/dsd24-day1-speakers1.png",
+  title: "The GOV.UK Design System in 5 years Video"
+}) %}
+
+Greg Macoy, Matchstick Creative
+
+Greg co-founded Matchstick Creative, a purpose-driven creative agency in Liverpool, with a mission to create a more equal world through stories and shared experiences. Matchstick Creative is now a certified B Corp company and takes an active role in progressing the conversation around what good, ethical business can be across Liverpool and beyond.
+
+### Curing design allergies in Japan's Government
+
+Chikako Masuda
+
+### Panel: Content for all and all for content
+
+With Zainab Daodu, Leyla Kee-McParlin, Lammy Jones and Helen Nickols
+
+### The value of performance analysis in design systems
+
+Duncan MacGruer
+
+### Dual Narrative: Design systems in small versus large organisations
+
+#### Prioritised Pixel Pushing: The case for product within design systems
+
+Michael Palmer, BBC
+
+Lessons from a product person's first twelve months in the design system space. Learn how to balance innovation with consistency, foster cross-functional alignment, and drive impactful design changes. Does having a product person in the team lead to a better design system?
+
+#### Perfectly Imperfect: Design Systems for Small Teams and Startups
+
+Alessandra Balliana, GoBubble
+
+### Closing keynote: Using the Design System to fight the climate emergency
+
+Ishmael Burdeau, Department for Work and Pensions
+
+We are all familiar with accessibility statements. But few understand the need for a service level sustainability statement and how the Design System could be a lever for meaningful impact and change.
