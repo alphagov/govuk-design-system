@@ -64,4 +64,4 @@ See more about [using CAPTCHAs and why they’re problematic](https://www.gov.uk
 
 ### Never use National Insurance numbers to verify a user’s identity
 
-If you currently use National Insurance numbers to verify identity, find out how to [protect your service against fraud](https://www.gov.uk/service-manual/technology/protecting-your-service-against-fraud#avoid-using-national-insurance-numbers-to-verify-identity).
+If you currently use National Insurance numbers to verify identity, find out how to [protect your service against fraud](https://www.gov.uk/service-manual/technology/protecting-your-service-against-fraud).

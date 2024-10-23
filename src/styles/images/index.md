@@ -90,7 +90,7 @@ Examples of unnecessary ‘images of text’ include images that show:
 
 If you do choose to use the image anyway, include written content nearby that conveys the same meaning and context.
 
-[Find out more about ‘images of text’](https://www.w3.org/WAI/tutorials/images/textual/#image-of-styled-text-with-decorative-effect) on the Web Accessibility Initiative website.
+[Find out more about ‘images of text’](https://www.w3.org/WAI/tutorials/images/textual/#styled-text-decorative-effect) on the Web Accessibility Initiative website.
 
 ### If text is not the focus of an image
 

@@ -62,7 +62,7 @@ Use the form label or hint text to tell users if you specifically need a UK, int
 
 ### Using example phone numbers
 
-If you wish to include an example phone number (in hint text for example), [Ofcom maintains a list of numbers](https://www.ofcom.org.uk/phones-telecoms-and-internet/information-for-industry/numbering/numbers-for-drama) that are reserved for use in media. These are:
+If you wish to include an example phone number (in hint text for example), [Ofcom maintains a list of numbers](https://www.ofcom.org.uk/phones-and-broadband/phone-numbers/numbers-for-drama) that are reserved for use in media. These are:
 
 - UK non-geographic: 01632 960000 to 960999
 - UK London: 020 7946 0000 to 7946 0999
@@ -90,7 +90,7 @@ When you look at your service's user journey, remember that phone numbers as lin
 
 ### Write phone numbers in the GOV.UK style
 
-See the [GOV.UK style for writing telephone numbers](https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#telephone-numbers).
+See the [GOV.UK style for writing telephone numbers](https://www.gov.uk/guidance/style-guide/a-to-z#telephone-numbers).
 
 ### Avoid input masking
 

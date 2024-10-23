@@ -24,7 +24,7 @@ Follow this pattern whenever you need to ask for a National Insurance number.
 
 Never use National Insurance numbers to verify a user’s identity.
 
-If you currently use National Insurance numbers to verify identity, find out how to [protect your service against fraud](https://www.gov.uk/service-manual/technology/protecting-your-service-against-fraud#avoid-using-national-insurance-numbers-to-verify-identity).
+If you currently use National Insurance numbers to verify identity, find out how to [protect your service against fraud](https://www.gov.uk/service-manual/technology/protecting-your-service-against-fraud).
 
 ## How it works
 

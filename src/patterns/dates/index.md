@@ -65,7 +65,7 @@ Never make a calendar control that depends on JavaScript as the only input optio
 
 ### How to write dates
 
-See the [GOV.UK style for writing dates](https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#dates) and [writing date ranges](https://www.gov.uk/guidance/content-design/writing-for-gov-uk#date-ranges).
+See the [GOV.UK style for writing dates](https://www.gov.uk/guidance/style-guide/a-to-z#dates) and [writing date ranges](https://www.gov.uk/guidance/content-design/writing-for-gov-uk#date-ranges).
 
 If you give an example date, use 13 or more for the day and 9 or less for the month - for example ‘27 3 2007’. This helps users enter the date in the correct order and shows them they do not need to include leading zeroes.
 
