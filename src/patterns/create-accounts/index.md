@@ -89,7 +89,3 @@ These are tests of cognitive function, which might be difficult for some users. 
 <p>Avoid making users do a cognitive test to use your service. If you do, you must also offer an alternative method. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum">3.3.8 Accessible authentication (minimum)</a>.</p>
 <p>See more about <a href="https://www.gov.uk/service-manual/technology/using-captchas">using CAPTCHAs and why they’re problematic</a> in the Service Manual. <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum#object-recognition">WCAG lists some other security measures</a> you can implement to prevent misuse and automated abuse in your service.</p>
 {% endcall %}
-
-### Never use National Insurance numbers to verify a user’s identity
-
-If you currently use National Insurance numbers to verify identity, find out how to [protect your service against fraud](https://www.gov.uk/service-manual/technology/protecting-your-service-against-fraud#avoid-using-national-insurance-numbers-to-verify-identity).
