@@ -98,7 +98,7 @@ HTML5 validation is a type of client side validation built into browsers. Do not
 - the visual style, placement and content of HTML5 error messages cannot be made consistent with the GOV.UK Design System
 - we know that the GOV.UK Design System error message and error summary components are accessible
 
-To turn off HTML5 validation, add ‘[novalidate](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attr-novalidate)’ to your form tags.
+To turn off HTML5 validation, add ‘[novalidate](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/form#novalidate)’ to your form tags.
 
 Do not add ‘required’ to your input fields.
 
