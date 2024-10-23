@@ -31,11 +31,11 @@ The first event this year was hosted online on 21 May 2024. Recordings from the 
 
 ## Event 2
 
-The second event will be a face to face conference, hosted in Liverpool on Thursday 5 September 2024. You can find out more about this event on [Design System Day 2024](/community/design-system-day-2024) page.
+The second event was a face to face conference, hosted in Liverpool on Thursday 5 September 2024. Recordings from the event will be available soon.
 
 ## Event 3
 
-We hope to host a third event later in 2024. This will be an online event, hosted on a conferencing platform. Details about this event will be released soon.
+We'll host our final event, a hackathon, on Thursday 28 November. This will be a hybrid event, with both in-person and online tickets available. Details about this event can be found on [Design System Day 2024](/community/design-system-day-2024) page.
 
 ## Previous events
 
