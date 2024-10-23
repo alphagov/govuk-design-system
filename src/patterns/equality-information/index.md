@@ -61,7 +61,7 @@ Updating equality information is especially relevant for longer term services an
 
 ## Get specialist privacy or data protection advice
 
-Some or all of the equality information you collect is likely to be what’s called ‘[special category personal data](https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/special-category-data/what-is-special-category-data/)’, meaning it has special legal protections.
+Some or all of the equality information you collect is likely to be what’s called ‘[special category personal data](https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/special-category-data/what-is-special-category-data/)’, meaning it has special legal protections.
 
 So before you start collecting equality information, it’s important to get advice and approval from your organisation’s privacy or data protection expert on how to collect and process the information.
 
@@ -107,7 +107,7 @@ If the user answers ‘yes’, ask about the impact of their condition or illnes
 
 ### Asking about ethnic group
 
-The ethnic groups used here are for England. The Government Statistical Service harmonised standard uses [different categories for ethnicity data collected in Wales, Scotland and Northern Ireland](https://gss.civilservice.gov.uk/policy-store/ethnicity/). This is to reflect differences in local populations.
+The ethnic groups used here are for England. The Government Statistical Service harmonised standard uses [different categories for ethnicity data collected in Wales, Scotland and Northern Ireland](https://analysisfunction.civilservice.gov.uk/policy-store/ethnicity-harmonised-standard/). This is to reflect differences in local populations.
 
 If your service covers more than one of England, Wales, Scotland or Northern Ireland, you should accommodate these differences in your design. For example, by changing the ethnic groups shown depending on where the user is based. Where this is not possible, use the English categories.
 
