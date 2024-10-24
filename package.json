@@ -99,7 +99,7 @@
     "serve-static": "^1.16.2",
     "sitemap": "^8.0.0",
     "slash": "^3.0.0",
-    "slug": "^9.1.0",
+    "slug": "^10.0.0",
     "smartypants": "^0.2.2",
     "standard": "^17.1.2",
     "stylelint": "^16.10.0",
