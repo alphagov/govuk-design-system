@@ -52,7 +52,7 @@ Make it clear whether content is available for re-use - and if it is, under what
 You can add links to:
 
 - [privacy notice](https://www.gov.uk/service-manual/design/collecting-personal-information-from-users)
-- [accessibility statement](https://www.gov.uk/service-manual/helping-people-to-use-your-service/publishing-information-about-your-services-accessibility)
+- [accessibility statement](https://www.gov.uk/government/publications/sample-accessibility-statement/sample-accessibility-statement-for-a-fictional-public-sector-website)
 - [cookies page](/patterns/cookies-page/)
 - terms and conditions
 - other language options
