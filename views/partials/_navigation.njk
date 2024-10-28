@@ -1,45 +1,15 @@
-<nav id="app-navigation" class="app-navigation js-app-navigation govuk-clearfix" role="navigation" aria-labelledby="app-navigation-heading">
-  <h2 class="govuk-visually-hidden" id="app-navigation-heading">Menu</h2>
-  <ul class="app-navigation__list app-width-container">
-    {% for item in navigation %}
-      <li class="app-navigation__list-item {% if permalink and (permalink == item.url or item.url and permalink.startsWith(item.url)) %} app-navigation__list-item--current{% endif %}">
-        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/{{ item.url }}/">
-          {{ item.label }}
-        </a>
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
 
-        {% if item.items %}
-          <button type="button" class="app-navigation__button js-app-navigation__button" hidden>
-            {{ item.label }}
-          </button>
-          <!-- [html-validate-disable-next aria-label-misuse --- inline fix for html-validate rule, rather than disable it entirely] -->
-          <ul class="app-navigation__subnav js-app-navigation__subnav {% if permalink and permalink.startsWith(item.url) %}app-navigation__subnav--active{% endif %}"
-            aria-label="{{ item.label }}"
-            hidden
-          >
-            <li class="app-navigation__subnav-item{% if permalink == item.url %} app-navigation__subnav-item--current{% endif %}">
-              <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/{{ item.url }}/">
-                {{ item.label }} overview
-              </a>
-            </li>
-            {% for theme, items in item.items | groupby("theme") %}
-              <li>
-                {% if theme != 'undefined' %}
-                  <h3 class="app-navigation__theme">{{ theme }}</h3>
-                {% endif %}
-                <ul class="app-navigation__list">
-                  {% for subitem in items %}
-                    <li class="app-navigation__subnav-item{% if permalink == subitem.url %} app-navigation__subnav-item--current{% endif %}">
-                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/{{ subitem.url }}/">
-                        {{ subitem.label }}
-                      </a>
-                    </li>
-                  {% endfor %}
-                </ul>
-              </li>
-            {% endfor %}
-          </ul>
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
-</nav>
+{% set navigationItems = [] %}
+
+{% for item in navigation %}
+  {% set navigationItems = navigationItems.concat({
+    href: item.href,
+    text: item.text,
+    current: permalink and permalink.startsWith(item.url)
+  }) %}
+{% endfor %}
+
+{{ govukServiceNavigation({
+  navigation: navigationItems
+}) }}

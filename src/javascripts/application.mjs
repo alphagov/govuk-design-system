@@ -1,6 +1,12 @@
 /* eslint-disable no-new */
 
-import { createAll, Button, NotificationBanner, SkipLink } from 'govuk-frontend'
+import {
+  createAll,
+  Button,
+  NotificationBanner,
+  ServiceNavigation,
+  SkipLink
+} from 'govuk-frontend'
 
 import { loadAnalytics } from './components/analytics.mjs'
 import BackToTop from './components/back-to-top.mjs'
@@ -23,6 +29,7 @@ import AppTabs from './components/tabs.mjs'
 // Initialise GOV.UK Frontend
 createAll(Button)
 createAll(NotificationBanner)
+createAll(ServiceNavigation)
 createAll(SkipLink)
 
 // Cookies and analytics
