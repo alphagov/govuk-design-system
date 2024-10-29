@@ -65,7 +65,7 @@ $icon-size: 40px;
   // feature is still visible without this.
   &:has(
       .app-site-search__input[aria-expanded="true"],
-      .app-site-search__input[aria-expanded="false"]:not([aria-describedby])
+      .app-site-search__input--focused[aria-expanded="false"]:not([aria-describedby])
     )::before {
     content: "";
     display: block;
