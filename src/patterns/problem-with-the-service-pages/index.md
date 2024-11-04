@@ -40,7 +40,7 @@ Use this page when there is an unexpected problem with the service. Use the same
 
 Log all errors and fix them as quickly as possible.
 
-Only display the page for a short time. If a problem cannot be fixed quickly, close the service and use a [service unavailable page](/patterns/service-unavailable-pages/).
+Only display the page for a short time. If a problem cannot be fixed quickly, close the service and [use a Service unavailable page](/patterns/service-unavailable-pages/).
 
 ## How it works
 

@@ -17,7 +17,7 @@ Use the radios component when users can only select one option from a list.
 
 ## When not to use this component
 
-Do not use the radios component if users might need to select more than one option. In this case, you should use the [checkboxes](/components/checkboxes/) component instead.
+Do not use the radios component if users might need to select more than one option. In this case, you should use the [Checkboxes component](/components/checkboxes/) instead.
 
 ## How it works
 
@@ -54,7 +54,7 @@ There are 2 ways to use the radios component. You can use HTML or, if you are us
 
 ### If you’re asking more than one question on the page
 
-If you're asking more than one question on the page, do not set the contents of the `<legend>` as the page heading. Read more about [asking multiple questions on question pages](/patterns/question-pages/#asking-multiple-questions-on-a-page).
+If you're asking more than one question on the page, do not set the contents of the `<legend>` as the page heading. Read more about [asking multiple questions on Question pages](/patterns/question-pages/#asking-multiple-questions-on-a-page).
 
 {{ example({ group: "components", item: "radios", example: "without-heading", html: true, nunjucks: true, open: false, size: "s" }) }}
 
@@ -132,7 +132,7 @@ Error messages should be styled like this:
 
 {{ example({ group: "components", item: "radios", example: "error", html: true, nunjucks: true, open: false, size: "s" }) }}
 
-Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
+Make sure errors follow the guidance in the [Error message component](/components/error-message/) and have specific error messages for specific error states.
 
 #### If it’s a ‘yes’ or ‘no’ question
 
@@ -148,7 +148,7 @@ Say ‘Select [whatever it is]’. For example, ‘Select the day of the week yo
 
 #### If it's a conditionally revealed question
 
-Include an [error message](/components/error-message/) that is clearly related to the initial question.
+Include an [Error message component](/components/error-message/) that is clearly related to the initial question.
 
 {{ example({ group: "components", item: "radios", example: "conditional-reveal-error", html: true, nunjucks: true, open: false, size: "s" }) }}
 

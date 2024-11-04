@@ -30,7 +30,7 @@ Help users know they’re using your service and navigate around it.
   ]
 }) }}
 
-Use this pattern to plan and design your navigation header using the [GOV.UK header](/components/header/) and [Service navigation](/components/service-navigation/) components. Check the ‘When to use this component’ sections in each of these components to make sure they’re right for your service.
+Use this pattern to plan and design your navigation header using the [GOV.UK header component](/components/header/) and [Service navigation component](/components/service-navigation/). Check the ‘When to use this component’ sections in each of these components to make sure they’re right for your service.
 
 This pattern also includes guidance on how to add other elements commonly used alongside navigation that are not in the GOV.UK Design System. We’ve included this guidance to help service teams make navigation headers more consistent across government.
 
@@ -48,17 +48,17 @@ Simplify the user journey as much as possible first. This might remove the need 
 
 If your service does have a clear end-to-end journey, avoid using navigation links.
 
-Use [Task lists](/components/task-list/) instead, as they’re better for helping users understand:
+Use a [Task list component](/components/task-list/) instead, as they’re better for helping users understand:
 
 - the tasks involved in completing a transaction
 - the order they should complete tasks in
 - when they’ve completed tasks
 
-See how to do this in the [Help users to complete multiple tasks](/patterns/complete-multiple-tasks/) pattern.
+See how to do this in the [Help users to complete multiple tasks pattern](/patterns/complete-multiple-tasks/).
 
 ## How it works
 
-Together, the [GOV.UK header](/components/header/) and [Service navigation](/components/service-navigation/) components work together to assure users that they’re in the right place to use your service. They also help users understand that GOV.UK functions as one website.
+Together, the [GOV.UK header component](/components/header/) and [Service navigation component](/components/service-navigation/) work together to assure users that they’re in the right place to use your service. They also help users understand that GOV.UK functions as one website.
 
 The GOV.UK header (black background) includes space to show:
 
@@ -73,9 +73,9 @@ The Service navigation (grey background) includes space to show:
 
 ### Plan your GOV.UK header
 
-The [GOV.UK header](/components/header/) component should only be used to show the GOV.UK logo and any GOV.UK-wide tools used in your service, such as GOV.UK One Login.
+The [GOV.UK header component](/components/header/) should only be used to show the GOV.UK logo and any GOV.UK-wide tools used in your service, such as GOV.UK One Login.
 
-We recommend using the [Service navigation](/components/service-navigation/) component to show your service name and navigation links instead of the GOV.UK header, and to start updating existing services.
+We recommend using the [Service navigation component](/components/service-navigation/) to show your service name and navigation links instead of the GOV.UK header, and to start updating existing services.
 
 #### Do not show GOV.UK topic links
 
@@ -83,11 +83,11 @@ To help users focus on completing your service, [do not add the menu of GOV.UK t
 
 The menu bar used in the [GOV.UK homepage](https://www.gov.uk/) and mainstream guidance pages are designed to help users explore topics and find government services and information.
 
-Once users enter your service, they should have all the information they need to complete it [from its start page](/patterns/start-using-a-service/). If you need to refer to specific information as part of your service’s journey, use links within your pages.
+Once users enter your service, they should have all the information they need to complete it [from your service's Start page](/patterns/start-using-a-service/). If you need to refer to specific information as part of your service’s journey, use links within your pages.
 
 ### Plan your Service navigation
 
-Use the [Service navigation](/components/service-navigation/) component to show your service name, navigation links and other service-level tools.
+Use the [Service navigation component](/components/service-navigation/) to show your service name, navigation links and other service-level tools.
 
 #### Show the service name as a link
 
@@ -172,7 +172,7 @@ To help users understand what the search input will cover, include ‘Search [yo
 
 #### Phase banners
 
-Show the [Phase banner](/components/phase-banner/) component directly under either:
+Show the [Phase banner component](/components/phase-banner/) directly under either:
 
 - the Service navigation component
 - the GOV.UK header and blue colour bar (if your service does not use the Service navigation component)
@@ -185,11 +185,11 @@ You can choose to place the Phase banner in a more appropriate place for your se
 
 Show any elements that only affect the current page after the Service header navigation.
 
-Place any [Breadcrumbs](/components/breadcrumbs/) just before the `<main>` element. Placing them here means that the ‘Skip to main content’ link allows the user to skip all navigation links, including breadcrumbs.
+If your service uses the [Breadcrumbs component](/components/breadcrumbs/), place them just before the `<main>` element. Placing them here means that the ‘Skip to main content’ link allows the user to skip all navigation links, including breadcrumbs.
 
 ## Changes to the GOV.UK header and Service navigation, and how they work together
 
-We introduced this pattern and the [Service navigation](/components/service-navigation/) component in August 2024. We recommend service teams start using these to show navigation links in their services.
+We introduced this pattern and the [Service navigation component](/components/service-navigation/) in August 2024. We recommend service teams start using these to show navigation links in their services.
 
 We’re confident that the new component is an improvement on the ‘GOV.UK header with navigation’, which we’ll deprecate in the next breaking release of GOV.UK Frontend.
 

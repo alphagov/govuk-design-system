@@ -44,7 +44,7 @@ Error messages should be styled like this:
 
 {{ example({ group: "patterns", item: "phone-numbers", example: "error-empty-field", html: true, nunjucks: true, open: false, size: "s" }) }}
 
-Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
+Make sure errors follow the guidance in the [Error message component](/components/error-message/) and have specific error messages for specific error states.
 
 #### If the phone number is not in the correct format and there is no example
 

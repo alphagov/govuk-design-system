@@ -34,7 +34,7 @@ Tell the user a service is unavailable on purpose. These are also known as 503 a
 
 Use a service unavailable page when a service has been closed on purpose. This could be for a specific period of time or permanently.
 
-If there is a problem with the service, use a [there is a problem with the service page](/patterns/problem-with-the-service-pages/).
+If there is a problem with the service, [use a There is a problem with the service page](/patterns/problem-with-the-service-pages/).
 
 Have a general page in case you need to close a service and do not have time to update the page. As soon as you know when the service will be available, update the page.
 

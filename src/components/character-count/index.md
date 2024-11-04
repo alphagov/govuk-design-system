@@ -28,7 +28,7 @@ If your users keep hitting the character limit imposed by the backend of your se
 
 ## How it works
 
-It tells users how many characters they have remaining as they type into a [textarea](/components/textarea/) with a character limit.
+It tells users how many characters they have remaining as they type into a [Textarea component](/components/textarea/) with a character limit.
 
 Users will get updates at a pace that works best for the way they interact with the textarea. This means:
 
@@ -50,7 +50,7 @@ There are 2 ways to use the character count component. You can use HTML or, if y
 
 ### If you’re asking more than one question on the page
 
-If you're asking more than one question on the page, do not set the contents of the `<label>` as the page heading. Read more about [asking multiple questions on question pages](/patterns/question-pages/#asking-multiple-questions-on-a-page).
+If you're asking more than one question on the page, do not set the contents of the `<label>` as the page heading. Read more about [asking multiple questions on Question pages](/patterns/question-pages/#asking-multiple-questions-on-a-page).
 
 {{ example({ group: "components", item: "character-count", example: "without-heading", html: true, nunjucks: true, open: false }) }}
 

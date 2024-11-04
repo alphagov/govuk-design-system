@@ -139,7 +139,7 @@ When you do this you’ll need to rename all [prefixes][prefix] that include `go
 
 Doing this removes the possibility of any updates breaking your service. However, you will not receive any future updates from the original component.
 
-For example, a large modification of an existing component is the [step by step navigation](/patterns/step-by-step-navigation/) which began as a small modification to the [accordion component](/components/accordion/). The step by step navigation had so many changes it was eventually forked into a separate component.
+For example, a large modification of an existing component is the [Step by step navigation pattern](/patterns/step-by-step-navigation/) which began as a small modification to the [Accordion component](/components/accordion/). The step by step navigation had so many changes it was eventually forked into a separate component.
 
 ## Contributing back
 

@@ -45,7 +45,7 @@ You should also identify if each cookie is set on the server or client.
 
 The result of your audit will guide your cookie policy and how the service should use a cookies page and cookie banner.
 
-The [cookie banner component](/components/cookie-banner/) shows several options for using a cookie banner for services that:
+The [Cookie banner component](/components/cookie-banner/) shows several options for using a cookie banner for services that:
 
 - only set essential cookies
 - sets non-essential cookies on the server - including services that also set non-essential cookies on the client
@@ -80,22 +80,22 @@ You must get the user’s consent before you set any cookies that are not strict
 
 You can get the user’s consent:
 
-- by using a [cookie banner](/components/cookie-banner/)
+- by using a [Cookie banner component](/components/cookie-banner/)
 - by letting the user change and save their settings on the cookies page
 
 ## Publishing your cookies page
 
-Link to the cookies page from the [service footer](/components/footer/) and from the [cookie banner](/components/cookie-banner/).
+Link to the cookies page from the [Footer component](/components/footer/) and from the [Cookie banner component](/components/cookie-banner/).
 
 ## Letting users accept or reject cookies on the cookies page
 
-Use [radios](/components/radios/) and a [button](/components/button/) to let users accept or reject non-essential cookies.
+Use a [Radios component](/components/radios/) and a [Button component](/components/button/) to let users accept or reject non-essential cookies.
 
 Load the page with the radios set to ‘no’ on the user’s first visit. If they’ve previously used the service and set their preferences, load the page with those preferences selected.
 
 {{ example({ group: "patterns", item: "cookies-page", example: "cookies-form", html: true, nunjucks: true, open: false }) }}
 
-When the user sets or changes their cookie preferences, use a green [notification banner](/components/notification-banner/) to confirm that the service has updated the user’s cookie settings. This is so they can get back to the page they were looking at.
+When the user sets or changes their cookie preferences, use a green [Notification banner component](/components/notification-banner/) to confirm that the service has updated the user’s cookie settings. This is so they can get back to the page they were looking at.
 
 {{ example({ group: "patterns", item: "cookies-page", example: "cookies-updated", html: true, nunjucks: true, open: false }) }}
 

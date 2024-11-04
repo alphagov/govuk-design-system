@@ -111,7 +111,7 @@ Error messages should be styled like this:
 
 {{ example({ group: "patterns", item: "bank-details", example: "error", html: true, nunjucks: true, open: false, size: "s" }) }}
 
-Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
+Make sure errors follow the guidance in the [Error message component](/components/error-message/) and have specific error messages for specific error states.
 
 #### If the name on the account is empty
 

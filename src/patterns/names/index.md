@@ -120,7 +120,7 @@ Avoid asking users for their title.
 
 It’s extra work for them and you’re asking them to potentially reveal their gender and marital status, which they may not want to do.
 
-It’s also hard to predict the range of titles your users will have. If you have to ask for someone’s title, use an optional [text input](/components/text-input/) not a [select](/components/select/).
+It’s also hard to predict the range of titles your users will have. If you have to ask for someone’s title, use an optional [Text input component](/components/text-input/) not a [Select component](/components/select/).
 
 Remember to correctly use people’s names in any resulting correspondence.
 
@@ -140,7 +140,7 @@ Error messages should be styled like this:
 
 {{ example({ group: "patterns", item: "names", example: "error", html: true, nunjucks: true, open: true }) }}
 
-Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
+Make sure errors follow the guidance in the [Error message component](/components/error-message/) and have specific error messages for specific error states.
 
 ## Research on this pattern
 

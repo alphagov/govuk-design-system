@@ -33,7 +33,7 @@ Do not use the step by step pattern:
 - when most of the guidance or services that make up the journey are not on GOV.UK
 - when the user only needs to read guidance and not take an action
 - when there’s no logical or helpful order to complete the tasks - for example, when you’re mostly presenting the user with a series of options
-- inside a transactional service – use the [complete multiple tasks pattern](/patterns/complete-multiple-tasks/) instead
+- inside a transactional service – use the [Complete multiple tasks pattern](/patterns/complete-multiple-tasks/) instead
 
 ## How it works
 

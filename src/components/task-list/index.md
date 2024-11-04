@@ -28,7 +28,7 @@ Try to simplify the service before you use a task list. If you’re able to redu
 
 Do not use the task list for a long service that needs to be completed in a specific order. If it needs to be completed over multiple sessions, consider allowing users to save their progress, and then to continue where they left off when they return. Use the start page to explain what users will be expected to do during the service.
 
-The task list should not be used as a way of showing users their answers. For this, you should use a [summary list](/components/summary-list/) instead.
+The task list should not be used as a way of showing users their answers. For this, you should use a [Summary list component](/components/summary-list/) instead.
 
 ## How it works
 
@@ -42,7 +42,7 @@ The status alongside the task indicates whether they can start it. Users can sel
 
 Users can only move on from the task list when all tasks are shown as ‘Completed’.
 
-Read the [complete multiple tasks pattern guidance](/patterns/complete-multiple-tasks/) for more information on how to use the task list within a service.
+Read the [Complete multiple tasks pattern guidance](/patterns/complete-multiple-tasks/) for more information on how to use the task list within a service.
 
 ### Tasks
 
@@ -70,13 +70,13 @@ Do not include links within the hint text. The whole task row links users to the
 
 If there are a lot of tasks to complete, you might find that grouping them makes it easier for users to understand and plan what they need to do. Tasks can be grouped into separate task lists on a page. Give each task list a short heading that clearly explains the grouping.
 
-Read the [complete multiple tasks pattern guidance](/patterns/complete-multiple-tasks/) for more information on grouping tasks.
+Read the [Complete multiple tasks pattern guidance](/patterns/complete-multiple-tasks/) for more information on grouping tasks.
 
 ### Statuses
 
 Statuses use colour and a short descriptor to give users a quick overview of how much of the task list they have completed, and how much is left to do.
 
-Read the [complete multiple tasks pattern guidance](/patterns/complete-multiple-tasks/) for more information on status colours and text.
+Read the [Complete multiple tasks pattern guidance](/patterns/complete-multiple-tasks/) for more information on status colours and text.
 
 ## Research on this component
 
