@@ -50,7 +50,7 @@ Do not use the accordion component if the amount of content inside will make the
 
 ## Decide between using accordions, tabs and details
 
-Accordions, [tabs](/components/tabs/) and [details](/components/details/) all work by hiding sections of content which a user can choose to reveal. Avoid using any of these components within one another.
+The Accordion component, [Tabs component](/components/tabs/) and [Details component](/components/details/) all work by hiding sections of content which a user can choose to reveal. Avoid using any of these components within one another.
 
 If you decide to use one of these components, consider if:
 

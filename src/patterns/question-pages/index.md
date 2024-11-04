@@ -43,7 +43,7 @@ To help you work out what to ask, you can carry out a [question protocol](https:
 If you ask for optional information:
 
 - in most contexts, add ‘(optional)’ to the labels of optional fields
-- for [radios](/components/radios/) and [checkboxes](/components/checkboxes/), add ‘(optional)’ to the legend
+- for [Radios components](/components/radios/) and [Checkboxes components](/components/checkboxes/), add ‘(optional)’ to the legend
 
 Never mark mandatory fields with asterisks.
 
@@ -78,7 +78,7 @@ If the same type of information is needed more than once, make it easier to reus
 
 Some users do not trust browser back buttons when they’re entering data.
 
-Always include a [back link](/components/back-link/) at the top of question pages to reassure them it’s possible to go back and change previous answers.
+Always include a [Back link component](/components/back-link/) at the top of question pages to reassure them it’s possible to go back and change previous answers.
 
 However, do not break the browser back button. Make sure it takes users to the previous page they were on, in the state they last saw it.
 

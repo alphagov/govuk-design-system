@@ -17,11 +17,11 @@ Use the textarea component when you need to let users enter an amount of text th
 
 ## When not to use this component
 
-Users can find open-ended questions difficult to answer. It might be better to break up one complex question into a series of simple ones, for example where users can select from options using [radios](/components/radios/).
+Users can find open-ended questions difficult to answer. It might be better to break up one complex question into a series of simple ones, for example where users can select from options using a [Radios component](/components/radios/).
 
 ### If you need to ask an open question
 
-Do not use the textarea component if you need to let users enter shorter answers no longer than a single line, such as a phone number or name. In this case, you should use the [text input](/components/text-input/) component.
+Do not use the textarea component if you need to let users enter shorter answers no longer than a single line, such as a phone number or name. In this case, you should use the [Text input component](/components/text-input/).
 
 ## How it works
 
@@ -45,13 +45,13 @@ Users will often need to copy and paste information into a textarea, so do not s
 
 ### If you’re asking more than one question on the page
 
-If you're asking more than one question on the page, do not set the contents of the `<label>` as the page heading. Read more about [asking multiple questions on question pages](/patterns/question-pages/#asking-multiple-questions-on-a-page).
+If you're asking more than one question on the page, do not set the contents of the `<label>` as the page heading. Read more about [asking multiple questions on Question pages](/patterns/question-pages/#asking-multiple-questions-on-a-page).
 
 {{ example({ group: "components", item: "textarea", example: "without-heading", html: true, nunjucks: true, open: false, size: "l" }) }}
 
 ### Limiting the number of characters
 
-If there’s a good reason to limit the number of characters users can enter, you can use the [character count](/components/character-count/) component.
+If there’s a good reason to limit the number of characters users can enter, you can use the [Character count component](/components/character-count/).
 
 ### Error messages
 
@@ -59,7 +59,7 @@ Error messages should be styled like this:
 
 {{ example({ group: "components", item: "textarea", example: "error", html: true, nunjucks: true, open: false, size: "l" }) }}
 
-Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
+Make sure errors follow the guidance in the [Error message component](/components/error-message/) and have specific error messages for specific error states.
 
 #### If the input is empty
 

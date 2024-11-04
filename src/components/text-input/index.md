@@ -17,7 +17,7 @@ Use the text input component when you need to let users enter text that’s no l
 
 ## When not to use this component
 
-Do not use the text input component if you need to let users enter longer answers that might span multiple lines. In this case, you should use the [textarea](/components/textarea/) component.
+Do not use the text input component if you need to let users enter longer answers that might span multiple lines. In this case, you should use the [Textarea component](/components/textarea/).
 
 ## How it works
 
@@ -45,7 +45,7 @@ There are 2 ways to use the text input component. You can use HTML or, if you’
 
 ### If you’re asking more than one question on the page
 
-If you're asking more than one question on the page, do not set the contents of the `<label>` as the page heading. Read more about [asking multiple questions on question pages](/patterns/question-pages/#asking-multiple-questions-on-a-page).
+If you're asking more than one question on the page, do not set the contents of the `<label>` as the page heading. Read more about [asking multiple questions on Question pages](/patterns/question-pages/#asking-multiple-questions-on-a-page).
 
 {{ example({ group: "components", item: "text-input", example: "without-heading", html: true, nunjucks: true, open: false, size: "s" }) }}
 
@@ -105,10 +105,10 @@ See how to do this by opening the HTML and Nunjucks tabs in this example:
 
 {{ example({ group: "components", item: "text-input", example: "number-input", html: true, nunjucks: true, open: false, size: "m" }) }}
 
-There is specific guidance on how to ask for:
+There is specific guidance on:
 
-- [dates](/patterns/dates/)
-- [phone numbers](/patterns/phone-numbers/)
+- [how to ask for dates](/patterns/dates/)
+- [how to ask for phone numbers](/patterns/phone-numbers/)
 
 #### Asking for decimal numbers
 
@@ -130,11 +130,11 @@ You do not need to do this for memorable information, such as phone numbers and 
 
 {{ example({ group: "components", item: "text-input", example: "code-sequence", html: true, nunjucks: true, open: false, size: "m" }) }}
 
-There is specific guidance on how to:
+There is specific guidance on:
 
-- [ask for bank account details](/patterns/bank-details/)
-- [ask for National Insurance numbers](/patterns/national-insurance-numbers/)
-- [confirm a phone number](/patterns/confirm-a-phone-number/)
+- [how to ask for bank account details](/patterns/bank-details/)
+- [how to ask for National Insurance numbers](/patterns/national-insurance-numbers/)
+- [how to confirm a phone number](/patterns/confirm-a-phone-number/)
 
 ### Prefixes and suffixes
 
@@ -182,7 +182,7 @@ A restrictive maximum length can stop users from formatting information in their
 
 Some assistive technologies do not tell users if an input has a `maxlength` set or if the user has passed the limit. Voice control software may insert additional spaces into the input.
 
-If you must enforce a maximum length for technical reasons, inform the user of the limit in the hint, but allow them to provide more information. Only return an error if the value is longer than allowed after normalisation. For longer values, consider using the [character count component](/components/character-count/) instead.
+If you must enforce a maximum length for technical reasons, inform the user of the limit in the hint, but allow them to provide more information. Only return an error if the value is longer than allowed after normalisation. For longer values, consider using the [Character count component](/components/character-count/) instead.
 
 ### How and when to spellcheck a user’s input
 
@@ -206,7 +206,7 @@ Error messages should be styled like this:
 
 {{ example({ group: "components", item: "text-input", example: "input-prefix-suffix-error", html: true, nunjucks: true, closed: true, size: "s" }) }}
 
-Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
+Make sure errors follow the guidance in the [Error message component](/components/error-message/) and have specific error messages for specific error states.
 
 #### If the input is empty
 

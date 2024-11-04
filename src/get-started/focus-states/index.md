@@ -19,7 +19,7 @@ When links are focused, they have a yellow background with a black bottom border
 
 ![A focused link against different GOV.UK background colours](link-focus.png)
 
-Other components and elements that look like links use the link focus state style. For example, the controls on the [accordion](/components/accordion/) and [details](/components/details/) components.
+Other components and elements that look like links use the link focus state style. For example, the controls on the [Accordion component](/components/accordion/) and [Details component](/components/details/).
 
 ![A focused details component. In the examples, the expandable text reads "Help with nationality" and beneath is an explanation of why the user is being asked for this information.](details-focus.png)
 
@@ -29,7 +29,7 @@ When form inputs are focused, they have a yellow outline and a thick black borde
 
 ![A text input labelled "What is your name?". The example shows the text input both unfocused and focused.](text-input-focus.png)
 
-[Radios](/components/radios/) and [checkboxes](/components/checkboxes/) use the same style.
+[Radios components](/components/radios/) and [checkboxes components](/components/checkboxes/) use the same style.
 
 ![Yes and no radio options to answer the question "Have you changed your name?". In this example, the "No" option is focused.](radios-focus.png)
 

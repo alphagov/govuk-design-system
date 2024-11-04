@@ -17,7 +17,7 @@ Use the fieldset component when you need to show a relationship between multiple
 
 {{ example({ group: "components", item: "fieldset", example: "address-group", html: true, nunjucks: true, open: false, size: "xl", loading: "eager" }) }}
 
-If you’re using the examples or macros for [radios](/components/radios/), [checkboxes](/components/checkboxes/) or [date input](/components/date-input/), the fieldset will already be included.
+If you’re using the examples or macros for a [Radios component](/components/radios/), [Checkboxes component](/components/checkboxes/) or [Date input component](/components/date-input/), the fieldset will already be included.
 
 ## How it works
 
@@ -29,6 +29,6 @@ Read more about [why and how to set legends as headings](/get-started/labels-leg
 
 {{ example({ group: "components", item: "fieldset", example: "default", html: true, nunjucks: true, open: false }) }}
 
-On [question pages](/patterns/question-pages/) containing a group of inputs, including the question as the legend helps users of screen readers to understand that the inputs are all related to that&nbsp;question.
+On [Question pages in your service](/patterns/question-pages/) containing a group of inputs, including the question as the legend helps users of screen readers to understand that the inputs are all related to that&nbsp;question.
 
 Include general help text in the legend if it would help the user fill in the form, and you cannot write it as [hint text](/components/text-input/#hint-text). However, try to keep it as short as possible.

@@ -39,8 +39,8 @@ Use an alpha banner when your service is in alpha, and a beta banner if your ser
 
 Show the Phase banner directly under either:
 
-- the [Service navigation](/components/service-navigation/) component
-- the [GOV.UK header](/components/header/) and its blue colour bar (if your service does not use the Service navigation component)
+- the [Service navigation component](/components/service-navigation/)
+- the [GOV.UK header component](/components/header/) and its blue colour bar (if your service does not use the Service navigation component)
 
 Phase banners are shown across all pages of a service, so users should understand it as a service-level message.
 

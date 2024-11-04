@@ -17,7 +17,7 @@ If you use the page template, you'll also get the skip link without having to ad
 
 ## When to use this component
 
-All GOV.UK pages must include a skip link. Usually, you should place the skip link immediately after the opening `<body>` tag. However, if you're using a [cookie banner](/components/cookie-banner/), place the skip link immediately after the cookie banner.
+All GOV.UK pages must include a skip link. Usually, you should place the skip link immediately after the opening `<body>` tag. However, if you're using a [Cookie banner component](/components/cookie-banner/), place the skip link immediately after the cookie banner.
 
 Some automated accessibility testing tools may warn that the skip link element is not inside a landmark. This warning does not apply to skip links, so you can ignore it. Do not wrap the skip link in a `<nav>` region, or move it inside the header.
 

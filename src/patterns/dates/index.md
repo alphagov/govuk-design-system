@@ -31,7 +31,7 @@ In some cases you might need users to pick a date from a given selection.
 
 ### Asking for memorable dates
 
-Ask for memorable dates, like dates of birth, using the [date input](/components/date-input/) component.
+Ask for memorable dates, like dates of birth, using the [Date input component](/components/date-input/) component.
 
 {{ example({ group: "patterns", item: "dates", example: "default", html: true, nunjucks: true, open: false, size: "s", loading: "eager" }) }}
 

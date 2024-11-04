@@ -93,7 +93,7 @@ Some services ask users to repeat their email address. Only do this if your user
 
 ### Check the user has access to their email account
 
-If email is an essential part of your service - for example to send a password reset - you can confirm whether the user has access to the email address they give you using an [email confirmation loop](/patterns/confirm-an-email-address/).
+If email is an essential part of your service - for example to send a password reset - you can confirm whether the user has access to the email address they give you [using an email confirmation loop](/patterns/confirm-an-email-address/).
 
 However, these are disruptive and should be avoided as far as possible.
 
@@ -103,7 +103,7 @@ Error messages should be styled like this:
 
 {{ example({ group: "patterns", item: "email-addresses", example: "error", html: true, nunjucks: true, open: false, size: "s" }) }}
 
-Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
+Make sure errors follow the guidance in the [Error message component](/components/error-message/) and have specific error messages for specific error states.
 
 #### If the email address is not in the correct format and there is no example
 

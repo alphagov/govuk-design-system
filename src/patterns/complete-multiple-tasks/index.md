@@ -36,7 +36,7 @@ Help users understand:
 
 {{ example({ group: "patterns", item: "complete-multiple-tasks", example: "default", html: true, nunjucks: true, open: false }) }}
 
-Complete multiple tasks pages use a [task list component](/components/task-list) for each group of tasks on the page.
+Complete multiple tasks pages use a [Task list component](/components/task-list) for each group of tasks on the page.
 
 ## When to use this pattern
 
@@ -100,7 +100,7 @@ If the user cannot start the task yet, for example because another task must be 
 
 #### Tasks containing an error
 
-You should avoid tasks having an error status by using the [error summary](/components/error-summary/) and [error messages](/components/error-message/) displayed at the point that the error is made, so that the user can fix it straight away.
+You should avoid tasks having an error status by using the [Error summary component](/components/error-summary/) and [Error message component](/components/error-message/) displayed at the point that the error is made, so that the user can fix it straight away.
 
 If it is unavoidable that a task may end up saved but containing an error, use the status text ‘There is a problem’ and a red background.
 
@@ -135,11 +135,11 @@ Sometimes, it’s better to let the user decide when a task is completed.
 This can be helpful when a task involves:
 
 - some questions that are optional
-- writing a long answer (such as in a [textarea](/components/textarea/))
+- writing a long answer (such as in a [Textarea component](/components/textarea/))
 - looking up information, such as details about previous jobs
 - answers that need to be checked carefully with someone else
 
-Do this by asking a radio question at the end of the task – either as the last question (if the task is a single page) or on the [‘Check answers’ page](/patterns/check-answers/) (if the task uses multiple [question pages](/patterns/question-pages/)).
+Do this by asking a radio question at the end of the task – either as the last question (if the task is a single page) or on the [Check answers page](/patterns/check-answers/) (if the task involves more than one page).
 
 Ask ‘Have you completed this section?’ with the radio options ‘Yes, I’ve completed this section’ or ‘No, I’ll come back later’.
 
@@ -159,7 +159,7 @@ Always allow users to go back into a task to change their answer.
 
 #### Error messages
 
-If the user does not select an option, show an [error message](/components/error-message/) to say: 'Select whether you’ve completed this section'.
+If the user does not select an option, show an [Error message component](/components/error-message/) to say: 'Select whether you’ve completed this section'.
 
 {{ example({ group: "patterns", item: "complete-multiple-tasks", example: "have-you-completed-this-section-error", html: true, nunjucks: true, open: false }) }}
 
@@ -167,6 +167,6 @@ If the user does not select an option, show an [error message](/components/error
 
 This pattern was previously named ‘Task list’ and was [developed by a team at the Government Digital Service (GDS)](https://designnotes.blog.gov.uk/2017/04/04/weve-published-the-task-list-pattern/).
 
-It was then iterated by a cross-government collaboration and published as a new [task list component](/components/task-list/) with updated guidance and research.
+It was then iterated by a cross-government collaboration and published as a new [Task list component](/components/task-list/) with updated guidance and research.
 
-See the [research on the new task list component](/components/task-list#research-on-this-component) for details of research done, and known issues and gaps.
+See the [research on the Task list component](/components/task-list#research-on-this-component) for details of research done, and known issues and gaps.

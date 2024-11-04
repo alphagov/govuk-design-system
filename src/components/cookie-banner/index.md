@@ -46,7 +46,7 @@ The term ‘non-essential cookies’ includes:
 - service workers
 - any other technologies that store files on the user’s device
 
-This cookie banner and the [cookies page pattern](/patterns/cookies-page/) are based on the approach to getting cookie consent used on the GOV.UK website.
+This cookie banner and the [Cookies page pattern](/patterns/cookies-page/) are based on the approach to getting cookie consent used on the GOV.UK website.
 
 This component page shows several options for using a cookie banner, based on the types of cookies you’re using in the service. We also tell you what to cover in your cookie banner, with some text examples.
 
@@ -66,7 +66,7 @@ Check with your organisation's privacy expert to see how data protection legisla
 Show the cookie banner every time the user accesses your service until they either:
 
 - accept or reject cookies using the buttons in the cookie banner
-- save their cookie preferences on the service’s [cookies page](/patterns/cookies-page/)
+- save their cookie preferences on [your service’s Cookies page](/patterns/cookies-page/)
 
 Once the user has accepted or rejected cookies, the cookie banner should:
 
@@ -177,7 +177,7 @@ You’ll need to change the example cookie banner text if your service:
 
 Keep the text as short as possible while making sure it’s an accurate description of how you use cookies. For example, if you use more than one ‘functional’ cookie and there’s not enough space to mention what each of them does, you could ask for permission to set cookies so ‘you can use as many of the service’s features as possible’.
 
-[See the cookies page for more advice on writing about cookies](/patterns/cookies-page/).
+[See the Cookies page pattern for more advice on writing about cookies](/patterns/cookies-page/).
 
 ### If you’re using essential cookies and analytics cookies
 
@@ -197,7 +197,7 @@ You can use this example text for a service that set:
 
 ## Creating a cookies page
 
-You’ll need a [cookies page](/patterns/cookies-page/) as well as a cookie banner.
+You’ll need a [Cookies page in your service](/patterns/cookies-page/) as well as a cookie banner.
 
 ## Research on this component
 

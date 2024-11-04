@@ -12,7 +12,7 @@ Help users to create a unique and memorable username to sign into a service with
 
 ## When to use this pattern
 
-Before using this pattern, you should consider whether you really need users to [create accounts](/patterns/create-accounts/) in the first place.
+Before using this pattern, you should consider whether you really need users to [create accounts in your service](/patterns/create-accounts/) in the first place.
 
 ## How it works
 

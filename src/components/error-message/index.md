@@ -25,13 +25,13 @@ This guidance is for government teams that build online services. [To find infor
   ]
 }) }}
 
-Follow the [validation pattern](/patterns/validation/) and show an error message when there is a validation error. In the error message explain what went wrong and how to fix it.
+Follow the [Validation pattern](/patterns/validation/) and show an error message when there is a validation error. In the error message explain what went wrong and how to fix it.
 
 {{ example({ group: "components", item: "error-message", example: "default", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}
 
 ## When to use this component
 
-Show an error message next to the field and in the [error summary](/components/error-summary/) when there is a validation error.
+Show an error message next to the field and in the [Error summary component](/components/error-summary/) when there is a validation error.
 
 Use standard messages for different components.
 
@@ -43,9 +43,9 @@ Instead, take the user to a page that explains the problem (for example, telling
 
 There are separate patterns for:
 
-- [‘there is a problem with the service’ pages](/patterns/problem-with-the-service-pages/)
-- [‘page not found’ pages](/patterns/page-not-found-pages/)
-- [‘service unavailable’ pages](/patterns/service-unavailable-pages/)
+- ['There is a problem with the service' pages](/patterns/problem-with-the-service-pages/)
+- ['Page not found' pages](/patterns/page-not-found-pages/)
+- ['Service unavailable' pages](/patterns/service-unavailable-pages/)
 
 ## How it works
 
@@ -72,7 +72,7 @@ If your error message is written in another language, you can change the prefix 
 
 {{ example({ group: "components", item: "error-message", example: "custom-prefix", html: true, nunjucks: true, open: true, displayExample: false, size: "s" }) }}
 
-Summarise all errors at the top of the page the user is on using an [error summary](/components/error-summary/).
+Summarise all errors at the top of the page the user is on using an [Error summary component](/components/error-summary/).
 
 There are 2 ways to use the error message component. You can use HTML or, if you are using Nunjucks or the GOV.UK Prototype Kit, you can use the Nunjucks macro.
 
@@ -121,7 +121,7 @@ Read the message out loud to see if it sounds like something you would say.
 
 ### Be consistent
 
-Use the same message next to the field and in the [error summary](/components/error-summary/) so they:
+Use the same message next to the field and in the [Error summary component](/components/error-summary/) so they:
 
 - look, sound and mean the same
 - make sense out of context
@@ -161,18 +161,18 @@ Use both instructions and descriptions, but use them consistently. For example, 
 
 Use template messages for common errors on:
 
-- [addresses](/patterns/addresses/#error-messages)
-- [character count](/components/character-count/#error-messages)
-- [checkboxes](/components/checkboxes/#error-messages)
-- [date input](/components/date-input/#error-messages)
-- [email address](/patterns/email-addresses/#error-messages)
-- [file upload](/components/file-upload/#error-messages)
-- [names](/patterns/names/#error-messages)
-- [National Insurance numbers](/patterns/national-insurance-numbers/#error-messages)
-- [radios](/components/radios/#error-messages)
-- [phone numbers](/patterns/phone-numbers/#error-messages)
-- [text input](/components/text-input/#error-messages)
-- [textarea](/components/textarea/#error-messages)
+- [Addresses pattern](/patterns/addresses/#error-messages)
+- [Character count component](/components/character-count/#error-messages)
+- [Checkboxes component](/components/checkboxes/#error-messages)
+- [Date input component](/components/date-input/#error-messages)
+- [Email address pattern](/patterns/email-addresses/#error-messages)
+- [File upload component](/components/file-upload/#error-messages)
+- [Names pattern](/patterns/names/#error-messages)
+- [National Insurance numbers pattern](/patterns/national-insurance-numbers/#error-messages)
+- [Radios component](/components/radios/#error-messages)
+- [Phone numbers pattern](/patterns/phone-numbers/#error-messages)
+- [Text input component](/components/text-input/#error-messages)
+- [Textarea component](/components/textarea/#error-messages)
 
 ### Track errors
 

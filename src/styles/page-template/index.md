@@ -16,7 +16,7 @@ Use this template to keep your pages consistent with the rest of GOV.UK.
 This page template combines the boilerplate markup and [components](/components/) needed for a basic GOV.UK page. It includes:
 
 - JavaScript that adds a `.govuk-frontend-supported` class, which is required by components with JavaScript behaviour
-- the [skip link](/components/skip-link/), [header](/components/header/) and [footer](/components/footer/) components
+- the [Skip link component](/components/skip-link/), [Header component](/components/header/) and [Footer component](/components/footer/)
 - the favicon, and other related theme icons
 
 In the examples provided, we show both HTML and [Nunjucks](https://frontend.design-system.service.gov.uk/use-nunjucks/).
@@ -37,7 +37,7 @@ This example shows the minimum required for a GOV.UK page.
 You can customise the page template, for example, by:
 
 - adding a service name and navigation
-- including a [back link](/components/back-link/) or [phase banner](/components/phase-banner/)
+- including a [Back link component](/components/back-link/) or [Phase banner component](/components/phase-banner/)
 
 {{ example({ group: "styles", item: "page-template", example: "custom", customCode: true, html: true, nunjucks: true, open: false, size: "xl" }) }}
 
@@ -55,7 +55,7 @@ To set a 'variable' option, use `set` to pass in a single value or string. For e
 {% endraw %}
 ```
 
-By default, the template contains a [skip link](/components/skip-link/), [header](/components/header/) and [footer](/components/footer/), all of which require 'blocks' to change.
+By default, the template contains a [Skip link component](/components/skip-link/), [Header component](/components/header/) and [Footer component](/components/footer/), all of which require 'blocks' to change.
 
 To set a 'block' option, use `block` to pass in a multiline value or HTML markup. For example, to add a block of HTML before the closing `</body>` element in the page template using the `bodyEnd` option:
 
@@ -111,8 +111,8 @@ To change the components that are included in the page template by default, set 
       <td class="govuk-table__cell">
         Add content that needs to appear outside <code>&lt;main&gt;</code> element.
         <br>
-        For example: The <a class="govuk-link" href="/components/back-link/">back link</a> component, <a class="govuk-link" href="/components/breadcrumbs/">breadcrumbs</a> component,
-        <a class="govuk-link" href="/components/phase-banner/">phase banner</a> component.
+        For example: The <a class="govuk-link" href="/components/back-link/">Back link component</a>, <a class="govuk-link" href="/components/breadcrumbs/">Breadcrumbs component</a>,
+        <a class="govuk-link" href="/components/phase-banner/">Phase banner component</a>.
       </td>
     </tr>
     <tr class="govuk-table__row">
@@ -138,7 +138,7 @@ To change the components that are included in the page template by default, set 
       <td class="govuk-table__cell">
         Add content after the opening <code>&lt;body&gt;</code> element.
         <br>
-        For example: The <a class="govuk-link" href="/components/cookie-banner/">cookie banner</a> component.
+        For example: The <a class="govuk-link" href="/components/cookie-banner/">Cookie banner component</a>.
       </td>
     </tr>
     <tr class="govuk-table__row">
@@ -164,7 +164,7 @@ To change the components that are included in the page template by default, set 
       <td class="govuk-table__cell">footer</td>
       <td class="govuk-table__cell">Block</td>
       <td class="govuk-table__cell">
-        Override the default <a class="govuk-link" href="/components/footer/">footer</a> component.
+        Override the default <a class="govuk-link" href="/components/footer/">Footer component</a>.
       </td>
     </tr>
     <tr class="govuk-table__row">
@@ -180,7 +180,7 @@ To change the components that are included in the page template by default, set 
       <td class="govuk-table__cell">header</td>
       <td class="govuk-table__cell">Block</td>
       <td class="govuk-table__cell">
-        Override the default <a class="govuk-link" href="/components/header/">header</a> component.
+        Override the default <a class="govuk-link" href="/components/header/">Header component</a>.
       </td>
     </tr>
     <tr class="govuk-table__row">
@@ -244,7 +244,7 @@ To change the components that are included in the page template by default, set 
       <td class="govuk-table__cell">skipLink</td>
       <td class="govuk-table__cell">Block</td>
       <td class="govuk-table__cell">
-        Override the default <a class="govuk-link" href="/components/skip-link/">skip link</a> component.
+        Override the default <a class="govuk-link" href="/components/skip-link/">Skip link component</a>.
       </td>
     </tr>
     <tr class="govuk-table__row">

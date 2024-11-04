@@ -27,9 +27,9 @@ Help users to create and enter secure and memorable passwords.
 
 ## When to use this pattern
 
-You should follow this pattern whenever you need users to create or enter a password. Before using this pattern, you should also read the guidance on [user accounts](/patterns/create-accounts/).
+You should follow this pattern whenever you need users to create or enter a password. Before using this pattern, you should also read the guidance on the [User accounts pattern](/patterns/create-accounts/).
 
-For technical considerations, you may also want to read the guidance for the [Password input](/components/password-input/) component.
+For technical considerations, you may also want to read the guidance for the [Password input component](/components/password-input/).
 
 ## How it works
 

@@ -33,7 +33,7 @@ The select component should only be used as a last resort in public-facing servi
 
 The select component allows users to choose an option from a long list. Before using the select component, try asking users questions which will allow you to present them with fewer options.
 
-Asking questions means you’re less likely to need to use the select component, and can consider using a different solution, such as [radios](/components/radios/).
+Asking questions means you’re less likely to need to use the select component, and can consider using a different solution, such as a [Radios component](/components/radios/).
 
 ## How it works
 

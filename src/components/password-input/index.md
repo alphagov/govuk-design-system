@@ -39,19 +39,19 @@ Help users to create and enter passwords.
 
 Use this component whenever you need users to create or enter a password.
 
-Before using this component, you should also read the guidance on [asking users for passwords](/patterns/passwords/) and [creating user accounts](/patterns/create-accounts/).
+Before using this component, you should also read the guidance on the [Ask users for passwords pattern](/patterns/passwords/) and [Creating user accounts pattern](/patterns/create-accounts/).
 
 ## When not to use this component
 
 Do not use this component to ask for any information other than a password.
 
-Use [Text input](/components/text-input/) to ask for other security information, such as:
+Use a [Text input component](/components/text-input/) to ask for other security information, such as:
 
 - multi-factor authentication codes
 - answers to security questions
 - other personally identifiable information
 
-Also see the [Confirm a phone number](/patterns/confirm-a-phone-number/) pattern.
+Also see the [Confirm a phone number pattern](/patterns/confirm-a-phone-number/).
 
 ## How it works
 
@@ -67,7 +67,7 @@ If the user enters their account details incorrectly, do not reveal whether they
 
 Revealing the source of the error can help fraudsters break into people’s accounts.
 
-See how to handle incorrect login attempts and help users who forget their password in the [Ask users for passwords](/patterns/passwords/) pattern.
+See how to handle incorrect login attempts and help users who forget their password in the [Ask users for passwords pattern](/patterns/passwords/).
 
 ### Showing and hiding passwords
 
@@ -129,7 +129,7 @@ This can be useful for users, such as to save a password that the browser has su
 
 ### Avoid restricting the user's input
 
-See the [Ask users for Passwords](/patterns/passwords/) pattern to see how to help users choose strong passwords.
+See the [Ask users for passwords pattern](/patterns/passwords/) to see how to help users choose strong passwords.
 
 Support all the characters users may need to enter a password, including numbers and symbols.
 
@@ -141,7 +141,7 @@ Any restrictions must be identical wherever the user creates or enters a passwor
 
 Users will not get any feedback when they’ve reached the `maxlength` and their text input has been truncated. This happens when a user has pasted text from elsewhere or it’s been autofilled by a password manager.
 
-If you must restrict the length of a password, show an error message instead using the [validation](/patterns/validation/) pattern.
+If you must restrict the length of a password, show an error message instead using the [Validation pattern](/patterns/validation/).
 
 ### Do not spellcheck or autocapitalise the user's input
 

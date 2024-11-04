@@ -4,4 +4,4 @@ layout: layout-archived.njk
 ignoreInSitemap: true
 ---
 
-For up to date information, see [the notification banner component](/components/notification-banner/).
+For up to date information, see the [Notification banner component](/components/notification-banner/).
