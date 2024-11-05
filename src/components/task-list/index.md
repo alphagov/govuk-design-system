@@ -19,8 +19,8 @@ Use the task list to give users more control over how they complete long, comple
 
 Only use the task list if there’s evidence that users:
 
-* do not want to, or cannot, complete all the tasks in one sitting
-* need to be able to choose the order they complete the tasks in
+- do not want to, or cannot, complete all the tasks in one sitting
+- need to be able to choose the order they complete the tasks in
 
 ## When not to use this component
 
@@ -98,8 +98,8 @@ We have also introduced a new colour palette for statuses, using colour contrast
 
 While this new component is based on user research from the task list pattern, we still need to carry out user testing with this new component. In particular, we would like to test the following assumptions:
 
-* the benefits of linking the whole task row outweigh the risks of accidental clicking
-* the contrast of the statuses is sufficient
-* the suggested wording of the statuses make the most sense to users
+- the benefits of linking the whole task row outweigh the risks of accidental clicking
+- the contrast of the statuses is sufficient
+- the suggested wording of the statuses make the most sense to users
 
 If you are using this component in a service, we would like to hear about any user research so that we can identify any potential issues.
