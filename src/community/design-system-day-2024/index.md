@@ -15,6 +15,8 @@ order: 15
 
 [Tickets are now available on Eventbrite](https://www.eventbrite.co.uk/e/design-system-hack-day-tickets-1056506733079?aff=mcml) for our third and final Design System Day event of 2024. We'll be hosting a hackathon looking at improving the journey between the GOV.UK Design System and other government design systems.
 
+Face to face tickets have sold out, but online tickets are still available.
+
 <table class="govuk-table">
   <tbody>
     <tr class="govuk-table__row">
