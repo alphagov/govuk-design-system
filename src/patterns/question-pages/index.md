@@ -118,7 +118,7 @@ You can also learn more about how starting with [one thing per page](https://www
 
 #### Hint text
 
-Use hint text to show information that helps the majority of users answer the question, like like how their information will be used, or where to find it.
+Use hint text to show information that helps the majority of users answer the question, like how their information will be used, or where to find it.
 
 Keep each hint to a single short sentence, without any full stops.
 
