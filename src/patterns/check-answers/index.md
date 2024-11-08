@@ -36,7 +36,7 @@ When designing a very large transaction with multiple sections, it may help to i
 
 This can be valuable for services where different users might be completing each section. You should test this approach with your users to find out if it’s helpful.
 
-Use [summary cards](/components/summary-list/#summary-cards) when users need to check multiple things of the same type. For example to review a series of interview appointments or application choices.
+Use the [Summary card component](/components/summary-list/#summary-cards) when users need to check multiple things of the same type. For example to review a series of interview appointments or application choices.
 
 ## How it works
 

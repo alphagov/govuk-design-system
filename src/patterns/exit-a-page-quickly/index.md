@@ -11,7 +11,7 @@ layout: layout-pane.njk
 {% from "_example.njk" import example %}
 
 Give users a way to quickly and safely exit a service, website or application.
-Use this pattern to add the [Exit this page](/components/exit-this-page/) component to your service and keep users safe by helping them to protect their privacy.
+Use this pattern to add the [Exit this page component](/components/exit-this-page/) to your service and keep users safe by helping them to protect their privacy.
 
 ## When to use this pattern
 
@@ -36,7 +36,7 @@ You should not use this pattern for standalone content pages, such as dashboards
 
 ## How it works
 
-First, you’ll need to add the [Exit this page](/components/exit-this-page/) component to your service and decide how it should work within your service.
+First, you’ll need to add the [Exit this page component](/components/exit-this-page/) to your service and decide how it should work within your service.
 
 The component has several parts, including:
 

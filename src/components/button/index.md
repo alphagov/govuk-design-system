@@ -33,15 +33,15 @@ Use the button component to help users carry out an action like starting an appl
 
 Write button text in sentence case, describing the action it performs. For example:
 
-- ‘Start now’ at the [start of the service](/patterns/start-using-a-service/)
+- ‘Start now’ at the [start of your service](/patterns/start-using-a-service/)
 - ‘Sign in’ to an account a user has already created
 - ‘Continue’ when the service does not save a user’s information
 - ‘Save and continue’ when the service does save a user’s information
 - ‘Save and come back later’ when a user can save their information and come back later
 - ‘Add another’ to add another item to a list or group
 - ‘Pay’ to make a payment
-- ‘Confirm and send’ on a [check answers](/patterns/check-answers/) page that does not have any legal content a user must agree to
-- ‘Accept and send’ on a [check answers](/patterns/check-answers/) page that has legal content a user must agree to
+- ‘Confirm and send’ on a [Check answers page](/patterns/check-answers/) that does not have any legal content a user must agree to
+- ‘Accept and send’ on a [Check answers page](/patterns/check-answers/) that has legal content a user must agree to
 - ‘Sign out’ when a user is signed in to an account
 
 You may need to include more or different words to better describe the action. For example, ‘Add another address’ and ‘Accept and claim a tax refund’.
@@ -65,7 +65,7 @@ Avoid using multiple default buttons on a single page. Having more than one main
 
 ### Start buttons
 
-Use a start button for the main call to action on your service’s [start page](/patterns/start-using-a-service/).
+Use a start button for the main call to action on [your service’s Start page](/patterns/start-using-a-service/).
 Start buttons do not usually submit form data, so use a link tag instead of a button tag.
 
 {{ example({ group: "components", item: "button", example: "start", html: true, nunjucks: true, open: false }) }}

@@ -11,7 +11,7 @@ layout: layout-pane.njk
 
 Use this component at the top of a page to summarise any errors a user has made.
 
-When a user makes an error, you must show both an error summary and an [error message](/components/error-message/) next to each answer that contains an error.
+When a user makes an error, you must show both an error summary and an [Error message component](/components/error-message/) next to each answer that contains an error.
 
 {{ example({ group: "components", item: "error-summary", example: "default", html: true, nunjucks: true, open: false, size: "s", loading: "eager" }) }}
 
@@ -28,9 +28,9 @@ You must:
 - link to each of the answers that have validation errors
 - make sure the error messages in the error summary are worded the same as those which appear next to the inputs with errors
 
-As well as showing an error summary, follow the [validation pattern](/patterns/validation/) - for example, by adding ‘Error: ’ to the beginning of the page `<title>` so screen readers read it out as soon as possible.
+As well as showing an error summary, follow the [Validation pattern](/patterns/validation/) - for example, by adding ‘Error: ’ to the beginning of the page `<title>` so screen readers read it out as soon as possible.
 
-And make your [error messages](/components/error-message/#be-clear-and-concise) clear and concise.
+And [make your error messages clear and concise](/components/error-message/#be-clear-and-concise).
 
 There are 2 ways to use the error summary component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 

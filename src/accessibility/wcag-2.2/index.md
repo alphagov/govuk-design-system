@@ -55,7 +55,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
   rows: [
     [
       {
-        html: '<a href="/components/back-link/">Back link</a>'
+        html: '<a href="/components/back-link/">Back link component</a>'
       },
       {
         html: 'Redundant entry<br>Target size (minimum)'
@@ -63,7 +63,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
     ],
     [
       {
-        html: '<a href="/components/breadcrumbs/">Breadcrumbs</a>'
+        html: '<a href="/components/breadcrumbs/">Breadcrumbs component</a>'
       },
       {
         html: 'Target size (minimum)'
@@ -71,7 +71,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
     ],
     [
       {
-        html: '<a href="/components/button/">Button</a>'
+        html: '<a href="/components/button/">Button component</a>'
       },
       {
         html: 'Target size (minimum)'
@@ -79,7 +79,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
     ],
     [
       {
-        html: '<a href="/components/cookie-banner/">Cookie banner</a>'
+        html: '<a href="/components/cookie-banner/">Cookie banner component</a>'
       },
       {
         html: 'Focus not obscured (minimum)<br>Target size (minimum)'
@@ -87,7 +87,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
     ],
     [
       {
-        html: '<a href="/components/error-message/">Error message</a>'
+        html: '<a href="/components/error-message/">Error message component</a>'
       },
       {
         html: 'Redundant entry'
@@ -95,7 +95,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
     ],
     [
       {
-        html: '<a href="/components/file-upload/">File upload</a>'
+        html: '<a href="/components/file-upload/">File upload component</a>'
       },
       {
         html: 'Dragging movements<br>Redundant entry'
@@ -103,7 +103,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
     ],
     [
       {
-        html: '<a href="/components/footer/">GOV.UK footer</a>'
+        html: '<a href="/components/footer/">GOV.UK footer component</a>'
       },
       {
         html: 'Consistent help'
@@ -111,7 +111,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
     ],
     [
       {
-        html: '<a href="/components/header/">GOV.UK header</a>'
+        html: '<a href="/components/header/">GOV.UK header component</a>'
       },
       {
         html: 'Focus not obscured (Minimum)<br>Consistent help'
@@ -119,7 +119,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
     ],
     [
       {
-        html: '<a href="/components/phase-banner/">Phase banner</a>'
+        html: '<a href="/components/phase-banner/">Phase banner component</a>'
       },
       {
         html: 'Focus not obscured (minimum)'
@@ -127,7 +127,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
     ],
     [
       {
-        html: '<a href="/components/select/">Select</a>'
+        html: '<a href="/components/select/">Select component</a>'
       },
       {
         html: 'Dragging movements'
@@ -135,7 +135,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
     ],
     [
       {
-        html: '<a href="/components/service-navigation/">Service navigation</a>'
+        html: '<a href="/components/service-navigation/">Service navigation component</a>'
       },
       {
         html: 'Focus not obscured (Minimum)<br>Consistent help'
@@ -143,7 +143,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
     ],
     [
       {
-        html: '<a href="/components/summary-list/">Summary list</a>'
+        html: '<a href="/components/summary-list/">Summary list component</a>'
       },
       {
         html: 'Redundant entry<br>Target size (minimum)'
@@ -151,7 +151,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
     ],
     [
       {
-        html: '<a href="/components/tag/">Tag</a>'
+        html: '<a href="/components/tag/">Tag component</a>'
       },
       {
         html: 'Dragging movements'
@@ -176,7 +176,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
   rows: [
     [
       {
-        html: '<a href="/patterns/addresses/">Addresses</a>'
+        html: '<a href="/patterns/addresses/">Addresses pattern</a>'
       },
       {
         html: 'Redundant entry'
@@ -184,7 +184,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
     ],
     [
       {
-        html: '<a href="/patterns/bank-details/">Bank details</a>'
+        html: '<a href="/patterns/bank-details/">Bank details pattern</a>'
       },
       {
         html: 'Redundant entry'
@@ -192,7 +192,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
     ],
     [
       {
-        html: '<a href="/patterns/email-addresses/">Email addresses</a>'
+        html: '<a href="/patterns/email-addresses/">Email addresses pattern</a>'
       },
       {
         html: 'Redundant entry'
@@ -200,7 +200,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
     ],
     [
       {
-        html: '<a href="/patterns/equality-information/">Equality information</a>'
+        html: '<a href="/patterns/equality-information/">Equality information pattern</a>'
       },
       {
         html: 'Redundant entry'
@@ -208,7 +208,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
     ],
     [
       {
-        html: '<a href="/patterns/names/">Names</a>'
+        html: '<a href="/patterns/names/">Names pattern</a>'
       },
       {
         html: 'Redundant entry'
@@ -216,7 +216,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
     ],
     [
       {
-        html: '<a href="/patterns/national-insurance-numbers/">National Insurance Numbers</a>'
+        html: '<a href="/patterns/national-insurance-numbers/">National Insurance Numbers pattern</a>'
       },
       {
         html: 'Redundant entry'
@@ -224,7 +224,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
     ],
     [
       {
-        html: '<a href="/patterns/passwords/">Passwords</a>'
+        html: '<a href="/patterns/passwords/">Passwords pattern</a>'
       },
       {
         html: 'Accessible authentication<br>Consistent help<br>Target size (minimum)'
@@ -232,7 +232,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
     ],
     [
       {
-        html: '<a href="/patterns/payment-card-details/">Payment card details</a>'
+        html: '<a href="/patterns/payment-card-details/">Payment card details pattern</a>'
       },
       {
         html: 'Target size (minimum)'
@@ -257,7 +257,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
   rows: [
     [
       {
-        html: '<a href="/patterns/check-a-service-is-suitable/">Check a service is suitable</a>'
+        html: '<a href="/patterns/check-a-service-is-suitable/">Check a service is suitable pattern</a>'
       },
       {
         html: 'Redundant entry'
@@ -265,7 +265,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
     ],
     [
       {
-        html: '<a href="/patterns/check-answers/">Check answers</a>'
+        html: '<a href="/patterns/check-answers/">Check answers pattern</a>'
       },
       {
         html: 'Redundant entry'
@@ -273,7 +273,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
     ],
     [
       {
-        html: '<a href="/patterns/complete-multiple-tasks/">Complete multiple tasks</a>'
+        html: '<a href="/patterns/complete-multiple-tasks/">Complete multiple tasks pattern</a>'
       },
       {
         html: 'Dragging movements<br>Redundant entry'
@@ -281,7 +281,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
     ],
     [
       {
-        html: '<a href="/patterns/confirm-a-phone-number/">Confirm a phone number</a>'
+        html: '<a href="/patterns/confirm-a-phone-number/">Confirm a phone number pattern</a>'
       },
       {
         html: 'Consistent help'
@@ -289,7 +289,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
     ],
     [
       {
-        html: '<a href="/patterns/confirm-an-email-address/">Confirm an email address</a>'
+        html: '<a href="/patterns/confirm-an-email-address/">Confirm an email address pattern</a>'
       },
       {
         html: 'Accessible authentication'
@@ -297,7 +297,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
     ],
     [
       {
-        html: '<a href="/patterns/contact-a-department-or-service-team/">Contact a department or service team</a>'
+        html: '<a href="/patterns/contact-a-department-or-service-team/">Contact a department or service team pattern</a>'
       },
       {
         html: 'Consistent help'
@@ -305,7 +305,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
     ],
     [
       {
-        html: '<a href="/patterns/create-accounts/">Create accounts</a>'
+        html: '<a href="/patterns/create-accounts/">Create accounts pattern</a>'
       },
       {
         html: 'Accessible authentication<br>Redundant entry'
@@ -313,7 +313,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
     ],
     [
       {
-        html: '<a href="/patterns/navigate-a-service/">Navigate a service</a>'
+        html: '<a href="/patterns/navigate-a-service/">Navigate a service pattern</a>'
       },
       {
         html: 'Focus not obscured (Minimum)<br>Consistent help'
@@ -321,7 +321,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
     ],
     [
       {
-        html: '<a href="/patterns/validation/">Recover from validation errors</a>'
+        html: '<a href="/patterns/validation/">Recover from validation errors pattern</a>'
       },
       {
         html: 'Redundant entry'
@@ -346,7 +346,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
   rows: [
     [
       {
-        html: '<a href="/patterns/page-not-found-pages/">Page not found pages</a>'
+        html: '<a href="/patterns/page-not-found-pages/">Page not found pages pattern</a>'
       },
       {
         html: 'Consistent help'
@@ -354,7 +354,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
     ],
     [
       {
-        html: '<a href="/patterns/question-pages/">Question pages</a>'
+        html: '<a href="/patterns/question-pages/">Question pages pattern</a>'
       },
       {
         html: 'Dragging movements<br>Redundant entry'
@@ -362,7 +362,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
     ],
     [
       {
-        html: '<a href="/patterns/service-unavailable-pages/">Service unavailable pages</a>'
+        html: '<a href="/patterns/service-unavailable-pages/">Service unavailable pages pattern</a>'
       },
       {
         html: 'Consistent help'
@@ -370,7 +370,7 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
     ],
     [
       {
-        html: '<a href="/patterns/problem-with-the-service-pages/">There is a problem with the service pages</a>'
+        html: '<a href="/patterns/problem-with-the-service-pages/">There is a problem with the service pages pattern</a>'
       },
       {
         html: 'Consistent help<br>Redundant entry'

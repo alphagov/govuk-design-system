@@ -69,7 +69,7 @@ If you’re highlighting just one field - either the day, month or year - only s
 
 {{ example({ group: "components", item: "date-input", example: "error-single", html: true, nunjucks: true, open: false, size: "m" }) }}
 
-Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
+Make sure errors follow the guidance in the [Error message component](/components/error-message/) and have specific error messages for specific error states.
 
 If there’s more than one error, show the highest priority error message. In order of priority, show error messages about:
 

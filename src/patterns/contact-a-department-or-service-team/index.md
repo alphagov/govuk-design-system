@@ -88,13 +88,13 @@ For example, tell users how long it'll usually take to:
 
 ### Inset contact information
 
-Use [inset text](/components/inset-text/) to display contact information when you want to differentiate it from the content that surrounds it.
+Use the [Inset text component](/components/inset-text/) to display contact information when you want to differentiate it from the content that surrounds it.
 
 {{ example({ group: "patterns", item: "contact-a-department-or-service-team", example: "inset-contact-information", html: true, nunjucks: true, open: false, size: "m" }) }}
 
 ### Expanding contact information
 
-If contact information is less important than other content on a page, you can enclose contact information inside the [details](/components/details/) component to avoid distracting users.
+If contact information is less important than other content on a page, you can enclose contact information inside the [Details component](/components/details/) to avoid distracting users.
 
 For example, if you need to provide contact information at the bottom of a form page for users who need help completing the form.
 

@@ -42,7 +42,7 @@ If you currently use National Insurance numbers to verify identity, find out how
 
 ## How it works
 
-Use a single [text input](/components/text-input/) labelled ‘National Insurance number’. Write it out in full and never use abbreviations such as ‘NINO’ or ‘NI Number’.
+Use a single [Text input component](/components/text-input/) labelled ‘National Insurance number’. Write it out in full and never use abbreviations such as ‘NINO’ or ‘NI Number’.
 
 Show a National Insurance number using the format ‘QQ 12 34 56 C’ – the spaces will break up the number to make it easier to read, particularly for screen reader users.
 
@@ -77,7 +77,7 @@ Error messages should be styled like this:
 
 {{ example({ group: "patterns", item: "national-insurance-numbers", example: "error", html: true, nunjucks: true, open: true, size: "s" }) }}
 
-Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
+Make sure errors follow the guidance in the [Error message component](/components/error-message/) and have specific error messages for specific error states.
 
 #### If the National Insurance number is not in the correct format and there is no example
 

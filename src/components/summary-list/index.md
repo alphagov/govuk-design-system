@@ -35,7 +35,7 @@ Use a summary list to summarise information, for example, a user’s responses a
 
 Use a summary list to show information as a list of key facts.
 
-You can use it to display metadata like ‘Last updated’ with a date like ‘22 June 2018’, or to summarise a user’s responses at the end of a form like the [check answers](/patterns/check-answers/) pattern.
+You can use it to display metadata like ‘Last updated’ with a date like ‘22 June 2018’, or to summarise a user’s responses at the end of a form like the [Check answers pattern](/patterns/check-answers/).
 
 [Summary cards](#summary-cards) are a variant within this component. You can use summary cards to show multiple summary lists that describe the same type of thing, such as people. You can also add card actions that apply to the entire summary list.
 
@@ -43,7 +43,7 @@ You can use it to display metadata like ‘Last updated’ with a date like ‘2
 
 The summary list uses the description list (`<dl>`) HTML element, so only use it to present information that has a key and at least one value.
 
-Do not use it for tabular data or a simple list of information or tasks, like a [task list](/components/task-list/). For those use a `<table>`, `<ul>` or `<ol>`.
+Do not use it for tabular data or a simple list of information or tasks, like a [Task list component](/components/task-list/). For those use a `<table>`, `<ul>` or `<ol>`.
 
 ## How it works
 

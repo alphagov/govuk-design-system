@@ -37,7 +37,7 @@ Check that a user has access to a specific mobile phone number using a security 
 
 Ask the user to enter a security code when they need to sign in or complete a higher-risk task, such as changing a password.
 
-Asking the user to enter a security code sent to their mobile phone gives a second layer of security over a [password](/patterns/passwords/).
+Asking the user to enter a security code sent to their mobile phone gives a second layer of security over only [asking for a password](/patterns/passwords/).
 
 You can ask for a security code every time a user signs in or only once per device, depending on the risk level of your service.
 

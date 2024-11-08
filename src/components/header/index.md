@@ -51,11 +51,11 @@ You can still build from this component, but you’ll need to [make some changes
 
 ## How it works
 
-Together, the GOV.UK header and [Service navigation](/components/service-navigation/) components ensure users get a consistent experience on GOV.UK.
+Together, the GOV.UK header and [Service navigation component](/components/service-navigation/) both ensure users get a consistent experience on GOV.UK.
 
 This also assures users that they’re in the right place to use your service and to understand that GOV.UK functions as one website.
 
-For guidance on how to plan your header and navigation, see the [Help users navigate a service](/patterns/navigate-a-service) pattern.
+For guidance on how to plan your header and navigation, see the [Help users navigate a service pattern](/patterns/navigate-a-service).
 
 ### Default GOV.UK header
 
@@ -72,15 +72,15 @@ The GOV.UK header component was originally released with 2 variants:
 - with service name
 - with service name and navigation
 
-In August 2024, we introduced a separate [Service navigation](/components/service-navigation) component. This is to better help users understand that they’re using your service and let them navigate around your service.
+In August 2024, we introduced a separate [Service navigation component](/components/service-navigation). This is to better help users understand that they’re using your service and let them navigate around your service.
 
 We recommend using the Service navigation component to show your service name and navigation links instead of the GOV.UK header, and to start updating existing services.
 
-See the [Help users navigate a service](/patterns/navigate-a-service) pattern for more guidance and our plans to phase out these 2 variants.
+See the [Help users navigate a service pattern](/patterns/navigate-a-service) for more guidance and our plans to phase out these 2 variants.
 
 #### GOV.UK header with service name
 
-Avoid using the 'GOV.UK header with service name' where possible, and use the [Service navigation](/components/service-navigation) component to show your service name instead.
+Avoid using the 'GOV.UK header with service name' where possible, and use the [Service navigation component](/components/service-navigation) to show your service name instead.
 
 {{ example({ group: "components", item: "header", example: "with-service-name", html: true, nunjucks: true, open: false }) }}
 
@@ -108,4 +108,4 @@ GOV.UK One Login maintains their own header on the [Let users navigate to their 
 
 ## Research on this component
 
-See the [research section in the Help users navigate a service](/patterns/navigate-a-service/#research-on-this-pattern) pattern for a summary of our research on the GOV.UK header and navigation, and how you can share your feedback with us.
+See the [research section in the Help users navigate a service pattern](/patterns/navigate-a-service/#research-on-this-pattern) for a summary of our research on the GOV.UK header and navigation, and how you can share your feedback with us.

@@ -101,7 +101,7 @@ If a postcode entered is not a real postcode, use a message like this:
 
 {{ example({ group: "patterns", item: "addresses", example: "error-postcode", html: true, nunjucks: true, open: false, size: "s" }) }}
 
-Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
+Make sure errors follow the guidance in the [Error message component](/components/error-message/) and have specific error messages for specific error states.
 
 ## Address lookup
 

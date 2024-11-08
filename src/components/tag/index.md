@@ -29,7 +29,7 @@ Use the tag component to show users the status of something.
 
 ## When to use this component
 
-Use the tag component when it’s possible for something to have more than one status and it’s useful for the user to know about that status. For example, you can use a tag to show whether an item in a [task list](/components/task-list/) has been ‘completed’.
+Use the tag component when it’s possible for something to have more than one status and it’s useful for the user to know about that status. For example, you can use a tag to show whether an item in a [Task list component](/components/task-list/) has been ‘completed’.
 
 ## How it works
 
@@ -46,7 +46,7 @@ Do not use tags to create links, buttons or other interactive elements, as users
 
 Sometimes a single status is enough. For example if you need to tell users which parts of an application they’ve finished and which they have not, you may only need a ‘Completed’ tag. Because the user understands that if something does not have a tag, that means it’s incomplete.
 
-The [complete multiple tasks pattern](/patterns/complete-multiple-tasks/) has an example of how to show one status using tags.
+The [Complete multiple tasks pattern](/patterns/complete-multiple-tasks/) has an example of how to show one status using tags.
 
 Or it can make sense to have two statuses. For example you may find that there’s a need to have one tag for ‘Active’ users and one for ‘Inactive’ users.
 

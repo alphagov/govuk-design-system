@@ -35,13 +35,13 @@ Although browsers have a back button, some sites break when you use it - so many
 
 ## When to use this component
 
-Always include the back link component on GOV.UK [question pages](/patterns/question-pages/).
+Always include the Back link component on GOV.UK [Question pages in your service](/patterns/question-pages/).
 
 You can include a back link on other pages within a multi-page transaction, if it makes sense to do so.
 
 ## When not to use this component
 
-Never use the back link component together with [breadcrumbs](/components/breadcrumbs/). If necessary, you should do research with your users to learn which they find more helpful in your service.
+Never use the back link component together with the [Breadcrumbs component](/components/breadcrumbs/). If necessary, you should do research with your users to learn which they find more helpful in your service.
 
 ## How it works
 

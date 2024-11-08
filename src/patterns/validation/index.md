@@ -39,9 +39,9 @@ Do not use validation to check whether the user is eligible to use the service o
 
 There are separate patterns for:
 
-- [‘there is a problem with the service’ pages](/patterns/problem-with-the-service-pages/)
-- [‘page not found’ pages](/patterns/page-not-found-pages/)
-- [‘service unavailable’ pages](/patterns/service-unavailable-pages/)
+- [‘There is a problem with the service’ pages](/patterns/problem-with-the-service-pages/)
+- [‘Page not found’ pages](/patterns/page-not-found-pages/)
+- [‘Service unavailable’ pages](/patterns/service-unavailable-pages/)
 
 ## How it works
 
@@ -69,8 +69,8 @@ If the user's answers fail validation:
 
 - show them the page again, with the form fields as the user filled them in
 - add ‘Error: ’ to the beginning of the page `<title>` so screen readers read it out as soon as possible
-- show an [error summary](/components/error-summary/) at the top of the page, and move keyboard focus to it
-- show [error messages](/components/error-message/) next to fields with errors
+- show an [Error summary component](/components/error-summary/) at the top of the page, and move keyboard focus to it
+- show [Error message components](/components/error-message/) next to fields with errors
 
 Read guidance on [writing good error messages](/components/error-message/#be-clear-and-concise).
 
@@ -91,7 +91,7 @@ Do not validate when the user moves away from a field. Wait until they try to mo
 
 Generally speaking, avoid validating the information in a field before the user has finished entering it. This sort of validation can cause problems - especially for users who type more slowly.
 
-Only add this sort of validation if your user research shows that, on balance, it solves more problems for users than it causes. For example, the [character count component](/components/character-count/) shows users an error message when they go over the character limit. Because it’s important that users do not spend time and effort writing out a response that turns out to be too long.
+Only add this sort of validation if your user research shows that, on balance, it solves more problems for users than it causes. For example, the [Character count component](/components/character-count/) shows users an error message when they go over the character limit. Because it’s important that users do not spend time and effort writing out a response that turns out to be too long.
 
 If you do use this sort of validation, [make sure you do it in a way that’s accessible](https://www.gov.uk/service-manual/technology/accessibility-for-developers-an-introduction).
 

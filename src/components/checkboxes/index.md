@@ -22,7 +22,7 @@ Use the checkboxes component when you need to help users:
 
 ## When not to use this component
 
-Do not use the checkboxes component if users can only choose one option from a selection. In this case, use the [radios component](/components/radios/).
+Do not use the checkboxes component if users can only choose one option from a selection. In this case, use the [Radios component](/components/radios/).
 
 ## How it works
 
@@ -55,7 +55,7 @@ There are 2 ways to use the checkboxes component. You can use HTML or, if you’
 
 ### If you’re asking more than one question on the page
 
-If you're asking more than one question on the page, do not set the contents of the `<legend>` as the page heading. Read more about [asking multiple questions on question pages](/patterns/question-pages/#asking-multiple-questions-on-a-page).
+If you're asking more than one question on the page, do not set the contents of the `<legend>` as the page heading. Read more about [asking multiple questions on Question pages](/patterns/question-pages/#asking-multiple-questions-on-a-page).
 
 {{ example({ group: "components", item: "checkboxes", example: "without-heading", html: true, nunjucks: true, open: false, size: "m" }) }}
 
@@ -127,7 +127,7 @@ Error messages should be styled like this:
 
 {{ example({ group: "components", item: "checkboxes", example: "error", html: true, nunjucks: true, open: false, size: "s" }) }}
 
-Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
+Make sure errors follow the guidance in the [Error message component](/components/error-message/) and have specific error messages for specific error states.
 
 #### If nothing is selected and the question has options in it
 

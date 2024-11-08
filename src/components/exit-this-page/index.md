@@ -11,7 +11,7 @@ layout: layout-pane.njk
 
 Give users a way to quickly and safely exit a service, website or application.
 
-For service journeys, you must use this component with the pattern to help a user [Exit a page quickly](/patterns/exit-a-page-quickly/).
+For service journeys, you must use this component with the [Exit a page quickly pattern](/patterns/exit-a-page-quickly/).
 
 {{ example({ group: "components", item: "exit-this-page", example: "default", html: true, nunjucks: true, open: false, size: "s", loading: "eager" }) }}
 
@@ -33,9 +33,9 @@ You can also use this component for standalone content pages, such as dashboards
 
 ## When not to use this component
 
-Do not use this component if the service or content is unlikely to put a user at risk. See the [Exit a page quickly](/patterns/exit-a-page-quickly/) pattern for examples of at-risk and sensitive topics.
+Do not use this component if the service or content is unlikely to put a user at risk. See the [Exit a page quickly pattern](/patterns/exit-a-page-quickly/) for examples of at-risk and sensitive topics.
 
-The 'Exit this page' component is a [button component](/components/button/) that has been marked up with addtional CSS and JavaScript functionality, to make it work in a specific way.
+The 'Exit this page' component is a [Button component](/components/button/) that has been marked up with addtional CSS and JavaScript functionality, to make it work in a specific way.
 
 Keep in mind that seeing this component might discourage certain users from using your service. If the user does not identify themselves as being at risk, they might see the button on a service and decide it’s not relevant to them.
 

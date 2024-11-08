@@ -19,17 +19,17 @@ Last updated 10 October 2024.
 
 We’ve released [GOV.UK Frontend v5.7.1](https://github.com/alphagov/govuk-frontend/releases/tag/v5.7.1) with updated department colours.
 
-Previously, we’ve released [GOV.UK Frontend v5.7.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.7.0), which includes an update to the Royal Arms in the [GOV.UK footer](/components/footer/). We’ve also added new features to help services [create their own JavaScript components using GOV.UK Frontend](https://frontend.design-system.service.gov.uk/building-your-own-javascript-components/).
+Previously, we’ve released [GOV.UK Frontend v5.7.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.7.0), which includes an update to the Royal Arms in the [GOV.UK footer component](/components/footer/). We’ve also added new features to help services [create their own JavaScript components using GOV.UK Frontend](https://frontend.design-system.service.gov.uk/building-your-own-javascript-components/).
 
 We’ve also recently:
 
-- introduced a new [Service navigation component](/components/service-navigation/) and published a new pattern to [Help users to navigate a service](/patterns/navigate-a-service)
+- introduced a new [Service navigation component](/components/service-navigation/) and published a new [pattern to Help users to navigate a service](/patterns/navigate-a-service)
 - updated the list of organisations and brand colours
 - added a new feature to stop long words from ‘breaking’ out of components
 - improved how the Breadcrumbs component appears on screen readers
 - fixed some alignment issues with Radio buttons and Checkboxes
 - introduced new features to help you include only the components your service uses
-- introduced a new [‘Password input’ component](/components/password-input/)
+- introduced a new [Password input component](/components/password-input/)
 - updated the crown in the header, favicon and social share images
 - updated the components, patterns and styles to be compliant with WCAG 2.2
 - made it easier for teams to understand [what's changed in WCAG 2.2 and what they need to do](/accessibility/wcag-2.2)

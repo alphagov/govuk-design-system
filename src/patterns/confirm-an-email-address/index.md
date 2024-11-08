@@ -57,7 +57,7 @@ If you use email confirmation loops you must consider:
 - whether to use a blocking or non-blocking loop
 - the design of the ‘activate your account’ page
 
-Most email confirmation loops will send the user a link and ask them to click it to return to the service. Another approach is to send the user a security code, similar to the [Confirm a phone number](/patterns/confirm-a-phone-number/) pattern, and ask the user to enter it.
+Most email confirmation loops will send the user a link and ask them to click it to return to the service. Another approach is to send the user a security code, similar to the [Confirm a phone number pattern](/patterns/confirm-a-phone-number/), and ask the user to enter it.
 
 {% call wcagNote({id: "wcag-copy-paste-security-codes"}) %}
 
