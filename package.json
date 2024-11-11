@@ -94,7 +94,7 @@
     "postcss-scss": "^4.0.9",
     "prettier": "^3.3.3",
     "puppeteer": "^23.3.0",
-    "rollup": "^4.24.4",
+    "rollup": "^4.25.0",
     "sass-export": "^2.1.2",
     "serve-static": "^1.16.2",
     "sitemap": "^8.0.0",
