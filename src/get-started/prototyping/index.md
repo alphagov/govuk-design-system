@@ -23,7 +23,7 @@ This means that any code that you copy across from old prototypes will not displ
 
 The Design System provides lots of new CSS classes for styling page elements, so you should not need to write as much of your own Sass or CSS.
 
-Explore the [Styles](/styles/) section of the Design System to see what classes are available and how to apply them.
+Explore the [Styles section](/styles/) of the Design System to see what classes are available and how to apply them.
 
 ## Using components
 

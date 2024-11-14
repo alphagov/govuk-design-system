@@ -85,13 +85,13 @@ The [GOV.UK Design System website](https://design-system.service.gov.uk/) was la
 
 DAC tested a sample of pages to cover the different content types in the GOV.UK Design System website. They were:
 
-- [the homepage](https://design-system.service.gov.uk/)
-- [a short content page](https://design-system.service.gov.uk/community/design-system-working-group/)
-- [a long content page](https://design-system.service.gov.uk/styles/layout/)
-- [an overview page](https://design-system.service.gov.uk/community/)
-- [a styles page](https://design-system.service.gov.uk/styles/headings/)
-- [a component page](https://design-system.service.gov.uk/components/radios/)
-- [a pattern page](https://design-system.service.gov.uk/patterns/question-pages/)
+- the [GOV.UK Design System homepage](https://design-system.service.gov.uk/)
+- a short content page: [Design System working group](https://design-system.service.gov.uk/community/design-system-working-group/)
+- a long content page: [Layout styles](https://design-system.service.gov.uk/styles/layout/)
+- an overview page: [Community section](https://design-system.service.gov.uk/community/)
+- a styles page: [Headings styles](https://design-system.service.gov.uk/styles/headings/)
+- a component page: [Radios component](https://design-system.service.gov.uk/components/radios/)
+- a pattern page: [Question pages pattern](https://design-system.service.gov.uk/patterns/question-pages/)
 
 DAC also tested the global search functionality that appears in the header of the GOV.UK Design System website.
 
@@ -101,11 +101,11 @@ The [GOV.UK Frontend documentation website](http://frontend.design-system.servic
 
 DAC tested the [Technical Documentation Template](https://tdt-documentation.london.cloudapps.digital/), which is the template for the GOV.UK Frontend documentation website.
 
-To learn more, read the [Technical Documentation Template accessibility statement](https://tdt-documentation.london.cloudapps.digital/accessibility/).
+To learn more, read the [Accessibility statement for Technical Documentation Template and documentation](https://github.com/alphagov/tdt-documentation/blob/main/source/accessibility/index.html.md.erb).
 
 ### Frontend codebase
 
-The GOV.UK Frontend codebase is not a website but a [code repository](https://github.com/alphagov/govuk-frontend) and [npm package](https://www.npmjs.com/package/govuk-frontend).
+The GOV.UK Frontend codebase is not a website but a [code repository on GitHub](https://github.com/alphagov/govuk-frontend) and [a software package on npm (Node Package Manager)](https://www.npmjs.com/package/govuk-frontend).
 
 Examples using the GOV.UK Frontend codebase were last audited for accessibility issues by an external group in May 2023. The audit was carried out by the [Digital Accessibility Centre (DAC)](https://digitalaccessibilitycentre.org/).
 
