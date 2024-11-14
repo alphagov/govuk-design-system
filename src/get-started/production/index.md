@@ -14,7 +14,7 @@ This guide explains how to set up your project so you can start using the styles
 
 {{ govukInsetText({
   classes: "app-table--constrained",
-  html: 'If you’ve used GOV.UK Elements, GOV.UK Template or the GOV.UK Frontend Toolkit before, you might also find it useful to read the guide on <a href="/get-started/updating-your-code/">updating your code</a>.'
+  html: 'If you’ve used GOV.UK Elements, GOV.UK Template or the GOV.UK Frontend Toolkit before, you might also find it useful to read the guide to <a href="https://frontend.design-system.service.gov.uk/v4/migrating-from-legacy-products/#migrate-from-our-old-frameworks">Migrate from our old frameworks</a>.'
 }) }}
 
 ## Include GOV.UK Frontend in your project
@@ -29,11 +29,11 @@ We recommend [installing GOV.UK Frontend using npm](https://frontend.design-syst
 
 Using this option, you will be able to:
 
-- selectively [include the CSS](https://frontend.design-system.service.gov.uk/import-css/) for individual components
-- selectively [include the JavaScript](https://frontend.design-system.service.gov.uk/import-javascript/) for individual components
+- [selectively include the CSS for individual components](https://frontend.design-system.service.gov.uk/import-css/)
+- [selectively include the JavaScript individual components](https://frontend.design-system.service.gov.uk/import-javascript/) for
 - build your own styles or components based on the palette or typography and spacing mixins
 - customise the build (for example, overriding colours or enabling global styles)
-- use the [Nunjucks template and macros](https://frontend.design-system.service.gov.uk/use-nunjucks/) if your environment supports them
+- use [our Nunjucks template and macros](https://frontend.design-system.service.gov.uk/use-nunjucks/) if your environment supports them
 
 ### Option 2: include compiled files
 
@@ -43,15 +43,15 @@ Using this option, you will be able to include all the CSS and JavaScript of GOV
 
 You will not be able to:
 
-- selectively [include the CSS](https://frontend.design-system.service.gov.uk/import-css/) for individual components
-- selectively [include the JavaScript](https://frontend.design-system.service.gov.uk/import-javascript/) for individual components
+- [selectively include the CSS for individual components](https://frontend.design-system.service.gov.uk/import-css/)
+- [selectively include the JavaScript for individual components](https://frontend.design-system.service.gov.uk/import-javascript/)
 - build your own styles or components based on the palette or typography and spacing mixins
 - customise the build, for example, overriding colours or enabling global styles
 - use the component Nunjucks templates
 
 ## Start using the GOV.UK page template
 
-You can set up a basic page that is consistent with GOV.UK branding by using the [GOV.UK page template](/styles/page-template/).
+You can set up a basic page that is consistent with GOV.UK branding by [using the GOV.UK page template](/styles/page-template/).
 
 ## Styling page elements
 
@@ -59,7 +59,7 @@ The Design System provides CSS classes for styling content, instead of global st
 
 The class names follow the Block Element Modifier (BEM) naming convention. This can look a bit daunting at first, but it makes robust code that’s easy to maintain.
 
-Explore the [Styles](/styles/) section of the Design System to see what classes are available.
+Explore the [Styles section](/styles/) of the Design System to see what classes are available.
 
 ## Using components
 
@@ -68,7 +68,7 @@ The components in the Design System are designed to be accessible and responsive
 You can use them in your live application as either:
 
 - HTML
-- [Nunjucks macros](https://frontend.design-system.service.gov.uk/use-nunjucks/) - if you installed GOV.UK Frontend using npm and your application uses Node.js
+- [our Nunjucks macros](https://frontend.design-system.service.gov.uk/use-nunjucks/), if you've installed GOV.UK Frontend using npm and your application uses Node.js
 
 You can get the code from the HTML or Nunjucks tabs below any examples:
 

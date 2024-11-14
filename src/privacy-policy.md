@@ -81,7 +81,7 @@ As part of [GOV.UK Design System](/) we share your personal data with data proce
 
 - software collaboration platforms when you share research, feedback or make a contribution
 - mailing list providers when you sign up to receive emails from us
-- [support providers](https://www.gov.uk/government/publications/government-digital-service-user-support-privacy-notice/user-support-privacy-notice) when you contact us for assistance
+- support providers when you contact us for assistance – [see the User support privacy notice](https://www.gov.uk/government/publications/government-digital-service-user-support-privacy-notice/user-support-privacy-notice)
 - web analytics services
 
 We will not:

@@ -9,7 +9,7 @@ description: Some people use keyboards or other devices to navigate through a pa
 
 Some people use keyboards or other devices to navigate through a page by jumping from one interactive element to the next. Focus states let users know which element they’re currently on and is ready to be interacted with.
 
-Focus states in the GOV.UK Design System use a combination of yellow and black to make sure they meet Web Content Accessibility Guidelines (WCAG) 2.1 level AA [non-text contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) on any background colour used on GOV.UK.
+Focus states in the GOV.UK Design System use a combination of yellow and black to make sure they meet [Web Content Accessibility Guidelines (WCAG) 2.2 success criterion 1.4.11 Non-text Contrast (Level AA)](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) on any background colour used on GOV.UK.
 
 The yellow has a high contrast with dark backgrounds and the thick black border has a high contrast against light backgrounds.
 
@@ -68,7 +68,7 @@ Use these variables in your components instead of numeric values for the backgro
 
 To make a component's focus state accessible without using Sass, you can:
 
-- see how the `govuk-focused-text` mixin works from the [GOV.UK Frontend source code](https://github.com/alphagov/govuk-frontend/blob/25a4333b239e1c3b8a136e526981fe29172a2852/src/govuk/helpers/_focused.scss#L12-L28)
+- use the `govuk-focused-text` mixin – [see how `govuk-focused-text` works in the GOV.UK Frontend source code](https://github.com/alphagov/govuk-frontend/blob/25a4333b239e1c3b8a136e526981fe29172a2852/src/govuk/helpers/_focused.scss#L12-L28)
 - get the values for `$govuk-focus-colour` and `$govuk-focus-text-colour` from the [colour page](/styles/colour/)
 
 ## Contributing back
