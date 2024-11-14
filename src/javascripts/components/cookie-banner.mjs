@@ -1,4 +1,4 @@
-import { Component } from 'govuk-frontend'
+import { ConfigurableComponent } from 'govuk-frontend'
 
 import * as CookieFunctions from './cookie-functions.mjs'
 
@@ -12,12 +12,12 @@ const cookieConfirmationRejectSelector = '.js-cookie-banner-confirmation-reject'
 /**
  * Website cookie banner
  */
-class CookieBanner extends Component {
+class CookieBanner extends ConfigurableComponent {
   /**
    * Check support of CookieBanner
    */
   static checkSupport() {
-    Component.checkSupport()
+    super.checkSupport()
 
     if (CookieBanner.onCookiesPage()) {
       throw Error('Cancelled initialisation as on cookie page')
@@ -34,14 +34,13 @@ class CookieBanner extends Component {
   }
 
   static moduleName = 'govuk-cookie-banner'
+
   /**
    * @param {Element} $module - HTML element
+   * @param {CookieBannerConfig} config - cookie banner config
    */
-  constructor($module) {
-    super($module)
-
-    this.cookieCategory =
-      (this.$root.dataset && this.$root.dataset.cookieCategory) || 'analytics'
+  constructor($module, config) {
+    super($module, config)
 
     const $acceptButton = $module.querySelector(cookieBannerAcceptSelector)
     const $rejectButton = $module.querySelector(cookieBannerRejectSelector)
@@ -109,7 +108,7 @@ class CookieBanner extends Component {
    */
   acceptCookies() {
     // Do actual cookie consent bit
-    CookieFunctions.setConsentCookie({ [this.cookieCategory]: true })
+    CookieFunctions.setConsentCookie({ [this.config.cookieCategory]: true })
 
     // Hide banner and show confirmation message
     this.$cookieMessage.setAttribute('hidden', 'true')
@@ -121,7 +120,7 @@ class CookieBanner extends Component {
    */
   rejectCookies() {
     // Do actual cookie consent bit
-    CookieFunctions.setConsentCookie({ [this.cookieCategory]: false })
+    CookieFunctions.setConsentCookie({ [this.config.cookieCategory]: false })
 
     // Hide banner and show confirmation message
     this.$cookieMessage.setAttribute('hidden', 'true')
@@ -147,6 +146,23 @@ class CookieBanner extends Component {
 
     confirmationMessage.focus()
   }
+
+  static defaults = {
+    cookieCategory: 'analytics'
+  }
+
+  static schema = {
+    properties: {
+      cookieCategory: { type: 'string' }
+    }
+  }
 }
+
+/**
+ * Cookie banner config
+ *
+ * @typedef {object} CookieBannerConfig
+ * @property {string} [cookieCategory] - category of cookie that the user is accepting/declining
+ */
 
 export default CookieBanner
