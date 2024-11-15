@@ -166,7 +166,7 @@ If it's not practical to avoid using an image that contains text (and replace it
 
 You should consider these options even if the text in an image is essential, as it will make your information easier to read for users that customise the way they look at web pages.
 
-In any case, make sure that the contrast ratio of text colour and all portions of the image that overlap the text [meets level AA of the Web Content Accessibility Guidelines (WCAG 2.1)](https://www.w3.org/TR/WCAG21/#contrast-minimum).
+In any case, make sure that the contrast ratio of text colour and all portions of the image that overlap the text [meets WCAG 2.2 success criterion 1.4.3 Contrast (minimum) level AA.](https://www.w3.org/TR/WCAG21/#contrast-minimum).
 
 #### Show HTML text over an image
 
