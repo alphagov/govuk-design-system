@@ -9,7 +9,7 @@ order: 3
 
 Anyone can propose a new component or pattern for the GOV.UK Design System.
 
-Proposals need to show that the component or pattern being suggested would be [useful and unique](/community/contribution-criteria/).
+Proposals need to show that the component or pattern being suggested would [meet our contribution criteria](/community/contribution-criteria/).
 
 Follow the steps to propose a component or pattern for the Design System.
 
@@ -23,7 +23,7 @@ If you'd like to work on it, read how to [develop a component or pattern](/commu
 
 ## 2. Raise an issue
 
-If your idea is not on the list, [raise an issue](https://github.com/alphagov/govuk-design-system-backlog/issues/new). Once you do, [let us know](/get-in-touch/) so a member of the Design System team can review your proposal and add it to the list.
+If your idea is not on the list, [raise an issue](https://github.com/alphagov/govuk-design-system-backlog/issues/new). Once you do, [contact us](/get-in-touch/) so a member of the Design System team can review your proposal and add it to the list.
 
 At this stage, you just need to present your idea and evidence of the user needs. You can include screenshots or links to versions of the component or pattern in use, but avoid spending time working on a specific design or writing code.
 

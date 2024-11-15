@@ -11,7 +11,7 @@ The Design System team focuses on developing [prioritised components and pattern
 
 If you see something you'd like to work on, join the discussion in the contribution's issue page or email the Design System team at <govuk-design-system-support@digital.cabinet-office.gov.uk>.
 
-If you have an idea for a new component or pattern that’s not already on the list, [propose it](/community/propose-a-component-or-pattern/).
+If you have an idea for a new component or pattern that’s not already on the list, [see how to propose a component or pattern](/community/propose-a-component-or-pattern/).
 
 ## Plan your work with the Design System team
 
