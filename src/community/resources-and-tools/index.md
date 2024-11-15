@@ -38,16 +38,16 @@ SVG images for creating flow diagrams of GOV.UK services.
 
 ## Create prototypes and wireframes
 
-[Balsamiq wireframes](https://github.com/enoranidi/govuk-design-system-balsamiq) -
+[GOV.UK Balsamiq wireframes](https://github.com/enoranidi/govuk-design-system-balsamiq) -
 Balsamiq wireframes based on the GOV.UK Design System.
 
-[Figma resources](https://www.figma.com/file/NWuFffKvPQhl3aJ9nKU0p3/GOV.UK-Design-System) -
+[GOV.UK Figma resources](https://www.figma.com/file/NWuFffKvPQhl3aJ9nKU0p3/GOV.UK-Design-System) -
 Figma library of styles and components based on the GOV.UK Design System.
 
-[Mural resources](https://github.com/vickytnz/govuk-elements-mural) -
+[GOV.UK Mural resources](https://github.com/vickytnz/govuk-elements-mural) -
 Mural template based on the GOV.UK Design System.
 
-[Sketch Wireframing Kit](https://github.com/dwp/sketch_wireframing_kit) -
+[GOV.UK Sketch Wireframing Kit](https://github.com/dwp/sketch_wireframing_kit) -
 Sketch wireframes based on the GOV.UK Design System.
 
 ## Build front ends
@@ -100,13 +100,12 @@ A Vue 3 component library for GOV.UK Frontend
 
 ## Write code
 
-You can download GOV.UK Frontend Nunjucks macro snippets for:
+[GOV.UK Design System snippets for Nova](https://extensions.panic.com/extensions/ca/ca.GOVUKDesignSystemSnippets/).
 
-- [Nova](https://extensions.panic.com/extensions/ca/ca.GOVUKDesignSystemSnippets/)
-- [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=simonwhatley.govuk-design-system-snippets)
+[GOV.UK Design System snippets for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=simonwhatley.govuk-design-system-snippets).
 
 ## Help improve this page
 
-To help make sure that this page is useful, relevant and up to date, you can [propose a change](https://github.com/alphagov/govuk-design-system/edit/main/src/community/resources-and-tools/index.md) – read more about [how to propose changes in GitHub](/community/propose-a-content-change-using-github/).
+To help make sure that this page is useful, relevant and up to date, you can [propose a change to this page](https://github.com/alphagov/govuk-design-system/edit/main/src/community/resources-and-tools/index.md) – read more about [how to propose changes in GitHub](/community/propose-a-content-change-using-github/).
 
 If you want to submit a resource or tool, check that it meets the [contribution criteria for resources](/community/contribution-criteria/#developing-a-community-resource-or-tool) first.

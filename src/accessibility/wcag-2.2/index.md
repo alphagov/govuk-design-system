@@ -21,10 +21,10 @@ WCAG 2.2 was published in October 2023. You’ll need to comply with the new cri
 
 ## What you need to do
 
-1. Revisit the [Government Digital Service (GDS) guidance](https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps) on what accessibility is and why your service needs to invest in it
+1. Revisit the [Government Digital Service (GDS) guidance on what accessibility is and why your service needs to invest in it](https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps)
 2. Read [What’s new in WCAG 2.2](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/) to understand the new criteria your service will need to comply with
 3. Ask your wider organisation for support to prepare for work needed to meet WCAG 2.2
-4. Update your service to use [GOV.UK Frontend v5.0.0](https://frontend.design-system.service.gov.uk/changes-to-govuk-frontend-v5/) or later, to make it easier to make changes in your service
+4. [Update your service to use GOV.UK Frontend v5.0.0 or later](https://frontend.design-system.service.gov.uk/changes-to-govuk-frontend-v5/), to make it easier to make changes in your service
 5. Review the lists on this page of affected components and patterns in the Design System
 6. Assess your service to see how many affected components and patterns are in use
 7. Plan and implement the changes needed to your service
@@ -37,7 +37,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
 
 See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/) on the W3C website.
 
-[Images](/styles/images/) also includes guidance to help ensure icons and images in your service meet Target size (minimum).
+[Our Images page](/styles/images/) also includes guidance to help ensure icons and images in your service meet Target size (minimum).
 
 {{ govukTable({
   caption: "Components",

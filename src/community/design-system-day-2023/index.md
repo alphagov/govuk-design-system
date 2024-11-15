@@ -28,7 +28,7 @@ order: 14
         text: "Location"
       },
       value: {
-        html: '<a href="https://dynamicearth.org.uk/plan-your-visit/getting-here/">Dynamic Earth</a>, Edinburgh, and online'
+        html: '<a href="https://dynamicearth.org.uk/plan-your-visit/getting-here/">Dynamic Earth, Edinburgh</a>, and online'
       }
     }
   ]
@@ -38,7 +38,7 @@ order: 14
 
 ### Day 1
 
-You can now watch (or re-watch) the [talks and panel discussions](/community/design-system-day-2023/session-information/#day-1-sessions) that happened on day 1 of Design System Day 2023 in Edinburgh.
+You can now [watch (or re-watch) the talks and panel discussions](/community/design-system-day-2023/session-information/#day-1-sessions) that happened on day 1 of Design System Day 2023 in Edinburgh.
 
 You can also read [speaker and panelist biographies](/community/design-system-day-2023/speaker-information/#day-1-speakers) for those who talked and presented at the event.
 
