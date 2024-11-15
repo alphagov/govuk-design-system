@@ -617,7 +617,7 @@ In February 2024, we updated the type scale in GOV.UK Frontend v5.2 to make text
 
 ## Using the type scale in your own CSS
 
-Include the [`govuk-font`](https://frontend.design-system.service.gov.uk/sass-api-reference/#govuk-font) mixin to use GOV.UK typography in your CSS.
+Include the [`govuk-font` mixin](https://frontend.design-system.service.gov.uk/sass-api-reference/#govuk-font) to use GOV.UK typography in your CSS.
 
 For example, if you want a custom element to use type scale point 19, use:
 
@@ -633,7 +633,7 @@ You can add additional arguments to control font weight, use tabular font spacin
 
 ### If you only want to set the font size
 
-Do not use `govuk-font` if you only want to change the font size and line height as it includes additional typography-related CSS like the New Transport font family. Instead, you should use [`govuk-font-size`](https://frontend.design-system.service.gov.uk/sass-api-reference/#govuk-font-size):
+Do not use `govuk-font` if you only want to change the font size and line height as it includes additional typography-related CSS like the New Transport font family. Instead, you should use the [`govuk-font-size` mixin](https://frontend.design-system.service.gov.uk/sass-api-reference/#govuk-font-size):
 
 ```scss
 @include govuk-font-size($size: 19);
