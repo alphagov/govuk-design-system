@@ -18,7 +18,7 @@ Check the information the user gives you to make sure it’s valid. If there's a
   name: "Recover from validation errors",
   criteria: [
     {
-      text: "edit information they've previously given to correct an error",
+      text: "make sure users can edit information they've previously given to correct an error",
       anchor: "wcag-edit-to-correct-errors"
     }
   ]
@@ -76,7 +76,7 @@ Read guidance on [writing good error messages](/components/error-message/#be-cle
 
 {% call wcagNote({id: "wcag-edit-to-correct-errors"}) %}
 
-<p>Do not clear any form fields when validating users’ answers. Keep both passing and failing answers. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
+<p>Do not clear any form fields when validating users’ answers. Keep both passing and failing answers. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry</a>.</p>
 {% endcall %}
 
 Keeping information that failed validation helps users to:

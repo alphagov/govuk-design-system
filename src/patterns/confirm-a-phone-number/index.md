@@ -21,11 +21,11 @@ Check that a user has access to a specific mobile phone number using a security 
   name: "Confirm a phone number",
   criteria: [
     {
-      text: "use a link to resend the security code when the user creates an account",
+      text: "make sure users can use a link to resend the security code (when the user creates an account)",
       anchor: "wcag-resend-security-code-creation"
     },
     {
-      text: "use a link to resend the security code when the user signs in",
+      text: "make sure users can use a link to resend the security code (when the user signs in)",
       anchor: "wcag-resend-security-code-sign-in"
     }
   ]
@@ -75,7 +75,7 @@ If the user follows the ‘Not received a text message?’ link, allow them to c
 
 {% call wcagNote({id: "wcag-resend-security-code-creation"}) %}
 
-<p>You must always include the link for 'Not received a text message?’ so the user can find help in a consistent way. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent help</a>.</p>
+<p>You must always include the link for 'Not received a text message?’ so the user can find help in a consistent way. This relates to <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">WCAG 2.2 success criterion 3.2.6 Consistent help</a>.</p>
 {% endcall %}
 
 {{ example({ group: "patterns", item: "confirm-a-phone-number", example: "resend-first-time", html: true, nunjucks: true, open: false }) }}
@@ -96,7 +96,7 @@ If they follow the ‘Not received a text message?’ link, show them a page all
 
 {% call wcagNote({id: "wcag-resend-security-code-sign-in"}) %}
 
-<p>You must always include the link for 'Not received a text message?’ so the user can find help in a consistent way. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent help</a>.</p>
+<p>You must always include the link for 'Not received a text message?’ so the user can find help in a consistent way. This relates to <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">WCAG 2.2 success criterion 3.2.6 Consistent help</a>.</p>
 {% endcall %}
 
 {{ example({group: "patterns", item: "confirm-a-phone-number", example: "resend", html: true, nunjucks: true, open: false}) }}

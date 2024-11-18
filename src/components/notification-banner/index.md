@@ -87,8 +87,8 @@ Remove a green notification banner when the user moves to a new page.
 
 To make the green version of the notification banner accessible:
 
-- use headings like ‘Success’ - so that you’re [not relying on colour alone to convey meaning](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html)
-- use the same heading for green notification banners within the same service - so that you’re [identifying components that work in the same way consistently](https://www.w3.org/WAI/WCAG21/Understanding/consistent-identification)
+- use headings like ‘Success’ - so that you’re not relying on colour alone to convey meaning – to [meet WCAG 2.2 success criterion 1.4.1 Use of colour](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html)
+- use the same heading for green notification banners within the same service - so that you’re identifying components that work in the same way consistently – this is to [meet WCAG 2.2 success criterion 3.2.4 Consistent identification](https://www.w3.org/WAI/WCAG22/Understanding/consistent-identification)
 
 ## Research on this component
 

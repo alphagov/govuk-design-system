@@ -9,7 +9,7 @@ description: Some people use keyboards or other devices to navigate through a pa
 
 Some people use keyboards or other devices to navigate through a page by jumping from one interactive element to the next. Focus states let users know which element they’re currently on and is ready to be interacted with.
 
-Focus states in the GOV.UK Design System use a combination of yellow and black to make sure they meet [Web Content Accessibility Guidelines (WCAG) 2.2 success criterion 1.4.11 Non-text Contrast (Level AA)](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) on any background colour used on GOV.UK.
+Focus states in the GOV.UK Design System use a combination of yellow and black, along with a thick bottom border, to make sure they meet [Web Content Accessibility Guidelines (WCAG) 2.2 success criterion 1.4.11 Non-text contrast, level AA](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html) on any background colour used on GOV.UK.
 
 The yellow has a high contrast with dark backgrounds and the thick black border has a high contrast against light backgrounds.
 

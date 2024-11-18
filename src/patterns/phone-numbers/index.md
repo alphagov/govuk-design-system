@@ -34,7 +34,7 @@ Use the `autocomplete` attribute on phone number inputs. This lets browsers auto
 
 To do this, set the `autocomplete` attribute to `tel`, as shown in the HTML and Nunjucks tabs in the examples on this page.
 
-If you are working in production you’ll need to do this to meet [WCAG 2.1 Level AA](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html).
+If you are working in production you’ll need to do this to meet [WCAG 2.2 success criterion 1.3.5 Identify input purpose](https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose.html).
 
 You will not normally need to use the `autocomplete` attribute in prototypes, as users will not generally be using their own devices.
 

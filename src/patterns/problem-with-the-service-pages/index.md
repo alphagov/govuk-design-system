@@ -20,11 +20,11 @@ This guidance is for government teams that build online services. [To find infor
   name: "There is a problem with the service pages",
   criteria: [
     {
-      text: "get contact information in a consistent way",
+      text: "make sure users can get contact information in a consistent way",
       anchor: "wcag-consistent-content-problem-service"
     },
     {
-      text: "resume the service using information they've previously entered, if possible",
+      text: "make sure users can resume the service using information they've previously entered, if possible",
       anchor: "wcag-resume-previous-entered-information"
     }
   ]
@@ -70,7 +70,7 @@ Store previously entered information for a reasonable amount of time so users ca
 {% call wcagNote({id: "wcag-resume-previous-entered-information"}) %}
 
 <p>Whenever possible, save and store any information the user has previously entered, unless doing so would be a major safety or security concern.</p>
-<p>This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
+<p>This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry</a>.</p>
 {% endcall %}
 
 ### Showing contact information
@@ -84,7 +84,7 @@ You might choose to link to a ‘contact information’ page, such as one shown 
 
 {% call wcagNote({id: "wcag-consistent-content-problem-service"}) %}
 
-<p>You must always write contact information in a clear and consistent way across ‘There is a problem with the service’ and similar service error pages. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent help</a>.</p>
+<p>You must always write contact information in a clear and consistent way across ‘There is a problem with the service’ and similar service error pages. This relates to <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">WCAG 2.2 success criterion 3.2.6 Consistent help</a>.</p>
 {% endcall %}
 
 ### Service has a specific page that includes numbers and opening times

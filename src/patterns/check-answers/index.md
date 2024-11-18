@@ -20,7 +20,7 @@ Let users check their answers before submitting information to a service.
   name: "Check answers",
   criteria: [
     {
-      text: "go back and edit information they've already entered",
+      text: "make sure users can go back and edit information they've already entered",
       anchor: "wcag-prepopulate-information"
     }
   ]
@@ -72,7 +72,7 @@ You should provide a ‘Change’ link next to each section on your check answer
 {% call wcagNote({id: "wcag-prepopulate-information"}) %}
 
 <p>If a user decides to go back to a previous answer, make sure information they've already entered is pre-populated.</p>
-<p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
+<p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry</a>.</p>
 {% endcall %}
 
 The answers pages should look the same way they did when the user last used them.

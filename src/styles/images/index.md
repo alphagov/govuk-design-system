@@ -74,7 +74,7 @@ Do not use a single icon to represent more than one thing. For example, the sear
 
 {% call wcagNote({id: "wcag-icon-focus"}) %}
 
-<p>Make sure any icons and images used in links are at least 24px by 24px in size, with adequate spacing. This is to make sure users can easily interact with the link. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target size (minimum)</a>.</p>
+<p>Make sure any icons and images used in links are at least 24px by 24px in size, with adequate spacing. This is to make sure users can easily interact with the link. This relates to <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target size (minimum)</a>.</p>
 {% endcall %}
 
 ## Avoid images that contain text
@@ -148,7 +148,7 @@ Examples of these might be:
 - text within an organisation’s logo (known as logotype)
 - a signature, signed in a distinctive way
 
-[Read more about essential text](https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html) in the Web Content Accessibility Guidelines.
+Read more about essential text in [WCAG 2.2 success criterion 1.4.5 Images of text](https://www.w3.org/WAI/WCAG22/Understanding/images-of-text.html).
 
 #### What to do with essential text in images
 
@@ -166,7 +166,7 @@ If it's not practical to avoid using an image that contains text (and replace it
 
 You should consider these options even if the text in an image is essential, as it will make your information easier to read for users that customise the way they look at web pages.
 
-In any case, make sure that the contrast ratio of text colour and all portions of the image that overlap the text [meets WCAG 2.2 success criterion 1.4.3 Contrast (minimum) level AA.](https://www.w3.org/TR/WCAG21/#contrast-minimum).
+In any case, make sure that the contrast ratio of text colour and all portions of the image that overlap the text [meets WCAG 2.2 success criterion 1.4.3 Contrast (minimum) level AA](https://www.w3.org/TR/WCAG22/#contrast-minimum).
 
 #### Show HTML text over an image
 

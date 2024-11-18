@@ -31,7 +31,7 @@ Do not use placeholder text in place of a label, or for hints or examples, as:
 
 - it vanishes when the user starts typing, which can cause problems for users with memory conditions or when reviewing answers
 - not all screen readers read it out
-- its browser default styles often do not meet [minimum contrast requirements](https://www.w3.org/TR/WCAG22/#contrast-minimum)
+- its browser default styles often do not meet [WCAG 2.2 success criterion 1.4.3 Contrast (minimum)](https://www.w3.org/TR/WCAG22/#contrast-minimum)
 
 ### If you're asking one question on the page
 
@@ -166,7 +166,7 @@ For example, to enable autofill on a postcode field, set the `autocomplete` attr
 
 {{ example({ group: "components", item: "text-input", example: "input-autocomplete-attribute", displayExample: false, html: true, nunjucks: true, open: true, size: "s" }) }}
 
-If you are working in production and there is a relevant [input purpose](https://www.w3.org/TR/WCAG21/#input-purposes), you'll need to use the `autocomplete` attribute to meet [WCAG 2.1 Level AA](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html).
+If you are working in production and there is a relevant [input purpose](https://www.w3.org/TR/WCAG22/#input-purposes), you'll need to use the `autocomplete` attribute to meet [WCAG 2.2 success criterion 1.3.5 Identify input purpose, level AA](https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose.html).
 
 You will not normally need to use the `autocomplete` attribute in prototypes, as users will not generally be using their own devices.
 

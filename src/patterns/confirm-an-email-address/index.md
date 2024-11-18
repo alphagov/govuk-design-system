@@ -20,7 +20,7 @@ This guidance is for government teams that build online services. [To find infor
   name: "Confirm an email address",
   criteria: [
     {
-      text: "copy and paste a security code (if you're asking the user to enter a security code you've sent them)",
+      text: "if you're asking the user to enter a security code, make sure they can enter the code using copy and paste",
       anchor: "wcag-copy-paste-security-codes"
     }
   ]
@@ -61,7 +61,7 @@ Most email confirmation loops will send the user a link and ask them to click it
 
 {% call wcagNote({id: "wcag-copy-paste-security-codes"}) %}
 
-<p>You must allow users to copy and paste any security codes. Avoid making the user memorise or transcribe a security code between apps or browser tabs to use your service. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum">3.3.8 Accessible authentication (minimum)</a>.</p>
+<p>You must allow users to copy and paste any security codes. Avoid making the user memorise or transcribe a security code between apps or browser tabs to use your service. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum">WCAG 2.2 success criterion 3.3.8 Accessible authentication (minimum)</a>.</p>
 {% endcall %}
 
 ### Set expiry conditions

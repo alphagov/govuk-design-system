@@ -19,11 +19,11 @@ Allow users to accept or reject cookies which are not essential to making your s
   name: "Cookie banner",
   criteria: [
     {
-      text: "see items that are in focus at all times",
+      text: "make sure that items in focus can be seen all times",
       anchor: "wcag-see-focus"
     },
     {
-      text: "interact with buttons and links in the cookie banner",
+      text: "make sure users can interact with buttons and links in the Cookie banner component",
       anchor: "wcag-interact-cookie-banner"
     }
   ]
@@ -83,12 +83,12 @@ Position the cookie banner after the opening `<body>` tag and before the ’skip
 
 {% call wcagNote({id: "wcag-see-focus"}) %}
 
-<p>Do not make the cookie banner ‘sticky’ to the top of the page by using `position: fixed` or any other method. This is to make sure it does not cover or obscure any content which has a focus applied. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html">2.4.11 Focus not obscured (minimum)</a>.</p>
+<p>Do not make the Cookie banner component ‘sticky’ to the top of the page by using `position: fixed` or any other method. This is to make sure it does not cover or obscure any content which has a focus applied. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html">WCAG 2.2 success criterion 2.4.11 Focus not obscured (minimum)</a>.</p>
 {% endcall %}
 
 {% call wcagNote({id: "wcag-interact-cookie-banner"}) %}
 
-<p>Do not change the padding or margins of buttons and links within the cookie banner. This is to make sure there’s adequate space for the user to interact with the buttons and links. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target size (minimum)</a>.</p>
+<p>Do not change the padding or margins of buttons and links within the Cookie banner component. This is to make sure there’s adequate space for the user to interact with the buttons and links. This relates to <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target size (minimum)</a>.</p>
 {% endcall %}
 
 ### Option 1: If you’re only using essential cookies
