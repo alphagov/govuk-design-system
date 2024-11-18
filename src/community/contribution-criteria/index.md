@@ -97,7 +97,7 @@ Before a new component or pattern is published the working group reviews the imp
       {
         html: '<p>The implementation is versatile enough that the component or pattern can be used in a range of different services that may need it.</p>
           <p>For example, a versatile date input component could be set up to ask for a year only, a month and year only, a precise date, or any other combination you may need.</p>
-          <p class="govuk-!-margin-bottom-0">The component or pattern must also have been tested and shown to work with a range of <a href="https://www.gov.uk/service-manual/technology/designing-for-different-browsers-and-devices">browsers, assistive technologies and devices</a>.</p>'
+          <p class="govuk-!-margin-bottom-0">The component or pattern must also have been <a href="https://www.gov.uk/service-manual/technology/designing-for-different-browsers-and-devices">tested and shown to work with a range of browsers, assistive technologies and devices</a>.</p>'
       }
     ]
   ]
