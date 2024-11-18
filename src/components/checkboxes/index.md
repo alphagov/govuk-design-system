@@ -103,7 +103,7 @@ You should only conditionally reveal questions - do not show or hide anything th
 
 #### Known issues
 
-Users are not always notified when a conditionally revealed question is shown or hidden. This fails [WCAG 2.1 success criterion 4.1.2 Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html).
+Users are not always notified when a conditionally revealed question is shown or hidden. This fails [WCAG 2.2 success criterion 4.1.2 Name, Role, Value](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html).
 
 However, we found that screen reader users did not have difficulty answering a conditionally revealed question - as long as it’s kept simple. It confused our test users when we conditionally revealed complicated questions to them.
 

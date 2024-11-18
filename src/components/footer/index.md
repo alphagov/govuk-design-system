@@ -19,7 +19,7 @@ The GOV.UK footer provides copyright, licensing and other information about your
   name: "GOV.UK footer",
   criteria: [
     {
-      text: "find help links in a consistent place on each page",
+      text: "make sure help links can be found in a consistent place on each page",
       anchor: "wcag-consistent-links"
     }
   ]
@@ -62,7 +62,7 @@ Use ‘Privacy’, ‘Accessibility’, ‘Cookies’ and ‘Terms and condition
 
 {% call wcagNote({id: "wcag-consistent-links"}) %}
 
-<p>If you include links to ‘help’ pages within a footer, make sure to place those links consistently within the footer content. Also make sure that ‘help’ links always function in a similar way across each page. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent help</a>.</p>
+<p>If you include links to ‘help’ pages within the GOV.UK footer component, make sure to place those links consistently within the footer content. Also make sure that ‘help’ links always function in a similar way across each page. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">WCAG 2.2 success criterion 3.2.6 Consistent help</a>.</p>
 {% endcall %}
 
 ## Adding secondary navigation

@@ -20,7 +20,7 @@ A page not found tells someone we cannot find the page they were trying to view.
   name: "Page not found pages",
   criteria: [
     {
-      text: "find contact information in a consistent way",
+      text: "make sure users can find contact information in a consistent way",
       anchor: "wcag-consistent-content-page-not-found"
     }
   ]
@@ -57,7 +57,7 @@ The content should be clear and concise, not blame the user.
 
 {% call wcagNote({id: "wcag-consistent-content-page-not-found"}) %}
 
-<p>You must always write contact information in a clear and consistent way across ‘Page not found’ and similar service error pages. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent help</a>.</p>
+<p>You must always write contact information in a clear and consistent way across ‘Page not found’ and similar service error pages. This relates to <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">WCAG 2.2 success criterion 3.2.6 Consistent help</a>.</p>
 {% endcall %}
 
 Do not use:

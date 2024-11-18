@@ -19,11 +19,11 @@ Use the back link component to help users go back to the previous page in a mult
   name: "Back link",
   criteria: [
     {
-      text: "avoid re-entering information they've previously given when they go back to a page",
+      text: "make sure users do not need to re-enter information they've previously given when they go back to a page",
       anchor: "wcag-avoid-information-reentry"
     },
     {
-      text: "interact with back links",
+      text: "make sure users can interact with the Back link component",
       anchor: "wcag-interact-back-links"
     }
   ]
@@ -52,12 +52,12 @@ Make sure the link takes users to the previous page they were on, in the state t
 {% call wcagNote({id: "wcag-avoid-information-reentry"}) %}
 
 <p>If a user decides to go back to a previous page, make sure information they have already entered is pre-populated.</p>
-<p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
+<p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry</a>.</p>
 {% endcall %}
 
 {% call wcagNote({id: "wcag-interact-back-links"}) %}
 
-<p>Make sure no other interactive elements are too close to the back link. This is to make sure users can easily interact with the back link. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target size (minimum)</a>.</p>
+<p>Make sure no other interactive elements are too close to the Back link component. This is to make sure users can easily interact with it. This relates to <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target size (minimum)</a>.</p>
 {% endcall %}
 
 Where possible, ensure the back link works even when JavaScript is not available. If this is not possible, you should hide the back link when JavaScript is not available.
@@ -74,6 +74,6 @@ For more complex user journeys, consider using different link text, like 'Go bac
 
 Use the `govuk-back-link--inverse` modifier class to show a white link on a dark background – for example, in headers, custom components, and patterns with darker backgrounds.
 
-Make sure all users can see the back link – the background colour [must have a contrast ratio of at least 4.5:1](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html) with white.
+Make sure all users can see the back link – the background colour must have a contrast ratio of at least 4.5:1 with white to meet [WCAG 2.2 success criterion 1.4.3 Contrast (minimum), level AA](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html).
 
 {{ example({ group: "components", item: "back-link", example: "inverse", html: true, nunjucks: true, open: false }) }}

@@ -19,11 +19,11 @@ Help users create an account for your service.
   name: "Create accounts",
   criteria: [
     {
-      text: "reuse information they've already entered",
+      text: "make sure users can reuse information they've already entered",
       anchor: "wcag-reuse-account-information"
     },
     {
-      text: "avoid doing a cognitive test, such as a CAPTCHA, to create an account",
+      text: "make sure that cognitives tests, such as CAPTCHAs, are not needed for users to create an account",
       anchor: "wcag-avoid-cognitive-test"
     }
   ]
@@ -69,7 +69,7 @@ Show a clear difference between creating an account and signing in. Presenting t
 
 {% call wcagNote({id: "wcag-reuse-account-information"}) %}
 
-<p>Make sure users do not need to enter the same information more than once when creating an account, unless the information is no longer valid or it’s necessary for security reasons. Use the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete">HTML autocomplete attribute</a> to allow password managers and user agents to automatically populate fields. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
+<p>Make sure users do not need to enter the same information more than once when creating an account, unless the information is no longer valid or it’s necessary for security reasons. Use the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete">HTML autocomplete attribute</a> to allow password managers and user agents to automatically populate fields. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry</a>.</p>
 {% endcall %}
 
 ### Make the sign-up process clear
@@ -86,7 +86,7 @@ These are tests of cognitive function, which might be difficult for some users. 
 
 {% call wcagNote({id: "wcag-avoid-cognitive-test"}) %}
 
-<p>Avoid making users do a cognitive test to use your service. If you do, you must also offer an alternative method. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum">3.3.8 Accessible authentication (minimum)</a>.</p>
+<p>Avoid making users do a cognitive test to use your service. If you do, you must also offer an alternative method. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum">WCAG 2.2 success criterion 3.3.8 Accessible authentication (minimum)</a>.</p>
 <p>See more about <a href="https://www.gov.uk/service-manual/technology/using-captchas">using CAPTCHAs and why they’re problematic</a> in the Service Manual. <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum#object-recognition">WCAG lists some other security measures</a> you can implement to prevent misuse and automated abuse in your service.</p>
 {% endcall %}
 

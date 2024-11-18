@@ -25,7 +25,7 @@ The GOV.UK Design System team follows 3 sets of principles to increase the acces
 
 ### Web accessibility
 
-We follow the [4 principles of web accessibility](https://www.w3.org/WAI/WCAG21/Understanding/intro#understanding-the-four-principles-of-accessibility) upon which WCAG is based:
+We follow the [4 principles of web accessibility](https://www.w3.org/WAI/WCAG22/Understanding/intro#understanding-the-four-principles-of-accessibility) upon which WCAG is based:
 
 1.  Perceivable – Information and user interface components must be presentable to users in ways they can perceive.
 2.  Operable – User interface components and navigation must be operable.
@@ -435,7 +435,7 @@ WCAG 2.2 published a new ‘Candidate recommendation’ version on 6 September 2
 
 ### 5 October 2023
 
-WCAG 2.2 formally published by <abbr title="World Wide Web Consortium">W3C</abbr>. At this stage, it’s a final and official web standard. WCAG 2.2 is backwards compatible with WCAG 2.1, thanks partly to a September 2023 update which helps deprecate [Success Criterion 4.1.1: Parsing for HTML and XML](https://www.w3.org/WAI/WCAG21/Understanding/parsing.html).
+WCAG 2.2 formally published by <abbr title="World Wide Web Consortium">W3C</abbr>. At this stage, it’s a final and official web standard. WCAG 2.2 is backwards compatible with WCAG 2.1, thanks partly to a September 2023 update which helps deprecate [Success Criterion 4.1.1: Parsing for HTML and XML](https://www.w3.org/WAI/WCAG22/Understanding/parsing.html).
 
 ### 8 December 2023
 

@@ -57,7 +57,7 @@ To do this, set the `autocomplete` attribute on the 3 fields to `bday-day`, `bda
 
 {{ example({ group: "components", item: "date-input", example: "date-of-birth", html: true, nunjucks: true, open: true, size: "s", id: "default-2" }) }}
 
-If you are working in production you’ll need to do this to meet [WCAG 2.1 Level AA](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html).
+If you are working in production you’ll need to do this to meet [WCAG 2.2 success criterion 1.3.5: Identify input purpose, level AA](https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose.html).
 
 ### Error messages
 

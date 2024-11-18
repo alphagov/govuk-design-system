@@ -13,7 +13,7 @@
   {% if caller -%}
     {{ caller() }}
   {% else -%}
-    <p class="govuk-body">To {{params.introAction}} ‘{{params.name}}’ and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:</p>
+    <p class="govuk-body">To {{params.introAction}} ‘{{params.name}}’ and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria:</p>
     <ul class="govuk-list">
     {% for criterion in params.criteria %}
       <li><a class="govuk-link" href="#{{criterion.anchor}}">{{criterion.text}}</a></li>

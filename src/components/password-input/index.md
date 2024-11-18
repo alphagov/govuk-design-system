@@ -19,15 +19,15 @@ Help users to create and enter passwords.
   name: "Password input",
   criteria: [
     {
-      text: "interact with any 'show password' button",
+      text: "make sure 'show password' buttons are easy to interact with",
       anchor: "wcag-interact-show-password"
     },
     {
-      text: "use `autocomplete` to securely create and enter passwords",
+      text: "make sure users can use `autocomplete` to securely create and enter passwords",
       anchor: "wcag-autocomplete-attribute"
     },
     {
-      text: "copy and paste into a password input",
+      text: "make sure users can enter a password using copy and paste",
       anchor: "wcag-copy-paste-password"
     }
   ]
@@ -75,7 +75,7 @@ Hide passwords by default until the user chooses to show it using the ‘show’
 
 {% call wcagNote({id: "wcag-interact-show-password"}) %}
 
-<p>Make sure any ‘show password’ button is at least 24px by 24px in size, or has adequate spacing. This is to make sure users can easily interact with the button. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target size (minimum)</a>.</p>
+<p>Make sure any ‘show password’ button is at least 24px by 24px in size, or has adequate spacing. This is to make sure users can easily interact with the button. This relates to <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target size (minimum)</a>.</p>
 {% endcall %}
 
 If you do choose to include two or more password inputs on a page, the ‘show’ and ‘hide’ toggles and labels for each password input must be different.
@@ -107,7 +107,7 @@ Set the `autocomplete` attribute to `new-password` if the user is creating a pas
 
 {% call wcagNote({id: "wcag-autocomplete-attribute"}) %}
 
-<p>Providing an <code>autocomplete</code> attribute is one way to avoid making the user memorise or transcribe a password from somewhere else in order to use your service. This is to help comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum">3.3.8 Accessible authentication (minimum)</a>.</p>
+<p>Providing an <code>autocomplete</code> attribute is one way to avoid making the user memorise or transcribe a password from somewhere else in order to use your service. This is to help comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum">WCAG 2.2 success criterion 3.3.8 Accessible authentication (minimum)</a>.</p>
 {% endcall %}
 
 Many browsers will autofill password inputs, even when the `autocomplete` attribute is missing or set to `off`.
@@ -118,7 +118,7 @@ Always allow users to copy and paste in password fields. People may have very go
 
 {% call wcagNote({id: "wcag-copy-paste-password"}) %}
 
-<p>You must allow users to paste in or use autofill to enter their password. Avoid making the user memorise or transcribe a password from somewhere else in order to use your service. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum">3.3.8 Accessible authentication (minimum)</a>.</p>
+<p>You must allow users to paste in or use autofill to enter their password. Avoid making the user memorise or transcribe a password from somewhere else in order to use your service. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum">WCAG 2.2 success criterion 3.3.8 Accessible authentication (minimum)</a>.</p>
 {% endcall %}
 
 #### Copying text from password fields

@@ -17,7 +17,7 @@ layout: layout-pane.njk
   name: "Select",
   criteria: [
     {
-      text: "use the select without relying on 'click and drag' movements (if you choose to add functionality to select multiple options)",
+      text: "if you choose to add functionality to select multiple options, make sure users can do so without relying on 'click and drag' movements",
       anchor: "wcag-avoid-dragging-multiple-options"
     }
   ]
@@ -69,7 +69,7 @@ The select component does not support selecting multiple options, [as there’s 
 
 {% call wcagNote({id: "wcag-avoid-dragging-multiple-options"}) %}
 
-<p>Any input that’s designed to let a user select multiple options must offer a way to do so without relying on ‘click and drag’ movements or keyboard and mouse combination actions. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">2.5.7 Dragging movements</a>.</p>
+<p>Any input that’s designed to let a user select multiple options must offer a way to do so without relying on ‘click and drag’ movements or keyboard and mouse combination actions. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">WCAG 2.2 success criterion 2.5.7 Dragging movements</a>.</p>
 {% endcall %}
 
 ## Research on this component

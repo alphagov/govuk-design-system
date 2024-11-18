@@ -19,7 +19,7 @@ Use the phase banner component to show users your service is still being worked 
   name: "Phase banner",
   criteria: [
     {
-      text: "see all page content when a phase banner is shown",
+      text: "make sure all page content can be seen when the Phase banner component is shown",
       anchor: "wcag-do-not-cover-content"
     }
   ]
@@ -48,7 +48,7 @@ You can choose to place the Phase banner in a more appropriate place for your se
 
 {% call wcagNote({id: "wcag-do-not-cover-content"}) %}
 
-<p>Do not make the phase banner ‘sticky’ to the top of the page by using `position: fixed` or any other method. This is to make sure it does not cover or obscure any content which has a focus applied. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html">2.4.11 Focus not obscured (minimum)</a>.</p>
+<p>Do not make the Phase banner component ‘sticky’ to the top of the page by using `position: fixed` or any other method. This is to make sure it does not cover or obscure any content which has a focus applied. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html">WCAG 2.2 success criterion 2.4.11 Focus not obscured (minimum)</a>.</p>
 {% endcall %}
 
 ### Add a feedback link
