@@ -13,6 +13,10 @@ To learn more about the GOV.UK Design System and Prototype Kit, check out these 
 
 Find out how the Design System and Prototype Kit work and what they do to make services more accessible and inclusive.
 
+[How Design System Day makes our community stronger (blog post)](https://gds.blog.gov.uk/2024/10/31/how-design-system-day-makes-our-community-stronger/) – 31 October 2024
+
+[More than you think – how we organise Design System Day (blog post)](https://gds.blog.gov.uk/2024/08/01/more-than-you-think-how-we-organise-design-system-day/) – 1 August 2024
+
 [Get to WCAG 2.2 faster with the GOV.UK Design System (blog post)](https://accessibility.blog.gov.uk/2024/01/11/get-to-wcag-2-2-faster-with-the-gov-uk-design-system/) – 11 January 2024
 
 [Exit this page fast with the Design System’s new component (blog post)](https://designnotes.blog.gov.uk/2023/08/14/exit-this-page-fast-with-the-design-systems-new-component/) – 14 August 2023
