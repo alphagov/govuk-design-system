@@ -1,6 +1,14 @@
 name: Check external links
 
-on: workflow_dispatch
+on:
+  pull_request:
+
+  push:
+    branches:
+      - 'feature/**'
+      - 'v[0-9]'
+
+  workflow_dispatch:
 
 jobs:
   check-links:
@@ -9,23 +17,13 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4.2.1
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4.0.4
-        with:
-          cache: npm
-          check-latest: true
-          node-version-file: .nvmrc
+        uses: actions/checkout@v4.2.2
 
       - name: Install dependencies
-        run: npm ci
+        uses: ./.github/workflows/actions/install-node
 
-      - name: Restore build
-        uses: actions/cache/restore@v4.1.1
-        with:
-          key: build-cache-${{ runner.os }}-${{ github.sha }}
-          path: build
+      - name: Build
+        uses: ./.github/workflows/actions/build
 
       - name: Check external broken links
         id: check-links
