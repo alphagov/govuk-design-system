@@ -70,7 +70,7 @@ The page should tell the user:
 The page should also tell the user that:
 
 - their internet browsing history will not be erased, which can still put them at risk
-- any information they’ve entered will not be saved, depending on what you’ve [decided to do with user session data](/components/exit-this-page/#consider-what-to-do-with-user-session-data)
+- any information they’ve entered will not be saved, depending on what you’ve [decided to do with your service's user session data](/components/exit-this-page/#consider-what-to-do-with-user-session-data)
 - to return to the service, they can search for the site they were using, or find it in their internet browsing history
 - there are other things they can do to stay safe online (include a link to a ‘safety content page’ where the user can learn more)
 

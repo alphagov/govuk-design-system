@@ -93,7 +93,7 @@ Generally speaking, avoid validating the information in a field before the user 
 
 Only add this sort of validation if your user research shows that, on balance, it solves more problems for users than it causes. For example, the [Character count component](/components/character-count/) shows users an error message when they go over the character limit. Because it’s important that users do not spend time and effort writing out a response that turns out to be too long.
 
-If you do use this sort of validation, [make sure you do it in a way that’s accessible](https://www.gov.uk/service-manual/technology/accessibility-for-developers-an-introduction).
+If you do use this sort of validation, [make sure you validate in a way that’s accessible](https://www.gov.uk/service-manual/technology/accessibility-for-developers-an-introduction).
 
 ## Client side and server side validation
 

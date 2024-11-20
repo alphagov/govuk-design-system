@@ -149,7 +149,7 @@ Some browsers might automatically change what the user is typing when the input�
 
 You can tell browsers not to correct spellings by setting the `spellcheck` attribute to `false`.
 
-Doing this can also prevent ['spell-jacking'](https://www.otto-js.com/news/article/chrome-and-edge-enhanced-spellcheck-features-expose-pii-even-your-passwords), where security researchers have found some spell checking tools gathering personal identifiable information, even user’s passwords, from password input fields to send to third party services.
+Doing this can [avoid making your service vulnerable to ‘spell-jacking’](https://www.itpro.com/security/vulnerability/370010/what-is-spell-jacking), where security researchers have found some spell checking tools gathering personal identifiable information, even user’s passwords, from password input fields to send to third party services.
 
 You can tell browsers not to autocapitalise values by setting the `autocapitalize` attribute to `off`.
 
@@ -167,7 +167,7 @@ We’ve tried to minimise duplicate functionality by hiding other types of ‘sh
 
 There’s also other instances where a password could be ‘shown’ or ‘hidden’ without the use of a button – causing a mismatch with the button label (in other words, the user would see a button to ‘show’ a password that’s already visible).
 
-We found [this happens in some browsers](https://github.com/alphagov/govuk-design-system/issues/3552#issuecomment-1976660248) when:
+[We found this mismatch happens in some browsers](https://github.com/alphagov/govuk-design-system/issues/3552#issuecomment-1976660248) when:
 
 - a keyboard shortcut is pressed
 - a suggested password is created

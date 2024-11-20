@@ -94,7 +94,7 @@ See the [GOV.UK style for writing telephone numbers](https://www.gov.uk/guidance
 
 ### Avoid input masking
 
-Avoid [input masking](https://css-tricks.com/input-masking/) because it makes it harder for users to:
+Avoid 'input masking', or showing placeholder answer, because it makes it harder for users to:
 
 - type a number in their preferred way
 - transcribe a number from another place and check that they’ve got it right
