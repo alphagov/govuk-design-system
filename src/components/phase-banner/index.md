@@ -61,4 +61,4 @@ Use a ‘feedback’ link to collect on-page feedback about your service. This c
 
 Whatever option you use, make sure that users do not lose their place in the service and can return to the page they were on.
 
-Find out what [feedback you need to collect at each phase](https://www.gov.uk/service-manual/measuring-success/measuring-user-satisfaction#user-satisfaction-through-each-service-phase) in the GOV.UK Service Manual.
+[Find out what feedback you need to collect at each phase](https://www.gov.uk/service-manual/measuring-success/measuring-user-satisfaction#user-satisfaction-through-each-service-phase) in the GOV.UK Service Manual.

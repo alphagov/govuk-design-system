@@ -80,7 +80,7 @@ Contact information should either:
 - include all numbers and opening times in one place on the page
 - be a link out to a page that includes numbers and opening times
 
-You might choose to link to a ‘contact information’ page, such as one shown in the ‘[Contact a department or service team](https://design-system.service.gov.uk/patterns/contact-a-department-or-service-team/)’ pattern.
+You might choose to link to a ‘contact information’ page, such as one shown in the [‘Contact a department or service team’ pattern](https://design-system.service.gov.uk/patterns/contact-a-department-or-service-team/).
 
 {% call wcagNote({id: "wcag-consistent-content-problem-service"}) %}
 
