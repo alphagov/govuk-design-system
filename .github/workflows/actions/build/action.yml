@@ -1,0 +1,26 @@
+name: Install
+
+runs:
+  using: composite
+
+  steps:
+    - name: Cache build
+      uses: actions/cache@v4.1.2
+      id: build-cache
+
+      with:
+        # Use faster GNU tar for all runners
+        enableCrossOsArchive: true
+
+        # Restore build cache (unless commit SHA changes)
+        key: build-${{ runner.os }}-${{ github.sha }}
+        path: build
+
+    - name: Build
+      id: build
+
+      # Skip build when we’ve built this SHA before
+      if: steps.build-cache.outputs.cache-hit != 'true'
+      shell: bash
+
+      run: npm run build

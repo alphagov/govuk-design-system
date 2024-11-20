@@ -149,7 +149,7 @@ Some browsers might automatically change what the user is typing when the input�
 
 You can tell browsers not to correct spellings by setting the `spellcheck` attribute to `false`.
 
-Doing this can also prevent ['spell-jacking'](https://www.otto-js.com/news/article/chrome-and-edge-enhanced-spellcheck-features-expose-pii-even-your-passwords), where security researchers have found some spell checking tools gathering personal identifiable information, even user’s passwords, from password input fields to send to third party services.
+Doing this can also prevent ['spell-jacking'](https://www.itpro.com/security/vulnerability/370010/what-is-spell-jacking), where security researchers have found some spell checking tools gathering personal identifiable information, even user’s passwords, from password input fields to send to third party services.
 
 You can tell browsers not to autocapitalise values by setting the `autocapitalize` attribute to `off`.
 
