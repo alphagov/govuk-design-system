@@ -74,26 +74,16 @@ For the GOV.UK Design System website and the GOV.UK Frontend Documentation websi
 
 Additional accessibility concerns from the GOV.UK Frontend codebase include:
 
-1.  The details component does not work well with Dragon and VoiceOver. This is not an issue with our details component, but is a known issue with the assistive technology and the `<details>` HTML element. Track our progress on the [GitHub issue: ‘Details component does not work well with Dragon and VoiceOver’](https://github.com/alphagov/govuk-frontend/issues/3693).
-2.  [A bug within Dragon means no action is taken when trying to activate the file upload component](https://github.com/alphagov/reported-bugs/issues/35) through the command ‘click choose file’. This is a usability issue originating from the assistive technology. The team does not plan to fix this, as the assistive technology will need to resolve it. Track our progress on the [GitHub issue: ‘Upload file component doesn’t respond to ‘click choose file’ due to Dragon / browser bugs’](https://github.com/alphagov/govuk-frontend/issues/3686).
+1.  The details component does not work well with Dragon and older versions of VoiceOver. This is not an issue with our details component, but is a known issue with the assistive technology and the `<details>` HTML element. Track our progress on the [GitHub issue: ‘Details component does not work well with Dragon and VoiceOver’](https://github.com/alphagov/govuk-frontend/issues/3693).
+2.  [A bug within Dragon means no action is taken when trying to activate the file upload component](https://github.com/alphagov/reported-bugs/issues/35) through the command ‘click choose file’ or ‘click button’. This is a usability issue originating from the assistive technology. The team is working on building a bespoke component that will fix this. Track our progress on the [GitHub issue: ‘Upload file component doesn’t respond to ‘click choose file’ due to Dragon / browser bugs’](https://github.com/alphagov/govuk-frontend/issues/3686).
 
 ## Preparation of this accessibility statement
 
-This statement was prepared on 23 October 2019. It was last reviewed and updated on 2 August 2023.
+This statement was prepared on 23 October 2019. It was last reviewed and updated on 18 December 2024.
 
-The [GOV.UK Design System website](https://design-system.service.gov.uk/) was last audited for accessibility issues by an external group on 7 October 2019. The test was carried out by the [Digital Accessibility Centre (DAC)](https://digitalaccessibilitycentre.org/).
+The [GOV.UK Design System website](https://design-system.service.gov.uk/) was last audited for accessibility issues by an external group in July 2024. The test was carried out by the [Digital Accessibility Centre (DAC)](https://digitalaccessibilitycentre.org/).
 
-DAC tested a sample of pages to cover the different content types in the GOV.UK Design System website. They were:
-
-- the [GOV.UK Design System homepage](https://design-system.service.gov.uk/)
-- a short content page: [Design System working group](https://design-system.service.gov.uk/community/design-system-working-group/)
-- a long content page: [Layout styles](https://design-system.service.gov.uk/styles/layout/)
-- an overview page: [Community section](https://design-system.service.gov.uk/community/)
-- a styles page: [Headings styles](https://design-system.service.gov.uk/styles/headings/)
-- a component page: [Radios component](https://design-system.service.gov.uk/components/radios/)
-- a pattern page: [Question pages pattern](https://design-system.service.gov.uk/patterns/question-pages/)
-
-DAC also tested the global search functionality that appears in the header of the GOV.UK Design System website.
+DAC tested a sample of pages to cover the different content types in the GOV.UK Design System website. They also tested the global search functionality that appears in the header of the GOV.UK Design System website.
 
 ### Frontend documentation website
 
@@ -107,7 +97,7 @@ To learn more, read the [Accessibility statement for Technical Documentation Tem
 
 The GOV.UK Frontend codebase is not a website but a [code repository on GitHub](https://github.com/alphagov/govuk-frontend) and [a software package on npm (Node Package Manager)](https://www.npmjs.com/package/govuk-frontend).
 
-Examples using the GOV.UK Frontend codebase were last audited for accessibility issues by an external group in May 2023. The audit was carried out by the [Digital Accessibility Centre (DAC)](https://digitalaccessibilitycentre.org/).
+Examples using the GOV.UK Frontend codebase were last audited for accessibility issues by an external group in July 2024. The audit was carried out by the [Digital Accessibility Centre (DAC)](https://digitalaccessibilitycentre.org/).
 
 Read more about the codebase’s accessibility in the [GOV.UK Frontend GitHub repository readme](https://github.com/alphagov/govuk-frontend#accessibility).
 
