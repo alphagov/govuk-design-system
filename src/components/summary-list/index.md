@@ -37,7 +37,7 @@ Use a summary list to show information as a list of key facts.
 
 You can use it to display metadata like ‘Last updated’ with a date like ‘22 June 2018’, or to summarise a user’s responses at the end of a form like the [Check answers pattern](/patterns/check-answers/).
 
-[Summary cards](#summary-cards) are a variant within this component. You can use summary cards to show multiple summary lists that describe the same type of thing, such as people. You can also add card actions that apply to the entire summary list.
+[Summary cards are a variant within this component](#summary-cards). You can use summary cards to show multiple summary lists that describe the same type of thing, such as people. You can also add card actions that apply to the entire summary list.
 
 ## When not to use this component
 
@@ -167,8 +167,8 @@ This component was developed and tested by the Government Digital Service as par
 
 The Department for Education contributed the summary card. It’s being used in some of their services, such as:
 
-- [apply for teacher training](https://www.gov.uk/apply-for-teacher-training), used by the general public
-- [register trainee teachers](https://www.register-trainee-teachers.service.gov.uk/), used by people that work for training providers
+- [Apply for teacher training](https://www.gov.uk/apply-for-teacher-training), used by the general public
+- [Register trainee teachers](https://www.register-trainee-teachers.service.gov.uk/), used by people that work for training providers
 
 The summary card is also used in services run by other departments, such us:
 

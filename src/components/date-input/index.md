@@ -21,7 +21,7 @@ Use the date input component when you’re asking users for a date they’ll alr
 
 Do not use the date input component if users are unlikely to know the exact date of the event you’re asking about.
 
-Read more about how to [ask users for dates](/patterns/dates/).
+Read more in the [Ask users for dates pattern](/patterns/dates/).
 
 ## How it works
 
@@ -29,7 +29,7 @@ The date input component consists of 3 fields to let users enter a day, month an
 
 The 3 date fields are grouped together in a `<fieldset>` with a `<legend>` that describes them, as shown in the examples on this page. This is usually a question, like ‘What is your date of birth?’.
 
-If you’re asking [one question per page](/patterns/question-pages/#start-by-asking-one-question-per-page), you can set the contents of the `<legend>` as the page heading. This is good practice as it means that users of screen readers will only hear the contents once.
+If you’re asking [one question per page in your service](/patterns/question-pages/#start-by-asking-one-question-per-page), you can set the contents of the `<legend>` as the page heading. This is good practice as it means that users of screen readers will only hear the contents once.
 
 Read more about [why and how to set legends as headings](/get-started/labels-legends-headings/).
 

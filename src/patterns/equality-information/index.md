@@ -34,7 +34,7 @@ These patterns are based on the [harmonised standards developed by the Governmen
 
 Collecting equality information in a consistent way across the public sector makes the data more useful. For example, an organisation can benchmark its own services against other public sector services or the population in general. And it can adjust its approach if it finds a particular group is under-represented.
 
-Do not use this pattern to collect information for operational reasons - especially if you’re legally required to ask for the information in a particular way. For example, you’re [asking about the user’s gender or sex](/patterns/gender-or-sex/) to work out how much State Pension they’re entitled to.
+Do not use this pattern to collect information for operational reasons - especially if you’re legally required to ask for the information in a particular way. For example, you’re [asking about the user’s gender or sex in your service](/patterns/gender-or-sex/) to work out how much State Pension they’re entitled to.
 
 ## How it works
 
@@ -126,7 +126,7 @@ If the user answers ‘yes’, ask about the impact of their condition or illnes
 
 ### Asking about ethnic group
 
-The ethnic groups used here are for England. The Government Statistical Service harmonised standard for ethnicity uses [different categories for Wales, Scotland and Northern Ireland](https://gss.civilservice.gov.uk/policy-store/ethnicity/). This is to reflect differences in local populations.
+The ethnic groups used here are for England. The Government Statistical Service harmonised standard uses [different categories for ethnicity data collected in Wales, Scotland and Northern Ireland](https://gss.civilservice.gov.uk/policy-store/ethnicity/). This is to reflect differences in local populations.
 
 If your service covers more than one of England, Wales, Scotland or Northern Ireland, you should accommodate these differences in your design. For example, by changing the ethnic groups shown depending on where the user is based. Where this is not possible, use the English categories.
 
@@ -150,7 +150,7 @@ Use this approach to ask about marriage or civil partnership status.
 
 ### Asking about religion
 
-The categories used here are for England. The Government Statistical Service harmonised standard for religion uses [different categories for Wales, Scotland and Northern Ireland](https://gss.civilservice.gov.uk/policy-store/religion/). This is to reflect differences in local populations.
+The categories used here are for England. The Government Statistical Service harmonised standard uses [different categories for religion data collected in Wales, Scotland and Northern Ireland](https://gss.civilservice.gov.uk/policy-store/religion/). This is to reflect differences in local populations.
 
 If your service covers more than one of England, Wales, Scotland or Northern Ireland, you should accommodate these differences in your design. For example, by changing the categories shown depending on where the user is based. Where this is not possible, use the English categories.
 

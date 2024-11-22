@@ -135,7 +135,7 @@ Consider showing external links in the page body instead.
 
 ### GOV.UK One Login
 
-GOV.UK One Login [publishes its own header component](https://www.sign-in.service.gov.uk/documentation/design-recommendations/let-users-navigate-sign-out/) for services to give users an easy, consistent route to their GOV.UK One Login and a way to sign out.
+[GOV.UK One Login publishes its own header component](https://www.sign-in.service.gov.uk/documentation/design-recommendations/let-users-navigate-sign-out/) for services to give users an easy, consistent route to their GOV.UK One Login and a way to sign out.
 
 ## Adding other header and navigation elements
 

@@ -44,7 +44,7 @@ Group radios together in a `<fieldset>` with a `<legend>` that describes them, a
 
 ### If you’re asking one question on the page
 
-If you are asking just [one question per page](/patterns/question-pages/#start-by-asking-one-question-per-page) as recommended, you can set the contents of the `<legend>` as the page heading. This is good practice as it means that users of screen readers will only hear the contents once.
+If you are asking just [one question per page in your service](/patterns/question-pages/#start-by-asking-one-question-per-page) as recommended, you can set the contents of the `<legend>` as the page heading. This is good practice as it means that users of screen readers will only hear the contents once.
 
 Read more about [why and how to set legends as headings](/get-started/labels-legends-headings/).
 
