@@ -23,9 +23,9 @@ AbilityNet has [advice on making your device easier to use](https://mcmw.ability
 
 ## Compliance status
 
-The Design System website at [design-system.service.gov.uk](https://design-system.service.gov.uk/) is fully compliant with the Web Content Accessibility Guidelines (WCAG) version 2.1 AA standard.
+The Design System website at [design-system.service.gov.uk](https://design-system.service.gov.uk/) is fully compliant with the Web Content Accessibility Guidelines (WCAG) version 2.2 AA standard.
 
-The GOV.UK Frontend documentation website at [frontend.design-system.service.gov.uk](https://frontend.design-system.service.gov.uk/) is fully compliant with the Web Content Accessibility Guidelines (WCAG) version 2.1 AA standard.
+The GOV.UK Frontend documentation website at [frontend.design-system.service.gov.uk](https://frontend.design-system.service.gov.uk/) is fully compliant with the Web Content Accessibility Guidelines (WCAG) version 2.2 AA standard.
 
 The GOV.UK Frontend codebase at [github.com/alphagov/govuk-frontend](https://github.com/alphagov/govuk-frontend) is fully compliant with the Web Content Accessibility Guidelines (WCAG) version 2.2 AA standard.
 
@@ -37,7 +37,7 @@ In this section, the team lists non-accessible content that has been reported, v
 - [GOV.UK Frontend Documentation Github repository](https://github.com/alphagov/govuk-frontend-docs)
 - [GOV.UK Frontend GitHub repository](https://github.com/alphagov/govuk-frontend)
 
-The team document WCAG 2.1 A and AA failures in two repositories under the ‘accessibility-regulations-failure’ issue label:
+The team document WCAG 2.2 A and AA failures in two repositories under the ‘accessibility-regulations-failure’ issue label:
 
 - [GOV.UK Design System website label for accessibility regulations failures](https://github.com/alphagov/govuk-design-system/labels/accessibility-regulations-failure)
 - [GOV.UK Frontend codebase label for accessibility regulations failures](https://github.com/alphagov/govuk-frontend/labels/accessibility-regulations-failure)
@@ -61,7 +61,7 @@ The team does not have any content within these products outside the scope of th
 In addition to non-compliant content, the team also track additional concerns about accessibility which:
 
 - show strong evidence of being accessibility barriers
-- do not constitute a failure in one or more WCAG 2.1 Level AA criteria
+- do not constitute a failure in one or more WCAG 2.2 Level AA criteria
 - are not classified as non-compliance with the accessibility regulations
 - are determined as worth featuring in this accessibility statement
 
