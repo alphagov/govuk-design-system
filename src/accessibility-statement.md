@@ -1,6 +1,6 @@
 ---
 title: Accessibility statement
-description: accessibility in the GOV.UK Design System
+description: Accessibility in the GOV.UK Design System
 layout: layout-single-page-prose.njk
 ---
 
@@ -37,7 +37,7 @@ In this section, the team lists non-accessible content that has been reported, v
 - [GOV.UK Frontend Documentation Github repository](https://github.com/alphagov/govuk-frontend-docs)
 - [GOV.UK Frontend GitHub repository](https://github.com/alphagov/govuk-frontend)
 
-The team document WCAG 2.2 A and AA failures in two repositories under the ‘accessibility regulations failure’ issue label:
+The team documents WCAG 2.2 A and AA failures in two repositories under the ‘accessibility regulations failure’ issue label:
 
 - [GOV.UK Design System website label for accessibility regulations failures](https://github.com/alphagov/govuk-design-system/issues?q=is%3Aopen+is%3Aissue+label%3A%22accessibility+regulations+failure%22)
 - [GOV.UK Frontend codebase label for accessibility regulations failures](https://github.com/alphagov/govuk-frontend/issues?q=is%3Aopen+is%3Aissue+label%3A%22accessibility+regulations+failure%22)
@@ -58,10 +58,10 @@ The team does not have any content within these products outside the scope of th
 
 ### Other identified and tracked accessibility concerns
 
-In addition to non-compliant content, the team also track additional concerns about accessibility which:
+In addition to non-compliant content, the team also tracks additional concerns about accessibility which:
 
 - show strong evidence of being accessibility barriers
-- do not constitute a failure in one or more WCAG 2.2 Level AA criteria
+- do not constitute a failure in any WCAG 2.2 Level AA criteria
 - are not classified as non-compliance with the accessibility regulations
 - are determined as worth featuring in this accessibility statement
 
@@ -70,7 +70,7 @@ The team documents these additional concerns in two repositories under the ‘ac
 - [GOV.UK Design System website label for accessibility concerns](https://github.com/alphagov/govuk-design-system/issues?q=is%3Aopen+is%3Aissue+label%3A%22accessibility+concern%22)
 - [GOV.UK Frontend codebase label for accessibility concerns](https://github.com/alphagov/govuk-frontend/issues?q=is%3Aopen+is%3Aissue+label%3A%22accessibility+concern%22)
 
-For the GOV.UK Design System website and the GOV.UK Frontend Documentation website, the team do not currently know of any additional accessibility concerns to add to this statement.
+For the GOV.UK Design System website and the GOV.UK Frontend Documentation website, the team does not currently know of any additional accessibility concerns to add to this statement.
 
 Additional accessibility concerns from the GOV.UK Frontend codebase include:
 
@@ -80,6 +80,8 @@ Additional accessibility concerns from the GOV.UK Frontend codebase include:
 ## Preparation of this accessibility statement
 
 This statement was prepared on 23 October 2019. It was last reviewed and updated on 18 December 2024.
+
+### GOV.UK Design System website
 
 The [GOV.UK Design System website](https://design-system.service.gov.uk/) was last audited for accessibility issues by an external group in July 2024. The test was carried out by the [Digital Accessibility Centre (DAC)](https://digitalaccessibilitycentre.org/).
 
