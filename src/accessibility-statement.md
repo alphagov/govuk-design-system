@@ -37,10 +37,10 @@ In this section, the team lists non-accessible content that has been reported, v
 - [GOV.UK Frontend Documentation Github repository](https://github.com/alphagov/govuk-frontend-docs)
 - [GOV.UK Frontend GitHub repository](https://github.com/alphagov/govuk-frontend)
 
-The team document WCAG 2.2 A and AA failures in two repositories under the ‘accessibility-regulations-failure’ issue label:
+The team document WCAG 2.2 A and AA failures in two repositories under the ‘accessibility regulations failure’ issue label:
 
-- [GOV.UK Design System website label for accessibility regulations failures](https://github.com/alphagov/govuk-design-system/labels/accessibility-regulations-failure)
-- [GOV.UK Frontend codebase label for accessibility regulations failures](https://github.com/alphagov/govuk-frontend/labels/accessibility-regulations-failure)
+- [GOV.UK Design System website label for accessibility regulations failures](https://github.com/alphagov/govuk-design-system/issues?q=is%3Aopen+is%3Aissue+label%3A%22accessibility+regulations+failure%22)
+- [GOV.UK Frontend codebase label for accessibility regulations failures](https://github.com/alphagov/govuk-frontend/issues?q=is%3Aopen+is%3Aissue+label%3A%22accessibility+regulations+failure%22)
 
 ### Non-compliance with the accessibility regulations
 
@@ -65,10 +65,10 @@ In addition to non-compliant content, the team also track additional concerns ab
 - are not classified as non-compliance with the accessibility regulations
 - are determined as worth featuring in this accessibility statement
 
-The team documents these additional concerns in two repositories under the ‘accessibility-concern’ issue label:
+The team documents these additional concerns in two repositories under the ‘accessibility concern’ issue label:
 
-- [GOV.UK Design System website label for accessibility concerns](https://github.com/alphagov/govuk-design-system/labels/accessibility-concern)
-- [GOV.UK Frontend codebase label for accessibility concerns](https://github.com/alphagov/govuk-frontend/labels/accessibility-concern)
+- [GOV.UK Design System website label for accessibility concerns](https://github.com/alphagov/govuk-design-system/issues?q=is%3Aopen+is%3Aissue+label%3A%22accessibility+concern%22)
+- [GOV.UK Frontend codebase label for accessibility concerns](https://github.com/alphagov/govuk-frontend/issues?q=is%3Aopen+is%3Aissue+label%3A%22accessibility+concern%22)
 
 For the GOV.UK Design System website and the GOV.UK Frontend Documentation website, the team do not currently know of any additional accessibility concerns to add to this statement.
 
