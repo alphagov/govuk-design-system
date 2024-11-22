@@ -13,7 +13,7 @@ Some things on the roadmap might change – the purpose is to tell you what’s 
 
 See our [GitHub team board](https://github.com/orgs/alphagov/projects/53) for more details on our plans and day-to-day activities.
 
-Last updated 10 October 2024.
+Last updated 22 November 2024.
 
 ## Recently shipped
 
@@ -29,26 +29,25 @@ We’ve also recently:
 - improved how the Breadcrumbs component appears on screen readers
 - fixed some alignment issues with Radio buttons and Checkboxes
 - introduced new features to help you include only the components your service uses
-- introduced a new [Password input component](/components/password-input/)
-- updated the crown in the header, favicon and social share images
-- updated the components, patterns and styles to be compliant with WCAG 2.2
-- made it easier for teams to understand [what's changed in WCAG 2.2 and what they need to do](/accessibility/wcag-2.2)
 
 ## Working on now
 
 We're:
 
-- making the guidance around form design and validation easier to find
-- working out how the Design System might need to change when used for pages embedded in apps using web views
+- making enhancements to the File upload component
+- planning community events and activities for 2025
+- doing research with services teams on how they are using the Design System and how they upgrade their service
 
 ## Coming up next
 
 We're getting ready to:
 
-- improve the way we organise technical documentation on the website
+- work on breaking changes for [V6.0.0](https://github.com/alphagov/govuk-frontend/milestone/51). We plan to include typographic scale enabled by default, iterate the navigation component and remove some deprecations
+- continue our Javascript work and make improvements to the Character Count component, Tabs component and Accordion component
 
 ## Future plans
 
 We plan to:
 
 - [drop support for Ruby Sass and LibSass](https://github.com/alphagov/govuk-frontend/issues/2637) and [migrate to the Sass module system](https://github.com/alphagov/govuk-frontend/issues/1791)
+- build new autocomplete components to replace [Accessible Autocomplete](https://github.com/alphagov/accessible-autocomplete)
