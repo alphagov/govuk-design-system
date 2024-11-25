@@ -30,7 +30,7 @@ $icon-size: 40px;
   }
 
   @include govuk-media-query($from: tablet) {
-    width: 300px;
+    width: 370px;
     max-width: 100%;
     float: none;
   }
