@@ -111,6 +111,8 @@ To see the changes you've made, you may need to create a new 'session'. For exam
 
 You can configure sections to start and stay open, but not stay closed.
 
+Change the `id` from `accordion-default` to `accordion-expanded` to make the sections open from the start. 
+
 ### Do not disable sections
 
 Disabling controls is normally confusing for users. If there is no content for a section, either remove the section or, if this would be confusing for your users, explain why there is no content when the section is opened.
