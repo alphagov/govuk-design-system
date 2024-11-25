@@ -44,7 +44,7 @@ If you're displaying lots of links together and want to save space and avoid rep
 
 Use the `govuk-link--inverse` modifier class to show white links on dark backgrounds. For example, in headers, custom components, and patterns with darker backgrounds.
 
-Make sure all users can see the links. The white links and background colour [must have a contrast ratio of at least 4.5:1](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html).
+Make sure all users can see the links. The white links and background colour [must have a contrast ratio of at least 4.5:1 to [meet WCAG 2.2 success criterion 1.4.3 Contrast (minimum), level AA](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html).
 
 {{ example({ group: "styles", item: "links", example: "on-dark-background", html: true, open: true }) }}
 

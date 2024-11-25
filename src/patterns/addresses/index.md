@@ -20,7 +20,7 @@ This guidance is for government teams that build online services. [To find infor
   name: "Addresses",
   criteria: [
     {
-      text: "reuse previously entered address",
+      text: "make sure users can reuse a previously entered address",
       anchor: "wcag-reuse-addresses"
     }
   ]
@@ -36,7 +36,7 @@ Help users provide an address using one of the following:
 
 {% call wcagNote({id: "wcag-reuse-addresses"}) %}
 
-<p>Make sure users can easily reuse a previously entered address within a single journey, unless doing so would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
+<p>Make sure users can easily reuse a previously entered address within a single journey, unless doing so would be a major safety or security concern. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry</a>.</p>
 {% endcall %}
 
 You can make it easier to reuse addresses through one of these methods:
@@ -87,9 +87,9 @@ Remove the county field if you’re sure your users will not need it, and your s
 
 Use the `autocomplete` attribute on each individual address field to help users enter their address more quickly. This lets you specify each input’s purpose so browsers can autofill the information on a user’s behalf if they’ve entered it previously.
 
-[Check which input purpose to use](https://www.w3.org/TR/WCAG21/#input-purposes) for each field.
+[Check which input purpose to use](https://www.w3.org/TR/WCAG22/#input-purposes) for each field.
 
-In production, you’ll need to do this to meet [WCAG 2.1 Level AA](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html). You will not normally need to use the `autocomplete` attribute in prototypes, as users will not generally be using their own devices.
+In production, you’ll need to do this to meet [WCAG 2.2 success criterion 1.3.5 Identify input purpose](https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose.html). You will not normally need to use the `autocomplete` attribute in prototypes, as users will not generally be using their own devices.
 
 #### Error messages
 
@@ -161,6 +161,6 @@ Use the `autocomplete` attribute on the textarea component when you're asking fo
 
 To do this, set the `autocomplete` attribute to `street-address` as shown in the HTML and Nunjucks tabs in the textarea example above.
 
-If you are working in production you’ll need to do this to meet [WCAG 2.1 Level AA](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html).
+If you are working in production you’ll need to do this to meet [WCAG 2.2 success criterion 1.3.5 Identify input purpose](https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose.html).
 
 You will not normally need to use the `autocomplete` attribute in prototypes, as users will not generally be using their own devices.

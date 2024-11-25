@@ -20,7 +20,7 @@ This guidance is for government teams that build online services. [To find infor
   name: "Service unavailable pages",
   criteria: [
     {
-      text: "get contact information in a consistent way",
+      text: "make sure users can get contact information in a consistent way",
       anchor: "wcag-consistent-content-service-unavailable"
     }
   ]
@@ -56,7 +56,7 @@ Contact information should either be:
 
 {% call wcagNote({id: "wcag-consistent-content-service-unavailable"}) %}
 
-<p>You must always write contact information in a clear and consistent way across ‘Service unavailable’ and similar service error pages. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent help</a>.</p>
+<p>You must always write contact information in a clear and consistent way across ‘Service unavailable’ and similar service error pages. This relates to <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">WCAG 2.2 success criterion 3.2.6 Consistent help</a>.</p>
 {% endcall %}
 
 Have clear and concise content and do not use:

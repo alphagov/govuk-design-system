@@ -19,7 +19,7 @@ Use the tag component to show users the status of something.
   name: "Tag",
   criteria: [
     {
-      text: "interact with tags without relying on 'click and drag' movements (if you choose to add functionality to reorder tags)",
+      text: "if you choose to add functionality to reorder tags, make sure users can do so without relying on 'click and drag' movements ()",
       anchor: "wcag-tag-no-dragging-reorder"
     }
   ]
@@ -60,14 +60,14 @@ Tags should be helpful to users. The more you add, the harder it is for users to
 
 {% call wcagNote({id: "wcag-tag-no-dragging-reorder"}) %}
 
-<p>Any tag implementation that allows the user to change the order of tags must offer a way to do so without relying on ‘click and drag’ movements. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">2.5.7 Dragging movements</a>.</p>
+<p>Any implementation of the Tag component that allows the user to change the order of tags must offer a way to do so without relying on ‘click and drag’ movements. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">WCAG 2.2 success criterion 2.5.7 Dragging movements</a>.</p>
 {% endcall %}
 
 ## Using colour with tags
 
 You can use colour to help distinguish between different tags – or to help draw the user’s attention to a tag if it’s especially important. For example, it probably makes sense to use `govuk-tag--red` for a tag that reads ‘Urgent’.
 
-[Do not use colour alone to convey information](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html) because it’s not accessible. If you use the same tag in more than one place, make sure you keep the colour consistent.
+Do not use colour alone to convey information, because it’s not accessible. If you use the same tag in more than one place, make sure you keep the colour consistent. This is to [meet WCAG 2.2 success criterion 1.4.1 Use of colour](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html).
 
 ### Additional colours
 

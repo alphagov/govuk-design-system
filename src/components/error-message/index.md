@@ -19,7 +19,7 @@ This guidance is for government teams that build online services. [To find infor
   name: "Error message",
   criteria: [
     {
-      text: "edit information they've previously given, so that they can correct an error",
+      text: "make sure users can edit information they've previously given, so that they can correct an error",
       anchor: "wcag-clear-answers-error"
     }
   ]
@@ -57,7 +57,7 @@ For each error:
 
 {% call wcagNote({id: "wcag-clear-answers-error"}) %}
 
-<p>Do not clear any form fields when adding error messages. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
+<p>Do not clear any form fields when showing the Error message component. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry</a>.</p>
 {% endcall %}
 
 Keeping information that caused errors helps users to:

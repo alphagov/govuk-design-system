@@ -20,7 +20,7 @@ Public sector organisations have a duty to consider the need to avoid discrimina
   name: "Equality information",
   criteria: [
     {
-      text: "update their equality information without re-entering existing information",
+      text: "make sure users can update their equality information without re-entering existing information",
       anchor: "wcag-do-not-ask-reentry-equality-info"
     }
   ]
@@ -75,7 +75,7 @@ Updating equality information is especially relevant for longer term services an
 
 {% call wcagNote({id: "wcag-do-not-ask-reentry-equality-info"}) %}
 
-<p>When users are updating equality information, only ask them to enter the information that has changed. Do not ask them to re-enter all existing equality information. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
+<p>When users are updating equality information, only ask them to enter the information that has changed. Do not ask them to re-enter all existing equality information. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry</a>.</p>
 {% endcall %}
 
 ## Get specialist privacy or data protection advice

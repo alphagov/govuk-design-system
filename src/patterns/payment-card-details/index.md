@@ -19,7 +19,7 @@ This guidance is for government teams that build online services. [To find infor
   name: "Payment card details",
   criteria: [
     {
-      text: "interact the with month and year fields, by adding adequate spacing between them",
+      text: "make sure there's adequate spacing between month and year fields, so users can easily interact with them",
       anchor: "wcag-spacing-month-year"
     }
   ]
@@ -45,7 +45,7 @@ Present all fields on a single page, in the order in which they appear on a cred
 
 {% call wcagNote({id: "wcag-spacing-month-year"}) %}
 
-<p>Make sure to add adequate spacing between the month and year fields. Ideally, leave at least 24px of space between the fields, either horizontally (inline) or vertically. This is to make sure users can easily interact with the fields. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target size (minimum)</a>.</p>
+<p>Make sure to add adequate spacing between the month and year fields. Ideally, leave at least 24px of space between the fields, either horizontally (inline) or vertically. This is to make sure users can easily interact with the fields. This relates to <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target size (minimum)</a>.</p>
 {% endcall %}
 
 Show logos for the cards you accept as icons so users can see whether their card is supported.

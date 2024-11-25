@@ -19,7 +19,7 @@ The breadcrumbs component helps users to understand where they are within a webs
   name: "Breadcrumbs",
   criteria: [
     {
-      text: "interact with breadcrumbs",
+      text: "make sure users can interact with the Breadcrumbs component",
       anchor: "wcag-interact-breadcrumbs"
     }
   ]
@@ -45,7 +45,7 @@ The breadcrumbs should start with your 'home' page and end with the parent secti
 
 {% call wcagNote({id: "wcag-interact-breadcrumbs"}) %}
 
-<p>Make sure no other interactive elements are too close to the breadcrumbs. This is to make sure users can easily interact with the breadcrumbs. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target size (minimum)</a>.</p>
+<p>Make sure no other interactive elements are too close to the Breadcrumbs component. This is to make sure users can easily interact with it. This relates to <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target size (minimum)</a>.</p>
 {% endcall %}
 
 There are 2 ways to use the breadcrumbs component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
@@ -64,6 +64,6 @@ To do this, add a `govuk-breadcrumbs--collapse-on-mobile` class to the outer `<d
 
 Use the `govuk-breadcrumbs--inverse` modifier class to show white links and arrows on dark backgrounds – for example, in headers, custom components, and patterns with darker backgrounds.
 
-Make sure all users can see the breadcrumbs – the background colour [must have a contrast ratio of at least 4.5:1](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html) with white.
+Make sure all users can see the breadcrumbs – the background colour must have a contrast ratio of at least 4.5:1 with white to [meet WCAG 2.2 success criterion 1.4.3 Contrast (minimum), level AA](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html).
 
 {{ example({ group: "components", item: "breadcrumbs", example: "inverse", html: true, nunjucks: true, open: false }) }}

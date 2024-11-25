@@ -20,7 +20,7 @@ Give users contact information within your service.
   name: "Contact a department or service team",
   criteria: [
     {
-      text: "find contact details in a consistent place across a set of pages",
+      text: "make sure users can find contact details in a consistent place across a set of pages",
       anchor: "wcag-consistent-contact"
     }
   ]
@@ -46,7 +46,7 @@ Show contact channels in the same order throughout your service. This helps user
 
 <p>If you repeat a particular set of contact details on different pages, show them in the same place on each page.</p>
 <p>For example, if you show a ‘contact us’ section at the end of one help page, any other help pages that include the same ‘contact us’ section should have them shown at the end of the page as well.</p>
-<p>This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent help</a>.</p>
+<p>This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">WCAG 2.2 success criterion 3.2.6 Consistent help</a>.</p>
 {% endcall %}
 
 ### Social media

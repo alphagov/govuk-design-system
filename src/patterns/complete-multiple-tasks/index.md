@@ -24,11 +24,11 @@ Help users understand:
   name: "Complete multiple tasks",
   criteria: [
     {
-      text: "interact with tasks without relying on 'click and drag' movements (if you choose to add functionality to reorder tasks)",
+      text: "if you choose to add functionality to reorder tasks, make sure users can do so without relying on 'click and drag' movements",
       anchor: "wcag-interact-without-click-drag-task"
     },
     {
-      text: "edit information they've given when going back to a previous task",
+      text: "make sure users can edit information they've given when going back to a previous task",
       anchor: "wcag-edit-information-previous-task"
     }
   ]
@@ -69,7 +69,7 @@ Where possible, task names should:
 
 {% call wcagNote({id: "wcag-interact-without-click-drag-task"}) %}
 
-<p>Any task list that allows the user to rearrange the order that tasks are shown must offer a way to do so without relying on ‘click and drag’ movements. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">2.5.7 Dragging movements</a>.</p>
+<p>Any task list that allows the user to rearrange the order that tasks are shown must offer a way to do so without relying on ‘click and drag’ movements. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">WCAG 2.2 success criterion 2.5.7 Dragging movements</a>.</p>
 {% endcall %}
 
 ### Show the status of the tasks
@@ -150,7 +150,7 @@ If the user selects ‘Yes, I’ve completed this section,’ mark the task as '
 {% call wcagNote({id: "wcag-edit-information-previous-task"}) %}
 
 <p>If a user decides to go back to a previous task, make sure information they have already entered is pre-populated.</p>
-<p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
+<p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry</a>.</p>
 {% endcall %}
 
 {{ example({ group: "patterns", item: "complete-multiple-tasks", example: "have-you-completed-this-section", html: true, nunjucks: true, open: false }) }}

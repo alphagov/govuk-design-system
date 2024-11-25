@@ -20,7 +20,7 @@ This guidance is for government teams that build online services. [To find infor
   name: "Email addresses",
   criteria: [
     {
-      text: "reuse a previously entered email address",
+      text: "make sure users can reuse a previously entered email address",
       anchor: "wcag-reuse-email-addresses"
     }
   ]
@@ -48,7 +48,7 @@ You may also need to check that users have access to the email account they give
 
 {% call wcagNote({id: "wcag-reuse-email-addresses"}) %}
 
-<p>Make sure users can easily reuse a previously entered email address within a single journey, unless doing so would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
+<p>Make sure users can easily reuse a previously entered email address within a single journey, unless doing so would be a major safety or security concern. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry</a>.</p>
 {% endcall %}
 
 You can make it easier to reuse email addresses through one of these methods:
@@ -83,7 +83,7 @@ Help your users to enter a valid email address by:
 
 You should also set the `autocomplete` attribute to `email`. This lets browsers autofill the email address on a user's behalf if they’ve entered it previously.
 
-If you are working in production you’ll need to do this to meet [WCAG 2.1 Level AA](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html). You will not normally need to use the `autocomplete` attribute in prototypes, as users will not generally be using their own devices.
+If you are working in production you’ll need to do this to meet [WCAG 2.2 success criterion 1.3.5 Identify input purpose](https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose.html). You will not normally need to use the `autocomplete` attribute in prototypes, as users will not generally be using their own devices.
 
 The field should be wide enough for most users to see their entire email address once they have entered it. A good rule of thumb is to make sure you can see at least 30 characters at once. You can analyse your user data to refine this.
 
