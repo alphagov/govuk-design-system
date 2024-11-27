@@ -61,7 +61,7 @@ Use a simple start page if users can start using the service without needing muc
 
 If the start point is linked to a wider process that needs more explanation, create an ‘Apply’ section within a multipart guide.
 
-For example, before a user applies for probate (the right to manage someone’s estate after they die) they need to understand whether probate is required, whether they’re the right person to apply, how the details of the will and the tax situation affect what they’re supposed to do, how to get the relevant information together and how the different outcomes affect what they'll need to do next.
+For example, for a user to prove their right to work in the UK, they need to understand which documents they'll need and how to show them to an employer. This depends on their nationality, what kind of permission they have to work in the UK and types of documents they've been issued with. Some users have the option of getting a 'share code' by entering their documents online. There are some specific schemes which use different documents.
 
 It’s important that users have this context, so it makes sense to embed the start point within the multipart guide – rather than creating the start point as a separate start page, allowing users to miss the context and potentially do the wrong thing.
 
