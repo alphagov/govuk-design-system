@@ -111,7 +111,7 @@ To see the changes you've made, you may need to create a new 'session'. For exam
 
 You can configure sections to start and stay open, but not stay closed.
 
-Change the `id` from `accordion-default` to `accordion-expanded` to make the sections open from the start. 
+Add the `govuk-accordion__section--expanded` class to the `govuk-accordion__section` `div` to make individual sections open from the start.
 
 ### Do not disable sections
 
