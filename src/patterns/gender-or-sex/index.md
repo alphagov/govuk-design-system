@@ -12,7 +12,9 @@ This pattern explains how to ask users about gender or sex.
 
 ## When to use this pattern
 
-You should only ask users about gender or sex if you genuinely cannot provide your service without this information.
+Only use this design pattern to ask users about gender or sex if you genuinely cannot provide your service without this information.
+
+You should use the separate [Equality information pattern](/patterns/equality-information/) to collect information about gender or sex (and other protected characteristics under the Equality Act 2010) to comply with the public sector Equality Duty.
 
 If you do need to ask, use ‘sex’ when you need biological data (for example, if you’re providing a medical service). In all other cases, use ‘gender’.
 
