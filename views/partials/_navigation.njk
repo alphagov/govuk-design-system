@@ -6,8 +6,18 @@
   {% set navigationItems = navigationItems.concat({
     href: item.href,
     text: item.text,
-    current: permalink and permalink.startsWith(item.url)
+    active: permalink and permalink.startsWith(item.url),
+    current: permalink === item.url
   }) %}
+  {% if permalink and permalink.startsWith(item.url) %}
+    {% for subItem in item.items %}
+      {% set navigationItems = navigationItems.concat({
+        text: subItem.label,
+        current: permalink === subItem.url,
+        html: '<a class="app-subnav__link app-subnav__link--mobile-only govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="' + subItem.url + '">' + subItem.label + '</a>'
+      }) %}
+    {% endfor %}
+  {% endif %}
 {% endfor %}
 
 {{ govukServiceNavigation({
