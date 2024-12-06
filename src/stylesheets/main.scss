@@ -60,6 +60,7 @@ $app-code-color: #d13118;
 @import "components/image-card";
 @import "components/masthead";
 @import "components/mobile-navigation";
+@import "components/navigation";
 @import "components/options";
 @import "components/page-navigation";
 @import "components/phase-banner";
@@ -68,6 +69,14 @@ $app-code-color: #d13118;
 @import "components/subnav";
 @import "components/tabs";
 @import "components/table";
+
+.app-nav-subitems-mobile {
+  @include govuk-media-query($from: tablet) {
+    display: none;
+  }
+
+  background-color: govuk-colour("mid-grey");
+}
 
 // We don't change the global width container width so that examples are the current width.
 .app-width-container,
