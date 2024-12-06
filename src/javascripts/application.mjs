@@ -20,6 +20,7 @@ import CookiesPage from './components/cookies-page.mjs'
 import Copy from './components/copy.mjs'
 import EmbedCard from './components/embed-card.mjs'
 import ExampleFrame from './components/example-frame.mjs'
+import MobileNavigation from './components/mobile-navigation.mjs'
 import Navigation from './components/navigation.mjs'
 import OptionsTable from './components/options-table.mjs'
 import ScrollContainer from './components/scroll-container.mjs'
@@ -56,6 +57,9 @@ new OptionsTable()
 
 // Initialise mobile navigation
 createAll(Navigation)
+
+// Initialise mobile navigation
+createAll(MobileNavigation)
 
 // Initialise scrollable container handling
 createAll(ScrollContainer)
