@@ -5,40 +5,40 @@
  */
 const config = [
   {
-    label: 'Get started',
-    url: 'get-started',
     text: 'Get started',
-    href: '/get-started'
+    href: 'get-started',
+    label: 'Get started',
+    url: 'get-started'
   },
   {
-    label: 'Styles',
-    url: 'styles',
     text: 'Styles',
-    href: '/styles'
+    href: 'styles',
+    label: 'Styles',
+    url: 'styles'
   },
   {
-    label: 'Components',
-    url: 'components',
     text: 'Components',
-    href: '/components'
+    href: 'components',
+    label: 'Components',
+    url: 'components'
   },
   {
-    label: 'Patterns',
-    url: 'patterns',
     text: 'Patterns',
-    href: '/patterns'
+    href: 'patterns',
+    label: 'Patterns',
+    url: 'patterns'
   },
   {
-    label: 'Community',
-    url: 'community',
     text: 'Community',
-    href: '/community'
+    href: 'community',
+    label: 'Community',
+    url: 'community'
   },
   {
-    label: 'Accessibility',
-    url: 'accessibility',
     text: 'Accessibility',
-    href: '/accessibility'
+    href: 'accessibility',
+    label: 'Accessibility',
+    url: 'accessibility'
   }
 ]
 
@@ -46,6 +46,8 @@ module.exports = config
 
 /**
  * @typedef {object} NavigationItem
+ * @property {string} text - Navigation item text
+ * @property {string} href - URL path without leading slash
  * @property {string} label - Navigation item text
  * @property {string} url - URL path without leading slash
  * @property {boolean} [ignoreInSearch] - Ignore in search index
@@ -54,6 +56,8 @@ module.exports = config
 
 /**
  * @typedef {object} NavigationSubItem
+ * @property {string} text - Navigation item text
+ * @property {string} href - URL path without leading slash
  * @property {string} label - Navigation item text
  * @property {string} url - URL path without leading slash
  * @property {string[]} [aliases] - Additional search terms (optional)

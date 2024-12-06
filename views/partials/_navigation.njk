@@ -1,15 +1,34 @@
 {% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+{% from "_mobile-navigation.njk" import mobileNavigation %}
 
 {% set navigationItems = [] %}
 
 {% for item in navigation %}
-  {% set navigationItems = navigationItems.concat({
+  {% set subNavItems = [{
     href: item.href,
-    text: item.text,
-    current: permalink and permalink.startsWith(item.url)
-  }) %}
+    text: item.text + " overview",
+    active: permalink and permalink.startsWith(item.href.slice(1)),
+    current: permalink === item.href
+  }] %}
+
+  {% if item.items %}
+    {% set subNavItems = subNavItems.concat(item.items) %}
+  {% endif %}
+
+  {% set subNavItemHtml = mobileNavigation({ items: subNavItems, theme: item.theme }) %}
+
+  {% set navItem = {
+    href: item.href,
+    html: item.text + '<template class="app-mobile-navigation__template">' + subNavItemHtml + '</template>',
+    active: permalink and permalink.startsWith(item.href.slice(1)),
+    current: permalink === item.href
+  } %}
+
+  {% set navigationItems = navigationItems.concat(navItem) %}
 {% endfor %}
 
-{{ govukServiceNavigation({
-  navigation: navigationItems
-}) }}
+<div class="app-mobile-navigation" data-module="app-mobile-navigation">
+  {{ govukServiceNavigation({
+    navigation: navigationItems
+  }) }}
+</div>
