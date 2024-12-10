@@ -26,6 +26,7 @@ $govuk-new-typography-scale: true;
 @import "govuk/components/panel";
 @import "govuk/components/phase-banner";
 @import "govuk/components/radios";
+@import "govuk/components/service-navigation";
 @import "govuk/components/skip-link";
 @import "govuk/components/summary-list";
 @import "govuk/components/table";
@@ -68,8 +69,17 @@ $app-code-color: #d13118;
 @import "components/tabs";
 @import "components/table";
 
+.app-nav-subitems-mobile {
+  @include govuk-media-query($from: tablet) {
+    display: none;
+  }
+
+  background-color: govuk-colour("mid-grey");
+}
+
 // We don't change the global width container width so that examples are the current width.
-.app-width-container {
+.app-width-container,
+.govuk-service-navigation .govuk-width-container {
   @include govuk-width-container(1100px);
 }
 
