@@ -628,7 +628,7 @@ For example, if you want a custom element to use type scale point 19, use:
 You can add additional arguments to control font weight, use tabular font spacing, or to override the line height:
 
 ```scss
-@include govuk-font($size 19, $weight: bold, $tabular: true);
+@include govuk-font($size: 19, $weight: bold, $tabular: true);
 ```
 
 ### If you only want to set the font size
