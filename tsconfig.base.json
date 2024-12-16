@@ -5,6 +5,7 @@
     "module": "NodeNext",
     "noEmit": true,
     "noImplicitThis": true,
+    "skipLibCheck": true,
     "strict": false,
     "strictBindCallApply": true,
     "strictFunctionTypes": true,
