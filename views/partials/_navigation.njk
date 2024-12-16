@@ -1,5 +1,5 @@
 {% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
-{% from "_sub-navigation-items.njk" import subNavigationItems %}
+{% from "_mobile-navigation.njk" import mobileNavigation %}
 
 {% set navigationItems = [] %}
 
@@ -7,10 +7,10 @@
   {% set navItem = {} %}
 
   {% if item.items %}
-    {% set subNavItemHtml = subNavigationItems({ items: item.items }) %}
+    {% set subNavItemHtml = mobileNavigation({ items: item.items }) %}
     {% set navItem = {
       href: item.href,
-      html: item.text + '<template>' + subNavItemHtml + '</template>',
+      html: item.text + '<template class="app-mobile-navigation__template">' + subNavItemHtml + '</template>',
       active: permalink and permalink.startsWith(item.url),
       current: permalink === item.url    
     } %}    
@@ -26,6 +26,8 @@
   {% set navigationItems = navigationItems.concat(navItem) %}
 {% endfor %}
 
-{{ govukServiceNavigation({
-  navigation: navigationItems
-}) }}
+<div data-module="app-mobile-navigation">
+  {{ govukServiceNavigation({
+    navigation: navigationItems
+  }) }}
+</div>
