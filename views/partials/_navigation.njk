@@ -1,27 +1,31 @@
 {% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+{% from "_sub-navigation-items.njk" import subNavigationItems %}
 
 {% set navigationItems = [] %}
-{% set subNavigationItems = ["<ul class='app-nav-subitems-mobile govuk-service-navigation__list'>"] %}
 
 {% for item in navigation %}
-  {% set navigationItems = navigationItems.concat({
-    href: item.href,
-    text: item.text,
-    active: permalink and permalink.startsWith(item.url),
-    current: permalink === item.url
-  }) %}
-  {% if permalink and permalink.startsWith(item.url) %}
-    {% for subItem in item.items %}
-      {% set subNavigationItems = subNavigationItems.concat('<li class="govuk-service-navigation__item"><a class="app-subnav__link app-subnav__link--mobile-only govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="' + subItem.url + '">' + subItem.label + '</a></li>') %}
-    {% endfor %}
-    {% set subNavigationItems = subNavigationItems.concat('</ul>') %}
-    {% set subNavigationItems = subNavigationItems | join %}
+  {% set navItem = {} %}
+
+  {% if item.items %}
+    {% set subNavItemHtml = subNavigationItems({ items: item.items }) %}
+    {% set navItem = {
+      href: item.href,
+      html: item.text + '<template>' + subNavItemHtml + '</template>',
+      active: permalink and permalink.startsWith(item.url),
+      current: permalink === item.url    
+    } %}    
+  {% else %}
+    {% set navItem = {
+      href: item.href,
+      html: item.text,
+      active: permalink and permalink.startsWith(item.url),
+      current: permalink === item.url    
+    } %}
   {% endif %}
+
+  {% set navigationItems = navigationItems.concat(navItem) %}
 {% endfor %}
 
 {{ govukServiceNavigation({
-  navigation: navigationItems,
-  slots: {
-    navigationEnd: subNavigationItems  
-  }
+  navigation: navigationItems
 }) }}

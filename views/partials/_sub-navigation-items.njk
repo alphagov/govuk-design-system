@@ -1,0 +1,13 @@
+{% macro subNavigationItems(params) %}
+  {% if params.items %}
+      <ul class="app-navigation__list js-app-navigation__list--hidden">
+        {% for item in params.items %}
+          <li class="app-navigation__subnav-item">
+            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="{{ item.url }}">
+              {{ item.label }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+  {% endif %}
+{% endmacro %}
