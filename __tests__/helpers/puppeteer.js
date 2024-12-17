@@ -54,9 +54,23 @@ async function isVisible($element) {
   return !!(await $element.boundingBox())
 }
 
+/**
+ * Type some text into a text element
+ *
+ * Extracted into its own function because it was causing flakiness and it makes
+ * sense to tweak it in a single place.
+ *
+ * @param {import('puppeteer').ElementHandle} $element - Puppeteer element handle
+ * @param {string} text - the text to type
+ */
+async function typeText($element, text) {
+  await $element.type(text, { delay: 100 })
+}
+
 module.exports = {
   goTo,
   getAttribute,
   getProperty,
-  isVisible
+  isVisible,
+  typeText
 }
