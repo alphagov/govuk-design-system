@@ -1,4 +1,4 @@
-const { goTo, getProperty } = require('./helpers/puppeteer.js')
+const { goTo, getProperty, typeText } = require('./helpers/puppeteer.js')
 
 // Regex that can be used to match on fingerprinted search index files
 const isSearchIndex = /.*\/search-index(-[0-9a-f]{32})?.json$/
@@ -35,7 +35,7 @@ describe('Site search', () => {
   })
 
   it('does not return any results when searching for something that does not exist', async () => {
-    await $searchInput.type('lorem ipsum')
+    await typeText($searchInput, 'lorem ipsum')
 
     const $searchOptions = await $module.$$('.app-site-search__option')
     await expect(getProperty($searchOptions[0], 'textContent')).resolves.toBe(
@@ -44,7 +44,7 @@ describe('Site search', () => {
   })
 
   it('returns results where a word in the title begins with the letter "d"', async () => {
-    await $searchInput.type('d')
+    await typeText($searchInput, 'd')
 
     // ignore any results where a match was found in the alias
     const resultsArray = await page.$$eval(
@@ -62,7 +62,7 @@ describe('Site search', () => {
   })
 
   it('returns results that contain aliases that start with the letter "d"', async () => {
-    await $searchInput.type('d')
+    await typeText($searchInput, 'd')
 
     // only get results where a match was found in the alias
     const resultsArray = await page.$$eval(
@@ -83,7 +83,7 @@ describe('Site search', () => {
   })
 
   it("doesn't show any aliases if it finds any matches in the title", async () => {
-    await $searchInput.type('det')
+    await typeText($searchInput, 'det')
 
     const resultsArray = await page.$$('.app-site-search__aliases')
     expect(resultsArray).toHaveLength(0)
@@ -91,7 +91,7 @@ describe('Site search', () => {
 
   it('selecting "details" as the result takes you to the the "details" page', async () => {
     await $searchInput.click()
-    await $searchInput.type('details')
+    await typeText($searchInput, 'details')
 
     await Promise.all([page.waitForNavigation(), page.keyboard.press('Enter')])
 
@@ -112,7 +112,7 @@ describe('Site search', () => {
     await setup(page)
 
     await $searchInput.click()
-    await $searchInput.type('lorem')
+    await typeText($searchInput, 'lorem')
 
     const $searchOptions = await $module.$$('.app-site-search__option')
     await expect(getProperty($searchOptions[0], 'textContent')).resolves.toBe(
@@ -134,7 +134,7 @@ describe('Site search', () => {
     await setup(page)
 
     await $searchInput.click()
-    await $searchInput.type('d')
+    await typeText($searchInput, 'd')
 
     const $searchOptions = await $module.$$('.app-site-search__option')
     await expect(getProperty($searchOptions[0], 'textContent')).resolves.toBe(
@@ -167,7 +167,7 @@ describe('Site search', () => {
       })
 
       await $searchInput.focus()
-      await $searchInput.type('lorem ipsum')
+      await typeText($searchInput, 'lorem ipsum')
 
       const GoogleTagManagerDataLayer = await page.evaluate(
         () => window.dataLayer
@@ -198,7 +198,7 @@ describe('Site search', () => {
       })
 
       await $searchInput.focus()
-      await $searchInput.type('g')
+      await typeText($searchInput, 'g')
 
       const $searchOptions = await $module.$$('.app-site-search__option')
       const GoogleTagManagerDataLayer = await page.evaluate(
@@ -249,7 +249,7 @@ describe('Site search', () => {
       })
 
       await $searchInput.focus()
-      await $searchInput.type('g')
+      await typeText($searchInput, 'g')
 
       await page.keyboard.press('ArrowDown')
       await page.keyboard.press('Enter')
@@ -294,7 +294,7 @@ describe('Site search', () => {
       })
 
       await $searchInput.focus()
-      await $searchInput.type('user@example.com')
+      await typeText($searchInput, 'user@example.com')
 
       const GoogleTagManagerDataLayer = await page.evaluate(
         () => window.dataLayer
@@ -317,7 +317,7 @@ describe('Site search', () => {
       })
 
       await $searchInput.focus()
-      await $searchInput.type('079460999')
+      await typeText($searchInput, '079460999')
 
       const GoogleTagManagerDataLayer = await page.evaluate(
         () => window.dataLayer
