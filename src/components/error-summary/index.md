@@ -23,7 +23,7 @@ Always show an error summary when there is a validation error, even if there’s
 
 You must:
 
-- move keyboard focus to the error summary
+- move keyboard focus to the error summary (the govuk-frontend javascript will do this for you)
 - include the heading ‘There is a problem’
 - link to each of the answers that have validation errors
 - make sure the error messages in the error summary are worded the same as those which appear next to the inputs with errors
