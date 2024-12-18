@@ -1,3 +1,15 @@
+.app-mobile-navigation .govuk-service-navigation__item--active {
+  @include govuk-media-query($until: tablet) {
+    border-color: transparent;
+  }
+}
+
+.app-mobile-navigation__link--active {
+  @include govuk-media-query($until: tablet) {
+    border-left: 5px solid rgb(26.1, 100.8, 165.6);
+  }
+}
+
 .app-mobile-navigation__toggle-button {
   @include govuk-media-query($from: tablet) {
     display: none;

@@ -4,29 +4,30 @@
 {% set navigationItems = [] %}
 
 {% for item in navigation %}
-  {% set navItem = {} %}
+  {% set subNavItems = [{ 
+    href: item.href,
+    text: item.text + " overview",
+    active: permalink and permalink.startsWith(item.href.slice(1)),
+    current: permalink === item.href
+  }] %}  
 
   {% if item.items %}
-    {% set subNavItemHtml = mobileNavigation({ items: item.items }) %}
-    {% set navItem = {
-      href: item.href,
-      html: item.text + '<template class="app-mobile-navigation__template">' + subNavItemHtml + '</template>',
-      active: permalink and permalink.startsWith(item.url),
-      current: permalink === item.url    
-    } %}    
-  {% else %}
-    {% set navItem = {
-      href: item.href,
-      html: item.text,
-      active: permalink and permalink.startsWith(item.url),
-      current: permalink === item.url    
-    } %}
+    {% set subNavItems = subNavItems.concat(item.items) %}
   {% endif %}
+
+  {% set subNavItemHtml = mobileNavigation({ items: subNavItems.concat(item.items) }) %}
+
+  {% set navItem = {
+    href: item.href,
+    html: item.text + '<template class="app-mobile-navigation__template">' + subNavItemHtml + '</template>',
+    active: permalink and permalink.startsWith(item.href.slice(1)),
+    current: permalink === item.href
+  } %}  
 
   {% set navigationItems = navigationItems.concat(navItem) %}
 {% endfor %}
 
-<div data-module="app-mobile-navigation">
+<div class="app-mobile-navigation" data-module="app-mobile-navigation">
   {{ govukServiceNavigation({
     navigation: navigationItems
   }) }}

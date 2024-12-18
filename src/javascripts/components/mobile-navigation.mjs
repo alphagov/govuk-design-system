@@ -46,14 +46,24 @@ class MobileNavigation extends Component {
       link.insertAdjacentElement('afterend', button)
     })
 
+    const currentLink = Array.from(
+      this.$root.querySelectorAll(
+        `.app-navigation__subnav-item a[href="${window.location.pathname.slice(0, -1)}"]`
+      )
+    ).pop()
+
+    if (currentLink) {
+      currentLink.classList.add('app-mobile-navigation__link--active')
+    }
+
     // A global const for storing a matchMedia instance which we'll use to detect when a screen size change happens
     // Set the matchMedia to the govuk-frontend tablet breakpoint
 
-    const x = getComputedStyle(document.documentElement).getPropertyValue(
-      '--govuk-frontend-breakpoint-tablet'
-    )
+    const breakPoint = getComputedStyle(
+      document.documentElement
+    ).getPropertyValue('--govuk-frontend-breakpoint-tablet')
 
-    this.mql = window.matchMedia(`(min-width: ${x})`)
+    this.mql = window.matchMedia(`(min-width: ${breakPoint})`)
 
     // MediaQueryList.addEventListener isn't supported by Safari < 14 so we need
     // to be able to fall back to the deprecated MediaQueryList.addListener
@@ -76,11 +86,10 @@ class MobileNavigation extends Component {
       'click',
       (e) => {
         if (e.target.tagName === 'BUTTON') {
-          if (e.target.getAttribute('aria-expanded') === 'true') {
-            e.target.setAttribute('aria-expanded', 'false')
-          } else {
-            e.target.setAttribute('aria-expanded', 'true')
-          }
+          e.target.setAttribute(
+            'aria-expanded',
+            !(e.target.getAttribute('aria-expanded') === 'true')
+          )
         }
       },
       { bubbles: true }
