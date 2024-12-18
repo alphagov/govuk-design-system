@@ -1,6 +1,6 @@
 ---
 title: Accessibility statement
-description: accessibility in the GOV.UK Design System
+description: Accessibility in the GOV.UK Design System
 layout: layout-single-page-prose.njk
 ---
 
@@ -23,9 +23,9 @@ AbilityNet has [advice on making your device easier to use](https://mcmw.ability
 
 ## Compliance status
 
-The Design System website at [design-system.service.gov.uk](https://design-system.service.gov.uk/) is fully compliant with the Web Content Accessibility Guidelines (WCAG) version 2.1 AA standard.
+The Design System website at [design-system.service.gov.uk](https://design-system.service.gov.uk/) is fully compliant with the Web Content Accessibility Guidelines (WCAG) version 2.2 AA standard.
 
-The GOV.UK Frontend documentation website at [frontend.design-system.service.gov.uk](https://frontend.design-system.service.gov.uk/) is fully compliant with the Web Content Accessibility Guidelines (WCAG) version 2.1 AA standard.
+The GOV.UK Frontend documentation website at [frontend.design-system.service.gov.uk](https://frontend.design-system.service.gov.uk/) is fully compliant with the Web Content Accessibility Guidelines (WCAG) version 2.2 AA standard.
 
 The GOV.UK Frontend codebase at [github.com/alphagov/govuk-frontend](https://github.com/alphagov/govuk-frontend) is fully compliant with the Web Content Accessibility Guidelines (WCAG) version 2.2 AA standard.
 
@@ -37,10 +37,10 @@ In this section, the team lists non-accessible content that has been reported, v
 - [GOV.UK Frontend Documentation Github repository](https://github.com/alphagov/govuk-frontend-docs)
 - [GOV.UK Frontend GitHub repository](https://github.com/alphagov/govuk-frontend)
 
-The team document WCAG 2.1 A and AA failures in two repositories under the ‘accessibility-regulations-failure’ issue label:
+The team documents WCAG 2.2 A and AA failures in two repositories under the ‘accessibility regulations failure’ issue label:
 
-- [GOV.UK Design System website label for accessibility regulations failures](https://github.com/alphagov/govuk-design-system/labels/accessibility-regulations-failure)
-- [GOV.UK Frontend codebase label for accessibility regulations failures](https://github.com/alphagov/govuk-frontend/labels/accessibility-regulations-failure)
+- [GOV.UK Design System website label for accessibility regulations failures](https://github.com/alphagov/govuk-design-system/issues?q=is%3Aopen+is%3Aissue+label%3A%22accessibility+regulations+failure%22)
+- [GOV.UK Frontend codebase label for accessibility regulations failures](https://github.com/alphagov/govuk-frontend/issues?q=is%3Aopen+is%3Aissue+label%3A%22accessibility+regulations+failure%22)
 
 ### Non-compliance with the accessibility regulations
 
@@ -58,42 +58,34 @@ The team does not have any content within these products outside the scope of th
 
 ### Other identified and tracked accessibility concerns
 
-In addition to non-compliant content, the team also track additional concerns about accessibility which:
+In addition to non-compliant content, the team also tracks additional concerns about accessibility which:
 
 - show strong evidence of being accessibility barriers
-- do not constitute a failure in one or more WCAG 2.1 Level AA criteria
+- do not constitute a failure in any WCAG 2.2 Level AA criteria
 - are not classified as non-compliance with the accessibility regulations
 - are determined as worth featuring in this accessibility statement
 
-The team documents these additional concerns in two repositories under the ‘accessibility-concern’ issue label:
+The team documents these additional concerns in two repositories under the ‘accessibility concern’ issue label:
 
-- [GOV.UK Design System website label for accessibility concerns](https://github.com/alphagov/govuk-design-system/labels/accessibility-concern)
-- [GOV.UK Frontend codebase label for accessibility concerns](https://github.com/alphagov/govuk-frontend/labels/accessibility-concern)
+- [GOV.UK Design System website label for accessibility concerns](https://github.com/alphagov/govuk-design-system/issues?q=is%3Aopen+is%3Aissue+label%3A%22accessibility+concern%22)
+- [GOV.UK Frontend codebase label for accessibility concerns](https://github.com/alphagov/govuk-frontend/issues?q=is%3Aopen+is%3Aissue+label%3A%22accessibility+concern%22)
 
-For the GOV.UK Design System website and the GOV.UK Frontend Documentation website, the team do not currently know of any additional accessibility concerns to add to this statement.
+For the GOV.UK Design System website and the GOV.UK Frontend Documentation website, the team does not currently know of any additional accessibility concerns to add to this statement.
 
 Additional accessibility concerns from the GOV.UK Frontend codebase include:
 
-1.  The details component does not work well with Dragon and VoiceOver. This is not an issue with our details component, but is a known issue with the assistive technology and the `<details>` HTML element. Track our progress on the [GitHub issue: ‘Details component does not work well with Dragon and VoiceOver’](https://github.com/alphagov/govuk-frontend/issues/3693).
-2.  [A bug within Dragon means no action is taken when trying to activate the file upload component](https://github.com/alphagov/reported-bugs/issues/35) through the command ‘click choose file’. This is a usability issue originating from the assistive technology. The team does not plan to fix this, as the assistive technology will need to resolve it. Track our progress on the [GitHub issue: ‘Upload file component doesn’t respond to ‘click choose file’ due to Dragon / browser bugs’](https://github.com/alphagov/govuk-frontend/issues/3686).
+1.  The details component does not work well with Dragon and older versions of VoiceOver. This is not an issue with our details component, but is a known issue with the assistive technology and the `<details>` HTML element. Track our progress on the [GitHub issue: ‘Details component does not work well with Dragon and VoiceOver’](https://github.com/alphagov/govuk-frontend/issues/3693).
+2.  [A bug within Dragon means no action is taken when trying to activate the file upload component](https://github.com/alphagov/reported-bugs/issues/35) through the command ‘click choose file’ or ‘click button’. This is a usability issue originating from the assistive technology. The team is working on building a bespoke component that will fix this. Track our progress on the [GitHub issue: ‘Upload file component doesn’t respond to ‘click choose file’ due to Dragon / browser bugs’](https://github.com/alphagov/govuk-frontend/issues/3686).
 
 ## Preparation of this accessibility statement
 
-This statement was prepared on 23 October 2019. It was last reviewed and updated on 2 August 2023.
+This statement was prepared on 23 October 2019. It was last reviewed and updated on 18 December 2024.
 
-The [GOV.UK Design System website](https://design-system.service.gov.uk/) was last audited for accessibility issues by an external group on 7 October 2019. The test was carried out by the [Digital Accessibility Centre (DAC)](https://digitalaccessibilitycentre.org/).
+### GOV.UK Design System website
 
-DAC tested a sample of pages to cover the different content types in the GOV.UK Design System website. They were:
+The [GOV.UK Design System website](https://design-system.service.gov.uk/) was last audited for accessibility issues by an external group in July 2024. The test was carried out by the [Digital Accessibility Centre (DAC)](https://digitalaccessibilitycentre.org/).
 
-- the [GOV.UK Design System homepage](https://design-system.service.gov.uk/)
-- a short content page: [Design System working group](https://design-system.service.gov.uk/community/design-system-working-group/)
-- a long content page: [Layout styles](https://design-system.service.gov.uk/styles/layout/)
-- an overview page: [Community section](https://design-system.service.gov.uk/community/)
-- a styles page: [Headings styles](https://design-system.service.gov.uk/styles/headings/)
-- a component page: [Radios component](https://design-system.service.gov.uk/components/radios/)
-- a pattern page: [Question pages pattern](https://design-system.service.gov.uk/patterns/question-pages/)
-
-DAC also tested the global search functionality that appears in the header of the GOV.UK Design System website.
+DAC tested a sample of pages to cover the different content types in the GOV.UK Design System website. They also tested the global search functionality that appears in the header of the GOV.UK Design System website.
 
 ### Frontend documentation website
 
@@ -107,7 +99,7 @@ To learn more, read the [Accessibility statement for Technical Documentation Tem
 
 The GOV.UK Frontend codebase is not a website but a [code repository on GitHub](https://github.com/alphagov/govuk-frontend) and [a software package on npm (Node Package Manager)](https://www.npmjs.com/package/govuk-frontend).
 
-Examples using the GOV.UK Frontend codebase were last audited for accessibility issues by an external group in May 2023. The audit was carried out by the [Digital Accessibility Centre (DAC)](https://digitalaccessibilitycentre.org/).
+Examples using the GOV.UK Frontend codebase were last audited for accessibility issues by an external group in July 2024. The audit was carried out by the [Digital Accessibility Centre (DAC)](https://digitalaccessibilitycentre.org/).
 
 Read more about the codebase’s accessibility in the [GOV.UK Frontend GitHub repository readme](https://github.com/alphagov/govuk-frontend#accessibility).
 
