@@ -5,40 +5,28 @@
  */
 const config = [
   {
-    label: 'Get started',
-    url: 'get-started',
     text: 'Get started',
-    href: '/get-started'
+    href: 'get-started'
   },
   {
-    label: 'Styles',
-    url: 'styles',
     text: 'Styles',
-    href: '/styles'
+    href: 'styles'
   },
   {
-    label: 'Components',
-    url: 'components',
     text: 'Components',
-    href: '/components'
+    href: 'components'
   },
   {
-    label: 'Patterns',
-    url: 'patterns',
     text: 'Patterns',
-    href: '/patterns'
+    href: 'patterns'
   },
   {
-    label: 'Community',
-    url: 'community',
     text: 'Community',
-    href: '/community'
+    href: 'community'
   },
   {
-    label: 'Accessibility',
-    url: 'accessibility',
     text: 'Accessibility',
-    href: '/accessibility'
+    href: 'accessibility'
   }
 ]
 
