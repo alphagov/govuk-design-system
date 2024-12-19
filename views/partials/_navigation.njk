@@ -15,7 +15,7 @@
     {% set subNavItems = subNavItems.concat(item.items) %}
   {% endif %}
 
-  {% set subNavItemHtml = mobileNavigation({ items: subNavItems.concat(item.items) }) %}
+  {% set subNavItemHtml = mobileNavigation({ items: subNavItems.concat(item.items), theme: item.theme }) %}
 
   {% set navItem = {
     href: item.href,
