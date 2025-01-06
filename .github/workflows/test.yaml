@@ -13,16 +13,16 @@ on:
       runner:
         description: Run tests on
         type: choice
-        default: ubuntu-latest
+        default: ubuntu-22.04
         options:
           - macos-latest
-          - ubuntu-latest
+          - ubuntu-22.04
           - windows-latest
 
 jobs:
   build:
     name: Build
-    runs-on: ${{ github.event.inputs.runner || 'ubuntu-latest' }}
+    runs-on: ${{ github.event.inputs.runner || 'ubuntu-22.04' }}
 
     steps:
       - name: Checkout code
@@ -55,7 +55,7 @@ jobs:
 
   test:
     name: ${{ matrix.task.description }}
-    runs-on: ${{ github.event.inputs.runner || 'ubuntu-latest' }}
+    runs-on: ${{ github.event.inputs.runner || 'ubuntu-22.04' }}
     needs: [build]
 
     strategy:
