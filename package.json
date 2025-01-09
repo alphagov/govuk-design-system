@@ -36,7 +36,7 @@
   "dependencies": {
     "accessible-autocomplete": "^3.0.1",
     "clipboard": "^2.0.11",
-    "govuk-frontend": "^5.7.1",
+    "govuk-frontend": "^5.8.0",
     "iframe-resizer": "^4.4.5",
     "lunr": "^2.3.9"
   },
