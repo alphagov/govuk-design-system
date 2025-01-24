@@ -112,7 +112,21 @@ Say ‘The selected file must use the template’.
 
 We introduced a change to the file upload component in January 2025. We recommend service teams start using it to improve the experience for users.
 
-xxx
+These changes are behind a feature flag.
+Add: how to enable it
+
+Add: example code
+
+### Changes to the previous version
+
+There is now a visible drop zone to assist with dragging and dropping a file. The drop zone shows from the start, is bigger and more interactive.
+
+The upload button has a GOV.UK look.
+
+The text on the button and the message that no file was chosen can be changed.
+
+This version includes a fix for Dragon, the speech recognition tool.
+Previously Dragon could not activate the button with "click button" or similar commands. This works now, although it only works the first time due to being [gated by user activation](https://developer.mozilla.org/en-US/docs/Web/Security/User_activation). This is a security feature, therefore true for all file upload elements and cannot be fixed. If the component needs to be used more than once, this can be done when also doing something else in between like saying "mouse click".
 
 ## Research on this component
 
