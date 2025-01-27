@@ -1,5 +1,15 @@
 $navigation-height: 50px;
 
+.app-navigation__list-toggle {
+  @include govuk-media-query($from: tablet) {
+    display: none;
+  }
+}
+
+.js-app-navigation__list--hidden {
+  display: none;
+}
+
 .app-navigation {
   border-bottom: 1px solid $govuk-border-colour;
   background-color: $app-light-grey;
