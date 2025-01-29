@@ -16,6 +16,12 @@ We regularly ask our community to help us decide the things we need to work on t
 
 To get a wider look at our work and see what we released recently, see our [Roadmap](/community/roadmap/).
 
+## Essential component criteria
+
+- Our way of prioritising work, alongside community input.
+- List of essential criteria.
+
+
 ## Working on now
 
 If you’d like to help us build these components and patterns, join the conversation to see what needs to be done to publish.
