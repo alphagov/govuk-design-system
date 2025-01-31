@@ -16,6 +16,19 @@ We regularly ask our community to help us decide the things we need to work on t
 
 To get a wider look at our work and see what we released recently, see our [Roadmap](/community/roadmap/).
 
+## Essential component criteria
+
+Alongside community input, we prioritise work to maintain and improve components that are essential to the Design System.
+
+An essential component should:
+
+1. Build things for user facing services on GOV.UK.
+2. Be required to provide security and trust in GOV.UK through consistent design across its services.
+3. Provide the building blocks to allow teams to successfully iterate at scale.
+4. Improve accessibility of GOV.UK services.
+5. Improve sustainability of GOV.UK services.
+6. Be in use in a large number of services.
+
 ## Working on now
 
 If you’d like to help us build these components and patterns, join the conversation to see what needs to be done to publish.
@@ -54,6 +67,14 @@ If you’d like to help us build these components and patterns, join the convers
             text: "Discuss Navigation"
           }
         ]
+      }
+    },
+    {
+      key: {
+        text: "Essential components"
+      },
+      value: {
+        text: "We're working to improve our essential components"
       }
     }
   ]
