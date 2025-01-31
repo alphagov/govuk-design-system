@@ -110,7 +110,7 @@ Say ‘The selected file must use the template’.
 
 ## How to turn on improvements
 
-We introduced a change to the file upload component in January 2025. We recommend service teams start using it to improve the experience for users.
+We introduced a change to the file upload component in February 2025. We recommend service teams start using it to improve the experience for users.
 
 These changes are behind a feature flag.
 Add: how to enable it
@@ -136,6 +136,6 @@ An accessibility audit has shown some users have encountered a problem when usin
 
 The file upload component does not show a visual target area when dragging and dropping a file. The component inherits and uses the browser's default behaviour. More detail on the findings can be found in the [GitHub issue: ‘Upload file component has no visual target area when dragging and dropping a file’](https://github.com/alphagov/govuk-frontend/issues/3685).
 
-We revisited this issue in January 2025 and have published a [custom file upload component](#how-to-turn-on-improvements) to improve the accessibility of the component. You have the option to use this, we're confident the new component is an improvement on the browser's default behaviour.
+We revisited this issue in February 2025 and have published a [custom file upload component](#how-to-turn-on-improvements) to improve the accessibility of the component. You have the option to use this, we're confident the new component is an improvement on the browser's default behaviour.
 
 Read a blog post about [design tips for helping users upload things](https://designnotes.blog.gov.uk/2017/02/14/some-design-tips-for-uploading-things/).
