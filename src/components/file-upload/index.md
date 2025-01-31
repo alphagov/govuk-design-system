@@ -115,7 +115,7 @@ We introduced a change to the file upload component in February 2025. We recomme
 These changes are behind a feature flag.
 Add: how to enable it
 
-Add: example code
+{{ example({ group: "components", item: "file-upload", example: "enhanced", html: true, nunjucks: true, open: false, size: "m" }) }}
 
 ### Changes to the previous version
 
