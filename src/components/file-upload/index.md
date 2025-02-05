@@ -35,7 +35,9 @@ Help users select and upload a file.
 
 ## When to use this component
 
-You should only ask users to upload something if it’s critical to the delivery of your&nbsp;service.
+You should only ask users to upload something if it’s critical to the delivery of your&nbsp;service. 
+
+We improved the component in February 2025, you will need to [enable the improved File upload component as a new feature](#how-to-turn-on-improvements).
 
 ## How it works
 
@@ -108,20 +110,24 @@ For example, ‘You can only select up to 10 files at the same time’.
 
 Say ‘The selected file must use the template’.
 
-## How to turn on improvements
+## Using the new improved File upload component
 
+- there's a new version
 We introduced a change to the file upload component in February 2025. We recommend service teams start using it to improve the experience for users.
-
-These changes are behind a feature flag.
-Add: how to enable it
 
 {{ example({ group: "components", item: "file-upload", example: "enhanced", html: true, nunjucks: true, open: false, size: "m" }) }}
 
-### Changes to the previous version
+These changes are behind a feature flag.
+
+- why there's a feature flag; clear improvement, avoidance of breaking things
+
+- what user needs to do
+
+### Changes in the improved component
 
 There is now a visible drop zone to assist with dragging and dropping a file. The drop zone shows from the start, is bigger and more interactive.
 
-The upload button has a GOV.UK look.
+We changed the button to be more consistent with the secondary [Button component]()
 
 The text on the button and the message that no file was chosen can be changed.
 
@@ -136,6 +142,6 @@ An accessibility audit has shown some users have encountered a problem when usin
 
 The file upload component does not show a visual target area when dragging and dropping a file. The component inherits and uses the browser's default behaviour. More detail on the findings can be found in the [GitHub issue: ‘Upload file component has no visual target area when dragging and dropping a file’](https://github.com/alphagov/govuk-frontend/issues/3685).
 
-We revisited this issue in February 2025 and have published a [custom file upload component](#how-to-turn-on-improvements) to improve the accessibility of the component. You have the option to use this, we're confident the new component is an improvement on the browser's default behaviour.
+We revisited this issue in February 2025 and have published a [custom file upload component](#using-the-new-file-upload-component) to improve the accessibility of the component. You have the option to use this, we're confident the new component is an improvement on the browser's default behaviour.
 
 Read a blog post about [design tips for helping users upload things](https://designnotes.blog.gov.uk/2017/02/14/some-design-tips-for-uploading-things/).
