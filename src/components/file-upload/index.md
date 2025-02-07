@@ -35,9 +35,9 @@ Help users select and upload a file.
 
 ## When to use this component
 
-You should only ask users to upload something if it’s critical to the delivery of your&nbsp;service. 
+You should only ask users to upload something if it’s critical to the delivery of your&nbsp;service.
 
-We improved the component in February 2025, you will need to [enable the improved File upload component as a new feature](#how-to-turn-on-improvements).
+We improved the component in February 2025, you will need to [enable the improved File upload component as a new feature](#using-the-improved-file-upload-component).
 
 ## How it works
 
@@ -110,38 +110,48 @@ For example, ‘You can only select up to 10 files at the same time’.
 
 Say ‘The selected file must use the template’.
 
-## Using the new improved File upload component
+## Using the improved File upload component
 
-- there's a new version
-We introduced a change to the file upload component in February 2025. We recommend service teams start using it to improve the experience for users.
+In February 2025 as part of GOV.UK Frontend 5.9.0, we introduced changes to the File upload component that you can opt into.
+
+The improved component is intended to:
+
+- fix accessibility issues
+- improve the user experience
+- allow the text in the component to be translated
+
+Although, we recommend service teams start using the improved component to improve the experience for users, it is a substantial visual change. To allow teams to migrate at their own pace, the improvements are behind a ‘feature flag’.
 
 {{ example({ group: "components", item: "file-upload", example: "enhanced", html: true, nunjucks: true, open: false, size: "m" }) }}
 
-These changes are behind a feature flag.
-
-- why there's a feature flag; clear improvement, avoidance of breaking things
-
-- what user needs to do
-
 ### Changes in the improved component
 
-There is now a visible drop zone to assist with dragging and dropping a file. The drop zone shows from the start, is bigger and more interactive.
+To make it easier for users to ‘drag and drop’ files, we’ve made the drop zone:
 
-We changed the button to be more consistent with the secondary [Button component]()
+- bigger
+- visible at all times
+- more visually responsive to user interactions
 
-The text on the button and the message that no file was chosen can be changed.
+We’ve also changed the ‘Choose file’ button to be more consistent with the secondary button in the [Button component](/components/button/).
 
-This version includes a fix for Dragon, the speech recognition tool.
-Previously Dragon could not activate the button with "click button" or similar commands. This works now, although it only works the first time due to being [gated by user activation](https://developer.mozilla.org/en-US/docs/Web/Security/User_activation). This is a security feature, therefore true for all file upload elements and cannot be fixed. If the component needs to be used more than once, this can be done when also doing something else in between like saying "mouse click".
+You can change the text on the button and the ‘no file chosen’ message.
+
+All the text in the component can now be translated to match the language the page is in when JavaScript is running.
+
+#### Improvements for assistive technology users
+
+Users of Dragon Naturally Speaking, a speech recognition tool, will now be able to activate the component by saying commands for interacting with [web page controls](https://www.nuance.com/products/help/dragon/dragon-for-pc/enx/professionalgroup/main/Content/Web/working_with_chrome.htm?Highlight=click%20button). This feature currently does not work with native file input from the browser.
+
+However, due to browser security features this will only work in the first instance. If the component needs to be used more than once, users will need to rely on [mouse commands](https://www.nuance.com/products/help/dragon/dragon-for-pc/enx/professionalgroup/main/Content/CommandandControl/using_your_mouse.htm) or [keyboard commands](https://www.nuance.com/products/help/dragon/dragon-for-pc/enx/professionalgroup/main/Content/CommandandControl/using_your_keyboard.htm), just as they would with the native file input.
 
 ## Research on this component
 
-An accessibility audit has shown some users have encountered a problem when using file upload.
+An accessibility audit has shown some users have encountered a problem when using File upload.
 
 ### Known issues and gaps
 
-The file upload component does not show a visual target area when dragging and dropping a file. The component inherits and uses the browser's default behaviour. More detail on the findings can be found in the [GitHub issue: ‘Upload file component has no visual target area when dragging and dropping a file’](https://github.com/alphagov/govuk-frontend/issues/3685).
+The File upload component does not show a visual target area when dragging and dropping a file. The component inherits and uses the browser’s default behaviour. More detail on the findings can be found in the [GitHub issue: ‘Upload file component has no visual target area when dragging and dropping a file’](https://github.com/alphagov/govuk-frontend/issues/3685).
 
-We revisited this issue in February 2025 and have published a [custom file upload component](#using-the-new-file-upload-component) to improve the accessibility of the component. You have the option to use this, we're confident the new component is an improvement on the browser's default behaviour.
+We revisited this issue in February 2025 and have published a [improved File upload component](#using-the-improved-file-upload-component) to improve the accessibility of the component. Although we’re confident the new component is an improvement on the browser’s default behaviour.
 
 Read a blog post about [design tips for helping users upload things](https://designnotes.blog.gov.uk/2017/02/14/some-design-tips-for-uploading-things/).
