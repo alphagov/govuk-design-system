@@ -75,6 +75,8 @@ The Service navigation (grey background) includes space to show:
 
 The [GOV.UK header component](/components/header/) should only be used to show the GOV.UK logo and any GOV.UK-wide tools used in your service, such as GOV.UK One Login.
 
+We’ve deprecated the option to show a service name and navigation links in the GOV.UK header component.
+
 We recommend using the [Service navigation component](/components/service-navigation/) to show your service name and navigation links instead of the GOV.UK header, and to start updating existing services.
 
 #### Do not show GOV.UK topic links

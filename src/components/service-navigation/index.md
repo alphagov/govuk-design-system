@@ -55,7 +55,9 @@ Apply a class `govuk-header--full-width-border` to the GOV.UK header.
 
 ### Showing your service name only
 
-We recommend that you use the Service navigation component to show your service name, instead of the GOV.UK header, and to start updating existing services.
+Use the Service navigation component to show your service name.
+
+We’ve deprecated the option to show a service name in the GOV.UK header component and recommend teams to start updating existing services.
 
 {{ example({ group: "components", item: "service-navigation", example: "with-service-name", html: true, nunjucks: true, open: false }) }}
 
