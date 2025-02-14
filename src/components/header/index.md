@@ -72,11 +72,11 @@ The GOV.UK header component was originally released with 2 variants:
 - with service name
 - with service name and navigation
 
+These 2 variants will be removed from the GOV.UK header component in the next breaking release of GOV.UK Frontend.
+
 In August 2024, we introduced a separate [Service navigation component](/components/service-navigation). This is to better help users understand that they’re using your service and let them navigate around your service.
 
 We recommend using the Service navigation component to show your service name and navigation links instead of the GOV.UK header, and to start updating existing services.
-
-These 2 variants will be removed from the GOV.UK header component in the next breaking release of GOV.UK Frontend.
 
 See the [Help users navigate a service pattern](/patterns/navigate-a-service) for more guidance.
 
