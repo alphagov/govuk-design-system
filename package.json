@@ -77,7 +77,7 @@
     "jest-axe": "^9.0.0",
     "jest-environment-jsdom": "^29.7.0",
     "jest-puppeteer": "^11.0.0",
-    "js-beautify": "^1.15.2",
+    "js-beautify": "^1.15.3",
     "jstransformer-marked": "^1.4.0",
     "jstransformer-nunjucks": "^1.2.0",
     "lint-staged": "^15.4.3",
