@@ -2,21 +2,9 @@
 
   {% from "govuk/components/cookie-banner/macro.njk" import govukCookieBanner %}
 
-  {%- set category -%}
-    {%- if params.category -%}
-      {{ params.category }}
-    {%- else -%}
-      analytics
-    {%- endif -%}
-  {%- endset -%}
+  {%- set category = params.category or "analytics" -%}
 
-  {%- set title -%}
-    {%- if params.title -%}
-      {{ params.title }}
-    {%- else -%}
-      Cookies on GOV.UK Design System
-    {%- endif -%}
-  {%- endset -%}
+  {%- set title = params.title or "Cookies on GOV.UK Design System" -%}
 
   {%- set html %}
     {% if params.html %}
