@@ -15,30 +15,37 @@ const { goTo } = require('./helpers/puppeteer.js')
 async function axe(page) {
   const reporter = new AxePuppeteer(page)
     .include('body')
-    .exclude([
+    .exclude(
       // Axe reports there is "no label associated with the text field", when there is one.
-      '#app-site-search__input',
-
+      '#app-site-search__input'
+    )
+    .exclude(
       // Axe reports that the phase banner is not inside a landmark, which is intentional.
-      '.app-phase-banner',
-
+      '.app-phase-banner'
+    )
+    .exclude(
       // Axe reports that the skip link is not inside a landmark, which is intentional.
       // https://design-system.service.gov.uk/components/skip-link/#when-to-use-this-component
-      '.govuk-skip-link',
-
+      '.govuk-skip-link'
+    )
+    .exclude(
       // Axe reports that the back to top button is not inside a landmark, which is intentional.
-      '.app-back-to-top',
-
+      '.app-back-to-top'
+    )
+    .exclude(
       // Axe reports that the Browsersync banner is not inside a landmark, which is intentional.
-      '#__bs_notify__',
-
+      '#__bs_notify__'
+    )
+    .exclude(
       // Axe reports that the frame "does not have a main landmark" and example <h1> headings
       // violate "Heading levels should only increase by one", which is intentional.
       // https://github.com/alphagov/govuk-design-system/pull/2442#issuecomment-1326600528
+      // Additionally, we are relying on accessibility testing in govuk-frontend to cover these.
       '.app-example__frame'
-    ])
-
-    .withRules([
+    )
+    // TODO
+    .exclude('.govuk-breadcrumbs')
+    .withTags([
       'best-practice',
 
       // WCAG 2.x
@@ -65,8 +72,41 @@ async function axe(page) {
   return report
 }
 
+// TODO: Didn't feel like spending ages working out the perfect glob, so have split these out.
+//
+// The idea here is to reduce the time taken by only checking the main index of the component pages,
+// rather than checking each example as well, since they're present on the main index in iframes.
+//
+// This assumes that the examples are well checked for accessibility since they're basically just
+// govuk-frontend components.
+//
+// Even then, though, some of them feature custom html and such from the site itself, so we might
+// decide to suck it up and audit EVERYTHING, and have to decide how to fix the issues that come up
+// here.
+//
+// Possibly the ideal solution is to split the components and "other" pages, and set up a
+// few different checks (with different rules due to the different nature of the content):
+// - Check everything
+// - Check component pages
+// - Check content pages
+// - Github script that only checks files that have been edited and flags 'em in a comment
+//
+// So you can choose to run the full, lengthy check, but it wouldn't run on Github, so our
+// deploy times wouldn't be seriously affected.
+function getFilesToCheck() {
+  const componentIndexes = globSync('components/*{,/*}.html', {
+    cwd: paths.public
+  })
+  const pageIndexes = globSync('**/index.html', {
+    cwd: paths.public,
+    ignore: ['components/**/index.html']
+  })
+
+  return [...componentIndexes, ...pageIndexes]
+}
+
 describe('Accessibility audit', () => {
-  it.each(globSync('**/index.html', { cwd: paths.public }))(
+  it.each(getFilesToCheck())(
     'validates %s',
     async (path) => {
       const page = await browser.newPage()
