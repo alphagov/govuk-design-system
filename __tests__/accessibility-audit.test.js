@@ -16,10 +16,6 @@ async function axe(page) {
   const reporter = new AxePuppeteer(page)
     .include('body')
     .exclude(
-      // Axe reports there is "no label associated with the text field", when there is one.
-      '#app-site-search__input'
-    )
-    .exclude(
       // Axe reports that the phase banner is not inside a landmark, which is intentional.
       '.app-phase-banner'
     )
