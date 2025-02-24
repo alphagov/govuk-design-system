@@ -97,12 +97,15 @@ function getFilesToCheck() {
   const componentIndexes = globSync('components/*{,/*}.html', {
     cwd: paths.public
   })
+  const patternIndexes = globSync('patterns/*{,/*}.html', {
+    cwd: paths.public
+  })
   const pageIndexes = globSync('**/index.html', {
     cwd: paths.public,
-    ignore: ['components/**/index.html']
+    ignore: ['components/**/index.html', 'patterns/*{,/*}.html']
   })
 
-  return [...componentIndexes, ...pageIndexes]
+  return [...componentIndexes, ...patternIndexes, ...pageIndexes]
 }
 
 describe('Accessibility audit', () => {
