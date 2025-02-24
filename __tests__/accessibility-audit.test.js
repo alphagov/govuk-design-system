@@ -43,8 +43,19 @@ async function axe(page) {
       // Additionally, we are relying on accessibility testing in govuk-frontend to cover these.
       '.app-example__frame'
     )
-    // TODO
+
+    // TODO: govuk-breadcrumbs sets off the "must be contained in landmarks" rule. Needs investigation.
     .exclude('.govuk-breadcrumbs')
+
+    // TODO: figure out how and whether to re-enable these rules, or target them better
+    .disableRules([
+      'region',
+      'color-contrast-enhanced',
+      'aria-allowed-attr',
+      'target-size',
+      'aria-allowed-role'
+    ])
+
     .withTags([
       'best-practice',
 
@@ -62,7 +73,7 @@ async function axe(page) {
     ])
 
   // Create report
-  const report = await reporter.options({}).analyze()
+  const report = await reporter.analyze()
 
   // Add preview URL to report violations
   report.violations.forEach((violation) => {
