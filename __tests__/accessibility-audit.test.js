@@ -1,3 +1,6 @@
+const fs = require('fs')
+const path = require('path')
+
 const { AxePuppeteer } = require('@axe-core/puppeteer')
 
 const { goTo } = require('./helpers/puppeteer.js')
@@ -26,39 +29,42 @@ async function analyze(page, path) {
   return axe.analyze()
 }
 
+function getDirectoriesWithIndexHTML (directory) {
+  const result = []
+
+  function traverse (currentDir, depth) {
+    if (depth === 0) {
+      return
+    }
+
+    const files = fs.readdirSync(currentDir)
+
+    if (files.includes('index.html')) {
+      result.push(currentDir)
+    }
+
+    for (const file of files) {
+      const filePath = path.join(currentDir, file)
+      const stat = fs.statSync(filePath)
+
+      if (stat.isDirectory()) {
+        traverse(filePath, depth - 1)
+      }
+    }
+  }
+
+  traverse(directory, 3)
+
+  return result.map((dir) => path.relative(directory, dir))
+}
+
+// Usage example
+const directory = 'deploy/public'
+const relativeDirectories = getDirectoriesWithIndexHTML(directory)
+
 describe('Accessibility Audit', () => {
-  describe('Home page - layout.njk', () => {
-    it('validates', async () => {
-      const results = await analyze(page, '/')
-      expect(results).toHaveNoViolations()
-    })
-  })
-
-  describe('Component page - layout-pane.njk', () => {
-    it('validates', async () => {
-      const results = await analyze(page, '/components/radios/')
-      expect(results).toHaveNoViolations()
-    })
-  })
-
-  describe('Patterns page - layout-pane.njk', () => {
-    it('validates', async () => {
-      const results = await analyze(page, '/patterns/gender-or-sex/')
-      expect(results).toHaveNoViolations()
-    })
-  })
-
-  describe('Get in touch page - layout-single-page.njk', () => {
-    it('validates', async () => {
-      const results = await analyze(page, '/get-in-touch/')
-      expect(results).toHaveNoViolations()
-    })
-  })
-
-  describe('Site Map page - layout-sitemap.njk', () => {
-    it('validates', async () => {
-      const results = await analyze(page, '/sitemap/')
-      expect(results).toHaveNoViolations()
-    })
-  })
+  it.each(relativeDirectories)('validates %s', async (path) => {
+    const results = await analyze(page, path)
+    expect(results).toHaveNoViolations()
+  }, 10000)
 })
