@@ -48,8 +48,7 @@ async function axe(page) {
       'region',
       'color-contrast-enhanced',
       'aria-allowed-attr',
-      'target-size',
-      'aria-allowed-role'
+      'target-size'
     ])
 
     .withTags([
