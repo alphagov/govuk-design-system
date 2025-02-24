@@ -62,45 +62,49 @@ createAll(BackToTop)
 // Initialise cookie page
 createAll(CookiesPage)
 
-const $embedCards = document.querySelectorAll('[data-module="app-embed-card"]')
+if ('IntersectionObserver' in window) {
+  const $embedCards = document.querySelectorAll(
+    '[data-module="app-embed-card"]'
+  )
 
-const lazyEmbedObserver = new IntersectionObserver(function (
-  entries,
-  observer
-) {
-  entries.forEach(function (entry) {
-    if (entry.isIntersecting) {
-      try {
-        new EmbedCard(entry.target)
-      } catch (error) {
-        console.log(error)
+  const lazyEmbedObserver = new IntersectionObserver(function (
+    entries,
+    observer
+  ) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        try {
+          new EmbedCard(entry.target)
+        } catch (error) {
+          console.log(error)
+        }
+      }
+    })
+  })
+
+  $embedCards.forEach(function (lazyEmbed) {
+    lazyEmbedObserver.observe(lazyEmbed)
+  })
+
+  const campaignCookieBanner = document.querySelector(
+    '[data-cookie-category="campaign"]'
+  )
+
+  if (campaignCookieBanner) {
+    const callback = (mutationList, observer) => {
+      if (mutationList.length) {
+        $embedCards.forEach(function (lazyEmbed) {
+          lazyEmbedObserver.unobserve(lazyEmbed)
+          lazyEmbedObserver.observe(lazyEmbed)
+        })
       }
     }
-  })
-})
 
-$embedCards.forEach(function (lazyEmbed) {
-  lazyEmbedObserver.observe(lazyEmbed)
-})
-
-const campaignCookieBanner = document.querySelector(
-  '[data-cookie-category="campaign"]'
-)
-
-if (campaignCookieBanner) {
-  const callback = (mutationList, observer) => {
-    if (mutationList.length) {
-      $embedCards.forEach(function (lazyEmbed) {
-        lazyEmbedObserver.unobserve(lazyEmbed)
-        lazyEmbedObserver.observe(lazyEmbed)
-      })
-    }
+    const observer = new MutationObserver(callback)
+    observer.observe(campaignCookieBanner, {
+      attributes: true,
+      childList: true,
+      subtree: true
+    })
   }
-
-  const observer = new MutationObserver(callback)
-  observer.observe(campaignCookieBanner, {
-    attributes: true,
-    childList: true,
-    subtree: true
-  })
 }
