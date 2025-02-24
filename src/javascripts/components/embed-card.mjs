@@ -57,14 +57,14 @@ class EmbedCard extends Component {
         /(youtu\.be\/|youtube\.com\/(watch\?(.*&)?v=|(embed|v)\/))([^?&"'>]+)/
       )[5]
 
+      const divIframeContainer = document.createElement('div')
+      divIframeContainer.className = 'app-embed-card__iframe-container'
+
       const iframe = this.createIframe(ytId, title)
 
-      placeholder.remove()
+      divIframeContainer.appendChild(iframe)
 
-      const iframeContainer = this.$root.querySelector(
-        '.app-embed-card__placeholder-iframe-container'
-      )
-      iframeContainer.appendChild(iframe)
+      placeholder.parentNode.replaceChild(divIframeContainer, placeholder)
     }
   }
 
