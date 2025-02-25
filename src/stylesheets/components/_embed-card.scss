@@ -1,5 +1,8 @@
 .app-embed-card__placeholder-thumb-container {
   position: relative;
+  height: 0;
+  // hack to set the aspect ratio
+  padding-top: percentage(9 / 16);
 }
 
 .app-embed-card__placeholder-thumb-container::before {
@@ -14,4 +17,12 @@
     url("/images/yt.svg") 50% center / 75px no-repeat,
     linear-gradient(transparent, transparent);
   background-position: 50% center;
+}
+
+.app-embed-card__placeholder .app-embed-card__placeholder-thumb-image {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
