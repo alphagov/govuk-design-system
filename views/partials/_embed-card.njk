@@ -14,8 +14,10 @@
         <a href="{{ params.transcriptHref }}">Read the full transcript</a>
       </p>
     </div>
-    <div class="govuk-grid-column-one-third-from-desktop">
-      <img class="app-image--no-border" src="{{ params.authorImgSrc }}" alt="{{ params.authorImgAlt }}" role="presentation">
-    </div>
+    {% if params.authorImgSrc %}
+      <div class="govuk-grid-column-one-third-from-desktop">
+        <img class="app-image--no-border" src="{{ params.authorImgSrc }}" alt="{{ params.authorImgAlt }}" role="presentation">
+      </div>
+    {% endif %}
   </div>
 {% endmacro %}

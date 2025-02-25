@@ -131,7 +131,7 @@ describe('Cookie banner', () => {
   it('is visible on campaign page if campaign not set', async () => {
     await page.setCookie(cookieParam)
 
-    await goTo(page, '/community/design-system-day-2024-day-1/')
+    await goTo(page, '/embed-test/')
     await setup(page, 'campaign')
 
     await expect(isVisible($module)).resolves.toBe(true)
@@ -152,7 +152,7 @@ describe('Cookie banner', () => {
       await page.setJavaScriptEnabled(false)
 
       // Reload page again
-      await goTo(page, '/community/design-system-day-2024-day-1/')
+      await goTo(page, '/embed-test/')
       await setup(page, 'campaign')
 
       await expect(isVisible($module)).resolves.toBe(false)
@@ -169,7 +169,7 @@ describe('Cookie banner', () => {
 
         await page.setCookie({ ...cookieParam, value })
 
-        await goTo(page, '/community/design-system-day-2024-day-1/')
+        await goTo(page, '/embed-test/')
         await setupAll(page)
 
         await $cookieBanners[category].buttonAccept.click()
@@ -195,7 +195,7 @@ describe('Cookie banner', () => {
           [category]: null
         })
 
-        await goTo(page, '/community/design-system-day-2024-day-1/')
+        await goTo(page, '/embed-test/')
         await page.setCookie({ ...cookieParam, value })
         await setupAll(page)
 
@@ -230,7 +230,7 @@ describe('Cookie banner', () => {
         })
 
         await page.setCookie({ ...cookieParam, value })
-        await goTo(page, '/community/design-system-day-2024-day-1/')
+        await goTo(page, '/embed-test/')
         await setupAll(page)
 
         const otherBanners = await Promise.all(
