@@ -17,7 +17,7 @@ describe('Embed Card', () => {
 
     await page.setJavaScriptEnabled(true)
 
-    await goTo(page, '/community/design-system-day-2024-day-1/')
+    await goTo(page, '/embed-test/')
   })
 
   it('will render placeholder if cookies not accepted', async () => {
