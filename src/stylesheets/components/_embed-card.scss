@@ -1,11 +1,12 @@
-.app-embed-card__placeholder-thumb-container {
+.app-embed-card__placeholder {
+  display: block;
   position: relative;
   height: 0;
   // hack to set the aspect ratio
   padding-top: percentage(9 / 16);
 }
 
-.app-embed-card__placeholder-thumb-container::before {
+.app-embed-card__placeholder::before {
   content: "";
   position: absolute;
   z-index: 1;
