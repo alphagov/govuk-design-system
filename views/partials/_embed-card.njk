@@ -3,7 +3,7 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
       {{- caller() if caller else params.content | safe -}}
       <a class="app-embed-card__placeholder app-embed-card__placeholder-thumb-container" href="https://www.youtube.com/watch?v={{ params.ytId }}">
-        <img class="app-image--no-border app-embed-card__placeholder-thumb-image" alt="{{ params.title }}" src="https://img.youtube.com/vi/{{ params.ytId }}/hqdefault.jpg">
+        <img class="app-image--no-border app-embed-card__placeholder-thumb-image" alt="{{ params.title }}" src="/images/yt-thumb-example.jpg">
         <span class="app-embed-card__placeholder-text govuk-visually-hidden">
           {{ params.title }}
         </span>
