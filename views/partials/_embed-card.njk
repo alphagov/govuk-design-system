@@ -1,5 +1,5 @@
 {% macro embedCard(params) %}
-  <div class="govuk-grid-row" data-module="app-embed-card">
+  <div class="govuk-grid-row" data-module="app-embed-card" data-yt-id="{{ params.ytId }}">
     <div class="govuk-grid-column-two-thirds-from-desktop">
       {{- caller() if caller else params.content | safe -}}
       <a class="app-embed-card__placeholder app-embed-card__placeholder-thumb-container" href="https://www.youtube.com/watch?v={{ params.ytId }}">
