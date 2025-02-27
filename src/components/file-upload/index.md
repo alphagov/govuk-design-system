@@ -140,7 +140,7 @@ To make it easier for users to drag and drop files, we’ve made the drop zone:
 
 We’ve also changed the ‘Choose file’ button to be more consistent with the secondary button in the [Button component](/components/button).
 
-Service teams can change the text on the button and in the ‘no file chosen’ message. We decided to make this text changeable for translation purposes and to let teams be specific about the file to upload. However, teams should aim to keep the text as short as possible for accessibility purposes. For example, screen reader users might find it difficult to use the component if the text is too long.
+Service teams can change the text on the button and in the ‘No file chosen’ message. We decided to make this text changeable for translation purposes and to let teams be specific about the file to upload. However, teams should aim to keep the text as short as possible for accessibility purposes. For example, screen reader users might find it difficult to use the component if the text is too long.
 
 All the text in the component can now be translated to match the language of the page content when JavaScript is running.
 
