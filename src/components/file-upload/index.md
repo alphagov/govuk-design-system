@@ -37,7 +37,7 @@ Help users select and upload a file.
 
 You should only ask users to upload something if it’s critical to the delivery of your service.
 
-We improved the component in March 2025, so you’ll need to enable the improved File upload component as a new feature.
+We improved the component in March 2025, so you’ll need to enable the [improved File upload component](#using-the-improved-file-upload-component) as a new feature.
 
 Read a blog post about [design tips for helping users upload things](https://designnotes.blog.gov.uk/2017/02/14/some-design-tips-for-uploading-things/).
 
