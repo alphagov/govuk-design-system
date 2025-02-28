@@ -42,4 +42,14 @@ describe('Embed Card', () => {
 
     await expect(page.$('.app-embed-card__placeholder')).resolves.toBe(null)
   })
+
+  it('will not render author image if not specified', async () => {
+    await expect(page.$('app-embed-card__author-img')).resolves.toBe(null)
+  })
+
+  it('will render author image if specified', async () => {
+    await goTo(page, '/embed-test-author-img/')
+
+    await expect(page.$('.app-embed-card__author-img')).resolves.not.toBe(null)
+  })
 })
