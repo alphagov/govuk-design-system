@@ -40,6 +40,24 @@ describe('Embed Card', () => {
 
     await new Promise((resolve) => setTimeout(resolve, 3000))
 
-    await expect(page.$('.app-embed-card__placeholder')).resolves.toBe(null)
+    const firstEmbed = await page.$('[data-module="app-embed-card"]')
+
+    await firstEmbed.scrollIntoView()
+
+    await expect(firstEmbed.$('.app-embed-card__placeholder')).resolves.toBe(
+      null
+    )
+  })
+
+  it('will not render author image if not specified', async () => {
+    const embeds = await page.$$('[data-module="app-embed-card"]')
+
+    await expect(embeds[0].$('app-embed-card__author-img')).resolves.toBe(null)
+  })
+
+  it('will render author image if specified', async () => {
+    const embeds = await page.$$('[data-module="app-embed-card"]')
+
+    await expect(embeds[1].$('app-embed-card__author-img')).resolves.toBe(null)
   })
 })

@@ -44,3 +44,11 @@ ignoreInSitemap: true
   title: "Test Video"
 }) %}
 {% endcall %}
+
+{% call embedCard({
+  ytId: "x91MPoITQ3I",
+  transcriptHref: "https://www.google.com",
+  authorImgSrc: "/images/yt-thumb-example.jpg",
+  title: "Test Video"
+}) %}
+{% endcall %}
