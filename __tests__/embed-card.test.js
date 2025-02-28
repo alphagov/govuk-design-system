@@ -17,7 +17,7 @@ describe('Embed Card', () => {
 
     await page.setJavaScriptEnabled(true)
 
-    await goTo(page, '/community/design-system-day-2024-day-1/')
+    await goTo(page, '/embed-test/')
   })
 
   it('will render placeholder if cookies not accepted', async () => {
@@ -41,5 +41,15 @@ describe('Embed Card', () => {
     await new Promise((resolve) => setTimeout(resolve, 3000))
 
     await expect(page.$('.app-embed-card__placeholder')).resolves.toBe(null)
+  })
+
+  it('will not render author image if not specified', async () => {
+    await expect(page.$('app-embed-card__author-img')).resolves.toBe(null)
+  })
+
+  it('will render author image if specified', async () => {
+    await goTo(page, '/embed-test-author-img/')
+
+    await expect(page.$('.app-embed-card__author-img')).resolves.not.toBe(null)
   })
 })
