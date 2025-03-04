@@ -13,13 +13,15 @@ Some things on the roadmap might change – the purpose is to tell you what’s 
 
 See our [GitHub team board](https://github.com/orgs/alphagov/projects/53) for more details on our plans and day-to-day activities.
 
-Last updated 22 November 2024.
+Last updated 4 March 2025.
 
 ## Recently shipped
 
-We’ve released [GOV.UK Frontend v5.8.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.8.0), which includes a new ConfigurableComponent class to help you build your own configurable components.
+We’ve released [GOV.UK Frontend v5.9.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.9.0), which includes a JavaScript enhancement to the File upload component to make dragging and dropping files easier for users.
 
-Previously, we released [GOV.UK Frontend v5.7.1](https://github.com/alphagov/govuk-frontend/releases/tag/v5.7.1) with updated department colours.
+We’ve also deprecated the options to show a service name, as well as navigation links, in the GOV.UK header component. Both options will be removed from the GOV.UK header in the next breaking release of GOV.UK Frontend.
+
+Previously, we released [GOV.UK Frontend v5.8.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.8.0), which includes a new `ConfigurableComponent` class to help you build your own configurable components.
 
 We’ve also recently:
 
@@ -32,7 +34,6 @@ We’ve also recently:
 
 We're:
 
-- making enhancements to the File upload component
 - planning community events and activities for 2025
 - doing research with services teams on how they are using the Design System and how they upgrade their service
 
