@@ -1,6 +1,6 @@
 ---
 title: File upload
-description: Help users select and upload a file
+description: Help users select and upload a file. To effectively accommodate WCAG 2.2 updates on file uploads and ensure users can reuse previously uploaded files, a "remove" link should be provided once a file is uploaded
 section: Components
 aliases:
 backlogIssueId: 49
