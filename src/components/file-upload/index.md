@@ -161,10 +161,3 @@ An accessibility audit has shown some users have encountered a problem when usin
 The earlier version of the File upload component does not show a visual target area when dragging and dropping a file. The component inherits and uses the browser’s default behaviour. More detail on the findings can be found in the [GitHub issue: ‘Upload file component has no visual target area when dragging and dropping a file’](https://github.com/alphagov/govuk-frontend/issues/3685).
 
 We revisited this issue in March 2025 and have published an improved File upload component to improve accessibility. Although we’re confident the new component is an improvement on the browser’s default behaviour, teams can continue to use the existing component until the next major release, when the new version will be enabled by default.
-
-## Help improve this component
-
-To help make sure that this page is useful, relevant and up to date, you can:
-
-- take part in the [‘File upload’ discussion on GitHub](https://github.com/alphagov/govuk-design-system-backlog/issues/49) and share your research
-- [propose a change on GitHub](https://github.com/alphagov/govuk-design-system/edit/main/src/components/file-upload/index.md) – read more about [how to propose changes in GitHub](https://design-system.service.gov.uk/community/propose-a-content-change-using-github/)
