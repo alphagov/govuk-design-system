@@ -15,10 +15,10 @@ If you want to contact the team you can [get in touch via email or Slack](/get-i
 ## Team leads
 
 - Charlotte Downs – Senior Interaction Designer
-- Kelly Lee – Senior Delivery Manager
+- Kelly Lee – Lead Delivery Manager
 - Oliver Byford – Lead Frontend Developer
 - Romaric Pascal – Senior Frontend Developer
-- Trang Erskine – Senior Product Manager
+- Trang Erskine – Lead Product Manager
 
 ## Design System team
 
