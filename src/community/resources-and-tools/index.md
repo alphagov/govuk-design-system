@@ -80,6 +80,10 @@ GOV.UK Frontend WTForms Widgets.
 
 [GOV.UK Frontend Flask](https://github.com/LandRegistry/govuk-frontend-flask) - Complete Flask app template that implements the Jinja and WTForms packages to integrate with GOV.UK Frontend.
 
+### Python / Django
+
+[Crispy Forms GDS](https://github.com/wildfish/crispy-forms-gds) - A Django Crispy Forms template pack for creating pages with GOV.UK Frontend components.
+
 ### PHP / Laravel
 
 [GOV.UK Laravel](https://github.com/AnthonyEdmonds/govuk-laravel) -
