@@ -8,26 +8,18 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "_wcag-callout.njk" import wcagCallout %}
-{% from "_wcag-note.njk" import wcagNote %}
+{% from "_brand-callout.njk" import brandCallout %}
 
 Use the back link component to help users go back to the previous page in a multi-page transaction.
 
-{{ wcagCallout({
-  type: "component",
-  introAction: "use the",
-  name: "Back link",
-  criteria: [
-    {
-      text: "make sure users do not need to re-enter information they've previously given when they go back to a page",
-      anchor: "wcag-avoid-information-reentry"
-    },
-    {
-      text: "make sure users can interact with the Back link component",
-      anchor: "wcag-interact-back-links"
-    }
-  ]
-}) }}
+{% call brandCallout({ text: "Brand", classes: "brand-tag-green" }) %}
+
+<h2>Brand changes might affect the {{title}}</h2><p class="govuk-body">From June 2025, parts of the Design System will be updated to support a wider refresh of the GOV.UK brand. <a href="#/">See the refreshed GOV.UK brand identity.</a></p>
+
+<p class="govuk-body"><a href="#/">Changes to the GOV.UK header will increase its height by 60px</a>, which might affect the {{title}} in your service.</p>
+
+<p class="govuk-body">Check the positioning of the {{title}} as you refresh the GOV.UK brand across your service.</p>
+{% endcall %}
 
 Although browsers have a back button, some sites break when you use it - so many users avoid it, instead of losing their progress in a service. Also, not all users are aware of the back button.
 
@@ -49,17 +41,6 @@ Always place back links at the top of a page, before the `<main>` element. Placi
 
 Make sure the link takes users to the previous page they were on, in the state they last saw it.
 
-{% call wcagNote({id: "wcag-avoid-information-reentry"}) %}
-
-<p>If a user decides to go back to a previous page, make sure information they have already entered is pre-populated.</p>
-<p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry</a>.</p>
-{% endcall %}
-
-{% call wcagNote({id: "wcag-interact-back-links"}) %}
-
-<p>Make sure no other interactive elements are too close to the Back link component. This is to make sure users can easily interact with it. This relates to <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target size (minimum)</a>.</p>
-{% endcall %}
-
 Where possible, ensure the back link works even when JavaScript is not available. If this is not possible, you should hide the back link when JavaScript is not available.
 
 There are 2 ways to use the back link component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
@@ -77,3 +58,11 @@ Use the `govuk-back-link--inverse` modifier class to show a white link on a dark
 Make sure all users can see the back link – the background colour must have a contrast ratio of at least 4.5:1 with white to meet [WCAG 2.2 success criterion 1.4.3 Contrast (minimum), level AA](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html).
 
 {{ example({ group: "components", item: "back-link", example: "inverse", html: true, nunjucks: true, open: false }) }}
+
+## Accessibility
+
+If a user decides to go back to a previous page, make sure information they have already entered is pre-populated.
+
+Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with [WCAG 2.2 success criterion 3.3.7 Redundant entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
+
+Make sure no other interactive elements are too close to the Back link component. This is to make sure users can easily interact with it. This relates to [WCAG 2.2 success criterion 2.5.8 Target size (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).
