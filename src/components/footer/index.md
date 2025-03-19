@@ -8,26 +8,27 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "_wcag-callout.njk" import wcagCallout %}
-{% from "_wcag-note.njk" import wcagNote %}
+{% from "_brand-callout.njk" import brandCallout %}
+{%- from "govuk/components/tag/macro.njk" import govukTag -%}
 
 The GOV.UK footer provides copyright, licensing and other information about your service.
-
-{{ wcagCallout({
-  type: "component",
-  introAction: "use the",
-  name: "GOV.UK footer",
-  criteria: [
-    {
-      text: "make sure help links can be found in a consistent place on each page",
-      anchor: "wcag-consistent-links"
-    }
-  ]
-}) }}
 
 {{ example({ group: "components", item: "footer", example: "default", id: "default-1", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}
 
 If you use the page template, you'll also get the footer without having to add it, as it's included by default. However, if you want to customise the default footer, read the [page template guidance about customising components](/styles/page-template/#changing-template-content).
+
+{% call brandCallout({ text: "Brand", classes: "brand-tag-green" }) %}
+
+<h2>Brand changes to the {{title}}</h2><p class="govuk-body">From June 2025, the {{title}} will be updated to support a wider refresh of the GOV.UK brand. <a href="#/">See the refreshed GOV.UK brand identity.</a>
+
+<p class="govuk-body">The updated {{title}} component:</p>
+<ul class="govuk-list">
+<li>uses a light blue as the background colour, instead of grey</li>
+<li>adds a thick blue top border</li>
+<li>adds a small crown logo, in addition to the existing coat of arms</li>
+</ul>
+<p class="govuk-body">To help you get ready to use the new branding by June 2025, these updates are available as options in GOV.UK Frontend.</p>
+{% endcall %}
 
 ## When to use this component
 
@@ -60,11 +61,6 @@ You can add links to:
 
 Use ‘Privacy’, ‘Accessibility’, ‘Cookies’ and ‘Terms and conditions’ for the link text.
 
-{% call wcagNote({id: "wcag-consistent-links"}) %}
-
-<p>If you include links to ‘help’ pages within the GOV.UK footer component, make sure to place those links consistently within the footer content. Also make sure that ‘help’ links always function in a similar way across each page. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">WCAG 2.2 success criterion 3.2.6 Consistent help</a>.</p>
-{% endcall %}
-
 ## Adding secondary navigation
 
 Only add secondary GOV.UK navigation if you’re creating a GOV.UK service, and you want users to be able to navigate away from the service to somewhere else on the GOV.UK website. For example, you probably don’t want to encourage a user to navigate away from a linear, form-type service.
@@ -76,3 +72,9 @@ Only add secondary GOV.UK navigation if you’re creating a GOV.UK service, and 
 ### Footer with links and secondary navigation
 
 {{ example({ group: "components", item: "footer", example: "full", html: true, nunjucks: true, open: false, size: "xl" }) }}
+
+## Accessibility
+
+If you include links to ‘help’ pages within the GOV.UK footer component, make sure to place those links consistently within the footer content.
+
+Also make sure that ‘help’ links always function in a similar way across each page. This is to comply with [WCAG 2.2 success criterion 3.2.6 Consistent help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html).

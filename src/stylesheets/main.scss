@@ -443,3 +443,28 @@ pre .language-plaintext {
 .app-campaign-cookie-banner .govuk-grid-column-two-thirds {
   width: 100%;
 }
+
+.brand-tag-blue {
+  margin-top: govuk-spacing(2);
+  margin-bottom: govuk-spacing(1);
+  color: #0f385c;
+  background-color: #d2e2f1;
+}
+
+.brand-tag-green {
+  margin-top: govuk-spacing(2);
+  margin-bottom: govuk-spacing(1);
+  color: #09442d;
+  background-color: #cfe7de;
+}
+
+.app-brand-callout {
+  border-left-color: #11875a;
+}
+
+// Change headings in WCAG callouts to look like H3s,
+// even though they semantically are H2s
+.app-brand-callout h2 {
+  @extend %govuk-heading-m;
+  max-width: 30em;
+}

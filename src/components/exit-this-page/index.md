@@ -8,12 +8,22 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "_brand-callout.njk" import brandCallout %}
 
 Give users a way to quickly and safely exit a service, website or application.
 
 For service journeys, you must use this component with the [Exit a page quickly pattern](/patterns/exit-a-page-quickly/).
 
 {{ example({ group: "components", item: "exit-this-page", example: "default", html: true, nunjucks: true, open: false, size: "s", loading: "eager" }) }}
+
+{% call brandCallout({ text: "Brand", classes: "brand-tag-green" }) %}
+
+<h2>Brand changes might affect the {{title}}</h2><p class="govuk-body">From June 2025, parts of the Design System will be updated to support a wider refresh of the GOV.UK brand. <a href="#/">See the refreshed GOV.UK brand identity.</a></p>
+
+<p class="govuk-body"><a href="#/">Changes to the GOV.UK header will increase its height by 60px</a>, which might affect the {{title}} in your service.</p>
+
+<p class="govuk-body">Check the positioning of the {{title}} as you refresh the GOV.UK brand across your service.</p>
+{% endcall %}
 
 ## When to use this component
 
