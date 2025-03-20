@@ -14,11 +14,16 @@ The GOV.UK header component tells users they’re using a service on GOV.UK and 
 
 {{ example({ group: "components", item: "header", example: "default", id: "default-1", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
+<strong class="govuk-tag brand-tag-green">
+  Brand
+</strong> 
+<a href="#">See an example of the GOV.UK header showing the refreshed GOV.UK branding</a>.
+
 If you use the page template, you'll also get the GOV.UK header without having to add it, as it's included by default. However, if you want to customise the default GOV.UK header, read the [page template guidance about customising components](/styles/page-template/#changing-template-content).
 
 {% call brandCallout({ text: "Brand", classes: "brand-tag-green" }) %}
 
-<h2>Brand changes to the {{title}}</h2><p class="govuk-body">From June 2025, the {{title}} will be updated to support a wider refresh of the GOV.UK brand. <a href="#/">See the refreshed GOV.UK brand identity.</a>
+<h2>Brand changes to the {{title}} component</h2><p class="govuk-body">From June 2025, the {{title}} component will be updated to support a wider refresh of the GOV.UK brand. <a href="#/">See the refreshed GOV.UK brand identity.</a>
 
 <p class="govuk-body">The updated {{title}} component:</p>
 <ul class="govuk-list">
@@ -26,7 +31,7 @@ If you use the page template, you'll also get the GOV.UK header without having t
 <li>uses a new logo and wordmark lockup</li>
 <li>adds 60px in height</li>
 </ul>
-<p class="govuk-body">To help you get ready to use the new branding by June 2025, these updates are available as options in GOV.UK Frontend.</p>
+<p class="govuk-body">To help you get ready to use the new branding by June 2025, <a href="#update-to-refresh-the-govuk-brand">we’ve provided several options to update your service</a>.</p>
 {% endcall %}
 
 ## When to use this component
@@ -53,6 +58,21 @@ This also assures users that they’re in the right place to use your service an
 
 For guidance on how to plan your header and navigation, see the [Help users navigate a service pattern](/patterns/navigate-a-service).
 
+### Update to refresh the GOV.UK brand
+
+If you use the Nunjucks macro and page template across your service, you can enable the brand refresh by setting the page template’s `rebrand` option to `true`. This will automatically make all needed changes related to the brand refresh.
+
+You can enable the brand refresh within the GOV.UK header component by setting its `rebrand` option to true. You’ll also need to add some code to your `<html>` and `<head>` elements.
+
+[See the release notes for more details](https://github.com/alphagov/govuk-frontend/releases) and and other ways to update.
+
+As you update your service, check the size and positioning of these nearby components:
+
+- [Back link component](/components/back-link/)
+- [Breadcrumbs component](/components/breadcrumbs/)
+- [Exit this page component](/components/exit-this-page/)
+
+
 ### Default GOV.UK header
 
 Most services on GOV.UK should use the default GOV.UK header.
@@ -60,6 +80,11 @@ Most services on GOV.UK should use the default GOV.UK header.
 It should only show the GOV.UK logo and any GOV.UK-wide links and tools to help your users. [Do not add the menu of GOV.UK topic links](https://insidegovuk.blog.gov.uk/2021/11/11/launching-gov-uks-new-menu-bar/) to your service’s GOV.UK header.
 
 {{ example({ group: "components", item: "header", example: "default", titleSuffix: "second", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
+
+<strong class="govuk-tag brand-tag-green">
+  Brand
+</strong> 
+<a href="#">See an example of the default GOV.UK header showing the refreshed GOV.UK branding</a>.
 
 ### Previous variants of the GOV.UK header
 
@@ -81,6 +106,11 @@ See the [Help users navigate a service pattern](/patterns/navigate-a-service) fo
 We’ve deprecated the [GOV.UK header with service name](/components/header/with-service-name) and will remove this option in the next breaking release of GOV.UK Frontend.
 
 Use the Service navigation component to show your service name instead. We recommend teams to start updating existing services.
+
+<strong class="govuk-tag brand-tag-green">
+  Brand
+</strong> 
+<a href="#">See an example of the GOV.UK header with service name showing the refreshed GOV.UK branding</a>.
 
 #### GOV.UK header with navigation
 

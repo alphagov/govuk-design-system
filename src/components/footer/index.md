@@ -19,7 +19,7 @@ If you use the page template, you'll also get the footer without having to add i
 
 {% call brandCallout({ text: "Brand", classes: "brand-tag-green" }) %}
 
-<h2>Brand changes to the {{title}}</h2><p class="govuk-body">From June 2025, the {{title}} will be updated to support a wider refresh of the GOV.UK brand. <a href="#/">See the refreshed GOV.UK brand identity.</a>
+<h2>Brand changes to the {{title}} component</h2><p class="govuk-body">From June 2025, the {{title}} component will be updated to support a wider refresh of the GOV.UK brand. <a href="#/">See the refreshed GOV.UK brand identity.</a>
 
 <p class="govuk-body">The updated {{title}} component:</p>
 <ul class="govuk-list">
@@ -27,7 +27,7 @@ If you use the page template, you'll also get the footer without having to add i
 <li>adds a thick blue top border</li>
 <li>adds a small crown logo, in addition to the existing coat of arms</li>
 </ul>
-<p class="govuk-body">To help you get ready to use the new branding by June 2025, these updates are available as options in GOV.UK Frontend.</p>
+<p class="govuk-body">To help you get ready to use the new branding by June 2025, <a href="#update-to-refresh-the-govuk-brand/">we’ve provided several options to update your service</a>.</p>
 {% endcall %}
 
 ## When to use this component
@@ -39,6 +39,14 @@ Use the footer at the bottom of every page of your service.
 Add a copyright notice to the footer to clarify who owns the copyright. For GOV.UK services, add the coat of arms to keep things consistent with the rest of GOV.UK.
 
 Make it clear whether content is available for re-use - and if it is, under what sort of licence. Use an [Open Government Licence](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/) unless you have permission from the National Archives to use a [different type of licence](https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/open-government-licence/other-licences/).
+
+### Update to refresh the GOV.UK brand
+
+If you use the Nunjucks macro and page template across your service, you can enable the brand refresh by setting the page template’s `rebrand` option to `true`. This will automatically make all needed changes related to the brand refresh.
+
+You can enable the brand refresh within the GOV.UK footer component by setting its `rebrand` option to true. You’ll also need to add some code to your `<html>` and `<head>` elements.
+
+[See the release notes](https://github.com/alphagov/govuk-frontend/releases) for more details and other ways to update.
 
 ### Footer without links
 
