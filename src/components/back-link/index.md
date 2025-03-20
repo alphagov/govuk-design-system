@@ -14,7 +14,7 @@ Use the back link component to help users go back to the previous page in a mult
 
 {% call brandCallout({ text: "Brand", classes: "brand-tag-green" }) %}
 
-<h2>Brand changes might affect the {{title}} component</h2><p class="govuk-body">From June 2025, parts of the Design System will be updated to support a wider refresh of the GOV.UK brand. <a href="#/">See the refreshed GOV.UK brand identity.</a></p>
+<h2>Brand changes might affect the {{title}} component</h2><p class="govuk-body">From June 2025, parts of the Design System will change to support a wider refresh of the GOV.UK brand. </p>
 
 <p class="govuk-body"><a href="/components/header/">Changes to the GOV.UK header component will increase its height by 60px</a>, which might affect the {{title}} in your service.</p>
 
