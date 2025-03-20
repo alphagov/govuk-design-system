@@ -16,7 +16,7 @@ The breadcrumbs component helps users to understand where they are within a webs
 
 {% call brandCallout({ text: "Brand", classes: "brand-tag-green" }) %}
 
-<h2>Brand changes might affect the {{title}} component</h2><p class="govuk-body">From June 2025, parts of the Design System will be updated to support a wider refresh of the GOV.UK brand. <a href="/components/header/">See the refreshed GOV.UK brand identity.</a></p>
+<h2>Brand changes might affect the {{title}} component</h2><p class="govuk-body">From June 2025, parts of the Design System will change to support a wider refresh of the GOV.UK brand. </p>
 
 <p class="govuk-body"><a href="#/">Changes to the GOV.UK header component will increase its height by 60px</a>, which might affect the {{title}} component in your service.</p>
 
