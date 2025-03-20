@@ -14,11 +14,11 @@ Use the back link component to help users go back to the previous page in a mult
 
 {% call brandCallout({ text: "Brand", classes: "brand-tag-green" }) %}
 
-<h2>Brand changes might affect the {{title}}</h2><p class="govuk-body">From June 2025, parts of the Design System will be updated to support a wider refresh of the GOV.UK brand. <a href="#/">See the refreshed GOV.UK brand identity.</a></p>
+<h2>Brand changes might affect the {{title}} component</h2><p class="govuk-body">From June 2025, parts of the Design System will be updated to support a wider refresh of the GOV.UK brand. <a href="#/">See the refreshed GOV.UK brand identity.</a></p>
 
-<p class="govuk-body"><a href="#/">Changes to the GOV.UK header will increase its height by 60px</a>, which might affect the {{title}} in your service.</p>
+<p class="govuk-body"><a href="/components/header/">Changes to the GOV.UK header component will increase its height by 60px</a>, which might affect the {{title}} in your service.</p>
 
-<p class="govuk-body">Check the positioning of the {{title}} as you refresh the GOV.UK brand across your service.</p>
+<p class="govuk-body">Check the positioning of the {{title}} component as you update your service to refresh the GOV.UK brand.</p>
 {% endcall %}
 
 Although browsers have a back button, some sites break when you use it - so many users avoid it, instead of losing their progress in a service. Also, not all users are aware of the back button.
