@@ -93,17 +93,19 @@ The GOV.UK header component was originally released with 2 variants:
 - with service name
 - with service name and navigation
 
+These 2 variants will be removed from the GOV.UK header component in the next breaking release of GOV.UK Frontend.
+
 In August 2024, we introduced a separate [Service navigation component](/components/service-navigation). This is to better help users understand that they’re using your service and let them navigate around your service.
 
 We recommend using the Service navigation component to show your service name and navigation links instead of the GOV.UK header, and to start updating existing services.
 
-See the [Help users navigate a service pattern](/patterns/navigate-a-service) for more guidance and our plans to phase out these 2 variants.
+See the [Help users navigate a service pattern](/patterns/navigate-a-service) for more guidance.
 
 #### GOV.UK header with service name
 
-Avoid using the 'GOV.UK header with service name' where possible, and use the [Service navigation component](/components/service-navigation) to show your service name instead.
+We’ve deprecated the [GOV.UK header with service name](/components/header/with-service-name) and will remove this option in the next breaking release of GOV.UK Frontend.
 
-{{ example({ group: "components", item: "header", example: "with-service-name", html: true, nunjucks: true, open: false }) }}
+Use the Service navigation component to show your service name instead. We recommend teams to start updating existing services.
 
 <strong class="govuk-tag brand-tag-green">
   Brand
@@ -112,7 +114,9 @@ Avoid using the 'GOV.UK header with service name' where possible, and use the [S
 
 #### GOV.UK header with navigation
 
-We’ve started to deprecate the [GOV.UK header with navigation](/components/header/with-service-name-and-navigation/) and will remove it in the next breaking release of GOV.UK Frontend.
+We’ve deprecated the [GOV.UK header with navigation](/components/header/with-service-name-and-navigation/) and will remove this option in the next breaking release of GOV.UK Frontend.
+
+Use the Service navigation component to add navigation links instead.
 
 In November 2021, [the GOV.UK homepage introduced a menu bar](https://insidegovuk.blog.gov.uk/2021/11/11/launching-gov-uks-new-menu-bar/) that avoids obscuring content by shifting the page down.
 
