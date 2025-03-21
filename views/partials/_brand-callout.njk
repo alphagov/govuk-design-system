@@ -1,0 +1,17 @@
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText -%}
+{% from "govuk/components/tag/macro.njk" import govukTag -%}
+
+{% macro brandCallout(params) -%}
+{% set tagContent -%}
+  {{- govukTag({
+    text: "Brand",
+    classes: "brand-tag-green"
+  }) }}
+  {{ caller() }}
+  {% endset -%}
+
+{{ govukInsetText({
+  html: tagContent,
+  classes: "app-brand-callout"
+}) }}
+{% endmacro %}
