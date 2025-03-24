@@ -8,22 +8,9 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "_wcag-callout.njk" import wcagCallout %}
 {% from "_wcag-note.njk" import wcagNote %}
 
 Use the tag component to show users the status of something.
-
-{{ wcagCallout({
-  type: "component",
-  introAction: "use the",
-  name: "Tag",
-  criteria: [
-    {
-      text: "if you choose to add functionality to reorder tags, make sure users can do so without relying on 'click and drag' movements ()",
-      anchor: "wcag-tag-no-dragging-reorder"
-    }
-  ]
-}) }}
 
 {{ example({ group: "components", item: "tag", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
@@ -58,11 +45,6 @@ Tags should be helpful to users. The more you add, the harder it is for users to
 
 {{ example({ group: "components", item: "tag", example: "coloured-tags", html: true, nunjucks: true, open: false }) }}
 
-{% call wcagNote({id: "wcag-tag-no-dragging-reorder"}) %}
-
-<p>Any implementation of the Tag component that allows the user to change the order of tags must offer a way to do so without relying on ‘click and drag’ movements. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">WCAG 2.2 success criterion 2.5.7 Dragging movements</a>.</p>
-{% endcall %}
-
 ## Using colour with tags
 
 You can use colour to help distinguish between different tags – or to help draw the user’s attention to a tag if it’s especially important. For example, it probably makes sense to use `govuk-tag--red` for a tag that reads ‘Urgent’.
@@ -85,3 +67,7 @@ The Department for Education contributed the coloured tags. They’re being used
 The tag component previously used uppercase bold text for the tags. This was changed as some research has shown that uppercase text can be harder to read, particularly for longer tag text.
 
 The tag component previously used white text on a dark coloured background. Research from multiple teams found that some users perceived these as buttons and tried to click on them. The design was changed to try and avoid this, by using a lighter background colour and darker text.
+
+## Accessibility
+
+Any implementation of the Tag component that allows the user to change the order of tags must offer a way to do so without relying on ‘click and drag’ movements. This is to comply with [WCAG 2.2 success criterion 2.5.7 Dragging movements](https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html).

@@ -7,22 +7,7 @@ aliases:
 layout: layout-pane.njk
 ---
 
-{% from "_wcag-callout.njk" import wcagCallout %}
-{% from "_wcag-note.njk" import wcagNote %}
-
 Check the information the user gives you to make sure it’s valid. If there's a validation error, tell the user what's gone wrong and how to fix it. Turn off HTML5 validation.
-
-{{ wcagCallout({
-  type: "pattern",
-  introAction: "help users to",
-  name: "Recover from validation errors",
-  criteria: [
-    {
-      text: "make sure users can edit information they've previously given to correct an error",
-      anchor: "wcag-edit-to-correct-errors"
-    }
-  ]
-}) }}
 
 ## When to use this pattern
 
@@ -74,11 +59,6 @@ If the user's answers fail validation:
 
 Read guidance on [writing good error messages](/components/error-message/#be-clear-and-concise).
 
-{% call wcagNote({id: "wcag-edit-to-correct-errors"}) %}
-
-<p>Do not clear any form fields when validating users’ answers. Keep both passing and failing answers. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry</a>.</p>
-{% endcall %}
-
 Keeping information that failed validation helps users to:
 
 - see what went wrong
@@ -129,3 +109,7 @@ This approach to validation has been used on a number of services over an extend
 But we'd like to expand the guidance, and we're especially interested in hearing from teams whose research has identified a need to use client side validation.
 
 We'd also like to know about any research into whether not adding ‘required‘ to form fields causes problems for screen reader users.
+
+## Accessibility
+
+Do not clear any form fields when validating users’ answers. Keep both passing and failing answers. This is to comply with [WCAG 2.2 success criterion 3.3.7 Redundant entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).

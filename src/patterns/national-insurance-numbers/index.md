@@ -14,18 +14,6 @@ layout: layout-pane.njk
 
 This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
 
-{{ wcagCallout({
-  type: "pattern",
-  introAction: "ask users for",
-  name: "National insurance numbers",
-  criteria: [
-    {
-      text: "make sure users can reuse a previously entered National Insurance number",
-      anchor: "wcag-reuse-national-insurance-number"
-    }
-  ]
-}) }}
-
 Ask users to provide their National Insurance number.
 
 {{ example({ group: "patterns", item: "national-insurance-numbers", example: "default", html: true, nunjucks: true, open: false, size: "s", loading: "eager" }) }}
@@ -58,12 +46,6 @@ When asking for a National Insurance number:
 
 ### Reusing entered National Insurance numbers
 
-{% call wcagNote({id: "wcag-reuse-national-insurance-number"}) %}
-
-<p>Do not ask for a National Insurance number more than once within a single journey, if only one person’s details are needed.</p>
-<p>Make sure users can easily reuse previously entered National Insurance numbers within a single journey, unless doing so would be a major safety or security concern. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry</a>.</p>
-{% endcall %}
-
 You can make it easier to reuse National Insurance numbers through one of these methods:
 
 - pre-populate fields with the previously entered number
@@ -86,3 +68,9 @@ Say ‘Enter a National Insurance number that is 2 letters, 6 numbers, then A, B
 #### If the National Insurance number is not in the correct format and there is an example
 
 Say ‘Enter a National Insurance number in the correct format’.
+
+## Accessibility
+
+Do not ask for a National Insurance number more than once within a single journey, if only one person’s details are needed.
+
+Make sure users can easily reuse previously entered National Insurance numbers within a single journey, unless doing so would be a major safety or security concern. This is to comply with [WCAG 2.2 success criterion 3.3.7 Redundant entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).

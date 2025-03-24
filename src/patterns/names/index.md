@@ -9,20 +9,6 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "_wcag-callout.njk" import wcagCallout %}
-{% from "_wcag-note.njk" import wcagNote %}
-
-{{ wcagCallout({
-  type: "pattern",
-  introAction: "ask users for",
-  name: "National insurance numbers",
-  criteria: [
-    {
-      text: "make sure users can reuse a previously entered name",
-      anchor: "wcag-reuse-name"
-    }
-  ]
-}) }}
 
 {{ example({ group: "patterns", item: "names", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
@@ -96,11 +82,6 @@ You will not normally need to use the `autocomplete` attribute in prototypes, as
 
 ### Reusing entered names
 
-{% call wcagNote({id: "wcag-reuse-name"}) %}
-
-<p>Make sure users can easily reuse a previously entered name within a single journey, unless doing so would be a major safety or security concern. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry</a>.</p>
-{% endcall %}
-
 You can make it easier to reuse names through one of these methods:
 
 - pre-populate name fields with the previously entered name
@@ -151,3 +132,7 @@ You can also read these articles to learn more about asking for users’ names:
 - [Personal names around the world (W3C)](https://www.w3.org/International/questions/qa-personal-names)
 - [Avoid splitting single input entities (Baymard)](https://baymard.com/blog/mobile-form-usability-single-input-fields)
 - [Falsehoods about names (Kalzumeus)](http://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/)
+
+## Accessibility
+
+Make sure users can easily reuse a previously entered name within a single journey, unless doing so would be a major safety or security concern. This is to comply with [WCAG 2.2 success criterion 3.3.7 Redundant entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
