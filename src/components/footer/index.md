@@ -8,7 +8,6 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "_brand-callout.njk" import brandCallout %}
 {%- from "govuk/components/tag/macro.njk" import govukTag -%}
 
 The GOV.UK footer provides copyright, licensing and other information about your service.
@@ -16,19 +15,6 @@ The GOV.UK footer provides copyright, licensing and other information about your
 {{ example({ group: "components", item: "footer", example: "default", id: "default-1", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}
 
 If you use the page template, you'll also get the footer without having to add it, as it's included by default. However, if you want to customise the default footer, read the [page template guidance about customising components](/styles/page-template/#changing-template-content).
-
-{% call brandCallout({ text: "Brand", classes: "brand-tag-green" }) %}
-
-<h2>Brand changes to the {{title}}</h2><p class="govuk-body">From June 2025, the {{title}} will be updated to support a wider refresh of the GOV.UK brand. <a href="#/">See the refreshed GOV.UK brand identity.</a>
-
-<p class="govuk-body">The updated {{title}} component:</p>
-<ul class="govuk-list">
-<li>uses a light blue as the background colour, instead of grey</li>
-<li>adds a thick blue top border</li>
-<li>adds a small crown logo, in addition to the existing coat of arms</li>
-</ul>
-<p class="govuk-body">To help you get ready to use the new branding by June 2025, these updates are available as options in GOV.UK Frontend.</p>
-{% endcall %}
 
 ## When to use this component
 

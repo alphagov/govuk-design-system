@@ -8,26 +8,12 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "_brand-callout.njk" import brandCallout %}
 
 The GOV.UK header component tells users they’re using a service on GOV.UK and lets them use GOV.UK-wide tools. Also known as the GOV.UK masthead.
 
 {{ example({ group: "components", item: "header", example: "default", id: "default-1", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 If you use the page template, you'll also get the GOV.UK header without having to add it, as it's included by default. However, if you want to customise the default GOV.UK header, read the [page template guidance about customising components](/styles/page-template/#changing-template-content).
-
-{% call brandCallout({ text: "Brand", classes: "brand-tag-green" }) %}
-
-<h2>Brand changes to the {{title}}</h2><p class="govuk-body">From June 2025, the {{title}} will be updated to support a wider refresh of the GOV.UK brand. <a href="#/">See the refreshed GOV.UK brand identity.</a>
-
-<p class="govuk-body">The updated {{title}} component:</p>
-<ul class="govuk-list">
-<li>uses blue as the background colour, instead of black</li>
-<li>uses a new logo and wordmark lockup</li>
-<li>adds 60px in height</li>
-</ul>
-<p class="govuk-body">To help you get ready to use the new branding by June 2025, these updates are available as options in GOV.UK Frontend.</p>
-{% endcall %}
 
 ## When to use this component
 
