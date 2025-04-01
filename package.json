@@ -54,7 +54,7 @@
     "@rollup/plugin-commonjs": "^28.0.2",
     "@rollup/plugin-node-resolve": "^16.0.0",
     "@rollup/plugin-terser": "^0.4.4",
-    "autoprefixer": "^10.4.20",
+    "autoprefixer": "^10.4.21",
     "browser-sync": "3.0.3",
     "connect": "^3.7.0",
     "cross-env": "^7.0.3",
