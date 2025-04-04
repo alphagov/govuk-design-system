@@ -8,28 +8,32 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "_wcag-callout.njk" import wcagCallout %}
-{% from "_wcag-note.njk" import wcagNote %}
+{% from "_brand-callout.njk" import brandCallout %}
 
 Allow users to accept or reject cookies which are not essential to making your service work.
 
-{{ wcagCallout({
-  type: "component",
-  introAction: "use the",
-  name: "Cookie banner",
-  criteria: [
-    {
-      text: "make sure that items in focus can be seen all times",
-      anchor: "wcag-see-focus"
-    },
-    {
-      text: "make sure users can interact with buttons and links in the Cookie banner component",
-      anchor: "wcag-interact-cookie-banner"
-    }
-  ]
-}) }}
-
 {{ example({ group: "components", item: "cookie-banner", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
+
+<strong class="govuk-tag brand-tag-green">
+  Brand
+</strong>
+<p class="govuk-body"><a href="#">See an example of the Cookie banner showing the refreshed GOV.UK branding</a>.</p>
+
+If you use the page template, you'll also get the Cookie banner without having to add it, as it's included by default. However, if you want to customise the default Cookie banner, read the [page template guidance about customising components](/styles/page-template/#changing-template-content).
+
+{% call brandCallout({ text: "Brand", classes: "brand-tag-green" }) %}
+
+<h2>Brand changes to the {{title}} component</h2>
+<p class="govuk-body">From June 2025, the {{title}} component will change to support a wider refresh of the GOV.UK brand. </p>
+
+<p class="govuk-body">The updated {{title}} component:</p>
+
+<ul class="govuk-list">
+<li></li>
+</ul>
+
+<p class="govuk-body">To help service teams in government get ready to use the new branding by June 2025, <a href="#update-to-refresh-the-govuk-brand">we’ve provided several options to update their services</a>.</p>
+{% endcall %}
 
 ## When to use this component
 
@@ -80,16 +84,6 @@ Make sure the cookie banner does not:
 - set any non-essential cookies unless the user accepted them on a previous visit
 
 Position the cookie banner after the opening `<body>` tag and before the ’skip to main content‘ link. If you're using the Nunjucks page template, use the `bodyStart` block.
-
-{% call wcagNote({id: "wcag-see-focus"}) %}
-
-<p>Do not make the Cookie banner component ‘sticky’ to the top of the page by using `position: fixed` or any other method. This is to make sure it does not cover or obscure any content which has a focus applied. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html">WCAG 2.2 success criterion 2.4.11 Focus not obscured (minimum)</a>.</p>
-{% endcall %}
-
-{% call wcagNote({id: "wcag-interact-cookie-banner"}) %}
-
-<p>Do not change the padding or margins of buttons and links within the Cookie banner component. This is to make sure there’s adequate space for the user to interact with the buttons and links. This relates to <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target size (minimum)</a>.</p>
-{% endcall %}
 
 ### Option 1: If you’re only using essential cookies
 
@@ -212,3 +206,9 @@ We decided to remove the visible focus indicator from the confirmation message f
 - it displays in place of the cookie message, which is the last thing the user interacted with
 
 In this scenario, we assume that a visible focus indicator would be more likely to confuse users than to help them. However, we need more research to prove this.
+
+## Accessibility
+
+Do not make the Cookie banner component ‘sticky’ to the top of the page by using `position: fixed` or any other method. This is to make sure it does not cover or obscure any content which has a focus applied. This is to comply with [WCAG 2.2 success criterion 2.4.11 Focus not obscured (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html).
+
+Do not change the padding or margins of buttons and links within the Cookie banner component. This is to make sure there’s adequate space for the user to interact with the buttons and links. This relates to [WCAG 2.2 success criterion 2.5.8 Target size (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).
