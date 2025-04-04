@@ -24,7 +24,7 @@ If you use the page template, you'll also get the footer without having to add i
 
 {% call brandCallout({ text: "Brand", classes: "brand-tag-green" }) %}
 
-<h2>Brand changes to the {{title}} component</h2><p class="govuk-body">From June 2025, the {{title}} component will change to support a wider refresh of the GOV.UK brand. </a></p>
+<h2>Brand changes to the {{title}} component</h2><p class="govuk-body">From June 2025, the {{title}} component will change to support a wider refresh of the GOV.UK brand.</p>
 
 <p class="govuk-body">The updated {{title}} component:</p>
 <ul class="govuk-list">
