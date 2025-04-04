@@ -8,22 +8,9 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "_wcag-callout.njk" import wcagCallout %}
-{% from "_wcag-note.njk" import wcagNote %}
+{%- from "govuk/components/tag/macro.njk" import govukTag -%}
 
 The GOV.UK footer provides copyright, licensing and other information about your service.
-
-{{ wcagCallout({
-  type: "component",
-  introAction: "use the",
-  name: "GOV.UK footer",
-  criteria: [
-    {
-      text: "make sure help links can be found in a consistent place on each page",
-      anchor: "wcag-consistent-links"
-    }
-  ]
-}) }}
 
 {{ example({ group: "components", item: "footer", example: "default", id: "default-1", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}
 
@@ -60,11 +47,6 @@ You can add links to:
 
 Use ‘Privacy’, ‘Accessibility’, ‘Cookies’ and ‘Terms and conditions’ for the link text.
 
-{% call wcagNote({id: "wcag-consistent-links"}) %}
-
-<p>If you include links to ‘help’ pages within the GOV.UK footer component, make sure to place those links consistently within the footer content. Also make sure that ‘help’ links always function in a similar way across each page. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">WCAG 2.2 success criterion 3.2.6 Consistent help</a>.</p>
-{% endcall %}
-
 ## Adding secondary navigation
 
 Only add secondary GOV.UK navigation if you’re creating a GOV.UK service, and you want users to be able to navigate away from the service to somewhere else on the GOV.UK website. For example, you probably don’t want to encourage a user to navigate away from a linear, form-type service.
@@ -76,3 +58,9 @@ Only add secondary GOV.UK navigation if you’re creating a GOV.UK service, and 
 ### Footer with links and secondary navigation
 
 {{ example({ group: "components", item: "footer", example: "full", html: true, nunjucks: true, open: false, size: "xl" }) }}
+
+## Accessibility
+
+If you include links to ‘help’ pages within the GOV.UK footer component, make sure to place those links consistently within the footer content.
+
+Also make sure that ‘help’ links always function in a similar way across each page. This is to comply with [WCAG 2.2 success criterion 3.2.6 Consistent help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html).

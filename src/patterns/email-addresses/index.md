@@ -8,23 +8,9 @@ backlogIssueId: 45
 layout: layout-pane.njk
 ---
 
-{% from "_wcag-callout.njk" import wcagCallout %}
-{% from "_wcag-note.njk" import wcagNote %}
 {% from "_example.njk" import example %}
 
 This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
-
-{{ wcagCallout({
-  type: "pattern",
-  introAction: "ask users for",
-  name: "Email addresses",
-  criteria: [
-    {
-      text: "make sure users can reuse a previously entered email address",
-      anchor: "wcag-reuse-email-addresses"
-    }
-  ]
-}) }}
 
 {{ example({ group: "patterns", item: "email-addresses", example: "default", html: true, nunjucks: true, open: false, size: "s", loading: "eager" }) }}
 
@@ -45,11 +31,6 @@ You may also need to check that users have access to the email account they give
 {{ example({ group: "patterns", item: "email-addresses", example: "default", html: true, nunjucks: true, open: true, size: "s", titleSuffix: "second" }) }}
 
 ### Reusing entered email addresses
-
-{% call wcagNote({id: "wcag-reuse-email-addresses"}) %}
-
-<p>Make sure users can easily reuse a previously entered email address within a single journey, unless doing so would be a major safety or security concern. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry</a>.</p>
-{% endcall %}
 
 You can make it easier to reuse email addresses through one of these methods:
 
@@ -112,3 +93,7 @@ Say ‘Enter an email address in the correct format, like name<i></i>@example.co
 #### If the email address is not in the correct format and there is an example
 
 Say ‘Enter an email address in the correct format’.
+
+## Accessibility
+
+Make sure users can easily reuse a previously entered email address within a single journey, unless doing so would be a major safety or security concern. This is to comply with [WCAG 2.2 success criterion 3.3.7 Redundant entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).

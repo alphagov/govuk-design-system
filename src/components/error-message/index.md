@@ -8,22 +8,8 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "_wcag-callout.njk" import wcagCallout %}
-{% from "_wcag-note.njk" import wcagNote %}
 
 This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
-
-{{ wcagCallout({
-  type: "component",
-  introAction: "use the",
-  name: "Error message",
-  criteria: [
-    {
-      text: "make sure users can edit information they've previously given, so that they can correct an error",
-      anchor: "wcag-clear-answers-error"
-    }
-  ]
-}) }}
 
 Follow the [Validation pattern](/patterns/validation/) and show an error message when there is a validation error. In the error message explain what went wrong and how to fix it.
 
@@ -54,11 +40,6 @@ For each error:
 - put the message in red after the question text and hint text
 - use a red border to visually connect the message and the question it belongs to
 - if the error relates to a specific field within the question, give it a red border and refer to that field in the error message - for example: "you must enter a year"
-
-{% call wcagNote({id: "wcag-clear-answers-error"}) %}
-
-<p>Do not clear any form fields when showing the Error message component. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry</a>.</p>
-{% endcall %}
 
 Keeping information that caused errors helps users to:
 
@@ -193,3 +174,7 @@ Research showed users:
 - were able to recover from the error
 
 If you’ve used this component, get in touch to share your user research findings.
+
+## Accessibility
+
+Do not clear any form fields when showing the Error message component. This is to comply with [WCAG 2.2 success criterion 3.3.7 Redundant entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
