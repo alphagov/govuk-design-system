@@ -1,0 +1,47 @@
+// Change callout <h2>'s to look like <h3>'s
+// Selector specificity needs to outweigh `.app-content h2`
+.app-callout {
+  .app-callout__heading {
+    @extend %govuk-heading-m;
+    max-width: 30em;
+  }
+
+  // Add highlight styling for callout content
+  &:target {
+    outline-offset: 6px;
+    outline-style: solid;
+    outline-width: 4px;
+  }
+}
+
+.app-callout__tag {
+  margin-top: 1px;
+  margin-top: govuk-spacing(2);
+  margin-bottom: govuk-spacing(1);
+}
+
+.app-callout--blue {
+  border-left-color: govuk-colour("blue");
+
+  .app-callout__tag {
+    color: #0f385c;
+    background-color: #d2e2f1;
+  }
+
+  &:target {
+    outline-color: govuk-colour("blue");
+  }
+}
+
+.app-callout--green {
+  border-left-color: #11875a;
+
+  &:target {
+    outline-color: govuk-colour("green");
+  }
+
+  .app-callout__tag {
+    color: #09442d;
+    background-color: #cfe7de;
+  }
+}
