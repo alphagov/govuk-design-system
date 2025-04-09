@@ -9,7 +9,7 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "_wcag-callout.njk" import wcagCallout %}
+{% from "_callout.njk" import callout %}
 {% from "_wcag-note.njk" import wcagNote %}
 
 Help users understand:
@@ -18,7 +18,9 @@ Help users understand:
 - the order they should complete tasks in
 - when they've completed tasks
 
-{{ wcagCallout({
+{{ callout({
+  wcag: "true",
+  colour: "blue",
   type: "pattern",
   introAction: "help users to",
   name: "Complete multiple tasks",

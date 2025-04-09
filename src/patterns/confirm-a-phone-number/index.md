@@ -8,14 +8,16 @@ backlogIssueId: 25
 layout: layout-pane.njk
 ---
 
-{% from "_wcag-callout.njk" import wcagCallout %}
+{% from "_callout.njk" import callout %}
 {% from "_example.njk" import example %}
 {% from "_wcag-note.njk" import wcagNote %}
 {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 
 Check that a user has access to a specific mobile phone number using a security code sent by text message.
 
-{{ wcagCallout({
+{{ callout({
+  wcag: "true",
+  colour: "blue",
   type: "pattern",
   introAction: "help users to",
   name: "Confirm a phone number",
