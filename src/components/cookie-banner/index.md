@@ -8,7 +8,7 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "_brand-callout.njk" import brandCallout %}
+{% from "_callout.njk" import callout %}
 
 Allow users to accept or reject cookies which are not essential to making your service work.
 
@@ -21,9 +21,9 @@ Allow users to accept or reject cookies which are not essential to making your s
 
 If you use the page template, you'll also get the Cookie banner without having to add it, as it's included by default. However, if you want to customise the default Cookie banner, read the [page template guidance about customising components](/styles/page-template/#changing-template-content).
 
-{% call brandCallout({ text: "Brand", classes: "brand-tag-green" }) %}
+{% call callout({ tagText: "Brand", colour: "green" }) %}
 
-<h2>Brand changes to the {{title}} component</h2>
+<h2 class="app-callout__heading">Brand changes to the {{title}} component</h2>
 <p class="govuk-body">From 25 June 2025, the {{title}} component will change to support a wider refresh of the GOV.UK brand. </p>
 
 <p class="govuk-body">The Cookie banner component’s background colour will change to light blue.</p>
