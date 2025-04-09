@@ -7,12 +7,14 @@ aliases:
 layout: layout-pane.njk
 ---
 
-{% from "_wcag-callout.njk" import wcagCallout %}
+{% from "_callout.njk" import callout %}
 {% from "_wcag-note.njk" import wcagNote %}
 
 Check the information the user gives you to make sure it’s valid. If there's a validation error, tell the user what's gone wrong and how to fix it. Turn off HTML5 validation.
 
-{{ wcagCallout({
+{{ callout({
+  wcag: "true",
+  colour: "blue",
   type: "pattern",
   introAction: "help users to",
   name: "Recover from validation errors",

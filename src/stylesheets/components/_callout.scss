@@ -1,16 +1,16 @@
-// Change headings in callouts to look like H3s,
-// even though they semantically are H2s
-.app-callout h2 {
-  @extend %govuk-heading-m;
-  max-width: 30em;
-}
-
 .app-callout--blue {
   border-left-color: govuk-colour("blue");
 }
 
 .app-callout--green {
   border-left-color: #11875a;
+}
+
+// Change headings in callouts to look like H3s,
+// even though they semantically are H2s
+.app-callout .app-callout__heading {
+  @extend %govuk-heading-m;
+  max-width: 30em;
 }
 
 .app-callout__tag {

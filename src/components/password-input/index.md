@@ -8,12 +8,14 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "_wcag-callout.njk" import wcagCallout %}
+{% from "_callout.njk" import callout %}
 {% from "_wcag-note.njk" import wcagNote %}
 
 Help users to create and enter passwords.
 
-{{ wcagCallout({
+{{ callout({
+  wcag: "true",
+  colour: "blue",
   type: "component",
   introAction: "use the",
   name: "Password input",

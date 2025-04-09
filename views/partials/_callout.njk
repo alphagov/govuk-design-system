@@ -2,25 +2,47 @@
 {% from "govuk/components/tag/macro.njk" import govukTag -%}
 
 {% macro callout(params) -%}
-{% set calloutContent -%}
-  {{- govukTag({
-    text: params.tagText,
-    classes: "app-callout__tag app-callout__tag--" + params.colour
-  }) }}
-  {% if params.heading %}
-    <h2>{{ params.heading }}</h2>
-  {% endif -%}
-  {% if caller -%}
-    {{ caller() }}
-  {% endif -%}
-  {% if params.html -%}
-    {{ params.html | safe }}
-  {% endif -%}
-{% endset -%}
+
+{% if params.wcag %}
+  {% set calloutContent %}
+    {{ govukTag({
+      text: "WCAG 2.2",
+      classes: "app-callout__tag app-callout__tag--" + params.colour
+    }) }}
+    <h2 class="app-callout__heading">
+      {{ params.heading if params.heading else "New WCAG 2.2 criteria affect this " + params.type }}
+    </h2>
+    {% if caller -%}
+      {{ caller() }}
+    {% else -%}
+      <p class="govuk-body">To {{params.introAction}} ‘{{params.name}}’ and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria:</p>
+      <ul class="govuk-list">
+      {% for criterion in params.criteria %}
+        <li><a class="govuk-link" href="#{{criterion.anchor}}">{{criterion.text}}</a></li>
+      {% endfor %}
+      </ul>
+    {% endif -%}
+    <p class="govuk-body">See the full list of <a class="govuk-link" href="/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system">components and patterns affected by WCAG 2.2</a>.</p>
+  {% endset %}
+
+{% else %}
+
+  {% set calloutContent -%}
+    {{ govukTag({
+      text: params.tagText,
+      classes: "app-callout__tag app-callout__tag--" + params.colour
+    }) }}
+    {% if params.heading %}
+      <h2 class="app-callout__heading">{{ params.heading }}</h2>
+    {% endif -%}
+    {{ caller() if caller else params.content | safe }}
+  {% endset -%}
+
+{% endif %}
 
 {{ govukInsetText({
   html: calloutContent,
-  classes: "app-callout app-callout--" + params.colour,
+  classes: "app-callout app-callout--" + params.colour
 }) }}
 
 {% endmacro %}

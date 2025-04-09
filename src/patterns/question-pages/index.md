@@ -9,12 +9,14 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "_wcag-callout.njk" import wcagCallout %}
+{% from "_callout.njk" import callout %}
 {% from "_wcag-note.njk" import wcagNote %}
 
 This pattern explains when to use question pages and what elements they need to include.
 
-{{ wcagCallout({
+{{ callout({
+  wcag: "true",
+  colour: "blue",
   type: "pattern",
   introAction: "use",
   name: "Question pages",

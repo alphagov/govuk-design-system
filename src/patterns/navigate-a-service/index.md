@@ -9,12 +9,14 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "_wcag-callout.njk" import wcagCallout %}
+{% from "_callout.njk" import callout %}
 {% from "_wcag-note.njk" import wcagNote %}
 
 Help users know they’re using your service and navigate around it.
 
-{{ wcagCallout({
+{{ callout({
+  wcag: "true",
+  colour: "blue",
   type: "pattern",
   introAction: "help users to",
   name: "Navigate a service",

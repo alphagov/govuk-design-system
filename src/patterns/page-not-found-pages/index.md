@@ -9,12 +9,14 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "_wcag-callout.njk" import wcagCallout %}
+{% from "_callout.njk" import callout %}
 {% from "_wcag-note.njk" import wcagNote %}
 
 A page not found tells someone we cannot find the page they were trying to view. They are also known as 404 pages.
 
-{{ wcagCallout({
+{{ callout({
+  wcag: "true",
+  colour: "blue",
   type: "pattern",
   introAction: "use",
   name: "Page not found pages",

@@ -8,12 +8,14 @@ backlogIssueId: 56
 layout: layout-pane.njk
 ---
 
-{% from "_wcag-callout.njk" import wcagCallout %}
+{% from "_callout.njk" import callout %}
 {% from "_wcag-note.njk" import wcagNote %}
 
 Help users to create and enter secure and memorable passwords.
 
-{{ wcagCallout({
+{{ callout({
+  wcag: "true",
+  colour: "blue",
   type: "pattern",
   introAction: "ask users for",
   name: "Passwords",

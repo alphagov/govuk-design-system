@@ -9,12 +9,14 @@ layout: layout-pane.njk
 ---
 
 {%- from "_example.njk" import example -%}
-{% from "_wcag-callout.njk" import wcagCallout %}
+{% from "_callout.njk" import callout %}
 {% from "_wcag-note.njk" import wcagNote %}
 
 Give users contact information within your service.
 
-{{ wcagCallout({
+{{ callout({
+  wcag: "true",
+  colour: "blue",
   type: "pattern",
   introAction: "help users to",
   name: "Contact a department or service team",
