@@ -32,7 +32,7 @@ If you use the page template, you'll also get the footer without having to add i
 <li>adds a thick blue top border</li>
 <li>adds a small crown logo, in addition to the existing coat of arms</li>
 </ul>
-<p class="govuk-body">To help service teams in government get ready to use the new branding by June 2025, <a href="#update-to-refresh-the-govuk-brand/">we’ve provided several options to update their services</a>.</p>
+<p class="govuk-body">To help service teams in government get ready to use the new branding by June 2025, <a href="#update-to-refresh-the-govuk-brand">we’ve provided several options to update their services</a>.</p>
 {% endcall %}
 
 ## When to use this component
@@ -57,9 +57,19 @@ You can enable the brand refresh within the GOV.UK footer component by setting i
 
 {{ example({ group: "components", item: "footer", example: "default", titleSuffix: "second", html: true, nunjucks: true, open: false, size: "m", titleSuffix: "second" }) }}
 
+<strong class="govuk-tag brand-tag-green">
+  Brand
+</strong>
+<p class="govuk-body"><a href="#">See an example of the GOV.UK footer without links showing the refreshed GOV.UK branding</a>.</p>
+
 ### Footer with links
 
 {{ example({ group: "components", item: "footer", example: "with-meta", html: true, nunjucks: true, open: false, size: "m" }) }}
+
+<strong class="govuk-tag brand-tag-green">
+  Brand
+</strong>
+<p class="govuk-body"><a href="#">See an example of the GOV.UK footer with links showing the refreshed GOV.UK branding</a>.</p>
 
 ## Adding links
 
@@ -82,9 +92,19 @@ Only add secondary GOV.UK navigation if you’re creating a GOV.UK service, and 
 
 {{ example({ group: "components", item: "footer", example: "with-navigation", html: true, nunjucks: true, open: false, size: "xl" }) }}
 
+<strong class="govuk-tag brand-tag-green">
+  Brand
+</strong>
+<p class="govuk-body"><a href="#">See an example of the GOV.UK footer with secondary navigation showing the refreshed GOV.UK branding</a>.</p>
+
 ### Footer with links and secondary navigation
 
 {{ example({ group: "components", item: "footer", example: "full", html: true, nunjucks: true, open: false, size: "xl" }) }}
+
+<strong class="govuk-tag brand-tag-green">
+  Brand
+</strong>
+<p class="govuk-body"><a href="#">See an example of the GOV.UK footer with links and secondary navigation showing the refreshed GOV.UK branding</a>.</p>
 
 ## Accessibility
 

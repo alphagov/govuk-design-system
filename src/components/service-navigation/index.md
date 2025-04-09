@@ -70,17 +70,32 @@ Apply a class `govuk-header--full-width-border` to the GOV.UK header.
 
 {{ example({ group: "components", item: "service-navigation", example: "with-govuk-header", html: true, nunjucks: true, open: false }) }}
 
+<strong class="govuk-tag brand-tag-green">
+  Brand
+</strong>
+<p class="govuk-body"><a href="#">See an example of the Service navigation with full width border showing the refreshed GOV.UK branding</a>.</p>
+
 ### Showing your service name only
 
 Use the Service navigation component to show your service name.
 
 {{ example({ group: "components", item: "service-navigation", example: "with-service-name", html: true, nunjucks: true, open: false }) }}
 
+<strong class="govuk-tag brand-tag-green">
+  Brand
+</strong>
+<p class="govuk-body"><a href="#">See an example of the Service navigation with service name only showing the refreshed GOV.UK branding</a>.</p>
+
 ### Showing service name and navigation links
 
 Show navigation links to let users navigate to different parts of your service and find useful links and tools.
 
 {{ example({ group: "components", item: "service-navigation", example: "with-service-name-and-navigation", html: true, nunjucks: true, open: false }) }}
+
+<strong class="govuk-tag brand-tag-green">
+  Brand
+</strong>
+<p class="govuk-body"><a href="#">See an example of the Service navigation with service name and navigation links showing the refreshed GOV.UK branding</a>.</p>
 
 See when and how to show navigation links in the [Help users navigate a service pattern](/patterns/navigate-a-service/).
 

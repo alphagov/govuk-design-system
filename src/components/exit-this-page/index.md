@@ -20,7 +20,7 @@ For service journeys, you must use this component with the [Exit a page quickly 
 
 <h2>Brand changes might affect the {{title}} component</h2><p class="govuk-body">From June 2025, parts of the Design System will change to support a wider refresh of the GOV.UK brand. </p>
 
-<p class="govuk-body"><a href="#/">Changes to the GOV.UK header component will increase its height by 60px</a>, which might affect the {{title}} in your service.</p>
+<p class="govuk-body"><a href="/components/header/">Changes to the GOV.UK header component will increase its height by 60px</a>, which might affect the {{title}} in your service.</p>
 
 <p class="govuk-body">Check the positioning of the {{title}} component as you update your service to refresh the GOV.UK brand.</p>
 {% endcall %}
