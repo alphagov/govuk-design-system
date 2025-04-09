@@ -18,7 +18,7 @@ The breadcrumbs component helps users to understand where they are within a webs
 
 <h2>Brand changes might affect the {{title}} component</h2><p class="govuk-body">From June 2025, parts of the Design System will change to support a wider refresh of the GOV.UK brand. </p>
 
-<p class="govuk-body"><a href="#/">Changes to the GOV.UK header component will increase its height by 60px</a>, which might affect the {{title}} component in your service.</p>
+<p class="govuk-body"><a href="/components/header/">Changes to the GOV.UK header component will increase its height by 60px</a>, which might affect the {{title}} component in your service.</p>
 
 <p class="govuk-body">Check the positioning of the {{title}} component as you update your service to refresh the GOV.UK brand.</p>
 {% endcall %}
@@ -58,7 +58,3 @@ Use the `govuk-breadcrumbs--inverse` modifier class to show white links and arro
 Make sure all users can see the breadcrumbs – the background colour must have a contrast ratio of at least 4.5:1 with white to [meet WCAG 2.2 success criterion 1.4.3 Contrast (minimum), level AA](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html).
 
 {{ example({ group: "components", item: "breadcrumbs", example: "inverse", html: true, nunjucks: true, open: false }) }}
-
-## Accessibility
-
-Make sure no other interactive elements are too close to the Breadcrumbs component. This is to make sure users can easily interact with it. This relates to [WCAG 2.2 success criterion 2.5.8 Target size (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).

@@ -58,11 +58,3 @@ Use the `govuk-back-link--inverse` modifier class to show a white link on a dark
 Make sure all users can see the back link – the background colour must have a contrast ratio of at least 4.5:1 with white to meet [WCAG 2.2 success criterion 1.4.3 Contrast (minimum), level AA](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html).
 
 {{ example({ group: "components", item: "back-link", example: "inverse", html: true, nunjucks: true, open: false }) }}
-
-## Accessibility
-
-If a user decides to go back to a previous page, make sure information they have already entered is pre-populated.
-
-Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with [WCAG 2.2 success criterion 3.3.7 Redundant entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
-
-Make sure no other interactive elements are too close to the Back link component. This is to make sure users can easily interact with it. This relates to [WCAG 2.2 success criterion 2.5.8 Target size (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).

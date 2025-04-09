@@ -99,7 +99,9 @@ Show navigation links to let users navigate to different parts of your service a
 
 See when and how to show navigation links in the [Help users navigate a service pattern](/patterns/navigate-a-service/).
 
-In November 2021, [the GOV.UK homepage introduced a menu bar](https://insidegovuk.blog.gov.uk/2021/11/11/launching-gov-uks-new-menu-bar/) that avoids obscuring content by shifting the page down.
+You can add a link to a ‘help’ page in your Service navigation component. If you do, the link must be positioned consistently within the header, and must always link to the same place.
+
+For example, a link in the Service navigation component to 'Get help with this service' must go to the same place as similar links in the Service navigation component elsewhere in your service. This is to comply with [WCAG 2.2 success criterion 3.2.6 Consistent help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html).
 
 ## Use ‘slots’ to add custom elements
 
@@ -122,10 +124,6 @@ There’s a risk that slot contents may look or work differently in a future rel
 You’ll need to ensure that slot content still works as intended after each update.
 
 ## Accessibility
-
-Do not make header elements, like dropdown menus, ‘sticky’ to the top of the page by using `position: fixed` or any other method. In other words, avoid any implementations that cause menus to sit on top of page content.
-
-This is to make sure elements do not hide or obscure any content which has a focus applied and comply with [WCAG 2.2 success criterion 2.4.11 Focus not obscured (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html).
 
 You can add a link to a ‘help’ page in your Service header component. If you do, the link must be positioned consistently within the header, and must always link to the same place.
 
