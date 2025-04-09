@@ -10,13 +10,13 @@ order: 12
 ---
 
 {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-{% from "_brand-callout.njk" import brandCallout %}
+{% from "_callout.njk" import callout %}
 
 Always use the GOV.UK colour palette.
 
-{% call brandCallout({ text: "Brand", classes: "brand-tag-green" }) %}
+{% call callout({ tagText: "Brand", colour: "green" }) %}
 
-<h2>Brand changes to the {{title}}</h2>
+<h2 class="app-callout__heading">Brand changes to the {{title}}</h2>
 <p class="govuk-body">From June 2025, the colour palette will change to support a wider refresh of the GOV.UK brand. </p>
 
 <p class="govuk-body">To get ready, service teams in government should now make updates to these components in their services:</p>

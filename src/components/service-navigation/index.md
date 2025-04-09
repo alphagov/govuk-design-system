@@ -8,14 +8,14 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "_brand-callout.njk" import brandCallout %}
+{% from "_callout.njk" import callout %}
 {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 
 Service navigation helps users understand that they’re using your service and lets them navigate around your service.
 
-{% call brandCallout({ text: "Brand", classes: "brand-tag-green" }) %}
+{% call callout({ tagText: "Brand", colour: "green" }) %}
 
-<h2>Brand changes to the {{title}} component</h2><p class="govuk-body">From June 2025, the {{title}} component will change to support a wider refresh of the GOV.UK brand.</p>
+<h2 class="app-callout__heading">Brand changes to the {{title}} component</h2><p class="govuk-body">From June 2025, the {{title}} component will change to support a wider refresh of the GOV.UK brand.</p>
 
 <p class="govuk-body">The updated {{title}} component:</p>
 <ul class="govuk-list">
