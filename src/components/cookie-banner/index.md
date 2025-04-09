@@ -80,6 +80,8 @@ Make sure the cookie banner does not:
 
 Position the cookie banner after the opening `<body>` tag and before the ’skip to main content‘ link. If you're using the Nunjucks page template, use the `bodyStart` block.
 
+Do not make the Cookie banner component ‘sticky’ to the top of the page by using `position: fixed` or any other method. This is to make sure it does not cover or obscure any content which has a focus applied. This is to comply with [WCAG 2.2 success criterion 2.4.11 Focus not obscured (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html).
+
 ### Option 1: If you’re only using essential cookies
 
 You can choose not to have a cookie banner if the service only sets essential or 'strictly necessary' cookies, as these do not need user consent.
@@ -201,9 +203,3 @@ We decided to remove the visible focus indicator from the confirmation message f
 - it displays in place of the cookie message, which is the last thing the user interacted with
 
 In this scenario, we assume that a visible focus indicator would be more likely to confuse users than to help them. However, we need more research to prove this.
-
-## Accessibility
-
-Do not make the Cookie banner component ‘sticky’ to the top of the page by using `position: fixed` or any other method. This is to make sure it does not cover or obscure any content which has a focus applied. This is to comply with [WCAG 2.2 success criterion 2.4.11 Focus not obscured (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html).
-
-Do not change the padding or margins of buttons and links within the Cookie banner component. This is to make sure there’s adequate space for the user to interact with the buttons and links. This relates to [WCAG 2.2 success criterion 2.5.8 Target size (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).

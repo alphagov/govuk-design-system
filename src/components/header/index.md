@@ -116,21 +116,9 @@ We’ve deprecated the [GOV.UK header with navigation](/components/header/with-s
 
 Use the Service navigation component to add navigation links instead.
 
-In November 2021, [the GOV.UK homepage introduced a menu bar](https://insidegovuk.blog.gov.uk/2021/11/11/launching-gov-uks-new-menu-bar/) that avoids obscuring content by shifting the page down.
-
 ### GOV.UK header with One Login
 
 GOV.UK One Login maintains their own header on the [Let users navigate to their GOV.UK One Login and sign out easily](https://www.sign-in.service.gov.uk/documentation/design-recommendations/let-users-navigate-sign-out) page.
-
-## Accessibility
-
-Do not make header elements, like dropdown menus, ‘sticky’ to the top of the page by using `position: fixed` or any other method. In other words, avoid any implementations that cause menus to sit on top of page content.
-
-This is to make sure elements do not hide or obscure any content which has a focus applied and comply with [WCAG 2.2 success criterion 2.4.11 Focus not obscured (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html).
-
-You can add a link to a ‘help’ page in your service’s GOV.UK header component. If you do, the link must be positioned consistently within the header, and must always link to the same place.
-
-For example, a header link to “Get help with this service” must go to the same place as similar header links elsewhere in your service. This is to comply with [WCAG 2.2 success criterion 3.2.6 Consistent help](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html).
 
 ## Research on this component
 
