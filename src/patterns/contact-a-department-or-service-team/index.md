@@ -9,22 +9,6 @@ layout: layout-pane.njk
 ---
 
 {%- from "_example.njk" import example -%}
-{% from "_wcag-callout.njk" import wcagCallout %}
-{% from "_wcag-note.njk" import wcagNote %}
-
-Give users contact information within your service.
-
-{{ wcagCallout({
-  type: "pattern",
-  introAction: "help users to",
-  name: "Contact a department or service team",
-  criteria: [
-    {
-      text: "make sure users can find contact details in a consistent place across a set of pages",
-      anchor: "wcag-consistent-contact"
-    }
-  ]
-}) }}
 
 {{ example({ group: "patterns", item: "contact-a-department-or-service-team", example: "default", html: true, open: false, size: "s" }) }}
 
@@ -41,13 +25,6 @@ Read about how and why to [set up user support](https://www.gov.uk/service-manua
 Order contact channels based on what research shows your users need, and what your service or department can best support.
 
 Show contact channels in the same order throughout your service. This helps users to find what they need more easily.
-
-{% call wcagNote({id: "wcag-consistent-contact"}) %}
-
-<p>If you repeat a particular set of contact details on different pages, show them in the same place on each page.</p>
-<p>For example, if you show a ‘contact us’ section at the end of one help page, any other help pages that include the same ‘contact us’ section should have them shown at the end of the page as well.</p>
-<p>This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">WCAG 2.2 success criterion 3.2.6 Consistent help</a>.</p>
-{% endcall %}
 
 ### Social media
 
@@ -114,3 +91,11 @@ Research is needed to work out:
 
 - if users who are signed into a service need a different approach
 - how to give contact information to users who need urgent help
+
+## Accessibility
+
+If you repeat a particular set of contact details on different pages, show them in the same place on each page.
+
+For example, if you show a ‘contact us’ section at the end of one help page, any other help pages that include the same ‘contact us’ section should have them shown at the end of the page as well.
+
+<p>This is to comply with [WCAG 2.2 success criterion 3.2.6 Consistent help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html).

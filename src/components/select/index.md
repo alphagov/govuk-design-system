@@ -8,20 +8,6 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "_wcag-callout.njk" import wcagCallout %}
-{% from "_wcag-note.njk" import wcagNote %}
-
-{{ wcagCallout({
-  type: "component",
-  introAction: "use the",
-  name: "Select",
-  criteria: [
-    {
-      text: "if you choose to add functionality to select multiple options, make sure users can do so without relying on 'click and drag' movements",
-      anchor: "wcag-avoid-dragging-multiple-options"
-    }
-  ]
-}) }}
 
 {{ example({ group: "components", item: "select", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
@@ -67,11 +53,6 @@ Style error messages as shown in the example:
 
 The select component does not support selecting multiple options, [as there’s a history of poor usability and assistive technology support for `<select multiple>`](https://www.24a11y.com/2019/select-your-poison/). If you need to ask the user to pick more than one item from a list, it’s almost always better to use another method, such as a list of checkboxes.
 
-{% call wcagNote({id: "wcag-avoid-dragging-multiple-options"}) %}
-
-<p>Any input that’s designed to let a user select multiple options must offer a way to do so without relying on ‘click and drag’ movements or keyboard and mouse combination actions. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">WCAG 2.2 success criterion 2.5.7 Dragging movements</a>.</p>
-{% endcall %}
-
 ## Research on this component
 
 User research has shown that some users struggle with selects.
@@ -89,3 +70,7 @@ Research shows that users can struggle with selects, particularly when users hav
 For more detail watch this video with [examples of users struggling with selects](https://www.youtube.com/watch?v=CUkMCQR4TpY).
 
 This blog shows [an example where a text input is used over a select](https://designnotes.blog.gov.uk/2013/12/05/asking-for-a-date-of-birth/) for asking a user for a date.
+
+## Accessibility
+
+Any input that’s designed to let a user select multiple options must offer a way to do so without relying on ‘click and drag’ movements or keyboard and mouse combination actions. This is to comply with [WCAG 2.2 success criterion 2.5.7 Dragging movements](https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html).

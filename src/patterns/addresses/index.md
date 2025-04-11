@@ -9,22 +9,8 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "_wcag-callout.njk" import wcagCallout %}
-{% from "_wcag-note.njk" import wcagNote %}
 
 This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
-
-{{ wcagCallout({
-  type: "pattern",
-  introAction: "ask users for",
-  name: "Addresses",
-  criteria: [
-    {
-      text: "make sure users can reuse a previously entered address",
-      anchor: "wcag-reuse-addresses"
-    }
-  ]
-}) }}
 
 Help users provide an address using one of the following:
 
@@ -33,11 +19,6 @@ Help users provide an address using one of the following:
 - Textarea
 
 ### Reusing entered addresses
-
-{% call wcagNote({id: "wcag-reuse-addresses"}) %}
-
-<p>Make sure users can easily reuse a previously entered address within a single journey, unless doing so would be a major safety or security concern. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry</a>.</p>
-{% endcall %}
 
 You can make it easier to reuse addresses through one of these methods:
 
@@ -164,3 +145,7 @@ To do this, set the `autocomplete` attribute to `street-address` as shown in the
 If you are working in production you’ll need to do this to meet [WCAG 2.2 success criterion 1.3.5 Identify input purpose](https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose.html).
 
 You will not normally need to use the `autocomplete` attribute in prototypes, as users will not generally be using their own devices.
+
+## Accessibility
+
+Make sure users can easily reuse a previously entered address within a single journey, unless doing so would be a major safety or security concern. This is to comply with [WCAG 2.2 success criterion 3.3.7 Redundant entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).
