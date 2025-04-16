@@ -58,14 +58,6 @@ If you use the Nunjucks macro and page template across your service, you can ena
 
 You can enable the brand refresh within the [component] by setting its `rebrand` option to true. You’ll also need to add some code to your `<html>` and `<head>` elements.
 
-[See the release notes](https://github.com/alphagov/govuk-frontend/releases) for more details and other ways to update.
-
-As you update your service, check the size and positioning of these nearby components:
-
-- [Back link component](/components/back-link/)
-- [Breadcrumbs component](/components/breadcrumbs/)
-- [Exit this page component](/components/exit-this-page/)
-
 ### Change the blue colour bar under the GOV.UK header to full width
 
 To use the GOV.UK header and Service navigation and make them fit together visually, you’ll need to change the bottom blue border of the GOV.UK header to full width.
@@ -73,6 +65,12 @@ To use the GOV.UK header and Service navigation and make them fit together visua
 Apply a class `govuk-header--full-width-border` to the GOV.UK header.
 
 {{ example({ group: "components", item: "service-navigation", example: "with-govuk-header", html: true, nunjucks: true, open: false }) }}
+
+<strong class="govuk-tag brand-tag-green">
+  Brand
+</strong>
+
+You do not need to change the bottom border of the updated GOV.UK header component using the refreshed branding.
 
 ### Showing your service name only
 

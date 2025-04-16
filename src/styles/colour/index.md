@@ -10,29 +10,8 @@ order: 12
 ---
 
 {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-{% from "_brand-callout.njk" import brandCallout %}
 
 Always use the GOV.UK colour palette.
-
-{% call brandCallout({ text: "Brand", classes: "brand-tag-green" }) %}
-
-<h2>Brand changes to {{title}}</h2>
-<p class="govuk-body">From June 2025, colours in some components will change to support a wider refresh of the GOV.UK brand. </p>
-
-<p class="govuk-body">To get ready, service teams in government should now make updates to these components in their services:</p>
-<ul class="govuk-list govuk-list--bullet">
-  <li><a href="/components/header/" class="govuk-link">GOV.UK header component</a></li>
-  <li><a href="/components/footer/" class="govuk-link">GOV.UK footer component</a></li>
-  <li><a href="/components/service-navigation/" class="govuk-link">Service navigation component</a></li>
-</ul>
-
-<p class="govuk-body">These components will have a change of background colour to light blue:</p>
-<ul class="govuk-list">
-<li><a href="/components/cookie-banner/" class="govuk-link">Cookie banner component</a></li>
-<li><a href="/components/footer/" class="govuk-link">GOV.UK footer component</a></li>
-</ul>
-
-{% endcall %}
 
 ## Colour contrast
 

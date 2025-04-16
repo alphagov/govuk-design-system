@@ -26,7 +26,7 @@ If you use the page template, you'll also get the Cookie banner without having t
 <h2>Brand changes to the {{title}} component</h2>
 <p class="govuk-body">From June 2025, the {{title}} component will change to support a wider refresh of the GOV.UK brand. </p>
 
-<p class="govuk-body">The updated colour palette changes the Cookie banner component’s background colour to light blue, instead of grey.</p>
+<p class="govuk-body">The Cookie banner component’s background colour will change to light blue.</p>
 
 {% endcall %}
 
