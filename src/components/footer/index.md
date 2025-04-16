@@ -47,6 +47,10 @@ Make it clear whether content is available for re-use - and if it is, under what
 
 ### Update to refresh the GOV.UK brand
 
+<strong class="govuk-tag brand-tag-green">
+  Brand
+</strong>
+
 If you use the Nunjucks macro and page template across your service, you can enable the brand refresh by setting the page template’s `rebrand` option to `true`. This will automatically make all needed changes related to the brand refresh.
 
 You can enable the brand refresh within the GOV.UK footer component by setting its `rebrand` option to true. You’ll also need to add some code to your `<html>` and `<head>` elements.
@@ -57,19 +61,9 @@ You can enable the brand refresh within the GOV.UK footer component by setting i
 
 {{ example({ group: "components", item: "footer", example: "default", titleSuffix: "second", html: true, nunjucks: true, open: false, size: "m", titleSuffix: "second" }) }}
 
-<strong class="govuk-tag brand-tag-green">
-  Brand
-</strong>
-<p class="govuk-body"><a href="#">See an example of the GOV.UK footer without links showing the refreshed GOV.UK branding</a>.</p>
-
 ### Footer with links
 
 {{ example({ group: "components", item: "footer", example: "with-meta", html: true, nunjucks: true, open: false, size: "m" }) }}
-
-<strong class="govuk-tag brand-tag-green">
-  Brand
-</strong>
-<p class="govuk-body"><a href="#">See an example of the GOV.UK footer with links showing the refreshed GOV.UK branding</a>.</p>
 
 ## Adding links
 
@@ -96,16 +90,6 @@ Only add secondary GOV.UK navigation if you’re creating a GOV.UK service, and 
 
 {{ example({ group: "components", item: "footer", example: "with-navigation", html: true, nunjucks: true, open: false, size: "xl" }) }}
 
-<strong class="govuk-tag brand-tag-green">
-  Brand
-</strong>
-<p class="govuk-body"><a href="#">See an example of the GOV.UK footer with secondary navigation showing the refreshed GOV.UK branding</a>.</p>
-
 ### Footer with links and secondary navigation
 
 {{ example({ group: "components", item: "footer", example: "full", html: true, nunjucks: true, open: false, size: "xl" }) }}
-
-<strong class="govuk-tag brand-tag-green">
-  Brand
-</strong>
-<p class="govuk-body"><a href="#">See an example of the GOV.UK footer with links and secondary navigation showing the refreshed GOV.UK branding</a>.</p>

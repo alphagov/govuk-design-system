@@ -16,8 +16,8 @@ Always use the GOV.UK colour palette.
 
 {% call brandCallout({ text: "Brand", classes: "brand-tag-green" }) %}
 
-<h2>Brand changes to the {{title}}</h2>
-<p class="govuk-body">From June 2025, the colour palette will change to support a wider refresh of the GOV.UK brand. </p>
+<h2>Brand changes to {{title}}</h2>
+<p class="govuk-body">From June 2025, colours in some components will change to support a wider refresh of the GOV.UK brand. </p>
 
 <p class="govuk-body">To get ready, service teams in government should now make updates to these components in their services:</p>
 <ul class="govuk-list govuk-list--bullet">
@@ -26,7 +26,7 @@ Always use the GOV.UK colour palette.
   <li><a href="/components/service-navigation/" class="govuk-link">Service navigation component</a></li>
 </ul>
 
-<p class="govuk-body">The updated colour palette will change the background colour of some components to light blue, instead of grey:</p>
+<p class="govuk-body">These components will have a change of background colour to light blue:</p>
 <ul class="govuk-list">
 <li><a href="/components/cookie-banner/" class="govuk-link">Cookie banner component</a></li>
 <li><a href="/components/footer/" class="govuk-link">GOV.UK footer component</a></li>

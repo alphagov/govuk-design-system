@@ -63,18 +63,15 @@ For guidance on how to plan your header and navigation, see the [Help users navi
 
 ### Update to refresh the GOV.UK brand
 
+<strong class="govuk-tag brand-tag-green">
+  Brand
+</strong>
+
 If you use the Nunjucks macro and page template across your service, you can enable the brand refresh by setting the page template’s `rebrand` option to `true`. This will automatically make all needed changes related to the brand refresh.
 
 You can enable the brand refresh within the GOV.UK header component by setting its `rebrand` option to true. You’ll also need to add some code to your `<html>` and `<head>` elements.
 
 [See the release notes for more details](https://github.com/alphagov/govuk-frontend/releases) and and other ways to update.
-
-As you update your service, check the size and positioning of these nearby components:
-
-- [Back link component](/components/back-link/)
-- [Breadcrumbs component](/components/breadcrumbs/)
-- [Exit this page component](/components/exit-this-page/)
-
 
 ### Default GOV.UK header
 
@@ -83,11 +80,6 @@ Most services on GOV.UK should use the default GOV.UK header.
 It should only show the GOV.UK logo and any GOV.UK-wide links and tools to help your users. [Do not add the menu of GOV.UK topic links](https://insidegovuk.blog.gov.uk/2021/11/11/launching-gov-uks-new-menu-bar/) to your service’s GOV.UK header.
 
 {{ example({ group: "components", item: "header", example: "default", titleSuffix: "second", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
-
-<strong class="govuk-tag brand-tag-green">
-  Brand
-</strong>
-<p class="govuk-body"><a href="#">See an example of the GOV.UK header showing the refreshed GOV.UK branding</a>.</p>
 
 ### Previous variants of the GOV.UK header
 
