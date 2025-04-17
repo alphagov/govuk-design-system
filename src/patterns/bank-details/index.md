@@ -9,22 +9,8 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "_wcag-callout.njk" import wcagCallout %}
-{% from "_wcag-note.njk" import wcagNote %}
 
 This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
-
-{{ wcagCallout({
-  type: "pattern",
-  introAction: "ask users for",
-  name: "Bank details",
-  criteria: [
-    {
-      text: "make sure users can reuse previously entered bank details",
-      anchor: "wcag-reuse-bank-details"
-    }
-  ]
-}) }}
 
 {{ example({ group: "patterns", item: "bank-details", example: "default", html: true, nunjucks: true, open: false, size: "xl", loading: "eager" }) }}
 
@@ -49,12 +35,6 @@ Do not ask users if they have a bank account or building society account as not 
 If your service does not support building society accounts, remove building society from the content and do not ask for a roll number.
 
 ### Reusing entered bank details
-
-{% call wcagNote({id: "wcag-reuse-bank-details"}) %}
-
-<p>Do not ask for bank details more than once within a single journey if only one transaction is taking place.</p>
-<p>Make sure users can easily reuse previously entered bank details within a single journey, unless the information is no longer valid or doing so would be a major safety or security concern. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry</a>.</p>
-{% endcall %}
 
 You can make it easier to reuse bank details through one of these methods:
 
@@ -182,3 +162,9 @@ More research is also needed on:
 - whether bank details should be shown or not on a ‘Check your answers’ page and how that affects this pattern
 - how to handle international bank accounts so users are only asked for information that’s needed based on the location of their bank account
 - the information required to pay credit union accounts and how to ask credit union members for that information
+
+## Accessibility
+
+Do not ask for bank details more than once within a single journey if only one transaction is taking place.
+
+Make sure users can easily reuse previously entered bank details within a single journey, unless the information is no longer valid or doing so would be a major safety or security concern. This is to comply with [WCAG 2.2 success criterion 3.3.7 Redundant entry](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html).

@@ -8,26 +8,8 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "_wcag-callout.njk" import wcagCallout %}
-{% from "_wcag-note.njk" import wcagNote %}
 
 Allow users to accept or reject cookies which are not essential to making your service work.
-
-{{ wcagCallout({
-  type: "component",
-  introAction: "use the",
-  name: "Cookie banner",
-  criteria: [
-    {
-      text: "make sure that items in focus can be seen all times",
-      anchor: "wcag-see-focus"
-    },
-    {
-      text: "make sure users can interact with buttons and links in the Cookie banner component",
-      anchor: "wcag-interact-cookie-banner"
-    }
-  ]
-}) }}
 
 {{ example({ group: "components", item: "cookie-banner", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
@@ -80,16 +62,6 @@ Make sure the cookie banner does not:
 - set any non-essential cookies unless the user accepted them on a previous visit
 
 Position the cookie banner after the opening `<body>` tag and before the ’skip to main content‘ link. If you're using the Nunjucks page template, use the `bodyStart` block.
-
-{% call wcagNote({id: "wcag-see-focus"}) %}
-
-<p>Do not make the Cookie banner component ‘sticky’ to the top of the page by using `position: fixed` or any other method. This is to make sure it does not cover or obscure any content which has a focus applied. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html">WCAG 2.2 success criterion 2.4.11 Focus not obscured (minimum)</a>.</p>
-{% endcall %}
-
-{% call wcagNote({id: "wcag-interact-cookie-banner"}) %}
-
-<p>Do not change the padding or margins of buttons and links within the Cookie banner component. This is to make sure there’s adequate space for the user to interact with the buttons and links. This relates to <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target size (minimum)</a>.</p>
-{% endcall %}
 
 ### Option 1: If you’re only using essential cookies
 
@@ -212,3 +184,9 @@ We decided to remove the visible focus indicator from the confirmation message f
 - it displays in place of the cookie message, which is the last thing the user interacted with
 
 In this scenario, we assume that a visible focus indicator would be more likely to confuse users than to help them. However, we need more research to prove this.
+
+## Accessibility
+
+Do not make the Cookie banner component ‘sticky’ to the top of the page by using `position: fixed` or any other method. This is to make sure it does not cover or obscure any content which has a focus applied. This is to comply with [WCAG 2.2 success criterion 2.4.11 Focus not obscured (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html).
+
+Do not change the padding or margins of buttons and links within the Cookie banner component. This is to make sure there’s adequate space for the user to interact with the buttons and links. This relates to [WCAG 2.2 success criterion 2.5.8 Target size (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).
