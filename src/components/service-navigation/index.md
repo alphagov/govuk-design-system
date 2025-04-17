@@ -29,7 +29,7 @@ Service navigation helps users understand that they’re using your service and 
 
 {% call callout({ tagText: "Brand", colour: "green" }) %}
 
-<p class="govuk-body"><a href="#">See an example of the Service navigation showing the refreshed GOV.UK branding</a>.</p>
+<p class="govuk-body"><a href="/components/service-navigation/default/branded/index.html">See an example of the Service navigation showing the refreshed GOV.UK branding</a>.</p>
 
 {% endcall %}
 
