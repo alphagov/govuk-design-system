@@ -4,7 +4,7 @@
 <div class="app-wcag-note" id="{{params.id}}" role="note">
   {{ govukTag({
     text: "WCAG 2.2",
-    classes: "app-wcag-callout__tag"
+    classes: "app-callout__tag"
   }) }}
   {{ caller() if caller else params.content | safe }}
 </div>
