@@ -7,18 +7,15 @@
       text: params.tagText,
       classes: "app-callout__tag"
     }) }}
-    {% if params.heading %}
+    {% if params.heading -%}
       <h2 class="app-callout__heading">{{ params.heading }}</h2>
     {% endif -%}
-    {% if caller %}
-      {{ caller() }}
-    {% elif params.content %}
-      {{ params.content | safe }}
-    {% endif %}
+    {{ caller() if caller else params.content | safe }}
   {% endset -%}
 
   {% if params.isInset === "true" -%}
     {{ govukInsetText({
+      id: params.id if params.id,
       html: calloutContent,
       classes: "app-callout app-callout--" + params.colour
     }) }}

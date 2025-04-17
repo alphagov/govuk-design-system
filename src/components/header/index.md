@@ -14,14 +14,14 @@ The GOV.UK header component tells users they’re using a service on GOV.UK and 
 
 {{ example({ group: "components", item: "header", example: "default", id: "default-1", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
-<strong class="govuk-tag brand-tag-green">
-  Brand
-</strong>
+{% call callout({ tagText: "Brand", colour: "green" }) %}
+
 <p class="govuk-body"><a href="#">See an example of the GOV.UK header showing the refreshed GOV.UK branding</a>.</p>
+{% endcall %}
 
 If you use the page template, you'll also get the GOV.UK header without having to add it, as it's included by default. However, if you want to customise the default GOV.UK header, read the [page template guidance about customising components](/styles/page-template/#changing-template-content).
 
-{% call callout({ tagText: "Brand", colour: "green" }) %}
+{% call callout({ tagText: "Brand", colour: "green", isInset: "true" }) %}
 
 <h2 class="app-callout__heading">Brand changes to the {{title}} component</h2>
 <p class="govuk-body">From 25 June 2025, the {{title}} component will change to support a wider refresh of the GOV.UK brand. </p>

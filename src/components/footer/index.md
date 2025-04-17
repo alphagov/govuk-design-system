@@ -15,14 +15,15 @@ The GOV.UK footer provides copyright, licensing and other information about your
 
 {{ example({ group: "components", item: "footer", example: "default", id: "default-1", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}
 
-<strong class="govuk-tag brand-tag-green">
-  Brand
-</strong>
+{% call callout({ tagText: "Brand", colour: "green" }) %}
+
 <p class="govuk-body"><a href="#">See an example of the GOV.UK footer showing the refreshed GOV.UK branding</a>.</p>
+
+{% endcall %}
 
 If you use the page template, you'll also get the footer without having to add it, as it's included by default. However, if you want to customise the default footer, read the [page template guidance about customising components](/styles/page-template/#changing-template-content).
 
-{% call callout({ tagText: "Brand", colour: "green" }) %}
+{% call callout({ tagText: "Brand", colour: "green", isInset: "true" }) %}
 
 <h2 class="app-callout__heading">Brand changes to the {{title}} component</h2><p class="govuk-body">From 25 June 2025, the {{title}} component will change to support a wider refresh of the GOV.UK brand.</p>
 
