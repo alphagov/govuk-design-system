@@ -13,7 +13,7 @@ layout: layout-pane.njk
 
 Service navigation helps users understand that they’re using your service and lets them navigate around your service.
 
-{% call callout({ tagText: "Brand", colour: "green" }) %}
+{% call callout({ tagText: "Brand", colour: "green", isInset: "true" }) %}
 
 <h2 class="app-callout__heading">Brand changes to the {{title}} component</h2><p class="govuk-body">From June 2025, the {{title}} component will change to support a wider refresh of the GOV.UK brand.</p>
 
@@ -23,14 +23,16 @@ Service navigation helps users understand that they’re using your service and 
 <li>reduces overall padding by [x]px</li>
 </ul>
 <p class="govuk-body">To help service teams in government get ready to use the new branding by June 2025, <a href="#update-to-refresh-the-govuk-brand">we’ve provided several options to update their services</a>.</p>
+
 {% endcall %}
 
 {{ example({ group: "components", item: "service-navigation", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
-<strong class="govuk-tag brand-tag-green">
-  Brand
-</strong>
+{% call callout({ tagText: "Brand", colour: "green" }) %}
+
 <p class="govuk-body"><a href="#">See an example of the Service navigation showing the refreshed GOV.UK branding</a>.</p>
+
+{% endcall %}
 
 If you use the page template, you'll also get the Service navigation without having to add it, as it's included by default. However, if you want to customise the default Service navigation, read the [page template guidance about customising components](/styles/page-template/#changing-template-content).
 
