@@ -111,7 +111,7 @@ To see the changes you've made, you may need to create a new 'session'. For exam
 
 You can configure sections to start and stay open, but not stay closed.
 
-Add the `govuk-accordion__section--expanded` class to the `govuk-accordion__section` `div` to make individual sections open from the start.
+Add the `govuk-accordion__section--expanded` class to the `govuk-accordion__section` `div` to make individual sections open from the start. You can also do this using nunjucks macro options, if you are using the nunjucks macro by setting the `expanded` option to `true` on the individual accordion items you want to be expanded.
 
 ### Do not disable sections
 
