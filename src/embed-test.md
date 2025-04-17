@@ -1,5 +1,5 @@
 ---
-title: Day 1
+title: Test Embed Page
 description: Description
 layout: layout-pane.njk
 order: 16
@@ -11,13 +11,7 @@ ignoreInSitemap: true
 
 {% from "_cookie-banner.njk" import cookieBanner %}
 
-<p class="govuk-body-l">
-  Day one was online and happened on the 5th of May 2024. An overview of day one activities could go here.
-</p>
-
-<img class="app-image--no-border govuk-!-margin-bottom-9" src="/images/dsd24-24.svg" alt="" role="presentation">
-
-## Watch the Day 1 talks
+## Test Page
 
 {% set html %}
 
@@ -47,11 +41,14 @@ ignoreInSitemap: true
 {% call embedCard({
   ytId: "x91MPoITQ3I",
   transcriptHref: "https://www.google.com",
-  authorImgSrc: "/images/dsd24-day1-speakers1.png",
-  title: "The GOV.UK Design System in 5 years Video"
+  title: "Test Video"
 }) %}
+{% endcall %}
 
-  <h3><a href="#">The GOV.UK Design System in 5 years</a></h3>
-  <p>Trang Erskine, Charlotte Downs and Romaric Pascal, GOV.UK Design System</p>
-  <p>A show &amp; tell exploring the history of the Design System, and our focus for the next few years</p>
+{% call embedCard({
+  ytId: "x91MPoITQ3I",
+  transcriptHref: "https://www.google.com",
+  authorImgSrc: "/images/yt-thumb-example.jpg",
+  title: "Test Video"
+}) %}
 {% endcall %}
