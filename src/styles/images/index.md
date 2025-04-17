@@ -10,18 +10,8 @@ order: 13
 ---
 
 {% from "_example.njk" import example %}
-{% from "_wcag-callout.njk" import wcagCallout %}
-{% from "_wcag-note.njk" import wcagNote %}
 
 Avoid using images for unnecessary decoration. Only use images if there’s a real user need.
-
-{% call wcagCallout({
-  name: "Images",
-  heading: "New WCAG 2.2 criteria affect how you use images"
-}) %}
-
-  <p>To meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, <a href="#wcag-icon-focus">make sure any icons and images used in links meet the minimum target size</a>. This is to make sure users can easily interact with the link.</p>
-{% endcall %}
 
 Make sure any information contained in an image can be understood by someone who cannot see it. Also consider partially-sighted users with visual impairments and the assistive technologies they might use.
 
@@ -71,11 +61,6 @@ Avoid using icons in most cases. People can understand a single icon to mean dif
 Icons can be more useful in case working systems, where users are familiar with the interface and return to it frequently. In this context, they can help users to scan pages more quickly. In most cases it’s still helpful to include a visible text label alongside any icons.
 
 Do not use a single icon to represent more than one thing. For example, the search icon (magnifying glass) should only be used for search functionality, and not also for screen magnification.
-
-{% call wcagNote({id: "wcag-icon-focus"}) %}
-
-<p>Make sure any icons and images used in links are at least 24px by 24px in size, with adequate spacing. This is to make sure users can easily interact with the link. This relates to <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target size (minimum)</a>.</p>
-{% endcall %}
 
 ## Avoid images that contain text
 
