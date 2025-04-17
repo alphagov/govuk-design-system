@@ -17,7 +17,7 @@ The GOV.UK footer provides copyright, licensing and other information about your
 
 {% call callout({ tagText: "Brand", colour: "green" }) %}
 
-<p class="govuk-body"><a href="#">See an example of the GOV.UK footer showing the refreshed GOV.UK branding</a>.</p>
+<p class="govuk-body"><a href="/components/footer/default/branded/index.html">See an example of the GOV.UK footer showing the refreshed GOV.UK branding</a>.</p>
 
 {% endcall %}
 

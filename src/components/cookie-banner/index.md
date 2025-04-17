@@ -16,7 +16,7 @@ Allow users to accept or reject cookies which are not essential to making your s
 
 {% call callout({ tagText: "Brand", colour: "green" }) %}
 
-<p class="govuk-body"><a href="#">See an example of the Cookie banner showing the refreshed GOV.UK branding</a>.</p>
+<p class="govuk-body"><a href="/components/cookie-banner/default/branded/index.html">See an example of the Cookie banner showing the refreshed GOV.UK branding</a>.</p>
 
 {% endcall %}
 
