@@ -3,8 +3,10 @@ title: Links
 description: Use links to navigate between pages
 section: Styles
 backlogIssueId: 64
+theme: Typography
 layout: layout-pane.njk
 showPageNav: true
+order: 9
 ---
 
 {% from "_example.njk" import example %}
@@ -27,7 +29,7 @@ If it's an external link to a non-government website, make that clear in the lin
 
 Avoid opening links in a new tab or window. It can be disorienting - and [can cause accessibility problems for people who cannot visually perceive that the new tab has opened](https://www.w3.org/TR/WCAG20-TECHS/G200.html).
 
-If you need a link to open in a new tab - for example, to stop the user losing information they’ve entered into a form - then include the words ‘opens in new tab’ as part of the link. There's no need to say 'tab or window', since opening in a new tab is the default behaviour for most browsers.
+If you need a link to open in a new tab, include the words ‘opens in new tab’ as part of the link. A use case example is to stop the user losing information they’ve entered into a form. There's no need to tell the user the new tab opens in a new window as this is the default behaviour for most browsers.
 
 Include `rel="noreferrer noopener"` along with `target="_blank"` to reduce the risk of [reverse tabnabbing](https://owasp.org/www-community/attacks/Reverse_Tabnabbing). The following example shows how to do this in HTML.
 
@@ -40,9 +42,9 @@ If you're displaying lots of links together and want to save space and avoid rep
 
 ## Links on dark backgrounds
 
-Use the `govuk-link--inverse` modifier class to show white links on dark backgrounds – for example, in headers, custom components, and patterns with darker backgrounds.
+Use the `govuk-link--inverse` modifier class to show white links on dark backgrounds. For example, in headers, custom components, and patterns with darker backgrounds.
 
-Make sure all users can see the links – the white links and background colour [must have a contrast ratio of at least 4.5:1](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html).
+Make sure all users can see the links. The white links and background colour [must have a contrast ratio of at least 4.5:1 to [meet WCAG 2.2 success criterion 1.4.3 Contrast (minimum), level AA](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html).
 
 {{ example({ group: "styles", item: "links", example: "on-dark-background", html: true, open: true }) }}
 
@@ -52,7 +54,7 @@ Use the `govuk-link--no-underline` modifier class to remove underlines from link
 
 Only do this if the context tells the user that the text is a link, even without the underline.
 
-For example, links in a header or side navigation might not need underlines. Users will understand that they’re links because of where they are, at the same place, across different pages.
+For example, links in a header or side navigation might not need underlines. Users will understand that they’re links because of where they are on the page.
 
 {{ example({ group: "styles", item: "links", example: "no-underline", html: true, open: true }) }}
 
@@ -64,6 +66,6 @@ When offering links to content in other languages, make sure:
 
 - the link's text includes the name of the alternative language in both English and the source language
 - the link's purpose is always clear, even when taken out of context
-- the link element includes an [`hreflang` attribute](https://www.w3schools.com/tags/att_a_hreflang.asp) that identifies the language of the linked page.
+- the link element includes an [`hreflang` attribute](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/hreflang) that identifies the language of the linked page.
 
 For example, your link text could be 'use [Service name] in [language]'.

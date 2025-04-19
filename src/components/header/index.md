@@ -1,103 +1,115 @@
 ---
-title: Header
+title: GOV.UK header
 description: The GOV.UK header shows users that they are on GOV.UK and which service they are using
 section: Components
+aliases: GOV.UK masthead
 backlogIssueId: 97
 layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "_wcag-callout.njk" import wcagCallout %}
+{% from "_wcag-note.njk" import wcagNote %}
 
-The GOV.UK header shows users that they are on GOV.UK and which service they are using.
+The GOV.UK header component tells users they’re using a service on GOV.UK and lets them use GOV.UK-wide tools. Also known as the GOV.UK masthead.
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affects this component
-
-To use the ‘Header' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
-
-- [see all page content when interacting with a dropdown menu](/components/header/#wcag-do-not-cover-content)
-- [find help links in a consistent place on each page](/components/header/#wcag-consistent-help-links)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "component",
+  introAction: "use the",
+  name: "GOV.UK header",
+  criteria: [
+    {
+      text: "make sure all page content can be seen when the user interacts with a dropdown menu",
+      anchor: "wcag-do-not-cover-content"
+    },
+    {
+      text: "make sure help links can be found in a consistent place on each page",
+      anchor: "wcag-consistent-help-links"
+    }
+  ]
 }) }}
 
 {{ example({ group: "components", item: "header", example: "default", id: "default-1", html: true, nunjucks: true, rails: true, open: false, loading: "eager" }) }}
 
-If you use the page template, you'll also get the header without having to add it, as it's included by default. However, if you want to customise the default header, read the [page template guidance about customising components](/styles/page-template/#changing-template-content).
-
-## Update to the new GOV.UK logo between 19&nbsp;February and 1&nbsp;March
-
-The GOV.UK logo has been updated to reflect the changing of the monarch. King Charles&nbsp;III uses the Tudor Crown, rather than the St Edward’s Crown chosen by Queen Elizabeth&nbsp;II.
-
-If your service uses GOV.UK branding, you must update your service between 19 February and 1 March 2024 to use the new logo. You may need to update the version of GOV.UK Frontend your service uses before you can do this.
-
-Read the release notes for the version of Frontend you're using for instructions on how to update the logo.
-
-- [GOV.UK Frontend v5.1.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.1.0)
-- [GOV.UK Frontend v4.8.0](https://github.com/alphagov/govuk-frontend/releases/tag/v4.8.0)
-- [GOV.UK Frontend v3.15.0](https://github.com/alphagov/govuk-frontend/releases/tag/v3.15.0)
+If you use the page template, you'll also get the GOV.UK header without having to add it, as it's included by default. However, if you want to customise the default GOV.UK header, read the [page template guidance about customising components](/styles/page-template/#changing-template-content).
 
 ## When to use this component
 
-You must use the GOV.UK header at the top of every page if your service is being hosted on one of these domains:
+If your service is being hosted on one of these domains, use the GOV.UK header component:
 
-- gov.uk/myservice
-- myservice.service.gov.uk
-- myblog.blog.gov.uk
+- gov.uk/[myservice]
+- [myservice].service.gov.uk
+- [myblog].blog.gov.uk
+
+You must use the GOV.UK header component at the top of every page. The Service Manual explains why it’s important for you to [make your service look like GOV.UK](https://www.gov.uk/service-manual/design/making-your-service-look-like-govuk).
 
 ## When not to use this component
 
-You must not use the GOV.UK header if your service is not being hosted on one of the above domains.
+If your service is not hosted on one of the gov.uk domains outlined, you must not use the GOV.UK header component as it’s not considered part of GOV.UK.
+
+You can still build from this component, but you’ll need to [make some changes to make sure users do not confuse your website with GOV.UK](https://www.gov.uk/service-manual/design/making-your-service-look-like-govuk#if-your-service-isnt-on-govuk).
 
 ## How it works
 
-### Default header
+Together, the GOV.UK header and [Service navigation component](/components/service-navigation/) both ensure users get a consistent experience on GOV.UK.
 
-Use the default header if your service has 5 pages or fewer.
+This also assures users that they’re in the right place to use your service and to understand that GOV.UK functions as one website.
+
+For guidance on how to plan your header and navigation, see the [Help users navigate a service pattern](/patterns/navigate-a-service).
+
+### Default GOV.UK header
+
+Most services on GOV.UK should use the default GOV.UK header.
+
+It should only show the GOV.UK logo and any GOV.UK-wide links and tools to help your users. [Do not add the menu of GOV.UK topic links](https://insidegovuk.blog.gov.uk/2021/11/11/launching-gov-uks-new-menu-bar/) to your service’s GOV.UK header.
 
 {{ example({ group: "components", item: "header", example: "default", titleSuffix: "second", html: true, nunjucks: true, rails: true, open: false, titleSuffix: "second" }) }}
 
-### Header with service name
+### Previous variants of the GOV.UK header
 
-Use the header with a service name if your service is more than 5 pages long - this can help users understand which service they are using.
+The GOV.UK header component was originally released with 2 variants:
 
-{{ example({ group: "components", item: "header", example: "with-service-name", html: true, nunjucks: true, rails: true, open: false }) }}
+- with service name
+- with service name and navigation
 
-### Header with service name and navigation
+These 2 variants will be removed from the GOV.UK header component in the next breaking release of GOV.UK Frontend.
 
-Use the header with navigation if you need to include basic navigation, contact or account management links.
+In August 2024, we introduced a separate [Service navigation component](/components/service-navigation). This is to better help users understand that they’re using your service and let them navigate around your service.
 
-<div class="app-wcag-22" id="wcag-do-not-cover-content" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>Do not make header elements, like dropdown menus, ‘sticky’ to the top of the page by using `position: fixed` or any other method. In other words, avoid any implementations that cause menus to sit on top of page content.</p>
-  <p>This is to make sure it does not hide or obscure any content which has a focus applied and comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html">2.4.11 Focus not Obscured (minimum)</a>.</p>
-</div>
+We recommend using the Service navigation component to show your service name and navigation links instead of the GOV.UK header, and to start updating existing services.
+
+See the [Help users navigate a service pattern](/patterns/navigate-a-service) for more guidance.
+
+#### GOV.UK header with service name
+
+We’ve deprecated the [GOV.UK header with service name](/components/header/with-service-name) and will remove this option in the next breaking release of GOV.UK Frontend.
+
+Use the Service navigation component to show your service name instead. We recommend teams to start updating existing services.
+
+#### GOV.UK header with navigation
+
+We’ve deprecated the [GOV.UK header with navigation](/components/header/with-service-name-and-navigation/) and will remove this option in the next breaking release of GOV.UK Frontend.
+
+Use the Service navigation component to add navigation links instead.
+
+{% call wcagNote({id: "wcag-do-not-cover-content"}) %}
+
+<p>Do not make header elements, like dropdown menus, ‘sticky’ to the top of the page by using `position: fixed` or any other method. In other words, avoid any implementations that cause menus to sit on top of page content.</p>
+<p>This is to make sure elements do not hide or obscure any content which has a focus applied and comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html">WCAG 2.2 success criterion 2.4.11 Focus not obscured (minimum)</a>.</p>
+{% endcall %}
 
 In November 2021, [the GOV.UK homepage introduced a menu bar](https://insidegovuk.blog.gov.uk/2021/11/11/launching-gov-uks-new-menu-bar/) that avoids obscuring content by shifting the page down.
 
-{{ example({group: "components", item: "header", example: "with-service-name-and-navigation", html: true, nunjucks: true, rails: true, open: false, size: "s"}) }}
+{% call wcagNote({id: "wcag-consistent-help-links"}) %}
 
-<div class="app-wcag-22" id="wcag-consistent-help-links" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>You can add a link to a ‘help’ page in your service’s header. If you do, the link must be positioned consistently within the header, and must always link to the same place.</p>
-  <p>For example, a header link to “Get help with this service” must go to the same place as similar header links elsewhere in your service. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent Help</a>.</p>
-</div>
+<p>You can add a link to a ‘help’ page in your service’s GOV.UK header component. If you do, the link must be positioned consistently within the header, and must always link to the same place.</p>
+<p>For example, a header link to “Get help with this service” must go to the same place as similar header links elsewhere in your service. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">WCAG 2.2 success criterion 3.2.6 Consistent help</a>.</p>
+{% endcall %}
+
+### GOV.UK header with One Login
+
+GOV.UK One Login maintains their own header on the [Let users navigate to their GOV.UK One Login and sign out easily](https://www.sign-in.service.gov.uk/documentation/design-recommendations/let-users-navigate-sign-out) page.
+
+## Research on this component
+
+See the [research section in the Help users navigate a service pattern](/patterns/navigate-a-service/#research-on-this-pattern) for a summary of our research on the GOV.UK header and navigation, and how you can share your feedback with us.

@@ -50,7 +50,7 @@ Do not use the accordion component if the amount of content inside will make the
 
 ## Decide between using accordions, tabs and details
 
-Accordions, [tabs](/components/tabs/) and [details](/components/details/) all work by hiding sections of content which a user can choose to reveal. Avoid using any of these components within one another.
+The Accordion component, [Tabs component](/components/tabs/) and [Details component](/components/details/) all work by hiding sections of content which a user can choose to reveal. Avoid using any of these components within one another.
 
 If you decide to use one of these components, consider if:
 
@@ -64,6 +64,8 @@ If you decide to use one of these components, consider if:
 There are 2 ways to use the accordion component. You can use HTML or, if you’re using Nunjucks or the GOV.UK Prototype Kit, you can use the Nunjucks macro.
 
 The accordion component uses JavaScript. When JavaScript is not available, users will see all the content displayed with the section labels as headings.
+
+If you are using HTML, you must add an 'id' attribute to the `<div>` tag with the `govuk-accordion` class. It must be unique across the service's domain to maintain the persistent expanded state of the accordion.
 
 ### Section heading buttons
 
@@ -82,6 +84,7 @@ For users of screen readers, all the text in the button will be read as a single
 #### Write clear button text
 
 Write the heading and summary line like any other button text. Use sentence case, describe the content that will show, and keep it short.
+
 Users of screen readers might find it difficult to navigate the accordion if the button text is too long.
 
 If you struggle to come up with clear button text, it might be because the way you’ve separated the content is not clear. Organise sections in a way that makes sense to users, based on their needs.
@@ -120,7 +123,7 @@ We updated this component in December 2021 to solve an accessibility issue where
 
 The team made sure the component is accessible, for example that users can interact with it using just the keyboard.
 
-#### Users that navigate using ‘elements lists’
+### Users that navigate using ‘elements lists’
 
 We need to find out more about users that navigate using ‘elements lists’ of headings, buttons, links and other elements – such as users of speech recognition software and partially-sighted users of screen readers.
 

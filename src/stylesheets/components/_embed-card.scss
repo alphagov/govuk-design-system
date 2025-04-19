@@ -1,0 +1,17 @@
+.app-embed-card__placeholder-thumb-container {
+  position: relative;
+}
+
+.app-embed-card__placeholder-thumb-container::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    url("/images/yt.svg") 50% center / 75px no-repeat,
+    linear-gradient(transparent, transparent);
+  background-position: 50% center;
+}

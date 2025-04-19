@@ -8,30 +8,21 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "_wcag-callout.njk" import wcagCallout %}
+{% from "_wcag-note.njk" import wcagNote %}
 
 The breadcrumbs component helps users to understand where they are within a website’s structure and move between levels.
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affects this component
-
-To use ‘Breadcrumbs' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
-
-- [interact with breadcrumbs](/components/breadcrumbs/#wcag-interact-breadcrumbs)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "component",
+  introAction: "use",
+  name: "Breadcrumbs",
+  criteria: [
+    {
+      text: "make sure users can interact with the Breadcrumbs component",
+      anchor: "wcag-interact-breadcrumbs"
+    }
+  ]
 }) }}
 
 {{ example({group: "components", item: "breadcrumbs", example: "default", html: true, nunjucks: true, rails: true, open: false, loading: "eager" }) }}
@@ -52,13 +43,10 @@ Always place breadcrumbs at the top of a page, before the `<main>` element. Plac
 
 The breadcrumbs should start with your 'home' page and end with the parent section of the current page.
 
-<div class="app-wcag-22" id="wcag-interact-breadcrumbs" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>Make sure no other interactive elements are too close to the breadcrumbs. This is to make sure users can easily interact with the breadcrumbs. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target Size (minimum)</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-interact-breadcrumbs"}) %}
+
+<p>Make sure no other interactive elements are too close to the Breadcrumbs component. This is to make sure users can easily interact with it. This relates to <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target size (minimum)</a>.</p>
+{% endcall %}
 
 There are 2 ways to use the breadcrumbs component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 
@@ -76,6 +64,6 @@ To do this, add a `govuk-breadcrumbs--collapse-on-mobile` class to the outer `<d
 
 Use the `govuk-breadcrumbs--inverse` modifier class to show white links and arrows on dark backgrounds – for example, in headers, custom components, and patterns with darker backgrounds.
 
-Make sure all users can see the breadcrumbs – the background colour [must have a contrast ratio of at least 4.5:1](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html) with white.
+Make sure all users can see the breadcrumbs – the background colour must have a contrast ratio of at least 4.5:1 with white to [meet WCAG 2.2 success criterion 1.4.3 Contrast (minimum), level AA](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html).
 
 {{ example({group: "components", item: "breadcrumbs", example: "inverse", html: true, nunjucks: true, rails: true, open: false}) }}

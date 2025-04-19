@@ -3,7 +3,7 @@
  *
  * @type {NavigationItem[]}
  */
-module.exports = [
+const config = [
   {
     label: 'Get started',
     url: 'get-started'
@@ -26,10 +26,11 @@ module.exports = [
   },
   {
     label: 'Accessibility',
-    url: 'accessibility',
-    includeInSearch: true
+    url: 'accessibility'
   }
 ]
+
+module.exports = config
 
 /**
  * @typedef {object} NavigationItem

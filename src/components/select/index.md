@@ -8,28 +8,19 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "_wcag-callout.njk" import wcagCallout %}
+{% from "_wcag-note.njk" import wcagNote %}
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affects this component
-
-To use the ‘Select' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
-
-- [use the select without relying on 'click and drag' movements (if you choose to add functionality to select multiple options)](/components/select/#wcag-avoid-dragging-multiple-options)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "component",
+  introAction: "use the",
+  name: "Select",
+  criteria: [
+    {
+      text: "if you choose to add functionality to select multiple options, make sure users can do so without relying on 'click and drag' movements",
+      anchor: "wcag-avoid-dragging-multiple-options"
+    }
+  ]
 }) }}
 
 {{ example({ group: "components", item: "select", example: "default", html: true, nunjucks: true, rails: true, open: false, loading: "eager" }) }}
@@ -42,7 +33,7 @@ The select component should only be used as a last resort in public-facing servi
 
 The select component allows users to choose an option from a long list. Before using the select component, try asking users questions which will allow you to present them with fewer options.
 
-Asking questions means you’re less likely to need to use the select component, and can consider using a different solution, such as [radios](/components/radios/).
+Asking questions means you’re less likely to need to use the select component, and can consider using a different solution, such as a [Radios component](/components/radios/).
 
 ## How it works
 
@@ -58,6 +49,10 @@ There are 2 ways to use the select component. You can use HTML or, if you’re u
 
 You can add hint text to help the user understand the options and choose one of them.
 
+Keep hint text to a single short sentence, without any full stops.
+
+Do not use links in hint text. While screen readers will read out the link text, they usually do not tell users the text is a link.
+
 {{ example({ group: "components", item: "select", example: "with-hint", html: true, nunjucks: true, open: false }) }}
 
 ### Error messages
@@ -72,13 +67,10 @@ Style error messages as shown in the example:
 
 The select component does not support selecting multiple options, [as there’s a history of poor usability and assistive technology support for `<select multiple>`](https://www.24a11y.com/2019/select-your-poison/). If you need to ask the user to pick more than one item from a list, it’s almost always better to use another method, such as a list of checkboxes.
 
-<div class="app-wcag-22" id="wcag-avoid-dragging-multiple-options" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>Any input that’s designed to let a user select multiple options must offer a way to do so without relying on ‘click and drag’ movements or keyboard and mouse combination actions. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">2.5.7 Dragging Movements</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-avoid-dragging-multiple-options"}) %}
+
+<p>Any input that’s designed to let a user select multiple options must offer a way to do so without relying on ‘click and drag’ movements or keyboard and mouse combination actions. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">WCAG 2.2 success criterion 2.5.7 Dragging movements</a>.</p>
+{% endcall %}
 
 ## Research on this component
 

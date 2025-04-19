@@ -18,7 +18,7 @@ Use this pattern to help you prototype a start point for your service, so you ca
 
 Public-facing UK government services need to start on a GOV.UK content page. The GDS content team creates these start points using GOV.UK publishing apps, separate from GOV.UK Frontend.
 
-Service teams will usually need to agree content for this GOV.UK content page with the GDS content team. Read guidance on how to get your service on GOV.UK. Read [guidance on how to get your service on GOV.UK](https://www.gov.uk/service-manual/service-assessments/get-your-service-on-govuk).
+Service teams will need to agree content for this GOV.UK content page with the GDS content team. Read [guidance on how to get your service on GOV.UK](https://www.gov.uk/service-manual/service-assessments/get-your-service-on-govuk).
 
 ## How it works
 
@@ -28,7 +28,7 @@ A service's start point should:
 - include a ‘button’ linking into the service, with text that’s consistent with the action you’re asking users to take – for example, ‘Start now’, ‘Sign in’ or ‘Register or update your details’ (if you need a secondary call to action, use a standard link)
 - let users sign in, resume an application they’ve already started or update their details (if relevant)
 - include any other information that most users are likely to need before they start using the service online – for example, how much it costs to use the service and roughly how long it will take
-- include details of other ways to access the service – for example, by telephone or by completing a paper form
+- include details of other ways to access the service – for example, by phone or by completing a paper form
 
 You’ll also need to list any documents or information the user will need to help them complete the service (there’s no need to list information that a user is likely to know from memory – for example, their own date of birth).
 
@@ -61,13 +61,13 @@ Use a simple start page if users can start using the service without needing muc
 
 If the start point is linked to a wider process that needs more explanation, create an ‘Apply’ section within a multipart guide.
 
-For example, before a user applies for probate (the right to manage someone’s estate after they die) they need to understand whether probate is required, whether they’re the right person to apply, how the details of the will and the tax situation affect what they’re supposed to do, how to get the relevant information together and how the different outcomes affect what they'll need to do next.
+For example, for a user to prove their right to work in the UK, they need to understand which documents they'll need and how to show them to an employer. This depends on their nationality, what kind of permission they have to work in the UK and types of documents they've been issued with. Some users have the option of getting a 'share code' by entering their documents online. There are some specific schemes which use different documents.
 
 It’s important that users have this context, so it makes sense to embed the start point within the multipart guide – rather than creating the start point as a separate start page, allowing users to miss the context and potentially do the wrong thing.
 
 ![A screenshot showing an example of a start point within a multipart guide. The page is shown as part of a set of pages and its body text explains what the user will need to use the service, followed by a start button labelled 'Apply now'.](multipart-guide-start-point.png)
 
-The Carer’s Allowance team found that, for their service, [providing a start point within a multipart guide helped users get to the right information without feeling overwhelmed](https://dwpdigital.blog.gov.uk/2014/07/24/improving-to-the-carers-allowance-guide/).
+[Read a blog post about how DWP's digital team found that providing a start page within a multipart guide for Carer's Allowance improved the journey for users](https://dwpdigital.blog.gov.uk/2014/07/24/improving-to-the-carers-allowance-guide/).
 
 ### Creating a start point using Whitehall Publisher
 

@@ -2,33 +2,26 @@
 title: Images
 description: Only use images if there’s a real user need
 section: Styles
+theme: Visual elements
 backlogIssueId: 70
 layout: layout-pane.njk
 showPageNav: true
+order: 13
 ---
 
 {% from "_example.njk" import example %}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "_wcag-callout.njk" import wcagCallout %}
+{% from "_wcag-note.njk" import wcagNote %}
 
 Avoid using images for unnecessary decoration. Only use images if there’s a real user need.
 
-{% set wcagCallout %}
+{% call wcagCallout({
+  name: "Images",
+  heading: "New WCAG 2.2 criteria affect how you use images"
+}) %}
 
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affects how you use images
-
-To meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, [make sure any icons and images used in links meet the minimum target size](/styles/images/#wcag-icon-focus). This is to make sure users can easily interact with the link.
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
-}) }}
+  <p>To meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, <a href="#wcag-icon-focus">make sure any icons and images used in links meet the minimum target size</a>. This is to make sure users can easily interact with the link.</p>
+{% endcall %}
 
 Make sure any information contained in an image can be understood by someone who cannot see it. Also consider partially-sighted users with visual impairments and the assistive technologies they might use.
 
@@ -79,13 +72,10 @@ Icons can be more useful in case working systems, where users are familiar with 
 
 Do not use a single icon to represent more than one thing. For example, the search icon (magnifying glass) should only be used for search functionality, and not also for screen magnification.
 
-<div class="app-wcag-22" id="wcag-icon-focus" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>Make sure any icons and images used in links are at least 24px by 24px in size, with adequate spacing. This is to make sure users can easily interact with the link. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target Size (minimum)</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-icon-focus"}) %}
+
+<p>Make sure any icons and images used in links are at least 24px by 24px in size, with adequate spacing. This is to make sure users can easily interact with the link. This relates to <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target size (minimum)</a>.</p>
+{% endcall %}
 
 ## Avoid images that contain text
 
@@ -158,7 +148,7 @@ Examples of these might be:
 - text within an organisation’s logo (known as logotype)
 - a signature, signed in a distinctive way
 
-[Read more about essential text](https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html) in the Web Content Accessibility Guidelines.
+Read more about essential text in [WCAG 2.2 success criterion 1.4.5 Images of text](https://www.w3.org/WAI/WCAG22/Understanding/images-of-text.html).
 
 #### What to do with essential text in images
 
@@ -176,7 +166,7 @@ If it's not practical to avoid using an image that contains text (and replace it
 
 You should consider these options even if the text in an image is essential, as it will make your information easier to read for users that customise the way they look at web pages.
 
-In any case, make sure that the contrast ratio of text colour and all portions of the image that overlap the text [meets level AA of the Web Content Accessibility Guidelines (WCAG 2.1)](https://www.w3.org/TR/WCAG21/#contrast-minimum).
+In any case, make sure that the contrast ratio of text colour and all portions of the image that overlap the text [meets WCAG 2.2 success criterion 1.4.3 Contrast (minimum) level AA](https://www.w3.org/TR/WCAG22/#contrast-minimum).
 
 #### Show HTML text over an image
 

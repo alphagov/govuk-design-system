@@ -1,77 +1,106 @@
 /* eslint-disable no-new */
 
-import { initAll } from 'govuk-frontend'
+import { createAll, Button, NotificationBanner, SkipLink } from 'govuk-frontend'
 
-import Analytics from './components/analytics.mjs'
+import { loadAnalytics } from './components/analytics.mjs'
 import BackToTop from './components/back-to-top.mjs'
 import CookieBanner from './components/cookie-banner.mjs'
 import {
   getConsentCookie,
-  isValidConsentCookie
+  isValidConsentCookie,
+  removeUACookies
 } from './components/cookie-functions.mjs'
 import CookiesPage from './components/cookies-page.mjs'
 import Copy from './components/copy.mjs'
-import Example from './components/example.mjs'
+import EmbedCard from './components/embed-card.mjs'
+import ExampleFrame from './components/example-frame.mjs'
 import Navigation from './components/navigation.mjs'
 import OptionsTable from './components/options-table.mjs'
+import ScrollContainer from './components/scroll-container.mjs'
 import Search from './components/search.mjs'
 import AppTabs from './components/tabs.mjs'
 
 // Initialise GOV.UK Frontend
-initAll()
+createAll(Button)
+createAll(NotificationBanner)
+createAll(SkipLink)
 
-// Initialise cookie banner
-const $cookieBanner = document.querySelector(
-  '[data-module="govuk-cookie-banner"]'
-)
-if ($cookieBanner) {
-  new CookieBanner($cookieBanner)
-}
+// Cookies and analytics
+createAll(CookieBanner)
+createAll(CookiesPage)
 
-// Initialise analytics if consent is given
+// Check for consent before initialising analytics
 const userConsent = getConsentCookie()
 if (userConsent && isValidConsentCookie(userConsent) && userConsent.analytics) {
-  Analytics()
+  loadAnalytics()
+
+  // Remove UA cookies if the user previously had them set or Google attempts
+  // to set them
+  removeUACookies()
 }
 
-// Initialise example frames
-const $examples = document.querySelectorAll('[data-module="app-example-frame"]')
-$examples.forEach(($example) => {
-  new Example($example)
-})
-
-// Initialise tabs
-const $tabs = document.querySelectorAll('[data-module="app-tabs"]')
-$tabs.forEach(($tabs) => {
-  new AppTabs($tabs)
-})
+// Code examples
+createAll(ExampleFrame)
+createAll(AppTabs)
 
 // Do this after initialising tabs
+createAll(Copy)
 new OptionsTable()
 
-// Add copy to clipboard to code blocks inside tab containers
-const $codeBlocks = document.querySelectorAll('[data-module="app-copy"] pre')
-$codeBlocks.forEach(($codeBlock) => {
-  new Copy($codeBlock)
-})
-
 // Initialise mobile navigation
-new Navigation(document)
+createAll(Navigation)
+
+// Initialise scrollable container handling
+createAll(ScrollContainer)
 
 // Initialise search
-const $searchContainer = document.querySelector('[data-module="app-search"]')
-if ($searchContainer) {
-  new Search($searchContainer)
-}
+createAll(Search)
 
 // Initialise back to top
-const $backToTop = document.querySelector('[data-module="app-back-to-top"]')
-if ($backToTop) {
-  new BackToTop($backToTop)
-}
+createAll(BackToTop)
 
 // Initialise cookie page
-const $cookiesPage = document.querySelector('[data-module="app-cookies-page"]')
-if ($cookiesPage) {
-  new CookiesPage($cookiesPage)
+createAll(CookiesPage)
+
+const $embedCards = document.querySelectorAll('[data-module="app-embed-card"]')
+
+const lazyEmbedObserver = new IntersectionObserver(function (
+  entries,
+  observer
+) {
+  entries.forEach(function (entry) {
+    if (entry.isIntersecting) {
+      try {
+        new EmbedCard(entry.target)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+  })
+})
+
+$embedCards.forEach(function (lazyEmbed) {
+  lazyEmbedObserver.observe(lazyEmbed)
+})
+
+const campaignCookieBanner = document.querySelector(
+  '[data-cookie-category="campaign"]'
+)
+
+if (campaignCookieBanner) {
+  const callback = (mutationList, observer) => {
+    if (mutationList.length) {
+      $embedCards.forEach(function (lazyEmbed) {
+        lazyEmbedObserver.unobserve(lazyEmbed)
+        lazyEmbedObserver.observe(lazyEmbed)
+      })
+    }
+  }
+
+  const observer = new MutationObserver(callback)
+  observer.observe(campaignCookieBanner, {
+    attributes: true,
+    childList: true,
+    subtree: true
+  })
 }

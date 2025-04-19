@@ -9,12 +9,12 @@ The examples in the GOV.UK Design System come with code to make it easy for you 
 
 There are guides to getting started:
 
-- [prototyping](prototyping/)
-- [in production](production/)
+- [with prototyping](prototyping/)
+- [working in production](production/)
 
 ## Using styles, components and patterns
 
-When something is published in the GOV.UK Design System as a [style](/styles/), [component](/components/) or [pattern](/patterns/) we include details of how and when it’s been tested in user research. This should help you decide whether it’s something you can use or adapt for your service.
+When we publish new [styles](/styles/), [components](/components/) or [patterns](/patterns/) we include details of how and when it’s been tested in user research. This should help you decide whether it’s something you can use or adapt for your service.
 
 You can ask questions or share your research by joining the discussion on GitHub. There are links at the end of each style, component and pattern page - under the ‘Help improve this page’ heading.
 

@@ -84,8 +84,8 @@ interface.
 
 ## Deployment
 
-- [How the Design System is deployed to production](docs/deployment/production.md)
-- [How branch and PR previews are deployed](docs/deployment/previews.md)
+- [How the Design System is deployed to production](docs/deployment.md#production)
+- [How branch and PR previews are deployed](docs/deployment.md#pull-request-previews)
 
 ## Security
 

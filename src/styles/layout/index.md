@@ -2,11 +2,13 @@
 title: Layout
 description: Organise the layout of the page into blocks
 section: Styles
+theme: Page structure
 layout: layout-pane.njk
 showPageNav: true
 headings:
   - text: Hide elements and keep them accessible to screen readers
     aliases: visually hidden
+order: 2
 ---
 
 {% from "_example.njk" import example %}
@@ -43,13 +45,13 @@ If you want to build your layout from scratch, or understand what each of the pa
 
 To set up your layout you will need to create 2 wrappers. The first should have the class `govuk-width-container`, which sets the maximum width of the content but does not add any vertical margin or padding.
 
-If your design requires them, you should place components such as [breadcrumbs](/components/breadcrumbs/), [back link](/components/back-link/) and [phase banner](/components/phase-banner/) inside this wrapper so that they sit directly underneath the header.
+If your design requires them, you should place components such as the [Breadcrumbs component](/components/breadcrumbs/), [Back link component](/components/back-link/) and [Phase banner component](/components/phase-banner/) inside this wrapper so that they sit directly underneath the header.
 
 ### Add vertical space
 
 Within `govuk-width-container` you should add the `govuk-main-wrapper` class to your `<main>` element. This adds responsive padding to the top and bottom of the page and will be the container for your main content.
 
-If you’re not using the [breadcrumbs](/components/breadcrumbs/), [back link](/components/back-link/) or [phase banner](/components/phase-banner/) components in your design, add the correct amount of vertical padding above the content by adding one of the following to your `<main>` element:
+If you’re not using the [Breadcrumbs component](/components/breadcrumbs/), [Back link component](/components/back-link/) or [Phase banner component](/components/phase-banner/) in your design, add the correct amount of vertical padding above the content by adding one of the following to your `<main>` element:
 
 - the `govuk-main-wrapper--auto-spacing` class
 - the `govuk-main-wrapper--l` class - if `govuk-main-wrapper--auto-spacing` does not work for your service

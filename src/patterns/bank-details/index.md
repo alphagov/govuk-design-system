@@ -9,30 +9,21 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "_wcag-callout.njk" import wcagCallout %}
+{% from "_wcag-note.njk" import wcagNote %}
 
 This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affects this pattern
-
-To ask users for 'Bank details' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
-
-- [reuse previously entered bank details](/patterns/bank-details/#wcag-reuse-bank-details)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "pattern",
+  introAction: "ask users for",
+  name: "Bank details",
+  criteria: [
+    {
+      text: "make sure users can reuse previously entered bank details",
+      anchor: "wcag-reuse-bank-details"
+    }
+  ]
 }) }}
 
 {{ example({ group: "patterns", item: "bank-details", example: "default", html: true, nunjucks: true, open: false, size: "xl", loading: "eager" }) }}
@@ -59,14 +50,11 @@ If your service does not support building society accounts, remove building soci
 
 ### Reusing entered bank details
 
-<div class="app-wcag-22" id="wcag-reuse-bank-details" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>Do not ask for bank details more than once within a single journey if only one transaction is taking place.</p>
-  <p>Make sure users can easily reuse previously entered bank details within a single journey, unless the information is no longer valid or doing so would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-reuse-bank-details"}) %}
+
+<p>Do not ask for bank details more than once within a single journey if only one transaction is taking place.</p>
+<p>Make sure users can easily reuse previously entered bank details within a single journey, unless the information is no longer valid or doing so would be a major safety or security concern. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry</a>.</p>
+{% endcall %}
 
 You can make it easier to reuse bank details through one of these methods:
 
@@ -123,7 +111,7 @@ Error messages should be styled like this:
 
 {{ example({ group: "patterns", item: "bank-details", example: "error", html: true, nunjucks: true, open: false, size: "s" }) }}
 
-Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
+Make sure errors follow the guidance in the [Error message component](/components/error-message/) and have specific error messages for specific error states.
 
 #### If the name on the account is empty
 

@@ -9,30 +9,21 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "_wcag-callout.njk" import wcagCallout %}
+{% from "_wcag-note.njk" import wcagNote %}
 
 Public sector organisations have a duty to consider the need to avoid discrimination and advance equality of opportunity as part of what they do. This is part of what’s called the [public sector equality duty](https://www.gov.uk/guidance/equality-act-2010-guidance#public-sector-equality-duty).
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affects this pattern
-
-To ask users for 'Equality information' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
-
-- [update their equality information without re-entering existing information](/patterns/equality-information/#wcag-do-not-ask-reentry-equality-info)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "pattern",
+  introAction: "ask users for",
+  name: "Equality information",
+  criteria: [
+    {
+      text: "make sure users can update their equality information without re-entering existing information",
+      anchor: "wcag-do-not-ask-reentry-equality-info"
+    }
+  ]
 }) }}
 
 Public sector bodies often collect equality information about service users to help them meet this duty.
@@ -43,7 +34,7 @@ These patterns are based on the [harmonised standards developed by the Governmen
 
 Collecting equality information in a consistent way across the public sector makes the data more useful. For example, an organisation can benchmark its own services against other public sector services or the population in general. And it can adjust its approach if it finds a particular group is under-represented.
 
-Do not use this pattern to collect information for operational reasons - especially if you’re legally required to ask for the information in a particular way. For example, you’re [asking about the user’s gender or sex](/patterns/gender-or-sex/) to work out how much State Pension they’re entitled to.
+Do not use this pattern to collect information for operational reasons - especially if you’re legally required to ask for the information in a particular way. For example, you’re [asking about the user’s gender or sex in your service](/patterns/gender-or-sex/) to work out how much State Pension they’re entitled to.
 
 ## How it works
 
@@ -57,7 +48,7 @@ When asking users for equality information, make it clear:
 
 For a service that people are likely to use on a one-off basis:
 
-- place equality questions between the [‘check your answers’ page](/patterns/check-answers/) and the [confirmation page](/patterns/confirmation-pages/)
+- place equality questions between [your service's Check your answers page](/patterns/check-answers/) and [your Confirmation page](/patterns/confirmation-pages/)
 - show the user a screen explaining why you’re asking the questions and what you’ll do with the information they provide, like the one below
 
 {{ example({ group: "patterns", item: "equality-information", example: "explainer-screen", html: true, nunjucks: true, open: false, loading: "eager" }) }}
@@ -82,13 +73,10 @@ When possible, offer users the option to update their equality information. User
 
 Updating equality information is especially relevant for longer term services and services that use the same equality information multiple times.
 
-<div class="app-wcag-22" id="wcag-do-not-ask-reentry-equality-info" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>When users are updating equality information, only ask them to enter the information that has changed. Do not ask them to re-enter all existing equality information. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-do-not-ask-reentry-equality-info"}) %}
+
+<p>When users are updating equality information, only ask them to enter the information that has changed. Do not ask them to re-enter all existing equality information. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry</a>.</p>
+{% endcall %}
 
 ## Get specialist privacy or data protection advice
 
@@ -138,7 +126,7 @@ If the user answers ‘yes’, ask about the impact of their condition or illnes
 
 ### Asking about ethnic group
 
-The ethnic groups used here are for England. The Government Statistical Service harmonised standard for ethnicity uses [different categories for Wales, Scotland and Northern Ireland](https://gss.civilservice.gov.uk/policy-store/ethnicity/). This is to reflect differences in local populations.
+The ethnic groups used here are for England. The Government Statistical Service harmonised standard uses [different categories for ethnicity data collected in Wales, Scotland and Northern Ireland](https://gss.civilservice.gov.uk/policy-store/ethnicity/). This is to reflect differences in local populations.
 
 If your service covers more than one of England, Wales, Scotland or Northern Ireland, you should accommodate these differences in your design. For example, by changing the ethnic groups shown depending on where the user is based. Where this is not possible, use the English categories.
 
@@ -162,7 +150,7 @@ Use this approach to ask about marriage or civil partnership status.
 
 ### Asking about religion
 
-The categories used here are for England. The Government Statistical Service harmonised standard for religion uses [different categories for Wales, Scotland and Northern Ireland](https://gss.civilservice.gov.uk/policy-store/religion/). This is to reflect differences in local populations.
+The categories used here are for England. The Government Statistical Service harmonised standard uses [different categories for religion data collected in Wales, Scotland and Northern Ireland](https://gss.civilservice.gov.uk/policy-store/religion/). This is to reflect differences in local populations.
 
 If your service covers more than one of England, Wales, Scotland or Northern Ireland, you should accommodate these differences in your design. For example, by changing the categories shown depending on where the user is based. Where this is not possible, use the English categories.
 

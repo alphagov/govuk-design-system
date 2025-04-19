@@ -1,4 +1,4 @@
-const { goTo, isVisible } = require('../lib/puppeteer-helpers.js')
+const { goTo, isVisible } = require('./helpers/puppeteer.js')
 
 describe('Back to top', () => {
   let $module

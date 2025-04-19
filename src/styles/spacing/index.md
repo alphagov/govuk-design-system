@@ -2,9 +2,11 @@
 title: Spacing
 description: The Design System uses a responsive spacing scale which adapts based on screen size
 section: Styles
+theme: Page structure
 aliases: margin, padding
 layout: layout-pane.njk
 showPageNav: true
+order: 3
 ---
 
 {% from "_example.njk" import example %}
@@ -142,7 +144,10 @@ If you want to reference the spacing scale in your CSS, use the spacing helpers.
 
 ### Using the responsive spacing helper
 
-To use the responsive spacing scale, include the [`govuk-responsive-margin`](https://frontend.design-system.service.gov.uk/sass-api-reference/#govuk-responsive-margin) or [`govuk-responsive-padding`](https://frontend.design-system.service.gov.uk/sass-api-reference/#govuk-responsive-padding) mixins.
+To use the responsive spacing scale, include either:
+
+- the [`govuk-responsive-margin`](https://frontend.design-system.service.gov.uk/sass-api-reference/#govuk-responsive-margin) mixin
+- the [`govuk-responsive-padding`](https://frontend.design-system.service.gov.uk/sass-api-reference/#govuk-responsive-padding) mixin
 
 For example, to apply spacing unit 6 for 30px padding on large screens and 20px on small screens, use:
 

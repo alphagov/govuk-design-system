@@ -9,31 +9,25 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "_wcag-callout.njk" import wcagCallout %}
+{% from "_wcag-note.njk" import wcagNote %}
 
 This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affects this pattern
-
-To use ‘There is a problem with the service pages' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
-
-- [get contact information in a consistent way](/patterns/problem-with-the-service-pages/#wcag-consistent-content-problem-service)
-- [resume the service using information they've previously entered, if possible](/patterns/problem-with-the-service-pages/#wcag-resume-previous-entered-information)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "pattern",
+  introAction: "use",
+  name: "There is a problem with the service pages",
+  criteria: [
+    {
+      text: "make sure users can get contact information in a consistent way",
+      anchor: "wcag-consistent-content-problem-service"
+    },
+    {
+      text: "make sure users can resume the service using information they've previously entered, if possible",
+      anchor: "wcag-resume-previous-entered-information"
+    }
+  ]
 }) }}
 
 Tell the user there is something wrong with the service. These are also known as 500 and internal server error pages.
@@ -46,7 +40,7 @@ Use this page when there is an unexpected problem with the service. Use the same
 
 Log all errors and fix them as quickly as possible.
 
-Only display the page for a short time. If a problem cannot be fixed quickly, close the service and use a [service unavailable page](/patterns/service-unavailable-pages/).
+Only display the page for a short time. If a problem cannot be fixed quickly, close the service and [use a Service unavailable page](/patterns/service-unavailable-pages/).
 
 ## How it works
 
@@ -73,14 +67,11 @@ Have clear and concise content and do not use:
 
 Store previously entered information for a reasonable amount of time so users can resume a journey with re-populated information when the service becomes available again.
 
-<div class="app-wcag-22" id="wcag-resume-previous-entered-information" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>Whenever possible, save and store any information the user has previously entered, unless doing so would be a major safety or security concern.</p>
-  <p>This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-resume-previous-entered-information"}) %}
+
+<p>Whenever possible, save and store any information the user has previously entered, unless doing so would be a major safety or security concern.</p>
+<p>This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry</a>.</p>
+{% endcall %}
 
 ### Showing contact information
 
@@ -89,15 +80,12 @@ Contact information should either:
 - include all numbers and opening times in one place on the page
 - be a link out to a page that includes numbers and opening times
 
-You might choose to link to a ‘contact information’ page, such as one shown in the ‘[Contact a department or service team](https://design-system.service.gov.uk/patterns/contact-a-department-or-service-team/)’ pattern.
+You might choose to link to a ‘contact information’ page, such as one shown in the [‘Contact a department or service team’ pattern](https://design-system.service.gov.uk/patterns/contact-a-department-or-service-team/).
 
-<div class="app-wcag-22" id="wcag-consistent-content-problem-service" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>You must always write contact information in a clear and consistent way across ‘There is a problem with the service’ and similar service error pages. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent Help</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-consistent-content-problem-service"}) %}
+
+<p>You must always write contact information in a clear and consistent way across ‘There is a problem with the service’ and similar service error pages. This relates to <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">WCAG 2.2 success criterion 3.2.6 Consistent help</a>.</p>
+{% endcall %}
 
 ### Service has a specific page that includes numbers and opening times
 

@@ -9,30 +9,21 @@ layout: layout-pane.njk
 ---
 
 {%- from "_example.njk" import example -%}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "_wcag-callout.njk" import wcagCallout %}
+{% from "_wcag-note.njk" import wcagNote %}
 
 Give users contact information within your service.
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affects this pattern
-
-To help users to 'Contact a department or service team' and meet the new WCAG 2.2 criteria, make sure that users can successfully:
-
-- [find contact details in a consistent place across a set of pages](/patterns/contact-a-department-or-service-team/#wcag-consistent-contact)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "pattern",
+  introAction: "help users to",
+  name: "Contact a department or service team",
+  criteria: [
+    {
+      text: "make sure users can find contact details in a consistent place across a set of pages",
+      anchor: "wcag-consistent-contact"
+    }
+  ]
 }) }}
 
 {{ example({ group: "patterns", item: "contact-a-department-or-service-team", example: "default", html: true, open: false, size: "s" }) }}
@@ -51,15 +42,12 @@ Order contact channels based on what research shows your users need, and what yo
 
 Show contact channels in the same order throughout your service. This helps users to find what they need more easily.
 
-<div class="app-wcag-22" id="wcag-consistent-contact" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>If you repeat a particular set of contact details on different pages, show them in the same place on each page.</p>
-  <p>For example, if you show a ‘contact us’ section at the end of one help page, any other help pages that include the same ‘contact us’ section should have them shown at the end of the page as well.</p>
-  <p>This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent Help</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-consistent-contact"}) %}
+
+<p>If you repeat a particular set of contact details on different pages, show them in the same place on each page.</p>
+<p>For example, if you show a ‘contact us’ section at the end of one help page, any other help pages that include the same ‘contact us’ section should have them shown at the end of the page as well.</p>
+<p>This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">WCAG 2.2 success criterion 3.2.6 Consistent help</a>.</p>
+{% endcall %}
 
 ### Social media
 
@@ -69,15 +57,15 @@ If you have social media channels:
 - do not include a link to the social media sites you're using - read more about this in [GOV.UK’s external linking policy](https://www.gov.uk/guidance/content-design/links#linking-policy)
 - tell users not to share personal information with you
 
-### Write telephone numbers in the GOV.UK style
+### Write phone numbers in the GOV.UK style
 
-See the [GOV.UK style for writing telephone numbers](https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#telephone-numbers).
+See the [GOV.UK style for writing phone numbers](https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#phone-numbers).
 
 ### Explain any charges
 
 Tell users if they might have to pay to use any of your contact channels.
 
-For telephone call charges, link to the GOV.UK page on [call charges](https://www.gov.uk/call-charges). Include the link after the contact channels list and opening hours.
+For phone call charges, link to the GOV.UK page on [call charges](https://www.gov.uk/call-charges). Include the link after the contact channels list and opening hours.
 
 {{ example({ group: "patterns", item: "contact-a-department-or-service-team", example: "default", html: true, open: false, size: "s", titleSuffix: "second" }) }}
 
@@ -100,13 +88,13 @@ For example, tell users how long it'll usually take to:
 
 ### Inset contact information
 
-Use [inset text](/components/inset-text/) to display contact information when you want to differentiate it from the content that surrounds it.
+Use the [Inset text component](/components/inset-text/) to display contact information when you want to differentiate it from the content that surrounds it.
 
 {{ example({ group: "patterns", item: "contact-a-department-or-service-team", example: "inset-contact-information", html: true, nunjucks: true, open: false, size: "m" }) }}
 
 ### Expanding contact information
 
-If contact information is less important than other content on a page, you can enclose contact information inside the [details](/components/details/) component to avoid distracting users.
+If contact information is less important than other content on a page, you can enclose contact information inside the [Details component](/components/details/) to avoid distracting users.
 
 For example, if you need to provide contact information at the bottom of a form page for users who need help completing the form.
 

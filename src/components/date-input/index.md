@@ -21,7 +21,7 @@ Use the date input component when you’re asking users for a date they’ll alr
 
 Do not use the date input component if users are unlikely to know the exact date of the event you’re asking about.
 
-Read more about how to [ask users for dates](/patterns/dates/).
+Read more in the [Ask users for dates pattern](/patterns/dates/).
 
 ## How it works
 
@@ -29,7 +29,7 @@ The date input component consists of 3 fields to let users enter a day, month an
 
 The 3 date fields are grouped together in a `<fieldset>` with a `<legend>` that describes them, as shown in the examples on this page. This is usually a question, like ‘What is your date of birth?’.
 
-If you’re asking [one question per page](/patterns/question-pages/#start-by-asking-one-question-per-page), you can set the contents of the `<legend>` as the page heading. This is good practice as it means that users of screen readers will only hear the contents once.
+If you’re asking [one question per page in your service](/patterns/question-pages/#start-by-asking-one-question-per-page), you can set the contents of the `<legend>` as the page heading. This is good practice as it means that users of screen readers will only hear the contents once.
 
 Read more about [why and how to set legends as headings](/get-started/labels-legends-headings/).
 
@@ -57,9 +57,7 @@ To do this, set the `autocomplete` attribute on the 3 fields to `bday-day`, `bda
 
 {{ example({ group: "components", item: "date-input", example: "date-of-birth", html: true, nunjucks: true, rails: true, open: true, size: "s", id: "default-2" }) }}
 
-If you are working in production you’ll need to do this to meet [WCAG 2.1 Level AA](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html).
-
-You will not normally need to use the `autocomplete` attribute in prototypes, as users will not generally be using their own devices.
+If you are working in production you’ll need to do this to meet [WCAG 2.2 success criterion 1.3.5: Identify input purpose, level AA](https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose.html).
 
 ### Error messages
 
@@ -71,7 +69,7 @@ If you’re highlighting just one field - either the day, month or year - only s
 
 {{ example({ group: "components", item: "date-input", example: "error-single", html: true, nunjucks: true, rails: true, open: false, size: "m" }) }}
 
-Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
+Make sure errors follow the guidance in the [Error message component](/components/error-message/) and have specific error messages for specific error states.
 
 If there’s more than one error, show the highest priority error message. In order of priority, show error messages about:
 

@@ -9,30 +9,21 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "_wcag-callout.njk" import wcagCallout %}
+{% from "_wcag-note.njk" import wcagNote %}
 
 A page not found tells someone we cannot find the page they were trying to view. They are also known as 404 pages.
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affects this pattern
-
-To use ‘Page not found pages' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
-
-- [find contact information in a consistent way](/patterns/page-not-found-pages/#wcag-consistent-content-page-not-found)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "pattern",
+  introAction: "use",
+  name: "Page not found pages",
+  criteria: [
+    {
+      text: "make sure users can find contact information in a consistent way",
+      anchor: "wcag-consistent-content-page-not-found"
+    }
+  ]
 }) }}
 
 {{ example({ group: "patterns", item: "page-not-found-pages", example: "default", html: true, nunjucks: true, size: "xl", loading: "eager" }) }}
@@ -64,13 +55,10 @@ Contact information should either:
 
 The content should be clear and concise, not blame the user.
 
-<div class="app-wcag-22" id="wcag-consistent-content-page-not-found" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>You must always write contact information in a clear and consistent way across ‘Page not found’ and similar service error pages. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent Help</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-consistent-content-page-not-found"}) %}
+
+<p>You must always write contact information in a clear and consistent way across ‘Page not found’ and similar service error pages. This relates to <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">WCAG 2.2 success criterion 3.2.6 Consistent help</a>.</p>
+{% endcall %}
 
 Do not use:
 

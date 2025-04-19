@@ -38,7 +38,7 @@ Check the [styles section](/styles/) to see if there’s a CSS class you can use
 For example, you can make changes to:
 
 - spacing with [spacing override classes](/styles/spacing/#overriding-spacing)
-- font size with [font override classes](/styles/typography/#font-override-classes)
+- font size with [font override classes](/styles/font-override-classes)
 - width with [width override classes](/styles/layout/#width-override-classes)
 
 ## Avoid overwriting GOV.UK Design System code
@@ -139,7 +139,7 @@ When you do this you’ll need to rename all [prefixes][prefix] that include `go
 
 Doing this removes the possibility of any updates breaking your service. However, you will not receive any future updates from the original component.
 
-For example, a large modification of an existing component is the [step by step navigation](/patterns/step-by-step-navigation/) which began as a small modification to the [accordion component](/components/accordion/). The step by step navigation had so many changes it was eventually forked into a separate component.
+For example, a large modification of an existing component is the [Step by step navigation pattern](/patterns/step-by-step-navigation/) which began as a small modification to the [Accordion component](/components/accordion/). The step by step navigation had so many changes it was eventually forked into a separate component.
 
 ## Contributing back
 

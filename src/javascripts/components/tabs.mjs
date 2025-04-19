@@ -1,3 +1,5 @@
+import { Component } from 'govuk-frontend'
+
 /**
  * The naming of things is a little complicated in here.
  * For reference:
@@ -8,22 +10,18 @@
  * - desktop tabs - the controls to show, hide or switch panels on tablet/desktop
  * - panels - the content that is shown/hidden/switched; same across all breakpoints
  */
-class AppTabs {
+class AppTabs extends Component {
+  static moduleName = 'app-tabs'
+
   /**
    * @param {Element} $module - HTML element
    */
   constructor($module) {
-    if (
-      !($module instanceof HTMLElement) ||
-      !document.body.classList.contains('govuk-frontend-supported')
-    ) {
-      return this
-    }
+    super($module)
 
-    this.$module = $module
-    this.$mobileTabs = this.$module.querySelectorAll('.js-tabs__heading a')
-    this.$desktopTabs = this.$module.querySelectorAll('.js-tabs__item a')
-    this.$panels = this.$module.querySelectorAll('.js-tabs__container')
+    this.$mobileTabs = this.$root.querySelectorAll('.js-tabs__heading a')
+    this.$desktopTabs = this.$root.querySelectorAll('.js-tabs__item a')
+    this.$panels = this.$root.querySelectorAll('.js-tabs__container')
 
     // Enhance mobile tabs into buttons
     this.enhanceMobileTabs()
@@ -38,7 +36,7 @@ class AppTabs {
     this.resetTabs()
 
     // Show the first panel already open if the `open` attribute is present
-    if (this.$module.hasAttribute('data-open')) {
+    if (this.$root.hasAttribute('data-open')) {
       this.openPanel(this.$panels[0].id)
     }
   }
@@ -102,7 +100,7 @@ class AppTabs {
     })
 
     // Replace the value of $mobileTabs with the new buttons
-    this.$mobileTabs = this.$module.querySelectorAll('.js-tabs__heading button')
+    this.$mobileTabs = this.$root.querySelectorAll('.js-tabs__heading button')
   }
 
   /**
@@ -210,7 +208,7 @@ class AppTabs {
    * @returns {HTMLAnchorElement | null} Desktop tab link
    */
   getDesktopTab(panelId) {
-    const $desktopTabContainer = this.$module.querySelector('.app-tabs')
+    const $desktopTabContainer = this.$root.querySelector('.app-tabs')
     if ($desktopTabContainer) {
       return $desktopTabContainer.querySelector(`[aria-controls="${panelId}"]`)
     }

@@ -25,7 +25,7 @@ The GOV.UK Design System team follows 3 sets of principles to increase the acces
 
 ### Web accessibility
 
-We follow the [4 principles of web accessibility](https://www.w3.org/WAI/WCAG21/Understanding/intro#understanding-the-four-principles-of-accessibility) upon which WCAG is based:
+We follow the [4 principles of web accessibility](https://www.w3.org/WAI/WCAG22/Understanding/intro#understanding-the-four-principles-of-accessibility) upon which WCAG is based:
 
 1.  Perceivable – Information and user interface components must be presentable to users in ways they can perceive.
 2.  Operable – User interface components and navigation must be operable.
@@ -34,7 +34,7 @@ We follow the [4 principles of web accessibility](https://www.w3.org/WAI/WCAG21/
 
 ### Universal design
 
-When designing accessible styles, components and patterns, we aim to follow [the 7 principles of universal design](https://universaldesign.ie/What-is-Universal-Design/The-7-Principles/):
+When designing accessible styles, components and patterns, we aim to follow [the 7 principles of universal design](https://universaldesign.ie/about-universal-design/the-7-principles):
 
 1.  Equitable use – The design is useful and marketable to people with diverse abilities.
 2.  Flexibility in use – The design accommodates a wide range of individual preferences and abilities.
@@ -149,7 +149,7 @@ If the GOV.UK Design System team can confirm the accessibility concern internall
 If the GOV.UK Design System team is unable to confirm the accessibility concern or disagrees with the raised concern, then the following steps are taken to resolve the disagreement:
 
 1.  Assess the severity of the accessibility concern (as defined in the section above)
-2.  If the accessibility concern is not [high-severity](#determining-severity-of-an-accessibility-concern), continue to hold discussions within the team and any frontend and accessibility communities where applicable
+2.  If the accessibility concern is [not determined to be high-severity](#determining-severity-of-an-accessibility-concern), continue to hold discussions within the team and any frontend and accessibility communities where applicable
 
 #### Level 3 for disagreement escalation
 
@@ -221,7 +221,7 @@ The team uses a variety of tools during the development process, including, but 
 
 The team also uses general inspection techniques, including:
 
-- [sensory inspection](https://web.dev/a11y-tips-for-web-dev/) (visual, auditory, etc.)
+- sensory inspection (visual, auditory, etc.)
 - HTML inspection using [browser developer tools](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools)
 - [accessibility tree](https://developer.mozilla.org/en-US/docs/Glossary/Accessibility_tree) inspection
 
@@ -229,7 +229,7 @@ The team also uses general inspection techniques, including:
 
 The team currently uses [jest-axe](https://github.com/nickcolley/jest-axe) as part of our deployment process, along with [@axe-core/puppeteer](https://github.com/dequelabs/axe-core-npm/blob/develop/packages/puppeteer). These tools test the example code snippets in the GOV.UK Design System against [axe-core](https://github.com/dequelabs/axe-core).
 
-The team does not solely rely on automated testing processes, as a 2017 study from GDS concluded that [only ~30% of issues are found by automated testing tools](https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage), such as axe-core.
+The team does not solely rely on automated testing processes, as a 2017 study from GDS concluded that [only about 30% of issues are found by automated testing tools](https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage), such as axe-core.
 
 As of May 2023, we have improved our automated accessibility testing processes:
 
@@ -238,15 +238,15 @@ As of May 2023, we have improved our automated accessibility testing processes:
 3.  We now run our tests in [@axe-core/puppeteer](https://github.com/dequelabs/axe-core-npm/blob/develop/packages/puppeteer) to include colour contrast checks, but we still use [jest-axe](https://github.com/nickcolley/jest-axe) to report issues.
 4.  We added [html-validate](https://html-validate.org/) to our automated tests. This helps us test for HTML compliance, including [various WCAG 2.1 checks available through html-validate](https://html-validate.org/wcag.html).
 
-We have an accessibility activity issue in GitHub where we track our efforts to [enhance automated testing in our development pipeline](https://github.com/alphagov/govuk-frontend/issues/3041).
+We have [an accessibility activity issue in GitHub where we track our efforts to enhance automated testing in our development pipeline](https://github.com/alphagov/govuk-frontend/issues/3041).
 
 ### Manual testing
 
-Manual testing for a style, component or pattern follows our own [accessibility acceptance criteria](https://github.com/alphagov/govuk-frontend/blob/main/docs/contributing/test-components-using-accessibility-acceptance-criteria.md).
+Manual testing for a style, component or pattern follows our own [guidance on establishing accessibility acceptance criteria](https://github.com/alphagov/govuk-frontend/blob/main/docs/contributing/test-components-using-accessibility-acceptance-criteria.md).
 
 Additionally, the team follows the [GOV.UK Service manual guidance on testing with assistive technologies](https://www.gov.uk/service-manual/technology/testing-with-assistive-technologies).
 
-The team records results on our [accessibility testing spreadsheet (Google Sheet)](https://docs.google.com/spreadsheets/d/1O0rWoH3ah_rj2iJ2We9VfyHNOr0gOVItXRy3vKzuYSw/edit?usp=sharing), which lists the specific browser and assistive technology combinations with which we test.
+The team records results on our [accessibility testing template spreadsheet (Google Sheet)](https://docs.google.com/spreadsheets/d/1O0rWoH3ah_rj2iJ2We9VfyHNOr0gOVItXRy3vKzuYSw/edit?usp=sharing), which lists the specific browser and assistive technology combinations with which we test.
 
 Currently, the team uses desktop-type devices to access assistive technologies in the following ways:
 
@@ -255,7 +255,7 @@ Currently, the team uses desktop-type devices to access assistive technologies i
 - high contrast and other display modes through Assistiv Labs and browsers
 - speech recognition software through Windows testing computers and macOS
 
-As of November 2022, there are limitations to how the team performs and records manual testing. These limitations may be addressed by the proposed ‘[Standardise and improve our manual testing methodology](https://github.com/alphagov/govuk-design-system/issues/2456)’ activity.
+As of November 2022, there are limitations to how the team performs and records manual testing. These limitations may be addressed by [the proposed ‘Standardise and improve our manual testing methodology activity](https://github.com/alphagov/govuk-design-system/issues/2456)’.
 
 ### User research and usability testing
 
@@ -265,7 +265,7 @@ Accessibility user research often includes activities such as:
 - user interviews
 - surveys
 
-[User research must include disabled people](https://www.gov.uk/service-manual/helping-people-to-use-your-service/making-your-service-accessible-an-introduction#meeting-government-accessibility-requirements) and should also include people with a variety of access needs and impairment types.
+[To ensure services are accessible, user research must include disabled people](https://www.gov.uk/service-manual/helping-people-to-use-your-service/making-your-service-accessible-an-introduction#meeting-government-accessibility-requirements) and should also include people with a variety of access needs and impairment types.
 
 The majority of accessibility user research results are contributed by service teams and the broader communities that use the GOV.UK Design System.
 
@@ -275,9 +275,9 @@ The team might determine that further accessibility user research is necessary f
 
 Examples of when the team and other service teams have completed additional accessibility user research include:
 
-- [Focus state](https://designnotes.blog.gov.uk/2019/07/29/weve-made-the-gov-uk-design-system-more-accessible/) (2019)
-- [General component accessibility research](https://github.com/alphagov/govuk-design-system/issues/1377) (2020)
-- [Hide this Page component](https://github.com/alphagov/govuk-design-system/issues/2195) (2022)
+- [Making the focus state more accessible](https://designnotes.blog.gov.uk/2019/07/29/weve-made-the-gov-uk-design-system-more-accessible/)
+- [Externally testing our components with a research prototype](https://github.com/alphagov/govuk-frontend/issues/2000)
+- [Exit this page accessibility research](https://github.com/alphagov/govuk-design-system/issues/2195)
 
 ## Recording accessibility concerns
 
@@ -299,7 +299,7 @@ If the GOV.UK Design System does not meet the requirements of level AA accessibi
 
 One of the goals of this strategy is to outline the work needed to improve the accessibility of the GOV.UK Design System. We document this work as a set of proposed activities, presented in a GitHub project.
 
-[Accessibility strategy: proposed activities](https://github.com/orgs/alphagov/projects/46)
+[View the Accessibility strategy: proposed activities GitHub project](https://github.com/orgs/alphagov/projects/46).
 
 This GitHub project allows service teams to see the areas of work under consideration, and is intended to enhance the success of the included activities. The project will be reviewed quarterly, to align with quarterly planning.
 
@@ -435,7 +435,7 @@ WCAG 2.2 published a new ‘Candidate recommendation’ version on 6 September 2
 
 ### 5 October 2023
 
-WCAG 2.2 formally published by <abbr title="World Wide Web Consortium">W3C</abbr>. At this stage, it’s a final and official web standard. WCAG 2.2 is backwards compatible with WCAG 2.1, thanks partly to a September 2023 update which helps deprecate [Success Criterion 4.1.1: Parsing for HTML and XML](https://www.w3.org/WAI/WCAG21/Understanding/parsing.html).
+WCAG 2.2 formally published by <abbr title="World Wide Web Consortium">W3C</abbr>. At this stage, it’s a final and official web standard. WCAG 2.2 is backwards compatible with WCAG 2.1, thanks partly to a September 2023 update which helps deprecate [Success Criterion 4.1.1: Parsing for HTML and XML](https://www.w3.org/WAI/WCAG22/Understanding/parsing.html).
 
 ### 8 December 2023
 

@@ -11,7 +11,7 @@ layout: layout-pane.njk
 {% from "_example.njk" import example %}
 
 Give users a way to quickly and safely exit a service, website or application.
-Use this pattern to add the [Exit this page](/components/exit-this-page/) component to your service and keep users safe by helping them to protect their privacy.
+Use this pattern to add the [Exit this page component](/components/exit-this-page/) to your service and keep users safe by helping them to protect their privacy.
 
 ## When to use this pattern
 
@@ -36,7 +36,7 @@ You should not use this pattern for standalone content pages, such as dashboards
 
 ## How it works
 
-First, you’ll need to add the [Exit this page](/components/exit-this-page/) component to your service and decide how it should work within your service.
+First, you’ll need to add the [Exit this page component](/components/exit-this-page/) to your service and decide how it should work within your service.
 
 The component has several parts, including:
 
@@ -70,7 +70,7 @@ The page should tell the user:
 The page should also tell the user that:
 
 - their internet browsing history will not be erased, which can still put them at risk
-- any information they’ve entered will not be saved, depending on what you’ve [decided to do with user session data](/components/exit-this-page/#consider-what-to-do-with-user-session-data)
+- any information they’ve entered will not be saved, depending on what you’ve [decided to do with your service's user session data](/components/exit-this-page/#consider-what-to-do-with-user-session-data)
 - to return to the service, they can search for the site they were using, or find it in their internet browsing history
 - there are other things they can do to stay safe online (include a link to a ‘safety content page’ where the user can learn more)
 
@@ -105,7 +105,7 @@ The design of this pattern is based on research from a specialist provider of se
 Live examples of similar components can be found on these websites:
 
 - [GOV.UK: Check if you can get legal aid](https://www.gov.uk/check-legal-aid)
-- [GOV.UK: Apply for help arranging child maintenance](https://child-maintenance.service.gov.uk/apply/eligibility/info)
+- [GOV.UK: Apply for help arranging child maintenance](https://child-maintenance.service.gov.uk/apply/)
 - [mygov.scot: Domestic abuse support](https://www.mygov.scot/domestic-abuse/)
 - [Women’s aid website](https://www.womensaid.org.uk/)
 - [Refuge website](https://www.nationaldahelpline.org.uk/)

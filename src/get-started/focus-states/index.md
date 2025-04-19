@@ -9,7 +9,7 @@ description: Some people use keyboards or other devices to navigate through a pa
 
 Some people use keyboards or other devices to navigate through a page by jumping from one interactive element to the next. Focus states let users know which element they’re currently on and is ready to be interacted with.
 
-Focus states in the GOV.UK Design System use a combination of yellow and black to make sure they meet Web Content Accessibility Guidelines (WCAG) 2.1 level AA [non-text contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) on any background colour used on GOV.UK.
+Focus states in the GOV.UK Design System use a combination of yellow and black, along with a thick bottom border, to make sure they meet [Web Content Accessibility Guidelines (WCAG) 2.2 success criterion 1.4.11 Non-text contrast, level AA](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html) on any background colour used on GOV.UK.
 
 The yellow has a high contrast with dark backgrounds and the thick black border has a high contrast against light backgrounds.
 
@@ -19,19 +19,19 @@ When links are focused, they have a yellow background with a black bottom border
 
 ![A focused link against different GOV.UK background colours](link-focus.png)
 
-Other components and elements that look like links use the link focus state style. For example, the controls on the [accordion](/components/accordion/) and [details](/components/details/) components.
+Other components and elements that look like links use the link focus state style. For example, the controls on the [Accordion component](/components/accordion/) and [Details component](/components/details/).
 
-![A focused details component. In the examples, the expandable text reads "Help with nationality" and beneath is an explanation of why the user is being asked for this information.](details-focus.png)
+![A focused details component. In the examples, the expandable text reads 'Help with nationality' and beneath is an explanation of why the user is being asked for this information.](details-focus.png)
 
 ## Form input focus state style
 
 When form inputs are focused, they have a yellow outline and a thick black border. If the element already has a border, the border gets thicker.
 
-![A text input labelled "What is your name?". The example shows the text input both unfocused and focused.](text-input-focus.png)
+![A text input labelled 'What is your name?'. The example shows the text input both unfocused and focused.](text-input-focus.png)
 
-[Radios](/components/radios/) and [checkboxes](/components/checkboxes/) use the same style.
+[Radios components](/components/radios/) and [checkboxes components](/components/checkboxes/) use the same style.
 
-![Yes and no radio options to answer the question "Have you changed your name?". In this example, the "No" option is focused.](radios-focus.png)
+![Yes and no radio options to answer the question 'Have you changed your name?'. In this example, the 'No' option is focused.](radios-focus.png)
 
 ## Making focus states accessible for extended and modified components
 
@@ -68,7 +68,7 @@ Use these variables in your components instead of numeric values for the backgro
 
 To make a component's focus state accessible without using Sass, you can:
 
-- see how the `govuk-focused-text` mixin works from the [GOV.UK Frontend source code](https://github.com/alphagov/govuk-frontend/blob/25a4333b239e1c3b8a136e526981fe29172a2852/src/govuk/helpers/_focused.scss#L12-L28)
+- use the `govuk-focused-text` mixin – [see how `govuk-focused-text` works in the GOV.UK Frontend source code](https://github.com/alphagov/govuk-frontend/blob/25a4333b239e1c3b8a136e526981fe29172a2852/src/govuk/helpers/_focused.scss#L12-L28)
 - get the values for `$govuk-focus-colour` and `$govuk-focus-text-colour` from the [colour page](/styles/colour/)
 
 ## Contributing back

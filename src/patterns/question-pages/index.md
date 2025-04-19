@@ -9,31 +9,25 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "_wcag-callout.njk" import wcagCallout %}
+{% from "_wcag-note.njk" import wcagNote %}
 
 This pattern explains when to use question pages and what elements they need to include.
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affects this pattern
-
-To use ‘Question pages' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
-
-- [avoid re-entering information they've given in a previous answer](/patterns/question-pages/#wcag-reenter-previous-answer)
-- [select an answer without relying on 'click and drag' movement](/patterns/question-pages/#wcag-select-without-click-drag)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "pattern",
+  introAction: "use",
+  name: "Question pages",
+  criteria: [
+    {
+      text: "make sure users can avoid re-entering information they've given in a previous answer",
+      anchor: "wcag-reenter-previous-answer"
+    },
+    {
+      text: "make sure users can select an answer without relying on 'click and drag' movements",
+      anchor: "wcag-select-without-click-drag"
+    }
+  ]
 }) }}
 
 {{ example({ group: "patterns", item: "question-pages", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
@@ -49,7 +43,7 @@ To help you work out what to ask, you can carry out a [question protocol](https:
 If you ask for optional information:
 
 - in most contexts, add ‘(optional)’ to the labels of optional fields
-- for [radios](/components/radios/) and [checkboxes](/components/checkboxes/), add ‘(optional)’ to the legend
+- for [Radios components](/components/radios/) and [Checkboxes components](/components/checkboxes/), add ‘(optional)’ to the legend
 
 Never mark mandatory fields with asterisks.
 
@@ -70,13 +64,10 @@ Question pages must include a:
 
 If research shows it’s helpful for users, you can also include a [progress indicator](#using-progress-indicators).
 
-<div class="app-wcag-22" id="wcag-reenter-previous-answer" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>Make sure to only ask for a piece of information once within a single journey. Whenever possible, do not ask a user to re-enter information they’ve already provided. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-reenter-previous-answer"}) %}
+
+<p>Make sure to only ask for a piece of information once within a single journey. Whenever possible, do not ask a user to re-enter information they’ve already provided. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry</a>.</p>
+{% endcall %}
 
 If the same type of information is needed more than once, make it easier to reuse previously entered answers through one of these methods:
 
@@ -87,7 +78,7 @@ If the same type of information is needed more than once, make it easier to reus
 
 Some users do not trust browser back buttons when they’re entering data.
 
-Always include a [back link](/components/back-link/) at the top of question pages to reassure them it’s possible to go back and change previous answers.
+Always include a [Back link component](/components/back-link/) at the top of question pages to reassure them it’s possible to go back and change previous answers.
 
 However, do not break the browser back button. Make sure it takes users to the previous page they were on, in the state they last saw it.
 
@@ -125,11 +116,17 @@ For example, ‘About you’
 
 You can also learn more about how starting with [one thing per page](https://www.gov.uk/service-manual/design/form-structure#start-with-one-thing-per-page) helps users in the GOV.UK Service Manual.
 
+#### Hint text
+
+Use hint text to show information that helps the majority of users answer the question, like how their information will be used, or where to find it.
+
+Keep each hint to a single short sentence, without any full stops.
+
+If you need to give a long, detailed explanation, do not use hint text. Screen readers will read out the entire text when users interact with the form element. This could frustrate users if the text is long.
+
+Do not use links in hint text. While screen readers will read out the link text when describing the field, they usually do not tell users the text is a link.
+
 #### Asking complex questions without using hint text
-
-Do not use hint text if you need to give a lengthy explanation with lists and paragraphs. Screen readers read out the entire text when users interact with the form element. This could frustrate users if the text is long.
-
-Do not use links in hint text. While screen readers will read out the link text when describing the field, they will not tell users the text is a link.
 
 If you're asking a question that needs a detailed explanation, use:
 
@@ -191,11 +188,8 @@ A number of GOV.UK services have removed this style of progress indicator withou
 
 ### Using range sliders
 
-<div class="app-wcag-22" id="wcag-select-without-click-drag" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>Avoid using <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range">range slider</a> questions, where the user needs to click and drag a selector across a range of answers or values. These types of controls are difficult for some users to interact with.</p>
-  <p>If you do use a range slider, you must provide a method for selecting an answer that doesn’t rely on ‘click and drag’ movements. This relates to WCAG success criterion <a href="https://www.w3.org/TR/WCAG22/#pointer-gestures">2.5.1 Pointer Gestures</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-select-without-click-drag"}) %}
+
+<p>Avoid using <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range">range slider</a> questions, where the user needs to click and drag a selector across a range of answers or values. These types of controls are difficult for some users to interact with.</p>
+<p>If you do use a range slider, you must provide a method for selecting an answer that doesn’t rely on ‘click and drag’ movements. This relates to <a href="https://www.w3.org/TR/WCAG22/#pointer-gestures">WCAG success criterion 2.5.1 Pointer Gestures</a>.</p>
+{% endcall %}

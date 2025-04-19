@@ -1,0 +1,17 @@
+---
+layout: layout-example-form.njk
+title: Phone numbers
+---
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "UK phone number"
+  },
+  id: "phone-number",
+  name: "phoneNumber",
+  type: "tel",
+  autocomplete: "tel",
+  classes: "govuk-input--width-20"
+}) }}

@@ -28,7 +28,7 @@ If your users keep hitting the character limit imposed by the backend of your se
 
 ## How it works
 
-It tells users how many characters they have remaining as they type into a [textarea](/components/textarea/) with a character limit.
+It tells users how many characters they have remaining as they type into a [Textarea component](/components/textarea/) with a character limit.
 
 Users will get updates at a pace that works best for the way they interact with the textarea. This means:
 
@@ -50,7 +50,7 @@ There are 2 ways to use the character count component. You can use HTML or, if y
 
 ### If you’re asking more than one question on the page
 
-If you're asking more than one question on the page, do not set the contents of the `<label>` as the page heading. Read more about [asking multiple questions on question pages](/patterns/question-pages/#asking-multiple-questions-on-a-page).
+If you're asking more than one question on the page, do not set the contents of the `<label>` as the page heading. Read more about [asking multiple questions on Question pages](/patterns/question-pages/#asking-multiple-questions-on-a-page).
 
 {{ example({ group: "components", item: "character-count", example: "without-heading", html: true, nunjucks: true, rails: true, open: false }) }}
 
@@ -102,11 +102,9 @@ For example, ‘Summary must be 400 characters or less’.
 
 ## Research on this component
 
-The Government Digital Service (GDS) developed and tested this component in a prototype of the ‘Apply for a temporary event notice’ service.
+In 2017, the Government Digital Service (GDS) [developed and tested this component](https://github.com/alphagov/govuk-design-system/wiki/Character-count-testing-and-user-research) in a prototype of the ‘Apply for a temporary event notice’ service. During this research, the component was tested with 17 users, including those with low digital skills and users with disabilities.
 
-During this research, the component was tested with 17 users, including those with low digital skills and users with disabilities.
-
-[Read more about this research in the Design System wiki on GitHub](https://github.com/alphagov/govuk-design-system/wiki/Character-count-testing-and-user-research).
+In 2022, the GOV.UK Design System team [updated the component to make it more accessible](https://github.com/alphagov/govuk-design-system-backlog/issues/67#issuecomment-1131719459), stopping the character count being announced twice by some screenreaders.
 
 ### Known issues and gaps
 

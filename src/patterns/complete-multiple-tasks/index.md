@@ -9,8 +9,8 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "_wcag-callout.njk" import wcagCallout %}
+{% from "_wcag-note.njk" import wcagNote %}
 
 Help users understand:
 
@@ -18,31 +18,25 @@ Help users understand:
 - the order they should complete tasks in
 - when they've completed tasks
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affects this pattern
-
-To help users to 'Complete multiple tasks' and meet the new WCAG 2.2 criteria, make sure that users can successfully:
-
-- [interact with tasks without relying on 'click and drag' movements (if you choose to add functionality to reorder tasks)](/patterns/complete-multiple-tasks/#wcag-interact-without-click-drag-task)
-- [edit information they've given when going back to a previous task](/patterns/complete-multiple-tasks/#wcag-edit-information-previous-task)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "pattern",
+  introAction: "help users to",
+  name: "Complete multiple tasks",
+  criteria: [
+    {
+      text: "if you choose to add functionality to reorder tasks, make sure users can do so without relying on 'click and drag' movements",
+      anchor: "wcag-interact-without-click-drag-task"
+    },
+    {
+      text: "make sure users can edit information they've given when going back to a previous task",
+      anchor: "wcag-edit-information-previous-task"
+    }
+  ]
 }) }}
 
 {{ example({ group: "patterns", item: "complete-multiple-tasks", example: "default", html: true, nunjucks: true, open: false }) }}
 
-Complete multiple tasks pages use a [task list component](/components/task-list) for each group of tasks on the page.
+Complete multiple tasks pages use a [Task list component](/components/task-list) for each group of tasks on the page.
 
 ## When to use this pattern
 
@@ -73,13 +67,10 @@ Where possible, task names should:
 - describe what the task or activity will involve
 - start with verbs, for example, ‘check’, ‘declare’, ‘report’
 
-<div class="app-wcag-22" id="wcag-interact-without-click-drag-task" role="note">
-    {{ govukTag({
-        text: "WCAG 2.2",
-        classes: "app-tag"
-    }) }}
-    <p>Any task list that allows the user to rearrange the order that tasks are shown must offer a way to do so without relying on ‘click and drag’ movements. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">WCAG 2.2 success criterion 2.5.7 Dragging Movements</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-interact-without-click-drag-task"}) %}
+
+<p>Any task list that allows the user to rearrange the order that tasks are shown must offer a way to do so without relying on ‘click and drag’ movements. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">WCAG 2.2 success criterion 2.5.7 Dragging movements</a>.</p>
+{% endcall %}
 
 ### Show the status of the tasks
 
@@ -109,7 +100,7 @@ If the user cannot start the task yet, for example because another task must be 
 
 #### Tasks containing an error
 
-You should avoid tasks having an error status by using the [error summary](/components/error-summary/) and [error messages](/components/error-message/) displayed at the point that the error is made, so that the user can fix it straight away.
+You should avoid tasks having an error status by using the [Error summary component](/components/error-summary/) and [Error message component](/components/error-message/) displayed at the point that the error is made, so that the user can fix it straight away.
 
 If it is unavoidable that a task may end up saved but containing an error, use the status text ‘There is a problem’ and a red background.
 
@@ -144,11 +135,11 @@ Sometimes, it’s better to let the user decide when a task is completed.
 This can be helpful when a task involves:
 
 - some questions that are optional
-- writing a long answer (such as in a [textarea](/components/textarea/))
+- writing a long answer (such as in a [Textarea component](/components/textarea/))
 - looking up information, such as details about previous jobs
 - answers that need to be checked carefully with someone else
 
-Do this by asking a radio question at the end of the task – either as the last question (if the task is a single page) or on the [‘Check answers’ page](/patterns/check-answers/) (if the task uses multiple [question pages](/patterns/question-pages/)).
+Do this by asking a radio question at the end of the task – either as the last question (if the task is a single page) or on the [Check answers page](/patterns/check-answers/) (if the task involves more than one page).
 
 Ask ‘Have you completed this section?’ with the radio options ‘Yes, I’ve completed this section’ or ‘No, I’ll come back later’.
 
@@ -156,14 +147,11 @@ If the user selects ‘No, I’ll come back to it later,’ mark the task as 'In
 
 If the user selects ‘Yes, I’ve completed this section,’ mark the task as 'Completed'.
 
-<div class="app-wcag-22" id="wcag-edit-information-previous-task" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>If a user decides to go back to a previous task, make sure information they have already entered is pre-populated.</p>
-  <p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-edit-information-previous-task"}) %}
+
+<p>If a user decides to go back to a previous task, make sure information they have already entered is pre-populated.</p>
+<p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry</a>.</p>
+{% endcall %}
 
 {{ example({ group: "patterns", item: "complete-multiple-tasks", example: "have-you-completed-this-section", html: true, nunjucks: true, open: false }) }}
 
@@ -171,7 +159,7 @@ Always allow users to go back into a task to change their answer.
 
 #### Error messages
 
-If the user does not select an option, show an [error message](/components/error-message/) to say: 'Select whether you’ve completed this section'.
+If the user does not select an option, show an [Error message component](/components/error-message/) to say: 'Select whether you’ve completed this section'.
 
 {{ example({ group: "patterns", item: "complete-multiple-tasks", example: "have-you-completed-this-section-error", html: true, nunjucks: true, open: false }) }}
 
@@ -179,6 +167,6 @@ If the user does not select an option, show an [error message](/components/error
 
 This pattern was previously named ‘Task list’ and was [developed by a team at the Government Digital Service (GDS)](https://designnotes.blog.gov.uk/2017/04/04/weve-published-the-task-list-pattern/).
 
-It was then iterated by a cross-government collaboration and published as a new [task list component](/patterns/equality-information/) with updated guidance and research.
+It was then iterated by a cross-government collaboration and published as a new [Task list component](/components/task-list/) with updated guidance and research.
 
-See the [research on the new task list component](/components/task-list#research-on-this-component) for details of research done, and known issues and gaps.
+See the [research on the Task list component](/components/task-list#research-on-this-component) for details of research done, and known issues and gaps.

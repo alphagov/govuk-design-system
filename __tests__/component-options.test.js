@@ -1,4 +1,4 @@
-const { goTo } = require('../lib/puppeteer-helpers.js')
+const { goTo } = require('./helpers/puppeteer.js')
 
 describe('Component page', () => {
   it('should contain a "Nunjucks" tab heading', async () => {

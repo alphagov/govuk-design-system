@@ -3,37 +3,32 @@ title: Confirm a phone number
 description: Identifying users when they sign in
 section: Patterns
 theme: Help users to…
-aliases: 2FA, MFA, multi-factor authentication, security code, telephone number, text message, two-factor authentication
+aliases: 2FA, MFA, multi-factor authentication, security code, telephone number, phone number, text message, two-factor authentication
 backlogIssueId: 25
 layout: layout-pane.njk
 ---
 
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "_wcag-callout.njk" import wcagCallout %}
 {% from "_example.njk" import example %}
-{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "_wcag-note.njk" import wcagNote %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 
 Check that a user has access to a specific mobile phone number using a security code sent by text message.
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affects this pattern
-
-To help users to 'Confirm a phone number' and meet the new WCAG 2.2 criteria, make sure that users can successfully:
-
-- [use a link to resend the security code when the user creates an account](/patterns/confirm-a-phone-number/#wcag-resend-security-code-creation)
-- [use a link to resend the security code when the user signs in](/patterns/confirm-a-phone-number/#wcag-resend-security-code-sign-in)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "pattern",
+  introAction: "help users to",
+  name: "Confirm a phone number",
+  criteria: [
+    {
+      text: "make sure users can use a link to resend the security code (when the user creates an account)",
+      anchor: "wcag-resend-security-code-creation"
+    },
+    {
+      text: "make sure users can use a link to resend the security code (when the user signs in)",
+      anchor: "wcag-resend-security-code-sign-in"
+    }
+  ]
 }) }}
 
 {{ example({ group: "patterns", item: "confirm-a-phone-number", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
@@ -42,7 +37,7 @@ See the full list of [components and patterns affected by WCAG 2.2](/accessibili
 
 Ask the user to enter a security code when they need to sign in or complete a higher-risk task, such as changing a password.
 
-Asking the user to enter a security code sent to their mobile phone gives a second layer of security over a [password](/patterns/passwords/).
+Asking the user to enter a security code sent to their mobile phone gives a second layer of security over only [asking for a password](/patterns/passwords/).
 
 You can ask for a security code every time a user signs in or only once per device, depending on the risk level of your service.
 
@@ -78,13 +73,10 @@ If the user enters an expired code that was sent more than:
 
 If the user follows the ‘Not received a text message?’ link, allow them to check which mobile number they entered, and to change it if necessary. This prevents the user becoming stuck if they entered a mobile number incorrectly. Do not allow the user to change the number when they're signing in.
 
-<div class="app-wcag-22" id="wcag-resend-security-code-creation" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>You must always include the link for 'Not received a text message?’ so the user can find help in a consistent way. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent Help</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-resend-security-code-creation"}) %}
+
+<p>You must always include the link for 'Not received a text message?’ so the user can find help in a consistent way. This relates to <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">WCAG 2.2 success criterion 3.2.6 Consistent help</a>.</p>
+{% endcall %}
 
 {{ example({ group: "patterns", item: "confirm-a-phone-number", example: "resend-first-time", html: true, nunjucks: true, open: false }) }}
 
@@ -102,13 +94,10 @@ Ask the user to enter this code. Use the same pattern and time limit as when cre
 
 If they follow the ‘Not received a text message?’ link, show them a page allowing them to request a new code. Do not reveal the mobile number you sent it to.
 
-<div class="app-wcag-22" id="wcag-resend-security-code-sign-in" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>You must always include the link for 'Not received a text message?’ so the user can find help in a consistent way. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent Help</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-resend-security-code-sign-in"}) %}
+
+<p>You must always include the link for 'Not received a text message?’ so the user can find help in a consistent way. This relates to <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">WCAG 2.2 success criterion 3.2.6 Consistent help</a>.</p>
+{% endcall %}
 
 {{ example({group: "patterns", item: "confirm-a-phone-number", example: "resend", html: true, nunjucks: true, open: false}) }}
 

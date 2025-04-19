@@ -1,4 +1,44 @@
-@import "govuk/all";
+$govuk-new-typography-scale: true;
+
+@import "govuk/settings";
+@import "govuk/helpers";
+@import "govuk/tools";
+@import "govuk/core";
+@import "govuk/objects";
+
+@import "govuk/components/back-link";
+@import "govuk/components/breadcrumbs";
+@import "govuk/components/button";
+@import "govuk/components/cookie-banner";
+@import "govuk/components/date-input";
+@import "govuk/components/details";
+@import "govuk/components/error-message";
+@import "govuk/components/error-summary";
+@import "govuk/components/fieldset";
+@import "govuk/components/footer";
+@import "govuk/components/header";
+@import "govuk/components/hint";
+@import "govuk/components/input";
+@import "govuk/components/inset-text";
+@import "govuk/components/label";
+@import "govuk/components/notification-banner";
+@import "govuk/components/pagination";
+@import "govuk/components/panel";
+@import "govuk/components/phase-banner";
+@import "govuk/components/radios";
+@import "govuk/components/skip-link";
+@import "govuk/components/summary-list";
+@import "govuk/components/table";
+@import "govuk/components/tag";
+@import "govuk/components/task-list";
+@import "govuk/components/warning-text";
+
+@import "govuk/utilities";
+
+@import "govuk/overrides/spacing";
+@import "govuk/overrides/text-align";
+@import "govuk/overrides/typography";
+@import "govuk/overrides/width";
 
 // App-specific variables
 $app-light-grey: #f8f8f8;
@@ -9,6 +49,9 @@ $app-code-color: #d13118;
 @import "components/category-nav";
 @import "components/contact-panel";
 @import "components/cookies-page";
+@import "components/call-to-action";
+@import "components/promo-banner";
+@import "components/embed-card";
 @import "components/example";
 @import "components/footer";
 @import "components/header";
@@ -315,6 +358,12 @@ pre .language-plaintext {
     @include govuk-typography-weight-bold;
   }
 
+  // Govuk tags are strong elements and prose scope reinforces strong's being
+  // bold, so we need to 'override' it back to regular
+  .govuk-tag {
+    @include govuk-typography-weight-regular;
+  }
+
   ul,
   ol {
     @extend %govuk-list;
@@ -365,7 +414,23 @@ pre .language-plaintext {
   background-color: $app-light-grey;
 }
 
-.app-wcag-22 {
+.app-wcag-callout {
+  border-left-color: govuk-colour("blue");
+}
+
+// Change headings in WCAG callouts to look like H3s,
+// even though they semantically are H2s
+.app-wcag-callout h2 {
+  @extend %govuk-heading-m;
+  max-width: 30em;
+}
+
+.app-wcag-callout__tag {
+  margin-top: 1px;
+  margin-bottom: govuk-spacing(2);
+}
+
+.app-wcag-note {
   margin-top: govuk-spacing(6);
 
   // Add highlight styling for WCAG 2.2 content
@@ -375,15 +440,6 @@ pre .language-plaintext {
   }
 }
 
-.app-inset-text {
-  border-left-color: govuk-colour("blue");
-}
-
-.app-tag {
-  margin-top: 1px;
-  margin-bottom: govuk-spacing(2);
-
-  .app-prose-scope & {
-    font-weight: normal;
-  }
+.app-campaign-cookie-banner .govuk-grid-column-two-thirds {
+  width: 100%;
 }

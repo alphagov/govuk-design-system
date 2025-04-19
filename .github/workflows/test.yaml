@@ -13,23 +13,23 @@ on:
       runner:
         description: Run tests on
         type: choice
-        default: ubuntu-latest
+        default: ubuntu-22.04
         options:
           - macos-latest
-          - ubuntu-latest
+          - ubuntu-22.04
           - windows-latest
 
 jobs:
   build:
     name: Build
-    runs-on: ${{ github.event.inputs.runner || 'ubuntu-latest' }}
+    runs-on: ${{ github.event.inputs.runner || 'ubuntu-22.04' }}
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@v4.2.2
 
       - name: Restore build
-        uses: actions/cache@v4.0.0
+        uses: actions/cache@v4.2.3
         id: build-cache
 
         with:
@@ -37,7 +37,7 @@ jobs:
           path: build
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4.0.1
+        uses: actions/setup-node@v4.3.0
         if: steps.build-cache.outputs.cache-hit != 'true'
 
         with:
@@ -55,7 +55,7 @@ jobs:
 
   test:
     name: ${{ matrix.task.description }}
-    runs-on: ${{ github.event.inputs.runner || 'ubuntu-latest' }}
+    runs-on: ${{ github.event.inputs.runner || 'ubuntu-22.04' }}
     needs: [build]
 
     strategy:
@@ -89,10 +89,10 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@v4.2.2
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4.0.1
+        uses: actions/setup-node@v4.3.0
         with:
           cache: npm
           check-latest: true
@@ -102,7 +102,7 @@ jobs:
         run: npm ci
 
       - name: Restore build
-        uses: actions/cache/restore@v4.0.0
+        uses: actions/cache/restore@v4.2.3
         with:
           key: build-cache-${{ runner.os }}-${{ github.sha }}
           path: build

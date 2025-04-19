@@ -4,13 +4,23 @@
  * @type {import('@babel/core').ConfigFunction}
  */
 module.exports = function (api) {
-  const browserslistEnv = !api.env('test') ? 'production' : 'node'
+  const isBrowser = !api.env('test')
+
+  const browserslistEnv = isBrowser ? 'javascripts' : 'node'
 
   const presets = [
     [
       '@babel/preset-env',
       {
-        browserslistEnv
+        browserslistEnv,
+        // Apply bug fixes to avoid transforms
+        bugfixes: true,
+
+        // Apply smaller "loose" transforms for browsers
+        loose: isBrowser,
+
+        // Skip ES module transforms for browsers
+        modules: isBrowser ? false : 'auto'
       }
     ]
   ]

@@ -1,37 +1,8 @@
-/**
- * Push to Google Analytics
- *
- * @param {object} payload - Google Analytics payload
- */
-function addToDataLayer(payload) {
-  // @ts-expect-error Property does not exist on window
-  window.dataLayer = window.dataLayer || []
-  // @ts-expect-error Property does not exist on window
-  window.dataLayer.push(payload)
-}
-
-/**
- * Strip possible personally identifiable information (PII)
- *
- * @param {string} string - Input string
- * @returns {string} Output string
- */
-function stripPossiblePII(string) {
-  // Try to detect emails, postcodes, and NI numbers, and redact them.
-  // Regexes copied from GTM variable 'JS - Remove PII from Hit Payload'
-  string = string.replace(/[^\s=/?&]+(?:@|%40)[^\s=/?&]+/g, '[REDACTED EMAIL]')
-  string = string.replace(
-    /\b[A-PR-UWYZ][A-HJ-Z]?[0-9][0-9A-HJKMNPR-Y]?(?:[\s+]|%20)*[0-9](?!refund)[ABD-HJLNPQ-Z]{2,3}\b/gi,
-    '[REDACTED POSTCODE]'
-  )
-  string = string.replace(
-    /^\s*[a-zA-Z]{2}(?:\s*\d\s*){6}[a-zA-Z]?\s*$/g,
-    '[REDACTED NI NUMBER]'
-  )
-  // If someone has typed in a number it's likely not related so redact it
-  string = string.replace(/[0-9]+/g, '[REDACTED NUMBER]')
-  return string
-}
+import {
+  addToDataLayer,
+  stripPossiblePII,
+  translateToItems
+} from './analytics.mjs'
 
 /**
  * Track confirmed autocomplete result
@@ -46,28 +17,30 @@ export function trackConfirm(searchQuery, searchResults, result) {
   }
 
   const searchTerm = stripPossiblePII(searchQuery)
-  const products = searchResults
-    .map((result, key) => ({
-      name: result.title,
-      category: result.section,
-      list: searchTerm, // Used to match an searchTerm with results
-      position: key + 1
-    }))
-    // Only return the product that matches what was clicked
-    .filter((product) => product.name === result.title)
+
+  // Only return the product that matches what was clicked
+  const items = translateToItems(searchResults, searchTerm).filter(
+    (product) => product.name === result.title
+  )
 
   addToDataLayer({
-    event: 'site-search',
-    eventDetails: {
-      category: 'site search',
+    event: 'site_search',
+    event_data: {
       action: 'click',
-      label: `${searchTerm} | ${result.title}`
-    },
+      text: searchTerm,
+      section: result.title
+    }
+  })
+
+  // Each time the ecommerce object is pushed to the dataLayer,
+  // it needs to be nullified first. Nullifying the ecommerce
+  // object clears it and prevents multiple ecommerce events on a
+  // page from affecting each other.
+  addToDataLayer({ ecommerce: null })
+  addToDataLayer({
+    event: 'select_item',
     ecommerce: {
-      click: {
-        actionField: { list: searchTerm },
-        products
-      }
+      items
     }
   })
 }
@@ -84,25 +57,26 @@ export function trackSearchResults(searchQuery, searchResults) {
   }
 
   const searchTerm = stripPossiblePII(searchQuery)
-
   const hasResults = searchResults.length > 0
-  // Impressions is Google Analytics lingo for what people have seen.
-  const impressions = searchResults.map((result, key) => ({
-    name: result.title,
-    category: result.section,
-    list: searchTerm, // Used to match an searchTerm with results
-    position: key + 1
-  }))
+  const items = translateToItems(searchResults, searchTerm)
 
   addToDataLayer({
-    event: 'site-search',
-    eventDetails: {
-      category: 'site search',
+    event: 'site_search',
+    event_data: {
       action: hasResults ? 'results' : 'no result',
-      label: searchTerm
-    },
+      text: searchTerm
+    }
+  })
+
+  // Each time the ecommerce object is pushed to the dataLayer,
+  // it needs to be nullified first. Nullifying the ecommerce
+  // object clears it and prevents multiple ecommerce events on a
+  // page from affecting each other.
+  addToDataLayer({ ecommerce: null })
+  addToDataLayer({
+    event: 'view_item_list',
     ecommerce: {
-      impressions
+      items
     }
   })
 }

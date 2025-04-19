@@ -30,6 +30,11 @@
   to = "/accessibility/accessibility-strategy/"
   status = 301
 
+[[redirects]]
+  from = "/patterns/telephone-numbers/"
+  to = "/patterns/phone-numbers/"
+  status = 301
+
 # Proxy requests for security.txt to the centralised Cabinet Office
 # vulnerability disclosure policy (VDP)
 #

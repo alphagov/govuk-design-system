@@ -13,46 +13,40 @@ Some things on the roadmap might change – the purpose is to tell you what’s 
 
 See our [GitHub team board](https://github.com/orgs/alphagov/projects/53) for more details on our plans and day-to-day activities.
 
-Last updated 8 December 2023.
+Last updated 4 March 2025.
 
 ## Recently shipped
 
-We’ve released GOV.UK Frontend [v5.1.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.1.0), [v4.8.0](https://github.com/alphagov/govuk-frontend/releases/tag/v4.8.0) and [v3.15.0](https://github.com/alphagov/govuk-frontend/releases/tag/v3.15.0) which include the update of the crown logo.
+We’ve released [GOV.UK Frontend v5.9.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.9.0), which includes a JavaScript enhancement to the File upload component to make dragging and dropping files easier for users.
 
-We also recently shipped GOV.UK Frontend v5.0 which includes:
+We’ve also deprecated the options to show a service name, as well as navigation links, in the GOV.UK header component. Both options will be removed from the GOV.UK header in the next breaking release of GOV.UK Frontend.
 
-- a new [Task List](/components/task-list) component
-- updates to the [Tag](/components/tag) component
-- [updates to browser support](https://github.com/alphagov/govuk-frontend/issues/2621), including the removal of support for Internet Explorer 8 to 10 and reduced support for Internet Explorer 11
-- [a clear JavaScript API for our components](https://github.com/alphagov/govuk-frontend/issues/1389)
-- [removal of support for compatibility mode](https://github.com/alphagov/govuk-frontend/issues/2769)
-- [new link styles enabled by default](https://github.com/alphagov/govuk-frontend/issues/2350)
+Previously, we released [GOV.UK Frontend v5.8.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.8.0), which includes a new `ConfigurableComponent` class to help you build your own configurable components.
 
-You can read more about this breaking release in the guide [‘Changes to GOV.UK Frontend v5.0.0’](https://frontend.design-system.service.gov.uk/changes-to-govuk-frontend-v5/) and the [release notes](https://github.com/alphagov/govuk-frontend/releases/tag/v5.0.0).
+We’ve also recently:
 
-We've also:
-
-- updated the components, patterns and styles to be compliant with WCAG 2.2
-- made it easier for teams to understand [what's changed in WCAG 2.2 and what they need to do](/accessibility/wcag-2.2)
-- made it easier for teams to [share their findings from user research](/community/share-research-findings/)
-- run [Design System Day 2023](/community/design-system-day/)
+- Added features to help services [create their own JavaScript components using GOV.UK Frontend](https://frontend.design-system.service.gov.uk/building-your-own-javascript-components/)
+- Updated the Royal Arms in the [GOV.UK Footer component](/components/footer/)
+- introduced a new [Service navigation component](/components/service-navigation/) and published a new [pattern to Help users to navigate a service](/patterns/navigate-a-service)
+- added a new feature to stop long words from ‘breaking’ out of components
 
 ## Working on now
 
 We're:
 
-- [updating the typographic scale](https://github.com/alphagov/govuk-design-system/issues/2289), including increasing the minimum text size on mobile
-- adding the [Password input](https://github.com/alphagov/govuk-design-system-backlog/issues/240) component to the Design System (thanks to Andy Sellick)
+- planning community events and activities for 2025
+- doing research with services teams on how they are using the Design System and how they upgrade their service
 
 ## Coming up next
 
 We're getting ready to:
 
-- improve the way we organise technical documentation on the website
-- start working on the next pattern, [Navigation](https://github.com/alphagov/govuk-design-system-backlog/issues/76)
+- work on breaking changes for [V6.0.0](https://github.com/alphagov/govuk-frontend/milestone/51). We plan to include typographic scale enabled by default, iterate the navigation component and remove some deprecations
+- continue our Javascript work and make improvements to the Character Count component, Tabs component and Accordion component
 
 ## Future plans
 
 We plan to:
 
 - [drop support for Ruby Sass and LibSass](https://github.com/alphagov/govuk-frontend/issues/2637) and [migrate to the Sass module system](https://github.com/alphagov/govuk-frontend/issues/1791)
+- build new autocomplete components to replace [Accessible Autocomplete](https://github.com/alphagov/accessible-autocomplete)

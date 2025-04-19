@@ -25,12 +25,12 @@ A notification banner lets you tell the user about something that’s not direct
 
 Use notification banners sparingly. There’s [evidence that people often miss them](https://www.nngroup.com/articles/banner-blindness-old-and-new-findings/), and using them too often is likely to make this problem worse.
 
-If the information is directly relevant to the thing the user is doing on that page, put the information in the main page content instead. Use [inset text](/components/inset-text/) or [warning text](/components/warning-text/) if it needs to stand out.
+If the information is directly relevant to the thing the user is doing on that page, put the information in the main page content instead. Use an [Inset text component](/components/inset-text/) or [Warning text component](/components/warning-text/) if it needs to stand out.
 
 Do not:
 
-- use a notification banner to tell the user about validation errors - use an [error message](/components/error-message/) and [error summary](/components/error-summary/) instead
-- show a notification banner and an [error summary](/components/error-summary/) on the same page - just show the error summary
+- use a notification banner to tell the user about validation errors - use an [Error message component](/components/error-message/) and [Error summary component](/components/error-summary/) instead
+- show a notification banner and an [Error summary component](/components/error-summary/) on the same page - just show the error summary
 
 ## How it works
 
@@ -71,9 +71,11 @@ Use a ‘neutral’ notification banner if the user needs to know about somethin
 
 ## Reacting to something the user has done
 
-You can also use a notification banner to tell the user about the outcome of something they’ve just done - but they have not finished using the service, so it does not make sense to use a [confirmation page](/patterns/confirmation-pages/).
+You can also use a notification banner to tell the user about the outcome of something they’ve just done - but they have not finished the current journey, so it does not make sense to use a [Confirmation page at this point in your service](/patterns/confirmation-pages/).
 
-Using a notification banner is unlikely to be the right approach in a linear service - for example, a service that lets the user register or apply for a thing. For a linear service, it will usually make sense to stick to the [‘one thing per page’ approach](https://www.gov.uk/service-manual/design/form-structure). Do not use a notification banner to tell users that they’ve finished using a linear service. Use a [confirmation page](/patterns/confirmation-pages/) instead.
+Using a notification banner is unlikely to be the right approach in a linear service - for example, a service that lets the user register or apply for a thing. For a linear service, it will usually make sense to stick to the [‘one thing per page’ approach](https://www.gov.uk/service-manual/design/form-structure), and avoid using a notification banner.
+
+Use a [Confirmation page in a linear service](/patterns/confirmation-pages/) to tell users that they’ve finished using the service instead of a notification banner.
 
 Use the green version of the notification banner to confirm that something they’re expecting to happen has happened.
 
@@ -85,8 +87,8 @@ Remove a green notification banner when the user moves to a new page.
 
 To make the green version of the notification banner accessible:
 
-- use headings like ‘Success’ - so that you’re [not relying on colour alone to convey meaning](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html))
-- use the same heading for green notification banners within the same service - so that you’re [identifying components that work in the same way consistently](https://www.w3.org/WAI/WCAG21/Understanding/consistent-identification)
+- use headings like ‘Success’ - so that you’re not relying on colour alone to convey meaning – to [meet WCAG 2.2 success criterion 1.4.1 Use of colour](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html)
+- use the same heading for green notification banners within the same service - so that you’re identifying components that work in the same way consistently – this is to [meet WCAG 2.2 success criterion 3.2.4 Consistent identification](https://www.w3.org/WAI/WCAG22/Understanding/consistent-identification)
 
 ## Research on this component
 

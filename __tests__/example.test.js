@@ -1,4 +1,4 @@
-const { goTo } = require('../lib/puppeteer-helpers.js')
+const { goTo } = require('./helpers/puppeteer.js')
 
 describe('Example page', () => {
   describe('that has a form', () => {

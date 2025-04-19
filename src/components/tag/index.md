@@ -8,37 +8,28 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "_wcag-callout.njk" import wcagCallout %}
+{% from "_wcag-note.njk" import wcagNote %}
 
 Use the tag component to show users the status of something.
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affects this component
-
-To use the ‘Tag' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
-
-- [interact with tags without relying on 'click and drag' movements (if you choose to add functionality to reorder tags)](/components/tag/#wcag-tag-no-dragging-reorder)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "component",
+  introAction: "use the",
+  name: "Tag",
+  criteria: [
+    {
+      text: "if you choose to add functionality to reorder tags, make sure users can do so without relying on 'click and drag' movements ()",
+      anchor: "wcag-tag-no-dragging-reorder"
+    }
+  ]
 }) }}
 
 {{ example({ group: "components", item: "tag", example: "default", html: true, nunjucks: true,rails: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 
-Use the tag component when it’s possible for something to have more than one status and it’s useful for the user to know about that status. For example, you can use a tag to show whether an item in a [task list](/components/task-list/) has been ‘completed’.
+Use the tag component when it’s possible for something to have more than one status and it’s useful for the user to know about that status. For example, you can use a tag to show whether an item in a [Task list component](/components/task-list/) has been ‘completed’.
 
 ## How it works
 
@@ -55,7 +46,7 @@ Do not use tags to create links, buttons or other interactive elements, as users
 
 Sometimes a single status is enough. For example if you need to tell users which parts of an application they’ve finished and which they have not, you may only need a ‘Completed’ tag. Because the user understands that if something does not have a tag, that means it’s incomplete.
 
-The [complete multiple tasks pattern](/patterns/complete-multiple-tasks/) has an example of how to show one status using tags.
+The [Complete multiple tasks pattern](/patterns/complete-multiple-tasks/) has an example of how to show one status using tags.
 
 Or it can make sense to have two statuses. For example you may find that there’s a need to have one tag for ‘Active’ users and one for ‘Inactive’ users.
 
@@ -67,19 +58,16 @@ Tags should be helpful to users. The more you add, the harder it is for users to
 
 {{ example({ group: "components", item: "tag", example: "coloured-tags", html: true, nunjucks: true, rails: true, open: false }) }}
 
-<div class="app-wcag-22" id="wcag-tag-no-dragging-reorder" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>Any tag implementation that allows the user to change the order of tags must offer a way to do so without relying on ‘click and drag’ movements. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">2.5.7 Dragging Movements</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-tag-no-dragging-reorder"}) %}
+
+<p>Any implementation of the Tag component that allows the user to change the order of tags must offer a way to do so without relying on ‘click and drag’ movements. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">WCAG 2.2 success criterion 2.5.7 Dragging movements</a>.</p>
+{% endcall %}
 
 ## Using colour with tags
 
 You can use colour to help distinguish between different tags – or to help draw the user’s attention to a tag if it’s especially important. For example, it probably makes sense to use `govuk-tag--red` for a tag that reads ‘Urgent’.
 
-[Do not use colour alone to convey information](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html) because it’s not accessible. If you use the same tag in more than one place, make sure you keep the colour consistent.
+Do not use colour alone to convey information, because it’s not accessible. If you use the same tag in more than one place, make sure you keep the colour consistent. This is to [meet WCAG 2.2 success criterion 1.4.1 Use of colour](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html).
 
 ### Additional colours
 

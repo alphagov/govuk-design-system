@@ -26,7 +26,7 @@ Only break up content onto separate pages if it improves the performance or usab
 
 Avoid using the 'infinite scroll' technique to automatically load content when the user approaches the bottom of the page. This causes problems for keyboard users.
 
-Do not use this Pagination component for linear journeys – for example, where you’re asking the user to complete a form. Instead, use the [Button component](/components/button/) (usually a 'Continue' button) to let the user move to the next page – and a [Back link](/components/back-link/) to let them move to the previous page.
+Do not use this Pagination component for linear journeys – for example, where you’re asking the user to complete a form. Instead, use the [Button component](/components/button/) (usually a 'Continue' button) to let the user move to the next page – and a [Back link component](/components/back-link/) to let them move to the previous page.
 
 ## How it works
 

@@ -9,28 +9,19 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "_wcag-callout.njk" import wcagCallout %}
+{% from "_wcag-note.njk" import wcagNote %}
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affects this pattern
-
-To ask users for 'Names' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
-
-- [reuse a previously entered name](/patterns/names/#wcag-reuse-name)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "pattern",
+  introAction: "ask users for",
+  name: "National insurance numbers",
+  criteria: [
+    {
+      text: "make sure users can reuse a previously entered name",
+      anchor: "wcag-reuse-name"
+    }
+  ]
 }) }}
 
 {{ example({ group: "patterns", item: "names", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
@@ -99,19 +90,16 @@ If you are asking users to enter their name in multiple fields, set the `autocom
 - `given-name` for fields labelled 'First name' or 'Given name'
 - `family-name` for fields labelled 'Last name' or 'Family name'
 
-If you are working in production you’ll need to do this to meet [WCAG 2.1 Level AA](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html).
+If you are working in production you’ll need to do this to meet [WCAG 2.2 success criterion 1.3.5 Identify input purpose](https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose.html).
 
 You will not normally need to use the `autocomplete` attribute in prototypes, as users will not generally be using their own devices.
 
 ### Reusing entered names
 
-<div class="app-wcag-22" id="wcag-reuse-name" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>Make sure users can easily reuse a previously entered name within a single journey, unless doing so would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-reuse-name"}) %}
+
+<p>Make sure users can easily reuse a previously entered name within a single journey, unless doing so would be a major safety or security concern. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry</a>.</p>
+{% endcall %}
 
 You can make it easier to reuse names through one of these methods:
 
@@ -132,7 +120,7 @@ Avoid asking users for their title.
 
 It’s extra work for them and you’re asking them to potentially reveal their gender and marital status, which they may not want to do.
 
-It’s also hard to predict the range of titles your users will have. If you have to ask for someone’s title, use an optional [text input](/components/text-input/) not a [select](/components/select/).
+It’s also hard to predict the range of titles your users will have. If you have to ask for someone’s title, use an optional [Text input component](/components/text-input/) not a [Select component](/components/select/).
 
 Remember to correctly use people’s names in any resulting correspondence.
 
@@ -152,7 +140,7 @@ Error messages should be styled like this:
 
 {{ example({ group: "patterns", item: "names", example: "error", html: true, nunjucks: true, open: true }) }}
 
-Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
+Make sure errors follow the guidance in the [Error message component](/components/error-message/) and have specific error messages for specific error states.
 
 ## Research on this pattern
 

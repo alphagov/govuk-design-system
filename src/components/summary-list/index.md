@@ -8,31 +8,25 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "_wcag-callout.njk" import wcagCallout %}
+{% from "_wcag-note.njk" import wcagNote %}
 
 Use a summary list to summarise information, for example, a user’s responses at the end of a form.
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### WCAG 2.2 criteria might affect this component
-
-To use ‘Summary list’ and comply with new success criteria introduced in Web Content Accessibility Guidelines (WCAG) 2.2, make sure that users can successfully:
-
-- [interact with row actions](/components/summary-list/#wcag-interact-row-actions)
-- [change information they've previously given in an answer](/components/summary-list/#wcag-change-answers)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "component",
+  introAction: "use",
+  name: "Summary list",
+  criteria: [
+    {
+      text: "make sure users can interact with row actions",
+      anchor: "wcag-interact-row-actions"
+    },
+    {
+      text: "make sure users can change information they've previously given in an answer",
+      anchor: "wcag-change-answers"
+    }
+  ]
 }) }}
 
 {{ example({ group: "components", item: "summary-list", example: "default", html: true, nunjucks: true, rails: true, open: false, loading: "eager" }) }}
@@ -41,15 +35,15 @@ See the full list of [components and patterns affected by WCAG 2.2](/accessibili
 
 Use a summary list to show information as a list of key facts.
 
-You can use it to display metadata like ‘Last updated’ with a date like ‘22 June 2018’, or to summarise a user’s responses at the end of a form like the [check answers](/patterns/check-answers/) pattern.
+You can use it to display metadata like ‘Last updated’ with a date like ‘22 June 2018’, or to summarise a user’s responses at the end of a form like the [Check answers pattern](/patterns/check-answers/).
 
-[Summary cards](#summary-cards) are a variant within this component. You can use summary cards to show multiple summary lists that describe the same type of thing, such as people. You can also add card actions that apply to the entire summary list.
+[Summary cards are a variant within this component](#summary-cards). You can use summary cards to show multiple summary lists that describe the same type of thing, such as people. You can also add card actions that apply to the entire summary list.
 
 ## When not to use this component
 
 The summary list uses the description list (`<dl>`) HTML element, so only use it to present information that has a key and at least one value.
 
-Do not use it for tabular data or a simple list of information or tasks, like a [task list](/components/task-list/). For those use a `<table>`, `<ul>` or `<ol>`.
+Do not use it for tabular data or a simple list of information or tasks, like a [Task list component](/components/task-list/). For those use a `<table>`, `<ul>` or `<ol>`.
 
 ## How it works
 
@@ -72,22 +66,16 @@ When navigating visually, the borders above and below each row help to show whic
 
 There's a few things to keep in mind to ensure that users can successfully use row actions.
 
-<div class="app-wcag-22" id="wcag-interact-row-actions" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>Make sure any 'action links' are at least 24px by 24px in size, or have adequate spacing. This is to make sure users can easily interact with the links. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target Size (minimum)</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-interact-row-actions"}) %}
 
-<div class="app-wcag-22" id="wcag-change-answers" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>If a user decides to go back to a previous answer through a card or row action, make sure information they have already entered is pre-populated.</p>
-  <p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
-</div>
+<p>Make sure any 'action links' are at least 24px by 24px in size, or have adequate spacing. This is to make sure users can easily interact with the links. This relates to <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target size (minimum)</a>.</p>
+{% endcall %}
+
+{% call wcagNote({id: "wcag-change-answers"}) %}
+
+<p>If a user decides to go back to a previous answer through a card or row action, make sure information they have already entered is pre-populated.</p>
+<p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry</a>.</p>
+{% endcall %}
 
 Assistive technology users, including those who use a screen reader, might hear a row action link out of context and might not know what it will do.
 
@@ -179,8 +167,8 @@ This component was developed and tested by the Government Digital Service as par
 
 The Department for Education contributed the summary card. It’s being used in some of their services, such as:
 
-- [apply for teacher training](https://www.gov.uk/apply-for-teacher-training), used by the general public
-- [register trainee teachers](https://www.register-trainee-teachers.service.gov.uk/), used by people that work for training providers
+- [Apply for teacher training](https://www.gov.uk/apply-for-teacher-training), used by the general public
+- [Register trainee teachers](https://www.register-trainee-teachers.service.gov.uk/), used by people that work for training providers
 
 The summary card is also used in services run by other departments, such us:
 

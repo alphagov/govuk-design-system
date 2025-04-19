@@ -17,7 +17,7 @@ Use the radios component when users can only select one option from a list.
 
 ## When not to use this component
 
-Do not use the radios component if users might need to select more than one option. In this case, you should use the [checkboxes](/components/checkboxes/) component instead.
+Do not use the radios component if users might need to select more than one option. In this case, you should use the [Checkboxes component](/components/checkboxes/) instead.
 
 ## How it works
 
@@ -44,7 +44,7 @@ Group radios together in a `<fieldset>` with a `<legend>` that describes them, a
 
 ### If you’re asking one question on the page
 
-If you are asking just [one question per page](/patterns/question-pages/#start-by-asking-one-question-per-page) as recommended, you can set the contents of the `<legend>` as the page heading. This is good practice as it means that users of screen readers will only hear the contents once.
+If you are asking just [one question per page in your service](/patterns/question-pages/#start-by-asking-one-question-per-page) as recommended, you can set the contents of the `<legend>` as the page heading. This is good practice as it means that users of screen readers will only hear the contents once.
 
 Read more about [why and how to set legends as headings](/get-started/labels-legends-headings/).
 
@@ -54,7 +54,7 @@ There are 2 ways to use the radios component. You can use HTML or, if you are us
 
 ### If you’re asking more than one question on the page
 
-If you're asking more than one question on the page, do not set the contents of the `<legend>` as the page heading. Read more about [asking multiple questions on question pages](/patterns/question-pages/#asking-multiple-questions-on-a-page).
+If you're asking more than one question on the page, do not set the contents of the `<legend>` as the page heading. Read more about [asking multiple questions on Question pages](/patterns/question-pages/#asking-multiple-questions-on-a-page).
 
 {{ example({ group: "components", item: "radios", example: "without-heading", html: true, nunjucks: true, open: false, size: "s" }) }}
 
@@ -74,6 +74,10 @@ Remember that on small screens such as mobile devices, the radios will still be 
 ### Radio items with hints
 
 You can add hints to radio items to provide additional information about the options.
+
+Keep each hint to a single short sentence, without any full stops. Screen readers will read out the entire text when users interact with an item. This could frustrate users if the text is long.
+
+Do not use links in hint text. While screen readers will read out the link text when describing the item, they usually do not tell users the text is a link.
 
 {{ example({ group: "components", item: "radios", example: "hint", html: true, nunjucks: true, open: false, size: "s" }) }}
 
@@ -99,7 +103,7 @@ Conditionally reveal questions only - do not show or hide anything that is not a
 
 #### Known issues
 
-Users are not always notified when a conditionally revealed question is shown or hidden. This fails [WCAG 2.1 success criterion 4.1.2 Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html).
+Users are not always notified when a conditionally revealed question is shown or hidden. This fails [WCAG 2.2 success criterion 4.1.2 Name, role, value](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html).
 
 However, we found that screen reader users did not have difficulty answering a conditionally revealed question - as long it’s kept simple. Users we tested with did get confused when complicated questions were conditionally revealed to them, particularly questions with more than one part.
 
@@ -128,7 +132,7 @@ Error messages should be styled like this:
 
 {{ example({ group: "components", item: "radios", example: "error", html: true, nunjucks: true, open: false, size: "s" }) }}
 
-Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
+Make sure errors follow the guidance in the [Error message component](/components/error-message/) and have specific error messages for specific error states.
 
 #### If it’s a ‘yes’ or ‘no’ question
 
@@ -144,7 +148,7 @@ Say ‘Select [whatever it is]’. For example, ‘Select the day of the week yo
 
 #### If it's a conditionally revealed question
 
-Include an [error message](/components/error-message/) that is clearly related to the initial question.
+Include an [Error message component](/components/error-message/) that is clearly related to the initial question.
 
 {{ example({ group: "components", item: "radios", example: "conditional-reveal-error", html: true, nunjucks: true, open: false, size: "s" }) }}
 

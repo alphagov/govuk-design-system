@@ -1,0 +1,18 @@
+.app-promo-banner {
+  display: flex;
+  margin-top: 30px;
+  border: 1px solid $govuk-border-colour;
+  align-items: center;
+  flex-direction: row;
+}
+
+.app-promo-banner .app-promo-banner__image {
+  max-width: 75px;
+  margin: 0;
+  border: 0;
+}
+
+.app-promo-banner .app-promo-banner__text-container p {
+  margin: 0;
+  padding-left: govuk-spacing(3);
+}

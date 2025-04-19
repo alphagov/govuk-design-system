@@ -1,5 +1,6 @@
 /* global XMLHttpRequest */
 import accessibleAutocomplete from 'accessible-autocomplete'
+import { Component } from 'govuk-frontend'
 import lunr from 'lunr'
 
 import { trackSearchResults, trackConfirm } from './search.tracking.mjs'
@@ -36,22 +37,16 @@ const DEBOUNCE_TIME_TO_WAIT = () => {
 /**
  * Website search
  */
-class Search {
+class Search extends Component {
+  static moduleName = 'app-search'
   /**
    * @param {Element} $module - HTML element
    */
   constructor($module) {
-    if (
-      !($module instanceof HTMLElement) ||
-      !document.body.classList.contains('govuk-frontend-supported')
-    ) {
-      return this
-    }
-
-    this.$module = $module
+    super($module)
 
     accessibleAutocomplete({
-      element: this.$module,
+      element: this.$root,
       id: 'app-site-search__input',
       cssNamespace: 'app-site-search',
       displayMenu: 'overlay',
@@ -67,7 +62,7 @@ class Search {
       tNoResults: () => statusMessage
     })
 
-    const $input = this.$module.querySelector('.app-site-search__input')
+    const $input = this.$root.querySelector('.app-site-search__input')
     if (!$input) {
       return this
     }
@@ -77,7 +72,7 @@ class Search {
       clearTimeout(inputDebounceTimer)
     })
 
-    const searchIndexUrl = this.$module.getAttribute('data-search-index')
+    const searchIndexUrl = this.$root.getAttribute('data-search-index')
     this.fetchSearchIndex(searchIndexUrl, () => {
       this.renderResults()
     })
@@ -239,6 +234,11 @@ class Search {
       section.className = 'app-site-search--section'
       section.innerHTML = result.section
 
+      const visuallyHiddenComma = document.createElement('span')
+      visuallyHiddenComma.className = 'govuk-visually-hidden'
+      visuallyHiddenComma.innerHTML = ', '
+
+      elem.appendChild(visuallyHiddenComma)
       elem.appendChild(section)
       return elem.innerHTML
     }

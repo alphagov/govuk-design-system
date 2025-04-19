@@ -12,23 +12,25 @@
  * The consent cookie version is defined in cookie-banner.njk
  */
 
-import Analytics from './analytics.mjs'
+import { loadAnalytics } from './analytics.mjs'
 
 /* Name of the cookie to save users cookie preferences to. */
 const CONSENT_COOKIE_NAME = 'design_system_cookies_policy'
 
 /* Google Analytics tracking IDs for preview and live environments. */
-const TRACKING_PREVIEW_ID = '26179049-17'
-const TRACKING_LIVE_ID = '116229859-1'
+const TRACKING_PREVIEW_ID = '8F2EMQL51V'
+const TRACKING_LIVE_ID = 'GHT8W0QGD9'
 
 /* Users can (dis)allow different groups of cookies. */
 const COOKIE_CATEGORIES = {
-  analytics: [
-    '_ga',
-    '_gid',
-    `_gat_UA-${TRACKING_PREVIEW_ID}`,
-    `_gat_UA-${TRACKING_LIVE_ID}`
-  ],
+  analytics: ['_ga', `_ga_${TRACKING_PREVIEW_ID}`, `_ga_${TRACKING_LIVE_ID}`],
+  /* Campaign cookies
+   *
+   * Cookies for campaign pages, so that we can embed YouTube videos and other
+   * embeddable content that sets cookies.
+   *
+   */
+  campaign: ['campaign'],
   /* Essential cookies
    *
    * Essential cookies cannot be deselected, but we want our cookie code to
@@ -46,7 +48,8 @@ const COOKIE_CATEGORIES = {
  * this will be ignored.
  */
 const DEFAULT_COOKIE_CONSENT = {
-  analytics: false
+  analytics: null, // tracks if has been asked at all
+  campaign: null // tracks if has been asked at all
 }
 
 /**
@@ -176,13 +179,20 @@ export function resetCookies() {
     // Initialise analytics if allowed
     if (cookieType === 'analytics' && options[cookieType]) {
       // Enable GA if allowed
-      window[`ga-disable-UA-${TRACKING_PREVIEW_ID}`] = false
-      window[`ga-disable-UA-${TRACKING_LIVE_ID}`] = false
-      Analytics()
+      window[`ga-disable-G-${TRACKING_PREVIEW_ID}`] = false
+      window[`ga-disable-G-${TRACKING_LIVE_ID}`] = false
+      loadAnalytics()
+
+      // Unset UA cookies if they've been set by GTM
+      removeUACookies()
     } else {
       // Disable GA if not allowed
-      window[`ga-disable-UA-${TRACKING_PREVIEW_ID}`] = true
-      window[`ga-disable-UA-${TRACKING_LIVE_ID}`] = true
+      window[`ga-disable-G-${TRACKING_PREVIEW_ID}`] = true
+      window[`ga-disable-G-${TRACKING_LIVE_ID}`] = true
+    }
+
+    if (cookieType === 'campaign') {
+      window[cookieType] = options[cookieType]
     }
 
     if (!options[cookieType]) {
@@ -194,6 +204,24 @@ export function resetCookies() {
         Cookie(cookie, null)
       })
     }
+  }
+}
+
+/**
+ * Remove UA cookies for user and prevent Google setting them.
+ *
+ * We've migrated our analytics from UA (Universal Analytics) to GA4, however
+ * users may still have the UA cookie set from our previous implementation.
+ * Additionally, our UA properties are scheduled for deletion but until they are
+ * entirely deleted, GTM is still setting UA cookies.
+ */
+export function removeUACookies() {
+  for (const UACookie of [
+    '_gid',
+    '_gat_UA-26179049-17',
+    '_gat_UA-116229859-1'
+  ]) {
+    Cookie(UACookie, null)
   }
 }
 
@@ -318,5 +346,6 @@ function deleteCookie(name) {
  * @typedef {object} ConsentPreferences
  * @property {boolean} [analytics] - Accept analytics cookies
  * @property {boolean} [essential] - Accept essential cookies
+ * @property {boolean} [campaign] - Accept essential cookies
  * @property {string} [version] - Content cookie version
  */

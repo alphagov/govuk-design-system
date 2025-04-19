@@ -1,3 +1,4 @@
+const babel = require('@rollup/plugin-babel')
 const commonjs = require('@rollup/plugin-commonjs')
 const resolve = require('@rollup/plugin-node-resolve')
 const terser = require('@rollup/plugin-terser')
@@ -35,5 +36,11 @@ module.exports = defineConfig({
   ],
 
   // Input plugins
-  plugins: [resolve(), commonjs()]
+  plugins: [
+    resolve(),
+    commonjs(),
+    babel({
+      babelHelpers: 'bundled'
+    })
+  ]
 })

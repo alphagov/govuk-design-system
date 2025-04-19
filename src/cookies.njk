@@ -91,14 +91,9 @@ layout: layout-single-page.njk
               { text: "2 years" }
             ],
             [
-              { text: "_gid" },
-              { text: "Helps us count how many people visit the GOV.UK Design System by telling us if you’ve visited before." },
-              { text: "24 hours" }
-            ],
-            [
-              { text: "_gat_UA-[random number]" },
+              { text: "ga_[random number]" },
               { text: "Used to reduce the number of requests." },
-              { text: "1 minute" }
+              { text: "2 years" }
             ]
           ]
         }) }}
@@ -114,6 +109,53 @@ layout: layout-single-page.njk
             classes: "js-cookies-page-form-fieldset",
             attributes: {
               "data-cookie-type": "analytics",
+              hidden: ""
+            }
+          },
+          items: [
+            {
+              text: "Yes",
+              value: "yes"
+            },
+            {
+              text: "No",
+              value: "no"
+            }
+          ]
+        }) }}
+
+        <h2 class="govuk-heading-l govuk-!-margin-top-6">Marketing and Communications Cookies</h2>
+
+        <p class="govuk-body">These cookies may be set by third party websites and do things like measure how you view YouTube videos.</p>
+
+        {{ govukTable({
+          firstCellIsHeader: true,
+          caption: "Marketing and Communications cookies we use",
+          head: [
+            { text: "Name" },
+            { text: "Purpose" },
+            { text: "Expires" }
+          ],
+          rows: [
+            [
+              { text: "campaign" },
+              { text: "Indicates that you consent for cookies to be set by third party websites such as YouTube." },
+              { text: "2 years" }
+            ]
+          ]
+        }) }}
+
+        {{ govukRadios({
+          name: "cookies[campaign]",
+          idPrefix: "cookies-campaign",
+          fieldset: {
+            legend: {
+              text: "Do you want to accept communications and marketing cookies?",
+              classes: "govuk-fieldset__legend--s"
+            },
+            classes: "js-cookies-page-form-fieldset",
+            attributes: {
+              "data-cookie-type": "campaign",
               hidden: ""
             }
           },

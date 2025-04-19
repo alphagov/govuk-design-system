@@ -7,30 +7,21 @@ aliases:
 layout: layout-pane.njk
 ---
 
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "_wcag-callout.njk" import wcagCallout %}
+{% from "_wcag-note.njk" import wcagNote %}
 
 Check the information the user gives you to make sure it’s valid. If there's a validation error, tell the user what's gone wrong and how to fix it. Turn off HTML5 validation.
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affects this pattern
-
-To help users to 'Recover from validation errors' and meet the new WCAG 2.2 criteria, make sure that users can successfully:
-
-- [edit information they've previously given to correct an error](/patterns/validation/#wcag-edit-to-correct-errors)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "pattern",
+  introAction: "help users to",
+  name: "Recover from validation errors",
+  criteria: [
+    {
+      text: "make sure users can edit information they've previously given to correct an error",
+      anchor: "wcag-edit-to-correct-errors"
+    }
+  ]
 }) }}
 
 ## When to use this pattern
@@ -48,9 +39,9 @@ Do not use validation to check whether the user is eligible to use the service o
 
 There are separate patterns for:
 
-- [‘there is a problem with the service’ pages](/patterns/problem-with-the-service-pages/)
-- [‘page not found’ pages](/patterns/page-not-found-pages/)
-- [‘service unavailable’ pages](/patterns/service-unavailable-pages/)
+- [‘There is a problem with the service’ pages](/patterns/problem-with-the-service-pages/)
+- [‘Page not found’ pages](/patterns/page-not-found-pages/)
+- [‘Service unavailable’ pages](/patterns/service-unavailable-pages/)
 
 ## How it works
 
@@ -78,18 +69,15 @@ If the user's answers fail validation:
 
 - show them the page again, with the form fields as the user filled them in
 - add ‘Error: ’ to the beginning of the page `<title>` so screen readers read it out as soon as possible
-- show an [error summary](/components/error-summary/) at the top of the page, and move keyboard focus to it
-- show [error messages](/components/error-message/) next to fields with errors
+- show an [Error summary component](/components/error-summary/) at the top of the page, and move keyboard focus to it
+- show [Error message components](/components/error-message/) next to fields with errors
 
 Read guidance on [writing good error messages](/components/error-message/#be-clear-and-concise).
 
-<div class="app-wcag-22" id="wcag-edit-to-correct-errors" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>Do not clear any form fields when validating users’ answers. Keep both passing and failing answers. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-edit-to-correct-errors"}) %}
+
+<p>Do not clear any form fields when validating users’ answers. Keep both passing and failing answers. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry</a>.</p>
+{% endcall %}
 
 Keeping information that failed validation helps users to:
 
@@ -103,9 +91,9 @@ Do not validate when the user moves away from a field. Wait until they try to mo
 
 Generally speaking, avoid validating the information in a field before the user has finished entering it. This sort of validation can cause problems - especially for users who type more slowly.
 
-Only add this sort of validation if your user research shows that, on balance, it solves more problems for users than it causes. For example, the [character count component](/components/character-count/) shows users an error message when they go over the character limit. Because it’s important that users do not spend time and effort writing out a response that turns out to be too long.
+Only add this sort of validation if your user research shows that, on balance, it solves more problems for users than it causes. For example, the [Character count component](/components/character-count/) shows users an error message when they go over the character limit. Because it’s important that users do not spend time and effort writing out a response that turns out to be too long.
 
-If you do use this sort of validation, [make sure you do it in a way that’s accessible](https://www.gov.uk/service-manual/technology/accessibility-for-developers-an-introduction).
+If you do use this sort of validation, [make sure you validate in a way that’s accessible](https://www.gov.uk/service-manual/technology/accessibility-for-developers-an-introduction).
 
 ## Client side and server side validation
 

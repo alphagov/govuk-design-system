@@ -10,6 +10,10 @@
   @return "%23" + $output;
 }
 
+@function _search-icon($colour) {
+  @return url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36' width='40' height='40'%3E%3Cpath d='M25.7 24.8L21.9 21c.7-1 1.1-2.2 1.1-3.5 0-3.6-2.9-6.5-6.5-6.5S10 13.9 10 17.5s2.9 6.5 6.5 6.5c1.6 0 3-.6 4.1-1.5l3.7 3.7 1.4-1.4zM12 17.5c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5-2 4.5-4.5 4.5-4.5-2-4.5-4.5z' fill='#{encode-hex($colour)}'%3E%3C/path%3E%3C/svg%3E");
+}
+
 $icon-size: 40px;
 
 .app-site-search {
@@ -26,7 +30,7 @@ $icon-size: 40px;
   }
 
   @include govuk-media-query($from: tablet) {
-    width: 300px;
+    width: 370px;
     max-width: 100%;
     float: none;
   }
@@ -50,6 +54,33 @@ $icon-size: 40px;
 .app-site-search__wrapper {
   display: block;
   position: relative;
+
+  // Adds a 'fake border' that's shorter than the width of the menu to create
+  // separation between the input and search items.
+  // This is here on the wrapper element and absolute positioned under the input
+  // rather than on the menu because we can't move a pseudo element out of the
+  // menu eg: using minus margins or absolute positioning without breaking the
+  // menu's overflow conditions.
+  // The use of :has means that this is an enhancement but the 'flowing' input
+  // feature is still visible without this.
+  &:has(
+      .app-site-search__input[aria-expanded="true"],
+      .app-site-search__input--focused[aria-expanded="false"]:not([aria-describedby])
+    )::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 101; // ensure the separator is above the menu
+    bottom: govuk-spacing(-1);
+    width: calc(100% - #{govuk-spacing(6)});
+    height: 1px;
+    margin: 0 0 govuk-spacing(1) govuk-spacing(3);
+    background-color: govuk-colour("black");
+
+    @media (forced-colors: active) {
+      background-color: currentcolor;
+    }
+  }
 }
 
 .app-site-search__hint,
@@ -72,13 +103,34 @@ $icon-size: 40px;
 
 .app-site-search__input {
   position: relative;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36' width='40' height='40'%3E%3Cpath d='M25.7 24.8L21.9 21c.7-1 1.1-2.2 1.1-3.5 0-3.6-2.9-6.5-6.5-6.5S10 13.9 10 17.5s2.9 6.5 6.5 6.5c1.6 0 3-.6 4.1-1.5l3.7 3.7 1.4-1.4zM12 17.5c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5-2 4.5-4.5 4.5-4.5-2-4.5-4.5z' fill='#{encode-hex(govuk-colour("dark-grey"))}'%3E%3C/path%3E%3C/svg%3E");
+  background-image: _search-icon($colour: govuk-colour("dark-grey"));
   background-repeat: no-repeat;
   background-position: center left -2px;
   background-size: $icon-size $icon-size;
 
   &::placeholder {
     color: govuk-colour("dark-grey");
+  }
+
+  // If the user is in a dark forced colours mode, switch the search icon out
+  // for a light variant.
+  @media (forced-colors: active) and (prefers-color-scheme: dark) {
+    background-image: _search-icon($colour: govuk-colour("white"));
+  }
+
+  // If a dropdown is visible ie: there are search results or the 'no results'
+  // dialog, adjust the focus state so that the bottom 'border' focus state
+  // disappears and the input 'flows' into the menu.
+  // The box-shadow from app-site-search__input--focused sets an inset shadow
+  // on all edges of the input ala the standard input focus state. This splits
+  // the box shadow into 2 insets; one that's nudged to the right so that it
+  // appears that only the top and left edges have a shadow and a similar one
+  // for the right edge, leaving the bottom without an indented shadow.
+  &[aria-expanded="true"],
+  &[aria-expanded="false"]:not([aria-describedby]).app-site-search__input--focused {
+    box-shadow:
+      inset $govuk-border-width-form-element $govuk-border-width-form-element 0 0,
+      inset ($govuk-border-width-form-element * -1) 0 0 0;
   }
 }
 
@@ -87,6 +139,20 @@ $icon-size: 40px;
   outline: $govuk-focus-width solid $govuk-focus-colour;
   outline-offset: 0;
   box-shadow: inset 0 0 0 $govuk-border-width-form-element;
+
+  // Reduce the width of the menu when the input is focused so that the edges
+  // line up with the indented box shadow from the input focus state
+  & ~ .app-site-search__menu--visible {
+    width: calc(100% - ($govuk-border-width-form-element * 4));
+    margin-left: ($govuk-border-width-form-element * 2);
+
+    // ...unless forced colours are active. Forced colour modes remove the indented
+    // box shadow meaning the menu's edges don't line up with the input
+    @media (forced-colors: active) {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
 }
 
 .app-site-search__input--show-all-values {
@@ -126,9 +192,18 @@ $icon-size: 40px;
 .app-site-search__menu--overlay {
   position: absolute;
   z-index: 100;
-  top: 100%;
+  top: calc(100% - $govuk-border-width-form-element);
   left: 0;
-  box-shadow: rgba(govuk-colour("black"), 0.256863) 0 2px 6px; // stylelint-disable-line number-max-precision
+  // Creates a fake extra portion of the menu above the scrollable area to
+  // provide some space between the list items highlight-able top edge and the
+  // bottom of the input.
+  border-top: govuk-colour("white") solid govuk-spacing(1);
+  box-shadow: rgba(govuk-colour("black"), 0.256863) 0 govuk-spacing(1) govuk-spacing(1); // stylelint-disable-line number-max-precision
+
+  // Ensure the border still looks like part of the menu in forced color modes
+  @media (forced-colors: active) {
+    border-top-color: Canvas;
+  }
 }
 
 .app-site-search__menu--inline {
@@ -227,10 +302,4 @@ $icon-size: 40px;
   &::after {
     content: ")";
   }
-}
-
-.app-site-search__separator {
-  display: inline-block;
-  margin-right: govuk-spacing(1);
-  margin-left: govuk-spacing(1);
 }

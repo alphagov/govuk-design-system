@@ -43,7 +43,7 @@ Test your content without tabs first. Consider if it’s better to:
 
 ## Decide between using tabs, accordion and details
 
-Tabs, [accordions](/components/accordion/), and [details](/components/details/) all hide sections of content which a user can choose to reveal.
+The Tabs component, [Accordion component](/components/accordion/), and [Details component](/components/details/) all hide sections of content which a user can choose to reveal.
 
 If you decide to use one of these components, consider if:
 

@@ -35,6 +35,6 @@ export default {
   testMatch: ['**/*.test.{js,mjs}'],
   transform: { '^.+\\.m?js$': ['babel-jest'] },
 
-  // Ignore built fixtures during `--watch`
-  watchPathIgnorePatterns: ['fixtures/build']
+  // Ignore built fixtures during `--watch` and node_modules folders
+  watchPathIgnorePatterns: ['fixtures/build', '/node_modules/']
 }

@@ -8,39 +8,30 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "_wcag-callout.njk" import wcagCallout %}
+{% from "_wcag-note.njk" import wcagNote %}
 
 This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
+{{ wcagCallout({
+  type: "component",
+  introAction: "use the",
+  name: "Error message",
+  criteria: [
+    {
+      text: "make sure users can edit information they've previously given, so that they can correct an error",
+      anchor: "wcag-clear-answers-error"
+    }
+  ]
 }) }}
 
-### New WCAG 2.2 criteria affects this component
-
-To use the ‘Error message' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
-
-- [edit information they've previously given, so that they can correct an error](/components/error-message/#wcag-clear-answers-error)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
-}) }}
-
-Follow the [validation pattern](/patterns/validation/) and show an error message when there is a validation error. In the error message explain what went wrong and how to fix it.
+Follow the [Validation pattern](/patterns/validation/) and show an error message when there is a validation error. In the error message explain what went wrong and how to fix it.
 
 {{ example({ group: "components", item: "error-message", example: "default", html: true, nunjucks: true, rails: true, open: false, size: "m", loading: "eager" }) }}
 
 ## When to use this component
 
-Show an error message next to the field and in the [error summary](/components/error-summary/) when there is a validation error.
+Show an error message next to the field and in the [Error summary component](/components/error-summary/) when there is a validation error.
 
 Use standard messages for different components.
 
@@ -52,9 +43,9 @@ Instead, take the user to a page that explains the problem (for example, telling
 
 There are separate patterns for:
 
-- [‘there is a problem with the service’ pages](/patterns/problem-with-the-service-pages/)
-- [‘page not found’ pages](/patterns/page-not-found-pages/)
-- [‘service unavailable’ pages](/patterns/service-unavailable-pages/)
+- ['There is a problem with the service' pages](/patterns/problem-with-the-service-pages/)
+- ['Page not found' pages](/patterns/page-not-found-pages/)
+- ['Service unavailable' pages](/patterns/service-unavailable-pages/)
 
 ## How it works
 
@@ -64,13 +55,10 @@ For each error:
 - use a red border to visually connect the message and the question it belongs to
 - if the error relates to a specific field within the question, give it a red border and refer to that field in the error message - for example: "you must enter a year"
 
-<div class="app-wcag-22" id="wcag-clear-answers-error" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>Do not clear any form fields when adding error messages. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-clear-answers-error"}) %}
+
+<p>Do not clear any form fields when showing the Error message component. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry</a>.</p>
+{% endcall %}
 
 Keeping information that caused errors helps users to:
 
@@ -84,7 +72,7 @@ If your error message is written in another language, you can change the prefix 
 
 {{ example({ group: "components", item: "error-message", example: "custom-prefix", html: true, nunjucks: true, open: true, displayExample: false, size: "s" }) }}
 
-Summarise all errors at the top of the page the user is on using an [error summary](/components/error-summary/).
+Summarise all errors at the top of the page the user is on using an [Error summary component](/components/error-summary/).
 
 There are 2 ways to use the error message component. You can use HTML or, if you are using Nunjucks or the GOV.UK Prototype Kit, you can use the Nunjucks macro.
 
@@ -133,7 +121,7 @@ Read the message out loud to see if it sounds like something you would say.
 
 ### Be consistent
 
-Use the same message next to the field and in the [error summary](/components/error-summary/) so they:
+Use the same message next to the field and in the [Error summary component](/components/error-summary/) so they:
 
 - look, sound and mean the same
 - make sense out of context
@@ -173,18 +161,18 @@ Use both instructions and descriptions, but use them consistently. For example, 
 
 Use template messages for common errors on:
 
-- [addresses](/patterns/addresses/#error-messages)
-- [character count](/components/character-count/#error-messages)
-- [checkboxes](/components/checkboxes/#error-messages)
-- [date input](/components/date-input/#error-messages)
-- [email address](/patterns/email-addresses/#error-messages)
-- [file upload](/components/file-upload/#error-messages)
-- [names](/patterns/names/#error-messages)
-- [National Insurance numbers](/patterns/national-insurance-numbers/#error-messages)
-- [radios](/components/radios/#error-messages)
-- [telephone numbers](/patterns/telephone-numbers/#error-messages)
-- [text input](/components/text-input/#error-messages)
-- [textarea](/components/textarea/#error-messages)
+- [Addresses pattern](/patterns/addresses/#error-messages)
+- [Character count component](/components/character-count/#error-messages)
+- [Checkboxes component](/components/checkboxes/#error-messages)
+- [Date input component](/components/date-input/#error-messages)
+- [Email address pattern](/patterns/email-addresses/#error-messages)
+- [File upload component](/components/file-upload/#error-messages)
+- [Names pattern](/patterns/names/#error-messages)
+- [National Insurance numbers pattern](/patterns/national-insurance-numbers/#error-messages)
+- [Radios component](/components/radios/#error-messages)
+- [Phone numbers pattern](/patterns/phone-numbers/#error-messages)
+- [Text input component](/components/text-input/#error-messages)
+- [Textarea component](/components/textarea/#error-messages)
 
 ### Track errors
 

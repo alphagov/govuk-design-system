@@ -8,31 +8,25 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "_wcag-callout.njk" import wcagCallout %}
+{% from "_wcag-note.njk" import wcagNote %}
 
 Use the back link component to help users go back to the previous page in a multi-page transaction.
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affects this component
-
-To use the ‘Back link’ and comply with new success criteria introduced in Web Content Accessibility Guidelines (WCAG) 2.2, make sure that users can successfully:
-
-- [avoid re-entering information they've previously given when they go back to a page](/components/back-link/#wcag-avoid-information-reentry)
-- [interact with back links](/components/back-link/#wcag-interact-back-links)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "component",
+  introAction: "use the",
+  name: "Back link",
+  criteria: [
+    {
+      text: "make sure users do not need to re-enter information they've previously given when they go back to a page",
+      anchor: "wcag-avoid-information-reentry"
+    },
+    {
+      text: "make sure users can interact with the Back link component",
+      anchor: "wcag-interact-back-links"
+    }
+  ]
 }) }}
 
 Although browsers have a back button, some sites break when you use it - so many users avoid it, instead of losing their progress in a service. Also, not all users are aware of the back button.
@@ -41,13 +35,13 @@ Although browsers have a back button, some sites break when you use it - so many
 
 ## When to use this component
 
-Always include the back link component on GOV.UK [question pages](/patterns/question-pages/).
+Always include the Back link component on GOV.UK [Question pages in your service](/patterns/question-pages/).
 
 You can include a back link on other pages within a multi-page transaction, if it makes sense to do so.
 
 ## When not to use this component
 
-Never use the back link component together with [breadcrumbs](/components/breadcrumbs/). If necessary, you should do research with your users to learn which they find more helpful in your service.
+Never use the back link component together with the [Breadcrumbs component](/components/breadcrumbs/). If necessary, you should do research with your users to learn which they find more helpful in your service.
 
 ## How it works
 
@@ -55,22 +49,16 @@ Always place back links at the top of a page, before the `<main>` element. Placi
 
 Make sure the link takes users to the previous page they were on, in the state they last saw it.
 
-<div class="app-wcag-22" id="wcag-avoid-information-reentry" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>If a user decides to go back to a previous page, make sure information they have already entered is pre-populated.</p>
-  <p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-avoid-information-reentry"}) %}
 
-<div class="app-wcag-22" id="wcag-interact-back-links" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>Make sure no other interactive elements are too close to the back link. This is to make sure users can easily interact with the back link. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target Size (minimum)</a>.</p>
-</div>
+<p>If a user decides to go back to a previous page, make sure information they have already entered is pre-populated.</p>
+<p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry</a>.</p>
+{% endcall %}
+
+{% call wcagNote({id: "wcag-interact-back-links"}) %}
+
+<p>Make sure no other interactive elements are too close to the Back link component. This is to make sure users can easily interact with it. This relates to <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target size (minimum)</a>.</p>
+{% endcall %}
 
 Where possible, ensure the back link works even when JavaScript is not available. If this is not possible, you should hide the back link when JavaScript is not available.
 
@@ -86,6 +74,6 @@ For more complex user journeys, consider using different link text, like 'Go bac
 
 Use the `govuk-back-link--inverse` modifier class to show a white link on a dark background – for example, in headers, custom components, and patterns with darker backgrounds.
 
-Make sure all users can see the back link – the background colour [must have a contrast ratio of at least 4.5:1](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html) with white.
+Make sure all users can see the back link – the background colour must have a contrast ratio of at least 4.5:1 with white to meet [WCAG 2.2 success criterion 1.4.3 Contrast (minimum), level AA](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html).
 
 {{ example({group: "components", item: "back-link", example: "inverse", html: true, nunjucks: true, rails: true, open: false}) }}

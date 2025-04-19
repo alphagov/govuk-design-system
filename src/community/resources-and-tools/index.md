@@ -38,16 +38,16 @@ SVG images for creating flow diagrams of GOV.UK services.
 
 ## Create prototypes and wireframes
 
-[Balsamiq wireframes](https://github.com/enoranidi/govuk-design-system-balsamiq) -
+[GOV.UK Balsamiq wireframes](https://github.com/enoranidi/govuk-design-system-balsamiq) -
 Balsamiq wireframes based on the GOV.UK Design System.
 
-[Figma resources](https://www.figma.com/file/NWuFffKvPQhl3aJ9nKU0p3/GOV.UK-Design-System) -
+[GOV.UK Figma resources](https://www.figma.com/file/NWuFffKvPQhl3aJ9nKU0p3/GOV.UK-Design-System) -
 Figma library of styles and components based on the GOV.UK Design System.
 
-[Mural resources](https://github.com/vickytnz/govuk-elements-mural) -
+[GOV.UK Mural resources](https://github.com/vickytnz/govuk-elements-mural) -
 Mural template based on the GOV.UK Design System.
 
-[Sketch Wireframing Kit](https://github.com/dwp/sketch_wireframing_kit) -
+[GOV.UK Sketch Wireframing Kit](https://github.com/dwp/sketch_wireframing_kit) -
 Sketch wireframes based on the GOV.UK Design System.
 
 ## Build front ends
@@ -67,6 +67,9 @@ Additional extensions with Umbraco CMS support, based on the ASP.NET Core integr
 
 Guidance on [building a hapi service using GOV.UK Frontend](https://github.com/DEFRA/hapi-govuk-examples).
 
+[GOV.UK Frontend Express.js](https://github.com/ministryofjustice/moj-express-skeleton) -
+An Express.js application skeleton using GOV.UK Frontend.
+
 ### Python
 
 [GOV.UK Frontend Jinja](https://github.com/LandRegistry/govuk-frontend-jinja) -
@@ -77,6 +80,10 @@ GOV.UK Frontend WTForms Widgets.
 
 [GOV.UK Frontend Flask](https://github.com/LandRegistry/govuk-frontend-flask) - Complete Flask app template that implements the Jinja and WTForms packages to integrate with GOV.UK Frontend.
 
+### Python / Django
+
+[Crispy Forms GDS](https://github.com/wildfish/crispy-forms-gds) - A Django Crispy Forms template pack for creating pages with GOV.UK Frontend components.
+
 ### PHP / Laravel
 
 [GOV.UK Laravel](https://github.com/AnthonyEdmonds/govuk-laravel) -
@@ -84,24 +91,28 @@ A collection of GOV.UK Frontend Laravel Blade components, validation rules, page
 
 ### Ruby on Rails
 
-[GOV.UK Design System Formbuilder](https://github.com/DFE-Digital/govuk_design_system_formbuilder) -
+[GOV.UK Design System Formbuilder](https://github.com/x-govuk/govuk-form-builder) -
 A Rails form builder using GOV.UK Frontend.
 
-[GOV.UK Components](https://github.com/DFE-Digital/govuk-components) -
+[GOV.UK Components](https://github.com/x-govuk/govuk-components) -
 A set of non-form Rails components using GOV.UK Frontend. You can use these together with the Design System Formbuilder.
 
 [GOV.UK Rails Template](https://github.com/DFE-Digital/rails-template) -
 A complete Rails application template using GOV.UK Frontend.
 
+### Vue.js
+
+[GOV.UK Vue](https://govukvue.org) -
+A Vue 3 component library for GOV.UK Frontend
+
 ## Write code
 
-You can download GOV.UK Frontend Nunjucks macro snippets for:
+[GOV.UK Design System snippets for Nova](https://extensions.panic.com/extensions/ca/ca.GOVUKDesignSystemSnippets/).
 
-- [Nova](https://extensions.panic.com/extensions/ca/ca.GOVUKDesignSystemSnippets/)
-- [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=simonwhatley.govuk-design-system-snippets)
+[GOV.UK Design System snippets for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=simonwhatley.govuk-design-system-snippets).
 
 ## Help improve this page
 
-To help make sure that this page is useful, relevant and up to date, you can [propose a change](https://github.com/alphagov/govuk-design-system/edit/main/src/community/resources-and-tools/index.md) – read more about [how to propose changes in GitHub](/community/propose-a-content-change-using-github/).
+To help make sure that this page is useful, relevant and up to date, you can [propose a change to this page](https://github.com/alphagov/govuk-design-system/edit/main/src/community/resources-and-tools/index.md) – read more about [how to propose changes in GitHub](/community/propose-a-content-change-using-github/).
 
 If you want to submit a resource or tool, check that it meets the [contribution criteria for resources](/community/contribution-criteria/#developing-a-community-resource-or-tool) first.

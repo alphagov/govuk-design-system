@@ -8,28 +8,19 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "_wcag-callout.njk" import wcagCallout %}
+{% from "_wcag-note.njk" import wcagNote %}
 
-{% set wcagCallout %}
-
-{{ govukTag({
-  text: "WCAG 2.2",
-  classes: "app-tag"
-}) }}
-
-### New WCAG 2.2 criteria affects this component
-
-To use the ‘Button' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:
-
-- [interact with buttons](/components/button/#wcag-interact-button)
-
-See the full list of [components and patterns affected by WCAG 2.2](/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system).
-{% endset %}
-
-{{ govukInsetText({
-  html: wcagCallout,
-  classes: "app-inset-text"
+{{ wcagCallout({
+  type: "component",
+  introAction: "use the",
+  name: "Button",
+  criteria: [
+    {
+      text: "make sure users can interact with the Button component",
+      anchor: "wcag-interact-button"
+    }
+  ]
 }) }}
 
 {{ example({group: "components", item: "button", example: "default", html: true, nunjucks: true, rails: true, open: false, loading: "eager" }) }}
@@ -42,30 +33,27 @@ Use the button component to help users carry out an action like starting an appl
 
 Write button text in sentence case, describing the action it performs. For example:
 
-- ‘Start now’ at the [start of the service](/patterns/start-using-a-service/)
+- ‘Start now’ at the [start of your service](/patterns/start-using-a-service/)
 - ‘Sign in’ to an account a user has already created
 - ‘Continue’ when the service does not save a user’s information
 - ‘Save and continue’ when the service does save a user’s information
 - ‘Save and come back later’ when a user can save their information and come back later
 - ‘Add another’ to add another item to a list or group
 - ‘Pay’ to make a payment
-- ‘Confirm and send’ on a [check answers](/patterns/check-answers/) page that does not have any legal content a user must agree to
-- ‘Accept and send’ on a [check answers](/patterns/check-answers/) page that has legal content a user must agree to
+- ‘Confirm and send’ on a [Check answers page](/patterns/check-answers/) that does not have any legal content a user must agree to
+- ‘Accept and send’ on a [Check answers page](/patterns/check-answers/) that has legal content a user must agree to
 - ‘Sign out’ when a user is signed in to an account
 
 You may need to include more or different words to better describe the action. For example, ‘Add another address’ and ‘Accept and claim a tax refund’.
 
 Align the primary action button to the left edge of your form.
 
-<div class="app-wcag-22" id="wcag-interact-button" role="note">
-  {{ govukTag({
-    text: "WCAG 2.2",
-    classes: "app-tag"
-  }) }}
-  <p>Do not decrease the height or target area of buttons. This is to make sure users can easily interact with buttons. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target Size (minimum)</a>.</p>
-</div>
+{% call wcagNote({id: "wcag-interact-button"}) %}
 
-There are 2 ways to use the button component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
+<p>Do not decrease the height or target area of the Button component. This is to make sure users can easily interact with it. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target size (minimum)</a>.</p>
+{% endcall %}
+
+There are 2 ways to use the Button component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 
 ### Default buttons
 
@@ -77,7 +65,7 @@ Avoid using multiple default buttons on a single page. Having more than one main
 
 ### Start buttons
 
-Use a start button for the main call to action on your service’s [start page](/patterns/start-using-a-service/).
+Use a start button for the main call to action on [your service’s Start page](/patterns/start-using-a-service/).
 Start buttons do not usually submit form data, so use a link tag instead of a button tag.
 
 {{ example({group: "components", item: "button", example: "start", html: true, nunjucks: true, rails: true, open: false}) }}
@@ -110,7 +98,7 @@ Do not only rely on the red colour of a warning button to communicate the seriou
 
 Use the `govuk-button--inverse` modifier class to show white buttons on dark backgrounds – for example, in headers, custom components, and patterns with darker backgrounds.
 
-Make sure all users can see the button – the white button and background colour [must have a contrast ratio of at least 3:1](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html).
+Make sure all users can see the button – the white button and background colour must have a contrast ratio of at least 4.5:1 to meet [WCAG 2.2 success criterion 1.4.3 Contrast (minimum), level AA](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html).
 
 {{ example({group: "components", item: "button", example: "inverse", html: true, nunjucks: true, rails: true, open: false}) }}
 

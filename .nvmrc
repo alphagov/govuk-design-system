@@ -1,1 +1,5 @@
-lts/iron
+22
+# When updating this version, remember to update:
+# - the 'engines' fields in the `package.json` file
+# - `package-lock.json` by running `npm install`
+# - the `[node]` section of the `.browserslistrc` file

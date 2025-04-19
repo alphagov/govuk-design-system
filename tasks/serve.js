@@ -1,14 +1,31 @@
-const { createServer } = require('http')
-
-const connect = require('connect')
-const serveStatic = require('serve-static')
+const browserSync = require('browser-sync').create()
 
 const { paths, ports } = require('../config')
 
-// Create a simple server for serving static files
-const app = connect().use(serveStatic(paths.public))
-const server = createServer(app)
+browserSync.init(
+  {
+    // Prevent browser mirroring
+    ghostMode: false,
 
-server.listen(ports.preview, () => {
-  console.log(`Server started at http://localhost:${ports.preview}`)
-})
+    // Prevent browser opening
+    open: false,
+
+    // Disable BrowserStack UI
+    ui: false,
+
+    // Configure port
+    port: ports.preview,
+
+    // Serve files from directory
+    server: paths.public
+  },
+  (err, bs) => {
+    if (err) {
+      console.error('Encountered an error starting the local server:', err)
+    } else {
+      console.log(
+        `Server started at http://localhost:${bs.options.get('port')}`
+      )
+    }
+  }
+)

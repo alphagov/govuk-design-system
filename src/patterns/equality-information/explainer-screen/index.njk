@@ -8,13 +8,13 @@ layout: layout-example-form.njk
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
 {% set hintHtml %}
-  <p class="govuk-!-margin-top-0">These questions are optional. [Add a couple of sentences explaining why you’re asking the questions and what you’ll do with the information].</p>
-  <p>Your answers will not affect your application.</p>
+  <p class="govuk-!-margin-top-0">These questions are optional. Your answers will not affect your application.</p>
 {% endset -%}
 
 <h1 class="govuk-heading-l">We have received your application</h1>
 
 <p class="govuk-body">Before you finish using the service, we’d like to ask some equality questions.</p>
+<p class="govuk-body">[Add a couple of sentences explaining why you’re asking the questions and what you’ll do with the information].</p>
 
 {{ govukRadios({
   name: "equalitiesInfo",

@@ -23,7 +23,7 @@ Do not use the details component to hide information that the majority of your u
 
 ## Decide between using details, accordions and tabs
 
-Details, [accordions](/components/accordion/), and [tabs](/components/tabs/) all hide sections of content which a user can choose to reveal.
+The Details component, [Accordion component](/components/accordion/), and [Tabs component](/components/tabs/) all hide sections of content which a user can choose to reveal.
 
 Use the details component instead of tabs or an accordion if you only have 1 section of content.
 

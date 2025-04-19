@@ -4,10 +4,16 @@ updates:
   # Update npm packages
   - package-ecosystem: npm
     directory: /
-    open-pull-requests-limit: 10
+    open-pull-requests-limit: 15
 
     # Group packages into shared PR
     groups:
+      # First in list so Dependabot looks at updating those first
+      design-system:
+        patterns:
+          - 'govuk-frontend'
+          - 'accessible-autocomplete'
+
       babel:
         patterns:
           - '@babel/*'
@@ -25,6 +31,8 @@ updates:
         patterns:
           - '@metalsmith/*'
           - 'jstransformer-*'
+          - 'marked'
+          - 'marked-*'
           - 'metalsmith'
           - 'metalsmith-*'
 
@@ -58,12 +66,22 @@ updates:
           - '@types/jest'
           - '@types/jest-*'
 
+    # Ignore eslint and is plugins for now
+    # the time they all get compatible with each other
+    ignore:
+      - dependency-name: 'eslint-*'
+      - dependency-name: 'eslint'
+      # iframe-resizer has switched to GPL licence in v5
+      # so we need to avoid upgrading to their next major version
+      - dependency-name: 'iframe-resizer'
+        update-types: ['version-update:semver-major']
+
     reviewers:
       - alphagov/design-system-developers
 
     # Schedule run every Monday, local time
     schedule:
-      interval: weekly
+      interval: monthly
       time: '10:30'
       timezone: 'Europe/London'
 
@@ -80,6 +98,6 @@ updates:
 
     # Schedule run every Monday, local time
     schedule:
-      interval: weekly
+      interval: monthly
       time: '10:30'
       timezone: 'Europe/London'

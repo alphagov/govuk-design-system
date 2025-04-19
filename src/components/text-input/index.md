@@ -17,7 +17,7 @@ Use the text input component when you need to let users enter text that’s no l
 
 ## When not to use this component
 
-Do not use the text input component if you need to let users enter longer answers that might span multiple lines. In this case, you should use the [textarea](/components/textarea/) component.
+Do not use the text input component if you need to let users enter longer answers that might span multiple lines. In this case, you should use the [Textarea component](/components/textarea/).
 
 ## How it works
 
@@ -31,11 +31,11 @@ Do not use placeholder text in place of a label, or for hints or examples, as:
 
 - it vanishes when the user starts typing, which can cause problems for users with memory conditions or when reviewing answers
 - not all screen readers read it out
-- its browser default styles often do not meet [minimum contrast requirements](https://www.w3.org/TR/WCAG22/#contrast-minimum)
+- its browser default styles often do not meet [WCAG 2.2 success criterion 1.4.3 Contrast (minimum)](https://www.w3.org/TR/WCAG22/#contrast-minimum)
 
 ### If you're asking one question on the page
 
-If you’re asking just [one question per page](/patterns/question-pages/#start-by-asking-one-question-per-page) as recommended, you can set the contents of the `<label>` as the page heading. This is good practice as it means that users of screen readers will only hear the contents once.
+If you’re asking just [one question per page in your service](/patterns/question-pages/#start-by-asking-one-question-per-page) as recommended, you can set the contents of the `<label>` as the page heading. This is good practice as it means that users of screen readers will only hear the contents once.
 
 Read more about [why and how to set legends as headings](/get-started/labels-legends-headings/).
 
@@ -45,7 +45,7 @@ There are 2 ways to use the text input component. You can use HTML or, if you’
 
 ### If you’re asking more than one question on the page
 
-If you're asking more than one question on the page, do not set the contents of the `<label>` as the page heading. Read more about [asking multiple questions on question pages](/patterns/question-pages/#asking-multiple-questions-on-a-page).
+If you're asking more than one question on the page, do not set the contents of the `<label>` as the page heading. Read more about [asking multiple questions on Question pages](/patterns/question-pages/#asking-multiple-questions-on-a-page).
 
 {{ example({ group: "components", item: "text-input", example: "without-heading", html: true, nunjucks: true, rails: true, open: false, size: "s" }) }}
 
@@ -59,7 +59,7 @@ If you want to make the input smaller, you can either use a fixed width input, o
 
 #### Fixed width inputs
 
-Use fixed width inputs for content that has a specific, known length. Postcode inputs should be postcode-sized, telephone number inputs should be telephone number-sized.
+Use fixed width inputs for content that has a specific, known length. Postcode inputs should be postcode-sized, phone number inputs should be phone number-sized.
 
 The widths are designed for specific character lengths and to be consistent across a range of browsers. They include extra padding to fit icons that some browsers might insert into the input (for example to show or generate a password).
 
@@ -79,11 +79,17 @@ Fluid width inputs will resize with the viewport.
 
 Use hint text for help that’s relevant to the majority of users, like how their information will be used, or where to find it.
 
+Keep hint text to a single short sentence, without any full stops.
+
+Do not use links in hint text. While screen readers will read out the link text when describing the field, they usually do not tell users the text is a link.
+
 {{ example({ group: "components", item: "text-input", example: "input-hint-text", html: true, nunjucks: true, open: false, size: "s" }) }}
 
 #### When not to use hint text
 
-Do not use long paragraphs and lists in hint text. Screen readers read out the entire text when users interact with the form element. This could frustrate users if the text is long.
+Do not use hint text to explain anything that's longer than a short, simple sentence. Screen readers read out the entire text when users interact with the form element. This could frustrate users if the text is long.
+
+If you’re asking a question that needs a detailed explanation, see [asking complex questions without using hint text](/patterns/question-pages/#asking-complex-questions-without-using-hint-text).
 
 #### Avoid links
 
@@ -99,10 +105,10 @@ See how to do this by opening the HTML and Nunjucks tabs in this example:
 
 {{ example({ group: "components", item: "text-input", example: "number-input", html: true, nunjucks: true, open: false, size: "m" }) }}
 
-There is specific guidance on how to ask for:
+There is specific guidance on:
 
-- [dates](/patterns/dates/)
-- [telephone numbers](/patterns/telephone-numbers/)
+- [how to ask for dates](/patterns/dates/)
+- [how to ask for phone numbers](/patterns/phone-numbers/)
 
 #### Asking for decimal numbers
 
@@ -124,11 +130,11 @@ You do not need to do this for memorable information, such as phone numbers and 
 
 {{ example({ group: "components", item: "text-input", example: "code-sequence", html: true, nunjucks: true, open: false, size: "m" }) }}
 
-There is specific guidance on how to:
+There is specific guidance on:
 
-- [ask for bank account details](/patterns/bank-details/)
-- [ask for National Insurance numbers](/patterns/national-insurance-numbers/)
-- [confirm a phone number](/patterns/confirm-a-phone-number/)
+- [how to ask for bank account details](/patterns/bank-details/)
+- [how to ask for National Insurance numbers](/patterns/national-insurance-numbers/)
+- [how to confirm a phone number](/patterns/confirm-a-phone-number/)
 
 ### Prefixes and suffixes
 
@@ -160,7 +166,7 @@ For example, to enable autofill on a postcode field, set the `autocomplete` attr
 
 {{ example({ group: "components", item: "text-input", example: "input-autocomplete-attribute", displayExample: false, html: true, nunjucks: true, open: true, size: "s" }) }}
 
-If you are working in production and there is a relevant [input purpose](https://www.w3.org/TR/WCAG21/#input-purposes), you'll need to use the `autocomplete` attribute to meet [WCAG 2.1 Level AA](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html).
+If you are working in production and there is a relevant [input purpose](https://www.w3.org/TR/WCAG22/#input-purposes), you'll need to use the `autocomplete` attribute to meet [WCAG 2.2 success criterion 1.3.5 Identify input purpose, level AA](https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose.html).
 
 You will not normally need to use the `autocomplete` attribute in prototypes, as users will not generally be using their own devices.
 
@@ -176,7 +182,7 @@ A restrictive maximum length can stop users from formatting information in their
 
 Some assistive technologies do not tell users if an input has a `maxlength` set or if the user has passed the limit. Voice control software may insert additional spaces into the input.
 
-If you must enforce a maximum length for technical reasons, inform the user of the limit in the hint, but allow them to provide more information. Only return an error if the value is longer than allowed after normalisation. For longer values, consider using the [character count component](/components/character-count/) instead.
+If you must enforce a maximum length for technical reasons, inform the user of the limit in the hint, but allow them to provide more information. Only return an error if the value is longer than allowed after normalisation. For longer values, consider using the [Character count component](/components/character-count/) instead.
 
 ### How and when to spellcheck a user’s input
 
@@ -200,7 +206,7 @@ Error messages should be styled like this:
 
 {{ example({ group: "components", item: "text-input", example: "input-prefix-suffix-error", html: true, nunjucks: true, closed: true, size: "s" }) }}
 
-Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
+Make sure errors follow the guidance in the [Error message component](/components/error-message/) and have specific error messages for specific error states.
 
 #### If the input is empty
 

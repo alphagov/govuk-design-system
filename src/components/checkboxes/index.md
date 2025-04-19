@@ -22,7 +22,7 @@ Use the checkboxes component when you need to help users:
 
 ## When not to use this component
 
-Do not use the checkboxes component if users can only choose one option from a selection. In this case, use the [radios component](/components/radios/).
+Do not use the checkboxes component if users can only choose one option from a selection. In this case, use the [Radios component](/components/radios/).
 
 ## How it works
 
@@ -55,7 +55,7 @@ There are 2 ways to use the checkboxes component. You can use HTML or, if you’
 
 ### If you’re asking more than one question on the page
 
-If you're asking more than one question on the page, do not set the contents of the `<legend>` as the page heading. Read more about [asking multiple questions on question pages](/patterns/question-pages/#asking-multiple-questions-on-a-page).
+If you're asking more than one question on the page, do not set the contents of the `<legend>` as the page heading. Read more about [asking multiple questions on Question pages](/patterns/question-pages/#asking-multiple-questions-on-a-page).
 
 {{ example({ group: "components", item: "checkboxes", example: "without-heading", html: true, nunjucks: true, rails: true, open: false, size: "m" }) }}
 
@@ -63,13 +63,17 @@ If you're asking more than one question on the page, do not set the contents of 
 
 You can add hints to checkbox items to provide additional information about the options.
 
+Keep each hint to a single short sentence, without any full stops. Screen readers will read out the entire text when users interact with an item. This could frustrate users if the text is long.
+
+Do not use links in hint text. While screen readers will read out the link text when describing the item, they usually do not tell users the text is a link.
+
 {{ example({ group: "components", item: "checkboxes", example: "hint", html: true, nunjucks: true, rails: true, open: false, size: "s" }) }}
 
 ### Add an option for ‘none’
 
 When 'none' would be a valid answer, give users the option to check a box to say none of the other options apply to them – without this option, users would have to leave all of the boxes unchecked. Giving users this option also makes sure they do not skip the question by accident.
 
-Remember to [start by asking one question per page](/patterns/question-pages/#start-by-asking-one-question-per-page). You might be able to remove the need for a 'none' option by asking the user a better question or filtering them out with a ‘filter question’ beforehand. The GOV.UK Service Manual has guidance on [designing good questions](https://www.gov.uk/service-manual/design/designing-good-questions).
+Remember to [start by asking one question per page in your service](/patterns/question-pages/#start-by-asking-one-question-per-page). You might be able to remove the need for a 'none' option by asking the user a better question or filtering them out with a ‘filter question’ beforehand. The GOV.UK Service Manual has guidance on [designing good questions](https://www.gov.uk/service-manual/design/designing-good-questions).
 
 Show the ‘none’ option last. Separate it from the other options using a divider. The text is usually the word ‘or’.
 
@@ -99,7 +103,7 @@ You should only conditionally reveal questions - do not show or hide anything th
 
 #### Known issues
 
-Users are not always notified when a conditionally revealed question is shown or hidden. This fails [WCAG 2.1 success criterion 4.1.2 Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html).
+Users are not always notified when a conditionally revealed question is shown or hidden. This fails [WCAG 2.2 success criterion 4.1.2 Name, Role, Value](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html).
 
 However, we found that screen reader users did not have difficulty answering a conditionally revealed question - as long as it’s kept simple. It confused our test users when we conditionally revealed complicated questions to them.
 
@@ -123,7 +127,7 @@ Error messages should be styled like this:
 
 {{ example({ group: "components", item: "checkboxes", example: "error", html: true, nunjucks: true, rails: true, open: false, size: "s" }) }}
 
-Make sure errors follow the guidance in [error message](/components/error-message/) and have specific error messages for specific error states.
+Make sure errors follow the guidance in the [Error message component](/components/error-message/) and have specific error messages for specific error states.
 
 #### If nothing is selected and the question has options in it
 
