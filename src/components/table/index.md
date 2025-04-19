@@ -13,7 +13,7 @@ layout: layout-pane.njk
 
 Use the table component to make information easier to compare and scan for users.
 
-{{ example({ group: "components", item: "table", example: "default", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}
+{{ example({ group: "components", item: "table", example: "default", html: true, nunjucks: true, rails: true, open: false, size: "m", loading: "eager" }) }}
 
 ## When to use this component
 

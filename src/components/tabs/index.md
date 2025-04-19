@@ -11,7 +11,7 @@ layout: layout-pane.njk
 
 The tabs component lets users navigate between related sections of content, displaying one section at a time.
 
-{{ example({ group: "components", item: "tabs", example: "default", html: true, nunjucks: true, open: false, size: "xl", loading: "eager" }) }}
+{{ example({ group: "components", item: "tabs", example: "default", html: true, nunjucks: true, rails: true, open: false, size: "xl", loading: "eager" }) }}
 
 ## When to use this component
 
@@ -56,7 +56,7 @@ If you decide to use one of these components, consider if:
 
 There are 2 ways to use the tabs component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 
-{{ example({ group: "components", item: "tabs", example: "default", html: true, nunjucks: true, open: false, size: "xl", titleSuffix: "second" }) }}
+{{ example({ group: "components", item: "tabs", example: "default", html: true, nunjucks: true, rails: true, open: false, size: "xl", titleSuffix: "second" }) }}
 
 The tabs component uses JavaScript. When JavaScript is not available, users will see the tabbed content on a single page, in order from first to last, with a table of contents that links to each of the sections.
 

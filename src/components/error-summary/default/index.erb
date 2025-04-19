@@ -1,0 +1,14 @@
+<%
+  # The error summary content is built using activerecord
+  # forms validation API. This means that your validations are
+  # declared on the model. To include the error summary, use
+  # the govuk_error_summary helper.
+%>
+
+<%= form_with model: @user do |f| %>
+
+  <%= f.govuk_error_summary %>
+
+  <% # Form fields go here %>
+
+<% end %>

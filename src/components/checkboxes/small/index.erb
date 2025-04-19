@@ -1,0 +1,23 @@
+<%
+  # organisations would normally be defined in code elsewhere,
+  # as either an activerecord collection or an array of structs:
+
+  organisations = [
+    OpenStruct.new(id: "hmrc", name: "HM Revenue and Customs (HMRC)"),
+    OpenStruct.new(id: "employment-tribunal", name: "Employment Tribunal"),
+    OpenStruct.new(id: "MOD", name: "Ministry of Defence"),
+    OpenStruct.new(id: "DfT", name: "Department for Transport")
+  ]
+%>
+
+<%= f.govuk_check_boxes_fieldset :organisation_id,
+  organisations,
+  :id,
+  :name,
+  small: true,
+  legend: {
+    text: "Organisation",
+    tag: "h1",
+    size: "m"
+  }
+%>

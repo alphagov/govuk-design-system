@@ -29,7 +29,7 @@ Service navigation helps users understand that they’re using your service and 
   ]
 }) }}
 
-{{ example({ group: "components", item: "service-navigation", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
+{{ example({ group: "components", item: "service-navigation", example: "default", html: true, nunjucks: true, rails: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 
@@ -51,7 +51,7 @@ To use the GOV.UK header and Service navigation and make them fit together visua
 
 Apply a class `govuk-header--full-width-border` to the GOV.UK header.
 
-{{ example({ group: "components", item: "service-navigation", example: "with-govuk-header", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "components", item: "service-navigation", example: "with-govuk-header", html: true, nunjucks: true, rails: true, open: false }) }}
 
 ### Showing your service name only
 
