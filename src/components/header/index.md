@@ -64,7 +64,7 @@ For guidance on how to plan your header and navigation, see the [Help users navi
 ### Update to refresh the GOV.UK brand
 
 <strong class="govuk-tag brand-tag-green">
-  Brand
+  Brand<span class="govuk-visually-hidden"> note</span>
 </strong>
 
 If you use the Nunjucks macro and page template across your service, you can enable the brand refresh by setting the page template’s `rebrand` option to `true`. This will automatically make all needed changes related to the brand refresh.

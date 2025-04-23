@@ -52,7 +52,7 @@ For guidance on how to plan your header and navigation, see the [Help users navi
 ### Update to refresh the GOV.UK brand
 
 <strong class="govuk-tag brand-tag-green">
-  Brand
+  Brand<span class="govuk-visually-hidden"> note</span>
 </strong>
 
 If you use the Nunjucks macro and page template across your service, you can enable the brand refresh by setting the page template’s `rebrand` option to `true`. This will automatically make all needed changes related to the brand refresh.
@@ -68,7 +68,7 @@ Apply a class `govuk-header--full-width-border` to the GOV.UK header.
 {{ example({ group: "components", item: "service-navigation", example: "with-govuk-header", html: true, nunjucks: true, open: false }) }}
 
 <strong class="govuk-tag brand-tag-green">
-  Brand
+  Brand<span class="govuk-visually-hidden"> note</span>
 </strong>
 
 You do not need to change the bottom border of the updated GOV.UK header component with the refreshed GOV.UK branding.

@@ -4,7 +4,7 @@
 {% macro callout(params) -%}
   {% set calloutContent -%}
     {{ govukTag({
-      text: params.tagText,
+      html: params.tagText + '<span class="govuk-visually-hidden"> note</span>',
       classes: "app-callout__tag"
     }) }}
     {% if params.heading -%}

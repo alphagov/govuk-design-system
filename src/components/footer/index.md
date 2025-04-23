@@ -49,7 +49,7 @@ Make it clear whether content is available for re-use - and if it is, under what
 ### Update to refresh the GOV.UK brand
 
 <strong class="govuk-tag brand-tag-green">
-  Brand
+  Brand<span class="govuk-visually-hidden"> note</span>
 </strong>
 
 If you use the Nunjucks macro and page template across your service, you can enable the brand refresh by setting the page template’s `rebrand` option to `true`. This will automatically make all needed changes related to the brand refresh.
