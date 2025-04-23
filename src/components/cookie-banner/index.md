@@ -8,28 +8,37 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "_wcag-callout.njk" import wcagCallout %}
-{% from "_wcag-note.njk" import wcagNote %}
+{% from "_callout.njk" import callout %}
 
 Allow users to accept or reject cookies which are not essential to making your service work.
 
-{{ wcagCallout({
-  type: "component",
-  introAction: "use the",
-  name: "Cookie banner",
-  criteria: [
-    {
-      text: "make sure that items in focus can be seen all times",
-      anchor: "wcag-see-focus"
-    },
-    {
-      text: "make sure users can interact with buttons and links in the Cookie banner component",
-      anchor: "wcag-interact-cookie-banner"
-    }
-  ]
-}) }}
-
 {{ example({ group: "components", item: "cookie-banner", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
+
+{% call callout({ tagText: "Brand", colour: "green" }) %}
+
+<p class="govuk-body"><a href="#">See an example of the Cookie banner showing the refreshed GOV.UK branding</a>.</p>
+
+{% endcall %}
+
+If you use the page template, you'll also get the Cookie banner without having to add it, as it's included by default. However, if you want to customise the default Cookie banner, read the [page template guidance about customising components](/styles/page-template/#changing-template-content).
+
+{% call callout({ tagText: "Brand", colour: "green", isInset: "true" }) %}
+
+<h2 class="app-callout__heading">Brand changes to the {{title}} component</h2>
+<p class="govuk-body">From 25 June 2025, the {{title}} component will change to support a wider refresh of the GOV.UK brand. </p>
+
+<p class="govuk-body">The Cookie banner component’s background colour will change to light blue.</p>
+
+<p class="govuk-body">To help service teams in government get ready to use the new branding, we’ve provided several options to update their services.</p>
+{% endcall %}
+
+### Update to refresh the GOV.UK brand
+
+If you use the Nunjucks macro and page template across your service, you can enable the brand refresh by setting the page template’s `rebrand` option to `true`. This will automatically make all needed changes related to the brand refresh.
+
+You can enable the brand refresh within the GOV.UK header component by setting its `rebrand` option to true. You’ll also need to add some code to your `<html>` and `<head>` elements.
+
+[See the release notes for more details](https://github.com/alphagov/govuk-frontend/releases) and and other ways to update.
 
 ## When to use this component
 
@@ -81,15 +90,7 @@ Make sure the cookie banner does not:
 
 Position the cookie banner after the opening `<body>` tag and before the ’skip to main content‘ link. If you're using the Nunjucks page template, use the `bodyStart` block.
 
-{% call wcagNote({id: "wcag-see-focus"}) %}
-
-<p>Do not make the Cookie banner component ‘sticky’ to the top of the page by using `position: fixed` or any other method. This is to make sure it does not cover or obscure any content which has a focus applied. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html">WCAG 2.2 success criterion 2.4.11 Focus not obscured (minimum)</a>.</p>
-{% endcall %}
-
-{% call wcagNote({id: "wcag-interact-cookie-banner"}) %}
-
-<p>Do not change the padding or margins of buttons and links within the Cookie banner component. This is to make sure there’s adequate space for the user to interact with the buttons and links. This relates to <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target size (minimum)</a>.</p>
-{% endcall %}
+Do not make the Cookie banner component ‘sticky’ to the top of the page by using `position: fixed` or any other method. This is to make sure it does not cover or obscure any content which has a focus applied. This is to comply with [WCAG 2.2 success criterion 2.4.11 Focus not obscured (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html).
 
 ### Option 1: If you’re only using essential cookies
 
