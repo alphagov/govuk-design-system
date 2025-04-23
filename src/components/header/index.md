@@ -24,7 +24,7 @@ If you use the page template, you'll also get the GOV.UK header without having t
 {% call brandCallout({ text: "Brand", classes: "brand-tag-green" }) %}
 
 <h2>Brand changes to the {{title}} component</h2>
-<p class="govuk-body">From June 2025, the {{title}} component will change to support a wider refresh of the GOV.UK brand. </p>
+<p class="govuk-body">From 25 June 2025, the {{title}} component will change to support a wider refresh of the GOV.UK brand. </p>
 
 <p class="govuk-body">The updated {{title}} component:</p>
 
@@ -34,7 +34,7 @@ If you use the page template, you'll also get the GOV.UK header without having t
 <li>adds 60px in height</li>
 </ul>
 
-<p class="govuk-body">To help service teams in government get ready to use the new branding by June 2025, <a href="#update-to-refresh-the-govuk-brand">we’ve provided several options to update their services</a>.</p>
+<p class="govuk-body">To help service teams in government get ready to use the new branding, <a href="#update-to-refresh-the-govuk-brand">we’ve provided several options to update their services</a>.</p>
 {% endcall %}
 
 ## When to use this component

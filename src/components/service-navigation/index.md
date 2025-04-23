@@ -15,14 +15,14 @@ Service navigation helps users understand that they’re using your service and 
 
 {% call brandCallout({ text: "Brand", classes: "brand-tag-green" }) %}
 
-<h2>Brand changes to the {{title}} component</h2><p class="govuk-body">From June 2025, the {{title}} component will change to support a wider refresh of the GOV.UK brand.</p>
+<h2>Brand changes to the {{title}} component</h2><p class="govuk-body">From 25 June 2025, the {{title}} component will change to support a wider refresh of the GOV.UK brand.</p>
 
 <p class="govuk-body">The updated {{title}} component:</p>
 <ul class="govuk-list">
 <li>uses light blue as the background colour, instead of grey</li>
-<li>reduces overall padding by [x]px</li>
+<li>slightly reduces overall padding</li>
 </ul>
-<p class="govuk-body">To help service teams in government get ready to use the new branding by June 2025, <a href="#update-to-refresh-the-govuk-brand">we’ve provided several options to update their services</a>.</p>
+<p class="govuk-body">To help service teams in government get ready to use the new branding, <a href="#update-to-refresh-the-govuk-brand">we’ve provided several options to update their services</a>.</p>
 {% endcall %}
 
 {{ example({ group: "components", item: "service-navigation", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
@@ -70,7 +70,7 @@ Apply a class `govuk-header--full-width-border` to the GOV.UK header.
   Brand
 </strong>
 
-You do not need to change the bottom border of the updated GOV.UK header component using the refreshed branding.
+You do not need to change the bottom border of the updated GOV.UK header component with the refreshed GOV.UK branding.
 
 ### Showing your service name only
 

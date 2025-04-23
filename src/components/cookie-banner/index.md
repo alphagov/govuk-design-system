@@ -24,11 +24,20 @@ If you use the page template, you'll also get the Cookie banner without having t
 {% call brandCallout({ text: "Brand", classes: "brand-tag-green" }) %}
 
 <h2>Brand changes to the {{title}} component</h2>
-<p class="govuk-body">From June 2025, the {{title}} component will change to support a wider refresh of the GOV.UK brand. </p>
+<p class="govuk-body">From 25 June 2025, the {{title}} component will change to support a wider refresh of the GOV.UK brand. </p>
 
 <p class="govuk-body">The Cookie banner component’s background colour will change to light blue.</p>
 
+<p class="govuk-body">To help service teams in government get ready to use the new branding, we’ve provided several options to update their services.</p>
 {% endcall %}
+
+### Update to refresh the GOV.UK brand
+
+If you use the Nunjucks macro and page template across your service, you can enable the brand refresh by setting the page template’s `rebrand` option to `true`. This will automatically make all needed changes related to the brand refresh.
+
+You can enable the brand refresh within the GOV.UK header component by setting its `rebrand` option to true. You’ll also need to add some code to your `<html>` and `<head>` elements.
+
+[See the release notes for more details](https://github.com/alphagov/govuk-frontend/releases) and and other ways to update.
 
 ## When to use this component
 
