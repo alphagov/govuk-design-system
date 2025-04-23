@@ -8,26 +8,32 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "_wcag-callout.njk" import wcagCallout %}
-{% from "_wcag-note.njk" import wcagNote %}
+{% from "_brand-callout.njk" import brandCallout %}
+{%- from "govuk/components/tag/macro.njk" import govukTag -%}
 
 The GOV.UK footer provides copyright, licensing and other information about your service.
 
-{{ wcagCallout({
-  type: "component",
-  introAction: "use the",
-  name: "GOV.UK footer",
-  criteria: [
-    {
-      text: "make sure help links can be found in a consistent place on each page",
-      anchor: "wcag-consistent-links"
-    }
-  ]
-}) }}
-
 {{ example({ group: "components", item: "footer", example: "default", id: "default-1", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}
 
+<strong class="govuk-tag brand-tag-green">
+  Brand
+</strong>
+<p class="govuk-body"><a href="#">See an example of the GOV.UK footer showing the refreshed GOV.UK branding</a>.</p>
+
 If you use the page template, you'll also get the footer without having to add it, as it's included by default. However, if you want to customise the default footer, read the [page template guidance about customising components](/styles/page-template/#changing-template-content).
+
+{% call brandCallout({ text: "Brand", classes: "brand-tag-green" }) %}
+
+<h2>Brand changes to the {{title}} component</h2><p class="govuk-body">From 25 June 2025, the {{title}} component will change to support a wider refresh of the GOV.UK brand.</p>
+
+<p class="govuk-body">The updated {{title}} component:</p>
+<ul class="govuk-list">
+<li>uses a light blue as the background colour, instead of grey</li>
+<li>adds a thick blue top border</li>
+<li>adds a small crown logo, in addition to the existing coat of arms</li>
+</ul>
+<p class="govuk-body">To help service teams in government get ready to use the new branding, <a href="#update-to-refresh-the-govuk-brand">we’ve provided several options to update their services</a>.</p>
+{% endcall %}
 
 ## When to use this component
 
@@ -38,6 +44,18 @@ Use the footer at the bottom of every page of your service.
 Add a copyright notice to the footer to clarify who owns the copyright. For GOV.UK services, add the coat of arms to keep things consistent with the rest of GOV.UK.
 
 Make it clear whether content is available for re-use - and if it is, under what sort of licence. Use an [Open Government Licence](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/) unless you have permission from the National Archives to use a [different type of licence](https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/open-government-licence/other-licences/).
+
+### Update to refresh the GOV.UK brand
+
+<strong class="govuk-tag brand-tag-green">
+  Brand
+</strong>
+
+If you use the Nunjucks macro and page template across your service, you can enable the brand refresh by setting the page template’s `rebrand` option to `true`. This will automatically make all needed changes related to the brand refresh.
+
+You can enable the brand refresh within the GOV.UK footer component by setting its `rebrand` option to true. You’ll also need to add some code to your `<html>` and `<head>` elements.
+
+[See the release notes](https://github.com/alphagov/govuk-frontend/releases) for more details and other ways to update.
 
 ### Footer without links
 
@@ -60,10 +78,9 @@ You can add links to:
 
 Use ‘Privacy’, ‘Accessibility’, ‘Cookies’ and ‘Terms and conditions’ for the link text.
 
-{% call wcagNote({id: "wcag-consistent-links"}) %}
+If you include links to ‘help’ pages within the GOV.UK footer component, make sure to place those links consistently within the footer content.
 
-<p>If you include links to ‘help’ pages within the GOV.UK footer component, make sure to place those links consistently within the footer content. Also make sure that ‘help’ links always function in a similar way across each page. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">WCAG 2.2 success criterion 3.2.6 Consistent help</a>.</p>
-{% endcall %}
+Also make sure that ‘help’ links always function in a similar way across each page. This is to comply with [WCAG 2.2 success criterion 3.2.6 Consistent help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html).
 
 ## Adding secondary navigation
 

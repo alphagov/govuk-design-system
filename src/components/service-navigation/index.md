@@ -8,28 +8,31 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "_wcag-callout.njk" import wcagCallout %}
-{% from "_wcag-note.njk" import wcagNote %}
+{% from "_brand-callout.njk" import brandCallout %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 
 Service navigation helps users understand that they’re using your service and lets them navigate around your service.
 
-{{ wcagCallout({
-  type: "component",
-  introAction: "use",
-  name: "Service navigation",
-  criteria: [
-    {
-      text: "make sure all page content can be seen when the user interacts with a dropdown menu",
-      anchor: "wcag-do-not-cover-content"
-    },
-    {
-      text: "make sure help links can be found in a consistent place on each page",
-      anchor: "wcag-consistent-help-links"
-    }
-  ]
-}) }}
+{% call brandCallout({ text: "Brand", classes: "brand-tag-green" }) %}
+
+<h2>Brand changes to the {{title}} component</h2><p class="govuk-body">From 25 June 2025, the {{title}} component will change to support a wider refresh of the GOV.UK brand.</p>
+
+<p class="govuk-body">The updated {{title}} component:</p>
+<ul class="govuk-list">
+<li>uses light blue as the background colour, instead of grey</li>
+<li>slightly reduces overall padding</li>
+</ul>
+<p class="govuk-body">To help service teams in government get ready to use the new branding, <a href="#update-to-refresh-the-govuk-brand">we’ve provided several options to update their services</a>.</p>
+{% endcall %}
 
 {{ example({ group: "components", item: "service-navigation", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
+
+<strong class="govuk-tag brand-tag-green">
+  Brand
+</strong>
+<p class="govuk-body"><a href="#">See an example of the Service navigation showing the refreshed GOV.UK branding</a>.</p>
+
+If you use the page template, you'll also get the Service navigation without having to add it, as it's included by default. However, if you want to customise the default Service navigation, read the [page template guidance about customising components](/styles/page-template/#changing-template-content).
 
 ## When to use this component
 
@@ -45,6 +48,16 @@ This also assures users that they’re in the right place to use your service an
 
 For guidance on how to plan your header and navigation, see the [Help users navigate a service pattern](/patterns/navigate-a-service/).
 
+### Update to refresh the GOV.UK brand
+
+<strong class="govuk-tag brand-tag-green">
+  Brand
+</strong>
+
+If you use the Nunjucks macro and page template across your service, you can enable the brand refresh by setting the page template’s `rebrand` option to `true`. This will automatically make all needed changes related to the brand refresh.
+
+You can enable the brand refresh within the [component] by setting its `rebrand` option to true. You’ll also need to add some code to your `<html>` and `<head>` elements.
+
 ### Change the blue colour bar under the GOV.UK header to full width
 
 To use the GOV.UK header and Service navigation and make them fit together visually, you’ll need to change the bottom blue border of the GOV.UK header to full width.
@@ -52,6 +65,12 @@ To use the GOV.UK header and Service navigation and make them fit together visua
 Apply a class `govuk-header--full-width-border` to the GOV.UK header.
 
 {{ example({ group: "components", item: "service-navigation", example: "with-govuk-header", html: true, nunjucks: true, open: false }) }}
+
+<strong class="govuk-tag brand-tag-green">
+  Brand
+</strong>
+
+You do not need to change the bottom border of the updated GOV.UK header component with the refreshed GOV.UK branding.
 
 ### Showing your service name only
 
@@ -67,19 +86,9 @@ Show navigation links to let users navigate to different parts of your service a
 
 See when and how to show navigation links in the [Help users navigate a service pattern](/patterns/navigate-a-service/).
 
-{% call wcagNote({id: "wcag-do-not-cover-content"}) %}
+You can add a link to a ‘help’ page in your Service navigation component. If you do, the link must be positioned consistently within the header, and must always link to the same place.
 
-<p>Do not make header elements, like dropdown menus, ‘sticky’ to the top of the page by using `position: fixed` or any other method. In other words, avoid any implementations that cause menus to sit on top of page content.</p>
-<p>This is to make sure elements do not hide or obscure any content which has a focus applied and comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html">WCAG 2.2 success criterion 2.4.11 Focus not obscured (minimum)</a>.</p>
-{% endcall %}
-
-In November 2021, [the GOV.UK homepage introduced a menu bar](https://insidegovuk.blog.gov.uk/2021/11/11/launching-gov-uks-new-menu-bar/) that avoids obscuring content by shifting the page down.
-
-{% call wcagNote({id: "wcag-consistent-help-links"}) %}
-
-<p>You can add a link to a ‘help’ page in your Service header component. If you do, the link must be positioned consistently within the header, and must always link to the same place.</p>
-<p>For example, a header link to 'Get help with this service' must go to the same place as similar header links elsewhere in your service. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">WCAG 2.2 success criterion 3.2.6 Consistent help</a>.</p>
-{% endcall %}
+For example, a link in the Service navigation component to 'Get help with this service' must go to the same place as similar links in the Service navigation component elsewhere in your service. This is to comply with [WCAG 2.2 success criterion 3.2.6 Consistent help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html).
 
 ## Use ‘slots’ to add custom elements
 
@@ -100,6 +109,12 @@ Depending on what you add in the slots, you might need to rename the `aria-label
 There’s a risk that slot contents may look or work differently in a future release of GOV.UK Frontend.
 
 You’ll need to ensure that slot content still works as intended after each update.
+
+## Accessibility
+
+You can add a link to a ‘help’ page in your Service header component. If you do, the link must be positioned consistently within the header, and must always link to the same place.
+
+For example, a header link to 'Get help with this service' must go to the same place as similar header links elsewhere in your service. This is to comply with [WCAG 2.2 success criterion 3.2.6 Consistent help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html).
 
 ## Research on this component
 
