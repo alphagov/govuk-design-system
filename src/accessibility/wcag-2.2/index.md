@@ -37,7 +37,7 @@ We've made changes to these components and patterns to comply with WCAG 2.2 leve
 
 See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/) on the W3C website.
 
-[Our Images page](/styles/images/) also includes guidance to help ensure icons and images in your service meet Target size (minimum).
+In June 2025, the Design System started to retire the WCAG 2.2 labels in our components and patterns, bringing the WCAG 2.2-specific messages into our overall guidance where it's useful.
 
 {{ govukTable({
   caption: "Components",
@@ -55,34 +55,10 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
   rows: [
     [
       {
-        html: '<a href="/components/back-link/">Back link component</a>'
-      },
-      {
-        html: 'Redundant entry<br>Target size (minimum)'
-      }
-    ],
-    [
-      {
-        html: '<a href="/components/breadcrumbs/">Breadcrumbs component</a>'
-      },
-      {
-        html: 'Target size (minimum)'
-      }
-    ],
-    [
-      {
         html: '<a href="/components/button/">Button component</a>'
       },
       {
         html: 'Target size (minimum)'
-      }
-    ],
-    [
-      {
-        html: '<a href="/components/cookie-banner/">Cookie banner component</a>'
-      },
-      {
-        html: 'Focus not obscured (minimum)<br>Target size (minimum)'
       }
     ],
     [
@@ -103,22 +79,6 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
     ],
     [
       {
-        html: '<a href="/components/footer/">GOV.UK footer component</a>'
-      },
-      {
-        html: 'Consistent help'
-      }
-    ],
-    [
-      {
-        html: '<a href="/components/header/">GOV.UK header component</a>'
-      },
-      {
-        html: 'Focus not obscured (Minimum)<br>Consistent help'
-      }
-    ],
-    [
-      {
         html: '<a href="/components/phase-banner/">Phase banner component</a>'
       },
       {
@@ -131,14 +91,6 @@ See an [explanation of every success criteria in WCAG 2.2](https://www.w3.org/WA
       },
       {
         html: 'Dragging movements'
-      }
-    ],
-    [
-      {
-        html: '<a href="/components/service-navigation/">Service navigation component</a>'
-      },
-      {
-        html: 'Focus not obscured (Minimum)<br>Consistent help'
       }
     ],
     [
