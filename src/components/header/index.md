@@ -23,18 +23,20 @@ If you use the page template, you'll also get the GOV.UK header without having t
 
 {% call callout({ tagText: "Brand", colour: "green", isInset: "true" }) %}
 
-<h2 class="app-callout__heading">Brand changes to the {{title}} component</h2>
+<h2 class="app-callout__heading">Brand refresh of the {{title}} component</h2>
 <p class="govuk-body">From 25 June 2025, the {{title}} component will change to support a wider refresh of the GOV.UK brand. </p>
 
 <p class="govuk-body">The updated {{title}} component:</p>
 
 <ul class="govuk-list">
 <li>uses blue as the background colour, instead of black</li>
-<li>uses a new logo and wordmark lockup</li>
+<li>uses a refreshed GOV.UK logo and wordmark lockup</li>
 <li>adds 60px in height</li>
 </ul>
 
-<p class="govuk-body">To help service teams in government get ready to use the new branding, <a href="#update-to-refresh-the-govuk-brand">we’ve provided several options to update their services</a>.</p>
+<p class="govuk-body">To help service teams in government get ready, we’ve released GOV.UK Frontend v5.10.0.</p>
+          
+<p class="govuk-body">Read the <a href="https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.0" class="govuk-link">full release notes</a> to see more details and how to update.</p>
 {% endcall %}
 
 ## When to use this component
@@ -60,18 +62,6 @@ Together, the GOV.UK header and [Service navigation component](/components/servi
 This also assures users that they’re in the right place to use your service and to understand that GOV.UK functions as one website.
 
 For guidance on how to plan your header and navigation, see the [Help users navigate a service pattern](/patterns/navigate-a-service).
-
-### Update to refresh the GOV.UK brand
-
-<strong class="govuk-tag brand-tag-green">
-  Brand<span class="govuk-visually-hidden"> note</span>
-</strong>
-
-If you use the Nunjucks macro and page template across your service, you can enable the brand refresh by setting the page template’s `rebrand` option to `true`. This will automatically make all needed changes related to the brand refresh.
-
-You can enable the brand refresh within the GOV.UK header component by setting its `rebrand` option to true. You’ll also need to add some code to your `<html>` and `<head>` elements.
-
-[See the release notes for more details](https://github.com/alphagov/govuk-frontend/releases) and and other ways to update.
 
 ### Default GOV.UK header
 

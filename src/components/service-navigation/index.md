@@ -15,14 +15,15 @@ Service navigation helps users understand that they’re using your service and 
 
 {% call callout({ tagText: "Brand", colour: "green", isInset: "true" }) %}
 
-<h2 class="app-callout__heading">Brand changes to the {{title}} component</h2><p class="govuk-body">From 25 June 2025, the {{title}} component will change to support a wider refresh of the GOV.UK brand.</p>
+<h2 class="app-callout__heading">Brand refresh of the {{title}} component</h2><p class="govuk-body">From 25 June 2025, the {{title}} component will change to support a wider refresh of the GOV.UK brand.</p>
 
 <p class="govuk-body">The updated {{title}} component:</p>
 <ul class="govuk-list">
 <li>uses light blue as the background colour, instead of grey</li>
 <li>slightly reduces overall padding</li>
 </ul>
-<p class="govuk-body">To help service teams in government get ready to use the new branding, <a href="#update-to-refresh-the-govuk-brand">we’ve provided several options to update their services</a>.</p>
+<p class="govuk-body">To help service teams in government get ready, we’ve released GOV.UK Frontend v5.10.0.</p>
+<p class="govuk-body">Read the <a href="https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.0" class="govuk-link">full release notes</a> to see more details and how to update.</p>
 {% endcall %}
 
 {{ example({ group: "components", item: "service-navigation", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
@@ -48,16 +49,6 @@ Together, the [GOV.UK header component](/components/header/) and Service navigat
 This also assures users that they’re in the right place to use your service and to understand that GOV.UK functions as one website.
 
 For guidance on how to plan your header and navigation, see the [Help users navigate a service pattern](/patterns/navigate-a-service/).
-
-### Update to refresh the GOV.UK brand
-
-<strong class="govuk-tag brand-tag-green">
-  Brand<span class="govuk-visually-hidden"> note</span>
-</strong>
-
-If you use the Nunjucks macro and page template across your service, you can enable the brand refresh by setting the page template’s `rebrand` option to `true`. This will automatically make all needed changes related to the brand refresh.
-
-You can enable the brand refresh within the [component] by setting its `rebrand` option to true. You’ll also need to add some code to your `<html>` and `<head>` elements.
 
 ### Change the blue colour bar under the GOV.UK header to full width
 
@@ -86,10 +77,6 @@ Show navigation links to let users navigate to different parts of your service a
 {{ example({ group: "components", item: "service-navigation", example: "with-service-name-and-navigation", html: true, nunjucks: true, open: false }) }}
 
 See when and how to show navigation links in the [Help users navigate a service pattern](/patterns/navigate-a-service/).
-
-You can add a link to a ‘help’ page in your Service navigation component. If you do, the link must be positioned consistently within the header, and must always link to the same place.
-
-For example, a link in the Service navigation component to 'Get help with this service' must go to the same place as similar links in the Service navigation component elsewhere in your service. This is to comply with [WCAG 2.2 success criterion 3.2.6 Consistent help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html).
 
 ## Use ‘slots’ to add custom elements
 
