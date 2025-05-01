@@ -199,7 +199,7 @@ We also recommend services to start using the Service navigation to show the ser
 - that GOV.UK functions as one website
 - the difference between GOV.UK-wide tools with service-level tools
 
-We’ve decided not to deprecate the 'GOV.UK header with service name' for now, as we'd like to gather more research.
+We’ve also deprecated the 'GOV.UK header with service name' and will remove this option in the next breaking release of GOV.UK Frontend.
 
 Share your research and give us your feedback in our [GitHub discussion space](https://github.com/alphagov/govuk-design-system/discussions/categories/navigation/).
 
