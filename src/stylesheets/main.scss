@@ -46,6 +46,7 @@ $app-code-color: #d13118;
 
 // App-specific components
 @import "components/back-to-top";
+@import "components/callout";
 @import "components/category-nav";
 @import "components/contact-panel";
 @import "components/cookies-page";
@@ -412,22 +413,6 @@ pre .language-plaintext {
 .app-whats-new {
   border-bottom: 1px solid $govuk-border-colour;
   background-color: $app-light-grey;
-}
-
-.app-wcag-callout {
-  border-left-color: govuk-colour("blue");
-}
-
-// Change headings in WCAG callouts to look like H3s,
-// even though they semantically are H2s
-.app-wcag-callout h2 {
-  @extend %govuk-heading-m;
-  max-width: 30em;
-}
-
-.app-wcag-callout__tag {
-  margin-top: 1px;
-  margin-bottom: govuk-spacing(2);
 }
 
 .app-wcag-note {

@@ -8,26 +8,8 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "_wcag-callout.njk" import wcagCallout %}
-{% from "_wcag-note.njk" import wcagNote %}
 
 Use the back link component to help users go back to the previous page in a multi-page transaction.
-
-{{ wcagCallout({
-  type: "component",
-  introAction: "use the",
-  name: "Back link",
-  criteria: [
-    {
-      text: "make sure users do not need to re-enter information they've previously given when they go back to a page",
-      anchor: "wcag-avoid-information-reentry"
-    },
-    {
-      text: "make sure users can interact with the Back link component",
-      anchor: "wcag-interact-back-links"
-    }
-  ]
-}) }}
 
 Although browsers have a back button, some sites break when you use it - so many users avoid it, instead of losing their progress in a service. Also, not all users are aware of the back button.
 
@@ -48,17 +30,6 @@ Never use the back link component together with the [Breadcrumbs component](/com
 Always place back links at the top of a page, before the `<main>` element. Placing them here means that the 'Skip to main content' link allows the user to skip all navigation links, including the back link.
 
 Make sure the link takes users to the previous page they were on, in the state they last saw it.
-
-{% call wcagNote({id: "wcag-avoid-information-reentry"}) %}
-
-<p>If a user decides to go back to a previous page, make sure information they have already entered is pre-populated.</p>
-<p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry</a>.</p>
-{% endcall %}
-
-{% call wcagNote({id: "wcag-interact-back-links"}) %}
-
-<p>Make sure no other interactive elements are too close to the Back link component. This is to make sure users can easily interact with it. This relates to <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target size (minimum)</a>.</p>
-{% endcall %}
 
 Where possible, ensure the back link works even when JavaScript is not available. If this is not possible, you should hide the back link when JavaScript is not available.
 

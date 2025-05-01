@@ -8,26 +8,36 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "_wcag-callout.njk" import wcagCallout %}
-{% from "_wcag-note.njk" import wcagNote %}
+{% from "_callout.njk" import callout %}
+{%- from "govuk/components/tag/macro.njk" import govukTag -%}
 
 The GOV.UK footer provides copyright, licensing and other information about your service.
 
-{{ wcagCallout({
-  type: "component",
-  introAction: "use the",
-  name: "GOV.UK footer",
-  criteria: [
-    {
-      text: "make sure help links can be found in a consistent place on each page",
-      anchor: "wcag-consistent-links"
-    }
-  ]
-}) }}
-
 {{ example({ group: "components", item: "footer", example: "default", id: "default-1", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}
 
+{% call callout({ tagText: "Brand", colour: "green" }) %}
+
+<p class="govuk-body"><a href="/components/footer/default/branded/index.html">See an example of the GOV.UK footer showing the refreshed GOV.UK branding</a>.</p>
+
+{% endcall %}
+
 If you use the page template, you'll also get the footer without having to add it, as it's included by default. However, if you want to customise the default footer, read the [page template guidance about customising components](/styles/page-template/#changing-template-content).
+
+{% call callout({ tagText: "Brand", colour: "green", isInset: "true" }) %}
+
+<h2 class="app-callout__heading">Brand refresh of the {{title}} component</h2><p class="govuk-body">From 25 June 2025, the {{title}} component will change to support a wider refresh of the GOV.UK brand.</p>
+
+<p class="govuk-body">The updated {{title}} component:</p>
+<ul class="govuk-list">
+<li>uses a light blue as the background colour, instead of grey</li>
+<li>adds a thick blue top border</li>
+<li>adds a small crown logo, in addition to the existing coat of arms</li>
+</ul>
+
+<p class="govuk-body">To help service teams in government get ready, we’ve released GOV.UK Frontend v5.10.0.</p>
+
+<p class="govuk-body">Read the <a href="https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.0" class="govuk-link">full release notes</a> to see more details and how to update.</p>
+{% endcall %}
 
 ## When to use this component
 
@@ -60,10 +70,9 @@ You can add links to:
 
 Use ‘Privacy’, ‘Accessibility’, ‘Cookies’ and ‘Terms and conditions’ for the link text.
 
-{% call wcagNote({id: "wcag-consistent-links"}) %}
+If you include links to ‘help’ pages within the GOV.UK footer component, make sure to place those links consistently within the footer content.
 
-<p>If you include links to ‘help’ pages within the GOV.UK footer component, make sure to place those links consistently within the footer content. Also make sure that ‘help’ links always function in a similar way across each page. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">WCAG 2.2 success criterion 3.2.6 Consistent help</a>.</p>
-{% endcall %}
+Also make sure that ‘help’ links always function in a similar way across each page. This is to comply with [WCAG 2.2 success criterion 3.2.6 Consistent help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html).
 
 ## Adding secondary navigation
 
