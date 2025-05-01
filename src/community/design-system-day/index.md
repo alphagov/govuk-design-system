@@ -17,7 +17,7 @@ This means that hyperlinks to /community/design-system-day/ can always encourage
 
 -->
 
-## A series of events throughout 2024
+## Our events
 
 Design System Day is the GOV.UK Design System's flagship event!
 
@@ -25,17 +25,19 @@ It’s an opportunity to collaborate and share knowledge about design systems wi
 
 You can [sign up to our mailing list](https://mailchi.mp/707ce8dec373/get-updated-by-email-govuk-design-system) to get the latest information on Design System Day events planned for this year.
 
+Recordings for our events in 2024 will be available soon.
+
 ## Event 1
 
-The first event this year was hosted online on 21 May 2024. Recordings from the event will be available soon.
+The first event was hosted online on 21 May 2024.
 
 ## Event 2
 
-The second event was a face to face conference, hosted in Liverpool on Thursday 5 September 2024. Recordings from the event will be available soon.
+The second event was a face to face conference, hosted in Liverpool on 5 September 2024.
 
 ## Event 3
 
-We'll host our final event, a hackathon, on Thursday 28 November. This will be a hybrid event, with both in-person and online tickets available. Details about this event can be found on [Design System Day 2024](/community/design-system-day-2024) page.
+The third event was a hackathon, hosted as a hybrid event online and in London on 28 November 2024.
 
 ## Previous events
 
