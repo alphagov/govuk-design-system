@@ -13,34 +13,35 @@ Some things on the roadmap might change – the purpose is to tell you what’s 
 
 See our [GitHub team board](https://github.com/orgs/alphagov/projects/53) for more details on our plans and day-to-day activities.
 
-Last updated 4 March 2025.
+Last updated 1 May 2025.
 
 ## Recently shipped
 
-We’ve released [GOV.UK Frontend v5.9.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.9.0), which includes a JavaScript enhancement to the File upload component to make dragging and dropping files easier for users.
+We’ve released [GOV.UK Frontend v5.10.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.0), which updates the GOV.UK header, GOV.UK footer, Service naviagtion and Cookie banner components to use the refreshed GOV.UK brand.
+
+Previously, we released [GOV.UK Frontend v5.9.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.9.0), which includes a [JavaScript enhancement to the File upload component](https://design-system.service.gov.uk/components/file-upload/#using-the-improved-file-upload-component).
 
 We’ve also deprecated the options to show a service name, as well as navigation links, in the GOV.UK header component. Both options will be removed from the GOV.UK header in the next breaking release of GOV.UK Frontend.
 
-Previously, we released [GOV.UK Frontend v5.8.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.8.0), which includes a new `ConfigurableComponent` class to help you build your own configurable components.
-
 We’ve also recently:
 
-- Added features to help services [create their own JavaScript components using GOV.UK Frontend](https://frontend.design-system.service.gov.uk/building-your-own-javascript-components/)
-- Updated the Royal Arms in the [GOV.UK Footer component](/components/footer/)
+- released [GOV.UK Frontend v5.8.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.8.0), which includes a new `ConfigurableComponent` class to help you build your own configurable components
+- added features to help services [create their own JavaScript components using GOV.UK Frontend](https://frontend.design-system.service.gov.uk/building-your-own-javascript-components/)
+- updated the Royal Arms in the [GOV.UK Footer component](/components/footer/)
 - introduced a new [Service navigation component](/components/service-navigation/) and published a new [pattern to Help users to navigate a service](/patterns/navigate-a-service)
-- added a new feature to stop long words from ‘breaking’ out of components
 
 ## Working on now
 
 We're:
 
-- planning community events and activities for 2025
-- doing research with services teams on how they are using the Design System and how they upgrade their service
+- preparing to release v4.10.0 of GOV.UK Frontend which updates the GOV.UK header, GOV.UK footer, Service navigation, Cookie banner components to use the refresh GOV.UK brand
+- carrying out research with services teams on how they are using the Design System and how they upgrade their service
 
 ## Coming up next
 
 We're getting ready to:
 
+- apply a refreshed GOV.UK colour palette to all Design System components for a future release
 - work on breaking changes for [V6.0.0](https://github.com/alphagov/govuk-frontend/milestone/51). We plan to include typographic scale enabled by default, iterate the navigation component and remove some deprecations
 - continue our Javascript work and make improvements to the Character Count component, Tabs component and Accordion component
 
