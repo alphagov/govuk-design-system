@@ -1,10 +1,14 @@
 {% macro example(params) %}
+
 {% set exampleRoot = "src/" + params.group + "/" + params.item + "/" + params.example + "/" %}
 {% if params.customCode %}
   {% set examplePath = exampleRoot + "code.njk" %}
 {% else %}
   {% set examplePath = exampleRoot + "index.njk" %}
 {% endif %}
+
+{% set railsPath = exampleRoot + "index.erb" %}
+
 {% set exampleURL = "/" + params.group + "/" + params.item + "/" + params.example + "/index.html" %}
 
 {% set exampleTitle = getFrontmatter(examplePath).title %}
@@ -44,6 +48,10 @@
     <ul class="app-tabs" role="tablist">
       <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#{{ exampleId }}-html" role="tab" aria-controls="{{ exampleId }}-html" data-track="tab-html">HTML</a></li>
       <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#{{ exampleId }}-nunjucks" role="tab" aria-controls="{{ exampleId }}-nunjucks" data-track="tab-nunjucks">Nunjucks</a></li>
+
+      {%- if (params.rails) %}
+        <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#{{ exampleId }}-rails" role="tab" aria-controls="{{ exampleId }}-rails" data-track="tab-rails">Ruby on Rails</a></li>
+      {% endif %}
     </ul>
   {% elif not (params.hideTab) %}
     {% set tabType = "html" if params.html else ("nunjucks" if params.nunjucks ) %}
@@ -72,6 +80,22 @@
     </div>
   {% endif %}
 
+  {%- if (params.rails) %}
+    <div class="app-tabs__container js-tabs__container{{ " js-tabs__container--no-tabs" if (params.hideTab) }}" id="{{ exampleId }}-rails" role="tabpanel">
+
+
+    <p class="govuk-body">This uses a Ruby gem maintained by the community. <a href="{{ getRailsLink(params.item) }}" class="govuk-link">Options for this helper</a>.</p>
+        <div class="app-example__code" data-module="app-copy">
+
+  ```erb
+  {{ getRubyOnRailsCode(railsPath) | safe }}
+  ```
+
+        </div>
+      </div>
+
+    <div class="app-tabs__heading js-tabs__heading"><a href="#{{ exampleId }}-rails" aria-controls="{{ exampleId }}-rails" data-track="tab-html">Ruby on Rails</a></div>
+  {% endif %}
   {%- if (params.nunjucks) %}
     {%- if (multipleTabs) %}
       <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#{{ exampleId }}-nunjucks" aria-controls="{{ exampleId }}-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>

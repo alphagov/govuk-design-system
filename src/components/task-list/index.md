@@ -11,7 +11,7 @@ layout: layout-pane.njk
 
 The task list component displays all the tasks a user needs to do, and allows users to easily identify which ones are done and which they still need to do.
 
-{{ example({ group: "components", item: "task-list", example: "default", id: "default-1", html: true, nunjucks: true, open: false, loading: "eager" }) }}
+{{ example({ group: "components", item: "task-list", example: "default", id: "default-1", html: true, nunjucks: true, rails: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 
@@ -34,7 +34,7 @@ The task list should not be used as a way of showing users their answers. For th
 
 There are 2 ways to use the task list component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://govuk-prototype-kit.herokuapp.com), you can use the Nunjucks macro.
 
-{{ example({ group: "components", item: "task-list", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
+{{ example({ group: "components", item: "task-list", example: "default", html: true, nunjucks: true, rails: true, open: false, titleSuffix: "second" }) }}
 
 Users should be able to complete tasks in whatever order they like.
 

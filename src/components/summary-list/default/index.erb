@@ -1,0 +1,27 @@
+<%= govuk_summary_list do |summary_list| %>
+  <%= summary_list.with_row do |row| %>
+    <%= row.with_key { 'Name' } %>
+    <%= row.with_value { 'Sarah Philips' } %>
+    <%= row.with_action(text: "Change", href: '#', visually_hidden_text: 'name')
+  <% end %>
+
+  <%= summary_list.with_row do |row| %>
+    <%= row.with_key { 'Date of birth' } %>
+    <%= row.with_value { '5 January 1978' } %>
+    <%= row.with_action(text: "Change", href: '#', visually_hidden_text: 'date of birth')
+  <% end %>
+
+  <%= summary_list.with_row do |row| %>
+    <%= row.with_key { 'Address' } %>
+    <%= row.with_value { '72 Guild Street<br>London<br>SE23 6FH' } %>
+    <%= row.with_action(text: "Change", href: '#', visually_hidden_text: 'address')
+  <% end %>
+
+  <%= summary_list.with_row do |row| %>
+    <%= row.with_key { 'Contact details' } %>
+    <%= row.with_value { '<p class="govuk-body">07700 900457</p><p class="govuk-body">sarah.phillips@example.com</p>' } %>
+    <%= row.with_action(text: "Add", href: '#', visually_hidden_text: 'contact details')
+    <%= row.with_action(text: "Change", href: '#', visually_hidden_text: 'contact details')
+  <% end %>
+
+<% end %>

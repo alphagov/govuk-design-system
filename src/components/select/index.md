@@ -23,7 +23,7 @@ layout: layout-pane.njk
   ]
 }) }}
 
-{{ example({ group: "components", item: "select", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
+{{ example({ group: "components", item: "select", example: "default", html: true, nunjucks: true, rails: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 

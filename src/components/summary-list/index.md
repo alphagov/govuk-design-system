@@ -29,7 +29,7 @@ Use a summary list to summarise information, for example, a user’s responses a
   ]
 }) }}
 
-{{ example({ group: "components", item: "summary-list", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
+{{ example({ group: "components", item: "summary-list", example: "default", html: true, nunjucks: true, rails: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 

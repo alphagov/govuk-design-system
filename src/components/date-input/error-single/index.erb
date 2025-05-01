@@ -1,0 +1,22 @@
+<%
+  # In the associated model, add:
+
+  validate :passport_issued_must_contain_a_year
+
+  def passport_issued_must_contain_a_year
+    if passport_issued.present? && passport_issued.year.blank?
+      errors.add(:passport_issued, "The date your passport was issued must include a year")
+    end
+  end
+%>
+
+<%= f.govuk_date_field :passport_issued,
+  legend: {
+    text: 'When was your passport issued?',
+    tag: 'h1',
+    size: 'l'
+  },
+  hint: {
+    text: 'For example, 27 3 2007'
+  }
+%>

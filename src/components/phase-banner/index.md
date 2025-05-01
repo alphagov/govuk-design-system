@@ -25,7 +25,7 @@ Use the phase banner component to show users your service is still being worked 
   ]
 }) }}
 
-{{ example({ group: "components", item: "phase-banner", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
+{{ example({ group: "components", item: "phase-banner", example: "default", html: true, nunjucks: true, rails: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 
@@ -55,9 +55,9 @@ You can choose to place the Phase banner in a more appropriate place for your se
 
 Use a ‘feedback’ link to collect on-page feedback about your service. This can open an email or take the user to a dedicated page or form.
 
-{{ example({ group: "components", item: "phase-banner", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
+{{ example({ group: "components", item: "phase-banner", example: "default", html: true, nunjucks: true, railse: true, open: false, titleSuffix: "second" }) }}
 
-{{ example({ group: "components", item: "phase-banner", example: "beta", html: true, nunjucks: true, open: false }) }}
+{{ example({ group: "components", item: "phase-banner", example: "beta", html: true, nunjucks: true, rails: true, open: false }) }}
 
 Whatever option you use, make sure that users do not lose their place in the service and can return to the page they were on.
 

@@ -1,0 +1,35 @@
+<%
+  # Note: the first checkbox needs to have `link_errors: true`.
+%>
+
+<%= f.govuk_check_boxes_fieldset :country_ids,
+  legend: {
+    text: "Will you be travelling to any of these countries?",
+    tag: "h1",
+    size: "l"
+  },
+  hint: {
+    text: "Select all countries that apply"
+  } do %>
+
+  <%= f.govuk_check_box :countries,
+    :france,
+    label: { text: "France" },
+    link_errors: true %>
+
+  <%= f.govuk_check_box :countries,
+    :portugal,
+    label: { text: "Portugal" } %>
+
+  <%= f.govuk_check_box :countries,
+    :spain,
+    label: { text: "Spain" } %>
+
+  <%= f.govuk_check_box_divider %>
+
+  <%= f.govuk_check_box :countries,
+    :none,
+    exclusive: true,
+    label: { text: "No, I will not be travelling to any of these countries " } %>
+
+<% end %>

@@ -1,0 +1,22 @@
+<%
+  # areas would normally be defined in code elsewhere,
+  # as either an activerecord collection or an array of structs:
+
+areas = [
+  OpenStruct.new(id: 'england', name: 'England'),
+  OpenStruct.new(id: 'scotland', name: 'Scotland'),
+  OpenStruct.new(id: 'wales', name: 'Wales'),
+  OpenStruct.new(id: 'northern-ireland', name: 'Northern Ireland')
+]
+%>
+
+<%= f.govuk_collection_radio_buttons :area_id,
+  areas,
+  :id,
+  :name,
+  legend: {
+    text: 'Where do you live?',
+    tag: 'h1',
+    size: 'l'
+  }
+%>

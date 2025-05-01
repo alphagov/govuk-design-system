@@ -9,7 +9,7 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 
-{{ example({ group: "components", item: "warning-text", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
+{{ example({group: "components", item: "warning-text", example: "default", html: true, nunjucks: true, rails: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 
@@ -17,8 +17,12 @@ Use the warning text component when you need to warn users about something impor
 
 ## How it works
 
-There are 2 ways to use the warning text component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
+There are 3 ways to use the warning text component:
 
-{{ example({ group: "components", item: "warning-text", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
+- HTML
+- Nunjucks – use this if you are using the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk)
+- Ruby on Rails
+
+{{ example({group: "components", item: "warning-text", example: "default", html: true, nunjucks: true, rails: true, open: false, titleSuffix: "second"}) }}
 
 You might need to rewrite the hidden text (‘Warning’ in the example) to make it appropriate for your context.

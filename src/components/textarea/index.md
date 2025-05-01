@@ -9,7 +9,7 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 
-{{ example({ group: "components", item: "textarea", example: "default", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}
+{{ example({ group: "components", item: "textarea", example: "default", html: true, nunjucks: true, rails: true, open: false, size: "m", loading: "eager" }) }}
 
 ## When to use this component
 
@@ -31,13 +31,13 @@ Labels must be aligned above the textarea they refer to. They should be short, d
 
 There are 2 ways to use the textarea component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 
-{{ example({ group: "components", item: "textarea", example: "default", html: true, nunjucks: true, open: false, size: "m", titleSuffix: "second" }) }}
+{{ example({ group: "components", item: "textarea", example: "default", html: true, nunjucks: true, rails: true, open: false, size: "m", titleSuffix: "second" }) }}
 
 ### Use appropriately-sized textareas
 
 Make the height of a textarea proportional to the amount of text you expect users to enter. You can set the height of a textarea by specifying the `rows` attribute.
 
-{{ example({ group: "components", item: "textarea", example: "specifying-rows", html: true, nunjucks: true, open: false, size: "l" }) }}
+{{ example({ group: "components", item: "textarea", example: "specifying-rows", html: true, nunjucks: true, rails: true, open: false, size: "l" }) }}
 
 ### Do not disable copy and paste
 
@@ -47,7 +47,7 @@ Users will often need to copy and paste information into a textarea, so do not s
 
 If you're asking more than one question on the page, do not set the contents of the `<label>` as the page heading. Read more about [asking multiple questions on Question pages](/patterns/question-pages/#asking-multiple-questions-on-a-page).
 
-{{ example({ group: "components", item: "textarea", example: "without-heading", html: true, nunjucks: true, open: false, size: "l" }) }}
+{{ example({ group: "components", item: "textarea", example: "without-heading", html: true, nunjucks: true, rails: true, open: false, size: "l" }) }}
 
 ### Limiting the number of characters
 

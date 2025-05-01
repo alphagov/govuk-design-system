@@ -29,7 +29,7 @@ The GOV.UK header component tells users they’re using a service on GOV.UK and 
   ]
 }) }}
 
-{{ example({ group: "components", item: "header", example: "default", id: "default-1", html: true, nunjucks: true, open: false, loading: "eager" }) }}
+{{ example({ group: "components", item: "header", example: "default", id: "default-1", html: true, nunjucks: true, rails: true, open: false, loading: "eager" }) }}
 
 If you use the page template, you'll also get the GOV.UK header without having to add it, as it's included by default. However, if you want to customise the default GOV.UK header, read the [page template guidance about customising components](/styles/page-template/#changing-template-content).
 
@@ -63,7 +63,7 @@ Most services on GOV.UK should use the default GOV.UK header.
 
 It should only show the GOV.UK logo and any GOV.UK-wide links and tools to help your users. [Do not add the menu of GOV.UK topic links](https://insidegovuk.blog.gov.uk/2021/11/11/launching-gov-uks-new-menu-bar/) to your service’s GOV.UK header.
 
-{{ example({ group: "components", item: "header", example: "default", titleSuffix: "second", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
+{{ example({ group: "components", item: "header", example: "default", titleSuffix: "second", html: true, nunjucks: true, rails: true, open: false, titleSuffix: "second" }) }}
 
 ### Previous variants of the GOV.UK header
 
