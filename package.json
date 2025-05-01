@@ -55,7 +55,7 @@
     "@rollup/plugin-node-resolve": "^16.0.1",
     "@rollup/plugin-terser": "^0.4.4",
     "autoprefixer": "^10.4.21",
-    "browser-sync": "3.0.3",
+    "browser-sync": "3.0.4",
     "cross-env": "^7.0.3",
     "editorconfig-checker": "^6.0.1",
     "eslint": "^8.57.0",
