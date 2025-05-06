@@ -8,27 +8,6 @@ backlogIssueId: 41
 layout: layout-pane.njk
 ---
 
-{% from "_wcag-callout.njk" import wcagCallout %}
-{% from "_wcag-note.njk" import wcagNote %}
-
-Help users create an account for your service.
-
-{{ wcagCallout({
-  type: "pattern",
-  introAction: "help users to",
-  name: "Create accounts",
-  criteria: [
-    {
-      text: "make sure users can reuse information they've already entered",
-      anchor: "wcag-reuse-account-information"
-    },
-    {
-      text: "make sure that cognitives tests, such as CAPTCHAs, are not needed for users to create an account",
-      anchor: "wcag-avoid-cognitive-test"
-    }
-  ]
-}) }}
-
 ## When to use this pattern
 
 Provide user accounts if your users will need to regularly access or update their data in your service.
@@ -65,12 +44,7 @@ Use labels like ‘Create a username’ and ‘Create a password’ rather than 
 
 Make it clear what you need users to do when they create an account.
 
-Show a clear difference between creating an account and signing in. Presenting the options side by side is not enough because users might miss one of them or not understand the&nbsp;difference.
-
-{% call wcagNote({id: "wcag-reuse-account-information"}) %}
-
-<p>Make sure users do not need to enter the same information more than once when creating an account, unless the information is no longer valid or it’s necessary for security reasons. Use the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete">HTML autocomplete attribute</a> to allow password managers and user agents to automatically populate fields. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry</a>.</p>
-{% endcall %}
+Show a clear difference between creating an account and signing in. Presenting the options side by side is not enough because users might miss one of them or not understand the difference.
 
 ### Make the sign-up process clear
 
@@ -78,17 +52,15 @@ If a user fails to create an account they might not be able to use your service 
 
 Make sure the account creation screen is solely about that task. Do not add any distracting content or links.
 
+Make sure users do not need to enter the same information more than once when creating an account.
+
 ### Avoid using security measures such as CAPTCHAs
 
 <abbr title="Completely Automated Public Turing Test to Tell Computers and Humans Apart">CAPTCHAs</abbr> and similar tests require users to recognise words or pictures.
 
 These are tests of cognitive function, which might be difficult for some users. Users can also struggle to recognise specific words or pictures due to differences in culture and locale.
 
-{% call wcagNote({id: "wcag-avoid-cognitive-test"}) %}
-
-<p>Avoid making users do a cognitive test to use your service. If you do, you must also offer an alternative method. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum">WCAG 2.2 success criterion 3.3.8 Accessible authentication (minimum)</a>.</p>
-<p>See more about <a href="https://www.gov.uk/service-manual/technology/using-captchas">using CAPTCHAs and why they’re problematic</a> in the Service Manual. <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum#object-recognition">WCAG lists some other security measures</a> you can implement to prevent misuse and automated abuse in your service.</p>
-{% endcall %}
+See more about [using CAPTCHAs and why they’re problematic](https://www.gov.uk/service-manual/technology/using-captchas) in the Service Manual. [WCAG lists some other security measures](https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum#object-recognition) you can implement to prevent misuse and automated abuse in your service.
 
 ### Never use National Insurance numbers to verify a user’s identity
 

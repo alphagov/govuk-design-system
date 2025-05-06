@@ -8,26 +8,8 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "_wcag-callout.njk" import wcagCallout %}
-{% from "_wcag-note.njk" import wcagNote %}
 
 This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
-
-{{ wcagCallout({
-  type: "component",
-  introAction: "use the",
-  name: "File upload",
-  criteria: [
-    {
-      text: "make sure users can upload a file without relying on drag and drop movements",
-      anchor: "wcag-multi-method-drag-drop"
-    },
-    {
-      text: "make sure uploaded files can be reused",
-      anchor: "wcag-use-previous-uploads"
-    }
-  ]
-}) }}
 
 Help users select and upload a file.
 
@@ -48,17 +30,13 @@ To upload a file, the user can either:
 - use the ‘Choose file’ button
 - drag and drop a file into the file upload input area
 
-{% call wcagNote({id: "wcag-multi-method-drag-drop"}) %}
+### Let users reuse uploaded files
 
-<p>Do not use ‘drag and drop’ as the only way to upload files. You must provide another method, such as the ‘Choose file’ button. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">WCAG 2.2 success criterion 2.5.7 Dragging movements</a>.</p>
-{% endcall %}
+Make sure users can easily reuse a previously uploaded file within a single journey, unless doing so would be a major security or privacy concern.
 
-{% call wcagNote({id: "wcag-use-previous-uploads"}) %}
+For example, a user might need to upload a photo of their driving licence to prove their identity, and again to prove their address.
 
-<p>Make sure users can easily reuse a previously uploaded file within a single journey, unless doing so would be a major security or privacy concern.</p>
-<p>For example, a user might need to upload a photo of their driving licence to prove their identity, and again to prove their address.</p>
-<p>You can make it easier for the user to reuse a file by showing it as an option for the user to select so they do not need to upload it again. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry</a>. Consider users on public devices before choosing to make the file available to preview or download. </p>
-{% endcall %}
+You can make it easier for the user to reuse a file by showing it as an option for the user to select so they do not need to upload it again. Consider users on public devices before choosing to make the file available to preview or download.
 
 There are 2 ways to use the file upload component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 
