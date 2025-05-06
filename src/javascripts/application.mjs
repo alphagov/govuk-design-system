@@ -59,9 +59,6 @@ createAll(Search)
 // Initialise back to top
 createAll(BackToTop)
 
-// Initialise cookie page
-createAll(CookiesPage)
-
 const $embedCards = document.querySelectorAll('[data-module="app-embed-card"]')
 
 const lazyEmbedObserver = new IntersectionObserver(function (
