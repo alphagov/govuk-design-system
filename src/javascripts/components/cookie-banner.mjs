@@ -113,6 +113,9 @@ class CookieBanner extends ConfigurableComponent {
     // Hide banner and show confirmation message
     this.$cookieMessage.setAttribute('hidden', 'true')
     this.revealConfirmationMessage(this.$cookieConfirmationAccept)
+
+    // Dispatch custom event to notify listening components of change
+    document.dispatchEvent(new CustomEvent('cookieAccepted'))
   }
 
   /**

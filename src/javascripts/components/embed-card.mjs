@@ -52,19 +52,16 @@ class EmbedCard extends Component {
 
       const title = placeholderText ? placeholderText.textContent : ''
 
-      const ytHref = placeholder.getAttribute('href')
-      const ytId = ytHref.match(
-        /(youtu\.be\/|youtube\.com\/(watch\?(.*&)?v=|(embed|v)\/))([^?&"'>]+)/
-      )[5]
+      const ytId = this.$root.dataset.ytId
+
+      const divIframeContainer = document.createElement('div')
+      divIframeContainer.className = 'app-embed-card__iframe-container'
 
       const iframe = this.createIframe(ytId, title)
 
-      placeholder.remove()
+      divIframeContainer.appendChild(iframe)
 
-      const iframeContainer = this.$root.querySelector(
-        '.app-embed-card__placeholder-iframe-container'
-      )
-      iframeContainer.appendChild(iframe)
+      placeholder.parentNode.replaceChild(divIframeContainer, placeholder)
     }
   }
 

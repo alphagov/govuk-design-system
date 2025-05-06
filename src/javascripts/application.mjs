@@ -12,7 +12,7 @@ import {
 } from './components/cookie-functions.mjs'
 import CookiesPage from './components/cookies-page.mjs'
 import Copy from './components/copy.mjs'
-import EmbedCard from './components/embed-card.mjs'
+import { initialiseEmbedCards } from './components/embed-initialisation.mjs'
 import ExampleFrame from './components/example-frame.mjs'
 import Navigation from './components/navigation.mjs'
 import OptionsTable from './components/options-table.mjs'
@@ -62,45 +62,4 @@ createAll(BackToTop)
 // Initialise cookie page
 createAll(CookiesPage)
 
-const $embedCards = document.querySelectorAll('[data-module="app-embed-card"]')
-
-const lazyEmbedObserver = new IntersectionObserver(function (
-  entries,
-  observer
-) {
-  entries.forEach(function (entry) {
-    if (entry.isIntersecting) {
-      try {
-        new EmbedCard(entry.target)
-      } catch (error) {
-        console.log(error)
-      }
-    }
-  })
-})
-
-$embedCards.forEach(function (lazyEmbed) {
-  lazyEmbedObserver.observe(lazyEmbed)
-})
-
-const campaignCookieBanner = document.querySelector(
-  '[data-cookie-category="campaign"]'
-)
-
-if (campaignCookieBanner) {
-  const callback = (mutationList, observer) => {
-    if (mutationList.length) {
-      $embedCards.forEach(function (lazyEmbed) {
-        lazyEmbedObserver.unobserve(lazyEmbed)
-        lazyEmbedObserver.observe(lazyEmbed)
-      })
-    }
-  }
-
-  const observer = new MutationObserver(callback)
-  observer.observe(campaignCookieBanner, {
-    attributes: true,
-    childList: true,
-    subtree: true
-  })
-}
+initialiseEmbedCards()
