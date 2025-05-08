@@ -8,22 +8,8 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "_wcag-callout.njk" import wcagCallout %}
-{% from "_wcag-note.njk" import wcagNote %}
 
 Use the phase banner component to show users your service is still being worked on.
-
-{{ wcagCallout({
-  type: "component",
-  introAction: "use the",
-  name: "Phase banner",
-  criteria: [
-    {
-      text: "make sure all page content can be seen when the Phase banner component is shown",
-      anchor: "wcag-do-not-cover-content"
-    }
-  ]
-}) }}
 
 {{ example({ group: "components", item: "phase-banner", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
@@ -45,11 +31,6 @@ Show the Phase banner directly under either:
 Phase banners are shown across all pages of a service, so users should understand it as a service-level message.
 
 You can choose to place the Phase banner in a more appropriate place for your service, however you’ll need to customise the component and provide your own CSS code to make it show correctly.
-
-{% call wcagNote({id: "wcag-do-not-cover-content"}) %}
-
-<p>Do not make the Phase banner component ‘sticky’ to the top of the page by using `position: fixed` or any other method. This is to make sure it does not cover or obscure any content which has a focus applied. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html">WCAG 2.2 success criterion 2.4.11 Focus not obscured (minimum)</a>.</p>
-{% endcall %}
 
 ### Add a feedback link
 

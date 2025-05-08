@@ -9,22 +9,8 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "_wcag-callout.njk" import wcagCallout %}
-{% from "_wcag-note.njk" import wcagNote %}
 
 Let users check their answers before submitting information to a service.
-
-{{ wcagCallout({
-  type: "pattern",
-  introAction: "help users to",
-  name: "Check answers",
-  criteria: [
-    {
-      text: "make sure users can go back and edit information they've already entered",
-      anchor: "wcag-prepopulate-information"
-    }
-  ]
-}) }}
 
 {{ example({ group: "patterns", item: "check-answers", example: "default", html: true, nunjucks: true, open: false, size: "xl", loading: "eager" }) }}
 
@@ -69,11 +55,7 @@ On the page, you should also:
 
 You should provide a ‘Change’ link next to each section on your check answers page so that users can add or change the information. 'Change' links contain hidden text to make them accessible to screen reader users. Update the hidden text to describe what each 'change' link is for.
 
-{% call wcagNote({id: "wcag-prepopulate-information"}) %}
-
-<p>If a user decides to go back to a previous answer, make sure information they've already entered is pre-populated.</p>
-<p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry</a>.</p>
-{% endcall %}
+If a user decides to go back to a previous answer, make sure information they've already entered is pre-populated.
 
 The answers pages should look the same way they did when the user last used them.
 

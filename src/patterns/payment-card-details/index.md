@@ -8,22 +8,7 @@ backlogIssueId: 80
 layout: layout-pane.njk
 ---
 
-{% from "_wcag-callout.njk" import wcagCallout %}
-{% from "_wcag-note.njk" import wcagNote %}
-
 This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
-
-{{ wcagCallout({
-  type: "pattern",
-  introAction: "ask users for",
-  name: "Payment card details",
-  criteria: [
-    {
-      text: "make sure there's adequate spacing between month and year fields, so users can easily interact with them",
-      anchor: "wcag-spacing-month-year"
-    }
-  ]
-}) }}
 
 ![A form entitled enter card details which asks for a card number, an expiry date, a name on the card and the card security code.](enter-card-details.jpg)
 
@@ -42,11 +27,6 @@ Let users enter payment card numbers in whatever format is familiar to them. All
 ### Help users enter valid card information
 
 Present all fields on a single page, in the order in which they appear on a credit or debit card. This makes it easy for users to transcribe the information from their payment card.
-
-{% call wcagNote({id: "wcag-spacing-month-year"}) %}
-
-<p>Make sure to add adequate spacing between the month and year fields. Ideally, leave at least 24px of space between the fields, either horizontally (inline) or vertically. This is to make sure users can easily interact with the fields. This relates to <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target size (minimum)</a>.</p>
-{% endcall %}
 
 Show logos for the cards you accept as icons so users can see whether their card is supported.
 

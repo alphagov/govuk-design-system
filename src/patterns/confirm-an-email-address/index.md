@@ -9,22 +9,8 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "_wcag-callout.njk" import wcagCallout %}
-{% from "_wcag-note.njk" import wcagNote %}
 
 This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
-
-{{ wcagCallout({
-  type: "pattern",
-  introAction: "help users to",
-  name: "Confirm an email address",
-  criteria: [
-    {
-      text: "if you're asking the user to enter a security code, make sure they can enter the code using copy and paste",
-      anchor: "wcag-copy-paste-security-codes"
-    }
-  ]
-}) }}
 
 Check that a user has access to a specific email account using an email confirmation&nbsp;loop.
 
@@ -58,11 +44,6 @@ If you use email confirmation loops you must consider:
 - the design of the ‘activate your account’ page
 
 Most email confirmation loops will send the user a link and ask them to click it to return to the service. Another approach is to send the user a security code, similar to the [Confirm a phone number pattern](/patterns/confirm-a-phone-number/), and ask the user to enter it.
-
-{% call wcagNote({id: "wcag-copy-paste-security-codes"}) %}
-
-<p>You must allow users to copy and paste any security codes. Avoid making the user memorise or transcribe a security code between apps or browser tabs to use your service. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum">WCAG 2.2 success criterion 3.3.8 Accessible authentication (minimum)</a>.</p>
-{% endcall %}
 
 ### Set expiry conditions
 

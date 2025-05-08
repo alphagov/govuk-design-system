@@ -8,28 +8,10 @@ backlogIssueId: 25
 layout: layout-pane.njk
 ---
 
-{% from "_wcag-callout.njk" import wcagCallout %}
 {% from "_example.njk" import example %}
-{% from "_wcag-note.njk" import wcagNote %}
 {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 
 Check that a user has access to a specific mobile phone number using a security code sent by text message.
-
-{{ wcagCallout({
-  type: "pattern",
-  introAction: "help users to",
-  name: "Confirm a phone number",
-  criteria: [
-    {
-      text: "make sure users can use a link to resend the security code (when the user creates an account)",
-      anchor: "wcag-resend-security-code-creation"
-    },
-    {
-      text: "make sure users can use a link to resend the security code (when the user signs in)",
-      anchor: "wcag-resend-security-code-sign-in"
-    }
-  ]
-}) }}
 
 {{ example({ group: "patterns", item: "confirm-a-phone-number", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
@@ -73,11 +55,6 @@ If the user enters an expired code that was sent more than:
 
 If the user follows the ‘Not received a text message?’ link, allow them to check which mobile number they entered, and to change it if necessary. This prevents the user becoming stuck if they entered a mobile number incorrectly. Do not allow the user to change the number when they're signing in.
 
-{% call wcagNote({id: "wcag-resend-security-code-creation"}) %}
-
-<p>You must always include the link for 'Not received a text message?’ so the user can find help in a consistent way. This relates to <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">WCAG 2.2 success criterion 3.2.6 Consistent help</a>.</p>
-{% endcall %}
-
 {{ example({ group: "patterns", item: "confirm-a-phone-number", example: "resend-first-time", html: true, nunjucks: true, open: false }) }}
 
 When the user requests a new code, send them a new one. The new code should have its 15 minute time limit. The previous code should remain valid within its original time limit.
@@ -93,11 +70,6 @@ When the user returns to your service, verify their password first. Once they ha
 Ask the user to enter this code. Use the same pattern and time limit as when creating an account.
 
 If they follow the ‘Not received a text message?’ link, show them a page allowing them to request a new code. Do not reveal the mobile number you sent it to.
-
-{% call wcagNote({id: "wcag-resend-security-code-sign-in"}) %}
-
-<p>You must always include the link for 'Not received a text message?’ so the user can find help in a consistent way. This relates to <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">WCAG 2.2 success criterion 3.2.6 Consistent help</a>.</p>
-{% endcall %}
 
 {{ example({group: "patterns", item: "confirm-a-phone-number", example: "resend", html: true, nunjucks: true, open: false}) }}
 
