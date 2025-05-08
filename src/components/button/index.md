@@ -8,20 +8,6 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "_wcag-callout.njk" import wcagCallout %}
-{% from "_wcag-note.njk" import wcagNote %}
-
-{{ wcagCallout({
-  type: "component",
-  introAction: "use the",
-  name: "Button",
-  criteria: [
-    {
-      text: "make sure users can interact with the Button component",
-      anchor: "wcag-interact-button"
-    }
-  ]
-}) }}
 
 {{ example({ group: "components", item: "button", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
@@ -47,11 +33,6 @@ Write button text in sentence case, describing the action it performs. For examp
 You may need to include more or different words to better describe the action. For example, ‘Add another address’ and ‘Accept and claim a tax refund’.
 
 Align the primary action button to the left edge of your form.
-
-{% call wcagNote({id: "wcag-interact-button"}) %}
-
-<p>Do not decrease the height or target area of the Button component. This is to make sure users can easily interact with it. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target size (minimum)</a>.</p>
-{% endcall %}
 
 There are 2 ways to use the Button component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 

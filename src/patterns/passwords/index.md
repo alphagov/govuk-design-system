@@ -8,22 +8,7 @@ backlogIssueId: 56
 layout: layout-pane.njk
 ---
 
-{% from "_wcag-callout.njk" import wcagCallout %}
-{% from "_wcag-note.njk" import wcagNote %}
-
 Help users to create and enter secure and memorable passwords.
-
-{{ wcagCallout({
-  type: "pattern",
-  introAction: "ask users for",
-  name: "Passwords",
-  criteria: [
-    {
-      text: "make sure that 'reset password' links can be found in a consistent place on each page",
-      anchor: "wcag-consistent-reset"
-    }
-  ]
-}) }}
 
 ## When to use this pattern
 
@@ -91,13 +76,6 @@ When helping users who’ve forgotten their password, you should:
 - send them a link or code to trigger a password reset
 - avoid password reset questions
 - avoid password reminders
-
-{% call wcagNote({id: "wcag-consistent-reset"}) %}
-
-<p>If you include instructions or a link to help users reset their password, make sure to place them consistently on the page. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">WCAG 2.2 success criterion 3.2.6 Consistent help</a>.</p>
-{% endcall %}
-
-Also make sure any password reset links always perform the same action across each page.
 
 ### Send a link to trigger password resets
 

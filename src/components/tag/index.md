@@ -8,22 +8,8 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "_wcag-callout.njk" import wcagCallout %}
-{% from "_wcag-note.njk" import wcagNote %}
 
 Use the tag component to show users the status of something.
-
-{{ wcagCallout({
-  type: "component",
-  introAction: "use the",
-  name: "Tag",
-  criteria: [
-    {
-      text: "if you choose to add functionality to reorder tags, make sure users can do so without relying on 'click and drag' movements ()",
-      anchor: "wcag-tag-no-dragging-reorder"
-    }
-  ]
-}) }}
 
 {{ example({ group: "components", item: "tag", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
@@ -57,11 +43,6 @@ Or it can make sense to have two statuses. For example you may find that there�
 Tags should be helpful to users. The more you add, the harder it is for users to remember them. So start with the smallest number of statuses you think might work, then add more if your user research shows there’s a need for them.
 
 {{ example({ group: "components", item: "tag", example: "coloured-tags", html: true, nunjucks: true, open: false }) }}
-
-{% call wcagNote({id: "wcag-tag-no-dragging-reorder"}) %}
-
-<p>Any implementation of the Tag component that allows the user to change the order of tags must offer a way to do so without relying on ‘click and drag’ movements. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">WCAG 2.2 success criterion 2.5.7 Dragging movements</a>.</p>
-{% endcall %}
 
 ## Using colour with tags
 

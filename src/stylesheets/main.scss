@@ -415,16 +415,6 @@ pre .language-plaintext {
   background-color: $app-light-grey;
 }
 
-.app-wcag-note {
-  margin-top: govuk-spacing(6);
-
-  // Add highlight styling for WCAG 2.2 content
-  &:target {
-    outline: 4px solid $govuk-brand-colour;
-    outline-offset: 6px;
-  }
-}
-
 .app-campaign-cookie-banner .govuk-grid-column-two-thirds {
   width: 100%;
 }

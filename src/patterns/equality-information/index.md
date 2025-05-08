@@ -9,22 +9,8 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "_wcag-callout.njk" import wcagCallout %}
-{% from "_wcag-note.njk" import wcagNote %}
 
 Public sector organisations have a duty to consider the need to avoid discrimination and advance equality of opportunity as part of what they do. This is part of what’s called the [public sector equality duty](https://www.gov.uk/guidance/equality-act-2010-guidance#public-sector-equality-duty).
-
-{{ wcagCallout({
-  type: "pattern",
-  introAction: "ask users for",
-  name: "Equality information",
-  criteria: [
-    {
-      text: "make sure users can update their equality information without re-entering existing information",
-      anchor: "wcag-do-not-ask-reentry-equality-info"
-    }
-  ]
-}) }}
 
 Public sector bodies often collect equality information about service users to help them meet this duty.
 
@@ -72,11 +58,6 @@ Some categories of equality information can change over time, including changes 
 When possible, offer users the option to update their equality information. Users should be able to update their equality information through an online account, a change request form, or other contact methods. Integrating the option to update equality information directly into your service or user account system is often the most usable and efficient method.
 
 Updating equality information is especially relevant for longer term services and services that use the same equality information multiple times.
-
-{% call wcagNote({id: "wcag-do-not-ask-reentry-equality-info"}) %}
-
-<p>When users are updating equality information, only ask them to enter the information that has changed. Do not ask them to re-enter all existing equality information. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry</a>.</p>
-{% endcall %}
 
 ## Get specialist privacy or data protection advice
 

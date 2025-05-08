@@ -8,38 +8,11 @@ backlogIssueId: 35
 layout: layout-pane.njk
 ---
 
-{% from "_wcag-callout.njk" import wcagCallout %}
-{% from "_wcag-note.njk" import wcagNote %}
-
 Ask users questions to help them work out if they can or should use your service.
-
-{{ wcagCallout({
-  type: "pattern",
-  introAction: "help users to",
-  name: "Check a service is suitable",
-  criteria: [
-    {
-      text: "make sure users do not need to repeat answers that they've already given",
-      anchor: "wcag-avoid-repeating-questions"
-    }
-  ]
-}) }}
 
 Doing this helps users save time as it tells them upfront whether they are eligible to use it and if they need it.
 
 It can also help reduce time and money spent processing queries from users confused about whether they’re eligible to use your service, or if it’s suitable for them.
-
-{% call wcagNote({id: "wcag-avoid-repeating-questions"}) %}
-
-<p>Make sure to not repeat questions or request information the user will need to re-provide later.</p>
-<p>If during the process a service is determined to be suitable, consider offering a secure method to carry forward relevant responses into the service journey, unless carrying forward would be a major safety concern.</p>
-<p>You can make it easier to enter the same information within the service through one of these methods:</p>
-<ul>
-  <li>pre-populating the relevant fields</li>
-  <li>showing carried-forward responses as an option for the user to select</li>
-</ul>
-<p>This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry</a>.</p>
-{% endcall %}
 
 ![‘Check a service is suitable’ flow diagram. Contains an introduction page followed by a series of simple questions. If at any point a user is deemed not eligible for the service they will be pointed to a page that explains why they are not eligible. Otherwise they will be presented an ‘application complete’ page. ](check-a-service-is-suitable-new.svg)
 
@@ -71,6 +44,8 @@ When using this pattern you need to:
 - present the user with a ‘results’ page
 
 If there are general rules about whether a service can or cannot be used such as an age limit or fixed deadline, include these on the start page.
+
+Avoid asking questions the user will need to provide again when using your service.
 
 ### Presenting results
 
