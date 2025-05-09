@@ -1,6 +1,12 @@
 /* eslint-disable no-new */
 
-import { createAll, Button, NotificationBanner, SkipLink } from 'govuk-frontend'
+import {
+  createAll,
+  Button,
+  NotificationBanner,
+  ServiceNavigation,
+  SkipLink
+} from 'govuk-frontend'
 
 import { loadAnalytics } from './components/analytics.mjs'
 import BackToTop from './components/back-to-top.mjs'
@@ -14,7 +20,6 @@ import CookiesPage from './components/cookies-page.mjs'
 import Copy from './components/copy.mjs'
 import EmbedCard from './components/embed-card.mjs'
 import ExampleFrame from './components/example-frame.mjs'
-import Navigation from './components/navigation.mjs'
 import OptionsTable from './components/options-table.mjs'
 import ScrollContainer from './components/scroll-container.mjs'
 import Search from './components/search.mjs'
@@ -23,6 +28,7 @@ import AppTabs from './components/tabs.mjs'
 // Initialise GOV.UK Frontend
 createAll(Button)
 createAll(NotificationBanner)
+createAll(ServiceNavigation)
 createAll(SkipLink)
 
 // Cookies and analytics
@@ -46,9 +52,6 @@ createAll(AppTabs)
 // Do this after initialising tabs
 createAll(Copy)
 new OptionsTable()
-
-// Initialise mobile navigation
-createAll(Navigation)
 
 // Initialise scrollable container handling
 createAll(ScrollContainer)
