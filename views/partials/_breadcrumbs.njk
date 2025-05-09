@@ -1,0 +1,10 @@
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+{# Only render breadcrumbs on pages that aren't the homepage. This is a bit
+hacky, but works as the homepage has an empty string for a permalink. #}
+{% if permalink %}
+  {{ govukBreadcrumbs({
+    classes: "app-width-container",
+    items: getAncestorPages(permalink)
+  }) }}
+{% endif %}
