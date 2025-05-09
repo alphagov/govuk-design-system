@@ -16,7 +16,7 @@ pages. #}
         <ul class="govuk-list">
         {% for subitem in items %}
           <li class="govuk-!-margin-bottom-2">
-            <a class="govuk-link" href="/{{ subitem.url }}/">{{ subitem.label }}</a>
+            <a class="govuk-link" href="{{subitem.href}}">{{ subitem.text }}</a>
           </li>
         {% endfor %}
         </ul>

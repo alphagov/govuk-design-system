@@ -3,6 +3,7 @@ layout: layout-pane.njk
 title: Get started
 description: The following introductory guides will help you to get set up
 showSubNav: true
+sectionRoot: 1
 ---
 
 The examples in the GOV.UK Design System come with code to make it easy for you to use them in your project.
