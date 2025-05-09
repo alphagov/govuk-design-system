@@ -5,10 +5,10 @@ service navigation component. #}
 {%- set navLinks = [] %}
 {%- for item in navigation %}
   {%- set navLinks = (navLinks.push({
-    href: '/' + item.url + '/',
-    text: item.label,
-    current: true if permalink and (permalink == item.url) else false,
-    active: true if permalink and permalink.startsWith(item.url) else false
+    href: item.href,
+    text: item.text,
+    current: item.isCurrent(permalink),
+    active: item.isActive(permalink)
   }), navLinks) %}
 {%- endfor %}
 
