@@ -3,7 +3,7 @@ layout: layout-pane.njk
 title: Patterns
 description: Patterns are best practice design solutions for specific user-focused tasks and page types
 showSubNav: true
-sectionRoot: 4
+order: 4
 ---
 
 Patterns are best practice design solutions for specific user-focused tasks and page&nbsp;types.

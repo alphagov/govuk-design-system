@@ -3,7 +3,7 @@ layout: layout-pane.njk
 title: Accessibility
 description: How we make the GOV.UK Design System accessible and our strategy for improving its accessibility over time.
 showSubNav: true
-sectionRoot: 6
+order: 6
 ---
 
 Our work to make the GOV.UK Design System meet public sector accessibility regulations is a continuous and iterative process. You must [make sure your service is accessible](https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps). We outline our approach on [our accessibility strategy](/accessibility/accessibility-strategy/).
