@@ -7,7 +7,7 @@ pages. #}
 <!-- [html-validate-disable-next unique-landmark -- allow 2 navs with the same aria-labelledby because they contain the same information] -->
 <nav class="category-nav" aria-labelledby="app-subnav-heading">
   {% for item in navigation %}
-    {% if permalink and permalink.startsWith(item.url) %}
+    {% if permalink and item.isActive(permalink) %}
     {% if item.items %}
       {% for theme, items in item.items | groupby("theme") %}
         {% if theme != 'undefined' %}
