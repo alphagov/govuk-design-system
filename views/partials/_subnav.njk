@@ -4,7 +4,7 @@
   {% for item in navigation %}
     {% if permalink and item.isActive(permalink) %}
     {% if item.items %}
-      {% for theme, items in item.items | groupby("theme") %}
+      {% for theme, items in item.items %}
         {% if theme != 'undefined' %}
           <h3 class="app-subnav__theme">{{ theme }}</h3>
         {% endif %}

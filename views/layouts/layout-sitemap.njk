@@ -5,7 +5,7 @@
   {% for item in navigation %}
     <h2 class="govuk-heading-l"><a class="govuk-link" href="{{item.href}}">{{ item.text }}</a></h2>
     {% if item.items %}
-      {% for theme, items in item.items | groupby("theme") %}
+      {% for theme, items in item.items %}
         {% if theme != 'undefined' %}
           <h3 class="govuk-heading-m">{{ theme }}</h3>
         {% endif %}
