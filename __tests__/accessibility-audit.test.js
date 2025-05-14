@@ -43,7 +43,7 @@ describe('Accessibility Audit', () => {
 
   describe('Patterns page - layout-pane.njk', () => {
     it('validates', async () => {
-      const results = await analyze(page, '/patterns/gender-or-sex/')
+      const results = await analyze(page, '/patterns/addresses/')
       expect(results).toHaveNoViolations()
     })
   })
