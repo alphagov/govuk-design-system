@@ -34,7 +34,7 @@ These patterns are based on the [harmonised standards developed by the Governmen
 
 Collecting equality information in a consistent way across the public sector makes the data more useful. For example, an organisation can benchmark its own services against other public sector services or the population in general. And it can adjust its approach if it finds a particular group is under-represented.
 
-Do not use this pattern to collect information for operational reasons - especially if you’re legally required to ask for the information in a particular way. For example, you’re [asking about the user’s gender or sex in your service](/patterns/gender-or-sex/) to work out how much State Pension they’re entitled to.
+Do not use this pattern to collect information for operational reasons - especially if you’re legally required to ask for the information in a particular way.
 
 ## How it works
 
