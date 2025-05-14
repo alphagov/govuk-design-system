@@ -168,6 +168,13 @@ To change the components that are included in the page template by default, set 
       </td>
     </tr>
     <tr class="govuk-table__row">
+      <td class="govuk-table__cell">govukRebrand</td>
+      <td class="govuk-table__cell">Variable</td>
+      <td class="govuk-table__cell">
+        Enables rebranded styles. If you’ve overridden any blocks that are affected by this, you may have to make manual changes. See the <a class="govuk-link" href="https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.0">v5.10.0 release notes</a> for more information.
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
       <td class="govuk-table__cell">head</td>
       <td class="govuk-table__cell">Block</td>
       <td class="govuk-table__cell">
