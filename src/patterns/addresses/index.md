@@ -9,44 +9,14 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "_wcag-callout.njk" import wcagCallout %}
-{% from "_wcag-note.njk" import wcagNote %}
 
 This guidance is for government teams that build online services. [To find information and services for the public, go to GOV.UK](https://www.gov.uk/).
-
-{{ wcagCallout({
-  type: "pattern",
-  introAction: "ask users for",
-  name: "Addresses",
-  criteria: [
-    {
-      text: "make sure users can reuse a previously entered address",
-      anchor: "wcag-reuse-addresses"
-    }
-  ]
-}) }}
 
 Help users provide an address using one of the following:
 
 - Multiple text inputs
 - Address lookup
 - Textarea
-
-### Reusing entered addresses
-
-{% call wcagNote({id: "wcag-reuse-addresses"}) %}
-
-<p>Make sure users can easily reuse a previously entered address within a single journey, unless doing so would be a major safety or security concern. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry</a>.</p>
-{% endcall %}
-
-You can make it easier to reuse addresses through one of these methods:
-
-- pre-populate address fields with the previously entered address
-- show any previously entered addresses as an option for the user to select
-
-For example, show an option to reuse an entered delivery address as the billing address.
-
-Continue to give users the option to enter a new address.
 
 ## Multiple text inputs
 

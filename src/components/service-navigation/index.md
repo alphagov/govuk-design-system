@@ -98,12 +98,6 @@ There’s a risk that slot contents may look or work differently in a future rel
 
 You’ll need to ensure that slot content still works as intended after each update.
 
-## Accessibility
-
-You can add a link to a ‘help’ page in your Service header component. If you do, the link must be positioned consistently within the header, and must always link to the same place.
-
-For example, a header link to 'Get help with this service' must go to the same place as similar header links elsewhere in your service. This is to comply with [WCAG 2.2 success criterion 3.2.6 Consistent help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html).
-
 ## Research on this component
 
 See the [research section in the Help users navigate a service pattern](/patterns/navigate-a-service/#research-on-this-pattern) for a summary of our research on the GOV.UK header and Service navigation, and how you can share your feedback with us.
