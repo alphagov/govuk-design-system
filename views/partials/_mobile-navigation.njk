@@ -1,0 +1,20 @@
+{% macro mobileNavigation(params) %}
+  {% if params.items %}
+    <ul hidden class="app-mobile-navigation__list">
+      {% for theme, items in params.items | groupby("theme") %}
+        {% if theme != 'undefined' %}
+          <li class="app-mobile-navigation__subnav-item">
+            <h3 class="app-mobile-navigation__theme" >{{ theme }}</h3>
+          </li>
+        {% endif %}
+        {% for item in items %}
+          <li class="app-mobile-navigation__subnav-item">
+            <a class="app-mobile-navigation__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="{{ item.href }}">
+              {{ item.text }}
+            </a>
+          </li>
+        {% endfor %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}
