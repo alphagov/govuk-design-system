@@ -38,17 +38,8 @@ SVG images for creating flow diagrams of GOV.UK services.
 
 ## Create prototypes and wireframes
 
-[GOV.UK Balsamiq wireframes](https://github.com/enoranidi/govuk-design-system-balsamiq) -
-Balsamiq wireframes based on the GOV.UK Design System.
-
 [GOV.UK Figma resources](https://www.figma.com/file/NWuFffKvPQhl3aJ9nKU0p3/GOV.UK-Design-System) -
 Figma library of styles and components based on the GOV.UK Design System.
-
-[GOV.UK Mural resources](https://github.com/vickytnz/govuk-elements-mural) -
-Mural template based on the GOV.UK Design System.
-
-[GOV.UK Sketch Wireframing Kit](https://github.com/dwp/sketch_wireframing_kit) -
-Sketch wireframes based on the GOV.UK Design System.
 
 ## Build front ends
 
