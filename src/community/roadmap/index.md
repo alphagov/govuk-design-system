@@ -13,18 +13,19 @@ Some things on the roadmap might change – the purpose is to tell you what’s 
 
 See our [GitHub team board](https://github.com/orgs/alphagov/projects/53) for more details on our plans and day-to-day activities.
 
-Last updated 1 May 2025.
+Last updated 15 May 2025.
 
 ## Recently shipped
 
-We’ve released [GOV.UK Frontend v5.10.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.0), which updates the GOV.UK header, GOV.UK footer, Service naviagtion and Cookie banner components to use the refreshed GOV.UK brand.
+We released [GOV.UK Frontend v5.10.1](https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.1), which fixes the colour of the dot in the refreshed GOV.UK logo, alongside small fixes to the implementation of the brand refresh.
 
-Previously, we released [GOV.UK Frontend v5.9.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.9.0), which includes a [JavaScript enhancement to the File upload component](https://design-system.service.gov.uk/components/file-upload/#using-the-improved-file-upload-component).
+Previously, we released [GOV.UK Frontend v5.10.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.0), which updates the GOV.UK header, GOV.UK footer, Service navigation and Cookie banner components to use the refreshed GOV.UK brand.
 
-We’ve also deprecated the options to show a service name, as well as navigation links, in the GOV.UK header component. Both options will be removed from the GOV.UK header in the next breaking release of GOV.UK Frontend.
+We also deprecated the options to show a service name, as well as navigation links, in the GOV.UK header component. Both options will be removed from the GOV.UK header in the next breaking release of GOV.UK Frontend.
 
 We’ve also recently:
 
+- released [GOV.UK Frontend v5.9.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.9.0), which includes a [JavaScript enhancement to the File upload component](https://design-system.service.gov.uk/components/file-upload/#using-the-improved-file-upload-component)
 - released [GOV.UK Frontend v5.8.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.8.0), which includes a new `ConfigurableComponent` class to help you build your own configurable components
 - added features to help services [create their own JavaScript components using GOV.UK Frontend](https://frontend.design-system.service.gov.uk/building-your-own-javascript-components/)
 - updated the Royal Arms in the [GOV.UK Footer component](/components/footer/)
