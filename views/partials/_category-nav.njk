@@ -7,16 +7,16 @@ pages. #}
 <!-- [html-validate-disable-next unique-landmark -- allow 2 navs with the same aria-labelledby because they contain the same information] -->
 <nav class="category-nav" aria-labelledby="app-subnav-heading">
   {% for item in navigation %}
-    {% if permalink and permalink.startsWith(item.url) %}
+    {% if permalink and item.isActive(permalink) %}
     {% if item.items %}
-      {% for theme, items in item.items | groupby("theme") %}
+      {% for theme, items in item.items %}
         {% if theme != 'undefined' %}
           <h2 class="govuk-heading-m">{{ theme }}</h2>
         {% endif %}
         <ul class="govuk-list">
         {% for subitem in items %}
           <li class="govuk-!-margin-bottom-2">
-            <a class="govuk-link" href="/{{ subitem.url }}/">{{ subitem.label }}</a>
+            <a class="govuk-link" href="{{subitem.href}}">{{ subitem.text }}</a>
           </li>
         {% endfor %}
         </ul>
