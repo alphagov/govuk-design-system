@@ -20,6 +20,7 @@ import CookiesPage from './components/cookies-page.mjs'
 import Copy from './components/copy.mjs'
 import EmbedCard from './components/embed-card.mjs'
 import ExampleFrame from './components/example-frame.mjs'
+import MobileNavigationSection from './components/mobile-navigation-section.mjs'
 import OptionsTable from './components/options-table.mjs'
 import ScrollContainer from './components/scroll-container.mjs'
 import Search from './components/search.mjs'
@@ -30,6 +31,9 @@ createAll(Button)
 createAll(NotificationBanner)
 createAll(ServiceNavigation)
 createAll(SkipLink)
+
+// Mobile navigation
+createAll(MobileNavigationSection)
 
 // Cookies and analytics
 createAll(CookieBanner)

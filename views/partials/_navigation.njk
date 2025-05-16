@@ -25,7 +25,10 @@ service navigation component. #}
     href: '/' + item.url + '/',
     html: item.label + subNavHtml,
     current: true if permalink and (permalink == item.url) else false,
-    active: true if permalink and permalink.startsWith(item.url) else false
+    active: true if permalink and permalink.startsWith(item.url) else false,
+    attributes: {
+      "data-module": "app-mobile-navigation-section"
+    }
   }), navLinks) %}
 {%- endfor %}
 
