@@ -4,7 +4,7 @@
 hacky, but works as the homepage has an empty string for a permalink. #}
 {% if permalink %}
   {{ govukBreadcrumbs({
-    classes: "app-width-container",
+    classes: "app-breadcrumbs",
     items: getAncestorPages(permalink)
   }) }}
 {% endif %}
