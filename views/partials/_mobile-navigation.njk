@@ -1,0 +1,38 @@
+{% macro mobileNavigationItem(params) %}
+  {% set current = true if params.pagePermalink and (params.pagePermalink == params.item.url) else false %}
+  {% set active = true if params.pagePermalink and params.pagePermalink.startsWith(params.item.url) else false %}
+
+  <li>
+    <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline"
+        href="/{{ params.item.url }}/"
+        {%- if current or active %} aria-current="{{ 'page' if current else 'true' }}"{% endif %}>
+      {{ params.label or params.item.label }}
+    </a>
+  </li>
+{% endmacro %}
+
+{% macro mobileNavigation(params) %}
+    <ul hidden>
+      {# Before the sub navigation items, inject a link to the root of the site section #}
+      {{ mobileNavigationItem({
+        item: params.item,
+        label: params.item.label + " overview",
+        pagePermalink: params.pagePermalink
+      })}}
+
+      {% if params.item.items %}
+        {% for theme, items in params.item.items | groupby("theme") %}
+          <li>
+          {% if theme != 'undefined' %}
+            <h3>{{ theme }}</h3>
+          {% endif %}
+            <ul>
+            {% for item in items %}
+              {{ mobileNavigationItem({item: item, pagePermalink: params.pagePermalink})}}
+            {% endfor %}
+            </ul>
+          </li>
+        {% endfor %}
+      {% endif %}
+    </ul>
+{% endmacro %}

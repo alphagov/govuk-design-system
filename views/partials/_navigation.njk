@@ -1,12 +1,29 @@
 {% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
 
+{% from "_mobile-navigation.njk" import mobileNavigation %}
+
 {# Convert backend navigation structure to one useable with the
 service navigation component. #}
 {%- set navLinks = [] %}
 {%- for item in navigation %}
+  {#
+    Render the sub navigation in a `<template>` element
+    so it can be used in JavaScript to provide an accordion
+    on narrow viewports
+  #}
+
+  {% if item.items %}
+    {% set subNavHtml %}
+      <template>{{ mobileNavigation({
+        item: item,
+        pagePermalink: permalink
+      }) }}</template>
+    {% endset %}
+  {% endif %}
+
   {%- set navLinks = (navLinks.push({
     href: '/' + item.url + '/',
-    text: item.label,
+    html: item.label + subNavHtml,
     current: true if permalink and (permalink == item.url) else false,
     active: true if permalink and permalink.startsWith(item.url) else false
   }), navLinks) %}
