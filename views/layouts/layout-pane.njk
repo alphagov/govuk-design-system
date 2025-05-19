@@ -12,11 +12,6 @@
   <div class="app-split-pane__content">
     {% include "_breadcrumbs.njk" %}
     <main id="main-content" class="app-content" role="main">
-      {% if not includeThemeInPageHeading %}
-      <span class="govuk-caption-xl">
-        {{ theme if theme else section }}
-      </span>
-      {% endif %}
       <h1 class="govuk-heading-xl {%- if status %} govuk-!-margin-bottom-5{% endif %}">
         {% if includeThemeInPageHeading %}
         <span class="govuk-caption-xl">
