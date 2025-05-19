@@ -41,6 +41,11 @@ $govuk-new-typography-scale: true;
 @import "govuk/overrides/typography";
 @import "govuk/overrides/width";
 
+// Neither values are available as variables in GOV.UK Frontend
+// so adding them as private variables for future reference
+$_govuk-service-navigation-link-colour: govuk-shade($govuk-link-colour, 10%);
+$_govuk-service-navigation-font-size: 19px;
+
 // App-specific variables
 $app-light-grey: #f8f8f8;
 $app-code-color: #d13118;
@@ -60,6 +65,7 @@ $app-code-color: #d13118;
 @import "components/highlight";
 @import "components/image-card";
 @import "components/masthead";
+@import "components/mobile-navigation-section";
 @import "components/options";
 @import "components/page-navigation";
 @import "components/phase-banner";
