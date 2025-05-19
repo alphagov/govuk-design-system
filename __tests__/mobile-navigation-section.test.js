@@ -198,7 +198,7 @@ describe('MobileNavigationSection', () => {
         // Wait a little bit that the Media Query List reacting to the change of viewport
         // has triggered its 'change' event before we look at the page
         await page.waitForSelector(
-          '.govuk-service-navigation__link:not([hidden])'
+          '[data-module="app-mobile-navigation-section"]:not([hidden])'
         )
 
         await expect(
@@ -212,7 +212,9 @@ describe('MobileNavigationSection', () => {
         await page.setViewport({ width: 375, height: 667 })
         // Wait a little bit that the Media Query List reacting to the change of viewport
         // has triggered its 'change' event before we look at the page
-        await page.waitForSelector('.govuk-service-navigation__link[hidden]')
+        await page.waitForSelector(
+          '[data-module="app-mobile-navigation-section"][hidden]'
+        )
 
         // When viewport is narrow again, the subnav is visible like it was before the viewport got larger
         await expect(

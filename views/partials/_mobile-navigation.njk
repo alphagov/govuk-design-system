@@ -1,9 +1,9 @@
 {% macro mobileNavigationItem(params) %}
   {% set current = true if params.pagePermalink and (params.pagePermalink == params.item.url) else false %}
-  {% set active = true if params.pagePermalink and params.pagePermalink.startsWith(params.item.url) else false %}
+  {% set active = (true if params.pagePermalink and params.pagePermalink.startsWith(params.item.url)) if not params.ignoreActive %}
 
-  <li>
-    <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline"
+  <li class="app-mobile-navigation-section__item{%- if current or active %} app-mobile-navigation-section__item--active{% endif %}">
+    <a class="govuk-service-navigation__link"
         href="/{{ params.item.url }}/"
         {%- if current or active %} aria-current="{{ 'page' if current else 'true' }}"{% endif %}>
       {{ params.label or params.item.label }}
@@ -12,21 +12,26 @@
 {% endmacro %}
 
 {% macro mobileNavigation(params) %}
-    <ul hidden>
-      {# Before the sub navigation items, inject a link to the root of the site section #}
+    <ul class="app-mobile-navigation-section__list app-mobile-navigation-section__subnav" hidden>
+      {#
+        Before the sub navigation items, inject a link to the root of the site section
+        That link should never be the active page as this is already visible by the subnavigation
+        being visible so we only want active styles when this item is actually the current page
+      #}
       {{ mobileNavigationItem({
         item: params.item,
         label: params.item.label + " overview",
-        pagePermalink: params.pagePermalink
+        pagePermalink: params.pagePermalink,
+        ignoreActive: true
       })}}
 
       {% if params.item.items %}
         {% for theme, items in params.item.items | groupby("theme") %}
           <li>
           {% if theme != 'undefined' %}
-            <h3>{{ theme }}</h3>
+            <h3 class="app-mobile-navigation-section__theme">{{ theme }}</h3>
           {% endif %}
-            <ul>
+            <ul class="app-mobile-navigation-section__list">
             {% for item in items %}
               {{ mobileNavigationItem({item: item, pagePermalink: params.pagePermalink})}}
             {% endfor %}

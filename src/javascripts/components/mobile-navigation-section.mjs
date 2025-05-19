@@ -75,7 +75,12 @@ class MobileNavigationSection extends Component {
    */
   createButton() {
     const $button = document.createElement('button')
-    $button.textContent = this.$root.textContent
+    $button.classList.add('app-mobile-navigation-section__toggle')
+    // `trim()` ensures no whitespace coming from the server rendered Service Navigation
+    // link gets into the button as it would mess the underline on hover
+    // The `<span>` allows to only apply the focus style to the text and chevron
+    // rather than having it take the whole width
+    $button.innerHTML = `<span>${this.$root.textContent.trim()}</span>`
     $button.setAttribute('aria-expanded', 'false')
     $button.hidden = true
 
@@ -99,11 +104,17 @@ class MobileNavigationSection extends Component {
   setHiddenStates() {
     if (!this.mql.matches) {
       this.$root.setAttribute('hidden', '')
+      this.$root.parentElement.classList.add(
+        'app-mobile-navigation-section__service-navigation-item'
+      )
       if (this.expanded) {
         this.$subnav.removeAttribute('hidden')
       }
       this.$button.removeAttribute('hidden')
     } else {
+      this.$root.parentElement.classList.remove(
+        'app-mobile-navigation-section__service-navigation-item'
+      )
       this.$button.setAttribute('hidden', '')
       this.$subnav.setAttribute('hidden', '')
       this.$root.removeAttribute('hidden')
