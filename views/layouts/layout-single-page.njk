@@ -1,6 +1,11 @@
 {% extends "_generic.njk" %}
 
 {% block body %}
+  {{ govukBreadcrumbs({
+    classes: "app-width-container",
+    items: getAncestorPages(permalink)
+  }) }}
+
   <main id="main-content" class="govuk-main-wrapper govuk-main-wrapper--l" role="main">
     <div class="app-width-container">
       {{ contents | safe }}
@@ -8,5 +13,4 @@
   </main>
 
   {% include "_footer.njk" %}
-
 {% endblock %}
