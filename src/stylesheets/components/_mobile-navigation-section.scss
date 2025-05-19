@@ -1,0 +1,215 @@
+@use "sass:math";
+
+// The Service Navigation container has a flex column layout
+// aligning items at the start. To make sure the toggles
+// of the mobile navigation take the whole width, we
+// need to make this wrapper 100% wide
+.app-service-navigation__wrapper {
+  width: 100%;
+}
+
+// Cancel out some of the Service Navigation styles
+// That class is toggled by JavaScript so needs no media query
+// to gate its styles
+.app-mobile-navigation-section__service-navigation-item {
+  // Avoid double margins with the button, which needs some spacing
+  // from the subnav whether the subnav is closed or open
+  margin-top: 0;
+  margin-bottom: 0;
+
+  &.govuk-service-navigation__item--active {
+    padding-left: govuk-spacing(3);
+    // The active element is highlighted in the subnav
+    // so the items in the service navigation don't need to show it
+    // We need to cancel out border width so it does not show
+    // in high contrast mode and restore the padding accordingly
+    border-width: 0;
+  }
+}
+
+.app-mobile-navigation-section__toggle {
+  // Make interactive area larger but aligns the text left
+  width: 100%;
+  // Add some vertical spacing evenly spread above and below the text
+  margin: 0;
+  padding: govuk-spacing(2) 0;
+  // Clear button styles
+  border: 0;
+
+  // Add back a border to separate each element of the menu
+  border-top: solid 1px $govuk-border-colour;
+
+  color: $_govuk-service-navigation-link-colour;
+  background: none;
+
+  // Meet the Service Nav's typography
+  font: inherit;
+  text-align: left;
+
+  // Add some extra affordance for mouse users
+  cursor: pointer;
+
+  &:hover {
+    color: $govuk-link-hover-colour;
+  }
+
+  &:focus {
+    // The outline is provided by the `govuk-focused-text`
+    // on the span
+    outline: none;
+
+    span {
+      @include govuk-focused-text;
+    }
+  }
+}
+
+$app-chevron-size: 6px;
+$app-chevron-stroke-width: 2px;
+$app-chevron-width: math.sqrt(2 * math.pow(6, 2));
+$app-chevron-margin-left: govuk-spacing(2);
+// Add a couple extra pixels on the right margin for nicer visual spacing
+$app-chevron-margin-right: govuk-spacing(2) + 2px;
+
+// We'll be drawing our own chevron so it aligns with those in the accordion
+.govuk-service-navigation__toggle::after {
+  content: none;
+}
+
+.app-mobile-navigation-section__toggle span::before,
+.govuk-service-navigation__toggle::before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  // Align to the middle of the uppercase that starts the toggle's text
+  // accounting for when font-size may be customised by user
+  bottom: govuk-em(4px, $_govuk-service-navigation-font-size);
+
+  // Draw an arrow by drawing top and right borders
+  // of a square and rotating it so the angle points
+  // in the right direction. Using `em` we can ensure
+  // the arrow scales with the adjacent text.
+  // Don't scale the chevron to be consistent with what's done
+  // in the search and leave more space for text when font-size
+  // is increased
+  width: $app-chevron-size;
+  height: $app-chevron-size;
+
+  margin: 0 $app-chevron-margin-right 0 $app-chevron-margin-left;
+  transform: rotate(135deg);
+  border-top: $app-chevron-stroke-width solid;
+  border-right: $app-chevron-stroke-width solid;
+  vertical-align: baseline;
+}
+
+.app-mobile-navigation-section__toggle[aria-expanded="true"] span::before,
+.govuk-service-navigation__toggle[aria-expanded="true"]::before {
+  // Cancel the vertical shift so the chevron remains aligned
+  // easier than to
+  bottom: govuk-em(1px, $_govuk-service-navigation-font-size);
+  transform: rotate(-45deg);
+}
+
+// Slight positioning adjustment for the service-navigation-toggle
+.govuk-service-navigation__toggle::before {
+  bottom: govuk-em(2px, $_govuk-service-navigation-font-size);
+}
+
+.govuk-service-navigation__toggle[aria-expanded="true"]::before {
+  bottom: govuk-em(-2px, $_govuk-service-navigation-font-size);
+}
+
+.app-mobile-navigation-section__list {
+  margin-bottom: 10px;
+  padding: 0;
+  list-style-type: none;
+}
+
+$subnav-padding-left: $app-chevron-width + $app-chevron-margin-left + $app-chevron-margin-right;
+
+.app-mobile-navigation-section__subnav {
+  // Prepare for painting a white background
+  // edge to edge behind the list using a pseudo element
+  position: relative;
+  z-index: 0;
+  // Make the list directly follow the toggle it belongs to
+  // but space it out a bit from the next one
+  margin-top: 0;
+  margin-bottom: govuk-spacing(2);
+  padding-top: govuk-spacing(3);
+  padding-bottom: govuk-spacing(3);
+  // Align the text with the text in the toggle
+  padding-left: $subnav-padding-left;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+
+    // Cover the element top to bottom
+    top: 1px;
+    bottom: 1px;
+    // Compensate from the margin of the `govuk-width-container`
+    // inside the Service Navigation
+    left: -$govuk-gutter-half;
+    // Make it span the whole screen width and white
+    width: 100vw;
+    // Add a border at the top so it's visible in high contrast
+    border-top: solid 1px transparent;
+    border-bottom: solid 1px transparent;
+    background-color: #ffffff;
+
+    @supports (margin: unquote("max(calc(0px))")) {
+      $save-area-aware: calc(#{$govuk-gutter-half} + env(safe-area-inset-left));
+
+      // Use max() to pick largest margin, default or with safe area
+      // Escaped due to Sass max() vs. CSS native max()
+      left: unquote("calc(-1 * max(#{$govuk-gutter-half}, #{$save-area-aware}))");
+    }
+  }
+}
+
+.app-mobile-navigation-section__theme {
+  @include govuk-typography-common;
+
+  margin-top: govuk-spacing(4);
+  margin-bottom: govuk-spacing(1);
+  margin-left: -($subnav-padding-left - govuk-spacing(2));
+  padding: 0;
+  color: govuk-colour("dark-grey");
+  font: inherit;
+}
+
+.app-mobile-navigation-section__item {
+  padding: govuk-spacing(2) 0;
+}
+
+.app-mobile-navigation-section__item--active {
+  // Offsets the border drawn to indicate the active element
+  // so it sits 1px from the left edge of the screen (allowing it to be more visible)
+  // accounting for:
+  // - the space on the side of the `govuk-width-container` of the Service Navigation
+  // - the padding of the subnav
+  $signifier-offset: $govuk-gutter-half + $subnav-padding-left - 1px;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -$signifier-offset;
+    border-left: solid 5px $_govuk-service-navigation-link-colour;
+
+    @supports (margin: unquote("max(calc(0px))")) {
+      $save-area-aware: calc(#{$signifier-offset} + env(safe-area-inset-left));
+
+      // Use max() to pick largest margin, default or with safe area
+      // Escaped due to Sass max() vs. CSS native max()
+      left: unquote("calc(-1 * max(#{$signifier-offset}, #{$save-area-aware}))");
+    }
+  }
+}
