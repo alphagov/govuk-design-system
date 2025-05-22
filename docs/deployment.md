@@ -66,3 +66,5 @@ trailing-slashed URLs, but decided against it because:
   configuration.
 - other parts of GOV.UK's infrastructure (such as their mirroring) make
   assumptions based on the lack of a trailing slash and relative URLs.
+
+[varnish-strip]: https://github.com/alphagov/govuk-puppet/blob/22e8fd6ab532febd4a5df30381d3fc215f6e0153/modules/varnish/templates/default.vcl.erb#L31-L37
