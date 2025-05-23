@@ -10,7 +10,10 @@
     {% include "_subnav.njk" %}
   </div>
   <div class="app-split-pane__content">
-    {% include "_breadcrumbs.njk" %}
+    {{ govukBreadcrumbs({
+      classes: "app-breadcrumbs",
+      items: getAncestorPages(permalink)
+    }) }}
     <main id="main-content" class="app-content" role="main">
       <h1 class="govuk-heading-xl {%- if status %} govuk-!-margin-bottom-5{% endif %}">
         {% if includeThemeInPageHeading %}
