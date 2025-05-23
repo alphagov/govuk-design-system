@@ -30,9 +30,16 @@ $toc-width-tablet: 210px;
 }
 
 .app-split-pane__content {
+  padding-top: govuk-spacing(3);
+  padding-bottom: govuk-spacing(4);
+
   @include govuk-media-query($from: tablet) {
     display: flex;
     min-width: 0;
+
+    padding-top: govuk-spacing(6);
+    padding-bottom: govuk-spacing(8);
+    padding-left: govuk-spacing(6);
     flex: 1 1 100%;
     flex-direction: column;
   }
