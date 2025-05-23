@@ -1,16 +1,15 @@
 {% extends "_generic.njk" %}
 
 {% block body %}
-  {{ govukBreadcrumbs({
-    classes: "app-width-container",
-    items: getAncestorPages(permalink)
-  }) }}
+  <div class="app-width-container">
+    {{ govukBreadcrumbs({
+      items: getAncestorPages(permalink)
+    }) }}
 
-  <main id="main-content" class="govuk-main-wrapper govuk-main-wrapper--l" role="main">
-    <div class="app-width-container">
+    <main id="main-content" role="main">
       {{ contents | safe }}
-    </div>
-  </main>
+    </main>
+  </div>
 
   {% include "_footer.njk" %}
 {% endblock %}

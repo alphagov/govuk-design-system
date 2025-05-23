@@ -78,8 +78,7 @@ $app-code-color: #d13118;
 .app-breadcrumbs {
   // match top padding of the first item in the pane navigation so that the
   // breadcrumbs line up nicely
-  margin-top: govuk-spacing(1);
-  margin-bottom: 0;
+  margin: govuk-spacing(1) 0;
 }
 
 .app-content {
