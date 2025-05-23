@@ -57,4 +57,10 @@
   margin: 0;
   padding: govuk-spacing(2) govuk-spacing(3) govuk-spacing(2) 0;
   color: govuk-colour("dark-grey");
+
+  // Avoid padding on the first heading so its baseline is close
+  // enough to the breadcrumbs' baseline that they look aligned
+  &:first-of-type {
+    padding-top: 0;
+  }
 }
