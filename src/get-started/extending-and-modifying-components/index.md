@@ -17,8 +17,9 @@ Consider whether your changes:
 - help the long term maintenance of your service
 - allow you to safely install updates from the GOV.UK Design System
 - reduce the risk of technical debt
+- maintain WCAG compliance
 
-When you extend or modify components in the GOV.UK Design System you create potential risk. For example, your code or service may break when you install Design System updates.
+When you extend or modify components in the GOV.UK Design System you create potential risk. For example, your code or service may break when you install Design System updates, or you might make your service less accessible.
 
 You can help reduce potential risk to your code by:
 
@@ -28,6 +29,7 @@ You can help reduce potential risk to your code by:
 - creating [custom override classes for multiple components](#custom-override-classes)
 - using BEM for [small modifications to components](#small-modifications-to-components)
 - forking components when you are making [large modifications](#large-modifications-to-components)
+- checking [accessibility](#check-accessibility)
 
 The GOV.UK Design System team uses many of these techniques to make sure code in the GOV.UK Design System does not unintentionally break your application code.
 
@@ -140,6 +142,12 @@ When you do this you’ll need to rename all [prefixes][prefix] that include `go
 Doing this removes the possibility of any updates breaking your service. However, you will not receive any future updates from the original component.
 
 For example, a large modification of an existing component is the [Step by step navigation pattern](/patterns/step-by-step-navigation/) which began as a small modification to the [Accordion component](/components/accordion/). The step by step navigation had so many changes it was eventually forked into a separate component.
+
+## Check accessibility
+
+When you make any changes you need to check the accessibility of the modified components. That is to ensure your service is compliant with WCAG 2.2 AA and [meets accessibility regulations](https://www.gov.uk/guidance/meet-the-requirements-of-equality-and-accessibility-regulations).
+
+Read our [accessibility statement](/accessibility-statement/) to understand how accessible unmodified components in the GOV.UK Design System are. And read [accessibility guidance in the Service Manual](https://www.gov.uk/service-manual/helping-people-to-use-your-service) to understand what you need to do to ensure your service is accessible.
 
 ## Contributing back
 
