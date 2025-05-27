@@ -82,7 +82,7 @@ GOV.UK Frontend WTForms Widgets.
 
 ### Python / Django
 
-[Crispy Forms GDS](https://github.com/wildfish/crispy-forms-gds) - A Django Crispy Forms template pack for creating pages with GOV.UK Frontend components.
+[Crispy Forms GDS](https://github.com/StuartMacKay/crispy-forms-gds) - A Django Crispy Forms template pack for creating pages with GOV.UK Frontend components.
 
 ### PHP / Laravel
 
