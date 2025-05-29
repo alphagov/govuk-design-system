@@ -17,9 +17,11 @@ Last updated 15 May 2025.
 
 ## Recently shipped
 
-We released [GOV.UK Frontend v5.10.1](https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.1), which fixes the colour of the dot in the refreshed GOV.UK logo, alongside small fixes to the implementation of the brand refresh.
+We’ve released [GOV.UK Frontend v5.10.2](https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.2), which updates the spacing in the header when the navigation is not used, allowing the product name to stay on the same line as the logo for a wider variety of small screens.
 
-Previously, we released [GOV.UK Frontend v5.10.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.0), which updates the GOV.UK header, GOV.UK footer, Service navigation and Cookie banner components to use the refreshed GOV.UK brand.
+Previously, we released [GOV.UK Frontend v5.10.1](https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.1), which fixes the colour of the dot in the refreshed GOV.UK logo, alongside small fixes to the implementation of the brand refresh.
+
+On 1 May 2025, we released [GOV.UK Frontend v5.10.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.0), which updates the GOV.UK header, GOV.UK footer, Service navigation and Cookie banner components to use the refreshed GOV.UK brand.
 
 We also deprecated the options to show a service name, as well as navigation links, in the GOV.UK header component. Both options will be removed from the GOV.UK header in the next breaking release of GOV.UK Frontend.
 
