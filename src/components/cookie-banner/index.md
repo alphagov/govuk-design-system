@@ -29,9 +29,15 @@ If you use the page template, you'll also get the Cookie banner without having t
 
 <p class="govuk-body">The Cookie banner component’s background colour will change to light blue.</p>
 
-<p class="govuk-body">To help service teams in government get ready, we’ve released GOV.UK Frontend v5.10.0.</p>
+<p class="govuk-body">To help service teams in government get ready, we’ve released GOV.UK Frontend v5.10.0 (and later fix versions). For teams on earlier versions, we’ve released GOV.UK Frontend v4.10.0</p>
 
-<p class="govuk-body">Read the <a href="https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.0" class="govuk-link">full release notes</a> to see more details and how to update.</p>
+<p class="govuk-body">To see more details and how to update, you can read:</p>
+<ul class="govuk-list govuk-list--bullet">
+<li><a href="https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.0" class="govuk-link">release notes for v5.10.0</a></li>
+<li><a href="https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.1" class="govuk-link">release notes for v5.10.1</a></li>
+<li><a href="https://github.com/alphagov/govuk-frontend/releases/tag/v4.10.0" class="govuk-link">release notes for v4.10.0</a></li>
+</ul>
+``
 {% endcall %}
 
 ## When to use this component

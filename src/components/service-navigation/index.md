@@ -22,7 +22,7 @@ Service navigation helps users understand that they’re using your service and 
 <li>uses light blue as the background colour, instead of grey</li>
 <li>slightly reduces overall padding</li>
 </ul>
-<p class="govuk-body">To help service teams in government get ready, we’ve released GOV.UK Frontend v5.10.0.</p>
+<p class="govuk-body">To help service teams in government get ready, we’ve released GOV.UK Frontend v5.10.0 (and later fix versions).</p>
 <p class="govuk-body">Read the <a href="https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.0" class="govuk-link">full release notes</a> to see more details and how to update.</p>
 {% endcall %}
 
