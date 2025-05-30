@@ -43,4 +43,4 @@ List of organisers:
 - Romaric Pascal
 - Trang Erskine
 
-(These guidelines are adapted from the [Practical Service Design](http://www.practicalservicedesign.com/getting-started-on-slack/) community guidelines, [Afrotech Fest code of conduct](https://www.afrotechfest.co.uk/coc/), [Code for America code of conduct](http://www.cvent.com/events/code-for-america-summit-2018/custom-40-e12d85b157b94d69b80d8911cc641d36.aspx), [UKGovcamp code of conduct](https://www.ukgovcamp.com/code-of-conduct/), and [Services Week 2021 code of conduct](https://docs.google.com/document/d/1vQchJh-s6Fu6F4bN8UFM4lvRChe8ERgsE5whf9pUfjA/edit?usp=sharing) codes of conduct.)
+(These guidelines are adapted from [Afrotech Fest code of conduct](https://www.afrotechfest.co.uk/coc/), [Code for America code of conduct](http://www.cvent.com/events/code-for-america-summit-2018/custom-40-e12d85b157b94d69b80d8911cc641d36.aspx), [UKGovcamp code of conduct](https://www.ukgovcamp.com/code-of-conduct/), and [Services Week 2021 code of conduct](https://docs.google.com/document/d/1vQchJh-s6Fu6F4bN8UFM4lvRChe8ERgsE5whf9pUfjA/edit?usp=sharing) codes of conduct.)

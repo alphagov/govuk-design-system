@@ -38,7 +38,7 @@ If you have social media channels:
 
 ### Write phone numbers in the GOV.UK style
 
-See the [GOV.UK style for writing phone numbers](https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#phone-numbers).
+See the [GOV.UK style for writing phone numbers](https://www.gov.uk/guidance/style-guide/a-to-z#telephone-numbers).
 
 ### Explain any charges
 
@@ -50,7 +50,7 @@ For phone call charges, link to the GOV.UK page on [call charges](https://www.go
 
 ### Give opening hours
 
-Follow the GOV.UK style guide format for [time ranges](https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#times) and [date ranges](https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#dates).
+Follow the GOV.UK style guide format for [time ranges](https://www.gov.uk/guidance/style-guide/a-to-z#times) and [date ranges](https://www.gov.uk/guidance/style-guide/a-to-z#dates).
 
 Explain any exceptions, like bank holidays, or days of the week when your opening hours are different.
 
