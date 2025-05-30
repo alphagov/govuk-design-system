@@ -41,6 +41,11 @@ $govuk-new-typography-scale: true;
 @import "govuk/overrides/typography";
 @import "govuk/overrides/width";
 
+// Neither values are available as variables in GOV.UK Frontend
+// so adding them as private variables for future reference
+$_govuk-service-navigation-link-colour: govuk-shade($govuk-link-colour, 10%);
+$_govuk-service-navigation-font-size: 19px;
+
 // App-specific variables
 $app-light-grey: #f8f8f8;
 $app-code-color: #d13118;
@@ -60,6 +65,7 @@ $app-code-color: #d13118;
 @import "components/highlight";
 @import "components/image-card";
 @import "components/masthead";
+@import "components/mobile-navigation-section";
 @import "components/options";
 @import "components/page-navigation";
 @import "components/phase-banner";
@@ -75,15 +81,23 @@ $app-code-color: #d13118;
   @include govuk-width-container(1100px);
 }
 
-.app-content {
-  padding: govuk-spacing(3) govuk-spacing(0) govuk-spacing(4);
+.app-main-wrapper {
+  padding-top: govuk-spacing(3);
+  padding-bottom: govuk-spacing(4);
 
   @include govuk-media-query($from: tablet) {
-    padding: govuk-spacing(6);
-    padding-right: 0;
+    padding-top: govuk-spacing(6);
     padding-bottom: govuk-spacing(8);
   }
+}
 
+.app-breadcrumbs {
+  // match top padding of the first item in the pane navigation so that the
+  // breadcrumbs line up nicely
+  margin: govuk-spacing(1) 0;
+}
+
+.app-content {
   h1 {
     max-width: 15em;
   }
