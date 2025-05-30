@@ -2,7 +2,7 @@
   // Since the back to top link is outside the flow of the document we need to create a space for it.
   // This number is magic and was determined by manually judging the visual spacing.
   margin-bottom: 100px;
-  padding: govuk-spacing(6) govuk-spacing(3) 0 0;
+  padding-right: govuk-spacing(3);
   @include govuk-font(16);
 }
 

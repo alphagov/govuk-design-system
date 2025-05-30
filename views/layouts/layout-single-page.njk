@@ -1,8 +1,9 @@
 {% extends "_generic.njk" %}
 
 {% block body %}
-  <div class="app-width-container">
+  <div class="app-width-container app-main-wrapper">
     {{ govukBreadcrumbs({
+      classes: "app-breadcrumbs",
       items: getAncestorPages(permalink)
     }) }}
 

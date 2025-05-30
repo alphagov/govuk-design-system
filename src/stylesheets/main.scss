@@ -75,6 +75,16 @@ $app-code-color: #d13118;
   @include govuk-width-container(1100px);
 }
 
+.app-main-wrapper {
+  padding-top: govuk-spacing(3);
+  padding-bottom: govuk-spacing(4);
+
+  @include govuk-media-query($from: tablet) {
+    padding-top: govuk-spacing(6);
+    padding-bottom: govuk-spacing(8);
+  }
+}
+
 .app-breadcrumbs {
   // match top padding of the first item in the pane navigation so that the
   // breadcrumbs line up nicely
