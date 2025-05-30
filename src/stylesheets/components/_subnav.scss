@@ -2,7 +2,7 @@
   // Since the back to top link is outside the flow of the document we need to create a space for it.
   // This number is magic and was determined by manually judging the visual spacing.
   margin-bottom: 100px;
-  padding: govuk-spacing(6) govuk-spacing(3) 0 0;
+  padding-right: govuk-spacing(3);
   @include govuk-font(16);
 }
 
@@ -57,4 +57,10 @@
   margin: 0;
   padding: govuk-spacing(2) govuk-spacing(3) govuk-spacing(2) 0;
   color: govuk-colour("dark-grey");
+
+  // Avoid padding on the first heading so its baseline is close
+  // enough to the breadcrumbs' baseline that they look aligned
+  &:first-of-type {
+    padding-top: 0;
+  }
 }

@@ -5,17 +5,16 @@
 {% set includeThemeInPageHeading = theme and "…" in theme %}
 
 {% block body %}
-<div class="app-split-pane app-width-container">
+<div class="app-split-pane app-width-container app-main-wrapper">
   <div class="app-split-pane__nav">
     {% include "_subnav.njk" %}
   </div>
   <div class="app-split-pane__content">
+    {{ govukBreadcrumbs({
+      classes: "app-breadcrumbs",
+      items: getAncestorPages(permalink)
+    }) }}
     <main id="main-content" class="app-content" role="main">
-      {% if not includeThemeInPageHeading %}
-      <span class="govuk-caption-xl">
-        {{ theme if theme else section }}
-      </span>
-      {% endif %}
       <h1 class="govuk-heading-xl {%- if status %} govuk-!-margin-bottom-5{% endif %}">
         {% if includeThemeInPageHeading %}
         <span class="govuk-caption-xl">

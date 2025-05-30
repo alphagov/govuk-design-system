@@ -33,6 +33,8 @@ $toc-width-tablet: 210px;
   @include govuk-media-query($from: tablet) {
     display: flex;
     min-width: 0;
+
+    padding-left: govuk-spacing(6);
     flex: 1 1 100%;
     flex-direction: column;
   }

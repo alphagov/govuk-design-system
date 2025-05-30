@@ -20,10 +20,8 @@ $icon-size: 40px;
   display: none;
   position: relative;
   width: 100%;
-  max-width: calc(100% - 75px);
   margin-top: govuk-spacing(2);
   margin-bottom: govuk-spacing(2);
-  float: left;
 
   .govuk-frontend-supported & {
     display: block;
