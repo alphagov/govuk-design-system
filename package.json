@@ -100,7 +100,7 @@
     "slug": "^9.1.0",
     "smartypants": "^0.2.2",
     "standard": "^17.1.2",
-    "stylelint": "^16.19.1",
+    "stylelint": "^16.20.0",
     "stylelint-config-gds": "^2.0.0",
     "stylelint-order": "^7.0.0",
     "tap-mocha-reporter": "^5.0.4",
