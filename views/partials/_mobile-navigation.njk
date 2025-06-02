@@ -1,6 +1,6 @@
 {% macro mobileNavigationItem(params) %}
   {% set current = true if params.pagePermalink and (params.pagePermalink == params.item.url) else false %}
-  {% set active = (true if params.pagePermalink and params.pagePermalink.startsWith(params.item.url)) if not params.ignoreActive %}
+  {% set active = (true if params.pagePermalink and params.item | isActive(params.pagePermalink)) if not params.ignoreActive %}
 
   <li class="app-mobile-navigation-section__item{%- if current or active %} app-mobile-navigation-section__item--active{% endif %}">
     <a class="govuk-service-navigation__link"
