@@ -46,6 +46,11 @@ $govuk-new-typography-scale: true;
 $_govuk-service-navigation-link-colour: govuk-shade($govuk-link-colour, 10%);
 $_govuk-service-navigation-font-size: 19px;
 
+// These colours are not available publically in GOV.UK Frontend
+// Adding them here until there's public variables
+$_govuk-rebrand-template-background-colour: #f4f8fb;
+$_govuk-rebrand-border-colour-on-blue-tint-95: #8eb8dc;
+
 // App-specific variables
 $app-light-grey: #f8f8f8;
 $app-code-color: #d13118;
@@ -425,9 +430,11 @@ pre .language-plaintext {
 }
 
 // Add styling for 'what's new' banner
+// Hard codes the new brand colours, which are currently private.
+// See govuk-frontend govuk/settings/_colours-applied.scss
 .app-whats-new {
-  border-bottom: 1px solid $govuk-border-colour;
-  background-color: $app-light-grey;
+  border-bottom: 1px solid $_govuk-rebrand-border-colour-on-blue-tint-95;
+  background-color: $_govuk-rebrand-template-background-colour;
 }
 
 .app-campaign-cookie-banner .govuk-grid-column-two-thirds {
