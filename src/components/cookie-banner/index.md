@@ -38,7 +38,6 @@ If you use the page template, you'll also get the Cookie banner without having t
 <li><a href="https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.2" class="govuk-link">release notes for v5.10.2</a></li>
 <li><a href="https://github.com/alphagov/govuk-frontend/releases/tag/v4.10.0" class="govuk-link">release notes for v4.10.0</a></li>
 </ul>
-``
 {% endcall %}
 
 ## When to use this component
