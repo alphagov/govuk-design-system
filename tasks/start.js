@@ -4,13 +4,20 @@ const browserSync = require('browser-sync')
 const slash = require('slash')
 
 const { paths } = require('../config') // specify paths to main working directories
-const { clean, compileCSS, metalsmith } = require('../lib/metalsmith') // configured static site generator
+const {
+  clean,
+  compileCSS,
+  copyAssets,
+  merge,
+  metalsmith
+} = require('../lib/metalsmith') // configured static site generator
 
 let bs
 
 const build = async function () {
   await clean()
   await compileCSS()
+  await copyAssets()
 
   metalsmith
 
@@ -54,6 +61,8 @@ const build = async function () {
         })
       }
     })
+
+  merge()
 }
 
 build()
