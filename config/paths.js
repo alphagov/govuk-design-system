@@ -10,5 +10,6 @@ module.exports = {
   root: rootPath,
   public: join(rootPath, 'build'),
   source: join(rootPath, 'src'),
+  staging: join(rootPath, '.staging'),
   views: join(rootPath, 'views')
 }
