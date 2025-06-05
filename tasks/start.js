@@ -9,7 +9,8 @@ const {
   compileCSS,
   copyAssets,
   merge,
-  metalsmith
+  metalsmith,
+  compileJavaScript
 } = require('../lib/metalsmith') // configured static site generator
 
 let bs
@@ -18,6 +19,7 @@ const build = async function () {
   await clean()
   await compileCSS()
   await copyAssets()
+  await compileJavaScript()
 
   metalsmith
 
