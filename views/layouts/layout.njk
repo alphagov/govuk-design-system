@@ -1,9 +1,8 @@
 {% extends "_generic.njk" %}
 
 {% block body %}
-  {# Only render breadcrumbs on pages that aren't the homepage. This is a bit
-  hacky, but works as the homepage has an empty string for a permalink. #}
-  {% if permalink %}
+  {# Only render breadcrumbs on pages that aren't the homepage. #}
+  {% if not isHomepage() %}
     {{ govukBreadcrumbs({
       classes: "app-width-container",
       items: getAncestorPages(permalink)
