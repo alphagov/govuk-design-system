@@ -10,9 +10,9 @@ The [GOV.UK Design System](/) brings together the latest research, design and de
 
 To add to and improve the Design System, the team reviews proposals and works with contributors to publish new entries and improve existing ones.
 
-The GOV.UK Design System is provided by the [Government Digital Service (GDS)](https://www.gov.uk/government/organisations/government-digital-service/about) which is part of the Department for Science, Innovation and Technology (DSIT). The data controller for GDS is DSIT - a data controller determines how and why personal data can be processed.
+The GOV.UK Design System is provided by the [Government Digital Service (GDS)](https://www.gov.uk/government/organisations/government-digital-service/about), which is part of the Department for Science, Innovation and Technology (DSIT). The data controller for GDS is DSIT - a data controller determines how and why personal data can be processed.
 
-[Read the DSIT’s entry in the Data Protection Public Register for more information](https://ico.org.uk/ESDWebPages/Entry/ZB546218).
+[Read DSIT’s entry in the Data Protection Public Register for more information](https://ico.org.uk/ESDWebPages/Entry/ZB546218).
 
 ## Why we need your data
 
