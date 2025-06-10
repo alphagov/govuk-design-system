@@ -58,11 +58,11 @@ Apply a class `govuk-header--full-width-border` to the GOV.UK header.
 
 {{ example({ group: "components", item: "service-navigation", example: "with-govuk-header", html: true, nunjucks: true, open: false }) }}
 
-<strong class="govuk-tag brand-tag-green">
-  Brand<span class="govuk-visually-hidden"> note</span>
-</strong>
+{% call callout({ tagText: "Brand", colour: "green" }) %}
 
 You do not need to change the bottom border of the updated GOV.UK header component with the refreshed GOV.UK branding.
+
+{% endcall %}
 
 ### Showing your service name only
 
