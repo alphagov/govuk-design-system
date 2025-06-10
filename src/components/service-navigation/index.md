@@ -60,7 +60,7 @@ Apply a class `govuk-header--full-width-border` to the GOV.UK header.
 
 {% call callout({ tagText: "Brand", colour: "green" }) %}
 
-You do not need to change the bottom border of the updated GOV.UK header component with the refreshed GOV.UK branding.
+<p class="govuk-body">You do not need to change the bottom border of the updated GOV.UK header component with the refreshed GOV.UK branding.</p>
 
 {% endcall %}
 
