@@ -35,19 +35,19 @@
   to = "/patterns/phone-numbers/"
   status = 301
 
-# Proxy requests for security.txt to the centralised Cabinet Office
+# Proxy requests for security.txt to the centralised Government Security
 # vulnerability disclosure policy (VDP)
 #
-# https://github.com/alphagov/security.txt
+# https://github.com/co-cddo/gc3-vuln-reporting-iac
 
 [[redirects]]
   from = "/.well-known/security.txt"
-  to = "https://vdp.cabinetoffice.gov.uk/.well-known/security.txt"
+  to = "https://vulnerability-reporting.service.security.gov.uk/.well-known/security.txt"
   status = 200 # Proxy rather than redirect
 
 [[redirects]]
   from = "/security.txt"
-  to = "https://vdp.cabinetoffice.gov.uk/.well-known/security.txt"
+  to = "https://vulnerability-reporting.service.security.gov.uk/.well-known/security.txt"
   status = 200 # Proxy rather than redirect
 
 # Send different cache-control headers depending on the file path
