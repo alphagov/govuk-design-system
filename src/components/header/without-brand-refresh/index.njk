@@ -1,0 +1,11 @@
+---
+title: Header without the brand refresh changes
+layout: layout-example.njk
+---
+
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+
+{{ govukHeader({
+  homepageUrl: "#",
+  rebrand: false
+}) }}
