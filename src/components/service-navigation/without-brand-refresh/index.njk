@@ -1,0 +1,24 @@
+---
+title: Service navigation without the brand refresh changes
+layout: layout-example.njk
+---
+
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+
+{{ govukServiceNavigation({
+  navigation: [
+    {
+      href: "#",
+      text: "Navigation item 1"
+    },
+    {
+      href: "#",
+      text: "Navigation item 2",
+      active: true
+    },
+    {
+      href: "#",
+      text: "Navigation item 3"
+    }
+  ]
+}) }}

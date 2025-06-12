@@ -1,0 +1,10 @@
+---
+title: Footer without the brand refresh changes
+layout: layout-example.njk
+---
+
+{% from "govuk/components/footer/macro.njk" import govukFooter %}
+
+{{ govukFooter({
+  rebrand: false
+}) }}
