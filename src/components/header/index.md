@@ -31,7 +31,7 @@ If you use the page template, you'll also get the GOV.UK header without having t
 <ul class="govuk-list">
 <li>uses blue as the background colour, instead of black</li>
 <li>uses a refreshed GOV.UK logo and wordmark lockup</li>
-<li>adds 60px in height</li>
+<li>extends to a height of 60px, instead of 50px with a 10px bottom border</li>
 </ul>
 
 <p class="govuk-body">To help service teams in government get ready, we’ve released GOV.UK Frontend v5.10.0 (and later fix versions). For teams on earlier versions, we’ve released GOV.UK Frontend v4.10.0</p>
