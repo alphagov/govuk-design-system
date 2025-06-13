@@ -13,19 +13,6 @@ layout: layout-pane.njk
 
 Service navigation helps users understand that they’re using your service and lets them navigate around your service.
 
-{% call callout({ tagText: "Brand", colour: "green", isInset: "true" }) %}
-
-<h2 class="app-callout__heading">Brand refresh of the {{title}} component</h2><p class="govuk-body">From 25 June 2025, the {{title}} component will change to support a wider refresh of the GOV.UK brand.</p>
-
-<p class="govuk-body">The updated {{title}} component:</p>
-<ul class="govuk-list">
-<li>uses light blue as the background colour, instead of grey</li>
-<li>slightly reduces overall padding</li>
-</ul>
-<p class="govuk-body">To help service teams in government get ready, we’ve released GOV.UK Frontend v5.10.0 (and later fix versions).</p>
-<p class="govuk-body">Read the <a href="https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.0" class="govuk-link">full release notes</a> to see more details and how to update.</p>
-{% endcall %}
-
 {{ example({ group: "components", item: "service-navigation", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 {{ example({ group: "components", item: "service-navigation", example: "without-brand-refresh", html: false, nunjucks: false, open: false, loading: "eager" }) }}
@@ -93,6 +80,18 @@ Depending on what you add in the slots, you might need to rename the `aria-label
 There’s a risk that slot contents may look or work differently in a future release of GOV.UK Frontend.
 
 You’ll need to ensure that slot content still works as intended after each update.
+
+## Brand refresh of the Service navigation component
+
+In June 2025, we updated this component to support a wider refresh of the GOV.UK brand.
+
+The updated Service navigation component:
+- uses light blue as the background colour, instead of grey
+- slightly reduces overall padding
+
+To help teams refresh the GOV.UK brand in their services, we released GOV.UK Frontend v5.10.0 (and later fix versions). For teams on earlier versions, we released GOV.UK Frontend v4.10.0
+
+To see more details and how to update, you can read the [release notes for GOV.UK Frontend v5.10.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.0) and [release notes for GOV.UK Frontend v4.10.0](https://github.com/alphagov/govuk-frontend/releases/tag/v4.10.0).
 
 ## Research on this component
 
