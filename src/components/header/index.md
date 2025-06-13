@@ -18,30 +18,6 @@ The GOV.UK header component tells users they’re using a service on GOV.UK and 
 
 If you use the page template, you'll also get the GOV.UK header without having to add it, as it's included by default. However, if you want to customise the default GOV.UK header, read the [page template guidance about customising components](/styles/page-template/#changing-template-content).
 
-{% call callout({ tagText: "Brand", colour: "green", isInset: "true" }) %}
-
-<h2 class="app-callout__heading">Brand refresh of the {{title}} component</h2>
-<p class="govuk-body">From 25 June 2025, the {{title}} component will change to support a wider refresh of the GOV.UK brand. </p>
-
-<p class="govuk-body">The updated {{title}} component:</p>
-
-<ul class="govuk-list">
-<li>uses blue as the background colour, instead of black</li>
-<li>uses a refreshed GOV.UK logo and wordmark lockup</li>
-<li>extends to a height of 60px, instead of 50px with a 10px bottom border</li>
-</ul>
-
-<p class="govuk-body">To help service teams in government get ready, we’ve released GOV.UK Frontend v5.10.0 (and later fix versions). For teams on earlier versions, we’ve released GOV.UK Frontend v4.10.0</p>
-
-<p class="govuk-body">To see more details and how to update, you can read:</p>
-<ul class="govuk-list govuk-list--bullet"> 
-          <li><a href="https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.0" class="govuk-link">release notes for v5.10.0</a></li>
-          <li><a href="https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.1" class="govuk-link">release notes for v5.10.1</a></li>
-          <li><a href="https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.2" class="govuk-link">release notes for v5.10.2</a></li>
-          <li><a href="https://github.com/alphagov/govuk-frontend/releases/tag/v4.10.0" class="govuk-link">release notes for v4.10.0</a></li>
-</ul>
-{% endcall %}
-
 ## When to use this component
 
 If your service is being hosted on one of these domains, use the GOV.UK header component:
@@ -104,6 +80,20 @@ Use the Service navigation component to add navigation links instead.
 ### GOV.UK header with One Login
 
 GOV.UK One Login maintains their own header on the [Let users navigate to their GOV.UK One Login and sign out easily](https://www.sign-in.service.gov.uk/documentation/design-recommendations/let-users-navigate-sign-out) page.
+
+## Brand refresh of the GOV.UK header component
+
+In June 2025, we updated this component to support a wider refresh of the GOV.UK brand.
+
+The updated GOV.UK header component:
+
+- uses blue as the background colour, instead of black
+- uses a refreshed GOV.UK logo and wordmark lockup
+- extends to a height of 60px, instead of 50px with a 10px bottom border
+
+To help teams refresh the GOV.UK brand in their services, we released GOV.UK Frontend v5.10.0 (and later fix versions). For teams on earlier versions, we released GOV.UK Frontend v4.10.0
+
+To see more details and how to update, you can read the [release notes for GOV.UK Frontend v5.10.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.0) and [release notes for GOV.UK Frontend v4.10.0](https://github.com/alphagov/govuk-frontend/releases/tag/v4.10.0).
 
 ## Research on this component
 
