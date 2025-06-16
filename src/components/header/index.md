@@ -1,6 +1,6 @@
 ---
 title: GOV.UK header
-description: The GOV.UK header shows users that they are on GOV.UK and which service they are using
+description: The GOV.UK header shows users that they are on GOV.UK
 section: Components
 aliases: GOV.UK masthead
 backlogIssueId: 97
