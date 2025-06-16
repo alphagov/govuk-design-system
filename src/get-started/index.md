@@ -18,11 +18,11 @@ In June 2025, we made updates to the Design System to support a wider refresh of
 
 When you set up a new service using GOV.UK Frontend, you’ll need to implement the refreshed brand as part of getting started.
 
-The easiest way to do this is to add a `govukRebrand` [global](https://mozilla.github.io/nunjucks/api.html#addglobal) to your Nunjucks environment, with a value of `true`.
+One simple way to do this is to add a `govukRebrand` [global](https://mozilla.github.io/nunjucks/api.html#addglobal) to your Nunjucks environment, with a value of `true`.
 
 This global value makes the affected components use new styles for the brand refresh and display updated assets (such as the refreshed logo in the GOV.UK header component and the crown in the GOV.UK footer component).
 
-We also offer several other ways to do this, depending on the code in your service, however they involve more steps.
+We also offer several other ways to do this depending on the code in your service.
 
 To see more details and how to update, see the [release notes for GOV.UK Frontend v5.10.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.0)
 
