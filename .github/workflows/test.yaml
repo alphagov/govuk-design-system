@@ -46,12 +46,10 @@ jobs:
           node-version-file: .nvmrc
 
       - name: Install dependencies
-        if: steps.build-cache.outputs.cache-hit != 'true'
-        run: npm ci
+        uses: ./.github/workflows/actions/install-node
 
-      - name: Build
-        if: steps.build-cache.outputs.cache-hit != 'true'
-        run: npm run build
+      - name: Build website
+        uses: ./.github/workflows/actions/build
 
   test:
     name: ${{ matrix.task.description }}
@@ -99,13 +97,16 @@ jobs:
           node-version-file: .nvmrc
 
       - name: Install dependencies
-        run: npm ci
+        uses: ./.github/workflows/actions/install-node
 
       - name: Restore build
         uses: actions/cache/restore@v4.2.3
         with:
           key: build-cache-${{ runner.os }}-${{ github.sha }}
           path: build
+
+      - name: Build
+        uses: ./.github/workflows/actions/build
 
       - name: Run task
         id: task

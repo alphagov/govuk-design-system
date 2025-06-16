@@ -116,7 +116,7 @@ Set up monitoring for potentially malicious behaviour, such as activity from une
 
 ## Research on this pattern
 
-[Read the National Cyber Security Centre’s guidance on multi-factor authentication](https://www.ncsc.gov.uk/guidance/multi-factor-authentication-online-services).
+[Read the National Cyber Security Centre’s guidance on multi-factor authentication](https://www.ncsc.gov.uk/collection/mfa-for-your-corporate-online-services).
 
 ### Services using this pattern
 
