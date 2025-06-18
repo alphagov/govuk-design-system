@@ -86,6 +86,7 @@ You’ll need to ensure that slot content still works as intended after each upd
 In June 2025, we updated this component to support a wider refresh of the GOV.UK brand.
 
 The updated Service navigation component:
+
 - uses light blue as the background colour, instead of grey
 - slightly reduces overall padding
 
