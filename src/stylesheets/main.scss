@@ -418,3 +418,15 @@ pre .language-plaintext {
 .app-campaign-cookie-banner .govuk-grid-column-two-thirds {
   width: 100%;
 }
+
+// Add styling for research banner
+.app-research-banner {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $govuk-border-colour;
+  background-color: #ffee80;
+
+  p {
+    margin-bottom: 0;
+  }
+}
