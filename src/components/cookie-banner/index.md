@@ -187,6 +187,7 @@ The updated Cookie banner component uses light blue as the background colour, in
 To help teams refresh the GOV.UK brand in their services, we released GOV.UK Frontend v5.10.0 (and later fix versions). For teams on earlier versions, we released GOV.UK Frontend v4.10.0
 
 To see more details and how to update, you can read the [release notes for GOV.UK Frontend v5.10.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.0) and [release notes for GOV.UK Frontend v4.10.0](https://github.com/alphagov/govuk-frontend/releases/tag/v4.10.0).
+
 ## Research on this component
 
 When the user accepts or rejects cookies, a confirmation message will display. For example, "Your cookie preferences have been saved." The focus also shifts to this new message.
