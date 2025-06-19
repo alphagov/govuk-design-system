@@ -13,7 +13,11 @@ layout: layout-pane.njk
 
 The GOV.UK footer provides copyright, licensing and other information about your service.
 
+Example of the GOV.UK footer component showing the [refreshed GOV.UK branding](#brand-refresh-of-the-govuk-footer-component):
+
 {{ example({ group: "components", item: "footer", example: "default", id: "default-1", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}
+
+Example of the GOV.UK footer component showing GOV.UK branding before June 2025:
 
 {{ example({ group: "components", item: "footer", example: "without-brand-refresh", html: false, nunjucks: false, open: false, size: "m", loading: "eager" }) }}
 

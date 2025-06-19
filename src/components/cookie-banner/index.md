@@ -12,7 +12,11 @@ layout: layout-pane.njk
 
 Allow users to accept or reject cookies which are not essential to making your service work.
 
+Example of the Cookie banner component showing the [refreshed GOV.UK branding](#brand-refresh-of-the-cookie-banner-component):
+
 {{ example({ group: "components", item: "cookie-banner", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
+
+Example of the Cookie banner component showing GOV.UK branding before June 2025:
 
 {{ example({ group: "components", item: "cookie-banner", example: "without-brand-refresh", html: false, nunjucks: false, open: false, loading: "eager" }) }}
 
