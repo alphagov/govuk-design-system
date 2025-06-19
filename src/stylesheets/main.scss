@@ -86,6 +86,21 @@ $app-code-color: #d13118;
   @include govuk-width-container(1100px);
 }
 
+// Invert the colours of the navigation on the homepage
+.govuk-template--rebranded .govuk-service-navigation--inverse {
+  // Override mobile menu toggles colour
+  .app-mobile-navigation-section__toggle {
+    border-top-color: $_govuk-rebrand-border-colour-on-blue-tint-95;
+    color: govuk-colour("white");
+  }
+
+  // Override link styles in sub menus
+  .app-mobile-navigation-section__item .govuk-service-navigation__link {
+    @include govuk-link-style-no-visited-state;
+    @include govuk-link-style-no-underline;
+  }
+}
+
 .app-main-wrapper {
   padding-top: govuk-spacing(3);
   padding-bottom: govuk-spacing(4);
