@@ -13,36 +13,15 @@ layout: layout-pane.njk
 
 The GOV.UK footer provides copyright, licensing and other information about your service.
 
+Example of the GOV.UK footer component showing the [refreshed GOV.UK branding](#brand-refresh-of-the-govuk-footer-component):
+
 {{ example({ group: "components", item: "footer", example: "default", id: "default-1", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}
 
-{% call callout({ tagText: "Brand", colour: "green" }) %}
+Example of the GOV.UK footer component showing GOV.UK branding before June 2025:
 
-<p class="govuk-body"><a href="/components/footer/default/branded/index.html">See an example of the GOV.UK footer showing the refreshed GOV.UK branding</a>.</p>
-
-{% endcall %}
+{{ example({ group: "components", item: "footer", example: "without-brand-refresh", html: false, nunjucks: false, open: false, size: "m", loading: "eager" }) }}
 
 If you use the page template, you'll also get the footer without having to add it, as it's included by default. However, if you want to customise the default footer, read the [page template guidance about customising components](/styles/page-template/#changing-template-content).
-
-{% call callout({ tagText: "Brand", colour: "green", isInset: "true" }) %}
-
-<h2 class="app-callout__heading">Brand refresh of the {{title}} component</h2><p class="govuk-body">From 25 June 2025, the {{title}} component will change to support a wider refresh of the GOV.UK brand.</p>
-
-<p class="govuk-body">The updated {{title}} component:</p>
-<ul class="govuk-list">
-<li>uses a light blue as the background colour, instead of grey</li>
-<li>adds a thick blue top border</li>
-<li>adds a small crown logo, in addition to the existing coat of arms</li>
-</ul>
-
-<p class="govuk-body">To help service teams in government get ready, we’ve released GOV.UK Frontend v5.10.0 (and later fix versions). For teams on earlier versions, we’ve released GOV.UK Frontend v4.10.0</p>
-<p class="govuk-body">To see more details and how to update, you can read:</p>
-<ul class="govuk-list govuk-list--bullet">
-<li><a href="https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.0" class="govuk-link">release notes for v5.10.0</a></li>
-<li><a href="https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.1" class="govuk-link">release notes for v5.10.1</a></li>
-<li><a href="https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.2" class="govuk-link">release notes for v5.10.2</a></li>
-<li><a href="https://github.com/alphagov/govuk-frontend/releases/tag/v4.10.0" class="govuk-link">release notes for v4.10.0</a></li>
-</ul>
-{% endcall %}
 
 ## When to use this component
 
@@ -90,3 +69,17 @@ Only add secondary GOV.UK navigation if you’re creating a GOV.UK service, and 
 ### Footer with links and secondary navigation
 
 {{ example({ group: "components", item: "footer", example: "full", html: true, nunjucks: true, open: false, size: "xl" }) }}
+
+## Brand refresh of the GOV.UK footer component
+
+In June 2025, we updated this component to support a wider refresh of the GOV.UK brand.
+
+The updated GOV.UK footer component:
+
+- uses a light blue as the background colour, instead of grey
+- adds a thick blue top border
+- adds a small crown logo, in addition to the existing coat of arms
+
+To help teams refresh the GOV.UK brand in their services, we released GOV.UK Frontend v5.10.0 (and later fix versions). For teams on earlier versions, we released GOV.UK Frontend v4.10.0
+
+To see more details and how to update, you can read the [release notes for GOV.UK Frontend v5.10.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.0) and [release notes for GOV.UK Frontend v4.10.0](https://github.com/alphagov/govuk-frontend/releases/tag/v4.10.0).
