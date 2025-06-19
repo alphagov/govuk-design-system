@@ -12,7 +12,11 @@ layout: layout-pane.njk
 
 The GOV.UK header component tells users they’re using a service on GOV.UK and lets them use GOV.UK-wide tools. Also known as the GOV.UK masthead.
 
+Example of the GOV.UK header component showing the [refreshed GOV.UK branding](#brand-refresh-of-the-govuk-header-component):
+
 {{ example({ group: "components", item: "header", example: "default", id: "default-1", html: true, nunjucks: true, open: false, loading: "eager" }) }}
+
+Example of the GOV.UK header component showing GOV.UK branding before June 2025:
 
 {{ example({ group: "components", item: "header", example: "without-brand-refresh", html: false, nunjucks: false, open: false, loading: "eager" }) }}
 

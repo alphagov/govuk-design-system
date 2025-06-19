@@ -13,7 +13,11 @@ layout: layout-pane.njk
 
 Service navigation helps users understand that they’re using your service and lets them navigate around your service.
 
+Example of the Service navigation component showing the [refreshed GOV.UK branding](#brand-refresh-of-the-service-navigation-component):
+
 {{ example({ group: "components", item: "service-navigation", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
+
+Example of the Service navigation component showing GOV.UK branding before June 2025:
 
 {{ example({ group: "components", item: "service-navigation", example: "without-brand-refresh", html: false, nunjucks: false, open: false, loading: "eager" }) }}
 
