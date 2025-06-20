@@ -6,16 +6,8 @@ layout: layout-example-full-page.njk
 {% extends "example-wrappers/full-page.njk" %}
 
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
-{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
 {% from "govuk/components/button/macro.njk" import govukButton %}
-
-{% block header %}
-  {{ govukServiceNavigation({
-    serviceName: "Service name",
-    serviceUrl: "#"
-  }) }}
-{% endblock %}
 
 {% block beforeContent %}
   {{ govukPhaseBanner({

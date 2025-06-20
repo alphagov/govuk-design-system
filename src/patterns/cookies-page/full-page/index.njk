@@ -1,22 +1,14 @@
 ---
 title: Full page – Cookies page
-layout: layout-example-full-page.njk
+layout: layout-example-part-page.njk
 ---
 
 {% extends "example-wrappers/full-page.njk" %}
 
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
-{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
 {% from "govuk/components/button/macro.njk" import govukButton %}
 {% from "govuk/components/table/macro.njk" import govukTable %}
-
-{% block header %}
-  {{ govukServiceNavigation({
-    serviceName: "Service name",
-    serviceUrl: "#"
-  }) }}
-{% endblock %}
 
 {% block beforeContent %}
   {{ govukPhaseBanner({
@@ -75,10 +67,6 @@ layout: layout-example-full-page.njk
             ]
         ]
         }) }}
-      <h2 class="govuk-heading-m">Analytics cookies (optional)</h2>
-      <p class="govuk-body">With your permission, we use Google Analytics to collect data about how you use this service. This information helps us to improve our service.</p>
-      <p class="govuk-body">Google is not allowed to use or share our analytics data with anyone.</p>
-      <p class="govuk-body">Google Analytics stores anonymised information about:</p>
     </div>
 </div>
 {% endblock %}
