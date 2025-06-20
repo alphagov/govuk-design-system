@@ -1,0 +1,36 @@
+---
+title: Result – Check a service is suitable
+layout: layout-example-full-page.njk
+---
+
+{% extends "example-wrappers/full-page.njk" %}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Prototype"
+    },
+    html: "This isn't a real service – it is an example."
+  }) }}
+  {{ govukBackLink({
+    href: "#",
+    text: "Back"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">You're eligible to transport goods</h1>
+      <p class="govuk-body">Based on your answers, you are eligble to transport goods.</p>
+      {{ govukButton({
+      text: "Continue"
+      }) }}
+    </div>
+</div>
+{% endblock %}
+

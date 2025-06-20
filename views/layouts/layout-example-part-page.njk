@@ -1,5 +1,7 @@
 {% extends "govuk/template.njk" %}
 
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+
 {% set assetUrl = 'https://design-system.service.gov.uk/assets' %}
 
 {% block pageTitle %}{{ title }} – Example – GOV.UK Design System{% endblock %}
@@ -16,6 +18,10 @@
   {{ govukHeader({
     homepageUrl: "#"
   }) }}
+  {{ govukServiceNavigation({
+    serviceName: "Service name",
+    serviceUrl: "#"
+  }) }}
 {% endblock %}
 
 {% block main %}
@@ -24,3 +30,5 @@
 {% block bodyEnd %}
   <script type="module" src="{{ getFingerprint('/javascripts/application-example.js') }}"></script>
 {% endblock %}
+
+{% block footer %}{% endblock %}
