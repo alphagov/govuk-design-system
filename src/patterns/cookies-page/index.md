@@ -12,7 +12,7 @@ layout: layout-pane.njk
 
 Tell users about the cookies you’re setting on their device and let them accept or reject different types of non-essential cookies.
 
-![A screenshot showing an example cookies page, with information about what cookies the site uses.](cookies-page.png)
+{{ example({ group: "patterns", item: "cookies-page", example: "full-page", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 ## When to use this pattern
 
