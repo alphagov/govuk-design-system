@@ -1,0 +1,70 @@
+---
+title: Full page – Cookies page
+layout: layout-example-full-page-with-no-footer.njk
+---
+
+{% extends "example-wrappers/full-page.njk" %}
+
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{% from "govuk/components/table/macro.njk" import govukTable %}
+
+{% block beforeContent %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Prototype"
+    },
+    html: "This isn't a real service – it is an example."
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Cookies</h1>
+    <p class="govuk-body">Cookies are small files saved on your phone, tablet or computer when you visit a website.</p>
+    <p class="govuk-body">We use cookies to make this site work and collect information about how you use our service.</p>
+    <h2 class="govuk-heading-m">Essential cookies</h2>
+    <p class="govuk-body">Essential cookies keep your information secure while you use this service. We do not need to ask permission to use them.</p>
+    {{ govukTable({
+      caption: "Essential cookies we use",
+      captionClasses: "govuk-table__caption--s",
+      firstCellIsHeader: false,
+      head: [
+        {
+          text: "Name"
+        },
+        {
+          text: "Purpose"
+        },
+        {
+          text: "Expires"
+        }
+      ],
+      rows: [
+        [
+          {
+            text: "session_cookie"
+          },
+          {
+            text: "Used to keep you signed in"
+          },
+          {
+            text: "20 hours"
+          }
+        ],
+        [
+          {
+            text: "cookie_policy"
+          },
+          {
+            text: "Saves your cookie consent settings"
+          },
+          {
+            text: "1 year"
+          }
+        ]
+      ]
+    }) }}
+  </div>
+</div>
+{% endblock %}

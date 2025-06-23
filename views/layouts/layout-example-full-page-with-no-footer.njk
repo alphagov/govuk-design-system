@@ -1,0 +1,16 @@
+{% extends "layout-example-full-page.njk" %}
+
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "#"
+  }) }}
+  {{ govukServiceNavigation({
+    serviceName: "Service name",
+    serviceUrl: "#"
+  }) }}
+{% endblock %}
+
+{% block footer %}{% endblock %}
