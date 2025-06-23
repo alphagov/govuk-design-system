@@ -82,7 +82,7 @@ $app-code-color: #d13118;
 
 // We don't change the global width container width so that examples are the current width.
 .app-width-container,
-.govuk-service-navigation .govuk-width-container {
+.app-service-navigation .govuk-width-container {
   @include govuk-width-container(1100px);
 }
 
