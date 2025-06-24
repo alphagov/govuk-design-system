@@ -19,13 +19,7 @@ Last updated 24 June 2025.
 
 We’ve released [GOV.UK Frontend v5.11.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.11.0), which includes improvements to the Service navigation component, making it easier to use on mobile devices and offering a new inverse colour option. We’ve also added deprecation warnings for code built with the LibSass library.
 
-Previously, we released [GOV.UK Frontend v5.10.2](https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.2), which updates the spacing in the header when the navigation is not used, allowing the product name to stay on the same line as the logo for a wider variety of small screens.
-
-We also released [GOV.UK Frontend v4.10.0](https://github.com/alphagov/govuk-frontend/releases/tag/v4.10.0), which was the first step towards refreshing the GOV.UK brand for users of earlier versions of GOV.UK Frontend.
-
-On 15 May 2025, we released [GOV.UK Frontend v5.10.1](https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.1), which fixes the colour of the dot in the refreshed GOV.UK logo, alongside small fixes to the implementation of the brand refresh.
-
-On 1 May 2025, we released [GOV.UK Frontend v5.10.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.0), which updates the GOV.UK header, GOV.UK footer, Service navigation and Cookie banner components to use the refreshed GOV.UK brand.
+In May 2025, we released [GOV.UK Frontend v5.10.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.0) (and later fix versions) and [GOV.UK Frontend v4.10.0](https://github.com/alphagov/govuk-frontend/releases/tag/v4.10.0). These are the first steps towards refreshing the GOV.UK brand across government services.
 
 We’ve also recently:
 
