@@ -8,6 +8,8 @@ backlogIssueId: 35
 layout: layout-pane.njk
 ---
 
+{% from "_example.njk" import example %}
+
 Ask users questions to help them work out if they can or should use your service.
 
 Doing this helps users save time as it tells them upfront whether they are eligible to use it and if they need it.
@@ -60,7 +62,7 @@ If a user is not eligible to use your service, explain why and, if possible, tel
 
 Here’s an example of a results page:
 
-![Screenshot of a results page, includes a heading that explains if the user is eligible, a summary of why, and a button to continue.](check-a-service-is-suitable-result.png)
+{{ example({ group: "patterns", item: "check-a-service-is-suitable", example: "result", html: true, nunjucks: true, open: false, loading: "eager", size: "xl" }) }}
 
 ## Research on this pattern
 

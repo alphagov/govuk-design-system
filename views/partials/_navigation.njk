@@ -33,6 +33,7 @@ service navigation component. #}
 {%- endfor %}
 
 {{ govukServiceNavigation({
+  classes: ('govuk-service-navigation--inverse ' if isHomepage()) + 'app-service-navigation',
   navigation: navLinks,
   navigationClasses: 'app-service-navigation__wrapper'
 }) }}

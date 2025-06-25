@@ -97,7 +97,7 @@ To change the components that are included in the page template by default, set 
       <td class="govuk-table__cell">assetPath</td>
       <td class="govuk-table__cell">Variable</td>
       <td class="govuk-table__cell">
-        Specify a path to the <a href="https://frontend.design-system.service.gov.uk/import-font-and-images-assets/">GOV.UK Frontend assets</a> (icons, images, font files).
+        Specify a path to the <a href="https://frontend.design-system.service.gov.uk/import-font-and-images-assets/">GOV.UK Frontend assets</a> (icons, images, font files). If you're using the refreshed GOV.UK brand, you may need to update this path to point to the updated assets.
       </td>
     </tr>
     <tr class="govuk-table__row">
@@ -231,7 +231,8 @@ To change the components that are included in the page template by default, set 
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">opengraphImageUrl</td>
       <td class="govuk-table__cell">Variable</td>
-      <td class="govuk-table__cell">Set the URL for the Open Graph image meta tag. The URL must be absolute, including the protocol and domain name.</td>
+      <td class="govuk-table__cell">Set the URL for the Open Graph image meta tag. The URL must be absolute, including the protocol and domain name. If you're using the refreshed GOV.UK brand, you may need to update this path to point to the updated assets.
+</td>
     </tr>
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">pageTitle</td>

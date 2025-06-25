@@ -46,6 +46,11 @@ $govuk-new-typography-scale: true;
 $_govuk-service-navigation-link-colour: govuk-shade($govuk-link-colour, 10%);
 $_govuk-service-navigation-font-size: 19px;
 
+// These colours are not available publically in GOV.UK Frontend
+// Adding them here until there's public variables
+$_govuk-rebrand-template-background-colour: #f4f8fb;
+$_govuk-rebrand-border-colour-on-blue-tint-95: #8eb8dc;
+
 // App-specific variables
 $app-light-grey: #f8f8f8;
 $app-code-color: #d13118;
@@ -77,8 +82,23 @@ $app-code-color: #d13118;
 
 // We don't change the global width container width so that examples are the current width.
 .app-width-container,
-.govuk-service-navigation .govuk-width-container {
+.app-service-navigation .govuk-width-container {
   @include govuk-width-container(1100px);
+}
+
+// Invert the colours of the navigation on the homepage
+.govuk-template--rebranded .govuk-service-navigation--inverse {
+  // Override mobile menu toggles colour
+  .app-mobile-navigation-section__toggle {
+    border-top-color: $_govuk-rebrand-border-colour-on-blue-tint-95;
+    color: govuk-colour("white");
+  }
+
+  // Override link styles in sub menus
+  .app-mobile-navigation-section__item .govuk-service-navigation__link {
+    @include govuk-link-style-no-visited-state;
+    @include govuk-link-style-no-underline;
+  }
 }
 
 .app-main-wrapper {
@@ -425,9 +445,11 @@ pre .language-plaintext {
 }
 
 // Add styling for 'what's new' banner
+// Hard codes the new brand colours, which are currently private.
+// See govuk-frontend govuk/settings/_colours-applied.scss
 .app-whats-new {
-  border-bottom: 1px solid $govuk-border-colour;
-  background-color: $app-light-grey;
+  border-bottom: 1px solid $_govuk-rebrand-border-colour-on-blue-tint-95;
+  background-color: $_govuk-rebrand-template-background-colour;
 }
 
 .app-campaign-cookie-banner .govuk-grid-column-two-thirds {

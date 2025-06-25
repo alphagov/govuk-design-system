@@ -34,8 +34,6 @@ $icon-size: 40px;
   }
 
   @include govuk-media-query($from: desktop) {
-    margin: 0;
-    margin-top: -5px; // negative margin to vertically align search in header
     float: right;
     text-align: right;
 
