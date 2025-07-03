@@ -10,9 +10,9 @@ The [GOV.UK Design System](/) brings together the latest research, design and de
 
 To add to and improve the Design System, the team reviews proposals and works with contributors to publish new entries and improve existing ones.
 
-The GOV.UK Design System is provided by the [Government Digital Service (GDS)](https://www.gov.uk/government/organisations/government-digital-service/about) which is part of the Cabinet Office. The data controller for GDS is the Cabinet Office - a data controller determines how and why personal data can be processed.
+The GOV.UK Design System is provided by the [Government Digital Service (GDS)](https://www.gov.uk/government/organisations/government-digital-service/about), which is part of the Department for Science, Innovation and Technology (DSIT). The data controller for GDS is DSIT - a data controller determines how and why personal data can be processed.
 
-[Read the Cabinet Office’s entry in the Data Protection Public Register for more information](https://ico.org.uk/ESDWebPages/Entry/Z7414053).
+[Read DSIT’s entry in the Data Protection Public Register for more information](https://ico.org.uk/ESDWebPages/Entry/ZB546218).
 
 ## Why we need your data
 
@@ -118,19 +118,19 @@ If your personal data is processed on the basis of consent, you have the right t
 
 ## Questions and complaints
 
-Contact the GDS Privacy Office if you:
+Contact the GDS Data Protection Team if you:
 
 - have any questions about anything in this document
 - think that your personal data has been misused or mishandled
 - want to make a [subject access request (SAR)](https://ico.org.uk/your-data-matters/your-right-of-access/)
 
-The contact details for the data controller are: Cabinet Office (Government Digital Service), The White Chapel Building, 10 Whitechapel High Street, London, E1 8QS, or [gds-privacy-office@digital.cabinet-office.gov.uk](mailto:gds-privacy-office@digital.cabinet-office.gov.uk).
+The contact details for the GDS Data Protection Team are: Government Digital Service, The White Chapel Building, 10 Whitechapel High Street, London, E1 8QS; or [gds-data-protection@digital.cabinet-office.gov.uk](mailto:gds-data-protection@digital.cabinet-office.gov.uk).
 
-The contact details for the data controller’s Data Protection Officer are: Stephen Jones, Data Protection Officer, Cabinet Office, 70 Whitehall, London, SW1A 2AS, or [dpo@cabinetoffice.gov.uk](mailto:dpo@cabinetoffice.gov.uk).
+The DSIT Data Protection Officer provides independent advice and monitoring of DSIT’s use of personal information.
 
-The Data Protection Officer provides independent advice and monitoring of Cabinet Office’s use of personal information.
+The contact details for the DSIT Data Protection Officer are: Data Protection Officer, Department for Science, Innovation and Technology, 22–26 Whitehall, London, SW1A 2EG; or [dataprotection@dsit.gov.uk](mailto:dataprotection@dsit.gov.uk).
 
-If you consider that your personal data has been misused or mishandled, you may make a complaint to the Information Commissioner, who is an independent regulator. The Information Commissioner can be contacted at: Information Commissioner's Office, Wycliffe House, Water Lane, Wilmslow, Cheshire, SK9 5AF, or 0303 123 1113, or [icocasework@ico.org.uk](mailto:icocasework@ico.org.uk).
+If you consider that your personal data has been misused or mishandled, you may make a complaint to the Information Commissioner, who is an independent regulator. The Information Commissioner can be contacted at: Information Commissioner's Office, Wycliffe House, Water Lane, Wilmslow, Cheshire, SK9 5AF; or 0303 123 1113; or [icocasework@ico.org.uk](mailto:icocasework@ico.org.uk).
 
 Any complaint to the Information Commissioner is without prejudice to your right to seek redress through the courts.
 
@@ -138,4 +138,4 @@ Any complaint to the Information Commissioner is without prejudice to your right
 
 We may change this privacy notice. When we make changes to this notice, the ‘last updated’ date at the bottom of this page will also change. Any changes to this privacy notice will apply to you and your data immediately. If these changes affect how your personal data is processed, GDS will take reasonable steps to make sure you know.
 
-<p class="govuk-body govuk-!-font-size-16">Last updated 15 September 2021</p>
+<p class="govuk-body govuk-!-font-size-16">Last updated 10 June 2025</p>
