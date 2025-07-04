@@ -36,7 +36,7 @@ Sam is the Head of Design in Digital Transformation, Digital Directorate, Scotti
 
 ### Jennifer I'Anson (Scottish Government)
 
-Jennifer is a lead product manager within the Digital directorate of the Scottish Government responsible for [mygov.scot](https://mygov.scot) and [gov.scot](https://gov.scot). She is also Product Owner of the Scottish Government’s Design System from its inception, helping launch it during the pandemic.
+Jennifer is a lead product manager within the Digital directorate of the Scottish Government responsible for [mygov.scot](https://www.mygov.scot) and [gov.scot](https://www.gov.scot). She is also Product Owner of the Scottish Government’s Design System from its inception, helping launch it during the pandemic.
 
 ### GOV.UK Design System team
 
