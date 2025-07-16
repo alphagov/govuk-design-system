@@ -14,10 +14,9 @@ If you want to contact the team you can [get in touch via email or Slack](/get-i
 
 ## Team leads
 
-- Charlotte Downs – Senior Interaction Designer
 - Kelly Lee – Lead Delivery Manager
+- Marina Filiba – Lead Designer
 - Oliver Byford – Lead Frontend Developer
-- Romaric Pascal – Senior Frontend Developer
 - Trang Erskine – Lead Product Manager
 
 ## Design System team
@@ -25,6 +24,7 @@ If you want to contact the team you can [get in touch via email or Slack](/get-i
 - Anika Henke – Senior Accessibility Specialist
 - Brett Kyle – Senior Frontend Developer
 - Calvin Lau – Senior Content Designer
+- Charlotte Downs – Senior Interaction Designer
 - Ciandelle Hughes – Interaction Designer
 - Hazal Arpalikli – Senior Interaction Designer
 - Imran Hussain – Community Designer
@@ -34,3 +34,4 @@ If you want to contact the team you can [get in touch via email or Slack](/get-i
 - Kim 'beeps' Grey – Frontend Developer
 - Mia Allers – Senior Graphic Designer
 - Owen Jones – Senior Frontend Developer
+- Romaric Pascal – Senior Frontend Developer
