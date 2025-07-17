@@ -36,7 +36,6 @@
   "dependencies": {
     "accessible-autocomplete": "^3.0.1",
     "clipboard": "^2.0.11",
-    "govuk-frontend": "^5.11.0",
     "iframe-resizer": "^4.4.5",
     "lunr": "^2.3.9"
   },
@@ -67,6 +66,7 @@
     "eslint-plugin-n": "^16.6.2",
     "eslint-plugin-promise": "^6.1.1",
     "glob": "^11.0.2",
+    "govuk-frontend": "^5.11.1",
     "gray-matter": "^4.0.2",
     "highlight.js": "^11.11.1",
     "html-validate": "^9.5.5",
