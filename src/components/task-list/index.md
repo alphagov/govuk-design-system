@@ -32,7 +32,7 @@ The task list should not be used as a way of showing users their answers. For th
 
 ## How it works
 
-There are 2 ways to use the task list component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://govuk-prototype-kit.herokuapp.com), you can use the Nunjucks macro.
+There are 2 ways to use the task list component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk/docs/), you can use the Nunjucks macro.
 
 {{ example({ group: "components", item: "task-list", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
 
