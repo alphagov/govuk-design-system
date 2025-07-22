@@ -34,6 +34,7 @@ export default {
   // See: https://jestjs.io/docs/ecmascript-modules
   testMatch: ['**/*.test.{js,mjs}'],
   transform: { '^.+\\.m?js$': ['babel-jest'] },
+  transformIgnorePatterns: ['/node_modules/(?!(marked)/)'],
 
   // Ignore built fixtures during `--watch` and node_modules folders
   watchPathIgnorePatterns: ['fixtures/build', '/node_modules/']
