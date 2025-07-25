@@ -73,6 +73,6 @@ Long words can create issues in constrained spaces such as mobile device screens
 
 You can help to reduce these issues by surrounding content likely to 'break out' with `govuk-!-text-break-word`.
 
-This class forcibly splits long words onto multiple lines when they become longer than the width of the container. It'll make the split exactly where the word would otherwise 'break out', which might make compound words more difficult to read. You can control where words can be split by inserting [the `wbr` HTML tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr) into your content.
+This class forcibly splits long words onto multiple lines when they become longer than the width of the container. It'll make the split exactly where the word would otherwise 'break out', which might make compound words more difficult to read. You can control where words can be split by inserting [the `wbr` HTML tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/wbr) into your content.
 
 {{ example({ group: "styles", item: "font-override-classes", example: "break-word", html: true, open: true }) }}

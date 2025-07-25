@@ -94,7 +94,7 @@ Useful resources to help write this safety advice include:
 
 - [Refuge: Secure your tech](https://refugetechsafety.org/secure-your-tech/)
 - [Women’s Aid: Cover your tracks online](https://www.womensaid.org.uk/information-support/what-is-domestic-abuse/cover-your-tracks-online/)
-- [National Cyber Security Centre: Information for individuals and families](https://www.ncsc.gov.uk/section/information-for/individuals-families/)
+- [National Cyber Security Centre: Information for individuals and families](https://www.ncsc.gov.uk/section/advice-guidance/you-your-family)
 
 Let us know of any other useful resources we should add to the list.
 
@@ -106,6 +106,6 @@ Live examples of similar components can be found on these websites:
 
 - [GOV.UK: Check if you can get legal aid](https://www.gov.uk/check-legal-aid)
 - [GOV.UK: Apply for help arranging child maintenance](https://child-maintenance.service.gov.uk/apply/)
-- [mygov.scot: Domestic abuse support](https://www.mygov.scot/domestic-abuse/)
+- [mygov.scot: Domestic abuse support](https://www.mygov.scot/domestic-abuse)
 - [Women’s aid website](https://www.womensaid.org.uk/)
 - [Refuge website](https://www.nationaldahelpline.org.uk/)

@@ -46,7 +46,7 @@ Make it clear whether content is available for re-use - and if it is, under what
 You can add links to:
 
 - [your service's privacy notice](https://www.gov.uk/service-manual/design/collecting-personal-information-from-users)
-- [your service's accessibility statement](https://www.gov.uk/service-manual/helping-people-to-use-your-service/publishing-information-about-your-services-accessibility)
+- [your service's accessibility statement](https://www.gov.uk/guidance/make-your-website-or-app-accessible-and-publish-an-accessibility-statement)
 - [your service's Cookies page](/patterns/cookies-page/)
 - terms and conditions
 - other language options
