@@ -5,28 +5,14 @@ on: workflow_dispatch
 jobs:
   check-links:
     name: Check for broken external links
-    runs-on: 'ubuntu-latest'
+    runs-on: 'ubuntu-22.04'
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4.2.1
+        uses: actions/checkout@v4.2.2
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4.0.4
-        with:
-          cache: npm
-          check-latest: true
-          node-version-file: .nvmrc
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Restore build
-        uses: actions/cache/restore@v4.1.1
-        with:
-          key: build-cache-${{ runner.os }}-${{ github.sha }}
-          path: build
+      - name: Build
+        uses: ./.github/workflows/actions/install-and-build
 
       - name: Check external broken links
-        id: check-links
         run: npm run check-external-links

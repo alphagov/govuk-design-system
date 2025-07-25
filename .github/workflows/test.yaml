@@ -28,30 +28,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4.2.2
 
-      - name: Restore build
-        uses: actions/cache@v4.2.3
-        id: build-cache
-
-        with:
-          key: build-cache-${{ runner.os }}-${{ github.sha }}
-          path: build
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4.4.0
-        if: steps.build-cache.outputs.cache-hit != 'true'
-
-        with:
-          cache: npm
-          check-latest: true
-          node-version-file: .nvmrc
-
-      - name: Install dependencies
-        if: steps.build-cache.outputs.cache-hit != 'true'
-        run: npm ci
-
       - name: Build
-        if: steps.build-cache.outputs.cache-hit != 'true'
-        run: npm run build
+        uses: ./.github/workflows/actions/install-and-build
+        with:
+          cache_install: 'true'
 
   test:
     name: ${{ matrix.task.description }}
@@ -91,21 +71,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.2.2
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4.4.0
-        with:
-          cache: npm
-          check-latest: true
-          node-version-file: .nvmrc
-
-      - name: Install dependencies
-        run: npm ci
-
       - name: Restore build
-        uses: actions/cache/restore@v4.2.3
-        with:
-          key: build-cache-${{ runner.os }}-${{ github.sha }}
-          path: build
+        uses: ./.github/workflows/actions/install-and-build
 
       - name: Run task
         id: task

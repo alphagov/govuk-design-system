@@ -1,0 +1,36 @@
+name: Build
+
+inputs:
+  cache_install:
+    description: Use build cache to bypass setting up node and installing dependencies
+    type: boolean
+    default: 'false'
+
+runs:
+  using: composite
+
+  steps:
+    - name: Restore build
+      uses: actions/cache@v4.2.3
+      id: build-cache
+      with:
+        key: build-cache-${{ runner.os }}-${{ github.sha }}
+        path: build
+
+    - name: Setup Node.js
+      if: steps.build-cache.outputs.cache-hit != 'true' || inputs.cache_install != 'true'
+      uses: actions/setup-node@v4.4.0
+      with:
+        cache: npm
+        check-latest: true
+        node-version-file: .nvmrc
+
+    - name: Install dependencies
+      if: steps.build-cache.outputs.cache-hit != 'true' || inputs.cache_install != 'true'
+      shell: bash
+      run: npm ci
+
+    - name: Build
+      if: steps.build-cache.outputs.cache-hit != 'true'
+      shell: bash
+      run: npm run build
