@@ -35,7 +35,7 @@ The following principles will help you research and develop your contribution.
 
 ### Start with what exists
 
-Find examples of the component or pattern already in use. The best way to do this is to ask the government design community on the [digital service designers mailing list](https://groups.google.com/a/digital.cabinet-office.gov.uk/forum/?hl=en-GB#!forum/digital-service-designers) or the [#design channel on cross-government Slack](https://ukgovernmentdigital.slack.com/app_redirect?channel=design).
+Find examples of the component or pattern already in use. The best way to do this is to ask the government design community on the [digital service designers mailing list](https://groups.google.com/a/digital.cabinet-office.gov.uk/g/digital-service-designers) or the [#design channel on cross-government Slack](https://ukgovernmentdigital.slack.com/app_redirect?channel=design).
 
 Examples and research from government services are usually most relevant. But look at how other organisations solve the problem too.
 

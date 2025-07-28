@@ -74,7 +74,7 @@ Have an agreed process for updating the cookie policy when you add or remove a c
 
 You do not need the user’s consent to set essential or ‘strictly necessary’ cookies. A cookie is ‘strictly necessary’ if the service will not work without it.
 
-The Information Commissioner’s Office (ICO) has [guidance on what types of cookie are likely to be considered ‘strictly necessary’](https://ico.org.uk/for-organisations/guide-to-pecr/guidance-on-the-use-of-cookies-and-similar-technologies/what-are-the-rules-on-cookies-and-similar-technologies/). For example, load balancing cookies are likely to be strictly necessary - but cookies that collect analytics data are not.
+The Information Commissioner’s Office (ICO) has [guidance on what types of cookie are likely to be considered ‘strictly necessary’](https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guide-to-pecr/cookies-and-similar-technologies/). For example, load balancing cookies are likely to be strictly necessary - but cookies that collect analytics data are not.
 
 You must get the user’s consent before you set any cookies that are not strictly necessary.
 

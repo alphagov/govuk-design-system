@@ -1,0 +1,18 @@
+name: Check external links
+
+on: workflow_dispatch
+
+jobs:
+  check-links:
+    name: Check for broken external links
+    runs-on: 'ubuntu-22.04'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+
+      - name: Build
+        uses: ./.github/workflows/actions/install-and-build
+
+      - name: Check external broken links
+        run: npm run check-external-links

@@ -89,9 +89,9 @@ DAC tested a sample of pages to cover the different content types in the GOV.UK 
 
 ### Frontend documentation website
 
-The [GOV.UK Frontend documentation website](http://frontend.design-system.service.gov.uk/) was last audited for accessibility issues by an external group in April 2021. The audit was carried out by the [Digital Accessibility Centre (DAC)](https://digitalaccessibilitycentre.org/).
+The [GOV.UK Frontend documentation website](https://frontend.design-system.service.gov.uk/) was last audited for accessibility issues by an external group in April 2021. The audit was carried out by the [Digital Accessibility Centre (DAC)](https://digitalaccessibilitycentre.org/).
 
-DAC tested the [Technical Documentation Template](https://tdt-documentation.london.cloudapps.digital/), which is the template for the GOV.UK Frontend documentation website.
+DAC tested the [Technical Documentation Template](https://github.com/alphagov/tdt-documentation/), which is the template for the GOV.UK Frontend documentation website.
 
 To learn more, read the [Accessibility statement for Technical Documentation Template and documentation](https://github.com/alphagov/tdt-documentation/blob/main/source/accessibility/index.html.md.erb).
 
