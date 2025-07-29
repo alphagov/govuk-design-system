@@ -1,0 +1,41 @@
+{% comment %}This is a comment{% endcomment %}
+{# This is a line comment #}
+{{ variable }}
+{{ variable | filter }}
+{{ variable | filter("string") }}
+{{ super() }}
+{{ govukComponent({
+  thing1: "value1",
+  thing2: "value2"
+})}}
+{{ "hello world" }}
+
+{% if happy and hungry %}
+  I am happy *and* hungry; both are true.
+{% elif happy or hungry %}
+  I am either happy *or* hungry; one or the other is true.
+{% endif %}
+
+{% for item in items %}
+  <li>{{ item.title }}</li>
+{% else %}
+  <li>This would display if the 'item' collection were empty</li>
+{% endfor %}
+
+{% block content %}
+Content
+{% endblock %}
+
+{% extends "base.html" %}
+
+{% include 'standardModalData.html' %}
+
+{% set username = "joe" %}
+
+{% set standardModal %}
+  <p>Set</p>
+{% endset %}
+
+{% macro field(name, value='', type='text') %}
+  <div>Content</div>
+{% endmacro %}
