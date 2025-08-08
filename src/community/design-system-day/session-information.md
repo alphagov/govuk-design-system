@@ -1,5 +1,5 @@
 ---
-title: This page has been archived
+title: This page has been archived - Session information
 layout: layout-archived.njk
 ignoreInSitemap: true
 ---
