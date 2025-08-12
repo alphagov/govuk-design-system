@@ -31,8 +31,8 @@ Common problems with email confirmation include:
 
 - confusing users about the journey outside the service
 - assuming users have an email account and access to it
-- sending emails to spam folders so users do not see them, for example, because it goes to their spam folder
 - taking too long to send the confirmation email
+- not taking steps to prevent emails from being marked as spam
 
 You must design your service to reduce these issues for users.
 
