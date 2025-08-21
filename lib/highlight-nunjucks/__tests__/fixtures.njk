@@ -39,3 +39,12 @@ Content
 {% macro field(name, value='', type='text') %}
   <div>Content</div>
 {% endmacro %}
+
+{{ govukInput({
+  label: {
+    text: "Address line 2 (optional)"
+  },
+  id: "address-line-2",
+  name: "addressLine2",
+  autocomplete: "address-line2"
+}) }}
