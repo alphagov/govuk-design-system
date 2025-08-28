@@ -8,13 +8,17 @@ description: This guide explains how to set up your project so you can start usi
 ---
 
 {% from "_example.njk" import example %}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
 
 This guide explains how to set up your project so you can start using the styles and coded examples in the GOV.UK Design System in production.
 
-{{ govukInsetText({
+{% set warningTextHtml %}
+If your service still uses GOV.UK Template, GOV.UK Frontend Toolkit or GOV.UK Elements, you should <a href="https://frontend.design-system.service.gov.uk/v4/installing-with-npm/">install the latest v4 release of GOV.UK Frontend</a> and follow the guidance on <a href="https://frontend.design-system.service.gov.uk/v4/migrating-from-legacy-products/">migrating from our old frameworks</a>.
+{% endset %}
+
+{{ govukWarningText({
   classes: "app-table--constrained",
-  html: 'If you’ve used GOV.UK Elements, GOV.UK Template or the GOV.UK Frontend Toolkit before, you might also find it useful to read the guide to <a href="https://frontend.design-system.service.gov.uk/v4/migrating-from-legacy-products/#migrate-from-our-old-frameworks">Migrate from our old frameworks</a>.'
+  html: warningTextHtml
 }) }}
 
 ## Include GOV.UK Frontend in your project
