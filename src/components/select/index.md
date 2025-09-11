@@ -67,6 +67,6 @@ Research shows that users can struggle with selects, particularly when users hav
 - tried to pinch zoom select options on smaller devices
 - not understood that they can scroll down to see more items, or how to
 
-For more detail watch this video with [examples of users struggling with selects](https://www.youtube.com/watch?v=CUkMCQR4TpY).
+For more detail watch this video with [examples of users struggling with selects](https://www.youtube.com/watch?v=-dH6a6eMdXE).
 
 This blog shows [an example where a text input is used over a select](https://designnotes.blog.gov.uk/2013/12/05/asking-for-a-date-of-birth/) for asking a user for a date.
