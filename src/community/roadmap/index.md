@@ -17,19 +17,11 @@ Last updated 17 July 2025.
 
 ## Recently shipped
 
-We've released [GOV.UK Frontend v5.11.1](https://github.com/alphagov/govuk-frontend/releases/tag/v5.11.1), which fixes link styles in the Service navigation on inverted backgrounds and makes `govuk-shade` and `govuk-tint` more reliable.
+We’ve released [GOV.UK Frontend v5.12.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.12.0), which introduces a new mixin you can use to style the focus state if you’re building your own form input components.
 
 In June 2025, we released [GOV.UK Frontend v5.11.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.11.0), which includes improvements to the Service navigation component, making it easier to use on mobile devices and offering a new inverse colour option. We also added deprecation warnings for code built with the LibSass library.
 
 In May 2025, we released [GOV.UK Frontend v5.10.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.0) (and later fix versions) and [GOV.UK Frontend v4.10.0](https://github.com/alphagov/govuk-frontend/releases/tag/v4.10.0). These are the first steps towards refreshing the GOV.UK brand across government services.
-
-We’ve also recently:
-
-- released [GOV.UK Frontend v5.9.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.9.0), which includes a [JavaScript enhancement to the File upload component](https://design-system.service.gov.uk/components/file-upload/#using-the-improved-file-upload-component)
-- released [GOV.UK Frontend v5.8.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.8.0), which includes a new `ConfigurableComponent` class to help you build your own configurable components
-- added features to help services [create their own JavaScript components using GOV.UK Frontend](https://frontend.design-system.service.gov.uk/building-your-own-javascript-components/)
-- updated the Royal Arms in the [GOV.UK Footer component](/components/footer/)
-- introduced a new [Service navigation component](/components/service-navigation/) and published a new [pattern to Help users to navigate a service](/patterns/navigate-a-service)
 
 ## Working on now
 
