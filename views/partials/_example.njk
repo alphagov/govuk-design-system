@@ -30,7 +30,7 @@
   {% if display %}
     <div class="app-example {{ "app-example--tabs" if params.html or params.nunjucks }}">
       <div class="app-example__toolbar">
-        <a href="{{ exampleURL }}" class="app-example__new-window" target="_blank">
+        <a href="{{ exampleURL }}" class="app-example__new-window" rel="noreferrer noopener" target="_blank">
           {#- Don't use full title visually as the context is shown based on location of this link #}
           Open this example in a new tab<span class="govuk-visually-hidden">: {{ exampleTitle | lower | smartypants }}</span>
         </a>
