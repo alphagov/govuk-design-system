@@ -42,12 +42,12 @@ See how to do this in the [Help users to complete multiple tasks pattern](/patte
 
 Together, the [GOV.UK header component](/components/header/) and [Service navigation component](/components/service-navigation/) work together to assure users that they’re in the right place to use your service. They also help users understand that GOV.UK functions as one website.
 
-The GOV.UK header (black background) includes space to show:
+The GOV.UK header (blue background, previously black) includes space to show:
 
 - the GOV.UK logo, which links to the GOV.UK homepage
 - GOV.UK-wide tools such as GOV.UK One Login
 
-The Service navigation (grey background) includes space to show:
+The Service navigation (light grey-blue background, previously grey) includes space to show:
 
 - the service name, which links to the homepage of your service (or closest page)
 - a navigation menu for your service
