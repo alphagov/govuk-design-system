@@ -24,6 +24,7 @@ module.exports = {
   server: {
     command: 'npm run serve',
     port: ports.preview,
+    host: 'localhost',
 
     // Skip when already running
     usedPortAction: 'ignore'
