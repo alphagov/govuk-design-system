@@ -1,20 +1,13 @@
 const browserSync = require('browser-sync').create()
 
-const { paths, ports } = require('../config')
+const { browsersync, paths } = require('../config')
 
 browserSync.init(
   {
-    // Prevent browser mirroring
-    ghostMode: false,
-
-    // Prevent browser opening
-    open: false,
+    ...browsersync,
 
     // Disable BrowserStack UI
     ui: false,
-
-    // Configure port
-    port: ports.preview,
 
     // Serve files from directory
     server: paths.public
