@@ -17,7 +17,9 @@ Last updated 17 July 2025.
 
 ## Recently shipped
 
-We’ve released [GOV.UK Frontend v5.12.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.12.0), which introduces a new mixin you can use to style the focus state if you’re building your own form input components.
+We’ve released [GOV.UK Frontend v5.13.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.13.0), which introduces new Sass functions to help write `@media` and `@container` queries, mixins and functions whilst still using custom breakpoints or GOV.UK Frontend’s `$govuk-breakpoints` setting.
+
+In September 2025, we released [GOV.UK Frontend v5.12.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.12.0), which introduced a new mixin you can use to style the focus state if you're building your own form input components.
 
 In June 2025, we released [GOV.UK Frontend v5.11.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.11.0), which includes improvements to the Service navigation component, making it easier to use on mobile devices and offering a new inverse colour option. We also added deprecation warnings for code built with the LibSass library.
 
