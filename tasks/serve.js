@@ -1,10 +1,10 @@
 const browserSync = require('browser-sync').create()
 
-const { browsersync, paths } = require('../config')
+const { browsersync: browserSyncConfig, paths } = require('../config')
 
 browserSync.init(
   {
-    ...browsersync,
+    ...browserSyncConfig,
 
     // Disable BrowserStack UI
     ui: false,

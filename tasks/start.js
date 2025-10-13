@@ -3,7 +3,7 @@ const { dirname, join } = require('path')
 const browserSync = require('browser-sync')
 const slash = require('slash')
 
-const { browsersync, paths } = require('../config') // specify paths to main working directories
+const { browsersync: browserSyncConfig, paths } = require('../config') // specify paths to main working directories
 const metalsmith = require('../lib/metalsmith') // configured static site generator
 
 let bs
@@ -32,7 +32,7 @@ metalsmith
       bs = browserSync.create()
 
       bs.init({
-        ...browsersync,
+        ...browserSyncConfig,
 
         // Configure output to watch for reloads
         files: [
