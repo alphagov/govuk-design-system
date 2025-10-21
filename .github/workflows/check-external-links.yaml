@@ -2,6 +2,9 @@ name: Check external links
 
 on: workflow_dispatch
 
+permissions:
+  contents: read
+
 jobs:
   check-links:
     name: Check for broken external links
