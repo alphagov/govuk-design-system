@@ -30,8 +30,8 @@
     "lint:scss": "npm run lint:scss:cli -- \"**/*.{md,scss}\"",
     "lint:scss:cli": "stylelint --cache --cache-location .cache/stylelint --cache-strategy content --color --ignore-path .gitignore --max-warnings 0",
     "lint:types": "tsc --build tsconfig.json",
-    "check-links": "hyperlink --canonicalroot https://design-system.service.gov.uk/ --internal --recursive build/sitemap.xml | tee check-links.log | tap-mocha-reporter min",
     "check-external-links": "hyperlink --canonicalroot https://design-system.service.gov.uk/ build/sitemap.xml --recursive --skip \"github.com\" | tee check-external-links.log | tap-mocha-reporter min",
+    "check-links": "linkinator build --recurse --skip example.com --skip github.com --verbosity error",
     "prepare": "node -e \"try { (await import('husky')).default() } catch (e) { if (e.code !== 'ERR_MODULE_NOT_FOUND') throw e }\" --input-type module"
   },
   "dependencies": {
@@ -73,7 +73,6 @@
     "highlight.js": "^11.11.1",
     "html-validate": "^10.2.1",
     "husky": "^9.1.7",
-    "hyperlink": "^5.0.4",
     "jest": "^30.2.0",
     "jest-axe": "^10.0.0",
     "jest-environment-jsdom": "^30.2.0",
@@ -81,6 +80,7 @@
     "js-beautify": "^1.15.4",
     "jstransformer-marked": "^1.4.0",
     "jstransformer-nunjucks": "^1.2.0",
+    "linkinator": "^7.2.0",
     "lint-staged": "^16.2.7",
     "marked": "^17.0.1",
     "marked-gfm-heading-id": "^4.1.3",
