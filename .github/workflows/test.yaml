@@ -19,6 +19,9 @@ on:
           - ubuntu-22.04
           - windows-latest
 
+permissions:
+  contents: read
+
 jobs:
   build:
     name: Build
