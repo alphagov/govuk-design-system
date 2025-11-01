@@ -109,10 +109,10 @@
   },
   "optionalDependencies": {
     "@jest/environment": "^30.0.5",
-    "@types/browser-sync": "^2.29.0",
+    "@types/browser-sync": "^2.29.1",
     "@types/jest": "^30.0.0",
     "@types/jest-axe": "^3.5.9",
-    "@types/node": "^24.6.1",
+    "@types/node": "^24.9.2",
     "@types/nunjucks": "^3.2.6",
     "@types/slug": "^5.0.9"
   },
