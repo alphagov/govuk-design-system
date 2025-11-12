@@ -54,23 +54,6 @@ If you’d like to help us build these components and patterns, join the convers
     },
     {
       key: {
-        text: "Navigation"
-      },
-      value: {
-        text: "Exploration into different kinds of navigation, for example sub-navigation and side navigation."
-      },
-      actions: {
-        classes: "govuk-!-text-align-left",
-        items: [
-          {
-            href: "https://github.com/alphagov/govuk-design-system/discussions/2376",
-            text: "Discuss Navigation"
-          }
-        ]
-      }
-    },
-    {
-      key: {
         text: "Essential components"
       },
       value: {
