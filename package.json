@@ -56,6 +56,7 @@
     "@rollup/plugin-terser": "^0.4.4",
     "autoprefixer": "^10.4.21",
     "browser-sync": "3.0.4",
+    "browserslist": "^4.28.0",
     "cross-env": "^10.1.0",
     "editorconfig-checker": "^6.1.1",
     "eslint": "^8.57.0",
@@ -117,7 +118,7 @@
     "@types/slug": "^5.0.9"
   },
   "engines": {
-    "node": "^22.11.0",
-    "npm": "^10.5.0"
+    "node": "^24.11.0",
+    "npm": "^11.6.0"
   }
 }
