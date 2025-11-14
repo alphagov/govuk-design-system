@@ -125,4 +125,10 @@ In the case of slow connections, aim to give the user information about what’s
 
 ## Research on this component
 
+In [January 2026] we updated the Button component as part of colour changes to support a wider refresh of the GOV.UK brand. We also made small changes to improve colour contrast and make the button text easier to read.
+
+We found that the proposed green colour made text harder to read, and that we could also improve the red colour as well. To make buttons easier to read overall, we added a slight text shadow and adjusted letter spacing, [and both colours are now improved](https://github.com/alphagov/govuk-design-system/discussions/4953#discussion-9108380).
+
+### Green start buttons
+
 Testing on GOV.UK has shown that [the green colour of start buttons has improved click-through rates](https://github.com/alphagov/govuk-design-system-backlog/issues/34#issuecomment-699537400).
