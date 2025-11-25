@@ -43,7 +43,7 @@ $govuk-new-typography-scale: true;
 
 // Neither values are available as variables in GOV.UK Frontend
 // so adding them as private variables for future reference
-$_govuk-service-navigation-link-colour: govuk-shade($govuk-link-colour, 10%);
+$_govuk-service-navigation-link-colour: govuk-colour("blue", $variant: "shade-25");
 $_govuk-service-navigation-font-size: 19px;
 
 // These colours are not available publically in GOV.UK Frontend
