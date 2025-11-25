@@ -6,7 +6,7 @@ $app-annotate-block-label-color: #ffffff;
   position: relative;
   padding: govuk-spacing(3);
   padding-top: 3em;
-  border: 2px dashed govuk-colour("dark-grey");
+  border: 2px dashed govuk-colour("black", $variant: "tint-25");
 
   // Collapse borders when two annotate blocks follow each other
   & + .app-annotate-block {
@@ -19,8 +19,8 @@ $app-annotate-block-label-color: #ffffff;
   top: 0;
   left: 0;
   padding: 0.25em 0.5em;
-  border-right: 2px dashed govuk-colour("dark-grey");
-  border-bottom: 2px dashed govuk-colour("dark-grey");
+  border-right: 2px dashed govuk-colour("black", $variant: "tint-25");
+  border-bottom: 2px dashed govuk-colour("black", $variant: "tint-25");
   background: $app-annotate-block-label-color;
   font-family: $govuk-font-family;
 }

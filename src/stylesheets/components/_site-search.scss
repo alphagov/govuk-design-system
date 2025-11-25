@@ -94,18 +94,18 @@ $icon-size: 40px;
 
 .app-site-search__hint {
   position: absolute;
-  color: govuk-colour("mid-grey");
+  color: govuk-colour("black", $variant: "tint-80");
 }
 
 .app-site-search__input {
   position: relative;
-  background-image: _search-icon($colour: govuk-colour("dark-grey"));
+  background-image: _search-icon($colour: govuk-colour("black", $variant: "tint-25"));
   background-repeat: no-repeat;
   background-position: center left -2px;
   background-size: $icon-size $icon-size;
 
   &::placeholder {
-    color: govuk-colour("dark-grey");
+    color: govuk-colour("black", $variant: "tint-25");
   }
 
   // If the user is in a dark forced colours mode, switch the search icon out
@@ -210,7 +210,7 @@ $icon-size: 40px;
   display: block;
   position: relative;
   padding: govuk-spacing(2);
-  border-bottom: solid govuk-colour("mid-grey");
+  border-bottom: solid govuk-colour("black", $variant: "tint-80");
   border-width: 1px 0;
   cursor: pointer;
 }
@@ -247,7 +247,7 @@ $icon-size: 40px;
 }
 
 .app-site-search__option--no-results {
-  color: govuk-colour("dark-grey");
+  color: govuk-colour("black", $variant: "tint-25");
   background-color: govuk-colour("white");
   cursor: not-allowed;
 }
