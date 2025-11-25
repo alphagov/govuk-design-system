@@ -23,11 +23,11 @@ You must make sure that the contrast ratio of text and interactive elements in y
 
 ## Main colours
 
-If you are using GOV.UK Frontend or the GOV.UK Prototype Kit, use the [Sass variables](https://frontend.design-system.service.gov.uk/sass-api-reference/#colours) provided rather than copying the hexadecimal (hex) colour values. For example, use `$govuk-brand-colour` rather than `{{ colours.applied['Brand colour'][0]['colour'] | trim }}`.
+If you are using GOV.UK Frontend or the GOV.UK Prototype Kit, use the [Sass variables](https://frontend.design-system.service.gov.uk/sass-api-reference/#colours) provided rather than copying the hexadecimal (hex) colour values. For example, use `govuk-functional-colour(brand)` rather than `{{ colours.applied['Brand colour'][0]['colour'] | trim }}`.
 
 This means that your service will always use the most recent colour palette whenever you update.
 
-Only use the variables in the context they're designed for. In all other cases, you should reference the [colour palette](#colour-palette) directly. For example, if you wanted to use red, you should use `govuk-colour("red")` rather than `$govuk-error-colour`.
+Only use the variables in the context they're designed for. In all other cases, you should reference the [colour palette](#colour-palette) directly. For example, if you wanted to use red, you should use `govuk-colour("red")` rather than `govuk-functional-colour(error)`.
 
 <table class="govuk-body app-colour-list" summary="Table of main colours">
   <tbody>
@@ -69,7 +69,7 @@ Use these colours for supporting materials like illustrations, or in custom comp
 
 To reference colours from the palette directly you should use the `govuk-colour` function. For example, `color: govuk-colour("blue")`.
 
-Avoid using the palette colours if there is a Sass variable that is designed for your context. For example, if you are styling the error state of a component you should use the `$govuk-error-colour` Sass variable rather than `govuk-colour("red")`.
+Avoid using the palette colours if there is a Sass variable that is designed for your context. For example, if you are styling the error state of a component you should use the `govuk-functional-colour(error)` Sass variable rather than `govuk-colour("red")`.
 
 If you need to use tints of this palette, use either 25% or 50%.
 

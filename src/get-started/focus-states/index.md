@@ -58,8 +58,8 @@ If you use Sass, you can use 3 GOV.UK Frontend variables if your component has a
 
 The 3 Sass variables are:
 
-- `$govuk-focus-colour` - yellow background
-- `$govuk-focus-text-colour` - black text
+- `govuk-functional-colour(focus)` - yellow background
+- `govuk-functional-colour(focus-text)` - black text
 - `$govuk-focus-width` - for consistent width
 
 Use these variables in your components instead of numeric values for the background, text and widths.
@@ -69,7 +69,7 @@ Use these variables in your components instead of numeric values for the backgro
 To make a component's focus state accessible without using Sass, you can:
 
 - use the `govuk-focused-text` mixin – [see how `govuk-focused-text` works in the GOV.UK Frontend source code](https://github.com/alphagov/govuk-frontend/blob/25a4333b239e1c3b8a136e526981fe29172a2852/src/govuk/helpers/_focused.scss#L12-L28)
-- get the values for `$govuk-focus-colour` and `$govuk-focus-text-colour` from the [colour page](/styles/colour/)
+- get the values for `govuk-functional-colour(focus)` and `govuk-functional-colour(focus-text)` from the [colour page](/styles/colour/)
 
 ## Contributing back
 

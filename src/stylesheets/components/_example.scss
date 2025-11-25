@@ -2,14 +2,14 @@
 .app-example-wrapper {
   @include govuk-responsive-margin(6, "top");
   @include govuk-responsive-margin(6, "bottom");
-  border: 1px solid $govuk-border-colour;
+  border: 1px solid govuk-functional-colour(border);
   border-top: 0;
 }
 
 .app-example {
   @include govuk-font-size($size: 16);
   position: relative;
-  border-top: 1px solid $govuk-border-colour;
+  border-top: 1px solid govuk-functional-colour(border);
   // Add a 'checkerboard' background
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAJUlEQVQoU2P88ePHfwY0wMHBwYguxjgUFKI7GsTH5m4M3w1ChQAZTSeO0/AZpgAAAABJRU5ErkJggg==")
     repeat;
@@ -21,8 +21,8 @@
 
 .app-example__toolbar {
   padding: 10px;
-  border-bottom: 1px solid $govuk-border-colour;
-  background: $govuk-body-background-colour;
+  border-bottom: 1px solid govuk-functional-colour(border);
+  background: govuk-functional-colour(body-background);
 }
 
 .app-example__frame {
@@ -30,7 +30,7 @@
   width: 100%;
   max-width: 100%;
   border: 0;
-  border-right: 1px solid $govuk-border-colour;
+  border-right: 1px solid govuk-functional-colour(border);
   background: govuk-colour("white");
 }
 
