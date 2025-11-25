@@ -149,7 +149,7 @@ $app-code-color: #d13118;
     max-width: 722px;
     height: auto;
     @include govuk-responsive-margin(2, "top");
-    border: 1px solid $govuk-border-colour;
+    border: 1px solid govuk-functional-colour(border);
   }
 
   img {
@@ -169,9 +169,9 @@ $app-code-color: #d13118;
   }
 
   .app-video__player:focus {
-    border-color: $govuk-focus-text-colour;
-    outline: $govuk-focus-width solid $govuk-focus-text-colour;
-    box-shadow: 0 0 0 ($govuk-focus-width * 2) $govuk-focus-colour;
+    border-color: govuk-functional-colour(focus-text);
+    outline: $govuk-focus-width solid govuk-functional-colour(focus-text);
+    box-shadow: 0 0 0 ($govuk-focus-width * 2) govuk-functional-colour(focus);
   }
 
   .app-video__description {
@@ -220,15 +220,15 @@ $app-code-color: #d13118;
   cursor: pointer;
 
   &:focus:not(:hover) {
-    color: $govuk-focus-text-colour;
-    background-color: $govuk-focus-colour;
-    box-shadow: 0 2px 0 0 $govuk-focus-text-colour;
+    color: govuk-functional-colour(focus-text);
+    background-color: govuk-functional-colour(focus);
+    box-shadow: 0 2px 0 0 govuk-functional-colour(focus-text);
   }
 
   &:active,
   &:focus {
     padding: 2px 10px; // Counter increased border size
-    border: 2px solid $govuk-focus-colour;
+    border: 2px solid govuk-functional-colour(focus);
     outline: 2px solid transparent;
     box-shadow: none;
   }
@@ -306,7 +306,7 @@ $colour-list-breakpoint: 980px;
 
   code {
     padding: 0;
-    color: $govuk-text-colour;
+    color: govuk-functional-colour(text);
     background: none;
   }
 }
@@ -347,14 +347,14 @@ pre code {
   padding: govuk-spacing(4);
   overflow-x: auto;
   border: $govuk-focus-width solid transparent;
-  outline: 1px solid $govuk-border-colour;
+  outline: 1px solid govuk-functional-colour(border);
   background-color: $app-light-grey;
   @include govuk-font-size($size: 19);
   @include govuk-responsive-margin(4, "bottom");
 
   &:focus {
-    border: $govuk-focus-width solid $govuk-input-border-colour;
-    outline: $govuk-focus-width solid $govuk-focus-colour;
+    border: $govuk-focus-width solid govuk-functional-colour(input-border);
+    outline: $govuk-focus-width solid govuk-functional-colour(focus);
   }
 
   .govuk-frontend-supported [data-module="app-copy"] & {
@@ -417,7 +417,7 @@ pre .language-plaintext {
     @extend %govuk-link;
 
     &:focus code {
-      color: $govuk-focus-text-colour;
+      color: govuk-functional-colour(focus-text);
       background: transparent;
     }
   }

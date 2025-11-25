@@ -23,11 +23,11 @@ You must make sure that the contrast ratio of text and interactive elements in y
 
 ## Functional colours
 
-If you are using GOV.UK Frontend or the GOV.UK Prototype Kit, use the [Sass variables](https://frontend.design-system.service.gov.uk/sass-api-reference/#colours) provided rather than copying the hexadecimal (hex) colour values. For example, use `$govuk-brand-colour` rather than `{{ colours.applied['Brand colour'][0]['colour'] | trim }}`.
+If you are using GOV.UK Frontend or the GOV.UK Prototype Kit, use the [Sass variables](https://frontend.design-system.service.gov.uk/sass-api-reference/#colours) provided rather than copying the hexadecimal (hex) colour values. For example, use `govuk-functional-colour(brand)` rather than `{{ colours.applied['Brand colour'][0]['colour'] | trim }}`.
 
 This means that your service will always use the most recent colour palette whenever you update.
 
-Only use the variables in the context they're designed for. In all other cases, you should reference the [GOV.UK web palette](#govuk-web-palette) directly. For example, if you wanted to use red, you should use `govuk-colour("red")` rather than `$govuk-error-colour`.
+Only use the variables in the context they're designed for. In all other cases, you should reference the [GOV.UK web palette](#govuk-web-palette) directly. For example, if you wanted to use red, you should use `govuk-colour("red")` rather than `govuk-functional-colour(error)`.
 
 <table class="govuk-body app-colour-list" summary="Table of main colours">
   <tbody>
@@ -69,7 +69,7 @@ If you need to add other colours, and your product or service is within the GOV.
 
 Use the [\_colours-palette.scss](https://github.com/alphagov/govuk-frontend/blob/main/packages/govuk-frontend/src/govuk/settings/_colours-palette.scss) file to find the values for colours along with their tints and shades.
 
-The [GOV.UK brand guidelines](https://www.gov.uk/government/publications/govuk-brand-guidelines) shows the full list of colours and swatches.
+The [GOV.UK brand guidelines](https://www.gov.uk/government/publications/govuk-brand-guidelines) shows the full list of colours and swatches.ur function)
 
 ### Add colours with the `govuk-colour` function
 

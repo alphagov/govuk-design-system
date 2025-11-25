@@ -37,7 +37,7 @@
   border: 0;
 
   // Add back a border to separate each element of the menu
-  border-top: solid 1px $govuk-border-colour;
+  border-top: solid 1px govuk-functional-colour(border);
 
   color: $_govuk-service-navigation-link-colour;
   background: none;
@@ -49,7 +49,7 @@
   cursor: pointer;
 
   &:hover {
-    color: $govuk-link-hover-colour;
+    color: govuk-functional-colour(link-hover);
   }
 
   &:focus {
