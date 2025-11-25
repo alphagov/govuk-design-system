@@ -288,7 +288,7 @@ $colour-list-breakpoint: 980px;
 }
 
 .app-swatch-border {
-  border-color: govuk-colour("mid-grey");
+  border-color: govuk-colour("black", $variant: "tint-80");
 }
 
 .app-colour-list-column--name {
@@ -324,7 +324,7 @@ td code,
 p code {
   padding: 1px 3px;
   color: $app-code-color;
-  background-color: govuk-colour("light-grey");
+  background-color: govuk-colour("black", $variant: "tint-95");
   @include govuk-font-size($size: 16);
   @include govuk-media-query($from: tablet) {
     padding: 2px 4px;

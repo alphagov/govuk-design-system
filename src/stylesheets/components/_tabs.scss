@@ -156,5 +156,5 @@
 .app-tabs__container pre code {
   outline: 1px solid transparent;
   color: $govuk-text-colour;
-  background-color: govuk-colour("light-grey");
+  background-color: govuk-colour("black", $variant: "tint-95");
 }
