@@ -48,8 +48,8 @@ $_govuk-service-navigation-font-size: 19px;
 
 // These colours are not available publically in GOV.UK Frontend
 // Adding them here until there's public variables
-$_govuk-rebrand-template-background-colour: #f4f8fb;
-$_govuk-rebrand-border-colour-on-blue-tint-95: #8eb8dc;
+$_govuk-rebrand-template-background-colour: govuk-colour("blue", $variant: "tint-95");
+$_govuk-rebrand-border-colour-on-blue-tint-95: govuk-colour("blue", $variant: "tint-50");
 
 // App-specific variables
 $app-light-grey: #f8f8f8;
