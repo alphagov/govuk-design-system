@@ -48,7 +48,7 @@ class MobileNavigationSection extends Component {
     // Check if the section should be visible or not
     const breakPoint = getComputedStyle(
       document.documentElement
-    ).getPropertyValue('--govuk-frontend-breakpoint-tablet')
+    ).getPropertyValue('--govuk-breakpoint-tablet')
 
     this.mql = window.matchMedia(`(min-width: ${breakPoint})`)
 
