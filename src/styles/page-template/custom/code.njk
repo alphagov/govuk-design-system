@@ -102,11 +102,11 @@ ignoreInSitemap: true
 
 {% set mainClasses = "app-main-class" %}
 
-{% block main %}
+{% block container %}
   {{ super() }}
 {% endblock %}
 
-{% block beforeContent %}
+{% block containerStart %}
   {{ govukPhaseBanner({
     tag: {
       text: "Alpha"
