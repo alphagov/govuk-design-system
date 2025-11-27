@@ -1,58 +1,95 @@
 {
-  "Text": [
-    {
-      "name": "$govuk-text-colour"
-    },
-    {
-      "name": "$govuk-secondary-text-colour"
-    }
-  ],
-  "Links": [
-    {
-      "name": "$govuk-link-colour"
-    },
-    {
-      "name": "$govuk-link-hover-colour"
-    },
-    {
-      "name": "$govuk-link-visited-colour"
-    },
-    {
-      "name": "$govuk-link-active-colour"
-    }
-  ],
-  "Border": [
-    {
-      "name": "$govuk-border-colour"
-    },
-    {
-      "name": "$govuk-input-border-colour"
-    }
-  ],
-  "Focus state": [
-    {
-      "name": "$govuk-focus-colour",
-      "notes": "Only use this colour to indicate which element is focused on. For example, when a user tabs to an element with their keyboard."
-    },
-    {
-      "name": "$govuk-focus-text-colour"
-    }
-  ],
-  "Error state": [
-    {
-      "name": "$govuk-error-colour",
-      "notes": "Use for error messages"
-    }
-  ],
-  "Success state": [
-    {
-      "name": "$govuk-success-colour",
-      "notes": "Use for success messages"
-    }
-  ],
-  "Brand colour": [
-    {
-      "name": "$govuk-brand-colour"
-    }
-  ]
+  "applied": {
+    "Text": [
+      {
+        "name": "$govuk-text-colour",
+        "colour": "#0b0c0c"
+      },
+      {
+        "name": "$govuk-secondary-text-colour",
+        "colour": "#505a5f"
+      }
+    ],
+    "Links": [
+      {
+        "name": "$govuk-link-colour",
+        "colour": "#1d70b8"
+      },
+      {
+        "name": "$govuk-link-hover-colour",
+        "colour": "#003078"
+      },
+      {
+        "name": "$govuk-link-visited-colour",
+        "colour": "#4c2c92"
+      },
+      {
+        "name": "$govuk-link-active-colour",
+        "colour": "#0b0c0c"
+      }
+    ],
+    "Border": [
+      {
+        "name": "$govuk-border-colour",
+        "colour": "#b1b4b6"
+      },
+      {
+        "name": "$govuk-input-border-colour",
+        "colour": "#0b0c0c"
+      }
+    ],
+    "Focus state": [
+      {
+        "name": "$govuk-focus-colour",
+        "colour": "#ffdd00",
+        "notes": "Only use this colour to indicate which element is focused on. For example, when a user tabs to an element with their keyboard."
+      },
+      {
+        "name": "$govuk-focus-text-colour",
+        "colour": "#0b0c0c"
+      }
+    ],
+    "Error state": [
+      {
+        "name": "$govuk-error-colour",
+        "colour": "#d4351c",
+        "notes": "Use for error messages"
+      }
+    ],
+    "Success state": [
+      {
+        "name": "$govuk-success-colour",
+        "colour": "#00703c",
+        "notes": "Use for success messages"
+      }
+    ],
+    "Brand colour": [
+      {
+        "name": "$govuk-brand-colour",
+        "colour": "#1d70b8"
+      }
+    ]
+  },
+  "palette": {
+    "red": "#d4351c",
+    "yellow": "#ffdd00",
+    "green": "#00703c",
+    "blue": "#1d70b8",
+    "dark-blue": "#003078",
+    "light-blue": "#5694ca",
+    "purple": "#4c2c92",
+    "black": "#0b0c0c",
+    "dark-grey": "#505a5f",
+    "mid-grey": "#b1b4b6",
+    "light-grey": "#f3f2f1",
+    "white": "#ffffff",
+    "light-purple": "#6f72af",
+    "bright-purple": "#912b88",
+    "pink": "#d53880",
+    "light-pink": "#f499be",
+    "orange": "#f47738",
+    "brown": "#b58840",
+    "light-green": "#85994b",
+    "turquoise": "#28a197"
+  }
 }
