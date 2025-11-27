@@ -23,7 +23,7 @@ You must make sure that the contrast ratio of text and interactive elements in y
 
 ## Main colours
 
-If you are using GOV.UK Frontend or the GOV.UK Prototype Kit, use the [Sass variables](https://frontend.design-system.service.gov.uk/sass-api-reference/#colours) provided rather than copying the hexadecimal (hex) colour values. For example, use `govuk-functional-colour("brand")` rather than `{{ colours.functional['Brand colour'][0]['colour'] | trim }}`.
+If you are using GOV.UK Frontend or the GOV.UK Prototype Kit, use the [Sass variables](https://frontend.design-system.service.gov.uk/sass-api-reference/#colours) provided rather than copying the hexadecimal (hex) colour values. For example, use `govuk-functional-colour("brand")` rather than `{{ colours['Brand colour'][0]['colour'] | trim }}`.
 
 This means that your service will always use the most recent colour palette whenever you update.
 
@@ -32,7 +32,7 @@ Only use the variables in the context they're designed for. In all other cases, 
 <table class="govuk-body app-colour-list" summary="Table of main colours">
   <tbody>
   {#- colours is an object built by ./lib/colours.js based on data defined in ./data/colours.json #}
-  {% for groupName, group in colours.functional -%}
+  {% for groupName, group in colours -%}
     <tr>
       <td colspan="3">
         <h3 class="govuk-heading-m {% if not loop.first %}govuk-!-padding-top-6{% endif %}">
@@ -72,23 +72,6 @@ To reference colours from the palette directly you should use the `govuk-colour`
 Avoid using the palette colours if there is a Sass variable that is designed for your context. For example, if you are styling the error state of a component you should use the `$govuk-error-colour` Sass variable rather than `govuk-colour("red")`.
 
 If you need to use tints of this palette, use either 25% or 50%.
-
-<table class="govuk-body app-colour-list" summary="Table of extended colours">
-  <tbody>
-  {% for name, colour in colours.palette %}
-    <tr class="app-colour-list-row">
-      <th class="app-colour-list-column app-colour-list-column--name" scope="row">
-        <span class="app-swatch {% if colour == "#ffffff" %}app-swatch-border{% endif %}" style="background-color:{{colour}}"></span>
-        <code>govuk-colour("{{name}}")</code>
-      </th>
-      <td class="app-colour-list-column app-colour-list-column--colour">
-        <code>{{colour}}</code>
-      </td>
-      <td class="app-colour-list-column app-colour-list-column--notes"></td>
-    </tr>
-  {% endfor %}
- </tbody>
-</table>
 
 ### Colour palette for charts
 
