@@ -68,7 +68,7 @@
     "eslint-plugin-n": "^16.6.2",
     "eslint-plugin-promise": "^6.1.1",
     "glob": "^11.1.0",
-    "govuk-frontend": "^5.13.0",
+    "govuk-frontend": "github:alphagov/govuk-frontend#4e255359e",
     "gray-matter": "^4.0.2",
     "highlight.js": "^11.11.1",
     "html-validate": "^10.2.1",
