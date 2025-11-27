@@ -41,12 +41,12 @@
   }) %}{% endcall %}
 {% endblock %}
 
-{# We provide our own header, so blank the one provided by the template #}
-{% block header %}{% endblock %}
-
-{% block main %}
+{% block header %}
   {% include "_header.njk" %}
   {% include "_navigation.njk" %}
+{% endblock %}
+
+{% block main %}
   {% include "_banner.njk" %}
 
   {% block body %}
@@ -54,8 +54,9 @@
   {% endblock %}
 {% endblock %}
 
-{# We provide our own footer, so blank the one provided by the template #}
-{% block footer %}{% endblock %}
+{% block footer %}
+  {% include "_footer.njk" %}
+{% endblock %}
 
 {% block bodyEnd %}
   <script type="module" src="{{ getFingerprint('/javascripts/application.js') }}"></script>
