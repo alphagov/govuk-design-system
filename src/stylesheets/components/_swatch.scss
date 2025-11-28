@@ -1,0 +1,39 @@
+.app-swatch {
+  $sample-size: 2.5em;
+
+  @include govuk-font-size($size: 16);
+  @include govuk-responsive-margin(5, $direction: "bottom");
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: govuk-spacing(3);
+  margin-top: 0;
+
+  // The colour sample
+  &::before {
+    content: "";
+    grid-row: 1 / 4;
+    display: inline-block;
+    width: $sample-size;
+    height: $sample-size;
+    border: 1px solid govuk-colour("dark-grey");
+    border-radius: 50%;
+    background-color: var(--app-swatch-colour);
+
+    // Prevent the swatch being overridden by forced colour modes
+    forced-color-adjust: none;
+
+    box-shadow: inset 0 0 0 4px govuk-colour("white");
+  }
+}
+
+.app-swatch__name,
+.app-swatch__value {
+  grid-column: 2;
+  margin: 0;
+}
+
+.app-swatch__notes {
+  @include govuk-font($size: 19);
+  @include govuk-responsive-margin(4, $direction: "bottom");
+}

@@ -29,39 +29,23 @@ This means that your service will always use the most recent colour palette when
 
 Only use the variables in the context they're designed for. In all other cases, you should reference the [colour palette](#colour-palette) directly. For example, if you wanted to use red, you should use `govuk-colour("red")` rather than `$govuk-error-colour`.
 
-<table class="govuk-body app-colour-list" summary="Table of main colours">
-  <tbody>
-  {#- colours is an object built by ./lib/colours.js based on data defined in ./data/colours.json #}
-  {% for groupName, group in colours.applied -%}
-    <tr>
-      <td colspan="3">
-        <h3 class="govuk-heading-m {% if not loop.first %}govuk-!-padding-top-6{% endif %}">
-        {{groupName}}
-        </h3>
-      </td>
-    </tr>
+{% for groupName, group in colours.applied -%}
+  <h3 class="govuk-heading-m">
+    {{groupName}}
+  </h3>
+
+  <dl class="app-swatch-list">
     {% for colour in group -%}
-      <tr class="app-colour-list-row">
-        <th class="app-colour-list-column app-colour-list-column--name" scope="row">
-          <span class="app-swatch {% if colour.colour == "#ffffff" %}app-swatch-border{% endif %}" style="background-color:{{colour.colour}}"></span>
-          <code>{{colour.name}}</code>
-        </th>
-        <td class="app-colour-list-column app-colour-list-column--colour">
-          <code>{{colour.colour}}</code>
-        </td>
-        {% if colour.notes %}
-        <td class="app-colour-list-column app-colour-list-column--notes">
-          {{colour.notes}}
-        </td>
-        {% else %}
-        <td class="app-colour-list-column app-colour-list-column--notes">
-        </td>
-        {% endif %}
-      </tr>
+      {% if colour.notes %}
+        <dt class="app-swatch__notes">{{colour.notes}}</dt>
+      {% endif %}
+      <div class="app-swatch" style="--app-swatch-colour:{{colour.colour}}">
+        <dt class="app-swatch__name"><code>{{colour.name}}</code></dt>
+        <dt class="app-swatch__value"><code>{{colour.colour}}</code></dt>
+      </div>
     {% endfor %}
-  {% endfor %}
-  </tbody>
-</table>
+  </dl>
+{% endfor %}
 
 ## Colour palette
 
@@ -73,22 +57,14 @@ Avoid using the palette colours if there is a Sass variable that is designed for
 
 If you need to use tints of this palette, use either 25% or 50%.
 
-<table class="govuk-body app-colour-list" summary="Table of extended colours">
-  <tbody>
-  {% for name, colour in colours.palette %}
-    <tr class="app-colour-list-row">
-      <th class="app-colour-list-column app-colour-list-column--name" scope="row">
-        <span class="app-swatch {% if colour == "#ffffff" %}app-swatch-border{% endif %}" style="background-color:{{colour}}"></span>
-        <code>govuk-colour("{{name}}")</code>
-      </th>
-      <td class="app-colour-list-column app-colour-list-column--colour">
-        <code>{{colour}}</code>
-      </td>
-      <td class="app-colour-list-column app-colour-list-column--notes"></td>
-    </tr>
+<dl class="app-swatch-list">
+  {% for name, colour in colours.palette -%}
+    <div class="app-swatch" style="--app-swatch-colour:{{colour}}">
+      <dt class="app-swatch__name"><code>govuk-colour("{{name}}")</code></dt>
+      <dt class="app-swatch__value"><code>{{colour}}<code></dt>
+    </div>
   {% endfor %}
- </tbody>
-</table>
+</dl>
 
 ### Colour palette for charts
 
