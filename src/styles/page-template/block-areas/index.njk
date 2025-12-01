@@ -41,18 +41,18 @@ stylesheets:
   </div>
 {%- endblock %}
 
-{% block main -%}
+{% block widthContainer -%}
   <div class="app-annotate-block">
-    <span class="app-annotate-block__label">block: main</span>
+    <span class="app-annotate-block__label">block: widthContainer (formerly "main")</span>
     <p class="govuk-body">
     </p>
     {{ super() }}
   </div>
 {%- endblock %}
 
-{% block beforeContent -%}
+{% block widthContainerStart -%}
   <div class="app-annotate-block">
-    <span class="app-annotate-block__label">block: beforeContent</span>
+    <span class="app-annotate-block__label">block: widthContainerStart (formerly "beforeContent")</span>
     {{ super() }}
     {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
 
@@ -63,11 +63,25 @@ stylesheets:
   </div>
 {%- endblock %}
 
+{% block pageMain -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: pageMain</span>
+    {{ super() }}
+  </div>
+{%- endblock %}
+
 {% block content -%}
   <div class="app-annotate-block">
     <span class="app-annotate-block__label">block: content</span>
     {{ super() }}
     <h1 class="govuk-heading-xl">GOV.UK page template</h1>
+  </div>
+{%- endblock %}
+
+{% block widthContainerEnd -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: widthContainerEnd</span>
+    {{ super() }}
   </div>
 {%- endblock %}
 
