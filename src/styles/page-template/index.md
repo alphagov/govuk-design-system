@@ -81,7 +81,17 @@ To change the components that are included in the page template by default, set 
 {% endraw %}
 ```
 
-### Options
+### Update the `<html>` element
+
+#### `htmlClasses` (Variable)
+
+Add a class to the `<html>` element.
+
+#### `htmlLang` (Variable)
+
+Set the language of the whole document. If your `<title>` and `<main>` element are in a different language to the rest of the page, use `htmlLang` to set the language of the rest of the page.
+
+### Update the `<head>` element
 
 #### `assetPath` (Variable)
 
@@ -91,11 +101,33 @@ Specify a path to the <a href="https://frontend.design-system.service.gov.uk/imp
 
 Set the domain for assets where an absolute URL is required, for example the Open Graph image.
 
-#### `beforeContent` (Block)
+#### `head` (Block)
 
-Add content that needs to appear outside `<main>` element.
-For example: The [Back link component](/components/back-link/), [Breadcrumbs component](/components/breadcrumbs/),
-[Phase banner component](/components/phase-banner/).
+Add additional items inside the `<head>` element.
+For example: `<meta name="description" content="My page description">`
+
+#### `headIcons` (Block)
+
+Override the default icons used for GOV.UK branded pages.
+For example: `<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">`
+
+#### `opengraphImageUrl` (Variable)
+
+Set the URL for the Open Graph image meta tag. The URL must be absolute, including the protocol and domain name. If you're using the refreshed GOV.UK brand, you may need to update this path to point to the updated assets.
+
+#### `pageTitle` (Block)
+
+Override the default page title (`<title>` element).
+
+#### `pageTitleLang` (Variable)
+
+Set the language of the `<title>` element if it's different to `htmlLang`.
+
+#### `themeColor` (Variable)
+
+Set the [toolbar colour on some devices](https://developer.chrome.com/blog/support-for-theme-color-in-chrome-39-for-android).
+
+### Update the `<body>` element
 
 #### `bodyAttributes` (Variable)
 
@@ -114,47 +146,29 @@ Add content just before the closing `<body>` element.
 Add content after the opening `<body>` element.
 For example: The [Cookie banner component](/components/cookie-banner/).
 
-#### `containerClasses` (Variable)
-
-Add a class to the container. This is useful if you want to make the page wrapper a fixed width.
-
-#### `content` (Block)
-
-Add content that needs to appear centered in the `<main>` element.
-
-#### `cspNonce` (Variable)
-
-Add a `nonce` attribute to the script for your Content Security Policy (CSP). Provide a nonce that hostile actors cannot guess, as otherwise they can easily find a way around your CSP. However, you should use this attribute only if you’re not able to [include the hash for the inline scripts in your service’s CSP](https://frontend.design-system.service.gov.uk/import-javascript/#if-our-inline-javascript-snippet-is-blocked-by-a-content-security-policy).
-
-#### `footer` (Block)
-
-Override the default [Footer component](/components/footer/).
-
-#### `govukRebrand` (Variable)
-
-Enables rebranded styles. If you’ve overridden any blocks that are affected by this, you may have to make manual changes. See the [v5.10.0 release notes](https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.0) for more information.
-
-#### `head` (Block)
-
-Add additional items inside the `<head>` element.
-For example: `<meta name="description" content="My page description">`
+### Update the page's header
 
 #### `header` (Block)
 
 Override the default [Header component](/components/header/).
 
-#### `headIcons` (Block)
+### Update the page's container
 
-Override the default icons used for GOV.UK branded pages.
-For example: `<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">`
+#### `containerClasses` (Variable)
 
-#### `htmlClasses` (Variable)
+Add a class to the container. This is useful if you want to make the page wrapper a fixed width.
 
-Add a class to the `<html>` element.
+#### `beforeContent` (Block)
 
-#### `htmlLang` (Variable)
+Add content that needs to appear outside `<main>` element.
+For example: The [Back link component](/components/back-link/), [Breadcrumbs component](/components/breadcrumbs/),
+[Phase banner component](/components/phase-banner/).
 
-Set the language of the whole document. If your `<title>` and `<main>` element are in a different language to the rest of the page, use `htmlLang` to set the language of the rest of the page.
+### Update the page's main content
+
+#### `content` (Block)
+
+Add content that needs to appear centered in the `<main>` element.
 
 #### `main` (Block)
 
@@ -168,26 +182,26 @@ Add a class to the `<main>` element.
 
 Set the language of the `<main>` element if it's different to `htmlLang`
 
-#### `opengraphImageUrl` (Variable)
+### Update the page's footer
 
-Set the URL for the Open Graph image meta tag. The URL must be absolute, including the protocol and domain name. If you're using the refreshed GOV.UK brand, you may need to update this path to point to the updated assets.
+#### `footer` (Block)
 
-#### `pageTitle` (Block)
+Override the default [Footer component](/components/footer/).
 
-Override the default page title (`<title>` element).
+### Other options
 
-#### `pageTitleLang` (Variable)
+#### `cspNonce` (Variable)
 
-Set the language of the `<title>` element if it's different to `htmlLang`.
+Add a `nonce` attribute to the script for your Content Security Policy (CSP). Provide a nonce that hostile actors cannot guess, as otherwise they can easily find a way around your CSP. However, you should use this attribute only if you’re not able to [include the hash for the inline scripts in your service’s CSP](https://frontend.design-system.service.gov.uk/import-javascript/#if-our-inline-javascript-snippet-is-blocked-by-a-content-security-policy).
+
+#### `govukRebrand` (Variable)
+
+Enables rebranded styles. If you’ve overridden any blocks that are affected by this, you may have to make manual changes. See the [v5.10.0 release notes](https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.0) for more information.
 
 #### `skipLink` (Block)
 
 Override the default [Skip link component](/components/skip-link/).
 
-#### `themeColor` (Variable)
-
-Set the [toolbar colour on some devices](https://developer.chrome.com/blog/support-for-theme-color-in-chrome-39-for-android).
-
-#### Exploded view of the page template block areas
+### Exploded view of the page template block areas
 
 {{ example({ group: "styles", item: "page-template", example: "block-areas", html: false, open: false }) }}
