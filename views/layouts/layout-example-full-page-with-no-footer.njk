@@ -3,10 +3,13 @@
 {% from "govuk/components/header/macro.njk" import govukHeader %}
 {% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
 
-{% block header %}
+{% block govukSkipLink %}
   {{ govukHeader({
     homepageUrl: "#"
   }) }}
+{% endblock %}
+
+{% block govukServiceNavigation %}
   {{ govukServiceNavigation({
     serviceName: "Service name",
     serviceUrl: "#"

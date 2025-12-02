@@ -70,14 +70,14 @@ ignoreInSitemap: true
   </form>
 {% endblock %}
 
-{% block skipLink %}
+{% block govukSkipLink %}
   {{ govukSkipLink({
     href: "#main-content",
     text: "Skip to main content"
   }) }}
 {% endblock %}
 
-{% block header %}
+{% block govukHeader %}
   {{ govukHeader({
     homepageUrl: "#",
     containerClasses: "app-width-container",
@@ -103,11 +103,11 @@ ignoreInSitemap: true
 
 {% set mainClasses = "app-main-class" %}
 
-{% block main %}
+{% block container %}
   {{ super() }}
 {% endblock %}
 
-{% block beforeContent %}
+{% block containerStart %}
   {{ govukPhaseBanner({
     tag: {
       text: "Alpha"
@@ -124,7 +124,7 @@ ignoreInSitemap: true
   <h1 class="govuk-heading-xl">Customised page template</h1>
 {% endblock %}
 
-{% block footer %}
+{% block govukFooter %}
   {{ govukFooter({
     containerClasses: "app-width-container",
     meta: {

@@ -12,15 +12,16 @@
   {%- endfor %}
 {% endblock %}
 
-{% block header %}
+{% block govukSkipLink %}
   {{ govukHeader({
     homepageUrl: "#"
   }) }}
 {% endblock %}
 
-{% block main %}
+{% block container %}
   {{ contents | safe }}
 {% endblock %}
+
 {% block bodyEnd %}
   <script type="module" src="{{ getFingerprint('/javascripts/application-example.js') }}"></script>
 {% endblock %}
