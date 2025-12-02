@@ -83,187 +83,110 @@ To change the components that are included in the page template by default, set 
 
 ### Options
 
-<table class="govuk-table app-table--constrained">
-  <caption class="govuk-table__caption govuk-visually-hidden">Options that you can use with the page template</caption>
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th class="govuk-table__header" scope="col">Option name</th>
-      <th class="govuk-table__header" scope="col">Option type</th>
-      <th class="govuk-table__header" scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">assetPath</td>
-      <td class="govuk-table__cell">Variable</td>
-      <td class="govuk-table__cell">
-        Specify a path to the <a href="https://frontend.design-system.service.gov.uk/import-font-and-images-assets/">GOV.UK Frontend assets</a> (icons, images, font files). If you're using the refreshed GOV.UK brand, you may need to update this path to point to the updated assets.
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">assetUrl</td>
-      <td class="govuk-table__cell">Variable</td>
-      <td class="govuk-table__cell">Set the domain for assets where an absolute URL is required, for example the Open Graph image.</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">beforeContent</td>
-      <td class="govuk-table__cell">Block</td>
-      <td class="govuk-table__cell">
-        Add content that needs to appear outside <code>&lt;main&gt;</code> element.
-        <br>
-        For example: The <a class="govuk-link" href="/components/back-link/">Back link component</a>, <a class="govuk-link" href="/components/breadcrumbs/">Breadcrumbs component</a>,
-        <a class="govuk-link" href="/components/phase-banner/">Phase banner component</a>.
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">bodyAttributes</td>
-      <td class="govuk-table__cell">Variable</td>
-      <td class="govuk-table__cell">Add attributes to the <code>&lt;body&gt;</code> element. Add each attribute and its value in the <code>bodyAttributes</code> object.</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">bodyClasses</td>
-      <td class="govuk-table__cell">Variable</td>
-      <td class="govuk-table__cell">Add a class to the <code>&lt;body&gt;</code> element.</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">bodyEnd</td>
-      <td class="govuk-table__cell">Block</td>
-      <td class="govuk-table__cell">
-        Add content just before the closing <code>&lt;/body&gt;</code> element.
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">bodyStart</td>
-      <td class="govuk-table__cell">Block</td>
-      <td class="govuk-table__cell">
-        Add content after the opening <code>&lt;body&gt;</code> element.
-        <br>
-        For example: The <a class="govuk-link" href="/components/cookie-banner/">Cookie banner component</a>.
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">containerClasses</td>
-      <td class="govuk-table__cell">Variable</td>
-      <td class="govuk-table__cell">Add a class to the container. This is useful if you want to make the page wrapper a fixed width.</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">content</td>
-      <td class="govuk-table__cell">Block</td>
-      <td class="govuk-table__cell">
-        Add content that needs to appear centered in the <code>&lt;main&gt;</code> element.
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">cspNonce</td>
-      <td class="govuk-table__cell">Variable</td>
-      <td class="govuk-table__cell">
-        Add a <code>nonce</code> attribute to the script for your Content Security Policy (CSP). Provide a nonce that hostile actors cannot guess, as otherwise they can easily find a way around your CSP. However, you should use this attribute only if you’re not able to <a class="govuk-link" href="https://frontend.design-system.service.gov.uk/import-javascript/#if-our-inline-javascript-snippet-is-blocked-by-a-content-security-policy">include the hash for the inline scripts in your service’s CSP</a>.
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">footer</td>
-      <td class="govuk-table__cell">Block</td>
-      <td class="govuk-table__cell">
-        Override the default <a class="govuk-link" href="/components/footer/">Footer component</a>.
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">govukRebrand</td>
-      <td class="govuk-table__cell">Variable</td>
-      <td class="govuk-table__cell">
-        Enables rebranded styles. If you’ve overridden any blocks that are affected by this, you may have to make manual changes. See the <a class="govuk-link" href="https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.0">v5.10.0 release notes</a> for more information.
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">head</td>
-      <td class="govuk-table__cell">Block</td>
-      <td class="govuk-table__cell">
-        Add additional items inside the <code>&lt;head&gt;</code> element.
-        <br>
-        For example: <code>&lt;meta name="description" content="My page description"&gt;</code>
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">header</td>
-      <td class="govuk-table__cell">Block</td>
-      <td class="govuk-table__cell">
-        Override the default <a class="govuk-link" href="/components/header/">Header component</a>.
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">headIcons</td>
-      <td class="govuk-table__cell">Block</td>
-      <td class="govuk-table__cell">
-        Override the default icons used for GOV.UK branded pages.
-        <br>
-        For example: <code>&lt;link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /&gt;</code>
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">htmlClasses</td>
-      <td class="govuk-table__cell">Variable</td>
-      <td class="govuk-table__cell">Add a class to the <code>&lt;html&gt;</code> element.</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">htmlLang</td>
-      <td class="govuk-table__cell">Variable</td>
-      <td class="govuk-table__cell">Set the language of the whole document. If your <code>&lt;title&gt;</code> and <code>&lt;main&gt;</code> element are in a different language to the rest of the page, use <code>htmlLang</code> to set the language of the rest of the page.</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">main</td>
-      <td class="govuk-table__cell">Block</td>
-      <td class="govuk-table__cell">
-        Override the main section of the page, which by default wraps the <code>&lt;main&gt;</code> element, <code>beforeContent</code> block and <code>content</code> block.
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">mainClasses</td>
-      <td class="govuk-table__cell">Variable</td>
-      <td class="govuk-table__cell">Add a class to the <code>&lt;main&gt;</code> element. </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">mainLang</td>
-      <td class="govuk-table__cell">Variable</td>
-      <td class="govuk-table__cell">
-        Set the language of the <code>&lt;main&gt;</code> element if it's different to <code>htmlLang</code>.
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">opengraphImageUrl</td>
-      <td class="govuk-table__cell">Variable</td>
-      <td class="govuk-table__cell">Set the URL for the Open Graph image meta tag. The URL must be absolute, including the protocol and domain name. If you're using the refreshed GOV.UK brand, you may need to update this path to point to the updated assets.
-</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">pageTitle</td>
-      <td class="govuk-table__cell">Block</td>
-      <td class="govuk-table__cell">
-        Override the default page title (<code>&lt;title&gt;</code> element).
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">pageTitleLang</td>
-      <td class="govuk-table__cell">Variable</td>
-      <td class="govuk-table__cell">
-        Set the language of the <code>&lt;title&gt;</code> element if it's different to <code>htmlLang</code>.
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">skipLink</td>
-      <td class="govuk-table__cell">Block</td>
-      <td class="govuk-table__cell">
-        Override the default <a class="govuk-link" href="/components/skip-link/">Skip link component</a>.
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">themeColor</td>
-      <td class="govuk-table__cell">Variable</td>
-      <td class="govuk-table__cell">
-        Set the <a href="https://developer.chrome.com/blog/support-for-theme-color-in-chrome-39-for-android">toolbar colour on some devices</a>.
-      </td>
-    </tr>
-  </tbody>
-</table>
+#### `assetPath` (Variable)
+
+Specify a path to the <a href="https://frontend.design-system.service.gov.uk/import-font-and-images-assets/">GOV.UK Frontend assets</a> (icons, images, font files). If you're using the refreshed GOV.UK brand, you may need to update this path to point to the updated assets.
+
+#### `assetUrl` (Variable)
+
+Set the domain for assets where an absolute URL is required, for example the Open Graph image.
+
+#### `beforeContent` (Block)
+
+Add content that needs to appear outside `<main>` element.
+For example: The [Back link component](/components/back-link/), [Breadcrumbs component](/components/breadcrumbs/),
+[Phase banner component](/components/phase-banner/).
+
+#### `bodyAttributes` (Variable)
+
+Add attributes to the `<body>` element. Add each attribute and its value in the `bodyAttributes` object.
+
+#### `bodyClasses` (Variable)
+
+Add a class to the `<body>` element.
+
+#### `bodyEnd` (Block)
+
+Add content just before the closing `<body>` element.
+
+#### `bodyStart` (Block)
+
+Add content after the opening `<body>` element.
+For example: The [Cookie banner component](/components/cookie-banner/).
+
+#### `containerClasses` (Variable)
+
+Add a class to the container. This is useful if you want to make the page wrapper a fixed width.
+
+#### `content` (Block)
+
+Add content that needs to appear centered in the `<main>` element.
+
+#### `cspNonce` (Variable)
+
+Add a `nonce` attribute to the script for your Content Security Policy (CSP). Provide a nonce that hostile actors cannot guess, as otherwise they can easily find a way around your CSP. However, you should use this attribute only if you’re not able to [include the hash for the inline scripts in your service’s CSP](https://frontend.design-system.service.gov.uk/import-javascript/#if-our-inline-javascript-snippet-is-blocked-by-a-content-security-policy).
+
+#### `footer` (Block)
+
+Override the default [Footer component](/components/footer/).
+
+#### `govukRebrand` (Variable)
+
+Enables rebranded styles. If you’ve overridden any blocks that are affected by this, you may have to make manual changes. See the [v5.10.0 release notes](https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.0) for more information.
+
+#### `head` (Block)
+
+Add additional items inside the `<head>` element.
+For example: `<meta name="description" content="My page description">`
+
+#### `header` (Block)
+
+Override the default [Header component](/components/header/).
+
+#### `headIcons` (Block)
+
+Override the default icons used for GOV.UK branded pages.
+For example: `<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">`
+
+#### `htmlClasses` (Variable)
+
+Add a class to the `<html>` element.
+
+#### `htmlLang` (Variable)
+
+Set the language of the whole document. If your `<title>` and `<main>` element are in a different language to the rest of the page, use `htmlLang` to set the language of the rest of the page.
+
+#### `main` (Block)
+
+Override the main section of the page, which by default wraps the `<main>` element, `beforeContent` block and `content` block.
+
+#### `mainClasses` (Variable)
+
+Add a class to the `<main>` element.
+
+#### `mainLang` (Variable)
+
+Set the language of the `<main>` element if it's different to `htmlLang`
+
+#### `opengraphImageUrl` (Variable)
+
+Set the URL for the Open Graph image meta tag. The URL must be absolute, including the protocol and domain name. If you're using the refreshed GOV.UK brand, you may need to update this path to point to the updated assets.
+
+#### `pageTitle` (Block)
+
+Override the default page title (`<title>` element).
+
+#### `pageTitleLang` (Variable)
+
+Set the language of the `<title>` element if it's different to `htmlLang`.
+
+#### `skipLink` (Block)
+
+Override the default [Skip link component](/components/skip-link/).
+
+#### `themeColor` (Variable)
+
+Set the [toolbar colour on some devices](https://developer.chrome.com/blog/support-for-theme-color-in-chrome-39-for-android).
 
 #### Exploded view of the page template block areas
 
