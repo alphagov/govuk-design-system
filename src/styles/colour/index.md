@@ -23,11 +23,11 @@ You must make sure that the contrast ratio of text and interactive elements in y
 
 ## Main colours
 
-If you are using GOV.UK Frontend or the GOV.UK Prototype Kit, use the [Sass variables](https://frontend.design-system.service.gov.uk/sass-api-reference/#colours) provided rather than copying the hexadecimal (hex) colour values. For example, use `$govuk-brand-colour` rather than `{{ colours.applied['Brand colour'][0]['colour'] | trim }}`.
+If you are using GOV.UK Frontend or the GOV.UK Prototype Kit, use the [Sass variables](https://frontend.design-system.service.gov.uk/sass-api-reference/#colours) provided rather than copying the hexadecimal (hex) colour values. For example, use `govuk-functional-colour("brand")` rather than `{{ colours.applied['Brand colour'][0]['colour'] | trim }}`.
 
 This means that your service will always use the most recent colour palette whenever you update.
 
-Only use the variables in the context they're designed for. In all other cases, you should reference the [colour palette](#colour-palette) directly. For example, if you wanted to use red, you should use `govuk-colour("red")` rather than `$govuk-error-colour`.
+Only use the variables in the context they're designed for. In all other cases, you should reference the [colour palette](#colour-palette) directly. For example, if you wanted to use red, you should use `govuk-colour("red")` rather than `govuk-functional-colour("error")`.
 
 <table class="govuk-body app-colour-list" summary="Table of main colours">
   <tbody>
@@ -44,7 +44,7 @@ Only use the variables in the context they're designed for. In all other cases, 
       <tr class="app-colour-list-row">
         <th class="app-colour-list-column app-colour-list-column--name" scope="row">
           <span class="app-swatch {% if colour.colour == "#ffffff" %}app-swatch-border{% endif %}" style="background-color:{{colour.colour}}"></span>
-          <code>{{colour.name}}</code>
+          <code>govuk-functional-colour("{{colour.name}}")</code>
         </th>
         <td class="app-colour-list-column app-colour-list-column--colour">
           <code>{{colour.colour}}</code>

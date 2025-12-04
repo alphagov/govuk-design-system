@@ -2,70 +2,70 @@
   "applied": {
     "Text": [
       {
-        "name": "$govuk-text-colour",
+        "name": "text",
         "colour": "#0b0c0c"
       },
       {
-        "name": "$govuk-secondary-text-colour",
+        "name": "secondary-text",
         "colour": "#484949"
       }
     ],
     "Links": [
       {
-        "name": "$govuk-link-colour",
+        "name": "link",
         "colour": "#1d70b8"
       },
       {
-        "name": "$govuk-link-hover-colour",
+        "name": "link-hover",
         "colour": "#0f385c"
       },
       {
-        "name": "$govuk-link-visited-colour",
+        "name": "link-visited",
         "colour": "#54319f"
       },
       {
-        "name": "$govuk-link-active-colour",
+        "name": "link-active",
         "colour": "#0b0c0c"
       }
     ],
     "Border": [
       {
-        "name": "$govuk-border-colour",
+        "name": "border",
         "colour": "#cecece"
       },
       {
-        "name": "$govuk-input-border-colour",
+        "name": "input-border",
         "colour": "#0b0c0c"
       }
     ],
     "Focus state": [
       {
-        "name": "$govuk-focus-colour",
+        "name": "focus",
         "colour": "#ffdd00",
         "notes": "Only use this colour to indicate which element is focused on. For example, when a user tabs to an element with their keyboard."
       },
       {
-        "name": "$govuk-focus-text-colour",
+        "name": "focus-text",
         "colour": "#0b0c0c"
       }
     ],
     "Error state": [
       {
-        "name": "$govuk-error-colour",
+        "name": "error",
         "colour": "#ca3535",
         "notes": "Use for error messages"
       }
     ],
     "Success state": [
       {
-        "name": "$govuk-success-colour",
+        "name": "success",
         "colour": "#11875a",
         "notes": "Use for success messages"
       }
     ],
     "Brand colour": [
       {
-        "name": "$govuk-brand-colour",
+        "name": "brand",
         "colour": "#1d70b8"
       }
     ]
