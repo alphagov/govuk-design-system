@@ -21,7 +21,7 @@ You must make sure that the contrast ratio of text and interactive elements in y
   text: "The WCAG 2.2 criterion for Contrast (minimum) is the same as WCAG 2.1."
 }) }}
 
-## Main colours
+## Functional colours
 
 If you are using GOV.UK Frontend or the GOV.UK Prototype Kit, use the [Sass variables](https://frontend.design-system.service.gov.uk/sass-api-reference/#colours) provided rather than copying the hexadecimal (hex) colour values. For example, use `govuk-functional-colour("brand")` rather than `{{ colours['Brand colour'][0]['colour'] | trim }}`.
 
