@@ -1,0 +1,2291 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template govuk-template--rebranded">
+  <head>
+    <meta charset="utf-8">
+    <title>Error message – GOV.UK Design System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#1d70b8">
+
+      <link rel="icon" sizes="48x48" href="/assets/rebrand/images/favicon.ico">
+      <link rel="icon" sizes="any" href="/assets/rebrand/images/favicon.svg" type="image/svg+xml">
+      <link rel="mask-icon" href="/assets/rebrand/images/govuk-icon-mask.svg" color="#1d70b8">
+      <link rel="apple-touch-icon" href="/assets/rebrand/images/govuk-icon-180.png">
+      <link rel="manifest" href="/assets/rebrand/manifest.json">
+
+  <meta name="og:title" content="Error message">
+  <meta name="description" content="When there&#8217;s a validation error, use an error message to explain what went wrong and how to fix it">
+  <meta name="og:description" content="When there&#8217;s a validation error, use an error message to explain what went wrong and how to fix it">
+  <link rel="canonical" href="https://design-system.service.gov.uk/components/error-message/">
+  <link href="/stylesheets/main-53f438e2b7fb5f6c27d8011421794cc8.css" rel="stylesheet" media="all">
+
+    <meta property="og:image" content="https://design-system.service.gov.uk/assets/rebrand/images/govuk-opengraph-image.png">
+  </head>
+  <body class="govuk-template__body" data-module="app-navigation">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+  <a id="top"></a>
+  <script>
+    /**
+     * If cookie policy changes and/or the user preferences object format needs to
+     * change, bump this version up afterwards. The user should then be shown the
+     * banner again to consent to the new policy.
+     *
+     * Note that because isValidCookieConsent checks that the version in the user's
+     * cookie is equal to or greater than this number, you should be careful to
+     * check backwards compatibility when changing the object format.
+    */
+    window.GDS_CONSENT_COOKIE_VERSION = 2;
+  </script>
+
+
+
+  <div class="govuk-cookie-banner" data-nosnippet role="region" aria-label="Cookies on GOV.UK Design System" hidden data-module="govuk-cookie-banner" data-cookie-category="analytics">
+  <div class="govuk-cookie-banner__message app-width-container js-cookie-banner-message govuk-width-container">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-cookie-banner__heading govuk-heading-m">
+          Cookies on GOV.UK Design System
+        </h2>
+        <div class="govuk-cookie-banner__content">
+          <p class="govuk-body">We’d like to use analytics cookies so we can understand how you use the Design System and make improvements.</p>
+                <p class="govuk-body">We also use essential cookies to remember if you’ve accepted analytics cookies.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="govuk-button-group">
+      <button type="button" class="govuk-button js-cookie-banner-accept" data-module="govuk-button">
+        Accept analytics cookies
+      </button>
+      <button type="button" class="govuk-button js-cookie-banner-reject" data-module="govuk-button">
+        Reject analytics cookies
+      </button>
+      <a class="govuk-link" href="/cookies/">View cookies</a>
+    </div>
+
+  </div>
+  <div class="govuk-cookie-banner__message js-cookie-banner-confirmation-accept app-width-container govuk-width-container" role="alert" hidden>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-cookie-banner__content">
+          <p class="govuk-body">You’ve accepted analytics cookies. You can <a class="govuk-link" href="/cookies/">change your cookie settings</a> at any time.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="govuk-button-group">
+      <button type="button" class="govuk-button js-cookie-banner-hide js-cookie-banner-hide--accept" data-module="govuk-button">
+        Hide cookie message
+      </button>
+    </div>
+
+  </div>
+  <div class="govuk-cookie-banner__message js-cookie-banner-confirmation-reject app-width-container govuk-width-container" role="alert" hidden>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-cookie-banner__content">
+          <p class="govuk-body">You’ve rejected analytics cookies. You can <a class="govuk-link" href="/cookies/">change your cookie settings</a> at any time.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="govuk-button-group">
+      <button type="button" class="govuk-button js-cookie-banner-hide js-cookie-banner-hide--reject" data-module="govuk-button">
+        Hide cookie message
+      </button>
+    </div>
+
+  </div>
+</div>
+
+
+  
+  <script>
+    (function () {
+      // Skip early setup when cookie banner component is not supported
+      if (!('noModule' in HTMLScriptElement.prototype)) {
+        return
+      }
+
+      /**
+       * Check the cookie preferences object.
+       *
+       * If the consent object is not present, malformed, or incorrect version,
+       * returns false, otherwise returns true.
+       *
+       * This is also duplicated in cookie-functions.js - the two need to be kept in sync
+       */
+      function isValidConsentCookie (options) {
+        return (options && options.version >= window.GDS_CONSENT_COOKIE_VERSION)
+      }
+
+      function categoryIsNull (options) {
+        return (options && options.analytics === null)
+      }
+
+      // Don't show the banner on the cookies page
+      if (window.location.pathname !== "/cookies/") {
+        // Show the banner if there is no consent cookie or if it is outdated
+        var currentConsentCookie = document.cookie.match(new RegExp('(^| )design_system_cookies_policy=([^;]+)'))
+
+        const cookieData = currentConsentCookie && JSON.parse(currentConsentCookie[2]);
+        const cookieNotSet = (!currentConsentCookie || !isValidConsentCookie(cookieData))
+        const categoryNotSet = isValidConsentCookie(cookieData) && categoryIsNull(cookieData)
+
+        if (cookieNotSet || categoryNotSet) {
+          var cookieBanner = document.querySelector("[data-cookie-category='analytics']")
+          cookieBanner.removeAttribute('hidden')
+        }
+      }
+    })()
+  </script>
+
+
+      <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+
+
+
+<header class="govuk-header govuk-header--full-width-border" role="banner">
+  <div class="govuk-header__container app-width-container">
+    <div class="govuk-header__logo app-header-logo">
+      <a href="/" class="govuk-header__link govuk-header__link--homepage">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          role="img"
+          viewBox="0 0 324 60"
+          height="30"
+          width="162"
+          fill="currentcolor"
+          class="govuk-header__logotype"
+          aria-label="GOV.UK">
+          <title>GOV.UK</title>
+          <g>
+            <circle cx="20" cy="17.6" r="3.7"></circle>
+            <circle cx="10.2" cy="23.5" r="3.7"></circle>
+            <circle cx="3.7" cy="33.2" r="3.7"></circle>
+            <circle cx="31.7" cy="30.6" r="3.7"></circle>
+            <circle cx="43.3" cy="17.6" r="3.7"></circle>
+            <circle cx="53.2" cy="23.5" r="3.7"></circle>
+            <circle cx="59.7" cy="33.2" r="3.7"></circle>
+            <circle cx="31.7" cy="30.6" r="3.7"></circle>
+            <path d="M33.1,9.8c.2-.1.3-.3.5-.5l4.6,2.4v-6.8l-4.6,1.5c-.1-.2-.3-.3-.5-.5l1.9-5.9h-6.7l1.9,5.9c-.2.1-.3.3-.5.5l-4.6-1.5v6.8l4.6-2.4c.1.2.3.3.5.5l-2.6,8c-.9,2.8,1.2,5.7,4.1,5.7h0c3,0,5.1-2.9,4.1-5.7l-2.6-8ZM37,37.9s-3.4,3.8-4.1,6.1c2.2,0,4.2-.5,6.4-2.8l-.7,8.5c-2-2.8-4.4-4.1-5.7-3.8.1,3.1.5,6.7,5.8,7.2,3.7.3,6.7-1.5,7-3.8.4-2.6-2-4.3-3.7-1.6-1.4-4.5,2.4-6.1,4.9-3.2-1.9-4.5-1.8-7.7,2.4-10.9,3,4,2.6,7.3-1.2,11.1,2.4-1.3,6.2,0,4,4.6-1.2-2.8-3.7-2.2-4.2.2-.3,1.7.7,3.7,3,4.2,1.9.3,4.7-.9,7-5.9-1.3,0-2.4.7-3.9,1.7l2.4-8c.6,2.3,1.4,3.7,2.2,4.5.6-1.6.5-2.8,0-5.3l5,1.8c-2.6,3.6-5.2,8.7-7.3,17.5-7.4-1.1-15.7-1.7-24.5-1.7h0c-8.8,0-17.1.6-24.5,1.7-2.1-8.9-4.7-13.9-7.3-17.5l5-1.8c-.5,2.5-.6,3.7,0,5.3.8-.8,1.6-2.3,2.2-4.5l2.4,8c-1.5-1-2.6-1.7-3.9-1.7,2.3,5,5.2,6.2,7,5.9,2.3-.4,3.3-2.4,3-4.2-.5-2.4-3-3.1-4.2-.2-2.2-4.6,1.6-6,4-4.6-3.7-3.7-4.2-7.1-1.2-11.1,4.2,3.2,4.3,6.4,2.4,10.9,2.5-2.8,6.3-1.3,4.9,3.2-1.8-2.7-4.1-1-3.7,1.6.3,2.3,3.3,4.1,7,3.8,5.4-.5,5.7-4.2,5.8-7.2-1.3-.2-3.7,1-5.7,3.8l-.7-8.5c2.2,2.3,4.2,2.7,6.4,2.8-.7-2.3-4.1-6.1-4.1-6.1h10.6,0Z"></path>
+          </g>
+          <circle class="govuk-logo-dot" cx="227" cy="36" r="7.3"></circle>
+          <path d="M94.7,36.1c0,1.9.2,3.6.7,5.4.5,1.7,1.2,3.2,2.1,4.5.9,1.3,2.2,2.4,3.6,3.2,1.5.8,3.2,1.2,5.3,1.2s3.6-.3,4.9-.9c1.3-.6,2.3-1.4,3.1-2.3.8-.9,1.3-2,1.6-3,.3-1.1.5-2.1.5-3v-.4h-11v-6.6h19.5v24h-7.7v-5.4c-.5.8-1.2,1.6-2,2.3-.8.7-1.7,1.3-2.7,1.8-1,.5-2.1.9-3.3,1.2-1.2.3-2.5.4-3.8.4-3.2,0-6-.6-8.4-1.7-2.5-1.1-4.5-2.7-6.2-4.7-1.7-2-3-4.4-3.8-7.1-.9-2.7-1.3-5.6-1.3-8.7s.5-6,1.5-8.7,2.4-5.1,4.2-7.1c1.8-2,4-3.6,6.5-4.7s5.4-1.7,8.6-1.7,4,.2,5.9.7c1.8.5,3.5,1.1,5.1,2,1.5.9,2.9,1.9,4,3.2,1.2,1.2,2.1,2.6,2.8,4.1l-7.7,4.3c-.5-.9-1-1.8-1.6-2.6-.6-.8-1.3-1.5-2.2-2.1-.8-.6-1.7-1-2.8-1.4-1-.3-2.2-.5-3.5-.5-2,0-3.8.4-5.3,1.2s-2.7,1.9-3.6,3.2c-.9,1.3-1.7,2.8-2.1,4.6s-.7,3.5-.7,5.3v.3h0ZM152.9,13.7c3.2,0,6.1.6,8.7,1.7,2.6,1.2,4.7,2.7,6.5,4.7,1.8,2,3.1,4.4,4.1,7.1s1.4,5.6,1.4,8.7-.5,6-1.4,8.7c-.9,2.7-2.3,5.1-4.1,7.1s-4,3.6-6.5,4.7c-2.6,1.1-5.5,1.7-8.7,1.7s-6.1-.6-8.7-1.7c-2.6-1.1-4.7-2.7-6.5-4.7-1.8-2-3.1-4.4-4.1-7.1-.9-2.7-1.4-5.6-1.4-8.7s.5-6,1.4-8.7,2.3-5.1,4.1-7.1c1.8-2,4-3.6,6.5-4.7s5.4-1.7,8.7-1.7h0ZM152.9,50.4c1.9,0,3.6-.4,5-1.1,1.4-.7,2.7-1.7,3.6-3,1-1.3,1.7-2.8,2.2-4.5.5-1.7.8-3.6.8-5.7v-.2c0-2-.3-3.9-.8-5.7-.5-1.7-1.3-3.3-2.2-4.5-1-1.3-2.2-2.3-3.6-3-1.4-.7-3.1-1.1-5-1.1s-3.6.4-5,1.1c-1.5.7-2.7,1.7-3.6,3s-1.7,2.8-2.2,4.5c-.5,1.7-.8,3.6-.8,5.7v.2c0,2.1.3,4,.8,5.7.5,1.7,1.2,3.2,2.2,4.5,1,1.3,2.2,2.3,3.6,3,1.5.7,3.1,1.1,5,1.1ZM189.1,58l-12.3-44h9.8l8.4,32.9h.3l8.2-32.9h9.7l-12.3,44M262.9,50.4c1.3,0,2.5-.2,3.6-.6,1.1-.4,2-.9,2.8-1.7.8-.8,1.4-1.7,1.9-2.9.5-1.2.7-2.5.7-4.1V14h8.6v28.5c0,2.4-.4,4.6-1.3,6.6-.9,2-2.1,3.6-3.7,5-1.6,1.4-3.4,2.4-5.6,3.2-2.2.7-4.5,1.1-7.1,1.1s-4.9-.4-7.1-1.1c-2.2-.7-4-1.8-5.6-3.2s-2.8-3-3.7-5c-.9-2-1.3-4.1-1.3-6.6V14h8.7v27.2c0,1.6.2,2.9.7,4.1.5,1.2,1.1,2.1,1.9,2.9.8.8,1.7,1.3,2.8,1.7s2.3.6,3.6.6h0ZM288.5,14h8.7v19.1l15.5-19.1h10.8l-15.1,17.6,16.1,26.4h-10.2l-11.5-19.7-5.6,6.3v13.5h-8.7"></path>
+        </svg>
+        <span class="govuk-header__product-name">
+          Design System
+        </span>
+      </a>
+    </div>
+    <div class="app-site-search" data-module="app-search" data-search-index="/search-index-4432b5fb24aae8bec1aba2476e8a491b.json">
+      <label class="govuk-visually-hidden" for="app-site-search__input">Search Design system</label>
+      <a class="app-site-search__link govuk-link" href="/sitemap/">Sitemap</a>
+    </div>
+  </div>
+</header>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  <div class="govuk-service-navigation app-service-navigation"
+data-module="govuk-service-navigation"
+>
+      <div class="govuk-width-container">
+
+    <div class="govuk-service-navigation__container">
+      
+
+      
+        <nav aria-label="Menu" class="govuk-service-navigation__wrapper app-service-navigation__wrapper">
+          <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden>
+            Menu
+          </button>
+
+          <ul class="govuk-service-navigation__list" id="navigation" >
+
+            
+              
+              <li class="govuk-service-navigation__item">
+                  <a class="govuk-service-navigation__link" href="/get-started/" data-module="app-mobile-navigation-section">
+                                    
+Get started      <template>    <ul class="app-mobile-navigation-section__list app-mobile-navigation-section__subnav" hidden>
+      
+      
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/get-started/">
+      Get started overview
+    </a>
+  </li>
+
+
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">Setup guides</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/get-started/prototyping/">
+      Prototyping
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/get-started/production/">
+      Production
+    </a>
+  </li>
+
+            </ul>
+          </li>
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">How to guides</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/get-started/labels-legends-headings/">
+      Making labels and legends headings
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/get-started/extending-and-modifying-components/">
+      Extending and modifying components in production
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/get-started/focus-states/">
+      Understanding focus state styles
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/get-started/new-type-scale/">
+      Updating your service to use the new type scale
+    </a>
+  </li>
+
+            </ul>
+          </li>
+    </ul>
+</template>
+
+                  </a>
+              </li>
+
+              
+              <li class="govuk-service-navigation__item">
+                  <a class="govuk-service-navigation__link" href="/styles/" data-module="app-mobile-navigation-section">
+                                    
+Styles      <template>    <ul class="app-mobile-navigation-section__list app-mobile-navigation-section__subnav" hidden>
+      
+      
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/">
+      Styles overview
+    </a>
+  </li>
+
+
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">Page structure</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/page-template/">
+      Page template
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/layout/">
+      Layout
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/spacing/">
+      Spacing
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/section-break/">
+      Section break
+    </a>
+  </li>
+
+            </ul>
+          </li>
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">Typography</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/typeface/">
+      Typeface
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/type-scale/">
+      Type scale
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/headings/">
+      Headings
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/paragraphs/">
+      Paragraphs
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/links/">
+      Links
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/lists/">
+      Lists
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/font-override-classes/">
+      Font override classes
+    </a>
+  </li>
+
+            </ul>
+          </li>
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">Visual elements</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/colour/">
+      Colour
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/images/">
+      Images
+    </a>
+  </li>
+
+            </ul>
+          </li>
+    </ul>
+</template>
+
+                  </a>
+              </li>
+
+              
+              <li class="govuk-service-navigation__item govuk-service-navigation__item--active">
+                  <a class="govuk-service-navigation__link" href="/components/" aria-current="true" data-module="app-mobile-navigation-section">
+                                    
+                  <strong class="govuk-service-navigation__active-fallback">Components      <template>    <ul class="app-mobile-navigation-section__list app-mobile-navigation-section__subnav" hidden>
+      
+      
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/">
+      Components overview
+    </a>
+  </li>
+
+
+          <li>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/accordion/">
+      Accordion
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/back-link/">
+      Back link
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/breadcrumbs/">
+      Breadcrumbs
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/button/">
+      Button
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/character-count/">
+      Character count
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/checkboxes/">
+      Checkboxes
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/cookie-banner/">
+      Cookie banner
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/date-input/">
+      Date input
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/details/">
+      Details
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item app-mobile-navigation-section__item--active">
+    <a class="govuk-service-navigation__link"
+        href="/components/error-message/" aria-current="page">
+      Error message
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/error-summary/">
+      Error summary
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/exit-this-page/">
+      Exit this page
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/fieldset/">
+      Fieldset
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/file-upload/">
+      File upload
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/footer/">
+      GOV.UK footer
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/header/">
+      GOV.UK header
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/inset-text/">
+      Inset text
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/notification-banner/">
+      Notification banner
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/pagination/">
+      Pagination
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/panel/">
+      Panel
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/password-input/">
+      Password input
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/phase-banner/">
+      Phase banner
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/radios/">
+      Radios
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/select/">
+      Select
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/service-navigation/">
+      Service navigation
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/skip-link/">
+      Skip link
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/summary-list/">
+      Summary list
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/table/">
+      Table
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/tabs/">
+      Tabs
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/tag/">
+      Tag
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/task-list/">
+      Task list
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/text-input/">
+      Text input
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/textarea/">
+      Textarea
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/warning-text/">
+      Warning text
+    </a>
+  </li>
+
+            </ul>
+          </li>
+    </ul>
+</template>
+</strong>
+
+                  </a>
+              </li>
+
+              
+              <li class="govuk-service-navigation__item">
+                  <a class="govuk-service-navigation__link" href="/patterns/" data-module="app-mobile-navigation-section">
+                                    
+Patterns      <template>    <ul class="app-mobile-navigation-section__list app-mobile-navigation-section__subnav" hidden>
+      
+      
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/">
+      Patterns overview
+    </a>
+  </li>
+
+
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">Ask users for…</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/addresses/">
+      Addresses
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/bank-details/">
+      Bank details
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/dates/">
+      Dates
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/email-addresses/">
+      Email addresses
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/equality-information/">
+      Equality information
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/names/">
+      Names
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/national-insurance-numbers/">
+      National Insurance numbers
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/passwords/">
+      Passwords
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/payment-card-details/">
+      Payment card details
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/phone-numbers/">
+      Phone numbers
+    </a>
+  </li>
+
+            </ul>
+          </li>
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">Help users to…</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/check-a-service-is-suitable/">
+      Check a service is suitable
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/check-answers/">
+      Check answers
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/complete-multiple-tasks/">
+      Complete multiple tasks
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/confirm-a-phone-number/">
+      Confirm a phone number
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/confirm-an-email-address/">
+      Confirm an email address
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/contact-a-department-or-service-team/">
+      Contact a department or service team
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/create-a-username/">
+      Create a username
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/create-accounts/">
+      Create accounts
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/exit-a-page-quickly/">
+      Exit a page quickly
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/navigate-a-service/">
+      Navigate a service
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/start-using-a-service/">
+      Start using a service
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/validation/">
+      Recover from validation errors
+    </a>
+  </li>
+
+            </ul>
+          </li>
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">Pages</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/confirmation-pages/">
+      Confirmation pages
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/cookies-page/">
+      Cookies page
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/page-not-found-pages/">
+      Page not found pages
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/problem-with-the-service-pages/">
+      There is a problem with the service pages
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/question-pages/">
+      Question pages
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/service-unavailable-pages/">
+      Service unavailable pages
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/step-by-step-navigation/">
+      Step by step navigation
+    </a>
+  </li>
+
+            </ul>
+          </li>
+    </ul>
+</template>
+
+                  </a>
+              </li>
+
+              
+              <li class="govuk-service-navigation__item">
+                  <a class="govuk-service-navigation__link" href="/community/" data-module="app-mobile-navigation-section">
+                                    
+Community      <template>    <ul class="app-mobile-navigation-section__list app-mobile-navigation-section__subnav" hidden>
+      
+      
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/">
+      Community overview
+    </a>
+  </li>
+
+
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">What we’re working on</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/upcoming-components-patterns/">
+      Upcoming components and patterns
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/roadmap/">
+      Roadmap
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/whats-new/">
+      What&#39;s new
+    </a>
+  </li>
+
+            </ul>
+          </li>
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">Ways to get involved</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/share-research-findings/">
+      Share findings about your users
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/propose-a-component-or-pattern/">
+      Propose a component or pattern
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/develop-a-component-or-pattern/">
+      Develop a component or pattern
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/propose-a-content-change-using-github/">
+      Propose a content change using GitHub
+    </a>
+  </li>
+
+            </ul>
+          </li>
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">How we work</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/community-principles/">
+      Community principles
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/contribution-criteria/">
+      Contribution criteria
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/design-system-working-group/">
+      Design System working group
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/blogs-talks-podcasts/">
+      Blog posts, videos and podcasts
+    </a>
+  </li>
+
+            </ul>
+          </li>
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">Resources</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/resources-and-tools/">
+      Resources and tools
+    </a>
+  </li>
+
+            </ul>
+          </li>
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">Events and workshops</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/design-system-day/">
+      Design System Day Events
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/design-system-day-2022/">
+      Design System Day 2022
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/design-system-day-2023/">
+      Design System Day 2023
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/design-system-day-2024/">
+      Design System Day 2024
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/code-of-conduct/">
+      Code of Conduct
+    </a>
+  </li>
+
+            </ul>
+          </li>
+    </ul>
+</template>
+
+                  </a>
+              </li>
+
+              
+              <li class="govuk-service-navigation__item">
+                  <a class="govuk-service-navigation__link" href="/accessibility/" data-module="app-mobile-navigation-section">
+                                    
+Accessibility      <template>    <ul class="app-mobile-navigation-section__list app-mobile-navigation-section__subnav" hidden>
+      
+      
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/accessibility/">
+      Accessibility overview
+    </a>
+  </li>
+
+
+          <li>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/accessibility/accessibility-strategy/">
+      Accessibility strategy
+    </a>
+  </li>
+
+            </ul>
+          </li>
+    </ul>
+</template>
+
+                  </a>
+              </li>
+
+            </ul>
+        </nav>
+    </div>
+
+    </div>
+
+  </div>
+
+
+
+<div class="app-split-pane app-width-container app-main-wrapper">
+  <div class="app-split-pane__nav">
+<!-- [html-validate-disable-next no-unused-disable, unique-landmark -- allow 2 navs with the same aria-labelledby because they contain the same information] -->
+<nav class="app-subnav" aria-labelledby="app-subnav-heading">
+  <h2 class="govuk-visually-hidden" id="app-subnav-heading">Pages in this section</h2>
+        <ul class="app-subnav__section">
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/accordion/">
+              Accordion
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/back-link/">
+              Back link
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/breadcrumbs/">
+              Breadcrumbs
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/button/">
+              Button
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/character-count/">
+              Character count
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/checkboxes/">
+              Checkboxes
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/cookie-banner/">
+              Cookie banner
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/date-input/">
+              Date input
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/details/">
+              Details
+            </a>
+          </li>
+          <li class="app-subnav__section-item app-subnav__section-item--current">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/error-message/" aria-current="page">
+              Error message
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/error-summary/">
+              Error summary
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/exit-this-page/">
+              Exit this page
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/fieldset/">
+              Fieldset
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/file-upload/">
+              File upload
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/footer/">
+              GOV.UK footer
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/header/">
+              GOV.UK header
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/inset-text/">
+              Inset text
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/notification-banner/">
+              Notification banner
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/pagination/">
+              Pagination
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/panel/">
+              Panel
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/password-input/">
+              Password input
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/phase-banner/">
+              Phase banner
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/radios/">
+              Radios
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/select/">
+              Select
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/service-navigation/">
+              Service navigation
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/skip-link/">
+              Skip link
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/summary-list/">
+              Summary list
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/table/">
+              Table
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/tabs/">
+              Tabs
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/tag/">
+              Tag
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/task-list/">
+              Task list
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/text-input/">
+              Text input
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/textarea/">
+              Textarea
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/warning-text/">
+              Warning text
+            </a>
+          </li>
+        </ul>
+</nav>
+  </div>
+  <div class="app-split-pane__content">
+    <nav class="govuk-breadcrumbs app-breadcrumbs" aria-label="Breadcrumb">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/components">Components</a>
+    </li>
+  </ol>
+</nav>
+
+    <main id="main-content" class="app-content" role="main">
+      <h1 class="govuk-heading-xl">
+        Error message
+      </h1>
+
+
+
+      <div class="app-prose-scope">
+        <p>This guidance is for government teams that build online services. <a href="https://www.gov.uk/">To find information and services for the public, go to GOV.UK</a>.</p>
+<p>Follow the <a href="/patterns/validation/">Validation pattern</a> and show an error message when there is a validation error. In the error message explain what went wrong and how to fix it.</p>
+<div class="app-example-wrapper" id="error-message-example" data-module="app-tabs">
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/components/error-message/default/index.html" class="app-example__new-window" target="_blank">
+          Open this example in a new tab<span class="govuk-visually-hidden">: error message</span>
+        </a>
+      </div>
+      <iframe title="Error message example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable app-example__frame--m" src="/components/error-message/default/index.html" loading="eager"></iframe>
+    </div>
+    <span id="options-error-message-example"></span>
+    <ul class="app-tabs" role="tablist">
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#error-message-example-html" role="tab" aria-controls="error-message-example-html" data-track="tab-html">HTML</a></li>
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#error-message-example-nunjucks" role="tab" aria-controls="error-message-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></li>
+    </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#error-message-example-html" aria-controls="error-message-example-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="error-message-example-html" role="tabpanel">
+      <div class="app-example__code" data-module="app-copy">
+
+<pre><code data-module="app-scroll-container" tabindex="0" class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group govuk-form-group--error&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-fieldset&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;group&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;passport-issued-hint passport-issued-error&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-fieldset__legend govuk-fieldset__legend--l&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-fieldset__heading&quot;</span>&gt;</span>
+        When was your passport issued?
+      <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;passport-issued-hint&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint&quot;</span>&gt;</span>
+      For example, 27 3 2007
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;passport-issued-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> The date your passport was issued must be in the past
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-date-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;passport-issued&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-date-input__item&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-date-input__label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;passport-issued-day&quot;</span>&gt;</span>
+            Day
+          <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input govuk-date-input__input govuk-input--width-2 govuk-input--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;passport-issued-day&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;passport-issued-day&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;6&quot;</span> <span class="hljs-attr">inputmode</span>=<span class="hljs-string">&quot;numeric&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-date-input__item&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-date-input__label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;passport-issued-month&quot;</span>&gt;</span>
+            Month
+          <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input govuk-date-input__input govuk-input--width-2 govuk-input--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;passport-issued-month&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;passport-issued-month&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;3&quot;</span> <span class="hljs-attr">inputmode</span>=<span class="hljs-string">&quot;numeric&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-date-input__item&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-date-input__label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;passport-issued-year&quot;</span>&gt;</span>
+            Year
+          <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input govuk-date-input__input govuk-input--width-4 govuk-input--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;passport-issued-year&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;passport-issued-year&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;2076&quot;</span> <span class="hljs-attr">inputmode</span>=<span class="hljs-string">&quot;numeric&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+      </div>
+    </div>
+      <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#error-message-example-nunjucks" aria-controls="error-message-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
+<div class="app-tabs__container js-tabs__container" id="error-message-example-nunjucks" role="tabpanel">
+<details class="govuk-details app-options" id="options-error-message-example-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      <span data-components="github-component-arguments">Nunjucks macro options</span>
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+              <p>
+          Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
+          </p>
+          <p>
+          Some options are required for the macro to work; these are marked as “Required” in the option description. Deprecated options are marked as “Deprecated”.
+          </p>
+          <p>
+          If you’re using Nunjucks macros in production with “html” options, or ones ending with “html”, you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
+          </p>
+            <table class="govuk-table app-options__table" id="options-error-message-example--primary">
+              <caption class="govuk-table__caption govuk-heading-m  govuk-visually-hidden">Primary options</caption>
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th class="govuk-table__header app-options__limit-table-cell" scope="col">Name</th>
+                  <th class="govuk-table__header app-options__limit-table-cell" scope="col">Type</th>
+                  <th class="govuk-table__header" scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">text</th>
+                    <td class="govuk-table__cell">string</td>
+                    <td class="govuk-table__cell">
+                      <strong>Required.</strong>
+                      If <code>html</code> is set, this is not required. Text to use within the error message. If <code>html</code> is provided, the <code>text</code> option will be ignored.
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">html</th>
+                    <td class="govuk-table__cell">string</td>
+                    <td class="govuk-table__cell">
+                      <strong>Required.</strong>
+                      If <code>text</code> is set, this is not required. HTML to use within the error message. If <code>html</code> is provided, the <code>text</code> option will be ignored.
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">id</th>
+                    <td class="govuk-table__cell">string</td>
+                    <td class="govuk-table__cell">
+                      ID attribute to add to the error message <code>&lt;p&gt;</code> tag.
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">classes</th>
+                    <td class="govuk-table__cell">string</td>
+                    <td class="govuk-table__cell">
+                      Classes to add to the error message <code>&lt;p&gt;</code> tag.
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">attributes</th>
+                    <td class="govuk-table__cell">object</td>
+                    <td class="govuk-table__cell">
+                      HTML attributes (for example data attributes) to add to the error message <code>&lt;p&gt;</code> tag.
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">visually<wbr>Hidden<wbr>Text</th>
+                    <td class="govuk-table__cell">string</td>
+                    <td class="govuk-table__cell">
+                      A visually hidden prefix used before the error message. Defaults to <code>&quot;Error&quot;</code>.
+                    </td>
+                  </tr>
+              </tbody>
+            </table>
+
+  </div>
+</details>
+
+<div class="app-example__code" data-module="app-copy">
+
+<pre><code data-module="app-scroll-container" tabindex="0" class="language-njk"><span class="hljs-tag">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/date-input/macro.njk&quot;</span> <span class="hljs-keyword">import</span> <span class="hljs-variable">govukDateInput</span> %}</span><span class="language-xml">
+
+</span><span class="hljs-tag">{{ <span class="hljs-title">govukDateInput</span><span class="language-javascript">({
+  <span class="hljs-attr">fieldset</span>: {
+    <span class="hljs-attr">legend</span>: {
+      <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;When was your passport issued?&quot;</span>,
+      <span class="hljs-attr">isPageHeading</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;govuk-fieldset__legend--l&quot;</span>
+    }
+  },
+  <span class="hljs-attr">hint</span>: {
+    <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;For example, 27 3 2007&quot;</span>
+  },
+  <span class="hljs-attr">errorMessage</span>: {
+    <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;The date your passport was issued must be in the past&quot;</span>
+  },
+  <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;passport-issued&quot;</span>,
+  <span class="hljs-attr">namePrefix</span>: <span class="hljs-string">&quot;passport-issued&quot;</span>,
+  <span class="hljs-attr">items</span>: [
+    {
+      <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;govuk-input--width-2 govuk-input--error&quot;</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;day&quot;</span>,
+      <span class="hljs-attr">value</span>: <span class="hljs-string">&quot;6&quot;</span>
+    },
+    {
+      <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;govuk-input--width-2 govuk-input--error&quot;</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;month&quot;</span>,
+      <span class="hljs-attr">value</span>: <span class="hljs-string">&quot;3&quot;</span>
+    },
+    {
+      <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;govuk-input--width-4 govuk-input--error&quot;</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;year&quot;</span>,
+      <span class="hljs-attr">value</span>: <span class="hljs-string">&quot;2076&quot;</span>
+    }
+  ]
+})</span> }}</span></code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+<h2 id="when-to-use-this-component">When to use this component</h2>
+<p>Show an error message next to the field and in the <a href="/components/error-summary/">Error summary component</a> when there is a validation error.</p>
+<p>Use standard messages for different components.</p>
+<h2 id="when-not-to-use-this-component">When not to use this component</h2>
+<p>Do not use error messages to tell a user that they are not eligible or do not have permission to do something. Or to tell them about a lack of capacity or other problem the user cannot fix - because the problem is with the service rather than with the information the user has provided.</p>
+<p>Instead, take the user to a page that explains the problem (for example, telling them why they’re not eligible) and provides useful information about what to do next.</p>
+<p>There are separate patterns for:</p>
+<ul>
+<li><a href="/patterns/problem-with-the-service-pages/">‘There is a problem with the service’ pages</a></li>
+<li><a href="/patterns/page-not-found-pages/">‘Page not found’ pages</a></li>
+<li><a href="/patterns/service-unavailable-pages/">‘Service unavailable’ pages</a></li>
+</ul>
+<h2 id="how-it-works">How it works</h2>
+<p>For each error:</p>
+<ul>
+<li>put the message in red after the question text and hint text</li>
+<li>use a red border to visually connect the message and the question it belongs to</li>
+<li>if the error relates to a specific field within the question, give it a red border and refer to that field in the error message - for example: “you must enter a year”</li>
+</ul>
+<p>Do not clear any form fields when showing the Error message component. Keep both passing and failing answers.</p>
+<p>Keeping information that caused errors helps users to:</p>
+<ul>
+<li>see what went wrong</li>
+<li>edit their previous answer</li>
+<li>avoid re-entering information</li>
+</ul>
+<p>To help screen reader users, the error message component includes a hidden ‘Error:’ before the error message. These users will hear, for example, “Error: The date your passport was issued must be in the past”.</p>
+<p>If your error message is written in another language, you can change the prefix as needed, as shown in this example.</p>
+<div class="app-example-wrapper" id="error-message-with-a-custom-visually-hidden-prefix-error-message-example-open" data-module="app-tabs" data-open>
+    <span id="options-error-message-with-a-custom-visually-hidden-prefix-error-message-example-open"></span>
+    <ul class="app-tabs" role="tablist">
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#error-message-with-a-custom-visually-hidden-prefix-error-message-example-open-html" role="tab" aria-controls="error-message-with-a-custom-visually-hidden-prefix-error-message-example-open-html" data-track="tab-html">HTML</a></li>
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#error-message-with-a-custom-visually-hidden-prefix-error-message-example-open-nunjucks" role="tab" aria-controls="error-message-with-a-custom-visually-hidden-prefix-error-message-example-open-nunjucks" data-track="tab-nunjucks">Nunjucks</a></li>
+    </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#error-message-with-a-custom-visually-hidden-prefix-error-message-example-open-html" aria-controls="error-message-with-a-custom-visually-hidden-prefix-error-message-example-open-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="error-message-with-a-custom-visually-hidden-prefix-error-message-example-open-html" role="tabpanel">
+      <div class="app-example__code" data-module="app-copy">
+
+<pre><code data-module="app-scroll-container" tabindex="0" class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Gwall:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> Rhowch eich enw llawn
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+      </div>
+    </div>
+      <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#error-message-with-a-custom-visually-hidden-prefix-error-message-example-open-nunjucks" aria-controls="error-message-with-a-custom-visually-hidden-prefix-error-message-example-open-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
+<div class="app-tabs__container js-tabs__container" id="error-message-with-a-custom-visually-hidden-prefix-error-message-example-open-nunjucks" role="tabpanel">
+<details class="govuk-details app-options" id="options-error-message-with-a-custom-visually-hidden-prefix-error-message-example-open-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      <span data-components="github-component-arguments">Nunjucks macro options</span>
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+              <p>
+          Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
+          </p>
+          <p>
+          Some options are required for the macro to work; these are marked as “Required” in the option description. Deprecated options are marked as “Deprecated”.
+          </p>
+          <p>
+          If you’re using Nunjucks macros in production with “html” options, or ones ending with “html”, you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
+          </p>
+            <table class="govuk-table app-options__table" id="options-error-message-with-a-custom-visually-hidden-prefix-error-message-example-open--primary">
+              <caption class="govuk-table__caption govuk-heading-m  govuk-visually-hidden">Primary options</caption>
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th class="govuk-table__header app-options__limit-table-cell" scope="col">Name</th>
+                  <th class="govuk-table__header app-options__limit-table-cell" scope="col">Type</th>
+                  <th class="govuk-table__header" scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">text</th>
+                    <td class="govuk-table__cell">string</td>
+                    <td class="govuk-table__cell">
+                      <strong>Required.</strong>
+                      If <code>html</code> is set, this is not required. Text to use within the error message. If <code>html</code> is provided, the <code>text</code> option will be ignored.
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">html</th>
+                    <td class="govuk-table__cell">string</td>
+                    <td class="govuk-table__cell">
+                      <strong>Required.</strong>
+                      If <code>text</code> is set, this is not required. HTML to use within the error message. If <code>html</code> is provided, the <code>text</code> option will be ignored.
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">id</th>
+                    <td class="govuk-table__cell">string</td>
+                    <td class="govuk-table__cell">
+                      ID attribute to add to the error message <code>&lt;p&gt;</code> tag.
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">classes</th>
+                    <td class="govuk-table__cell">string</td>
+                    <td class="govuk-table__cell">
+                      Classes to add to the error message <code>&lt;p&gt;</code> tag.
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">attributes</th>
+                    <td class="govuk-table__cell">object</td>
+                    <td class="govuk-table__cell">
+                      HTML attributes (for example data attributes) to add to the error message <code>&lt;p&gt;</code> tag.
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">visually<wbr>Hidden<wbr>Text</th>
+                    <td class="govuk-table__cell">string</td>
+                    <td class="govuk-table__cell">
+                      A visually hidden prefix used before the error message. Defaults to <code>&quot;Error&quot;</code>.
+                    </td>
+                  </tr>
+              </tbody>
+            </table>
+
+  </div>
+</details>
+
+<div class="app-example__code" data-module="app-copy">
+
+<pre><code data-module="app-scroll-container" tabindex="0" class="language-njk"><span class="hljs-tag">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/error-message/macro.njk&quot;</span> <span class="hljs-keyword">import</span> <span class="hljs-variable">govukErrorMessage</span> %}</span><span class="language-xml">
+
+</span><span class="hljs-tag">{{ <span class="hljs-title">govukErrorMessage</span><span class="language-javascript">({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Rhowch eich enw llawn&quot;</span>,
+  <span class="hljs-attr">visuallyHiddenText</span>: <span class="hljs-string">&quot;Gwall&quot;</span>
+})</span> }}</span></code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+<p>Summarise all errors at the top of the page the user is on using an <a href="/components/error-summary/">Error summary component</a>.</p>
+<p>There are 2 ways to use the error message component. You can use HTML or, if you are using Nunjucks or the GOV.UK Prototype Kit, you can use the Nunjucks macro.</p>
+<h3 id="legend">Legend</h3>
+<div class="app-example-wrapper" id="error-message-with-legend-error-message-example" data-module="app-tabs">
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/components/error-message/legend/index.html" class="app-example__new-window" target="_blank">
+          Open this example in a new tab<span class="govuk-visually-hidden">: error message with legend – error message</span>
+        </a>
+      </div>
+      <iframe title="Error message with legend – Error message example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable app-example__frame--m" src="/components/error-message/legend/index.html" loading="lazy"></iframe>
+    </div>
+    <span id="options-error-message-with-legend-error-message-example"></span>
+    <ul class="app-tabs" role="tablist">
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#error-message-with-legend-error-message-example-html" role="tab" aria-controls="error-message-with-legend-error-message-example-html" data-track="tab-html">HTML</a></li>
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#error-message-with-legend-error-message-example-nunjucks" role="tab" aria-controls="error-message-with-legend-error-message-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></li>
+    </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#error-message-with-legend-error-message-example-html" aria-controls="error-message-with-legend-error-message-example-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="error-message-with-legend-error-message-example-html" role="tabpanel">
+      <div class="app-example__code" data-module="app-copy">
+
+<pre><code data-module="app-scroll-container" tabindex="0" class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group govuk-form-group--error&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-fieldset&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;nationality-hint nationality-error&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-fieldset__legend govuk-fieldset__legend--l&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-fieldset__heading&quot;</span>&gt;</span>
+        What is your nationality?
+      <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;nationality-hint&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint&quot;</span>&gt;</span>
+      If you have dual nationality, select all options that are relevant to you
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;nationality-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> Select if you are British, Irish or a citizen of a different country
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-checkboxes&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-checkboxes&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-checkboxes__item&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-checkboxes__input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;nationality&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;nationality&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;british&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-checkboxes__label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;nationality&quot;</span>&gt;</span>
+          British
+        <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-checkboxes__item&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-checkboxes__input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;nationality-2&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;nationality&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;irish&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-checkboxes__label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;nationality-2&quot;</span>&gt;</span>
+          Irish
+        <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-checkboxes__item&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-checkboxes__input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;nationality-3&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;nationality&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;other&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-checkboxes__label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;nationality-3&quot;</span>&gt;</span>
+          Citizen of another country
+        <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+      </div>
+    </div>
+      <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#error-message-with-legend-error-message-example-nunjucks" aria-controls="error-message-with-legend-error-message-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
+<div class="app-tabs__container js-tabs__container" id="error-message-with-legend-error-message-example-nunjucks" role="tabpanel">
+<details class="govuk-details app-options" id="options-error-message-with-legend-error-message-example-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      <span data-components="github-component-arguments">Nunjucks macro options</span>
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+              <p>
+          Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
+          </p>
+          <p>
+          Some options are required for the macro to work; these are marked as “Required” in the option description. Deprecated options are marked as “Deprecated”.
+          </p>
+          <p>
+          If you’re using Nunjucks macros in production with “html” options, or ones ending with “html”, you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
+          </p>
+            <table class="govuk-table app-options__table" id="options-error-message-with-legend-error-message-example--primary">
+              <caption class="govuk-table__caption govuk-heading-m  govuk-visually-hidden">Primary options</caption>
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th class="govuk-table__header app-options__limit-table-cell" scope="col">Name</th>
+                  <th class="govuk-table__header app-options__limit-table-cell" scope="col">Type</th>
+                  <th class="govuk-table__header" scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">text</th>
+                    <td class="govuk-table__cell">string</td>
+                    <td class="govuk-table__cell">
+                      <strong>Required.</strong>
+                      If <code>html</code> is set, this is not required. Text to use within the error message. If <code>html</code> is provided, the <code>text</code> option will be ignored.
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">html</th>
+                    <td class="govuk-table__cell">string</td>
+                    <td class="govuk-table__cell">
+                      <strong>Required.</strong>
+                      If <code>text</code> is set, this is not required. HTML to use within the error message. If <code>html</code> is provided, the <code>text</code> option will be ignored.
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">id</th>
+                    <td class="govuk-table__cell">string</td>
+                    <td class="govuk-table__cell">
+                      ID attribute to add to the error message <code>&lt;p&gt;</code> tag.
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">classes</th>
+                    <td class="govuk-table__cell">string</td>
+                    <td class="govuk-table__cell">
+                      Classes to add to the error message <code>&lt;p&gt;</code> tag.
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">attributes</th>
+                    <td class="govuk-table__cell">object</td>
+                    <td class="govuk-table__cell">
+                      HTML attributes (for example data attributes) to add to the error message <code>&lt;p&gt;</code> tag.
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">visually<wbr>Hidden<wbr>Text</th>
+                    <td class="govuk-table__cell">string</td>
+                    <td class="govuk-table__cell">
+                      A visually hidden prefix used before the error message. Defaults to <code>&quot;Error&quot;</code>.
+                    </td>
+                  </tr>
+              </tbody>
+            </table>
+
+  </div>
+</details>
+
+<div class="app-example__code" data-module="app-copy">
+
+<pre><code data-module="app-scroll-container" tabindex="0" class="language-njk"><span class="hljs-tag">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/checkboxes/macro.njk&quot;</span> <span class="hljs-keyword">import</span> <span class="hljs-variable">govukCheckboxes</span> %}</span><span class="language-xml">
+
+</span><span class="hljs-tag">{{ <span class="hljs-title">govukCheckboxes</span><span class="language-javascript">({
+  <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;nationality&quot;</span>,
+  <span class="hljs-attr">fieldset</span>: {
+    <span class="hljs-attr">legend</span>: {
+      <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;What is your nationality?&quot;</span>,
+      <span class="hljs-attr">isPageHeading</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;govuk-fieldset__legend--l&quot;</span>
+    }
+  },
+  <span class="hljs-attr">hint</span>: {
+    <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;If you have dual nationality, select all options that are relevant to you&quot;</span>
+  },
+  <span class="hljs-attr">errorMessage</span>: {
+    <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Select if you are British, Irish or a citizen of a different country&quot;</span>
+  },
+  <span class="hljs-attr">items</span>: [
+    {
+      <span class="hljs-attr">value</span>: <span class="hljs-string">&quot;british&quot;</span>,
+      <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;British&quot;</span>
+    },
+    {
+      <span class="hljs-attr">value</span>: <span class="hljs-string">&quot;irish&quot;</span>,
+      <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Irish&quot;</span>
+    },
+    {
+      <span class="hljs-attr">value</span>: <span class="hljs-string">&quot;other&quot;</span>,
+      <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Citizen of another country&quot;</span>
+    }
+  ]
+})</span> }}</span></code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+<h3 id="label">Label</h3>
+<div class="app-example-wrapper" id="error-message-with-label-error-message-example" data-module="app-tabs">
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/components/error-message/label/index.html" class="app-example__new-window" target="_blank">
+          Open this example in a new tab<span class="govuk-visually-hidden">: error message with label – error message</span>
+        </a>
+      </div>
+      <iframe title="Error message with label – Error message example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable app-example__frame--s" src="/components/error-message/label/index.html" loading="lazy"></iframe>
+    </div>
+    <span id="options-error-message-with-label-error-message-example"></span>
+    <ul class="app-tabs" role="tablist">
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#error-message-with-label-error-message-example-html" role="tab" aria-controls="error-message-with-label-error-message-example-html" data-track="tab-html">HTML</a></li>
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#error-message-with-label-error-message-example-nunjucks" role="tab" aria-controls="error-message-with-label-error-message-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></li>
+    </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#error-message-with-label-error-message-example-html" aria-controls="error-message-with-label-error-message-example-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="error-message-with-label-error-message-example-html" role="tabpanel">
+      <div class="app-example__code" data-module="app-copy">
+
+<pre><code data-module="app-scroll-container" tabindex="0" class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group govuk-form-group--error&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;national-insurance-number&quot;</span>&gt;</span>
+    National Insurance number
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;national-insurance-number-hint&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint&quot;</span>&gt;</span>
+    It’s on your National Insurance card, benefit letter, payslip or P60 – for example, ‘QQ 12 34 56 C’
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;national-insurance-number-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> Enter a National Insurance number in the correct format
+  <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input govuk-input--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;national-insurance-number&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;nationalInsuranceNumber&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;national-insurance-number-hint national-insurance-number-error&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+      </div>
+    </div>
+      <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#error-message-with-label-error-message-example-nunjucks" aria-controls="error-message-with-label-error-message-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
+<div class="app-tabs__container js-tabs__container" id="error-message-with-label-error-message-example-nunjucks" role="tabpanel">
+<details class="govuk-details app-options" id="options-error-message-with-label-error-message-example-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      <span data-components="github-component-arguments">Nunjucks macro options</span>
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+              <p>
+          Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
+          </p>
+          <p>
+          Some options are required for the macro to work; these are marked as “Required” in the option description. Deprecated options are marked as “Deprecated”.
+          </p>
+          <p>
+          If you’re using Nunjucks macros in production with “html” options, or ones ending with “html”, you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
+          </p>
+            <table class="govuk-table app-options__table" id="options-error-message-with-label-error-message-example--primary">
+              <caption class="govuk-table__caption govuk-heading-m  govuk-visually-hidden">Primary options</caption>
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th class="govuk-table__header app-options__limit-table-cell" scope="col">Name</th>
+                  <th class="govuk-table__header app-options__limit-table-cell" scope="col">Type</th>
+                  <th class="govuk-table__header" scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">text</th>
+                    <td class="govuk-table__cell">string</td>
+                    <td class="govuk-table__cell">
+                      <strong>Required.</strong>
+                      If <code>html</code> is set, this is not required. Text to use within the error message. If <code>html</code> is provided, the <code>text</code> option will be ignored.
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">html</th>
+                    <td class="govuk-table__cell">string</td>
+                    <td class="govuk-table__cell">
+                      <strong>Required.</strong>
+                      If <code>text</code> is set, this is not required. HTML to use within the error message. If <code>html</code> is provided, the <code>text</code> option will be ignored.
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">id</th>
+                    <td class="govuk-table__cell">string</td>
+                    <td class="govuk-table__cell">
+                      ID attribute to add to the error message <code>&lt;p&gt;</code> tag.
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">classes</th>
+                    <td class="govuk-table__cell">string</td>
+                    <td class="govuk-table__cell">
+                      Classes to add to the error message <code>&lt;p&gt;</code> tag.
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">attributes</th>
+                    <td class="govuk-table__cell">object</td>
+                    <td class="govuk-table__cell">
+                      HTML attributes (for example data attributes) to add to the error message <code>&lt;p&gt;</code> tag.
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">visually<wbr>Hidden<wbr>Text</th>
+                    <td class="govuk-table__cell">string</td>
+                    <td class="govuk-table__cell">
+                      A visually hidden prefix used before the error message. Defaults to <code>&quot;Error&quot;</code>.
+                    </td>
+                  </tr>
+              </tbody>
+            </table>
+
+  </div>
+</details>
+
+<div class="app-example__code" data-module="app-copy">
+
+<pre><code data-module="app-scroll-container" tabindex="0" class="language-njk"><span class="hljs-tag">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/input/macro.njk&quot;</span> <span class="hljs-keyword">import</span> <span class="hljs-variable">govukInput</span> %}</span><span class="language-xml">
+
+</span><span class="hljs-tag">{{ <span class="hljs-title">govukInput</span><span class="language-javascript">({
+  <span class="hljs-attr">label</span>: {
+    <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;National Insurance number&quot;</span>
+  },
+  <span class="hljs-attr">hint</span>: {
+    <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;It’s on your National Insurance card, benefit letter, payslip or P60 – for example, ‘QQ 12 34 56 C’&quot;</span>
+  },
+  <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;national-insurance-number&quot;</span>,
+  <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;nationalInsuranceNumber&quot;</span>,
+  <span class="hljs-attr">errorMessage</span>: {
+    <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Enter a National Insurance number in the correct format&quot;</span>
+  }
+})</span> }}</span></code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+<h3 id="match-up-error-messages-to-labels">Match up error messages to labels</h3>
+<p>Error messages should directly include language from the question or fieldset label. This helps match up the error message with the relevant form field.</p>
+<p>Here are some examples of label and error message pairs.</p>
+<p>Example 1:</p>
+<ul>
+<li>Label: ‘How many hours do you work a week?’</li>
+<li>Error message: ‘Enter how many hours you work a week’</li>
+</ul>
+<p>Example 2:</p>
+<ul>
+<li>Label: ‘Address line 1’</li>
+<li>Error message: ‘Enter address line 1, typically the building and street’</li>
+</ul>
+<h3 id="be-clear-and-concise">Be clear and concise</h3>
+<p>Describe what has happened and tell them how to fix it. The message must be in plain English, use positive language and get to the point.</p>
+<p>Do not use:</p>
+<ul>
+<li>technical jargon like ‘form post error’, ‘unspecified error’ and ‘error 0x0000000643’</li>
+<li>words like ‘forbidden’, ‘illegal’, ‘you forgot’ and ‘prohibited’</li>
+<li>‘please’ because it implies a choice</li>
+<li>‘sorry’ because it does not help fix the problem</li>
+<li>‘valid’ and ‘invalid’ because they do not add anything to the message</li>
+<li>humourous, informal language like ‘oops’</li>
+</ul>
+<p>Do not give an example in the error message if there is an example on the screen. For example, if you are asking for a National Insurance number and include ‘QQ 12 34 56 C’ as hint text, do not include an example in the error message.</p>
+<p>Above all, aim for clarity.</p>
+<p>Read the message out loud to see if it sounds like something you would say.</p>
+<h3 id="be-consistent">Be consistent</h3>
+<p>Use the same message next to the field and in the <a href="/components/error-summary/">Error summary component</a> so they:</p>
+<ul>
+<li>look, sound and mean the same</li>
+<li>make sense out of context</li>
+<li>reduce the cognitive effort needed to understand what has happened</li>
+</ul>
+<h3 id="be-specific">Be specific</h3>
+<p>General errors are not helpful to everyone. They do not make sense out of context. Avoid messages like:</p>
+<ul>
+<li>‘An error occurred’</li>
+<li>‘Answer the question’</li>
+<li>‘Select an option’</li>
+<li>‘Fill in the field’</li>
+<li>‘This field is required’</li>
+</ul>
+<p>Different errors need different messages. For example, text fields may be:</p>
+<ul>
+<li>empty</li>
+<li>too long</li>
+<li>too short</li>
+<li>using characters that are not allowed</li>
+<li>in the wrong format</li>
+</ul>
+<p>An error for a specific situation is more helpful. It will tell someone what has happened and how to fix it.</p>
+<h3 id="use-instructions-and-descriptions">Use instructions and descriptions</h3>
+<p>Some errors work better as instructions and some work better as descriptions. For example:</p>
+<ul>
+<li>‘Enter your first name’ is clearer, more direct and natural than ‘First name must have an entry’</li>
+<li>‘Enter a first name that is 35 characters or less’ is wordier, less direct and natural than ‘First name must be 35 characters or less’</li>
+<li>‘Enter a date after 31 August 2017 for when you started the course’ is wordier, less direct and natural than ‘Date you started the course must be after 31 August 2017’</li>
+</ul>
+<p>Use both instructions and descriptions, but use them consistently. For example, use an instruction for empty fields like ‘Enter your name’, but a description like ‘Name must be 35 characters or less’ for entries that are too long.</p>
+<h3 id="use-error-message-templates">Use error message templates</h3>
+<p>Use template messages for common errors on:</p>
+<ul>
+<li><a href="/patterns/addresses/#error-messages">Addresses pattern</a></li>
+<li><a href="/components/character-count/#error-messages">Character count component</a></li>
+<li><a href="/components/checkboxes/#error-messages">Checkboxes component</a></li>
+<li><a href="/components/date-input/#error-messages">Date input component</a></li>
+<li><a href="/patterns/email-addresses/#error-messages">Email address pattern</a></li>
+<li><a href="/components/file-upload/#error-messages">File upload component</a></li>
+<li><a href="/patterns/names/#error-messages">Names pattern</a></li>
+<li><a href="/patterns/national-insurance-numbers/#error-messages">National Insurance numbers pattern</a></li>
+<li><a href="/components/radios/#error-messages">Radios component</a></li>
+<li><a href="/patterns/phone-numbers/#error-messages">Phone numbers pattern</a></li>
+<li><a href="/components/text-input/#error-messages">Text input component</a></li>
+<li><a href="/components/textarea/#error-messages">Textarea component</a></li>
+</ul>
+<h3 id="track-errors">Track errors</h3>
+<p>Find out how often people see them. This will let you:</p>
+<ul>
+<li>improve content</li>
+<li>A/B test variations</li>
+<li>redesign a journey</li>
+</ul>
+<h2 id="research-on-this-component">Research on this component</h2>
+<p>Error messages designed using this guidance have been tested with all types of users in live services, including tax credits.</p>
+<p>Research showed users:</p>
+<ul>
+<li>understood what went wrong</li>
+<li>knew how to fix the problem</li>
+<li>were able to recover from the error</li>
+</ul>
+<p>If you’ve used this component, get in touch to share your user research findings.</p>
+
+      </div>
+
+      
+
+  <h2 class="govuk-heading-l govuk-!-padding-top-7" id="help-improve-this-page">Help improve this component</h2>
+
+    <p class="govuk-body">
+      To help make sure that this page is useful, relevant and up to date, you can:
+    </p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        take part in the
+        <a class="govuk-link app-contact-panel__link" href="https://github.com/alphagov/govuk-design-system-backlog/issues/47">
+          ‘Error message’ discussion on GitHub
+        </a>
+        and share your research
+      </li>
+      <li>
+        <a class="govuk-link app-contact-panel__link" href="https://github.com/alphagov/govuk-design-system/edit/main/src/components/error-message/index.md">propose a change on GitHub</a>
+        – read more about
+        <a class="govuk-link app-contact-panel__link" href="/community/propose-a-content-change-using-github/">
+          how to propose changes in GitHub
+        </a>
+      </li>
+    </ul>
+
+<div class="app-contact-panel">
+  <h2 class="app-contact-panel__heading">Need help?</h2>
+
+  <p class="govuk-body app-contact-panel__body">
+    If you’ve got a question about the GOV.UK Design System, <a class="govuk-link" href="/get-in-touch/">contact the team</a>.
+  </p>
+</div>
+    </main>
+  </div>
+<div class="app-back-to-top app-back-to-top--hidden" data-module="app-back-to-top">
+  <a class="govuk-link govuk-link--no-visited-state app-back-to-top__link" href="#top">
+    <svg role="presentation" focusable="false" class="app-back-to-top__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17">
+      <path fill="currentColor" d="M6.5 0L0 6.5 1.4 8l4-4v12.7h2V4l4.3 4L13 6.4z"></path>
+    </svg>Back to top
+  </a>
+</div>
+</div>
+
+<footer class="govuk-footer app-footer">
+  <div class="govuk-width-container app-width-container">
+
+  
+  <svg
+    focusable="false"
+    role="presentation"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 64 60"
+    height="30"
+    width="32"
+    fill="currentcolor" class="govuk-footer__crown"
+  >    <g>
+        <circle cx="20" cy="17.6" r="3.7"/>
+        <circle cx="10.2" cy="23.5" r="3.7"/>
+        <circle cx="3.7" cy="33.2" r="3.7"/>
+        <circle cx="31.7" cy="30.6" r="3.7"/>
+        <circle cx="43.3" cy="17.6" r="3.7"/>
+        <circle cx="53.2" cy="23.5" r="3.7"/>
+        <circle cx="59.7" cy="33.2" r="3.7"/>
+        <circle cx="31.7" cy="30.6" r="3.7"/>
+        <path d="M33.1,9.8c.2-.1.3-.3.5-.5l4.6,2.4v-6.8l-4.6,1.5c-.1-.2-.3-.3-.5-.5l1.9-5.9h-6.7l1.9,5.9c-.2.1-.3.3-.5.5l-4.6-1.5v6.8l4.6-2.4c.1.2.3.3.5.5l-2.6,8c-.9,2.8,1.2,5.7,4.1,5.7h0c3,0,5.1-2.9,4.1-5.7l-2.6-8ZM37,37.9s-3.4,3.8-4.1,6.1c2.2,0,4.2-.5,6.4-2.8l-.7,8.5c-2-2.8-4.4-4.1-5.7-3.8.1,3.1.5,6.7,5.8,7.2,3.7.3,6.7-1.5,7-3.8.4-2.6-2-4.3-3.7-1.6-1.4-4.5,2.4-6.1,4.9-3.2-1.9-4.5-1.8-7.7,2.4-10.9,3,4,2.6,7.3-1.2,11.1,2.4-1.3,6.2,0,4,4.6-1.2-2.8-3.7-2.2-4.2.2-.3,1.7.7,3.7,3,4.2,1.9.3,4.7-.9,7-5.9-1.3,0-2.4.7-3.9,1.7l2.4-8c.6,2.3,1.4,3.7,2.2,4.5.6-1.6.5-2.8,0-5.3l5,1.8c-2.6,3.6-5.2,8.7-7.3,17.5-7.4-1.1-15.7-1.7-24.5-1.7h0c-8.8,0-17.1.6-24.5,1.7-2.1-8.9-4.7-13.9-7.3-17.5l5-1.8c-.5,2.5-.6,3.7,0,5.3.8-.8,1.6-2.3,2.2-4.5l2.4,8c-1.5-1-2.6-1.7-3.9-1.7,2.3,5,5.2,6.2,7,5.9,2.3-.4,3.3-2.4,3-4.2-.5-2.4-3-3.1-4.2-.2-2.2-4.6,1.6-6,4-4.6-3.7-3.7-4.2-7.1-1.2-11.1,4.2,3.2,4.3,6.4,2.4,10.9,2.5-2.8,6.3-1.3,4.9,3.2-1.8-2.7-4.1-1-3.7,1.6.3,2.3,3.3,4.1,7,3.8,5.4-.5,5.7-4.2,5.8-7.2-1.3-.2-3.7,1-5.7,3.8l-.7-8.5c2.2,2.3,4.2,2.7,6.4,2.8-.7-2.3-4.1-6.1-4.1-6.1h10.6,0Z"/>
+      </g>
+  </svg>
+
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+        <h2 class="govuk-visually-hidden">Support links</h2>
+        <ul class="govuk-footer__inline-list">
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="/accessibility-statement/">
+              Accessibility statement
+            </a>
+          </li>
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="/sitemap/">
+              Sitemap
+            </a>
+          </li>
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="/cookies/">
+              Cookies
+            </a>
+          </li>
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="/privacy-policy/">
+              Privacy
+            </a>
+          </li>
+        </ul>
+        <div class="govuk-footer__meta-custom">
+          Built by the <a href="/design-system-team/" class="govuk-footer__link">GOV.UK Design System team</a>
+        </div>
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          class="govuk-footer__licence-logo"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 483.2 195.7"
+          height="17"
+          width="41"
+        >
+          <path
+            fill="currentColor"
+            d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+          />
+        </svg>
+        <span class="govuk-footer__licence-description">
+          All content is available under the
+          <a
+            class="govuk-footer__link"
+            href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+            rel="license"
+          >Open Government Licence v3.0</a>, except where otherwise stated
+        </span>
+      </div>
+      <div class="govuk-footer__meta-item">
+        <a
+          class="govuk-footer__link govuk-footer__copyright-logo"
+          href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+        >
+          © Crown copyright
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+  <script type="module" src="/javascripts/application-73d194447c36a6ee2c2391f2ae156c74.js"></script>
+  </body>
+</html>

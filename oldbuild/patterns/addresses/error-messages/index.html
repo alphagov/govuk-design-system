@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template govuk-template--rebranded app-example-page__wrapper">
+  <head>
+    <meta charset="utf-8">
+    <title>Pattern error – Addresses – Example – GOV.UK Design System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#1d70b8">
+
+      <link rel="icon" sizes="48x48" href="/assets/rebrand/images/favicon.ico">
+      <link rel="icon" sizes="any" href="/assets/rebrand/images/favicon.svg" type="image/svg+xml">
+      <link rel="mask-icon" href="/assets/rebrand/images/govuk-icon-mask.svg" color="#1d70b8">
+      <link rel="apple-touch-icon" href="/assets/rebrand/images/govuk-icon-180.png">
+      <link rel="manifest" href="/assets/rebrand/manifest.json">
+
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="og:title" content="Pattern error – Addresses">
+  <meta name="description" content="">
+  <meta name="og:description" content="">
+  <link rel="canonical" href="https://design-system.service.gov.uk/patterns/addresses/error-messages/">
+
+  <link href="/stylesheets/govuk-frontend-29487252a98c73d40fcf1c4a638d1d2d.min.css" rel="stylesheet" media="all">
+  <link href="/stylesheets/example-28cf8f56ce3cba62d258b5725b59ecd7.css" rel="stylesheet" media="all">
+    <link href="/patterns/addresses/error-messages/address-wrapper-99adc7f7a7296f96a3a90ac734ec9f6b.css" rel="stylesheet" media="all">
+    <meta property="og:image" content="https://design-system.service.gov.uk/assets/images/govuk-opengraph-image.png">
+  </head>
+  <body class="govuk-template__body app-example-page">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+
+
+
+  <!-- Disable browser validation for any examples that include form elements -->
+  <form action="/form-handler" method="post" novalidate>
+      
+
+<fieldset class="govuk-fieldset">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    <h1 class="govuk-fieldset__heading">
+      What is your address?
+    </h1>
+  </legend>
+
+  <div class="govuk-form-group govuk-form-group--error">
+  <label class="govuk-label" for="address-line-1">
+    Address line 1
+  </label>
+  <p id="address-line-1-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> Enter address line 1, typically the building and street
+  </p>
+  <input class="govuk-input govuk-input--error" id="address-line-1" name="addressLine1" type="text" aria-describedby="address-line-1-error" autocomplete="address-line1">
+</div>
+
+
+  <div class="govuk-form-group">
+  <label class="govuk-label" for="address-line-2">
+    Address line 2 (optional)
+  </label>
+  <input class="govuk-input" id="address-line-2" name="addressLine2" type="text" autocomplete="address-line2">
+</div>
+
+
+  <div class="govuk-form-group govuk-form-group--error">
+  <label class="govuk-label" for="address-town">
+    Town or city
+  </label>
+  <p id="address-town-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> Enter town or city
+  </p>
+  <input class="govuk-input govuk-!-width-two-thirds govuk-input--error" id="address-town" name="addressTown" type="text" aria-describedby="address-town-error" autocomplete="address-level2">
+</div>
+
+
+  <div class="govuk-form-group">
+  <label class="govuk-label" for="address-county">
+    County (optional)
+  </label>
+  <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="addressCounty" type="text">
+</div>
+
+
+  <div class="govuk-form-group govuk-form-group--error">
+  <label class="govuk-label" for="address-postcode">
+    Postcode
+  </label>
+  <p id="address-postcode-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> Enter postcode
+  </p>
+  <input class="govuk-input govuk-input--width-10 govuk-input--error" id="address-postcode" name="addressPostcode" type="text" aria-describedby="address-postcode-error" autocomplete="postal-code">
+</div>
+
+
+
+</fieldset>
+
+  </form>
+
+
+  <script type="module" src="/javascripts/application-example-df1b1846e6ebb2eca45a9e21924dfbd8.js"></script>
+  </body>
+</html>

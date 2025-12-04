@@ -1,0 +1,1949 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template govuk-template--rebranded">
+  <head>
+    <meta charset="utf-8">
+    <title>Phase banner – GOV.UK Design System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#1d70b8">
+
+      <link rel="icon" sizes="48x48" href="/assets/rebrand/images/favicon.ico">
+      <link rel="icon" sizes="any" href="/assets/rebrand/images/favicon.svg" type="image/svg+xml">
+      <link rel="mask-icon" href="/assets/rebrand/images/govuk-icon-mask.svg" color="#1d70b8">
+      <link rel="apple-touch-icon" href="/assets/rebrand/images/govuk-icon-180.png">
+      <link rel="manifest" href="/assets/rebrand/manifest.json">
+
+  <meta name="og:title" content="Phase banner">
+  <meta name="description" content="Use the phase banner component to show users your service is still being worked on">
+  <meta name="og:description" content="Use the phase banner component to show users your service is still being worked on">
+  <link rel="canonical" href="https://design-system.service.gov.uk/components/phase-banner/">
+  <link href="/stylesheets/main-53f438e2b7fb5f6c27d8011421794cc8.css" rel="stylesheet" media="all">
+
+    <meta property="og:image" content="https://design-system.service.gov.uk/assets/rebrand/images/govuk-opengraph-image.png">
+  </head>
+  <body class="govuk-template__body" data-module="app-navigation">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+  <a id="top"></a>
+  <script>
+    /**
+     * If cookie policy changes and/or the user preferences object format needs to
+     * change, bump this version up afterwards. The user should then be shown the
+     * banner again to consent to the new policy.
+     *
+     * Note that because isValidCookieConsent checks that the version in the user's
+     * cookie is equal to or greater than this number, you should be careful to
+     * check backwards compatibility when changing the object format.
+    */
+    window.GDS_CONSENT_COOKIE_VERSION = 2;
+  </script>
+
+
+
+  <div class="govuk-cookie-banner" data-nosnippet role="region" aria-label="Cookies on GOV.UK Design System" hidden data-module="govuk-cookie-banner" data-cookie-category="analytics">
+  <div class="govuk-cookie-banner__message app-width-container js-cookie-banner-message govuk-width-container">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-cookie-banner__heading govuk-heading-m">
+          Cookies on GOV.UK Design System
+        </h2>
+        <div class="govuk-cookie-banner__content">
+          <p class="govuk-body">We’d like to use analytics cookies so we can understand how you use the Design System and make improvements.</p>
+                <p class="govuk-body">We also use essential cookies to remember if you’ve accepted analytics cookies.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="govuk-button-group">
+      <button type="button" class="govuk-button js-cookie-banner-accept" data-module="govuk-button">
+        Accept analytics cookies
+      </button>
+      <button type="button" class="govuk-button js-cookie-banner-reject" data-module="govuk-button">
+        Reject analytics cookies
+      </button>
+      <a class="govuk-link" href="/cookies/">View cookies</a>
+    </div>
+
+  </div>
+  <div class="govuk-cookie-banner__message js-cookie-banner-confirmation-accept app-width-container govuk-width-container" role="alert" hidden>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-cookie-banner__content">
+          <p class="govuk-body">You’ve accepted analytics cookies. You can <a class="govuk-link" href="/cookies/">change your cookie settings</a> at any time.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="govuk-button-group">
+      <button type="button" class="govuk-button js-cookie-banner-hide js-cookie-banner-hide--accept" data-module="govuk-button">
+        Hide cookie message
+      </button>
+    </div>
+
+  </div>
+  <div class="govuk-cookie-banner__message js-cookie-banner-confirmation-reject app-width-container govuk-width-container" role="alert" hidden>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-cookie-banner__content">
+          <p class="govuk-body">You’ve rejected analytics cookies. You can <a class="govuk-link" href="/cookies/">change your cookie settings</a> at any time.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="govuk-button-group">
+      <button type="button" class="govuk-button js-cookie-banner-hide js-cookie-banner-hide--reject" data-module="govuk-button">
+        Hide cookie message
+      </button>
+    </div>
+
+  </div>
+</div>
+
+
+  
+  <script>
+    (function () {
+      // Skip early setup when cookie banner component is not supported
+      if (!('noModule' in HTMLScriptElement.prototype)) {
+        return
+      }
+
+      /**
+       * Check the cookie preferences object.
+       *
+       * If the consent object is not present, malformed, or incorrect version,
+       * returns false, otherwise returns true.
+       *
+       * This is also duplicated in cookie-functions.js - the two need to be kept in sync
+       */
+      function isValidConsentCookie (options) {
+        return (options && options.version >= window.GDS_CONSENT_COOKIE_VERSION)
+      }
+
+      function categoryIsNull (options) {
+        return (options && options.analytics === null)
+      }
+
+      // Don't show the banner on the cookies page
+      if (window.location.pathname !== "/cookies/") {
+        // Show the banner if there is no consent cookie or if it is outdated
+        var currentConsentCookie = document.cookie.match(new RegExp('(^| )design_system_cookies_policy=([^;]+)'))
+
+        const cookieData = currentConsentCookie && JSON.parse(currentConsentCookie[2]);
+        const cookieNotSet = (!currentConsentCookie || !isValidConsentCookie(cookieData))
+        const categoryNotSet = isValidConsentCookie(cookieData) && categoryIsNull(cookieData)
+
+        if (cookieNotSet || categoryNotSet) {
+          var cookieBanner = document.querySelector("[data-cookie-category='analytics']")
+          cookieBanner.removeAttribute('hidden')
+        }
+      }
+    })()
+  </script>
+
+
+      <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+
+
+
+<header class="govuk-header govuk-header--full-width-border" role="banner">
+  <div class="govuk-header__container app-width-container">
+    <div class="govuk-header__logo app-header-logo">
+      <a href="/" class="govuk-header__link govuk-header__link--homepage">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          role="img"
+          viewBox="0 0 324 60"
+          height="30"
+          width="162"
+          fill="currentcolor"
+          class="govuk-header__logotype"
+          aria-label="GOV.UK">
+          <title>GOV.UK</title>
+          <g>
+            <circle cx="20" cy="17.6" r="3.7"></circle>
+            <circle cx="10.2" cy="23.5" r="3.7"></circle>
+            <circle cx="3.7" cy="33.2" r="3.7"></circle>
+            <circle cx="31.7" cy="30.6" r="3.7"></circle>
+            <circle cx="43.3" cy="17.6" r="3.7"></circle>
+            <circle cx="53.2" cy="23.5" r="3.7"></circle>
+            <circle cx="59.7" cy="33.2" r="3.7"></circle>
+            <circle cx="31.7" cy="30.6" r="3.7"></circle>
+            <path d="M33.1,9.8c.2-.1.3-.3.5-.5l4.6,2.4v-6.8l-4.6,1.5c-.1-.2-.3-.3-.5-.5l1.9-5.9h-6.7l1.9,5.9c-.2.1-.3.3-.5.5l-4.6-1.5v6.8l4.6-2.4c.1.2.3.3.5.5l-2.6,8c-.9,2.8,1.2,5.7,4.1,5.7h0c3,0,5.1-2.9,4.1-5.7l-2.6-8ZM37,37.9s-3.4,3.8-4.1,6.1c2.2,0,4.2-.5,6.4-2.8l-.7,8.5c-2-2.8-4.4-4.1-5.7-3.8.1,3.1.5,6.7,5.8,7.2,3.7.3,6.7-1.5,7-3.8.4-2.6-2-4.3-3.7-1.6-1.4-4.5,2.4-6.1,4.9-3.2-1.9-4.5-1.8-7.7,2.4-10.9,3,4,2.6,7.3-1.2,11.1,2.4-1.3,6.2,0,4,4.6-1.2-2.8-3.7-2.2-4.2.2-.3,1.7.7,3.7,3,4.2,1.9.3,4.7-.9,7-5.9-1.3,0-2.4.7-3.9,1.7l2.4-8c.6,2.3,1.4,3.7,2.2,4.5.6-1.6.5-2.8,0-5.3l5,1.8c-2.6,3.6-5.2,8.7-7.3,17.5-7.4-1.1-15.7-1.7-24.5-1.7h0c-8.8,0-17.1.6-24.5,1.7-2.1-8.9-4.7-13.9-7.3-17.5l5-1.8c-.5,2.5-.6,3.7,0,5.3.8-.8,1.6-2.3,2.2-4.5l2.4,8c-1.5-1-2.6-1.7-3.9-1.7,2.3,5,5.2,6.2,7,5.9,2.3-.4,3.3-2.4,3-4.2-.5-2.4-3-3.1-4.2-.2-2.2-4.6,1.6-6,4-4.6-3.7-3.7-4.2-7.1-1.2-11.1,4.2,3.2,4.3,6.4,2.4,10.9,2.5-2.8,6.3-1.3,4.9,3.2-1.8-2.7-4.1-1-3.7,1.6.3,2.3,3.3,4.1,7,3.8,5.4-.5,5.7-4.2,5.8-7.2-1.3-.2-3.7,1-5.7,3.8l-.7-8.5c2.2,2.3,4.2,2.7,6.4,2.8-.7-2.3-4.1-6.1-4.1-6.1h10.6,0Z"></path>
+          </g>
+          <circle class="govuk-logo-dot" cx="227" cy="36" r="7.3"></circle>
+          <path d="M94.7,36.1c0,1.9.2,3.6.7,5.4.5,1.7,1.2,3.2,2.1,4.5.9,1.3,2.2,2.4,3.6,3.2,1.5.8,3.2,1.2,5.3,1.2s3.6-.3,4.9-.9c1.3-.6,2.3-1.4,3.1-2.3.8-.9,1.3-2,1.6-3,.3-1.1.5-2.1.5-3v-.4h-11v-6.6h19.5v24h-7.7v-5.4c-.5.8-1.2,1.6-2,2.3-.8.7-1.7,1.3-2.7,1.8-1,.5-2.1.9-3.3,1.2-1.2.3-2.5.4-3.8.4-3.2,0-6-.6-8.4-1.7-2.5-1.1-4.5-2.7-6.2-4.7-1.7-2-3-4.4-3.8-7.1-.9-2.7-1.3-5.6-1.3-8.7s.5-6,1.5-8.7,2.4-5.1,4.2-7.1c1.8-2,4-3.6,6.5-4.7s5.4-1.7,8.6-1.7,4,.2,5.9.7c1.8.5,3.5,1.1,5.1,2,1.5.9,2.9,1.9,4,3.2,1.2,1.2,2.1,2.6,2.8,4.1l-7.7,4.3c-.5-.9-1-1.8-1.6-2.6-.6-.8-1.3-1.5-2.2-2.1-.8-.6-1.7-1-2.8-1.4-1-.3-2.2-.5-3.5-.5-2,0-3.8.4-5.3,1.2s-2.7,1.9-3.6,3.2c-.9,1.3-1.7,2.8-2.1,4.6s-.7,3.5-.7,5.3v.3h0ZM152.9,13.7c3.2,0,6.1.6,8.7,1.7,2.6,1.2,4.7,2.7,6.5,4.7,1.8,2,3.1,4.4,4.1,7.1s1.4,5.6,1.4,8.7-.5,6-1.4,8.7c-.9,2.7-2.3,5.1-4.1,7.1s-4,3.6-6.5,4.7c-2.6,1.1-5.5,1.7-8.7,1.7s-6.1-.6-8.7-1.7c-2.6-1.1-4.7-2.7-6.5-4.7-1.8-2-3.1-4.4-4.1-7.1-.9-2.7-1.4-5.6-1.4-8.7s.5-6,1.4-8.7,2.3-5.1,4.1-7.1c1.8-2,4-3.6,6.5-4.7s5.4-1.7,8.7-1.7h0ZM152.9,50.4c1.9,0,3.6-.4,5-1.1,1.4-.7,2.7-1.7,3.6-3,1-1.3,1.7-2.8,2.2-4.5.5-1.7.8-3.6.8-5.7v-.2c0-2-.3-3.9-.8-5.7-.5-1.7-1.3-3.3-2.2-4.5-1-1.3-2.2-2.3-3.6-3-1.4-.7-3.1-1.1-5-1.1s-3.6.4-5,1.1c-1.5.7-2.7,1.7-3.6,3s-1.7,2.8-2.2,4.5c-.5,1.7-.8,3.6-.8,5.7v.2c0,2.1.3,4,.8,5.7.5,1.7,1.2,3.2,2.2,4.5,1,1.3,2.2,2.3,3.6,3,1.5.7,3.1,1.1,5,1.1ZM189.1,58l-12.3-44h9.8l8.4,32.9h.3l8.2-32.9h9.7l-12.3,44M262.9,50.4c1.3,0,2.5-.2,3.6-.6,1.1-.4,2-.9,2.8-1.7.8-.8,1.4-1.7,1.9-2.9.5-1.2.7-2.5.7-4.1V14h8.6v28.5c0,2.4-.4,4.6-1.3,6.6-.9,2-2.1,3.6-3.7,5-1.6,1.4-3.4,2.4-5.6,3.2-2.2.7-4.5,1.1-7.1,1.1s-4.9-.4-7.1-1.1c-2.2-.7-4-1.8-5.6-3.2s-2.8-3-3.7-5c-.9-2-1.3-4.1-1.3-6.6V14h8.7v27.2c0,1.6.2,2.9.7,4.1.5,1.2,1.1,2.1,1.9,2.9.8.8,1.7,1.3,2.8,1.7s2.3.6,3.6.6h0ZM288.5,14h8.7v19.1l15.5-19.1h10.8l-15.1,17.6,16.1,26.4h-10.2l-11.5-19.7-5.6,6.3v13.5h-8.7"></path>
+        </svg>
+        <span class="govuk-header__product-name">
+          Design System
+        </span>
+      </a>
+    </div>
+    <div class="app-site-search" data-module="app-search" data-search-index="/search-index-4432b5fb24aae8bec1aba2476e8a491b.json">
+      <label class="govuk-visually-hidden" for="app-site-search__input">Search Design system</label>
+      <a class="app-site-search__link govuk-link" href="/sitemap/">Sitemap</a>
+    </div>
+  </div>
+</header>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  <div class="govuk-service-navigation app-service-navigation"
+data-module="govuk-service-navigation"
+>
+      <div class="govuk-width-container">
+
+    <div class="govuk-service-navigation__container">
+      
+
+      
+        <nav aria-label="Menu" class="govuk-service-navigation__wrapper app-service-navigation__wrapper">
+          <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden>
+            Menu
+          </button>
+
+          <ul class="govuk-service-navigation__list" id="navigation" >
+
+            
+              
+              <li class="govuk-service-navigation__item">
+                  <a class="govuk-service-navigation__link" href="/get-started/" data-module="app-mobile-navigation-section">
+                                    
+Get started      <template>    <ul class="app-mobile-navigation-section__list app-mobile-navigation-section__subnav" hidden>
+      
+      
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/get-started/">
+      Get started overview
+    </a>
+  </li>
+
+
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">Setup guides</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/get-started/prototyping/">
+      Prototyping
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/get-started/production/">
+      Production
+    </a>
+  </li>
+
+            </ul>
+          </li>
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">How to guides</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/get-started/labels-legends-headings/">
+      Making labels and legends headings
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/get-started/extending-and-modifying-components/">
+      Extending and modifying components in production
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/get-started/focus-states/">
+      Understanding focus state styles
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/get-started/new-type-scale/">
+      Updating your service to use the new type scale
+    </a>
+  </li>
+
+            </ul>
+          </li>
+    </ul>
+</template>
+
+                  </a>
+              </li>
+
+              
+              <li class="govuk-service-navigation__item">
+                  <a class="govuk-service-navigation__link" href="/styles/" data-module="app-mobile-navigation-section">
+                                    
+Styles      <template>    <ul class="app-mobile-navigation-section__list app-mobile-navigation-section__subnav" hidden>
+      
+      
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/">
+      Styles overview
+    </a>
+  </li>
+
+
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">Page structure</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/page-template/">
+      Page template
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/layout/">
+      Layout
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/spacing/">
+      Spacing
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/section-break/">
+      Section break
+    </a>
+  </li>
+
+            </ul>
+          </li>
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">Typography</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/typeface/">
+      Typeface
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/type-scale/">
+      Type scale
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/headings/">
+      Headings
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/paragraphs/">
+      Paragraphs
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/links/">
+      Links
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/lists/">
+      Lists
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/font-override-classes/">
+      Font override classes
+    </a>
+  </li>
+
+            </ul>
+          </li>
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">Visual elements</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/colour/">
+      Colour
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/images/">
+      Images
+    </a>
+  </li>
+
+            </ul>
+          </li>
+    </ul>
+</template>
+
+                  </a>
+              </li>
+
+              
+              <li class="govuk-service-navigation__item govuk-service-navigation__item--active">
+                  <a class="govuk-service-navigation__link" href="/components/" aria-current="true" data-module="app-mobile-navigation-section">
+                                    
+                  <strong class="govuk-service-navigation__active-fallback">Components      <template>    <ul class="app-mobile-navigation-section__list app-mobile-navigation-section__subnav" hidden>
+      
+      
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/">
+      Components overview
+    </a>
+  </li>
+
+
+          <li>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/accordion/">
+      Accordion
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/back-link/">
+      Back link
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/breadcrumbs/">
+      Breadcrumbs
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/button/">
+      Button
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/character-count/">
+      Character count
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/checkboxes/">
+      Checkboxes
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/cookie-banner/">
+      Cookie banner
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/date-input/">
+      Date input
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/details/">
+      Details
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/error-message/">
+      Error message
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/error-summary/">
+      Error summary
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/exit-this-page/">
+      Exit this page
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/fieldset/">
+      Fieldset
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/file-upload/">
+      File upload
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/footer/">
+      GOV.UK footer
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/header/">
+      GOV.UK header
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/inset-text/">
+      Inset text
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/notification-banner/">
+      Notification banner
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/pagination/">
+      Pagination
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/panel/">
+      Panel
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/password-input/">
+      Password input
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item app-mobile-navigation-section__item--active">
+    <a class="govuk-service-navigation__link"
+        href="/components/phase-banner/" aria-current="page">
+      Phase banner
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/radios/">
+      Radios
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/select/">
+      Select
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/service-navigation/">
+      Service navigation
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/skip-link/">
+      Skip link
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/summary-list/">
+      Summary list
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/table/">
+      Table
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/tabs/">
+      Tabs
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/tag/">
+      Tag
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/task-list/">
+      Task list
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/text-input/">
+      Text input
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/textarea/">
+      Textarea
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/warning-text/">
+      Warning text
+    </a>
+  </li>
+
+            </ul>
+          </li>
+    </ul>
+</template>
+</strong>
+
+                  </a>
+              </li>
+
+              
+              <li class="govuk-service-navigation__item">
+                  <a class="govuk-service-navigation__link" href="/patterns/" data-module="app-mobile-navigation-section">
+                                    
+Patterns      <template>    <ul class="app-mobile-navigation-section__list app-mobile-navigation-section__subnav" hidden>
+      
+      
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/">
+      Patterns overview
+    </a>
+  </li>
+
+
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">Ask users for…</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/addresses/">
+      Addresses
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/bank-details/">
+      Bank details
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/dates/">
+      Dates
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/email-addresses/">
+      Email addresses
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/equality-information/">
+      Equality information
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/names/">
+      Names
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/national-insurance-numbers/">
+      National Insurance numbers
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/passwords/">
+      Passwords
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/payment-card-details/">
+      Payment card details
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/phone-numbers/">
+      Phone numbers
+    </a>
+  </li>
+
+            </ul>
+          </li>
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">Help users to…</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/check-a-service-is-suitable/">
+      Check a service is suitable
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/check-answers/">
+      Check answers
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/complete-multiple-tasks/">
+      Complete multiple tasks
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/confirm-a-phone-number/">
+      Confirm a phone number
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/confirm-an-email-address/">
+      Confirm an email address
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/contact-a-department-or-service-team/">
+      Contact a department or service team
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/create-a-username/">
+      Create a username
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/create-accounts/">
+      Create accounts
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/exit-a-page-quickly/">
+      Exit a page quickly
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/navigate-a-service/">
+      Navigate a service
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/start-using-a-service/">
+      Start using a service
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/validation/">
+      Recover from validation errors
+    </a>
+  </li>
+
+            </ul>
+          </li>
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">Pages</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/confirmation-pages/">
+      Confirmation pages
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/cookies-page/">
+      Cookies page
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/page-not-found-pages/">
+      Page not found pages
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/problem-with-the-service-pages/">
+      There is a problem with the service pages
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/question-pages/">
+      Question pages
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/service-unavailable-pages/">
+      Service unavailable pages
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/step-by-step-navigation/">
+      Step by step navigation
+    </a>
+  </li>
+
+            </ul>
+          </li>
+    </ul>
+</template>
+
+                  </a>
+              </li>
+
+              
+              <li class="govuk-service-navigation__item">
+                  <a class="govuk-service-navigation__link" href="/community/" data-module="app-mobile-navigation-section">
+                                    
+Community      <template>    <ul class="app-mobile-navigation-section__list app-mobile-navigation-section__subnav" hidden>
+      
+      
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/">
+      Community overview
+    </a>
+  </li>
+
+
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">What we’re working on</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/upcoming-components-patterns/">
+      Upcoming components and patterns
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/roadmap/">
+      Roadmap
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/whats-new/">
+      What&#39;s new
+    </a>
+  </li>
+
+            </ul>
+          </li>
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">Ways to get involved</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/share-research-findings/">
+      Share findings about your users
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/propose-a-component-or-pattern/">
+      Propose a component or pattern
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/develop-a-component-or-pattern/">
+      Develop a component or pattern
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/propose-a-content-change-using-github/">
+      Propose a content change using GitHub
+    </a>
+  </li>
+
+            </ul>
+          </li>
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">How we work</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/community-principles/">
+      Community principles
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/contribution-criteria/">
+      Contribution criteria
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/design-system-working-group/">
+      Design System working group
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/blogs-talks-podcasts/">
+      Blog posts, videos and podcasts
+    </a>
+  </li>
+
+            </ul>
+          </li>
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">Resources</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/resources-and-tools/">
+      Resources and tools
+    </a>
+  </li>
+
+            </ul>
+          </li>
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">Events and workshops</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/design-system-day/">
+      Design System Day Events
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/design-system-day-2022/">
+      Design System Day 2022
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/design-system-day-2023/">
+      Design System Day 2023
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/design-system-day-2024/">
+      Design System Day 2024
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/code-of-conduct/">
+      Code of Conduct
+    </a>
+  </li>
+
+            </ul>
+          </li>
+    </ul>
+</template>
+
+                  </a>
+              </li>
+
+              
+              <li class="govuk-service-navigation__item">
+                  <a class="govuk-service-navigation__link" href="/accessibility/" data-module="app-mobile-navigation-section">
+                                    
+Accessibility      <template>    <ul class="app-mobile-navigation-section__list app-mobile-navigation-section__subnav" hidden>
+      
+      
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/accessibility/">
+      Accessibility overview
+    </a>
+  </li>
+
+
+          <li>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/accessibility/accessibility-strategy/">
+      Accessibility strategy
+    </a>
+  </li>
+
+            </ul>
+          </li>
+    </ul>
+</template>
+
+                  </a>
+              </li>
+
+            </ul>
+        </nav>
+    </div>
+
+    </div>
+
+  </div>
+
+
+
+<div class="app-split-pane app-width-container app-main-wrapper">
+  <div class="app-split-pane__nav">
+<!-- [html-validate-disable-next no-unused-disable, unique-landmark -- allow 2 navs with the same aria-labelledby because they contain the same information] -->
+<nav class="app-subnav" aria-labelledby="app-subnav-heading">
+  <h2 class="govuk-visually-hidden" id="app-subnav-heading">Pages in this section</h2>
+        <ul class="app-subnav__section">
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/accordion/">
+              Accordion
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/back-link/">
+              Back link
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/breadcrumbs/">
+              Breadcrumbs
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/button/">
+              Button
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/character-count/">
+              Character count
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/checkboxes/">
+              Checkboxes
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/cookie-banner/">
+              Cookie banner
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/date-input/">
+              Date input
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/details/">
+              Details
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/error-message/">
+              Error message
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/error-summary/">
+              Error summary
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/exit-this-page/">
+              Exit this page
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/fieldset/">
+              Fieldset
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/file-upload/">
+              File upload
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/footer/">
+              GOV.UK footer
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/header/">
+              GOV.UK header
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/inset-text/">
+              Inset text
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/notification-banner/">
+              Notification banner
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/pagination/">
+              Pagination
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/panel/">
+              Panel
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/password-input/">
+              Password input
+            </a>
+          </li>
+          <li class="app-subnav__section-item app-subnav__section-item--current">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/phase-banner/" aria-current="page">
+              Phase banner
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/radios/">
+              Radios
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/select/">
+              Select
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/service-navigation/">
+              Service navigation
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/skip-link/">
+              Skip link
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/summary-list/">
+              Summary list
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/table/">
+              Table
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/tabs/">
+              Tabs
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/tag/">
+              Tag
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/task-list/">
+              Task list
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/text-input/">
+              Text input
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/textarea/">
+              Textarea
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/warning-text/">
+              Warning text
+            </a>
+          </li>
+        </ul>
+</nav>
+  </div>
+  <div class="app-split-pane__content">
+    <nav class="govuk-breadcrumbs app-breadcrumbs" aria-label="Breadcrumb">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/components">Components</a>
+    </li>
+  </ol>
+</nav>
+
+    <main id="main-content" class="app-content" role="main">
+      <h1 class="govuk-heading-xl">
+        Phase banner
+      </h1>
+
+
+
+      <div class="app-prose-scope">
+        <p>Use the phase banner component to show users your service is still being worked on.</p>
+<div class="app-example-wrapper" id="phase-banner-example" data-module="app-tabs">
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/components/phase-banner/default/index.html" class="app-example__new-window" target="_blank">
+          Open this example in a new tab<span class="govuk-visually-hidden">: phase banner</span>
+        </a>
+      </div>
+      <iframe title="Phase banner example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable" src="/components/phase-banner/default/index.html" loading="eager"></iframe>
+    </div>
+    <span id="options-phase-banner-example"></span>
+    <ul class="app-tabs" role="tablist">
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#phase-banner-example-html" role="tab" aria-controls="phase-banner-example-html" data-track="tab-html">HTML</a></li>
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#phase-banner-example-nunjucks" role="tab" aria-controls="phase-banner-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></li>
+    </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#phase-banner-example-html" aria-controls="phase-banner-example-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="phase-banner-example-html" role="tabpanel">
+      <div class="app-example__code" data-module="app-copy">
+
+<pre><code data-module="app-scroll-container" tabindex="0" class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-phase-banner&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-phase-banner__content&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">strong</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-tag govuk-phase-banner__content__tag&quot;</span>&gt;</span>
+      Alpha
+    <span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-phase-banner__text&quot;</span>&gt;</span>
+      This is a new service. Help us improve it and <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>give your feedback by email<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+    <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+      </div>
+    </div>
+      <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#phase-banner-example-nunjucks" aria-controls="phase-banner-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
+<div class="app-tabs__container js-tabs__container" id="phase-banner-example-nunjucks" role="tabpanel">
+<details class="govuk-details app-options" id="options-phase-banner-example-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      <span data-components="github-component-arguments">Nunjucks macro options</span>
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+              <p>
+          Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
+          </p>
+          <p>
+          Some options are required for the macro to work; these are marked as “Required” in the option description. Deprecated options are marked as “Deprecated”.
+          </p>
+          <p>
+          If you’re using Nunjucks macros in production with “html” options, or ones ending with “html”, you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
+          </p>
+            <table class="govuk-table app-options__table" id="options-phase-banner-example--primary">
+              <caption class="govuk-table__caption govuk-heading-m  govuk-visually-hidden">Primary options</caption>
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th class="govuk-table__header app-options__limit-table-cell" scope="col">Name</th>
+                  <th class="govuk-table__header app-options__limit-table-cell" scope="col">Type</th>
+                  <th class="govuk-table__header" scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">text</th>
+                    <td class="govuk-table__cell">string</td>
+                    <td class="govuk-table__cell">
+                      <strong>Required.</strong>
+                      If <code>html</code> is set, this is not required. Text to use within the phase banner. If <code>html</code> is provided, the <code>text</code> option will be ignored.
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">html</th>
+                    <td class="govuk-table__cell">string</td>
+                    <td class="govuk-table__cell">
+                      <strong>Required.</strong>
+                      If <code>text</code> is set, this is not required. HTML to use within the phase banner. If <code>html</code> is provided, the <code>text</code> option will be ignored.
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">tag</th>
+                    <td class="govuk-table__cell">object</td>
+                    <td class="govuk-table__cell">
+                      <strong>Required.</strong>
+                      The tag used by the phase banner component.
+                      <a href="/components/tag/#options-tag-example">See macro options for tag</a>.
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">classes</th>
+                    <td class="govuk-table__cell">string</td>
+                    <td class="govuk-table__cell">
+                      Classes to add to the phase banner container.
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">attributes</th>
+                    <td class="govuk-table__cell">object</td>
+                    <td class="govuk-table__cell">
+                      HTML attributes (for example data attributes) to add to the phase banner container.
+                    </td>
+                  </tr>
+              </tbody>
+            </table>
+
+  </div>
+</details>
+
+<div class="app-example__code" data-module="app-copy">
+
+<pre><code data-module="app-scroll-container" tabindex="0" class="language-njk"><span class="hljs-tag">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/phase-banner/macro.njk&quot;</span> <span class="hljs-keyword">import</span> <span class="hljs-variable">govukPhaseBanner</span> %}</span><span class="language-xml">
+
+</span><span class="hljs-tag">{{ <span class="hljs-title">govukPhaseBanner</span><span class="language-javascript">({
+  <span class="hljs-attr">tag</span>: {
+    <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Alpha&quot;</span>
+  },
+  <span class="hljs-attr">html</span>: <span class="hljs-string">&#x27;This is a new service. Help us improve it and &lt;a class=&quot;govuk-link&quot; href=&quot;#&quot;&gt;give your feedback by email&lt;/a&gt;.&#x27;</span>
+})</span> }}</span></code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+<h2 id="when-to-use-this-component">When to use this component</h2>
+<p>Services hosted on a service.gov.uk domain must use the phase banner until they pass a live assessment.</p>
+<h2 id="how-it-works">How it works</h2>
+<p>There are 2 ways to use the phase banner component. You can use HTML or, if you are using <a href="https://mozilla.github.io/nunjucks/">Nunjucks</a> or the <a href="https://prototype-kit.service.gov.uk">GOV.UK Prototype Kit</a>, you can use the Nunjucks macro.</p>
+<p>Use an alpha banner when your service is in alpha, and a beta banner if your service is in private or public beta.</p>
+<p>Show the Phase banner directly under either:</p>
+<ul>
+<li>the <a href="/components/service-navigation/">Service navigation component</a></li>
+<li>the <a href="/components/header/">GOV.UK header component</a> and its blue colour bar (if your service does not use the Service navigation component)</li>
+</ul>
+<p>Phase banners are shown across all pages of a service, so users should understand it as a service-level message.</p>
+<p>You can choose to place the Phase banner in a more appropriate place for your service, however you’ll need to customise the component and provide your own CSS code to make it show correctly.</p>
+<h3 id="add-a-feedback-link">Add a feedback link</h3>
+<p>Use a ‘feedback’ link to collect on-page feedback about your service. This can open an email or take the user to a dedicated page or form.</p>
+<div class="app-example-wrapper" id="phase-banner-second-example" data-module="app-tabs">
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/components/phase-banner/default/index.html" class="app-example__new-window" target="_blank">
+          Open this example in a new tab<span class="govuk-visually-hidden">: phase banner second</span>
+        </a>
+      </div>
+      <iframe title="Phase banner second example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable" src="/components/phase-banner/default/index.html" loading="lazy"></iframe>
+    </div>
+    <span id="options-phase-banner-second-example"></span>
+    <ul class="app-tabs" role="tablist">
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#phase-banner-second-example-html" role="tab" aria-controls="phase-banner-second-example-html" data-track="tab-html">HTML</a></li>
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#phase-banner-second-example-nunjucks" role="tab" aria-controls="phase-banner-second-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></li>
+    </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#phase-banner-second-example-html" aria-controls="phase-banner-second-example-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="phase-banner-second-example-html" role="tabpanel">
+      <div class="app-example__code" data-module="app-copy">
+
+<pre><code data-module="app-scroll-container" tabindex="0" class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-phase-banner&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-phase-banner__content&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">strong</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-tag govuk-phase-banner__content__tag&quot;</span>&gt;</span>
+      Alpha
+    <span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-phase-banner__text&quot;</span>&gt;</span>
+      This is a new service. Help us improve it and <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>give your feedback by email<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+    <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+      </div>
+    </div>
+      <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#phase-banner-second-example-nunjucks" aria-controls="phase-banner-second-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
+<div class="app-tabs__container js-tabs__container" id="phase-banner-second-example-nunjucks" role="tabpanel">
+<details class="govuk-details app-options" id="options-phase-banner-second-example-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      <span data-components="github-component-arguments">Nunjucks macro options</span>
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+              <p>
+          Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
+          </p>
+          <p>
+          Some options are required for the macro to work; these are marked as “Required” in the option description. Deprecated options are marked as “Deprecated”.
+          </p>
+          <p>
+          If you’re using Nunjucks macros in production with “html” options, or ones ending with “html”, you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
+          </p>
+            <table class="govuk-table app-options__table" id="options-phase-banner-second-example--primary">
+              <caption class="govuk-table__caption govuk-heading-m  govuk-visually-hidden">Primary options</caption>
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th class="govuk-table__header app-options__limit-table-cell" scope="col">Name</th>
+                  <th class="govuk-table__header app-options__limit-table-cell" scope="col">Type</th>
+                  <th class="govuk-table__header" scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">text</th>
+                    <td class="govuk-table__cell">string</td>
+                    <td class="govuk-table__cell">
+                      <strong>Required.</strong>
+                      If <code>html</code> is set, this is not required. Text to use within the phase banner. If <code>html</code> is provided, the <code>text</code> option will be ignored.
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">html</th>
+                    <td class="govuk-table__cell">string</td>
+                    <td class="govuk-table__cell">
+                      <strong>Required.</strong>
+                      If <code>text</code> is set, this is not required. HTML to use within the phase banner. If <code>html</code> is provided, the <code>text</code> option will be ignored.
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">tag</th>
+                    <td class="govuk-table__cell">object</td>
+                    <td class="govuk-table__cell">
+                      <strong>Required.</strong>
+                      The tag used by the phase banner component.
+                      <a href="/components/tag/#options-tag-example">See macro options for tag</a>.
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">classes</th>
+                    <td class="govuk-table__cell">string</td>
+                    <td class="govuk-table__cell">
+                      Classes to add to the phase banner container.
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">attributes</th>
+                    <td class="govuk-table__cell">object</td>
+                    <td class="govuk-table__cell">
+                      HTML attributes (for example data attributes) to add to the phase banner container.
+                    </td>
+                  </tr>
+              </tbody>
+            </table>
+
+  </div>
+</details>
+
+<div class="app-example__code" data-module="app-copy">
+
+<pre><code data-module="app-scroll-container" tabindex="0" class="language-njk"><span class="hljs-tag">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/phase-banner/macro.njk&quot;</span> <span class="hljs-keyword">import</span> <span class="hljs-variable">govukPhaseBanner</span> %}</span><span class="language-xml">
+
+</span><span class="hljs-tag">{{ <span class="hljs-title">govukPhaseBanner</span><span class="language-javascript">({
+  <span class="hljs-attr">tag</span>: {
+    <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Alpha&quot;</span>
+  },
+  <span class="hljs-attr">html</span>: <span class="hljs-string">&#x27;This is a new service. Help us improve it and &lt;a class=&quot;govuk-link&quot; href=&quot;#&quot;&gt;give your feedback by email&lt;/a&gt;.&#x27;</span>
+})</span> }}</span></code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="app-example-wrapper" id="phase-banner-with-beta-text-phase-banner-example" data-module="app-tabs">
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/components/phase-banner/beta/index.html" class="app-example__new-window" target="_blank">
+          Open this example in a new tab<span class="govuk-visually-hidden">: phase banner with beta text – phase banner</span>
+        </a>
+      </div>
+      <iframe title="Phase banner with beta text – Phase banner example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable" src="/components/phase-banner/beta/index.html" loading="lazy"></iframe>
+    </div>
+    <span id="options-phase-banner-with-beta-text-phase-banner-example"></span>
+    <ul class="app-tabs" role="tablist">
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#phase-banner-with-beta-text-phase-banner-example-html" role="tab" aria-controls="phase-banner-with-beta-text-phase-banner-example-html" data-track="tab-html">HTML</a></li>
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#phase-banner-with-beta-text-phase-banner-example-nunjucks" role="tab" aria-controls="phase-banner-with-beta-text-phase-banner-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></li>
+    </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#phase-banner-with-beta-text-phase-banner-example-html" aria-controls="phase-banner-with-beta-text-phase-banner-example-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="phase-banner-with-beta-text-phase-banner-example-html" role="tabpanel">
+      <div class="app-example__code" data-module="app-copy">
+
+<pre><code data-module="app-scroll-container" tabindex="0" class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-phase-banner&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-phase-banner__content&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">strong</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-tag govuk-phase-banner__content__tag&quot;</span>&gt;</span>
+      Beta
+    <span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-phase-banner__text&quot;</span>&gt;</span>
+      This is a new service. Help us improve it and <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>give your feedback (opens in new tab)<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+    <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+      </div>
+    </div>
+      <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#phase-banner-with-beta-text-phase-banner-example-nunjucks" aria-controls="phase-banner-with-beta-text-phase-banner-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
+<div class="app-tabs__container js-tabs__container" id="phase-banner-with-beta-text-phase-banner-example-nunjucks" role="tabpanel">
+<details class="govuk-details app-options" id="options-phase-banner-with-beta-text-phase-banner-example-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      <span data-components="github-component-arguments">Nunjucks macro options</span>
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+              <p>
+          Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
+          </p>
+          <p>
+          Some options are required for the macro to work; these are marked as “Required” in the option description. Deprecated options are marked as “Deprecated”.
+          </p>
+          <p>
+          If you’re using Nunjucks macros in production with “html” options, or ones ending with “html”, you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.
+          </p>
+            <table class="govuk-table app-options__table" id="options-phase-banner-with-beta-text-phase-banner-example--primary">
+              <caption class="govuk-table__caption govuk-heading-m  govuk-visually-hidden">Primary options</caption>
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th class="govuk-table__header app-options__limit-table-cell" scope="col">Name</th>
+                  <th class="govuk-table__header app-options__limit-table-cell" scope="col">Type</th>
+                  <th class="govuk-table__header" scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">text</th>
+                    <td class="govuk-table__cell">string</td>
+                    <td class="govuk-table__cell">
+                      <strong>Required.</strong>
+                      If <code>html</code> is set, this is not required. Text to use within the phase banner. If <code>html</code> is provided, the <code>text</code> option will be ignored.
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">html</th>
+                    <td class="govuk-table__cell">string</td>
+                    <td class="govuk-table__cell">
+                      <strong>Required.</strong>
+                      If <code>text</code> is set, this is not required. HTML to use within the phase banner. If <code>html</code> is provided, the <code>text</code> option will be ignored.
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">tag</th>
+                    <td class="govuk-table__cell">object</td>
+                    <td class="govuk-table__cell">
+                      <strong>Required.</strong>
+                      The tag used by the phase banner component.
+                      <a href="/components/tag/#options-tag-example">See macro options for tag</a>.
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">classes</th>
+                    <td class="govuk-table__cell">string</td>
+                    <td class="govuk-table__cell">
+                      Classes to add to the phase banner container.
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">attributes</th>
+                    <td class="govuk-table__cell">object</td>
+                    <td class="govuk-table__cell">
+                      HTML attributes (for example data attributes) to add to the phase banner container.
+                    </td>
+                  </tr>
+              </tbody>
+            </table>
+
+  </div>
+</details>
+
+<div class="app-example__code" data-module="app-copy">
+
+<pre><code data-module="app-scroll-container" tabindex="0" class="language-njk"><span class="hljs-tag">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/phase-banner/macro.njk&quot;</span> <span class="hljs-keyword">import</span> <span class="hljs-variable">govukPhaseBanner</span> %}</span><span class="language-xml">
+
+</span><span class="hljs-tag">{{ <span class="hljs-title">govukPhaseBanner</span><span class="language-javascript">({
+  <span class="hljs-attr">tag</span>: {
+    <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Beta&quot;</span>
+  },
+  <span class="hljs-attr">html</span>: <span class="hljs-string">&#x27;This is a new service. Help us improve it and &lt;a class=&quot;govuk-link&quot; href=&quot;#&quot;&gt;give your feedback (opens in new tab)&lt;/a&gt;.&#x27;</span>
+})</span> }}</span></code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+<p>Whatever option you use, make sure that users do not lose their place in the service and can return to the page they were on.</p>
+<p><a href="https://www.gov.uk/service-manual/measuring-success/measuring-user-satisfaction#user-satisfaction-through-each-service-phase">Find out what feedback you need to collect at each phase</a> in the GOV.UK Service Manual.</p>
+
+      </div>
+
+      
+
+  <h2 class="govuk-heading-l govuk-!-padding-top-7" id="help-improve-this-page">Help improve this component</h2>
+
+    <p class="govuk-body">
+      To help make sure that this page is useful, relevant and up to date, you can:
+    </p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        take part in the
+        <a class="govuk-link app-contact-panel__link" href="https://github.com/alphagov/govuk-design-system-backlog/issues/57">
+          ‘Phase banner’ discussion on GitHub
+        </a>
+        and share your research
+      </li>
+      <li>
+        <a class="govuk-link app-contact-panel__link" href="https://github.com/alphagov/govuk-design-system/edit/main/src/components/phase-banner/index.md">propose a change on GitHub</a>
+        – read more about
+        <a class="govuk-link app-contact-panel__link" href="/community/propose-a-content-change-using-github/">
+          how to propose changes in GitHub
+        </a>
+      </li>
+    </ul>
+
+<div class="app-contact-panel">
+  <h2 class="app-contact-panel__heading">Need help?</h2>
+
+  <p class="govuk-body app-contact-panel__body">
+    If you’ve got a question about the GOV.UK Design System, <a class="govuk-link" href="/get-in-touch/">contact the team</a>.
+  </p>
+</div>
+    </main>
+  </div>
+<div class="app-back-to-top app-back-to-top--hidden" data-module="app-back-to-top">
+  <a class="govuk-link govuk-link--no-visited-state app-back-to-top__link" href="#top">
+    <svg role="presentation" focusable="false" class="app-back-to-top__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17">
+      <path fill="currentColor" d="M6.5 0L0 6.5 1.4 8l4-4v12.7h2V4l4.3 4L13 6.4z"></path>
+    </svg>Back to top
+  </a>
+</div>
+</div>
+
+<footer class="govuk-footer app-footer">
+  <div class="govuk-width-container app-width-container">
+
+  
+  <svg
+    focusable="false"
+    role="presentation"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 64 60"
+    height="30"
+    width="32"
+    fill="currentcolor" class="govuk-footer__crown"
+  >    <g>
+        <circle cx="20" cy="17.6" r="3.7"/>
+        <circle cx="10.2" cy="23.5" r="3.7"/>
+        <circle cx="3.7" cy="33.2" r="3.7"/>
+        <circle cx="31.7" cy="30.6" r="3.7"/>
+        <circle cx="43.3" cy="17.6" r="3.7"/>
+        <circle cx="53.2" cy="23.5" r="3.7"/>
+        <circle cx="59.7" cy="33.2" r="3.7"/>
+        <circle cx="31.7" cy="30.6" r="3.7"/>
+        <path d="M33.1,9.8c.2-.1.3-.3.5-.5l4.6,2.4v-6.8l-4.6,1.5c-.1-.2-.3-.3-.5-.5l1.9-5.9h-6.7l1.9,5.9c-.2.1-.3.3-.5.5l-4.6-1.5v6.8l4.6-2.4c.1.2.3.3.5.5l-2.6,8c-.9,2.8,1.2,5.7,4.1,5.7h0c3,0,5.1-2.9,4.1-5.7l-2.6-8ZM37,37.9s-3.4,3.8-4.1,6.1c2.2,0,4.2-.5,6.4-2.8l-.7,8.5c-2-2.8-4.4-4.1-5.7-3.8.1,3.1.5,6.7,5.8,7.2,3.7.3,6.7-1.5,7-3.8.4-2.6-2-4.3-3.7-1.6-1.4-4.5,2.4-6.1,4.9-3.2-1.9-4.5-1.8-7.7,2.4-10.9,3,4,2.6,7.3-1.2,11.1,2.4-1.3,6.2,0,4,4.6-1.2-2.8-3.7-2.2-4.2.2-.3,1.7.7,3.7,3,4.2,1.9.3,4.7-.9,7-5.9-1.3,0-2.4.7-3.9,1.7l2.4-8c.6,2.3,1.4,3.7,2.2,4.5.6-1.6.5-2.8,0-5.3l5,1.8c-2.6,3.6-5.2,8.7-7.3,17.5-7.4-1.1-15.7-1.7-24.5-1.7h0c-8.8,0-17.1.6-24.5,1.7-2.1-8.9-4.7-13.9-7.3-17.5l5-1.8c-.5,2.5-.6,3.7,0,5.3.8-.8,1.6-2.3,2.2-4.5l2.4,8c-1.5-1-2.6-1.7-3.9-1.7,2.3,5,5.2,6.2,7,5.9,2.3-.4,3.3-2.4,3-4.2-.5-2.4-3-3.1-4.2-.2-2.2-4.6,1.6-6,4-4.6-3.7-3.7-4.2-7.1-1.2-11.1,4.2,3.2,4.3,6.4,2.4,10.9,2.5-2.8,6.3-1.3,4.9,3.2-1.8-2.7-4.1-1-3.7,1.6.3,2.3,3.3,4.1,7,3.8,5.4-.5,5.7-4.2,5.8-7.2-1.3-.2-3.7,1-5.7,3.8l-.7-8.5c2.2,2.3,4.2,2.7,6.4,2.8-.7-2.3-4.1-6.1-4.1-6.1h10.6,0Z"/>
+      </g>
+  </svg>
+
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+        <h2 class="govuk-visually-hidden">Support links</h2>
+        <ul class="govuk-footer__inline-list">
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="/accessibility-statement/">
+              Accessibility statement
+            </a>
+          </li>
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="/sitemap/">
+              Sitemap
+            </a>
+          </li>
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="/cookies/">
+              Cookies
+            </a>
+          </li>
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="/privacy-policy/">
+              Privacy
+            </a>
+          </li>
+        </ul>
+        <div class="govuk-footer__meta-custom">
+          Built by the <a href="/design-system-team/" class="govuk-footer__link">GOV.UK Design System team</a>
+        </div>
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          class="govuk-footer__licence-logo"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 483.2 195.7"
+          height="17"
+          width="41"
+        >
+          <path
+            fill="currentColor"
+            d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+          />
+        </svg>
+        <span class="govuk-footer__licence-description">
+          All content is available under the
+          <a
+            class="govuk-footer__link"
+            href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+            rel="license"
+          >Open Government Licence v3.0</a>, except where otherwise stated
+        </span>
+      </div>
+      <div class="govuk-footer__meta-item">
+        <a
+          class="govuk-footer__link govuk-footer__copyright-logo"
+          href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+        >
+          © Crown copyright
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+  <script type="module" src="/javascripts/application-73d194447c36a6ee2c2391f2ae156c74.js"></script>
+  </body>
+</html>

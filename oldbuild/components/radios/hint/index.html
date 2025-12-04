@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template govuk-template--rebranded app-example-page__wrapper">
+  <head>
+    <meta charset="utf-8">
+    <title>Radio items with hint – Radios – Example – GOV.UK Design System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#1d70b8">
+
+      <link rel="icon" sizes="48x48" href="/assets/rebrand/images/favicon.ico">
+      <link rel="icon" sizes="any" href="/assets/rebrand/images/favicon.svg" type="image/svg+xml">
+      <link rel="mask-icon" href="/assets/rebrand/images/govuk-icon-mask.svg" color="#1d70b8">
+      <link rel="apple-touch-icon" href="/assets/rebrand/images/govuk-icon-180.png">
+      <link rel="manifest" href="/assets/rebrand/manifest.json">
+
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="og:title" content="Radio items with hint – Radios">
+  <meta name="description" content="">
+  <meta name="og:description" content="">
+  <link rel="canonical" href="https://design-system.service.gov.uk/components/radios/hint/">
+
+  <link href="/stylesheets/govuk-frontend-29487252a98c73d40fcf1c4a638d1d2d.min.css" rel="stylesheet" media="all">
+  <link href="/stylesheets/example-28cf8f56ce3cba62d258b5725b59ecd7.css" rel="stylesheet" media="all">
+
+    <meta property="og:image" content="https://design-system.service.gov.uk/assets/images/govuk-opengraph-image.png">
+  </head>
+  <body class="govuk-template__body app-example-page">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+
+
+
+  <!-- Disable browser validation for any examples that include form elements -->
+  <form action="/form-handler" method="post" novalidate>
+      
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    <h1 class="govuk-fieldset__heading">
+      How do you want to sign in?
+    </h1>
+  </legend>
+  <div id="signIn-hint" class="govuk-hint">
+    You’ll need an account to prove your identity and complete your Self Assessment
+  </div>
+  <div class="govuk-radios" data-module="govuk-radios">
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="signIn" name="signIn" type="radio" value="government-gateway" aria-describedby="signIn-item-hint">
+      <label class="govuk-label govuk-radios__label" for="signIn">
+        Sign in with Government Gateway
+      </label>
+      <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+        You’ll have a user ID if you’ve registered for Self Assessment or filed a tax return online before
+      </div>
+    </div>
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
+      <label class="govuk-label govuk-radios__label" for="signIn-2">
+        Sign in with GOV.UK One Login
+      </label>
+      <div id="signIn-2-item-hint" class="govuk-hint govuk-radios__hint">
+        If you don’t have a GOV.UK One Login, you can create one
+      </div>
+    </div>
+  </div>
+</fieldset>
+</div>
+
+
+  </form>
+
+
+  <script type="module" src="/javascripts/application-example-df1b1846e6ebb2eca45a9e21924dfbd8.js"></script>
+  </body>
+</html>

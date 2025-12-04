@@ -1,0 +1,1 @@
+{"version":3,"sources":["data:;charset=utf-8,img%20%7B%0A%20%20display:%20inline-block;%0A%20%20max-width:%20100%25;%0A%7D%0A"],"names":[],"mappings":"AAAA,IACE,oBAAA,CACA,cAAA","file":"images.css","sourcesContent":["img {\n  display: inline-block;\n  max-width: 100%;\n}\n"]}
