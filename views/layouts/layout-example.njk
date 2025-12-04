@@ -21,12 +21,12 @@
 {% endblock %}
 
 {# Example pages shouldn't have a skip link or header, so blank the one provided by the template #}
-{% block skipLink %}{% endblock %}
+{% block govukSkipLink %}{% endblock %}
 {% block header %}{% endblock %}
 
 {% set bodyClasses = "app-example-page" %}
 
-{% block main %}
+{% block container %}
   {% block body %}
     {{ contents | safe }}
   {% endblock %}

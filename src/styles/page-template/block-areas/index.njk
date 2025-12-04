@@ -9,6 +9,7 @@ stylesheets:
 {% extends "govuk/template.njk" %}
 
 {% block pageTitle %}{{ title }} – Example - GOV.UK Design System{% endblock %}
+{% set serviceName = title %}
 
 {% block head -%}
   {# Since we’re not extending the Design System layout we need to add this manually #}
@@ -27,9 +28,9 @@ stylesheets:
   </div>
 {%- endblock %}
 
-{% block skipLink -%}
+{% block govukSkipLink -%}
   <div class="app-annotate-block">
-    <span class="app-annotate-block__label">block: skipLink</span>
+    <span class="app-annotate-block__label">block: govukSkipLink</span>
     {{ super() }}
   </div>
 {%- endblock %}
@@ -41,18 +42,46 @@ stylesheets:
   </div>
 {%- endblock %}
 
-{% block main -%}
+{% block headerStart -%}
   <div class="app-annotate-block">
-    <span class="app-annotate-block__label">block: main</span>
+    <span class="app-annotate-block__label">block: headerStart</span>
+    {{ super() }}
+  </div>
+{%- endblock %}
+
+{% block govukHeader -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: govukHeader</span>
+    {{ super() }}
+  </div>
+{%- endblock %}
+
+{% block govukServiceNavigation -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: govukServiceNavigation</span>
+    {{ super() }}
+  </div>
+{%- endblock %}
+
+{% block headerEnd -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: headerEnd</span>
+    {{ super() }}
+  </div>
+{%- endblock %}
+
+{% block container -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: container</span>
     <p class="govuk-body">
     </p>
     {{ super() }}
   </div>
 {%- endblock %}
 
-{% block beforeContent -%}
+{% block containerStart -%}
   <div class="app-annotate-block">
-    <span class="app-annotate-block__label">block: beforeContent</span>
+    <span class="app-annotate-block__label">block: containerStart</span>
     {{ super() }}
     {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
 
@@ -60,6 +89,13 @@ stylesheets:
       href: "/",
       text: "Back"
     }) }}
+  </div>
+{%- endblock %}
+
+{% block main -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: main</span>
+    {{ super() }}
   </div>
 {%- endblock %}
 
@@ -71,9 +107,37 @@ stylesheets:
   </div>
 {%- endblock %}
 
+{% block containerEnd -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: containerEnd</span>
+    {{ super() }}
+  </div>
+{%- endblock %}
+
 {% block footer -%}
   <div class="app-annotate-block">
     <span class="app-annotate-block__label">block: footer</span>
+    {{ super() }}
+  </div>
+{%- endblock %}
+
+{% block footerStart -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: footerStart</span>
+    {{ super() }}
+  </div>
+{%- endblock %}
+
+{% block govukFooter -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: govukFooter</span>
+    {{ super() }}
+  </div>
+{%- endblock %}
+
+{% block footerEnd -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: footerEnd</span>
     {{ super() }}
   </div>
 {%- endblock %}
