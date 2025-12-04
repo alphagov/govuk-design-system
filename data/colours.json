@@ -7,7 +7,7 @@
       },
       {
         "name": "$govuk-secondary-text-colour",
-        "colour": "#505a5f"
+        "colour": "#484949"
       }
     ],
     "Links": [
@@ -17,11 +17,11 @@
       },
       {
         "name": "$govuk-link-hover-colour",
-        "colour": "#003078"
+        "colour": "#0f385c"
       },
       {
         "name": "$govuk-link-visited-colour",
-        "colour": "#4c2c92"
+        "colour": "#54319f"
       },
       {
         "name": "$govuk-link-active-colour",
@@ -31,7 +31,7 @@
     "Border": [
       {
         "name": "$govuk-border-colour",
-        "colour": "#b1b4b6"
+        "colour": "#cecece"
       },
       {
         "name": "$govuk-input-border-colour",
@@ -52,14 +52,14 @@
     "Error state": [
       {
         "name": "$govuk-error-colour",
-        "colour": "#d4351c",
+        "colour": "#ca3535",
         "notes": "Use for error messages"
       }
     ],
     "Success state": [
       {
         "name": "$govuk-success-colour",
-        "colour": "#00703c",
+        "colour": "#11875a",
         "notes": "Use for success messages"
       }
     ],
