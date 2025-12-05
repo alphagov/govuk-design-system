@@ -97,6 +97,25 @@ stylesheets:
   </div>
 {%- endblock %}
 
+{% block footerStart -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: footerStart</span>
+  </div>
+{%- endblock %}
+
+{% block footerEnd -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: footerEnd</span>
+  </div>
+{%- endblock %}
+
+{% block govukFooter -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: govukFooter</span>
+    {{ super() }}
+  </div>
+{%- endblock %}
+
 {% block bodyEnd -%}
   <div class="app-annotate-block">
     <span class="app-annotate-block__label">block: bodyEnd</span>

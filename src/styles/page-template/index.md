@@ -164,6 +164,41 @@ To change the components that are included in the page template by default, set 
       <td class="govuk-table__cell">footer</td>
       <td class="govuk-table__cell">Block</td>
       <td class="govuk-table__cell">
+        Override the <code>&lt;footer&gt;</code> element and the <code>govukFooter</code>, <code>footerStart</code>, and <code>footerEnd</code> blocks.
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">footerAttributes</td>
+      <td class="govuk-table__cell">Variable</td>
+      <td class="govuk-table__cell">
+        Add HTML attributes to the <code>&lt;footer&gt;</code> element.
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">footerClasses</td>
+      <td class="govuk-table__cell">Variable</td>
+      <td class="govuk-table__cell">
+        Add a class to the <code>&lt;footer&gt;</code> element.
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">footerEnd</td>
+      <td class="govuk-table__cell">Block</td>
+      <td class="govuk-table__cell">
+        Add custom HTML at the end of the <code>&lt;footer&gt;</code> element.
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">footerStart</td>
+      <td class="govuk-table__cell">Block</td>
+      <td class="govuk-table__cell">
+        Add custom HTML at the start of the <code>&lt;footer&gt;</code> element.
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">govukFooter</td>
+      <td class="govuk-table__cell">Block</td>
+      <td class="govuk-table__cell">
         Override the default <a class="govuk-link" href="/components/footer/">Footer component</a>.
       </td>
     </tr>
