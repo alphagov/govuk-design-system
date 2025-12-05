@@ -41,6 +41,25 @@ stylesheets:
   </div>
 {%- endblock %}
 
+{% block headerStart -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: headerStart</span>
+  </div>
+{%- endblock %}
+
+{% block headerEnd -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: headerEnd</span>
+  </div>
+{%- endblock %}
+
+{% block govukHeader -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: govukHeader</span>
+    {{ super() }}
+  </div>
+{%- endblock %}
+
 {% block main -%}
   <div class="app-annotate-block">
     <span class="app-annotate-block__label">block: main</span>

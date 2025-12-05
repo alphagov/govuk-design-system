@@ -73,7 +73,7 @@ To change the components that are included in the page template by default, set 
 
 ```njk
 {% raw %}
-{% block header %}
+{% block govukHeader %}
   {{ govukHeader ({
     homepageUrl: "/custom-url"
   }) }}
@@ -168,6 +168,13 @@ To change the components that are included in the page template by default, set 
       </td>
     </tr>
     <tr class="govuk-table__row">
+      <td class="govuk-table__cell">govukHeader</td>
+      <td class="govuk-table__cell">Block</td>
+      <td class="govuk-table__cell">
+        Override the default <a class="govuk-link" href="/components/header/">Header component</a>.
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
       <td class="govuk-table__cell">govukRebrand</td>
       <td class="govuk-table__cell">Variable</td>
       <td class="govuk-table__cell">
@@ -184,19 +191,47 @@ To change the components that are included in the page template by default, set 
       </td>
     </tr>
     <tr class="govuk-table__row">
-      <td class="govuk-table__cell">header</td>
-      <td class="govuk-table__cell">Block</td>
-      <td class="govuk-table__cell">
-        Override the default <a class="govuk-link" href="/components/header/">Header component</a>.
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
       <td class="govuk-table__cell">headIcons</td>
       <td class="govuk-table__cell">Block</td>
       <td class="govuk-table__cell">
         Override the default icons used for GOV.UK branded pages.
         <br>
         For example: <code>&lt;link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /&gt;</code>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">header</td>
+      <td class="govuk-table__cell">Block</td>
+      <td class="govuk-table__cell">
+        Override the <code>&lt;header&gt;</code> element and the <code>govukHeader</code>, <code>headerStart</code>, and <code>headerEnd</code> blocks.
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">headerAttributes</td>
+      <td class="govuk-table__cell">Variable</td>
+      <td class="govuk-table__cell">
+        Add HTML attributes to the <code>&lt;header&gt;</code> element.
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">headerClasses</td>
+      <td class="govuk-table__cell">Variable</td>
+      <td class="govuk-table__cell">
+        Add a class to the <code>&lt;header&gt;</code> element.
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">headerEnd</td>
+      <td class="govuk-table__cell">Block</td>
+      <td class="govuk-table__cell">
+        Add custom HTML at the end of the <code>&lt;header&gt;</code> element.
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">headerStart</td>
+      <td class="govuk-table__cell">Block</td>
+      <td class="govuk-table__cell">
+        Add custom HTML at the start of the <code>&lt;header&gt;</code> element.
       </td>
     </tr>
     <tr class="govuk-table__row">
@@ -231,8 +266,9 @@ To change the components that are included in the page template by default, set 
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">opengraphImageUrl</td>
       <td class="govuk-table__cell">Variable</td>
-      <td class="govuk-table__cell">Set the URL for the Open Graph image meta tag. The URL must be absolute, including the protocol and domain name. If you're using the refreshed GOV.UK brand, you may need to update this path to point to the updated assets.
-</td>
+      <td class="govuk-table__cell">
+        Set the URL for the Open Graph image meta tag. The URL must be absolute, including the protocol and domain name. If you're using the refreshed GOV.UK brand, you may need to update this path to point to the updated assets.
+      </td>
     </tr>
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">pageTitle</td>
