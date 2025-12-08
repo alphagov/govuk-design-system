@@ -43,7 +43,14 @@ You can customise the page template, for example, by:
 
 ## Changing template content
 
-If you’re using Nunjucks, you can change the template’s content using options.
+If you’re using Nunjucks, you can change the template’s content using options. You can make changes in:
+
+- [the `<html>` and `<body>` elements](#the-html-and-body-elements)
+- [the `<head>` element and page metadata](#the-head-element-and-page-metadata)
+- [the page's header](#the-pages-header)
+- [the page's main content](#the-pages-main-content)
+- [the page's footer](#the-pages-footer)
+- [other parts of the template](#other-options)
 
 How you set an option depends on whether it's a 'variable' option or a 'block' option.
 
@@ -83,6 +90,12 @@ To change the components that are included in the page template by default, set 
 
 ### The `<html>` and `<body>` elements
 
+The page template lets you customise the `<html>` and `<body>` element it renders:
+
+- [configure classes and attributes on the `<html>` element](#htmlclasses-variable)
+- [configure classes and attributes on the `<body>` element](#bodyclasses-variable)
+- [add content at the start or end of the `<body>` element](#bodystart-block)
+
 #### `htmlClasses` (Variable)
 
 Add a class to the `<html>` element.
@@ -109,6 +122,12 @@ For example: The [Cookie banner component](/components/cookie-banner/).
 Add content just before the closing `</body>` element.
 
 ### The `<head>` element and page metadata
+
+The page template lets you control what’s rendered inside the `<head>` element:
+
+- configure [where your page can access GOV.UK Frontend assets](#assetpath-variable)
+- [set the page’s title and its language](#pagetitle-block)
+- [add custom metadata to the `<head>` element](#head-block) (like a `<link>` to your services stylesheet)
 
 #### `assetPath` (Variable)
 
@@ -145,6 +164,14 @@ Add additional items inside the `<head>` element.
 For example: `<meta name="description" content="My page description">`
 
 ### The page's header
+
+Customise the header appearing at the top of the page:
+
+- [replace the Skip Link rendered before the `<header>`](#govukskiplink-block)
+- [replace the whole `<header>` element](#header-block) with your own
+- [add classes or attributes to the `<header>` element](#headerclasses-variable)
+- [add extra content at the start or end of the `<header>` element](#headerstart-block)
+- [replace the components rendered inside the `<header>`](#govukheader-block)
 
 #### `govukSkipLink` (Block)
 
@@ -189,6 +216,14 @@ Renders a Service Navigation with the given `serviceName` if present. If you nee
 Override the Service Navigation rendered if `serviceName` is set or add your custom Service Navigation without affecting the rest of the `<header>` element.
 
 ### The page's main content
+
+The page template [renders your content](#content-block) in a `<main>` tag, wrapped in a container limiting the content’s width. You can:
+
+- [replace the container limiting the content’s width](#container-block)
+- [add classes or attributes to the container](#containerclasses-variable)
+- [add content at the start or end of the container](#containerend-block)
+- [replace the `<main>` element](#main-block) with your own
+- [add classes or attributes to the `<main>` element](#mainclasses-variable)
 
 ### container (Block)
 
@@ -238,6 +273,13 @@ Add other attributes than `class` to the container. Add each attribute and its v
 Add content that needs to appear centered in the `<main>` element.
 
 ### The page's footer
+
+Customise the header appearing at the top of the page:
+
+- [replace the whole `<footer>` element](#footer-block) with your own
+- [add classes or attributes to the `<footer>` element](#footerclasses-variable)
+- [add extra content at the start or end of the `<footer>` element](#footerstart-block)
+- [replace the components rendered inside the `<footer>`](#govukfooter-block)
 
 #### `footer` (Block)
 
