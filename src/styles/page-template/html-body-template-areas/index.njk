@@ -1,0 +1,38 @@
+---
+title: "Html and body template areas – Page template"
+layout: false
+ignoreInSitemap: true
+stylesheets:
+- styles/page-template/block-areas-annotate.css
+---
+
+{% extends "govuk/template.njk" %}
+
+{% block pageTitle %}{{ title }} – Example - GOV.UK Design System{% endblock %}
+{% set serviceName = title %}
+
+{% block head -%}
+  {# Since we’re not extending the Design System layout we need to add this manually #}
+  <meta name="robots" content="noindex, nofollow">
+  <link href="{{ getFingerprint('/stylesheets/main.css') }}" rel="stylesheet" media="all">
+  {#- Include any additional stylesheets specified in the example frontmatter #}
+  {% for stylesheet in stylesheets %}
+    <link href="{{ getFingerprint(stylesheet) }}" rel="stylesheet" media="all">
+  {%- endfor %}
+{%- endblock %}
+
+{% block bodyStart -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: bodyStart</span>
+    {{ super() }}
+  </div>
+{%- endblock %}
+
+{% block bodyEnd -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: bodyEnd</span>
+    {{ super() }}
+    {# Since we’re not extending the Design System layout we need to add this manually #}
+    <script type="module" src="{{ getFingerprint('/javascripts/application-example.js') }}"></script>
+  </div>
+{%- endblock %}
