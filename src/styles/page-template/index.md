@@ -100,6 +100,8 @@ The page template lets you customise the `<html>` and `<body>` element it render
 - Configure [classes and attributes on the `<body>` element](link to `bodyClasses`)
 - [Add content at the start or end of the `<body>` element](link to `bodyStart`)
 
+{{ example({ group: "styles", item: "page-template", example: "html-body-template-areas", html: false, open: false }) }}
+
 <table class="govuk-table app-table--constrained">
   <caption class="govuk-table__caption govuk-visually-hidden">Options that you can use with the page template</caption>
   <thead class="govuk-table__head">
@@ -237,6 +239,8 @@ Customise the header appearing at the top of the page:
 - [add extra content at the start or end of the `<header>` element](link to `headerStart`)
 - [replace the components rendered inside the `<header>`](link to `govukHeader`)
 
+{{ example({ group: "styles", item: "page-template", example: "header-template-areas", html: false, open: false }) }}
+
 <table class="govuk-table app-table--constrained">
   <caption class="govuk-table__caption govuk-visually-hidden">Options that you can use with the page template</caption>
   <thead class="govuk-table__head">
@@ -329,6 +333,8 @@ The page template [renders your content](link to the `content` option) in a `<ma
 - [replace the `<main>` element](link to `main`) with your own
 - [add classes or a `lang` attribute to the `<main>` element](link to `mainClasses`)
 
+{{ example({ group: "styles", item: "page-template", example: "main-content-template-areas", html: false, open: false }) }}
+
 <table class="govuk-table app-table--constrained">
   <caption class="govuk-table__caption govuk-visually-hidden">Options that you can use with the page template</caption>
   <thead class="govuk-table__head">
@@ -407,7 +413,7 @@ Customise the header appearing at the top of the page:
 - [add extra content at the start or end of the `<footer>` element](link to `footerStart`)
 - [replace the components rendered inside the `<footer>`](link to `govukFooter`)
 
-[VISUAL EXAMPLE: Outline the blocks related to the footer]
+{{ example({ group: "styles", item: "page-template", example: "footer-template-areas", html: false, open: false }) }}
 
 <table class="govuk-table app-table--constrained">
   <caption class="govuk-table__caption govuk-visually-hidden">Options that you can use with the page template</caption>
