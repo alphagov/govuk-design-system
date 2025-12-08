@@ -146,24 +146,76 @@ For example: `<meta name="description" content="My page description">`
 
 ### The page's header
 
+#### `govukSkipLink` (Block)
+
+Override the default [Skip link component](/components/skip-link/).
+
 #### `skipLink` (Block)
 
+**Deprecated - Use [`govukSkipLink`](#govukskiplink-block) instead**
 Override the default [Skip link component](/components/skip-link/).
 
 #### `header` (Block)
 
-Override the default [Header component](/components/header/).
+Override the whole `<header>` element (including its opening and closing tags).
+
+#### `headerClasses` (Variable)
+
+Add a class to the `<header>` element.
+
+#### `headerAttributes` (Variable)
+
+Add other attributes than `class` to the `<header>` element. Add each attribute and its value in the `headerAttributes` object.
+
+#### `headerStart` (Block)
+
+Add content after the opening `<header>` element.
+
+#### `headerEnd` (Block)
+
+Add content just before the closing `</header>` element.
+For example: The [Phase banner component](/components/phase-banner/).
+
+#### `govukHeader` (Block)
+
+Override the GOV.UK Header component rendered by default without affecting the rest of the `<header>` element.
+
+#### `serviceName` (Variable)
+
+Renders a Service Navigation with the given `serviceName` if present. If you need to add navigation items, you’ll need to [replace the default Service Navigation with your own](#govukservicenavigation-block).
+
+#### `govukServiceNavigation` (Block)
+
+Override the Service Navigation rendered if `serviceName` is set or add your custom Service Navigation without affecting the rest of the `<header>` element.
 
 ### The page's main content
+
+### container (Block)
+
+Override the default container limiting the width of the page, including `<main>` element it wraps.
 
 #### `containerClasses` (Variable)
 
 Add a class to the container. This is useful if you want to make the page wrapper a fixed width.
 
+#### `containerAttributes` (Variable)
+
+Add other attributes than `class` to the container. Add each attribute and its value in the `containerAttributes` object.
+
+#### `containerStart` (Block)
+
+Add content after the opening `<div class=”govuk-width-container”>` element that limits the width of the page.
+For example: [Back link component](/components/back-link/), [Breadcrumbs component](/components/breadcrumbs/)
+
 #### `beforeContent` (Block)
 
+**Deprecated - Use [`containerStart`](#containerstart-block) instead**
 Add content that needs to appear outside `<main>` element.  
 For example: The [Back link component](/components/back-link/), [Breadcrumbs component](/components/breadcrumbs/), [Phase banner component](/components/phase-banner/).
+
+#### `containerEnd` (Block)
+
+Add content just before the closing `</div>` of the container.
 
 #### `main` (Block)
 
@@ -177,6 +229,10 @@ Add a class to the `<main>` element.
 
 Set the language of the `<main>` element if it’s different to `htmlLang`.
 
+#### `mainAttributes` (Variable)
+
+Add other attributes than `class` to the container. Add each attribute and its value in the `mainAttributes` object.
+
 #### `content` (Block)
 
 Add content that needs to appear centered in the `<main>` element.
@@ -185,7 +241,27 @@ Add content that needs to appear centered in the `<main>` element.
 
 #### `footer` (Block)
 
-Override the default [Footer component](/components/footer/).
+Override the whole `<footer>` element (including its opening and closing tags).
+
+#### `footerClasses` (Variable)
+
+Add a class to the `<footer>` element.
+
+#### `footerAttributes` (Variable)
+
+Add attributes to the `<footer>` element. Add each attribute and its value in the `footerAttributes` object.
+
+#### `footerStart` (Block)
+
+Add content after the opening `<footer>` element.
+
+#### `govukFooter` (Block)
+
+Override the GOV.UK Footer component rendered by default without changing the rest of the `<footer>` element.
+
+#### `footerEnd` (Block)
+
+Add content just before the closing `</footer>` element.
 
 ### Other options
 
