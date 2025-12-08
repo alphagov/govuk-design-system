@@ -96,6 +96,8 @@ The page template lets you customise the `<html>` and `<body>` element it render
 - [configure classes and attributes on the `<body>` element](#bodyclasses-variable)
 - [add content at the start or end of the `<body>` element](#bodystart-block)
 
+{{ example({ group: "styles", item: "page-template", example: "html-body-template-areas", html: false, open: false }) }}
+
 #### `htmlClasses` (Variable)
 
 Add a class to the `<html>` element.
@@ -173,6 +175,8 @@ Customise the header appearing at the top of the page:
 - [add extra content at the start or end of the `<header>` element](#headerstart-block)
 - [replace the components rendered inside the `<header>`](#govukheader-block)
 
+{{ example({ group: "styles", item: "page-template", example: "header-template-areas", html: false, open: false }) }}
+
 #### `govukSkipLink` (Block)
 
 Override the default [Skip link component](/components/skip-link/).
@@ -224,6 +228,8 @@ The page template [renders your content](#content-block) in a `<main>` tag, wrap
 - [add content at the start or end of the container](#containerend-block)
 - [replace the `<main>` element](#main-block) with your own
 - [add classes or attributes to the `<main>` element](#mainclasses-variable)
+
+{{ example({ group: "styles", item: "page-template", example: "main-content-areas", html: false, open: false }) }}
 
 ### container (Block)
 
@@ -281,6 +287,8 @@ Customise the header appearing at the top of the page:
 - [add extra content at the start or end of the `<footer>` element](#footerstart-block)
 - [replace the components rendered inside the `<footer>`](#govukfooter-block)
 
+{{ example({ group: "styles", item: "page-template", example: "footer-template-areas", html: false, open: false }) }}
+
 #### `footer` (Block)
 
 Override the whole `<footer>` element (including its opening and closing tags).
@@ -314,7 +322,3 @@ Add a `nonce` attribute to the script for your Content Security Policy (CSP). Pr
 #### `govukRebrand` (Variable)
 
 Enables rebranded styles. If you’ve overridden any blocks that are affected by this, you may have to make manual changes. See the [v5.10.0 release notes](https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.0) for more information.
-
-### Exploded view of the page template block areas
-
-{{ example({ group: "styles", item: "page-template", example: "block-areas", html: false, open: false }) }}
