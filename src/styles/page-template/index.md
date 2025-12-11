@@ -217,6 +217,13 @@ To change the components that are included in the page template by default, set 
       </td>
     </tr>
     <tr class="govuk-table__row">
+      <td class="govuk-table__cell">govukServiceNavigation</td>
+      <td class="govuk-table__cell">Block</td>
+      <td class="govuk-table__cell">
+        Override the default <a class="govuk-link" href="/components/service-navigation/">Service navigation component</a>.
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
       <td class="govuk-table__cell">head</td>
       <td class="govuk-table__cell">Block</td>
       <td class="govuk-table__cell">
@@ -317,6 +324,20 @@ To change the components that are included in the page template by default, set 
       <td class="govuk-table__cell">Variable</td>
       <td class="govuk-table__cell">
         Set the language of the <code>&lt;title&gt;</code> element if it's different to <code>htmlLang</code>.
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">serviceName</td>
+      <td class="govuk-table__cell">Variable</td>
+      <td class="govuk-table__cell">
+        Set the name of the current service. If set, this will show a <a class="govuk-link" href="/components/service-navigation/">Service navigation component</a> below the header.
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">serviceUrl</td>
+      <td class="govuk-table__cell">Variable</td>
+      <td class="govuk-table__cell">
+        Set a URL for the service name to link to. Doesn't do anything if <code>serviceName</code> is not set.
       </td>
     </tr>
     <tr class="govuk-table__row">
