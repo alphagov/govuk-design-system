@@ -29,7 +29,6 @@ If you want to contact the team you can [get in touch via email or Slack](/get-i
 - Imran Hussain – Community Designer
 - Izabela Podralska – Delivery Manager
 - Kam Nijjar – Associate Delivery Manager
-- Katrina Birch – User Researcher
 - Kim 'beeps' Grey – Frontend Developer
 - Lewis Darlow – Interaction Designer
 - Mia Allers – Senior Graphic Designer
