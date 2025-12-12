@@ -48,3 +48,17 @@ Use the `govuk-back-link--inverse` modifier class to show a white link on a dark
 Make sure all users can see the back link – the background colour must have a contrast ratio of at least 4.5:1 with white to meet [WCAG 2.2 success criterion 1.4.3 Contrast (minimum), level AA](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html).
 
 {{ example({ group: "components", item: "back-link", example: "inverse", html: true, nunjucks: true, open: false }) }}
+
+## Research on this component
+
+We're not aware of any user issues with this component. However, automated accessibility checkers might warn that the component is not within a landmark.
+
+### Known issues and gaps
+
+After reports from service teams, we confirmed that some accessibility checkers raise a warning that [the back link is outside of landmarks](https://github.com/alphagov/govuk-frontend/issues/1604).
+
+However, in the case of the back link we've not seen this to be an issue for actual users. While having all content within landmarks is usually best practice, moving the back link into a landmark might create a worse experience in this case.
+
+This issue does not affect WCAG compliance.
+
+If your service has tested pages with back links with screen reader users and have any insight into how it was used, [share your findings with us](https://github.com/alphagov/govuk-design-system-backlog/issues/32). We're particularly interested in understanding how easily the component can be found inside and outside of landmarks.
