@@ -98,30 +98,42 @@ The page template lets you customise the `<html>` and `<body>` element it render
 
 {{ example({ group: "styles", item: "page-template", example: "html-body-template-areas", html: false, open: false }) }}
 
-#### `htmlClasses` (Variable)
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 
-Add a class to the `<html>` element.
-
-#### `htmlLang` (Variable)
-
-Set the language of the whole document. If your `<title>` and `<main>` element are in a different language to the rest of the page, use `htmlLang` to set the language of the rest of the page.
-
-#### `bodyClasses` (Variable)
-
-Add a class to the `<body>` element.
-
-#### `bodyAttributes` (Variable)
-
-Add attributes to the `<body>` element. Add each attribute and its value in the `bodyAttributes` object.
-
-#### `bodyStart` (Block)
-
-Add content after the opening `<body>` element.  
-For example: The [Cookie banner component](/components/cookie-banner/).
-
-#### `bodyEnd` (Block)
-
-Add content just before the closing `</body>` element.
+{{ govukSummaryList({
+  classes: 'app-page-template-options-list',
+  rows: [{
+    key: {
+      html: '#### `htmlClasses` (Variable)' | markdown | replace('h4', 'span')
+    },
+    value: {
+      html: 'Add a class to the `<html>` element.' | markdown | replace('h4', 'span')
+    }
+  }, {
+    key: {
+      html: '#### `htmlLang` (Variable)' | markdown | replace('h4', 'span')
+    },
+    value: {
+      html: 'Set the language of the whole document. If your `<title>` and `<main>` element are in a different language to the rest of the page, use `htmlLang` to set the language of the rest of the page.' | markdown
+    }
+  }, {
+    key: {html :'#### `htmlLang` (Variable)' | markdown | replace('h4', 'span')},
+    value: {html: 'Set the language of the whole document. If your `<title>` and `<main>` element are in a different language to the rest of the page, use `htmlLang` to set the language of the rest of the page.' | markdown}
+  }, {
+    key: {html: '#### `bodyClasses` (Variable)' | markdown | replace('h4', 'span')},
+    value: {html: 'Add a class to the `<body>` element.' | markdown}
+  }, {
+    key: {html: '#### `bodyAttributes` (Variable)' | markdown | replace('h4', 'span')},
+    value: {html: 'Add attributes to the `<body>` element. Add each attribute and its value in the `bodyAttributes` object.' | markdown}
+  }, {
+    key: {html: '#### `bodyStart` (Block)' | markdown | replace('h4', 'span')},
+    value: {html: 'Add content after the opening `<body>` element.
+For example: The [Cookie banner component](/components/cookie-banner/).' | markdown}
+  }, {
+    key: {html: '#### `bodyEnd` (Block)' | markdown | replace('h4', 'span')},
+    value: {html: 'Add content just before the closing `</body>` element.' | markdown }
+  }]
+})}}
 
 ### The `<head>` element and page metadata
 
@@ -131,39 +143,36 @@ The page template lets you control what’s rendered inside the `<head>` element
 - [set the page’s title and its language](#pagetitle-block)
 - [add custom metadata to the `<head>` element](#head-block) (like a `<link>` to your services stylesheet)
 
-#### `assetPath` (Variable)
-
-Specify a path to the GOV.UK Frontend assets (icons, images, font files). If you’re using the refreshed GOV.UK brand, you may need to update this path to point to the updated assets.
-
-#### `assetUrl` (Variable)
-
-Set the domain for assets where an absolute URL is required, for example the Open Graph image.
-
-#### `headIcons` (Block)
-
-Override the default icons used for GOV.UK branded pages.  
-For example: `<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />`
-
-#### `opengraphImageUrl` (Variable)
-
-Set the URL for the Open Graph image meta tag. The URL must be absolute, including the protocol and domain name. If you’re using the refreshed GOV.UK brand, you may need to update this path to point to the updated assets.
-
-#### `themeColor` (Variable)
-
-Set the [toolbar colour on some devices](https://developer.chrome.com/blog/support-for-theme-color-in-chrome-39-for-android).
-
-#### `pageTitle` (Block)
-
-Override the default page title (`<title>` element).
-
-#### `pageTitleLang` (Variable)
-
-Set the language of the `<title>` element if it’s different to `htmlLang`.
-
-#### `head` (Block)
-
-Add additional items inside the `<head>` element.  
-For example: `<meta name="description" content="My page description">`
+{{ govukSummaryList({
+  classes: 'app-page-template-options-list',
+  rows: [{
+    key: {html: '#### `assetPath` (Variable)' | markdown | replace('h4', 'span')},
+    value: {html: 'Specify a path to the GOV.UK Frontend assets (icons, images, font files). If you’re using the refreshed GOV.UK brand, you may need to update this path to point to the updated assets.' | markdown}
+  }, {
+    key: {html: '#### `assetUrl` (Variable)' | markdown | replace('h4', 'span')},
+    value: {html: 'Set the domain for assets where an absolute URL is required, for example the Open Graph image.' | markdown}
+  }, {
+    key: {html: '#### `headIcons` (Block)' | markdown | replace('h4', 'span')},
+    value: {html: 'Override the default icons used for GOV.UK branded pages.
+For example: `<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />`' | markdown}
+  }, {
+    key: {html: '#### `opengraphImageUrl` (Variable)' | markdown | replace('h4', 'span')},
+    value: {html: "Set the URL for the Open Graph image meta tag. The URL must be absolute, including the protocol and domain name. If you’re using the refreshed GOV.UK brand, you may need to update this path to point to the updated assets." | markdown }
+  }, {
+    key: {html: '#### `themeColor` (Variable)' | markdown | replace('h4', 'span')},
+    value: {html: 'Set the [toolbar colour on some devices](https://developer.chrome.com/blog/support-for-theme-color-in-chrome-39-for-android).' | markdown }
+  }, {
+    key: {html: '#### `pageTitle` (Block)' | markdown | replace('h4', 'span')},
+    value: {html: 'Override the default page title (`<title>` element).' | markdown}
+  }, {
+    key: {html: '#### `pageTitleLang` (Variable)' | markdown | replace('h4', 'span')},
+    value: {html: 'Set the language of the `<title>` element if it’s different to `htmlLang`.' | markdown }
+  }, {
+    key: {html: '#### `head` (Block)' | markdown | replace('h4', 'span')},
+    value: {html: 'Add additional items inside the `<head>` element.
+For example: `<meta name="description" content="My page description">`' | markdown }
+  }]
+})}}
 
 ### The page's header
 
@@ -177,47 +186,44 @@ Customise the header appearing at the top of the page:
 
 {{ example({ group: "styles", item: "page-template", example: "header-template-areas", html: false, open: false }) }}
 
-#### `govukSkipLink` (Block)
-
-Override the default [Skip link component](/components/skip-link/).
-
-#### `skipLink` (Block)
-
-**Deprecated - Use [`govukSkipLink`](#govukskiplink-block) instead**
-Override the default [Skip link component](/components/skip-link/).
-
-#### `header` (Block)
-
-Override the whole `<header>` element (including its opening and closing tags).
-
-#### `headerClasses` (Variable)
-
-Add a class to the `<header>` element.
-
-#### `headerAttributes` (Variable)
-
-Add other attributes than `class` to the `<header>` element. Add each attribute and its value in the `headerAttributes` object.
-
-#### `headerStart` (Block)
-
-Add content after the opening `<header>` element.
-
-#### `headerEnd` (Block)
-
-Add content just before the closing `</header>` element.
-For example: The [Phase banner component](/components/phase-banner/).
-
-#### `govukHeader` (Block)
-
-Override the GOV.UK Header component rendered by default without affecting the rest of the `<header>` element.
-
-#### `serviceName` (Variable)
-
-Renders a Service Navigation with the given `serviceName` if present. If you need to add navigation items, you’ll need to [replace the default Service Navigation with your own](#govukservicenavigation-block).
-
-#### `govukServiceNavigation` (Block)
-
-Override the Service Navigation rendered if `serviceName` is set or add your custom Service Navigation without affecting the rest of the `<header>` element.
+{{ govukSummaryList({
+  classes: 'app-page-template-options-list',
+  rows: [{
+    key: {html: '#### `govukSkipLink` (Block)' | markdown | replace('h4', 'span') },
+    value: {html: 'Override the default [Skip link component](/components/skip-link/)' | markdown }
+  }, {
+    key: {html: '#### `skipLink` (Block)' | markdown | replace('h4', 'span')},
+    value: {html: '**Deprecated - Use [`govukSkipLink`](#govukskiplink-block) instead**
+Override the default [Skip link component](/components/skip-link/).' | markdown}
+  }, {
+    key: {html: '#### `header` (Block)' | markdown  | replace('h4', 'span')},
+    value: {html: 'Override the whole `<header>` element (including its opening and closing tags).' | markdown }
+  }, {
+    key: {html: '#### `headerClasses` (Variable)' | markdown | replace('h4', 'span')},
+    value: {html: 'Add a class to the `<header>` element.' | markdown }
+  }, {
+    key: {html: '#### `headerAttributes` (Variable)' | markdown | replace('h4', 'span')},
+    value: {html: '
+Add other attributes than `class` to the `<header>` element. Add each attribute and its value in the `headerAttributes` object.' | markdown}
+  }, {
+    key: {html: '#### `headerStart` (Block)' | markdown | replace('h4', 'span')},
+    value: {html: 'Add content after the opening `<header>` element.' | markdown}
+  }, {
+    key: {html: '#### `headerEnd` (Block)' | markdown | replace('h4', 'span')},
+    value: {html: 'Add content just before the closing `</header>` element.
+For example: The [Phase banner component](/components/phase-banner/).' | markdown}
+  }, {
+    key: {html: '#### `govukHeader` (Block)' | markdown | replace('h4', 'span')},
+    value: {html: 'Override the GOV.UK Header component rendered by default without affecting the rest of the `<header>` element.' | markdown}
+  }, {
+    key: {html: '#### `serviceName` (Variable)' | markdown | replace('h4', 'span')},
+    value: {html: 'Renders a Service Navigation with the given `serviceName` if present. If you need to add navigation items, you’ll need to [replace the default Service Navigation with your own](#govukservicenavigation-block).' | markdown}
+  }, {
+    key: {html: '#### `govukServiceNavigation` (Block)' | markdown | replace('h4', 'span')},
+    value: {html: '
+Override the Service Navigation rendered if `serviceName` is set or add your custom Service Navigation without affecting the rest of the `<header>` element.' | markdown}
+  }]
+})}}
 
 ### The page's main content
 
