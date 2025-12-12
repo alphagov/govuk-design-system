@@ -21,7 +21,7 @@ You must make sure that the contrast ratio of text and interactive elements in y
   text: "The WCAG 2.2 criterion for Contrast (minimum) is the same as WCAG 2.1."
 }) }}
 
-## Main colours
+## Functional colours
 
 If you are using GOV.UK Frontend or the GOV.UK Prototype Kit, use the [Sass variables](https://frontend.design-system.service.gov.uk/sass-api-reference/#colours) provided rather than copying the hexadecimal (hex) colour values. For example, use `$govuk-brand-colour` rather than `{{ colours.applied['Brand colour'][0]['colour'] | trim }}`.
 
@@ -63,32 +63,26 @@ Only use the variables in the context they're designed for. In all other cases, 
   </tbody>
 </table>
 
-## Colour palette
+## GOV.UK web palette
 
-Use these colours for supporting materials like illustrations, or in custom components where appropriate.
+If you need to add other colours, and your product or service is within the GOV.UK proposition, use the GOV.UK web palette and its brand colours.
 
-To reference colours from the palette directly you should use the `govuk-colour` function. For example, `color: govuk-colour("blue")`.
+Use the [\_colours-palette.scss](https://github.com/alphagov/govuk-frontend/blob/main/packages/govuk-frontend/src/govuk/settings/_colours-palette.scss) file to find the values for colours along with their tints and shades.
 
-Avoid using the palette colours if there is a Sass variable that is designed for your context. For example, if you are styling the error state of a component you should use the `$govuk-error-colour` Sass variable rather than `govuk-colour("red")`.
+The [GOV.UK brand guidelines](https://www.gov.uk/government/publications/govuk-brand-guidelines) shows the full list of colours and swatches.
 
-If you need to use tints of this palette, use either 25% or 50%.
+### Add colours with the `govuk-colour` function
 
-<table class="govuk-body app-colour-list" summary="Table of extended colours">
-  <tbody>
-  {% for name, colour in colours.palette %}
-    <tr class="app-colour-list-row">
-      <th class="app-colour-list-column app-colour-list-column--name" scope="row">
-        <span class="app-swatch {% if colour == "#ffffff" %}app-swatch-border{% endif %}" style="background-color:{{colour}}"></span>
-        <code>govuk-colour("{{name}}")</code>
-      </th>
-      <td class="app-colour-list-column app-colour-list-column--colour">
-        <code>{{colour}}</code>
-      </td>
-      <td class="app-colour-list-column app-colour-list-column--notes"></td>
-    </tr>
-  {% endfor %}
- </tbody>
-</table>
+In [January 2026], we changed the purpose of the `govuk-colour` function for use with the GOV.UK web palette. Previously, the function used a more generalised set of common colours.
+
+If you already use the `govuk-colour` function, the GOV.UK web palette colours will now apply automatically.
+
+Read the [GOV.UK Frontend v6.0 release notes](https://github.com/alphagov/govuk-frontend/releases/tag/v6.0.0) for more guidance on what’s changed, and what you need to do if your service used the `govuk-colour` function in any earlier versions.
+
+You should no longer use the `govuk-colour` function, the GOV.UK web palette and its colours:
+
+- if your product or service is not part of the GOV.UK proposition
+- for any other purpose
 
 ### Colour palette for charts
 
