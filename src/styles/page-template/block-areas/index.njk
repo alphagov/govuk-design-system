@@ -27,9 +27,9 @@ stylesheets:
   </div>
 {%- endblock %}
 
-{% block skipLink -%}
+{% block govukSkipLink -%}
   <div class="app-annotate-block">
-    <span class="app-annotate-block__label">block: skipLink</span>
+    <span class="app-annotate-block__label">block: govukSkipLink</span>
     {{ super() }}
   </div>
 {%- endblock %}
@@ -67,18 +67,18 @@ stylesheets:
   </div>
 {%- endblock %}
 
-{% block main -%}
+{% block container -%}
   <div class="app-annotate-block">
-    <span class="app-annotate-block__label">block: main</span>
+    <span class="app-annotate-block__label">block: container</span>
     <p class="govuk-body">
     </p>
     {{ super() }}
   </div>
 {%- endblock %}
 
-{% block beforeContent -%}
+{% block containerStart -%}
   <div class="app-annotate-block">
-    <span class="app-annotate-block__label">block: beforeContent</span>
+    <span class="app-annotate-block__label">block: containerStart</span>
     {{ super() }}
     {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
 
@@ -89,11 +89,24 @@ stylesheets:
   </div>
 {%- endblock %}
 
+{% block main -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: main</span>
+    {{ super() }}
+  </div>
+{%- endblock %}
+
 {% block content -%}
   <div class="app-annotate-block">
     <span class="app-annotate-block__label">block: content</span>
     {{ super() }}
     <h1 class="govuk-heading-xl">GOV.UK page template</h1>
+  </div>
+{%- endblock %}
+
+{% block containerEnd -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: containerEnd</span>
   </div>
 {%- endblock %}
 

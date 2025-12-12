@@ -142,9 +142,35 @@ To change the components that are included in the page template by default, set 
       </td>
     </tr>
     <tr class="govuk-table__row">
+      <td class="govuk-table__cell">container</td>
+      <td class="govuk-table__cell">Block</td>
+      <td class="govuk-table__cell">
+        Override the part of the page between the <code>header</code> and <code>footer</code> blocks. By default this includes the <code>&lt;div class="govuk-width-container"&gt;</code> element, and the <code>main</code>, <code>containerStart</code>, <code>containerEnd</code> and <code>content</code> blocks.
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">containerAttributes</td>
+      <td class="govuk-table__cell">Variable</td>
+      <td class="govuk-table__cell">Add HTML attributes to the container.</td>
+    </tr>
+    <tr class="govuk-table__row">
       <td class="govuk-table__cell">containerClasses</td>
       <td class="govuk-table__cell">Variable</td>
       <td class="govuk-table__cell">Add a class to the container. This is useful if you want to make the page wrapper a fixed width.</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">containerEnd</td>
+      <td class="govuk-table__cell">Block</td>
+      <td class="govuk-table__cell">
+        Add custom HTML at the start of the <code>container</code> block and before the <code>&lt;main&gt;</code> element.
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">containerStart</td>
+      <td class="govuk-table__cell">Block</td>
+      <td class="govuk-table__cell">
+        Add custom HTML at the start of the <code>container</code> block and before the <code>&lt;main&gt;</code> element.
+      </td>
     </tr>
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">content</td>
@@ -224,6 +250,13 @@ To change the components that are included in the page template by default, set 
       </td>
     </tr>
     <tr class="govuk-table__row">
+      <td class="govuk-table__cell">govukSkipLink</td>
+      <td class="govuk-table__cell">Block</td>
+      <td class="govuk-table__cell">
+        Override the default <a class="govuk-link" href="/components/skip-link/">Skip link component</a>.
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
       <td class="govuk-table__cell">head</td>
       <td class="govuk-table__cell">Block</td>
       <td class="govuk-table__cell">
@@ -290,8 +323,13 @@ To change the components that are included in the page template by default, set 
       <td class="govuk-table__cell">main</td>
       <td class="govuk-table__cell">Block</td>
       <td class="govuk-table__cell">
-        Override the main section of the page, which by default wraps the <code>&lt;main&gt;</code> element, <code>beforeContent</code> block and <code>content</code> block.
+        Override the main section of the page, which by default wraps the <code>&lt;main&gt;</code> element.
       </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">mainAttributes</td>
+      <td class="govuk-table__cell">Variable</td>
+      <td class="govuk-table__cell">Add HTML attributes to the <code>&lt;main&gt;</code> element.</td>
     </tr>
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">mainClasses</td>
@@ -338,13 +376,6 @@ To change the components that are included in the page template by default, set 
       <td class="govuk-table__cell">Variable</td>
       <td class="govuk-table__cell">
         Set a URL for the service name to link to. Doesn't do anything if <code>serviceName</code> is not set.
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">skipLink</td>
-      <td class="govuk-table__cell">Block</td>
-      <td class="govuk-table__cell">
-        Override the default <a class="govuk-link" href="/components/skip-link/">Skip link component</a>.
       </td>
     </tr>
     <tr class="govuk-table__row">
