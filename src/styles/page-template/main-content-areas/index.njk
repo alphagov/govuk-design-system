@@ -1,0 +1,51 @@
+---
+title: Main content areas – Page template
+layout: false
+ignoreInSitemap: true
+---
+
+{% extends "example-wrappers/page-template-blocks.njk" %}
+
+{% block container -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: container</span>
+    <p class="govuk-body">
+    </p>
+    {{ super() }}
+  </div>
+{%- endblock %}
+
+{% block containerStart -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: containerStart</span>
+    {{ super() }}
+    {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+    {{ govukBackLink({
+      href: "/",
+      text: "Back"
+    }) }}
+  </div>
+{%- endblock %}
+
+{% block main -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: main</span>
+    {{ super() }}
+  </div>
+{%- endblock %}
+
+{% block content -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: content</span>
+    {{ super() }}
+    <h1 class="govuk-heading-xl">GOV.UK page template</h1>
+  </div>
+{%- endblock %}
+
+{% block containerEnd -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: containerEnd</span>
+    {{ super() }}
+  </div>
+{%- endblock %}

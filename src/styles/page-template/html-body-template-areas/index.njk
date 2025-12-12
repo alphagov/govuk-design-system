@@ -1,0 +1,21 @@
+---
+title: "Html and body template areas – Page template"
+layout: false
+ignoreInSitemap: true
+---
+
+{% extends "example-wrappers/page-template-blocks.njk" %}
+
+{% block bodyStart -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: bodyStart</span>
+    {{ super() }}
+  </div>
+{%- endblock %}
+
+{% block bodyEnd -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: bodyEnd</span>
+    {{ super() }}
+  </div>
+{%- endblock %}

@@ -1,0 +1,39 @@
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+{% macro pageTemplateOptions(cardTitle) %}
+  {# Collect the rows from the `caller` content #}
+  {% set rows = [] %}
+  {% set discarded = caller(rows) %}
+  {# Generate an ID so the card can be linked to easily #}
+  {% set cardId =  cardTitle | slugify %}
+  {# Convert the card title into HTML, removing the wrapping `<p>` tag #}
+  {% set cardTitleHtml = cardTitle | markdown | replace('<p>','') | replace('</p>','') %}
+  {# Finally render the summary card  #}
+  {{ govukSummaryList({
+    card: {
+      title: {
+        html: cardTitleHtml,
+        headingLevel: 4
+      },
+      classes: 'app-page-template-options-list',
+      attributes: {
+        id: cardId
+      }
+    },
+    rows: rows
+  }) }}
+{% endmacro %}
+
+{% macro addPageTemplateOption(rows, key="", value="") %}
+  {# Compile the key as a heading so it automatically gets an ID #}
+  {% set keyHtml = ("#### " + key) | markdown | replace('h4', 'span') %}
+
+  {% set discarded = rows.push({
+    key: {
+      html: keyHtml
+    },
+    value: {
+      html: value | markdown
+    }
+  }) %}
+{% endmacro %}

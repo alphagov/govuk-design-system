@@ -4,10 +4,14 @@ $app-annotate-block-label-color: #ffffff;
 
 .app-annotate-block {
   position: relative;
-  margin-bottom: govuk-spacing(6);
   padding: govuk-spacing(3);
   padding-top: 3em;
-  outline: 2px dashed govuk-colour("dark-grey");
+  border: 2px dashed govuk-colour("dark-grey");
+
+  // Collapse borders when two annotate blocks follow each other
+  & + .app-annotate-block {
+    border-top: 0;
+  }
 }
 
 .app-annotate-block__label {

@@ -268,6 +268,25 @@ $colour-list-breakpoint: 980px;
   }
 }
 
+.app-page-template-options-list {
+  dt,
+  dd {
+    // Clean up margins when headings or paragraphs are set as template options
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // Rest the Summary card title's bottom margin that's being overridden by `.app-prose-scope`
+  .govuk-summary-card__title {
+    margin-bottom: govuk-spacing(2);
+
+    @media #{govuk-from-breakpoint(desktop)} {
+      margin-bottom: govuk-spacing(1);
+    }
+  }
+}
+
 .app-swatch {
   display: block;
   position: absolute;
