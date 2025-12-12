@@ -101,13 +101,16 @@ The page template lets you customise the `<html>` and `<body>` element it render
 {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 
 {{ govukSummaryList({
-  classes: 'app-page-template-options-list',
+  card: {
+    classes: 'app-page-template-options-list',
+    title: { html: "Configure classes and attributes on the `<html>` element" | markdown | replace('<p>','') | replace('</p>','')}
+  },
   rows: [{
     key: {
       html: '#### `htmlClasses` (Variable)' | markdown | replace('h4', 'span')
     },
     value: {
-      html: 'Add a class to the `<html>` element.' | markdown | replace('h4', 'span')
+      html: 'Add a class to the `<html>` element.' | markdown
     }
   }, {
     key: {
@@ -119,13 +122,29 @@ The page template lets you customise the `<html>` and `<body>` element it render
   }, {
     key: {html :'#### `htmlLang` (Variable)' | markdown | replace('h4', 'span')},
     value: {html: 'Set the language of the whole document. If your `<title>` and `<main>` element are in a different language to the rest of the page, use `htmlLang` to set the language of the rest of the page.' | markdown}
-  }, {
+  }]
+}) | replace('h2', 'h4')}}
+
+{{ govukSummaryList({
+  card: {
+    classes: 'app-page-template-options-list',
+    title: { html: "Configure classes and attributes on the `<body>` element" | markdown | replace('<p>','') | replace('</p>','')}
+  },
+  rows: [{
     key: {html: '#### `bodyClasses` (Variable)' | markdown | replace('h4', 'span')},
     value: {html: 'Add a class to the `<body>` element.' | markdown}
   }, {
     key: {html: '#### `bodyAttributes` (Variable)' | markdown | replace('h4', 'span')},
     value: {html: 'Add attributes to the `<body>` element. Add each attribute and its value in the `bodyAttributes` object.' | markdown}
-  }, {
+  }]
+}) | replace('h2', 'h4')}}
+
+{{ govukSummaryList({
+  card: {
+    classes: 'app-page-template-options-list',
+    title: { html: "Add content at the start or end of the `<body>` element" | markdown | replace('<p>','') | replace('</p>','')}
+  },
+  rows: [{
     key: {html: '#### `bodyStart` (Block)' | markdown | replace('h4', 'span')},
     value: {html: 'Add content after the opening `<body>` element.
 For example: The [Cookie banner component](/components/cookie-banner/).' | markdown}
@@ -133,7 +152,7 @@ For example: The [Cookie banner component](/components/cookie-banner/).' | markd
     key: {html: '#### `bodyEnd` (Block)' | markdown | replace('h4', 'span')},
     value: {html: 'Add content just before the closing `</body>` element.' | markdown }
   }]
-})}}
+}) | replace('h2', 'h4')}}
 
 ### The `<head>` element and page metadata
 

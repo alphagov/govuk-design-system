@@ -276,6 +276,15 @@ $colour-list-breakpoint: 980px;
       margin-bottom: 0;
     }
   }
+
+  // Rest the Summary card title's bottom margin that's being overridden by `.app-prose-scope`
+  .govuk-summary-card__title {
+    margin-bottom: govuk-spacing(2);
+
+    @media #{govuk-from-breakpoint(desktop)} {
+      margin-bottom: govuk-spacing(1);
+    }
+  }
 }
 
 .app-swatch {
