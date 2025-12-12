@@ -23,20 +23,102 @@ You must make sure that the contrast ratio of text and interactive elements in y
 
 ## Functional colours
 
-If you are using GOV.UK Frontend or the GOV.UK Prototype Kit, define colours for essential elements by function, using our Sass variables, rather than copying hexadecimal (hex) colour values.
+The GOV.UK Design System has a set of functional colours for essential page elements.
+
+To access these colours, use the `govuk-functional-colour` Sass function. The colours available using this function are based on specific purposes and contexts, so that function will automatically assign appropriate colours.
+
+Do not copy the specific hexadecimal (hex) colour values.
+
+For example, use `govuk-functional-colour("brand")` rather than` #1d70b8`.
 
 This means that your service will always use the most recent colour palette whenever you update.
 
-### Define colours using `govuk-functional-colour`
+Only use the variables in the context they’re designed for.
 
-Use the `govuk-functional-colour` function, along with the variable for what you need.
+In all other cases, you should reference colours directly from the GOV.UK web palette.
 
-For example, use `govuk-functional-colour("brand")` rather than `#1d70b8`.
+For example, if you wanted to use red, you should use`govuk-colour("red")` rather than `govuk-functional-colour("error")`.
 
-Only use the variables in the context they’re designed for. In all other cases, you should reference colours directly from the GOV.UK web palette.
+### Text
 
-For example, if you wanted to use red, you should use `govuk-colour("red")` rather than `govuk-functional-colour("error")`.
+govuk-functional-colour("text")
+#0b0c0c
 
+govuk-functional-colour("secondary-text")
+#484949
+
+### Links
+
+govuk-functional-colour("link")
+#1d70b8
+
+govuk-functional-colour("link-hover")
+#0f385c
+
+govuk-functional-colour("link-visited")
+#54319f
+
+govuk-functional-colour("link-active")
+#0b0c0c
+
+### Border
+
+govuk-functional-colour("border")
+#cecece
+
+govuk-functional-colour("input-border")
+#0b0c0c
+
+### Backgrounds
+
+govuk-functional-colour(body-background)
+#ffffff
+
+govuk-functional-colour(template-background)
+#f3f3f3
+
+### Focus state
+
+Only use `govuk-functional-colour("focus")` colour to indicate which element is focused on. For example, when a user tabs to an element with their keyboard.
+
+govuk-functional-colour("focus")
+#ffdd00
+
+govuk-functional-colour("focus-text")
+#0b0c0c
+
+### Error state
+
+Use for error messages
+
+govuk-functional-colour("error")
+#ca3535
+
+### Success state
+
+Use for success messages
+
+govuk-functional-colour("success")
+#11875a
+
+### Hover state
+
+Use for input hover states
+
+govuk-functional-colour(hover)
+#cecece
+
+### Brand colour
+
+govuk-functional-colour("brand")
+#1d70b8
+
+### Print
+
+govuk-functional-colour(print-text)
+#00000
+
+<!--
 <table class="govuk-body app-colour-list" summary="Table of main colours">
   <tbody>
   {#- colours is an object built by ./lib/colours.js based on data defined in ./data/colours.json #}
@@ -70,48 +152,41 @@ For example, if you wanted to use red, you should use `govuk-colour("red")` rath
   {% endfor %}
   </tbody>
 </table>
+-->
 
 ## GOV.UK web palette
 
-The GOV.UK web palette follows the [GOV.UK brand guidelines](https://www.gov.uk/government/publications/govuk-brand-guidelines). Use these colours for supporting elements in your service like illustrations, or in custom components where appropriate.
+The GOV.UK web palette works as part of the [GOV.UK brand guidelines](https://www.gov.uk/government/publications/govuk-brand-guidelines). Use these colours for supporting elements in your service like illustrations, or in custom components where appropriate.
 
 The web palette includes:
 
 - primary colours
-- tints: lighter variants of each colour
-- shades: darker variants of each colour
+- tints – lighter variants of each colour
+- shades – darker variants of each colour
 
 ### Add colours using using `govuk-colour`
 
-Reference primary colours from the palette directly using the `govuk-colour` function.
+You can access the full web palette, and all its available colours, using the `govuk-colour` function.
 
-For example: `color: govuk-colour("blue")`
+By default, the function will return the ‘primary’ variant of each colour.
 
-Reference tints and shades using the `$variant` option.
+For example: `govuk-colour("blue")` will return ‘Primary blue’ ` #1d70b8`.
 
-For example: `govuk-colour(‘red’, $variant: ‘tint-25’)` or `govuk-colour(‘green’, $variant: ‘shade-50’)`
+Access tints and shades of colour groups using the `$variant` option.
+
+For example:
+
+- `govuk-colour(‘red’, $variant: ‘tint-25’)` will return ‘Red tint 25%’, which is a variant of red with a tint of 25%
+- ` govuk-colour(‘blue’, $variant: ‘shade-50’)` will return ‘Blue shade 50%’, which is a variant of blue with a shade of 50%
 
 Most colours include these variants:
 
-- tints at 25%, 50%, 80% and 95%
-- shades at 25% and 50%
+- tints at 25% (`tint-25`), 50% (`tint-50`), 80% (`tint-80`) and 95% (`tint-95`)
+- shades at 25% (`shade-25`) and 50% (`shade-50`)
 
-Black, white and brown have fewer tints and shades.
+Black includes a ‘Primary black', with tints to show grey. White has no variants.
 
-See [\_colours-palette.scss](https://github.com/alphagov/govuk-frontend/blob/main/packages/govuk-frontend/src/govuk/settings/_colours-palette.scss) for colour values and their tints and shades.
-
-### When to use the GOV.UK web palette
-
-In [February 2026], we changed the purpose of the `govuk-colour` function for use with the GOV.UK web palette. Previously, the function used a more generalised set of common colours.
-
-If you already use the `govuk-colour` function, the GOV.UK web palette colours will now apply automatically.
-
-Read the [GOV.UK Frontend v6.0 release notes](https://github.com/alphagov/govuk-frontend/releases/tag/v6.0.0) for more guidance on what’s changed, and what you need to do if your service used the `govuk-colour` function in any earlier versions.
-
-You should no longer use the `govuk-colour` function, the GOV.UK web palette and its colours:
-
-- if your product or service is not part of the GOV.UK proposition
-- for any other purpose
+See the [\_colours-palette.scss](https://github.com/alphagov/govuk-frontend/blob/main/packages/govuk-frontend/src/govuk/settings/_colours-palette.scss) file for the full list of colour values and their tints and shades.
 
 ### Colour palette for charts
 
