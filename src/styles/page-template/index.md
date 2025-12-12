@@ -10,6 +10,8 @@ order: 1
 ---
 
 {% from "_example.njk" import example %}
+{% from "_page-template-options.njk" import pageTemplateOptions, addPageTemplateOption %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 
 Use this template to keep your pages consistent with the rest of GOV.UK.
 
@@ -92,67 +94,45 @@ To change the components that are included in the page template by default, set 
 
 The page template lets you customise the `<html>` and `<body>` element it renders:
 
-- [configure classes and attributes on the `<html>` element](#htmlclasses-variable)
-- [configure classes and attributes on the `<body>` element](#bodyclasses-variable)
-- [add content at the start or end of the `<body>` element](#bodystart-block)
+- [configure classes and attributes on the `<html>` element](#configure-classes-and-attributes-on-the-html-element)
+- [configure classes and attributes on the `<body>` element](#configure-classes-and-attributes-on-the-body-element)
+- [add content at the start or end of the `<body>` element](#add-content-at-the-start-or-end-of-the-body-element)
 
 {{ example({ group: "styles", item: "page-template", example: "html-body-template-areas", html: false, open: false }) }}
 
-{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{% call(options) pageTemplateOptions("Configure classes and attributes on the `<html>` element") %}
+{{ addPageTemplateOption(options,
+    key= '`htmlClasses` (Variable)',
+    value= 'Add a class to the `<html>` element.'
+  ) }}
+{{ addPageTemplateOption(options,
+    key= '`htmlLang` (Variable)',
+    value= 'Set the language of the whole document. If your `<title>` and `<main>` element are in a different language to the rest of the page, use `htmlLang` to set the language of the rest of the page.'
+  ) }}
+{% endcall %}
 
-{{ govukSummaryList({
-  card: {
-    classes: 'app-page-template-options-list',
-    title: { html: "Configure classes and attributes on the `<html>` element" | markdown | replace('<p>','') | replace('</p>','')}
-  },
-  rows: [{
-    key: {
-      html: '#### `htmlClasses` (Variable)' | markdown | replace('h4', 'span')
-    },
-    value: {
-      html: 'Add a class to the `<html>` element.' | markdown
-    }
-  }, {
-    key: {
-      html: '#### `htmlLang` (Variable)' | markdown | replace('h4', 'span')
-    },
-    value: {
-      html: 'Set the language of the whole document. If your `<title>` and `<main>` element are in a different language to the rest of the page, use `htmlLang` to set the language of the rest of the page.' | markdown
-    }
-  }, {
-    key: {html :'#### `htmlLang` (Variable)' | markdown | replace('h4', 'span')},
-    value: {html: 'Set the language of the whole document. If your `<title>` and `<main>` element are in a different language to the rest of the page, use `htmlLang` to set the language of the rest of the page.' | markdown}
-  }]
-}) | replace('h2', 'h4')}}
+{% call(options) pageTemplateOptions("Configure classes and attributes on the `<body>` element") %}
+{{ addPageTemplateOption(options,
+    key= '`bodyClasses` (Variable)',
+    value= 'Add a class to the `<body>` element.'
+  ) }}
+{{ addPageTemplateOption(options,
+    key= '`bodyAttributes` (Variable)',
+    value= 'Add attributes to the `<body>` element. Add each attribute and its value in the `bodyAttributes` object.'
+  ) }}
+{% endcall %}
 
-{{ govukSummaryList({
-  card: {
-    classes: 'app-page-template-options-list',
-    title: { html: "Configure classes and attributes on the `<body>` element" | markdown | replace('<p>','') | replace('</p>','')}
-  },
-  rows: [{
-    key: {html: '#### `bodyClasses` (Variable)' | markdown | replace('h4', 'span')},
-    value: {html: 'Add a class to the `<body>` element.' | markdown}
-  }, {
-    key: {html: '#### `bodyAttributes` (Variable)' | markdown | replace('h4', 'span')},
-    value: {html: 'Add attributes to the `<body>` element. Add each attribute and its value in the `bodyAttributes` object.' | markdown}
-  }]
-}) | replace('h2', 'h4')}}
-
-{{ govukSummaryList({
-  card: {
-    classes: 'app-page-template-options-list',
-    title: { html: "Add content at the start or end of the `<body>` element" | markdown | replace('<p>','') | replace('</p>','')}
-  },
-  rows: [{
-    key: {html: '#### `bodyStart` (Block)' | markdown | replace('h4', 'span')},
-    value: {html: 'Add content after the opening `<body>` element.
-For example: The [Cookie banner component](/components/cookie-banner/).' | markdown}
-  }, {
-    key: {html: '#### `bodyEnd` (Block)' | markdown | replace('h4', 'span')},
-    value: {html: 'Add content just before the closing `</body>` element.' | markdown }
-  }]
-}) | replace('h2', 'h4')}}
+{% call(options) pageTemplateOptions("Add content at the start or end of the `<body>` element") %}
+{{ addPageTemplateOption(options,
+    key= '`bodyStart` (Block)',
+    value= 'Add content after the opening `<body>` element.
+For example: The [Cookie banner component](/components/cookie-banner/).'
+  ) }}
+{{ addPageTemplateOption(options,
+    key= '`bodyEnd` (Block)',
+    value= 'Add content just before the closing `</body>` element.'
+  ) }}
+{% endcall %}
 
 ### The `<head>` element and page metadata
 
