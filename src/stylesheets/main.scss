@@ -455,3 +455,17 @@ pre .language-plaintext {
 .app-campaign-cookie-banner .govuk-grid-column-two-thirds {
   width: 100%;
 }
+
+// Add styling for promotion banner
+.app-promotion-banner {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $_govuk-rebrand-border-colour-on-blue-tint-95;
+  background-color: $_govuk-rebrand-template-background-colour;
+
+  p,
+  a {
+    margin-bottom: 0;
+    color: #1a65a6;
+  }
+}
