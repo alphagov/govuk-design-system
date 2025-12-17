@@ -1,0 +1,4251 @@
+{
+  "index": {
+    "version": "2.3.9",
+    "fields": ["title", "aliases"],
+    "fieldVectors": [
+      ["title/accessibility/accessibility-strategy", [0, 299.791, 1, 443.8]],
+      ["aliases/accessibility/accessibility-strategy", []],
+      [
+        "title/community/blogs-talks-podcasts",
+        [2, 366.147, 3, 366.147, 4, 366.147, 5, 366.147]
+      ],
+      ["aliases/community/blogs-talks-podcasts", []],
+      ["title/community/code-of-conduct", [6, 443.8, 7, 498.904]],
+      ["aliases/community/code-of-conduct", []],
+      ["title/community/community-principles", [8, 498.904, 9, 443.8]],
+      ["aliases/community/community-principles", []],
+      ["title/community/contribution-criteria", [10, 498.904, 11, 498.904]],
+      ["aliases/community/contribution-criteria", []],
+      [
+        "title/community/design-system-day-2022",
+        [12, 212.095, 13, 212.095, 14, 228.823, 15, 366.147]
+      ],
+      ["aliases/community/design-system-day-2022", []],
+      [
+        "title/community/design-system-day-2023",
+        [12, 212.095, 13, 212.095, 14, 228.823, 16, 299.069]
+      ],
+      ["aliases/community/design-system-day-2023", []],
+      [
+        "title/community/design-system-day-2023/session-information",
+        [12, 187.189, 13, 187.189, 14, 201.954, 16, 263.951, 17, 287.461]
+      ],
+      ["aliases/community/design-system-day-2023/session-information", []],
+      [
+        "title/community/design-system-day-2023/speaker-information",
+        [
+          12, 151.589, 13, 151.589, 14, 163.545, 16, 213.751, 18, 232.79, 19,
+          232.79, 20, 199.531
+        ]
+      ],
+      ["aliases/community/design-system-day-2023/speaker-information", []],
+      [
+        "title/community/design-system-day-2024",
+        [12, 212.095, 13, 212.095, 14, 228.823, 21, 299.069]
+      ],
+      ["aliases/community/design-system-day-2024", []],
+      [
+        "title/community/design-system-day-2024/session-information",
+        [12, 187.189, 13, 187.189, 14, 201.954, 17, 287.461, 21, 263.951]
+      ],
+      ["aliases/community/design-system-day-2024/session-information", []],
+      [
+        "title/community/design-system-day-2024/speaker-information",
+        [
+          12, 151.589, 13, 151.589, 14, 163.545, 18, 232.79, 19, 232.79, 20,
+          199.531, 21, 213.751
+        ]
+      ],
+      ["aliases/community/design-system-day-2024/speaker-information", []],
+      [
+        "title/community/design-system-day",
+        [12, 212.095, 13, 212.095, 14, 228.823, 22, 366.147]
+      ],
+      ["aliases/community/design-system-day", []],
+      [
+        "title/community/design-system-working-group",
+        [12, 212.095, 13, 212.095, 23, 366.147, 24, 325.707]
+      ],
+      ["aliases/community/design-system-working-group", []],
+      [
+        "title/community/develop-a-component-or-pattern",
+        [25, 422.339, 26, 375.692, 27, 375.692]
+      ],
+      ["aliases/community/develop-a-component-or-pattern", []],
+      [
+        "title/community/propose-a-component-or-pattern",
+        [26, 375.692, 27, 375.692, 28, 375.692]
+      ],
+      ["aliases/community/propose-a-component-or-pattern", []],
+      [
+        "title/community/propose-a-content-change-using-github",
+        [28, 287.461, 29, 287.461, 30, 287.461, 31, 246.391, 32, 323.153]
+      ],
+      ["aliases/community/propose-a-content-change-using-github", []],
+      ["title/community/resources-and-tools", [33, 498.904, 34, 498.904]],
+      ["aliases/community/resources-and-tools", []],
+      ["title/community/roadmap", [35, 609.376]],
+      ["aliases/community/roadmap", []],
+      [
+        "title/community/share-research-findings",
+        [36, 422.339, 37, 422.339, 38, 422.339]
+      ],
+      ["aliases/community/share-research-findings", []],
+      [
+        "title/community/upcoming-components-patterns",
+        [39, 422.339, 40, 375.692, 41, 422.339]
+      ],
+      [
+        "aliases/community/upcoming-components-patterns",
+        [42, 20.925, 43, 20.925, 44, 20.925, 45, 18.614, 46, 14.291]
+      ],
+      ["title/community/whats-new", [47, 498.904, 48, 407.504]],
+      ["aliases/community/whats-new", []],
+      ["title/components/accordion", [49, 609.376]],
+      ["aliases/components/accordion", []],
+      ["title/components/back-link", [50, 443.8, 51, 380.395]],
+      [
+        "aliases/components/back-link",
+        [50, 21.81, 51, 18.694, 52, 24.518, 53, 21.81]
+      ],
+      ["title/components/breadcrumbs", [54, 609.376]],
+      [
+        "aliases/components/breadcrumbs",
+        [46, 16.745, 55, 24.518, 56, 20.026, 57, 24.518]
+      ],
+      ["title/components/button", [53, 542.071]],
+      ["aliases/components/button", []],
+      ["title/components/character-count", [58, 498.904, 59, 443.8]],
+      ["aliases/components/character-count", [59, 33.215, 60, 33.215]],
+      ["title/components/checkboxes", [61, 609.376]],
+      [
+        "aliases/components/checkboxes",
+        [62, 17.092, 63, 34.712, 64, 20.925, 65, 20.925]
+      ],
+      ["title/components/cookie-banner", [56, 407.504, 66, 358.748]],
+      [
+        "aliases/components/cookie-banner",
+        [66, 29.443, 67, 10.743, 68, 12.077, 69, 12.077, 70, 10.743, 71, 12.077]
+      ],
+      ["title/components/date-input", [45, 443.8, 72, 380.395]],
+      ["aliases/components/date-input", []],
+      ["title/components/details", [73, 497.738]],
+      [
+        "aliases/components/details",
+        [
+          74, 14.536, 75, 14.536, 76, 14.536, 77, 12.93, 78, 7.872, 79, 14.536,
+          80, 12.93, 81, 14.536
+        ]
+      ],
+      ["title/components/error-message", [82, 443.8, 83, 380.395]],
+      ["aliases/components/error-message", [83, 28.47, 84, 33.215]],
+      ["title/components/error-summary", [82, 443.8, 85, 407.504]],
+      ["aliases/components/error-summary", []],
+      ["title/components/exit-this-page", [86, 443.8, 87, 311.789]],
+      ["aliases/components/exit-this-page", []],
+      ["title/components/fieldset", [88, 609.376]],
+      ["aliases/components/fieldset", []],
+      ["title/components/file-upload", [89, 498.904, 90, 498.904]],
+      ["aliases/components/file-upload", []],
+      ["title/components/footer", [91, 407.504, 92, 498.904]],
+      [
+        "aliases/components/footer",
+        [0, 10.967, 93, 16.235, 94, 18.251, 95, 18.251, 96, 16.235, 97, 18.251]
+      ],
+      ["title/components/header", [91, 407.504, 98, 498.904]],
+      ["aliases/components/header", [91, 30.499, 99, 37.339]],
+      ["title/components/inset-text", [78, 270.187, 100, 498.904]],
+      ["aliases/components/inset-text", [78, 16.03, 101, 29.6, 102, 29.6]],
+      ["title/components/notification-banner", [66, 358.748, 103, 498.904]],
+      [
+        "aliases/components/notification-banner",
+        [
+          83, 25.86, 104, 14.536, 105, 12.93, 106, 14.536, 107, 12.93, 108,
+          14.536
+        ]
+      ],
+      ["title/components/pagination", [109, 609.376]],
+      ["aliases/components/pagination", []],
+      ["title/components/panel", [110, 609.376]],
+      [
+        "aliases/components/panel",
+        [
+          111, 10.743, 112, 16.463, 113, 12.077, 114, 12.077, 115, 17.636, 116,
+          21.591, 117, 10.743
+        ]
+      ],
+      ["title/components/password-input", [72, 380.395, 118, 498.904]],
+      [
+        "aliases/components/password-input",
+        [60, 21.81, 119, 39.514, 120, 24.518]
+      ],
+      ["title/components/phase-banner", [66, 358.748, 121, 498.904]],
+      [
+        "aliases/components/phase-banner",
+        [
+          66, 29.443, 122, 12.077, 123, 12.077, 124, 12.077, 125, 12.077, 126,
+          12.077
+        ]
+      ],
+      ["title/components/radios", [127, 609.376]],
+      ["aliases/components/radios", [128, 24.518, 129, 39.514, 130, 24.518]],
+      ["title/components/select", [131, 609.376]],
+      [
+        "aliases/components/select",
+        [
+          112, 13.419, 132, 17.6, 133, 17.6, 134, 17.6, 135, 13.419, 136, 9.633,
+          137, 9.633, 138, 7.868
+        ]
+      ],
+      ["title/components/service-navigation", [46, 340.727, 139, 311.789]],
+      ["aliases/components/service-navigation", [46, 25.501, 140, 37.339]],
+      ["title/components/skip-link", [51, 380.395, 141, 443.8]],
+      ["aliases/components/skip-link", [46, 20.215, 51, 22.569, 141, 26.331]],
+      ["title/components/summary-list", [85, 407.504, 135, 380.395]],
+      ["aliases/components/summary-list", [85, 30.499, 142, 33.215]],
+      ["title/components/table", [143, 609.376]],
+      ["aliases/components/table", []],
+      ["title/components/tabs", [144, 609.376]],
+      ["aliases/components/tabs", []],
+      ["title/components/tag", [145, 609.376]],
+      [
+        "aliases/components/tag",
+        [146, 24.518, 147, 24.518, 148, 24.518, 149, 24.518]
+      ],
+      ["title/components/task-list", [135, 380.395, 150, 498.904]],
+      ["aliases/components/task-list", []],
+      ["title/components/text-input", [72, 380.395, 78, 270.187]],
+      [
+        "aliases/components/text-input",
+        [72, 10.059, 78, 17.02, 112, 17.809, 151, 20.777, 152, 13.193]
+      ],
+      ["title/components/textarea", [153, 609.376]],
+      [
+        "aliases/components/textarea",
+        [78, 13.776, 112, 11.083, 151, 12.93, 154, 22.628, 155, 25.437]
+      ],
+      ["title/components/warning-text", [78, 270.187, 105, 443.8]],
+      [
+        "aliases/components/warning-text",
+        [78, 21.399, 107, 21.81, 156, 24.518]
+      ],
+      [
+        "title/get-started/extending-and-modifying-components",
+        [40, 325.707, 157, 366.147, 158, 366.147, 159, 325.707]
+      ],
+      ["aliases/get-started/extending-and-modifying-components", []],
+      [
+        "title/get-started/focus-states",
+        [160, 366.147, 161, 366.147, 162, 325.707, 163, 366.147]
+      ],
+      ["aliases/get-started/focus-states", []],
+      [
+        "title/get-started/labels-legends-headings",
+        [164, 366.147, 165, 366.147, 166, 366.147, 167, 299.069]
+      ],
+      ["aliases/get-started/labels-legends-headings", []],
+      [
+        "title/get-started/new-type-scale",
+        [
+          48, 236.214, 139, 180.731, 168, 289.194, 169, 289.194, 170, 257.253,
+          171, 257.253
+        ]
+      ],
+      ["aliases/get-started/new-type-scale", []],
+      ["title/get-started/production", [159, 542.071]],
+      ["aliases/get-started/production", []],
+      ["title/get-started/prototyping", [172, 609.376]],
+      ["aliases/get-started/prototyping", []],
+      ["title/patterns/addresses", [173, 542.071]],
+      ["aliases/patterns/addresses", []],
+      ["title/patterns/bank-details", [73, 407.504, 174, 498.904]],
+      ["aliases/patterns/bank-details", []],
+      [
+        "title/patterns/check-a-service-is-suitable",
+        [62, 344.966, 139, 263.94, 175, 422.339]
+      ],
+      ["aliases/patterns/check-a-service-is-suitable", []],
+      ["title/patterns/check-answers", [62, 407.504, 176, 498.904]],
+      ["aliases/patterns/check-answers", []],
+      [
+        "title/patterns/complete-multiple-tasks",
+        [117, 375.692, 177, 422.339, 178, 422.339]
+      ],
+      ["aliases/patterns/complete-multiple-tasks", []],
+      [
+        "title/patterns/confirm-a-phone-number",
+        [115, 344.966, 179, 375.692, 180, 322.017]
+      ],
+      [
+        "aliases/patterns/confirm-a-phone-number",
+        [
+          6, 7.127, 78, 4.339, 83, 6.109, 115, 12.133, 154, 7.127, 180, 6.109,
+          181, 8.012, 182, 8.012, 183, 14.854, 184, 14.854, 185, 8.012, 186,
+          7.127, 187, 8.012
+        ]
+      ],
+      [
+        "title/patterns/confirm-an-email-address",
+        [179, 375.692, 188, 375.692, 189, 422.339]
+      ],
+      ["aliases/patterns/confirm-an-email-address", []],
+      ["title/patterns/confirmation-pages", [111, 443.8, 190, 325.291]],
+      [
+        "aliases/patterns/confirmation-pages",
+        [190, 22.633, 191, 20.925, 192, 20.925, 193, 20.925]
+      ],
+      [
+        "title/patterns/contact-a-department-or-service-team",
+        [139, 228.823, 194, 366.147, 195, 366.147, 196, 366.147]
+      ],
+      ["aliases/patterns/contact-a-department-or-service-team", []],
+      ["title/patterns/cookies-page", [67, 443.8, 87, 311.789]],
+      [
+        "aliases/patterns/cookies-page",
+        [56, 14.907, 70, 16.235, 93, 16.235, 197, 40.297]
+      ],
+      ["title/patterns/create-a-username", [198, 443.8, 199, 498.904]],
+      ["aliases/patterns/create-a-username", []],
+      ["title/patterns/create-accounts", [198, 443.8, 200, 498.904]],
+      ["aliases/patterns/create-accounts", []],
+      ["title/patterns/dates", [201, 542.071]],
+      ["aliases/patterns/dates", []],
+      ["title/patterns/email-addresses", [173, 443.8, 188, 443.8]],
+      ["aliases/patterns/email-addresses", []],
+      ["title/patterns/equality-information", [20, 380.395, 202, 498.904]],
+      [
+        "aliases/patterns/equality-information",
+        [
+          24, 6.748, 203, 7.586, 204, 7.586, 205, 7.586, 206, 7.586, 207, 7.586,
+          208, 7.586, 209, 7.586, 210, 7.586, 211, 7.586, 212, 7.586, 213,
+          7.586, 214, 7.586, 215, 7.586, 216, 7.586, 217, 7.586, 218, 7.586
+        ]
+      ],
+      [
+        "title/patterns/exit-a-page-quickly",
+        [86, 375.692, 87, 263.94, 219, 422.339]
+      ],
+      ["aliases/patterns/exit-a-page-quickly", []],
+      ["title/patterns/names", [220, 609.376]],
+      ["aliases/patterns/names", []],
+      [
+        "title/patterns/national-insurance-numbers",
+        [221, 422.339, 222, 422.339, 223, 322.017]
+      ],
+      ["aliases/patterns/national-insurance-numbers", []],
+      ["title/patterns/navigate-a-service", [139, 311.789, 224, 498.904]],
+      ["aliases/patterns/navigate-a-service", []],
+      [
+        "title/patterns/page-not-found-pages",
+        [87, 263.94, 190, 275.37, 225, 422.339]
+      ],
+      ["aliases/patterns/page-not-found-pages", [226, 50.559]],
+      ["title/patterns/passwords", [227, 609.376]],
+      ["aliases/patterns/passwords", []],
+      [
+        "title/patterns/payment-card-details",
+        [73, 344.966, 142, 375.692, 228, 422.339]
+      ],
+      ["aliases/patterns/payment-card-details", []],
+      ["title/patterns/phone-numbers", [180, 380.395, 223, 380.395]],
+      [
+        "aliases/patterns/phone-numbers",
+        [180, 22.569, 186, 26.331, 223, 22.569]
+      ],
+      [
+        "title/patterns/problem-with-the-service-pages",
+        [139, 263.94, 190, 275.37, 229, 422.339]
+      ],
+      ["aliases/patterns/problem-with-the-service-pages", [230, 50.559]],
+      ["title/patterns/question-pages", [190, 325.291, 231, 498.904]],
+      ["aliases/patterns/question-pages", []],
+      [
+        "title/patterns/service-unavailable-pages",
+        [139, 263.94, 190, 275.37, 232, 422.339]
+      ],
+      ["aliases/patterns/service-unavailable-pages", [233, 50.559]],
+      [
+        "title/patterns/start-using-a-service",
+        [31, 322.017, 139, 263.94, 234, 375.692]
+      ],
+      [
+        "aliases/patterns/start-using-a-service",
+        [87, 15.322, 190, 15.986, 234, 35.15]
+      ],
+      ["title/patterns/step-by-step-navigation", [46, 288.437, 235, 596.913]],
+      ["aliases/patterns/step-by-step-navigation", []],
+      ["title/patterns/validation", [84, 375.692, 236, 422.339, 237, 422.339]],
+      ["aliases/patterns/validation", []],
+      ["title/styles/colour", [238, 609.376]],
+      ["aliases/styles/colour", [239, 50.559]],
+      [
+        "title/styles/font-override-classes",
+        [240, 344.966, 241, 344.966, 242, 375.692]
+      ],
+      ["aliases/styles/font-override-classes", []],
+      ["title/styles/headings", [167, 497.738]],
+      ["aliases/styles/headings", []],
+      ["title/styles/images", [243, 464.626]],
+      ["aliases/styles/images", []],
+      ["title/styles/layout", [244, 609.376]],
+      ["aliases/styles/layout", []],
+      ["title/styles/links", [245, 397.32]],
+      ["aliases/styles/links", []],
+      ["title/styles/lists", [246, 497.738]],
+      ["aliases/styles/lists", []],
+      ["title/styles/page-template", [87, 311.789, 247, 407.504]],
+      ["aliases/styles/page-template", [248, 50.559]],
+      ["title/styles/paragraphs", [249, 609.376]],
+      ["aliases/styles/paragraphs", []],
+      ["title/styles/section-break", [250, 498.904, 251, 498.904]],
+      ["aliases/styles/section-break", []],
+      ["title/styles/spacing", [252, 416.175]],
+      ["aliases/styles/spacing", [253, 37.339, 254, 37.339]],
+      ["title/styles/type-scale", [170, 443.8, 171, 443.8]],
+      ["aliases/styles/type-scale", []],
+      ["title/styles/typeface", [255, 609.376]],
+      ["aliases/styles/typeface", []],
+      [
+        "title/accessibility/accessibility-strategy/#accessibility-and-design-systems",
+        [0, 253.783, 12, 244.644, 256, 422.339]
+      ],
+      [
+        "aliases/accessibility/accessibility-strategy/#accessibility-and-design-systems",
+        []
+      ],
+      [
+        "title/accessibility/accessibility-strategy/#principles-for-increasing-accessibility",
+        [0, 253.783, 9, 375.692, 257, 422.339]
+      ],
+      [
+        "aliases/accessibility/accessibility-strategy/#principles-for-increasing-accessibility",
+        []
+      ],
+      [
+        "title/accessibility/accessibility-strategy/#prioritising-accessibility-concerns",
+        [0, 253.783, 258, 422.339, 259, 344.966]
+      ],
+      [
+        "aliases/accessibility/accessibility-strategy/#prioritising-accessibility-concerns",
+        []
+      ],
+      [
+        "title/accessibility/accessibility-strategy/#baseline-wcag-accessibility-compliance",
+        [0, 220.018, 260, 366.147, 261, 325.707, 262, 366.147]
+      ],
+      [
+        "aliases/accessibility/accessibility-strategy/#baseline-wcag-accessibility-compliance",
+        []
+      ],
+      [
+        "title/accessibility/accessibility-strategy/#testing-accessibility-concerns",
+        [0, 253.783, 259, 344.966, 263, 422.339]
+      ],
+      [
+        "aliases/accessibility/accessibility-strategy/#testing-accessibility-concerns",
+        []
+      ],
+      [
+        "title/accessibility/accessibility-strategy/#recording-accessibility-concerns",
+        [0, 253.783, 259, 344.966, 264, 422.339]
+      ],
+      [
+        "aliases/accessibility/accessibility-strategy/#recording-accessibility-concerns",
+        []
+      ],
+      [
+        "title/accessibility/accessibility-strategy/#proposed-accessibility-activities",
+        [0, 253.783, 265, 422.339, 266, 422.339]
+      ],
+      [
+        "aliases/accessibility/accessibility-strategy/#proposed-accessibility-activities",
+        []
+      ],
+      [
+        "title/accessibility/accessibility-strategy/#performance-measurement",
+        [267, 498.904, 268, 498.904]
+      ],
+      [
+        "aliases/accessibility/accessibility-strategy/#performance-measurement",
+        []
+      ],
+      [
+        "title/accessibility/accessibility-strategy/#terms-used-in-this-strategy",
+        [1, 375.692, 96, 375.692, 269, 422.339]
+      ],
+      [
+        "aliases/accessibility/accessibility-strategy/#terms-used-in-this-strategy",
+        []
+      ],
+      [
+        "title/accessibility/accessibility-strategy/#wcag-related-dates",
+        [201, 375.692, 261, 375.692, 270, 422.339]
+      ],
+      ["aliases/accessibility/accessibility-strategy/#wcag-related-dates", []],
+      [
+        "title/styles/font-override-classes/#text-alignment",
+        [78, 270.187, 271, 498.904]
+      ],
+      ["aliases/styles/font-override-classes/#text-alignment", []],
+      [
+        "title/styles/font-override-classes/#font-size",
+        [240, 407.504, 272, 443.8]
+      ],
+      ["aliases/styles/font-override-classes/#font-size", []],
+      [
+        "title/styles/font-override-classes/#font-weight",
+        [240, 407.504, 273, 498.904]
+      ],
+      ["aliases/styles/font-override-classes/#font-weight", []],
+      [
+        "title/styles/font-override-classes/#tabular-numbers",
+        [223, 380.395, 274, 498.904]
+      ],
+      ["aliases/styles/font-override-classes/#tabular-numbers", []],
+      [
+        "title/styles/font-override-classes/#breaking-up-long-words",
+        [138, 299.069, 275, 366.147, 276, 366.147, 277, 366.147]
+      ],
+      ["aliases/styles/font-override-classes/#breaking-up-long-words", []],
+      [
+        "title/styles/headings/#headings-with-captions",
+        [167, 407.504, 278, 498.904]
+      ],
+      ["aliases/styles/headings/#headings-with-captions", []],
+      [
+        "title/styles/images/#using-images-to-give-information",
+        [20, 279.173, 31, 279.173, 243, 279.173, 279, 366.147]
+      ],
+      ["aliases/styles/images/#using-images-to-give-information", []],
+      ["title/styles/images/#photography", [280, 609.376]],
+      ["aliases/styles/images/#photography", []],
+      ["title/styles/images/#illustrations", [281, 609.376]],
+      ["aliases/styles/images/#illustrations", []],
+      ["title/styles/images/#icons", [282, 609.376]],
+      ["aliases/styles/images/#icons", []],
+      [
+        "title/styles/images/#avoid-images-that-contain-text",
+        [78, 198.292, 243, 279.173, 283, 366.147, 284, 366.147]
+      ],
+      ["aliases/styles/images/#avoid-images-that-contain-text", []],
+      ["title/styles/images/#alt-text", [78, 270.187, 285, 498.904]],
+      ["aliases/styles/images/#alt-text", []],
+      ["title/styles/images/#research-on-images", [243, 380.395, 286, 498.904]],
+      ["aliases/styles/images/#research-on-images", []],
+      ["title/styles/layout/#screen-size", [272, 443.8, 287, 443.8]],
+      ["aliases/styles/layout/#screen-size", []],
+      ["title/styles/layout/#common-layouts", [288, 498.904, 289, 498.904]],
+      ["aliases/styles/layout/#common-layouts", []],
+      [
+        "title/styles/layout/#setting-up-page-wrappers",
+        [87, 228.823, 138, 299.069, 290, 366.147, 291, 366.147]
+      ],
+      ["aliases/styles/layout/#setting-up-page-wrappers", []],
+      [
+        "title/styles/layout/#using-the-grid-system",
+        [13, 244.644, 31, 322.017, 292, 422.339]
+      ],
+      ["aliases/styles/layout/#using-the-grid-system", []],
+      [
+        "title/styles/layout/#width-override-classes",
+        [241, 344.966, 242, 375.692, 293, 422.339]
+      ],
+      ["aliases/styles/layout/#width-override-classes", []],
+      [
+        "title/styles/layout/#override-how-elements-display",
+        [241, 344.966, 294, 375.692, 295, 422.339]
+      ],
+      ["aliases/styles/layout/#override-how-elements-display", []],
+      [
+        "title/styles/layout/#hide-elements-and-keep-them-accessible-to-screen-readers",
+        [
+          80, 257.253, 287, 257.253, 294, 257.253, 296, 289.194, 297, 289.194,
+          298, 289.194
+        ]
+      ],
+      [
+        "aliases/styles/layout/#hide-elements-and-keep-them-accessible-to-screen-readers",
+        [77, 33.215, 299, 37.339]
+      ],
+      [
+        "title/styles/links/#links-without-a-visited-state",
+        [162, 325.707, 245, 238.732, 300, 325.707, 301, 366.147]
+      ],
+      ["aliases/styles/links/#links-without-a-visited-state", []],
+      ["title/styles/links/#external-links", [245, 325.291, 302, 498.904]],
+      ["aliases/styles/links/#external-links", []],
+      [
+        "title/styles/links/#opening-links-in-a-new-tab",
+        [48, 299.069, 245, 238.732, 303, 366.147, 304, 366.147]
+      ],
+      ["aliases/styles/links/#opening-links-in-a-new-tab", []],
+      [
+        "title/styles/links/#links-on-dark-backgrounds",
+        [245, 275.37, 305, 422.339, 306, 422.339]
+      ],
+      ["aliases/styles/links/#links-on-dark-backgrounds", []],
+      [
+        "title/styles/links/#links-without-underlines",
+        [245, 275.37, 300, 375.692, 307, 422.339]
+      ],
+      ["aliases/styles/links/#links-without-underlines", []],
+      [
+        "title/styles/links/#links-to-change-a-language",
+        [30, 375.692, 245, 275.37, 308, 422.339]
+      ],
+      ["aliases/styles/links/#links-to-change-a-language", []],
+      ["title/styles/lists/#bulleted-lists", [246, 407.504, 309, 498.904]],
+      ["aliases/styles/lists/#bulleted-lists", []],
+      ["title/styles/lists/#numbered-lists", [246, 407.504, 310, 498.904]],
+      ["aliases/styles/lists/#numbered-lists", []],
+      [
+        "title/styles/lists/#adding-extra-spacing-between-list-items",
+        [
+          135, 220.499, 252, 197.506, 311, 289.194, 312, 289.194, 313, 289.194,
+          314, 289.194
+        ]
+      ],
+      ["aliases/styles/lists/#adding-extra-spacing-between-list-items", []],
+      ["title/styles/page-template/#default", [315, 609.376]],
+      ["aliases/styles/page-template/#default", []],
+      [
+        "title/styles/page-template/#customised-page-template",
+        [87, 263.94, 247, 344.966, 316, 422.339]
+      ],
+      ["aliases/styles/page-template/#customised-page-template", []],
+      [
+        "title/styles/page-template/#changing-template-content",
+        [29, 375.692, 247, 344.966, 317, 422.339]
+      ],
+      ["aliases/styles/page-template/#changing-template-content", []],
+      ["title/styles/paragraphs/#lead-paragraph", [318, 498.904, 319, 498.904]],
+      ["aliases/styles/paragraphs/#lead-paragraph", []],
+      ["title/styles/paragraphs/#body-small", [320, 498.904, 321, 498.904]],
+      ["aliases/styles/paragraphs/#body-small", []],
+      [
+        "title/styles/spacing/#responsive-spacing",
+        [252, 340.727, 322, 498.904]
+      ],
+      ["aliases/styles/spacing/#responsive-spacing", []],
+      ["title/styles/spacing/#static-spacing", [252, 340.727, 323, 498.904]],
+      ["aliases/styles/spacing/#static-spacing", []],
+      [
+        "title/styles/spacing/#applying-spacing-in-your-own-css",
+        [252, 288.437, 324, 422.339, 325, 422.339]
+      ],
+      ["aliases/styles/spacing/#applying-spacing-in-your-own-css", []],
+      [
+        "title/styles/spacing/#overriding-spacing",
+        [252, 340.727, 326, 498.904]
+      ],
+      ["aliases/styles/spacing/#overriding-spacing", []]
+    ],
+    "invertedIndex": [
+      [
+        "2022",
+        {
+          "_index": 15,
+          "title": { "community/design-system-day-2022": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "2023",
+        {
+          "_index": 16,
+          "title": {
+            "community/design-system-day-2023": {},
+            "community/design-system-day-2023/session-information": {},
+            "community/design-system-day-2023/speaker-information": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "2024",
+        {
+          "_index": 21,
+          "title": {
+            "community/design-system-day-2024": {},
+            "community/design-system-day-2024/session-information": {},
+            "community/design-system-day-2024/speaker-information": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "2fa",
+        {
+          "_index": 181,
+          "title": {},
+          "aliases": { "patterns/confirm-a-phone-number": {} }
+        }
+      ],
+      [
+        "404",
+        {
+          "_index": 226,
+          "title": {},
+          "aliases": { "patterns/page-not-found-pages": {} }
+        }
+      ],
+      [
+        "500",
+        {
+          "_index": 230,
+          "title": {},
+          "aliases": { "patterns/problem-with-the-service-pages": {} }
+        }
+      ],
+      [
+        "503",
+        {
+          "_index": 233,
+          "title": {},
+          "aliases": { "patterns/service-unavailable-pages": {} }
+        }
+      ],
+      [
+        "accessibility",
+        {
+          "_index": 0,
+          "title": {
+            "accessibility/accessibility-strategy": {},
+            "accessibility/accessibility-strategy/#accessibility-and-design-systems": {},
+            "accessibility/accessibility-strategy/#principles-for-increasing-accessibility": {},
+            "accessibility/accessibility-strategy/#prioritising-accessibility-concerns": {},
+            "accessibility/accessibility-strategy/#baseline-wcag-accessibility-compliance": {},
+            "accessibility/accessibility-strategy/#testing-accessibility-concerns": {},
+            "accessibility/accessibility-strategy/#recording-accessibility-concerns": {},
+            "accessibility/accessibility-strategy/#proposed-accessibility-activities": {}
+          },
+          "aliases": { "components/footer": {} }
+        }
+      ],
+      [
+        "accessible",
+        {
+          "_index": 297,
+          "title": {
+            "styles/layout/#hide-elements-and-keep-them-accessible-to-screen-readers": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "accordion",
+        { "_index": 49, "title": { "components/accordion": {} }, "aliases": {} }
+      ],
+      [
+        "accounts",
+        {
+          "_index": 200,
+          "title": { "patterns/create-accounts": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "activities",
+        {
+          "_index": 266,
+          "title": {
+            "accessibility/accessibility-strategy/#proposed-accessibility-activities": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "adding",
+        {
+          "_index": 311,
+          "title": {
+            "styles/lists/#adding-extra-spacing-between-list-items": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "address",
+        {
+          "_index": 189,
+          "title": { "patterns/confirm-an-email-address": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "addresses",
+        {
+          "_index": 173,
+          "title": { "patterns/addresses": {}, "patterns/email-addresses": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "age",
+        {
+          "_index": 208,
+          "title": {},
+          "aliases": { "patterns/equality-information": {} }
+        }
+      ],
+      [
+        "alert",
+        {
+          "_index": 104,
+          "title": {},
+          "aliases": { "components/notification-banner": {} }
+        }
+      ],
+      [
+        "alignment",
+        {
+          "_index": 271,
+          "title": { "styles/font-override-classes/#text-alignment": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "alpha",
+        {
+          "_index": 122,
+          "title": {},
+          "aliases": { "components/phase-banner": {} }
+        }
+      ],
+      [
+        "alt",
+        {
+          "_index": 285,
+          "title": { "styles/images/#alt-text": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "analytics",
+        {
+          "_index": 71,
+          "title": {},
+          "aliases": { "components/cookie-banner": {} }
+        }
+      ],
+      [
+        "answers",
+        {
+          "_index": 176,
+          "title": { "patterns/check-answers": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "application",
+        { "_index": 116, "title": {}, "aliases": { "components/panel": {} } }
+      ],
+      [
+        "applying",
+        {
+          "_index": 324,
+          "title": { "styles/spacing/#applying-spacing-in-your-own-css": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "authentication",
+        {
+          "_index": 184,
+          "title": {},
+          "aliases": { "patterns/confirm-a-phone-number": {} }
+        }
+      ],
+      [
+        "autocomplete",
+        {
+          "_index": 43,
+          "title": {},
+          "aliases": { "community/upcoming-components-patterns": {} }
+        }
+      ],
+      [
+        "avoid",
+        {
+          "_index": 283,
+          "title": { "styles/images/#avoid-images-that-contain-text": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "back",
+        {
+          "_index": 50,
+          "title": { "components/back-link": {} },
+          "aliases": { "components/back-link": {} }
+        }
+      ],
+      [
+        "backgrounds",
+        {
+          "_index": 306,
+          "title": { "styles/links/#links-on-dark-backgrounds": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "badge",
+        { "_index": 147, "title": {}, "aliases": { "components/tag": {} } }
+      ],
+      [
+        "bank",
+        {
+          "_index": 174,
+          "title": { "patterns/bank-details": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "banner",
+        {
+          "_index": 66,
+          "title": {
+            "components/cookie-banner": {},
+            "components/notification-banner": {},
+            "components/phase-banner": {}
+          },
+          "aliases": {
+            "components/cookie-banner": {},
+            "components/phase-banner": {}
+          }
+        }
+      ],
+      [
+        "baseline",
+        {
+          "_index": 260,
+          "title": {
+            "accessibility/accessibility-strategy/#baseline-wcag-accessibility-compliance": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "beta",
+        {
+          "_index": 123,
+          "title": {},
+          "aliases": { "components/phase-banner": {} }
+        }
+      ],
+      [
+        "between",
+        {
+          "_index": 313,
+          "title": {
+            "styles/lists/#adding-extra-spacing-between-list-items": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "blog",
+        {
+          "_index": 2,
+          "title": { "community/blogs-talks-podcasts": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "body",
+        {
+          "_index": 320,
+          "title": { "styles/paragraphs/#body-small": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "boilerplate",
+        {
+          "_index": 248,
+          "title": {},
+          "aliases": { "styles/page-template": {} }
+        }
+      ],
+      [
+        "box",
+        {
+          "_index": 112,
+          "title": {},
+          "aliases": {
+            "components/panel": {},
+            "components/select": {},
+            "components/text-input": {},
+            "components/textarea": {}
+          }
+        }
+      ],
+      [
+        "boxes",
+        {
+          "_index": 63,
+          "title": {},
+          "aliases": { "components/checkboxes": {} }
+        }
+      ],
+      [
+        "breadcrumbs",
+        {
+          "_index": 54,
+          "title": { "components/breadcrumbs": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "break",
+        {
+          "_index": 251,
+          "title": { "styles/section-break": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "breaking",
+        {
+          "_index": 275,
+          "title": {
+            "styles/font-override-classes/#breaking-up-long-words": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "bulleted",
+        {
+          "_index": 309,
+          "title": { "styles/lists/#bulleted-lists": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "button",
+        {
+          "_index": 53,
+          "title": { "components/button": {} },
+          "aliases": { "components/back-link": {} }
+        }
+      ],
+      [
+        "buttons",
+        { "_index": 129, "title": {}, "aliases": { "components/radios": {} } }
+      ],
+      [
+        "callout",
+        {
+          "_index": 102,
+          "title": {},
+          "aliases": { "components/inset-text": {} }
+        }
+      ],
+      [
+        "captions",
+        {
+          "_index": 278,
+          "title": { "styles/headings/#headings-with-captions": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "card",
+        {
+          "_index": 142,
+          "title": { "patterns/payment-card-details": {} },
+          "aliases": { "components/summary-list": {} }
+        }
+      ],
+      [
+        "change",
+        {
+          "_index": 30,
+          "title": {
+            "community/propose-a-content-change-using-github": {},
+            "styles/links/#links-to-change-a-language": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "changing",
+        {
+          "_index": 317,
+          "title": { "styles/page-template/#changing-template-content": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "character",
+        {
+          "_index": 58,
+          "title": { "components/character-count": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "characteristics",
+        {
+          "_index": 204,
+          "title": {},
+          "aliases": { "patterns/equality-information": {} }
+        }
+      ],
+      [
+        "check",
+        {
+          "_index": 62,
+          "title": {
+            "patterns/check-a-service-is-suitable": {},
+            "patterns/check-answers": {}
+          },
+          "aliases": { "components/checkboxes": {} }
+        }
+      ],
+      [
+        "checkboxes",
+        {
+          "_index": 61,
+          "title": { "components/checkboxes": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "chip",
+        { "_index": 146, "title": {}, "aliases": { "components/tag": {} } }
+      ],
+      [
+        "choosing",
+        {
+          "_index": 44,
+          "title": {},
+          "aliases": { "community/upcoming-components-patterns": {} }
+        }
+      ],
+      [
+        "civil",
+        {
+          "_index": 211,
+          "title": {},
+          "aliases": { "patterns/equality-information": {} }
+        }
+      ],
+      [
+        "classes",
+        {
+          "_index": 242,
+          "title": {
+            "styles/font-override-classes": {},
+            "styles/layout/#width-override-classes": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "code",
+        {
+          "_index": 6,
+          "title": { "community/code-of-conduct": {} },
+          "aliases": { "patterns/confirm-a-phone-number": {} }
+        }
+      ],
+      [
+        "colour",
+        { "_index": 238, "title": { "styles/colour": {} }, "aliases": {} }
+      ],
+      [
+        "combo",
+        { "_index": 136, "title": {}, "aliases": { "components/select": {} } }
+      ],
+      [
+        "common",
+        {
+          "_index": 288,
+          "title": { "styles/layout/#common-layouts": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "community",
+        {
+          "_index": 8,
+          "title": { "community/community-principles": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "complete",
+        {
+          "_index": 117,
+          "title": { "patterns/complete-multiple-tasks": {} },
+          "aliases": { "components/panel": {} }
+        }
+      ],
+      [
+        "completion",
+        {
+          "_index": 191,
+          "title": {},
+          "aliases": { "patterns/confirmation-pages": {} }
+        }
+      ],
+      [
+        "compliance",
+        {
+          "_index": 262,
+          "title": {
+            "accessibility/accessibility-strategy/#baseline-wcag-accessibility-compliance": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "component",
+        {
+          "_index": 26,
+          "title": {
+            "community/develop-a-component-or-pattern": {},
+            "community/propose-a-component-or-pattern": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "components",
+        {
+          "_index": 40,
+          "title": {
+            "community/upcoming-components-patterns": {},
+            "get-started/extending-and-modifying-components": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "concerns",
+        {
+          "_index": 259,
+          "title": {
+            "accessibility/accessibility-strategy/#prioritising-accessibility-concerns": {},
+            "accessibility/accessibility-strategy/#testing-accessibility-concerns": {},
+            "accessibility/accessibility-strategy/#recording-accessibility-concerns": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "conditions",
+        { "_index": 97, "title": {}, "aliases": { "components/footer": {} } }
+      ],
+      [
+        "conduct",
+        {
+          "_index": 7,
+          "title": { "community/code-of-conduct": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "confirm",
+        {
+          "_index": 179,
+          "title": {
+            "patterns/confirm-a-phone-number": {},
+            "patterns/confirm-an-email-address": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "confirmation",
+        {
+          "_index": 111,
+          "title": { "patterns/confirmation-pages": {} },
+          "aliases": { "components/panel": {} }
+        }
+      ],
+      [
+        "consent",
+        {
+          "_index": 68,
+          "title": {},
+          "aliases": { "components/cookie-banner": {} }
+        }
+      ],
+      [
+        "contact",
+        {
+          "_index": 194,
+          "title": { "patterns/contact-a-department-or-service-team": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "contain",
+        {
+          "_index": 284,
+          "title": { "styles/images/#avoid-images-that-contain-text": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "content",
+        {
+          "_index": 29,
+          "title": {
+            "community/propose-a-content-change-using-github": {},
+            "styles/page-template/#changing-template-content": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "contribution",
+        {
+          "_index": 10,
+          "title": { "community/contribution-criteria": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "cookie",
+        {
+          "_index": 56,
+          "title": { "components/cookie-banner": {} },
+          "aliases": {
+            "components/breadcrumbs": {},
+            "patterns/cookies-page": {}
+          }
+        }
+      ],
+      [
+        "cookies",
+        {
+          "_index": 67,
+          "title": { "patterns/cookies-page": {} },
+          "aliases": { "components/cookie-banner": {} }
+        }
+      ],
+      [
+        "count",
+        {
+          "_index": 59,
+          "title": { "components/character-count": {} },
+          "aliases": { "components/character-count": {} }
+        }
+      ],
+      [
+        "create",
+        {
+          "_index": 198,
+          "title": {
+            "patterns/create-a-username": {},
+            "patterns/create-accounts": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "criteria",
+        {
+          "_index": 11,
+          "title": { "community/contribution-criteria": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "crumb",
+        {
+          "_index": 57,
+          "title": {},
+          "aliases": { "components/breadcrumbs": {} }
+        }
+      ],
+      [
+        "css",
+        {
+          "_index": 325,
+          "title": { "styles/spacing/#applying-spacing-in-your-own-css": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "customised",
+        {
+          "_index": 316,
+          "title": { "styles/page-template/#customised-page-template": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "dark",
+        {
+          "_index": 305,
+          "title": { "styles/links/#links-on-dark-backgrounds": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "date",
+        {
+          "_index": 45,
+          "title": { "components/date-input": {} },
+          "aliases": { "community/upcoming-components-patterns": {} }
+        }
+      ],
+      [
+        "dates",
+        {
+          "_index": 201,
+          "title": {
+            "patterns/dates": {},
+            "accessibility/accessibility-strategy/#wcag-related-dates": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "day",
+        {
+          "_index": 14,
+          "title": {
+            "community/design-system-day-2022": {},
+            "community/design-system-day-2023": {},
+            "community/design-system-day-2023/session-information": {},
+            "community/design-system-day-2023/speaker-information": {},
+            "community/design-system-day-2024": {},
+            "community/design-system-day-2024/session-information": {},
+            "community/design-system-day-2024/speaker-information": {},
+            "community/design-system-day": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "default",
+        {
+          "_index": 315,
+          "title": { "styles/page-template/#default": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "demographic",
+        {
+          "_index": 207,
+          "title": {},
+          "aliases": { "patterns/equality-information": {} }
+        }
+      ],
+      [
+        "department",
+        {
+          "_index": 195,
+          "title": { "patterns/contact-a-department-or-service-team": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "design",
+        {
+          "_index": 12,
+          "title": {
+            "community/design-system-day-2022": {},
+            "community/design-system-day-2023": {},
+            "community/design-system-day-2023/session-information": {},
+            "community/design-system-day-2023/speaker-information": {},
+            "community/design-system-day-2024": {},
+            "community/design-system-day-2024/session-information": {},
+            "community/design-system-day-2024/speaker-information": {},
+            "community/design-system-day": {},
+            "community/design-system-working-group": {},
+            "accessibility/accessibility-strategy/#accessibility-and-design-systems": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "details",
+        {
+          "_index": 73,
+          "title": {
+            "components/details": {},
+            "patterns/bank-details": {},
+            "patterns/payment-card-details": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "develop",
+        {
+          "_index": 25,
+          "title": { "community/develop-a-component-or-pattern": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "disability",
+        {
+          "_index": 209,
+          "title": {},
+          "aliases": { "patterns/equality-information": {} }
+        }
+      ],
+      [
+        "disclosure",
+        { "_index": 76, "title": {}, "aliases": { "components/details": {} } }
+      ],
+      [
+        "display",
+        {
+          "_index": 295,
+          "title": { "styles/layout/#override-how-elements-display": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "diversity",
+        {
+          "_index": 206,
+          "title": {},
+          "aliases": { "patterns/equality-information": {} }
+        }
+      ],
+      [
+        "down",
+        { "_index": 133, "title": {}, "aliases": { "components/select": {} } }
+      ],
+      [
+        "drop",
+        { "_index": 132, "title": {}, "aliases": { "components/select": {} } }
+      ],
+      [
+        "elements",
+        {
+          "_index": 294,
+          "title": {
+            "styles/layout/#override-how-elements-display": {},
+            "styles/layout/#hide-elements-and-keep-them-accessible-to-screen-readers": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "email",
+        {
+          "_index": 188,
+          "title": {
+            "patterns/confirm-an-email-address": {},
+            "patterns/email-addresses": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "entry",
+        {
+          "_index": 152,
+          "title": {},
+          "aliases": { "components/text-input": {} }
+        }
+      ],
+      [
+        "equality",
+        {
+          "_index": 202,
+          "title": { "patterns/equality-information": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "error",
+        {
+          "_index": 82,
+          "title": {
+            "components/error-message": {},
+            "components/error-summary": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "errors",
+        { "_index": 237, "title": { "patterns/validation": {} }, "aliases": {} }
+      ],
+      [
+        "ethnic",
+        {
+          "_index": 205,
+          "title": {},
+          "aliases": { "patterns/equality-information": {} }
+        }
+      ],
+      [
+        "events",
+        {
+          "_index": 22,
+          "title": { "community/design-system-day": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "exit",
+        {
+          "_index": 86,
+          "title": {
+            "components/exit-this-page": {},
+            "patterns/exit-a-page-quickly": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "extending",
+        {
+          "_index": 157,
+          "title": { "get-started/extending-and-modifying-components": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "external",
+        {
+          "_index": 302,
+          "title": { "styles/links/#external-links": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "extra",
+        {
+          "_index": 312,
+          "title": {
+            "styles/lists/#adding-extra-spacing-between-list-items": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "factor",
+        {
+          "_index": 183,
+          "title": {},
+          "aliases": { "patterns/confirm-a-phone-number": {} }
+        }
+      ],
+      [
+        "feedback",
+        {
+          "_index": 126,
+          "title": {},
+          "aliases": { "components/phase-banner": {} }
+        }
+      ],
+      [
+        "field",
+        {
+          "_index": 151,
+          "title": {},
+          "aliases": { "components/text-input": {}, "components/textarea": {} }
+        }
+      ],
+      [
+        "fieldset",
+        { "_index": 88, "title": { "components/fieldset": {} }, "aliases": {} }
+      ],
+      [
+        "file",
+        {
+          "_index": 89,
+          "title": { "components/file-upload": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "findings",
+        {
+          "_index": 37,
+          "title": { "community/share-research-findings": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "finish",
+        {
+          "_index": 193,
+          "title": {},
+          "aliases": { "patterns/confirmation-pages": {} }
+        }
+      ],
+      [
+        "flag",
+        { "_index": 148, "title": {}, "aliases": { "components/tag": {} } }
+      ],
+      [
+        "flash",
+        {
+          "_index": 108,
+          "title": {},
+          "aliases": { "components/notification-banner": {} }
+        }
+      ],
+      [
+        "focus",
+        {
+          "_index": 161,
+          "title": { "get-started/focus-states": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "font",
+        {
+          "_index": 240,
+          "title": {
+            "styles/font-override-classes": {},
+            "styles/font-override-classes/#font-size": {},
+            "styles/font-override-classes/#font-weight": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "footer",
+        { "_index": 92, "title": { "components/footer": {} }, "aliases": {} }
+      ],
+      [
+        "found",
+        {
+          "_index": 225,
+          "title": { "patterns/page-not-found-pages": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "gdpr",
+        {
+          "_index": 69,
+          "title": {},
+          "aliases": { "components/cookie-banner": {} }
+        }
+      ],
+      [
+        "gender",
+        {
+          "_index": 215,
+          "title": {},
+          "aliases": { "patterns/equality-information": {} }
+        }
+      ],
+      [
+        "github",
+        {
+          "_index": 32,
+          "title": { "community/propose-a-content-change-using-github": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "give",
+        {
+          "_index": 279,
+          "title": { "styles/images/#using-images-to-give-information": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "gov.uk",
+        {
+          "_index": 91,
+          "title": { "components/footer": {}, "components/header": {} },
+          "aliases": { "components/header": {} }
+        }
+      ],
+      [
+        "grid",
+        {
+          "_index": 292,
+          "title": { "styles/layout/#using-the-grid-system": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "group",
+        {
+          "_index": 24,
+          "title": { "community/design-system-working-group": {} },
+          "aliases": { "patterns/equality-information": {} }
+        }
+      ],
+      [
+        "header",
+        { "_index": 98, "title": { "components/header": {} }, "aliases": {} }
+      ],
+      [
+        "headings",
+        {
+          "_index": 167,
+          "title": {
+            "get-started/labels-legends-headings": {},
+            "styles/headings": {},
+            "styles/headings/#headings-with-captions": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "hidden",
+        {
+          "_index": 77,
+          "title": {},
+          "aliases": {
+            "components/details": {},
+            "styles/layout/#hide-elements-and-keep-them-accessible-to-screen-readers": {}
+          }
+        }
+      ],
+      [
+        "hide",
+        {
+          "_index": 80,
+          "title": {
+            "styles/layout/#hide-elements-and-keep-them-accessible-to-screen-readers": {}
+          },
+          "aliases": { "components/details": {} }
+        }
+      ],
+      [
+        "highlighted",
+        {
+          "_index": 101,
+          "title": {},
+          "aliases": { "components/inset-text": {} }
+        }
+      ],
+      [
+        "icons",
+        {
+          "_index": 282,
+          "title": { "styles/images/#icons": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "identity",
+        {
+          "_index": 216,
+          "title": {},
+          "aliases": { "patterns/equality-information": {} }
+        }
+      ],
+      [
+        "illustrations",
+        {
+          "_index": 281,
+          "title": { "styles/images/#illustrations": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "images",
+        {
+          "_index": 243,
+          "title": {
+            "styles/images": {},
+            "styles/images/#using-images-to-give-information": {},
+            "styles/images/#avoid-images-that-contain-text": {},
+            "styles/images/#research-on-images": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "important",
+        {
+          "_index": 107,
+          "title": {},
+          "aliases": {
+            "components/notification-banner": {},
+            "components/warning-text": {}
+          }
+        }
+      ],
+      [
+        "increasing",
+        {
+          "_index": 257,
+          "title": {
+            "accessibility/accessibility-strategy/#principles-for-increasing-accessibility": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "information",
+        {
+          "_index": 20,
+          "title": {
+            "community/design-system-day-2023/speaker-information": {},
+            "community/design-system-day-2024/speaker-information": {},
+            "patterns/equality-information": {},
+            "styles/images/#using-images-to-give-information": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "input",
+        {
+          "_index": 72,
+          "title": {
+            "components/date-input": {},
+            "components/password-input": {},
+            "components/text-input": {}
+          },
+          "aliases": { "components/text-input": {} }
+        }
+      ],
+      [
+        "inset",
+        {
+          "_index": 100,
+          "title": { "components/inset-text": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "insurance",
+        {
+          "_index": 222,
+          "title": { "patterns/national-insurance-numbers": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "items",
+        {
+          "_index": 314,
+          "title": {
+            "styles/lists/#adding-extra-spacing-between-list-items": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "keep",
+        {
+          "_index": 296,
+          "title": {
+            "styles/layout/#hide-elements-and-keep-them-accessible-to-screen-readers": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "labels",
+        {
+          "_index": 165,
+          "title": { "get-started/labels-legends-headings": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "language",
+        {
+          "_index": 308,
+          "title": { "styles/links/#links-to-change-a-language": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "layout",
+        { "_index": 244, "title": { "styles/layout": {} }, "aliases": {} }
+      ],
+      [
+        "layouts",
+        {
+          "_index": 289,
+          "title": { "styles/layout/#common-layouts": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "lead",
+        {
+          "_index": 318,
+          "title": { "styles/paragraphs/#lead-paragraph": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "legal",
+        {
+          "_index": 156,
+          "title": {},
+          "aliases": { "components/warning-text": {} }
+        }
+      ],
+      [
+        "legends",
+        {
+          "_index": 166,
+          "title": { "get-started/labels-legends-headings": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "line",
+        { "_index": 155, "title": {}, "aliases": { "components/textarea": {} } }
+      ],
+      [
+        "link",
+        {
+          "_index": 51,
+          "title": { "components/back-link": {}, "components/skip-link": {} },
+          "aliases": { "components/back-link": {}, "components/skip-link": {} }
+        }
+      ],
+      [
+        "links",
+        {
+          "_index": 245,
+          "title": {
+            "styles/links": {},
+            "styles/links/#links-without-a-visited-state": {},
+            "styles/links/#external-links": {},
+            "styles/links/#opening-links-in-a-new-tab": {},
+            "styles/links/#links-on-dark-backgrounds": {},
+            "styles/links/#links-without-underlines": {},
+            "styles/links/#links-to-change-a-language": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "list",
+        {
+          "_index": 135,
+          "title": {
+            "components/summary-list": {},
+            "components/task-list": {},
+            "styles/lists/#adding-extra-spacing-between-list-items": {}
+          },
+          "aliases": { "components/select": {} }
+        }
+      ],
+      [
+        "lists",
+        {
+          "_index": 246,
+          "title": {
+            "styles/lists": {},
+            "styles/lists/#bulleted-lists": {},
+            "styles/lists/#numbered-lists": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "long",
+        {
+          "_index": 276,
+          "title": {
+            "styles/font-override-classes/#breaking-up-long-words": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "making",
+        {
+          "_index": 164,
+          "title": { "get-started/labels-legends-headings": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "maps",
+        {
+          "_index": 42,
+          "title": {},
+          "aliases": { "community/upcoming-components-patterns": {} }
+        }
+      ],
+      [
+        "margin",
+        { "_index": 253, "title": {}, "aliases": { "styles/spacing": {} } }
+      ],
+      [
+        "marriage",
+        {
+          "_index": 210,
+          "title": {},
+          "aliases": { "patterns/equality-information": {} }
+        }
+      ],
+      [
+        "masthead",
+        { "_index": 99, "title": {}, "aliases": { "components/header": {} } }
+      ],
+      [
+        "measurement",
+        {
+          "_index": 268,
+          "title": {
+            "accessibility/accessibility-strategy/#performance-measurement": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "menu",
+        { "_index": 134, "title": {}, "aliases": { "components/select": {} } }
+      ],
+      [
+        "message",
+        {
+          "_index": 83,
+          "title": { "components/error-message": {} },
+          "aliases": {
+            "components/error-message": {},
+            "components/notification-banner": {},
+            "patterns/confirm-a-phone-number": {}
+          }
+        }
+      ],
+      [
+        "mfa",
+        {
+          "_index": 182,
+          "title": {},
+          "aliases": { "patterns/confirm-a-phone-number": {} }
+        }
+      ],
+      [
+        "modifying",
+        {
+          "_index": 158,
+          "title": { "get-started/extending-and-modifying-components": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "multi",
+        {
+          "_index": 154,
+          "title": {},
+          "aliases": {
+            "components/textarea": {},
+            "patterns/confirm-a-phone-number": {}
+          }
+        }
+      ],
+      [
+        "multiple",
+        {
+          "_index": 177,
+          "title": { "patterns/complete-multiple-tasks": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "names",
+        { "_index": 220, "title": { "patterns/names": {} }, "aliases": {} }
+      ],
+      [
+        "national",
+        {
+          "_index": 221,
+          "title": { "patterns/national-insurance-numbers": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "navigate",
+        {
+          "_index": 224,
+          "title": { "patterns/navigate-a-service": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "navigation",
+        {
+          "_index": 46,
+          "title": {
+            "components/service-navigation": {},
+            "patterns/step-by-step-navigation": {}
+          },
+          "aliases": {
+            "community/upcoming-components-patterns": {},
+            "components/breadcrumbs": {},
+            "components/service-navigation": {},
+            "components/skip-link": {}
+          }
+        }
+      ],
+      [
+        "new",
+        {
+          "_index": 48,
+          "title": {
+            "community/whats-new": {},
+            "get-started/new-type-scale": {},
+            "styles/links/#opening-links-in-a-new-tab": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "notice",
+        { "_index": 94, "title": {}, "aliases": { "components/footer": {} } }
+      ],
+      [
+        "notification",
+        {
+          "_index": 103,
+          "title": { "components/notification-banner": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "number",
+        {
+          "_index": 115,
+          "title": { "patterns/confirm-a-phone-number": {} },
+          "aliases": {
+            "components/panel": {},
+            "patterns/confirm-a-phone-number": {}
+          }
+        }
+      ],
+      [
+        "numbered",
+        {
+          "_index": 310,
+          "title": { "styles/lists/#numbered-lists": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "numbers",
+        {
+          "_index": 223,
+          "title": {
+            "patterns/national-insurance-numbers": {},
+            "patterns/phone-numbers": {},
+            "styles/font-override-classes/#tabular-numbers": {}
+          },
+          "aliases": { "patterns/phone-numbers": {} }
+        }
+      ],
+      [
+        "opening",
+        {
+          "_index": 303,
+          "title": { "styles/links/#opening-links-in-a-new-tab": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "option",
+        { "_index": 130, "title": {}, "aliases": { "components/radios": {} } }
+      ],
+      [
+        "orientation",
+        {
+          "_index": 218,
+          "title": {},
+          "aliases": { "patterns/equality-information": {} }
+        }
+      ],
+      [
+        "override",
+        {
+          "_index": 241,
+          "title": {
+            "styles/font-override-classes": {},
+            "styles/layout/#width-override-classes": {},
+            "styles/layout/#override-how-elements-display": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "overriding",
+        {
+          "_index": 326,
+          "title": { "styles/spacing/#overriding-spacing": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "padding",
+        { "_index": 254, "title": {}, "aliases": { "styles/spacing": {} } }
+      ],
+      [
+        "page",
+        {
+          "_index": 87,
+          "title": {
+            "components/exit-this-page": {},
+            "patterns/cookies-page": {},
+            "patterns/exit-a-page-quickly": {},
+            "patterns/page-not-found-pages": {},
+            "styles/page-template": {},
+            "styles/layout/#setting-up-page-wrappers": {},
+            "styles/page-template/#customised-page-template": {}
+          },
+          "aliases": { "patterns/start-using-a-service": {} }
+        }
+      ],
+      [
+        "pages",
+        {
+          "_index": 190,
+          "title": {
+            "patterns/confirmation-pages": {},
+            "patterns/page-not-found-pages": {},
+            "patterns/problem-with-the-service-pages": {},
+            "patterns/question-pages": {},
+            "patterns/service-unavailable-pages": {}
+          },
+          "aliases": {
+            "patterns/confirmation-pages": {},
+            "patterns/start-using-a-service": {}
+          }
+        }
+      ],
+      [
+        "pagination",
+        {
+          "_index": 109,
+          "title": { "components/pagination": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "palette",
+        { "_index": 239, "title": {}, "aliases": { "styles/colour": {} } }
+      ],
+      [
+        "panel",
+        { "_index": 110, "title": { "components/panel": {} }, "aliases": {} }
+      ],
+      [
+        "panellist",
+        {
+          "_index": 19,
+          "title": {
+            "community/design-system-day-2023/speaker-information": {},
+            "community/design-system-day-2024/speaker-information": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "paragraph",
+        {
+          "_index": 319,
+          "title": { "styles/paragraphs/#lead-paragraph": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "paragraphs",
+        { "_index": 249, "title": { "styles/paragraphs": {} }, "aliases": {} }
+      ],
+      [
+        "partnership",
+        {
+          "_index": 212,
+          "title": {},
+          "aliases": { "patterns/equality-information": {} }
+        }
+      ],
+      [
+        "pass",
+        {
+          "_index": 119,
+          "title": {},
+          "aliases": { "components/password-input": {} }
+        }
+      ],
+      [
+        "password",
+        {
+          "_index": 118,
+          "title": { "components/password-input": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "passwords",
+        { "_index": 227, "title": { "patterns/passwords": {} }, "aliases": {} }
+      ],
+      [
+        "path",
+        {
+          "_index": 55,
+          "title": {},
+          "aliases": { "components/breadcrumbs": {} }
+        }
+      ],
+      [
+        "pattern",
+        {
+          "_index": 27,
+          "title": {
+            "community/develop-a-component-or-pattern": {},
+            "community/propose-a-component-or-pattern": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "patterns",
+        {
+          "_index": 41,
+          "title": { "community/upcoming-components-patterns": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "payment",
+        {
+          "_index": 228,
+          "title": { "patterns/payment-card-details": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "performance",
+        {
+          "_index": 267,
+          "title": {
+            "accessibility/accessibility-strategy/#performance-measurement": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "phase",
+        {
+          "_index": 121,
+          "title": { "components/phase-banner": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "phone",
+        {
+          "_index": 180,
+          "title": {
+            "patterns/confirm-a-phone-number": {},
+            "patterns/phone-numbers": {}
+          },
+          "aliases": {
+            "patterns/confirm-a-phone-number": {},
+            "patterns/phone-numbers": {}
+          }
+        }
+      ],
+      [
+        "photography",
+        {
+          "_index": 280,
+          "title": { "styles/images/#photography": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "phrase",
+        {
+          "_index": 120,
+          "title": {},
+          "aliases": { "components/password-input": {} }
+        }
+      ],
+      [
+        "podcasts",
+        {
+          "_index": 5,
+          "title": { "community/blogs-talks-podcasts": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "pop",
+        { "_index": 137, "title": {}, "aliases": { "components/select": {} } }
+      ],
+      [
+        "posts",
+        {
+          "_index": 3,
+          "title": { "community/blogs-talks-podcasts": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "primary",
+        {
+          "_index": 140,
+          "title": {},
+          "aliases": { "components/service-navigation": {} }
+        }
+      ],
+      [
+        "principles",
+        {
+          "_index": 9,
+          "title": {
+            "community/community-principles": {},
+            "accessibility/accessibility-strategy/#principles-for-increasing-accessibility": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "prioritising",
+        {
+          "_index": 258,
+          "title": {
+            "accessibility/accessibility-strategy/#prioritising-accessibility-concerns": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "privacy",
+        {
+          "_index": 93,
+          "title": {},
+          "aliases": { "components/footer": {}, "patterns/cookies-page": {} }
+        }
+      ],
+      [
+        "problem",
+        {
+          "_index": 229,
+          "title": { "patterns/problem-with-the-service-pages": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "production",
+        {
+          "_index": 159,
+          "title": {
+            "get-started/extending-and-modifying-components": {},
+            "get-started/production": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "progressive",
+        { "_index": 75, "title": {}, "aliases": { "components/details": {} } }
+      ],
+      [
+        "propose",
+        {
+          "_index": 28,
+          "title": {
+            "community/propose-a-component-or-pattern": {},
+            "community/propose-a-content-change-using-github": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "proposed",
+        {
+          "_index": 265,
+          "title": {
+            "accessibility/accessibility-strategy/#proposed-accessibility-activities": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "protected",
+        {
+          "_index": 203,
+          "title": {},
+          "aliases": { "patterns/equality-information": {} }
+        }
+      ],
+      [
+        "prototype",
+        {
+          "_index": 124,
+          "title": {},
+          "aliases": { "components/phase-banner": {} }
+        }
+      ],
+      [
+        "prototyping",
+        {
+          "_index": 172,
+          "title": { "get-started/prototyping": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "question",
+        {
+          "_index": 231,
+          "title": { "patterns/question-pages": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "quickly",
+        {
+          "_index": 219,
+          "title": { "patterns/exit-a-page-quickly": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "radio",
+        { "_index": 128, "title": {}, "aliases": { "components/radios": {} } }
+      ],
+      [
+        "radios",
+        { "_index": 127, "title": { "components/radios": {} }, "aliases": {} }
+      ],
+      [
+        "readers",
+        {
+          "_index": 298,
+          "title": {
+            "styles/layout/#hide-elements-and-keep-them-accessible-to-screen-readers": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "receipts",
+        {
+          "_index": 192,
+          "title": {},
+          "aliases": { "patterns/confirmation-pages": {} }
+        }
+      ],
+      [
+        "recording",
+        {
+          "_index": 264,
+          "title": {
+            "accessibility/accessibility-strategy/#recording-accessibility-concerns": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "recover",
+        { "_index": 236, "title": { "patterns/validation": {} }, "aliases": {} }
+      ],
+      [
+        "reference",
+        { "_index": 114, "title": {}, "aliases": { "components/panel": {} } }
+      ],
+      [
+        "related",
+        {
+          "_index": 270,
+          "title": {
+            "accessibility/accessibility-strategy/#wcag-related-dates": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "religion",
+        {
+          "_index": 213,
+          "title": {},
+          "aliases": { "patterns/equality-information": {} }
+        }
+      ],
+      [
+        "research",
+        {
+          "_index": 286,
+          "title": { "styles/images/#research-on-images": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "resources",
+        {
+          "_index": 33,
+          "title": { "community/resources-and-tools": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "responsive",
+        {
+          "_index": 322,
+          "title": { "styles/spacing/#responsive-spacing": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "results",
+        { "_index": 113, "title": {}, "aliases": { "components/panel": {} } }
+      ],
+      [
+        "return",
+        { "_index": 52, "title": {}, "aliases": { "components/back-link": {} } }
+      ],
+      [
+        "reveal",
+        { "_index": 74, "title": {}, "aliases": { "components/details": {} } }
+      ],
+      [
+        "roadmap",
+        { "_index": 35, "title": { "community/roadmap": {} }, "aliases": {} }
+      ],
+      [
+        "scale",
+        {
+          "_index": 171,
+          "title": {
+            "get-started/new-type-scale": {},
+            "styles/type-scale": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "screen",
+        {
+          "_index": 287,
+          "title": {
+            "styles/layout/#screen-size": {},
+            "styles/layout/#hide-elements-and-keep-them-accessible-to-screen-readers": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "section",
+        {
+          "_index": 250,
+          "title": { "styles/section-break": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "security",
+        {
+          "_index": 185,
+          "title": {},
+          "aliases": { "patterns/confirm-a-phone-number": {} }
+        }
+      ],
+      [
+        "select",
+        { "_index": 131, "title": { "components/select": {} }, "aliases": {} }
+      ],
+      [
+        "service",
+        {
+          "_index": 139,
+          "title": {
+            "components/service-navigation": {},
+            "get-started/new-type-scale": {},
+            "patterns/check-a-service-is-suitable": {},
+            "patterns/contact-a-department-or-service-team": {},
+            "patterns/navigate-a-service": {},
+            "patterns/problem-with-the-service-pages": {},
+            "patterns/service-unavailable-pages": {},
+            "patterns/start-using-a-service": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "sessions",
+        {
+          "_index": 17,
+          "title": {
+            "community/design-system-day-2023/session-information": {},
+            "community/design-system-day-2024/session-information": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "setting",
+        {
+          "_index": 290,
+          "title": { "styles/layout/#setting-up-page-wrappers": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "settings",
+        {
+          "_index": 197,
+          "title": {},
+          "aliases": { "patterns/cookies-page": {} }
+        }
+      ],
+      [
+        "sex",
+        {
+          "_index": 214,
+          "title": {},
+          "aliases": { "patterns/equality-information": {} }
+        }
+      ],
+      [
+        "sexual",
+        {
+          "_index": 217,
+          "title": {},
+          "aliases": { "patterns/equality-information": {} }
+        }
+      ],
+      [
+        "share",
+        {
+          "_index": 36,
+          "title": { "community/share-research-findings": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "show",
+        { "_index": 79, "title": {}, "aliases": { "components/details": {} } }
+      ],
+      [
+        "showyhideything",
+        { "_index": 81, "title": {}, "aliases": { "components/details": {} } }
+      ],
+      [
+        "size",
+        {
+          "_index": 272,
+          "title": {
+            "styles/font-override-classes/#font-size": {},
+            "styles/layout/#screen-size": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "skip",
+        {
+          "_index": 141,
+          "title": { "components/skip-link": {} },
+          "aliases": { "components/skip-link": {} }
+        }
+      ],
+      [
+        "small",
+        {
+          "_index": 321,
+          "title": { "styles/paragraphs/#body-small": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "spacing",
+        {
+          "_index": 252,
+          "title": {
+            "styles/spacing": {},
+            "styles/lists/#adding-extra-spacing-between-list-items": {},
+            "styles/spacing/#responsive-spacing": {},
+            "styles/spacing/#static-spacing": {},
+            "styles/spacing/#applying-spacing-in-your-own-css": {},
+            "styles/spacing/#overriding-spacing": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "speaker",
+        {
+          "_index": 18,
+          "title": {
+            "community/design-system-day-2023/speaker-information": {},
+            "community/design-system-day-2024/speaker-information": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "start",
+        {
+          "_index": 234,
+          "title": { "patterns/start-using-a-service": {} },
+          "aliases": { "patterns/start-using-a-service": {} }
+        }
+      ],
+      [
+        "state",
+        {
+          "_index": 162,
+          "title": {
+            "get-started/focus-states": {},
+            "styles/links/#links-without-a-visited-state": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "statement",
+        { "_index": 95, "title": {}, "aliases": { "components/footer": {} } }
+      ],
+      [
+        "static",
+        {
+          "_index": 323,
+          "title": { "styles/spacing/#static-spacing": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "status",
+        {
+          "_index": 125,
+          "title": {},
+          "aliases": { "components/phase-banner": {} }
+        }
+      ],
+      [
+        "step",
+        {
+          "_index": 235,
+          "title": { "patterns/step-by-step-navigation": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "strategy",
+        {
+          "_index": 1,
+          "title": {
+            "accessibility/accessibility-strategy": {},
+            "accessibility/accessibility-strategy/#terms-used-in-this-strategy": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "styles",
+        {
+          "_index": 163,
+          "title": { "get-started/focus-states": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "success",
+        {
+          "_index": 106,
+          "title": {},
+          "aliases": { "components/notification-banner": {} }
+        }
+      ],
+      [
+        "suitable",
+        {
+          "_index": 175,
+          "title": { "patterns/check-a-service-is-suitable": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "summary",
+        {
+          "_index": 85,
+          "title": {
+            "components/error-summary": {},
+            "components/summary-list": {}
+          },
+          "aliases": { "components/summary-list": {} }
+        }
+      ],
+      [
+        "system",
+        {
+          "_index": 13,
+          "title": {
+            "community/design-system-day-2022": {},
+            "community/design-system-day-2023": {},
+            "community/design-system-day-2023/session-information": {},
+            "community/design-system-day-2023/speaker-information": {},
+            "community/design-system-day-2024": {},
+            "community/design-system-day-2024/session-information": {},
+            "community/design-system-day-2024/speaker-information": {},
+            "community/design-system-day": {},
+            "community/design-system-working-group": {},
+            "styles/layout/#using-the-grid-system": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "systems",
+        {
+          "_index": 256,
+          "title": {
+            "accessibility/accessibility-strategy/#accessibility-and-design-systems": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "tab",
+        {
+          "_index": 304,
+          "title": { "styles/links/#opening-links-in-a-new-tab": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "table",
+        { "_index": 143, "title": { "components/table": {} }, "aliases": {} }
+      ],
+      [
+        "tabs",
+        { "_index": 144, "title": { "components/tabs": {} }, "aliases": {} }
+      ],
+      [
+        "tabular",
+        {
+          "_index": 274,
+          "title": { "styles/font-override-classes/#tabular-numbers": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "tag",
+        { "_index": 145, "title": { "components/tag": {} }, "aliases": {} }
+      ],
+      [
+        "task",
+        {
+          "_index": 150,
+          "title": { "components/task-list": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "tasks",
+        {
+          "_index": 178,
+          "title": { "patterns/complete-multiple-tasks": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "team",
+        {
+          "_index": 196,
+          "title": { "patterns/contact-a-department-or-service-team": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "telephone",
+        {
+          "_index": 186,
+          "title": {},
+          "aliases": {
+            "patterns/confirm-a-phone-number": {},
+            "patterns/phone-numbers": {}
+          }
+        }
+      ],
+      [
+        "template",
+        {
+          "_index": 247,
+          "title": {
+            "styles/page-template": {},
+            "styles/page-template/#customised-page-template": {},
+            "styles/page-template/#changing-template-content": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "terms",
+        {
+          "_index": 96,
+          "title": {
+            "accessibility/accessibility-strategy/#terms-used-in-this-strategy": {}
+          },
+          "aliases": { "components/footer": {} }
+        }
+      ],
+      [
+        "testing",
+        {
+          "_index": 263,
+          "title": {
+            "accessibility/accessibility-strategy/#testing-accessibility-concerns": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "text",
+        {
+          "_index": 78,
+          "title": {
+            "components/inset-text": {},
+            "components/text-input": {},
+            "components/warning-text": {},
+            "styles/font-override-classes/#text-alignment": {},
+            "styles/images/#avoid-images-that-contain-text": {},
+            "styles/images/#alt-text": {}
+          },
+          "aliases": {
+            "components/details": {},
+            "components/inset-text": {},
+            "components/text-input": {},
+            "components/textarea": {},
+            "components/warning-text": {},
+            "patterns/confirm-a-phone-number": {}
+          }
+        }
+      ],
+      [
+        "textarea",
+        { "_index": 153, "title": { "components/textarea": {} }, "aliases": {} }
+      ],
+      [
+        "tick",
+        {
+          "_index": 65,
+          "title": {},
+          "aliases": { "components/checkboxes": {} }
+        }
+      ],
+      [
+        "tickboxes",
+        {
+          "_index": 64,
+          "title": {},
+          "aliases": { "components/checkboxes": {} }
+        }
+      ],
+      [
+        "token",
+        { "_index": 149, "title": {}, "aliases": { "components/tag": {} } }
+      ],
+      [
+        "tools",
+        {
+          "_index": 34,
+          "title": { "community/resources-and-tools": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "tracking",
+        {
+          "_index": 70,
+          "title": {},
+          "aliases": {
+            "components/cookie-banner": {},
+            "patterns/cookies-page": {}
+          }
+        }
+      ],
+      [
+        "two",
+        {
+          "_index": 187,
+          "title": {},
+          "aliases": { "patterns/confirm-a-phone-number": {} }
+        }
+      ],
+      [
+        "type",
+        {
+          "_index": 170,
+          "title": {
+            "get-started/new-type-scale": {},
+            "styles/type-scale": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "typeface",
+        { "_index": 255, "title": { "styles/typeface": {} }, "aliases": {} }
+      ],
+      [
+        "unavailable",
+        {
+          "_index": 232,
+          "title": { "patterns/service-unavailable-pages": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "underlines",
+        {
+          "_index": 307,
+          "title": { "styles/links/#links-without-underlines": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "understanding",
+        {
+          "_index": 160,
+          "title": { "get-started/focus-states": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "up",
+        {
+          "_index": 138,
+          "title": {
+            "styles/font-override-classes/#breaking-up-long-words": {},
+            "styles/layout/#setting-up-page-wrappers": {}
+          },
+          "aliases": { "components/select": {} }
+        }
+      ],
+      [
+        "upcoming",
+        {
+          "_index": 39,
+          "title": { "community/upcoming-components-patterns": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "updating",
+        {
+          "_index": 168,
+          "title": { "get-started/new-type-scale": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "upload",
+        {
+          "_index": 90,
+          "title": { "components/file-upload": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "use",
+        {
+          "_index": 169,
+          "title": { "get-started/new-type-scale": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "used",
+        {
+          "_index": 269,
+          "title": {
+            "accessibility/accessibility-strategy/#terms-used-in-this-strategy": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "username",
+        {
+          "_index": 199,
+          "title": { "patterns/create-a-username": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "users",
+        {
+          "_index": 38,
+          "title": { "community/share-research-findings": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "using",
+        {
+          "_index": 31,
+          "title": {
+            "community/propose-a-content-change-using-github": {},
+            "patterns/start-using-a-service": {},
+            "styles/images/#using-images-to-give-information": {},
+            "styles/layout/#using-the-grid-system": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "validation",
+        {
+          "_index": 84,
+          "title": { "patterns/validation": {} },
+          "aliases": { "components/error-message": {} }
+        }
+      ],
+      [
+        "videos",
+        {
+          "_index": 4,
+          "title": { "community/blogs-talks-podcasts": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "visited",
+        {
+          "_index": 301,
+          "title": { "styles/links/#links-without-a-visited-state": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "visually",
+        {
+          "_index": 299,
+          "title": {},
+          "aliases": {
+            "styles/layout/#hide-elements-and-keep-them-accessible-to-screen-readers": {}
+          }
+        }
+      ],
+      [
+        "warning",
+        {
+          "_index": 105,
+          "title": { "components/warning-text": {} },
+          "aliases": { "components/notification-banner": {} }
+        }
+      ],
+      [
+        "wcag",
+        {
+          "_index": 261,
+          "title": {
+            "accessibility/accessibility-strategy/#baseline-wcag-accessibility-compliance": {},
+            "accessibility/accessibility-strategy/#wcag-related-dates": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "weight",
+        {
+          "_index": 273,
+          "title": { "styles/font-override-classes/#font-weight": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "what's",
+        { "_index": 47, "title": { "community/whats-new": {} }, "aliases": {} }
+      ],
+      [
+        "width",
+        {
+          "_index": 293,
+          "title": { "styles/layout/#width-override-classes": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "without",
+        {
+          "_index": 300,
+          "title": {
+            "styles/links/#links-without-a-visited-state": {},
+            "styles/links/#links-without-underlines": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "word",
+        {
+          "_index": 60,
+          "title": {},
+          "aliases": {
+            "components/character-count": {},
+            "components/password-input": {}
+          }
+        }
+      ],
+      [
+        "words",
+        {
+          "_index": 277,
+          "title": {
+            "styles/font-override-classes/#breaking-up-long-words": {}
+          },
+          "aliases": {}
+        }
+      ],
+      [
+        "working",
+        {
+          "_index": 23,
+          "title": { "community/design-system-working-group": {} },
+          "aliases": {}
+        }
+      ],
+      [
+        "wrappers",
+        {
+          "_index": 291,
+          "title": { "styles/layout/#setting-up-page-wrappers": {} },
+          "aliases": {}
+        }
+      ]
+    ],
+    "pipeline": []
+  },
+  "store": {
+    "accessibility/accessibility-strategy": {
+      "permalink": "accessibility/accessibility-strategy",
+      "title": "Accessibility strategy",
+      "section": "in Accessibility"
+    },
+    "community/blogs-talks-podcasts": {
+      "permalink": "community/blogs-talks-podcasts",
+      "title": "Blog posts, videos and podcasts",
+      "section": "in Community"
+    },
+    "community/code-of-conduct": {
+      "permalink": "community/code-of-conduct",
+      "title": "Code of Conduct",
+      "section": "in Community"
+    },
+    "community/community-principles": {
+      "permalink": "community/community-principles",
+      "title": "Community principles",
+      "section": "in Community"
+    },
+    "community/contribution-criteria": {
+      "permalink": "community/contribution-criteria",
+      "title": "Contribution criteria",
+      "section": "in Community"
+    },
+    "community/design-system-day-2022": {
+      "permalink": "community/design-system-day-2022",
+      "title": "Design System Day 2022",
+      "section": "in Community"
+    },
+    "community/design-system-day-2023": {
+      "permalink": "community/design-system-day-2023",
+      "title": "Design System Day 2023",
+      "section": "in Community"
+    },
+    "community/design-system-day-2023/session-information": {
+      "permalink": "community/design-system-day-2023/session-information",
+      "title": "Design System Day 2023 sessions",
+      "section": "in Community"
+    },
+    "community/design-system-day-2023/speaker-information": {
+      "permalink": "community/design-system-day-2023/speaker-information",
+      "title": "Speaker and panellist information for Design System Day 2023",
+      "section": "in Community"
+    },
+    "community/design-system-day-2024": {
+      "permalink": "community/design-system-day-2024",
+      "title": "Design System Day 2024",
+      "section": "in Community"
+    },
+    "community/design-system-day-2024/session-information": {
+      "permalink": "community/design-system-day-2024/session-information",
+      "title": "Design System Day 2024 sessions",
+      "section": "in Community"
+    },
+    "community/design-system-day-2024/speaker-information": {
+      "permalink": "community/design-system-day-2024/speaker-information",
+      "title": "Speaker and panellist information for Design System Day 2024",
+      "section": "in Community"
+    },
+    "community/design-system-day": {
+      "permalink": "community/design-system-day",
+      "title": "Design System Day Events",
+      "section": "in Community"
+    },
+    "community/design-system-working-group": {
+      "permalink": "community/design-system-working-group",
+      "title": "Design System working group",
+      "section": "in Community"
+    },
+    "community/develop-a-component-or-pattern": {
+      "permalink": "community/develop-a-component-or-pattern",
+      "title": "Develop a component or pattern",
+      "section": "in Community"
+    },
+    "community/propose-a-component-or-pattern": {
+      "permalink": "community/propose-a-component-or-pattern",
+      "title": "Propose a component or pattern",
+      "section": "in Community"
+    },
+    "community/propose-a-content-change-using-github": {
+      "permalink": "community/propose-a-content-change-using-github",
+      "title": "Propose a content change using GitHub",
+      "section": "in Community"
+    },
+    "community/resources-and-tools": {
+      "permalink": "community/resources-and-tools",
+      "title": "Resources and tools",
+      "section": "in Community"
+    },
+    "community/roadmap": {
+      "permalink": "community/roadmap",
+      "title": "Roadmap",
+      "section": "in Community"
+    },
+    "community/share-research-findings": {
+      "permalink": "community/share-research-findings",
+      "title": "Share findings about your users",
+      "section": "in Community"
+    },
+    "community/upcoming-components-patterns": {
+      "permalink": "community/upcoming-components-patterns",
+      "title": "Upcoming components and patterns",
+      "section": "in Community",
+      "aliases": "maps, autocomplete, choosing a date, navigation"
+    },
+    "community/whats-new": {
+      "permalink": "community/whats-new",
+      "title": "What's new",
+      "section": "in Community"
+    },
+    "components/accordion": {
+      "permalink": "components/accordion",
+      "title": "Accordion",
+      "section": "in Components",
+      "aliases": null
+    },
+    "components/back-link": {
+      "permalink": "components/back-link",
+      "title": "Back link",
+      "section": "in Components",
+      "aliases": "return link, back button"
+    },
+    "components/breadcrumbs": {
+      "permalink": "components/breadcrumbs",
+      "title": "Breadcrumbs",
+      "section": "in Components",
+      "aliases": "navigation path, cookie crumb"
+    },
+    "components/button": {
+      "permalink": "components/button",
+      "title": "Button",
+      "section": "in Components",
+      "aliases": null
+    },
+    "components/character-count": {
+      "permalink": "components/character-count",
+      "title": "Character count",
+      "section": "in Components",
+      "aliases": "word count"
+    },
+    "components/checkboxes": {
+      "permalink": "components/checkboxes",
+      "title": "Checkboxes",
+      "section": "in Components",
+      "aliases": "check boxes, tickboxes, tick boxes"
+    },
+    "components/cookie-banner": {
+      "permalink": "components/cookie-banner",
+      "title": "Cookie banner",
+      "section": "in Components",
+      "aliases": "Cookies banner, consent banner, GDPR banner, tracking banner, analytics banner"
+    },
+    "components/date-input": {
+      "permalink": "components/date-input",
+      "title": "Date input",
+      "section": "in Components",
+      "aliases": null
+    },
+    "components/details": {
+      "permalink": "components/details",
+      "title": "Details",
+      "section": "in Components",
+      "aliases": "reveal, progressive disclosure, hidden text, show and hide, ShowyHideyThing"
+    },
+    "components/error-message": {
+      "permalink": "components/error-message",
+      "title": "Error message",
+      "section": "in Components",
+      "aliases": "validation message"
+    },
+    "components/error-summary": {
+      "permalink": "components/error-summary",
+      "title": "Error summary",
+      "section": "in Components",
+      "aliases": null
+    },
+    "components/exit-this-page": {
+      "permalink": "components/exit-this-page",
+      "title": "Exit this page",
+      "section": "in Components",
+      "aliases": null
+    },
+    "components/fieldset": {
+      "permalink": "components/fieldset",
+      "title": "Fieldset",
+      "section": "in Components",
+      "aliases": null
+    },
+    "components/file-upload": {
+      "permalink": "components/file-upload",
+      "title": "File upload",
+      "section": "in Components",
+      "aliases": null
+    },
+    "components/footer": {
+      "permalink": "components/footer",
+      "title": "GOV.UK footer",
+      "section": "in Components",
+      "aliases": "privacy notice, accessibility statement, terms and conditions"
+    },
+    "components/header": {
+      "permalink": "components/header",
+      "title": "GOV.UK header",
+      "section": "in Components",
+      "aliases": "GOV.UK masthead"
+    },
+    "components/inset-text": {
+      "permalink": "components/inset-text",
+      "title": "Inset text",
+      "section": "in Components",
+      "aliases": "highlighted text, callout"
+    },
+    "components/notification-banner": {
+      "permalink": "components/notification-banner",
+      "title": "Notification banner",
+      "section": "in Components",
+      "aliases": "alert, warning, success message, important message, flash message"
+    },
+    "components/pagination": {
+      "permalink": "components/pagination",
+      "title": "Pagination",
+      "section": "in Components",
+      "aliases": null
+    },
+    "components/panel": {
+      "permalink": "components/panel",
+      "title": "Panel",
+      "section": "in Components",
+      "aliases": "confirmation box, results box, reference number, application complete, application number"
+    },
+    "components/password-input": {
+      "permalink": "components/password-input",
+      "title": "Password input",
+      "section": "in Components",
+      "aliases": "pass word, pass phrase"
+    },
+    "components/phase-banner": {
+      "permalink": "components/phase-banner",
+      "title": "Phase banner",
+      "section": "in Components",
+      "aliases": "alpha banner, beta banner, prototype banner, status banner, feedback banner"
+    },
+    "components/radios": {
+      "permalink": "components/radios",
+      "title": "Radios",
+      "section": "in Components",
+      "aliases": "radio buttons, option buttons"
+    },
+    "components/select": {
+      "permalink": "components/select",
+      "title": "Select",
+      "section": "in Components",
+      "aliases": "drop down menu, list box, drop down list, combo box, pop-up menu"
+    },
+    "components/service-navigation": {
+      "permalink": "components/service-navigation",
+      "title": "Service navigation",
+      "section": "in Components",
+      "aliases": "Primary navigation"
+    },
+    "components/skip-link": {
+      "permalink": "components/skip-link",
+      "title": "Skip link",
+      "section": "in Components",
+      "aliases": "Skip navigation link"
+    },
+    "components/summary-list": {
+      "permalink": "components/summary-list",
+      "title": "Summary list",
+      "section": "in Components",
+      "aliases": "Summary card"
+    },
+    "components/table": {
+      "permalink": "components/table",
+      "title": "Table",
+      "section": "in Components",
+      "aliases": null
+    },
+    "components/tabs": {
+      "permalink": "components/tabs",
+      "title": "Tabs",
+      "section": "in Components",
+      "aliases": null
+    },
+    "components/tag": {
+      "permalink": "components/tag",
+      "title": "Tag",
+      "section": "in Components",
+      "aliases": "chip, badge, flag, token"
+    },
+    "components/task-list": {
+      "permalink": "components/task-list",
+      "title": "Task list",
+      "section": "in Components",
+      "aliases": null
+    },
+    "components/text-input": {
+      "permalink": "components/text-input",
+      "title": "Text input",
+      "section": "in Components",
+      "aliases": "text box, text field, input field, text entry box"
+    },
+    "components/textarea": {
+      "permalink": "components/textarea",
+      "title": "Textarea",
+      "section": "in Components",
+      "aliases": "multi-line text box, multi-line text field"
+    },
+    "components/warning-text": {
+      "permalink": "components/warning-text",
+      "title": "Warning text",
+      "section": "in Components",
+      "aliases": "important text, legal text"
+    },
+    "get-started/extending-and-modifying-components": {
+      "permalink": "get-started/extending-and-modifying-components",
+      "title": "Extending and modifying components in production",
+      "section": "in Get started"
+    },
+    "get-started/focus-states": {
+      "permalink": "get-started/focus-states",
+      "title": "Understanding focus state styles",
+      "section": "in Get started"
+    },
+    "get-started/labels-legends-headings": {
+      "permalink": "get-started/labels-legends-headings",
+      "title": "Making labels and legends headings",
+      "section": "in Get started"
+    },
+    "get-started/new-type-scale": {
+      "permalink": "get-started/new-type-scale",
+      "title": "Updating your service to use the new type scale",
+      "section": "in Get started"
+    },
+    "get-started/production": {
+      "permalink": "get-started/production",
+      "title": "Production",
+      "section": "in Get started"
+    },
+    "get-started/prototyping": {
+      "permalink": "get-started/prototyping",
+      "title": "Prototyping",
+      "section": "in Get started"
+    },
+    "patterns/addresses": {
+      "permalink": "patterns/addresses",
+      "title": "Addresses",
+      "section": "in Patterns",
+      "aliases": null
+    },
+    "patterns/bank-details": {
+      "permalink": "patterns/bank-details",
+      "title": "Bank details",
+      "section": "in Patterns",
+      "aliases": null
+    },
+    "patterns/check-a-service-is-suitable": {
+      "permalink": "patterns/check-a-service-is-suitable",
+      "title": "Check a service is suitable",
+      "section": "in Patterns",
+      "aliases": null
+    },
+    "patterns/check-answers": {
+      "permalink": "patterns/check-answers",
+      "title": "Check answers",
+      "section": "in Patterns",
+      "aliases": null
+    },
+    "patterns/complete-multiple-tasks": {
+      "permalink": "patterns/complete-multiple-tasks",
+      "title": "Complete multiple tasks",
+      "section": "in Patterns",
+      "aliases": null
+    },
+    "patterns/confirm-a-phone-number": {
+      "permalink": "patterns/confirm-a-phone-number",
+      "title": "Confirm a phone number",
+      "section": "in Patterns",
+      "aliases": "2FA, MFA, multi-factor authentication, security code, telephone number, phone number, text message, two-factor authentication"
+    },
+    "patterns/confirm-an-email-address": {
+      "permalink": "patterns/confirm-an-email-address",
+      "title": "Confirm an email address",
+      "section": "in Patterns",
+      "aliases": null
+    },
+    "patterns/confirmation-pages": {
+      "permalink": "patterns/confirmation-pages",
+      "title": "Confirmation pages",
+      "section": "in Patterns",
+      "aliases": "completion pages, receipts, finish pages"
+    },
+    "patterns/contact-a-department-or-service-team": {
+      "permalink": "patterns/contact-a-department-or-service-team",
+      "title": "Contact a department or service team",
+      "section": "in Patterns",
+      "aliases": null
+    },
+    "patterns/cookies-page": {
+      "permalink": "patterns/cookies-page",
+      "title": "Cookies page",
+      "section": "in Patterns",
+      "aliases": "Privacy settings, Cookie settings, tracking settings"
+    },
+    "patterns/create-a-username": {
+      "permalink": "patterns/create-a-username",
+      "title": "Create a username",
+      "section": "in Patterns",
+      "aliases": null
+    },
+    "patterns/create-accounts": {
+      "permalink": "patterns/create-accounts",
+      "title": "Create accounts",
+      "section": "in Patterns",
+      "aliases": null
+    },
+    "patterns/dates": {
+      "permalink": "patterns/dates",
+      "title": "Dates",
+      "section": "in Patterns",
+      "aliases": null
+    },
+    "patterns/email-addresses": {
+      "permalink": "patterns/email-addresses",
+      "title": "Email addresses",
+      "section": "in Patterns",
+      "aliases": null
+    },
+    "patterns/equality-information": {
+      "permalink": "patterns/equality-information",
+      "title": "Equality information",
+      "section": "in Patterns",
+      "aliases": "protected characteristics, ethnic group, diversity, demographic, age, disability, marriage, civil partnership, religion, sex, gender identity, sexual orientation"
+    },
+    "patterns/exit-a-page-quickly": {
+      "permalink": "patterns/exit-a-page-quickly",
+      "title": "Exit a page quickly",
+      "section": "in Patterns",
+      "aliases": null
+    },
+    "patterns/names": {
+      "permalink": "patterns/names",
+      "title": "Names",
+      "section": "in Patterns",
+      "aliases": null
+    },
+    "patterns/national-insurance-numbers": {
+      "permalink": "patterns/national-insurance-numbers",
+      "title": "National Insurance numbers",
+      "section": "in Patterns",
+      "aliases": null
+    },
+    "patterns/navigate-a-service": {
+      "permalink": "patterns/navigate-a-service",
+      "title": "Navigate a service",
+      "section": "in Patterns",
+      "aliases": null
+    },
+    "patterns/page-not-found-pages": {
+      "permalink": "patterns/page-not-found-pages",
+      "title": "Page not found pages",
+      "section": "in Patterns",
+      "aliases": "404"
+    },
+    "patterns/passwords": {
+      "permalink": "patterns/passwords",
+      "title": "Passwords",
+      "section": "in Patterns",
+      "aliases": null
+    },
+    "patterns/payment-card-details": {
+      "permalink": "patterns/payment-card-details",
+      "title": "Payment card details",
+      "section": "in Patterns",
+      "aliases": null
+    },
+    "patterns/phone-numbers": {
+      "permalink": "patterns/phone-numbers",
+      "title": "Phone numbers",
+      "section": "in Patterns",
+      "aliases": "phone numbers, telephone"
+    },
+    "patterns/problem-with-the-service-pages": {
+      "permalink": "patterns/problem-with-the-service-pages",
+      "title": "There is a problem with the service pages",
+      "section": "in Patterns",
+      "aliases": "500"
+    },
+    "patterns/question-pages": {
+      "permalink": "patterns/question-pages",
+      "title": "Question pages",
+      "section": "in Patterns",
+      "aliases": null
+    },
+    "patterns/service-unavailable-pages": {
+      "permalink": "patterns/service-unavailable-pages",
+      "title": "Service unavailable pages",
+      "section": "in Patterns",
+      "aliases": "503"
+    },
+    "patterns/start-using-a-service": {
+      "permalink": "patterns/start-using-a-service",
+      "title": "Start using a service",
+      "section": "in Patterns",
+      "aliases": "start page, start pages"
+    },
+    "patterns/step-by-step-navigation": {
+      "permalink": "patterns/step-by-step-navigation",
+      "title": "Step by step navigation",
+      "section": "in Patterns",
+      "aliases": null
+    },
+    "patterns/validation": {
+      "permalink": "patterns/validation",
+      "title": "Recover from validation errors",
+      "section": "in Patterns",
+      "aliases": null
+    },
+    "styles/colour": {
+      "permalink": "styles/colour",
+      "title": "Colour",
+      "section": "in Styles",
+      "aliases": "palette"
+    },
+    "styles/font-override-classes": {
+      "permalink": "styles/font-override-classes",
+      "title": "Font override classes",
+      "section": "in Styles"
+    },
+    "styles/headings": {
+      "permalink": "styles/headings",
+      "title": "Headings",
+      "section": "in Styles"
+    },
+    "styles/images": {
+      "permalink": "styles/images",
+      "title": "Images",
+      "section": "in Styles"
+    },
+    "styles/layout": {
+      "permalink": "styles/layout",
+      "title": "Layout",
+      "section": "in Styles"
+    },
+    "styles/links": {
+      "permalink": "styles/links",
+      "title": "Links",
+      "section": "in Styles"
+    },
+    "styles/lists": {
+      "permalink": "styles/lists",
+      "title": "Lists",
+      "section": "in Styles"
+    },
+    "styles/page-template": {
+      "permalink": "styles/page-template",
+      "title": "Page template",
+      "section": "in Styles",
+      "aliases": "boilerplate"
+    },
+    "styles/paragraphs": {
+      "permalink": "styles/paragraphs",
+      "title": "Paragraphs",
+      "section": "in Styles"
+    },
+    "styles/section-break": {
+      "permalink": "styles/section-break",
+      "title": "Section break",
+      "section": "in Styles"
+    },
+    "styles/spacing": {
+      "permalink": "styles/spacing",
+      "title": "Spacing",
+      "section": "in Styles",
+      "aliases": "margin, padding"
+    },
+    "styles/type-scale": {
+      "permalink": "styles/type-scale",
+      "title": "Type scale",
+      "section": "in Styles"
+    },
+    "styles/typeface": {
+      "permalink": "styles/typeface",
+      "title": "Typeface",
+      "section": "in Styles"
+    },
+    "accessibility/accessibility-strategy/#accessibility-and-design-systems": {
+      "permalink": "accessibility/accessibility-strategy/#accessibility-and-design-systems",
+      "title": "Accessibility and design systems",
+      "section": "part of Accessibility strategy in Accessibility"
+    },
+    "accessibility/accessibility-strategy/#principles-for-increasing-accessibility": {
+      "permalink": "accessibility/accessibility-strategy/#principles-for-increasing-accessibility",
+      "title": "Principles for increasing accessibility",
+      "section": "part of Accessibility strategy in Accessibility"
+    },
+    "accessibility/accessibility-strategy/#prioritising-accessibility-concerns": {
+      "permalink": "accessibility/accessibility-strategy/#prioritising-accessibility-concerns",
+      "title": "Prioritising accessibility concerns",
+      "section": "part of Accessibility strategy in Accessibility"
+    },
+    "accessibility/accessibility-strategy/#baseline-wcag-accessibility-compliance": {
+      "permalink": "accessibility/accessibility-strategy/#baseline-wcag-accessibility-compliance",
+      "title": "Baseline WCAG accessibility compliance",
+      "section": "part of Accessibility strategy in Accessibility"
+    },
+    "accessibility/accessibility-strategy/#testing-accessibility-concerns": {
+      "permalink": "accessibility/accessibility-strategy/#testing-accessibility-concerns",
+      "title": "Testing accessibility concerns",
+      "section": "part of Accessibility strategy in Accessibility"
+    },
+    "accessibility/accessibility-strategy/#recording-accessibility-concerns": {
+      "permalink": "accessibility/accessibility-strategy/#recording-accessibility-concerns",
+      "title": "Recording accessibility concerns",
+      "section": "part of Accessibility strategy in Accessibility"
+    },
+    "accessibility/accessibility-strategy/#proposed-accessibility-activities": {
+      "permalink": "accessibility/accessibility-strategy/#proposed-accessibility-activities",
+      "title": "Proposed accessibility activities",
+      "section": "part of Accessibility strategy in Accessibility"
+    },
+    "accessibility/accessibility-strategy/#performance-measurement": {
+      "permalink": "accessibility/accessibility-strategy/#performance-measurement",
+      "title": "Performance measurement",
+      "section": "part of Accessibility strategy in Accessibility"
+    },
+    "accessibility/accessibility-strategy/#terms-used-in-this-strategy": {
+      "permalink": "accessibility/accessibility-strategy/#terms-used-in-this-strategy",
+      "title": "Terms used in this strategy",
+      "section": "part of Accessibility strategy in Accessibility"
+    },
+    "accessibility/accessibility-strategy/#wcag-related-dates": {
+      "permalink": "accessibility/accessibility-strategy/#wcag-related-dates",
+      "title": "WCAG-related dates",
+      "section": "part of Accessibility strategy in Accessibility"
+    },
+    "styles/font-override-classes/#text-alignment": {
+      "permalink": "styles/font-override-classes/#text-alignment",
+      "title": "Text alignment",
+      "section": "part of Font override classes in Styles"
+    },
+    "styles/font-override-classes/#font-size": {
+      "permalink": "styles/font-override-classes/#font-size",
+      "title": "Font size",
+      "section": "part of Font override classes in Styles"
+    },
+    "styles/font-override-classes/#font-weight": {
+      "permalink": "styles/font-override-classes/#font-weight",
+      "title": "Font weight",
+      "section": "part of Font override classes in Styles"
+    },
+    "styles/font-override-classes/#tabular-numbers": {
+      "permalink": "styles/font-override-classes/#tabular-numbers",
+      "title": "Tabular numbers",
+      "section": "part of Font override classes in Styles"
+    },
+    "styles/font-override-classes/#breaking-up-long-words": {
+      "permalink": "styles/font-override-classes/#breaking-up-long-words",
+      "title": "Breaking up long words",
+      "section": "part of Font override classes in Styles"
+    },
+    "styles/headings/#headings-with-captions": {
+      "permalink": "styles/headings/#headings-with-captions",
+      "title": "Headings with captions",
+      "section": "part of Headings in Styles"
+    },
+    "styles/images/#using-images-to-give-information": {
+      "permalink": "styles/images/#using-images-to-give-information",
+      "title": "Using images to give information",
+      "section": "part of Images in Styles"
+    },
+    "styles/images/#photography": {
+      "permalink": "styles/images/#photography",
+      "title": "Photography",
+      "section": "part of Images in Styles"
+    },
+    "styles/images/#illustrations": {
+      "permalink": "styles/images/#illustrations",
+      "title": "Illustrations",
+      "section": "part of Images in Styles"
+    },
+    "styles/images/#icons": {
+      "permalink": "styles/images/#icons",
+      "title": "Icons",
+      "section": "part of Images in Styles"
+    },
+    "styles/images/#avoid-images-that-contain-text": {
+      "permalink": "styles/images/#avoid-images-that-contain-text",
+      "title": "Avoid images that contain text",
+      "section": "part of Images in Styles"
+    },
+    "styles/images/#alt-text": {
+      "permalink": "styles/images/#alt-text",
+      "title": "Alt text",
+      "section": "part of Images in Styles"
+    },
+    "styles/images/#research-on-images": {
+      "permalink": "styles/images/#research-on-images",
+      "title": "Research on images",
+      "section": "part of Images in Styles"
+    },
+    "styles/layout/#screen-size": {
+      "permalink": "styles/layout/#screen-size",
+      "title": "Screen size",
+      "section": "part of Layout in Styles"
+    },
+    "styles/layout/#common-layouts": {
+      "permalink": "styles/layout/#common-layouts",
+      "title": "Common layouts",
+      "section": "part of Layout in Styles"
+    },
+    "styles/layout/#setting-up-page-wrappers": {
+      "permalink": "styles/layout/#setting-up-page-wrappers",
+      "title": "Setting up page wrappers",
+      "section": "part of Layout in Styles"
+    },
+    "styles/layout/#using-the-grid-system": {
+      "permalink": "styles/layout/#using-the-grid-system",
+      "title": "Using the grid system",
+      "section": "part of Layout in Styles"
+    },
+    "styles/layout/#width-override-classes": {
+      "permalink": "styles/layout/#width-override-classes",
+      "title": "Width override classes",
+      "section": "part of Layout in Styles"
+    },
+    "styles/layout/#override-how-elements-display": {
+      "permalink": "styles/layout/#override-how-elements-display",
+      "title": "Override how elements display",
+      "section": "part of Layout in Styles"
+    },
+    "styles/layout/#hide-elements-and-keep-them-accessible-to-screen-readers": {
+      "permalink": "styles/layout/#hide-elements-and-keep-them-accessible-to-screen-readers",
+      "title": "Hide elements and keep them accessible to screen readers",
+      "section": "part of Layout in Styles",
+      "aliases": "visually hidden"
+    },
+    "styles/links/#links-without-a-visited-state": {
+      "permalink": "styles/links/#links-without-a-visited-state",
+      "title": "Links without a visited state",
+      "section": "part of Links in Styles"
+    },
+    "styles/links/#external-links": {
+      "permalink": "styles/links/#external-links",
+      "title": "External links",
+      "section": "part of Links in Styles"
+    },
+    "styles/links/#opening-links-in-a-new-tab": {
+      "permalink": "styles/links/#opening-links-in-a-new-tab",
+      "title": "Opening links in a new tab",
+      "section": "part of Links in Styles"
+    },
+    "styles/links/#links-on-dark-backgrounds": {
+      "permalink": "styles/links/#links-on-dark-backgrounds",
+      "title": "Links on dark backgrounds",
+      "section": "part of Links in Styles"
+    },
+    "styles/links/#links-without-underlines": {
+      "permalink": "styles/links/#links-without-underlines",
+      "title": "Links without underlines",
+      "section": "part of Links in Styles"
+    },
+    "styles/links/#links-to-change-a-language": {
+      "permalink": "styles/links/#links-to-change-a-language",
+      "title": "Links to change a language",
+      "section": "part of Links in Styles"
+    },
+    "styles/lists/#bulleted-lists": {
+      "permalink": "styles/lists/#bulleted-lists",
+      "title": "Bulleted lists",
+      "section": "part of Lists in Styles"
+    },
+    "styles/lists/#numbered-lists": {
+      "permalink": "styles/lists/#numbered-lists",
+      "title": "Numbered lists",
+      "section": "part of Lists in Styles"
+    },
+    "styles/lists/#adding-extra-spacing-between-list-items": {
+      "permalink": "styles/lists/#adding-extra-spacing-between-list-items",
+      "title": "Adding extra spacing between list items",
+      "section": "part of Lists in Styles"
+    },
+    "styles/page-template/#default": {
+      "permalink": "styles/page-template/#default",
+      "title": "Default",
+      "section": "part of Page template in Styles"
+    },
+    "styles/page-template/#customised-page-template": {
+      "permalink": "styles/page-template/#customised-page-template",
+      "title": "Customised page template",
+      "section": "part of Page template in Styles"
+    },
+    "styles/page-template/#changing-template-content": {
+      "permalink": "styles/page-template/#changing-template-content",
+      "title": "Changing template content",
+      "section": "part of Page template in Styles"
+    },
+    "styles/paragraphs/#lead-paragraph": {
+      "permalink": "styles/paragraphs/#lead-paragraph",
+      "title": "Lead paragraph",
+      "section": "part of Paragraphs in Styles"
+    },
+    "styles/paragraphs/#body-small": {
+      "permalink": "styles/paragraphs/#body-small",
+      "title": "Body small",
+      "section": "part of Paragraphs in Styles"
+    },
+    "styles/spacing/#responsive-spacing": {
+      "permalink": "styles/spacing/#responsive-spacing",
+      "title": "Responsive spacing",
+      "section": "part of Spacing in Styles"
+    },
+    "styles/spacing/#static-spacing": {
+      "permalink": "styles/spacing/#static-spacing",
+      "title": "Static spacing",
+      "section": "part of Spacing in Styles"
+    },
+    "styles/spacing/#applying-spacing-in-your-own-css": {
+      "permalink": "styles/spacing/#applying-spacing-in-your-own-css",
+      "title": "Applying spacing in your own CSS",
+      "section": "part of Spacing in Styles"
+    },
+    "styles/spacing/#overriding-spacing": {
+      "permalink": "styles/spacing/#overriding-spacing",
+      "title": "Overriding spacing",
+      "section": "part of Spacing in Styles"
+    }
+  }
+}

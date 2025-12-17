@@ -1,0 +1,1 @@
+{"version":3,"sources":["data:;charset=utf-8,@import%20%22example-init%22;%0A%0A.app-example-page%20%7B%0A%20%20background-color:%20govuk-colour(%22blue%22);%0A%7D%0A"],"names":[],"mappings":"AAEA,kBACE,wBAAA","file":"example-inverse.css","sourcesContent":["@import \"example-init\";\n\n.app-example-page {\n  background-color: govuk-colour(\"blue\");\n}\n"]}

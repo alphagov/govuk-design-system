@@ -1,0 +1,2339 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template govuk-template--rebranded">
+  <head>
+    <meta charset="utf-8">
+    <title>Question pages – GOV.UK Design System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#1d70b8">
+
+      <link rel="icon" sizes="48x48" href="/assets/rebrand/images/favicon.ico">
+      <link rel="icon" sizes="any" href="/assets/rebrand/images/favicon.svg" type="image/svg+xml">
+      <link rel="mask-icon" href="/assets/rebrand/images/govuk-icon-mask.svg" color="#1d70b8">
+      <link rel="apple-touch-icon" href="/assets/rebrand/images/govuk-icon-180.png">
+      <link rel="manifest" href="/assets/rebrand/manifest.json">
+
+  <meta name="og:title" content="Question pages">
+  <meta name="description" content="Follow this pattern whenever you need to ask users questions within your service">
+  <meta name="og:description" content="Follow this pattern whenever you need to ask users questions within your service">
+  <link rel="canonical" href="https://design-system.service.gov.uk/patterns/question-pages/">
+  <link href="/stylesheets/main-53f438e2b7fb5f6c27d8011421794cc8.css" rel="stylesheet" media="all">
+
+    <meta property="og:image" content="https://design-system.service.gov.uk/assets/rebrand/images/govuk-opengraph-image.png">
+  </head>
+  <body class="govuk-template__body" data-module="app-navigation">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+  <a id="top"></a>
+  <script>
+    /**
+     * If cookie policy changes and/or the user preferences object format needs to
+     * change, bump this version up afterwards. The user should then be shown the
+     * banner again to consent to the new policy.
+     *
+     * Note that because isValidCookieConsent checks that the version in the user's
+     * cookie is equal to or greater than this number, you should be careful to
+     * check backwards compatibility when changing the object format.
+    */
+    window.GDS_CONSENT_COOKIE_VERSION = 2;
+  </script>
+
+
+
+  <div class="govuk-cookie-banner" data-nosnippet role="region" aria-label="Cookies on GOV.UK Design System" hidden data-module="govuk-cookie-banner" data-cookie-category="analytics">
+  <div class="govuk-cookie-banner__message app-width-container js-cookie-banner-message govuk-width-container">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-cookie-banner__heading govuk-heading-m">
+          Cookies on GOV.UK Design System
+        </h2>
+        <div class="govuk-cookie-banner__content">
+          <p class="govuk-body">We’d like to use analytics cookies so we can understand how you use the Design System and make improvements.</p>
+                <p class="govuk-body">We also use essential cookies to remember if you’ve accepted analytics cookies.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="govuk-button-group">
+      <button type="button" class="govuk-button js-cookie-banner-accept" data-module="govuk-button">
+        Accept analytics cookies
+      </button>
+      <button type="button" class="govuk-button js-cookie-banner-reject" data-module="govuk-button">
+        Reject analytics cookies
+      </button>
+      <a class="govuk-link" href="/cookies/">View cookies</a>
+    </div>
+
+  </div>
+  <div class="govuk-cookie-banner__message js-cookie-banner-confirmation-accept app-width-container govuk-width-container" role="alert" hidden>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-cookie-banner__content">
+          <p class="govuk-body">You’ve accepted analytics cookies. You can <a class="govuk-link" href="/cookies/">change your cookie settings</a> at any time.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="govuk-button-group">
+      <button type="button" class="govuk-button js-cookie-banner-hide js-cookie-banner-hide--accept" data-module="govuk-button">
+        Hide cookie message
+      </button>
+    </div>
+
+  </div>
+  <div class="govuk-cookie-banner__message js-cookie-banner-confirmation-reject app-width-container govuk-width-container" role="alert" hidden>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-cookie-banner__content">
+          <p class="govuk-body">You’ve rejected analytics cookies. You can <a class="govuk-link" href="/cookies/">change your cookie settings</a> at any time.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="govuk-button-group">
+      <button type="button" class="govuk-button js-cookie-banner-hide js-cookie-banner-hide--reject" data-module="govuk-button">
+        Hide cookie message
+      </button>
+    </div>
+
+  </div>
+</div>
+
+
+  
+  <script>
+    (function () {
+      // Skip early setup when cookie banner component is not supported
+      if (!('noModule' in HTMLScriptElement.prototype)) {
+        return
+      }
+
+      /**
+       * Check the cookie preferences object.
+       *
+       * If the consent object is not present, malformed, or incorrect version,
+       * returns false, otherwise returns true.
+       *
+       * This is also duplicated in cookie-functions.js - the two need to be kept in sync
+       */
+      function isValidConsentCookie (options) {
+        return (options && options.version >= window.GDS_CONSENT_COOKIE_VERSION)
+      }
+
+      function categoryIsNull (options) {
+        return (options && options.analytics === null)
+      }
+
+      // Don't show the banner on the cookies page
+      if (window.location.pathname !== "/cookies/") {
+        // Show the banner if there is no consent cookie or if it is outdated
+        var currentConsentCookie = document.cookie.match(new RegExp('(^| )design_system_cookies_policy=([^;]+)'))
+
+        const cookieData = currentConsentCookie && JSON.parse(currentConsentCookie[2]);
+        const cookieNotSet = (!currentConsentCookie || !isValidConsentCookie(cookieData))
+        const categoryNotSet = isValidConsentCookie(cookieData) && categoryIsNull(cookieData)
+
+        if (cookieNotSet || categoryNotSet) {
+          var cookieBanner = document.querySelector("[data-cookie-category='analytics']")
+          cookieBanner.removeAttribute('hidden')
+        }
+      }
+    })()
+  </script>
+
+
+      <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+
+
+
+<header class="govuk-header govuk-header--full-width-border" role="banner">
+  <div class="govuk-header__container app-width-container">
+    <div class="govuk-header__logo app-header-logo">
+      <a href="/" class="govuk-header__link govuk-header__link--homepage">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          role="img"
+          viewBox="0 0 324 60"
+          height="30"
+          width="162"
+          fill="currentcolor"
+          class="govuk-header__logotype"
+          aria-label="GOV.UK">
+          <title>GOV.UK</title>
+          <g>
+            <circle cx="20" cy="17.6" r="3.7"></circle>
+            <circle cx="10.2" cy="23.5" r="3.7"></circle>
+            <circle cx="3.7" cy="33.2" r="3.7"></circle>
+            <circle cx="31.7" cy="30.6" r="3.7"></circle>
+            <circle cx="43.3" cy="17.6" r="3.7"></circle>
+            <circle cx="53.2" cy="23.5" r="3.7"></circle>
+            <circle cx="59.7" cy="33.2" r="3.7"></circle>
+            <circle cx="31.7" cy="30.6" r="3.7"></circle>
+            <path d="M33.1,9.8c.2-.1.3-.3.5-.5l4.6,2.4v-6.8l-4.6,1.5c-.1-.2-.3-.3-.5-.5l1.9-5.9h-6.7l1.9,5.9c-.2.1-.3.3-.5.5l-4.6-1.5v6.8l4.6-2.4c.1.2.3.3.5.5l-2.6,8c-.9,2.8,1.2,5.7,4.1,5.7h0c3,0,5.1-2.9,4.1-5.7l-2.6-8ZM37,37.9s-3.4,3.8-4.1,6.1c2.2,0,4.2-.5,6.4-2.8l-.7,8.5c-2-2.8-4.4-4.1-5.7-3.8.1,3.1.5,6.7,5.8,7.2,3.7.3,6.7-1.5,7-3.8.4-2.6-2-4.3-3.7-1.6-1.4-4.5,2.4-6.1,4.9-3.2-1.9-4.5-1.8-7.7,2.4-10.9,3,4,2.6,7.3-1.2,11.1,2.4-1.3,6.2,0,4,4.6-1.2-2.8-3.7-2.2-4.2.2-.3,1.7.7,3.7,3,4.2,1.9.3,4.7-.9,7-5.9-1.3,0-2.4.7-3.9,1.7l2.4-8c.6,2.3,1.4,3.7,2.2,4.5.6-1.6.5-2.8,0-5.3l5,1.8c-2.6,3.6-5.2,8.7-7.3,17.5-7.4-1.1-15.7-1.7-24.5-1.7h0c-8.8,0-17.1.6-24.5,1.7-2.1-8.9-4.7-13.9-7.3-17.5l5-1.8c-.5,2.5-.6,3.7,0,5.3.8-.8,1.6-2.3,2.2-4.5l2.4,8c-1.5-1-2.6-1.7-3.9-1.7,2.3,5,5.2,6.2,7,5.9,2.3-.4,3.3-2.4,3-4.2-.5-2.4-3-3.1-4.2-.2-2.2-4.6,1.6-6,4-4.6-3.7-3.7-4.2-7.1-1.2-11.1,4.2,3.2,4.3,6.4,2.4,10.9,2.5-2.8,6.3-1.3,4.9,3.2-1.8-2.7-4.1-1-3.7,1.6.3,2.3,3.3,4.1,7,3.8,5.4-.5,5.7-4.2,5.8-7.2-1.3-.2-3.7,1-5.7,3.8l-.7-8.5c2.2,2.3,4.2,2.7,6.4,2.8-.7-2.3-4.1-6.1-4.1-6.1h10.6,0Z"></path>
+          </g>
+          <circle class="govuk-logo-dot" cx="227" cy="36" r="7.3"></circle>
+          <path d="M94.7,36.1c0,1.9.2,3.6.7,5.4.5,1.7,1.2,3.2,2.1,4.5.9,1.3,2.2,2.4,3.6,3.2,1.5.8,3.2,1.2,5.3,1.2s3.6-.3,4.9-.9c1.3-.6,2.3-1.4,3.1-2.3.8-.9,1.3-2,1.6-3,.3-1.1.5-2.1.5-3v-.4h-11v-6.6h19.5v24h-7.7v-5.4c-.5.8-1.2,1.6-2,2.3-.8.7-1.7,1.3-2.7,1.8-1,.5-2.1.9-3.3,1.2-1.2.3-2.5.4-3.8.4-3.2,0-6-.6-8.4-1.7-2.5-1.1-4.5-2.7-6.2-4.7-1.7-2-3-4.4-3.8-7.1-.9-2.7-1.3-5.6-1.3-8.7s.5-6,1.5-8.7,2.4-5.1,4.2-7.1c1.8-2,4-3.6,6.5-4.7s5.4-1.7,8.6-1.7,4,.2,5.9.7c1.8.5,3.5,1.1,5.1,2,1.5.9,2.9,1.9,4,3.2,1.2,1.2,2.1,2.6,2.8,4.1l-7.7,4.3c-.5-.9-1-1.8-1.6-2.6-.6-.8-1.3-1.5-2.2-2.1-.8-.6-1.7-1-2.8-1.4-1-.3-2.2-.5-3.5-.5-2,0-3.8.4-5.3,1.2s-2.7,1.9-3.6,3.2c-.9,1.3-1.7,2.8-2.1,4.6s-.7,3.5-.7,5.3v.3h0ZM152.9,13.7c3.2,0,6.1.6,8.7,1.7,2.6,1.2,4.7,2.7,6.5,4.7,1.8,2,3.1,4.4,4.1,7.1s1.4,5.6,1.4,8.7-.5,6-1.4,8.7c-.9,2.7-2.3,5.1-4.1,7.1s-4,3.6-6.5,4.7c-2.6,1.1-5.5,1.7-8.7,1.7s-6.1-.6-8.7-1.7c-2.6-1.1-4.7-2.7-6.5-4.7-1.8-2-3.1-4.4-4.1-7.1-.9-2.7-1.4-5.6-1.4-8.7s.5-6,1.4-8.7,2.3-5.1,4.1-7.1c1.8-2,4-3.6,6.5-4.7s5.4-1.7,8.7-1.7h0ZM152.9,50.4c1.9,0,3.6-.4,5-1.1,1.4-.7,2.7-1.7,3.6-3,1-1.3,1.7-2.8,2.2-4.5.5-1.7.8-3.6.8-5.7v-.2c0-2-.3-3.9-.8-5.7-.5-1.7-1.3-3.3-2.2-4.5-1-1.3-2.2-2.3-3.6-3-1.4-.7-3.1-1.1-5-1.1s-3.6.4-5,1.1c-1.5.7-2.7,1.7-3.6,3s-1.7,2.8-2.2,4.5c-.5,1.7-.8,3.6-.8,5.7v.2c0,2.1.3,4,.8,5.7.5,1.7,1.2,3.2,2.2,4.5,1,1.3,2.2,2.3,3.6,3,1.5.7,3.1,1.1,5,1.1ZM189.1,58l-12.3-44h9.8l8.4,32.9h.3l8.2-32.9h9.7l-12.3,44M262.9,50.4c1.3,0,2.5-.2,3.6-.6,1.1-.4,2-.9,2.8-1.7.8-.8,1.4-1.7,1.9-2.9.5-1.2.7-2.5.7-4.1V14h8.6v28.5c0,2.4-.4,4.6-1.3,6.6-.9,2-2.1,3.6-3.7,5-1.6,1.4-3.4,2.4-5.6,3.2-2.2.7-4.5,1.1-7.1,1.1s-4.9-.4-7.1-1.1c-2.2-.7-4-1.8-5.6-3.2s-2.8-3-3.7-5c-.9-2-1.3-4.1-1.3-6.6V14h8.7v27.2c0,1.6.2,2.9.7,4.1.5,1.2,1.1,2.1,1.9,2.9.8.8,1.7,1.3,2.8,1.7s2.3.6,3.6.6h0ZM288.5,14h8.7v19.1l15.5-19.1h10.8l-15.1,17.6,16.1,26.4h-10.2l-11.5-19.7-5.6,6.3v13.5h-8.7"></path>
+        </svg>
+        <span class="govuk-header__product-name">
+          Design System
+        </span>
+      </a>
+    </div>
+    <div class="app-site-search" data-module="app-search" data-search-index="/search-index-4432b5fb24aae8bec1aba2476e8a491b.json">
+      <label class="govuk-visually-hidden" for="app-site-search__input">Search Design system</label>
+      <a class="app-site-search__link govuk-link" href="/sitemap/">Sitemap</a>
+    </div>
+  </div>
+</header>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  <div class="govuk-service-navigation app-service-navigation"
+data-module="govuk-service-navigation"
+>
+      <div class="govuk-width-container">
+
+    <div class="govuk-service-navigation__container">
+      
+
+      
+        <nav aria-label="Menu" class="govuk-service-navigation__wrapper app-service-navigation__wrapper">
+          <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden>
+            Menu
+          </button>
+
+          <ul class="govuk-service-navigation__list" id="navigation" >
+
+            
+              
+              <li class="govuk-service-navigation__item">
+                  <a class="govuk-service-navigation__link" href="/get-started/" data-module="app-mobile-navigation-section">
+                                    
+Get started      <template>    <ul class="app-mobile-navigation-section__list app-mobile-navigation-section__subnav" hidden>
+      
+      
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/get-started/">
+      Get started overview
+    </a>
+  </li>
+
+
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">Setup guides</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/get-started/prototyping/">
+      Prototyping
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/get-started/production/">
+      Production
+    </a>
+  </li>
+
+            </ul>
+          </li>
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">How to guides</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/get-started/labels-legends-headings/">
+      Making labels and legends headings
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/get-started/extending-and-modifying-components/">
+      Extending and modifying components in production
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/get-started/focus-states/">
+      Understanding focus state styles
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/get-started/new-type-scale/">
+      Updating your service to use the new type scale
+    </a>
+  </li>
+
+            </ul>
+          </li>
+    </ul>
+</template>
+
+                  </a>
+              </li>
+
+              
+              <li class="govuk-service-navigation__item">
+                  <a class="govuk-service-navigation__link" href="/styles/" data-module="app-mobile-navigation-section">
+                                    
+Styles      <template>    <ul class="app-mobile-navigation-section__list app-mobile-navigation-section__subnav" hidden>
+      
+      
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/">
+      Styles overview
+    </a>
+  </li>
+
+
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">Page structure</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/page-template/">
+      Page template
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/layout/">
+      Layout
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/spacing/">
+      Spacing
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/section-break/">
+      Section break
+    </a>
+  </li>
+
+            </ul>
+          </li>
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">Typography</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/typeface/">
+      Typeface
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/type-scale/">
+      Type scale
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/headings/">
+      Headings
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/paragraphs/">
+      Paragraphs
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/links/">
+      Links
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/lists/">
+      Lists
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/font-override-classes/">
+      Font override classes
+    </a>
+  </li>
+
+            </ul>
+          </li>
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">Visual elements</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/colour/">
+      Colour
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/styles/images/">
+      Images
+    </a>
+  </li>
+
+            </ul>
+          </li>
+    </ul>
+</template>
+
+                  </a>
+              </li>
+
+              
+              <li class="govuk-service-navigation__item">
+                  <a class="govuk-service-navigation__link" href="/components/" data-module="app-mobile-navigation-section">
+                                    
+Components      <template>    <ul class="app-mobile-navigation-section__list app-mobile-navigation-section__subnav" hidden>
+      
+      
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/">
+      Components overview
+    </a>
+  </li>
+
+
+          <li>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/accordion/">
+      Accordion
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/back-link/">
+      Back link
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/breadcrumbs/">
+      Breadcrumbs
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/button/">
+      Button
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/character-count/">
+      Character count
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/checkboxes/">
+      Checkboxes
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/cookie-banner/">
+      Cookie banner
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/date-input/">
+      Date input
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/details/">
+      Details
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/error-message/">
+      Error message
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/error-summary/">
+      Error summary
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/exit-this-page/">
+      Exit this page
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/fieldset/">
+      Fieldset
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/file-upload/">
+      File upload
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/footer/">
+      GOV.UK footer
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/header/">
+      GOV.UK header
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/inset-text/">
+      Inset text
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/notification-banner/">
+      Notification banner
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/pagination/">
+      Pagination
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/panel/">
+      Panel
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/password-input/">
+      Password input
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/phase-banner/">
+      Phase banner
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/radios/">
+      Radios
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/select/">
+      Select
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/service-navigation/">
+      Service navigation
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/skip-link/">
+      Skip link
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/summary-list/">
+      Summary list
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/table/">
+      Table
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/tabs/">
+      Tabs
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/tag/">
+      Tag
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/task-list/">
+      Task list
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/text-input/">
+      Text input
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/textarea/">
+      Textarea
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/components/warning-text/">
+      Warning text
+    </a>
+  </li>
+
+            </ul>
+          </li>
+    </ul>
+</template>
+
+                  </a>
+              </li>
+
+              
+              <li class="govuk-service-navigation__item govuk-service-navigation__item--active">
+                  <a class="govuk-service-navigation__link" href="/patterns/" aria-current="true" data-module="app-mobile-navigation-section">
+                                    
+                  <strong class="govuk-service-navigation__active-fallback">Patterns      <template>    <ul class="app-mobile-navigation-section__list app-mobile-navigation-section__subnav" hidden>
+      
+      
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/">
+      Patterns overview
+    </a>
+  </li>
+
+
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">Ask users for…</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/addresses/">
+      Addresses
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/bank-details/">
+      Bank details
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/dates/">
+      Dates
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/email-addresses/">
+      Email addresses
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/equality-information/">
+      Equality information
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/names/">
+      Names
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/national-insurance-numbers/">
+      National Insurance numbers
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/passwords/">
+      Passwords
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/payment-card-details/">
+      Payment card details
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/phone-numbers/">
+      Phone numbers
+    </a>
+  </li>
+
+            </ul>
+          </li>
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">Help users to…</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/check-a-service-is-suitable/">
+      Check a service is suitable
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/check-answers/">
+      Check answers
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/complete-multiple-tasks/">
+      Complete multiple tasks
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/confirm-a-phone-number/">
+      Confirm a phone number
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/confirm-an-email-address/">
+      Confirm an email address
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/contact-a-department-or-service-team/">
+      Contact a department or service team
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/create-a-username/">
+      Create a username
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/create-accounts/">
+      Create accounts
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/exit-a-page-quickly/">
+      Exit a page quickly
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/navigate-a-service/">
+      Navigate a service
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/start-using-a-service/">
+      Start using a service
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/validation/">
+      Recover from validation errors
+    </a>
+  </li>
+
+            </ul>
+          </li>
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">Pages</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/confirmation-pages/">
+      Confirmation pages
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/cookies-page/">
+      Cookies page
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/page-not-found-pages/">
+      Page not found pages
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/problem-with-the-service-pages/">
+      There is a problem with the service pages
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item app-mobile-navigation-section__item--active">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/question-pages/" aria-current="page">
+      Question pages
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/service-unavailable-pages/">
+      Service unavailable pages
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/patterns/step-by-step-navigation/">
+      Step by step navigation
+    </a>
+  </li>
+
+            </ul>
+          </li>
+    </ul>
+</template>
+</strong>
+
+                  </a>
+              </li>
+
+              
+              <li class="govuk-service-navigation__item">
+                  <a class="govuk-service-navigation__link" href="/community/" data-module="app-mobile-navigation-section">
+                                    
+Community      <template>    <ul class="app-mobile-navigation-section__list app-mobile-navigation-section__subnav" hidden>
+      
+      
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/">
+      Community overview
+    </a>
+  </li>
+
+
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">What we’re working on</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/upcoming-components-patterns/">
+      Upcoming components and patterns
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/roadmap/">
+      Roadmap
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/whats-new/">
+      What&#39;s new
+    </a>
+  </li>
+
+            </ul>
+          </li>
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">Ways to get involved</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/share-research-findings/">
+      Share findings about your users
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/propose-a-component-or-pattern/">
+      Propose a component or pattern
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/develop-a-component-or-pattern/">
+      Develop a component or pattern
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/propose-a-content-change-using-github/">
+      Propose a content change using GitHub
+    </a>
+  </li>
+
+            </ul>
+          </li>
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">How we work</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/community-principles/">
+      Community principles
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/contribution-criteria/">
+      Contribution criteria
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/design-system-working-group/">
+      Design System working group
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/blogs-talks-podcasts/">
+      Blog posts, videos and podcasts
+    </a>
+  </li>
+
+            </ul>
+          </li>
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">Resources</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/resources-and-tools/">
+      Resources and tools
+    </a>
+  </li>
+
+            </ul>
+          </li>
+          <li>
+            <h3 class="app-mobile-navigation-section__theme">Events and workshops</h3>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/design-system-day/">
+      Design System Day Events
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/design-system-day-2022/">
+      Design System Day 2022
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/design-system-day-2023/">
+      Design System Day 2023
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/design-system-day-2024/">
+      Design System Day 2024
+    </a>
+  </li>
+
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/community/code-of-conduct/">
+      Code of Conduct
+    </a>
+  </li>
+
+            </ul>
+          </li>
+    </ul>
+</template>
+
+                  </a>
+              </li>
+
+              
+              <li class="govuk-service-navigation__item">
+                  <a class="govuk-service-navigation__link" href="/accessibility/" data-module="app-mobile-navigation-section">
+                                    
+Accessibility      <template>    <ul class="app-mobile-navigation-section__list app-mobile-navigation-section__subnav" hidden>
+      
+      
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/accessibility/">
+      Accessibility overview
+    </a>
+  </li>
+
+
+          <li>
+            <ul class="app-mobile-navigation-section__list">
+              
+  <li class="app-mobile-navigation-section__item">
+    <a class="govuk-service-navigation__link"
+        href="/accessibility/accessibility-strategy/">
+      Accessibility strategy
+    </a>
+  </li>
+
+            </ul>
+          </li>
+    </ul>
+</template>
+
+                  </a>
+              </li>
+
+            </ul>
+        </nav>
+    </div>
+
+    </div>
+
+  </div>
+
+
+
+<div class="app-split-pane app-width-container app-main-wrapper">
+  <div class="app-split-pane__nav">
+<!-- [html-validate-disable-next no-unused-disable, unique-landmark -- allow 2 navs with the same aria-labelledby because they contain the same information] -->
+<nav class="app-subnav" aria-labelledby="app-subnav-heading">
+  <h2 class="govuk-visually-hidden" id="app-subnav-heading">Pages in this section</h2>
+          <h3 class="app-subnav__theme">Ask users for…</h3>
+        <ul class="app-subnav__section">
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/addresses/">
+              Addresses
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/bank-details/">
+              Bank details
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/dates/">
+              Dates
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/email-addresses/">
+              Email addresses
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/equality-information/">
+              Equality information
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/names/">
+              Names
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/national-insurance-numbers/">
+              National Insurance numbers
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/passwords/">
+              Passwords
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/payment-card-details/">
+              Payment card details
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/phone-numbers/">
+              Phone numbers
+            </a>
+          </li>
+        </ul>
+          <h3 class="app-subnav__theme">Help users to…</h3>
+        <ul class="app-subnav__section">
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/check-a-service-is-suitable/">
+              Check a service is suitable
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/check-answers/">
+              Check answers
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/complete-multiple-tasks/">
+              Complete multiple tasks
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/confirm-a-phone-number/">
+              Confirm a phone number
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/confirm-an-email-address/">
+              Confirm an email address
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/contact-a-department-or-service-team/">
+              Contact a department or service team
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/create-a-username/">
+              Create a username
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/create-accounts/">
+              Create accounts
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/exit-a-page-quickly/">
+              Exit a page quickly
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/navigate-a-service/">
+              Navigate a service
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/start-using-a-service/">
+              Start using a service
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/validation/">
+              Recover from validation errors
+            </a>
+          </li>
+        </ul>
+          <h3 class="app-subnav__theme">Pages</h3>
+        <ul class="app-subnav__section">
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/confirmation-pages/">
+              Confirmation pages
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/cookies-page/">
+              Cookies page
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/page-not-found-pages/">
+              Page not found pages
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/problem-with-the-service-pages/">
+              There is a problem with the service pages
+            </a>
+          </li>
+          <li class="app-subnav__section-item app-subnav__section-item--current">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/question-pages/" aria-current="page">
+              Question pages
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/service-unavailable-pages/">
+              Service unavailable pages
+            </a>
+          </li>
+          <li class="app-subnav__section-item">
+            <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/patterns/step-by-step-navigation/">
+              Step by step navigation
+            </a>
+          </li>
+        </ul>
+</nav>
+  </div>
+  <div class="app-split-pane__content">
+    <nav class="govuk-breadcrumbs app-breadcrumbs" aria-label="Breadcrumb">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/patterns">Patterns</a>
+    </li>
+  </ol>
+</nav>
+
+    <main id="main-content" class="app-content" role="main">
+      <h1 class="govuk-heading-xl">
+        Question pages
+      </h1>
+
+
+
+      <div class="app-prose-scope">
+        <p>This pattern explains when to use question pages and what elements they need to include.</p>
+<div class="app-example-wrapper" id="question-pages-example" data-module="app-tabs">
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/patterns/question-pages/default/index.html" class="app-example__new-window" target="_blank">
+          Open this example in a new tab<span class="govuk-visually-hidden">: question pages</span>
+        </a>
+      </div>
+      <iframe title="Question pages example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable" src="/patterns/question-pages/default/index.html" loading="eager"></iframe>
+    </div>
+    <span id="options-question-pages-example"></span>
+    <ul class="app-tabs" role="tablist">
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#question-pages-example-html" role="tab" aria-controls="question-pages-example-html" data-track="tab-html">HTML</a></li>
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#question-pages-example-nunjucks" role="tab" aria-controls="question-pages-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></li>
+    </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#question-pages-example-html" aria-controls="question-pages-example-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="question-pages-example-html" role="tabpanel">
+      <div class="app-example__code" data-module="app-copy">
+
+<pre><code data-module="app-scroll-container" tabindex="0" class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-width-container&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-back-link&quot;</span>&gt;</span>Back<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-main-wrapper &quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;main-content&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;main&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-row&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-column-two-thirds&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;/form-handler&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span> <span class="hljs-attr">novalidate</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-fieldset&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-fieldset__legend govuk-fieldset__legend--l&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-fieldset__heading&quot;</span>&gt;</span>
+                  Where do you live?
+                <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-radios&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__item&quot;</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;whereDoYouLive&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;whereDoYouLive&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;england&quot;</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-radios__label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;whereDoYouLive&quot;</span>&gt;</span>
+                    England
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__item&quot;</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;whereDoYouLive-2&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;whereDoYouLive&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;scotland&quot;</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-radios__label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;whereDoYouLive-2&quot;</span>&gt;</span>
+                    Scotland
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__item&quot;</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;whereDoYouLive-3&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;whereDoYouLive&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;wales&quot;</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-radios__label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;whereDoYouLive-3&quot;</span>&gt;</span>
+                    Wales
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__item&quot;</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;whereDoYouLive-4&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;whereDoYouLive&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;northern-ireland&quot;</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-radios__label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;whereDoYouLive-4&quot;</span>&gt;</span>
+                    Northern Ireland
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
+            Continue
+          <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+      </div>
+    </div>
+      <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#question-pages-example-nunjucks" aria-controls="question-pages-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
+<div class="app-tabs__container js-tabs__container" id="question-pages-example-nunjucks" role="tabpanel"><div class="app-example__code" data-module="app-copy">
+
+<pre><code data-module="app-scroll-container" tabindex="0" class="language-njk"><span class="hljs-tag">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/back-link/macro.njk&quot;</span> <span class="hljs-keyword">import</span> <span class="hljs-variable">govukBackLink</span> %}</span><span class="language-xml">
+</span><span class="hljs-tag">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/radios/macro.njk&quot;</span> <span class="hljs-keyword">import</span> <span class="hljs-variable">govukRadios</span> %}</span><span class="language-xml">
+</span><span class="hljs-tag">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/button/macro.njk&quot;</span> <span class="hljs-keyword">import</span> <span class="hljs-variable">govukButton</span> %}</span><span class="language-xml">
+
+</span><span class="hljs-tag">{% <span class="hljs-keyword">block</span> <span class="hljs-variable">beforeContent</span> %}</span><span class="language-xml">
+  </span><span class="hljs-tag">{{ <span class="hljs-title">govukBackLink</span><span class="language-javascript">({
+    <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Back&quot;</span>
+  })</span> }}</span><span class="language-xml">
+</span><span class="hljs-tag">{% <span class="hljs-keyword">endblock</span> %}</span><span class="language-xml">
+
+</span><span class="hljs-tag">{% <span class="hljs-keyword">block</span> <span class="hljs-variable">content</span> %}</span><span class="language-xml">
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-row&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-column-two-thirds&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;/form-handler&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span> <span class="hljs-attr">novalidate</span>&gt;</span>
+
+        </span><span class="hljs-tag">{{ <span class="hljs-title">govukRadios</span><span class="language-javascript">({
+          <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;whereDoYouLive&quot;</span>,
+          <span class="hljs-attr">fieldset</span>: {
+            <span class="hljs-attr">legend</span>: {
+              <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Where do you live?&quot;</span>,
+              <span class="hljs-attr">isPageHeading</span>: <span class="hljs-literal">true</span>,
+              <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;govuk-fieldset__legend--l&quot;</span>
+            }
+          },
+          <span class="hljs-attr">items</span>: [
+            {
+              <span class="hljs-attr">value</span>: <span class="hljs-string">&quot;england&quot;</span>,
+              <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;England&quot;</span>
+            },
+            {
+              <span class="hljs-attr">value</span>: <span class="hljs-string">&quot;scotland&quot;</span>,
+              <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Scotland&quot;</span>
+            },
+            {
+              <span class="hljs-attr">value</span>: <span class="hljs-string">&quot;wales&quot;</span>,
+              <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Wales&quot;</span>
+            },
+            {
+              <span class="hljs-attr">value</span>: <span class="hljs-string">&quot;northern-ireland&quot;</span>,
+              <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Northern Ireland&quot;</span>
+            }
+          ]
+        })</span> }}</span><span class="language-xml">
+
+        </span><span class="hljs-tag">{{ <span class="hljs-title">govukButton</span><span class="language-javascript">({
+          <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Continue&quot;</span>
+        })</span> }}</span><span class="language-xml">
+      <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</span><span class="hljs-tag">{% <span class="hljs-keyword">endblock</span> %}</span></code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+<h2 id="when-to-use-this-pattern">When to use this pattern</h2>
+<p>Follow this pattern whenever you need to ask users questions within your service.</p>
+<p>You should make sure you know why you’re asking every question and only ask users for information you really need.</p>
+<p>To help you work out what to ask, you can carry out a <a href="https://www.uxmatters.com/mt/archives/2010/06/the-question-protocol-how-to-make-sure-every-form-field-is-necessary.php">question protocol</a>.</p>
+<p>If you ask for optional information:</p>
+<ul>
+<li>in most contexts, add ‘(optional)’ to the labels of optional fields</li>
+<li>for <a href="/components/radios/">Radios components</a> and <a href="/components/checkboxes/">Checkboxes components</a>, add ‘(optional)’ to the legend</li>
+</ul>
+<p>Never mark mandatory fields with asterisks.</p>
+<p>On every question page you should:</p>
+<ul>
+<li>make sure it’s clear to users why you’re asking each question</li>
+<li>allow users to answer ‘I do not know’ or ‘I’m not sure’ if they are valid responses</li>
+</ul>
+<p>Read more about <a href="https://www.gov.uk/service-manual/design/designing-good-questions">designing good questions</a> in the GOV.UK Service Manual.</p>
+<h2 id="how-it-works">How it works</h2>
+<p>Question pages must include a:</p>
+<ul>
+<li>back link</li>
+<li>page heading</li>
+<li>continue button</li>
+</ul>
+<p>If research shows it’s helpful for users, you can also include a <a href="#using-progress-indicators">progress indicator</a>.</p>
+<p>Make sure to only ask for a piece of information once within a single journey. Whenever possible, do not ask a user to re-enter information they’ve already provided.</p>
+<p>If the same type of information is needed more than once, make it easier to reuse previously entered answers through one of these methods:</p>
+<ul>
+<li>pre-populating the relevant fields</li>
+<li>showing carried-forward responses as an option for the user to select</li>
+</ul>
+<h3 id="back-link">Back link</h3>
+<p>Some users do not trust browser back buttons when they’re entering data.</p>
+<p>Always include a <a href="/components/back-link/">Back link component</a> at the top of question pages to reassure them it’s possible to go back and change previous answers.</p>
+<p>However, do not break the browser back button. Make sure it takes users to the previous page they were on, in the state they last saw it.</p>
+<p>An exception to this is when the user has performed an action they should only do once, like make a payment or complete an application. The browser back button should still work, but show the user a sensible message rather than let them perform the action again.</p>
+<h3 id="page-headings">Page headings</h3>
+<p>Page headings can be questions or statements.</p>
+<h4 id="start-by-asking-one-question-per-page">Start by asking one question per page</h4>
+<p>Asking just one question per question page helps users understand what you’re asking them to do, and focus on the specific question and its answer.</p>
+<p>To help you follow this approach, you can set the contents of a <code>&lt;legend&gt;</code> or <code>&lt;label&gt;</code> for a page’s input as the page heading. This is good practice as it means that users of screen readers will only hear the contents once.</p>
+<p>Read more about why and <a href="/get-started/labels-legends-headings/">how to set labels and legends as headings</a> or see examples below.</p>
+<p>A question page with a legend as the page heading:</p>
+<div class="app-example-wrapper" id="date-of-birth-question-pages-example" data-module="app-tabs">
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/patterns/question-pages/date-of-birth/index.html" class="app-example__new-window" target="_blank">
+          Open this example in a new tab<span class="govuk-visually-hidden">: date of birth – question pages</span>
+        </a>
+      </div>
+      <iframe title="Date of birth – Question pages example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable" src="/patterns/question-pages/date-of-birth/index.html" loading="lazy"></iframe>
+    </div>
+    <span id="options-date-of-birth-question-pages-example"></span>
+    <ul class="app-tabs" role="tablist">
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#date-of-birth-question-pages-example-html" role="tab" aria-controls="date-of-birth-question-pages-example-html" data-track="tab-html">HTML</a></li>
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#date-of-birth-question-pages-example-nunjucks" role="tab" aria-controls="date-of-birth-question-pages-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></li>
+    </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#date-of-birth-question-pages-example-html" aria-controls="date-of-birth-question-pages-example-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="date-of-birth-question-pages-example-html" role="tabpanel">
+      <div class="app-example__code" data-module="app-copy">
+
+<pre><code data-module="app-scroll-container" tabindex="0" class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-width-container&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-back-link&quot;</span>&gt;</span>Back<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-main-wrapper &quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;main-content&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;main&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-row&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-column-two-thirds&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;/form-handler&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span> <span class="hljs-attr">novalidate</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-fieldset&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;group&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;dob-hint&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-fieldset__legend govuk-fieldset__legend--l&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-fieldset__heading&quot;</span>&gt;</span>
+                  What is your date of birth?
+                <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dob-hint&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint&quot;</span>&gt;</span>
+                For example, 31 3 1980
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-date-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dob&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-date-input__item&quot;</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-date-input__label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;dob-day&quot;</span>&gt;</span>
+                      Day
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input govuk-date-input__input govuk-input--width-2&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dob-day&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;dob-day&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">autocomplete</span>=<span class="hljs-string">&quot;bday-day&quot;</span> <span class="hljs-attr">inputmode</span>=<span class="hljs-string">&quot;numeric&quot;</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-date-input__item&quot;</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-date-input__label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;dob-month&quot;</span>&gt;</span>
+                      Month
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input govuk-date-input__input govuk-input--width-2&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dob-month&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;dob-month&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">autocomplete</span>=<span class="hljs-string">&quot;bday-month&quot;</span> <span class="hljs-attr">inputmode</span>=<span class="hljs-string">&quot;numeric&quot;</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-date-input__item&quot;</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-date-input__label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;dob-year&quot;</span>&gt;</span>
+                      Year
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input govuk-date-input__input govuk-input--width-4&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dob-year&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;dob-year&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">autocomplete</span>=<span class="hljs-string">&quot;bday-year&quot;</span> <span class="hljs-attr">inputmode</span>=<span class="hljs-string">&quot;numeric&quot;</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
+            Continue
+          <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+      </div>
+    </div>
+      <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#date-of-birth-question-pages-example-nunjucks" aria-controls="date-of-birth-question-pages-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
+<div class="app-tabs__container js-tabs__container" id="date-of-birth-question-pages-example-nunjucks" role="tabpanel"><div class="app-example__code" data-module="app-copy">
+
+<pre><code data-module="app-scroll-container" tabindex="0" class="language-njk"><span class="hljs-tag">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/back-link/macro.njk&quot;</span> <span class="hljs-keyword">import</span> <span class="hljs-variable">govukBackLink</span> %}</span><span class="language-xml">
+</span><span class="hljs-tag">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/date-input/macro.njk&quot;</span> <span class="hljs-keyword">import</span> <span class="hljs-variable">govukDateInput</span> %}</span><span class="language-xml">
+</span><span class="hljs-tag">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/button/macro.njk&quot;</span> <span class="hljs-keyword">import</span> <span class="hljs-variable">govukButton</span> %}</span><span class="language-xml">
+
+</span><span class="hljs-tag">{% <span class="hljs-keyword">block</span> <span class="hljs-variable">beforeContent</span> %}</span><span class="language-xml">
+  </span><span class="hljs-tag">{{ <span class="hljs-title">govukBackLink</span><span class="language-javascript">({
+    <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Back&quot;</span>
+  })</span> }}</span><span class="language-xml">
+</span><span class="hljs-tag">{% <span class="hljs-keyword">endblock</span> %}</span><span class="language-xml">
+
+</span><span class="hljs-tag">{% <span class="hljs-keyword">block</span> <span class="hljs-variable">content</span> %}</span><span class="language-xml">
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-row&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-column-two-thirds&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;/form-handler&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span> <span class="hljs-attr">novalidate</span>&gt;</span>
+        </span><span class="hljs-tag">{{ <span class="hljs-title">govukDateInput</span><span class="language-javascript">({
+          <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;dob&quot;</span>,
+          <span class="hljs-attr">namePrefix</span>: <span class="hljs-string">&quot;dob&quot;</span>,
+          <span class="hljs-attr">fieldset</span>: {
+            <span class="hljs-attr">legend</span>: {
+              <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;What is your date of birth?&quot;</span>,
+              <span class="hljs-attr">isPageHeading</span>: <span class="hljs-literal">true</span>,
+              <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;govuk-fieldset__legend--l&quot;</span>
+            }
+          },
+          <span class="hljs-attr">hint</span>: {
+            <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;For example, 31 3 1980&quot;</span>
+          },
+          <span class="hljs-attr">items</span>: [
+            {
+              <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;day&quot;</span>,
+              <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;govuk-input--width-2&quot;</span>,
+              <span class="hljs-attr">autocomplete</span>: <span class="hljs-string">&quot;bday-day&quot;</span>
+            },
+            {
+              <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;month&quot;</span>,
+              <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;govuk-input--width-2&quot;</span>,
+              <span class="hljs-attr">autocomplete</span>: <span class="hljs-string">&quot;bday-month&quot;</span>
+            },
+            {
+              <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;year&quot;</span>,
+              <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;govuk-input--width-4&quot;</span>,
+              <span class="hljs-attr">autocomplete</span>: <span class="hljs-string">&quot;bday-year&quot;</span>
+            }
+          ]
+        })</span> }}</span><span class="language-xml">
+
+        </span><span class="hljs-tag">{{ <span class="hljs-title">govukButton</span><span class="language-javascript">({
+          <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Continue&quot;</span>
+        })</span> }}</span><span class="language-xml">
+      <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</span><span class="hljs-tag">{% <span class="hljs-keyword">endblock</span> %}</span></code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+<p>A question page with a label as the page heading:</p>
+<div class="app-example-wrapper" id="postcode-question-pages-example" data-module="app-tabs">
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/patterns/question-pages/postcode/index.html" class="app-example__new-window" target="_blank">
+          Open this example in a new tab<span class="govuk-visually-hidden">: postcode – question pages</span>
+        </a>
+      </div>
+      <iframe title="Postcode – Question pages example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable" src="/patterns/question-pages/postcode/index.html" loading="lazy"></iframe>
+    </div>
+    <span id="options-postcode-question-pages-example"></span>
+    <ul class="app-tabs" role="tablist">
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#postcode-question-pages-example-html" role="tab" aria-controls="postcode-question-pages-example-html" data-track="tab-html">HTML</a></li>
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#postcode-question-pages-example-nunjucks" role="tab" aria-controls="postcode-question-pages-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></li>
+    </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#postcode-question-pages-example-html" aria-controls="postcode-question-pages-example-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="postcode-question-pages-example-html" role="tabpanel">
+      <div class="app-example__code" data-module="app-copy">
+
+<pre><code data-module="app-scroll-container" tabindex="0" class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-width-container&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-back-link&quot;</span>&gt;</span>Back<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-main-wrapper &quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;main-content&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;main&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-row&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-column-two-thirds&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;/form-handler&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span> <span class="hljs-attr">novalidate</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label-wrapper&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-label--l&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;postcode&quot;</span>&gt;</span>
+                What is your home postcode?
+              <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input govuk-input--width-10&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;postcode&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;postcode&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">autocomplete</span>=<span class="hljs-string">&quot;postal-code&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
+            Continue
+          <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+      </div>
+    </div>
+      <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#postcode-question-pages-example-nunjucks" aria-controls="postcode-question-pages-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
+<div class="app-tabs__container js-tabs__container" id="postcode-question-pages-example-nunjucks" role="tabpanel"><div class="app-example__code" data-module="app-copy">
+
+<pre><code data-module="app-scroll-container" tabindex="0" class="language-njk"><span class="hljs-tag">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/back-link/macro.njk&quot;</span> <span class="hljs-keyword">import</span> <span class="hljs-variable">govukBackLink</span> %}</span><span class="language-xml">
+</span><span class="hljs-tag">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/input/macro.njk&quot;</span> <span class="hljs-keyword">import</span> <span class="hljs-variable">govukInput</span> %}</span><span class="language-xml">
+</span><span class="hljs-tag">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/button/macro.njk&quot;</span> <span class="hljs-keyword">import</span> <span class="hljs-variable">govukButton</span> %}</span><span class="language-xml">
+
+</span><span class="hljs-tag">{% <span class="hljs-keyword">block</span> <span class="hljs-variable">beforeContent</span> %}</span><span class="language-xml">
+  </span><span class="hljs-tag">{{ <span class="hljs-title">govukBackLink</span><span class="language-javascript">({
+    <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Back&quot;</span>
+  })</span> }}</span><span class="language-xml">
+</span><span class="hljs-tag">{% <span class="hljs-keyword">endblock</span> %}</span><span class="language-xml">
+
+</span><span class="hljs-tag">{% <span class="hljs-keyword">block</span> <span class="hljs-variable">content</span> %}</span><span class="language-xml">
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-row&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-column-two-thirds&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;/form-handler&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span> <span class="hljs-attr">novalidate</span>&gt;</span>
+      </span><span class="hljs-tag">{{ <span class="hljs-title">govukInput</span><span class="language-javascript">({
+        <span class="hljs-attr">label</span>: {
+          <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;What is your home postcode?&quot;</span>,
+          <span class="hljs-attr">isPageHeading</span>: <span class="hljs-literal">true</span>,
+          <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;govuk-label--l&quot;</span>
+        },
+        <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;govuk-input--width-10&quot;</span>,
+        <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;postcode&quot;</span>,
+        <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;postcode&quot;</span>,
+        <span class="hljs-attr">autocomplete</span>: <span class="hljs-string">&quot;postal-code&quot;</span>
+      })</span> }}</span><span class="language-xml">
+
+      </span><span class="hljs-tag">{{ <span class="hljs-title">govukButton</span><span class="language-javascript">({
+        <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Continue&quot;</span>
+      })</span> }}</span><span class="language-xml">
+    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</span><span class="hljs-tag">{% <span class="hljs-keyword">endblock</span> %}</span></code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+<p>Do not use the same page heading across multiple pages.</p>
+<p>The page heading should relate specifically to the information being asked for on the current page, not any higher-level section the page is part of.</p>
+<p>If you need to show the high-level section, you can use the <code>govuk-caption</code> style.</p>
+<p>For example, ‘About you’</p>
+<div class="app-example-wrapper" id="section-headings-question-pages-example-open" data-module="app-tabs" data-open>
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/patterns/question-pages/section-headings/index.html" class="app-example__new-window" target="_blank">
+          Open this example in a new tab<span class="govuk-visually-hidden">: section headings – question pages</span>
+        </a>
+      </div>
+      <iframe title="Section headings – Question pages example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable" src="/patterns/question-pages/section-headings/index.html" loading="lazy"></iframe>
+    </div>
+    <div class="app-tabs__container js-tabs__container js-tabs__container--no-tabs" id="section-headings-question-pages-example-open-html" role="tabpanel">
+      <div class="app-example__code" data-module="app-copy">
+
+<pre><code data-module="app-scroll-container" tabindex="0" class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-caption-l&quot;</span>&gt;</span>About you<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;</span>
+  What is your home address?
+<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+<p>You can also learn more about how starting with <a href="https://www.gov.uk/service-manual/design/form-structure#start-with-one-thing-per-page">one thing per page</a> helps users in the GOV.UK Service Manual.</p>
+<h4 id="hint-text">Hint text</h4>
+<p>Use hint text to show information that helps the majority of users answer the question, like how their information will be used, or where to find it.</p>
+<p>Keep each hint to a single short sentence, without any full stops.</p>
+<p>If you need to give a long, detailed explanation, do not use hint text. Screen readers will read out the entire text when users interact with the form element. This could frustrate users if the text is long.</p>
+<p>Do not use links in hint text. While screen readers will read out the link text when describing the field, they usually do not tell users the text is a link.</p>
+<h4 id="asking-complex-questions-without-using-hint-text">Asking complex questions without using hint text</h4>
+<p>If you’re asking a question that needs a detailed explanation, use:</p>
+<ul>
+<li>a <code>h1</code> heading that’s a statement (for example, ‘Interview needs’) rather than a question</li>
+<li>whatever mix of text, paragraphs, lists and examples best explains your question to users</li>
+<li>a label, above the form input, that asks users a specific question – for example, ‘Do you have any interview needs?’</li>
+</ul>
+<div class="app-example-wrapper" id="explanatory-text-question-pages-example" data-module="app-tabs">
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/patterns/question-pages/explanatory-text/index.html" class="app-example__new-window" target="_blank">
+          Open this example in a new tab<span class="govuk-visually-hidden">: explanatory text – question pages</span>
+        </a>
+      </div>
+      <iframe title="Explanatory text – Question pages example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable" src="/patterns/question-pages/explanatory-text/index.html" loading="lazy"></iframe>
+    </div>
+    <span id="options-explanatory-text-question-pages-example"></span>
+    <ul class="app-tabs" role="tablist">
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#explanatory-text-question-pages-example-html" role="tab" aria-controls="explanatory-text-question-pages-example-html" data-track="tab-html">HTML</a></li>
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#explanatory-text-question-pages-example-nunjucks" role="tab" aria-controls="explanatory-text-question-pages-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></li>
+    </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#explanatory-text-question-pages-example-html" aria-controls="explanatory-text-question-pages-example-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="explanatory-text-question-pages-example-html" role="tabpanel">
+      <div class="app-example__code" data-module="app-copy">
+
+<pre><code data-module="app-scroll-container" tabindex="0" class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-width-container&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-back-link&quot;</span>&gt;</span>Back<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-main-wrapper &quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;main-content&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;main&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-row&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-column-two-thirds&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;</span>
+          Interview needs
+        <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>
+          Providers do not usually have much flexibility when setting a date and time for interview unless you need adjustments due to a <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>health condition or disability<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+        <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>
+          However, if you need flexibility for other reasons you can tell us about it here.
+        <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>
+          For example, you have commitments like caring responsibilities or employment.
+        <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>
+          Contact your provider if you’re concerned about the interview process.
+        <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;/form-handler&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span> <span class="hljs-attr">novalidate</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-fieldset&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-fieldset__legend govuk-fieldset__legend--m&quot;</span>&gt;</span>
+                Do you have any interview needs?
+              <span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-radios&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__item&quot;</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;interviewNeeds&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;interviewNeeds&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;yes&quot;</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-radios__label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;interviewNeeds&quot;</span>&gt;</span>
+                    Yes
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__item&quot;</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;interviewNeeds-2&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;interviewNeeds&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;no&quot;</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-radios__label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;interviewNeeds-2&quot;</span>&gt;</span>
+                    No
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
+            Continue
+          <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+      </div>
+    </div>
+      <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#explanatory-text-question-pages-example-nunjucks" aria-controls="explanatory-text-question-pages-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
+<div class="app-tabs__container js-tabs__container" id="explanatory-text-question-pages-example-nunjucks" role="tabpanel"><div class="app-example__code" data-module="app-copy">
+
+<pre><code data-module="app-scroll-container" tabindex="0" class="language-njk"><span class="hljs-tag">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/back-link/macro.njk&quot;</span> <span class="hljs-keyword">import</span> <span class="hljs-variable">govukBackLink</span> %}</span><span class="language-xml">
+</span><span class="hljs-tag">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/radios/macro.njk&quot;</span> <span class="hljs-keyword">import</span> <span class="hljs-variable">govukRadios</span> %}</span><span class="language-xml">
+</span><span class="hljs-tag">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/button/macro.njk&quot;</span> <span class="hljs-keyword">import</span> <span class="hljs-variable">govukButton</span> %}</span><span class="language-xml">
+
+</span><span class="hljs-tag">{% <span class="hljs-keyword">block</span> <span class="hljs-variable">beforeContent</span> %}</span><span class="language-xml">
+  </span><span class="hljs-tag">{{ <span class="hljs-title">govukBackLink</span><span class="language-javascript">({
+    <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Back&quot;</span>
+  })</span> }}</span><span class="language-xml">
+</span><span class="hljs-tag">{% <span class="hljs-keyword">endblock</span> %}</span><span class="language-xml">
+
+</span><span class="hljs-tag">{% <span class="hljs-keyword">block</span> <span class="hljs-variable">content</span> %}</span><span class="language-xml">
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-row&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-column-two-thirds&quot;</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;</span>
+        Interview needs
+      <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>
+        Providers do not usually have much flexibility when setting a date and time for interview unless you need adjustments due to a <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>health condition or disability<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>
+        However, if you need flexibility for other reasons you can tell us about it here.
+      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>
+        For example, you have commitments like caring responsibilities or employment.
+      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>
+        Contact your provider if you’re concerned about the interview process.
+      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;/form-handler&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span> <span class="hljs-attr">novalidate</span>&gt;</span>
+
+        </span><span class="hljs-tag">{{ <span class="hljs-title">govukRadios</span><span class="language-javascript">({
+          <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;interviewNeeds&quot;</span>,
+          <span class="hljs-attr">fieldset</span>: {
+            <span class="hljs-attr">legend</span>: {
+              <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Do you have any interview needs?&quot;</span>,
+              <span class="hljs-attr">isPageHeading</span>: <span class="hljs-literal">false</span>,
+              <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;govuk-fieldset__legend--m&quot;</span>
+            }
+          },
+          <span class="hljs-attr">items</span>: [
+            {
+              <span class="hljs-attr">value</span>: <span class="hljs-string">&quot;yes&quot;</span>,
+              <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Yes&quot;</span>
+            },
+            {
+              <span class="hljs-attr">value</span>: <span class="hljs-string">&quot;no&quot;</span>,
+              <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;No&quot;</span>
+            }
+          ]
+        })</span> }}</span><span class="language-xml">
+
+        </span><span class="hljs-tag">{{ <span class="hljs-title">govukButton</span><span class="language-javascript">({
+          <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Continue&quot;</span>
+        })</span> }}</span><span class="language-xml">
+      <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</span><span class="hljs-tag">{% <span class="hljs-keyword">endblock</span> %}</span></code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+<h4 id="asking-multiple-questions-on-a-page">Asking multiple questions on a page</h4>
+<p>Sometimes it makes sense to group a number of related questions on the same page.</p>
+<p>User research will tell you when you can group pages together. For example, if you’re designing an internal service for government users who need to repeat and switch between tasks quickly.</p>
+<p>If you need to ask for multiple related things on a page, use a statement as the heading.</p>
+<p>You can style each <code>&lt;label&gt;</code> or <code>&lt;legend&gt;</code> to make the questions easier to scan. Read more about why and <a href="/get-started/labels-legends-headings/#styling-options-for-labels-and-legends">how to style labels and legends</a>.</p>
+<div class="app-example-wrapper" id="passport-question-pages-example" data-module="app-tabs">
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/patterns/question-pages/passport/index.html" class="app-example__new-window" target="_blank">
+          Open this example in a new tab<span class="govuk-visually-hidden">: passport – question pages</span>
+        </a>
+      </div>
+      <iframe title="Passport – Question pages example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable" src="/patterns/question-pages/passport/index.html" loading="lazy"></iframe>
+    </div>
+    <span id="options-passport-question-pages-example"></span>
+    <ul class="app-tabs" role="tablist">
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#passport-question-pages-example-html" role="tab" aria-controls="passport-question-pages-example-html" data-track="tab-html">HTML</a></li>
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#passport-question-pages-example-nunjucks" role="tab" aria-controls="passport-question-pages-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></li>
+    </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#passport-question-pages-example-html" aria-controls="passport-question-pages-example-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="passport-question-pages-example-html" role="tabpanel">
+      <div class="app-example__code" data-module="app-copy">
+
+<pre><code data-module="app-scroll-container" tabindex="0" class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-width-container&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-back-link&quot;</span>&gt;</span>Back<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-main-wrapper &quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;main-content&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;main&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-row&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-column-two-thirds&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;</span>Passport details<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;/form-handler&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span> <span class="hljs-attr">novalidate</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-label--m&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;passport-number&quot;</span>&gt;</span>
+              Passport number
+            <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;passport-number-hint&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint&quot;</span>&gt;</span>
+              For example, 502135326
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input govuk-input--width-10&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;passport-number&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;passportNumber&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;passport-number-hint&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-fieldset&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;group&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;expiry-hint&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-fieldset__legend govuk-fieldset__legend--m&quot;</span>&gt;</span>
+                Expiry date
+              <span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;expiry-hint&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint&quot;</span>&gt;</span>
+                For example, 31 3 1980
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-date-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;expiry&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-date-input__item&quot;</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-date-input__label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;expiry-day&quot;</span>&gt;</span>
+                      Day
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input govuk-date-input__input govuk-input--width-2&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;expiry-day&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;expiry-day&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">inputmode</span>=<span class="hljs-string">&quot;numeric&quot;</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-date-input__item&quot;</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-date-input__label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;expiry-month&quot;</span>&gt;</span>
+                      Month
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input govuk-date-input__input govuk-input--width-2&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;expiry-month&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;expiry-month&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">inputmode</span>=<span class="hljs-string">&quot;numeric&quot;</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-date-input__item&quot;</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-date-input__label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;expiry-year&quot;</span>&gt;</span>
+                      Year
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input govuk-date-input__input govuk-input--width-4&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;expiry-year&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;expiry-year&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">inputmode</span>=<span class="hljs-string">&quot;numeric&quot;</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
+            Continue
+          <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+      </div>
+    </div>
+      <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#passport-question-pages-example-nunjucks" aria-controls="passport-question-pages-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
+<div class="app-tabs__container js-tabs__container" id="passport-question-pages-example-nunjucks" role="tabpanel"><div class="app-example__code" data-module="app-copy">
+
+<pre><code data-module="app-scroll-container" tabindex="0" class="language-njk"><span class="hljs-tag">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/back-link/macro.njk&quot;</span> <span class="hljs-keyword">import</span> <span class="hljs-variable">govukBackLink</span> %}</span><span class="language-xml">
+</span><span class="hljs-tag">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/input/macro.njk&quot;</span> <span class="hljs-keyword">import</span> <span class="hljs-variable">govukInput</span> %}</span><span class="language-xml">
+</span><span class="hljs-tag">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/date-input/macro.njk&quot;</span> <span class="hljs-keyword">import</span> <span class="hljs-variable">govukDateInput</span> %}</span><span class="language-xml">
+</span><span class="hljs-tag">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/button/macro.njk&quot;</span> <span class="hljs-keyword">import</span> <span class="hljs-variable">govukButton</span> %}</span><span class="language-xml">
+
+</span><span class="hljs-tag">{% <span class="hljs-keyword">block</span> <span class="hljs-variable">beforeContent</span> %}</span><span class="language-xml">
+  </span><span class="hljs-tag">{{ <span class="hljs-title">govukBackLink</span><span class="language-javascript">({
+    <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Back&quot;</span>
+  })</span> }}</span><span class="language-xml">
+</span><span class="hljs-tag">{% <span class="hljs-keyword">endblock</span> %}</span><span class="language-xml">
+
+</span><span class="hljs-tag">{% <span class="hljs-keyword">block</span> <span class="hljs-variable">content</span> %}</span><span class="language-xml">
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-row&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-column-two-thirds&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;</span>Passport details<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;/form-handler&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span> <span class="hljs-attr">novalidate</span>&gt;</span>
+
+        </span><span class="hljs-tag">{{ <span class="hljs-title">govukInput</span><span class="language-javascript">({
+          <span class="hljs-attr">label</span>: {
+            <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Passport number&quot;</span>,
+            <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;govuk-label--m&quot;</span>
+          },
+          <span class="hljs-attr">hint</span>: {
+            <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;For example, 502135326&quot;</span>
+          },
+          <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;govuk-input--width-10&quot;</span>,
+          <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;passport-number&quot;</span>,
+          <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;passportNumber&quot;</span>
+        })</span> }}</span><span class="language-xml">
+
+        </span><span class="hljs-tag">{{ <span class="hljs-title">govukDateInput</span><span class="language-javascript">({
+          <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;expiry&quot;</span>,
+          <span class="hljs-attr">namePrefix</span>: <span class="hljs-string">&quot;expiry&quot;</span>,
+          <span class="hljs-attr">fieldset</span>: {
+            <span class="hljs-attr">legend</span>: {
+              <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Expiry date&quot;</span>,
+              <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;govuk-fieldset__legend--m&quot;</span>
+            }
+          },
+          <span class="hljs-attr">hint</span>: {
+            <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;For example, 31 3 1980&quot;</span>
+          }
+        })</span> }}</span><span class="language-xml">
+
+        </span><span class="hljs-tag">{{ <span class="hljs-title">govukButton</span><span class="language-javascript">({
+          <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Continue&quot;</span>
+        })</span> }}</span><span class="language-xml">
+
+      <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</span><span class="hljs-tag">{% <span class="hljs-keyword">endblock</span> %}</span></code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+<h3 id="continue-button">Continue button</h3>
+<p>Make sure your ‘Continue’ button is:</p>
+<ul>
+<li>labelled ‘Continue’, not ‘Next’</li>
+<li>aligned to the left so users do not miss it</li>
+</ul>
+<h3 id="using-progress-indicators">Using progress indicators</h3>
+<p>Start by testing your form without a progress indicator to see if it’s simple enough that users do not need one.</p>
+<p>Try improving the order, type or number of questions before adding a progress indicator. If people still have difficulty, try adding a simple step or question indicator like this one.</p>
+<div class="app-example-wrapper" id="progress-indicator-question-pages-example" data-module="app-tabs">
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a href="/patterns/question-pages/progress/index.html" class="app-example__new-window" target="_blank">
+          Open this example in a new tab<span class="govuk-visually-hidden">: progress indicator – question pages</span>
+        </a>
+      </div>
+      <iframe title="Progress indicator – Question pages example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable" src="/patterns/question-pages/progress/index.html" loading="lazy"></iframe>
+    </div>
+    <span id="options-progress-indicator-question-pages-example"></span>
+    <ul class="app-tabs" role="tablist">
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#progress-indicator-question-pages-example-html" role="tab" aria-controls="progress-indicator-question-pages-example-html" data-track="tab-html">HTML</a></li>
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#progress-indicator-question-pages-example-nunjucks" role="tab" aria-controls="progress-indicator-question-pages-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></li>
+    </ul>
+      <div class="app-tabs__heading js-tabs__heading"><a href="#progress-indicator-question-pages-example-html" aria-controls="progress-indicator-question-pages-example-html" data-track="tab-html">HTML</a></div>
+    <div class="app-tabs__container js-tabs__container" id="progress-indicator-question-pages-example-html" role="tabpanel">
+      <div class="app-example__code" data-module="app-copy">
+
+<pre><code data-module="app-scroll-container" tabindex="0" class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-caption-l&quot;</span>&gt;</span>Question 3 of 9<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;</span>
+  Your details
+<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></code></pre>
+      </div>
+    </div>
+      <div class="app-tabs__heading js-tabs__heading"><a class="app-tabs__heading-link" href="#progress-indicator-question-pages-example-nunjucks" aria-controls="progress-indicator-question-pages-example-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
+<div class="app-tabs__container js-tabs__container" id="progress-indicator-question-pages-example-nunjucks" role="tabpanel"><div class="app-example__code" data-module="app-copy">
+
+<pre><code data-module="app-scroll-container" tabindex="0" class="language-njk"><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-caption-l&quot;</span>&gt;</span>Question 3 of 9<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;</span>
+  Your details
+<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span></code></pre>
+      </div>
+    </div>
+</div>
+
+
+
+<p>Only include the total number of questions if you can do so reliably. As the user moves through the form, make sure the indicator updates to tell them which question they are on and the total number remaining.</p>
+<p>Do not use progress indicators that do all of the following:</p>
+<ul>
+<li>show all questions at once</li>
+<li>allow navigation to previous questions</li>
+<li>show the current question</li>
+</ul>
+<p>An example of this looks like:</p>
+<img src="progress_indicators_horizontal.png" alt="Screenshot of a progress indicator that shows five questions.">
+<p>These can be problematic because they:</p>
+<ul>
+<li>are often not noticed</li>
+<li>take up lots of space</li>
+<li>do not scale well on small screens</li>
+<li>can distract and confuse some users</li>
+<li>make it hard to write good labels for the steps</li>
+<li>make it hard to handle conditional sections</li>
+</ul>
+<p>A number of GOV.UK services have removed this style of progress indicator without any negative effects. Read a blog post about <a href="https://designnotes.blog.gov.uk/2014/07/07/do-less-problems-as-shared-spaces/">how the Carer’s Allowance team removed a 12-step progress indicator</a> with no effect on completion rates or times.</p>
+<h3 id="using-range-sliders">Using range sliders</h3>
+<p>Avoid using <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elementsment/input/range">range slider</a> questions, where the user needs to click and drag a selector across a range of answers or values. These types of controls are difficult for some users to interact with.</p>
+<p>If you do use a range slider, you must provide a method for selecting an answer that doesn’t rely on ‘click and drag’ movements. This relates to <a href="https://www.w3.org/TR/WCAG22/#pointer-gestures">WCAG success criterion 2.5.1 Pointer Gestures</a>.</p>
+
+      </div>
+
+      
+
+  <h2 class="govuk-heading-l govuk-!-padding-top-7" id="help-improve-this-page">Help improve this pattern</h2>
+
+    <p class="govuk-body">
+      To help make sure that this page is useful, relevant and up to date, you can:
+    </p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        take part in the
+        <a class="govuk-link app-contact-panel__link" href="https://github.com/alphagov/govuk-design-system-backlog/issues/58">
+          ‘Question pages’ discussion on GitHub
+        </a>
+        and share your research
+      </li>
+      <li>
+        <a class="govuk-link app-contact-panel__link" href="https://github.com/alphagov/govuk-design-system/edit/main/src/patterns/question-pages/index.md">propose a change on GitHub</a>
+        – read more about
+        <a class="govuk-link app-contact-panel__link" href="/community/propose-a-content-change-using-github/">
+          how to propose changes in GitHub
+        </a>
+      </li>
+    </ul>
+
+<div class="app-contact-panel">
+  <h2 class="app-contact-panel__heading">Need help?</h2>
+
+  <p class="govuk-body app-contact-panel__body">
+    If you’ve got a question about the GOV.UK Design System, <a class="govuk-link" href="/get-in-touch/">contact the team</a>.
+  </p>
+</div>
+    </main>
+  </div>
+<div class="app-back-to-top app-back-to-top--hidden" data-module="app-back-to-top">
+  <a class="govuk-link govuk-link--no-visited-state app-back-to-top__link" href="#top">
+    <svg role="presentation" focusable="false" class="app-back-to-top__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17">
+      <path fill="currentColor" d="M6.5 0L0 6.5 1.4 8l4-4v12.7h2V4l4.3 4L13 6.4z"></path>
+    </svg>Back to top
+  </a>
+</div>
+</div>
+
+<footer class="govuk-footer app-footer">
+  <div class="govuk-width-container app-width-container">
+
+  
+  <svg
+    focusable="false"
+    role="presentation"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 64 60"
+    height="30"
+    width="32"
+    fill="currentcolor" class="govuk-footer__crown"
+  >    <g>
+        <circle cx="20" cy="17.6" r="3.7"/>
+        <circle cx="10.2" cy="23.5" r="3.7"/>
+        <circle cx="3.7" cy="33.2" r="3.7"/>
+        <circle cx="31.7" cy="30.6" r="3.7"/>
+        <circle cx="43.3" cy="17.6" r="3.7"/>
+        <circle cx="53.2" cy="23.5" r="3.7"/>
+        <circle cx="59.7" cy="33.2" r="3.7"/>
+        <circle cx="31.7" cy="30.6" r="3.7"/>
+        <path d="M33.1,9.8c.2-.1.3-.3.5-.5l4.6,2.4v-6.8l-4.6,1.5c-.1-.2-.3-.3-.5-.5l1.9-5.9h-6.7l1.9,5.9c-.2.1-.3.3-.5.5l-4.6-1.5v6.8l4.6-2.4c.1.2.3.3.5.5l-2.6,8c-.9,2.8,1.2,5.7,4.1,5.7h0c3,0,5.1-2.9,4.1-5.7l-2.6-8ZM37,37.9s-3.4,3.8-4.1,6.1c2.2,0,4.2-.5,6.4-2.8l-.7,8.5c-2-2.8-4.4-4.1-5.7-3.8.1,3.1.5,6.7,5.8,7.2,3.7.3,6.7-1.5,7-3.8.4-2.6-2-4.3-3.7-1.6-1.4-4.5,2.4-6.1,4.9-3.2-1.9-4.5-1.8-7.7,2.4-10.9,3,4,2.6,7.3-1.2,11.1,2.4-1.3,6.2,0,4,4.6-1.2-2.8-3.7-2.2-4.2.2-.3,1.7.7,3.7,3,4.2,1.9.3,4.7-.9,7-5.9-1.3,0-2.4.7-3.9,1.7l2.4-8c.6,2.3,1.4,3.7,2.2,4.5.6-1.6.5-2.8,0-5.3l5,1.8c-2.6,3.6-5.2,8.7-7.3,17.5-7.4-1.1-15.7-1.7-24.5-1.7h0c-8.8,0-17.1.6-24.5,1.7-2.1-8.9-4.7-13.9-7.3-17.5l5-1.8c-.5,2.5-.6,3.7,0,5.3.8-.8,1.6-2.3,2.2-4.5l2.4,8c-1.5-1-2.6-1.7-3.9-1.7,2.3,5,5.2,6.2,7,5.9,2.3-.4,3.3-2.4,3-4.2-.5-2.4-3-3.1-4.2-.2-2.2-4.6,1.6-6,4-4.6-3.7-3.7-4.2-7.1-1.2-11.1,4.2,3.2,4.3,6.4,2.4,10.9,2.5-2.8,6.3-1.3,4.9,3.2-1.8-2.7-4.1-1-3.7,1.6.3,2.3,3.3,4.1,7,3.8,5.4-.5,5.7-4.2,5.8-7.2-1.3-.2-3.7,1-5.7,3.8l-.7-8.5c2.2,2.3,4.2,2.7,6.4,2.8-.7-2.3-4.1-6.1-4.1-6.1h10.6,0Z"/>
+      </g>
+  </svg>
+
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+        <h2 class="govuk-visually-hidden">Support links</h2>
+        <ul class="govuk-footer__inline-list">
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="/accessibility-statement/">
+              Accessibility statement
+            </a>
+          </li>
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="/sitemap/">
+              Sitemap
+            </a>
+          </li>
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="/cookies/">
+              Cookies
+            </a>
+          </li>
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="/privacy-policy/">
+              Privacy
+            </a>
+          </li>
+        </ul>
+        <div class="govuk-footer__meta-custom">
+          Built by the <a href="/design-system-team/" class="govuk-footer__link">GOV.UK Design System team</a>
+        </div>
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          class="govuk-footer__licence-logo"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 483.2 195.7"
+          height="17"
+          width="41"
+        >
+          <path
+            fill="currentColor"
+            d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+          />
+        </svg>
+        <span class="govuk-footer__licence-description">
+          All content is available under the
+          <a
+            class="govuk-footer__link"
+            href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+            rel="license"
+          >Open Government Licence v3.0</a>, except where otherwise stated
+        </span>
+      </div>
+      <div class="govuk-footer__meta-item">
+        <a
+          class="govuk-footer__link govuk-footer__copyright-logo"
+          href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+        >
+          © Crown copyright
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+  <script type="module" src="/javascripts/application-73d194447c36a6ee2c2391f2ae156c74.js"></script>
+  </body>
+</html>
