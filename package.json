@@ -30,7 +30,8 @@
     "lint:scss": "npm run lint:scss:cli -- \"**/*.{md,scss}\"",
     "lint:scss:cli": "stylelint --cache --cache-location .cache/stylelint --cache-strategy content --color --ignore-path .gitignore --max-warnings 0",
     "lint:types": "tsc --build tsconfig.json",
-    "check-links": "linkinator build --recurse --skip example.com --skip github.com --verbosity error",
+    "check-links": "linkinator build --recurse --skip \"^https://(?!design-system)\"",
+    "check-all-links": "linkinator ./build --recurse --skip github.com --skip example.com --verbosity error",
     "prepare": "node -e \"try { (await import('husky')).default() } catch (e) { if (e.code !== 'ERR_MODULE_NOT_FOUND') throw e }\" --input-type module"
   },
   "dependencies": {
