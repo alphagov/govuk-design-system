@@ -89,7 +89,7 @@
     "metalsmith": "^2.6.3",
     "metalsmith-canonical": "^1.2.0",
     "metalsmith-tracer": "^2.1.1",
-    "multimatch": "^7.0.0",
+    "micromatch": "^4.0.8",
     "nunjucks": "^3.2.4",
     "outdent": "^0.8.0",
     "postcss-markdown": "^1.3.0",
