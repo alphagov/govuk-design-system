@@ -10,6 +10,11 @@ let bs
 
 metalsmith
 
+  .use((files, metalsmith, done) => {
+    console.log(metalsmith.metadata())
+    done()
+  })
+
   // Configure sources to watch for rebuilds
   .watch([
     slash(paths.source),
