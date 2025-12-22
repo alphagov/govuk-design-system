@@ -1,6 +1,6 @@
 ---
 title: Tag
-description: The tag component indicates the status of something, such as an item on a task list or a phase banner
+description: The Tag component indicates the status of something, such as an item on a task list or a phase banner
 section: Components
 aliases: chip, badge, flag, token
 backlogIssueId: 62
@@ -9,17 +9,17 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 
-Use the tag component to show users the status of something.
+Use the Tag component to show users the status of something.
 
 {{ example({ group: "components", item: "tag", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 
-Use the tag component when it’s possible for something to have more than one status and it’s useful for the user to know about that status. For example, you can use a tag to show whether an item in a [Task list component](/components/task-list/) has been ‘completed’.
+Use the Tag component when it’s possible for something to have more than one status and it’s useful for the user to know about that status. For example, you can use a tag to show whether an item in a [Task list component](/components/task-list/) has been ‘completed’.
 
 ## How it works
 
-There are two ways to use the tag component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
+There are two ways to use the Tag component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 
 Tags are only used to indicate a status. Do not make a tag interactive by making it into a link or button. Use adjectives (descriptive words) and not verbs (action words) for the names of your tags. Using a verb might make a user think that clicking on them will do something.
 
@@ -58,11 +58,26 @@ If you need more tag colours, you can use the following colours.
 
 ## Research on this component
 
-The Department for Education contributed the coloured tags. They’re being used in:
+In [February 2026] we updated the Tag component as part of colour changes to the GOV.UK brand. As part of this work, we also improved colour contrast and text legibility.
+
+We found the proposed brand colours would not meet minimum contrast requirements, so we made small changes to the colours and design.
+
+To improve contrast, we:
+
+- used a lighter background, using the 80% tint of each colour
+- added a 1px border, using the 50% shade of each colour
+
+To make the tags easier to read, we added more padding to the top and bottom.
+
+### Colour in tags
+
+The Department for Education contributed coloured tags into the Design System.
+
+They’re being used in:
 
 - apply for teacher training (used by citizens)
 - manage teacher training applications (used by teacher training providers)
 
-The tag component previously used uppercase bold text for the tags. This was changed as some research has shown that uppercase text can be harder to read, particularly for longer tag text.
+The Tag component previously used uppercase bold text for the tags. This was changed as some research has shown that uppercase text can be harder to read, particularly for longer tag text.
 
-The tag component previously used white text on a dark coloured background. Research from multiple teams found that some users perceived these as buttons and tried to click on them. The design was changed to try and avoid this, by using a lighter background colour and darker text.
+The Tag component previously used white text on a dark coloured background. Research from multiple teams found that some users perceived these as buttons and tried to click on them. The design was changed to try and avoid this, by using a lighter background colour and darker text.
