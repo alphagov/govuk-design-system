@@ -63,7 +63,7 @@ class MobileNavigationSection extends Component {
     this.setHiddenStates()
 
     // Finally, get ready for user interactions
-    this.$button.addEventListener('click', () => {
+    this.$button.addEventListener('click', (event) => {
       this.expanded = !this.expanded
     })
   }
@@ -110,15 +110,54 @@ class MobileNavigationSection extends Component {
       if (this.expanded) {
         this.$subnav.removeAttribute('hidden')
       }
-      this.$button.removeAttribute('hidden')
+      removeAttributes(this.$button, Object.keys(attributesForHidingButton))
     } else {
       this.$root.parentElement.classList.remove(
         'app-mobile-navigation-section__service-navigation-item'
       )
-      this.$button.setAttribute('hidden', '')
+      setAttributes(this.$button, attributesForHidingButton)
       this.$subnav.setAttribute('hidden', '')
       this.$root.removeAttribute('hidden')
     }
+  }
+}
+
+/**
+ * Collection of attributes that needs setting on a `<button>`
+ * to fully hide it, both visually and from screen-readers,
+ * and prevent its activation while hidden
+ */
+const attributesForHidingButton = {
+  hidden: '',
+  // Prevent activating the button with JavaScript APIs while hidden
+  disabled: '',
+  // Fix button still appearing in VoiceOver's form control's menu despite being hidden,
+  // as well as remaining focusable through VoiceOver on iPadOS and iOS
+  // https://bugs.webkit.org/show_bug.cgi?id=300899
+  'aria-hidden': 'true'
+}
+
+/**
+ * Sets a group of attributes on the given element
+ *
+ * @param {Element} $element - The element to set the attribute on
+ * @param {{[attributeName: string]: string}} attributes - The attributes to set
+ */
+function setAttributes($element, attributes) {
+  for (const attributeName in attributes) {
+    $element.setAttribute(attributeName, attributes[attributeName])
+  }
+}
+
+/**
+ * Removes a list of attributes from the given element
+ *
+ * @param {Element} $element - The element to remove the attributes from
+ * @param {string[]} attributeNames - The names of the attributes to remove
+ */
+function removeAttributes($element, attributeNames) {
+  for (const attributeName of attributeNames) {
+    $element.removeAttribute(attributeName)
   }
 }
 
