@@ -11,7 +11,7 @@ You can use these community resources and tools to help you use the GOV.UK Desig
 
 The GOV.UK Design System team is not responsible for these resources and tools and we cannot support you with using them. Please contact the owner if you need help or you want to request a feature.
 
-To find design systems, style guides, manuals and other reusable resources from across government, you can explore the cross-government [GOV Reuse Library](https://reuselibrary.service.justice.gov.uk/).
+To find design systems, style guides, manuals and other reusable resources from across government, you can explore the cross-government [GOV Reuse Library](https://dev.reuselibrary.service.justice.gov.uk/).
 
 ## Create flow diagrams
 
