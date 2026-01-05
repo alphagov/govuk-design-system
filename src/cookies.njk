@@ -22,7 +22,10 @@ layout: layout-single-page.njk
         html: successNotificationBannerHtml,
         classes: "js-cookies-page-success",
         attributes: {
-          hidden: ""
+          hidden: {
+            value: true,
+            optional: true
+          }
         }
       }) }}
 
@@ -109,7 +112,10 @@ layout: layout-single-page.njk
             classes: "js-cookies-page-form-fieldset",
             attributes: {
               "data-cookie-type": "analytics",
-              hidden: ""
+              hidden: {
+                value: true,
+                optional: true
+              }
             }
           },
           items: [
@@ -156,7 +162,10 @@ layout: layout-single-page.njk
             classes: "js-cookies-page-form-fieldset",
             attributes: {
               "data-cookie-type": "campaign",
-              hidden: ""
+              hidden: {
+                value: true,
+                optional: true
+              }
             }
           },
           items: [
@@ -175,7 +184,10 @@ layout: layout-single-page.njk
           text: "Save cookie settings",
           classes: "js-cookies-form-button",
           attributes: {
-            hidden: ""
+            hidden: {
+              value: true,
+              optional: true
+            }
           }
         }) }}
       </form>
