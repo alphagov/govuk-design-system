@@ -10,7 +10,7 @@ layout: layout-single-page-prose.njk
 
 The GOV.UK Design System at the [Government Digital Service](https://www.gov.uk/government/organisations/government-digital-service) (GDS) maintains this design system.
 
-If you want to contact the team you can [get in touch via email or Slack](/get-in-touch/).
+If you want to contact the team you can [get in touch via email or Slack](/contact/).
 
 ## Team leads
 

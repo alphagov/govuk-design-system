@@ -114,4 +114,4 @@ Browse our [list of discussions on GitHub](https://github.com/orgs/alphagov/proj
 
 If you can’t find what you’re looking for, you can [propose a component or pattern](/community/propose-a-component-or-pattern/).
 
-If you’d like to contribute a component or pattern that isn’t in the list of priorities, [contact the Design System team](/get-in-touch/).
+If you’d like to contribute a component or pattern that isn’t in the list of priorities, [contact the Design System team](/contact/).

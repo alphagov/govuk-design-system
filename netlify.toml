@@ -35,6 +35,11 @@
   to = "/patterns/phone-numbers/"
   status = 301
 
+[[redirects]]
+  from = "/get-in-touch/"
+  to = "/contact/"
+  status = 301
+
 # Proxy requests for security.txt to the centralised Government Security
 # vulnerability disclosure policy (VDP)
 #
