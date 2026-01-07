@@ -24,6 +24,6 @@ The event organisers reserve the right to ask anyone in violation of these polic
 
 Organisers will reinforce this code within events and on our platforms. If you have any concerns, you can get in touch with any member of the Design System team.
 
-Alternatively you can [contact the Design System team](/get-in-touch/) and a member of the team will get back to you.
+Alternatively you can [contact the Design System team](/contact/) and a member of the team will get back to you.
 
 (These guidelines are adapted from [Afrotech Fest code of conduct](https://www.afrotechfest.co.uk/coc/), [Code for America code of conduct](http://www.cvent.com/events/code-for-america-summit-2018/custom-40-e12d85b157b94d69b80d8911cc641d36.aspx), [UKGovcamp code of conduct](https://www.ukgovcamp.com/code-of-conduct/), and [Services Week 2021 code of conduct](https://docs.google.com/document/d/1vQchJh-s6Fu6F4bN8UFM4lvRChe8ERgsE5whf9pUfjA/edit?usp=sharing) codes of conduct.)

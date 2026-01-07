@@ -50,7 +50,7 @@ describe('Accessibility Audit', () => {
 
   describe('Get in touch page - layout-single-page.njk', () => {
     it('validates', async () => {
-      const results = await analyze(page, '/get-in-touch/')
+      const results = await analyze(page, '/contact/')
       expect(results).toHaveNoViolations()
     })
   })

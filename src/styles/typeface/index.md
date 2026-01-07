@@ -17,4 +17,4 @@ If your service is publicly available on a subdomain other than service.gov.uk, 
 If you’re not sure whether you should use GDS Transport, do one of the following:
 
 - read the service manual section [‘If your service is not on GOV.UK’ section on ‘Making your service look like GOV.UK’](https://www.gov.uk/service-manual/design/making-your-service-look-like-govuk#if-your-service-isnt-on-govuk)
-- contact the [Design System team](/get-in-touch/)
+- contact the [Design System team](/contact/)
