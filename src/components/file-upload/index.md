@@ -128,7 +128,7 @@ Users of Dragon, a speech recognition tool, [cannot activate their browser’s n
 
 With the improved File upload component, users can say commands for interacting with web page controls to choose files.
 
-However, due to [browser security features](https://developer.mozilla.org/en-US/docs/Web/Security/User_activation), this may not work on subsequent interactions on the same page. If the component needs to be used more than once (for example, to correct a mistake), users will first need to perform another action, such as a mouse click.
+However, due to [browser security features](https://developer.mozilla.org/en-US/docs/Web/Security/User_activation), this may not work right away or on subsequent interactions on the same page. If users cannot interact with the component, they'll first need to perform another action, such as a mouse click.
 
 ## Research on this component
 
