@@ -39,7 +39,7 @@ You can find our [list of discussions on GitHub](https://github.com/orgs/alphago
 
 Feedback on both is useful to us. You’ll need to [create a GitHub account](https://github.com/join) to add comments.
 
-Select the thing you want to share findings about. If what you’re looking for is not on the list, read about [how to propose a component or pattern](https://design-system.service.gov.uk/community/propose-a-component-or-pattern/).
+Select the thing you want to share findings about. If what you’re looking for is not on the list, read about [how to propose a component or pattern](/community/propose-a-component-or-pattern/).
 
 Once you’ve selected the right discussion, use the template below to add your findings.
 
@@ -98,4 +98,4 @@ We’ll prioritise improvements to an existing part of the Design System if we s
 
 Most major additions to the Design System team are chosen through a regular prioritisation process with the community. [Read a blog post about how we prioritise new additions to the Design System](https://designnotes.blog.gov.uk/2022/09/07/how-we-prioritise-additions-to-the-gov-uk-design-system/).
 
-We share the chosen priorities on the [Upcoming components and patterns page](https://design-system.service.gov.uk/community/upcoming-components-patterns/).
+We share the chosen priorities on the [Upcoming components and patterns page](/community/upcoming-components-patterns/).

@@ -34,7 +34,7 @@ Do not:
 
 ## How it works
 
-Position a notification banner immediately before the page `h1`. The notification banner should be the same width as the page's other content, such as components, headings and body text. For example, if the other content takes up two-thirds of the screen on desktop devices, then the notification banner should also take up two-thirds. [Read about how to lay out pages](https://design-system.service.gov.uk/styles/layout/).
+Position a notification banner immediately before the page `h1`. The notification banner should be the same width as the page's other content, such as components, headings and body text. For example, if the other content takes up two-thirds of the screen on desktop devices, then the notification banner should also take up two-thirds. [Read about how to lay out pages](/styles/layout/).
 
 Use `role="region"` and `aria-labelledby="govuk-notification-banner-title"` (with `id="govuk-notification-banner-title"` on `<govuk-notification-banner__title>`) so that screen reader users can navigate to the notification banner.
 

@@ -47,7 +47,7 @@ Here’s a few places to join the discussions that help shape the Design System.
       title: "Share your examples and research",
       classes: "govuk-!-margin-bottom-2"
     }) %}
-      <p>We want to hear how existing components and patterns perform in your service, not just <a href="https://design-system.service.gov.uk/community/upcoming-components-patterns/">what we’re working on</a>. Follow our research template to <a href="https://design-system.service.gov.uk/community/share-research-findings/">share findings about your users.</a></p>
+      <p>We want to hear how existing components and patterns perform in your service, not just <a href="/community/upcoming-components-patterns/">what we’re working on</a>. Follow our research template to <a href="/community/share-research-findings/">share findings about your users.</a></p>
     {% endcall %}
   </div>
   <div class="govuk-grid-column-full govuk-grid-column-one-half-from-desktop">
@@ -57,7 +57,7 @@ Here’s a few places to join the discussions that help shape the Design System.
       title: "Propose a change to pages",
       classes: "govuk-!-margin-bottom-2"
     }) %}
-      <p>Anyone can suggest an improvement, report a bug or correct an error on our pages. Look for the ‘Help improve this page’ section at the end of each page to <a href="https://design-system.service.gov.uk/community/propose-a-content-change-using-github/">propose a change using GitHub</a>.</p>
+      <p>Anyone can suggest an improvement, report a bug or correct an error on our pages. Look for the ‘Help improve this page’ section at the end of each page to <a href="/community/propose-a-content-change-using-github/">propose a change using GitHub</a>.</p>
     {% endcall %}
   </div>
 </div>
