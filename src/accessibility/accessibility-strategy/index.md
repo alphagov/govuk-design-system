@@ -64,8 +64,8 @@ An ‘accessibility concern’ is our umbrella term for any question about the a
 
 Accessibility concerns can surface in any product, including:
 
-- [GOV.UK Frontend](https://design-system.service.gov.uk/get-started/production/)
-- the [GOV.UK Design System website](https://design-system.service.gov.uk/)
+- [GOV.UK Frontend](/get-started/production/)
+- the [GOV.UK Design System website](/)
 - the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk/)
 - the [GOV.UK Frontend technical documentation website](https://frontend.design-system.service.gov.uk/)
 - other content produced by the GOV.UK Design System team
@@ -287,13 +287,13 @@ If an incoming query is more than a quickly-answered question, it will be record
 
 By keeping accessibility concerns in the same place as all our GitHub issues, the team can more easily identify accessibility concerns related to other items. Addressing and storing accessibility concerns separate from GitHub issues could lead to them receiving less attention.
 
-If an accessibility concern turns out to be a bug the team cannot quickly fix, the team will determine whether it should be recorded in the [GOV.UK Design System accessibility statement](https://design-system.service.gov.uk/accessibility/).
+If an accessibility concern turns out to be a bug the team cannot quickly fix, the team will determine whether it should be recorded in the [GOV.UK Design System accessibility statement](/accessibility-statement/).
 
 We also will record relevant accessibility concerns for specific styles, components or patterns in their corresponding guidance pages.
 
 ### Recording WCAG compliance status
 
-If the GOV.UK Design System does not meet the requirements of level AA accessibility compliance, the team will update the [GOV.UK Design System accessibility statement](https://design-system.service.gov.uk/accessibility/) and keep the records of changes required until compliance is met.
+If the GOV.UK Design System does not meet the requirements of level AA accessibility compliance, the team will update the [GOV.UK Design System accessibility statement](/accessibility-statement/) and keep the records of changes required until compliance is met.
 
 ## Proposed accessibility activities
 
@@ -343,7 +343,7 @@ Initially, the team will assess the performance of this accessibility strategy b
 - use of the strategy to guide and improve the GOV.UK Design System team’s decision-making
 - progress and completion of activities mentioned in the strategy
 - number of accessibility concerns recorded as GitHub issues in the team’s repositories
-- number of accessibility concerns listed in the [GOV.UK Design System accessibility statement](https://design-system.service.gov.uk/accessibility/)
+- number of accessibility concerns listed in the [GOV.UK Design System accessibility statement](/accessibility-statement/)
 
 #### Additional indicators
 
@@ -359,7 +359,7 @@ If capacity is available to expand measurement efforts, additional performance i
 
 ### Recording performance measurement results
 
-The team will gather performance measurement results every 6 months and record them in the team’s internal documentation. The team will also review the [GOV.UK Design System accessibility statement](https://design-system.service.gov.uk/accessibility/) every 6 months and update as needed.
+The team will gather performance measurement results every 6 months and record them in the team’s internal documentation. The team will also review the [GOV.UK Design System accessibility statement](/accessibility-statement/) every 6 months and update as needed.
 
 The team will use the results of performance measurement and accessibility statement reviews to help inform quarterly planning.
 
