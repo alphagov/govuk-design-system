@@ -1,36 +1,46 @@
 ---
-title: Contact the Design System team
+title: Contact the team
 description: If you’ve got a question, idea or suggestion get in touch with the Design System team
 layout: layout-single-page.njk
 ---
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">Contact the Design System team</h1>
+    <h1 class="govuk-heading-xl">Contact the team</h1>
 
-    <p class="govuk-body-l">If you’ve got a question, idea or suggestion get in touch with the Design System team.</p>
+    <p class="govuk-body-l">If you have a question or feedback for the GOV.UK Design System team, we’d love to hear from you. There are different ways to communicate with us depending on who you are and what type of feedback or question you have.</p>
 
-    {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+    <h2 class="govuk-heading-l">For UK government services</h2>
 
-    {% set callout %}
-      The GOV.UK Design System team provide support to people who work in the government.<br>
-      <br>
-      We cannot give general advice to the public. We do not have access to information about you held by government departments.<br>
-      <br>
-      For other enquiries, use <a class="govuk-link" href="https://www.gov.uk/contact">the contact form on GOV.UK</a>.
-    {% endset %}
+    <p class="govuk-body">If you work on a central UK government service, you can contact us using:</p>
 
-    {{ govukWarningText({
-      html: callout,
-      iconFallbackText: "Warning"
-    }) }}
+    <ul class="govuk-list govuk-list--bullet">
+      <li><a href="https://ukgovernmentdigital.slack.com/app_redirect?channel=govuk-design-system" data-hsupport="slack" class="govuk-link">#govuk-design-system on cross-government Slack</a> to also get access to a wealth of knowledge from the whole community</li>
+      <li><a class="govuk-link" href="mailto:govuk-design-system-support@digital.cabinet-office.gov.uk" data-hsupport="email">govuk-design-system-support@digital.cabinet-office.gov.uk</a> to contact us directly or ask questions you prefer not to share publicly</li>
+      <li><a href="https://github.com/alphagov/govuk-frontend/issues/new/choose" class="govuk-link">Github issues</a> to report bugs and suggest code changes</li>
+      <li><a href="https://design-system.service.gov.uk/community/#join-the-conversation" class="govuk-link">various community discussion spaces </a> to help us improve the Design System</li>
+    </ul>
 
-    <h2 class="govuk-heading-l">Slack</h2>
+    <h2 class="govuk-heading-l">For other users of the GOV.UK Design System</h2>
 
-    <p class="govuk-body">Use the <a class="govuk-link" href="https://ukgovernmentdigital.slack.com/app_redirect?channel=govuk-design-system" data-hsupport="slack">#govuk-design-system channel on cross-government Slack</a>.</p>
+    <p class="govuk-body">If you do not work on a central UK government service but still use the GOV.UK Design System, we can try to help but might not be able to.</p>
 
-    <h2 class="govuk-heading-l">Email</h2>
+    <p class="govuk-body">We focus on the use of the GOV.UK Design System for central UK government digital services. We cannot reliably provide guidance or support for different contexts.</p>
 
-    <p class="govuk-body">For general support queries, please email the Design System team on <a class="govuk-link" href="mailto:govuk-design-system-support@digital.cabinet-office.gov.uk" data-hsupport="email">govuk-design-system-support@digital.cabinet-office.gov.uk</a>.</p>
+    <p class="govuk-body">You can feed back in the same GitHub discussions mentioned above or email us at <a class="govuk-link" href="mailto:govuk-design-system-support@digital.cabinet-office.gov.uk" data-hsupport="email">govuk-design-system-support@digital.cabinet-office.gov.uk</a>.</p>
+
+    <h2 class="govuk-heading-l">For GOV.UK publishers</h2>
+
+    <p class="govuk-body">We cannot help with publishing on the GOV.UK website. Read the <a href="https://www.gov.uk/guidance/content-design" class="govuk-link">content design guidance</a> and <a href="https://www.gov.uk/guidance/how-to-publish-on-gov-uk" class="govuk-link">guidance for publishers</a>.</p>
+
+    <p class="govuk-body">If you cannot find an answer there, get support using ‘<a href="https://www.gov.uk/guidance/contact-the-government-digital-service/request-a-thing" class="govuk-link">Request a thing</a>’.</p>
+
+    <h2 class="govuk-heading-l">For members of the public</h2>
+
+    <p class="govuk-body">We cannot give general advice to the public. We do not have access to information about you held by government departments and cannot forward your queries to those departments.</p>
+
+    <p class="govuk-body">If you need specific advice or help, you can <a href="https://www.gov.uk/contact" class="govuk-link">find contact details for services</a>.</p>
+
+    <p class="govuk-body">If you have technical issues with the GOV.UK website, you can <a href="https://www.gov.uk/contact/govuk" class="govuk-link">use the contact form on GOV.UK</a>.</p>
   </div>
 </div>
