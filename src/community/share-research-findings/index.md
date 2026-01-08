@@ -22,29 +22,30 @@ Feedback from any phase helps us iterate the Design System in line with evolving
 
 ## Where to add findings
 
-Go to our [list of discussions on GitHub](https://github.com/orgs/alphagov/projects/43/views/1). There are 2 tabs, each showing a list of discussion pages about:
+You can share your findings with us either publicly or privately. We strive to work in the open as much as possible, but we understand that you may not feel comfortable sharing your findings in a public forum.
+
+### Share information responsibly
+
+[You must get informed consent from your participants](https://www.gov.uk/service-manual/user-research/getting-users-consent-for-research) before you can share findings of any research they’ve participated in.
+
+In addition, remember that all the information on GitHub is open to the public. Do not share any personally identifiable information about your participants or sensitive information about your service, either on GitHub or privately with us.
+
+### Share findings publicly on GitHub
+
+You can find our [list of discussions on GitHub](https://github.com/orgs/alphagov/projects/43/views/1). There are 2 tabs, each showing a list of discussion pages about:
 
 - things already in the Design System
-- things that could be added in the future
+- things we could add in the future
 
 Feedback on both is useful to us. You’ll need to [create a GitHub account](https://github.com/join) to add comments.
 
-Select the thing you want to share findings about. If what you’re looking for isn’t on the list, read about [how to propose a component or pattern](https://design-system.service.gov.uk/community/propose-a-component-or-pattern/).
+Select the thing you want to share findings about. If what you’re looking for is not on the list, read about [how to propose a component or pattern](https://design-system.service.gov.uk/community/propose-a-component-or-pattern/).
 
 Once you’ve selected the right discussion, use the template below to add your findings.
 
-{% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+### Share findings by contacting the team directly
 
-{% set callout %}
-Share information responsibly. <a href="https://www.gov.uk/service-manual/user-research/getting-users-consent-for-research">You must get informed consent from your participants</a> before you can share findings of any research they’ve participated in.
-{% endset %}
-
-{{ govukWarningText({
-  html: callout,
-  iconFallbackText: "Warning"
-}) }}
-
-Remember that all the information on GitHub is open to the public. Do not share any personally identifiable information about your participants or sensitive information about your service.
+If you do not want to use GitHub or would rather share your findings privately, you can [contact the team directly](/contact/) either by email or by sending a direct message on Slack.
 
 ## Research template
 
