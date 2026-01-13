@@ -9,9 +9,19 @@ order: 10
 
 See our latest releases and updates.
 
+## January 2026
+
+### We released GOV.UK Frontend v5.14.0
+
+This release allows you to remove content licence information from the GOV.UK footer if your service does not provide information under the Open Government Licence (OGL).
+
+It also provides a fix for a bug in the VoiceOver screen reader software that affects the menu toggle in the Service Navigation component.
+
+[Read the release notes for v5.14.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.14.0) to see what’s changed.
+
 ## October 2025
 
-### We released GOV.UK Frontend 5.13.0
+### We released GOV.UK Frontend v5.13.0
 
 This release introduces new Sass functions to help write `@media` and `@container` queries, mixins and functions whilst still using custom breakpoints or [GOV.UK Frontend’s `$govuk-breakpoints`](https://frontend.design-system.service.gov.uk/sass-api-reference/#govuk-breakpoints) setting.
 
@@ -21,7 +31,7 @@ Read the [release notes for v5.13.0](https://github.com/alphagov/govuk-frontend/
 
 ## September 2025
 
-### We released GOV.UK Frontend 5.12.0
+### We released GOV.UK Frontend v5.12.0
 
 It introduces a new mixin you can use to style the focus state if you’re building your own form input components.
 
@@ -29,7 +39,7 @@ Read the [release notes for v5.12.0](https://github.com/alphagov/govuk-frontend/
 
 ## August 2025
 
-### We released GOV.UK Frontend 5.11.2
+### We released GOV.UK Frontend v5.11.2
 
 This release includes some JavaScript bug fixes, as well as a fix for thickness of underlines on the Pagination component in Safari.
 
@@ -37,7 +47,7 @@ Read the [release notes for v5.11.2](https://github.com/alphagov/govuk-frontend/
 
 ## July 2025
 
-### We released GOV.UK Frontend 5.11.1
+### We released GOV.UK Frontend v5.11.1
 
 It fixes link styles in the Service navigation on inverted backgrounds and makes govuk-shade and govuk-tint more reliable.
 
