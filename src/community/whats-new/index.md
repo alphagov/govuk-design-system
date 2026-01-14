@@ -15,7 +15,7 @@ See our latest releases and updates.
 
 This release allows you to remove content licence information from the GOV.UK footer if your service does not provide information under the Open Government Licence (OGL).
 
-It also provides a fix for a bug in the VoiceOver screen reader software that affects the menu toggle in the Service Navigation component.
+It also provides a fix for a bug in the VoiceOver screen reader software that affects the menu toggle in the Service navigation component.
 
 [Read the release notes for v5.14.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.14.0) to see what’s changed.
 
