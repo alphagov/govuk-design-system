@@ -81,7 +81,399 @@ To change the components that are included in the page template by default, set 
 {% endraw %}
 ```
 
-### Options
+Options are listed by block areas where they're used :
+
+- `<html>` and `<body>`
+- `<head>` and metadata
+- page header
+- main container
+- footer
+- other sections
+
+See a diagram showing an exploded view of the page template block areas.
+
+### `<html>` and `<body>`
+
+The page template lets you customise the `<html>` and `<body>` element it renders:
+
+- Configure [classes and attributes on the `<html>` element](link to `htmlClasses`)
+- Configure [classes and attributes on the `<body>` element](link to `bodyClasses`)
+- [Add content at the start or end of the `<body>` element](link to `bodyStart`)
+
+<table class="govuk-table app-table--constrained">
+  <caption class="govuk-table__caption govuk-visually-hidden">Options that you can use with the page template</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col">Option name</th>
+      <th class="govuk-table__header" scope="col">Option type</th>
+      <th class="govuk-table__header" scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">htmlClasses</td>
+      <td class="govuk-table__cell">Variable</td>
+      <td class="govuk-table__cell">Add a class to the <code>&lt;html&gt;</code> element.</td>
+	</tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">htmlLang</td>
+      <td class="govuk-table__cell">Variable</td>
+      <td class="govuk-table__cell">Set the language of the whole document. If your <code>&lt;title&gt;</code> and <code>&lt;main&gt;</code> element are in a different language to the rest of the page, use <code>htmlLang</code> to set the language of the rest of the page.</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">bodyClasses</td>
+      <td class="govuk-table__cell">Variable</td>
+      <td class="govuk-table__cell">Add a class to the <code>&lt;body&gt;</code> element.</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">bodyAttributes</td>
+      <td class="govuk-table__cell">Variable</td>
+      <td class="govuk-table__cell">Add attributes to the <code>&lt;body&gt;</code> element. Add each attribute and its value in the <code>bodyAttributes</code> object.</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">bodyStart</td>
+      <td class="govuk-table__cell">Block</td>
+      <td class="govuk-table__cell">
+        Add content after the opening <code>&lt;body&gt;</code> element.
+        <br>
+        For example: the <a class="govuk-link" href="/components/cookie-banner/">Cookie banner component</a>.
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">bodyEnd</td>
+      <td class="govuk-table__cell">Block</td>
+      <td class="govuk-table__cell">
+        Add content just before the closing <code>&lt;/body&gt;</code> element.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### `<head>` and metadata
+
+The page template lets you control what’s rendered inside the `<head>` element:
+
+- configure [where your page can access GOV.UK Frontend assets](link to `assetPath`),
+- [set the page’s title](link to `pageTitle`)
+- add [custom metadata to the `<head>` element](link to `head`) (like a `<link>` to your services stylesheet).
+
+<table class="govuk-table app-table--constrained">
+  <caption class="govuk-table__caption govuk-visually-hidden">Options that you can use with the page template</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col">Option name</th>
+      <th class="govuk-table__header" scope="col">Option type</th>
+      <th class="govuk-table__header" scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+	<tr class="govuk-table__row">
+      <td class="govuk-table__cell">assetPath</td>
+      <td class="govuk-table__cell">Variable</td>
+      <td class="govuk-table__cell">
+        Specify a path to the <a href="https://frontend.design-system.service.gov.uk/import-font-and-images-assets/">GOV.UK Frontend assets</a> (icons, images, font files). If you're using the refreshed GOV.UK brand, you may need to update this path to point to the updated assets.
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">assetUrl</td>
+      <td class="govuk-table__cell">Variable</td>
+      <td class="govuk-table__cell">Set the domain for assets where an absolute URL is required, for example the Open Graph image.</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">head</td>
+      <td class="govuk-table__cell">Block</td>
+      <td class="govuk-table__cell">
+        Add additional items inside the <code>&lt;head&gt;</code> element.
+        <br>
+        For example: <code>&lt;meta name="description" content="My page description"&gt;</code>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">headIcons</td>
+      <td class="govuk-table__cell">Block</td>
+      <td class="govuk-table__cell">
+        Override the default icons used for GOV.UK branded pages.
+        <br>
+        For example: <code>&lt;link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /&gt;</code>
+      </td>
+    </tr>
+	<tr class="govuk-table__row">
+      <td class="govuk-table__cell">opengraphImageUrl</td>
+      <td class="govuk-table__cell">Variable</td>
+      <td class="govuk-table__cell">Set the URL for the Open Graph image meta tag. The URL must be absolute, including the protocol and domain name. If you're using the refreshed GOV.UK brand, you may need to update this path to point to the updated assets.
+</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">themeColor</td>
+      <td class="govuk-table__cell">Variable</td>
+      <td class="govuk-table__cell">
+        Set the <a href="https://developer.chrome.com/blog/support-for-theme-color-in-chrome-39-for-android">toolbar colour on some devices</a>.
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">pageTitle</td>
+      <td class="govuk-table__cell">Block</td>
+      <td class="govuk-table__cell">
+        Override the default page title (<code>&lt;title&gt;</code> element).
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">pageTitleLang</td>
+      <td class="govuk-table__cell">Variable</td>
+      <td class="govuk-table__cell">
+        Set the language of the <code>&lt;title&gt;</code> element if it's different to <code>htmlLang</code>.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### Page header
+
+Customise the header appearing at the top of the page:
+
+- [replace the Skip Link rendered before the `<header>`](link to `skipLink`)
+- [replace the whole `<header>` element](link to `header`) with your own
+- [add classes or attributes to the `<header>` element](link to `headerClasses`)
+- [add extra content at the start or end of the `<header>` element](link to `headerStart`)
+- [replace the components rendered inside the `<header>`](link to `govukHeader`)
+
+<table class="govuk-table app-table--constrained">
+  <caption class="govuk-table__caption govuk-visually-hidden">Options that you can use with the page template</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col">Option name</th>
+      <th class="govuk-table__header" scope="col">Option type</th>
+      <th class="govuk-table__header" scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+	<tr class="govuk-table__row">
+      <td class="govuk-table__cell">skipLink</td>
+      <td class="govuk-table__cell">Block</td>
+      <td class="govuk-table__cell">
+        Deprecated - use <code>govukSkipLink</code> instead. Override the default <a class="govuk-link" href="/components/skip-link/">Skip link component</a>.
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">govukSkipLink</td>
+      <td class="govuk-table__cell">Block</td>
+      <td class="govuk-table__cell">
+        Override the default <a class="govuk-link" href="/components/skip-link/">Skip link component</a>.
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">header</td>
+      <td class="govuk-table__cell">Block</td>
+      <td class="govuk-table__cell">
+        Override the default <a class="govuk-link" href="/components/header/">GOV.UK Header component</a>.
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">headerClasses</td>
+      <td class="govuk-table__cell">Variable</td>
+      <td class="govuk-table__cell">
+        Add a class to the <code>&lt;header&gt;</code> element.
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">headerAttributes</td>
+      <td class="govuk-table__cell">Variable</td>
+      <td class="govuk-table__cell">
+		Add other attributes than `class` to the <code>&lt;header&gt;</code> element. Add each attribute and its value in the `headerAttributes` object.
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">headerStart</td>
+      <td class="govuk-table__cell">Block</td>
+      <td class="govuk-table__cell">
+		Add content after the opening <code>&lt;header&gt;</code> element.
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">headerEnd</td>
+      <td class="govuk-table__cell">Block</td>
+      <td class="govuk-table__cell">
+		Add content just before the closing <code>&lt;header&gt;</code> element.<br>For example: The Phase banner component.
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">govukHeader</td>
+      <td class="govuk-table__cell">Block</td>
+      <td class="govuk-table__cell">
+		Override the GOV.UK Header without changing the rest of the <code>&lt;header&gt;</code> element.
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">serviceName</td>
+      <td class="govuk-table__cell">Variable</td>
+      <td class="govuk-table__cell">
+		Renders a Service Navigation with the given <code>serviceName</code> if present. If you need to add navigation items, you’ll need to <a class="govuk-link" href="/components/header/">[ADD LINK to govukServiceNavigation] replace the default Service Navigation with your own</a>.
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">govukServiceNavigation</td>
+      <td class="govuk-table__cell">Block</td>
+      <td class="govuk-table__cell">
+		Override the Service Navigation rendered if <code>serviceName</code> is set or add your custom Service Navigation without affecting the rest of the <code>&lt;header&gt;</code> element.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### Main content
+
+The page template [renders your content](link to the `content` option) in a `<main>` tag, wrapped in a container limiting the content’s width. You can:
+
+- [replace the container limiting the content’s width](link to `container`) or [add classes to the container](link to `containerClasses`
+- [add content at the start or end of the container](link to `containerStart`)
+- [replace the `<main>` element](link to `main`) with your own
+- [add classes or a `lang` attribute to the `<main>` element](link to `mainClasses`)
+
+<table class="govuk-table app-table--constrained">
+  <caption class="govuk-table__caption govuk-visually-hidden">Options that you can use with the page template</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col">Option name</th>
+      <th class="govuk-table__header" scope="col">Option type</th>
+      <th class="govuk-table__header" scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">container</td>
+      <td class="govuk-table__cell">Block</td>
+      <td class="govuk-table__cell">Override the default container limiting the width of the page, including <code>&lt;main&gt;</code> element it wraps.</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">containerClasses</td>
+      <td class="govuk-table__cell">Variable</td>
+      <td class="govuk-table__cell">Add a class to the container. This is useful if you want to make the page wrapper a fixed width.
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">containerStart</td>
+      <td class="govuk-table__cell">Block</td>
+      <td class="govuk-table__cell">Add content after the opening <code>&lt;div class=”govuk-width-container”&gt;</code> element that limits the width of the page. For example: the Back link component, Breadcrumbs component
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">beforeContent</td>
+      <td class="govuk-table__cell">Block</td>
+      <td class="govuk-table__cell">Deprecated - Use <code>containerStart</code> instead
+Add content that needs to appear outside the <code>&lt;main&gt;</code> element. For example: the Back link component, Breadcrumbs component, Phase banner component.
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">containerEnd</td>
+      <td class="govuk-table__cell">Block</td>
+      <td class="govuk-table__cell">Add content just before the closing <code>&lt;/div&gt;</code> of the width container.
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">main</td>
+      <td class="govuk-table__cell">Variable</td>
+      <td class="govuk-table__cell">Add a class to the <code>&lt;main&gt;</code> element.
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">mainClasses</td>
+      <td class="govuk-table__cell">Block</td>
+      <td class="govuk-table__cell">Override the whole <code>&lt;main&gt;</code> element.
+    </tr>
+     <tr class="govuk-table__row">
+      <td class="govuk-table__cell">mainLang</td>
+      <td class="govuk-table__cell">Variable</td>
+      <td class="govuk-table__cell">Set the language of the <code>&lt;main&gt;</code> element if it’s different to htmlLang.
+    </tr>
+     <tr class="govuk-table__row">
+      <td class="govuk-table__cell">content</td>
+      <td class="govuk-table__cell">Block</td>
+      <td class="govuk-table__cell">Add content that needs to appear centered in the <code>&lt;main&gt;</code> element.
+    </tr>
+  </tbody>
+</table>
+
+### Footer
+
+Customise the header appearing at the top of the page:
+
+- [replace the whole `<footer>` element](link to `footer`) with your own
+- [add classes or attributes to the `<footer>` element](link to `footerClasses`)
+- [add extra content at the start or end of the `<footer>` element](link to `footerStart`)
+- [replace the components rendered inside the `<footer>`](link to `govukFooter`)
+
+[VISUAL EXAMPLE: Outline the blocks related to the footer]
+
+<table class="govuk-table app-table--constrained">
+  <caption class="govuk-table__caption govuk-visually-hidden">Options that you can use with the page template</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col">Option name</th>
+      <th class="govuk-table__header" scope="col">Option type</th>
+      <th class="govuk-table__header" scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+ 	<tr class="govuk-table__row">
+      <td class="govuk-table__cell">footer</td>
+      <td class="govuk-table__cell">Block</td>
+      <td class="govuk-table__cell">Override the whole <code>&lt;footer&gt;</code> element.</td>
+    </tr>
+ 	<tr class="govuk-table__row">
+      <td class="govuk-table__cell">footerClasses</td>
+      <td class="govuk-table__cell">Variable</td>
+      <td class="govuk-table__cell">Add a class to the <code>&lt;footer&gt;</code> element.</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">footerAttributes</td>
+      <td class="govuk-table__cell">Variable</td>
+      <td class="govuk-table__cell">Add attributes to the <code>&lt;footer&gt;</code> element. Add each attribute and its value in the <code>bodyAttributes</code> object.
+</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">footerStart</td>
+      <td class="govuk-table__cell">Block</td>
+      <td class="govuk-table__cell">Add content after the opening <code>&lt;footer&gt;</code> element.
+</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">govukFooter</td>
+      <td class="govuk-table__cell">Block</td>
+      <td class="govuk-table__cell">Override the GOV.UK footer without changing the rest of the <code>&lt;footer&gt;</code> element.
+</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">footerEnd</td>
+      <td class="govuk-table__cell">Block</td>
+      <td class="govuk-table__cell">Add content just before the closing <code>&lt;/footer&gt;</code> element.
+</td>
+    </tr>
+  </tbody>
+</table>
+
+### Other sections
+
+<table class="govuk-table app-table--constrained">
+  <caption class="govuk-table__caption govuk-visually-hidden">Options that you can use with the page template</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col">Option name</th>
+      <th class="govuk-table__header" scope="col">Option type</th>
+      <th class="govuk-table__header" scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">cspNonce</td>
+      <td class="govuk-table__cell">Variable</td>
+      <td class="govuk-table__cell">Add a nonce attribute to the script for your Content Security Policy (CSP). Provide a nonce that hostile actors cannot guess, as otherwise they can easily find a way around your CSP. However, you should use this attribute only if you’re not able to include the hash for the inline scripts in your service’s CSP.</td>
+    </tr>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">govukRebrand</td>
+      <td class="govuk-table__cell">Variable</td>
+      <td class="govuk-table__cell">Enables rebranded styles. If you’ve overridden any blocks that are affected by this, you may have to make manual changes. See the v5.10.0 release notes for more information.
+</td>
+    </tr>
+  </tbody>
+</table>
+
+### [OLD TABLE]
 
 <table class="govuk-table app-table--constrained">
   <caption class="govuk-table__caption govuk-visually-hidden">Options that you can use with the page template</caption>
