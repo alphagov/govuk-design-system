@@ -13,11 +13,13 @@ Some things on the roadmap might change – the purpose is to tell you what’s 
 
 See our [GitHub team board](https://github.com/orgs/alphagov/projects/53) for more details on our plans and day-to-day activities.
 
-Last updated 30 December 2025.
+Last updated 14 January 2026.
 
 ## Recently shipped
 
-We’ve released [GOV.UK Frontend v5.13.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.13.0), which introduces new Sass functions to help write `@media` and `@container` queries, mixins and functions whilst still using custom breakpoints or GOV.UK Frontend’s `$govuk-breakpoints` setting.
+We’ve released [GOV.UK Frontend v5.14.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.14.0). This release allows you to remove content licence information from the GOV.UK footer if your service does not provide information under the Open Government Licence (OGL). It also provides a fix for a bug in the VoiceOver screen reader software that affects the menu toggle in the Service navigation component.
+
+In October 2025, we released [GOV.UK Frontend v5.13.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.13.0), which introduced new Sass functions to help write `@media` and `@container` queries, mixins and functions whilst still using custom breakpoints or GOV.UK Frontend’s `$govuk-breakpoints` setting.
 
 In September 2025, we released [GOV.UK Frontend v5.12.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.12.0), which introduced a new mixin you can use to style the focus state if you're building your own form input components.
 
@@ -26,6 +28,8 @@ In June 2025, we released [GOV.UK Frontend v5.11.0](https://github.com/alphagov/
 In May 2025, we released [GOV.UK Frontend v5.10.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.0) (and later fix versions) and [GOV.UK Frontend v4.10.0](https://github.com/alphagov/govuk-frontend/releases/tag/v4.10.0). These are the first steps towards refreshing the GOV.UK brand across government services.
 
 ## Working on now
+
+We've started to:
 
 - apply a refreshed GOV.UK colour palette to all Design System components
 - work on breaking changes for [v6.0.0](https://github.com/alphagov/govuk-frontend/milestone/51) – we plan to include typographic scale enabled by default and remove some deprecated features and options
