@@ -350,6 +350,11 @@ The page template [renders your content](link to the `content` option) in a `<ma
       <td class="govuk-table__cell">Add a class to the container. This is useful if you want to make the page wrapper a fixed width.
     </tr>
     <tr class="govuk-table__row">
+      <td class="govuk-table__cell">containerAttributes</td>
+      <td class="govuk-table__cell">Variable</td>
+      <td class="govuk-table__cell">Add other attributes than <code>class</code> to the container element. Add each attribute and its value in the `containerAttributes` object.
+    </tr>
+    <tr class="govuk-table__row">
       <td class="govuk-table__cell">containerStart</td>
       <td class="govuk-table__cell">Block</td>
       <td class="govuk-table__cell">Add content after the opening <code>&lt;div class=”govuk-width-container”&gt;</code> element that limits the width of the page. For example: the Back link component, Breadcrumbs component
@@ -379,6 +384,11 @@ Add content that needs to appear outside the <code>&lt;main&gt;</code> element. 
       <td class="govuk-table__cell">mainLang</td>
       <td class="govuk-table__cell">Variable</td>
       <td class="govuk-table__cell">Set the language of the <code>&lt;main&gt;</code> element if it’s different to htmlLang.
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">mainAttributes</td>
+      <td class="govuk-table__cell">Variable</td>
+      <td class="govuk-table__cell">Add other attributes than <code>class</code> and <code>lang</code> to the <code>&lt;main&gt;</code> element. Add each attribute and its value in the `mainAttributes` object.
     </tr>
      <tr class="govuk-table__row">
       <td class="govuk-table__cell">content</td>
