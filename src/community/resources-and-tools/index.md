@@ -52,10 +52,7 @@ Sketch wireframes based on the GOV.UK Design System.
 
 ## Build front ends
 
-### ASP.NET
-
-Guidance on [bringing the GOV.UK Design System into a .NET MVC Project](https://github.com/nouriach/compile-gds-runtime-dotnet) -
-A walkthrough for how to import the GOV.UK Design System into a MVC project and compile the sass at runtime using gulp.
+### ASP.NET Core
 
 [GOV.UK Design System for ASP.NET Core](https://github.com/x-govuk/govuk-frontend-aspnetcore) -
 GOV.UK Frontend component library and assets integration for ASP.NET Core
