@@ -91,10 +91,10 @@ A collection of GOV.UK Frontend Laravel Blade components, validation rules, page
 
 ### Ruby on Rails
 
-[GOV.UK Design System Formbuilder](https://github.com/x-govuk/govuk-form-builder) -
+[GOV.UK Design System Formbuilder](https://govuk-form-builder.x-govuk.org) -
 A Rails form builder using GOV.UK Frontend.
 
-[GOV.UK Components](https://github.com/x-govuk/govuk-components) -
+[GOV.UK Components](https://govuk-components.x-govuk.org) -
 A set of non-form Rails components using GOV.UK Frontend. You can use these together with the Design System Formbuilder.
 
 [GOV.UK Rails Template](https://github.com/DFE-Digital/rails-template) -
