@@ -253,83 +253,75 @@ Override the GOV.UK Header without changing the rest of the `<header>` element.
 
 ### Main content
 
-The page template [renders your content](link to the `content` option) in a `<main>` tag, wrapped in a container limiting the content’s width. You can:
+The page template [renders your content](#render-your-content-inside-the-template) in a `<main>` tag, wrapped in a container limiting the content’s width. You can:
 
-- [replace the container limiting the content’s width](link to `container`) or [add classes to the container](link to `containerClasses`
-- [add content at the start or end of the container](link to `containerStart`)
-- [replace the `<main>` element](link to `main`) with your own
-- [add classes or a `lang` attribute to the `<main>` element](link to `mainClasses`)
+- [add classes to the container limiting the content’s width](#add-classes-or-attributes-to-the-container)
+- [add content at the start or end of the container](#add-extra-content-at-the-start-or-end-of-the-container)
+- [add classes or attributes to the `<main>` element](#add-classes-or-attributes-to-the-main-element)
+- [replace the container or `<main>` element](#replace-the-container-or-main-element) with your own
 
 {{ example({ group: "styles", item: "page-template", example: "main-content-template-areas", html: false, open: false }) }}
 
-<table class="govuk-table app-table--constrained">
-  <caption class="govuk-table__caption govuk-visually-hidden">Options that you can use with the page template</caption>
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th class="govuk-table__header" scope="col">Option name</th>
-      <th class="govuk-table__header" scope="col">Option type</th>
-      <th class="govuk-table__header" scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">container</td>
-      <td class="govuk-table__cell">Block</td>
-      <td class="govuk-table__cell">Override the default container limiting the width of the page, including <code>&lt;main&gt;</code> element it wraps.</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">containerClasses</td>
-      <td class="govuk-table__cell">Variable</td>
-      <td class="govuk-table__cell">Add a class to the container. This is useful if you want to make the page wrapper a fixed width.
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">containerAttributes</td>
-      <td class="govuk-table__cell">Variable</td>
-      <td class="govuk-table__cell">Add other attributes than <code>class</code> to the container element. Add each attribute and its value in the `containerAttributes` object.
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">containerStart</td>
-      <td class="govuk-table__cell">Block</td>
-      <td class="govuk-table__cell">Add content after the opening <code>&lt;div class=”govuk-width-container”&gt;</code> element that limits the width of the page. For example: the Back link component, Breadcrumbs component
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">beforeContent</td>
-      <td class="govuk-table__cell">Block</td>
-      <td class="govuk-table__cell">Deprecated - Use <code>containerStart</code> instead
-Add content that needs to appear outside the <code>&lt;main&gt;</code> element. For example: the Back link component, Breadcrumbs component, Phase banner component.
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">containerEnd</td>
-      <td class="govuk-table__cell">Block</td>
-      <td class="govuk-table__cell">Add content just before the closing <code>&lt;/div&gt;</code> of the width container.
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">main</td>
-      <td class="govuk-table__cell">Variable</td>
-      <td class="govuk-table__cell">Add a class to the <code>&lt;main&gt;</code> element.
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">mainClasses</td>
-      <td class="govuk-table__cell">Block</td>
-      <td class="govuk-table__cell">Override the whole <code>&lt;main&gt;</code> element.
-    </tr>
-     <tr class="govuk-table__row">
-      <td class="govuk-table__cell">mainLang</td>
-      <td class="govuk-table__cell">Variable</td>
-      <td class="govuk-table__cell">Set the language of the <code>&lt;main&gt;</code> element if it’s different to htmlLang.
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">mainAttributes</td>
-      <td class="govuk-table__cell">Variable</td>
-      <td class="govuk-table__cell">Add other attributes than <code>class</code> and <code>lang</code> to the <code>&lt;main&gt;</code> element. Add each attribute and its value in the `mainAttributes` object.
-    </tr>
-     <tr class="govuk-table__row">
-      <td class="govuk-table__cell">content</td>
-      <td class="govuk-table__cell">Block</td>
-      <td class="govuk-table__cell">Add content that needs to appear centered in the <code>&lt;main&gt;</code> element.
-    </tr>
-  </tbody>
-</table>
+{% call(options) nunjucksOptions("Render your content inside the template") %}
+{%- call addNunjucksOption(options, 'content', 'Block') -%}
+Add content that needs to appear in the <main> element.
+{%- endcall %}
+
+{%- call addNunjucksOption(options, 'containerAttributes', 'Variable') -%}
+Add other attributes than `class` to the container element. Add each attribute and its value in the `containerAttributes` object.
+{%- endcall %}
+{% endcall %}
+
+{% call(options) nunjucksOptions("Add classes or attributes to the container") %}
+{%- call addNunjucksOption(options, 'containerClasses', 'Variable') -%}
+Add a class to the container. This is useful if you want to make the page wrapper a fixed width.
+{%- endcall %}
+
+{%- call addNunjucksOption(options, 'containerAttributes', 'Variable') -%}
+Add other attributes than `class` to the container element. Add each attribute and its value in the `containerAttributes` object.
+{%- endcall %}
+{% endcall %}
+
+{% call(options) nunjucksOptions("Add extra content at the start or end of the container") %}
+{%- call addNunjucksOption(options, 'containerStart', 'Block') -%}
+Add content after the opening `<div class=”govuk-width-container”>` element that limits the width of the page.
+For example: the [Back link component](/components/back-link), [Breadcrumbs component](/components/breadcrumbs)
+{%- endcall %}
+
+{%- call addNunjucksOption(options, 'containerStart', 'Block') -%}
+Deprecated - Use [`containerStart`](#containerstart-variable) instead.
+Add content that needs to appear outside the `<main>` element.
+For example: the [Back link component](/components/back-link), [Breadcrumbs component](/components/breadcrumbs).
+{%- endcall %}
+
+{%- call addNunjucksOption(options, 'containerEnd', 'Block') -%}
+Add content just before the closing `</div>` of the width container.
+{%- endcall %}
+{% endcall %}
+
+{% call(options) nunjucksOptions("Add classes or attributes to the `<main>` element") %}
+{%- call addNunjucksOption(options, 'mainClasses', 'Variable') -%}
+Add a class to the `<main>` element.
+{%- endcall %}
+
+{%- call addNunjucksOption(options, 'mainClasses', 'Variable') -%}
+Set the language of the `<main>` element if it’s different to [`htmlLang`](#htmllang-variable).
+{%- endcall %}
+
+{%- call addNunjucksOption(options, 'mainAttributes', 'Variable') -%}
+Add other attributes than `class` and `lang` to the `<main>` element. Add each attribute and its value in the `mainAttributes` object.
+{%- endcall %}
+{% endcall %}
+
+{% call(options) nunjucksOptions("Replace the container or `<main>` element") %}
+{%- call addNunjucksOption(options, 'container', 'Block') -%}
+Override the default container limiting the width of the page, including the `<main>` element it wraps.
+{%- endcall %}
+
+{%- call addNunjucksOption(options, 'main', 'Block') -%}
+Override the whole <main> element.
+{%- endcall %}
+{% endcall %}
 
 ### Footer
 
