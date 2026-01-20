@@ -191,96 +191,65 @@ For example: `<meta name="description" content="My page description">`
 
 Customise the header appearing at the top of the page:
 
-- [replace the Skip Link rendered before the `<header>`](link to `skipLink`)
-- [replace the whole `<header>` element](link to `header`) with your own
-- [add classes or attributes to the `<header>` element](link to `headerClasses`)
-- [add extra content at the start or end of the `<header>` element](link to `headerStart`)
-- [replace the components rendered inside the `<header>`](link to `govukHeader`)
+- [replace the Skip Link rendered before the `<header>`](#replace-the-skip-link-rendered-before-the-header)
+- [add classes or attributes to the `<header>` element](#add-classes-or-attributes-to-the-header-element)
+- [add extra content at the start or end of the `<header>` element](#add-extra-content-at-the-start-or-end-of-the-header-element)
+- [add a Service Navigation component](#add-a-service-navigation-component)
+- [replace the default content from the header](#replace-the-default-content-from-the-header)
 
 {{ example({ group: "styles", item: "page-template", example: "header-template-areas", html: false, open: false }) }}
 
-<table class="govuk-table app-table--constrained">
-  <caption class="govuk-table__caption govuk-visually-hidden">Options that you can use with the page template</caption>
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th class="govuk-table__header" scope="col">Option name</th>
-      <th class="govuk-table__header" scope="col">Option type</th>
-      <th class="govuk-table__header" scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-	<tr class="govuk-table__row">
-      <td class="govuk-table__cell">skipLink</td>
-      <td class="govuk-table__cell">Block</td>
-      <td class="govuk-table__cell">
-        Deprecated - use <code>govukSkipLink</code> instead. Override the default <a class="govuk-link" href="/components/skip-link/">Skip link component</a>.
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">govukSkipLink</td>
-      <td class="govuk-table__cell">Block</td>
-      <td class="govuk-table__cell">
-        Override the default <a class="govuk-link" href="/components/skip-link/">Skip link component</a>.
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">header</td>
-      <td class="govuk-table__cell">Block</td>
-      <td class="govuk-table__cell">
-        Override the default <a class="govuk-link" href="/components/header/">GOV.UK Header component</a>.
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">headerClasses</td>
-      <td class="govuk-table__cell">Variable</td>
-      <td class="govuk-table__cell">
-        Add a class to the <code>&lt;header&gt;</code> element.
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">headerAttributes</td>
-      <td class="govuk-table__cell">Variable</td>
-      <td class="govuk-table__cell">
-		Add other attributes than `class` to the <code>&lt;header&gt;</code> element. Add each attribute and its value in the `headerAttributes` object.
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">headerStart</td>
-      <td class="govuk-table__cell">Block</td>
-      <td class="govuk-table__cell">
-		Add content after the opening <code>&lt;header&gt;</code> element.
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">headerEnd</td>
-      <td class="govuk-table__cell">Block</td>
-      <td class="govuk-table__cell">
-		Add content just before the closing <code>&lt;header&gt;</code> element.<br>For example: The Phase banner component.
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">govukHeader</td>
-      <td class="govuk-table__cell">Block</td>
-      <td class="govuk-table__cell">
-		Override the GOV.UK Header without changing the rest of the <code>&lt;header&gt;</code> element.
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">serviceName</td>
-      <td class="govuk-table__cell">Variable</td>
-      <td class="govuk-table__cell">
-		Renders a Service Navigation with the given <code>serviceName</code> if present. If you need to add navigation items, you’ll need to <a class="govuk-link" href="/components/header/">[ADD LINK to govukServiceNavigation] replace the default Service Navigation with your own</a>.
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">govukServiceNavigation</td>
-      <td class="govuk-table__cell">Block</td>
-      <td class="govuk-table__cell">
-		Override the Service Navigation rendered if <code>serviceName</code> is set or add your custom Service Navigation without affecting the rest of the <code>&lt;header&gt;</code> element.
-      </td>
-    </tr>
-  </tbody>
-</table>
+{% call(options) nunjucksOptions("Replace the Skip Link rendered before the `<header>`") %}
+{%- call addNunjucksOption(options, 'skipLink', 'Block') -%}
+Deprecated - use `govukSkipLink` instead. Override the default [Skip link component](/components/skip-link/).
+{%- endcall -%}
+
+{%- call addNunjucksOption(options, 'govukSkipLink', 'Block') -%}
+Override the default [Skip link component](/components/skip-link/).
+{%- endcall -%}
+{% endcall %}
+
+{% call(options) nunjucksOptions("Add classes or attributes to the `<header>` element") %}
+{%- call addNunjucksOption(options, 'headerClasses', 'Variable') -%}
+Add a class to the `<header>` element.
+{%- endcall %}
+
+{%- call addNunjucksOption(options, 'headerAttributes', 'Variable') -%}
+Add attributes to the `<header>` element. Add each attribute and its value in the `headerAttributes` object
+{%- endcall %}
+{% endcall %}
+
+{% call(options) nunjucksOptions("Add extra content at the start or end of the `<header>` element") %}
+{%- call addNunjucksOption(options, 'headerStart', 'Block') -%}
+Add content after the opening `<header>` element.
+{%- endcall %}
+
+{%- call addNunjucksOption(options, 'headerEnd', 'Block') -%}
+Add content just before the closing `</header>` element.
+For example: the [Phase banner component](/components/phase-banner/).
+{%- endcall %}
+{% endcall %}
+
+{% call(options) nunjucksOptions("Add a Service Navigation component") %}
+{%- call addNunjucksOption(options, 'serviceName', 'Variable') -%}
+Renders a Service Navigation with the given `serviceName` if present.
+If you need to add navigation items, you’ll need to [replace the default Service Navigation with your own](#govukservicenavigation-block)
+{%- endcall %}
+
+{%- call addNunjucksOption(options, 'govukServiceNavigation', 'Block') -%}
+Override the Service Navigation rendered if [`serviceName`](#servicename-variable) is set or add your custom Service Navigation without affecting the rest of the `<header>` element.
+{%- endcall %}
+{% endcall %}
+
+{% call(options) nunjucksOptions("Replace the default content from the header") %}
+{%- call addNunjucksOption(options, 'header', 'Block') -%}
+Override the `<header>` element and the `govukHeader`, `headerStart`, and `headerEnd` blocks.
+{%- endcall -%}
+
+{%- call addNunjucksOption(options, 'govukHeader', 'Block') -%}
+Override the GOV.UK Header without changing the rest of the `<header>` element.
+{%- endcall -%}
+{% endcall %}
 
 ### Main content
 
