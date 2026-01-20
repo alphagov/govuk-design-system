@@ -138,79 +138,54 @@ Add content just before the closing `</body>` element.
 
 The page template lets you control what’s rendered inside the `<head>` element:
 
-- configure [where your page can access GOV.UK Frontend assets](link to `assetPath`),
-- [set the page’s title](link to `pageTitle`)
-- add [custom metadata to the `<head>` element](link to `head`) (like a `<link>` to your services stylesheet).
+- [configure where your page can access GOV.UK Frontend assets](#configure-where-your-page-can-access-govuk-frontend-assets)
+- [customise icons and theme colours](#customise-icons-and-theme-colours)
+- [set the page’s title](#set-the-pages-title)
+- [add custom metadata to the `<head>` element](#add-custom-metadata-to-the-head-element) (like a `<link>` to your services stylesheet)
 
-<table class="govuk-table app-table--constrained">
-  <caption class="govuk-table__caption govuk-visually-hidden">Options that you can use with the page template</caption>
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th class="govuk-table__header" scope="col">Option name</th>
-      <th class="govuk-table__header" scope="col">Option type</th>
-      <th class="govuk-table__header" scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-	<tr class="govuk-table__row">
-      <td class="govuk-table__cell">assetPath</td>
-      <td class="govuk-table__cell">Variable</td>
-      <td class="govuk-table__cell">
-        Specify a path to the <a href="https://frontend.design-system.service.gov.uk/import-font-and-images-assets/">GOV.UK Frontend assets</a> (icons, images, font files). If you're using the refreshed GOV.UK brand, you may need to update this path to point to the updated assets.
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">assetUrl</td>
-      <td class="govuk-table__cell">Variable</td>
-      <td class="govuk-table__cell">Set the domain for assets where an absolute URL is required, for example the Open Graph image.</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">head</td>
-      <td class="govuk-table__cell">Block</td>
-      <td class="govuk-table__cell">
-        Add additional items inside the <code>&lt;head&gt;</code> element.
-        <br>
-        For example: <code>&lt;meta name="description" content="My page description"&gt;</code>
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">headIcons</td>
-      <td class="govuk-table__cell">Block</td>
-      <td class="govuk-table__cell">
-        Override the default icons used for GOV.UK branded pages.
-        <br>
-        For example: <code>&lt;link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /&gt;</code>
-      </td>
-    </tr>
-	<tr class="govuk-table__row">
-      <td class="govuk-table__cell">opengraphImageUrl</td>
-      <td class="govuk-table__cell">Variable</td>
-      <td class="govuk-table__cell">Set the URL for the Open Graph image meta tag. The URL must be absolute, including the protocol and domain name. If you're using the refreshed GOV.UK brand, you may need to update this path to point to the updated assets.
-</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">themeColor</td>
-      <td class="govuk-table__cell">Variable</td>
-      <td class="govuk-table__cell">
-        Set the <a href="https://developer.chrome.com/blog/support-for-theme-color-in-chrome-39-for-android">toolbar colour on some devices</a>.
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">pageTitle</td>
-      <td class="govuk-table__cell">Block</td>
-      <td class="govuk-table__cell">
-        Override the default page title (<code>&lt;title&gt;</code> element).
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">pageTitleLang</td>
-      <td class="govuk-table__cell">Variable</td>
-      <td class="govuk-table__cell">
-        Set the language of the <code>&lt;title&gt;</code> element if it's different to <code>htmlLang</code>.
-      </td>
-    </tr>
-  </tbody>
-</table>
+<!-- Without this comment, the option is rendered as part of a `<li>` from the previous list -->
+
+{% call(options) nunjucksOptions("Configure where your page can access GOV.UK Frontend assets") %}
+{%- call addNunjucksOption(options, 'assetPath', 'Variable') -%}
+Specify a path to the [GOV.UK Frontend assets](https://frontend.design-system.service.gov.uk/import-font-and-images-assets/) (icons, images, font files). If you're using the refreshed GOV.UK brand, you may need to update this path to point to the updated assets.
+{%- endcall -%}
+
+{%- call addNunjucksOption(options, 'assetUrl', 'Variable') -%}
+Set the domain for assets where an absolute URL is required, for example the Open Graph image.
+{%- endcall -%}
+{% endcall %}
+
+{% call(options) nunjucksOptions("Customise icons and theme colours") %}
+{%- call addNunjucksOption(options, 'opengraphImageUrl', 'Variable') -%}
+Set the URL for the Open Graph image meta tag. The URL must be absolute, including the protocol and domain name. If you're using the refreshed GOV.UK brand, you may need to update this path to point to the updated assets.
+{%- endcall %}
+
+{%- call addNunjucksOption(options, 'themeColor', 'Variable') -%}
+Set the [toolbar colour on some devices](https://developer.chrome.com/blog/support-for-theme-color-in-chrome-39-for-android).
+{%- endcall %}
+
+{%- call addNunjucksOption(options, 'headIcons', 'Block') -%}
+Override the default icons used for GOV.UK branded pages.
+For example: `<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />`
+{% endcall %}
+{% endcall %}
+
+{% call(options) nunjucksOptions("Set the page's title") %}
+{%- call addNunjucksOption(options, 'pageTitle', 'Variable') -%}
+Override the default page title (`<title>` element).
+{%- endcall %}
+
+{%- call addNunjucksOption(options, 'pageTitleLang', 'Variable') -%}
+Set the language of the `<title>` element if it's different to `<htmlLang>`.
+{% endcall %}
+{% endcall %}
+
+{% call(options) nunjucksOptions("Add custom metadata to the `<head>` element") %}
+{%- call addNunjucksOption(options, 'head', 'Block') -%}
+Add additional items inside the `<head>` element.
+For example: `<meta name="description" content="My page description">`
+{%- endcall %}
+{% endcall %}
 
 ### Page header
 
