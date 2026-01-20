@@ -323,59 +323,41 @@ Override the whole `<main>` element.
 
 Customise the header appearing at the top of the page:
 
-- [replace the whole `<footer>` element](link to `footer`) with your own
-- [add classes or attributes to the `<footer>` element](link to `footerClasses`)
-- [add extra content at the start or end of the `<footer>` element](link to `footerStart`)
-- [replace the components rendered inside the `<footer>`](link to `govukFooter`)
+- [add classes or attributes to the `<footer>` element](#add-classes-or-attributes-to-the-footer-element)
+- [add extra content at the start or end of the `<footer>` element](#add-extra-content-at-the-start-or-end-of-the-footer-element)
+- [replace the default content from the footer](#replace-the-default-content-from-the-footer)
 
 {{ example({ group: "styles", item: "page-template", example: "footer-template-areas", html: false, open: false }) }}
 
-<table class="govuk-table app-table--constrained">
-  <caption class="govuk-table__caption govuk-visually-hidden">Options that you can use with the page template</caption>
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th class="govuk-table__header" scope="col">Option name</th>
-      <th class="govuk-table__header" scope="col">Option type</th>
-      <th class="govuk-table__header" scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
- 	<tr class="govuk-table__row">
-      <td class="govuk-table__cell">footer</td>
-      <td class="govuk-table__cell">Block</td>
-      <td class="govuk-table__cell">Override the whole <code>&lt;footer&gt;</code> element.</td>
-    </tr>
- 	<tr class="govuk-table__row">
-      <td class="govuk-table__cell">footerClasses</td>
-      <td class="govuk-table__cell">Variable</td>
-      <td class="govuk-table__cell">Add a class to the <code>&lt;footer&gt;</code> element.</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">footerAttributes</td>
-      <td class="govuk-table__cell">Variable</td>
-      <td class="govuk-table__cell">Add attributes to the <code>&lt;footer&gt;</code> element. Add each attribute and its value in the <code>bodyAttributes</code> object.
-</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">footerStart</td>
-      <td class="govuk-table__cell">Block</td>
-      <td class="govuk-table__cell">Add content after the opening <code>&lt;footer&gt;</code> element.
-</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">govukFooter</td>
-      <td class="govuk-table__cell">Block</td>
-      <td class="govuk-table__cell">Override the GOV.UK footer without changing the rest of the <code>&lt;footer&gt;</code> element.
-</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">footerEnd</td>
-      <td class="govuk-table__cell">Block</td>
-      <td class="govuk-table__cell">Add content just before the closing <code>&lt;/footer&gt;</code> element.
-</td>
-    </tr>
-  </tbody>
-</table>
+{% call(options) nunjucksOptions("Add classes or attributes to the `<footer>` element") %}
+{%- call addNunjucksOption(options, 'footerClasses', 'Variable') -%}
+Add a class to the `<footer>` element.
+{%- endcall %}
+
+{%- call addNunjucksOption(options, 'footerAttributes', 'Variable') -%}
+Add attributes to the `<footer>` element. Add each attribute and its value in the `footerAttributes` object
+{%- endcall %}
+{% endcall %}
+
+{% call(options) nunjucksOptions("Add extra content at the start or end of the `<footer>` element") %}
+{%- call addNunjucksOption(options, 'footerStart', 'Block') -%}
+Add content after the opening `<footer>` element.
+{%- endcall %}
+
+{%- call addNunjucksOption(options, 'footerEnd', 'Block') -%}
+Add content just before the closing `</footer>` element.
+{%- endcall %}
+{% endcall %}
+
+{% call(options) nunjucksOptions("Replace the default content from the footer") %}
+{%- call addNunjucksOption(options, 'footer', 'Block') -%}
+Override the `<footer>` element and the `govukFooter`, `footerStart`, and `footerEnd` blocks.
+{%- endcall -%}
+
+{%- call addNunjucksOption(options, 'govukfooter', 'Block') -%}
+Override the GOV.UK Footer without changing the rest of the `<footer>` element.
+{%- endcall -%}
+{% endcall %}
 
 ### Other sections
 
