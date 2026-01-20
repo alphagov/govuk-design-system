@@ -359,32 +359,13 @@ Override the GOV.UK Footer without changing the rest of the `<footer>` element.
 {%- endcall -%}
 {% endcall %}
 
-### Other sections
+### Other options
 
-<table class="govuk-table app-table--constrained">
-  <caption class="govuk-table__caption govuk-visually-hidden">Options that you can use with the page template</caption>
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th class="govuk-table__header" scope="col">Option name</th>
-      <th class="govuk-table__header" scope="col">Option type</th>
-      <th class="govuk-table__header" scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">cspNonce</td>
-      <td class="govuk-table__cell">Variable</td>
-      <td class="govuk-table__cell">Add a nonce attribute to the script for your Content Security Policy (CSP). Provide a nonce that hostile actors cannot guess, as otherwise they can easily find a way around your CSP. However, you should use this attribute only if you’re not able to include the hash for the inline scripts in your service’s CSP.</td>
-    </tr>
-  <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">govukRebrand</td>
-      <td class="govuk-table__cell">Variable</td>
-      <td class="govuk-table__cell">Enables rebranded styles. If you’ve overridden any blocks that are affected by this, you may have to make manual changes. See the v5.10.0 release notes for more information.
-</td>
-    </tr>
-  </tbody>
-</table>
+{% call(options) nunjucksOptions("Security") %}
+{%- call addNunjucksOption(options, 'cspNonce', 'Variable') -%}
+Add a nonce attribute to the script for your Content Security Policy (CSP). Provide a nonce that hostile actors cannot guess, as otherwise they can easily find a way around your CSP. However, you should use this attribute only if you’re not able to include the hash for the inline scripts in your service’s CSP.
+{%- endcall -%}
+{% endcall %}
 
 ### [OLD TABLE]
 
