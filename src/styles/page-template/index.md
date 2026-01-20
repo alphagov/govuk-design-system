@@ -10,6 +10,7 @@ order: 1
 ---
 
 {% from "_example.njk" import example %}
+{% from "_nunjucks-options.njk" import nunjucksOptions, addNunjucksOption %}
 
 Use this template to keep your pages consistent with the rest of GOV.UK.
 
@@ -96,60 +97,42 @@ See a diagram showing an exploded view of the page template block areas.
 
 The page template lets you customise the `<html>` and `<body>` element it renders:
 
-- Configure [classes and attributes on the `<html>` element](link to `htmlClasses`)
-- Configure [classes and attributes on the `<body>` element](link to `bodyClasses`)
-- [Add content at the start or end of the `<body>` element](link to `bodyStart`)
+- [configure classes and attributes on the `<html>` element](#configure-classes-and-attributes-on-the-html-element)
+- [configure classes and attributes on the `<body>` element](#configure-classes-and-attributes-on-the-body-element)
+- [add content at the start or end of the `<body>` element](#add-content-at-the-start-or-end-of-the-body-element)
 
 {{ example({ group: "styles", item: "page-template", example: "html-body-template-areas", html: false, open: false }) }}
 
-<table class="govuk-table app-table--constrained">
-  <caption class="govuk-table__caption govuk-visually-hidden">Options that you can use with the page template</caption>
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th class="govuk-table__header" scope="col">Option name</th>
-      <th class="govuk-table__header" scope="col">Option type</th>
-      <th class="govuk-table__header" scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">htmlClasses</td>
-      <td class="govuk-table__cell">Variable</td>
-      <td class="govuk-table__cell">Add a class to the <code>&lt;html&gt;</code> element.</td>
-	</tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">htmlLang</td>
-      <td class="govuk-table__cell">Variable</td>
-      <td class="govuk-table__cell">Set the language of the whole document. If your <code>&lt;title&gt;</code> and <code>&lt;main&gt;</code> element are in a different language to the rest of the page, use <code>htmlLang</code> to set the language of the rest of the page.</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">bodyClasses</td>
-      <td class="govuk-table__cell">Variable</td>
-      <td class="govuk-table__cell">Add a class to the <code>&lt;body&gt;</code> element.</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">bodyAttributes</td>
-      <td class="govuk-table__cell">Variable</td>
-      <td class="govuk-table__cell">Add attributes to the <code>&lt;body&gt;</code> element. Add each attribute and its value in the <code>bodyAttributes</code> object.</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">bodyStart</td>
-      <td class="govuk-table__cell">Block</td>
-      <td class="govuk-table__cell">
-        Add content after the opening <code>&lt;body&gt;</code> element.
-        <br>
-        For example: the <a class="govuk-link" href="/components/cookie-banner/">Cookie banner component</a>.
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">bodyEnd</td>
-      <td class="govuk-table__cell">Block</td>
-      <td class="govuk-table__cell">
-        Add content just before the closing <code>&lt;/body&gt;</code> element.
-      </td>
-    </tr>
-  </tbody>
-</table>
+{% call(options) nunjucksOptions("Configure classes and attributes on the `<html>` element") %}
+{%- call addNunjucksOption(options, 'htmlClasses', 'Variable') -%}
+Add a class to the `<html>` element.
+{%- endcall %}
+
+{%- call addNunjucksOption(options, 'htmlLang', 'Variable') -%}
+Set the language of the whole document. If your `<title>` and `<main>` element are in a different language to the rest of the page, use `htmlLang` to set the language of the rest of the page.
+{%- endcall %}
+{% endcall %}
+
+{% call(options) nunjucksOptions("Configure classes and attributes on the `<body>` element") %}
+{%- call addNunjucksOption(options, 'bodyClasses', 'Variable') -%}
+Add a class to the `<body>` element.
+{%- endcall %}
+
+{%- call addNunjucksOption(options, 'bodyAttributes', 'Variable') -%}
+Add attributes to the `<body>` element. Add each attribute and its value in the `bodyAttributes` object
+{%- endcall %}
+{% endcall %}
+
+{% call(options) nunjucksOptions("Add content at the start or end of the `<body>` element") %}
+{%- call addNunjucksOption(options, 'bodyStart', 'Block') -%}
+Add content after the opening `<body>` element.
+For example: the [Cookie banner component](/components/cookie-banner/).
+{%- endcall %}
+
+{%- call addNunjucksOption(options, 'bodyEnd', 'Block') -%}
+Add content just before the closing `</body>` element.
+{%- endcall %}
+{% endcall %}
 
 ### `<head>` and metadata
 
