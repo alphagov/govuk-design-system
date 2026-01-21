@@ -65,7 +65,7 @@ You may find you need additional statuses if your user research shows that users
 
 In this instance, instead of ‘Incomplete’, you may want to use ‘Not yet started’ to show which tasks they are yet to start. You should then use ‘In progress’ for tasks they have started but are yet to complete.
 
-‘Not yet started’ uses a blue background, and ‘In progress’ uses a light blue background.
+Different colours may be used to further differentiate between tags.
 
 {{ example({ group: "components", item: "task-list", example: "in-progress", html: true, nunjucks: true, open: false }) }}
 
