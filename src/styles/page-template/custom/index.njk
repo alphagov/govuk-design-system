@@ -107,7 +107,7 @@ ignoreInSitemap: true
   {{ super() }}
 {% endblock %}
 
-{% block beforeContent %}
+{% block containerStart %}
   {{ govukPhaseBanner({
     tag: {
       text: "Alpha"
