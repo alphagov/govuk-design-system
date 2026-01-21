@@ -82,20 +82,20 @@ To change the components that are included in the page template by default, set 
 {% endraw %}
 ```
 
-Options are listed by block areas where they're used :
+## Template blocks and options
 
-- `<html>` and `<body>`
-- `<head>` and metadata
-- page header
-- width container and main content
-- footer
-- other sections
+Options are listed within the template blocks where they're used:
 
-See a diagram showing an exploded view of the page template block areas.
+- [`<html>` and `<body>`](#html-and-body)
+- [`<head>` and metadata](#head-and-metadata)
+- [page header](#page-header)
+- [width container and main content](#width-container-and-main-content)
+- [footer](#footer)
+- [other options](#other-options)
 
 ### `<html>` and `<body>`
 
-The page template lets you customise the `<html>` and `<body>` element it renders:
+Use options in `<html>` and `<body>` to:
 
 - [configure classes and attributes on the `<html>` element](#configure-classes-and-attributes-on-the-html-element)
 - [configure classes and attributes on the `<body>` element](#configure-classes-and-attributes-on-the-body-element)
@@ -136,7 +136,7 @@ Add content just before the closing `</body>` element.
 
 ### `<head>` and metadata
 
-The page template lets you control what’s rendered inside the `<head>` element:
+Use options in `<head>` and metadata to:
 
 - [configure where your page can access GOV.UK Frontend assets](#configure-where-your-page-can-access-govuk-frontend-assets)
 - [customise icons and theme colours](#customise-icons-and-theme-colours)
@@ -189,7 +189,7 @@ For example: `<meta name="description" content="My page description">`
 
 ### Page header
 
-Customise the header appearing at the top of the page:
+Use options in page header to:
 
 - [replace the Skip Link rendered before the `<header>`](#replace-the-skip-link-rendered-before-the-header)
 - [add classes or attributes to the `<header>` element](#add-classes-or-attributes-to-the-header-element)
@@ -253,7 +253,9 @@ Override the GOV.UK Header without changing the rest of the `<header>` element.
 
 ### Width container and main content
 
-The page template [renders your content](#render-your-content-inside-the-template) in a `<main>` tag, wrapped in a container limiting the content’s width. You can:
+The page template [renders your content](#render-your-content-inside-the-template) in a `<main>` tag, wrapped in a container limiting the content’s width.
+
+Use options in main content to:
 
 - [add classes to the container limiting the content’s width](#add-classes-or-attributes-to-the-container)
 - [add content at the start or end of the container](#add-extra-content-at-the-start-or-end-of-the-container)
@@ -321,7 +323,7 @@ Override the whole `<main>` element.
 
 ### Footer
 
-Customise the header appearing at the top of the page:
+Use options in footer to:
 
 - [add classes or attributes to the `<footer>` element](#add-classes-or-attributes-to-the-footer-element)
 - [add extra content at the start or end of the `<footer>` element](#add-extra-content-at-the-start-or-end-of-the-footer-element)
