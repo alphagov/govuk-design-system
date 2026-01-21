@@ -99,7 +99,7 @@ $app-code-color: #d13118;
   }
 }
 
-.app-main-wrapper {
+.app-container-wrapper {
   padding-top: govuk-spacing(3);
   padding-bottom: govuk-spacing(4);
 
@@ -107,6 +107,13 @@ $app-code-color: #d13118;
     padding-top: govuk-spacing(6);
     padding-bottom: govuk-spacing(8);
   }
+}
+
+// reset .govuk-main-wrapper as we set the spacing on .app-container-wrapper in
+// order to account for elements outside main also benefiting from the same top
+// and bottom spacing
+.app-main-wrapper {
+  padding: 0;
 }
 
 .app-breadcrumbs {
