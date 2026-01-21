@@ -58,14 +58,9 @@ If you need more tag colours, you can use the following colours.
 
 ## Research on this component
 
-In [February 2026] we updated the Tag component as part of colour changes to the GOV.UK brand. As part of this work, we also improved colour contrast and text legibility.
+In February 2026 we updated the Tag component as part of colour changes to the GOV.UK brand. As part of this work, we also improved colour contrast and text legibility.
 
-We found the proposed brand colours would not meet minimum contrast requirements, so we made small changes to the colours and design.
-
-To improve contrast, we:
-
-- used a lighter background, using the 80% tint of each colour
-- added a 1px border, using the 50% shade of each colour
+We found the proposed colours would not meet minimum contrast requirements, so we made small changes to the colours and design. We improved contrast by using lighter background colours for most colours.
 
 To make the tags easier to read, we added more padding to the top and bottom.
 
