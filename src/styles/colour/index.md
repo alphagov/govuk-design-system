@@ -27,7 +27,7 @@ If you are using GOV.UK Frontend or the GOV.UK Prototype Kit, use the [Sass vari
 
 This means that your service will always use the most recent colour palette whenever you update.
 
-Only use the variables in the context they're designed for. In all other cases, you should reference the [colour palette](#colour-palette) directly. For example, if you wanted to use red, you should use `govuk-colour("red")` rather than `$govuk-error-colour`.
+Only use the variables in the context they're designed for. In all other cases, you should reference the [GOV.UK web palette](#govuk-web-palette) directly. For example, if you wanted to use red, you should use `govuk-colour("red")` rather than `$govuk-error-colour`.
 
 <table class="govuk-body app-colour-list" summary="Table of main colours">
   <tbody>
