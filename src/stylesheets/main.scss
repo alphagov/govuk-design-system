@@ -455,3 +455,16 @@ pre .language-plaintext {
 .app-campaign-cookie-banner .govuk-grid-column-two-thirds {
   width: 100%;
 }
+
+.app-nunjucks-options-list {
+  // Cancel out the margin from the `.app-prose-scope` class
+  h4 {
+    margin: 0;
+  }
+}
+
+.app-nunjucks-options-list__key {
+  code {
+    font-size: govuk-px-to-rem(18px);
+  }
+}

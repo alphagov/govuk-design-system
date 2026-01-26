@@ -15,7 +15,7 @@
         html: cardTitleHtml,
         headingLevel: 4
       },
-      classes: 'app-page-template-options-list',
+      classes: 'app-nunjucks-options-list',
       attributes: {
         id: cardId
       }
@@ -31,7 +31,8 @@
 
   {% set discarded = rows.push({
     key: {
-      html: keyHtml
+      html: keyHtml,
+      classes: 'app-nunjucks-options-list__key'
     },
     value: {
       html: value | markdown
