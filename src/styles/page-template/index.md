@@ -119,7 +119,7 @@ Add a class to the `<body>` element.
 {%- endcall %}
 
 {%- call addNunjucksOption(options, 'bodyAttributes', 'Variable') -%}
-Add attributes to the `<body>` element. Add each attribute and its value in the `bodyAttributes` object
+Add attributes to the `<body>` element. Add each attribute and its value in the `bodyAttributes` object.
 {%- endcall %}
 {% endcall %}
 
@@ -166,7 +166,7 @@ Set the [toolbar colour on some devices](https://developer.chrome.com/blog/suppo
 
 {%- call addNunjucksOption(options, 'headIcons', 'Block') -%}
 Override the default icons used for GOV.UK branded pages.
-For example: `<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />`
+For example: `<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />`.
 {% endcall %}
 {% endcall %}
 
@@ -176,14 +176,14 @@ Override the default page title (`<title>` element).
 {%- endcall %}
 
 {%- call addNunjucksOption(options, 'pageTitleLang', 'Variable') -%}
-Set the language of the `<title>` element if it's different to `<htmlLang>`.
+Set the language of the `<title>` element if it's different to [`htmlLang`](#htmllang-variable).
 {% endcall %}
 {% endcall %}
 
 {% call(options) nunjucksOptions("Add custom metadata to the `<head>` element") %}
 {%- call addNunjucksOption(options, 'head', 'Block') -%}
 Add additional items inside the `<head>` element.
-For example: `<meta name="description" content="My page description">`
+For example: `<meta name="description" content="My page description">`.
 {%- endcall %}
 {% endcall %}
 
@@ -201,7 +201,8 @@ Use options in page header to:
 
 {% call(options) nunjucksOptions("Replace the Skip Link rendered before the `<header>`") %}
 {%- call addNunjucksOption(options, 'skipLink', 'Block') -%}
-Deprecated - use `govukSkipLink` instead. Override the default [Skip link component](/components/skip-link/).
+Deprecated - use [`govukSkipLink`](#govukskiplink-block) instead.
+Override the default [Skip link component](/components/skip-link/).
 {%- endcall -%}
 
 {%- call addNunjucksOption(options, 'govukSkipLink', 'Block') -%}
@@ -215,7 +216,7 @@ Add a class to the `<header>` element.
 {%- endcall %}
 
 {%- call addNunjucksOption(options, 'headerAttributes', 'Variable') -%}
-Add attributes to the `<header>` element. Add each attribute and its value in the `headerAttributes` object
+Add attributes to the `<header>` element. Add each attribute and its value in the `headerAttributes` object.
 {%- endcall %}
 {% endcall %}
 
@@ -233,7 +234,7 @@ For example: the [Phase banner component](/components/phase-banner/).
 {% call(options) nunjucksOptions("Add a Service Navigation component") %}
 {%- call addNunjucksOption(options, 'serviceName', 'Variable') -%}
 Renders a Service Navigation with the given `serviceName` if present.
-If you need to add navigation items, you’ll need to [replace the default Service Navigation with your own](#govukservicenavigation-block)
+If you need to add navigation items, you’ll need to [replace the default Service Navigation with your own](#govukservicenavigation-block).
 {%- endcall %}
 
 {%- call addNunjucksOption(options, 'govukServiceNavigation', 'Block') -%}
@@ -243,7 +244,7 @@ Override the Service Navigation rendered if [`serviceName`](#servicename-variabl
 
 {% call(options) nunjucksOptions("Replace the default content from the header") %}
 {%- call addNunjucksOption(options, 'header', 'Block') -%}
-Override the `<header>` element and the `govukHeader`, `headerStart`, and `headerEnd` blocks.
+Override the `<header>` element and the [`headerStart`](#headerstart-block), [`govukHeader`](#govukheader-block), [`govukServiceNavigation`](#govukservicenavigation-block), and [`headerEnd`](#headerend-block) blocks.
 {%- endcall -%}
 
 {%- call addNunjucksOption(options, 'govukHeader', 'Block') -%}
@@ -283,7 +284,7 @@ Add other attributes than `class` to the container element. Add each attribute a
 {% call(options) nunjucksOptions("Add extra content at the start or end of the container") %}
 {%- call addNunjucksOption(options, 'containerStart', 'Block') -%}
 Add content after the opening `<div class=”govuk-width-container”>` element that limits the width of the page.
-For example: the [Back link component](/components/back-link), [Breadcrumbs component](/components/breadcrumbs)
+For example: the [Back link component](/components/back-link), [Breadcrumbs component](/components/breadcrumbs).
 {%- endcall %}
 
 {%- call addNunjucksOption(options, 'beforeContent', 'Block') -%}
@@ -337,7 +338,7 @@ Add a class to the `<footer>` element.
 {%- endcall %}
 
 {%- call addNunjucksOption(options, 'footerAttributes', 'Variable') -%}
-Add attributes to the `<footer>` element. Add each attribute and its value in the `footerAttributes` object
+Add attributes to the `<footer>` element. Add each attribute and its value in the `footerAttributes` object.
 {%- endcall %}
 {% endcall %}
 
@@ -368,7 +369,3 @@ Override the GOV.UK Footer without changing the rest of the `<footer>` element.
 Add a nonce attribute to the script for your Content Security Policy (CSP). Provide a nonce that hostile actors cannot guess, as otherwise they can easily find a way around your CSP. However, you should use this attribute only if you’re not able to include the hash for the inline scripts in your service’s CSP.
 {%- endcall -%}
 {% endcall %}
-
-#### Exploded view of all page template block areas
-
-{{ example({ group: "styles", item: "page-template", example: "block-areas", html: false, open: false }) }}
