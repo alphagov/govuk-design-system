@@ -1,0 +1,36 @@
+---
+title: "Footer template areas – Page template"
+layout: false
+ignoreInSitemap: true
+---
+
+{% extends "example-wrappers/page-template-blocks.njk" %}
+
+{% block footer -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: footer</span>
+    {{ super() }}
+  </div>
+{%- endblock %}
+
+{% block footerStart -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: footerStart</span>
+    {{ super() }}
+  </div>
+{%- endblock %}
+
+{% block govukFooter -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: govukFooter</span>
+    {{ super() }}
+  </div>
+{%- endblock %}
+
+
+{% block footerEnd -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: footerEnd</span>
+    {{ super() }}
+  </div>
+{%- endblock %}

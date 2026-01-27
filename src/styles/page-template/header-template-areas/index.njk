@@ -1,0 +1,42 @@
+---
+title: "Header template areas – Page template"
+layout: false
+ignoreInSitemap: true
+---
+
+{% extends "example-wrappers/page-template-blocks.njk" %}
+
+{% block header -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: header</span>
+    {{ super() }}
+  </div>
+{%- endblock %}
+
+{% block headerStart -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: headerStart</span>
+    {{ super() }}
+  </div>
+{%- endblock %}
+
+{% block govukHeader -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: govukHeader</span>
+    {{ super() }}
+  </div>
+{%- endblock %}
+
+{% block govukServiceNavigation -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: govukServiceNavigation</span>
+    {{ super() }}
+  </div>
+{%- endblock %}
+
+{% block headerEnd -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: headerEnd</span>
+    {{ super() }}
+  </div>
+{%- endblock %}

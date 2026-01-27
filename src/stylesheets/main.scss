@@ -455,3 +455,9 @@ pre .language-plaintext {
 .app-campaign-cookie-banner .govuk-grid-column-two-thirds {
   width: 100%;
 }
+
+// Counteract the `.app-prose-scope h4`'s margin
+// leaking into the component
+.app-nunjucks-options-list h4 {
+  margin: 0;
+}
