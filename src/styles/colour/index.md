@@ -10,6 +10,7 @@ order: 12
 ---
 
 {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/hint/macro.njk" import govukHint %}
 
 Always use the GOV.UK colour palette.
 
@@ -23,16 +24,23 @@ You must make sure that the contrast ratio of text and interactive elements in y
 
 ## Functional colours
 
-If you are using GOV.UK Frontend or the GOV.UK Prototype Kit, use the [Sass variables](https://frontend.design-system.service.gov.uk/sass-api-reference/#colours) provided rather than copying the hexadecimal (hex) colour values. For example, use `govuk-functional-colour(brand)` rather than `{{ colours.applied['Brand colour'][0]['colour'] | trim }}`.
+The GOV.UK Design System has a set of functional colours for essential page elements. These help apply colours across the Design System in a way that makes interactions predictable and consistent to users.
+
+### Assign colours using `govuk-functional-colour`
+
+To access these colours, use the `govuk-functional-colour` Sass function. The colours available using this function are based on specific purposes and contexts, so that function will automatically assign appropriate colours.
+
+Do not copy the specific hexadecimal (hex) colour values. For example, use `govuk-functional-colour("brand")` rather than `#1d70b8`.
 
 This means that your service will always use the most recent colour palette whenever you update.
 
-Only use the variables in the context they're designed for. In all other cases, you should reference the [GOV.UK web palette](#govuk-web-palette) directly. For example, if you wanted to use red, you should use `govuk-colour("red")` rather than `govuk-functional-colour(error)`.
+Only use the variables in the context they're designed for. In all other cases, you should reference the [GOV.UK web palette](#govuk-web-palette) directly. For example, if you wanted to use red, you should use `govuk-colour("red")` rather than `govuk-functional-colour("error")`.
 
-<table class="govuk-body app-colour-list" summary="Table of main colours">
+<table class="govuk-body app-colour-list">
+	<caption class="govuk-visually-hidden">Table of functional colours</caption>
   <tbody>
-  {#- colours is an object built by ./lib/colours.js based on data defined in ./data/colours.json #}
-  {% for groupName, group in colours.applied -%}
+  {#- colours is defined in ./data/colours.json #}
+  {% for groupName, group in colours.functional -%}
     <tr>
       <td colspan="3">
         <h3 class="govuk-heading-m {% if not loop.first %}govuk-!-padding-top-6{% endif %}">
@@ -65,38 +73,64 @@ Only use the variables in the context they're designed for. In all other cases, 
 
 ## GOV.UK web palette
 
-If you need to add other colours, and your product or service is within the GOV.UK proposition, use the GOV.UK web palette and its brand colours.
+The GOV.UK web palette works as part of the [GOV.UK brand guidelines](https://www.gov.uk/government/publications/govuk-brand-guidelines). Use these colours for supporting elements in your service like illustrations, or in custom components where appropriate.
 
-Use the [\_colours-palette.scss](https://github.com/alphagov/govuk-frontend/blob/main/packages/govuk-frontend/src/govuk/settings/_colours-palette.scss) file to find the values for colours along with their tints and shades.
+The web palette is organised into colour groups. Each colour group includes:
 
-The [GOV.UK brand guidelines](https://www.gov.uk/government/publications/govuk-brand-guidelines) shows the full list of colours and swatches.ur function)
+- a 'primary' variant
+- tints – lighter variants of each colour
+- shades – darker variants of each colour
 
-### Add colours with the `govuk-colour` function
+### Add colours using `govuk-colour`
 
-In [January 2026], we changed the purpose of the `govuk-colour` function for use with the GOV.UK web palette. Previously, the function used a more generalised set of common colours.
+You can access the full web palette, and all its available colours, using the `govuk-colour` function.
 
-If you already use the `govuk-colour` function, the GOV.UK web palette colours will now apply automatically.
+By default, the function will return the ‘primary’ variant of each colour. For example: `govuk-colour("blue")` will return ‘Primary blue’ ` #1d70b8`.
 
-Read the [GOV.UK Frontend v6.0 release notes](https://github.com/alphagov/govuk-frontend/releases/tag/v6.0.0) for more guidance on what’s changed, and what you need to do if your service used the `govuk-colour` function in any earlier versions.
+Access tints and shades of colour groups using the ` $variant` option.
 
-You should no longer use the `govuk-colour` function, the GOV.UK web palette and its colours:
+For example:
 
-- if your product or service is not part of the GOV.UK proposition
-- for any other purpose
+- `govuk-colour("red", $variant: "tint-25")` will return ‘Red tint 25%’, which is a variant of red with a tint of 25%
+- ` govuk-colour("blue", $variant: "shade-50")` will return ‘Blue shade 50%’, which is a variant of blue with a shade of 50%
 
-### Colour palette for charts
+Most colours include these variants:
 
-When creating charts, use the colour palettes and guidance set out in the Government Analysis Function [Data visualisation: colours guidance](https://analysisfunction.civilservice.gov.uk/policy-store/data-visualisation-colours-in-charts/).
+- tints at 25% (`tint-25`), 50% (`tint-50`), 80% (`tint-80`) and 95% (`tint-95`)
+- shades at 25% (`shade-25`) and 50% (`shade-50`)
 
-The colour palettes recommended by the Government Analysis Function are based on the colours shown on this page. They've made some slight changes to improve colour contrast, in line with the Web Content Accessibility Guidelines (WCAG).
+Black includes a ‘primary’ black, with tints to show greys. White has no variants.
 
-## Organisation colours
-
-You can find brand colours for government departments and organisations in the [\_colours-organisations file in GOV.UK Frontend](https://github.com/alphagov/govuk-frontend/blob/main/packages/govuk-frontend/src/govuk/settings/_colours-organisations.scss).
-
-This file is maintained on a best effort basis and is assembled from a number of sources, including:
-
-- [HM Government branding portal](https://hmgbrand.gcs.civilservice.gov.uk/)
-- Cabinet Office branding team
-- [Design102](https://design102.co.uk/), the government's in-house design studio
-- Communications teams from individual organisations
+<table class="govuk-body app-colour-list" summary="Table of palette colours">
+  <tbody>
+  {#- colours is defined in ./data/colours.json #}
+  {% for groupName, group in colours.palette -%}
+    <tr>
+      <td colspan="3">
+        <h3 class="govuk-heading-m {% if not loop.first %}govuk-!-padding-top-6{% endif %}">
+        {{groupName}}
+        </h3>
+      </td>
+    </tr>
+    {% for colour in group -%}
+      <tr class="app-colour-list-row">
+        <th class="app-colour-list-column app-colour-list-column--name" scope="row">
+          <span class="app-swatch {% if colour.colour == "#ffffff" %}app-swatch-border{% endif %}" style="background-color:{{colour.colour}}"></span>
+          <code>{{colour.name}}</code>
+        </th>
+        <td class="app-colour-list-column app-colour-list-column--colour">
+          <code>{{colour.colour}}</code>
+        </td>
+        {% if colour.notes %}
+        <td class="app-colour-list-column app-colour-list-column--notes">
+          {{colour.notes}}
+        </td>
+        {% else %}
+        <td class="app-colour-list-column app-colour-list-column--notes">
+        </td>
+        {% endif %}
+      </tr>
+    {% endfor %}
+  {% endfor %}
+  </tbody>
+</table>
