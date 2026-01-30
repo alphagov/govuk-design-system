@@ -89,7 +89,7 @@ You’ll need to ensure that slot content still works as intended after each upd
 
 In June 2025, we updated this component to support a wider refresh of the GOV.UK brand.
 
-The refreshed GOV.UK branding is now the default. If you use the `govukRebrand` feature flag in GOV.UK Frontend, you should now remove it.
+You should now use the refreshed GOV.UK branding. If your service has updated to GOV.UK Frontend v6.0.0 or later, you no longer need to use the `govukRebrand` feature flag and should remove it.
 
 ## Research on this component
 
