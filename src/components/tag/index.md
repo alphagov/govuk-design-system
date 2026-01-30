@@ -58,20 +58,18 @@ If you need more tag colours, you can use the following colours.
 
 ## Research on this component
 
-In February 2026 we updated the Tag component as part of colour changes to the GOV.UK brand. As part of this work, we also improved colour contrast and text legibility.
-
-We found the proposed colours would not meet minimum contrast requirements, so we made small changes to the colours and design. We improved contrast by using lighter background colours for most colours.
-
-To make the tags easier to read, we added more padding to the top and bottom.
+In February 2026, we updated the Tag component as part of colour changes to the GOV.UK brand. As part of this work, we also improved colour contrast and made the tags easier to distinguish from buttons.
 
 ### Colour in tags
 
-The Department for Education contributed coloured tags into the Design System.
+The Department for Education first introduced coloured tags into the Design System through a contributions.
 
 They’re being used in:
 
 - apply for teacher training (used by citizens)
 - manage teacher training applications (used by teacher training providers)
+
+### Text in tags
 
 The Tag component previously used uppercase bold text for the tags. This was changed as some research has shown that uppercase text can be harder to read, particularly for longer tag text.
 
