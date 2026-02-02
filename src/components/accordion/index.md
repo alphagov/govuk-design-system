@@ -9,6 +9,17 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 
+<div class="app-component-metadata">
+    <dl class="app-metadata">
+        <dt class="app-metadata-term">Status:</dt>
+        <dd class="app-metadata-definition"><a class="govuk-link" href="https://github.com/alphagov/govuk-design-system-backlog/issues/1">Theoretical and evidenced</a></dd>
+        <dt class="app-metadata-term">Published</dt>
+        <dd class="app-metadata-definition">00 date 00</dd>
+        <dt class="app-metadata-term">Last updated</dt>
+        <dd class="app-metadata-definition">00 date 00</dd>
+    </dl>
+</div>
+
 The accordion component lets users show and hide sections of related content on a page.
 
 {{ example({ group: "components", item: "accordion", example: "default", html: true, nunjucks: true, open: false, size: "xl", loading: "eager" }) }}

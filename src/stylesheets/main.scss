@@ -455,3 +455,30 @@ pre .language-plaintext {
 .app-campaign-cookie-banner .govuk-grid-column-two-thirds {
   width: 100%;
 }
+
+// Add styling for metadata
+
+.app-component-metadata {
+  margin-bottom: govuk-spacing(5);
+  padding: govuk-spacing(2) 0;
+  border-top: 1px solid $govuk-border-colour;
+  border-bottom: 1px solid $govuk-border-colour;
+}
+
+.app-metadata {
+  @include govuk-font(16);
+  @include govuk-typography-weight-regular;
+}
+
+.app-metadata-term {
+  box-sizing: border-box;
+  margin-top: 0;
+  padding-right: 5px;
+  float: left;
+  clear: left;
+}
+
+.app-metadata-definition {
+  margin: 0;
+  margin-bottom: govuk-spacing(1);
+}
