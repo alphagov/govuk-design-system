@@ -58,6 +58,8 @@ If you need more tag colours, you can use the following colours.
 
 ## Research on this component
 
+### Colour and style updates from the GOV.UK brand refresh
+
 In February 2026, we updated the Tag component as part of colour changes to the GOV.UK brand. As part of this work, we also improved colour contrast and made the tags easier to distinguish from buttons.
 
 ### Colour in tags
