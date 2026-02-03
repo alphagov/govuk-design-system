@@ -12,13 +12,13 @@
   {%- endfor %}
 {% endblock %}
 
-{% block header %}
+{% block govukHeader %}
   {{ govukHeader({
     homepageUrl: "#"
   }) }}
 {% endblock %}
 
-{% block main %}
+{% block container %}
   {{ contents | safe }}
 {% endblock %}
 {% block bodyEnd %}

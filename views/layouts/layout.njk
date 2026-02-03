@@ -1,17 +1,21 @@
 {% extends "_generic.njk" %}
 
-{% block body %}
+{% block containerStart %}
   {# Only render breadcrumbs on pages that aren't the homepage. #}
   {% if not isHomepage() %}
     {{ govukBreadcrumbs({
-      classes: "app-width-container",
       items: getAncestorPages(permalink)
     }) }}
   {% endif %}
+{% endblock %}
 
-  <main id="main-content" role="main">
-    {{ contents | safe }}
+{# We want the homepage to bypass the width container but it still needs a main #}
+{% block container %}
+  <main id="main-content">
+  {{ contents | safe }}
   </main>
+{% endblock %}
 
+{% block govukFooter %}
   {% include "_footer.njk" %}
 {% endblock %}

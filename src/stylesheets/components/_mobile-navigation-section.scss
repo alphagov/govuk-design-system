@@ -37,7 +37,7 @@
   border: 0;
 
   // Add back a border to separate each element of the menu
-  border-top: solid 1px $govuk-border-colour;
+  border-top: solid 1px govuk-functional-colour(border);
 
   color: $_govuk-service-navigation-link-colour;
   background: none;
@@ -49,7 +49,7 @@
   cursor: pointer;
 
   &:hover {
-    color: $govuk-link-hover-colour;
+    color: govuk-functional-colour(link-hover);
   }
 
   &:focus {
@@ -173,7 +173,7 @@ $subnav-padding-left: $app-chevron-width + $app-chevron-margin-left + $app-chevr
   margin-bottom: govuk-spacing(1);
   margin-left: -($subnav-padding-left - govuk-spacing(2));
   padding: 0;
-  color: govuk-colour("dark-grey");
+  color: govuk-colour("black", $variant: "tint-25");
   font: inherit;
 }
 

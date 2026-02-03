@@ -1,5 +1,3 @@
-$govuk-new-typography-scale: true;
-
 @import "govuk/settings";
 @import "govuk/helpers";
 @import "govuk/tools";
@@ -43,13 +41,8 @@ $govuk-new-typography-scale: true;
 
 // Neither values are available as variables in GOV.UK Frontend
 // so adding them as private variables for future reference
-$_govuk-service-navigation-link-colour: govuk-shade($govuk-link-colour, 10%);
+$_govuk-service-navigation-link-colour: govuk-functional-colour("surface-link");
 $_govuk-service-navigation-font-size: 19px;
-
-// These colours are not available publically in GOV.UK Frontend
-// Adding them here until there's public variables
-$_govuk-rebrand-template-background-colour: #f4f8fb;
-$_govuk-rebrand-border-colour-on-blue-tint-95: #8eb8dc;
 
 // App-specific variables
 $app-light-grey: #f8f8f8;
@@ -87,10 +80,10 @@ $app-code-color: #d13118;
 }
 
 // Invert the colours of the navigation on the homepage
-.govuk-template--rebranded .govuk-service-navigation--inverse {
+.govuk-service-navigation--inverse {
   // Override mobile menu toggles colour
   .app-mobile-navigation-section__toggle {
-    border-top-color: $_govuk-rebrand-border-colour-on-blue-tint-95;
+    border-top-color: govuk-functional-colour("surface-border");
     color: govuk-colour("white");
   }
 
@@ -101,7 +94,7 @@ $app-code-color: #d13118;
   }
 }
 
-.app-main-wrapper {
+.app-container-wrapper {
   padding-top: govuk-spacing(3);
   padding-bottom: govuk-spacing(4);
 
@@ -109,6 +102,13 @@ $app-code-color: #d13118;
     padding-top: govuk-spacing(6);
     padding-bottom: govuk-spacing(8);
   }
+}
+
+// reset .govuk-main-wrapper as we set the spacing on .app-container-wrapper in
+// order to account for elements outside main also benefiting from the same top
+// and bottom spacing
+.app-main-wrapper {
+  padding: 0;
 }
 
 .app-breadcrumbs {
@@ -149,7 +149,7 @@ $app-code-color: #d13118;
     max-width: 722px;
     height: auto;
     @include govuk-responsive-margin(2, "top");
-    border: 1px solid $govuk-border-colour;
+    border: 1px solid govuk-functional-colour(border);
   }
 
   img {
@@ -169,9 +169,9 @@ $app-code-color: #d13118;
   }
 
   .app-video__player:focus {
-    border-color: $govuk-focus-text-colour;
-    outline: $govuk-focus-width solid $govuk-focus-text-colour;
-    box-shadow: 0 0 0 ($govuk-focus-width * 2) $govuk-focus-colour;
+    border-color: govuk-functional-colour(focus-text);
+    outline: $govuk-focus-width solid govuk-functional-colour(focus-text);
+    box-shadow: 0 0 0 ($govuk-focus-width * 2) govuk-functional-colour(focus);
   }
 
   .app-video__description {
@@ -220,15 +220,15 @@ $app-code-color: #d13118;
   cursor: pointer;
 
   &:focus:not(:hover) {
-    color: $govuk-focus-text-colour;
-    background-color: $govuk-focus-colour;
-    box-shadow: 0 2px 0 0 $govuk-focus-text-colour;
+    color: govuk-functional-colour(focus-text);
+    background-color: govuk-functional-colour(focus);
+    box-shadow: 0 2px 0 0 govuk-functional-colour(focus-text);
   }
 
   &:active,
   &:focus {
     padding: 2px 10px; // Counter increased border size
-    border: 2px solid $govuk-focus-colour;
+    border: 2px solid govuk-functional-colour(focus);
     outline: 2px solid transparent;
     box-shadow: none;
   }
@@ -288,7 +288,7 @@ $colour-list-breakpoint: 980px;
 }
 
 .app-swatch-border {
-  border-color: govuk-colour("mid-grey");
+  border-color: govuk-colour("black", $variant: "tint-80");
 }
 
 .app-colour-list-column--name {
@@ -306,7 +306,7 @@ $colour-list-breakpoint: 980px;
 
   code {
     padding: 0;
-    color: $govuk-text-colour;
+    color: govuk-functional-colour(text);
     background: none;
   }
 }
@@ -324,7 +324,7 @@ td code,
 p code {
   padding: 1px 3px;
   color: $app-code-color;
-  background-color: govuk-colour("light-grey");
+  background-color: govuk-colour("black", $variant: "tint-95");
   @include govuk-font-size($size: 16);
   @include govuk-media-query($from: tablet) {
     padding: 2px 4px;
@@ -347,14 +347,14 @@ pre code {
   padding: govuk-spacing(4);
   overflow-x: auto;
   border: $govuk-focus-width solid transparent;
-  outline: 1px solid $govuk-border-colour;
+  outline: 1px solid govuk-functional-colour(border);
   background-color: $app-light-grey;
   @include govuk-font-size($size: 19);
   @include govuk-responsive-margin(4, "bottom");
 
   &:focus {
-    border: $govuk-focus-width solid $govuk-input-border-colour;
-    outline: $govuk-focus-width solid $govuk-focus-colour;
+    border: $govuk-focus-width solid govuk-functional-colour(input-border);
+    outline: $govuk-focus-width solid govuk-functional-colour(focus);
   }
 
   .govuk-frontend-supported [data-module="app-copy"] & {
@@ -417,7 +417,7 @@ pre .language-plaintext {
     @extend %govuk-link;
 
     &:focus code {
-      color: $govuk-focus-text-colour;
+      color: govuk-functional-colour(focus-text);
       background: transparent;
     }
   }
@@ -444,12 +444,10 @@ pre .language-plaintext {
   }
 }
 
-// Add styling for 'what's new' banner
-// Hard codes the new brand colours, which are currently private.
-// See govuk-frontend govuk/settings/_colours-applied.scss
-.app-whats-new {
-  border-bottom: 1px solid $_govuk-rebrand-border-colour-on-blue-tint-95;
-  background-color: $_govuk-rebrand-template-background-colour;
+.app-surface {
+  border-bottom: 1px solid govuk-functional-colour("surface-border");
+  color: govuk-functional-colour("surface-text");
+  background-color: govuk-functional-colour("surface-background");
 }
 
 .app-campaign-cookie-banner .govuk-grid-column-two-thirds {
@@ -460,4 +458,11 @@ pre .language-plaintext {
 // leaking into the component
 .app-nunjucks-options-list h4 {
   margin: 0;
+}
+
+// Clearfix for header container
+// When govuk-frontend rc.1/v6 is released, we can remove this as it is
+// fixed within the latest code
+.govuk-header__container {
+  @include govuk-clearfix;
 }
