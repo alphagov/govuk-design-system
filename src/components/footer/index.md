@@ -13,13 +13,7 @@ layout: layout-pane.njk
 
 The GOV.UK footer provides copyright, licensing and other information about your service.
 
-Example of the GOV.UK footer component showing the [refreshed GOV.UK branding](#brand-refresh-of-the-govuk-footer-component):
-
 {{ example({ group: "components", item: "footer", example: "default", id: "default-1", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}
-
-Example of the GOV.UK footer component showing GOV.UK branding before June 2025:
-
-{{ example({ group: "components", item: "footer", example: "without-brand-refresh", html: false, nunjucks: false, open: false, size: "m", loading: "eager" }) }}
 
 If you use the page template, you'll also get the footer without having to add it, as it's included by default. However, if you want to customise the default footer, read the [page template guidance about customising components](/styles/page-template/#changing-template-content).
 

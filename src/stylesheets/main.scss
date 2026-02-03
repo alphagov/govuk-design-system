@@ -44,11 +44,6 @@
 $_govuk-service-navigation-link-colour: govuk-colour("blue", $variant: "shade-25");
 $_govuk-service-navigation-font-size: 19px;
 
-// These colours are not available publically in GOV.UK Frontend
-// Adding them here until there's public variables
-$_govuk-rebrand-template-background-colour: govuk-colour("blue", $variant: "tint-95");
-$_govuk-rebrand-border-colour-on-blue-tint-95: govuk-colour("blue", $variant: "tint-50");
-
 // App-specific variables
 $app-light-grey: #f8f8f8;
 $app-code-color: #d13118;
@@ -85,10 +80,10 @@ $app-code-color: #d13118;
 }
 
 // Invert the colours of the navigation on the homepage
-.govuk-template--rebranded .govuk-service-navigation--inverse {
+.govuk-service-navigation--inverse {
   // Override mobile menu toggles colour
   .app-mobile-navigation-section__toggle {
-    border-top-color: $_govuk-rebrand-border-colour-on-blue-tint-95;
+    border-top-color: govuk-functional-colour("surface-border");
     color: govuk-colour("white");
   }
 
@@ -453,8 +448,8 @@ pre .language-plaintext {
 // Hard codes the new brand colours, which are currently private.
 // See govuk-frontend govuk/settings/_colours-applied.scss
 .app-whats-new {
-  border-bottom: 1px solid $_govuk-rebrand-border-colour-on-blue-tint-95;
-  background-color: $_govuk-rebrand-template-background-colour;
+  border-bottom: 1px solid govuk-functional-colour("surface-border");
+  background-color: govuk-functional-colour("surface-background");
 }
 
 .app-campaign-cookie-banner .govuk-grid-column-two-thirds {
@@ -465,4 +460,11 @@ pre .language-plaintext {
 // leaking into the component
 .app-nunjucks-options-list h4 {
   margin: 0;
+}
+
+// Clearfix for header container
+// When govuk-frontend rc.1/v6 is released, we can remove this as it is
+// fixed within the latest code
+.govuk-header__container {
+  @include govuk-clearfix;
 }
