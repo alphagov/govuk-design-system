@@ -444,11 +444,9 @@ pre .language-plaintext {
   }
 }
 
-// Add styling for 'what's new' banner
-// Hard codes the new brand colours, which are currently private.
-// See govuk-frontend govuk/settings/_colours-applied.scss
-.app-whats-new {
+.app-surface {
   border-bottom: 1px solid govuk-functional-colour("surface-border");
+  color: govuk-functional-colour("surface-text");
   background-color: govuk-functional-colour("surface-background");
 }
 
