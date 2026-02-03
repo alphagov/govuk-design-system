@@ -10,7 +10,7 @@ order: 12
 ---
 
 {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-{% from "govuk/components/hint/macro.njk" import govukHint %}
+{% from "_colour-table.njk" import colourTable %}
 
 Always use the GOV.UK colour palette.
 
@@ -36,40 +36,11 @@ This means that your service will always use the most recent colour palette when
 
 Only use the variables in the context they're designed for. In all other cases, you should reference the [GOV.UK web palette](#govuk-web-palette) directly. For example, if you wanted to use red, you should use `govuk-colour("red")` rather than `govuk-functional-colour("error")`.
 
-<table class="govuk-body app-colour-list">
-	<caption class="govuk-visually-hidden">Table of functional colours</caption>
-  <tbody>
-  {#- colours is defined in ./data/colours.json #}
-  {% for groupName, group in colours.functional -%}
-    <tr>
-      <td colspan="3">
-        <h3 class="govuk-heading-m {% if not loop.first %}govuk-!-padding-top-6{% endif %}">
-        {{groupName}}
-        </h3>
-      </td>
-    </tr>
-    {% for colour in group -%}
-      <tr class="app-colour-list-row">
-        <th class="app-colour-list-column app-colour-list-column--name" scope="row">
-          <span class="app-swatch {% if colour.colour == "#ffffff" %}app-swatch-border{% endif %}" style="background-color:{{colour.colour}}"></span>
-          <code>{{colour.name}}</code>
-        </th>
-        <td class="app-colour-list-column app-colour-list-column--colour">
-          <code>{{colour.colour}}</code>
-        </td>
-        {% if colour.notes %}
-        <td class="app-colour-list-column app-colour-list-column--notes">
-          {{colour.notes}}
-        </td>
-        {% else %}
-        <td class="app-colour-list-column app-colour-list-column--notes">
-        </td>
-        {% endif %}
-      </tr>
-    {% endfor %}
-  {% endfor %}
-  </tbody>
-</table>
+{{ colourTable({
+  title: "Table of functional colours",
+  colourSet: colours.functional,
+  hiddenGroups: ["Print"]
+})}}
 
 ## GOV.UK web palette
 
@@ -101,36 +72,7 @@ Most colours include these variants:
 
 Black includes a ‘primary’ black, with tints to show greys. White has no variants.
 
-<table class="govuk-body app-colour-list" summary="Table of palette colours">
-  <tbody>
-  {#- colours is defined in ./data/colours.json #}
-  {% for groupName, group in colours.palette -%}
-    <tr>
-      <td colspan="3">
-        <h3 class="govuk-heading-m {% if not loop.first %}govuk-!-padding-top-6{% endif %}">
-        {{groupName}}
-        </h3>
-      </td>
-    </tr>
-    {% for colour in group -%}
-      <tr class="app-colour-list-row">
-        <th class="app-colour-list-column app-colour-list-column--name" scope="row">
-          <span class="app-swatch {% if colour.colour == "#ffffff" %}app-swatch-border{% endif %}" style="background-color:{{colour.colour}}"></span>
-          <code>{{colour.name}}</code>
-        </th>
-        <td class="app-colour-list-column app-colour-list-column--colour">
-          <code>{{colour.colour}}</code>
-        </td>
-        {% if colour.notes %}
-        <td class="app-colour-list-column app-colour-list-column--notes">
-          {{colour.notes}}
-        </td>
-        {% else %}
-        <td class="app-colour-list-column app-colour-list-column--notes">
-        </td>
-        {% endif %}
-      </tr>
-    {% endfor %}
-  {% endfor %}
-  </tbody>
-</table>
+{{ colourTable({
+  title: "Table of palette colours",
+  colourSet: colours.palette
+})}}
