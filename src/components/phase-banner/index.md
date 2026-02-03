@@ -23,10 +23,14 @@ There are 2 ways to use the phase banner component. You can use HTML or, if you 
 
 Use an alpha banner when your service is in alpha, and a beta banner if your service is in private or public beta.
 
-Show the Phase banner directly under either:
+Show the Phase banner inside the `<header>` element, directly after either:
 
 - the [Service navigation component](/components/service-navigation/)
 - the [GOV.UK header component](/components/header/) and its blue colour bar (if your service does not use the Service navigation component)
+
+If you use Nunjucks, use the `headerEnd` block to place the Phase banner on your page.
+
+See ['Add extra content at the start or end of the `<header>` element' in 'Page template: Blocks and options'](/styles/page-template/#add-extra-content-at-the-start-or-end-of-the-header-element).
 
 Phase banners are shown across all pages of a service, so users should understand it as a service-level message.
 
