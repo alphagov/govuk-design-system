@@ -1,20 +1,22 @@
 ---
 layout: layout-pane.njk
-title: Updating your service to use the new type scale
+title: Using the updated type scale
 section: Get started
 theme: How to guides
 order: 6
-description: The GOV.UK Design System team has updated the GOV.UK Frontend type scale. This new scale is an available option to use now, but will be enforced by default in GOV.UK Frontend version 6.0.0. Here's how to use it, what's changed and what to expect when implementing it into your service.
+description: The GOV.UK Design System team has updated the GOV.UK Frontend type scale used in version 6.0.0 and later. Here's how to use it, what's changed and what to expect when implementing it into your service.
 ---
 
 {% from "govuk/components/table/macro.njk" import govukTable %}
 {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
 
-The GOV.UK Design System team has updated the GOV.UK Frontend type scale. This new scale is an available option to use now, but will be enforced by default in GOV.UK Frontend version 6.0.0. Here's how to use it, what's changed and what to expect when implementing it into your service.
+The GOV.UK Design System team has updated the GOV.UK Frontend type scale used in version 6.0.0 and later.
+
+Here's how to use it, what's changed and what to expect when implementing the update to your service.
 
 ## Changes we've made
 
-The new type scale includes the following changes from the previous scale:
+The updated type scale includes these changes from the previous scale:
 
 {{ govukTable({
     caption: "Changes to the type scale",
@@ -33,7 +35,7 @@ The new type scale includes the following changes from the previous scale:
                 text: "14"
             },
             {
-                text: "Deprecated as a scale point and will be removed in GOV.UK Frontend version 6.0.0"
+                text: "Deprecated as a scale point and removed in GOV.UK Frontend version 6.0.0 and later"
             }
         ],
         [
@@ -79,25 +81,19 @@ The new type scale includes the following changes from the previous scale:
     ]
 }) }}
 
-[Read more about this work and why we're updating our type scale](https://designnotes.blog.gov.uk/2022/12/12/making-the-gov-uk-frontend-typography-scale-more-accessible/).
+### Making our typography scale more accessible
 
-## How to use the new type scale
+[Read more about this work and why we updated our type scale](https://designnotes.blog.gov.uk/2022/12/12/making-the-gov-uk-frontend-typography-scale-more-accessible/).
 
-You can opt into the new scale by setting the feature flag variable `$govuk-new-typography-scale` at the root of your service's Sass to `true`:
+### Remove the $govuk-new-typography-scale feature flag
 
-```scss
-$govuk-new-typography-scale: true;
-```
+The updated type scale was first introduced as an 'opt in' feature under a feature flag. You no longer need to use the `$govuk-new-typography-scale` Sass variable and should remove it.
 
-This will automatically use the new type scale. You do not need to change any of your Sass to use the new scale.
+## Test your service against the updated type scale
 
-{{ govukWarningText({
-  text: "This is an early release of the new type scale. We may release significant changes to the scale in releases between now and GOV.UK Frontend 6.0.0. Please read the version release notes to see if you are affected."
-}) }}
+If your service uses custom elements made using GOV.UK Frontend, test your service against the new type scale to assess if you need to make any adjustments.
 
-## Testing your service against the new type scale
+Some key things to look for are:
 
-If your service uses custom elements made using GOV.UK Frontend, test your service against the new type scale to assess if you need to make any adjustments. Some key things to look for are:
-
-- spacing – With the increased font sizes, your custom elements may now look squashed on small screens.
+- spacing – with the increased font sizes, your custom elements may now look squashed on small screens.
 - specific positioning values – you may need to adjust these values, for example an `absolute` positioned element
