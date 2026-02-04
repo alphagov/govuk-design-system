@@ -383,6 +383,15 @@ pre .language-plaintext {
   margin: 0;
 }
 
+// REMOVE EACH RULE BELOW WHEN GOV.UK FRONTEND V6.0.0 IS RELEASED
+// AND USED ON THE SITE
+
+// Fixes a bug where the mobile menu toggle button has small font size
+// This will be fixed in the next release of GOV.UK Frontend
+.govuk-service-navigation__toggle {
+  @include govuk-font($size: 19, $weight: bold);
+}
+
 // Clearfix for header container
 // When govuk-frontend rc.1/v6 is released, we can remove this as it is
 // fixed within the latest code
