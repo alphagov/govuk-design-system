@@ -54,7 +54,7 @@ $colour-list-breakpoint: 980px;
   font-weight: normal;
   text-align: left;
   @include govuk-media-query($from: $colour-list-breakpoint) {
-    width: 50%;
+    width: 40%;
   }
 }
 
@@ -72,6 +72,6 @@ $colour-list-breakpoint: 980px;
 
 .app-colour-list-column--notes {
   @include govuk-media-query($from: $colour-list-breakpoint) {
-    width: 35%;
+    width: 45%;
   }
 }
