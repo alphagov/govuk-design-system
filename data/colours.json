@@ -1,95 +1,412 @@
 {
-  "applied": {
+  "functional": {
     "Text": [
       {
-        "name": "$govuk-text-colour",
+        "name": "text",
         "colour": "#0b0c0c"
       },
       {
-        "name": "$govuk-secondary-text-colour",
-        "colour": "#505a5f"
+        "name": "secondary-text",
+        "colour": "#484949"
       }
     ],
-    "Links": [
+    "Link": [
       {
-        "name": "$govuk-link-colour",
+        "name": "link",
         "colour": "#1d70b8"
       },
       {
-        "name": "$govuk-link-hover-colour",
-        "colour": "#003078"
+        "name": "link-hover",
+        "colour": "#0f385c"
       },
       {
-        "name": "$govuk-link-visited-colour",
-        "colour": "#4c2c92"
+        "name": "link-visited",
+        "colour": "#54319f"
       },
       {
-        "name": "$govuk-link-active-colour",
+        "name": "link-active",
         "colour": "#0b0c0c"
       }
     ],
     "Border": [
       {
-        "name": "$govuk-border-colour",
-        "colour": "#b1b4b6"
+        "name": "border",
+        "colour": "#cecece"
       },
       {
-        "name": "$govuk-input-border-colour",
+        "name": "input-border",
         "colour": "#0b0c0c"
+      }
+    ],
+    "Background": [
+      {
+        "name": "template-background",
+        "colour": "#f4f8fb",
+        "notes": "Use this colour if you need to match the colour of the <html> element"
+      },
+      {
+        "name": "body-background",
+        "colour": "#f3f2f1",
+        "notes": "Use this colour if you need to match the colour of the <body> element"
       }
     ],
     "Focus state": [
       {
-        "name": "$govuk-focus-colour",
+        "name": "focus",
         "colour": "#ffdd00",
         "notes": "Only use this colour to indicate which element is focused on. For example, when a user tabs to an element with their keyboard."
       },
       {
-        "name": "$govuk-focus-text-colour",
+        "name": "focus-text",
         "colour": "#0b0c0c"
       }
     ],
     "Error state": [
       {
-        "name": "$govuk-error-colour",
-        "colour": "#d4351c",
-        "notes": "Use for error messages"
+        "name": "error",
+        "colour": "#ca3535",
+        "notes": "Use this colour for error messages"
       }
     ],
     "Success state": [
       {
-        "name": "$govuk-success-colour",
-        "colour": "#00703c",
-        "notes": "Use for success messages"
+        "name": "success",
+        "colour": "#0f7a52",
+        "notes": "Use this colour for success messages"
+      }
+    ],
+    "Hover state": [
+      {
+        "name": "hover",
+        "colour": "#cecece",
+        "notes": "Use this colour for input hover states"
       }
     ],
     "Brand colour": [
       {
-        "name": "$govuk-brand-colour",
+        "name": "brand",
         "colour": "#1d70b8"
+      }
+    ],
+    "Surface": [
+      {
+        "name": "surface-background",
+        "colour": "#f4f8fb"
+      },
+      {
+        "name": "surface-text",
+        "colour": "#0b0c0c"
+      },
+      {
+        "name": "surface-border",
+        "colour": "#8eb8dc"
+      },
+      {
+        "name": "surface-link",
+        "colour": "#1a65a6"
+      }
+    ],
+    "Print": [
+      {
+        "name": "print-text",
+        "colour": "#000000"
       }
     ]
   },
   "palette": {
-    "red": "#d4351c",
-    "yellow": "#ffdd00",
-    "green": "#00703c",
-    "blue": "#1d70b8",
-    "dark-blue": "#003078",
-    "light-blue": "#5694ca",
-    "purple": "#4c2c92",
-    "black": "#0b0c0c",
-    "dark-grey": "#505a5f",
-    "mid-grey": "#b1b4b6",
-    "light-grey": "#f3f2f1",
-    "white": "#ffffff",
-    "light-purple": "#6f72af",
-    "bright-purple": "#912b88",
-    "pink": "#d53880",
-    "light-pink": "#f499be",
-    "orange": "#f47738",
-    "brown": "#b58840",
-    "light-green": "#85994b",
-    "turquoise": "#28a197"
+    "Blue": [
+      {
+        "name": "primary",
+        "colour": "#1d70b8"
+      },
+      {
+        "name": "tint-25",
+        "colour": "#5694ca"
+      },
+      {
+        "name": "tint-50",
+        "colour": "#8eb8dc"
+      },
+      {
+        "name": "tint-80",
+        "colour": "#d2e2f1"
+      },
+      {
+        "name": "tint-95",
+        "colour": "#f4f8fb"
+      },
+      {
+        "name": "shade-25",
+        "colour": "#16548a"
+      },
+      {
+        "name": "shade-50",
+        "colour": "#0f385c"
+      },
+      {
+        "name": "shade-10",
+        "colour": "#1a65a6"
+      }
+    ],
+    "Green": [
+      {
+        "name": "primary",
+        "colour": "#0f7a52"
+      },
+      {
+        "name": "tint-25",
+        "colour": "#4b9b7d"
+      },
+      {
+        "name": "tint-50",
+        "colour": "#87bca8"
+      },
+      {
+        "name": "tint-80",
+        "colour": "#cfe4dc"
+      },
+      {
+        "name": "tint-95",
+        "colour": "#f3f8f6"
+      },
+      {
+        "name": "shade-25",
+        "colour": "#0b5c3e"
+      },
+      {
+        "name": "shade-50",
+        "colour": "#083d29"
+      }
+    ],
+    "Teal": [
+      {
+        "name": "primary",
+        "colour": "#158187"
+      },
+      {
+        "name": "tint-25",
+        "colour": "#50a1a5"
+      },
+      {
+        "name": "tint-50",
+        "colour": "#8ac0c3"
+      },
+      {
+        "name": "tint-80",
+        "colour": "#d0e6e7"
+      },
+      {
+        "name": "tint-95",
+        "colour": "#f3f9f9"
+      },
+      {
+        "name": "shade-25",
+        "colour": "#106165"
+      },
+      {
+        "name": "shade-50",
+        "colour": "#0b4144"
+      },
+      {
+        "name": "accent",
+        "colour": "#00ffe0"
+      }
+    ],
+    "Purple": [
+      {
+        "name": "primary",
+        "colour": "#54319f"
+      },
+      {
+        "name": "tint-25",
+        "colour": "#7f65b7"
+      },
+      {
+        "name": "tint-50",
+        "colour": "#aa98cf"
+      },
+      {
+        "name": "tint-80",
+        "colour": "#ddd6ec"
+      },
+      {
+        "name": "tint-95",
+        "colour": "#f6f5fa"
+      },
+      {
+        "name": "shade-25",
+        "colour": "#3f2577"
+      },
+      {
+        "name": "shade-50",
+        "colour": "#2a1950"
+      }
+    ],
+    "Magenta": [
+      {
+        "name": "primary",
+        "colour": "#ca357c"
+      },
+      {
+        "name": "tint-25",
+        "colour": "#d7689d"
+      },
+      {
+        "name": "tint-50",
+        "colour": "#e59abe"
+      },
+      {
+        "name": "tint-80",
+        "colour": "#f4d7e5"
+      },
+      {
+        "name": "tint-95",
+        "colour": "#fcf5f8"
+      },
+      {
+        "name": "shade-25",
+        "colour": "#98285d"
+      },
+      {
+        "name": "shade-50",
+        "colour": "#651b3e"
+      }
+    ],
+    "Red": [
+      {
+        "name": "primary",
+        "colour": "#ca3535"
+      },
+      {
+        "name": "tint-25",
+        "colour": "#d76868"
+      },
+      {
+        "name": "tint-50",
+        "colour": "#e59a9a"
+      },
+      {
+        "name": "tint-80",
+        "colour": "#f4d7d7"
+      },
+      {
+        "name": "tint-95",
+        "colour": "#fcf5f5"
+      },
+      {
+        "name": "shade-25",
+        "colour": "#982828"
+      },
+      {
+        "name": "shade-50",
+        "colour": "#651b1b"
+      }
+    ],
+    "Orange": [
+      {
+        "name": "primary",
+        "colour": "#f47738"
+      },
+      {
+        "name": "tint-25",
+        "colour": "#f7996a"
+      },
+      {
+        "name": "tint-50",
+        "colour": "#fabb9c"
+      },
+      {
+        "name": "tint-80",
+        "colour": "#fde4d7"
+      },
+      {
+        "name": "tint-95",
+        "colour": "#fef8f5"
+      },
+      {
+        "name": "shade-25",
+        "colour": "#b7592a"
+      },
+      {
+        "name": "shade-50",
+        "colour": "#7a3c1c"
+      }
+    ],
+    "Yellow": [
+      {
+        "name": "primary",
+        "colour": "#ffdd00"
+      },
+      {
+        "name": "tint-25",
+        "colour": "#ffe640"
+      },
+      {
+        "name": "tint-50",
+        "colour": "#ffee80"
+      },
+      {
+        "name": "tint-80",
+        "colour": "#fff8cc"
+      },
+      {
+        "name": "tint-95",
+        "colour": "#fffdf2"
+      },
+      {
+        "name": "shade-25",
+        "colour": "#bfa600"
+      },
+      {
+        "name": "shade-50",
+        "colour": "#806f00"
+      }
+    ],
+    "Brown": [
+      {
+        "name": "primary",
+        "colour": "#99704a"
+      },
+      {
+        "name": "tint-25",
+        "colour": "#b39477"
+      },
+      {
+        "name": "tint-50",
+        "colour": "#ccb8a5"
+      },
+      {
+        "name": "tint-95",
+        "colour": "#faf8f6"
+      }
+    ],
+    "Black": [
+      {
+        "name": "primary",
+        "colour": "#0b0c0c"
+      },
+      {
+        "name": "tint-25",
+        "colour": "#484949"
+      },
+      {
+        "name": "tint-50",
+        "colour": "#858686"
+      },
+      {
+        "name": "tint-80",
+        "colour": "#cecece"
+      },
+      {
+        "name": "tint-95",
+        "colour": "#f3f3f3"
+      }
+    ],
+    "White": [
+      {
+        "name": "primary",
+        "colour": "#ffffff"
+      }
+    ]
   }
 }
