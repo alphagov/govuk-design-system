@@ -48,32 +48,11 @@ It should only show the GOV.UK logo and any GOV.UK-wide links and tools to help 
 
 {{ example({ group: "components", item: "header", example: "default", titleSuffix: "second", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
 
-### Previous variants of the GOV.UK header
+### Do not show service name or navigation links in the GOV.UK header
 
-The GOV.UK header component was originally released with 2 variants:
+You can no longer use the GOV.UK header to show service name or navigation links. Use the [Service navigation component](/components/service-navigation) instead.
 
-- with service name
-- with service name and navigation
-
-These 2 variants will be removed from the GOV.UK header component in the next breaking release of GOV.UK Frontend.
-
-In August 2024, we introduced a separate [Service navigation component](/components/service-navigation). This is to better help users understand that they’re using your service and let them navigate around your service.
-
-We recommend using the Service navigation component to show your service name and navigation links instead of the GOV.UK header, and to start updating existing services.
-
-See the [Help users navigate a service pattern](/patterns/navigate-a-service) for more guidance.
-
-#### GOV.UK header with service name
-
-We’ve deprecated the [GOV.UK header with service name](/components/header/with-service-name) and will remove this option in the next breaking release of GOV.UK Frontend.
-
-Use the Service navigation component to show your service name instead. We recommend teams to start updating existing services.
-
-#### GOV.UK header with navigation
-
-We’ve deprecated the [GOV.UK header with navigation](/components/header/with-service-name-and-navigation/) and will remove this option in the next breaking release of GOV.UK Frontend.
-
-Use the Service navigation component to add navigation links instead.
+The [Help users navigate a service pattern](/patterns/navigate-a-service) shows how the GOV.UK header and Service navigation components work together to help users know they’re using your service and navigate around it.
 
 ### GOV.UK header with One Login
 
