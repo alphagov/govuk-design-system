@@ -1,6 +1,5 @@
 {% macro colourTable(params) %}
 {% set hiddenGroups = params.hiddenGroups or [] %}
-{% set hiddenColours = params.hiddenColours or [] %}
 
 <table class="govuk-body app-colour-list">
   <caption class="govuk-visually-hidden">{{params.caption}}</caption>
@@ -16,7 +15,7 @@
       </td>
     </tr>
     {% for colour in group -%}
-      {% if color.name not in hiddenColours %}
+      {% if not colour.hidden %}
       <tr class="app-colour-list-row">
         <th class="app-colour-list-column app-colour-list-column--name" scope="row">
           <span class="app-swatch {% if colour.colour == "#ffffff" %}app-swatch-border{% endif %}" style="background-color:{{colour.colour}}"></span>
