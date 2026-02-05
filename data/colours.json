@@ -13,7 +13,7 @@
     "Link": [
       {
         "name": "link",
-        "colour": "#1d70b8"
+        "colour": "#1a65a6"
       },
       {
         "name": "link-hover",
@@ -100,10 +100,6 @@
       {
         "name": "surface-border",
         "colour": "#8eb8dc"
-      },
-      {
-        "name": "surface-link",
-        "colour": "#1a65a6"
       }
     ],
     "Print": [
@@ -145,7 +141,8 @@
       },
       {
         "name": "shade-10",
-        "colour": "#1a65a6"
+        "colour": "#1a65a6",
+        "hidden": true
       }
     ],
     "Green": [
