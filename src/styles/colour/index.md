@@ -76,3 +76,14 @@ Black includes a ‘primary’ black, with tints to show greys. White has no var
   title: "Table of palette colours",
   colourSet: colours.palette
 })}}
+
+## Organisation colours
+
+You can find brand colours for government departments and organisations in the [\_colours-organisations file in GOV.UK Frontend](https://github.com/alphagov/govuk-frontend/blob/main/packages/govuk-frontend/src/govuk/settings/_colours-organisations.scss).
+
+This file is maintained on a best effort basis and is assembled from a number of sources, including:
+
+- [HM Government branding portal](https://hmgbrand.gcs.civilservice.gov.uk/)
+- Cabinet Office branding team
+- [Design102](https://design102.co.uk/), the government's in-house design studio
+- Communications teams from individual organisations
