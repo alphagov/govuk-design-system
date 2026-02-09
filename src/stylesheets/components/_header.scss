@@ -1,9 +1,4 @@
 .app-header-logo {
-  // Override the default 33% width on the logo in GOV.UK Frontend (prevents
-  // unnecessary wrapping of "GOV.UK Design System" on smaller tablet / desktop
-  // viewports)
-  width: auto;
-
   // Add a little margin to the right of the logo
   // so it doesn't touch the search box when side by side
   margin-right: govuk-spacing(3);
