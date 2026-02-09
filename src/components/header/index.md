@@ -62,7 +62,7 @@ GOV.UK One Login maintains their own header on the [Let users navigate to their 
 
 In June 2025, we updated this component to support a wider refresh of the GOV.UK brand.
 
-The refreshed blue GOV.UK branding is now the default. If you use the `govukRebrand` feature flag in GOV.UK Frontend, you should now remove it.
+You should now use the refreshed GOV.UK branding. If your service has updated to GOV.UK Frontend v6.0.0 or later, you no longer need to use the `govukRebrand` feature flag and should remove it.
 
 With these changes, the GOV.UK header and GOV.UK footer components should now only be used by [services on the GOV.UK website](https://www.gov.uk/service-manual/design/making-your-service-look-like-govuk). Services outside of [the GOV.UK proposition](https://www.gov.uk/government/publications/govuk-proposition) should stop using the header and footer components and instead create their own.
 
