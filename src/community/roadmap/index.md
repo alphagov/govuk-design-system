@@ -13,11 +13,13 @@ Some things on the roadmap might change – the purpose is to tell you what’s 
 
 See our [GitHub team board](https://github.com/orgs/alphagov/projects/53) for more details on our plans and day-to-day activities.
 
-Last updated 14 January 2026.
+Last updated 9 February 2026.
 
 ## Recently shipped
 
-We’ve released [GOV.UK Frontend v5.14.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.14.0). This release allows you to remove content licence information from the GOV.UK footer if your service does not provide information under the Open Government Licence (OGL). It also provides a fix for a bug in the VoiceOver screen reader software that affects the menu toggle in the Service navigation component.
+We’ve released [GOV.UK Frontend v6.0.0](https://github.com/alphagov/govuk-frontend/releases/tag/v6.0.0). This breaking release includes changes to improve our Sass architecture, use an updated type scale, update our colours and improve flexibility in our page template layout. We’ve also removed a number of deprecated APIs, Sass variables and component options.
+
+In January 2026, we released [GOV.UK Frontend v5.14.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.14.0). This release allows you to remove content licence information from the GOV.UK footer if your service does not provide information under the Open Government Licence (OGL). It also provides a fix for a bug in the VoiceOver screen reader software that affects the menu toggle in the Service navigation component.
 
 In October 2025, we released [GOV.UK Frontend v5.13.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.13.0), which introduced new Sass functions to help write `@media` and `@container` queries, mixins and functions whilst still using custom breakpoints or GOV.UK Frontend’s `$govuk-breakpoints` setting.
 
