@@ -9,6 +9,33 @@ order: 10
 
 See our latest releases and updates.
 
+## February 2026
+
+### We’ve released GOV.UK Frontend v6.0.0.
+
+Some of the breaking changes in this release include:
+
+- improving our Sass architecture
+- using an updated type scale to improve accessibility for small screens
+- updating colours to use the web palette in the GOV.UK brand guidelines
+- improving flexibility in our page template layout
+
+We’ve also removed a number of deprecated APIs, Sass variables and component options.
+
+#### Benefits of updating
+
+By updating to v6.0.0 you’ll:
+
+- stay aligned with the GOV.UK look and feel
+- benefit from a more consistent colour system
+- get the latest accessibility improvements
+- benefit from a smaller CSS payload
+- be able to customise the page template further than before
+
+[Read the full release notes for v6.0.0](https://github.com/alphagov/govuk-frontend/releases/tag/v6.0.0) to see what’s changed.
+
+If you have any questions or feedback, [contact the team](/contact/).
+
 ## January 2026
 
 ### We released GOV.UK Frontend v5.14.0
