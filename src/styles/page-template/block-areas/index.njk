@@ -2,11 +2,9 @@
 title: Block areas – Page template
 layout: false
 ignoreInSitemap: true
-stylesheets:
-- styles/page-template/block-areas/block-areas-annotate.css
 ---
 
-{% extends "govuk/template.njk" %}
+{% extends "example-wrappers/page-template-blocks.njk" %}
 
 {% block pageTitle %}{{ title }} – Example - GOV.UK Design System{% endblock %}
 
@@ -50,7 +48,7 @@ stylesheets:
   </div>
 {%- endblock %}
 
-{% block beforeContent -%}
+{% block containerStart -%}
   <div class="app-annotate-block">
     <span class="app-annotate-block__label">block: beforeContent</span>
     {{ super() }}

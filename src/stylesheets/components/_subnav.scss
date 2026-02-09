@@ -43,7 +43,7 @@
 .app-subnav__section--nested .app-subnav__section-item::before {
   content: "—";
   margin-left: -(govuk-spacing(4));
-  color: govuk-colour("dark-grey");
+  color: govuk-colour("black", $variant: "tint-25");
 }
 
 .app-subnav__section--nested .app-subnav__link {
@@ -56,7 +56,7 @@
   @include govuk-typography-weight-regular;
   margin: 0;
   padding: govuk-spacing(2) govuk-spacing(3) govuk-spacing(2) 0;
-  color: govuk-colour("dark-grey");
+  color: govuk-colour("black", $variant: "tint-25");
 
   // Avoid padding on the first heading so its baseline is close
   // enough to the breadcrumbs' baseline that they look aligned

@@ -4,8 +4,8 @@
   H1 becomes e.g. 'Ask users for dates'. Otherwise, we put it before the H1. #}
 {% set includeThemeInPageHeading = theme and "…" in theme %}
 
-{% block body %}
-<div class="app-split-pane app-width-container app-main-wrapper">
+{% block container %}
+<div class="app-split-pane app-width-container app-container-wrapper">
   <div class="app-split-pane__nav">
     {% include "_subnav.njk" %}
   </div>
@@ -63,5 +63,8 @@
   </div>
   {% include "_back-to-top.njk" %}
 </div>
-{% include "_footer.njk" %}
+{% endblock %}
+
+{% block govukFooter %}
+  {% include "_footer.njk" %}
 {% endblock %}

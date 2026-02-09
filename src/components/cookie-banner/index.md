@@ -12,13 +12,7 @@ layout: layout-pane.njk
 
 Allow users to accept or reject cookies which are not essential to making your service work.
 
-Example of the Cookie banner component showing the [refreshed GOV.UK branding](#brand-refresh-of-the-cookie-banner-component):
-
 {{ example({ group: "components", item: "cookie-banner", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
-
-Example of the Cookie banner component showing GOV.UK branding before June 2025:
-
-{{ example({ group: "components", item: "cookie-banner", example: "without-brand-refresh", html: false, nunjucks: false, open: false, loading: "eager" }) }}
 
 If you use the page template, you'll also get the Cookie banner without having to add it, as it's included by default. However, if you want to customise the default Cookie banner, read the [page template guidance about customising components](/styles/page-template/#changing-template-content).
 
@@ -186,11 +180,7 @@ You’ll need a [Cookies page in your service](/patterns/cookies-page/) as well 
 
 In June 2025, we updated this component to support a wider refresh of the GOV.UK brand.
 
-The updated Cookie banner component uses light blue as the background colour, instead of grey.
-
-To help teams refresh the GOV.UK brand in their services, we released GOV.UK Frontend v5.10.0 (and later fix versions). For teams on earlier versions, we released GOV.UK Frontend v4.10.0
-
-To see more details and how to update, you can read the [release notes for GOV.UK Frontend v5.10.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.0) and [release notes for GOV.UK Frontend v4.10.0](https://github.com/alphagov/govuk-frontend/releases/tag/v4.10.0).
+You should now use the refreshed GOV.UK branding. If your service has updated to GOV.UK Frontend v6.0.0 or later, you no longer need to use the `govukRebrand` feature flag and should remove it.
 
 ## Research on this component
 

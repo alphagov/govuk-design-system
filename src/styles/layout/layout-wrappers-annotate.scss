@@ -7,12 +7,12 @@
 [class^="govuk-grid-column"] {
   position: relative;
   z-index: 0;
-  border: 2px dashed govuk-colour("light-grey");
+  border: 2px dashed govuk-colour("black", $variant: "tint-95");
 }
 
 .govuk-width-container,
 .govuk-main-wrapper {
-  border: 2px dashed govuk-colour("dark-grey");
+  border: 2px dashed govuk-colour("black", $variant: "tint-25");
 }
 
 .govuk-grid-row {

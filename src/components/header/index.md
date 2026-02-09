@@ -12,13 +12,7 @@ layout: layout-pane.njk
 
 The GOV.UK header component tells users they’re using a service on GOV.UK and lets them use GOV.UK-wide tools. Also known as the GOV.UK masthead.
 
-Example of the GOV.UK header component showing the [refreshed GOV.UK branding](#brand-refresh-of-the-govuk-header-component):
-
 {{ example({ group: "components", item: "header", example: "default", id: "default-1", html: true, nunjucks: true, open: false, loading: "eager" }) }}
-
-Example of the GOV.UK header component showing GOV.UK branding before June 2025:
-
-{{ example({ group: "components", item: "header", example: "without-brand-refresh", html: false, nunjucks: false, open: false, loading: "eager" }) }}
 
 If you use the page template, you'll also get the GOV.UK header without having to add it, as it's included by default. However, if you want to customise the default GOV.UK header, read the [page template guidance about customising components](/styles/page-template/#changing-template-content).
 
@@ -54,32 +48,11 @@ It should only show the GOV.UK logo and any GOV.UK-wide links and tools to help 
 
 {{ example({ group: "components", item: "header", example: "default", titleSuffix: "second", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
 
-### Previous variants of the GOV.UK header
+### Do not show service name or navigation links in the GOV.UK header
 
-The GOV.UK header component was originally released with 2 variants:
+You can no longer use the GOV.UK header to show service name or navigation links. Use the [Service navigation component](/components/service-navigation) instead.
 
-- with service name
-- with service name and navigation
-
-These 2 variants will be removed from the GOV.UK header component in the next breaking release of GOV.UK Frontend.
-
-In August 2024, we introduced a separate [Service navigation component](/components/service-navigation). This is to better help users understand that they’re using your service and let them navigate around your service.
-
-We recommend using the Service navigation component to show your service name and navigation links instead of the GOV.UK header, and to start updating existing services.
-
-See the [Help users navigate a service pattern](/patterns/navigate-a-service) for more guidance.
-
-#### GOV.UK header with service name
-
-We’ve deprecated the [GOV.UK header with service name](/components/header/with-service-name) and will remove this option in the next breaking release of GOV.UK Frontend.
-
-Use the Service navigation component to show your service name instead. We recommend teams to start updating existing services.
-
-#### GOV.UK header with navigation
-
-We’ve deprecated the [GOV.UK header with navigation](/components/header/with-service-name-and-navigation/) and will remove this option in the next breaking release of GOV.UK Frontend.
-
-Use the Service navigation component to add navigation links instead.
+The [Help users navigate a service pattern](/patterns/navigate-a-service) shows how the GOV.UK header and Service navigation components work together to help users know they’re using your service and navigate around it.
 
 ### GOV.UK header with One Login
 
@@ -89,15 +62,9 @@ GOV.UK One Login maintains their own header on the [Let users navigate to their 
 
 In June 2025, we updated this component to support a wider refresh of the GOV.UK brand.
 
-The updated GOV.UK header component:
+You should now use the refreshed GOV.UK branding. If your service has updated to GOV.UK Frontend v6.0.0 or later, you no longer need to use the `govukRebrand` feature flag and should remove it.
 
-- uses blue as the background colour, instead of black
-- uses a refreshed GOV.UK logo and wordmark lockup
-- extends to a height of 60px, instead of 50px with a 10px bottom border
-
-To help teams refresh the GOV.UK brand in their services, we released GOV.UK Frontend v5.10.0 (and later fix versions). For teams on earlier versions, we released GOV.UK Frontend v4.10.0
-
-To see more details and how to update, you can read the [release notes for GOV.UK Frontend v5.10.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.0) and [release notes for GOV.UK Frontend v4.10.0](https://github.com/alphagov/govuk-frontend/releases/tag/v4.10.0).
+With these changes, the GOV.UK header and GOV.UK footer components should now only be used by [services on the GOV.UK website](https://www.gov.uk/service-manual/design/making-your-service-look-like-govuk). Services outside of [the GOV.UK proposition](https://www.gov.uk/government/publications/govuk-proposition) should stop using the header and footer components and instead create their own.
 
 ## Research on this component
 

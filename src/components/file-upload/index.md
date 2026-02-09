@@ -132,7 +132,13 @@ However, due to [browser security features](https://developer.mozilla.org/en-US/
 
 ## Research on this component
 
-An accessibility audit has shown some users have encountered a problem when using File upload.
+### Colour and 'interaction state' updates from the GOV.UK brand refresh
+
+In [February 2026], we updated the improved File upload component.
+
+As part of colour changes to the GOV.UK brand, we improved the various ‘states’ that show as the user interacts with the component. For example, we’ve made it easier for users to see when they’ve added a file.
+
+We’ve also updated the colours to make user interaction more consistent and less distracting than before.
 
 ### Known issues and gaps
 

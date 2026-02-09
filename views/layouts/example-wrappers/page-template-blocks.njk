@@ -1,0 +1,15 @@
+{% extends "govuk/template.njk" %}
+
+{% block pageTitle %}{{ title }} – Example - GOV.UK Design System{% endblock %}
+{% set serviceName = title %}
+
+{% block head -%}
+  {# Since we’re not extending the Design System layout we need to add this manually #}
+  <meta name="robots" content="noindex, nofollow">
+  <link href="{{ getFingerprint('/stylesheets/main.css') }}" rel="stylesheet" media="all">
+  <link href="{{ getFingerprint('/stylesheets/page-template-blocks.css') }}" rel="stylesheet" media="all">
+{%- endblock %}
+
+{% block bodyEnd %}
+  <script type="module" src="{{ getFingerprint('/javascripts/application-example.js') }}"></script>
+{% endblock %}

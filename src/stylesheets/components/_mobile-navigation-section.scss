@@ -37,9 +37,9 @@
   border: 0;
 
   // Add back a border to separate each element of the menu
-  border-top: solid 1px $govuk-border-colour;
+  border-top: solid 1px govuk-functional-colour(border);
 
-  color: $_govuk-service-navigation-link-colour;
+  color: govuk-functional-colour("link");
   background: none;
 
   // Meet the Service Nav's typography
@@ -49,7 +49,7 @@
   cursor: pointer;
 
   &:hover {
-    color: $govuk-link-hover-colour;
+    color: govuk-functional-colour(link-hover);
   }
 
   &:focus {
@@ -173,7 +173,7 @@ $subnav-padding-left: $app-chevron-width + $app-chevron-margin-left + $app-chevr
   margin-bottom: govuk-spacing(1);
   margin-left: -($subnav-padding-left - govuk-spacing(2));
   padding: 0;
-  color: govuk-colour("dark-grey");
+  color: govuk-colour("black", $variant: "tint-25");
   font: inherit;
 }
 
@@ -198,7 +198,7 @@ $subnav-padding-left: $app-chevron-width + $app-chevron-margin-left + $app-chevr
     top: 0;
     bottom: 0;
     left: -$signifier-offset;
-    border-left: solid 5px $_govuk-service-navigation-link-colour;
+    border-left: solid 5px govuk-functional-colour("link");
 
     @supports (margin: unquote("max(calc(0px))")) {
       $save-area-aware: calc(#{$signifier-offset} + env(safe-area-inset-left));

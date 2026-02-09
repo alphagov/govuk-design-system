@@ -1,0 +1,43 @@
+{% macro colourTable(params) %}
+{% set hiddenGroups = params.hiddenGroups or [] %}
+
+<table class="govuk-body app-colour-list">
+  <caption class="govuk-visually-hidden">{{params.caption}}</caption>
+  <tbody>
+  {#- colours is defined in ./data/colours.json #}
+  {% for groupName, group in params.colourSet -%}
+    {% if groupName not in hiddenGroups %}
+    <tr>
+      <td colspan="3">
+        <h3 class="govuk-heading-m {% if not loop.first %}govuk-!-padding-top-6{% endif %}">
+        {{groupName}}
+        </h3>
+      </td>
+    </tr>
+    {% for colour in group -%}
+      {% if not colour.hidden %}
+      <tr class="app-colour-list-row">
+        <th class="app-colour-list-column app-colour-list-column--name" scope="row">
+          <span class="app-swatch {% if colour.colour == "#ffffff" %}app-swatch-border{% endif %}" style="background-color:{{colour.colour}}"></span>
+          <code>{{colour.name}}</code>
+        </th>
+        <td class="app-colour-list-column app-colour-list-column--colour">
+          <code>{{colour.colour}}</code>
+        </td>
+        {% if colour.notes %}
+        <td class="app-colour-list-column app-colour-list-column--notes">
+          {{colour.notes}}
+        </td>
+        {% else %}
+        <td class="app-colour-list-column app-colour-list-column--notes">
+        </td>
+        {% endif %}
+      </tr>
+      {% endif %}
+    {% endfor %}
+    {% endif %}
+  {% endfor %}
+  </tbody>
+</table>
+
+{% endmacro %}

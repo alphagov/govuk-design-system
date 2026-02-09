@@ -94,18 +94,18 @@ $icon-size: 40px;
 
 .app-site-search__hint {
   position: absolute;
-  color: govuk-colour("mid-grey");
+  color: govuk-colour("black", $variant: "tint-80");
 }
 
 .app-site-search__input {
   position: relative;
-  background-image: _search-icon($colour: govuk-colour("dark-grey"));
+  background-image: _search-icon($colour: govuk-colour("black", $variant: "tint-25"));
   background-repeat: no-repeat;
   background-position: center left -2px;
   background-size: $icon-size $icon-size;
 
   &::placeholder {
-    color: govuk-colour("dark-grey");
+    color: govuk-colour("black", $variant: "tint-25");
   }
 
   // If the user is in a dark forced colours mode, switch the search icon out
@@ -131,8 +131,8 @@ $icon-size: 40px;
 }
 
 .app-site-search__input--focused {
-  border-color: $govuk-focus-text-colour;
-  outline: $govuk-focus-width solid $govuk-focus-colour;
+  border-color: govuk-functional-colour(focus-text);
+  outline: $govuk-focus-width solid govuk-functional-colour(focus);
   outline-offset: 0;
   box-shadow: inset 0 0 0 $govuk-border-width-form-element;
 
@@ -210,7 +210,7 @@ $icon-size: 40px;
   display: block;
   position: relative;
   padding: govuk-spacing(2);
-  border-bottom: solid govuk-colour("mid-grey");
+  border-bottom: solid govuk-colour("black", $variant: "tint-80");
   border-width: 1px 0;
   cursor: pointer;
 }
@@ -247,7 +247,7 @@ $icon-size: 40px;
 }
 
 .app-site-search__option--no-results {
-  color: govuk-colour("dark-grey");
+  color: govuk-colour("black", $variant: "tint-25");
   background-color: govuk-colour("white");
   cursor: not-allowed;
 }
@@ -285,7 +285,7 @@ $icon-size: 40px;
 .app-site-search--section {
   display: block;
   @include govuk-font-size($size: 16);
-  color: $govuk-secondary-text-colour;
+  color: govuk-functional-colour(secondary-text);
 }
 
 .app-site-search__aliases {

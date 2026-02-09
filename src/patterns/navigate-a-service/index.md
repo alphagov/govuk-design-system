@@ -157,24 +157,20 @@ Show any elements that only affect the current page after the Service header nav
 
 If your service uses the [Breadcrumbs component](/components/breadcrumbs/), place them just before the `<main>` element. Placing them here means that the ‘Skip to main content’ link allows the user to skip all navigation links, including breadcrumbs.
 
-## Changes to the GOV.UK header and Service navigation, and how they work together
+## How the GOV.UK header and Service navigation work together
 
-We introduced this pattern and the [Service navigation component](/components/service-navigation/) in August 2024. We recommend service teams start using these to show navigation links in their services.
+We introduced this pattern and the [Service navigation component](/components/service-navigation/) in August 2024. You can no longer use the GOV.UK header to show service name or navigation links.
 
-We’re confident that the new component is an improvement on the ‘GOV.UK header with navigation’, which we’ll deprecate in the next breaking release of GOV.UK Frontend.
-
-We also recommend services to start using the Service navigation to show the service name. This is to help users understand:
+We made these changes to help users better understand:
 
 - the relationship between GOV.UK and services
 - that GOV.UK functions as one website
 - the difference between GOV.UK-wide tools with service-level tools
 
-We’ve also deprecated the 'GOV.UK header with service name' and will remove this option in the next breaking release of GOV.UK Frontend.
-
-Share your research and give us your feedback in our [GitHub discussion space](https://github.com/alphagov/govuk-design-system/discussions/categories/navigation/).
+To help us further improve, share your research and give us your feedback in our [GitHub discussion space](https://github.com/alphagov/govuk-design-system/discussions/categories/navigation/).
 
 ## Research on this pattern
 
-To explain our design rationale and decision-making process, we're writing a series of design notes and discussion topics to be posted in our [GitHub discussion space](https://github.com/alphagov/govuk-design-system/discussions/categories/navigation/).
+To explain our design rationale and decision-making process, we posted a series of design notes and discussion topics in our [GitHub discussion space](https://github.com/alphagov/govuk-design-system/discussions/categories/navigation/).
 
 We also ask service teams to use the space to share any research findings they have and give us their feedback to help us iterate.
