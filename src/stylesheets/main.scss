@@ -390,10 +390,3 @@ pre .language-plaintext {
 .govuk-service-navigation__toggle {
   @include govuk-font($size: 19, $weight: bold);
 }
-
-// Clearfix for header container
-// When govuk-frontend rc.1/v6 is released, we can remove this as it is
-// fixed within the latest code
-.govuk-header__container {
-  @include govuk-clearfix;
-}
