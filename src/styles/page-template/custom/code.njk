@@ -76,10 +76,8 @@ ignoreInSitemap: true
   }) }}
 {% endblock %}
 
-{% block header %}
-  {{ govukHeader({
-    homepageUrl: "#",
-    containerClasses: "app-width-container",
+{% block govukServiceNavigation %}
+  {{ govukServiceNavigation({
     serviceName: "Service name",
     serviceUrl: "#",
     navigation: [
@@ -123,7 +121,7 @@ ignoreInSitemap: true
   <h1 class="govuk-heading-xl">Customised page template</h1>
 {% endblock %}
 
-{% block footer %}
+{% block govukFooter %}
   {{ govukFooter({
     meta: {
       items: [
