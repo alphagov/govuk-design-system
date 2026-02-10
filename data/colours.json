@@ -46,7 +46,7 @@
       },
       {
         "name": "body-background",
-        "colour": "#f3f2f1",
+        "colour": "#ffffff",
         "notes": "Use this colour if you need to match the colour of the <body> element"
       }
     ],
