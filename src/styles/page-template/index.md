@@ -74,7 +74,7 @@ To change the components that are included in the page template by default, set 
 
 ```njk
 {% raw %}
-{% block header %}
+{% block govukHeader %}
   {{ govukHeader ({
     homepageUrl: "/custom-url"
   }) }}
