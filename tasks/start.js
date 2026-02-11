@@ -1,12 +1,34 @@
+const { watch } = require('fs')
 const { dirname, join } = require('path')
 
 const browserSync = require('browser-sync')
 const slash = require('slash')
 
 const { browsersync: browserSyncConfig, paths } = require('../config') // specify paths to main working directories
+const nunjucksTransformer = require('../lib/jstransformer-nunjucks')
 const metalsmith = require('../lib/metalsmith') // configured static site generator
 
 let bs
+let nunjucksWatcher
+
+// Watch for changes to the views directory. These templates are cached by the
+// nunjucks transformer, so the cache must be cleared when they change.
+function setupNunjucksWatcher() {
+  if (nunjucksWatcher) {
+    return
+  }
+
+  nunjucksWatcher = watch(
+    paths.views,
+    { recursive: true },
+    (eventType, filename) => {
+      if (!filename || !filename.endsWith('.njk')) {
+        return
+      }
+      nunjucksTransformer.resetCache()
+    }
+  )
+}
 
 metalsmith
 
@@ -27,6 +49,8 @@ metalsmith
       if (bs) {
         return
       }
+
+      setupNunjucksWatcher()
 
       // Setup synchronised browser testing
       bs = browserSync.create()
