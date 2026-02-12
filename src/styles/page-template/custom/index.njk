@@ -105,13 +105,16 @@ ignoreInSitemap: true
   {{ super() }}
 {% endblock %}
 
-{% block containerStart %}
+{% block headerEnd %}
   {{ govukPhaseBanner({
     tag: {
       text: "Alpha"
     },
     html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
   }) }}
+{% endblock %}
+
+{% block containerStart %}
   {{ govukBackLink({
     href: "#",
     text: "Back"
