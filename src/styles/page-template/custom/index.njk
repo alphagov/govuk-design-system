@@ -25,6 +25,7 @@ ignoreInSitemap: true
   "data-other": "report:details"
 } %}
 {% set containerClasses = "app-width-container" %}
+{% set mainClasses = "app-main-class" %}
 
 {% block pageTitle %}{{ title }} – Example - GOV.UK Design System{% endblock %}
 
@@ -99,12 +100,6 @@ ignoreInSitemap: true
   }) }}
 {% endblock %}
 
-{% set mainClasses = "app-main-class" %}
-
-{% block main %}
-  {{ super() }}
-{% endblock %}
-
 {% block headerEnd %}
   {{ govukPhaseBanner({
     tag: {
@@ -119,6 +114,10 @@ ignoreInSitemap: true
     href: "#",
     text: "Back"
   }) }}
+{% endblock %}
+
+{% block main %}
+  {{ super() }}
 {% endblock %}
 
 {% block content %}
