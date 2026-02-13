@@ -23,9 +23,9 @@ Use the footer at the bottom of every page of your service.
 
 ## How it works
 
-Add a copyright notice to the footer to clarify who owns the copyright. For GOV.UK services, add the coat of arms to keep things consistent with the rest of GOV.UK.
+Add a Crown copyright notice to the footer to clarify who owns the copyright. For GOV.UK services, add the coat of arms to keep things consistent with the rest of GOV.UK.
 
-Make it clear whether content is available for re-use - and if it is, under what sort of licence. Use an [Open Government Licence](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/) unless you have permission from the National Archives to use a [different type of licence](https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/open-government-licence/other-licences/).
+Make it clear that content is available for re-use - and if it is, under what sort of licence. Apply the [Open Government Licence](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/) unless your organisation has obtained a [Delegation of Authority] (https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/delegations-of-authority/) from The National Archives to use a [different type of licence](https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/open-government-licence/other-licences/).
 
 ### Footer without links
 
