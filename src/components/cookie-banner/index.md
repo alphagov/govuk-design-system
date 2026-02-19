@@ -8,7 +8,6 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "_callout.njk" import callout %}
 
 Allow users to accept or reject cookies which are not essential to making your service work.
 

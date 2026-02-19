@@ -8,7 +8,6 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "_callout.njk" import callout %}
 {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 
 Service navigation helps users understand that they’re using your service and lets them navigate around your service.
@@ -30,20 +29,6 @@ Together, the [GOV.UK header component](/components/header/) and Service navigat
 This also assures users that they’re in the right place to use your service and to understand that GOV.UK functions as one website.
 
 For guidance on how to plan your header and navigation, see the [Help users navigate a service pattern](/patterns/navigate-a-service/).
-
-### Change the blue colour bar under the GOV.UK header to full width
-
-To use the GOV.UK header and Service navigation and make them fit together visually, you’ll need to change the bottom blue border of the GOV.UK header to full width.
-
-Apply a class `govuk-header--full-width-border` to the GOV.UK header.
-
-{{ example({ group: "components", item: "service-navigation", example: "with-govuk-header", html: true, nunjucks: true, open: false }) }}
-
-{% call callout({ tagText: "Brand", colour: "green" }) %}
-
-<p class="govuk-body">You do not need to change the bottom border of the updated GOV.UK header component with the refreshed GOV.UK branding.</p>
-
-{% endcall %}
 
 ### Showing your service name only
 
