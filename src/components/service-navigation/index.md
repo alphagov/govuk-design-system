@@ -8,7 +8,6 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{% from "_callout.njk" import callout %}
 {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 
 Service navigation helps users understand that they’re using your service and lets them navigate around your service.
