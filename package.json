@@ -97,7 +97,7 @@
     "puppeteer": "^24.36.1",
     "rollup": "^4.59.0",
     "sass-export": "^2.1.2",
-    "sitemap": "^9.0.0",
+    "sitemap": "^9.0.1",
     "slash": "^3.0.0",
     "slug": "^9.1.0",
     "smartypants": "^0.2.2",
