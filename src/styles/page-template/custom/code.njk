@@ -25,6 +25,7 @@ ignoreInSitemap: true
   "data-other": "report:details"
 } %}
 {% set containerClasses = "app-width-container" %}
+{% set mainClasses = "app-main-class" %}
 
 {% block pageTitle %}GOV.UK - Customised page template{% endblock %}
 
@@ -69,7 +70,7 @@ ignoreInSitemap: true
   </form>
 {% endblock %}
 
-{% block skipLink %}
+{% block govukSkipLink %}
   {{ govukSkipLink({
     href: "#main-content",
     text: "Skip to main content"
@@ -98,23 +99,24 @@ ignoreInSitemap: true
   }) }}
 {% endblock %}
 
-{% set mainClasses = "app-main-class" %}
-
-{% block main %}
-  {{ super() }}
-{% endblock %}
-
-{% block containerStart %}
+{% block headerEnd %}
   {{ govukPhaseBanner({
     tag: {
       text: "Alpha"
     },
     html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
   }) }}
+{% endblock %}
+
+{% block containerStart %}
   {{ govukBackLink({
     href: "#",
     text: "Back"
   }) }}
+{% endblock %}
+
+{% block main %}
+  {{ super() }}
 {% endblock %}
 
 {% block content %}
