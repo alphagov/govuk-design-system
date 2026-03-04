@@ -64,8 +64,8 @@ Additional extensions with Umbraco CMS support, based on the ASP.NET Core integr
 
 Guidance on [building a hapi service using GOV.UK Frontend](https://github.com/DEFRA/hapi-govuk-examples).
 
-[GOV.UK Frontend Express.js](https://github.com/ministryofjustice/moj-express-skeleton) -
-An Express.js application skeleton using GOV.UK Frontend.
+[GOV.UK Frontend - Express TypeScript Template](https://github.com/ministryofjustice/laa-express-typescript-template) -
+GOV.UK Frontend Node.js/Express template written in TypeScript. This is created by the MOJ LAA Digital department.
 
 ### Python
 
