@@ -64,6 +64,29 @@ Here’s a few places to join the discussions that help shape the Design System.
 
 <hr class="govuk-section-break govuk-section-break--visible">
 
+## Take part in research
+
+<div>
+
+{%- call imageCard({
+    src: "/community/images/workshop.jpg",
+    alt: "Table with post-it notes, pens and paper.",
+    title: "'Always on' continuous research",
+    large: true
+  }) %}
+
+  <p>Participate in one of our 'Always on' research sessions, where we talk to individual users like you about how and why you use the Design System.</p>
+  
+  <p>The goal is to stay in touch with the needs of our users and continuously improve our work.</p>
+  
+  <p><a href="/community/continuous-research/">Find out how to apply</a></p>
+
+{% endcall %}
+
+</div>
+
+<hr class="govuk-section-break govuk-section-break--visible">
+
 ## Attend our events
 
 Join one of our regular events where we share ideas and work together to solve common problems affecting service teams.
