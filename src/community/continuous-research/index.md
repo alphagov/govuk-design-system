@@ -1,5 +1,5 @@
 ---
-title: "Always on: our continuous research programme"
+title: Take part in our research
 description: Participate in one of our ‘Always on’ research sessions, where we regularly talk to individual users about how and why you use the Design System.
 section: Community
 theme: Ways to get involved
@@ -7,9 +7,13 @@ layout: layout-pane.njk
 order: 2
 ---
 
-We’ve started a new rolling research programme to learn more about how and why people use the Design System to build government services. The goal is to stay in touch with the needs of our users and continuously improve our work.
+In March 2026, we started to trial a new rolling research programme with people that work on government services. If it works out, we plan to hold sessions every few weeks.
 
-In March 2026, we started a trial run of these research sessions. If it works out, we plan to hold sessions every few weeks.
+## Introducing our ‘Always on’ research with users in services
+
+We’d like to learn more about how and why people use the Design System to build government services, and do this on an ongoing basis.
+
+The goal is to stay in touch with the needs of our users and continuously improve our work.
 
 ## Who can take part
 
@@ -18,8 +22,7 @@ We want to speak with anyone who uses the GOV.UK Design System. You can take par
 - a GOV.UK service
 - a cross-government service, such as within a department, government organisation or local council
 
-You can take part no matter how often you use the Design System or what your job title is. It does not matter how experienced or senior you are. We’d particularly like to hear from
-people who are new to the Design System.
+You can take part no matter how often you use the Design System or what your job title is. It does not matter how experienced or senior you are. We’d particularly like to hear from people who are new to the Design System.
 
 ## Session format
 
