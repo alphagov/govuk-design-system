@@ -7,45 +7,41 @@ layout: layout-pane.njk
 order: 11
 ---
 
-<!--
+Design System Day is the GOV.UK Design System’s flagship event.
 
-Setting the following convention:
-    /community/design-system-day/ always describes the upcoming event or the event in general
-    /community/design-system-day-[year]/ is the archive page for an event which collects the videos, slides and notes for a particular conference
+It's an opportunity to collaborate and share knowledge about design systems with like-minded people, covering topics like accessibility, community and decision-making. It’s a space for anyone using design systems in government to share ideas and developments, learn from colleagues, and spark conversations.
 
-This means that hyperlinks to /community/design-system-day/ can always encourage ticket sales or mailing list subscriptions.
+## What’s next for Design System Day
 
--->
+We’ve decided to pause Design System Day for the time being.
 
-## Our events
+Over the five years we’ve held Design System Day, we’ve seen it grow into one of the largest design events in government. At the same time, the work to organise Design System Day throughout the year also placed ever-increasing resource and time demands on our multidisciplinary team.
 
-Design System Day is the GOV.UK Design System's flagship event!
+Meanwhile, we’ve seen our events lose some of their focus and turn into broader design events, rather than just about design systems, due to popular demand and well-intentioned efforts to fill gaps left elsewhere.
 
-It’s an opportunity to collaborate and share knowledge about design systems with like-minded people, covering topics like accessibility, community and decision-making. It's a space for anyone using design systems in government to share ideas and developments, learn from colleagues, and spark conversations on related topics.
+Based on this, we've decided to take the time to reflect on our next steps.
 
-You can [sign up to our mailing list](https://mailchi.mp/707ce8dec373/get-updated-by-email-govuk-design-system) to get the latest information on Design System Day events planned for this year.
+## Watch talks from past Design System Day events
 
-Recordings for our events in 2024 will be available soon.
+We’ve welcomed user-centered design professionals from across the wider government community on to our stage. You can watch some of our keynote talks and panel discussions from past events on the GOV.UK YouTube channel.
 
-## Event 1
+[Building conscious design systems (video)](https://www.youtube.com/watch?v=25XuvRqbLEM)
+Amy Hupe, a UK-based design systems and content design consultant, speaks about building conscious design systems.
 
-The first event was hosted online on 21 May 2024.
+[Accessibility in design systems (video)](https://www.youtube.com/watch?v=MYtgs7eW_Og)
+A panel across the UK civil service, broader public sector and private sector organisations explore the intersection between accessibility and design systems.
 
-## Event 2
+[Design systems don’t solve problems, people do (video)](https://www.youtube.com/watch?v=cTFvg1L_7ug)
+Tash Willcocks, Design lead at TPXImpact, discussed the intricate relationship between people and design systems. From user feedback, ownership, to the organisation’s context, she delved into the dynamic interplay that defines modern design practices.
 
-The second event was a face to face conference, hosted in Liverpool on 5 September 2024.
+[The impact of research operations when conducting user research at scale (video)](https://www.youtube.com/watch?v=7Q1g5E8TkyU)
+Rachel Male, Scottish Government, talks about how she created a research operations unit that refined processes and added critical value when the team suddenly scaled.
 
-## Event 3
+[Reflections on creating the Scottish Government Digital Design System (video)](https://www.youtube.com/watch?v=G3v9uBCgZIs)
+The Scottish Government’s Head of Design, Samantha Ernstzen, and Design System Product Owner, Jennifer I’Anson, reflect on creating the Scottish Government Digital Design System.
 
-The third event was a hackathon, hosted as a hybrid event online and in London on 28 November 2024.
+[How design systems manage contributions (video)](https://www.youtube.com/watch?v=lJbERK58iB4)
+A panel of designers and developers across the private and public sector talk about how they prioritise contributions and work with their communities to make the process effective and rewarding for contributors and design system curators.
 
-## Previous events
-
-- [Design System Day 2022](/community/design-system-day-2022)
-- [Design System Day 2023](/community/design-system-day-2023)
-
-## About the GOV.UK Design System community
-
-The GOV.UK Design System [relies on a strong cross-government community](/community/) to make sure it represents the latest research, design, and development work used in digital services.
-
-To bring our community together, the GOV.UK Design System team regularly hosts events, workshops, and co-design sprints. Our team is always on the lookout for ways to engage users in different teams and departments to help strengthen the work we do, and to help to build better products.
+[Trauma-informed research and design (video)](https://www.youtube.com/watch?v=Ch0FPJNdaHg)
+A multidisciplinary panel and colleagues across the public and private sector talk about their work towards trauma-informed approaches to research and design.
