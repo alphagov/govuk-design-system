@@ -15,21 +15,11 @@ describe('Cookie banner', () => {
   let $confirmationAccept
   let $confirmationReject
 
-  let $cookieBanners
-
-  const categories = ['analytics', 'campaign']
-
   // Default cookie
   const cookieParam = {
     name: 'design_system_cookies_policy',
-    value: JSON.stringify({ analytics: true, campaign: null, version: 2 }),
+    value: JSON.stringify({ analytics: true, version: 2 }),
     url: `http://localhost:${ports.preview}`
-  }
-
-  const cookieValue = {
-    analytics: null,
-    campaign: null,
-    version: 2
   }
 
   async function setup(page, cookieCategory) {
@@ -48,52 +38,6 @@ describe('Cookie banner', () => {
     )
     $confirmationReject = await $module.$(
       '.js-cookie-banner-confirmation-reject'
-    )
-  }
-
-  async function setupAll(page) {
-    const $modules = await Promise.all(
-      categories.map(async (category) => {
-        const $module = await page.$(`div[data-cookie-category="${category}"]`)
-        return $module
-      })
-    )
-
-    const $cookieBannersElements = await Promise.all(
-      $modules.map(async ($module) => {
-        const [
-          message,
-          buttonAccept,
-          buttonReject,
-          confirmationAccept,
-          confirmationReject
-        ] = await Promise.all([
-          $module.$('.js-cookie-banner-message'),
-          $module.$('.js-cookie-banner-accept'),
-          $module.$('.js-cookie-banner-reject'),
-          $module.$('.js-cookie-banner-confirmation-accept'),
-          $module.$('.js-cookie-banner-confirmation-reject')
-        ])
-
-        return {
-          message,
-          buttonAccept,
-          buttonReject,
-          confirmationAccept,
-          confirmationReject
-        }
-      })
-    )
-
-    $cookieBanners = categories.reduce(
-      (obj, category, index) => ({
-        ...obj,
-        [category]: {
-          module: $modules[index],
-          ...$cookieBannersElements[index]
-        }
-      }),
-      {}
     )
   }
 
@@ -128,15 +72,6 @@ describe('Cookie banner', () => {
     await expect(isVisible($module)).resolves.toBe(false)
   })
 
-  it('is visible on campaign page if campaign not set', async () => {
-    await page.setCookie(cookieParam)
-
-    await goTo(page, '/community/design-system-day-2024-day-1/')
-    await setup(page, 'campaign')
-
-    await expect(isVisible($module)).resolves.toBe(true)
-  })
-
   describe('when JavaScript is disabled', () => {
     it('is hidden', async () => {
       await page.setJavaScriptEnabled(false)
@@ -146,107 +81,6 @@ describe('Cookie banner', () => {
       await setup(page)
 
       await expect(isVisible($module)).resolves.toBe(false)
-    })
-
-    it('is hidden on campaign page', async () => {
-      await page.setJavaScriptEnabled(false)
-
-      // Reload page again
-      await goTo(page, '/community/design-system-day-2024-day-1/')
-      await setup(page, 'campaign')
-
-      await expect(isVisible($module)).resolves.toBe(false)
-    })
-  })
-
-  describe('if page has mulitple category of banners on one page', () => {
-    categories.forEach((category) => {
-      it(`accepts only the ${category} cookie from the ${category} banner`, async () => {
-        const value = JSON.stringify({
-          ...cookieValue,
-          [category]: null
-        })
-
-        await page.setCookie({ ...cookieParam, value })
-
-        await goTo(page, '/community/design-system-day-2024-day-1/')
-        await setupAll(page)
-
-        await $cookieBanners[category].buttonAccept.click()
-
-        await expect(page.cookies()).resolves.toEqual(
-          expect.arrayContaining([
-            expect.objectContaining({
-              name: cookieParam.name,
-              value: JSON.stringify({
-                ...cookieValue,
-                [category]: true
-              })
-            })
-          ])
-        )
-      })
-    })
-
-    categories.forEach((category) => {
-      it(`rejects only the ${category} cookie from the ${category} banner`, async () => {
-        const value = JSON.stringify({
-          ...cookieValue,
-          [category]: null
-        })
-
-        await goTo(page, '/community/design-system-day-2024-day-1/')
-        await page.setCookie({ ...cookieParam, value })
-        await setupAll(page)
-
-        await $cookieBanners[category].buttonReject.click()
-
-        await expect(page.cookies()).resolves.toEqual(
-          expect.arrayContaining([
-            expect.objectContaining({
-              name: cookieParam.name,
-              value: JSON.stringify({
-                ...cookieValue,
-                [category]: false
-              })
-            })
-          ])
-        )
-      })
-    })
-
-    categories.forEach((category) => {
-      it(`shows only the ${category} cookie banner if unaccepted ${category} cookie`, async () => {
-        const value = JSON.stringify({
-          ...cookieValue,
-          ...categories.reduce(
-            (obj, category) => ({
-              ...obj,
-              [category]: true
-            }),
-            {}
-          ),
-          [category]: null
-        })
-
-        await page.setCookie({ ...cookieParam, value })
-        await goTo(page, '/community/design-system-day-2024-day-1/')
-        await setupAll(page)
-
-        const otherBanners = await Promise.all(
-          categories
-            .filter((cat) => category !== cat)
-            .map((cat) => isVisible($cookieBanners[cat].module))
-        )
-
-        otherBanners.forEach((otherBanner) => {
-          expect(otherBanner).toBe(false)
-        })
-
-        await expect(isVisible($cookieBanners[category].module)).resolves.toBe(
-          true
-        )
-      })
     })
   })
 
@@ -289,7 +123,6 @@ describe('Cookie banner', () => {
             name: cookieParam.name,
             value: JSON.stringify({
               analytics: true,
-              campaign: null,
               version: 2
             })
           })
@@ -333,7 +166,6 @@ describe('Cookie banner', () => {
             name: cookieParam.name,
             value: JSON.stringify({
               analytics: false,
-              campaign: null,
               version: 2
             })
           })

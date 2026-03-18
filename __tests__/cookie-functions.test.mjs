@@ -143,7 +143,7 @@ describe('Cookie settings', () => {
         CookieHelpers.setConsentCookie({ analytics: false })
 
         expect(document.cookie).toEqual(
-          'design_system_cookies_policy={"analytics":false,"campaign":null,"version":2}'
+          'design_system_cookies_policy={"analytics":false,"version":2}'
         )
         // Make sure those analytics cookies are definitely gone
         expect(CookieHelpers.Cookie('_ga')).toEqual(null)
@@ -174,7 +174,7 @@ describe('Cookie settings', () => {
         CookieHelpers.setConsentCookie()
 
         expect(document.cookie).toEqual(
-          'design_system_cookies_policy={"analytics":null,"campaign":null,"version":2}'
+          'design_system_cookies_policy={"analytics":null,"version":2}'
         )
       })
     })

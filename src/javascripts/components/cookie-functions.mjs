@@ -24,19 +24,6 @@ const TRACKING_LIVE_ID = 'GHT8W0QGD9'
 /* Users can (dis)allow different groups of cookies. */
 const COOKIE_CATEGORIES = {
   analytics: ['_ga', `_ga_${TRACKING_PREVIEW_ID}`, `_ga_${TRACKING_LIVE_ID}`],
-  /* Campaign cookies
-   *
-   * Cookies for campaign pages, so that we can embed YouTube videos and other
-   * embeddable content that sets cookies.
-   *
-   */
-  campaign: ['campaign'],
-  /* Essential cookies
-   *
-   * Essential cookies cannot be deselected, but we want our cookie code to
-   * only allow adding cookies that are documented in this object, so they need
-   * to be added here.
-   */
   essential: ['design_system_cookies_policy']
 }
 
@@ -48,8 +35,7 @@ const COOKIE_CATEGORIES = {
  * this will be ignored.
  */
 const DEFAULT_COOKIE_CONSENT = {
-  analytics: null, // tracks if has been asked at all
-  campaign: null // tracks if has been asked at all
+  analytics: null // tracks if has been asked at all
 }
 
 /**
@@ -189,10 +175,6 @@ export function resetCookies() {
       // Disable GA if not allowed
       window[`ga-disable-G-${TRACKING_PREVIEW_ID}`] = true
       window[`ga-disable-G-${TRACKING_LIVE_ID}`] = true
-    }
-
-    if (cookieType === 'campaign') {
-      window[cookieType] = options[cookieType]
     }
 
     if (!options[cookieType]) {
@@ -346,6 +328,5 @@ function deleteCookie(name) {
  * @typedef {object} ConsentPreferences
  * @property {boolean} [analytics] - Accept analytics cookies
  * @property {boolean} [essential] - Accept essential cookies
- * @property {boolean} [campaign] - Accept essential cookies
  * @property {string} [version] - Content cookie version
  */
