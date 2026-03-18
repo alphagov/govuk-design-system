@@ -10,8 +10,6 @@ describe('Cookies page', () => {
 
   let $radioYesAnalytics
   let $radioNoAnalytics
-  let $radioYesCampaign
-  let $radioNoCampaign
   let $buttonSave
 
   async function setup(page) {
@@ -21,12 +19,6 @@ describe('Cookies page', () => {
     )
     $radioNoAnalytics = await $module.$(
       'input[name="cookies[analytics]"][value="no"]'
-    )
-    $radioYesCampaign = await $module.$(
-      'input[name="cookies[campaign]"][value="yes"]'
-    )
-    $radioNoCampaign = await $module.$(
-      'input[name="cookies[campaign]"][value="no"]'
     )
     $buttonSave = await $module.$('button')
   }
@@ -67,8 +59,6 @@ describe('Cookies page', () => {
   it('has radios for each cookie type', async () => {
     await expect(isVisible($radioYesAnalytics)).resolves.toBe(true)
     await expect(isVisible($radioNoAnalytics)).resolves.toBe(true)
-    await expect(isVisible($radioYesCampaign)).resolves.toBe(true)
-    await expect(isVisible($radioNoCampaign)).resolves.toBe(true)
   })
 
   it('sets the default radio selection to "no"', async () => {
@@ -78,8 +68,6 @@ describe('Cookies page', () => {
       false
     )
     await expect(getProperty($radioNoAnalytics, 'checked')).resolves.toBe(true)
-    await expect(getProperty($radioYesCampaign, 'checked')).resolves.toBe(false)
-    await expect(getProperty($radioNoCampaign, 'checked')).resolves.toBe(true)
   })
 
   it('has a save button', async () => {
@@ -103,28 +91,26 @@ describe('Cookies page', () => {
   it('saves user preferences to a cookie', async () => {
     // Click 'Yes' and submit
     await $radioYesAnalytics.click()
-    await $radioYesCampaign.click()
     await $buttonSave.click()
 
     await expect(page.cookies()).resolves.toEqual(
       expect.arrayContaining([
         expect.objectContaining({
           name: 'design_system_cookies_policy',
-          value: '{"analytics":true,"campaign":true,"version":2}'
+          value: '{"analytics":true,"version":2}'
         })
       ])
     )
 
     // Click 'No' and submit
     await $radioNoAnalytics.click()
-    await $radioNoCampaign.click()
     await $buttonSave.click()
 
     await expect(page.cookies()).resolves.toEqual(
       expect.arrayContaining([
         expect.objectContaining({
           name: 'design_system_cookies_policy',
-          value: '{"analytics":false,"campaign":false,"version":2}'
+          value: '{"analytics":false,"version":2}'
         })
       ])
     )
@@ -164,7 +150,6 @@ describe('Cookies page', () => {
   it('shows the users existing preferences when the page is loaded', async () => {
     // Click 'No' and submit
     await $radioNoAnalytics.click()
-    await $radioNoCampaign.click()
     await $buttonSave.click()
 
     // Reload page again
@@ -175,12 +160,9 @@ describe('Cookies page', () => {
       false
     )
     await expect(getProperty($radioNoAnalytics, 'checked')).resolves.toBe(true)
-    await expect(getProperty($radioYesCampaign, 'checked')).resolves.toBe(false)
-    await expect(getProperty($radioNoCampaign, 'checked')).resolves.toBe(true)
 
     // Click 'Yes', submit form
     await $radioYesAnalytics.click()
-    await $radioYesCampaign.click()
     await $buttonSave.click()
 
     // Reload page again
@@ -189,7 +171,5 @@ describe('Cookies page', () => {
 
     await expect(getProperty($radioYesAnalytics, 'checked')).resolves.toBe(true)
     await expect(getProperty($radioNoAnalytics, 'checked')).resolves.toBe(false)
-    await expect(getProperty($radioYesCampaign, 'checked')).resolves.toBe(true)
-    await expect(getProperty($radioNoCampaign, 'checked')).resolves.toBe(false)
   })
 })
