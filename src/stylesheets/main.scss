@@ -56,7 +56,6 @@ $app-code-color: #d13118;
 @import "components/cookies-page";
 @import "components/call-to-action";
 @import "components/promo-banner";
-@import "components/embed-card";
 @import "components/example";
 @import "components/footer";
 @import "components/header";
@@ -370,10 +369,6 @@ pre .language-plaintext {
   border-bottom: 1px solid govuk-functional-colour("surface-border");
   color: govuk-functional-colour("surface-text");
   background-color: govuk-functional-colour("surface-background");
-}
-
-.app-campaign-cookie-banner .govuk-grid-column-two-thirds {
-  width: 100%;
 }
 
 // Counteract the `.app-prose-scope h4`'s margin
