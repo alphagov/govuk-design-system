@@ -1,5 +1,5 @@
 ---
-title: Design System Day Events
+title: Design System Day events
 description: A conference to collaborate and share knowledge about design systems with like-minded people.
 section: Community
 theme: Events and workshops
@@ -17,9 +17,11 @@ We’ve decided to pause Design System Day for the time being.
 
 Over the five years we’ve held Design System Day, we’ve seen it grow into one of the largest design events in government. At the same time, the work to organise Design System Day throughout the year also placed ever-increasing resource and time demands on our multidisciplinary team.
 
-Meanwhile, we’ve seen our events lose some of their focus and turn into broader design events, rather than just about design systems, due to popular demand and well-intentioned efforts to fill gaps left elsewhere.
+Meanwhile, we’ve seen our events lose some of their focus and turn into broader design events, rather than just about design systems, due to well-intentioned efforts to meet popular demand and fill gaps left elsewhere.
 
 Based on this, we've decided to take the time to reflect on our next steps.
+
+<img src="/community/design-system-day/images/design-system-day-talk.jpg" alt="Panel discussion about content design on stage at Design System Day 2024 held in St. George's Hall, Liverpool." class="app-image--no-border govuk-!-margin-bottom-6" loading="lazy">
 
 ## Watch talks from past Design System Day events
 
