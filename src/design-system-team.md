@@ -27,7 +27,6 @@ If you want to contact the team you can [get in touch via email or Slack](/conta
 - Charlotte Downs – Senior Interaction Designer
 - Emma Carter – Senior Product Manager
 - Hazal Arpalikli – Senior Interaction Designer
-- Imran Hussain – Community Designer
 - Izabela Podralska – Delivery Manager
 - Kam Nijjar – Associate Delivery Manager
 - Kim 'beeps' Grey – Frontend Developer
