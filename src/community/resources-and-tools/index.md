@@ -50,6 +50,9 @@ Mural template based on the GOV.UK Design System.
 [GOV.UK Sketch Wireframing Kit](https://github.com/dwp/sketch_wireframing_kit) -
 Sketch wireframes based on the GOV.UK Design System.
 
+[W3C Design Tokens](https://github.com/Sulei-UK/GDS-Design-Tokens) - 
+A standards‑aligned, W3C‑compliant design token library supporting the GDS parent system and child variants including NHS, MoJ, and MoneyHelper. Fully compatible with Penpot.
+
 ## Build front ends
 
 ### ASP.NET Core
