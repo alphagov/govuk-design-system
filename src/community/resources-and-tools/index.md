@@ -13,43 +13,6 @@ The GOV.UK Design System team is not responsible for these resources and tools a
 
 To find design systems, style guides, manuals and other reusable resources from across government, you can explore the cross-government [GOV Reuse Library](https://dev.reuselibrary.service.justice.gov.uk/).
 
-## Create flow diagrams
-
-[GOV.UK Design System Flow Diagrams](https://github.com/dashouse/govuk-design-system-flow-diagrams) -
-A Sketch file for creating flow diagrams of GOV.UK services.
-
-[GOV.UK Design System Flow Diagrams for Figma](https://github.com/paulmsmith/govuk-designsystem-flow-diagram-figma) -
-A Figma file for creating flow diagrams of GOV.UK services.
-
-[GOV.UK Design System Flow Diagrams for Miro](https://github.com/paulmsmith/govuk-designsystem-flow-diagram-miro) -
-A Miro file for creating flow diagrams of GOV.UK services.
-
-[GOV.UK Design System Flow Diagrams for Mural](https://github.com/clare-brown/govuk-designsystem-flow-diagram-mural) -
-A Mural file for creating flow diagrams of GOV.UK services.
-
-[GOV Flow](https://github.com/charlesrt/gov-flow) -
-A Sketch file for creating flow diagrams of GOV.UK services.
-
-[GOV Flow for Google Drawings](https://www.beatnic.co.uk/2019/10/04/google-drawing-template-gov-flow-kit/) -
-Google Drawings templates for creating flow diagrams, based on GOV Flow.
-
-[GOV.UK Userflow Icons](https://github.com/alirawashdeh/govuk-userflow-icons) -
-SVG images for creating flow diagrams of GOV.UK services.
-
-## Create prototypes and wireframes
-
-[GOV.UK Balsamiq wireframes](https://github.com/enoranidi/govuk-design-system-balsamiq) -
-Balsamiq wireframes based on the GOV.UK Design System.
-
-[GOV.UK Figma resources](https://www.figma.com/file/NWuFffKvPQhl3aJ9nKU0p3/GOV.UK-Design-System) -
-Figma library of styles and components based on the GOV.UK Design System.
-
-[GOV.UK Mural resources](https://github.com/vickytnz/govuk-elements-mural) -
-Mural template based on the GOV.UK Design System.
-
-[GOV.UK Sketch Wireframing Kit](https://github.com/dwp/sketch_wireframing_kit) -
-Sketch wireframes based on the GOV.UK Design System.
-
 ## Build front ends
 
 ### ASP.NET Core
