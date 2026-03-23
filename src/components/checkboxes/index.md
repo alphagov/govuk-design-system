@@ -22,7 +22,12 @@ Use the checkboxes component when you need to help users:
 
 ## When not to use this component
 
-Do not use the checkboxes component if users can only choose one option from a selection. In this case, use the [Radios component](/components/radios/).
+Do not use the checkboxes component if:
+
+- users can only choose one option from a selection, as checkboxes allow users to select multiple options
+- you want users to toggle between two possible states, for example, 'on' or 'off', as single checkboxes can be missed by users when you might want a user to engage with a two option question
+
+In these cases, use the [radios component](/components/radios/).
 
 ## How it works
 
