@@ -112,7 +112,7 @@
     "@types/browser-sync": "^2.29.1",
     "@types/jest": "^30.0.0",
     "@types/jest-axe": "^3.5.9",
-    "@types/node": "^25.3.3",
+    "@types/node": "^25.5.0",
     "@types/nunjucks": "^3.2.6",
     "@types/slug": "^5.0.9"
   },
