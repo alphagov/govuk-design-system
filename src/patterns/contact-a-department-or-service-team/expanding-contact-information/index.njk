@@ -5,7 +5,9 @@ layout: layout-example.njk
 
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
-{% set contactInformation %}
+{% call govukDetails({
+  summaryText: "If you need help completing this form"
+}) %}
   <ul class="govuk-list">
     <li>Phone: 020 7946 0101</li>
     <li>Monday to Friday, 8am to 6pm (except public holidays)</li>
@@ -18,9 +20,4 @@ layout: layout-example.njk
     <li><a class="govuk-link" href="#">name@example.com</a></li>
     <li>We aim to respond within 2 working days</li>
   </ul>
-{% endset %}
-
-{{ govukDetails({
-  summaryText: "If you need help completing this form",
-  html: contactInformation
-}) }}
+{% endcall %}

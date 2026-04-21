@@ -17,7 +17,9 @@ title: Request a new security code (first time) – Confirm a phone number
 
 <p class="govuk-body">Text messages sometimes take a few minutes to arrive. If you do not receive the text message, you can request a new one.</p>
 
-{% set mobileNumberHtml %}
+{% call govukDetails({
+  summaryText: "Change where the text message is sent"
+}) %}
   {{ govukInput({
     label: {
       text: "Mobile number"
@@ -29,12 +31,7 @@ title: Request a new security code (first time) – Confirm a phone number
     autocomplete: "tel",
     classes: "govuk-input--width-20"
   }) }}
-{% endset %}
-
-{{ govukDetails({
-  summaryText: "Change where the text message is sent",
-  html: mobileNumberHtml
-}) }}
+{% endcall %}
 
 {{ govukButton({
   text: "Request a new code"
