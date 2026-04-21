@@ -9,17 +9,12 @@ layout: layout-single-page.njk
 {% from "govuk/components/button/macro.njk" import govukButton %}
 {% from "govuk/components/table/macro.njk" import govukTable %}
 
-{% set successNotificationBannerHtml %}
-  <p class="govuk-notification-banner__heading">You’ve set your cookie preferences.</p>
-{% endset %}
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <div class="app-cookies-page" data-module="app-cookies-page">
 
-      {{ govukNotificationBanner({
+      {% call govukNotificationBanner({
         type: "success",
-        html: successNotificationBannerHtml,
         classes: "js-cookies-page-success",
         attributes: {
           hidden: {
@@ -27,7 +22,9 @@ layout: layout-single-page.njk
             optional: true
           }
         }
-      }) }}
+      }) %}
+        <p class="govuk-notification-banner__heading">You’ve set your cookie preferences.</p>
+      {% endcall %}
 
       <h1 class="govuk-heading-xl">Cookies</h1>
       <p class="govuk-body"><a href="/" class="govuk-link">GOV.UK Design System</a> puts small files (known as ‘cookies’) on your computer.</p>
