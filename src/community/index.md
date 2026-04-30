@@ -66,11 +66,23 @@ Anyone can suggest an improvement, report a bug or correct an error on our pages
 
 ## Take part in research
 
-Participate in one of our 'Always on' continuous research sessions, where we talk to individual users like you about how and why you use the Design System.
+We’d like to learn more about how and why people use the Design System to build government services, and do this on an ongoing basis.
+
+<div>
+{%- call imageCard({
+  src: "/community/images/research-interview.png",
+  alt: "Continuous research through user interviews",
+  title: "'Always on' continuous research sessions",
+  large: true
+}) %}
+Participate in one of our sessions where we talk to individual users like you about how and why you use the Design System.
 
 The goal is to stay in touch with the needs of our users and continuously improve our work.
 
 [Find out how to apply](/community/continuous-research/)
+{% endcall %}
+
+</div>
 
 <hr class="govuk-section-break govuk-section-break--visible">
 
@@ -87,8 +99,8 @@ eg: div's closing unclosed p's -->
 
 <div>
 {%- call imageCard({
-  src: "/community/images/catchup-call-groupshot.jpg",
-  alt: "Catchup call screenshot.",
+  src: "/community/images/catchup-groupshot.png",
+  alt: "Group call on video conference",
   title: "Design systems monthly catchup",
   large: true
 }) %}
@@ -101,8 +113,8 @@ Every month, we host a catchup with our community on Google Meet. The call usual
 
 <div>
 {%- call imageCard({
-  src: "/community/images/workshop.jpg",
-  alt: "Table with post-it notes, pens and paper.",
+  src: "/community/images/workshop.png",
+  alt: "Set of post-it notes showing ideas from a workshop.",
   title: "Join a Workshop",
   large: true
 }) %}
