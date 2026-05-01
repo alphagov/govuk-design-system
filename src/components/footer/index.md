@@ -8,7 +8,6 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
-{%- from "govuk/components/tag/macro.njk" import govukTag -%}
 
 The GOV.UK footer provides copyright, licensing and other information about your service.
 

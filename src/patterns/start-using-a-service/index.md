@@ -8,8 +8,6 @@ backlogIssueId: 111
 layout: layout-pane.njk
 ---
 
-{% from "govuk/components/tag/macro.njk" import govukTag %}
-
 GOV.UK services must start on a GOV.UK content page. This links your service to the rest of GOV.UK, and means that users can find it using search or through GOV.UK’s navigation.
 
 ## When to use this pattern
