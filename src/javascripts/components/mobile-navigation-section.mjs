@@ -7,6 +7,23 @@ class MobileNavigationSection extends Component {
   static moduleName = 'app-mobile-navigation-section'
 
   /**
+   * Check if --govuk-breakpoint-tablet is available
+   */
+  static checkSupport() {
+    Component.checkSupport()
+
+    if (
+      !getComputedStyle(document.documentElement).getPropertyValue(
+        '--govuk-breakpoint-tablet'
+      )
+    ) {
+      throw Error(
+        'GOV.UK Frontend tablet breakpoint custom property is not available'
+      )
+    }
+  }
+
+  /**
    * @returns {boolean} Whether the section is expanded
    */
   get expanded() {
@@ -46,11 +63,9 @@ class MobileNavigationSection extends Component {
     }
 
     // Check if the section should be visible or not
-    const breakPoint = getComputedStyle(
-      document.documentElement
-    ).getPropertyValue('--govuk-breakpoint-tablet')
-
-    this.mql = window.matchMedia(`(min-width: ${breakPoint})`)
+    this.mql = window.matchMedia(
+      `(min-width: ${getComputedStyle(document.documentElement).getPropertyValue('--govuk-breakpoint-tablet')})`
+    )
 
     // MediaQueryList.addEventListener isn't supported by Safari < 14 so we need
     // to be able to fall back to the deprecated MediaQueryList.addListener
