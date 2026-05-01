@@ -8,7 +8,6 @@ description: The GOV.UK Design System team has updated the GOV.UK Frontend type 
 ---
 
 {% from "govuk/components/table/macro.njk" import govukTable %}
-{% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
 
 The GOV.UK Design System team has updated the GOV.UK Frontend type scale used in version 6.0.0 and later.
 

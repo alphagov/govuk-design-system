@@ -10,7 +10,6 @@ order: 6
 
 {% from "_example.njk" import example %}
 
-{% from "govuk/components/details/macro.njk" import govukDetails %}
 {% from "govuk/components/table/macro.njk" import govukTable %}
 
 {% include "_new-type-scale.njk" %}
