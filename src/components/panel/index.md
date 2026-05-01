@@ -1,6 +1,6 @@
 ---
 title: Panel
-description: The panel component is a visible container used on confirmation or results pages
+description: The Panel component is a visible container used on confirmation or results pages
 section: Components
 aliases: confirmation box, results box, reference number, application complete, application number
 backlogIssueId: 55
@@ -23,7 +23,7 @@ See guidance on [Confirmation pages](/patterns/confirmation-pages/) and [Interru
 
 ## When not to use this component
 
-Never use the panel component to highlight important information within body content.
+Never use the Panel component to highlight important information within body content.
 
 ## How it works
 
@@ -31,7 +31,7 @@ There are 2 ways to use the panel component. You can use HTML or, if you are usi
 
 ### Confirmation panel
 
-The confirmation panel is part of a [confirmation page](/patterns/confirmation-pages/) and tells the user the outcome of their journey as a heading. You might also give more detailed information as description text.
+The confirmation panel is part of a [Confirmation page](/patterns/confirmation-pages/) and tells the user the outcome of their journey as a heading. You might also give more detailed information as description text.
 
 {{ example({ group: "components", item: "panel", example: "default", html: true, nunjucks: true, open: false, size: "m", titleSuffix: "second" }) }}
 
@@ -45,7 +45,7 @@ If you need to give detailed information, or more context, use the description t
 
 ## Interruption panel
 
-The interruption panel is part of a [interruption page]()/patterns/interruption-pages/) and shows the user important information that they’d miss if shown any other way.
+The interruption panel is part of an [Interruption page](/patterns/interruption-pages/) and shows the user important information that they’d miss if shown any other way.
 
 Within the panel is a ‘continue’ button that the user must interact with to resume their journey.
 
