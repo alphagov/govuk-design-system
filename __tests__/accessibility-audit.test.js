@@ -16,15 +16,6 @@ async function axe(page) {
   const reporter = new AxePuppeteer(page)
     .include('body')
     .exclude(
-      // Axe reports that the skip link is not inside a landmark, which is intentional.
-      // https://design-system.service.gov.uk/components/skip-link/#when-to-use-this-component
-      '.govuk-skip-link'
-    )
-    .exclude(
-      // Axe reports that the back to top button is not inside a landmark, which is intentional.
-      '.app-back-to-top'
-    )
-    .exclude(
       // Axe reports that the Browsersync banner is not inside a landmark, which is intentional.
       '#__bs_notify__'
     )
@@ -35,9 +26,6 @@ async function axe(page) {
       // Additionally, we are relying on accessibility testing in govuk-frontend to cover these.
       '.app-example__frame'
     )
-
-    // TODO: govuk-breadcrumbs sets off the "must be contained in landmarks" rule. Needs investigation.
-    .exclude('.govuk-breadcrumbs')
 
     // TODO: figure out how and whether to re-enable these rules, or target them better
     .disableRules([
