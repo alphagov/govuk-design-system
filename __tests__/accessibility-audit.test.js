@@ -1,10 +1,7 @@
 const { AxePuppeteer } = require('@axe-core/puppeteer')
 const { globSync } = require('glob')
-const slash = require('slash')
 
-const { paths } = require('../config')
-
-const { goTo } = require('./helpers/puppeteer.js')
+const { paths, ports } = require('../config')
 
 /**
  * Axe Puppeteer reporter
@@ -28,12 +25,7 @@ async function axe(page) {
     )
 
     // TODO: figure out how and whether to re-enable these rules, or target them better
-    .disableRules([
-      'region',
-      'color-contrast-enhanced',
-      'aria-allowed-attr',
-      'target-size'
-    ])
+    .disableRules(['region', 'color-contrast-enhanced', 'aria-allowed-attr'])
 
     .withTags([
       'best-practice',
@@ -92,7 +84,11 @@ function getFilesToCheck() {
   })
   const pageIndexes = globSync('**/index.html', {
     cwd: paths.public,
-    ignore: ['components/**/index.html', 'patterns/*{,/*}.html']
+    ignore: [
+      'components/**/index.html',
+      'patterns/*{,/*}.html',
+      '__canary__/**'
+    ]
   })
 
   return [...componentIndexes, ...patternIndexes, ...pageIndexes]
@@ -103,8 +99,9 @@ describe('Accessibility audit', () => {
     'validates %s',
     async (path) => {
       const page = await browser.newPage()
+      const { href } = new URL(path, `http://localhost:${ports.preview}`)
+      await page.goto(href, { waitUntil: 'networkidle0' })
 
-      await goTo(page, `/${slash(path)}`)
       await expect(axe(page)).resolves.toHaveNoViolations()
 
       await page.close()
