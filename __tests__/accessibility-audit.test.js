@@ -16,10 +16,6 @@ async function axe(page) {
   const reporter = new AxePuppeteer(page)
     .include('body')
     .exclude(
-      // Axe reports that the phase banner is not inside a landmark, which is intentional.
-      '.app-phase-banner'
-    )
-    .exclude(
       // Axe reports that the skip link is not inside a landmark, which is intentional.
       // https://design-system.service.gov.uk/components/skip-link/#when-to-use-this-component
       '.govuk-skip-link'
