@@ -112,9 +112,9 @@ There is specific guidance on:
 
 #### Asking for decimal numbers
 
-If you're asking the user to enter a number that might include decimal places, use `input type="text"`.
+If you're asking the user to enter a number that might include decimal places, set `inputmode` to `decimal`. Like `numeric`, this presents a numeric keypad on devices with on-screen keyboards, including a decimal separator.
 
-Do not set the `inputmode` attribute to `decimal` as it causes some devices to bring up a keypad without a key for the decimal separator.
+Some devices do not allow users to enter negative values using the on-screen keypad. If users should be able to insert negative values, use `input type="text"` without the `inputmode` attribute.
 
 {{ example({ group: "components", item: "text-input", example: "decimal-input", html: true, nunjucks: true, open: false, size: "m" }) }}
 
