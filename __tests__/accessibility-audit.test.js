@@ -54,6 +54,21 @@ async function axe(page) {
   return report
 }
 
+/**
+ * Wait for web fonts to load, if the browser supports the Font Loading API.
+ *
+ * @param {import('puppeteer').Page} page - Puppeteer page object
+ */
+async function waitForFonts(page) {
+  await page.evaluate(async () => {
+    if (!document.fonts?.ready) {
+      return
+    }
+
+    await document.fonts.ready
+  })
+}
+
 // TODO: Didn't feel like spending ages working out the perfect glob, so have split these out.
 //
 // The idea here is to reduce the time taken by only checking the main index of the component pages,
@@ -95,17 +110,18 @@ function getFilesToCheck() {
 }
 
 describe('Accessibility audit', () => {
-  it.each(getFilesToCheck())(
+  it.concurrent.each(getFilesToCheck())(
     'validates %s',
     async (path) => {
       const page = await browser.newPage()
       const { href } = new URL(path, `http://localhost:${ports.preview}`)
-      await page.goto(href, { waitUntil: 'networkidle0' })
+      await page.goto(href, { waitUntil: 'load' })
+      await waitForFonts(page)
 
       await expect(axe(page)).resolves.toHaveNoViolations()
 
       await page.close()
     },
-    10000
+    20000
   )
 })

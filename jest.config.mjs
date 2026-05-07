@@ -1,7 +1,20 @@
+import os from 'node:os'
+
 import jestPuppeteerConfig from './jest-puppeteer.config.js'
 
 // Detect when browser has been launched headless
 const { headless } = jestPuppeteerConfig.launch
+const cpuCount = os.availableParallelism?.() ?? os.cpus().length
+const defaultA11yAuditConcurrency = process.env.CI
+  ? Math.min(4, cpuCount)
+  : Math.min(8, Math.max(2, Math.floor(cpuCount / 2)))
+
+const configuredA11yAuditConcurrency = Number(
+  process.env.A11Y_AUDIT_CONCURRENCY
+)
+const maxConcurrency = Number.isFinite(configuredA11yAuditConcurrency)
+  ? Math.max(1, configuredA11yAuditConcurrency)
+  : defaultA11yAuditConcurrency
 
 /**
  * Jest config
@@ -29,6 +42,9 @@ export default {
 
   // Test timeout increased (5s to 15s)
   testTimeout: 15000,
+
+  // Limit concurrent tests in the same file to avoid overloading Puppeteer.
+  maxConcurrency,
 
   // Enable Babel transforms until Jest supports ESM
   // See: https://jestjs.io/docs/ecmascript-modules
