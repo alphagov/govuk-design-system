@@ -83,7 +83,7 @@ You can find brand colours for government departments and organisations in the [
 
 This file is maintained on a best effort basis and is assembled from a number of sources, including:
 
-- [HM Government branding portal](https://hmgbrand.gcs.civilservice.gov.uk/)
+- [UK Government brand resource centre](https://brand.gov.uk/)
 - Cabinet Office branding team
 - [Design102](https://design102.co.uk/), the government's in-house design studio
 - Communications teams from individual organisations
