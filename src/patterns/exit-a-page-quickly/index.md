@@ -9,6 +9,13 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "_callout.njk" import callout %}
+
+{% call callout({
+  tagText: "Experimental"
+}) %}
+This guidance is an experimental addition to the GOV.UK Design System. It may be changed significantly or withdrawn without notice. Find out more about <a href="/get-started/experimental-work/">how we iterate experimental guidance</a>.
+{% endcall %}
 
 Give users a way to quickly and safely exit a service, website or application.
 Use this pattern to add the [Exit this page component](/components/exit-this-page/) to your service and keep users safe by helping them to protect their privacy.

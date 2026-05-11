@@ -8,6 +8,13 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "_callout.njk" import callout %}
+
+{% call callout({
+  tagText: "Experimental"
+}) %}
+This component is an experimental addition to the GOV.UK Design System. It may be changed significantly or withdrawn without a breaking release. Find out more about <a href="/get-started/experimental-work/">how we iterate experimental components</a>.
+{% endcall %}
 
 Help users to create and enter passwords.
 
