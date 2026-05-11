@@ -1,5 +1,7 @@
 {% extends "_generic.njk" %}
 
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
 {# If the theme ends in '…', then we nest the caption inside the H1 so that the
   H1 becomes e.g. 'Ask users for dates'. Otherwise, we put it before the H1. #}
 {% set includeThemeInPageHeading = theme and "…" in theme %}
