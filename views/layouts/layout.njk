@@ -1,5 +1,7 @@
 {% extends "_generic.njk" %}
 
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
 {% block containerStart %}
   {# Only render breadcrumbs on pages that aren't the homepage. #}
   {% if not isHomepage() %}
