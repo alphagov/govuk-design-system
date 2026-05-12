@@ -1,7 +1,6 @@
 @import "example-init";
 
 [class^="govuk-grid-column"] > p {
-  @include govuk-text-colour;
   @include govuk-font($size: 24);
   @include govuk-responsive-padding(6);
 
