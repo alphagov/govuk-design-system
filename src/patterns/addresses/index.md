@@ -134,3 +134,17 @@ To do this, set the `autocomplete` attribute to `street-address` as shown in the
 If you are working in production you’ll need to do this to meet [WCAG 2.2 success criterion 1.3.5 Identify input purpose](https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose.html).
 
 You will not normally need to use the `autocomplete` attribute in prototypes, as users will not generally be using their own devices.
+
+## Update history
+
+<div class="app-changelog-table">
+
+| Date        | Changes                                                                                                                                  |
+| :---------- | :--------------------------------------------------------------------------------------------------------------------------------------- |
+| 19 Dec 2017 | Pattern introduced.                                                                                                                      |
+| 7 Sep 2018  | Added error message guidance.                                                                                                            |
+| 6 Feb 2019  | Added guidance on using the `autocomplete` attribute.                                                                                    |
+| 29 Jan 2022 | Added recommendation against including a 'county' field. These are no longer used by postal systems, so collecting them isn't necessary. |
+| 12 Apr 2022 | Partially reverted previous guidance. We now recommend including 'county' as an optional field.                                          |
+
+</div>

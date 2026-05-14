@@ -140,3 +140,15 @@ There’s also other instances where a password could be ‘shown’ or ‘hidde
 We [decided that having a second field is not helpful for users](https://github.com/alphagov/govuk-design-system-backlog/issues/240#issuecomment-2020125340), particularly on password inputs with show and hide buttons.
 
 However, we’d like to better support our rationale with real life examples from service teams and get your feedback.
+
+## Update history
+<div class="app-changelog-table">
+
+|Date|Version|Changes|
+|:-|:-|:-|
+|26 Mar 2024|5.3.0|Component introduced.|
+|19 Apr 2024|5.3.1|Fixed issue with button growing larger if the text input has a capped width.|
+|17 May 2024|5.4.0|Removed duplicate `errorMessage` parameter.|
+|4 Mar 2025|5.9.0|The `id` parameter now defaults to match `name` if an `id` isn't provided.|
+
+</div>

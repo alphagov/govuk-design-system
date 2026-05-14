@@ -284,3 +284,34 @@ For example, ‘How much you earn a week must not include pence, like 123 or 156
 Read a blog post about [the problems we discovered with input type="number"](https://technology.blog.gov.uk/2020/02/24/why-the-gov-uk-design-system-team-changed-the-input-type-for-numbers/).
 
 The prefix and suffix design has tested well in a number of services, but [some users have been observed clicking on prefixes](https://github.com/alphagov/govuk-design-system-backlog/issues/134#issuecomment-655615251), on the assumption that this would do something.
+
+## Update history
+
+<div class="app-changelog-table">
+
+| Date        | Version | Changes                                                                                                                  |
+| :---------- | :------ | :----------------------------------------------------------------------------------------------------------------------- |
+| 21 Jun 2018 | 1.0.0   | Component introduced.                                                                                                    |
+| 19 Nov 2018 | 2.4.0   | Classes can now be set on the input's `formGroup`.                                                                       |
+| 31 Jan 2019 | 2.6.0   | Added `autocomplete` parameter.                                                                                          |
+| 6 Feb 2019  |         | Added guidance on supporting autofill using `autocomplete`.                                                              |
+| 18 Feb 2019 |         | Added guidance on supporting spellchecking.                                                                              |
+| 29 Jul 2019 | 3.0.0   | Updated focus style to comply with WCAG 2.1.                                                                             |
+| 2 Sep 2019  | 3.1.0   | Added `inputmode` parameter.                                                                                             |
+| 3 Feb 2020  |         | Added guidance about asking for numbers.                                                                                 |
+| 9 Jun 2020  |         | Added guidance advising against using `type="decimal"`.                                                                  |
+| 29 Jul 2020 | 3.8.0   | Added `spellcheck` parameter. Updated input's border thickness when in the error state.                                  |
+| 14 Sep 2020 | 3.9.0   | Added input prefixes and suffixes.                                                                                       |
+| 17 Apr 2022 |         | Added guidance on use of placeholder text.                                                                               |
+| 19 Aug 2022 |         | Removed guidance on using the `pattern` attribute to coerce iOS into showing a numpad. Use `inputmode` instead.          |
+| 9 Aug 2022  | 4.3.0   | Updated length modifier classes to use `em` units.                                                                       |
+| 20 Apr 2023 | 4.6.0   | Added `disabled` parameter and updated input disabled styles. Added guidance and modifier class for codes and sequences. |
+| 14 Aug 2023 |         | Added guidance about not restricting the length of a user's input.                                                       |
+| 5 Feb 2024  | 5.1.0   | Updated positioning of input prefixes and suffixes.                                                                      |
+| 21 Feb 2024 | 5.2.0   | Added `beforeInput` and `afterInput` slots.                                                                              |
+| 17 May 2024 | 5.4.0   | Fixed being unable to set the `value` parameter if the value was '0'.                                                    |
+| 4 Oct 2024  |         | Expanded guidance on writing and formatting hint text.                                                                   |
+| 4 Mar 2025  | 5.9.0   | The `id` parameter now defaults to match `name` if an `id` isn't provided.                                               |
+| 2 Mar 2026  | 6.1.0   | Fixed focus state using wrong shade of black.                                                                            |
+
+</div>
