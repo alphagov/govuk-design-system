@@ -3,6 +3,8 @@ title: Password input
 description: Help users accessibly enter passwords
 section: Components
 aliases: pass word, pass phrase
+addedInVersion: 5.3.0
+statuses: [stable, accessible]
 backlogIssueId: 240
 layout: layout-pane.njk
 ---
