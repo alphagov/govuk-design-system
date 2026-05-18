@@ -1,4 +1,4 @@
-@import "example-init";
+@use "govuk/base" as *;
 
 div {
   background-color: govuk-colour("blue", $variant: "tint-80");
