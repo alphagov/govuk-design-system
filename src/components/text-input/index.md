@@ -285,6 +285,8 @@ Read a blog post about [the problems we discovered with input type="number"](htt
 
 The prefix and suffix design has tested well in a number of services, but [some users have been observed clicking on prefixes](https://github.com/alphagov/govuk-design-system-backlog/issues/134#issuecomment-655615251), on the assumption that this would do something.
 
+{% set updateHistoryHtml %}
+
 ## Update history
 
 <div class="app-changelog-table">
@@ -315,3 +317,4 @@ The prefix and suffix design has tested well in a number of services, but [some 
 | 2 Mar 2026  | 6.1.0   | Fixed focus state using wrong shade of black.                                                                            |
 
 </div>
+{% endset %}
