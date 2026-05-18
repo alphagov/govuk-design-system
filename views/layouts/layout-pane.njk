@@ -3,8 +3,8 @@
 {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
 
 {# If the theme ends in '…', then we nest the caption inside the H1 so that the
-  H1 becomes e.g. 'Ask users for dates'. Otherwise, we put it before the H1. #}
-{% set includeThemeInPageHeading = theme and "…" in theme %}
+  H1 becomes e.g. 'Ask users for dates'. #}
+{% set headingCaption = preTitle if preTitle else (theme | replace("…", "") if theme and "…" in theme) %}
 
 {% block container %}
 <div class="app-split-pane app-width-container app-container-wrapper">
@@ -18,9 +18,9 @@
     }) }}
     <main id="main-content" class="app-content" role="main">
       <h1 class="govuk-heading-xl {%- if status %} govuk-!-margin-bottom-5{% endif %}">
-        {% if includeThemeInPageHeading %}
+        {% if headingCaption %}
         <span class="govuk-caption-xl">
-          {{ theme | replace("…", "") }}
+          {{ headingCaption }}
         </span>
         {% endif %}
         {{ title }}
