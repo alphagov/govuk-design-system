@@ -1,3 +1,5 @@
+@use "govuk/base" as *;
+
 // Example styles
 .app-example-wrapper {
   @include govuk-responsive-margin(6, "top");
