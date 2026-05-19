@@ -1,6 +1,9 @@
 @use "sass:math";
 @use "govuk/base" as *;
 
+// This value is not currently available as a GOV.UK Frontend variable.
+$_govuk-service-navigation-font-size: 19px;
+
 // The Service Navigation container has a flex column layout
 // aligning items at the start.
 // To make sure the toggles of the mobile navigation take

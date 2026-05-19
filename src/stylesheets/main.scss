@@ -39,10 +39,6 @@
 @import "govuk/overrides/typography";
 @import "govuk/overrides/width";
 
-// This value is not available as a variable in GOV.UK Frontend
-// so adding it as a private variable for future reference
-$_govuk-service-navigation-font-size: 19px;
-
 // App-specific variables
 $app-light-grey: #f8f8f8;
 $app-code-color: #d13118;
