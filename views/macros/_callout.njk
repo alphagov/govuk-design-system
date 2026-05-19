@@ -1,0 +1,23 @@
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText -%}
+{% from "govuk/components/tag/macro.njk" import govukTag -%}
+
+{% macro callout(params) -%}
+  {% set calloutContent -%}
+    {{ govukTag({
+      html: params.tagText + '<span class="govuk-visually-hidden"> note</span>',
+      classes: "govuk-tag--orange app-callout__tag"
+    }) }}
+    {% if params.heading -%}
+      <h2 class="app-callout__heading">{{ params.heading }}</h2>
+    {% endif -%}
+    {%- if caller or params.content %}
+      <div>{{ caller() if caller else params.content | safe }}</div>
+    {%- endif %}
+  {% endset -%}
+
+  {{ govukInsetText({
+    id: params.id if params.id,
+    html: calloutContent,
+    classes: "app-callout"
+  }) }}
+{% endmacro %}

@@ -199,6 +199,14 @@ For example, use:
 
 ### Static spacing override classes
 
+{% from "_callout.njk" import callout %}
+
+{% call callout({
+  tagText: "Experimental"
+}) %}
+These override classes are an experimental addition to the GOV.UK Design System. They may be changed significantly or withdrawn without a breaking release. Find out more about <a href="/get-started/experimental-work/">how we manage experimental styles</a>.
+{% endcall %}
+
 The static spacing override classes start with `govuk-!-static`. Use them the same way as the responsive spacing override classes.
 
 For example, use:
