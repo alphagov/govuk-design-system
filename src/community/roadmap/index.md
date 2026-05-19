@@ -17,9 +17,9 @@ Last updated 19 May 2026.
 
 ## Recently shipped
 
-We recently released [GOV.UK Frontend v6.1.0](https://github.com/alphagov/govuk-frontend/releases/tag/v6.1.0) which adds support for configuring custom assets url functions as Sass functions, and fixes a number of Sass deprecation warnings. 
+We recently released [GOV.UK Frontend v6.1.0](https://github.com/alphagov/govuk-frontend/releases/tag/v6.1.0), which adds support for configuring custom assets URL functions as Sass functions and fixes a number of Sass deprecation warnings.
 
-In February 2026, we released [GOV.UK Frontend v6.0.0](https://github.com/alphagov/govuk-frontend/releases/tag/v6.0.0). This breaking release includes changes to improve our Sass architecture, use an updated type scale, update our colours and improve flexibility in our page template layout. We’ve also removed a number of deprecated APIs, Sass variables and component options.
+In February 2026, we released [GOV.UK Frontend v6.0.0](https://github.com/alphagov/govuk-frontend/releases/tag/v6.0.0). This breaking release includes changes to improve our Sass architecture, use an updated type scale, updated colours and improved flexibility in our page template layout. We’ve also removed a number of deprecated APIs, Sass variables and component options.
 
 ## Working on now
 
@@ -27,9 +27,9 @@ We've started to:
 
 - create a feedback link component and test it in live services
 - add a language switcher component
-- add an interruption variant to the [Panel component](https://design-system.service.gov.uk/components/panel/) with an accompanying pattern
+- add an interruption panel variant of the [Panel component](/components/panel/) with an accompanying pattern
 - make it easier for non-GOV.UK services to use our header
-- explore how we might publish experimental components, patterns and variants 
+- explore how we might publish experimental components, patterns and variants
 
 ## Future plans
 
@@ -37,7 +37,7 @@ We plan to:
 
 - run a discovery into dark mode
 - improve user journeys between the GOV.UK Design System and other design resources in government
-- explore patterns for data sharing between services, and services where AI is in used
+- explore patterns for data sharing between services and for services where AI is in use
 - create further CSS custom properties
 - build new autocomplete components to replace [Accessible autocomplete](https://github.com/alphagov/accessible-autocomplete)
-- iterate the information architetcure of the website 
+- iterate the structure of the website
