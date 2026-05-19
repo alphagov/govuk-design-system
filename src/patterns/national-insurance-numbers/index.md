@@ -4,6 +4,8 @@ description: Ask users to provide their National Insurance number
 section: Patterns
 theme: Ask users for…
 aliases:
+statuses: [deprecated]
+statusMessage: This is some future timeline where we abolished National Insurance numbers.
 backlogIssueId: 54
 layout: layout-pane.njk
 ---

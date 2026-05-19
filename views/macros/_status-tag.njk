@@ -1,0 +1,27 @@
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+
+{% macro statusTag(status, text) -%}
+  {%- set tagColour = "grey" %}
+
+  {%- if status == "stable" %}
+    {%- set tagText = "Stable" %}
+    {%- set tagColour = "blue"  %}
+  {%- elif status == "experimental" %}
+    {%- set tagText = "Experimental" %}
+    {%- set tagColour = "orange"  %}
+  {%- elif status == "accessible" %}
+    {%- set tagText = "Accessible" %}
+    {%- set tagColour = "green"  %}
+  {%- elif status == "issues" %}
+    {%- set tagText = "Known issues" %}
+    {%- set tagColour = "red"  %}
+  {%- elif status == "deprecated" %}
+    {%- set tagText = "Deprecated" %}
+    {%- set tagColour = "turquoise"  %}
+  {%- endif %}
+
+  {{- govukTag({
+    text: text if text else tagText,
+    classes: "govuk-tag--" + tagColour
+  }) }}
+{%- endmacro %}
