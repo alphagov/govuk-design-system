@@ -1,3 +1,5 @@
+@use "govuk/base" as *;
+
 .app-back-to-top {
   margin-top: govuk-spacing(4);
   margin-bottom: govuk-spacing(6);

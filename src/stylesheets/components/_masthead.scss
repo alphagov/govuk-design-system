@@ -1,3 +1,5 @@
+@use "govuk/base" as *;
+
 .app-masthead {
   @include govuk-responsive-padding(6, "top");
   @include govuk-responsive-padding(6, "bottom");
