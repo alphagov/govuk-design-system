@@ -1,3 +1,5 @@
+@use "govuk/base" as *;
+
 .app-subnav {
   // Since the back to top link is outside the flow of the document we need to create a space for it.
   // This number is magic and was determined by manually judging the visual spacing.

@@ -1,4 +1,4 @@
-@import "example-init";
+@use "govuk/base" as *;
 
 [class^="govuk-grid-column"] > p {
   @include govuk-font($size: 24);

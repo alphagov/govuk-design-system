@@ -1,3 +1,5 @@
+@use "govuk/base" as *;
+
 .app-header-logo {
   // Add a little margin to the right of the logo
   // so it doesn't touch the search box when side by side
