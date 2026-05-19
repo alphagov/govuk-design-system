@@ -1,4 +1,5 @@
 @use "govuk/base" as *;
+@use "govuk/core";
 
 .app-contact-panel {
   @include govuk-responsive-margin(9, "top");
