@@ -1,6 +1,6 @@
 ---
 title: Panel
-description: The Panel component is a visible container used on confirmation or results pages
+description: Use the Panel component to display important information in within confirmation and interruption pages
 section: Components
 aliases: confirmation box, results box, reference number, application complete, application number
 backlogIssueId: 55
@@ -16,10 +16,8 @@ The Panel component is a visible container used to highlight important content.
 
 Use the Panel component to display important information within:
 
-- Confirmation pages, which tell the user they’ve successfully completed the transaction
-- Interruption pages, which pause the user journey to give important information
-
-See guidance on [Confirmation pages](/patterns/confirmation-pages/) and [Interruption pages](/patterns/interruption-pages/).
+- [Confirmation pages](/patterns/confirmation-pages/), which tell the user they’ve successfully completed the transaction
+- [Interruption pages](/patterns/interruption-pages/), which pause the user journey to give important information
 
 ## When not to use this component
 
@@ -37,11 +35,9 @@ The confirmation panel is part of a [Confirmation page](/patterns/confirmation-p
 
 ### How to write confirmation panel text
 
-Keep your panel text brief, as it's only meant for a high-level explanation of what has happened. For example, 'Application complete'.
+Keep your panel text brief, as it's only meant for a high-level explanation of what has happened.
 
-Aim to use short words and phrases to make sure highlighted information is easy to read at different screen sizes. For example, shorter amounts of information is less likely to wrap around the panel, which can happen when using the zoom function on mobiles.
-
-If you need to give detailed information, or more context, use the description text under the heading text.
+Aim to use short words and phrases to make sure highlighted information is easy to read at different screen sizes. For example, shorter amounts of information are less likely to wrap around the panel, which can happen when using the zoom function on mobiles.
 
 ## Interruption panel
 
@@ -49,4 +45,6 @@ The interruption panel is part of an [Interruption page](/patterns/interruption-
 
 Within the panel is a ‘continue’ button that the user must interact with to resume their journey.
 
-The information itself is usually shown as heading with some description text, possibly a bullet or numbered list.
+The information itself is usually shown as heading with some description text, possibly with bullet points and numbered steps
+
+[EXAMPLE]
