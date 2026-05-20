@@ -1,73 +1,49 @@
-@import "govuk/settings";
-@import "govuk/helpers";
-@import "govuk/tools";
-@import "govuk/core";
-@import "govuk/objects";
+@use "govuk/base" as *;
 
-@import "govuk/components/back-link";
-@import "govuk/components/breadcrumbs";
-@import "govuk/components/button";
-@import "govuk/components/cookie-banner";
-@import "govuk/components/date-input";
-@import "govuk/components/details";
-@import "govuk/components/error-message";
-@import "govuk/components/error-summary";
-@import "govuk/components/fieldset";
-@import "govuk/components/footer";
-@import "govuk/components/header";
-@import "govuk/components/hint";
-@import "govuk/components/input";
-@import "govuk/components/inset-text";
-@import "govuk/components/label";
-@import "govuk/components/notification-banner";
-@import "govuk/components/pagination";
-@import "govuk/components/panel";
-@import "govuk/components/phase-banner";
-@import "govuk/components/radios";
-@import "govuk/components/service-navigation";
-@import "govuk/components/skip-link";
-@import "govuk/components/summary-list";
-@import "govuk/components/table";
-@import "govuk/components/tag";
-@import "govuk/components/task-list";
-@import "govuk/components/warning-text";
+@use "govuk/core";
+@use "govuk/objects";
 
-@import "govuk/utilities";
+@use "govuk/components/back-link";
+@use "govuk/components/breadcrumbs";
+@use "govuk/components/button";
+@use "govuk/components/cookie-banner";
+@use "govuk/components/date-input";
+@use "govuk/components/details";
+@use "govuk/components/error-message";
+@use "govuk/components/error-summary";
+@use "govuk/components/fieldset";
+@use "govuk/components/footer";
+@use "govuk/components/header";
+@use "govuk/components/hint";
+@use "govuk/components/input";
+@use "govuk/components/inset-text";
+@use "govuk/components/label";
+@use "govuk/components/notification-banner";
+@use "govuk/components/pagination";
+@use "govuk/components/panel";
+@use "govuk/components/phase-banner";
+@use "govuk/components/radios";
+@use "govuk/components/service-navigation";
+@use "govuk/components/skip-link";
+@use "govuk/components/summary-list";
+@use "govuk/components/table";
+@use "govuk/components/tag";
+@use "govuk/components/task-list";
+@use "govuk/components/warning-text";
 
-@import "govuk/overrides/spacing";
-@import "govuk/overrides/text-align";
-@import "govuk/overrides/typography";
-@import "govuk/overrides/width";
+@use "govuk/utilities";
 
-// This value is not available as a variable in GOV.UK Frontend
-// so adding it as a private variable for future reference
-$_govuk-service-navigation-font-size: 19px;
+@use "govuk/overrides/spacing";
+@use "govuk/overrides/text-align";
+@use "govuk/overrides/typography";
+@use "govuk/overrides/width";
+
+// App-specific components
+@use "components";
 
 // App-specific variables
 $app-light-grey: #f8f8f8;
 $app-code-color: #d13118;
-
-// App-specific components
-@import "components/back-to-top";
-@import "components/category-nav";
-@import "components/colour-table";
-@import "components/contact-panel";
-@import "components/cookies-page";
-@import "components/example";
-@import "components/footer";
-@import "components/header";
-@import "components/highlight";
-@import "components/image-card";
-@import "components/masthead";
-@import "components/mobile-navigation-section";
-@import "components/options";
-@import "components/page-navigation";
-@import "components/phase-banner";
-@import "components/site-search";
-@import "components/split-pane";
-@import "components/subnav";
-@import "components/tabs";
-@import "components/table";
 
 // We don't change the global width container width so that examples are the current width.
 .app-width-container,

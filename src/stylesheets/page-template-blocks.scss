@@ -1,4 +1,4 @@
-@import "example-init";
+@use "govuk/base" as *;
 
 $app-annotate-block-label-color: #ffffff;
 
