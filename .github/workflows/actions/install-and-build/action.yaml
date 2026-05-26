@@ -28,7 +28,7 @@ runs:
     - name: Install dependencies
       # if: steps.build-cache.outputs.cache-hit != 'true' || inputs.cache_install != 'true'
       shell: bash
-      run: npm ci
+      run: npm install
 
     - name: Build
       # if: steps.build-cache.outputs.cache-hit != 'true'
