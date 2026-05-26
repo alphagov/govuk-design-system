@@ -64,6 +64,9 @@ jobs:
           # - description: TypeScript compiler
           #   run: npm run lint:types -- --pretty
 
+          - description: Force install chrome
+          - run: npx puppeteer browsers install chrome
+
           - description: JavaScript tests
             run: npx jest --color --maxWorkers=2
 
