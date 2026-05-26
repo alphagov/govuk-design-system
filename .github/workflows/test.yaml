@@ -64,8 +64,11 @@ jobs:
           - description: TypeScript compiler
             run: npm run lint:types -- --pretty
 
+          # Puppeteer uses Chrome to execute tests.
+          # Ubuntu requires an App Armor profile for developer builds of Chrome to run without errors.
+          # (https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md)
           - description: JavaScript tests
-            run: npx jest --color --maxWorkers=2
+            run: aa-exec --profile=chrome npx jest --color --maxWorkers=2
 
           - description: Check broken links
             run: npm run check-links
