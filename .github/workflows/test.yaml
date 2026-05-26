@@ -66,6 +66,7 @@ jobs:
 
           - description: JavaScript tests
             run: |
+              rm -rf .cache/puppeteer
               npx puppeteer browsers install chrome
               npx jest --color --maxWorkers=2
 
