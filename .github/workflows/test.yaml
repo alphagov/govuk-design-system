@@ -9,15 +9,6 @@ on:
       - 'v[0-9]'
 
   workflow_dispatch:
-    inputs:
-      runner:
-        description: Run tests on
-        type: choice
-        default: ubuntu-24.04
-        options:
-          - macos-latest
-          - ubuntu-24.04
-          - windows-latest
 
 permissions:
   contents: read
@@ -25,7 +16,7 @@ permissions:
 jobs:
   build:
     name: Build
-    runs-on: ${{ github.event.inputs.runner || 'ubuntu-24.04' }}
+    runs-on: 'ubuntu-24.04'
 
     steps:
       - name: Checkout code
@@ -38,7 +29,7 @@ jobs:
 
   test:
     name: ${{ matrix.task.description }}
-    runs-on: ${{ github.event.inputs.runner || 'ubuntu-24.04' }}
+    runs-on: 'ubuntu-24.04'
     needs: [build]
 
     strategy:
