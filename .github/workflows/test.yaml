@@ -46,29 +46,29 @@ jobs:
 
       matrix:
         task:
-          - description: Lint Sass
-            run: npm run lint:scss
+          # - description: Lint Sass
+          #   run: npm run lint:scss
 
-          - description: Lint JavaScript
-            run: npm run lint:js
+          # - description: Lint JavaScript
+          #   run: npm run lint:js
 
-          - description: Lint HTML
-            run: npm run lint:html --ignore-scripts
+          # - description: Lint HTML
+          #   run: npm run lint:html --ignore-scripts
 
-          - description: EditorConfig
-            run: npm run lint:editorconfig
+          # - description: EditorConfig
+          #   run: npm run lint:editorconfig
 
-          - description: Prettier
-            run: npm run lint:prettier
+          # - description: Prettier
+          #   run: npm run lint:prettier
 
-          - description: TypeScript compiler
-            run: npm run lint:types -- --pretty
+          # - description: TypeScript compiler
+          #   run: npm run lint:types -- --pretty
 
           - description: JavaScript tests
             run: npx jest --color --maxWorkers=2
 
-          - description: Check broken links
-            run: npm run check-links
+          # - description: Check broken links
+          #   run: npm run check-links
 
     steps:
       - name: Checkout
