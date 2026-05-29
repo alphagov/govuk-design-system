@@ -9,6 +9,16 @@ order: 10
 
 See our latest releases and updates.
 
+## June 2026
+
+### We've released GOV.UK Frontend v6.2.0
+
+This release helps teams prepare for upcoming changes to Sass, the CSS extension language, by adding support for including GOV.UK Frontend CSS as a Sass module with `@use` or `@forward`. We’ve also improved the enhanced File upload component and made several fixes.
+
+[Read the full release notes for v6.2.0](https://github.com/alphagov/govuk-frontend/releases/tag/v6.2.0) to see what’s changed.
+
+If you have any questions or feedback, [contact the team](https://design-system.service.gov.uk/contact/).
+
 ## March 2026
 
 ### We’ve released GOV.‌UK Frontend v6.1.0
@@ -16,8 +26,6 @@ See our latest releases and updates.
 This release improves how the text colour switches to pure black when printing, adds support for configuring custom assets URL functions as Sass functions, and fixes a number of Sass deprecation warnings along with other small fixes.
 
 [Read the full release notes for v6.1.0](https://github.com/alphagov/govuk-frontend/releases/tag/v6.1.0) to see what’s changed.
-
-If you have any questions or feedback, [contact the team](https://design-system.service.gov.uk/contact/).
 
 ## February 2026
 
@@ -43,8 +51,6 @@ By updating to v6.0.0 you’ll:
 - be able to customise the page template further than before
 
 [Read the full release notes for v6.0.0](https://github.com/alphagov/govuk-frontend/releases/tag/v6.0.0) to see what’s changed.
-
-If you have any questions or feedback, [contact the team](/contact/).
 
 ## January 2026
 
