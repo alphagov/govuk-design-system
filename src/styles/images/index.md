@@ -15,7 +15,7 @@ Avoid using images for unnecessary decoration. Only use images if there’s a re
 
 Make sure any information contained in an image can be understood by someone who cannot see it. Also consider partially-sighted users with visual impairments and the assistive technologies they might use.
 
-This guidance is for government teams that build online services. To learn how to use images as a GOV.UK content publisher, go to [GOV.UK content guidance for images](https://www.gov.uk/guidance/content-design/images).
+This guidance is for government teams that build online services. To learn how to use images as a GOV.UK content publisher, go to [GOV.UK content guidance for images](https://guidance.publishing.service.gov.uk/formatting-content/images/).
 
 ## Using images to give information
 

@@ -55,7 +55,7 @@ The [Cookie banner component](/components/cookie-banner/) shows several options 
 
 Work with your organisation’s privacy expert to write the cookies page.
 
-The cookie policy must be written in [plain English](https://www.gov.uk/guidance/content-design/writing-for-gov-uk#plain-english) and it must explain:
+The cookie policy must be written in [clear language](https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/tone-of-voice/clear-language/) and it must explain:
 
 List the cookies individually on the cookies page, under the relevant category. For each cookie, give:
 

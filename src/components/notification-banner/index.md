@@ -57,7 +57,7 @@ For example:
 
 {{ example({ group: "components", item: "notification-banner", example: "whole-service", html: true, nunjucks: true, open: false, size: "s" }) }}
 
-If your service is on GOV.UK and it’s affected by an emergency, ask your department’s content team to [request a change to the service start page](https://www.gov.uk/guidance/contact-the-government-digital-service/request-a-thing#change-govuk-content).
+If your service is on GOV.UK and it’s affected by an emergency, ask your department’s content team to [make a request to add a downtime message on GOV.UK content that links to it](https://guidance.publishing.service.gov.uk/accounts-support/make-content-requests/ask-downtime-messages/).
 If your service is getting more demand than usual, check that you’ve set up [There is a problem with the service pages](/patterns/problem-with-the-service-pages/) and [Service unavailable pages](/patterns/service-unavailable-pages/), and the wording is up to date.
 
 ## Telling the user about something that’s happening elsewhere
