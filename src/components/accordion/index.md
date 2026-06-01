@@ -33,7 +33,7 @@ Accordions hide content from the user. Not all users will notice them or underst
 
 Do not use an accordion for content that all users need to see.
 
-Test your content without an accordion first. Well-written and structured content, as shown in the [Content design: writing for GOV.UK](https://www.gov.uk/guidance/content-design/writing-for-gov-uk) guidance, can remove the need to use an accordion.
+Test your content without an accordion first. Well-written and structured content, as shown in [GOV.UK writing standards](https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/), can remove the need to use an accordion.
 
 It’s usually better to:
 

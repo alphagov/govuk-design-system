@@ -86,7 +86,7 @@ Before a new component or pattern is published the working group reviews the imp
       },
       {
         html: '<p>It reuses existing styles and components in the Design System where relevant.</p>
-          <p>Both the guidance and any content included in examples must follow the <a href="https://www.gov.uk/guidance/style-guide/a-to-z">GOV.UK content style guide</a>.</p>
+          <p>Both the guidance and any content included in examples must follow the <a href="https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/style-guides/a-to-z-style-guide/">GOV.UK style guide</a>.</p>
           <p class="govuk-!-margin-bottom-0">If there is code, it follows the <a href="https://github.com/alphagov/govuk-frontend/blob/main/CONTRIBUTING.md#conventions-to-follow">GOV.UK Frontend coding standards</a> and is ready to merge in GOV.UK Frontend.</p>'
       }
     ],

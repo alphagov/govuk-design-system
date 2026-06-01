@@ -30,15 +30,11 @@ Show contact channels in the same order throughout your service. This helps user
 
 ### Social media
 
-If you have social media channels:
-
-- list these channels last
-- do not include a link to the social media sites you're using - read more about this in [GOV.UK’s external linking policy](https://www.gov.uk/guidance/content-design/links#linking-policy)
-- tell users not to share personal information with you
+If you have social media channels, list these channels last. Tell users not to share personal information where others can see it.
 
 ### Write phone numbers in the GOV.UK style
 
-See the [GOV.UK style for writing phone numbers](https://www.gov.uk/guidance/style-guide/a-to-z#telephone-numbers).
+See the [GOV.UK style guide for writing phone numbers](https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/style-guides/a-to-z-style-guide/#telephone-numbers).
 
 ### Explain any charges
 
@@ -50,7 +46,7 @@ For phone call charges, link to the GOV.UK page on [call charges](https://www.go
 
 ### Give opening hours
 
-Follow the GOV.UK style guide format for [time ranges](https://www.gov.uk/guidance/style-guide/a-to-z#times) and [date ranges](https://www.gov.uk/guidance/style-guide/a-to-z#dates).
+Follow the GOV.UK style guide format for [time ranges](https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/style-guides/a-to-z-style-guide/#times) and [date ranges](https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/style-guides/a-to-z-style-guide/#dates).
 
 Explain any exceptions, like bank holidays, or days of the week when your opening hours are different.
 

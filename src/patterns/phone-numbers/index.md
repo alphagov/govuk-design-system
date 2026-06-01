@@ -90,7 +90,7 @@ When you look at your service's user journey, remember that phone numbers as lin
 
 ### Write phone numbers in the GOV.UK style
 
-See the [GOV.UK style for writing telephone numbers](https://www.gov.uk/guidance/style-guide/a-to-z#telephone-numbers).
+See the [GOV.UK style for writing telephone numbers](https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/style-guides/a-to-z-style-guide/#telephone-numbers).
 
 ### Avoid input masking
 
