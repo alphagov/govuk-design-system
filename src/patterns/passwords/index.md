@@ -87,7 +87,7 @@ Always email the user when a password reset has happened, in case it was trigger
 
 ### Avoid password reset questions
 
-Some services ask users to provide a ‘password reminder’ when they create a password, and give users the option to show this reminder when they’ve forgotten their password.
+Some services ask users a ‘password reset question’ when they create a password, and ask users to answer it again when they’ve forgotten their password.
 
 You should not use password reset questions because they often ask for information that’s:
 
