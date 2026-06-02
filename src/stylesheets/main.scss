@@ -130,7 +130,7 @@ $app-code-color: #d13118;
   h5,
   h6,
   p,
-  ul:not(.app-tabs),
+  ul:not(.app-tabs), // stylelint-disable-line selector-no-qualifying-type
   ol,
   img,
   video,
