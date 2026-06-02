@@ -92,6 +92,14 @@ Say ‘The selected file must use the template’.
 
 ## Using the improved File upload component
 
+{% from "_callout.njk" import callout %}
+
+{% call callout({
+  tagText: "Experimental"
+}) %}
+This variant is an experimental addition to the GOV.UK Design System. It may be changed significantly or withdrawn without a breaking release. Find out more about <a href="/get-started/experimental-work/">how we iterate experimental components</a>.
+{% endcall %}
+
 In March 2025, we introduced changes to the File upload component that service teams can opt in to as part of GOV.UK Frontend 5.9.0.
 
 The improved component is intended to:
