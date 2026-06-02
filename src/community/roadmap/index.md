@@ -13,7 +13,7 @@ Some things on the roadmap might change – the purpose is to tell you what’s 
 
 See our [GitHub team board](https://github.com/orgs/alphagov/projects/53) for more details on our plans and day-to-day activities.
 
-Last updated 1 June 2026.
+Last updated 2 June 2026.
 
 ## Recently shipped
 
