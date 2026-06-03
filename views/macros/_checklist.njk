@@ -1,0 +1,42 @@
+{% from "govuk/components/task-list/macro.njk" import govukTaskList %}
+
+{% macro checklist(params) -%}
+  {#- Allow for a simplified list format given each item has the same format. #}
+  {%- set listItems = [] %}
+  {%- for item in params.items %}
+    {#- Determine status tag text and colour from status. #}
+    {%- set statusText = null %}
+    {%- set statusClasses = null %}
+
+    {%- if item.status == "yes" %}
+      {%- set statusText = "Yes" %}
+      {%- set statusClasses = "govuk-tag--green" %}
+    {%- elif item.status == "feedback needed" %}
+      {%- set statusText = "Feedback needed" %}
+      {%- set statusClasses = "govuk-tag--orange" %}
+    {%- else %}
+      {%- set statusText = "Not started" %}
+    {%- endif %}
+
+    {%- set listItems = listItems.concat([{
+      title: {
+        text: item.title
+      },
+      hint: {
+        text: item.description
+      },
+      status: {
+        tag: {
+          text: statusText,
+          classes: statusClasses
+        } if statusClasses,
+        text: statusText if not statusClasses
+      }
+    }]) %}
+  {%- endfor %}
+
+  {{ govukTaskList({
+    idPrefix: params.idPrefix | default("checklist"),
+    items: listItems
+  }) }}
+{%- endmacro %}
