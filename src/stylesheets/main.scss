@@ -1,42 +1,42 @@
-@use "govuk/base" as *;
+@use "pkg:govuk-frontend/base" as *;
 
-@use "govuk/core";
-@use "govuk/objects";
+@use "pkg:govuk-frontend/core";
+@use "pkg:govuk-frontend/objects";
 
-@use "govuk/components/back-link";
-@use "govuk/components/breadcrumbs";
-@use "govuk/components/button";
-@use "govuk/components/cookie-banner";
-@use "govuk/components/date-input";
-@use "govuk/components/details";
-@use "govuk/components/error-message";
-@use "govuk/components/error-summary";
-@use "govuk/components/fieldset";
-@use "govuk/components/footer";
-@use "govuk/components/header";
-@use "govuk/components/hint";
-@use "govuk/components/input";
-@use "govuk/components/inset-text";
-@use "govuk/components/label";
-@use "govuk/components/notification-banner";
-@use "govuk/components/pagination";
-@use "govuk/components/panel";
-@use "govuk/components/phase-banner";
-@use "govuk/components/radios";
-@use "govuk/components/service-navigation";
-@use "govuk/components/skip-link";
-@use "govuk/components/summary-list";
-@use "govuk/components/table";
-@use "govuk/components/tag";
-@use "govuk/components/task-list";
-@use "govuk/components/warning-text";
+@use "pkg:govuk-frontend/components/back-link";
+@use "pkg:govuk-frontend/components/breadcrumbs";
+@use "pkg:govuk-frontend/components/button";
+@use "pkg:govuk-frontend/components/cookie-banner";
+@use "pkg:govuk-frontend/components/date-input";
+@use "pkg:govuk-frontend/components/details";
+@use "pkg:govuk-frontend/components/error-message";
+@use "pkg:govuk-frontend/components/error-summary";
+@use "pkg:govuk-frontend/components/fieldset";
+@use "pkg:govuk-frontend/components/footer";
+@use "pkg:govuk-frontend/components/header";
+@use "pkg:govuk-frontend/components/hint";
+@use "pkg:govuk-frontend/components/input";
+@use "pkg:govuk-frontend/components/inset-text";
+@use "pkg:govuk-frontend/components/label";
+@use "pkg:govuk-frontend/components/notification-banner";
+@use "pkg:govuk-frontend/components/pagination";
+@use "pkg:govuk-frontend/components/panel";
+@use "pkg:govuk-frontend/components/phase-banner";
+@use "pkg:govuk-frontend/components/radios";
+@use "pkg:govuk-frontend/components/service-navigation";
+@use "pkg:govuk-frontend/components/skip-link";
+@use "pkg:govuk-frontend/components/summary-list";
+@use "pkg:govuk-frontend/components/table";
+@use "pkg:govuk-frontend/components/tag";
+@use "pkg:govuk-frontend/components/task-list";
+@use "pkg:govuk-frontend/components/warning-text";
 
-@use "govuk/utilities";
+@use "pkg:govuk-frontend/utilities";
 
-@use "govuk/overrides/spacing";
-@use "govuk/overrides/text-align";
-@use "govuk/overrides/typography";
-@use "govuk/overrides/width";
+@use "pkg:govuk-frontend/overrides/spacing";
+@use "pkg:govuk-frontend/overrides/text-align";
+@use "pkg:govuk-frontend/overrides/typography";
+@use "pkg:govuk-frontend/overrides/width";
 
 // App-specific components
 @use "components";

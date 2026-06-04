@@ -1,5 +1,5 @@
 @use "sass:math";
-@use "govuk/base" as *;
+@use "pkg:govuk-frontend/base" as *;
 
 // This value is not currently available as a GOV.UK Frontend variable.
 $_govuk-service-navigation-font-size: 19px;
