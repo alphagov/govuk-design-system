@@ -4,7 +4,11 @@ module.exports = {
   overrides: [
     {
       customSyntax: 'postcss-markdown',
-      files: ['**/*.md']
+      files: ['**/*.md'],
+      rules: {
+        // Allow orphan CSS attributes in guidance for illustrative purposes
+        'no-invalid-position-declaration': null
+      }
     },
     {
       customSyntax: 'postcss-markdown',

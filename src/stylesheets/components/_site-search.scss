@@ -196,7 +196,7 @@ $icon-size: 40px;
   // provide some space between the list items highlight-able top edge and the
   // bottom of the input.
   border-top: govuk-colour("white") solid govuk-spacing(1);
-  box-shadow: rgba(govuk-colour("black"), 0.256863) 0 govuk-spacing(1) govuk-spacing(1); // stylelint-disable-line number-max-precision
+  box-shadow: govuk-colour("black", $variant: "tint-25") 0 govuk-spacing(1) govuk-spacing(1); // stylelint-disable-line number-max-precision
 
   // Ensure the border still looks like part of the menu in forced color modes
   @media (forced-colors: active) {

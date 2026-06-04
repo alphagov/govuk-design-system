@@ -20,7 +20,6 @@
       padding-right: govuk-spacing(2);
 
       // Automatic wrapping for unbreakable option names
-      word-wrap: break-word; // Fallback for older browsers only
       overflow-wrap: break-word;
     }
   }
