@@ -47,4 +47,4 @@ Within the panel is a ‘continue’ button that the user must interact with to 
 
 The information itself is usually shown as heading with some description text, possibly with bullet points and numbered steps
 
-[EXAMPLE]
+{{ example({ group: "components", item: "panel", example: "interruption", html: true, nunjucks: true, open: false, size: "m" }) }}

@@ -12,7 +12,7 @@ layout: layout-pane.njk
 
 Use Interruption pages to pause the user’s journey to give them important information that they’d miss if shown any other way.
 
-{{ example({ group: "components", item: "panel", example: "default", html: true, nunjucks: true, open: false, size: "m", loading: "eager" }) }}
+{{ example({ group: "patterns", item: "interruption-pages", example: "default", html: true, nunjucks: true, open: false, size: "l", loading: "eager" }) }}
 
 ## When to use this pattern
 

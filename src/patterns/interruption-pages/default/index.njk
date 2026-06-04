@@ -1,5 +1,5 @@
 ---
-title: Confirmation pages
+title: Interruption pages
 layout: layout-example-full-page.njk
 ---
 
@@ -8,28 +8,24 @@ layout: layout-example-full-page.njk
 
 {% from "govuk/components/panel/macro.njk" import govukPanel %}
 
+{% set panelHtml %}
+<p>You entered your age as <strong>109</strong>.</p>
+<div class="govuk-button-group">
+  <button type="submit" class="govuk-button govuk-button--inverse" data-module="govuk-button">
+    Yes, this is correct
+  </button>
+  <a href="#" class="govuk-link govuk-link--inverse">Change my age</a>
+</div>
+{% endset %}
+
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       {{ govukPanel({
-        titleText: "Application complete",
-        html: "Your reference number<br><strong>HDJ2123F</strong>"
+        titleText: "Is your age correct?",
+        html: panelHtml,
+        classes: "govuk-panel--interruption"
       }) }}
-
-      <p class="govuk-body">We have sent you a confirmation email.</p>
-
-      <h2 class="govuk-heading-m">What happens next</h2>
-
-      <p class="govuk-body">
-        We’ve sent your application to Hackney Electoral Register Office.
-      </p>
-      <p class="govuk-body">
-        They will contact you either to confirm your registration, or to ask for more information.
-      </p>
-
-      <p class="govuk-body">
-        <a href="#" class="govuk-link">What did you think of this service?</a> (takes 30 seconds)
-      </p>
     </div>
   </div>
 {% endblock %}
