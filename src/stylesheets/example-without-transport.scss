@@ -1,5 +1,8 @@
-@use "pkg:govuk-frontend/base" as *;
-
-* {
-  font-family: "helvetica neue", helvetica, arial, sans-serif !important; // stylelint-disable declaration-no-important
-}
+@use "pkg:govuk-frontend" with (
+  $govuk-font-family: (
+    "helvetica neue",
+    helvetica,
+    arial,
+    sans-serif
+  )
+);
