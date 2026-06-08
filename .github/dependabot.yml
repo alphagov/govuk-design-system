@@ -88,7 +88,9 @@ updates:
 
   # Update GitHub Actions
   - package-ecosystem: github-actions
-    directory: /
+    directories:
+      - /
+      - /.github/workflows/actions/*
 
     # Schedule run every Monday, local time
     schedule:
