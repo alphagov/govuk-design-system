@@ -26,7 +26,7 @@ Use an alpha banner when your service is in alpha, and a beta banner if your ser
 Show the Phase banner inside the `<header>` element, directly after either:
 
 - the [Service navigation component](/components/service-navigation/)
-- the [GOV.UK header component](/components/header/) and its blue colour bar (if your service does not use the Service navigation component)
+- the [GOV.UK header component](/components/header/) (if your service does not use the Service navigation component)
 
 If you use Nunjucks, use the `headerEnd` block to place the Phase banner on your page.
 
