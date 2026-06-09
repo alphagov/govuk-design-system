@@ -53,15 +53,13 @@ Ideally you’ll research as part of an actual service, but it’s possible to t
 
 If you're making a component, you'll also need to [make sure it's accessible by testing it against both general and specific acceptance criteria](https://github.com/alphagov/govuk-frontend/blob/main/docs/contributing/test-components-using-accessibility-acceptance-criteria.md).
 
-Once you have researched the component or pattern and shown it works for users, the [Design System working group](/community/design-system-working-group/) will review it.
+Once you have researched the component or pattern and shown it works for users, the Design System team will review it.
 
 ## Send your contribution for review
 
-All components and patterns must meet the [contribution criteria](/community/contribution-criteria/) before they can be published. The Design System working group will use the criteria to review your contribution.
+All components and patterns must meet the [contribution criteria](/community/contribution-criteria/) before they can be published. The Design System team will use the criteria to review your contribution.
 
-To arrange a review, tell the Design System team your contribution is ready. The team will check your work before letting the working group know it’s ready to review.
-
-The working group will vote if your contribution:
+To arrange a review, tell the Design System team your contribution is ready. The team will check your work and will vote on if your contribution:
 
 - can be published as it is
 - cannot be published until certain recommendations have been addressed
@@ -72,6 +70,6 @@ During the meeting, you’ll be able to ask questions, hear recommendations and 
 
 ## Get ready to publish
 
-If the working group recommended some changes to make before publishing, the Design System team will help you work on them.
+If the Design System team recommendeds some changes to make before publishing, the team will help you work on them.
 
-If the working group agree your contribution meets the criteria, the Design System team will help you get ready to publish. This includes organising any final checks or updates to the design, content, code and guidance.
+If the team agrees your contribution meets the criteria, they will help you get ready to publish. This includes organising any final checks or updates to the design, content, code and guidance.

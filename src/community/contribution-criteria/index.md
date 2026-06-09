@@ -51,11 +51,11 @@ To be successful, proposals need to show that the component or pattern being sug
   ]
 }) }}
 
-The [Design System working group](/community/design-system-working-group/) reviews proposals to check they meet these criteria. Proposals that meet the criteria then move to the next step to show they're ready to publish.
+The Design System team reviews proposals to check they meet these criteria. Proposals that meet the criteria then move to the next step to show they're ready to publish.
 
 ## Developing a component or pattern
 
-Before a new component or pattern is published the working group reviews the implementation to make sure it is usable, consistent and versatile.
+Before a new component or pattern is published the team reviews the implementation to make sure it is usable, consistent and versatile.
 
 {{ govukTable({
   caption: "Before publication criteria",
