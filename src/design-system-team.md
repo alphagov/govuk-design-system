@@ -31,6 +31,7 @@ If you want to contact the team you can [get in touch via email or Slack](/conta
 - Kim 'beeps' Grey – Frontend Developer
 - Lamiece Hassan – User Researcher
 - Lewis Darlow – Interaction Designer
+- Lou Knowles - Delivery Manager
 - Mia Allers – Senior Graphic Designer
 - Nick Colley – Senior Frontend Developer
 - Owen Jones – Senior Frontend Developer
