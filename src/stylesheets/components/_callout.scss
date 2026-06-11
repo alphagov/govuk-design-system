@@ -4,8 +4,8 @@
 // Change callout <h2>'s to look like <h3>'s
 // Selector specificity needs to outweigh `.app-content h2`
 .app-callout {
-  border-left-color: govuk-colour("red");
-  background-color: govuk-colour("red", $variant: "tint-95");
+  border-left-color: govuk-colour("orange");
+  background-color: govuk-colour("orange", $variant: "tint-95");
 
   .app-callout__heading {
     @extend %govuk-heading-m;

@@ -7,14 +7,6 @@ backlogIssueId: 44
 layout: layout-pane.njk
 ---
 
-{% from "_callout.njk" import callout %}
-
-{% call callout({
-  tagText: "Needs review"
-}) %}
-This component has some known issues and gaps that may result in changes or potential deprecation. Find out more about <a href="#">how we iterate 'needs review' components</a>.
-{% endcall %}
-
 {% from "_example.njk" import example %}
 
 Make a page easier to scan by letting users reveal more detailed information only if they need it.
