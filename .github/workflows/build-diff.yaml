@@ -1,0 +1,75 @@
+name: Build Diff
+
+on:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      base_ref:
+        description: Base ref to compare from
+        required: false
+        default: origin/main
+        type: string
+      head_ref:
+        description: Head ref to compare to
+        required: false
+        default: HEAD
+        type: string
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  generate-diff:
+    name: Build diff
+    runs-on: ubuntu-22.04
+    if: ${{ github.event_name == 'workflow_dispatch' || (github.event.pull_request && !github.event.pull_request.head.repo.fork) }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.2
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4.4.0
+        with:
+          cache: npm
+          check-latest: true
+          node-version-file: .nvmrc
+
+      - name: Generate diff
+        run: |
+          BASE_REF="${{ github.event_name == 'workflow_dispatch' && inputs.base_ref || github.event.pull_request.base.sha }}"
+          HEAD_REF="${{ github.event_name == 'workflow_dispatch' && inputs.head_ref || github.event.pull_request.head.sha }}"
+
+          bash scripts/build-diff-ci.sh \
+            "$BASE_REF" \
+            "$HEAD_REF" \
+            build.diff
+
+      - name: Upload diff artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: compiled-build-diff
+          path: build.diff
+          if-no-files-found: ignore
+
+      - name: Comment on PR
+        if: ${{ github.event_name == 'pull_request' }}
+        uses: actions/github-script@v9.0.0
+        with:
+          script: |
+            const path = require('path')
+            const { addBuildDiffComment } = require(path.join(
+              process.env.GITHUB_WORKSPACE,
+              'scripts/build-diff-pr-comment.js'
+            ))
+
+            await addBuildDiffComment({
+              github,
+              context,
+              htmlDiffPath: 'build-html.diff',
+              cssDiffPath: 'build-css.diff',
+              jsDiffPath: 'build-js.diff'
+            })
