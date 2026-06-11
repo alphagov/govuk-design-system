@@ -4,6 +4,8 @@ description: Give users a way to quickly and safely exit a service, website or a
 section: Patterns
 theme: Help users to…
 aliases:
+statuses: [experimental]
+statusMessage: This guidance is still being developed.
 backlogIssueId: 213
 layout: layout-pane.njk
 ---

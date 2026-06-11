@@ -26,14 +26,20 @@
         {{ title }}
       </h1>
 
-      {% if status %}
-      <aside class="govuk-!-margin-bottom-8" aria-label="Guidance status">
-        <strong class="govuk-tag govuk-!-margin-bottom-2">
-          {{ status }}
-        </strong>
-        <p class="govuk-body">{{ statusMessage | safe }}</p>
-      </aside>
-      {% endif %}
+      {%- if addedInversion or statuses or statusMessage %}
+        {% from "_status-tag.njk" import statusTag %}
+        <aside class="govuk-!-margin-bottom-8" aria-label="Guidance status">
+          {%- if addedInVersion %}
+            {{ statusTag("version", "Added in " + addedInVersion) }}
+          {%- endif %}
+          {%- for status in statuses %}
+            {{ statusTag(status) }}
+          {%- endfor %}
+          {%- if statusMessage %}
+            <p class="govuk-body govuk-!-margin-top-2">{{ statusMessage | safe }}</p>
+          {%- endif %}
+        </aside>
+      {%- endif %}
 
       {% if showPageNav %}
         <ul class="app-page-navigation">
