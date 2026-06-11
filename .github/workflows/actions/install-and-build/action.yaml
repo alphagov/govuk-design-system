@@ -25,6 +25,10 @@ runs:
         check-latest: true
         node-version-file: .nvmrc
 
+    - name: Install npm version specified in package.json's engines.npm
+      shell: bash
+      run: npm install --global npm@$(npm pkg get engines.npm | jq "." -r)
+
     - name: Install dependencies
       if: steps.build-cache.outputs.cache-hit != 'true' || inputs.cache_install != 'true'
       shell: bash
