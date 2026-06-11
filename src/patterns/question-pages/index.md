@@ -167,6 +167,6 @@ A number of GOV.UK services have removed this style of progress indicator withou
 
 ### Using range sliders
 
-Avoid using [range slider](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elementsment/input/range) questions, where the user needs to click and drag a selector across a range of answers or values. These types of controls are difficult for some users to interact with.
+Avoid using [range slider](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/range) questions, where the user needs to click and drag a selector across a range of answers or values. These types of controls are difficult for some users to interact with.
 
 If you do use a range slider, you must provide a method for selecting an answer that doesn’t rely on ‘click and drag’ movements. This relates to [WCAG success criterion 2.5.1 Pointer Gestures](https://www.w3.org/TR/WCAG22/#pointer-gestures).
