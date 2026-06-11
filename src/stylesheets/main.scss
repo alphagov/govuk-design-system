@@ -331,6 +331,20 @@ pre .language-plaintext {
     padding-top: govuk-spacing(2);
   }
 
+  // stylelint-disable scss/at-extend-no-missing-placeholder -- spike code
+  table {
+    @extend .govuk-table;
+
+    th {
+      @extend .govuk-table__header;
+    }
+
+    td {
+      @extend .govuk-table__cell;
+    }
+  }
+  // stylelint-enable scss/at-extend-no-missing-placeholder
+
   // Ensure that content at the bottom of the page does not have margins
   // so that they line up with the back to top link.
   > :last-child {
@@ -357,4 +371,13 @@ pre .language-plaintext {
 // This will be fixed in the next release of GOV.UK Frontend
 .govuk-service-navigation__toggle {
   @include govuk-font($size: 19, $weight: bold);
+}
+
+.app-changelog-table {
+  table-layout: fixed;
+
+  // Set first column to fixed width
+  td:first-child {
+    width: 6em;
+  }
 }
