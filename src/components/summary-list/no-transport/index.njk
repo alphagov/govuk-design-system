@@ -1,0 +1,47 @@
+---
+title: Summary without the transport font – Summary list
+layout: layout-example.njk
+includeFrontend: false
+stylesheets:
+- ../../../stylesheets/example-without-transport.css
+---
+
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+{{ govukSummaryList({
+  card: {
+    title: {
+      text: "I'm not using the font!"
+    },
+    actions: {
+      items: [
+        {
+          href: "#",
+          text: "Delete choice"
+        },
+        {
+          href: "#",
+          text: "Withdraw"
+        }
+      ]
+    }
+  },
+  rows: [
+    {
+      key: {
+        text: "Course"
+      },
+      value: {
+        html: "English (3DMD)<br>PGCE with QTS full time"
+      }
+    },
+    {
+      key: {
+        text: "Location"
+      },
+      value: {
+        html: "School name<br>Road, City, SW1 1AA"
+      }
+    }
+  ]
+}) }}
