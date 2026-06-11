@@ -295,6 +295,7 @@ pre .language-plaintext {
   }
 
   ul,
+  ul:not(.govuk-task-list),
   ol {
     @extend %govuk-list;
   }
@@ -303,7 +304,7 @@ pre .language-plaintext {
     @extend %govuk-list--number;
   }
 
-  ul {
+  ul:not(.govuk-task-list) {
     @extend %govuk-list--bullet;
   }
 
