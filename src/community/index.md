@@ -136,4 +136,4 @@ Find out:
 - how to [propose a component or pattern](/community/propose-a-component-or-pattern/)
 - how to [develop a component or pattern](/community/develop-a-component-or-pattern/)
 
-Learn how the [Design System working group](/community/design-system-working-group/) reviews and approves components and patterns to confirm they meet the [contribution criteria](/community/contribution-criteria/).
+Learn how the Design System team reviews and approves components and patterns to confirm they meet the [contribution criteria](/community/contribution-criteria/).
