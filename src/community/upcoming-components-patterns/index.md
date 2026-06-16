@@ -37,27 +37,44 @@ If you’d like to help us build these components and patterns, join the convers
   rows: [
     {
       key: {
-        text: "Maps"
+        text: "Interruption panel"
       },
       value: {
-        html: "A community collaboration to develop guidance on designing accessible maps."
+        html: "The interruption panel is part of an Interruption page and shows the user important information that they’d miss if shown any other way."
+      }
+    },
+    {
+      key: {
+        text: "Feedback link"
+      },
+      value: {
+        text: "Let users leave feedback about a page consistently."
       },
       actions: {
         classes: "govuk-!-text-align-left",
         items: [
           {
-            href: "https://join.slack.com/t/mapsinservices/shared_invite/zt-163npa168-e5EREuQZU3NqwfdojWw2ew",
-            text: "Join the Maps Slack group"
+            href: "https://github.com/alphagov/govuk-design-system/discussions?discussions_q=is%3Aopen+label%3A%22feedback+link%22",
+            text: "Discuss Feedback link"
           }
         ]
       }
     },
     {
       key: {
-        text: "Essential components"
+        text: "Language switcher"
       },
       value: {
-        text: "We're working to improve our essential components"
+        text: "Allowing users to switch a page between languages."
+      },
+      actions: {
+        classes: "govuk-!-text-align-left",
+        items: [
+          {
+            href: "https://github.com/alphagov/govuk-design-system/discussions/categories/language-switcher?discussions_q=is%3Aopen+category%3A%22Language+Switcher%22",
+            text: "Discuss Language selector"
+          }
+        ]
       }
     }
   ]
@@ -82,23 +99,6 @@ We particularly welcome input on the following themes. To contribute, you can ad
           {
             href: "https://github.com/alphagov/govuk-design-system/discussions/2374",
             text: "Discuss Autocomplete"
-          }
-        ]
-      }
-    },
-    {
-      key: {
-        text: "Choosing a date"
-      },
-      value: {
-        html: "Looking into the use cases for date pickers and whether they’re a good idea."
-      },
-      actions: {
-        classes: "govuk-!-text-align-left",
-        items: [
-          {
-            href: "https://github.com/alphagov/govuk-design-system/discussions/2375",
-            text: "Discuss Choosing a date"
           }
         ]
       }
