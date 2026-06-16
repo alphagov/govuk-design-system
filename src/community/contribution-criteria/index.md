@@ -120,6 +120,6 @@ Before linking from the Design System to a [community resource or tool](/communi
 
 To help users decide whether to use your resource or tool and tell them how to get support for it, add this message to the resource README and after any website links:
 
-{{ govukInsetText({
-  text: "[Name of resource or tool] is a community [resource/tool] of the GOV.UK Design System. The Design System team is not responsible for it and cannot support you with using it. Contact [contributor] directly if you need help or you want to request a feature."
-}) }}
+{% call govukInsetText() %}
+[Name of resource or tool] is a community [resource/tool] of the GOV.UK Design System. The Design System team is not responsible for it and cannot support you with using it. Contact [contributor] directly if you need help or you want to request a feature.
+{% endcall %}

@@ -65,9 +65,11 @@ If possible, you should aim to have less data in your tables. If you have a lot 
 
 If you cannot split your data, you can use the CSS class `govuk-table--small-text-until-tablet`. This class reduces the size of the text on small screens so large amounts of data has more empty space around it. This makes it easier to visually differentiate between each piece of data when read on small screens.
 
-{{ govukInsetText({
-  html: "<p>The CSS class <code>govuk-table--small-text-until-tablet</code> is only available in version 5.2 of GOV.UK Frontend and later.</p><p>Read about <a href=\"/get-started/new-type-scale/\">updating your service to use the new type scale</a>.</p>"
-}) }}
+{% call govukInsetText() %}
+
+  <p>The CSS class <code>govuk-table--small-text-until-tablet</code> is only available in version 5.2 of GOV.UK Frontend and later.</p>
+  <p>Read about <a href="/get-started/new-type-scale/">updating your service to use the new type scale</a>.</p>
+{% endcall %}
 
 You should not use this class on tables unless your table has a lot of data, because a smaller amount of data is easier to read if the text is larger.
 

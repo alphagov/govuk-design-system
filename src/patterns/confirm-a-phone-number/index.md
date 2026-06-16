@@ -36,9 +36,9 @@ When the user creates an account, ask for their password and mobile phone number
 
 After saving the user’s password and mobile phone number, verify their mobile phone number by sending them a text message with a 5 digit code in this format:
 
-{{ govukInsetText({
-  text: "12345 is your [service name] security code"
-}) }}
+{% call govukInsetText() %}
+12345 is your [service name] security code
+{% endcall %}
 
 Then ask the user to enter this code:
 
@@ -63,9 +63,9 @@ When the user requests a new code, send them a new one. The new code should have
 
 When the user returns to your service, verify their password first. Once they have entered this correctly, send a text message to their mobile phone with a 5 digit code in this format:
 
-{{ govukInsetText({
-  text: "12345 is your [service name] security code"
-}) }}
+{% call govukInsetText() %}
+12345 is your [service name] security code
+{% endcall %}
 
 Ask the user to enter this code. Use the same pattern and time limit as when creating an account.
 
@@ -83,9 +83,9 @@ You can also follow the [domain-bound codes](https://developer.apple.com/news/?i
 
 Include the domain of the service on a new line, prefixed with an `@`, followed by a `#` symbol and the code, like this:
 
-{{ govukInsetText({
-  html: "12345 is your [service name] security code<br><br>@www.example.service.gov.uk #12345"
-}) }}
+{% call govukInsetText() %}
+12345 is your [service name] security code<br><br>@www.example.service.gov.uk #12345
+{% endcall %}
 
 ### Error messages
 
