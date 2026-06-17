@@ -3,7 +3,7 @@ title: Addresses
 description: Help users provide an address
 section: Patterns
 theme: Ask users for…
-aliases:
+aliases: postcode
 backlogIssueId: 31
 layout: layout-pane.njk
 ---

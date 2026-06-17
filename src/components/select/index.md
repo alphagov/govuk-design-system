@@ -2,7 +2,7 @@
 title: Select
 description: Help users select an item from a list
 section: Components
-aliases: drop down menu, list box, drop down list, combo box, pop-up menu
+aliases: dropdown, list box, combo box, pop-up menu
 backlogIssueId: 60
 layout: layout-pane.njk
 ---
