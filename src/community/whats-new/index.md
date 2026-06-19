@@ -11,6 +11,12 @@ See our latest releases and updates.
 
 ## June 2026
 
+### We’ve released GOV.UK Frontend v6.3.0
+
+This release adds the [Generic header component](/components/generic-header/) for services that are not part of the [GOV.UK proposition](https://www.gov.uk/government/publications/govuk-proposition/govuk-proposition) but would still benefit from using GOV.UK Frontend to build their service.
+
+Read the [full release notes](https://github.com/alphagov/govuk-frontend/releases/tag/v6.3.0) to see what’s changed.
+
 ### We've released GOV.UK Frontend v6.2.0
 
 This release helps teams prepare for upcoming changes to Sass, the CSS extension language, by adding support for including GOV.UK Frontend CSS as a Sass module with `@use` or `@forward`. We’ve also improved the enhanced File upload component and made several fixes.
