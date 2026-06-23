@@ -13,13 +13,13 @@ Some things on the roadmap might change – the purpose is to tell you what’s 
 
 See our [GitHub team board](https://github.com/orgs/alphagov/projects/53) for more details on our plans and day-to-day activities.
 
-Last updated 2 June 2026.
+Last updated 23 June 2026.
 
 ## Recently shipped
 
-We've released [GOV.UK Frontend v6.2.0](https://github.com/alphagov/govuk-frontend/releases/tag/v6.2.0), which helps teams prepare for upcoming changes to Sass, the CSS extension language, by adding support for including GOV.UK Frontend CSS as a Sass module with `@use` or `@forward`. We’ve also improved the enhanced File upload component and made several fixes.
+We’ve released GOV.UK Frontend v6.3.0, which adds the [Generic header component](/components/generic-header/) for services that are not part of the [GOV.UK proposition](https://www.gov.uk/government/publications/govuk-proposition/govuk-proposition) but would still benefit from using GOV.UK Frontend to build their service.
 
-In February 2026 we released [GOV.UK Frontend v6.0.0](https://github.com/alphagov/govuk-frontend/releases/tag/v6.0.0). This breaking release includes changes to improve our Sass architecture, use an updated type scale, update our colours and improve flexibility in our page template layout. We’ve also removed a number of deprecated APIs, Sass variables and component options.
+In June 2026, we released [GOV.UK Frontend v6.2.0](https://github.com/alphagov/govuk-frontend/releases/tag/v6.2.0), which helps teams prepare for upcoming changes to Sass, the CSS extension language, by adding support for including GOV.UK Frontend CSS as a Sass module with `@use` or `@forward`. We’ve also improved the enhanced File upload component and made several fixes.
 
 ## Working on now
 
@@ -28,7 +28,6 @@ We've started to:
 - create a feedback link component and test it in live services
 - add a language switcher component
 - add an interruption panel variant of the [Panel component](/components/panel/) with an accompanying pattern
-- make it easier for non-GOV.UK services to use our header
 - explore how we might publish experimental components, patterns and variants
 
 ## Future plans
