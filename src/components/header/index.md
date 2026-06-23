@@ -23,13 +23,15 @@ If your service is being hosted on one of these domains, use the GOV.UK header c
 - [myservice].service.gov.uk
 - [myblog].blog.gov.uk
 
-You must use the GOV.UK header component at the top of every page. The Service Manual explains why it’s important for you to [make your service look like GOV.UK](https://www.gov.uk/service-manual/design/making-your-service-look-like-govuk).
+You must use the GOV.UK header component at the top of every page. This is to maintain user trust as they move around the GOV.UK website and other government websites and services.
+
+The Service Manual explains why it’s important for you to [make your service look like GOV.UK](https://www.gov.uk/service-manual/design/making-your-service-look-like-govuk).
 
 ## When not to use this component
 
 If your service is not hosted on one of the gov.uk domains outlined, you must not use the GOV.UK header component as it’s not considered part of GOV.UK.
 
-You can still build from this component, but you’ll need to [make some changes to make sure users do not confuse your website with GOV.UK](https://www.gov.uk/service-manual/design/making-your-service-look-like-govuk#if-your-service-isnt-on-govuk).
+Use the [Generic header component](/components/generic-header/) instead to show your own organisation’s branding.
 
 ## How it works
 

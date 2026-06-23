@@ -1,0 +1,11 @@
+// Imports frontend without the Transport font
+// Used by Generic header component examples
+
+@use "pkg:govuk-frontend" with (
+  $govuk-font-family: (
+    "Helvetica Neue",
+    helvetica,
+    arial,
+    sans-serif
+  )
+);

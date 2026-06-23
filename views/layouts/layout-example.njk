@@ -12,7 +12,9 @@
   <meta name="og:description" content="{{ description | smartypants }}">
   <link rel="canonical" href="{{ canonical }}">
 
-  <link href="{{ getFingerprint('/stylesheets/govuk-frontend.min.css') }}" rel="stylesheet" media="all">
+  {% if includeFrontend != false %}
+    <link href="{{ getFingerprint('/stylesheets/govuk-frontend.min.css') }}" rel="stylesheet" media="all">
+  {% endif %}
   <link href="{{ getFingerprint('/stylesheets/example.css') }}" rel="stylesheet" media="all">
   {#- Include any additional stylesheets specified in the example frontmatter #}
   {% for stylesheet in stylesheets %}
