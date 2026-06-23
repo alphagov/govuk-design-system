@@ -62,11 +62,11 @@ To make your logo image as accessible and optimised as possible, also see:
 
 ### Homepage link
 
-By default, the Generic header component links to `/`, which is the top level of your service’s domain. You should customise the link to point to wherever makes the most sense for your service.
+By default, the homepage link points to `/`, which is the top level of your service’s domain. You should customise the link to point to wherever makes the most sense for your service.
 
-### Do not show service name or navigation links in the Generic header component
+### Do not show navigation links in the Generic header component
 
-As with the GOV.UK header component, you should not use the Generic header component to show service name or navigation links. Use the [Service navigation component](/components/service-navigation) instead.
+As with the GOV.UK header component, you should not use the Generic header component to show navigation links. Use the [Service navigation component](/components/service-navigation) instead to let users navigate to different parts of your service and find useful links and tools.
 
 ## Research on this component
 
