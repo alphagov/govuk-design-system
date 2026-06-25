@@ -47,14 +47,17 @@ updates:
           - '@rollup/*'
           - 'rollup'
 
-      test:
+      jest:
         patterns:
-          - '@axe-core/*'
           - '@jest/*'
           - '@types/jest'
           - '@types/jest-*'
           - 'jest'
           - 'jest-*'
+
+      test:
+        patterns:
+          - '@axe-core/*'
           - 'puppeteer'
 
       types:
