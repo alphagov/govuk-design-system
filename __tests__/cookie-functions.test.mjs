@@ -228,6 +228,15 @@ describe('Cookie settings', () => {
       expect(window['ga-disable-G-8F2EMQL51V']).toEqual(false)
       expect(window['ga-disable-G-GHT8W0QGD9']).toEqual(false)
     })
+
+    it('handles categories that do not exist', async () => {
+      document.cookie =
+        'design_system_cookies_policy={"grobulating":false,"version":2}'
+
+      expect(() => {
+        CookieHelpers.resetCookies()
+      }).not.toThrow()
+    })
   })
 
   describe('consent cookie version', () => {

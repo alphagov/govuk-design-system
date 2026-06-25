@@ -177,7 +177,7 @@ export function resetCookies() {
       window[`ga-disable-G-${TRACKING_LIVE_ID}`] = true
     }
 
-    if (!options[cookieType]) {
+    if (!options[cookieType] && cookieType in COOKIE_CATEGORIES) {
       // Fetch the cookies in that category
       const cookiesInCategory = COOKIE_CATEGORIES[cookieType]
 
