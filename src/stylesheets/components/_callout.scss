@@ -1,0 +1,28 @@
+@use "pkg:govuk-frontend/base" as *;
+@use "pkg:govuk-frontend/core/typography";
+
+// Change callout <h2>'s to look like <h3>'s
+// Selector specificity needs to outweigh `.app-content h2`
+.app-callout {
+  border-left-color: govuk-colour("orange");
+  background-color: govuk-colour("orange", $variant: "tint-95");
+
+  .app-callout__heading {
+    @extend %govuk-heading-m;
+    max-width: 30em;
+  }
+
+  // Add highlight styling for callout content
+  &:target {
+    outline-color: govuk-colour("yellow");
+    outline-offset: 6px;
+    outline-style: solid;
+    outline-width: 4px;
+  }
+}
+
+.app-callout__tag {
+  margin-top: 1px;
+  margin-top: govuk-spacing(2);
+  margin-bottom: govuk-spacing(1);
+}
