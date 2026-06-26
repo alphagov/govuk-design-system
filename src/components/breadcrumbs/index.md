@@ -9,6 +9,17 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 
+<div class="app-component-metadata">
+    <dl class="app-metadata">
+        <dt class="app-metadata-term">Status:</dt>
+        <dd class="app-metadata-definition"><a class="govuk-link" href="#">Stable</a></dd>
+        <dt class="app-metadata-term">Published</dt>
+        <dd class="app-metadata-definition">21 June 2018</dd>
+        <dt class="app-metadata-term">Last updated</dt>
+        <dd class="app-metadata-definition">1 May 2025</dd>
+    </dl>
+</div>
+
 The breadcrumbs component helps users to understand where they are within a website’s structure and move between levels.
 
 {{ example({ group: "components", item: "breadcrumbs", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
@@ -48,3 +59,21 @@ Use the `govuk-breadcrumbs--inverse` modifier class to show white links and arro
 Make sure all users can see the breadcrumbs – the background colour must have a contrast ratio of at least 4.5:1 with white to [meet WCAG 2.2 success criterion 1.4.3 Contrast (minimum), level AA](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html).
 
 {{ example({ group: "components", item: "breadcrumbs", example: "inverse", html: true, nunjucks: true, open: false }) }}
+
+## Update history
+
+<div class="app-changelog-table">
+
+| Date        | Version  | Changes                                                                        |
+| ----------- | -------- | ------------------------------------------------------------------------------ |
+| 21 Jun 2018 | 1.0.0    | Component introduced.                                                          |
+| 26 Sep 2018 | 2.1.0    | Allow attributes to be added to child items in Nunjucks macros in breadcrumbs. |
+| 29 Jul 2019 | 3.0.0    | Update file paths for v3 of Frontend.                                          |
+| 1 Jun 2020  | 3.7.0    | Collapse breadcrumb component on mobile.                                       |
+| 6 Jul 2023  | 4.7.0    | Added inverse modifier for breadcrumbs on dark backgrounds.                    |
+| 7 Jul 2023  | Guidance | Add documentation and examples for inverse breadcrumbs.                        |
+| 11 Jan 2024 | Guidance | Added WCAG 2.2 criteria.                                                       |
+| 17 Jun 2024 | 5.4.1    | Update Breadcrumbs to use `nav` and `aria-label`.                              |
+| 1 May 2025  | Guidance | Removed WCAG 2.2 notes from back link, breadcrumbs, images.                    |
+
+</div>
