@@ -6,6 +6,7 @@ layout: layout-example-full-page.njk
 {% extends "example-wrappers/full-page.njk" %}
 
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
 {% from "govuk/components/panel/macro.njk" import govukPanel %}
 
 {% block containerStart %}
@@ -23,9 +24,10 @@ layout: layout-example-full-page.njk
       }) %}
         <p>You entered your age as <strong>109</strong>.</p>
         <div class="govuk-button-group">
-          <button type="submit" class="govuk-button govuk-button--inverse" data-module="govuk-button">
-            Yes, this is correct
-          </button>
+          {{ govukButton({
+            classes: "govuk-button--inverse",
+            text: "Yes, this is correct"
+          }) }}
           <a href="#" class="govuk-link govuk-link--inverse">Change my age</a>
         </div>
       {% endcall %}
