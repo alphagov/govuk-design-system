@@ -14,24 +14,21 @@ layout: layout-example-full-page.njk
   }) }}
 {% endblock %}
 
-{% set panelHtml %}
-<p>You entered your age as <strong>109</strong>.</p>
-<div class="govuk-button-group">
-  <button type="submit" class="govuk-button govuk-button--inverse" data-module="govuk-button">
-    Yes, this is correct
-  </button>
-  <a href="#" class="govuk-link govuk-link--inverse">Change my age</a>
-</div>
-{% endset %}
-
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      {{ govukPanel({
+      {% call govukPanel({
         titleText: "Is your age correct?",
-        html: panelHtml,
         classes: "govuk-panel--interruption"
-      }) }}
+      }) %}
+        <p>You entered your age as <strong>109</strong>.</p>
+        <div class="govuk-button-group">
+          <button type="submit" class="govuk-button govuk-button--inverse" data-module="govuk-button">
+            Yes, this is correct
+          </button>
+          <a href="#" class="govuk-link govuk-link--inverse">Change my age</a>
+        </div>
+      {% endcall %}
     </div>
   </div>
 {% endblock %}
