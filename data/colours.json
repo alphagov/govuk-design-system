@@ -8,6 +8,11 @@
       {
         "name": "secondary-text",
         "colour": "#484949"
+      },
+      {
+        "name": "inverse-text",
+        "colour": "#ffffff",
+        "notes": "Use this colour for text set against a dark functional colour background (like brand, success or error)"
       }
     ],
     "Link": [
