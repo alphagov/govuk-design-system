@@ -1,6 +1,7 @@
 {% extends "_generic.njk" %}
 
 {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "_experimental-callout.njk" import experimentalCallout %}
 
 {# If the theme ends in '…', then we nest the caption inside the H1 so that the
   H1 becomes e.g. 'Ask users for dates'. Otherwise, we put it before the H1. #}
@@ -26,14 +27,9 @@
         {{ title }}
       </h1>
 
-      {% if status %}
-      <aside class="govuk-!-margin-bottom-8" aria-label="Guidance status">
-        <strong class="govuk-tag govuk-!-margin-bottom-2">
-          {{ status }}
-        </strong>
-        <p class="govuk-body">{{ statusMessage | safe }}</p>
-      </aside>
-      {% endif %}
+      {%- if experimental %}
+        {{ experimentalCallout(experimental) }}
+      {%- endif %}
 
       {% if showPageNav %}
         <ul class="app-page-navigation">

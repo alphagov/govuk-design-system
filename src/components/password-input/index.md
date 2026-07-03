@@ -5,17 +5,15 @@ section: Components
 aliases: pass word, pass phrase
 backlogIssueId: 240
 layout: layout-pane.njk
+experimental: 
+  links:
+    - href: "#known-issues"
+      text: Known issues
+    - href: "#research-on-this-component"
+      text: Research on this component
 ---
 
 {% from "_example.njk" import example %}
-{% from "_experimental-callout.njk" import experimentalCallout %}
-
-{{ experimentalCallout({
-  links: [
-  	{ href: '#known-issues', text: "Known issues" },
-  	{ href: '#research-on-this-component', text: "Research on this component" }
-  ]
-}) }}
 
 Help users to create and enter passwords.
 
