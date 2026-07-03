@@ -10,7 +10,7 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 
-Use Interruption pages to pause the user’s journey to give them important information.
+Use Interruption pages to pause the user’s journey and give them important information.
 
 {{ example({ group: "patterns", item: "interruption-pages", example: "default", html: true, nunjucks: true, open: false, size: "l", loading: "eager" }) }}
 
@@ -21,7 +21,7 @@ Think carefully before you choose to use an Interruption page, as doing this mig
 Use Interruption pages to warn the user before they:
 
 - do something unusual that’s probably a mistake
-- do something that cannot be undone (asking the user “Are you sure?”)
+- do something that cannot be undone (so you can ask the user “Are you sure?”)
 - give an answer that conflicts with existing information
 
 You can also use Interruption pages:
@@ -68,4 +68,4 @@ Guidance in this pattern is based on:
 
 We’d like to get more input from service teams to help us further improve this pattern.
 
-See our [‘Interruption card’ discussion on GitHub](https://github.com/alphagov/govuk-design-system-backlog/issues/27) to see areas we're interested in.```
+See our [‘Interruption card’ discussion on GitHub](https://github.com/alphagov/govuk-design-system-backlog/issues/27) to see some of the areas we're interested in learning more about.
