@@ -64,14 +64,8 @@ Guidance in this pattern is based on:
 - [Interruption page on NHS Design System](https://service-manual.nhs.uk/design-system/patterns/interruption-page)
 - [Interruption card on Ministry of Justice (MOJ) Design System](https://design-patterns.service.justice.gov.uk/components/interruption-card/)
 
-### Other uses of Interruption pages
-
-We’ve seen that many services in government use Interruption pages to show other types of important information that might otherwise get missed.
-
-See our [‘Interruption card’ discussion on GitHub](https://github.com/alphagov/govuk-design-system-backlog/issues/27) to see these examples.
-
 ### Next steps
 
-We’d like to get more feedback from service teams to help us improve this pattern.
+We’d like to get more input from service teams to help us further improve this pattern.
 
-We'd particularly like to better understand the ways services use Interruption pages, so that we can provide better guidance on ‘When to use this pattern’ and ‘When not to use this pattern’ to ensure they're used effectively and consistently across government.
+See our [‘Interruption card’ discussion on GitHub](https://github.com/alphagov/govuk-design-system-backlog/issues/27) to see areas we're interested in.```
