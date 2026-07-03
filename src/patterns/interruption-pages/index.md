@@ -26,14 +26,14 @@ Use Interruption pages to warn the user before they:
 
 You can also use Interruption pages:
 
-- instead of Confirmation pages to show a more varied journey outcomes (that are different to a straightforward success, rejection or completion)
+- instead of Confirmation pages to show more varied journey outcomes (that are different to a straightforward success, rejection or completion)
 - to show the user important information ahead of a task
 
 ## When not to use this pattern
 
 Do not use Interruption pages unless you're confident that both:
 
-- there’s evidence of a clear need to interrupt the user journey.
+- there’s evidence of a clear need to pause the user journey.
 - it's the only way to give the user information and that they’d otherwise miss it
 
 Read guidance in the Service Manual, particularly to [Map and understand a user's whole problem](https://www.gov.uk/service-manual/design/map-a-users-whole-problem), to find ways to improve the user journey and the organisational processes behind them.
@@ -44,7 +44,7 @@ Interruption pages pause the user journey to show important information. Use Int
 
 All important information on the page is shown within an Interruption panel, to help ensure the user does not miss it.
 
-The panel includes a ‘continue’ button that the user must interact with to continue their journey. Information within the panel is usually shown as heading with some description text, possibly with bullet points and numbered steps.
+The panel includes a ‘continue’ button that the user must interact with to continue their journey. Information within the panel is usually shown as a heading with some description text, possibly with bullet points and numbered steps.
 
 Keep information within the panel short. Do not place any other components or form elements inside the panel.
 
@@ -54,7 +54,6 @@ The Interruption page includes a back link at the top of a page, to allow users 
 
 If it’s helpful for users to jump back to another point in the journey, such as the start of a section, add a link and group it alongside the continue button. Write link text that describes the action it performs or the page it will take the user. 
 
-Do not add links that duplicate the back link.
 
 ## Research on this pattern
 

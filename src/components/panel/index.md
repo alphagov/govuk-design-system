@@ -21,7 +21,7 @@ Use the Panel component to display important information within:
 
 ## When not to use this component
 
-Never use the Panel component to highlight important information within body content.
+Never use the Panel component to highlight any other information.
 
 ## How it works
 
