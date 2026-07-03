@@ -8,6 +8,14 @@ layout: layout-pane.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "_experimental-callout.njk" import experimentalCallout %}
+
+{{ experimentalCallout({
+  links: [
+  	{ href: '#known-issues', text: "Known issues" },
+  	{ href: '#research-on-this-component', text: "Research on this component" }
+  ]
+}) }}
 
 Help users to create and enter passwords.
 
