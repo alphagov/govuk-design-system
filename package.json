@@ -80,7 +80,7 @@
     "jest-puppeteer": "^11.0.0",
     "js-beautify": "^1.15.4",
     "jstransformer-marked": "^1.4.0",
-    "lint-staged": "^17.0.7",
+    "lint-staged": "^17.0.8",
     "marked": "^18.0.5",
     "marked-gfm-heading-id": "^4.1.4",
     "marked-highlight": "^2.2.4",
