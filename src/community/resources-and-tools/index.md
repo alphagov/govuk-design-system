@@ -4,7 +4,7 @@ description: Useful community resources and tools
 section: Community
 theme: Resources
 layout: layout-pane.njk
-order: 9
+order: 10
 ---
 
 You can use these community resources and tools to help you use the GOV.UK Design System in your design tool or development environment.
