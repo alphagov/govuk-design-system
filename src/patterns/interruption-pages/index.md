@@ -42,7 +42,7 @@ Read guidance in the Service Manual, particularly to [Map and understand a user'
 
 Interruption pages pause the user journey to show important information. Use Interruption pages sparingly, as they get less effective the more often users see them.
 
-All important information on the page is shown within an Interruption panel, to help ensure the user does not miss it.
+All important information on the page is shown within an [Interruption panel](/components/panel/#interruption panel), to help ensure the user does not miss it.
 
 The panel includes a ‘continue’ button that the user must interact with to continue their journey. Information within the panel is usually shown as a heading with some description text, possibly with bullet points and numbered steps.
 
@@ -57,7 +57,7 @@ If it’s helpful for users to jump back to another point in the journey, such a
 
 ## Research on this pattern
 
-This pattern was originally contributed by the NHS Design System. We thank the team for working with us to publish the [Interruption panel variant of the Panel component](/components/panel/) and this pattern.
+This pattern was originally contributed by the NHS Design System. We thank the team for working with us to publish the [Interruption panel variant of the Panel component](/components/panel/#interruption panel) and this pattern.
 
 Guidance in this pattern is based on:
 

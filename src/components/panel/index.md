@@ -45,6 +45,6 @@ The interruption panel is part of an [Interruption page](/patterns/interruption-
 
 Within the panel is a ‘continue’ button that the user must interact with to resume their journey.
 
-The information itself is usually shown as heading with some description text, possibly with bullet points and numbered steps
+The information itself is usually shown as heading with some description text, possibly with bullet points and numbered steps.
 
 {{ example({ group: "components", item: "panel", example: "interruption", html: true, nunjucks: true, open: false, size: "m" }) }}
