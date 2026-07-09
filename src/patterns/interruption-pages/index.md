@@ -52,8 +52,7 @@ Keep information within the panel short. Do not place any other components or fo
 
 The Interruption page includes a back link at the top of a page, to allow users to go back to the previous page they were on.
 
-If it’s helpful for users to jump back to another point in the journey, such as the start of a section, add a link and group it alongside the continue button. Write link text that describes the action it performs or the page it will take the user. 
-
+If it’s helpful for users to jump back to another point in the journey, such as the start of a section, add a link and group it alongside the continue button. Write link text that describes the action it performs or the page it will take the user.
 
 ## Research on this pattern
 
