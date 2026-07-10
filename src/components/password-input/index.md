@@ -5,7 +5,7 @@ section: Components
 aliases: pass word, pass phrase
 backlogIssueId: 240
 layout: layout-pane.njk
-experimental: 
+trial: 
   links:
     - href: "#known-issues"
       text: Known issues

@@ -1,7 +1,7 @@
 {% extends "_generic.njk" %}
 
 {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
-{% from "_experimental-callout.njk" import experimentalCallout %}
+{% from "_trial-callout.njk" import trialCallout %}
 
 {# If the theme ends in '…', then we nest the caption inside the H1 so that the
   H1 becomes e.g. 'Ask users for dates'. Otherwise, we put it before the H1. #}
@@ -27,8 +27,8 @@
         {{ title }}
       </h1>
 
-      {%- if experimental %}
-        {{ experimentalCallout(experimental) }}
+      {%- if trial %}
+        {{ trialCallout(trial) }}
       {%- endif %}
 
       {% if showPageNav %}

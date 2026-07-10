@@ -1,7 +1,7 @@
 {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 {% from "govuk/components/tag/macro.njk" import govukTag %}
 
-{% macro experimentalCallout(params) %}
+{% macro trialCallout(params) %}
 {%- set defaultContent %}
 <p class="govuk-body">This component is being actively developed and may change significantly before being stabilised. Find out more about <a class="govuk-link" href="/get-started/component-lifecycle/">how we iterate our components</a>.</p>
 {%- endset %}
@@ -19,11 +19,11 @@
 {%- endset -%}
 
 {%- call govukInsetText({
-  classes: "app-experimental-callout"
+  classes: "app-trial-callout"
 }) %}
 {{ govukTag({
   classes: "govuk-tag--orange",
-  text: "Experimental"
+  text: "Trial"
 }) }}
 {{ content | safe }}
 

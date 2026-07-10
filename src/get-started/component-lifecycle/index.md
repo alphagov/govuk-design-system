@@ -11,13 +11,13 @@ This content is placeholder right now. Dolore esse elit anim consequat eu. Dolor
 
 ## Component statuses
 
-### Experimental
+### Trial
 
-**Experimental** components are being actively iterated upon and may change significantly before graduating to stable.
+**Trial** components are being actively iterated upon and may change significantly before graduating to stable.
 
-If we decide that an experimental component isn't worth pursuing further, it may move to being deprecated and eventually withdrawn from the Design System without becoming a stable component.
+If we decide that an trial component isn't worth pursuing further, it may move to being deprecated and eventually withdrawn from the Design System without becoming a stable component.
 
-Services using experimental components should be prepared to make ongoing updates to them.
+Services using trial components should be prepared to make ongoing updates to them.
 
 ### Stable
 
