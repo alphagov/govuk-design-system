@@ -12,7 +12,7 @@
       {
         "name": "inverse-text",
         "colour": "#ffffff",
-        "notes": "Use this colour for text set against a dark functional colour background (like brand, success or error)"
+        "notes": "Use this colour for text on dark backgrounds"
       }
     ],
     "Link": [
