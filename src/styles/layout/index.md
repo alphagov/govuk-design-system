@@ -51,7 +51,7 @@ If your design requires them, you should place components such as the [Breadcrum
 
 Within `govuk-width-container` you should add the `govuk-main-wrapper` class to your `<main>` element. This adds responsive padding to the top and bottom of the page and will be the container for your main content.
 
-If you’re not using the [Breadcrumbs component](/components/breadcrumbs/), [Back link component](/components/back-link/) or [Phase banner component](/components/phase-banner/) in your design, add the correct amount of vertical padding above the content by adding one of the following to your `<main>` element:
+If you’re not using the [Breadcrumbs component](/components/breadcrumbs/) or [Back link component](/components/back-link/) in your design, add the correct amount of vertical padding above the content by adding one of the following to your `<main>` element:
 
 - the `govuk-main-wrapper--auto-spacing` class
 - the `govuk-main-wrapper--l` class - if `govuk-main-wrapper--auto-spacing` does not work for your service
