@@ -8,6 +8,11 @@
       {
         "name": "secondary-text",
         "colour": "#484949"
+      },
+      {
+        "name": "inverse-text",
+        "colour": "#ffffff",
+        "notes": "Use this colour for text on dark backgrounds"
       }
     ],
     "Link": [
