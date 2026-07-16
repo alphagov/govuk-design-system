@@ -17,7 +17,7 @@ Last updated 16 July 2026.
 
 ## Recently shipped
 
-We've released GOV.UK Frontend v6.4.0, which adds an [interruption variant of the Panel component](/components/panel/#interruption-panel), which you can use to pause the user’s journey and give them important information. We’ve also introduced a new `inverse-text` functional colour to use on dark backgrounds.
+We've released GOV.UK Frontend v6.4.0, which adds an [interruption variant of the Panel component](/components/panel/#interruption-panel), which you can use to pause the user’s journey and give them important information. We’ve also improved the Date input component and introduced a new `inverse-text` functional colour to use on dark backgrounds.
 
 In June 2026, we released GOV.UK Frontend v6.3.0, which adds the [Generic header component](/components/generic-header/) for services that are not part of the [GOV.UK proposition](https://www.gov.uk/government/publications/govuk-proposition/govuk-proposition) but would still benefit from using GOV.UK Frontend to build their service.
 
