@@ -43,22 +43,15 @@ layout: layout-example-full-page.njk
           errorMessage: {
             text: "Passport issue date must include a year"
           },
-          items: [
-            {
-              name: "day",
-              classes: "govuk-input--width-2",
-              value: 5
-            },
-            {
-              name: "month",
-              classes: "govuk-input--width-2",
-              value: 12
-            },
-            {
-              name: "year",
-              classes: "govuk-input--width-4 govuk-input--error"
-            }
-          ]
+          day: {
+            value: 5
+          },
+          month: {
+            value: 12
+          },
+          year: {
+            error: true
+          }
           })
         }}
 
