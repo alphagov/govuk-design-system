@@ -12,7 +12,12 @@ masthead: true
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds-from-desktop">
           <h2 id="whats-new" class="govuk-heading-l">What’s new</h2>
-          {% include "_whats-new.md" %}
+          <div class="app-prose-scope">
+            {% markdown %}
+              {% include "_whats-new.md" %}
+            {% endmarkdown %}
+          </div>
+          <hr class="govuk-section-break govuk-section-break--m">
           <h2 class="govuk-heading-l">Get updates on the Design System</h2>
           <p class="govuk-body">Interested in changes to the Design System, or our upcoming events and workshops?</p>
           <p class="govuk-body"><a href="http://mailchi.mp/707ce8dec373/get-updated-by-email-govuk-design-system" class="govuk-link">Sign up with your email</a></p>
