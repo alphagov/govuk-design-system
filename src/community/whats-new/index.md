@@ -15,7 +15,7 @@ See our latest releases and updates.
 
 This release adds an [interruption variant of the Panel component](/components/panel/#interruption-panel), which you can use to pause the user’s journey and give them important information.
 
-We’ve also introduced a new `inverse-text` functional colour to use on dark backgrounds.
+We’ve also improved the Date input component and introduced a new `inverse-text` functional colour to use on dark backgrounds.
 
 Read the [full release notes](https://github.com/alphagov/govuk-frontend/releases/tag/v6.4.0) to see what’s changed.
 
