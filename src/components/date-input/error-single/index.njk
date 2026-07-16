@@ -21,20 +21,11 @@ layout: layout-example-form.njk
   errorMessage: {
     text: "The date your passport was issued must include a year"
   },
-  items: [
-    {
-      classes: "govuk-input--width-2",
-      name: "day",
-      value: "6"
-    },
-    {
-      classes: "govuk-input--width-2",
-      name: "month",
-      value: "3"
-    },
-    {
-      classes: "govuk-input--width-4 govuk-input--error",
-      name: "year"
-    }
-  ]
+  values: {
+    day: 6,
+    month: 3
+  },
+  year: {
+    error: true
+  }
 }) }}

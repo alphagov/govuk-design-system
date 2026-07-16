@@ -21,21 +21,9 @@ layout: layout-example-form.njk
   errorMessage: {
     text: "The date your passport was issued must be in the past"
   },
-  items: [
-    {
-      classes: "govuk-input--width-2 govuk-input--error",
-      name: "day",
-      value: "6"
-    },
-    {
-      classes: "govuk-input--width-2 govuk-input--error",
-      name: "month",
-      value: "3"
-    },
-    {
-      classes: "govuk-input--width-4 govuk-input--error",
-      name: "year",
-      value: "2076"
-    }
-  ]
+  values: {
+    day: 6,
+    month: 3,
+    year: 2076
+  }
 }) }}

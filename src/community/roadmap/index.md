@@ -13,13 +13,13 @@ Some things on the roadmap might change – the purpose is to tell you what’s 
 
 See our [GitHub team board](https://github.com/orgs/alphagov/projects/53) for more details on our plans and day-to-day activities.
 
-Last updated 23 June 2026.
+Last updated 16 July 2026.
 
 ## Recently shipped
 
-We’ve released GOV.UK Frontend v6.3.0, which adds the [Generic header component](/components/generic-header/) for services that are not part of the [GOV.UK proposition](https://www.gov.uk/government/publications/govuk-proposition/govuk-proposition) but would still benefit from using GOV.UK Frontend to build their service.
+We've released GOV.UK Frontend v6.4.0, which adds an [interruption variant of the Panel component](/components/panel/#interruption-panel), which you can use to pause the user’s journey and give them important information. We’ve also improved the Date input component and introduced a new `inverse-text` functional colour to use on dark backgrounds.
 
-In June 2026, we released [GOV.UK Frontend v6.2.0](https://github.com/alphagov/govuk-frontend/releases/tag/v6.2.0), which helps teams prepare for upcoming changes to Sass, the CSS extension language, by adding support for including GOV.UK Frontend CSS as a Sass module with `@use` or `@forward`. We’ve also improved the enhanced File upload component and made several fixes.
+In June 2026, we released GOV.UK Frontend v6.3.0, which adds the [Generic header component](/components/generic-header/) for services that are not part of the [GOV.UK proposition](https://www.gov.uk/government/publications/govuk-proposition/govuk-proposition) but would still benefit from using GOV.UK Frontend to build their service.
 
 ## Working on now
 
@@ -27,7 +27,6 @@ We've started to:
 
 - create a feedback link component and test it in live services
 - add a language switcher component
-- add an interruption panel variant of the [Panel component](/components/panel/) with an accompanying pattern
 - explore how we might publish experimental components, patterns and variants
 
 ## Future plans
