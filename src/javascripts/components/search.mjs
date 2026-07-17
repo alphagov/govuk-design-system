@@ -150,7 +150,7 @@ class Search extends Component {
   /**
    * Handle confirmed result
    *
-   * @param {object} result - Search result
+   * @param {SearchResult} result - Search result
    */
   handleOnConfirm(result) {
     const permalink = result.permalink
@@ -166,7 +166,7 @@ class Search extends Component {
   /**
    * Format input value
    *
-   * @param {object} result - Search result
+   * @param {SearchResult} result - Search result
    * @returns {string | undefined} Formatted value
    */
   inputValueTemplate(result) {
@@ -178,7 +178,7 @@ class Search extends Component {
   /**
    * Format result value
    *
-   * @param {object} result - Search result
+   * @param {SearchResult} result - Search result
    * @returns {string | undefined} Formatted value
    */
   resultTemplate(result) {
@@ -246,3 +246,11 @@ class Search extends Component {
 }
 
 export default Search
+
+/**
+ * @typedef SearchResult
+ * @property {string} permalink - The permalink of the page
+ * @property {string} title - The title of the page
+ * @property {string} aliases - A `, ` separated list of aliases the page may also match
+ * @property {string} section - The section of the website the page belongs to
+ */
