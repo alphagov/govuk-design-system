@@ -74,6 +74,9 @@ updates:
       # iframe-resizer has switched to GPL licence in v5
       # so we need to avoid upgrading to their next major version
       - dependency-name: 'iframe-resizer'
+      # Dependabot keeps `@types` dependencies in sync with updated packages,
+      # but as far as we can tell this doesn't work for node itself.
+      - dependency-name: '@types/node'
 
     # Schedule run every Monday, local time
     schedule:
