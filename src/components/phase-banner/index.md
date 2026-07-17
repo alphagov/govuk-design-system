@@ -3,7 +3,8 @@ title: Phase banner
 description: Use the phase banner component to show users your service is still being worked on
 section: Components
 aliases: alpha banner, beta banner, prototype banner, status banner, feedback banner
-backlogIssueId: 57
+backlogIssueId: 4973
+isDiscussion: true
 layout: layout-pane.njk
 ---
 
