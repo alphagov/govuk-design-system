@@ -3,3 +3,4 @@
 # - the 'engines' fields in the `package.json` file
 # - `package-lock.json` by running `npm install`
 # - the `[node]` section of the `.browserslistrc` file
+# - the `@types/node` package
