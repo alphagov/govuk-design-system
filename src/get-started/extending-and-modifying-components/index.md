@@ -52,17 +52,16 @@ This will work in the short term but may break if you install an update relying 
 For example, if you want to override the button component you could do the following.
 
 ```html
-<div class="app-interruption-card">
+<div class="app-admin-card">
   <button class="govuk-button">
-    Inverse button
+    Small button
   </button>
 </div>
 ```
 
 ```css
-.app-interruption-card .govuk-button {
-  color: govuk-colour("blue");
-  background-color: govuk-colour("white");
+.app-admin-card .govuk-button {
+  @include govuk-font-size($size: 16, $line-height: 1);
 }
 ```
 
@@ -113,17 +112,16 @@ When making small modifications to components you can make use of the [modifier 
 For example, if you wanted to override the button component you could do the following.
 
 ```html
-<div class="app-interruption-card">
-  <button class="govuk-button app-button--inverse">
-    Inverse button
+<div class="app-admin-card">
+  <button class="govuk-button app-button--small">
+    Small button
   </button>
 </div>
 ```
 
 ```css
-.app-button--inverse {
-  color: govuk-colour("blue");
-  background-color: govuk-colour("white");
+.app-button--small {
+  @include govuk-font-size($size: 16, $line-height: 1);
 }
 ```
 
