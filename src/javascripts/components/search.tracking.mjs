@@ -8,8 +8,8 @@ import {
  * Track confirmed autocomplete result
  *
  * @param {string} searchQuery - Search query
- * @param {object[]} searchResults - Search results
- * @param {object} result - Search result
+ * @param {SearchResult[]} searchResults - Search results
+ * @param {SearchResult} result - Search result
  */
 export function trackConfirm(searchQuery, searchResults, result) {
   if ('DO_NOT_TRACK_ENABLED' in window && window.DO_NOT_TRACK_ENABLED) {
@@ -49,7 +49,7 @@ export function trackConfirm(searchQuery, searchResults, result) {
  * Track autocomplete results
  *
  * @param {string} searchQuery - Search query
- * @param {object[]} searchResults - Search results
+ * @param {SearchResult[]} searchResults - Search results
  */
 export function trackSearchResults(searchQuery, searchResults) {
   if ('DO_NOT_TRACK_ENABLED' in window && window.DO_NOT_TRACK_ENABLED) {
@@ -80,3 +80,7 @@ export function trackSearchResults(searchQuery, searchResults) {
     }
   })
 }
+
+/**
+ * @import {SearchResult} from './search.mjs'
+ */
