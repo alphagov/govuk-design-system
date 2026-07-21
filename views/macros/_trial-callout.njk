@@ -1,0 +1,41 @@
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+
+{% macro trialCallout(params) %}
+{%- set defaultContent %}
+<p class="govuk-body">This component is being actively developed and may change significantly before being stabilised. Find out more about <a class="govuk-link" href="/get-started/component-lifecycle/">how we iterate our components</a>.</p>
+{%- endset %}
+
+{%- set content -%}
+  {%- if caller %}
+    {{ caller() }}
+  {%- elif params.html %}
+    {{ params.html | safe }}
+  {%- elif params.text %}
+    <p class="govuk-body">{{ params.text }}</p>
+  {%- else %}
+    {{ defaultContent | safe }}
+  {%- endif %}
+{%- endset -%}
+
+{%- call govukInsetText({
+  classes: "app-trial-callout"
+}) %}
+{{ govukTag({
+  classes: "govuk-tag--orange",
+  text: "Trial"
+}) }}
+{{ content | safe }}
+
+{%- if params.links %}
+<ul class="govuk-list">
+{%- for item in params.links %}
+<li><a class="govuk-link" href="{{ item.href }}">
+  {{- item.html | safe if item.html else item.text -}}
+</a></li>
+{%- endfor %}
+</ul>
+{%- endif %}
+
+{%- endcall %}
+{% endmacro %}

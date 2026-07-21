@@ -350,6 +350,16 @@ pre .language-plaintext {
   margin: 0;
 }
 
+// Trial status callout
+.app-trial-callout {
+  border-left-color: govuk-colour("orange");
+  background-color: govuk-colour("orange", $variant: "tint-95");
+
+  .govuk-tag {
+    margin-bottom: govuk-spacing(1);
+  }
+}
+
 // REMOVE EACH RULE BELOW WHEN GOV.UK FRONTEND V6.0.0 IS RELEASED
 // AND USED ON THE SITE
 
