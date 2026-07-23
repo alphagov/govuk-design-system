@@ -1,0 +1,14 @@
+---
+title: Feedback
+layout: layout-example.njk
+---
+
+{% from "govuk/components/feedback/macro.njk" import govukFeedback %}
+
+{% call govukFeedback({
+  titleText: "Help us improve this service"
+}) %}
+  <p class="govuk-body">
+    Tell us about your experience using this service. <a href="#" class="govuk-link">Give us your feedback</a>
+  </p>
+{% endcall %}
