@@ -3,6 +3,13 @@ title: Feedback
 description: Ask users to give their feedback about your service at any point of the journey
 section: Components
 layout: layout-pane.njk
+status: 
+  type: trial
+  links:
+    - href: "#research-on-this-component"
+      text: Research on this component
+    - href: "#help-improve-this-page"
+      text: Help improve this component
 ---
 
 {% from "_example.njk" import example %}
