@@ -5,6 +5,8 @@ section: Components
 aliases: pass word, pass phrase
 backlogIssueId: 240
 layout: layout-pane.njk
+showPageNav: true
+history: true
 ---
 
 {% from "_example.njk" import example %}

@@ -338,6 +338,15 @@ pre .language-plaintext {
   }
 }
 
+.app-changelog-table {
+  table-layout: fixed;
+
+  // Set first column to fixed width
+  td:first-child {
+    width: 6em;
+  }
+}
+
 .app-surface {
   border-bottom: 1px solid govuk-functional-colour("surface-border");
   color: govuk-functional-colour("surface-text");
