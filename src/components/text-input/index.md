@@ -9,6 +9,8 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 
+See the [change history](/components/text-input/history) for the Text input component
+
 {{ example({ group: "components", item: "text-input", example: "default", html: true, nunjucks: true, open: false, size: "s", loading: "eager" }) }}
 
 ## When to use this component
