@@ -49,6 +49,17 @@
         </ul>
       {% endif %}
 
+      {% if title == "Generic header" or title == "Generic header - Change history" %}
+        <ul class="app-guidance-tabs">
+          <li class="app-guidance-tabs__item{% if title == "Generic header" %} app-guidance-tabs__item--current{% endif %}">
+            <a href="/components/generic-header" class="app-guidance-tabs__link">Guidance</a>
+          </li>
+          <li class="app-guidance-tabs__item{% if title == "Generic header - Change history" %} app-guidance-tabs__item--current{% endif %}">
+            <a href="/components/generic-header/history" class="app-guidance-tabs__link">Change history</a>
+          </li>
+        </ul>
+      {% endif %}
+
       <div class="app-prose-scope">
         {{ contents | safe }}
       </div>
