@@ -19,7 +19,7 @@
   classes: "app-status-callout" + (" " + settings.classes if settings.classes)
 }) %}
 {{ govukTag({
-  classes: "govuk-tag--" + settings.statusTagColour,
+  classes: "app-status-callout__tag govuk-tag--" + settings.statusTagColour,
   text: settings.statusName
 }) }}
 {{ content | safe }}
