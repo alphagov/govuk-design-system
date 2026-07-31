@@ -25,13 +25,19 @@
 {{ content | safe }}
 
 {%- if params.links %}
-<ul class="govuk-list">
+{%- if params.links | length > 1 %}
+<ul class="govuk-list app-status-callout__list">
 {%- for item in params.links %}
 <li><a class="govuk-link" href="{{ item.href }}">
   {{- item.html | safe if item.html else item.text -}}
 </a></li>
 {%- endfor %}
 </ul>
+{%- else %}
+<p class="govuk-body"><a class="govuk-link" href="{{ params.links[0].href }}">
+  {{- params.links[0].html | safe if params.links[0].html else params.links[0].text -}}
+</a></p>
+{%- endif %}
 {%- endif %}
 
 {%- endcall %}
