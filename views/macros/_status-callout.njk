@@ -1,0 +1,63 @@
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+
+{# Generic macro that other callouts can inherit from. #}
+{% macro _statusCallout(settings, params) %}
+  {%- set content -%}
+    {% if caller %}
+      {{ caller() }}
+    {% elif params.html %}
+      {{ params.html | safe }}
+    {% elif params.text %}
+      <p class="govuk-body">{{ params.text }}</p>
+    {% else %}
+      {{ settings.content | safe }}
+    {% endif %}
+  {%- endset -%}
+
+  {%- call govukInsetText({
+    classes: "app-status-callout" + (" " + settings.classes if settings.classes)
+  }) %}
+    {{ govukTag({
+      classes: "app-status-callout__tag govuk-tag--" + settings.statusTagColour,
+      text: settings.statusName
+    }) }}
+    {{ content | safe }}
+
+    {%- if params.links %}
+      {%- if params.links | length > 1 %}
+        <ul class="govuk-list app-status-callout__list">
+          {%- for item in params.links -%}
+            <li>
+              <a class="govuk-link" href="{{ item.href }}">
+                {{- item.html | safe if item.html else item.text -}}
+              </a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      {%- else %}
+        <p class="govuk-body">
+          <a class="govuk-link" href="{{ params.links[0].href }}">
+            {{- params.links[0].html | safe if params.links[0].html else params.links[0].text -}}
+          </a>
+        </p>
+      {%- endif %}
+    {%- endif %}
+  {%- endcall %}
+{% endmacro %}
+
+{# Trial status #}
+{% macro trialCallout(params) %}
+  {%- set defaultContent -%}
+  <p class="govuk-body">This component is being actively developed and may change significantly before being stabilised.</p>
+  {%- endset -%}
+
+  {%- set settings = {
+    classes: "app-status-callout--trial",
+    statusName: "Trial",
+    statusTagColour: "orange",
+    content: defaultContent
+  } -%}
+
+  {{- _statusCallout(settings, params) -}}
+{% endmacro %}

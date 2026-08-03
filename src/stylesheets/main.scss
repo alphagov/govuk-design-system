@@ -350,6 +350,27 @@ pre .language-plaintext {
   margin: 0;
 }
 
+// Lifecycle status callouts (inherits from inset text component)
+.app-status-callout {
+  &.app-status-callout--trial {
+    border-left-color: govuk-colour("orange");
+    background-color: govuk-colour("orange", $variant: "tint-95");
+  }
+}
+
+.app-status-callout__tag {
+  margin-bottom: govuk-spacing(1);
+}
+
+// Element name is included here as this needs higher specificity to override
+// the styles applied by .app-prose-scope
+//
+// stylelint-disable-next-line selector-no-qualifying-type
+ul.app-status-callout__list {
+  padding-left: 0;
+  list-style-type: none;
+}
+
 // REMOVE EACH RULE BELOW WHEN GOV.UK FRONTEND V6.0.0 IS RELEASED
 // AND USED ON THE SITE
 
