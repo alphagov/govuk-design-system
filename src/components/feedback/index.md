@@ -58,6 +58,13 @@ We thank the service teams across government who worked with us in the early sta
 
 We’d also like to thank the GOV.UK Forms team for helping us build this component.
 
-### Help us improve this component
+### Share your research
 
-We're still working to improve this component and we’d like to get your feedback. If you've implemented this component and can tell us about how it’s working in your service, [contact the team](/contact/).
+We're still working to improve this component and we’d like to get your feedback. 
+
+If you've implemented this component, we'd like to know if it's an improvement over what you've used before to gather feedback. 
+
+We want to know how many of your users: 
+
+- use this component to go from your service to your feedback page, compared to before
+- start and complete your feedback form, compared to before
