@@ -15,7 +15,7 @@ Using the GOV.UK Design System in a service does not immediately make that servi
 
 ## Accessibility statement
 
-[Our accessibility statement](/accessibility-statement/) helps not just end users but also service teams to understand how accessibile GOV.UK Frontend, its documentation website and this website are.
+[Our accessibility statement](/accessibility-statement/) helps not just end users but also service teams to understand how accessible GOV.UK Frontend, its documentation website and this website are.
 
 ## Accessibility in the Service Manual
 
