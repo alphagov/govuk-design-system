@@ -2,6 +2,7 @@
 title: Feedback
 description: Ask users to give their feedback about your service at any point of the journey
 section: Components
+discussionId: 4978
 layout: layout-pane.njk
 status: 
   type: trial

@@ -2,14 +2,15 @@
 {% if ["Components", "Patterns", "Styles"].includes(section) %}
   <h2 class="govuk-heading-l govuk-!-padding-top-7" id="help-improve-this-page">Help improve this {{ section.slice(0, -1) | lower }}</h2>
 
-  {% if backlogIssueId %}
+  {% if backlogIssueId or discussionId %}
+    {%- set discussionUrl = "https://github.com/alphagov/" + ("govuk-design-system/discussions/" + discussionId if discussionId else "govuk-design-system-backlog/issues/") + backlogIssueId  %}
     <p class="govuk-body">
       To help make sure that this page is useful, relevant and up to date, you can:
     </p>
     <ul class="govuk-list govuk-list--bullet">
       <li>
         take part in the
-        <a class="govuk-link app-contact-panel__link" href="https://github.com/alphagov/govuk-design-system-backlog/issues/{{ backlogIssueId }}">
+        <a class="govuk-link app-contact-panel__link" href="{{ discussionUrl }}">
           ‘{{ title }}’ discussion on GitHub
         </a>
         and share your research
