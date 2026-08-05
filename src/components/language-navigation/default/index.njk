@@ -1,0 +1,22 @@
+---
+title: Language navigation
+layout: layout-example.njk
+---
+
+{% from "govuk/components/language-navigation/macro.njk" import govukLanguageNavigation %}
+
+{{ govukLanguageNavigation({
+  items: [
+    {
+      text: "English",
+      lang: "en",
+      href: "#",
+      current: true
+    },
+    {
+      text: "Cymraeg",
+      lang: "cy",
+      href: "#"
+    }
+  ]
+}) }}

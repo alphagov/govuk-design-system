@@ -44,17 +44,39 @@ Show navigation links to let users navigate to different parts of your service a
 
 See when and how to show navigation links in the [Help users navigate a service pattern](/patterns/navigate-a-service/).
 
-## Use ‘slots’ to add custom elements
+## Use ‘slots’ to add custom HTML code
 
-The Service navigation includes the option to use ‘slots’ to insert custom HTML code at specific points inside the component. This helps you extend the component to add custom elements, such as language selectors.
+The Service navigation includes the option to use ‘slots’ to render custom HTML code at specific places inside the component.
 
-You must provide your own styles and JavaScript code for the content within a slot, particularly if you’re not using an existing component. You’ll need to decide on the most appropriate layout and positioning.
+You must provide your own styles and JavaScript for the custom HTML code within a slot, particularly if you’re not using an existing component. You’ll need to decide on the most appropriate layout and positioning.
 
 {{ example({ group: "components", item: "service-navigation", example: "with-slots", html: true, nunjucks: true, open: false }) }}
 
 The [Help users to navigate a service pattern](/patterns/navigate-a-service) includes some guidance on ‘Adding other header and navigation elements’.
 
-### Ensure the ‘aria-label’ is accurate for users of assistive technology
+### Adding language navigation
+
+If you use the [trial Language navigation component](/components/language-navigation) and provide your whole service in more than one language, you can use the 'end' slot to show language options within the Service navigation and align it with navigation items.
+
+### Align the end slot with the navigation items
+
+When enough space is available on screen, the Service Navigation can render custom HTML inline with navigation items, to their right, rather than underneath the navigation items.
+
+If you use HTML:
+
+1. Place the custom HTML code in the end slot before the closing `</div>` of the `<div class="govuk-width-container">` element.
+2. Add the `govuk-service-navigation__inlining-container` to the `<div class="govuk-width-container">` element.
+
+If you use Nunjucks:
+
+1. Place the custom HTML code in the `html` option of the `end` slot.
+2. Set the `align` option of the `end` slot to `"inline"`.
+
+This can help save space when showing tools users expect to see in that area, like a [language navigation](/components/language-navigation), or authentication and account links.
+
+{{ example({ group: "components", item: "service-navigation", example: "with-inline-end-slot", html: true, nunjucks: true, open: false }) }}
+
+### Make sure the ‘aria-label’ is accurate for users of assistive technology
 
 When a service name is shown, we let users know that there’s information about the service with a ‘region landmark’ using the `<section>` element.
 
