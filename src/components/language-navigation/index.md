@@ -5,6 +5,13 @@ section: Components
 aliases: Language selector, Language switcher
 backlogIssueId: 285
 layout: layout-pane.njk
+status: 
+  type: trial
+  links:
+    - href: "#research-on-this-component"
+      text: Research on this component
+    - href: "#help-improve-this-page"
+      text: Help improve this component
 ---
 
 {% from "_example.njk" import example %}
