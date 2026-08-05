@@ -32,7 +32,7 @@
   background-color: govuk-colour("white");
 }
 
-.app-subnav__section-item--current .app-subnav__link {
+.app-subnav__section-item--current .app-subnav__link[aria-current="page"] {
   font-weight: bold;
 }
 

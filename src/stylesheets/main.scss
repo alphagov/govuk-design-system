@@ -349,3 +349,33 @@ pre .language-plaintext {
 .app-nunjucks-options-list h4 {
   margin: 0;
 }
+
+.app-guidance-tabs {
+  @include govuk-font($size: 19);
+  display: flex;
+  margin: 0 0 govuk-spacing(4);
+  padding: 0;
+  border-bottom: 1px solid govuk-functional-colour(border);
+  list-style: none;
+}
+
+.app-guidance-tabs__item {
+  box-sizing: border-box;
+  margin-right: govuk-spacing(6);
+  padding-bottom: govuk-spacing(1);
+  list-style: none;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.app-guidance-tabs__item--current {
+  @include govuk-typography-weight-bold;
+  border-bottom: 3px solid govuk-functional-colour(link);
+}
+
+.app-guidance-tabs__link {
+  @include govuk-link-style-no-underline;
+  @include govuk-link-style-no-visited-state;
+}

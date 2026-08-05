@@ -35,17 +35,26 @@
       </aside>
       {% endif %}
 
-      {% if showPageNav %}
+      {% if showPageNav or hasHistory %}
         <ul class="app-page-navigation">
-          {% for heading in headings %}
-            {% if heading.depth == 2 %}
-              <li class="app-page-navigation__item">
-                <a class="govuk-link" href="#{{ heading.url}}">
-                  {{ heading.text }}
-                </a>
-              </li>
-            {% endif %}
-          {% endfor %}
+          {% if hasHistory %}
+            <li class="app-page-navigation__item">
+              <a class="govuk-link" href="{{ permalink }}/history">
+                History<span class="govuk-visually-hidden"> of {{ subitem.label }}</span>
+              </a>
+            </li>
+          {% endif %}
+          {% if showPageNav %}
+            {% for heading in headings %}
+              {% if heading.depth == 2 %}
+                <li class="app-page-navigation__item">
+                  <a class="govuk-link" href="#{{ heading.url}}">
+                    {{ heading.text }}
+                  </a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
         </ul>
       {% endif %}
 
