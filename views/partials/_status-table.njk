@@ -1,0 +1,31 @@
+{%- from "govuk/components/task-list/macro.njk" import govukTaskList %}
+
+<div class="app-status-table">
+  {%- for item in navigation %}
+    {%- if permalink and item | isActive(permalink) %}
+      {%- for theme, items in item.items | groupby("theme") %}
+        {%- set sectionItems = [] %}
+
+        {%- if theme != 'undefined' %}
+          <h2 class="govuk-heading-m">{{ theme }}</h2>
+        {%- endif %}
+
+        {%- for subitem in items %}
+          {%- set sectionItems = sectionItems.concat({
+            title: {
+              text: subitem.label
+            },
+            href: "/" + subitem.url + "/",
+            status: {
+              tag: subitem.status
+            }
+          }) %}
+        {%- endfor %}
+
+        {{ govukTaskList({
+          items: sectionItems
+        }) }}
+      {%- endfor %}
+    {%- endif %}
+  {%- endfor %}
+</div>
