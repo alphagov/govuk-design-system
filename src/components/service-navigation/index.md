@@ -44,9 +44,13 @@ Show navigation links to let users navigate to different parts of your service a
 
 See when and how to show navigation links in the [Help users navigate a service pattern](/patterns/navigate-a-service/).
 
+### Adding language navigation
+
+If you provide your whole service in more than one language, you can place the [Language navigation component in the Service navigation](/components/language-navigation/#if-you-offer-your-whole-service-in-another-language).
+
 ## Use ‘slots’ to add custom elements
 
-The Service navigation includes the option to use ‘slots’ to insert custom HTML code at specific points inside the component. This helps you extend the component to add custom elements, such as language selectors.
+The Service navigation includes the option to use ‘slots’ to insert custom HTML code at specific points inside the component. This helps you extend the component to add custom elements.
 
 You must provide your own styles and JavaScript code for the content within a slot, particularly if you’re not using an existing component. You’ll need to decide on the most appropriate layout and positioning.
 
