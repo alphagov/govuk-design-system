@@ -3,6 +3,8 @@
 
 {# Generic macro that other callouts can inherit from. #}
 {% macro _statusCallout(settings, params) %}
+  {%- set classSlug = settings.statusName | slugify %}
+
   {%- set content -%}
     {% if caller %}
       {{ caller() }}
@@ -16,10 +18,10 @@
   {%- endset -%}
 
   {%- call govukInsetText({
-    classes: "app-status-callout" + (" " + settings.classes if settings.classes)
+    classes: "app-status-callout app-status-callout--" + classSlug
   }) %}
     {{ govukTag({
-      classes: "app-status-callout__tag govuk-tag--" + settings.statusTagColour,
+      classes: "app-status-tag app-status-tag--" + classSlug,
       text: settings.statusName
     }) }}
     {{ content | safe }}
@@ -53,9 +55,7 @@
   {%- endset -%}
 
   {%- set settings = {
-    classes: "app-status-callout--trial",
     statusName: "Trial",
-    statusTagColour: "orange",
     content: defaultContent
   } -%}
 
