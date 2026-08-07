@@ -373,7 +373,7 @@ ul.app-status-callout__list {
 
 // Lifecycle status overview tables
 .app-status-table {
-  margin-top: govuk-spacing(5);
+  @include govuk-responsive-margin(7, $direction: top);
 }
 
 // REMOVE EACH RULE BELOW WHEN GOV.UK FRONTEND V6.0.0 IS RELEASED
