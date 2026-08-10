@@ -27,7 +27,9 @@
         {{ title }}
       </h1>
 
-      {%- if (status == "Trial") or (status.type == "Trial") %}
+      {# Status callout #}
+      {% set statusTag = (status.type if status.type else status) | slugify if status %}
+      {%- if statusTag == "trial" %}
         {{ trialCallout(status) }}
       {%- endif %}
 
