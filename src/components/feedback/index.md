@@ -5,7 +5,7 @@ section: Components
 discussionId: 4978
 layout: layout-pane.njk
 status: 
-  type: trial
+  type: Trial
   links:
     - href: "#research-on-this-component"
       text: Research on this component

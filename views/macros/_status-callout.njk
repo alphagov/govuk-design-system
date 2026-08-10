@@ -54,7 +54,7 @@
 
   {%- set settings = {
     classes: "app-status-callout--trial",
-    statusName: "Trial",
+    statusName: params.type if params.type else params,
     statusTagColour: "orange",
     content: defaultContent
   } -%}
