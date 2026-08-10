@@ -79,6 +79,14 @@ Make sure to translate:
 - the `aria-label` (or `ariaLabel` in Nunjucks) to be in the language of the page it is on (it says “Language navigation” by default)
 - the hidden text behind each item (`languageDescriptionText` in Nunjucks) to be in the language of the item
 
+### Language navigation on dark backgrounds
+
+Use the `govuk-language-navigation--inverse` modifier class to show white links and text on a dark background – for example, inside a Service navigation with a dark background.
+
+Make sure all users can see the breadcrumbs – the background colour must have a contrast ratio of at least 4.5:1 with white to [meet WCAG 2.2 success criterion 1.4.3 Contrast (minimum), level AA](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html).
+
+{{ example({ group: "components", item: "language-navigation", example: "inverse", html: true, nunjucks: true, open: false }) }}
+
 ## Designing services that offer multiple languages
 
 GOV.UK Content and publishing guidance gives some advice on things you need to [consider when translating content](https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/plan-manage-content/consider-translations/).
