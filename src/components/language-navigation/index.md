@@ -18,7 +18,7 @@ status:
 
 The Language navigation component helps users choose and switch between languages when using a service.
 
-[CODE EXAMPLE]
+{{ example({ group: "components", item: "language-navigation", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 
