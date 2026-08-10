@@ -61,7 +61,7 @@ You could place the language navigation at the top of a page, after the `h1` ele
 
 This helps users find their preferred language as quickly as possible.
 
-[CODE EXAMPLE]
+{{ example({ group: "components", item: "language-navigation", example: "after-h1", html: true, nunjucks: true, open: false }) }}
 
 ### If you offer your whole service in another language
 
