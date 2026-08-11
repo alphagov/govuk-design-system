@@ -110,7 +110,7 @@ In 2022, the GOV.UK Design System team [updated the component to make it more ac
 
 In Internet Explorer 11, JAWS will ignore any set threshold and announce the character count, even if the user entered less than the threshold.
 
-In Chrome version 99, JAWS will not announce the hint or character count of a pre-populated textarea. This is a [known issue for the developer of JAWS](https://github.com/FreedomScientific/VFO-standards-support/issues/201).
+In Chrome version 99, JAWS will not announce the hint or character count of a pre-populated textarea. This is a [known issue for the developer of JAWS](https://github.com/FreedomScientific/standards-support/issues/201).
 
 Also, this component [counts some characters as multiple characters](https://github.com/alphagov/govuk-frontend/issues/1104). For example, emojis and some non-Latin characters.
 
