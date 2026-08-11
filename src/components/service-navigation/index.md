@@ -50,6 +50,8 @@ The Service navigation includes the option to use ‘slots’ to insert custom H
 
 You must provide your own styles and JavaScript code for the content within a slot, particularly if you’re not using an existing component. You’ll need to decide on the most appropriate layout and positioning.
 
+{{ example({ group: "components", item: "service-navigation", example: "with-slots", html: true, nunjucks: true, open: false }) }}
+
 The [Help users to navigate a service pattern](/patterns/navigate-a-service) includes some guidance on ‘Adding other header and navigation elements’.
 
 ### Ensure the ‘aria-label’ is accurate for users of assistive technology
