@@ -1,0 +1,47 @@
+---
+title: Service navigation with inline end slot – Service navigation
+layout: layout-example.njk
+---
+
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+{% from "govuk/components/language-navigation/macro.njk" import govukLanguageNavigation %}
+
+{% set languageNavigationHtml %}
+  {{ govukLanguageNavigation({
+    items: [
+      {
+        text: "English",
+        lang: "en",
+        href: "#",
+        current: true
+      },
+      {
+        text: "Cymraeg",
+        lang: "cy",
+        href: "#"
+      }
+    ]
+  }) }}
+{% endset %}
+
+{{ govukServiceNavigation({
+  serviceName: "Service name",
+  serviceUrl: "#",
+  navigation: [
+    {
+      href: "#",
+      text: "Item 1"
+    },
+    {
+      href: "#",
+      text: "Item 2",
+      active: true
+    }
+  ],
+  slots: {
+    end: {
+      html: languageNavigationHtml,
+      align: 'inline'
+    }
+  }
+}) }}

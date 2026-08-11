@@ -64,6 +64,12 @@ When a service name is shown, we let users know that there’s information about
 
 Depending on what you add in the slots, you might need to rename the `aria-label` to accurately describe what’s in the section.
 
+### Align the `end` slot with the navigation items
+
+When enough space is available on screen, you can display the `end` slot inline with the navigation items to their right rather than underneath the navigation items. This can be useful when injecting content users expect in that area, like a [language navigation](/components/language-navigation), or authentication and account links.
+
+{{ example({ group: "components", item: "service-navigation", example: "with-inline-end-slot", html: true, nunjucks: true, open: false }) }}
+
 ### Test with each update of GOV.UK Frontend
 
 There’s a risk that slot contents may look or work differently in a future release of GOV.UK Frontend.
