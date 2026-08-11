@@ -46,7 +46,7 @@ See when and how to show navigation links in the [Help users navigate a service 
 
 ### Adding language navigation
 
-If you provide your whole service in more than one language, you can place the [Language navigation component in the Service navigation](/components/language-navigation/#if-you-offer-your-whole-service-in-another-language).
+If you provide your whole service in more than one language, you can place the Language navigation component in the [`end` slot of the Service navigation, inline with the navigation items](#align-the-end-slot-with-the-navigation-items).
 
 ## Use ‘slots’ to add custom elements
 
