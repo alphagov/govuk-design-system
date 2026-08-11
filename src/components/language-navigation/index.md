@@ -65,12 +65,7 @@ This helps users find their preferred language as quickly as possible.
 
 ### If you offer your whole service in another language
 
-If users can change the language for your whole service, place the Language navigation component into the Service navigation component:
-
-- if you’re using Nunjucks, place the component into the `end` slot
-- if you’re using HTML, place it right after the closing `</nav>`
-
-The Service navigation component has the `endRightAligned` option in Nunjucks that will move whatever is in the `end` slot to the right-hand side of the Service navigation component. This adds a `<div class="govuk-service-navigation__end"></div>` around the slot’s content. This option includes space for a few language links.
+If users can change the language for your whole service, place the [Language navigation component into the Service navigation component](/components/service-navigation/#adding-language-navigation).
 
 ### Showing language navigation in another language
 
