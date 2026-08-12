@@ -36,6 +36,7 @@
     {{ content | safe }}
 
     {%- if params.links %}
+      <p class="govuk-body">Read these sections to see why this component is in trial:</p>
       {%- if params.links | length > 1 %}
         <ul class="govuk-list app-status-callout__list">
           {%- for item in params.links -%}
