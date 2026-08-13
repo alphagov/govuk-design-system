@@ -65,7 +65,9 @@ This helps users find their preferred language as quickly as possible.
 
 ### If you offer your whole service in another language
 
-If users can change the language for your whole service, place the [Language navigation component into the Service navigation component](/components/service-navigation/#adding-language-navigation).
+If users can change the language for your whole service, you can place the [Language navigation component into the Service navigation component](/components/service-navigation/#adding-language-navigation) using its 'slots' options.
+
+{{ example({ group: "components", item: "service-navigation", example: "with-inline-end-slot", html: true, nunjucks: true, open: false }) }}
 
 ### Showing language navigation in another language
 
