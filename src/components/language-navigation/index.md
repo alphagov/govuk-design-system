@@ -18,7 +18,7 @@ status:
 
 The Language navigation component helps users choose and switch between languages when using a service.
 
-[CODE EXAMPLE]
+{{ example({ group: "components", item: "language-navigation", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 
@@ -61,7 +61,7 @@ You could place the language navigation at the top of a page, after the `h1` ele
 
 This helps users find their preferred language as quickly as possible.
 
-[CODE EXAMPLE]
+{{ example({ group: "components", item: "language-navigation", example: "after-h1", html: true, nunjucks: true, open: false }) }}
 
 ### If you offer your whole service in another language
 
@@ -78,6 +78,14 @@ Make sure to translate:
 
 - the `aria-label` (or `ariaLabel` in Nunjucks) to be in the language of the page it is on (it says “Language navigation” by default)
 - the hidden text behind each item (`languageDescriptionText` in Nunjucks) to be in the language of the item
+
+### Language navigation on dark backgrounds
+
+Use the `govuk-language-navigation--inverse` modifier class to show white links and text on a dark background – for example, inside a Service navigation with a dark background.
+
+Make sure all users can see the breadcrumbs – the background colour must have a contrast ratio of at least 4.5:1 with white to [meet WCAG 2.2 success criterion 1.4.3 Contrast (minimum), level AA](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html).
+
+{{ example({ group: "components", item: "language-navigation", example: "inverse", html: true, nunjucks: true, open: false }) }}
 
 ## Designing services that offer multiple languages
 
