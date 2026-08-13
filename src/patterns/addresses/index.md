@@ -14,9 +14,48 @@ This guidance is for government teams that build online services. [To find infor
 
 Help users provide an address using one of the following:
 
-- Multiple text inputs
 - Address lookup
+- Multiple text inputs
 - Textarea
+
+## Address lookup
+
+An address lookup helps users find a full address from partial information such as a postcode.
+
+### When to use an address lookup
+
+Use an address lookup when you’re asking users for a UK address.
+
+### When not to use an address lookup
+
+Address lookups generally only work for UK addresses. Use a manual option such as multiple text inputs or a textarea when you are collecting mostly or only international addresses.
+
+### How an address lookup works
+
+An address lookup lets users specify a UK address by entering their postcode and selecting their address from a list. There is also an option to enter a street name or number.
+
+When using an address lookup, you should:
+
+- make it clear that it will only work for UK addresses
+- provide a manual option for people with international addresses or addresses that are missing or not properly listed in the address lookup
+- let people enter their postcodes in upper or lower case and with or without spaces
+
+### Unique Property Reference Numbers
+
+Many address lookup APIs also include a Unique Property Reference Number (UPRN) which is a 12 digit identifier for every addressable location in Great Britain.  [A mandate](https://static.geoplace.co.uk/downloads/GEO13042-GeoPlace-You-Must-Use-UPRNs-USRNs-v4.pdf) was introduced in 2020 which states all public sector systems and projects which include address data should include UPRNs. Collecting this information at source will prevent manual address matching in future.
+
+Address lookups should only use data from one API so it is consistent and accurate. One such API which can be used for this is the [Ordnance Survey Places API](https://www.ordnancesurvey.co.uk/products/os-places-api).
+
+#### Allow different postcode formats
+
+It's easier for users if you accept and ignore unwanted characters. This is better than rejecting the input and telling the user they have not provided a valid postcode.
+
+You should let users enter postcodes that contain:
+
+- upper and lower case letters
+- no spaces
+- additional spaces at the beginning, middle or end
+- punctuation like hyphens, brackets, dashes and full stops
 
 ## Multiple text inputs
 
@@ -72,39 +111,6 @@ If a postcode entered is not a real postcode, use a message like this:
 {{ example({ group: "patterns", item: "addresses", example: "error-postcode", html: true, nunjucks: true, open: false, size: "s" }) }}
 
 Make sure errors follow the guidance in the [Error message component](/components/error-message/) and have specific error messages for specific error states.
-
-## Address lookup
-
-An address lookup helps users find a full address from partial information such as a postcode.
-
-### When to use an address lookup
-
-Use an address lookup when you’re asking users for a UK address.
-
-### When not to use an address lookup
-
-Address lookups generally only work for UK addresses. Use a manual option such as multiple text inputs or a textarea when you are collecting mostly or only international&nbsp;addresses
-
-### How an address lookup works
-
-An address lookup lets users specify a UK address by entering their postcode and selecting their address from a list. There is also an option to enter a street name or&nbsp;number.
-
-When using an address lookup, you should:
-
-- make it clear that it will only work for UK addresses
-- provide a manual option for people with international addresses or addresses that are missing or not properly listed in the address lookup
-- let people enter their postcodes in upper or lower case and with or without spaces
-
-#### Allow different postcode formats
-
-It's easier for users if you accept and ignore unwanted characters. This is better than rejecting the input and telling the user they have not provided a valid postcode.
-
-You should let users enter postcodes that contain:
-
-- upper and lower case letters
-- no spaces
-- additional spaces at the beginning, middle or end
-- punctuation like hyphens, brackets, dashes and full stops
 
 ## Textarea
 
