@@ -5,8 +5,7 @@
 // class names across uses
 
 $_statuses: (
-  "trial": "orange",
-  "stable": "blue"
+  "trial": "orange"
 );
 
 @each $name, $colour in $_statuses {
