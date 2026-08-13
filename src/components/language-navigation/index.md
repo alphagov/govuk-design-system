@@ -28,8 +28,8 @@ For example, to help users choose and switch from a page in English to a Welsh v
 
 How you use this component will depend on whether you offer a choice of languages for:
 
-- your entire service
-- specific pages within your service
+- [specific pages within your service](#if-you-only-offer-specific-pages-in-another-language)
+- [your whole service](#if-you-offer-your-whole-service-in-another-language)
 
 ## When not to use this component
 
@@ -39,7 +39,7 @@ Do not use this component unless you can provide all the same key information on
 
 The Language navigation component shows users a choice of languages and helps the user choose and switch between them.
 
-Use the native name of each language, for example Cymraeg for Welsh. This helps speakers of that language recognise the link.
+Use the native name of each language, for example <span lang="cy">Cymraeg</span> for Welsh. This helps speakers of that language recognise the link.
 
 The component does not translate content. You'll need to create, test and maintain content for all the languages you offer your service in.
 
@@ -57,7 +57,7 @@ Use the same placement throughout your service in all languages. This helps user
 
 ### If you only offer specific pages in another language
 
-You could place the language navigation at the top of a page, after the `h1` element, in a location that makes sense within the page heading structure.
+You could place the language navigation at the top of a page, after the `h1` element. Make sure its location makes sense within the page heading structure.
 
 This helps users find their preferred language as quickly as possible.
 
@@ -74,10 +74,11 @@ The Service navigation component has the `endRightAligned` option in Nunjucks th
 
 ### Showing language navigation in another language
 
-Make sure to translate:
+The code in this component contains landmark roles and hidden text to help users, including users of assistive technology. Make sure to translate these attributes as needed.
 
-- the `aria-label` (or `ariaLabel` in Nunjucks) to be in the language of the page it is on (it says “Language navigation” by default)
-- the hidden text behind each item (`languageDescriptionText` in Nunjucks) to be in the language of the item
+`aria-label` (or `ariaLabel` in Nunjucks) is a 'landmark role' to helps users find and navigate to this component and understand what it does. By default it says "language navigation". Translate this to the language of the page it's on.
+
+Hidden text within the link for each language option (or `languageDescriptionText` in Nunjucks) explains what the link will do. For example, “Change the language to English”. Translate these to the language you're linking to.
 
 ### Language navigation on dark backgrounds
 
