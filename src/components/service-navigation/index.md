@@ -44,10 +44,6 @@ Show navigation links to let users navigate to different parts of your service a
 
 See when and how to show navigation links in the [Help users navigate a service pattern](/patterns/navigate-a-service/).
 
-### Adding language navigation
-
-If you provide your whole service in more than one language, you can place the Language navigation component in the [`end` slot of the Service navigation, inline with the navigation items](#align-the-end-slot-with-the-navigation-items).
-
 ## Use ‘slots’ to add custom elements
 
 The Service navigation includes the option to use ‘slots’ to insert custom HTML code at specific points inside the component. This helps you extend the component to add custom elements.
@@ -58,17 +54,27 @@ You must provide your own styles and JavaScript code for the content within a sl
 
 The [Help users to navigate a service pattern](/patterns/navigate-a-service) includes some guidance on ‘Adding other header and navigation elements’.
 
-### Ensure the ‘aria-label’ is accurate for users of assistive technology
+### Adding language navigation
 
-When a service name is shown, we let users know that there’s information about the service with a ‘region landmark’ using the `<section>` element.
+If you use the [trial Language navigation component](/components/language-navigation) and provide your whole service in more than one language, you can use slots to show language options within the Service navigation.
 
-Depending on what you add in the slots, you might need to rename the `aria-label` to accurately describe what’s in the section.
+Place the Language navigation component in the `end` slot of the Service navigation, inline with the navigation items.
 
 ### Align the `end` slot with the navigation items
 
 When enough space is available on screen, you can display the `end` slot inline with the navigation items to their right rather than underneath the navigation items. This can be useful when injecting content users expect in that area, like a [language navigation](/components/language-navigation), or authentication and account links.
 
+Use the `inline` align option to show the `end` slot inline with navigation items (to the right instead of underneath) when there's enough screen space.
+
+This can help save space when showing tools users expect to see in that area, such as language navigation.
+
 {{ example({ group: "components", item: "service-navigation", example: "with-inline-end-slot", html: true, nunjucks: true, open: false }) }}
+
+### Ensure the ‘aria-label’ is accurate for users of assistive technology
+
+When a service name is shown, we let users know that there’s information about the service with a ‘region landmark’ using the `<section>` element.
+
+Depending on what you add in the slots, you might need to rename the `aria-label` to accurately describe what’s in the section.
 
 ### Test with each update of GOV.UK Frontend
 

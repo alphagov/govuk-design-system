@@ -57,21 +57,25 @@ Use the same placement throughout your service in all languages. This helps user
 
 ### If you only offer specific pages in another language
 
-You could place the language navigation at the top of a page, after the `h1` element. Make sure its location makes sense within the page heading structure.
+You could place the language navigation at the top of a page, after the `h1` element. This helps users find their preferred language as quickly as possible.
 
-This helps users find their preferred language as quickly as possible.
+If you choose to place the language navigation elsewhere on a page, it should be in a sensible place in the page heading structure with its own visible or hidden heading.
 
 {{ example({ group: "components", item: "language-navigation", example: "after-h1", html: true, nunjucks: true, open: false }) }}
 
 ### If you offer your whole service in another language
 
-If users can change the language for your whole service, place the [Language navigation component into the Service navigation component](/components/service-navigation/#adding-language-navigation).
+If users can change the language for your whole service, you can place the [Language navigation component into the Service navigation component](/components/service-navigation/#adding-language-navigation) using its 'slots' options.
 
-### Showing language navigation in another language
+Use the `inline` align option for slots to align the language navigation inline with navigation items as shown in this example.
 
-The code in this component contains landmark roles and hidden text to help users, including users of assistive technology. Make sure to translate these attributes as needed.
+{{ example({ group: "components", item: "service-navigation", example: "with-inline-end-slot", html: true, nunjucks: true, open: false }) }}
 
-`aria-label` (or `ariaLabel` in Nunjucks) is a 'landmark role' to helps users find and navigate to this component and understand what it does. By default it says "language navigation". Translate this to the language of the page it's on.
+### Showing language navigation for other languages
+
+The code in this component contains a navigation landmark and some hidden text to help users, including users of assistive technology. Make sure to translate these attributes as needed.
+
+`aria-label` (or `ariaLabel` in Nunjucks) labels the component's navigation landmark. By default the label is "language", which will be announced by a screen reader as "language navigation". Translate this label to the language of the page it's on.
 
 Hidden text within the link for each language option (or `languageDescriptionText` in Nunjucks) explains what the link will do. For example, “Change the language to English”. Translate these to the language you're linking to.
 
