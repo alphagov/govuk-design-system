@@ -1,0 +1,39 @@
+@use "pkg:govuk-frontend/base" as *;
+
+// Tag colours for lifecycle statuses are defined using names, so the status to
+// colour pairing can be defined in CSS, rather than relying on syncronising
+// class names across uses
+
+$_statuses: (
+  "trial": "orange"
+);
+
+@each $name, $colour in $_statuses {
+  .app-status-tag--#{$name} {
+    color: govuk-colour($colour, $variant: "shade-50");
+    background-color: govuk-colour($colour, $variant: "tint-80");
+  }
+
+  .app-status-callout--#{$name} {
+    border-left-color: govuk-colour($colour);
+    background-color: govuk-colour($colour, $variant: "tint-95");
+  }
+}
+
+.app-status-callout .app-status-tag {
+  margin-bottom: govuk-spacing(1);
+}
+
+// The element name is included here as this needs higher specificity to
+// override the list styles applied by .app-prose-scope
+//
+// stylelint-disable-next-line selector-no-qualifying-type
+ul.app-status-callout__list {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+// Extra spacing before lifecycle status overview tables
+.app-status-table {
+  @include govuk-responsive-margin(7, $direction: top);
+}

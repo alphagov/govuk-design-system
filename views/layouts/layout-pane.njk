@@ -1,7 +1,7 @@
 {% extends "_generic.njk" %}
 
 {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
-{% from "_status-callout.njk" import trialCallout %}
+{% from "_status-callout.njk" import statusCallout %}
 
 {# If the theme ends in '…', then we nest the caption inside the H1 so that the
   H1 becomes e.g. 'Ask users for dates'. Otherwise, we put it before the H1. #}
@@ -27,8 +27,10 @@
         {{ title }}
       </h1>
 
-      {%- if (status == "trial") or (status.type == "trial") %}
-        {{ trialCallout(status) }}
+      {# Status callout #}
+      {% set statusTag = (status.type if status.type else status) | slugify if status %}
+      {%- if statusTag == "trial" %}
+        {{ statusCallout(status) }}
       {%- endif %}
 
       {% if showPageNav %}

@@ -1,8 +1,19 @@
 {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 {% from "govuk/components/tag/macro.njk" import govukTag %}
 
-{# Generic macro that other callouts can inherit from. #}
-{% macro _statusCallout(settings, params) %}
+{% macro statusCallout(params) %}
+  {# Status name can be the passed value (as a string) or the 'type' key within an object. #}
+  {%- set statusLabel = params.type if params.type else params %}
+  {%- set classSlug = statusLabel | slugify %}
+
+  {# Define the default content each status type displays, if any. #}
+  {# This is specified here so that it remains the same regardless of the macro being used in the layout or in content. #}
+  {%- set defaultContent %}
+    {%- if classSlug == "trial" %}
+      <p class="govuk-body">This component is being developed and may change as we improve it.</p>
+    {%- endif %}
+  {%- endset %}
+
   {%- set content -%}
     {% if caller %}
       {{ caller() }}
@@ -11,16 +22,16 @@
     {% elif params.text %}
       <p class="govuk-body">{{ params.text }}</p>
     {% else %}
-      {{ settings.content | safe }}
+      {{ defaultContent | safe }}
     {% endif %}
   {%- endset -%}
 
   {%- call govukInsetText({
-    classes: "app-status-callout" + (" " + settings.classes if settings.classes)
+    classes: "app-status-callout app-status-callout--" + classSlug
   }) %}
     {{ govukTag({
-      classes: "app-status-callout__tag govuk-tag--" + settings.statusTagColour,
-      text: settings.statusName
+      classes: "app-status-tag app-status-tag--" + classSlug,
+      text: statusLabel
     }) }}
     {{ content | safe }}
 
@@ -44,20 +55,4 @@
       {%- endif %}
     {%- endif %}
   {%- endcall %}
-{% endmacro %}
-
-{# Trial status #}
-{% macro trialCallout(params) %}
-  {%- set defaultContent -%}
-  <p class="govuk-body">This component is being developed and may change as we improve it.</p>
-  {%- endset -%}
-
-  {%- set settings = {
-    classes: "app-status-callout--trial",
-    statusName: "Trial",
-    statusTagColour: "orange",
-    content: defaultContent
-  } -%}
-
-  {{- _statusCallout(settings, params) -}}
 {% endmacro %}
