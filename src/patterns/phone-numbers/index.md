@@ -6,6 +6,8 @@ theme: Ask users for…
 aliases: phone numbers, telephone
 backlogIssueId: 101
 layout: layout-pane.njk
+redirects:
+- /patterns/telephone-numbers
 ---
 
 {% from "_example.njk" import example %}
