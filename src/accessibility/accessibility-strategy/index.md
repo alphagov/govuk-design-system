@@ -5,6 +5,8 @@ section: Accessibility
 layout: layout-pane.njk
 showPageNav: true
 order: 3
+redirects:
+- /community/accessibility-strategy
 ---
 
 This accessibility strategy outlines the current principles and work needed to improve the accessibility of the GOV.UK Design System.

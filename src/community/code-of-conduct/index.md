@@ -5,6 +5,8 @@ section: Community
 theme: Events and workshops
 layout: layout-pane.njk
 order: 16
+redirects:
+- /code-of-conduct
 ---
 
 In order to establish and maintain an inclusive environment we ask participants to agree to the following code of conduct:
