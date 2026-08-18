@@ -1,3 +1,18 @@
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃ 👉 Looking to create a redirect for a page that has moved? 👀             ┃
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+# If you want to create redirects for pages that have moved, add them to the
+# frontmatter for the relevant page instead of adding them here.
+#
+# For example:
+#
+#   ---
+#   title: My moved document
+#   redirects:
+#   - /old-url
+#   ---
+
+
 # Override default `deploy/public` build directory used by legacy branches
 # https://app.netlify.com/sites/govuk-design-system-preview/configuration/deploys
 
