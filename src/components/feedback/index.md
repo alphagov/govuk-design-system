@@ -11,6 +11,8 @@ status:
       text: Research on this component
     - href: "#help-improve-this-page"
       text: Help improve this component
+  date: August 2026
+  dataCollectionUrl: https://github.com/alphagov/govuk-design-system/discussions/4978
 ---
 
 {% from "_example.njk" import example %}
@@ -57,7 +59,3 @@ You must include a link to a feedback page, which could be either:
 We thank the service teams across government who worked with us in the early stages of this component to measure its effectiveness.
 
 We’d also like to thank the GOV.UK Forms team for helping us build this component.
-
-### Help us improve this component
-
-We're still working to improve this component and we’d like to get your feedback. If you've implemented this component and can tell us about how it’s working in your service, [contact the team](/contact/).
