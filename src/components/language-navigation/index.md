@@ -6,7 +6,7 @@ aliases: Language selector, Language switcher
 backlogIssueId: 285
 layout: layout-pane.njk
 status: 
-  type: trial
+  type: Trial
   links:
     - href: "#research-on-this-component"
       text: Research on this component
@@ -24,7 +24,7 @@ The Language navigation component helps users choose and switch between language
 
 Use the Language navigation component when you can provide your service in more than one language.
 
-For example, to help users choose and switch from a page in English to a Welsh version of the same page.
+For example, to help users switch from a page in English to a Welsh version of the same page.
 
 How you use this component will depend on whether you offer a choice of languages for:
 
@@ -45,7 +45,7 @@ The component does not translate content. You'll need to create, test and mainta
 
 See some of the other things you might need to do as part of [designing services that offer multiple languages](#designing-services-that-offer-multiple-languages).
 
-Ensure the user does not lose any data they've entered when they navigate to another language. Do not ask the user to re-enter information they've already given.
+Make sure the user does not lose any data they've entered when they navigate to another language. Do not ask the user to re-enter information they've already given.
 
 ### Placement on pages
 
@@ -75,9 +75,9 @@ Use the `inline` align option for slots to align the language navigation inline 
 
 The code in this component contains a navigation landmark and some hidden text to help users, including users of assistive technology. Make sure to translate these attributes as needed.
 
-`aria-label` (or `ariaLabel` in Nunjucks) labels the component's navigation landmark. By default the label is "language", which will be announced by a screen reader as "language navigation". Translate this label to the language of the page it's on.
+`aria-label` (or `ariaLabel` in Nunjucks) labels the component's navigation landmark. By default the label is 'language', which will be announced by a screen reader as 'language navigation'. Translate this label to the language of the page it's on.
 
-Hidden text within the link for each language option (or `languageDescriptionText` in Nunjucks) explains what the link will do. For example, “Change the language to English”. Translate these to the language you're linking to.
+Hidden text within the link for each language option (or `languageDescriptionText` in Nunjucks) explains what the link will do. For example, 'Change the language to English'. Translate these to the language you're linking to.
 
 ### Language navigation on dark backgrounds
 
@@ -99,7 +99,7 @@ If you choose to show larger parts of your service in another language, consider
 
 Our components use English by default but include methods to translate text within them. Follow our documentation on how to [localise GOV.UK Frontend](https://frontend.design-system.service.gov.uk/localise-govuk-frontend/#localise-gov-uk-frontend/).
 
-For some languages, you’ll need to [modify components](/get-started/extending-and-modifying-components/) to ensure text displays well and is understandable by users of assistive technologies. For example, to show languages that read from right to left, such as Arabic, you’ll need to make changes to components and layouts.
+For some languages, you’ll need to [modify components](/get-started/extending-and-modifying-components/) to make sure text displays well and is understandable by users of assistive technologies. For example, to show languages that read from right to left, such as Arabic, you’ll need to make changes to components and layouts.
 
 See [W3C’s introduction to internationalisation](https://www.w3.org/International/i18n-drafts/nav/about/) for more about some of the things you might need to consider.
 

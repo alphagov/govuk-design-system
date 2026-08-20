@@ -70,7 +70,7 @@ This can help save space when showing tools users expect to see in that area, su
 
 {{ example({ group: "components", item: "service-navigation", example: "with-inline-end-slot", html: true, nunjucks: true, open: false }) }}
 
-### Ensure the ‘aria-label’ is accurate for users of assistive technology
+### Make sure the ‘aria-label’ is accurate for users of assistive technology
 
 When a service name is shown, we let users know that there’s information about the service with a ‘region landmark’ using the `<section>` element.
 
