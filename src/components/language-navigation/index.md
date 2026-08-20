@@ -12,6 +12,8 @@ status:
       text: Research on this component
     - href: "#help-improve-this-page"
       text: Help improve this component
+date: August 2026
+dataCollectionUrl: https://github.com/alphagov/govuk-design-system-backlog/issues/285
 ---
 
 {% from "_example.njk" import example %}
@@ -106,3 +108,20 @@ See [W3C’s introduction to internationalisation](https://www.w3.org/Internatio
 Keep in mind that language and regional differences can affect the format users expect to see and enter information such as names, numbers and addresses.
 
 ## Research on this component
+
+We want to thank teams in departments across government who worked with us to contribute and share their research to get the component to this point.
+
+We know from research contributed that users:
+
+- want the option to change language to be easy to find and recognise
+- want data to persist so they can navigate between languages and understand unfamiliar words
+- want navigating languages across government services to be consistent
+- want to change the language for a whole journey or page whilst moving through a service
+
+### Share your research
+
+If you use this component, we'd like to get your feedback to help us improve it.
+
+We'd particularly like to know more about how different services use language navigation and how well users find it.
+
+Until we're confident we're providing well-defined guidance for services to use language navigation consistently in a way that meets user needs, we'll keep this component in trial status.
