@@ -1,0 +1,20 @@
+---
+title: Example Trial status callout
+layout: layout-example.njk
+---
+
+{% from "_status-callout.njk" import statusCallout %}
+
+{{ statusCallout({
+  type: "Trial",
+  links: [
+    {
+      href: "#",
+      text: "Research on this component"
+    },
+    {
+      href: "#",
+      text: "Help improve this component"
+    }
+  ]
+}) }}
