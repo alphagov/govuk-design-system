@@ -1,0 +1,12 @@
+- date: 2024-03-26
+  version: 5.3.0
+  description: Component introduced.
+- date: 2024-04-19
+  version: 5.3.1
+  description: Fixed issue with button growing larger if the text input has a capped width.
+- date: 2024-05-17
+  version: 5.4.0
+  description: Removed duplicate `errorMessage` parameter.
+- date: 2025-03-04
+  version: 5.9.0
+  description: The `id` parameter now defaults to match `name` if an `id` isn't provided.

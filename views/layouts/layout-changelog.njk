@@ -1,0 +1,36 @@
+{% extends "layout-pane.njk" %}
+
+{% set title = "Change history" %}
+
+{# Todo: Get component name programatically #}
+{% set entries = getChangelog("password-input") %}
+
+{% set contents %}
+  <table class="govuk-table">
+    <thead class="govuk-table__thead">
+      <tr class="govuk-table__row">
+        <th class="govuk-table__header" scope="col">Date</th>
+        <th class="govuk-table__header" scope="col">Version</th>
+        <th class="govuk-table__header" scope="col">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      {%- for entry in entries %}
+      <tr class="govuk-table__row">
+        <th class="govuk-table__header" scope="row">{{ entry.date }}</th>
+        <td class="govuk-table__cell">
+          {%- if entry.releaseUrl %}
+            <a href="{{ entry.releaseUrl }}">
+              <span class="govuk-visually-hidden">GOV.UK Frontend</span>
+              {{ entry.version }}
+            </a>
+          {%- else %}
+            Guidance
+          {%- endif %}
+        </td>
+        <td class="govuk-table__cell">{{ entry.description | safe }}</td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+{% endset %}
