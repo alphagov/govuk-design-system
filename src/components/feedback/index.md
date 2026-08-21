@@ -56,6 +56,17 @@ You must include a link to a feedback page, which could be either:
 
 ## Research on this component
 
+During design exploration for this component, desk research suggested that services struggled to get enough feedback from users using a previous version of this component.
+
+This version separates the feedback link from the [Phase banner component](/components/phase-banner/).
+
+We've released this Feedback component in trial status as we want to understand whether:
+
+- moving the feedback link from the phase banner increases the amount of feedback services receive
+- placing the feedback link its own dedicated location helps users know where to provide feedback when they need to, by overcoming potential 'banner blindness' of the phase banner.
+
+Until we have enough evidence that these needs are being met, the component will remain in trial.
+
 We thank the service teams across government who worked with us in the early stages of this component to measure its effectiveness.
 
 We’d also like to thank the GOV.UK Forms team for helping us build this component.
