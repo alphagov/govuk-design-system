@@ -44,7 +44,7 @@ Show navigation links to let users navigate to different parts of your service a
 
 See when and how to show navigation links in the [Help users navigate a service pattern](/patterns/navigate-a-service/).
 
-## Use ‘slots’ to add custom elements
+### Use ‘slots’ to add custom elements
 
 The Service navigation includes the option to use ‘slots’ to insert custom HTML code at specific points inside the component. This helps you extend the component to add custom elements, such as language selectors.
 
@@ -52,13 +52,13 @@ You must provide your own styles and JavaScript code for the content within a sl
 
 The [Help users to navigate a service pattern](/patterns/navigate-a-service) includes some guidance on ‘Adding other header and navigation elements’.
 
-### Ensure the ‘aria-label’ is accurate for users of assistive technology
+#### Ensure the ‘aria-label’ is accurate for users of assistive technology
 
 When a service name is shown, we let users know that there’s information about the service with a ‘region landmark’ using the `<section>` element.
 
 Depending on what you add in the slots, you might need to rename the `aria-label` to accurately describe what’s in the section.
 
-### Test with each update of GOV.UK Frontend
+#### Test with each update of GOV.UK Frontend
 
 There’s a risk that slot contents may look or work differently in a future release of GOV.UK Frontend.
 
