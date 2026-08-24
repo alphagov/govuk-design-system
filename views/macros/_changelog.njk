@@ -1,8 +1,6 @@
 {% macro changelog(params) %}
-  {% set entries = getChangelog(params.group, params.item) %}
-  {% set guidanceOnly = params.guidanceOnly or params.group == "patterns"%}
-
-  {#{ data | dump }#}
+  {% set entries = getChangelog(params.group, params.item, params.limit if params.limit) %}
+  {% set guidanceOnly = params.guidanceOnly or params.group == "patterns" %}
 
   <table class="govuk-table app-changelog-table">
     <thead class="govuk-table__thead">
