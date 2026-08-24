@@ -12,8 +12,8 @@ status:
       text: Research on this component
     - href: "#help-improve-this-page"
       text: Help improve this component
-date: August 2026
-dataCollectionUrl: https://github.com/alphagov/govuk-design-system-backlog/issues/285
+  date: August 2026
+  dataCollectionUrl: https://github.com/alphagov/govuk-design-system-backlog/issues/285
 ---
 
 {% from "_example.njk" import example %}
@@ -41,7 +41,7 @@ Do not use this component unless you can provide all the same key information on
 
 The Language navigation component shows users a choice of languages and helps the user choose and switch between them.
 
-Use the native name of each language, for example <span lang="cy">Cymraeg</span> for Welsh. This helps speakers of that language recognise the link.
+Use the native name of each language, such as <span lang="cy">Cymraeg</span> for Welsh. This helps speakers of that language recognise the link.
 
 The component does not translate content. You'll need to create, test and maintain content for all the languages you offer your service in.
 
@@ -55,11 +55,11 @@ Where you place the Language navigation component helps users understand whether
 
 Choose a single consistent location that works best for your users.
 
-Use the same placement throughout your service in all languages. This helps users who often switch languages throughout their journey to check their understanding.
+Use the same placement throughout your service in all languages. This helps users in many ways. For example, some users often switch languages throughout their journey as a way to check their understanding of a page.
 
 ### If you only offer specific pages in another language
 
-You could place the language navigation at the top of a page, after the `h1` element. This helps users find their preferred language as quickly as possible.
+You could place the language navigation at the top of a page, after the `h1` element.
 
 If you choose to place the language navigation elsewhere on a page, it should be in a sensible place in the page heading structure with its own visible or hidden heading.
 
@@ -67,13 +67,13 @@ If you choose to place the language navigation elsewhere on a page, it should be
 
 ### If you offer your whole service in another language
 
-If users can change the language for your whole service, you can place the [Language navigation component into the Service navigation component](/components/service-navigation/#adding-language-navigation) using its 'slots' options.
+If users can change the language for your whole service, you can place the [Language navigation component into the Service navigation component](/components/service-navigation/#adding-language-navigation), within its `end` slot.
 
-Use the `inline` align option for slots to align the language navigation inline with navigation items as shown in this example.
+The Service navigation component includes options to align the language navigation with navigation items as shown in this example.
 
 {{ example({ group: "components", item: "service-navigation", example: "with-inline-end-slot", html: true, nunjucks: true, open: false }) }}
 
-### Showing language navigation for other languages
+### Ensure hidden text and attributes are in the correct languages
 
 The code in this component contains a navigation landmark and some hidden text to help users, including users of assistive technology. Make sure to translate these attributes as needed.
 
@@ -101,9 +101,9 @@ If you choose to show larger parts of your service in another language, consider
 
 Our components use English by default but include methods to translate text within them. Follow our documentation on how to [localise GOV.UK Frontend](https://frontend.design-system.service.gov.uk/localise-govuk-frontend/#localise-gov-uk-frontend/).
 
-For some languages, you’ll need to [modify components](/get-started/extending-and-modifying-components/) to make sure text displays well and is understandable by users of assistive technologies. For example, to show languages that read from right to left, such as Arabic, you’ll need to make changes to components and layouts.
+For some languages, you’ll need to [modify components](/get-started/extending-and-modifying-components/) to make sure text displays well and is understandable by users of assistive technologies. For example, to show languages using scripts that read from right to left, such as Arabic, you’ll need to make changes to components and layouts.
 
-See [W3C’s introduction to internationalisation](https://www.w3.org/International/i18n-drafts/nav/about/) for more about some of the things you might need to consider.
+See [W3C’s introduction to internationalisation](https://www.w3.org/International/i18n-drafts/nav/about) for more about some of the things you might need to consider.
 
 Keep in mind that language and regional differences can affect the format users expect to see and enter information such as names, numbers and addresses.
 

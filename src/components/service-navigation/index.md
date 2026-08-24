@@ -62,11 +62,9 @@ Place the Language navigation component in the `end` slot of the Service navigat
 
 ### Align the `end` slot with the navigation items
 
-When enough space is available on screen, you can display the `end` slot inline with the navigation items to their right rather than underneath the navigation items. This can be useful when injecting content users expect in that area, like a [language navigation](/components/language-navigation), or authentication and account links.
+When enough space is available on screen, you can use the `inline` align option to display the `end` slot inline with the navigation items to their right rather than underneath the navigation items. 
 
-Use the `inline` align option to show the `end` slot inline with navigation items (to the right instead of underneath) when there's enough screen space.
-
-This can help save space when showing tools users expect to see in that area, such as language navigation.
+This can help save space when showing tools users expect to see in that area, like a [language navigation](/components/language-navigation), or authentication and account links.
 
 {{ example({ group: "components", item: "service-navigation", example: "with-inline-end-slot", html: true, nunjucks: true, open: false }) }}
 

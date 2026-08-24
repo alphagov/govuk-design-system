@@ -11,8 +11,8 @@ status:
       text: Research on this component
     - href: "#help-improve-this-page"
       text: Help improve this component
-date: August 2026
-dataCollectionUrl: https://github.com/alphagov/govuk-design-system/discussions/4978
+  date: August 2026
+  dataCollectionUrl: https://github.com/alphagov/govuk-design-system/discussions/4978
 ---
 
 {% from "_example.njk" import example %}
