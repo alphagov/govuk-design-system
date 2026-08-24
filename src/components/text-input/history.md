@@ -1,7 +1,8 @@
 ---
-title: Change history
+title: Text input change history
 layout: layout-pane.njk
 ---
 
-{% set data = getChangelog("text-input") %}
-{{ data | dump }}
+{% from "_changelog.njk" import changelog %}
+
+{{ changelog({ group: "components", item: "text-input" }) }}
