@@ -1,5 +1,9 @@
 {% macro changelog(params) %}
-  {% set entries = getChangelog(params.group, params.item, params.limit if params.limit) %}
+  {% set entries = getChangelog({
+    group: params.group,
+    item: params.item,
+    limit: params.limit if params.limit
+  }) %}
   {% set guidanceOnly = params.guidanceOnly or params.group == "patterns" %}
 
   <table class="govuk-table app-changelog-table">
