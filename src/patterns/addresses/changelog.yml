@@ -1,0 +1,10 @@
+- date: 2017-12-19
+  description: Pattern introduced.
+- date: 2018-09-07
+  description: Added error message guidance.
+- date: 2019-02-06
+  description: Added guidance on using the autocomplete attribute.
+- date: 2022-01-29
+  description: Added recommendation against including a ‘county’ field. These are no longer used by postal systems, so collecting them isn’t necessary.
+- date: 2022-04-12
+  description: Partially reverted previous change. We now recommend including ‘county’ as an optional field.
