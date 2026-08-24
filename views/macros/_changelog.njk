@@ -1,0 +1,38 @@
+{% macro changelog(params) %}
+  {% set entries = getChangelog(params.group, params.item) %}
+  {% set guidanceOnly = params.guidanceOnly or params.group == "patterns"%}
+
+  {#{ data | dump }#}
+
+  <table class="govuk-table app-changelog-table">
+    <thead class="govuk-table__thead">
+      <tr class="govuk-table__row">
+        <th class="govuk-table__header" scope="col">Date</th>
+        {%- if not guidanceOnly %}
+          <th class="govuk-table__header" scope="col">Version</th>
+        {%- endif %}
+        <th class="govuk-table__header" scope="col">Description</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__tbody">
+      {%- for entry in entries %}
+      <tr class="govuk-table__row">
+        <th class="govuk-table__header" scope="row">{{ entry.date | formatChangelogDate }}</th>
+        {%- if not guidanceOnly %}
+          <td class="govuk-table__cell">
+            {%- if entry.version %}
+              <a href="{{ entry.releaseUrl }}">
+                <span class="govuk-visually-hidden">GOV.UK Frontend version</span>
+                {{ entry.version }}
+              </a>
+            {%- else %}
+              Guidance
+            {%- endif %}
+          </td>
+        {%- endif %}
+        <td class="govuk-table__cell">{{ entry.description | safe }}</td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+{% endmacro %}
