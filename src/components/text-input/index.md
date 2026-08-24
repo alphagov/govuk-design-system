@@ -284,3 +284,10 @@ For example, ‘How much you earn a week must not include pence, like 123 or 156
 Read a blog post about [the problems we discovered with input type="number"](https://technology.blog.gov.uk/2020/02/24/why-the-gov-uk-design-system-team-changed-the-input-type-for-numbers/).
 
 The prefix and suffix design has tested well in a number of services, but [some users have been observed clicking on prefixes](https://github.com/alphagov/govuk-design-system-backlog/issues/134#issuecomment-655615251), on the assumption that this would do something.
+
+## Recent changes
+
+{% from "_changelog.njk" import changelog %}
+{{ changelog({ group: "components", item: "text-input", limit: 5 }) }}
+
+[View full change history](/components/text-input/history/)
