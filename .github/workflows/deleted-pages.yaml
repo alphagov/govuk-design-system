@@ -1,0 +1,47 @@
+name: Check deleted pages
+
+on: pull_request
+
+permissions:
+  contents: read
+
+jobs:
+  check_deleted_pages:
+    name: Check for deleted pages without an archive or redirect
+    runs-on: 'ubuntu-22.04'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7.0.0
+        with:
+          fetch-depth: 0
+
+      - name: Generate name-status diff
+        run: git diff --name-status origin/${{ github.base_ref }} origin/${{ github.head_ref }} > diff.txt
+
+      - name: Get deleted pages
+        id: get-deleted-pages
+        uses: actions/github-script@v9.0.0
+        with:
+          script: |
+            const { getDeletedPages } = await import('${{ github.workspace }}/.github/workflows/scripts/diff-helpers.mjs')
+            return getDeletedPages()
+
+      - name: Add comment if there are deleted pages
+        if: steps.get-deleted-pages.outputs.result != 'false'
+        run: |
+          BODY="The following pages have been deleted in this pull request:\n\n"
+          echo "${{ steps.get-deleted-pages.outputs.result }}"
+          for page in "${${{ steps.get-deleted-pages.outputs.result.deletedPages }}}"
+          do
+            BODY="${BODY}- ${page}\n"
+          done
+          if [ "${{ steps.get-deleted-pages.outputs.result.netlifyChanged }}" == false ]; then
+            BODY="${BODY}\n\nThere has also been no change detected to netlify.toml config file, meaning no redirects have been setup for any deleted pages."
+          fi
+          BODY="${BODY}\n\nIf you have not already done so, please read our documentation on [handling deleted URLs](https://github.com/alphagov/govuk-design-system/blob/main/docs/contributing/handling-deleted-urls.md) and ensure the above deleted pages are handled properly."
+          gh pr comment ${{ github.event.pull_request.number }} --body "${BODY}"
+
+      - name: Explicitly fail if deleted pages and no netlify changes
+        if: steps.get-deleted-pages.outputs.result != 'false' && steps.get-deleted-pages.outputs.result.netlifyChanged == 'false'
+        run: exit 1
