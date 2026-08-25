@@ -60,6 +60,7 @@ jobs:
 
           - description: Prettier
             run: npm run lint:prettier
+            continue-on-error: true
 
           - description: TypeScript compiler
             run: npm run lint:types -- --pretty
@@ -81,6 +82,14 @@ jobs:
         id: task
         run: ${{ matrix.task.run }}
         continue-on-error: ${{ matrix.task.continue-on-error || false }}
+
+      - name: Display Prettier failures
+        if: matrix.task.description == 'Prettier' && steps.task.outcome == 'failure'
+        run: |
+          npm run lint:prettier -- --write
+          DIFF=$(git diff)
+          echo "::error title=${{ matrix.task.description }} issues::```diff\n$DIFF\n```"
+          exit 1
 
       - name: Task warnings
         if: steps.task.outcome == 'failure'
