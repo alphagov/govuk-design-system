@@ -60,7 +60,7 @@ If you use the [trial Language navigation component](/components/language-naviga
 
 ### Align the end slot with the navigation items
 
-When enough space is available on screen, the Service Navigation can render custom HTML within the end slot inline with navigation items, to their right, rather than underneath the navigation items.
+When enough space is available on screen, the Service navigation component can render custom HTML inline with navigation items, to their right, rather than underneath the navigation items.
 
 If you use HTML:
 

@@ -109,7 +109,7 @@ Keep in mind that language and regional differences can affect the format users 
 
 ## Research on this component
 
-We’ve released this Language navigation component in trial status. 
+We’ve released this Language navigation component in trial status.
 
 Thank you to the teams in departments across government who worked with us to contribute and share their research to get the component to this point.
 

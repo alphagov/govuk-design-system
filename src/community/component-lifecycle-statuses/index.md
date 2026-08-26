@@ -19,7 +19,7 @@ The GOV.UK Design System:
 
 We currently use 2 component statuses on the GOV.UK Design System website:
 
-- Trial- these components have a trial status tag
+- Trial - these components have a trial status tag
 - Stable - these components do not have a tag
 
 ## Trial components
