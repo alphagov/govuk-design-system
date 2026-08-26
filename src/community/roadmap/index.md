@@ -13,7 +13,7 @@ Some things on the roadmap might change – the purpose is to tell you what’s 
 
 See our [GitHub team board](https://github.com/orgs/alphagov/projects/53) for more details on our plans and day-to-day activities.
 
-Last updated 16 July 2026.
+Last updated 26 August 2026.
 
 ## Recently shipped
 
@@ -25,15 +25,16 @@ In June 2026, we released GOV.UK Frontend v6.3.0, which adds the [Generic header
 
 We've started to:
 
-- create a feedback link component and test it in live services
-- add a language switcher component
-- explore how we might publish experimental components, patterns and variants
+- build a feedback component
+- add a language navigation component
+- introduce lifecycle statues to our components
+- add change histories to components
+- explore what users in government need to prototype services
 
 ## Future plans
 
 We plan to:
 
-- run a discovery into dark mode
 - improve user journeys between the GOV.UK Design System and other design resources in government
 - explore patterns for data sharing between services and for services where AI is in use
 - create further CSS custom properties
