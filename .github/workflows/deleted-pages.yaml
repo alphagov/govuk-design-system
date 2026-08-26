@@ -2,13 +2,11 @@ name: Check deleted pages
 
 on: pull_request
 
-permissions:
-  contents: read
-
 jobs:
   check_deleted_pages:
     name: Check for deleted pages without an archive or redirect
     runs-on: 'ubuntu-22.04'
+    permissions: write-all
 
     steps:
       - name: Checkout
@@ -27,21 +25,35 @@ jobs:
             const { getDeletedPages } = await import('${{ github.workspace }}/.github/workflows/scripts/diff-helpers.mjs')
             return getDeletedPages()
 
+      - name: Check if netlify.toml has netlify has changed
+        if: steps.get-deleted-pages.outputs.result != 'false'
+        id: netlify-changed
+        uses: actions/github-script@v9.0.0
+        with:
+          script: |
+            const { getNetlifyConfigChanged } = await import('${{ github.workspace }}/.github/workflows/scripts/diff-helpers.mjs')
+            return getNetlifyConfigChanged()
+
       - name: Add comment if there are deleted pages
         if: steps.get-deleted-pages.outputs.result != 'false'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          BODY="The following pages have been deleted in this pull request:\n\n"
-          echo "${{ steps.get-deleted-pages.outputs.result }}"
-          for page in "${${{ steps.get-deleted-pages.outputs.result.deletedPages }}}"
+          echo "The following pages have been deleted in this pull request:" >> body.txt
+          echo "" >> body.txt
+          IFS=', ' read -r -a pages <<< "${{ steps.get-deleted-pages.outputs.result }}"
+          for page in "${pages[@]}"
           do
-            BODY="${BODY}- ${page}\n"
+            echo "- ${page}" >> body.txt
           done
-          if [ "${{ steps.get-deleted-pages.outputs.result.netlifyChanged }}" == false ]; then
-            BODY="${BODY}\n\nThere has also been no change detected to netlify.toml config file, meaning no redirects have been setup for any deleted pages."
+          echo "" >> body.txt
+          if [ "${{ steps.netlify-changed.outputs.result }}" == 'false' ]; then
+            echo "There has also been no change detected to netlify.toml config file, meaning no redirects have been setup for any deleted pages." >> body.txt
+            echo "" >> body.txt
           fi
-          BODY="${BODY}\n\nIf you have not already done so, please read our documentation on [handling deleted URLs](https://github.com/alphagov/govuk-design-system/blob/main/docs/contributing/handling-deleted-urls.md) and ensure the above deleted pages are handled properly."
-          gh pr comment ${{ github.event.pull_request.number }} --body "${BODY}"
+          echo "If you have not already done so, please read our documentation on [handling deleted URLs](https://github.com/alphagov/govuk-design-system/blob/main/docs/contributing/handling-deleted-urls.md) and ensure the above deleted pages are handled properly." >> body.txt
+          gh pr comment ${{ github.event.pull_request.number }} --body-file "body.txt" --edit-last --create-if-none
 
       - name: Explicitly fail if deleted pages and no netlify changes
-        if: steps.get-deleted-pages.outputs.result != 'false' && steps.get-deleted-pages.outputs.result.netlifyChanged == 'false'
+        if: steps.get-deleted-pages.outputs.result != 'false' && steps.netlify-changed.outputs.result == 'false'
         run: exit 1

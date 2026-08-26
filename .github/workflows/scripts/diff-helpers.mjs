@@ -7,16 +7,18 @@ export function getDeletedPages() {
       change.file.match(/src\/[a-z-]+\/[a-z-]+\/index\.md/) &&
       change.status === 'D'
   )
-  const netlifyChanged = !!changes.find(
-    (change) => change.file === 'netlify.toml' && change.status === 'M'
-  )
 
   return deletedPages.length
-    ? {
-        deletedPages,
-        netlifyChanged
-      }
+    ? deletedPages.map((change) => change.file).join(', ')
     : false
+}
+
+export function getNetlifyConfigChanged() {
+  const changes = processDiffTxt()
+
+  return !!changes.find(
+    (change) => change.file === 'netlify.toml' && change.status === 'M'
+  )
 }
 
 function processDiffTxt() {
