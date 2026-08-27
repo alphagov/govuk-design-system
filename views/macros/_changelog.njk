@@ -19,13 +19,13 @@
     <tbody class="govuk-table__tbody">
       {%- for entry in entries %}
       <tr class="govuk-table__row">
-        <th class="govuk-table__header" scope="row">{{ entry.date | formatChangelogDate }}</th>
+        <td class="govuk-table__cell">{{ entry.date | formatChangelogDate }}</td>
         {%- if not guidanceOnly %}
           <td class="govuk-table__cell">
             {%- if entry.version %}
               <a href="{{ entry.releaseUrl }}">
-                <span class="govuk-visually-hidden">GOV.UK Frontend version</span>
-                {{ entry.version }}
+                <span class="govuk-visually-hidden">GOV.UK Frontend</span>
+                v{{ entry.version }}
               </a>
             {%- else %}
               Guidance
