@@ -26,7 +26,7 @@ The Language navigation component helps users choose and switch between language
 
 Use the Language navigation component when you can provide your service in more than one language.
 
-For example, to help users switch from a page in English to a Welsh version of the same page.
+For example, to help users switch from a page in English to a version of the same page in Welsh.
 
 How you use this component will depend on whether you offer a choice of languages for:
 
@@ -93,7 +93,7 @@ Make sure all users can see the breadcrumbs – the background colour must have 
 
 GOV.UK Content and publishing guidance gives some advice on things you need to [consider when translating content](https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/plan-manage-content/consider-translations/).
 
-Test your service with users in your intended language to spot potential issues such as word inaccuracies and cultural differences. The Service Manual for Wales shows how to [consider bilingualism in your research](https://digitalpublicservices.gov.wales/guidance-and-standards/service-manual/researching-your-users-and-testing-your-service/considering-bilingualism-in-your-research/).
+Test your service with users in your intended language to spot potential issues such as word inaccuracies and cultural differences. The Service Manual for Wales shows how you can [consider bilingualism in your research](https://digitalpublicservices.gov.wales/guidance-and-standards/service-manual/researching-your-users-and-testing-your-service/considering-bilingualism-in-your-research/).
 
 ### Internationalisation and localisation
 
@@ -109,7 +109,9 @@ Keep in mind that language and regional differences can affect the format users 
 
 ## Research on this component
 
-We want to thank teams in departments across government who worked with us to contribute and share their research to get the component to this point.
+We’ve released this Language navigation component in trial status.
+
+Thank you to the teams in departments across government who worked with us to contribute and share their research to get the component to this point.
 
 We know from research contributed that users:
 

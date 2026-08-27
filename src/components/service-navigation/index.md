@@ -48,11 +48,11 @@ See when and how to show navigation links in the [Help users navigate a service 
 
 The Service navigation includes the option to use ‘slots’ to render custom HTML code at specific places inside the component.
 
-You must provide your own styles and JavaScript for the custom HTML code within a slot, particularly if you’re not using an existing component. You’ll need to decide on the most appropriate layout and positioning.
+You must provide your own styles and JavaScript for the custom HTML code within a slot, particularly if you’re not adding an existing component. You’ll need to decide on the most appropriate layout and positioning.
 
 {{ example({ group: "components", item: "service-navigation", example: "with-slots", html: true, nunjucks: true, open: false }) }}
 
-The [Help users to navigate a service pattern](/patterns/navigate-a-service) includes some guidance on ‘Adding other header and navigation elements’.
+The Help users to navigate a service pattern includes some guidance on ‘[Adding other header and navigation elements](/patterns/navigate-a-service/#adding-other-header-and-navigation-elements)’.
 
 ### Adding language navigation
 
@@ -60,7 +60,7 @@ If you use the [trial Language navigation component](/components/language-naviga
 
 ### Align the end slot with the navigation items
 
-When enough space is available on screen, the Service Navigation can render custom HTML inline with navigation items, to their right, rather than underneath the navigation items.
+When enough space is available on screen, the Service navigation component can render custom HTML inline with navigation items, to their right, rather than underneath the navigation items.
 
 If you use HTML:
 
