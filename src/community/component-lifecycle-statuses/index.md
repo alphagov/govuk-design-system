@@ -59,7 +59,7 @@ To help you decide whether to use a specific trial component in your service, se
 
 ## Research on component statuses
 
-Our research showed that participants were broadly positive about introducing lifecycle statuses into the GOV.UK Design System.
+[Our research](https://github.com/alphagov/govuk-design-system/discussions/5622) showed that participants were broadly positive about introducing lifecycle statuses into the GOV.UK Design System.
 
 Users:
 
