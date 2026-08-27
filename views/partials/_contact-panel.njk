@@ -19,7 +19,7 @@
 {%- endif %}
 
   {% if backlogIssueId or discussionId %}
-    {%- set discussionUrl = "https://github.com/alphagov/" + ("govuk-design-system/discussions/" + discussionId if discussionId else "govuk-design-system-backlog/issues/") + backlogIssueId  %}
+    {%- set discussionUrl = "https://github.com/alphagov/" + (("govuk-design-system/discussions/" + discussionId) if discussionId else ("govuk-design-system-backlog/issues/" + backlogIssueId))  %}
     <p class="govuk-body">
       {{ "You can also:" if isTrial else "To help make sure that this page is useful, relevant and up to date, you can:" }}
     </p>
