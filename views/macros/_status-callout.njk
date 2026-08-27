@@ -1,0 +1,59 @@
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+
+{% macro statusCallout(params) %}
+  {# Status name can be the passed value (as a string) or the 'type' key within an object. #}
+  {%- set statusLabel = params.type if params.type else params %}
+  {%- set classSlug = statusLabel | slugify %}
+
+  {# Define the default content each status type displays, if any. #}
+  {# This is specified here so that it remains the same regardless of the macro being used in the layout or in content. #}
+  {%- set defaultContent %}
+    {%- if classSlug == "trial" %}
+      <p class="govuk-body">This component is being developed and may change as we improve it. Read more about <a href="/community/component-lifecycle-statuses/" class="govuk-link">the lifecycle of our components</a>.</p>
+    {%- endif %}
+  {%- endset %}
+
+  {%- set content -%}
+    {% if caller %}
+      {{ caller() }}
+    {% elif params.html %}
+      {{ params.html | safe }}
+    {% elif params.text %}
+      <p class="govuk-body">{{ params.text }}</p>
+    {% else %}
+      {{ defaultContent | safe }}
+    {% endif %}
+  {%- endset -%}
+
+  {%- call govukInsetText({
+    classes: "app-status-callout app-status-callout--" + classSlug
+  }) %}
+    {{ govukTag({
+      classes: "app-status-tag app-status-tag--" + classSlug,
+      text: statusLabel
+    }) }}
+    {{ content | safe }}
+
+    {%- if params.links %}
+      <p class="govuk-body">Read these sections to see why this component is in trial:</p>
+      {%- if params.links | length > 1 %}
+        <ul class="govuk-list app-status-callout__list">
+          {%- for item in params.links -%}
+            <li>
+              <a class="govuk-link" href="{{ item.href }}">
+                {{- item.html | safe if item.html else item.text -}}
+              </a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      {%- else %}
+        <p class="govuk-body">
+          <a class="govuk-link" href="{{ params.links[0].href }}">
+            {{- params.links[0].html | safe if params.links[0].html else params.links[0].text -}}
+          </a>
+        </p>
+      {%- endif %}
+    {%- endif %}
+  {%- endcall %}
+{% endmacro %}
