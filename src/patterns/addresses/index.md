@@ -14,9 +14,9 @@ This guidance is for government teams that build online services. [To find infor
 
 Help users provide an address using one of the following:
 
-- Address lookup
-- Multiple text inputs
-- Textarea
+- address lookup
+- multiple text inputs
+- textarea
 
 ## Address lookup
 
@@ -40,13 +40,15 @@ When using an address lookup, you should:
 - provide a manual option for people with international addresses or addresses that are missing or not properly listed in the address lookup
 - let people enter their postcodes in upper or lower case and with or without spaces
 
-### Unique Property Reference Numbers
+### Identify and match addresses with UPRN identifiers
 
-Many address lookup APIs also include a Unique Property Reference Number (UPRN) which is a 12 digit identifier for every addressable location in Great Britain.  [A mandate](https://static.geoplace.co.uk/downloads/GEO13042-GeoPlace-You-Must-Use-UPRNs-USRNs-v4.pdf) was introduced in 2020 which states all public sector systems and projects which include address data should include UPRNs. Collecting this information at source will prevent manual address matching in future.
+Use an address lookup that can [identify and match addresses with Unique Property Reference Numbers (UPRNs)](https://www.gov.uk/government/publications/open-standards-for-government/identifying-property-and-street-information). UPRNs are 12-digit unique identifiers for every addressable location across the UK.
 
-Address lookups should only use data from one API so it is consistent and accurate. One such API which can be used for this is the [Ordnance Survey Places API](https://www.ordnancesurvey.co.uk/products/os-places-api).
+[Open standards for government mandates that all public sector systems and projects which include address data should include UPRNs](https://technology.blog.gov.uk/2020/04/02/identifying-properties-and-streets-in-government-data/). This is to help government share consistent data, reduce errors and avoid the need for manual address matching in future.
 
-#### Allow different postcode formats
+Your address lookup should only use data from one API so it is consistent and accurate. One such API which can be used for this is the [Ordnance Survey Places API](https://www.ordnancesurvey.co.uk/products/os-places-api).
+
+### Allow different postcode formats
 
 It's easier for users if you accept and ignore unwanted characters. This is better than rejecting the input and telling the user they have not provided a valid postcode.
 
