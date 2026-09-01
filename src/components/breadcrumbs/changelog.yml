@@ -1,0 +1,20 @@
+- date: 2018-06-21
+  version: 1.0.0
+  description: Component introduced.
+- date: 2018-09-26
+  version: 2.1.0
+  description: Added ability to pass `attributes` to breadcrumb `items`.
+- date: 2020-04-28
+  description: Removed guidance advising to include the current page’s name in the breadcrumbs.
+- date: 2020-06-01
+  version: 3.7.0
+  description: Added `collapseOnMobile` parameter.
+- date: 2023-01-31
+  version: 4.5.0
+  description: Fixed chevrons not scaling with text size.
+- date: 2023-06-06
+  version: 4.7.0
+  description: Added inverse appearance modifier.
+- date: 2024-07-12
+  version: 5.4.1
+  description: Updated component to use the `nav` HTML element with an `aria-label`, to better describe the component to assistive technologies.

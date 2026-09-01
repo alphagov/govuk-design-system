@@ -1,0 +1,49 @@
+- date: 2019-01-10
+  version: 2.5.0
+  description: Component introduced.
+- date: 2019-01-31
+  version: 2.6.0
+  description: |
+    Fixed component not being exported to global namespace.
+
+    Fixed accordion not rendering correctly when JavaScript wasn’t available.
+
+    Removed hover state from on touchscreen devices.
+- date: 2019-07-29
+  version: 3.0.0
+  description: Updated focus style to comply with WCAG 2.1.
+- date: 2020-06-01
+  version: 3.7.0
+  description: |
+    Fixed hover state not being applied when hovering over plus/minus icon.
+
+    Fixed headings using incorrect line height when GOV.UK Frontend was used with GOV.UK Elements.
+- date: 2021-12-16
+  version: 4.0.0
+  description: Redesigned appearance.
+- date: 2022-02-08
+  version: 4.0.1
+  description: Fixed toggles rendering incorrectly when JavaScript wasn’t available.
+- date: 2022-06-27
+  version: 4.2.0
+  description: Added extra padding to the top of content inside accordions, so that links inside of an accordion don’t appear too close to the section toggle.
+- date: 2022-08-09
+  version: 4.3.0
+  description: |
+    Fixed content passed using the `text` parameter not being styled correctly.
+
+    Fixed accordion icons not using customised focus colours.
+- date: 2022-11-14
+  version: 4.4.0
+  description: Added options to localise accordion interface text using `data-*` attributes and JavaScript.
+- date: 2023-01-31
+  version: 4.5.0
+  description: Added ability for users to find content inside of accordions using a browser’s ‘find in page’ functionality.
+- date: 2023-04-20
+  version: 4.6.0
+  description: Added `rememberExpanded` parameter and guidance.
+- date: 2024-02-05
+  version: 5.1.0
+  description: Removed `aria-labelledby` attributes from accordion sections.
+- date: 2024-11-25
+  description: Added guidance on how to display accordion sections as open by default.
