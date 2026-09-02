@@ -12,7 +12,7 @@ The GOV.UK Design System at the [Government Digital Service](https://www.gov.uk/
 
 If you want to contact the team you can [get in touch via email or Slack](/contact/).
 
-## Team leads
+## Team lead
 
 - Kelly Lee – Lead Delivery Manager
 - Marina Filiba – Lead Designer
