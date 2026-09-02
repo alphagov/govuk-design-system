@@ -24,11 +24,13 @@ An address lookup helps users find a full address from partial information such 
 
 ### When to use an address lookup
 
-Use an address lookup when you’re asking users for a UK address.
+Use an address lookup to collect UK addresses where possible.
 
 ### When not to use an address lookup
 
-Address lookups generally only work for UK addresses. Use a manual option such as multiple text inputs or a textarea when you are collecting mostly or only international addresses.
+Address lookups generally only work for UK addresses. 
+
+If both UK and international addresses are expected, give users to the option to either search for a UK address or manually enter an international address.
 
 ### How an address lookup works
 
@@ -65,7 +67,9 @@ You should let users enter postcodes that contain:
 
 ### When to use multiple text inputs
 
-Only use multiple text inputs when you know which countries the addresses will come from and can find a format that supports them all. This can be difficult to know if you’re asking for addresses outside of the UK.
+Use multiple text inputs to offer users a manual option to enter an address, such as for international addresses or when users cannot find their address using an address lookup.
+
+You'll need to know which countries the addresses will come from and find a format that supports them. This can be difficult for addresses outside of the UK.
 
 Using multiple text inputs means:
 
@@ -120,14 +124,13 @@ Make sure errors follow the guidance in the [Error message component](/component
 
 ### When to use textarea
 
-Use a textarea if you expect a broad range of address formats and you do not need to format the address for print or use specific sub-parts of the address (for example, street or postcode).
+Use a textarea to offer users a manual option to enter an address, such as for international addresses or when users cannot find their address using an address lookup.
+
+A textarea is useful when you expect a broad range of address formats and you do not need to format the address for print or use specific sub-parts of the address (for example, street or postcode).
 
 ### When not to use textarea
 
-You should not use a textarea if you:
-
-- need to separate an address into accurate sub-parts (for example, street or postcode)
-- need to help users look up an address
+You should not use a textarea if you need to separate an address into accurate sub-parts (for example, street or postcode).
 
 ### How a textarea works
 
