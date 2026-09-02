@@ -28,7 +28,7 @@ Use an address lookup to collect UK addresses where possible.
 
 ### When not to use an address lookup
 
-Address lookups generally only work for UK addresses. 
+Address lookups generally only work for UK addresses.
 
 If both UK and international addresses are expected, give users to the option to either search for a UK address or manually enter an international address.
 
