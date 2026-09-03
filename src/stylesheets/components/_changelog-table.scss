@@ -1,0 +1,56 @@
+@use "pkg:govuk-frontend/base" as *;
+
+.app-changelog-table {
+  // Date cells are visually (but not actually) merged if they contain the same
+  // information as the preceding row. To pull this off, we need to change each
+  // row's border to be visually assigned to the following row, rather than the
+  // row itself.
+
+  // Re-add border at bottom of table
+  border-bottom: 1px solid;
+  border-bottom-color: govuk-functional-colour("border");
+
+  .govuk-table__header,
+  .govuk-table__cell {
+    border-bottom: none;
+  }
+
+  .govuk-table__cell {
+    border-top: 1px solid;
+    border-top-color: govuk-functional-colour("border");
+  }
+
+  // Control wrapping of date column on changelog tables so the date doesn't get
+  // broken across multiple lines, making them harder to scan visually.
+  @include govuk-media-query($from: mobile) {
+    .app-changelog-table__date {
+      white-space: nowrap;
+    }
+  }
+
+  // Hide border and content in 'merged' date cells
+  .app-changelog-table__date--merged {
+    @include govuk-visually-hidden;
+  }
+
+  // Use a reduced font size for the table until the desktop breakpoint.
+  // There isn't enough space on mobile, and on tablet the sidebar nav takes
+  // up most of the page
+  @include govuk-media-query($until: desktop) {
+    @include govuk-font-size($size: 16);
+  }
+
+  // Alterations to text styles inside of changelog tables.
+  p {
+    // Reduce spacing between paragraphs
+    margin-bottom: govuk-spacing(2);
+
+    // Use the table's font-size, rather than what we assign to <p>
+    font-size: inherit;
+
+    // Remove bottom margin from last paragraph
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
