@@ -9,15 +9,6 @@ on:
       - 'v[0-9]'
 
   workflow_dispatch:
-    inputs:
-      runner:
-        description: Run tests on
-        type: choice
-        default: ubuntu-22.04
-        options:
-          - macos-latest
-          - ubuntu-22.04
-          - windows-latest
 
 permissions:
   contents: read
@@ -25,7 +16,7 @@ permissions:
 jobs:
   build:
     name: Build
-    runs-on: ${{ github.event.inputs.runner || 'ubuntu-22.04' }}
+    runs-on: 'ubuntu-24.04'
 
     steps:
       - name: Checkout code
@@ -38,7 +29,7 @@ jobs:
 
   test:
     name: ${{ matrix.task.description }}
-    runs-on: ${{ github.event.inputs.runner || 'ubuntu-22.04' }}
+    runs-on: 'ubuntu-24.04'
     needs: [build]
 
     strategy:
@@ -64,8 +55,11 @@ jobs:
           - description: TypeScript compiler
             run: npm run lint:types -- --pretty
 
+          # Puppeteer uses Chrome to execute tests.
+          # Ubuntu requires an App Armor profile for developer builds of Chrome to run without errors.
+          # (https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md)
           - description: JavaScript tests
-            run: npx jest --color --maxWorkers=2
+            run: aa-exec --profile=chrome npx jest --color --maxWorkers=2
 
           - description: Check broken links
             run: npm run check-links
