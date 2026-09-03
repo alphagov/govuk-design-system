@@ -1,0 +1,56 @@
+---
+title: Summary list
+layout: layout-example.njk
+---
+
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "First 6 weeks"
+      },
+      value: {
+        text: "£109.80 per week"
+      }
+    },
+    {
+      key: {
+        text: "Next 33 weeks"
+      },
+      value: {
+        text: "£159.80 per week"
+      }
+    },
+    {
+      key: {
+        text: "Total estimated pay"
+      },
+      value: {
+        html: "£4,282.20"
+      }
+    }
+      key: {
+        text: "Contact details"
+      },
+      value: {
+        html: '<p class="govuk-body">07700 900457</p><p class="govuk-body">sarah.phillips@example.com</p>'
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Add",
+            visuallyHiddenText: "contact details"
+          },
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "contact details"
+          }
+        ]
+      }
+    }
+  ]
+}) }}
