@@ -6,6 +6,9 @@
   }) %}
   {% set guidanceOnly = params.guidanceOnly or params.group == "patterns" %}
 
+  {# Keep track of the previous row's date so we can hide repeated dates. #}
+  {% set previousDate = null %}
+
   <table class="govuk-table app-changelog-table">
     <thead class="govuk-table__thead">
       <tr class="govuk-table__row">
@@ -18,22 +21,27 @@
     </thead>
     <tbody class="govuk-table__tbody">
       {%- for entry in entries %}
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell">{{ entry.date | formatChangelogDate }}</td>
-        {%- if not guidanceOnly %}
-          <td class="govuk-table__cell">
-            {%- if entry.version %}
-              <a href="{{ entry.releaseUrl }}">
-                <span class="govuk-visually-hidden">GOV.UK Frontend</span>
-                v{{ entry.version }}
-              </a>
-            {%- else %}
-              Guidance
-            {%- endif %}
+        {%- set date = entry.date | formatChangelogDate %}
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell app-changelog-table__date {%- if date == previousDate %} app-changelog-table__date--merged{% endif %}">
+            {{ date }}
           </td>
-        {%- endif %}
-        <td class="govuk-table__cell">{{ entry.description | safe }}</td>
-      </tr>
+          </td>
+          {%- if not guidanceOnly %}
+            <td class="govuk-table__cell">
+              {%- if entry.version %}
+                <a href="{{ entry.releaseUrl }}">
+                  <span class="govuk-visually-hidden">GOV.UK Frontend</span>
+                  v{{ entry.version }}
+                </a>
+              {%- else %}
+                Guidance
+              {%- endif %}
+            </td>
+          {%- endif %}
+          <td class="govuk-table__cell">{{ entry.description | safe }}</td>
+        </tr>
+        {%- set previousDate = date %}
       {%- endfor %}
     </tbody>
   </table>

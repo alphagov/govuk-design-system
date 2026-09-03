@@ -350,36 +350,6 @@ pre .language-plaintext {
   margin: 0;
 }
 
-// Use a reduced font size for the table until the desktop breakpoint.
-// There isn't enough space on mobile, and on tablet the sidebar nav takes
-// up most of the page
-@include govuk-media-query($until: desktop) {
-  .app-changelog-table {
-    @include govuk-font-size($size: 16);
-  }
-}
-
-// Control wrapping of date column on changelog tables so the date doesn't get
-// broken across multiple lines, making them harder to scan visually.
-@include govuk-media-query($from: mobile) {
-  .app-changelog-table tr > :first-child {
-    white-space: nowrap;
-  }
-}
-
-.app-changelog-table p {
-  // Reduce spacing of paragraphs in changelog tables
-  margin-bottom: govuk-spacing(2);
-
-  // Use table's font-size, not prosaic style font size
-  font-size: inherit;
-
-  // Remove bottom margin from last paragraph
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-
 .app-guidance-tabs {
   @include govuk-font($size: 19);
   display: flex;
