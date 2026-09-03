@@ -137,17 +137,16 @@
         "colour": "#f4f8fb"
       },
       {
+        "name": "shade-10",
+        "colour": "#1a65a6"
+      },
+      {
         "name": "shade-25",
         "colour": "#16548a"
       },
       {
         "name": "shade-50",
         "colour": "#0f385c"
-      },
-      {
-        "name": "shade-10",
-        "colour": "#1a65a6",
-        "hidden": true
       }
     ],
     "Green": [
