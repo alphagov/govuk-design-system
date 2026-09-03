@@ -276,8 +276,8 @@ For example, ‘How much you earn a week must include pence, like 123.45 or 156.
 
 #### If the input is an amount of money that must not have decimals
 
-Say ‘[whatever it is] must not include pence, like 123 or 156’.<br>
-For example, ‘How much you earn a week must not include pence, like 123 or 156’.
+Say ‘[whatever it is] must not include pence, use 123 not 123.00’.<br>
+For example, ‘How much you earn a week must not include pence, use 123 not 123.00’.
 
 ## Research on this component
 
