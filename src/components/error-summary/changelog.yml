@@ -1,0 +1,46 @@
+- date: 2018-06-21
+  version: 1.0.0
+  description: Component introduced.
+- date: 2018-05-30
+  description: Expanded guidance on when and how to use an Error summary.
+- date: 2018-07-19
+  description: Clarified that the component should always be used in conjunction with [the Error message component](/components/error-message/).
+- date: 2018-09-26
+  version: 2.1.0
+  description: Added ability to add HTML attributes to individual error messages.
+- date: 2018-11-14
+  description: Added guidance on how to link to different types of question from the Error summary.
+- date: 2018-11-19
+  version: 2.4.0
+  description: Updated link behaviour to scroll to the label or legend of the input, rather than the input itself, so that information relating to the input isn't cut off by the top of the viewport.
+- date: 2019-07-29
+  version: 3.0.0
+  description: |
+    Fixed links appending the ID of the related input to the URL, which prevented the Error summary being automatically focused on subsequent form submissions.
+
+    Updated border width to be the same across all breakpoints.
+- date: 2019-10-07
+  version: 3.3.0
+  description: Fixed invalid inputs not being visible on screen if they're contained in a large fieldset. Error summary will now check if the input won't be visible and will scroll to the input instead of the fieldset's legend.
+- date: 2020-03-16
+  description: Moved some guidance to the [Recover from validation errors pattern](/patterns/validation/).
+- date: 2022-02-08
+  version: 4.0.1
+  description: |
+    Added `disableAutoFocus` parameter to prevent the summary automatically taking keyboard focus when the page is loaded.
+
+    Removed the `tabindex` attribute from the component's HTML. It's now added by JavaScript when it's needed.
+- date: 2022-08-09
+  version: 4.3.0
+  description: Added the ability to pass the `descriptionHtml` parameter using [Nunjucks call syntax](https://mozilla.github.io/nunjucks/templating.html#call).
+- date: 2024-05-17
+  version: 5.4.0
+  description: Fixed an empty `<ul>` element being output when there are no errors to display.
+- date: 2024-05-29
+  description: Added clarification that GOV.UK Frontend will automatically move keyboard focus to the Error summary.
+- date: 2024-07-12
+  version: 5.4.1
+  description: Re-added spacing at the bottom of the component that was removed in v5.4.0.
+- date: 2026-06-02
+  version: 6.2.0
+  description: Fixed component CSS outputting list code twice.
