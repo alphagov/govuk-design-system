@@ -1,0 +1,24 @@
+- date: 2018-05-30
+  description: |
+    Added guidance on when and when not to use Error messages.
+
+    Added guidance on writing clear, consistent and specific error text.
+- date: 2018-06-21
+  version: 1.0.0
+  description: Component introduced.
+- date: 2019-03-05
+  version: 2.8.0
+  description: Updated error messages to include visually hidden 'Error:' text at the beginning, to make the message easier to understand for assistive technology users.
+- date: 2020-03-16
+  description: Moved some guidance to the [Recover from validation errors pattern](/patterns/validation/).
+- date: 2020-07-28
+  description: Added guidance on displaying error messages where there's more than one input element, such as [Date input](/components/date-input/).
+- date: 2020-09-11
+  description: Added clarification that the Error message component is intended for describing problems with a user's input, not problems with a service.
+- date: 2021-12-16
+  version: 4.0.0
+  description: Changed the HTML element used for error messages from `<span>` to `<p>`.
+- date: 2023-11-08
+  description: Added guidance on matching up the language used in questions and error messages.
+- date: 2024-01-11
+  description: Added guidance advising to retain the content of form fields where a validation error has happened.
