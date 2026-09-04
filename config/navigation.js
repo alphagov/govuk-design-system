@@ -1,34 +1,44 @@
 /**
  * Navigation menu items
  *
- * @type {NavigationItem[]}
+ * @type {{sections: NavigationItem[], subpages: NavigationItem[]}}
  */
-const config = [
-  {
-    label: 'Get started',
-    url: 'get-started'
-  },
-  {
-    label: 'Styles',
-    url: 'styles'
-  },
-  {
-    label: 'Components',
-    url: 'components'
-  },
-  {
-    label: 'Patterns',
-    url: 'patterns'
-  },
-  {
-    label: 'Community',
-    url: 'community'
-  },
-  {
-    label: 'Accessibility',
-    url: 'accessibility'
-  }
-]
+const config = {
+  // Top level sections of the website
+  sections: [
+    {
+      label: 'Get started',
+      url: 'get-started'
+    },
+    {
+      label: 'Styles',
+      url: 'styles'
+    },
+    {
+      label: 'Components',
+      url: 'components'
+    },
+    {
+      label: 'Patterns',
+      url: 'patterns'
+    },
+    {
+      label: 'Community',
+      url: 'community'
+    },
+    {
+      label: 'Accessibility',
+      url: 'accessibility'
+    }
+  ],
+  // Possible subpages that a guidance page can have
+  subpages: [
+    {
+      label: 'History',
+      url: 'history'
+    }
+  ]
+}
 
 module.exports = config
 
