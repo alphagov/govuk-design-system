@@ -32,8 +32,10 @@
   background-color: govuk-colour("white");
 }
 
-.app-subnav__section-item--current .app-subnav__link {
-  font-weight: bold;
+// Tie the bold highlighting to `aria-current` so that for both guidance pages
+// and their subpages, the actual page the user is on is always highlighted
+.app-subnav__section-item--current .app-subnav__link[aria-current="page"] {
+  @include govuk-typography-weight-bold;
 }
 
 .app-subnav__section--nested {
@@ -42,7 +44,9 @@
   padding-left: govuk-spacing(4);
 }
 
-.app-subnav__section--nested .app-subnav__section-item::before {
+// Only apply em dash bullet to subnav subitems that are jump links to headings
+// to visually differentiate them from subpage links
+.app-subnav__section--nested .app-subnav__section-item--anchor::before {
   content: "—";
   margin-left: -(govuk-spacing(4));
   color: govuk-colour("black", $variant: "tint-25");
