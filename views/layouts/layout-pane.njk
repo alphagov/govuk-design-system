@@ -67,6 +67,10 @@
         {% include "_category-nav.njk" %}
       {% endif %}
 
+      {% if (subpages | length) and (subpages | hasSubpage('history')) %}
+        {% include "_recent-changes.njk" %}
+      {% endif %}
+
       {% if section %}
         {% include "_contact-panel.njk" %}
       {% endif %}

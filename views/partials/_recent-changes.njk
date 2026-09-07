@@ -1,0 +1,11 @@
+{% from "_changelog.njk" import changelog %}
+
+<h2 class="govuk-heading-l govuk-!-padding-top-7" id="recent-changes">Recent changes</h2>
+
+{{ changelog({
+  group: section | slugify,
+  item: title | slugify,
+  limit: 5
+}) }}
+
+<p class="govuk-body"><a href="/{{ permalink }}/history/" class="govuk-link">View full change history</a></p>
