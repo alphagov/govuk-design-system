@@ -11,16 +11,19 @@
   description: Added guidance on supporting autofill using `autocomplete`.
 - date: 2019-02-18
   description: Added guidance on supporting spellchecking.
+- date: 2019-03-05
+  version: 2.8.0
+  description: Added `pattern` parameter.
 - date: 2019-07-29
   version: 3.0.0
   description: Updated focus style to comply with WCAG 2.1.
 - date: 2019-09-02
   version: 3.1.0
   description: Added `inputmode` parameter.
-- date: 2020-02-03
+- date: 2020-02-04
   description: Added guidance about asking for numbers.
-- date: 2020-06-09
-  description: Added guidance advising against using `type="decimal"`.
+- date: 2020-06-10
+  description: Added guidance advising against using `inputmode="decimal"` due to inconsistent behaviour across devices.
 - date: 2020-07-29
   version: 3.8.0
   description: |
@@ -30,7 +33,9 @@
 - date: 2020-09-14
   version: 3.9.0
   description: Added input prefixes and suffixes.
-- date: 2022-04-17
+- date: 2022-02-10
+  description: Added guidance advising to support all characters a user might reasonably need to enter when performing validation.
+- date: 2022-04-28
   description: Added guidance on use of placeholder text.
 - date: 2022-08-09
   version: 4.3.0
@@ -48,6 +53,8 @@
 - date: 2024-02-05
   version: 5.1.0
   description: Updated positioning of input prefixes and suffixes.
+- date: 2024-02-16
+  description: Updated guidance to advise against placing complex instructions inside of hint text. Put them before the question instead. See [our guidance on complex questions](/patterns/question-pages/#asking-complex-questions-without-using-hint-text).
 - date: 2024-02-21
   version: 5.2.0
   description: Added `beforeInput` and `afterInput` slots.
@@ -62,3 +69,8 @@
 - date: 2026-03-02
   version: 6.1.0
   description: Fixed focus state using wrong shade of black.
+- date: 2026-06-02
+  description: Updated guidance about `inputmode="decimal"`. We now suggest using it when asking for decimal numbers, unless the number can be negative.
+- date: 2026-06-23
+  version: 6.3.0
+  description: Fixed input prefixes and suffixes not having a text colour set, which could result in insufficient text contrast in some situations.
