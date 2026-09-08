@@ -29,7 +29,7 @@
           {%- if not guidanceOnly %}
             <td class="govuk-table__cell">
               {%- if entry.version %}
-                <a href="{{ entry.releaseUrl }}">
+                <a class="govuk-link" href="{{ entry.releaseUrl }}">
                   <span class="govuk-visually-hidden">GOV.UK Frontend</span>
                   v{{ entry.version }}
                 </a>
@@ -38,7 +38,9 @@
               {%- endif %}
             </td>
           {%- endif %}
-          <td class="govuk-table__cell">{{ entry.description | safe }}</td>
+          <td class="govuk-table__cell app-prose-scope">
+            {{- entry.description | safe -}}
+          </td>
         </tr>
         {%- set previousDate = date %}
       {%- endfor %}

@@ -47,10 +47,5 @@
 
     // Use the table's font-size, rather than what we assign to <p>
     font-size: inherit;
-
-    // Remove bottom margin from last paragraph
-    &:last-child {
-      margin-bottom: 0;
-    }
   }
 }
