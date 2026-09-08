@@ -1,0 +1,67 @@
+- date: 2018-10-11
+  version: 2.2.0
+  description: Component introduced.
+- date: 2019-09-11
+  version: 3.2.0
+  description: Added option to add classes to the form group wrapper.
+- date: 2019-11-19
+  version: 3.4.0
+  description: |
+    Changed handling of count message in JavaScript.
+
+    Fixed classes for error state.
+- date: 2020-01-21
+  version: 3.5.0
+  description: Added option to add classes to the count message.
+- date: 2020-07-29
+  version: 3.8.0
+  description: |
+    Added spellcheck option.
+
+    Added preservation of component state when navigating 'back' in the browser.
+- date: 2020-08-13
+  version: 3.8.1
+  description: Fixed `textarea` within Character count to prevent it shrinking as users exceed the character limit.
+- date: 2021-02-08
+  version: 3.11.0
+  description: |
+    Fixed JavaScript error when Character count ID starts with a number.
+
+    Added option to use of tabular numbers for Character count message.
+- date: 2021-12-16
+  version: 4.0.0
+  description: Changed JavaScript initialisation to look for count message HTML element in whole page, rather than only within Character count element
+- date: 2022-01-20
+  description: Explained that the component counts emojis and some non-Latin characters as multiple characters.
+- date: 2022-05-18
+  version: 4.1.0
+  description: |
+    Removed `aria-live` from the Character count component.
+
+    Added new live-updated accessible announcements.
+
+    Added option to remove of `maxlength` attribute from `textarea` after character count JavaScript has been initialised.
+- date: 2022-05-18
+  description: Added known issues with assistive technology.
+- date: 2022-05-18
+  description: Explained that input shows a red border only when user exceeds character limit.
+- date: 2022-11-14
+  version: 4.4.0
+  description: Added option to localise the Character count's textarea description, count message and input description.
+- date: 2023-12-08
+  version: 5.0.0
+  description: Added option to throw `ElementError` for missing elements during Character count component instantiation.
+- date: 2024-03-26
+  version: 5.3.0
+  description: Changed component element to also include form group wrapper.
+- date: 2024-10-21
+  description: Added details of accessibility improvements to the Character count component.
+- date: 2025-03-04
+  version: 5.9.0
+  description: |
+    Changed component `id` attribute to be based on `name` parameter by default.
+
+    Added focused error state to Character count component.
+- date: 2025-05-15
+  version: 5.10.1
+  description: Added error border colour to Character count component when rendered with error message.
