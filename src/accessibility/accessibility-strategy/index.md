@@ -68,7 +68,7 @@ Accessibility concerns can surface in any product, including:
 
 - [GOV.UK Frontend](/get-started/production/)
 - the [GOV.UK Design System website](/)
-- the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk/)
+- the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk)
 - the [GOV.UK Frontend technical documentation website](https://frontend.design-system.service.gov.uk/)
 - other content produced by the GOV.UK Design System team
 
