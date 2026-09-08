@@ -1,0 +1,45 @@
+- date: 2021-02-08
+  version: 3.11.0
+  description: Component introduced.
+- date: 2021-02-18
+  description: Added legal disclaimer.
+- date: 2021-02-19
+  description: Added explanation for removing the visual focus indicator from the confirmation message.
+- date: 2021-05-13
+  version: 3.12.0
+  description: Added links styled as buttons.
+- date: 2021-05-20
+  description: |
+    Rewrote guidance to be more detailed and more accurate.
+
+    Advised users to audit the cookies they set before adding a Cookie banner.
+
+    Added server-side cookie setting code examples.
+- date: 2021-12-16
+  version: 4.0.0
+  description: Removed default font styles.
+- date: 2024-01-11
+  description: Added WCAG 2.2 guidance for the Cookie banner.
+- date: 2024-02-02
+  description: Clarified scenarios for setting cookies.
+- date: 2024-04-19
+  version: 5.3.1
+  description: Changed background colour to be the GOV.UK Frontend 'canvas' colour rather than hard-coded grey.
+- date: 2025-05-01
+  version: 5.10.0
+  description: Changed background colour from grey to light blue for the GOV.UK brand refresh.
+- date: 2025-05-01
+  description: Removed WCAG 2.2 guidance.
+- date: 2025-05-29
+  version: 4.10.0
+  description: Changed background colour from grey to light blue for the GOV.UK brand refresh.
+- date: 2025-06-25
+  description: Added guidance on the GOV.UK brand refresh.
+- date: 2026-02-09
+  version: 6.0.0
+  description: Removed rebrand feature flag.
+- date: 2026-02-10
+  description: Removed guidance about 'default' Cookie banner in page template.
+- date: 2026-08-27
+  version: 6.5.0
+  description: Removed background colours for print.
