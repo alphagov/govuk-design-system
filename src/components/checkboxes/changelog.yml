@@ -1,0 +1,98 @@
+- date: 2018-06-21
+  version: 1.0.0
+  description: Component introduced.
+- date: 2018-07-13
+  version: 1.1.0
+  description: |
+    Added a transparent outline when an input is focused, to aid visibility in forced colour modes.
+
+    Fixed labels extending the full width of the page.
+
+    Removed extra spacing from the bottom of labels.
+- date: 2018-07-28
+  version: 1.2.0
+  description: |
+    Added the option to add a hint for each item's input.
+
+    Added the option to add custom classes for each item's label.
+
+    Fixed conditionally revealed content being visible when the page is still loading.
+- date: 2018-08-15
+  version: 1.3.0
+  description: Added the option to add custom HTML attributes for each item's input.
+- date: 2018-10-15
+  description: Added guidance to include hint text telling the user how many options they can select.
+- date: 2018-11-01
+  version: 2.3.0
+  description: Added the option to add custom classes to each item's wrapping element.
+- date: 2018-11-19
+  version: 2.4.0
+  description: Fixed single checkboxes not outputting the `aria-describedby` attribute when showing an error.
+- date: 2019-01-21
+  description: Added guidance on positioning inputs relative to their labels.
+- date: 2019-01-31
+  version: 2.6.0
+  description: Fixed conditional reveal functionality being able to reveal content in other checkbox groups on the same page.
+- date: 2019-02-05
+  description: |
+    Added guidance to advise against pre-checking checkboxes.
+
+    Added guidance on how to sort options within a checkbox list.
+- date: 2019-04-12
+  version: 2.10.0
+  description: |
+    Added small checkbox variant.
+
+    Fixed an edge case where a checkbox could render with two `aria-describedby` attributes.
+- date: 2019-07-29
+  version: 3.0.0
+  description: |
+    Updated how the `id` of the first input in a group is generated. It now uses the exact value of the `idPrefix` parameter, without the `-1` suffix.
+
+    Updated focus style to use a thicker border and remove the transparent outline.
+- date: 2019-10-07
+  version: 3.3.0
+  description: Fixed conditionally revealed content areas still being shown when there's no content in them.
+- date: 2020-01-21
+  version: 3.5.0
+  description: Added the option to add custom classes for each item's hint.
+- date: 2020-07-29
+  version: 3.8.0
+  description: Fixed checkboxes rendering incorrectly if the page's CSS `box-sizing` wasn't set to `border-box`.
+- date: 2021-06-24
+  version: 3.13.0
+  description: |
+    Added the option to add a 'none' option to a checkbox list. Checking this options unchecks other checkboxes in the same group.
+
+    Added the option to add divider text between items.
+
+    Fixed checkboxes rendering incorrectly in Internet Explorer 8.
+- date: 2021-06-28
+  description: Added guidance to suggest asking 'filter questions' to reduce the need for a 'none' checkbox.
+- date: 2021-09-07
+  version: 3.13.1
+  description: Updated focus style to re-add the transparent outline for forced colour mode users.
+- date: 2021-12-16
+  version: 4.0.0
+  description: Inputs that conditionally reveal content can now toggle the visibility of elements anywhere on the page, not only within the current checkbox group.
+- date: 2022-05-18
+  version: 4.1.0
+  description: Fixed the hint text of disabled checkboxes appearing darker than the label.
+- date: 2022-06-27
+  version: 4.2.0
+  description: Added `values` parameter.
+- date: 2023-12-08
+  version: 5.0.0
+  description: Added hover styles to small checkboxes in forced colours mode.
+- date: 2024-04-19
+  version: 5.3.1
+  description: Fixed conditionally revealed content having forced indentation, which caused whitespace sensitive content, such as `textarea` elements, to render incorrectly.
+- date: 2024-07-12
+  version: 5.4.1
+  description: |
+    Fixed conditionally revealed content not being aligned with the parent checkbox.
+
+    Fixed divider text not being aligned with inputs when using small checkboxes.
+- date: 2025-09-22
+  version: 5.12.0
+  description: Fixed fieldsets having forced indentation, which caused whitespace sensitive content to render incorrectly.
