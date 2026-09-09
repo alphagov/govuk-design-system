@@ -8,7 +8,7 @@
   description:
     Updated the button's default text to include visually-hidden 'Emergency'.
 
-    Added a rel HTML attribute to the button and secondary link.
+    Added `rel="nofollow noreferrer"` to the button and secondary link. This prevents the page being linked to from receiving information about the referring page and potentially exposing the user's origin.
 - date: 2026-07-16
   version: 6.4.0
   description: Updated overlay to use system colours.
