@@ -3,7 +3,7 @@
   description: Component introduced.
 - date: 2024-04-19
   version: 5.3.1
-  description: Fixed issue with button growing larger if the text input has a capped width.
+  description: Fixed issue with button size increasing if the text input has a capped width.
 - date: 2024-05-17
   version: 5.4.0
   description: Removed duplicate `errorMessage` parameter.

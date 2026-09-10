@@ -23,7 +23,7 @@
 - date: 2020-02-04
   description: Added guidance about asking for numbers.
 - date: 2020-06-10
-  description: Added guidance advising against using `inputmode="decimal"` due to inconsistent behaviour across devices.
+  description: Added guidance to advise against using `inputmode="decimal"` due to inconsistent behaviour across devices.
 - date: 2020-07-29
   version: 3.8.0
   description: |
@@ -41,7 +41,7 @@
   version: 4.3.0
   description: Updated length modifier classes to use `em` units.
 - date: 2022-08-19
-  description: Removed guidance on using the `pattern` attribute to coerce iOS into showing a numpad. Use `inputmode` instead.
+  description: Removed guidance on using the `pattern` attribute to force iOS to show a numpad. Use `inputmode` instead.
 - date: 2023-04-20
   version: 4.6.0
   description: |
@@ -49,7 +49,7 @@
 
     Added guidance and modifier class for codes and sequences.
 - date: 2023-08-14
-  description: Added guidance about not restricting the length of a user's input.
+  description: Added guidance to not restrict the length of a user's input.
 - date: 2024-02-05
   version: 5.1.0
   description: Updated positioning of input prefixes and suffixes.
@@ -70,7 +70,7 @@
   version: 6.1.0
   description: Fixed focus state using wrong shade of black.
 - date: 2026-06-02
-  description: Updated guidance about `inputmode="decimal"`. We now suggest using it when asking for decimal numbers, unless the number can be negative.
+  description: Changed guidance about `inputmode="decimal"` to suggest using it when asking for decimal numbers, unless the number can be negative.
 - date: 2026-06-23
   version: 6.3.0
   description: Fixed input prefixes and suffixes not having a text colour set, which could result in insufficient text contrast in some situations.
