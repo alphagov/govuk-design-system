@@ -30,7 +30,7 @@ Use an address lookup to collect UK addresses where possible.
 
 Address lookups generally only work for UK addresses.
 
-If both UK and international addresses are expected, give users to the option to either search for a UK address or manually enter an international address.
+If you expect both UK and international addresses, give users the option to either search for a UK address or manually enter an international address.
 
 ### How an address lookup works
 
@@ -46,9 +46,9 @@ When using an address lookup, you should:
 
 Use an address lookup that can identify addresses with Unique Property Reference Numbers (UPRNs). UPRNs are 12-digit unique identifiers for every addressable location across the UK.
 
-Open standards for government mandates that [services that store property information must use UPRN identifiers](https://www.gov.uk/government/publications/open-standards-for-government/identifying-property-and-street-information).
+Open standards for government mandate that [services that store property information must use UPRN identifiers](https://www.gov.uk/government/publications/open-standards-for-government/identifying-property-and-street-information).
 
-Using UPRN identifiers helps users enter an address accurately and ensures it stays consistent. This helps your service by making address data easier to handle, reducing errors and removing the need for manual address matching in the future.
+Using UPRN identifiers helps users enter addresses accurately. This helps your service by making address data more consistent and easier to handle, which reduces errors and removes the need for manual address matching in the future.
 
 See a post on [The power of UPRNs in linking data on the Geospatial Insights blog](https://gdsgeospatial.blog.gov.uk/2026/01/23/unlocking-better-outcomes-the-power-of-uprns-in-linking-data/).
 
@@ -73,7 +73,7 @@ You should let users enter postcodes that contain:
 
 Use multiple text inputs to offer users a manual option to enter an address, such as for international addresses or when users cannot find their address using an address lookup.
 
-You'll need to know which countries the addresses will come from and find a format that supports them. This can be difficult for addresses outside of the UK.
+Find out which countries the addresses will come from and find a format that supports them. 
 
 Using multiple text inputs means:
 
@@ -126,13 +126,13 @@ Make sure errors follow the guidance in the [Error message component](/component
 
 {{ example({ group: "patterns", item: "addresses", example: "textarea", html: true, nunjucks: true, open: true, size: "s" }) }}
 
-### When to use textarea
+### When to use a textarea
 
 Use a textarea to offer users a manual option to enter an address, such as for international addresses or when users cannot find their address using an address lookup.
 
 A textarea is useful when you expect a broad range of address formats and you do not need to format the address for print or use specific sub-parts of the address (for example, street or postcode).
 
-### When not to use textarea
+### When not to use a textarea
 
 You should not use a textarea if you need to separate an address into accurate sub-parts (for example, street or postcode).
 
