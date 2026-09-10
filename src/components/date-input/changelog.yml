@@ -1,0 +1,63 @@
+- date: 2018-06-21
+  version: 1.0.0
+  description: Component introduced.
+- date: 2018-07-13
+  version: 1.1.0
+  description: |
+    Added option to set `name` and `id` on each input item.
+
+    Changed component to rely on `classes` attribute rather than input names to set width.
+
+    Added default Date input items (day, month, year) if no items are set.
+- date: 2018-07-17
+  version: 1.1.1
+  description: Fixed undefined class displaying in Date input.
+- date: 2018-07-31
+  description: Added guidance on setting the Date input's `legend` as a page heading
+- date: 2018-09-10
+  version: 2.0.0
+  description: |
+    Removed name-based width logic.
+
+    Changed `name` option to `namePrefix`.
+- date: 2018-09-19
+  version: 2.4.0
+  description: Add option to set classes on component's form group.
+- date: 2019-01-31
+  version: 2.6.0
+  description: Added `autocomplete` parameter.
+- date: 2019-03-05
+  version: 2.8.0
+  description: Added `pattern` parameter.
+- date: 2019-09-02
+  version: 3.1.0
+  description: Added option to set attributes on thr Date input's fieldset.
+- date: 2020-01-21
+  version: 3.5.0
+  description: Added automatically setting each input's `type` to `text` and `inputmode` to `numeric`.
+- date: 2020-04-16
+  description: Updated date error guidance to be more consistent.
+- date: 2020-10-27
+  description: Added guidance about using example dates in hint text.
+- date: 2020-11-23
+  version: 3.10.0
+  description: Added setting `inputmode`.
+- date: 2021-12-16
+  version: 4.0.0
+  description: Changed default attribute `type="number"` to `inputmode="numeric"`.
+- date: 2021-05-18
+  version: 4.1.0
+  description: Removed default `pattern` value.
+- date: 2021-05-18
+  version: 4.1.0
+  description: Removed default `pattern` value.
+- date: 2023-08-14
+  description: Added recommendation to accept month names.
+- date: 2024-09-18
+  description: Removed guidance suggesting not needing to use `autocomplete` in prototypes.
+- date: 2026-01-14
+  version: 5.14.0
+  description: Fixed component shifting alignment on iOS 18.
+- date: 2026-07-26
+  version: 6.4.0
+  description: Added passing `day`, `month`, `year`, `error` and `values` options to customise individual inputs in the component.
