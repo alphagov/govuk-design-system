@@ -33,17 +33,28 @@
         {{ statusCallout(status) }}
       {%- endif %}
 
-      {% if showPageNav %}
+      {% if showPageNav or (subpages | length) %}
         <ul class="app-page-navigation">
-          {% for heading in headings %}
-            {% if heading.depth == 2 %}
+          {% if (subpages | length) %}
+            {% for subpage in subpages %}
               <li class="app-page-navigation__item">
-                <a class="govuk-link" href="#{{ heading.url}}">
-                  {{ heading.text }}
+                <a class="govuk-link" href="/{{ permalink }}/{{ subpage.url}}/">
+                  {{ subpage.label }}
                 </a>
               </li>
-            {% endif %}
-          {% endfor %}
+            {% endfor %}
+          {% endif %}
+          {% if showPageNav %}
+            {% for heading in headings %}
+              {% if heading.depth == 2 %}
+                <li class="app-page-navigation__item">
+                  <a class="govuk-link" href="#{{ heading.url}}">
+                    {{ heading.text }}
+                  </a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
         </ul>
       {% endif %}
 
@@ -54,6 +65,10 @@
       {# No JS fallback to show overview #}
       {% if showSubNav %}
         {% include "_category-nav.njk" %}
+      {% endif %}
+
+      {% if (subpages | length) and (subpages | hasSubpage('history')) %}
+        {% include "_recent-changes.njk" %}
       {% endif %}
 
       {% if section %}
