@@ -252,7 +252,7 @@ function userAllowsCookie(cookieName) {
   for (const category in COOKIE_CATEGORIES) {
     const cookiesInCategory = COOKIE_CATEGORIES[category]
 
-    if (cookiesInCategory.indexOf(cookieName) !== '-1') {
+    if (cookiesInCategory.indexOf(cookieName) !== -1) {
       return userAllowsCookieCategory(category, cookiePreferences)
     }
   }
