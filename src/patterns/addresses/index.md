@@ -44,11 +44,15 @@ When using an address lookup, you should:
 
 ### Identify and match addresses with UPRN identifiers
 
-Use an address lookup that can [identify addresses with Unique Property Reference Numbers (UPRNs)](https://www.gov.uk/government/publications/open-standards-for-government/identifying-property-and-street-information). UPRNs are 12-digit unique identifiers for every addressable location across the UK.
+Use an address lookup that can identify addresses with Unique Property Reference Numbers (UPRNs). UPRNs are 12-digit unique identifiers for every addressable location across the UK.
 
-Open standards for government mandates that [all public sector systems and projects which include address data should include UPRNs](https://technology.blog.gov.uk/2020/04/02/identifying-properties-and-streets-in-government-data/). This is to help government share consistent data, reduce errors and avoid the need for manual address matching in future.
+Open standards for government mandates that [services that store property information must use UPRN identifiers](https://www.gov.uk/government/publications/open-standards-for-government/identifying-property-and-street-information).
 
-Your address lookup should only use data from one API so it is consistent and accurate. One option for this is the [Ordnance Survey Places API](https://www.ordnancesurvey.co.uk/products/os-places-api).
+Using UPRN identifiers helps users enter an address accurately and ensures it stays consistent. This helps your service by making address data easier to handle, reducing errors and removing the need for manual address matching in the future.
+
+See a post on [The power of UPRNs in linking data on the Geospatial Insights blog](https://gdsgeospatial.blog.gov.uk/2026/01/23/unlocking-better-outcomes-the-power-of-uprns-in-linking-data/).
+
+Your address lookup should only use data from a single API. One option for this is the [Ordnance Survey Places API](https://www.ordnancesurvey.co.uk/products/os-places-api). Public sector organisations can get access to OS Places API as part of the [Public Sector Geospatial Agreement (PSGA)](https://www.ordnancesurvey.co.uk/customers/public-sector/public-sector-geospatial-agreement).
 
 ### Allow different postcode formats
 
