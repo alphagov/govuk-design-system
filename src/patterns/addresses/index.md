@@ -71,9 +71,10 @@ You should let users enter postcodes that contain:
 
 ### When to use multiple text inputs
 
-Use multiple text inputs to offer users a manual option to enter an address, such as for international addresses or when users cannot find their address using an address lookup.
+Only use multiple text inputs to offer users a manual input option when you both:
 
-Find out which countries the addresses will come from and find a format that supports them. 
+- know which countries the addresses will come from
+- can find a format that supports them all – this can be difficult to know if you’re asking for addresses outside of the UK
 
 Using multiple text inputs means:
 
