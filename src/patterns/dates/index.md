@@ -67,7 +67,9 @@ Never make a calendar control that depends on JavaScript as the only input optio
 
 See the [GOV.UK style for writing dates and date ranges](https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/style-guides/a-to-z-style-guide/#dates).
 
-If you give an example date, use 13 or more for the day and 9 or less for the month - for example ‘27 3 2007’. This helps users enter the date in the correct order and shows them they do not need to include leading zeroes.
+If you give an example date, use a day of 13 or more and a month of 9 or less. **Do not use a day that ends in zero** (such as 20 or 30). Some screen readers will merge the zero with a single-digit month, misreading '30 9' as '39'.
+
+For example, use ‘27 3 2007’. This helps users enter the date in the correct order, shows them they do not need to include leading zeroes, and ensures assistive technology reads the numbers correctly.
 
 ## Research on this pattern
 
