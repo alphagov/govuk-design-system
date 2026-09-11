@@ -1,0 +1,26 @@
+- date: 2018-06-21
+  version: 1.0.0
+  description: Component introduced.
+- date: 2018-07-13
+  version: 1.1.0
+  description: Updated padding to be set in `px` rather than `em` units for consistency with other parts of Frontend. This change slightly increased the height of cells.
+- date: 2018-09-10
+  version: 2.0.0
+  description: Fixed font size being overridden when using GOV.UK Frontend alongside GOV.UK Elements.
+- date: 2018-10-11
+  version: 2.2.0
+  description: Added option for passing custom classes to cells.
+- date: 2018-11-01
+  version: 2.3.0
+  description: Added option for passing custom HTML attributes to cells.
+- date: 2019-01-09
+  description: Added guidance about using [width override classes](/styles/layout/#width-override-classes) to customise column widths.
+- date: 2019-07-29
+  version: 3.0.0
+  description: Changed the default vertical alignment of content to be at the top of the cell.
+- date: 2021-02-08
+  version: 3.11.0
+  description: Added size modifier classes for captions.
+- date: 2024-02-21
+  version: 5.2.0
+  description: Added `govuk-table--small-text-until-tablet` modifier class.
