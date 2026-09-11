@@ -1,0 +1,33 @@
+- date: 2018-06-21
+  version: 1.0.0
+  description: Component introduced.
+- date: 2018-07-13
+  version: 1.1.0
+  description: Added outline around Tags in forced colours mode.
+- date: 2018-08-15
+  version: 1.3.0
+  description: Adjusted vertical alignment of text when using the GDS Transport version 1.
+- date: 2020-03-06
+  version: 3.6.0
+  description: Added colour modifier classes.
+- date: 2020-04-17
+  description: Updated guidance to clarify that Tag text should use adjectives.
+- date: 2021-12-16
+  version: 4.0.0
+  description: Removed `govuk-tag--inactive` modifier class. Use `govuk-tag--grey` instead.
+- date: 2023-12-08
+  version: 5.0.0
+  description: |
+    Updated Tag text to no longer be bold, uppercase, and with extra letter spacing. Text is now set in a larger size, in regular weight, and is sentence cased.
+
+    Updated colours to use lighter variants, to make tags easier to distinguish from buttons.
+- date: 2024-01-11
+  description: |
+    Added guidance to advise against uses Tags for links, buttons or other interactive elements.
+
+    Added guidance that any drag-and-drop interactions must comply with [accessibility guidance regarded dragging movements](https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements) if used.
+- date: 2025-05-15
+  description: Removed guidance about drag-and-drop interactions.
+- date: 2026-02-09
+  version: 6.0.0
+  description: Updated colours to align with the refreshed GOV.UK brand colours.
