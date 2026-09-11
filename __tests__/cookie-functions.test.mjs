@@ -52,6 +52,13 @@ describe('Cookie settings', () => {
       expect(document.cookie).toEqual('')
     })
 
+    it('doesnt set an unrecognised cookie even if the user consented to analytics', async () => {
+      CookieHelpers.setConsentCookie({ analytics: true })
+      CookieHelpers.Cookie('myCookie', 'myValue')
+
+      expect(CookieHelpers.Cookie('myCookie')).toEqual(null)
+    })
+
     it('allows deletion of any cookie even if not recognised', async () => {
       document.cookie = 'myCookie=hello; path=/'
       document.cookie = 'otherCookie=world; path=/'
