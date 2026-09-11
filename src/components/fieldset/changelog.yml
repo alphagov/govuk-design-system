@@ -1,0 +1,17 @@
+- date: 2018-06-21
+  version: 1.0.0
+  description: Component introduced.
+- date: 2018-07-31
+  description: Added guidance on setting legends as page headings.
+- date: 2019-04-25
+  version: 2.11.0
+  description: Added styling to prevent Fieldsets from exceeding their max width.
+- date: 2019-05-28
+  version: 2.12.0
+  description: Added `describedBy` parameter.
+- date: 2019-09-02
+  version: 3.1.0
+  description: Added `role` parameter.
+- date: 2019-09-11
+  version: 3.2.0
+  description: Fixed component legend text clipping when using a custom or fallback font.
