@@ -1,0 +1,20 @@
+- date: 2018-06-21
+  version: 1.0.0
+  description: Component introduced.
+- date: 2020-01-21
+  version: 3.5.0
+  description: Fixed focus style lacking an underline when the [global styles option](https://frontend.design-system.service.gov.uk/v4/sass-api-reference/#global-styles) is enabled.
+- date: 2021-12-16
+  version: 4.0.0
+  description: Added JavaScript that programatically moves focus to the Skip link's target to improve the consistency of screen reader behaviour.
+- date: 2022-04-28
+  description: |
+    Added guidance about where to place the Skip link on a page.
+
+    Added note that accessibility auditing tools may incorrectly flag the Skip link as not being within a page landmark. Bypass links are not required to be within a landmark.
+- date: 2024-04-19
+  version: 5.3.1
+  description: Fixed regression that reintroduced the bug previously fixed in 3.5.0.
+- date: 2026-01-14
+  version: 5.14.0
+  description: Fixed focus style appearing cut off in forced colours mode.
