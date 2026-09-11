@@ -1,0 +1,32 @@
+- date: 2018-06-21
+  version: 1.0.0
+  description: Component introduced.
+- date: 2018-07-18
+  version: 1.1.1
+  description: |
+    Fixed component not removing bottom margin from contained elements.
+
+    Fixed component collapsing when revealed contents is clicked in certain browsers.
+- date: 2019-09-02
+  version: 3.1.0
+  description: Added polyfill of Details on browsers not supporting the native details element.
+- date: 2021-02-23
+  description: Added research section to component guidance.
+- date: 2021-09-07
+  version: 3.13.1
+  description: Removed unnecessary right-side padding.
+- date: 2022-08-09
+  version: 4.3.0
+  description: |
+    Added option to pass HTML into details using Nunjucks' `caller` feature.
+
+    Removed redundant `aria-hidden` attribute.
+- date: 2023-12-08
+  version: 5.0.0
+  description: Removed JavaScript polyfill for component.
+- date: 2024-10-10
+  version: 5.7.0
+  description: |
+    Fixed incorrect bottom margin when component is collapsed.
+
+    Fixed expanded state not being announced on iOS.
