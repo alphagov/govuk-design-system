@@ -1,0 +1,65 @@
+- date: 2018-06-21
+  version: 1.0.0
+  description: Component introduced.
+- date: 2018-11-19
+  version: 2.4.0
+  description: Classes can now be set on the input's `formGroup`.
+- date: 2018-12-10
+  description: Added templates for suggested error messages.
+- date: 2020-07-29
+  version: 3.8.0
+  description: Updated the error state to no longer include a border around the file upload input.
+- date: 2021-05-13
+  version: 3.12.0
+  description: Fixed `-webkit-appearance:button` so text is aligned in Safari.
+
+    Fixed 'jumping' on focus.
+- date: 2021-09-07
+  version: 3.13.1
+  description: Added `max-width` to the component to fix an issue with magnification.
+- date: 2023-04-20
+  version: 4.6.0
+  description: Updated the appearance of disabled form controls.
+
+    Added a top-level `disabled` parameter to form controls.
+- date: 2023-08-03
+  description: Added a usability issue to the known issues and gaps.
+- date: 2024-01-11
+  description: Added WCAG 2.2 guidance for the File upload.
+- date: 2024-10-11
+  version: 5.7.1
+  description: Stopped setting a `value` parameter, since no modern browser supports passing a `value` to a file input.
+- date: 2025-03-04
+  version: 5.9.0
+  description: Added an improved file upload which uses a Javascript enhancement.
+- date: 2025-03-04
+  description: Added guidance for the improved file upload.
+- date: 2025-05-08
+  description: Removed WCAG 2.2 guidance.
+- date: 2025-08-22
+  version: 5.11.2
+  description: Fixed the improved file upload being hidden with an empty label.
+- date: 2025-10-10
+  version: 5.13.0
+  description:
+    Update to account for `multiple` attribute when using the improved file upload.
+
+    Fixed long filenames in improved file upload not wrapping.
+- date: 2025-12-12
+  description: Added an update to the research on this component section.
+- date: 2026-02-09
+  version: 6.0.0
+  description: Update colours to use `govuk_palette`.
+- date: 2026-05-21
+  description: Added guidance about HTML attributes.
+- date: 2026-06-02
+  version: 6.2.0
+  description:
+    Introduced `wrapperClasses` and `wrapperAttributes` parameters to define custom classes and HTML attributes for the wrapper of the improved file upload.
+
+    Renamed the `govuk-drop-zone` to `govuk-file-upload-wrapper` of the improved file upload.
+
+    Fixed improved file upload lacking an error state.
+- date: 2026-07-16
+  version: 6.4.0
+  description: Fixed an error with Rails apps and `hidden` inputs.
