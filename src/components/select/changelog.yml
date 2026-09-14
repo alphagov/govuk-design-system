@@ -1,0 +1,52 @@
+- date: 2018-06-21
+  version: 1.0.0
+  description: Component introduced.
+- date: 2018-09-10
+  version: 2.0.0
+  description: |
+    Updated appearance so that Selects are no longer the full width of the parent container.
+
+    Added parameter to pass custom HTML attributes to Select options.
+- date: 2018-10-11
+  version: 2.2.0
+  description: Fixed Selects with long options growing wider than the parent container.
+- date: 2018-11-19
+  version: 2.4.0
+  description: Classes can now be set on the input's `formGroup`.
+- date: 2020-07-29
+  version: 3.8.0
+  description: Updated input's border thickness when in the error state.
+- date: 2021-09-21
+  description: Added guidance about pre-selecting options.
+- date: 2022-02-08
+  version: 4.0.1
+  description: |
+    Fixed component rendering with a grey background in Firefox.
+
+    Fixed component rendering with a grey background and blue text in Safari for iOS.
+- date: 2022-06-20
+  description: Added guidance about using hints.
+- date: 2022-06-27
+  version: 4.2.0
+  description: Added `value` parameter.
+- date: 2022-08-09
+  version: 4.3.0
+  description: Set a minimum width so that the Select doesn't appear shrunk down if the option list hasn't been populated yet.
+- date: 2023-01-24
+  description: Added user research indicating that users can struggle to use select inputs.
+- date: 2023-04-20
+  version: 4.6.0
+  description: Added `disabled` parameter and updated disabled styles.
+- date: 2023-08-09
+  description: Added guidance about error messaging.
+- date: 2023-12-08
+  version: 5.0.0
+  description: |
+    Updated how the Select Nunjucks macro handles options without a `value` provided. The value would previously be set to an empty string.
+
+    As of 5.0.0, the HTML attribute is not set and the input's value is the same as the display text of the option, as is the case with native `<select>` elements.
+- date: 2024-10-04
+  description: Expanded guidance on writing hint text.
+- date: 2025-03-04
+  version: 5.9.0
+  description: The `id` parameter now defaults to match `name` if an `id` isn't provided.
