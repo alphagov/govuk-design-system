@@ -1,0 +1,38 @@
+- date: 2018-06-21
+  version: 1.0.0
+  description: Component introduced.
+- date: 2018-07-13
+  version: 1.1.0
+  description: |
+    Fixed the exclamation icon's text being selectable and copyable.
+
+    Fixed the border of the icon not being visible in forced colours mode.
+- date: 2018-12-11
+  version: 2.4.1
+  description: Reduced spacing between the icon and text.
+- date: 2019-10-07
+  version: 3.3.0
+  description: |
+    Updated icon position so that it aligns with the first line of text when wrapped over multiple lines.
+
+    Fixed icon becoming distorted if a user altered their browser's font size.
+
+    Fixed text not appearing in bold when using GOV.UK Frontend alongside GOV.UK Elements.
+- date: 2020-07-29
+  version: 3.8.0
+  description: Fixed icon rendering incorrectly if the page's CSS `box-sizing` wasn't set to `border-box`.
+- date: 2021-05-13
+  version: 3.12.0
+  description: Fixed icon outline appearing clipped when using Microsoft Edge in forced colours mode.
+- date: 2023-04-20
+  version: 4.6.0
+  description: Set a default value for the `iconFallbackText` parameter, so it's no longer required to specify this manually.
+- date: 2023-12-08
+  version: 5.0.0
+  description: Removed styles associated with the `govuk-warning-text__assistive` CSS class. Use the `govuk-visually-hidden` class instead.
+- date: 2024-04-19
+  version: 5.3.1
+  description: Updated the icon colours to use the root text and background colours, rather than hardcoded as black and white. This allows the Warning text icon to change appearance if these colours are customised by a user.
+- date: 2024-10-10
+  version: 5.7.0
+  description: Fixed text not appearing in bold if user agent styles were being overridden.
