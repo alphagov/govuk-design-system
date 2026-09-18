@@ -4,7 +4,7 @@
 
 {{ changelog({
   group: section | slugify,
-  item: title | slugify,
+  item: getCurrentPageSlug(),
   limit: 5
 }) }}
 
