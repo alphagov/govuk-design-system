@@ -39,7 +39,7 @@
             {% for subpage in subpages %}
               <li class="app-page-navigation__item">
                 <a class="govuk-link" href="/{{ permalink }}/{{ subpage.url}}/">
-                  {{ subpage.label }}
+                  {{ subpage.label }}<span class="govuk-visually-hidden"> for {{ subitem.label }}</span>
                 </a>
               </li>
             {% endfor %}
