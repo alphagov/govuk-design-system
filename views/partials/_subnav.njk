@@ -21,7 +21,7 @@
                   {% for subpage in subitem.subpages %}
                     <li class="app-subnav__section-item">
                       <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/{{ subitem.url }}/{{ subpage.url }}/"{% if subitem | isActiveSubpage(permalink) %} aria-current="page"{% endif %}>
-                        {{ subpage.label }}
+                        {{ subpage.label }}<span class="govuk-visually-hidden"> for {{ subitem.label }}</span>
                       </a>
                     </li>
                   {% endfor %}
