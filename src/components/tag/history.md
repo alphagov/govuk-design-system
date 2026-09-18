@@ -1,5 +1,6 @@
 ---
 title: Tag change history
+parent: Tag
 layout: layout-pane.njk
 ---
 

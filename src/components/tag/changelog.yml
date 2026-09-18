@@ -6,7 +6,7 @@
   description: Added outline around Tags in forced colours mode.
 - date: 2018-08-15
   version: 1.3.0
-  description: Adjusted vertical alignment of text when using the GDS Transport version 1.
+  description: Adjusted vertical alignment of text when using GDS Transport version 1.
 - date: 2020-03-06
   version: 3.6.0
   description: Added colour modifier classes.
@@ -23,7 +23,7 @@
     Updated colours to use lighter variants, to make Tags easier to distinguish from buttons.
 - date: 2024-01-11
   description: |
-    Added guidance to advise against uses Tags for links, buttons or other interactive elements.
+    Added guidance to advise against using Tags for links, buttons or other interactive elements.
 
     Added guidance that any drag-and-drop interactions must comply with [accessibility guidance regarded dragging movements](https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements) if used.
 - date: 2025-05-15
