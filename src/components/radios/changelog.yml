@@ -31,32 +31,32 @@
 
     Added guidance to include a 'none of the above' option, if that's a valid answer.
 
-    Added guidance to advise against pre-selecting radio buttons.
+    Added guidance to advise against pre-selecting Radio buttons.
 
-    Added guidance on how to sort options within a radio button list.
+    Added guidance on how to sort options within a Radio button list.
 - date: 2018-11-01
   version: 2.3.0
   description: Added the option to add custom classes to each item's wrapping element.
 - date: 2018-11-15
-  description: Added guidance to advise against using conditionally revealed content with inline (horizontal) radio buttons.
+  description: Added guidance to advise against using conditionally revealed content with inline (horizontal) Radio buttons.
 - date: 2019-01-21
   description: Added guidance on positioning inputs relative to their labels.
 - date: 2019-01-31
   version: 2.6.0
-  description: Fixed conditional reveal functionality being able to reveal content in other radio button groups on the same page.
+  description: Fixed conditional reveal functionality being able to reveal content in other Radio button groups on the same page.
 - date: 2019-04-12
   version: 2.10.0
-  description: Added small radio button variant.
+  description: Added small variant.
 - date: 2019-07-29
   version: 3.0.0
   description: |
-    Added support for conditional reveal functionality to work across multiple radio button groups with the same `name` attribute.
+    Added support for conditional reveal functionality to work across multiple Radio button groups with the same `name` attribute.
 
-    Updated how the `id` of the first input in a group is generated. It now uses the exact value of the `idPrefix` parameter, without the `-1` suffix.
+    Updated how the `id` of the first input in a group is generated to use the exact value of the `idPrefix` parameter, without the `-1` suffix.
 
     Updated focus style to use a thicker border and remove the transparent outline.
 
-    Reduced the size of the dot in small radio buttons.
+    Reduced the size of the dot in small Radio buttons.
 - date: 2019-10-07
   version: 3.3.0
   description: Fixed conditionally revealed content areas still being shown when there's no content in them.
@@ -65,37 +65,39 @@
   description: Added the option to add custom classes for each item's hint.
 - date: 2020-09-23
   description: Added known issue that that assistive software users are not consistently notified about conditionally revealed content.
+- date: 2021-06-30
+  description: Updated known issue guidance to include findings from screen reader user testing of conditionally revealed content.
 - date: 2021-08-04
-  description: Updated guidance about when to use inline (horizontal) radio buttons.
+  description: Updated guidance about when to use inline (horizontal) Radio buttons.
 - date: 2021-09-07
   version: 3.13.1
   description: Updated focus style to re-add the transparent outline for forced colour mode users.
 - date: 2021-12-16
   version: 4.0.0
-  description: Inputs that conditionally reveal content can now toggle the visibility of elements anywhere on the page, not only within the current radio button group.
+  description: Changed conditional reveal JavaScript to look for conditionally revealed content in the whole page rather than just in the current Radios element to fix JavaScript `id` issues.
 - date: 2022-01-31
   description: Added guidance about showing error messages within conditionally revealed content.
 - date: 2022-05-18
   version: 4.1.0
-  description: Fixed the hint text of disabled radio buttons appearing darker than the label.
+  description: Fixed the hint text of disabled Radios appearing darker than the label.
 - date: 2022-06-27
   version: 4.2.0
   description: Added `value` parameter.
 - date: 2023-12-08
   version: 5.0.0
-  description: Added hover styles to small radio buttons in forced colours mode.
+  description: Added hover styles to small Radio buttons in forced colours mode.
 - date: 2024-04-19
   version: 5.3.1
   description: Fixed conditionally revealed content having forced indentation, which caused whitespace sensitive content, such as `textarea` elements, to render incorrectly.
 - date: 2024-07-12
   version: 5.4.1
-  description: Fixed conditionally revealed content not being aligned with the parent radio button.
+  description: Fixed conditionally revealed content not being aligned with the parent Radio button.
 - date: 2025-09-22
   version: 5.12.0
   description: Fixed fieldsets having forced indentation, which caused whitespace sensitive content to render incorrectly.
 - date: 2026-01-14
   version: 5.14.0
-  description: Fixed small radio buttons that were both hovered and focused not rendering the focus style.
+  description: Fixed small Radio buttons that were both hovered and focused not rendering the focus style.
 - date: 2026-06-23
   version: 6.3.0
-  description: Fixed label text in small, inline radio buttons wrapping unnecessarily.
+  description: Fixed label text in small, inline Radio buttons wrapping unnecessarily.
