@@ -3,13 +3,13 @@
   description: Component introduced.
 - date: 2018-09-26
   version: 2.1.0
-  description: Added ability to pass `attributes` to Breadcrumb items.
+  description: Added ability to pass `attributes` to breadcrumb items.
 - date: 2020-06-01
   version: 3.7.0
   description: |
     Added `collapseOnMobile` parameter.
 
-    Removed guidance advising to include the current page’s name in the Breadcrumbs.
+    Removed guidance that advised including the current page’s name in the Breadcrumbs.
 - date: 2021-12-23
   description: Added guidance on where to place the Breadcrumbs component on a page.
 - date: 2023-01-31

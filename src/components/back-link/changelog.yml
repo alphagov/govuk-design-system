@@ -8,9 +8,9 @@
   version: 3.7.0
   description: Updated link design to be larger and look consistent with the Breadcrumbs component.
 - date: 2020-08-21
-  description: Expanded guidance on where to place the Back link on a page.
+  description: Added guidance to clarify where to place the Back link component on a page.
 - date: 2021-09-06
-  description: Added information on the user need for Back links.
+  description: Added information on the user need for back links.
 - date: 2021-11-15
   description: Added guidance on labelling links for complex journeys.
 - date: 2023-01-31
@@ -20,4 +20,4 @@
   version: 4.7.0
   description: Added inverse appearance modifier.
 - date: 2025-12-18
-  description: Added information about known issues with the Back link existing outside of landmarks causing automated auditing tools to emit a warning.
+  description: Added information on known issues with automated auditing tools emitting a warning when the Back link component exists outside of landmarks.
