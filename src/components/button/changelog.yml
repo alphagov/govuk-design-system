@@ -6,7 +6,7 @@
   description: Removed additional dotted focus outline from Firefox.
 - date: 2018-10-11
   version: 2.2.0
-  description: Fixed links styled as Buttons being draggable.
+  description: Fixed links styled as buttons being draggable.
 - date: 2019-03-05
   version: 2.8.0
   description: Added `preventDoubleClick` parameter and functionality.
@@ -16,31 +16,31 @@
 - date: 2019-07-29
   version: 3.0.0
   description: |
-    Updated the chevron icon on start Buttons to use an inline SVG instead of a background image.
+    Updated the chevron icon on start buttons to use an inline SVG instead of a background image.
 
-    Updated Button colours to align with the updated colour palette.
+    Updated button colours to align with the updated colour palette.
 
     Updated focus style to comply with WCAG 2.1.
 - date: 2019-09-11
   version: 3.2.0
   description: Fixed focus style being unreadable when GOV.UK Frontend was used alongside GOV.UK Elements.
 - date: 2020-10-27
-  description: Added explanation of why start Buttons are rendered as links.
+  description: Added explanation of why start buttons are rendered as links.
 - date: 2021-02-08
   version: 3.11.0
   description: |
-    Added Button groups.
+    Added button groups.
 
-    Fixed additional margins around Button in Safari browser.
+    Fixed additional margins around button in Safari browser.
 - date: 2021-09-07
   version: 3.13.1
   description: |
-    Fixed start Button chevron being invisible in forced colour modes.
+    Fixed start button chevron being invisible in forced colour modes.
 
-    Fixed Buttons with the disabled modifier class still having visible focus style in forced colour modes.
+    Fixed buttons with the disabled modifier class still having visible focus style in forced colour modes.
 - date: 2022-11-14
   version: 4.4.0
-  description: Added customisation of Button colours with Sass.
+  description: Added customisation of button colours with Sass.
 - date: 2023-04-20
   version: 4.6.0
   description: |
@@ -55,9 +55,9 @@
   description: |
     Updated Nunjucks macro to always output an explicit `type` attribute for `<button>` elements.
 
-    Updated inverse Buttons to default to the configured brand colour.
+    Updated inverse buttons to default to the configured brand colour.
 
-    Added customisation of inverse Button colours with Sass.
+    Added customisation of inverse button colours with Sass.
 
     Removed `govuk-button--disabled` modifier class. Use the `disabled` parameter instead.
 
@@ -70,4 +70,4 @@
     Updated Button colours to align with the refreshed GOV.UK brand.
 - date: 2026-07-16
   version: 6.4.0
-  description: Fixed text spacing collapsing when HTML is nested inside of start Buttons.
+  description: Fixed text spacing when HTML is nested inside of start buttons.
