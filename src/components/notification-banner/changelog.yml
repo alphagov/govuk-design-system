@@ -1,0 +1,18 @@
+- date: 2020-11-23
+  version: 3.10.0
+  description: Component introduced.
+- date: 2020-12-01
+  version: 3.10.1
+  description: |
+    Fixed hairline gap between component's header and outer border.
+
+    Explicitly set component's text colour.
+
+    Updated component to wrap text at two thirds `width-container` width.
+- date: 2021-02-18
+  description: Added advice on how and when to use heading HTML tags in the component.
+- date: 2021-09-20
+  description: Expanded on what the layout of the component should be in relation to the rest of a page's content.
+- date: 2022-08-09
+  version: 4.3.0
+  description: Added the ability to pass the `html` parameter using [Nunjucks call syntax](https://mozilla.github.io/nunjucks/templating.html#call).
