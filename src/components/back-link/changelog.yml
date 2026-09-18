@@ -1,0 +1,23 @@
+- date: 2018-06-21
+  version: 1.0.0
+  description: Component introduced.
+- date: 2019-07-29
+  version: 3.0.0
+  description: Updated focus style to comply with WCAG 2.1.
+- date: 2020-06-01
+  version: 3.7.0
+  description: Updated link design to be larger and look consistent with the Breadcrumbs component.
+- date: 2020-08-21
+  description: Added guidance to clarify where to place the Back link on a page.
+- date: 2021-09-06
+  description: Added information on the user need for Back links.
+- date: 2021-11-15
+  description: Added guidance on labelling links for complex journeys.
+- date: 2023-01-31
+  version: 4.5.0
+  description: Fixed chevron not scaling with text size.
+- date: 2023-06-06
+  version: 4.7.0
+  description: Added inverse appearance modifier.
+- date: 2025-12-18
+  description: Added information on known issues with automated auditing tools emitting a warning when the Back link component exists outside of landmarks.
