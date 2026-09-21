@@ -1,0 +1,44 @@
+- date: 2024-08-29
+  version: 5.6.0
+  description: Component introduced.
+- date: 2024-09-03
+  description: Added more examples including an example alongside the GOV.UK header.
+- date: 2024-10-10
+  version: 5.7.0
+  description: Fixed the top margin of the mobile toggle button which was missing when navigation is not alongside a service name.
+- date: 2025-05-01
+  version: 5.10.0
+  description: Changed the background colour from grey to light blue to align with the GOV.UK brand refresh.
+- date: 2025-05-08
+  description: Remove accessibility a link to a help page is very unlikely to not be consistent.
+- date: 2025-06-25
+  description: Added guidance on how the GOV.UK brand refresh impacts the Service navigation component.
+- date: 2025-07-11
+  version: 5.11.0
+  description: |
+    Removed the menu button when the navigation only has one link.
+
+    Added inverse styling to the component for use on product pages.
+
+    Fixed layout in Edge browsers when forced colours are enabled.
+
+    Fixed the wrapper not filling available width so that items after the navigation can be right-aligned.
+- date: 2025-07-17
+  version: 5.11.1
+  description: Fixed text within the inverse variant not appearing in white.
+- date: 2026-01-14
+  version: 5.14.0
+  description: Added `aria-hidden="true"` so that VoiceOver can't access the menu button when it has the `hidden` attribute.
+- date: 2026-02-09
+  version: 6.0.0
+  description: Added `aria-hidden="true"` so that VoiceOver can't access the menu button when it has the `hidden` attribute.
+- date: 2026-02-19
+  description: Removed guidance on how to use the component with a full width [GOV.UK header](/components/header/).
+- date: 2026-08-27
+  description: Added guidance on using [Language navigation](/components/language-navigation/) in the 'end slot' of the component.
+- date: 2026-08-27
+  version: 6.5.0
+  description: Updated how the `end` slot gets aligned.
+- date: 2026-09-14
+  version: 6.5.1
+  description: Fixed an example with right aligned Language navigation that was using outdated options.
