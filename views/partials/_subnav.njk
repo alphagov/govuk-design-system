@@ -10,7 +10,7 @@
         {% endif %}
         <ul class="app-subnav__section">
         {% for subitem in items %}
-          {%- set isPageOrSubpage = (subitem.url == permalink) or (subitem | isActiveSubpage(permalink)) %}
+          {%- set isPageOrSubpage = (subitem.url == permalink) or subitem | isActive(permalink) %}
           <li class="app-subnav__section-item{% if isPageOrSubpage %} app-subnav__section-item--current{% endif %}">
             <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/{{ subitem.url }}/"{% if subitem.url == permalink %} aria-current="page"{% endif %}>
               {{ subitem.label }}
@@ -19,8 +19,9 @@
               <ul class="app-subnav__section app-subnav__section--nested">
                 {% if (subitem.subpages | length) %}
                   {% for subpage in subitem.subpages %}
+                    {% set subpageUrl = subitem.url + '/' + subpage.url %}
                     <li class="app-subnav__section-item">
-                      <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/{{ subitem.url }}/{{ subpage.url }}/"{% if subitem | isActiveSubpage(permalink) %} aria-current="page"{% endif %}>
+                      <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/{{ subpageUrl }}/"{% if subpageUrl == permalink %} aria-current="page"{% endif %}>
                         {{ subpage.label }}<span class="govuk-visually-hidden"> for {{ subitem.label }}</span>
                       </a>
                     </li>
