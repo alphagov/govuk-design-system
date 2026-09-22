@@ -37,6 +37,11 @@ const config = {
       label: 'History',
       url: 'history',
       pageTitle: 'Change history'
+    },
+    {
+      label: 'Use with Nunjucks',
+      url: 'nunjucks',
+      pageTitle: 'Nunjucks macro options'
     }
   ]
 }
