@@ -6,6 +6,7 @@
 {# If the theme ends in '…', then we nest the caption inside the H1 so that the
   H1 becomes e.g. 'Ask users for dates'. Otherwise, we put it before the H1. #}
 {% set includeThemeInPageHeading = theme and "…" in theme %}
+{% set currentSubpage = getCurrentSubpage() %}
 
 {% block container %}
 <div class="app-split-pane app-width-container app-container-wrapper">
@@ -19,7 +20,6 @@
     }) }}
     <main id="main-content" class="app-content" role="main">
       <h1 class="govuk-heading-xl {%- if status %} govuk-!-margin-bottom-5{% endif %}">
-        {% set currentSubpage = getCurrentSubpage() %}
         {% if includeThemeInPageHeading or currentSubpage %}
         <span class="govuk-caption-xl">
           {% if includeThemeInPageHeading %}
@@ -64,6 +64,10 @@
       {% endif %}
 
       <div class="app-prose-scope">
+        {% if currentSubpage and currentSubpage.url == 'nunjucks' %}
+          {% include "_nunjucks-intro.njk" %}
+        {% endif %}
+
         {{ contents | safe }}
       </div>
 
