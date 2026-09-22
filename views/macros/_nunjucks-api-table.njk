@@ -1,0 +1,52 @@
+{% macro nunjucksApiTable(params) %}
+{% set macroOptions = getMacroOptions(params.item) %}
+
+<p class="govuk-body">Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.</p>
+<p class="govuk-body">Some options are required for the macro to work; these are marked as "Required" in the option description. Deprecated options are marked as "Deprecated".</p>
+<p class="govuk-body">If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a class="govuk-link" href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.</p>
+{% for table in macroOptions %}
+  <table class="govuk-table app-options__table" id="options-{{ exampleId }}--{{ table.slug }}">
+    <caption class="govuk-table__caption govuk-heading-m {% if table.slug == 'primary' %} govuk-visually-hidden{% endif %}">{{ table.name | safe }}</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th class="govuk-table__header app-options__limit-table-cell" scope="col">Name</th>
+        <th class="govuk-table__header app-options__limit-table-cell" scope="col">Type</th>
+        <th class="govuk-table__header" scope="col">Description</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      {% for option in table.options -%}
+        {# Option name only, without parent prefix -#}
+        {% set optionName = option.name.split(" ") | last %}
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">{{ optionName | safe }}</th>
+          <td class="govuk-table__cell">{{ option.type }}</td>
+          <td class="govuk-table__cell">
+            {% if option.deprecated | length %}
+              <a href="https://github.com/alphagov/govuk-frontend/releases/tag/v{{ option.deprecated }}">Deprecated in {{ option.deprecated }}</a><br><br>
+            {% elif option.deprecated %}
+              <strong>Deprecated</strong><br><br>
+            {% endif %}
+          {% if (option.required) %}
+            <strong>Required.</strong>
+          {% endif %}
+            {{ option.description | safe }}
+          {% if (option.params) or (option.isComponent and ["hint", "label"].includes(option.id)) %}
+            {% if option.isComponent and not ["hint", "label"].includes(option.id) %}
+              {# Link to subset of Nunjucks macro options table and Design System component page -#}
+              <a href="#options-{{ exampleId }}--{{ option.slug }}">See supported {{ option.name | safe }} macro options</a> for <a href="/components/{{ option.slug }}/#options-{{ option.slug }}-example">{{ optionName | safe }} component macro</a>.
+            {% else %}
+              {# Link to Nunjucks macro options table only -#}
+              <a href="#options-{{ exampleId }}--{{ option.slug }}"> See macro options for {{ option.name | safe }}</a>.
+            {% endif %}
+          {% elif option.isComponent %}
+            {# Link to Design System component page for nested components -#}
+            <a href="/components/{{ option.slug }}/#options-{{ option.slug }}-example">See macro options for {{ optionName | safe }}</a>.
+          {% endif %}
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endfor %}
+{% endmacro %}
