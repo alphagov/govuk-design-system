@@ -1,0 +1,104 @@
+- date: 2018-06-21
+  version: 1.0.0
+  description: Component introduced.
+- date: 2018-09-26
+  version: 2.1.0
+  description: |
+    Added passing additional content to the `meta` option.
+
+    Adding passing additional attributes to links within the Footer.
+- date: 2019-01-31
+  version: 2.6.0
+  description: Fixed centering of the component's container in Internet Explorer 8.
+- date: 2019-06-14
+  version: 2.13.0
+  description: Added overriding visually hidden 'support links' using the `meta` parameter.
+- date: 2019-07-29
+  version: 3.0.0
+  description: Changed focus style of Footer links.
+- date: 2019-09-02
+  version: 3.1.0
+  description: Updated component so that sections default to a two-thirds and one-third column layout when there are two sections.
+- date: 2020-01-21
+  version: 3.5.0
+  description: Added underlines to links, to make it clear that they're clickable.
+- date: 2021-05-13
+  version: 3.12.0
+  description: |
+    Added underline to crown copyright link.
+
+    Removed thicker underline hover states from Footer links because of a bug with links in columns in Chromium browsers.
+- date: 2021-09-07
+  version: 3.13.1
+  description: Fixed Open Government License logo not being visible in forced colours mode.
+- date: 2021-12-16
+  version: 4.0.0
+  description: |
+    Fixed sections being misaligned with the grid system.
+
+    Removed the automatic two-thirds and one-third layout when there are two sections. Sections default to full width instead.
+
+    Added `width` parameter to manually specify the width of section columns.
+
+    Updated Open Government Licence logo in the Footer to be hidden from screen readers.
+- date: 2022-05-19
+  description: |
+    Added links to information on privacy notices, cookie pages and accessibility statements.
+
+    Clarified guidance on copyright and licensing information.
+
+    Added advice on when to use secondary navigation.
+- date: 2022-08-09
+  version: 4.3.0
+  description: Added option to localise Open Government Licence and copyright notice content.
+- date: 2023-04-20
+  version: 4.6.0
+  description: Added thicker underline hover states to Footer links, which we'd previously removed because of a now resolved Chromium browser bug.
+- date: 2024-01-11
+  description: Added guidance on linking to 'help' pages in the Footer consistently.
+- date: 2024-03-26
+  version: 5.3.0
+  description: Removed redundant `role` attribute.
+- date: 2024-10-10
+  version: 5.7.0
+  description: |
+    Updated Royal Arms to use crest with Tudor crown.
+
+    Updated licence description text wrapping.
+- date: 2024-10-10
+  version: 4.9.0
+  description: Updated Royal Arms to use crest with Tudor crown.
+- date: 2025-05-01
+  version: 5.10.0
+  description: |
+    Updated background colour from grey to light blue to align with the refreshed GOV.UK brand.
+
+    Added GOV.UK logo to the Footer.
+
+    Added blue border to the top of the Footer.
+
+    Updated Royal Arms crest to use the same colour as text.
+- date: 2025-05-15
+  version: 5.10.1
+  description: Fixed licence link reflowing on focus in Safari browsers.
+- date: 2025-05-29
+  version: 4.10.0
+  description: |
+    Updated background colour from grey to light blue to align with the refreshed GOV.UK brand.
+
+    Added GOV.UK logo to the Footer.
+
+    Added blue border to the top of the Footer.
+
+    Updated Royal Arms crest to use the same colour as text.
+- date: 2025-06-25
+  description: Added guidance on how the GOV.UK brand refresh impacts the Footer.
+- date: 2026-01-14
+  version: 5.14.0
+  description: Added option to remove content licence information.
+- date: 2026-02-09
+  version: 6.0.0
+  description: |
+    Removed rebrand feature flag.
+
+    Changed containing HTML element from `footer` to `div`.
