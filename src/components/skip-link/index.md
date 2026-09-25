@@ -32,3 +32,17 @@ The skip link component is visually hidden until a keyboard press activates it.
 There are 2 ways to use the skip link component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 
 {{ example({ group: "components", item: "skip-link", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
+
+## Research on this component
+
+### Persisting anchor in URL after form submission
+
+When a user uses the skip link, it adds the anchor for the skip link target to the URL (the `#main-content` fragment identifier). When that user then submits a form, it can happen that that part of the URL persists on the new page. That means that the user does not just skip to the main content on the first page after they've clicked on the skip link. They automatically skip to the main content on every page within that flow.
+
+This can happen with skip links but also with other in-page links.
+
+We have had feedback that doing that is unexpected and confusing, especially for screen reader users. We have also had feedback that doing that makes the experience better for some keyboard-only users.
+
+We assume that not persisting the anchor is better. That is partly because it is more consistent with how skip links work on other pages.
+
+If you’ve done any user research with users who use the skip link, tell us what you’ve learned. You can [add a comment to the related GitHub issue](https://github.com/alphagov/govuk-frontend/issues/4465).
