@@ -1,0 +1,46 @@
+- date: 2024-08-29
+  version: 5.6.0
+  description: Component introduced.
+- date: 2024-09-03
+  description: Added more examples including an example alongside the GOV.UK header.
+- date: 2024-10-10
+  version: 5.7.0
+  description: Fixed the top margin of the mobile toggle button which was missing when navigation is not alongside a service name.
+- date: 2025-05-01
+  version: 5.10.0
+  description: Updated the colours from grey to blue to align with the GOV.UK brand refresh.
+- date: 2025-05-08
+  description: Remove accessibility a link to a help page is very unlikely to not be consistent.
+- date: 2025-06-25
+  description: Added guidance on GOV.UK brand refresh`govukRebrand` feature flag in GOV.UK Frontend to affected components.
+- date: 2025-07-11
+  version: 5.11.0
+  description: |
+    Removed the menu button when the navigation only has one link.
+
+    Added inverse styling to the component for use on product pages.
+
+    Fixed layout in Edge when forced colours are enabled.
+
+    Fixed the wrapper not filling available width. Items after the navigation can now be right aligned.
+- date: 2025-07-17
+  version: 5.11.1
+  description: Fixed text within the inverse variant not appearing in white.
+- date: 2026-01-14
+  version: 5.14.0
+  description: Fix VoiceOver access to `hidden` menu button.
+- date: 2026-02-03
+  description: Removed guidance on GOV.UK brand refresh`govukRebrand` feature flag.
+- date: 2026-02-09
+  version: 6.0.0
+  description: Fix VoiceOver access to `hidden` menu button.
+- date: 2026-02-19
+  description: Removed guidance on how to use the component with the GOV.UK header.
+- date: 2026-08-25
+  description: Added visual examples of slots available in the component.
+- date: 2026-08-27
+  version: 6.5.0
+  description: Updated how the `end` slot gets aligned.
+- date: 2026-09-14
+  version: 6.5.1
+  description: Fixed an example with right aligned Language navigation that was using outdated options.
