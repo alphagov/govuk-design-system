@@ -20,7 +20,6 @@ import CookiesPage from './components/cookies-page.mjs'
 import Copy from './components/copy.mjs'
 import ExampleFrame from './components/example-frame.mjs'
 import MobileNavigationSection from './components/mobile-navigation-section.mjs'
-import OptionsTable from './components/options-table.mjs'
 import ScrollContainer from './components/scroll-container.mjs'
 import Search from './components/search.mjs'
 import AppTabs from './components/tabs.mjs'
@@ -54,7 +53,6 @@ createAll(AppTabs)
 
 // Do this after initialising tabs
 createAll(Copy)
-new OptionsTable()
 
 // Initialise scrollable container handling
 createAll(ScrollContainer)
