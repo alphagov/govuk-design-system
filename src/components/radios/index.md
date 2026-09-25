@@ -107,7 +107,7 @@ Users are not always notified when a conditionally revealed question is shown or
 
 However, we found that screen reader users did not have difficulty answering a conditionally revealed question - as long it’s kept simple. Users we tested with did get confused when complicated questions were conditionally revealed to them, particularly questions with more than one part.
 
-We’ll keep looking for opportunities to [learn more about how conditionally revealed questions be used in services](https://github.com/alphagov/govuk-design-system-backlog/issues/59).
+We’ll keep looking for opportunities to [learn more about how conditionally revealed questions can be used in services](https://github.com/alphagov/govuk-design-system-backlog/issues/59).
 
 ### Smaller radios
 
