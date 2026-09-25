@@ -1,9 +1,11 @@
 {% macro nunjucksApiTable(params) %}
-{% set macroOptions = getMacroOptions(params.item) %}
-{% set title = params.title if params.title else params.item | titlify %}
+{% set macroOptions = getMacroOptions(params.item) -%}
+{% set title = params.title if params.title else params.item | titlify -%}
+{% set componentUrl = "/components/" + params.item + "/" -%}
 
 <p class="govuk-body">Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.</p>
-<p class="govuk-body">Read the <a href="/components/{{ params.item }}/" class="govuk-link">{{title }} component guidance</a> for how to use this component in your service.</p>
+<p class="govuk-body">Read the <a href="{{ componentUrl }}" class="govuk-link">{{title }} component guidance</a> for how to use this component in your service.</p>
+<p class="govuk-body">You can see these options in use in the nunjucks tab of the <a href="{{ componentUrl }}#{{ params.item }}-example-nunjucks" class="govuk-link">{{ title }} component code examples</a>.</p>
 <p class="govuk-body">Some options are required for the macro to work; these are marked as "Required" in the option description. Deprecated options are marked as "Deprecated".</p>
 <p class="govuk-body">If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a class="govuk-link" href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.</p>
 {% for table in macroOptions %}
