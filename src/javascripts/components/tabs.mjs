@@ -35,8 +35,23 @@ class AppTabs extends Component {
     // We also add all our default ARIA goodness here
     this.resetTabs()
 
-    // Show the first panel already open if the `open` attribute is present
-    if (this.$root.hasAttribute('data-open')) {
+    // Get the page hash on load for opening tabs on being linked to behaviour
+    const hash = window.location.hash
+    // If there is a hash, look for it as an id in $panels
+    const $panelFromHash = hash
+      ? Array.from(this.$panels).find(
+          (panel) => panel.id === hash.replaceAll('#', '')
+        )
+      : false
+
+    // If we find $panelFromHash, open that panel.
+    // This overrides the `open` attribute behaviour as we don't want a situation
+    // where we open a panel that isn't the first panel in the panel list, only
+    // for that to be overridden by `data-open`.
+    if ($panelFromHash) {
+      this.openPanel($panelFromHash.id)
+    } else if (this.$root.hasAttribute('data-open')) {
+      // Show the first panel already open if the `open` attribute is present
       this.openPanel(this.$panels[0].id)
     }
   }
