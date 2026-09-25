@@ -4,7 +4,7 @@
 
 {{ changelog({
   group: section | slugify,
-  item: getCurrentPageSlug(),
+  item: getDirnameFromUrl(),
   limit: 5
 }) }}
 
