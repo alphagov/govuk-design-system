@@ -6,14 +6,14 @@ aliases:
 backlogIssueId: 34
 layout: layout-pane.njk
 ---
-[Guidance]
-[History]
-[Macros]
+[Guidance](/gov.uk)
+[History](/gov.uk)
+[Macros](/gov.uk)
 
 On this page
-- [When to use this component]
-- [How it works]
-- [Research on this component]
+[When to use this component](#when-to-use-this-component)
+[How it works](#how-it-works)
+[Research on this component](#research-on-this-component)
 
 {% from "_example.njk" import example %}
 
