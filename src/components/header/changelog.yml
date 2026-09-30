@@ -1,0 +1,176 @@
+- date: 2018-06-21
+  version: 1.0.0
+  description: Component introduced.
+- date: 2018-07-13
+  version: 1.1.0
+  description: Changed alignment to use `float` styling to fix an issue with whitespace.
+- date: 2018-07-27
+  version: 1.2.0
+  description: Updated logo to only show an underline on hover when users override colours in their browser.
+- date: 2018-09-26
+  version: 2.1.0
+  description: |
+    Fixed mobile menu button unintentionally submitting forms by explicitly setting the `type` attribute to `button`.
+
+    Adding passing additional attributes to links within the Header.
+- date: 2018-10-11
+  version: 2.2.0
+  description: Fixed an issue with the product name wrapping by adding `display:inline-table` to the product name element.
+- date: 2019-01-31
+  version: 2.6.0
+  description: |
+    Added gutters to ensure the Header lines up with the grid properly.
+
+    Fixed centering of the component's container in Internet Explorer 8.
+- date: 2019-05-28
+  version: 2.12.0
+  description: Prevented the crown's fallback PNG image from being downloaded when not needed in Internet Explorer and Edge.
+- date: 2019-06-14
+  version: 2.13.0
+  description: Updated the crown logo to set `height` and `width` attributes and align better with the 'GOV.UK' text in Internet Explorer 8.
+- date: 2019-07-29
+  version: 3.0.0
+  description: |
+    Updated the CSS class name from `js-header-toggle` to `govuk-js-header-toggle`.
+
+    Updated the serviceName description.
+- date: 2019-10-07
+  version: 3.3.0
+  description: |
+    Fixed height and alignment issue in Chrome 76 and later.
+
+    Removed unnecessary `role="button"` from the mobile menu button as the HTML5 button element has the role of button already.
+- date: 2020-06-01
+  version: 3.7.0
+  description: Added the option to pass HTML to a navigation item.
+- date: 2020-09-14
+  version: 3.9.0
+  description: |
+    Added option to set navigation section `aria-label` text.
+
+    Added option to add navigation items without links.
+
+    Added functionality to set `aria-expanded` and `aria-hidden` attributes on navigation menu and menu button when page loads.
+
+    Changed default menu button label from 'Show or Hide Top Level Navigation' to 'Show or hide navigation menu'.
+
+    Changed default navigation menu label from 'Top Level Navigation' to 'Navigation menu'.
+- date: 2020-09-22
+  version: 3.9.1
+  description: Fixed navigation links not being announced by screen readers.
+- date: 2021-05-13
+  version: 3.12.0
+  description: Updated menu button's `cursor` styling from `default` to `pointer`.
+- date: 2021-06-24
+  version: 3.13.0
+  description: Fixed alignment of the fallback crown logo PNG with 'GOV.UK' text.
+- date: 2021-12-16
+  version: 4.0.0
+  description: |
+    Updated the navigation HTML to improve the screen reader experience.
+
+    Fixed crown logo fallback PNG to not be picked up by screen readers in Chrome.
+
+    Fixed mobile navigation menu to not show a bottom border on the last item.
+- date: 2022-05-18
+  version: 4.1.0
+  description: Fixed product name hover and focus states on desktop.
+- date: 2022-06-27
+  version: 4.2.0
+  description: |
+    Replaced deprecated `govuk-header__link--service-name` class with `govuk-header__service-name`.
+
+    Fixed service names becoming an empty link if no `serviceUrl` was provided.
+- date: 2022-08-09
+  version: 4.3.0
+  description: Added `hidden` to the mobile menu button before JavaScript loads and when the user is on the 'desktop' media query.
+- date: 2022-11-14
+  version: 4.4.0
+  description: Updated the header Nunjucks macro to translate the text of the mobile navigation menu toggle button by using the `menuButtonText` parameter.
+- date: 2023-01-31
+  version: 4.5.0
+  description: |
+    Fixed colour of active navigation item when printing the page.
+
+    Removed unused `classList` polyfill from the component JavaScript.
+- date: 2023-12-08
+  version: 5.0.0
+  description: |
+    Changed the GOV.UK logo to combine the 'GOV.UK' logotype into a single SVG with the crown.
+
+    Removed the fallback crown logo PNG.
+
+    Removed deprecated govuk-header__navigation--no-service-name class.
+- date: 2024-01-24
+  description: |
+    Added guidance on not making the Header component or header elements ‘sticky’ on the user's screen in order to comply with WCAG 2.2.
+
+    Added guidance on presenting links persistently in order to comply with WCAG 2.2.
+- date: 2024-02-05
+  version: 3.15.0
+  description: Updated the GOV.UK logo to reflect the changing of the monarch.
+- date: 2024-02-05
+  version: 4.8.0
+  description: Updated the GOV.UK logo to reflect the changing of the monarch.
+- date: 2024-02-05
+  version: 5.1.0
+  description: |
+    Updated the GOV.UK logo to reflect the changing of the monarch.
+
+    Updated minimum height of the mobile navigation menu button to 24px to make the touch target larger to improve accessibility of the menu button.
+- date: 2024-03-26
+  version: 5.3.0
+  description: Removed redundant `role="banner"` attribute.
+- date: 2024-04-11
+  description: Removed guidance on updating the crown logo to use the Tudor crown as the transition period had ended.
+- date: 2024-08-29
+  description: Renamed 'Header' component to 'GOV.UK header' component.
+- date: 2025-03-04
+  description: Deprecated service name and navigation options, which we'll eventually remove.
+- date: 2025-05-01
+  version: 5.10.0
+  description: |
+    Changed the GOV.UK logo and background colour for the GOV.UK brand refresh.
+
+    Removed the bottom border and overall height.
+- date: 2025-05-01
+  description: Removed some WCAG 2.2-related guidance.
+- date: 2025-05-29
+  version: 4.10.0
+  description: |
+    Changed the GOV.UK logo and background colour for the GOV.UK brand refresh.
+
+    Removed the bottom border and overall height.
+- date: 2025-05-29
+  version: 5.10.2
+  description: Fixed line break issues with the GOV.UK logo.
+- date: 2025-06-24
+  version: 4.10.1
+  description: Updated the GOV.UK logo SVG to fix some imperfections visible at high zoom levels.
+- date: 2025-06-24
+  version: 5.11.0
+  description: Updated the GOV.UK logo SVG to fix some imperfections visible at high zoom levels.
+- date: 2025-06-25
+  description: Added before and after examples of the GOV.UK brand refresh to show what services should aim to look like.
+- date: 2026-01-14
+  version: 5.14.0
+  description: Fixed GOV.UK branded blue background being visible when printed.
+- date: 2026-02-05
+  description: Updated guidance on service name and navigation to recommend using [Service navigation](/components/service-navigation/) to show these in your service.
+- date: 2026-02-09
+  version: 6.0.0
+  description: |
+    Removed `rebrand` parameter to no longer allow use of the previous GOV.UK logo and colour palette.
+
+    Changed containing HTML element from `header` to `div`.
+
+    Changed naming of the GOV.UK logo link class.
+
+    Removed parameters for setting service name and navigation.
+
+    Removed `useTudorCrown` parameter so that only the Tudor crown logo can be used.
+- date: 2026-06-02
+  version: 6.2.0
+  description: Fixed logo link hover state in Safari browsers.
+- date: 2026-06-23
+  description: Added guidance to use the [Generic header](/components/generic-header/) component if your service is not part of GOV.UK.
