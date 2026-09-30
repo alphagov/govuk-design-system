@@ -6,6 +6,14 @@ aliases:
 backlogIssueId: 34
 layout: layout-pane.njk
 ---
+[Guidance]
+[History]
+[Macros]
+
+On this page
+- [When to use this component]
+- [How it works]
+- [Research on this component]
 
 {% from "_example.njk" import example %}
 
