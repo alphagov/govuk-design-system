@@ -1,5 +1,6 @@
 ---
 title: Character count change history
+parent: Character count
 layout: layout-pane.njk
 ---
 

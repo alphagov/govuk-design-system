@@ -1,5 +1,6 @@
 ---
 title: GOV.UK header change history
+parent: GOV.UK header
 layout: layout-pane.njk
 ---
 

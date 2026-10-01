@@ -1,5 +1,6 @@
 ---
 title: Details change history
+parent: Details
 layout: layout-pane.njk
 ---
 

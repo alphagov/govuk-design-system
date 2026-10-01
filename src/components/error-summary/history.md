@@ -1,5 +1,6 @@
 ---
 title: Error summary change history
+parent: Error summary
 layout: layout-pane.njk
 ---
 

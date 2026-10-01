@@ -1,5 +1,6 @@
 ---
 title: Button change history
+parent: Button
 layout: layout-pane.njk
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: GOV.UK footer change history
+parent: GOV.UK footer
 layout: layout-pane.njk
 ---
 

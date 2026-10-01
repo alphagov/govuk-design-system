@@ -1,5 +1,6 @@
 ---
 title: Language navigation change history
+parent: Language navigation
 layout: layout-pane.njk
 ---
 
