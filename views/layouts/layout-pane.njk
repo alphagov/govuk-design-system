@@ -29,7 +29,7 @@
           {% endif %}
         </span>
         {% endif %}
-        {{ title }}
+        {{ currentSubpage.pageTitle if currentSubpage else title }}
       </h1>
 
       {# Status callout #}
