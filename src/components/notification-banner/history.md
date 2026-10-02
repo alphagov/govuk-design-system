@@ -1,5 +1,6 @@
 ---
 title: Notification banner change history
+parent: Notification banner
 layout: layout-pane.njk
 ---
 

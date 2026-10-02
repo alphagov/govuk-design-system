@@ -1,5 +1,6 @@
 ---
 title: Date input change history
+parent: Date input
 layout: layout-pane.njk
 ---
 

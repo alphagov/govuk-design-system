@@ -1,5 +1,6 @@
 ---
 title: Exit this page change history
+parent: Exit this page
 layout: layout-pane.njk
 ---
 

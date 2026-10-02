@@ -1,5 +1,6 @@
 ---
 title: Accordion change history
+parent: Accordion
 layout: layout-pane.njk
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Task list change history
+parent: Task list
 layout: layout-pane.njk
 ---
 

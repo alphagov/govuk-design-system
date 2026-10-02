@@ -1,5 +1,6 @@
 ---
 title: Cookie banner change history
+parent: Cookie banner
 layout: layout-pane.njk
 ---
 

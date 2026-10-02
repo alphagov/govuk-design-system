@@ -1,5 +1,6 @@
 ---
 title: Inset text change history
+parent: Inset text
 layout: layout-pane.njk
 ---
 

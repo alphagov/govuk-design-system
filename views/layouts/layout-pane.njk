@@ -19,12 +19,17 @@
     }) }}
     <main id="main-content" class="app-content" role="main">
       <h1 class="govuk-heading-xl {%- if status %} govuk-!-margin-bottom-5{% endif %}">
-        {% if includeThemeInPageHeading %}
+        {% set currentSubpage = getCurrentSubpage() %}
+        {% if includeThemeInPageHeading or currentSubpage %}
         <span class="govuk-caption-xl">
+          {% if includeThemeInPageHeading %}
           {{ theme | replace("…", "") }}
+          {% elif currentSubpage %}
+          {{ parent }}
+          {% endif %}
         </span>
         {% endif %}
-        {{ title }}
+        {{ currentSubpage.pageTitle if currentSubpage else title }}
       </h1>
 
       {# Status callout #}

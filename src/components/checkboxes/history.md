@@ -1,5 +1,6 @@
 ---
 title: Checkboxes change history
+parent: Checkboxes
 layout: layout-pane.njk
 ---
 

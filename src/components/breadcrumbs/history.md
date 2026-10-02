@@ -1,5 +1,6 @@
 ---
 title: Breadcrumbs change history
+parent: Breadcrumbs
 layout: layout-pane.njk
 ---
 

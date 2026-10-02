@@ -1,5 +1,6 @@
 ---
 title: Skip link change history
+parent: Skip link
 layout: layout-pane.njk
 ---
 

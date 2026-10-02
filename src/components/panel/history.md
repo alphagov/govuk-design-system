@@ -1,5 +1,6 @@
 ---
 title: Panel change history
+parent: Panel
 layout: layout-pane.njk
 ---
 

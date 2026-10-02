@@ -1,5 +1,6 @@
 ---
 title: Password input change history
+parent: Password input
 layout: layout-pane.njk
 ---
 
