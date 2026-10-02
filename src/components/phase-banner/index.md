@@ -38,6 +38,6 @@ You can choose to place the Phase banner in a more appropriate place for your se
 
 ### Collect feedback from users
 
-Use the [Feedback component](/components/feedback/) to ask users to give feedback about your service and provide them with a link a feedback page.
+Use the [Feedback component](/components/feedback/) to ask users to give feedback about your service and provide them with a link to a feedback page.
 
 [Find out what feedback you need to collect at each phase](https://www.gov.uk/service-manual/measuring-success/measuring-user-satisfaction#user-satisfaction-through-each-service-phase) in the GOV.UK Service Manual.
