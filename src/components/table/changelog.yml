@@ -3,7 +3,7 @@
   description: Component introduced.
 - date: 2018-07-13
   version: 1.1.0
-  description: Updated padding to be set in `px` rather than `em` units for consistency with other parts of Frontend. This change slightly increased the height of cells.
+  description: Updated padding to be set in `px` rather than `em` units for consistency with other parts of Frontend, which slightly increased the height of cells.
 - date: 2018-09-10
   version: 2.0.0
   description: Fixed font size being overridden when using GOV.UK Frontend alongside GOV.UK Elements.
@@ -20,7 +20,7 @@
   description: |
     Changed the default vertical alignment of content to be at the top of the cell.
 
-    Row headers now accept `classes`, `rowspan` and `colspan` parameters.
+    Updated row headers to accept `classes`, `rowspan` and `colspan` parameters.
 - date: 2021-02-08
   version: 3.11.0
   description: Added size modifier classes for captions.
