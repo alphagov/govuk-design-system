@@ -11,7 +11,7 @@ layout: layout-pane.njk
 
 Use this generic version of the header to tell users they’re using a government service that’s not part of the GOV.UK website.
 
-{{ example({ group: "components", item: "generic-header", example: "default", id: "default-1", html: true, nunjucks: true, open: false, loading: "eager" }) }}
+{{ example({ group: "components", item: "generic-header", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) }}
 
 ## When to use this component
 

@@ -76,6 +76,28 @@ describe('Component page', () => {
         ).resolves.toBe('false')
       })
     })
+
+    // For these tests, we implicitly expect the nunjucks tab to always be the
+    // second tab in the tab list
+    describe('when linked to with a hash', () => {
+      beforeEach(async () => {
+        await page.setJavaScriptEnabled(true)
+
+        await goTo(page, '/components/back-link#back-link-example-nunjucks')
+        await setup(page)
+      })
+
+      it('opens the tab with the same id as the contents of the hash', async () => {
+        const tabContainerIsVisible = await isVisible($tabsContainers[1])
+        expect(tabContainerIsVisible).toBe(true)
+      })
+
+      it('should indicate the selected state of the tab using aria-expanded', async () => {
+        await expect(
+          getAttribute($tabsLinks[1], 'aria-expanded')
+        ).resolves.toBe('true')
+      })
+    })
   })
 })
 
