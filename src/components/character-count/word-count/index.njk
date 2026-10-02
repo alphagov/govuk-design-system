@@ -8,7 +8,8 @@ layout: layout-example-form.njk
 {{ govukCharacterCount({
   name: "wordCount",
   id: "word-count",
-  maxwords: 150,
+  maxlength: 150,
+  countType: "words",
   label: {
     text: "Enter a job description",
     classes: "govuk-label--l",
