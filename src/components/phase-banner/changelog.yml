@@ -1,0 +1,26 @@
+- date: 2018-06-21
+  version: 1.0.0
+  description: Component introduced.
+- date: 2018-07-13
+  version: 1.1.0
+  description: Fixed component using the wrong font size when `$govuk-global-styles` is enabled.
+- date: 2021-04-13
+  version: 3.12.0
+  description: Fixed vertical alignment of phase banner tag on small screens.
+- date: 2021-06-16
+  description: Added guidance to explain that services hosted on a service.gov.uk domain must use the Phase banner if they have not passed a live service assessment.
+- date: 2024-01-11
+  description: Added guidance on not making the Phase banner 'sticky' within your service to comply with WCAG 2.2.
+- date: 2024-08-30
+  description: Updated guidance on where to position the component on a page to fix inconsistency between Phase banner, [Service navigation](/components/service-navigation/) and [Navigate a service guidance](/patterns/navigate-a-service/).
+- date: 2025-04-15
+  description: Removed guidance on 'sticky' phase banners.
+- date: 2026-02-04
+  description: Updated guidance to recommend that the component should be placed within the `header` element.
+- date: 2026-02-09
+  version: 6.0.0
+  description: Added `govuk-width-container` class to component container.
+- date: 2026-06-09
+  description: Removed outdated guidance referencing the previous GOV.UK brand.
+- date: 2026-07-17
+  description: Replaced previous feedback link and guidance with recommendation to use the [Feedback](/components/feedback/) component to collect user feedback on your service.
