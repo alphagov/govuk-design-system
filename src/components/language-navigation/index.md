@@ -5,7 +5,7 @@ section: Components
 aliases: Language selector, Language switcher
 backlogIssueId: 285
 layout: layout-pane.njk
-status: 
+status:
   type: Trial
   links:
     - href: "#research-on-this-component"
