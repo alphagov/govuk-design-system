@@ -82,7 +82,7 @@
     "js-beautify": "^2.0.3",
     "js-yaml": "^5.4.2",
     "jstransformer-marked": "^1.4.0",
-    "lint-staged": "^17.4.1",
+    "lint-staged": "^17.6.0",
     "marked": "^18.0.14",
     "marked-gfm-heading-id": "^4.1.4",
     "marked-highlight": "^2.2.4",
