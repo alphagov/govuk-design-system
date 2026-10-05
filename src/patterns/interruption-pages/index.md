@@ -3,7 +3,7 @@ title: Interruption pages
 description: Pause the user journey to give them important information
 section: Patterns
 theme: Pages
-aliases: 
+aliases:
 backlogIssueId: 27
 layout: layout-pane.njk
 ---

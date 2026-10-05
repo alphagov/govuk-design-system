@@ -65,7 +65,7 @@ To set a 'block' option, use `block` to pass in a multiline value or HTML markup
 {% raw %}
 {% block bodyEnd %}
   <div>
-     <p>Example text</p>
+    <p>Example text</p>
   </div>
 {% endblock %}
 {% endraw %}
