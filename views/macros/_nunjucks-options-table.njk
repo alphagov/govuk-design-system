@@ -2,12 +2,12 @@
 {% set macroOptions = getMacroOptions(params.item) %}
 
 {% for table in macroOptions %}
-  <table class="govuk-table app-options__table" id="options-{{ exampleId }}--{{ table.slug }}">
+  <table class="govuk-table" id="options-{{ exampleId }}--{{ table.slug }}">
     <caption class="govuk-table__caption govuk-heading-m {% if table.slug == 'primary' %} govuk-visually-hidden{% endif %}">{{ table.name | safe }}</caption>
     <thead class="govuk-table__head">
       <tr class="govuk-table__row">
-        <th class="govuk-table__header app-options__limit-table-cell" scope="col">Name</th>
-        <th class="govuk-table__header app-options__limit-table-cell" scope="col">Type</th>
+        <th class="govuk-table__header" scope="col">Name</th>
+        <th class="govuk-table__header" scope="col">Type</th>
         <th class="govuk-table__header" scope="col">Description</th>
       </tr>
     </thead>
@@ -16,7 +16,7 @@
         {# Option name only, without parent prefix -#}
         {% set optionName = option.name.split(" ") | last %}
         <tr class="govuk-table__row">
-          <th class="govuk-table__header" scope="row">{{ optionName | safe }}</th>
+          <th class="govuk-table__header app-options-table__header" scope="row">{{ optionName | safe }}</th>
           <td class="govuk-table__cell">{{ option.type }}</td>
           <td class="govuk-table__cell">
             {% if option.deprecated | length %}
