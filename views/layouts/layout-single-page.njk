@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block content %}
-  {{ contents | safe }}
+  {{ (contents or content) | safe }}
 {% endblock %}
 
 {% block govukFooter %}

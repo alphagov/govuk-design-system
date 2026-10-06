@@ -14,7 +14,7 @@
 {# We want the homepage to bypass the width container but it still needs a main #}
 {% block container %}
   <main id="main-content">
-  {{ contents | safe }}
+  {{ (contents or content) | safe }}
   </main>
 {% endblock %}
 

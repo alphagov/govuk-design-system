@@ -68,7 +68,7 @@
           {% include "_nunjucks-intro.njk" %}
         {% endif %}
 
-        {{ contents | safe }}
+        {{ (contents or content) | safe }}
       </div>
 
       {# No JS fallback to show overview #}
