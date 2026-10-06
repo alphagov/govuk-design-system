@@ -15,6 +15,7 @@
   "scripts": {
     "postinstall": "npm ls --depth=0",
     "build": "cross-env NODE_ENV=production node tasks/build.js",
+    "diff": "npm run build && node tasks/diff.mjs",
     "serve": "cross-env NODE_ENV=production DEBUG=build* node tasks/serve.js",
     "start": "cross-env NODE_ENV=development DEBUG=build* node tasks/start.js",
     "pretest": "npm run build",
