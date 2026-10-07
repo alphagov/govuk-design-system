@@ -44,6 +44,23 @@ module.exports = function (eleventyConfig) {
   // Basic navigation (just the main sections) - subnav will have to come later
   eleventyConfig.addGlobalData('navigation', navConfig.sections)
 
+  // Only build migrated pages.
+  for (const ignored of ignoredPaths()) {
+    eleventyConfig.ignores.add(`src/${ignored}`)
+  }
+
+  // Copy page assets
+  for (const migrated of migratedPaths) {
+    const dir = dirname(migrated)
+
+    // Only copy assets from subdirectories
+    if (dir !== '.') {
+      eleventyConfig.addPassthroughCopy(
+        `src/${dir}/**/*.{png,jpg,jpeg,svg,gif,webp,mp4}`
+      )
+    }
+  }
+
   eleventyConfig.addGlobalData('eleventyComputed', {
     pagePath: (data) => {
       const url = data.page?.url
