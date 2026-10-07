@@ -44,6 +44,22 @@ module.exports = function (eleventyConfig) {
   // Basic navigation (just the main sections) - subnav will have to come later
   eleventyConfig.addGlobalData('navigation', navConfig.sections)
 
+  eleventyConfig.addGlobalData('eleventyComputed', {
+    pagePath: (data) => {
+      const url = data.page?.url
+      return typeof url === 'string' ? url.replace(/^\/+|\/+$/g, '') : ''
+    },
+
+    // Root files have permalink: false, which 11ty doesn't like
+    permalink: (data) => {
+      if (data.permalink === false) {
+        return `/${data.page?.fileSlug ?? ''}.html`
+      }
+
+      return data.permalink
+    }
+  })
+
   // Only build migrated pages.
   for (const ignored of ignoredPaths()) {
     eleventyConfig.ignores.add(`src/${ignored}`)

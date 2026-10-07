@@ -6,7 +6,7 @@
   {# Only render breadcrumbs on pages that aren't the homepage. #}
   {% if not isHomepage() %}
     {{ govukBreadcrumbs({
-      items: getAncestorPages(permalink)
+      items: getAncestorPages(pagePath)
     }) }}
   {% endif %}
 {% endblock %}

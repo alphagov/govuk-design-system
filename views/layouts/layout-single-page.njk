@@ -5,7 +5,7 @@
 {% block containerStart %}
   {{ govukBreadcrumbs({
     classes: "app-breadcrumbs",
-    items: getAncestorPages(permalink)
+    items: getAncestorPages(pagePath)
   }) }}
 {% endblock %}
 
