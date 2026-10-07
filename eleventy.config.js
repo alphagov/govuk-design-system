@@ -4,6 +4,7 @@ const nunjucks = require('nunjucks')
 
 const { navigation: navConfig } = require('./config')
 const { ignoredPaths, migratedPaths } = require('./lib/eleventy/migrated.js')
+const { buildNavigation } = require('./lib/eleventy/navigation.js')
 const nunjucksOptions = require('./lib/nunjucks/index.js')
 
 module.exports = function (eleventyConfig) {
@@ -41,8 +42,30 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.setLibrary('njk', environment)
 
-  // Basic navigation (just the main sections) - subnav will have to come later
-  eleventyConfig.addGlobalData('navigation', navConfig.sections)
+  eleventyConfig.addCollection('navigation', buildNavigation(navConfig))
+
+  // Copy page assets (images etc.) referenced by markdown content
+  eleventyConfig.addPassthroughCopy(
+    'src-11ty/**/*.{png,jpg,jpeg,svg,gif,webp,mp4}'
+  )
+
+  eleventyConfig.addGlobalData('eleventyComputed', {
+    navigation: (data) => data.collections?.navigation,
+
+    pagePath: (data) => {
+      const url = data.page?.url
+      return typeof url === 'string' ? url.replace(/^\/+|\/+$/g, '') : ''
+    },
+
+    // Root files have permalink: false, which 11ty doesn't like
+    permalink: (data) => {
+      if (data.permalink === false) {
+        return `/${data.page?.fileSlug ?? ''}.html`
+      }
+
+      return data.permalink
+    }
+  })
 
   // Only build migrated pages.
   for (const ignored of ignoredPaths()) {
@@ -60,22 +83,6 @@ module.exports = function (eleventyConfig) {
       )
     }
   }
-
-  eleventyConfig.addGlobalData('eleventyComputed', {
-    pagePath: (data) => {
-      const url = data.page?.url
-      return typeof url === 'string' ? url.replace(/^\/+|\/+$/g, '') : ''
-    },
-
-    // Root files have permalink: false, which 11ty doesn't like
-    permalink: (data) => {
-      if (data.permalink === false) {
-        return `/${data.page?.fileSlug ?? ''}.html`
-      }
-
-      return data.permalink
-    }
-  })
 
   // Only build migrated pages.
   for (const ignored of ignoredPaths()) {
