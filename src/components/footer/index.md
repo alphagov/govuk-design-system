@@ -41,7 +41,6 @@ You can add links to:
 - [your service's accessibility statement](https://www.gov.uk/guidance/make-your-website-or-app-accessible-and-publish-an-accessibility-statement)
 - [your service's Cookies page](/patterns/cookies-page/)
 - terms and conditions
-- other language options
 - help content
 
 Use ‘Privacy’, ‘Accessibility’, ‘Cookies’ and ‘Terms and conditions’ for the link text.

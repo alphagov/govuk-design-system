@@ -32,3 +32,13 @@ The skip link component is visually hidden until a keyboard press activates it.
 There are 2 ways to use the skip link component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 
 {{ example({ group: "components", item: "skip-link", example: "default", html: true, nunjucks: true, open: false, titleSuffix: "second" }) }}
+
+## Research on this component
+
+### Persisting skip anchors in URLs
+
+When a user uses the skip link and then a button, any pages that load afterwards might automatically skip to main content in a way that they might not expect.
+
+Usually, predictable and consistent behaviour is better for users. However, we've received mixed feedback on whether this unexpected behaviour is useful or confusing for users, particularly amongst users of assistive technology such as screen readers and keyboard-only navigation.
+
+If you’ve done any user research with users who use the skip link, tell us what you’ve learned. You can see the discussion and [add a comment to the related GitHub issue](https://github.com/alphagov/govuk-frontend/issues/4465).

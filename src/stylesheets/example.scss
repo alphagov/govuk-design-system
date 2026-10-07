@@ -1,5 +1,8 @@
 @use "pkg:govuk-frontend/base" as *;
 
+// Use the lifecycle status component for the example on the lifecycle guidance page
+@use "components/lifecycle-statuses";
+
 .app-example-page__wrapper {
   overflow: auto;
   background-color: govuk-colour("white");

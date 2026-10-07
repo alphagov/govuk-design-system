@@ -1,10 +1,12 @@
 {% extends "_generic.njk" %}
 
 {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "_status-callout.njk" import statusCallout %}
 
 {# If the theme ends in '…', then we nest the caption inside the H1 so that the
   H1 becomes e.g. 'Ask users for dates'. Otherwise, we put it before the H1. #}
 {% set includeThemeInPageHeading = theme and "…" in theme %}
+{% set currentSubpage = getCurrentSubpage() %}
 
 {% block container %}
 <div class="app-split-pane app-width-container app-container-wrapper">
@@ -18,44 +20,64 @@
     }) }}
     <main id="main-content" class="app-content" role="main">
       <h1 class="govuk-heading-xl {%- if status %} govuk-!-margin-bottom-5{% endif %}">
-        {% if includeThemeInPageHeading %}
+        {% if includeThemeInPageHeading or currentSubpage %}
         <span class="govuk-caption-xl">
+          {% if includeThemeInPageHeading %}
           {{ theme | replace("…", "") }}
+          {% elif currentSubpage %}
+          {{ parent }}
+          {% endif %}
         </span>
         {% endif %}
-        {{ title }}
+        {{ currentSubpage.pageTitle if currentSubpage else title }}
       </h1>
 
-      {% if status %}
-      <aside class="govuk-!-margin-bottom-8" aria-label="Guidance status">
-        <strong class="govuk-tag govuk-!-margin-bottom-2">
-          {{ status }}
-        </strong>
-        <p class="govuk-body">{{ statusMessage | safe }}</p>
-      </aside>
-      {% endif %}
+      {# Status callout #}
+      {% set statusTag = (status.type if status.type else status) | slugify if status %}
+      {%- if statusTag == "trial" %}
+        {{ statusCallout(status) }}
+      {%- endif %}
 
-      {% if showPageNav %}
+      {% if showPageNav or (subpages | length) %}
         <ul class="app-page-navigation">
-          {% for heading in headings %}
-            {% if heading.depth == 2 %}
+          {% if (subpages | length) %}
+            {% for subpage in subpages %}
               <li class="app-page-navigation__item">
-                <a class="govuk-link" href="#{{ heading.url}}">
-                  {{ heading.text }}
+                <a class="govuk-link" href="/{{ permalink }}/{{ subpage.url}}/">
+                  {{ subpage.label }}<span class="govuk-visually-hidden"> for {{ subitem.label }}</span>
                 </a>
               </li>
-            {% endif %}
-          {% endfor %}
+            {% endfor %}
+          {% endif %}
+          {% if showPageNav %}
+            {% for heading in headings %}
+              {% if heading.depth == 2 %}
+                <li class="app-page-navigation__item">
+                  <a class="govuk-link" href="#{{ heading.url}}">
+                    {{ heading.text }}
+                  </a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
         </ul>
       {% endif %}
 
       <div class="app-prose-scope">
+        {% if currentSubpage and currentSubpage.url == 'nunjucks' %}
+          {% include "_nunjucks-intro.njk" %}
+        {% endif %}
+
         {{ contents | safe }}
       </div>
 
       {# No JS fallback to show overview #}
       {% if showSubNav %}
         {% include "_category-nav.njk" %}
+      {% endif %}
+
+      {% if (subpages | length) and (subpages | hasSubpage('history')) %}
+        {% include "_recent-changes.njk" %}
       {% endif %}
 
       {% if section %}

@@ -1,34 +1,50 @@
 /**
  * Navigation menu items
  *
- * @type {NavigationItem[]}
+ * @type {{sections: NavigationItem[], subpages: SubpageItem[]}}
  */
-const config = [
-  {
-    label: 'Get started',
-    url: 'get-started'
-  },
-  {
-    label: 'Styles',
-    url: 'styles'
-  },
-  {
-    label: 'Components',
-    url: 'components'
-  },
-  {
-    label: 'Patterns',
-    url: 'patterns'
-  },
-  {
-    label: 'Community',
-    url: 'community'
-  },
-  {
-    label: 'Accessibility',
-    url: 'accessibility'
-  }
-]
+const config = {
+  // Top level sections of the website
+  sections: [
+    {
+      label: 'Get started',
+      url: 'get-started'
+    },
+    {
+      label: 'Styles',
+      url: 'styles'
+    },
+    {
+      label: 'Components',
+      url: 'components'
+    },
+    {
+      label: 'Patterns',
+      url: 'patterns'
+    },
+    {
+      label: 'Community',
+      url: 'community'
+    },
+    {
+      label: 'Accessibility',
+      url: 'accessibility'
+    }
+  ],
+  // Possible subpages that a guidance page can have
+  subpages: [
+    {
+      label: 'History',
+      url: 'history',
+      pageTitle: 'Change history'
+    },
+    {
+      label: 'Use with Nunjucks',
+      url: 'nunjucks',
+      pageTitle: 'Nunjucks macro options'
+    }
+  ]
+}
 
 module.exports = config
 
@@ -48,4 +64,11 @@ module.exports = config
  * @property {string[]} [headings] - Markdown extracted headings (optional)
  * @property {string} [order] - Menu item sort order (optional)
  * @property {string} [theme] - Menu heading to group by (optional)
+ */
+
+/**
+ * @typedef {object} SubpageItem
+ * @property {string} label - Navigation item text
+ * @property {string} url - URL path without leading slash
+ * @property {string} pageTitle - Title used on page, without parent names eg: the component name
  */

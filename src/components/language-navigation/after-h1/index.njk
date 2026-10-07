@@ -1,0 +1,38 @@
+---
+title: Language navigation after H1
+layout: layout-example-full-page.njk
+---
+{% extends "example-wrappers/full-page.njk" %}
+
+{% from "govuk/components/language-navigation/macro.njk" import govukLanguageNavigation %}
+
+{% block content %}
+  <!--
+    Note the override class adding the same margin
+    as the heading would have to this `<div>`
+  -->
+  <div class="govuk-!-margin-bottom-8">
+    <!--
+      Note the override class setting a smaller margin between
+      the heading and the Language navigation
+    -->
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-3">Find protected areas of countryside</h1>
+    {{ govukLanguageNavigation({
+      items: [
+        {
+          text: "English",
+          lang: "en",
+          href: "#",
+          current: true
+        },
+        {
+          text: "Cymraeg",
+          lang: "cy",
+          href: "#"
+        }
+      ]
+    }) }}
+  </div>
+  <p class="govuk-body">Nature sites and areas of countryside can be ‘designated’, which means they have special status as protected areas because of their natural and cultural importance.</p>
+  <p class="govuk-body">...</p>
+{% endblock %}

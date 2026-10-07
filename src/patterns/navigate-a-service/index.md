@@ -51,7 +51,7 @@ The Service navigation (light blue background) includes space to show:
 
 - the service name, which links to the homepage of your service (or closest page)
 - a navigation menu for your service
-- service-level tools, such as a language selector
+- service-level tools, such as a search within your service
 
 ### Plan your GOV.UK header
 
@@ -129,16 +129,17 @@ We’d like to learn more about elements you might place between the GOV.UK head
 
 ### Then, add any other service-level elements
 
-Most other service-level elements can be added within the Service navigation, immediately after the service name.
+Most other service-level elements can be added within the Service navigation, after the service name.
 
-The [Service navigation component includes ‘slots’](/components/service-navigation/#use-slots-to-add-custom-elements) to support this. You’ll need to decide on the most appropriate layout and positioning and provide your own styles.
+#### Language navigation
 
-Elements you might add to Service navigation include:
+If you provide your whole service in more than one language, you can place the [Language navigation component in the Service navigation](/components/language-navigation/#if-you-offer-your-whole-service-in-another-language).
 
-- language selectors, if they work across your entire service
-- search inputs, if they only search within your service
+#### Use ‘slots’ to add custom elements
 
-To help users understand what the search input will cover, include ‘Search [your service]’ as placeholder text within the search input.
+The [Service navigation component includes ‘slots’](/components/service-navigation/#use-slots-to-add-custom-html-code) to support adding custom elements. You’ll need to decide on the most appropriate layout and positioning and provide your own styles.
+
+For example, you might add a search input, if it only searches within your service. To help users understand what the search input will cover, include ‘Search [your service]’ as placeholder text within the search input.
 
 #### Phase banners
 

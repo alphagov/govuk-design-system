@@ -65,7 +65,7 @@ To set a 'block' option, use `block` to pass in a multiline value or HTML markup
 {% raw %}
 {% block bodyEnd %}
   <div>
-     <p>Example text</p>
+    <p>Example text</p>
   </div>
 {% endblock %}
 {% endraw %}
@@ -172,7 +172,7 @@ For example: `<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /
 {% endcall %}
 
 {% call(options) nunjucksOptions("Set the page's title") %}
-{%- call addNunjucksOption(options, 'pageTitle', 'Variable') -%}
+{%- call addNunjucksOption(options, 'pageTitle', 'Block') -%}
 Override the default page title (`<title>` element).
 {%- endcall %}
 
@@ -358,7 +358,7 @@ Add content just before the closing `</footer>` element.
 Override the `<footer>` element and the `govukFooter`, `footerStart`, and `footerEnd` blocks.
 {%- endcall -%}
 
-{%- call addNunjucksOption(options, 'govukfooter', 'Block') -%}
+{%- call addNunjucksOption(options, 'govukFooter', 'Block') -%}
 Override the GOV.UK Footer without changing the rest of the `<footer>` element.
 {%- endcall -%}
 {% endcall %}

@@ -57,15 +57,3 @@ Only do this if the context tells the user that the text is a link, even without
 For example, links in a header or side navigation might not need underlines. Users will understand that they’re links because of where they are on the page.
 
 {{ example({ group: "styles", item: "links", example: "no-underline", html: true, open: true }) }}
-
-## Links to change a language
-
-You can use links to allow a user to access the current content in a different language.
-
-When offering links to content in other languages, make sure:
-
-- the link's text includes the name of the alternative language in both English and the source language
-- the link's purpose is always clear, even when taken out of context
-- the link element includes an [`hreflang` attribute](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/hreflang) that identifies the language of the linked page.
-
-For example, your link text could be 'use [Service name] in [language]'.

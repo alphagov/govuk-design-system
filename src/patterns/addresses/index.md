@@ -14,9 +14,56 @@ This guidance is for government teams that build online services. [To find infor
 
 Help users provide an address using one of the following:
 
-- Multiple text inputs
-- Address lookup
-- Textarea
+- address lookup
+- multiple text inputs
+- textarea
+
+## Address lookup
+
+An address lookup helps users find a full address from partial information such as a postcode.
+
+### When to use an address lookup
+
+Use an address lookup to collect UK addresses where possible.
+
+### When not to use an address lookup
+
+Address lookups generally only work for UK addresses.
+
+If you expect both UK and international addresses, give users the option to either search for a UK address or manually enter an international address.
+
+### How an address lookup works
+
+An address lookup lets users specify a UK address by entering their postcode and selecting their address from a list. There is also an option to enter a street name or number.
+
+When using an address lookup, you should:
+
+- make it clear that it will only work for UK addresses
+- provide a manual option for people with international addresses or addresses that are missing or not properly listed in the address lookup
+- let people enter their postcodes in upper or lower case and with or without spaces
+
+### Identify and match addresses with UPRN identifiers
+
+Use an address lookup that can identify addresses with Unique Property Reference Numbers (UPRNs). UPRNs are 12-digit unique identifiers for every addressable location across the UK.
+
+Open standards for government mandate that [services that store property information must use UPRN identifiers](https://www.gov.uk/government/publications/open-standards-for-government/identifying-property-and-street-information).
+
+Using UPRN identifiers helps users enter addresses accurately. This helps your service by making address data more consistent and easier to handle, which reduces errors and removes the need for manual address matching in the future.
+
+See a post on [The power of UPRNs in linking data on the Geospatial Insights blog](https://gdsgeospatial.blog.gov.uk/2026/01/23/unlocking-better-outcomes-the-power-of-uprns-in-linking-data/).
+
+Your address lookup should only use data from a single API. One option for this is the [Ordnance Survey Places API](https://www.ordnancesurvey.co.uk/products/os-places-api). Public sector organisations can get access to OS Places API as part of the [Public Sector Geospatial Agreement (PSGA)](https://www.ordnancesurvey.co.uk/customers/public-sector/public-sector-geospatial-agreement).
+
+### Allow different postcode formats
+
+It's easier for users if you accept and ignore unwanted characters. This is better than rejecting the input and telling the user they have not provided a valid postcode.
+
+You should let users enter postcodes that contain:
+
+- upper and lower case letters
+- no spaces
+- additional spaces at the beginning, middle or end
+- punctuation like hyphens, brackets, dashes and full stops
 
 ## Multiple text inputs
 
@@ -24,7 +71,10 @@ Help users provide an address using one of the following:
 
 ### When to use multiple text inputs
 
-Only use multiple text inputs when you know which countries the addresses will come from and can find a format that supports them all. This can be difficult to know if you’re asking for addresses outside of the UK.
+Only use multiple text inputs to offer users a manual input option when you both:
+
+- know which countries the addresses will come from
+- can find a format that supports them all – this can be difficult to know if you’re asking for addresses outside of the UK
 
 Using multiple text inputs means:
 
@@ -73,53 +123,19 @@ If a postcode entered is not a real postcode, use a message like this:
 
 Make sure errors follow the guidance in the [Error message component](/components/error-message/) and have specific error messages for specific error states.
 
-## Address lookup
-
-An address lookup helps users find a full address from partial information such as a postcode.
-
-### When to use an address lookup
-
-Use an address lookup when you’re asking users for a UK address.
-
-### When not to use an address lookup
-
-Address lookups generally only work for UK addresses. Use a manual option such as multiple text inputs or a textarea when you are collecting mostly or only international&nbsp;addresses
-
-### How an address lookup works
-
-An address lookup lets users specify a UK address by entering their postcode and selecting their address from a list. There is also an option to enter a street name or&nbsp;number.
-
-When using an address lookup, you should:
-
-- make it clear that it will only work for UK addresses
-- provide a manual option for people with international addresses or addresses that are missing or not properly listed in the address lookup
-- let people enter their postcodes in upper or lower case and with or without spaces
-
-#### Allow different postcode formats
-
-It's easier for users if you accept and ignore unwanted characters. This is better than rejecting the input and telling the user they have not provided a valid postcode.
-
-You should let users enter postcodes that contain:
-
-- upper and lower case letters
-- no spaces
-- additional spaces at the beginning, middle or end
-- punctuation like hyphens, brackets, dashes and full stops
-
 ## Textarea
 
 {{ example({ group: "patterns", item: "addresses", example: "textarea", html: true, nunjucks: true, open: true, size: "s" }) }}
 
-### When to use textarea
+### When to use a textarea
 
-Use a textarea if you expect a broad range of address formats and you do not need to format the address for print or use specific sub-parts of the address (for example, street or postcode).
+Use a textarea to offer users a manual option to enter an address, such as for international addresses or when users cannot find their address using an address lookup.
 
-### When not to use textarea
+A textarea is useful when you expect a broad range of address formats and you do not need to format the address for print or use specific sub-parts of the address (for example, street or postcode).
 
-You should not use a textarea if you:
+### When not to use a textarea
 
-- need to separate an address into accurate sub-parts (for example, street or postcode)
-- need to help users look up an address
+You should not use a textarea if you need to separate an address into accurate sub-parts (for example, street or postcode).
 
 ### How a textarea works
 

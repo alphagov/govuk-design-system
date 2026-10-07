@@ -50,13 +50,13 @@ Step by step navigation is displayed in 2 ways.
 
 1. On the right hand sidebar of content pages that are part of the step by step navigation.
 
-   ![A screenshot showing an example of the step by step as a sidebar](step-by-step-sidebar.png)
+![A screenshot showing an example of the step by step as a sidebar](step-by-step-sidebar.png)
 
 2. As a standalone page.
 
-   ![A screenshot showing an example of the step by step navigation pattern](step-by-step-standalone-page.png)
+![A screenshot showing an example of the step by step navigation pattern](step-by-step-standalone-page.png)
 
-You can use [install the 'Step By Step' plugin](https://prototype-kit.service.gov.uk/docs/install-and-use-plugins) in the GOV.UK Prototype Kit to prototype a step by step.
+You can use [install the 'Step By Step' plugin](https://prototype-kit.service.gov.uk/install-and-use-plugins/) in the GOV.UK Prototype Kit to prototype a step by step.
 
 Remember that step by step navigation is not for use within transactional services. We have included it in the Prototype Kit only so you can prototype your end to end journeys. Unlike most other components and patterns in the Design System, we do not provide the code for step by step navigation in `govuk-frontend`.
 
@@ -169,7 +169,7 @@ Visit the UK on a Standard Visitor visa
 **Department for Transport**<br>
 Get a Blue Badge
 
-See a list of [live services using step by step navigation [GOV.UK Developer docs]](https://docs.publishing.service.gov.uk/document-types/step_by_step_nav.html#example-pages)).
+See a list of live services using [step by step navigation on the GOV.UK Publishing Developer docs](https://docs.publishing.service.gov.uk/document-types/step_by_step_nav.html#example-pages).
 
 ### Next steps
 

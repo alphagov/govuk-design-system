@@ -18,6 +18,7 @@
 @use "pkg:govuk-frontend/components/input";
 @use "pkg:govuk-frontend/components/inset-text";
 @use "pkg:govuk-frontend/components/label";
+@use "pkg:govuk-frontend/components/language-navigation";
 @use "pkg:govuk-frontend/components/notification-banner";
 @use "pkg:govuk-frontend/components/pagination";
 @use "pkg:govuk-frontend/components/panel";
@@ -86,7 +87,7 @@ $app-code-color: #d13118;
 .app-breadcrumbs {
   // match top padding of the first item in the pane navigation so that the
   // breadcrumbs line up nicely
-  margin: govuk-spacing(1) 0;
+  margin-top: govuk-spacing(1);
 }
 
 .app-content {

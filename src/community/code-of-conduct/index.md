@@ -1,5 +1,5 @@
 ---
-title: Code of Conduct 
+title: Code of Conduct
 description: Description
 section: Community
 theme: Events and workshops

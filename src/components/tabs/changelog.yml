@@ -1,0 +1,52 @@
+- date: 2018-06-21
+  version: 1.0.0
+  description: Component introduced.
+- date: 2018-07-13
+  version: 1.1.0
+  description: Added bottom margin for consistency with other components.
+- date: 2018-07-17
+  version: 1.1.1
+  description: Updated component padding to be more uniform on all sides.
+- date: 2018-07-27
+  version: 1.2.0
+  description: Updated styling of hidden panels to use the component-specific class `govuk-tabs__panel--hidden` rather than `js-hidden` to prevent conflict with other global styles.
+- date: 2018-09-26
+  version: 2.1.0
+  description: Added ability to pass `attributes` to tab links and panels.
+- date: 2018-10-16
+  description: Added more detailed guidance on how the component behaves without JavaScript.
+- date: 2018-11-01
+  version: 2.3.0
+  description: Fixed issue with links to tabs being able to open tabs in other Tabs component instances.
+- date: 2019-01-28
+  description: Added section on when to use Tabs rather than the [Accordion](/components/accordion/) or [Details](/components/details/) components for hiding content for a user to reveal.
+- date: 2019-03-18
+  version: 2.9.0
+  description: Fixed bullet point character encoding in progressively enhanced tabs.
+- date: 2019-07-29
+  version: 3.0.0
+  description: |
+    Updated focus style to comply with WCAG 2.1.
+
+    Changed CSS class for a 'selected' tab from `govuk-tabs__tab--sected` to `govuk-tabs__list-item--selected`.
+
+    Fixed styling of progressively enhanced tabs to be consistent with other lists in GOV.UK Frontend.
+
+    Fixed tab selection breaking when there is additional HTML inside a tab.
+
+    Fixed keyboard navigation bug in Internet Explorer 8.
+- date: 2018-07-17
+  version: 3.5.0
+  description: Fixed component JavaScript throwing errors in Internet Explorer 8.
+- date: 2021-12-16
+  description: Updated section on when to use Tabs, [Accordion](/components/accordion/) or [Details](/components/details/) to be more concise.
+- date: 2022-08-09
+  version: 4.3.0
+  description: Fixed incorrect styling on content passed using the `text` parameter.
+- date: 2023-03-28
+  description: Added guidance on using URL hashes to navigate between tabs.
+- date: 2023-08-11
+  description: Added guidance on including a heading inside each tab to help with navigation on smaller screens.
+- date: 2024-08-09
+  version: 5.5.0
+  description: Removed 'up' and 'down' arrow key bindings to prevent issues with screen reader navigation.

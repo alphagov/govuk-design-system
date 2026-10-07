@@ -1,0 +1,25 @@
+---
+title: Invers Language navigation - Language navigation
+layout: layout-example.njk
+stylesheets:
+- ../../../stylesheets/example-inverse.css
+---
+
+{% from "govuk/components/language-navigation/macro.njk" import govukLanguageNavigation %}
+
+{{ govukLanguageNavigation({
+  classes: 'govuk-language-navigation--inverse',
+  items: [
+    {
+      text: "English",
+      lang: "en",
+      href: "#",
+      current: true
+    },
+    {
+      text: "Cymraeg",
+      lang: "cy",
+      href: "#"
+    }
+  ]
+}) }}

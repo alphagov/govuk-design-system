@@ -1,0 +1,66 @@
+---
+title: Service navigation slots – Service navigation
+layout: layout-example.njk
+stylesheets:
+- /stylesheets/page-template-blocks.css
+---
+
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+
+{% set startHtml %}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">slot: start</span>
+  </div>
+{% endset %}
+
+{% set endHtml %}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">slot: end</span>
+  </div>
+{% endset %}
+
+{% set navigationStart %}
+  <!--
+    Notice the wrapping `<li>` as the `navigationStart` slot
+    injects content at the start of the `<ul>` listing the navigation items
+  -->
+  <li class="govuk-service-navigation__item">
+    <div class="app-annotate-block app-annotate-block--short">
+      <span class="app-annotate-block__label">slot: navigationStart</span>
+    </div>
+  </li>
+{% endset %}
+
+{% set navigationEnd %}
+  <!--
+    Notice the wrapping `<li>` as the `navigationStart` slot
+    injects content at the end of the `<ul>` listing the navigation items
+  -->
+  <li class="govuk-service-navigation__item">
+    <div class="app-annotate-block app-annotate-block--short">
+      <span class="app-annotate-block__label">slot: navigationEnd</span>
+    </div>
+  </li>
+{% endset %}
+
+{{ govukServiceNavigation({
+  serviceName: "Service name",
+  serviceUrl: "#",
+  navigation: [
+    {
+      href: "#",
+      text: "Item 1"
+    },
+    {
+      href: "#",
+      text: "Item 2",
+      active: true
+    }
+  ],
+  slots: {
+    start: startHtml,
+    end: endHtml,
+    navigationStart: navigationStart,
+    navigationEnd: navigationEnd
+  }
+}) }}
