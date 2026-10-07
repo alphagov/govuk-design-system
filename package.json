@@ -96,6 +96,7 @@
     "micromatch": "^4.0.8",
     "nunjucks": "^3.2.4",
     "outdent": "^0.8.0",
+    "postcss": "^8.5.28",
     "postcss-markdown": "^2.0.0",
     "postcss-scss": "^4.0.9",
     "prettier": "^3.9.9",

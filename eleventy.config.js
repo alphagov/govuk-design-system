@@ -1,10 +1,11 @@
-const { dirname } = require('path')
+const { dirname, join } = require('path')
 
 const nunjucks = require('nunjucks')
 
 const { navigation: navConfig } = require('./config')
 const { ignoredPaths, migratedPaths } = require('./lib/eleventy/migrated.js')
 const { buildNavigation } = require('./lib/eleventy/navigation.js')
+const { compileStylesheets } = require('./lib/eleventy/sass.js')
 const nunjucksOptions = require('./lib/nunjucks/index.js')
 
 module.exports = function (eleventyConfig) {
@@ -48,6 +49,13 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy(
     'src-11ty/**/*.{png,jpg,jpeg,svg,gif,webp,mp4}'
   )
+
+  // Compile Sass
+  eleventyConfig.on('eleventy.before', async ({ directories }) => {
+    await compileStylesheets(directories.output)
+  })
+
+  eleventyConfig.addWatchTarget(join(paths.source, 'stylesheets'))
 
   eleventyConfig.addGlobalData('eleventyComputed', {
     navigation: (data) => data.collections?.navigation,
