@@ -13,12 +13,16 @@ import { paths } from '../config/index.js'
  * @example
  *   npm run diff main          # main (Metalsmith) → working tree (Metalsmith)
  *   npm run diff main 11ty     # main (Metalsmith) → working tree (11ty)
+ *   npm run diff main 11ty -- --no-removed
+ *                              # …also ignore pages 11ty has not migrated yet
  */
 
-const [baseRef, target] = process.argv.slice(2)
+const [baseRef, target, ...flags] = process.argv.slice(2)
 const output = join(paths.root, 'build.diff')
 
 const is11ty = target === '11ty'
+
+const ignoreRemoved = flags.includes('--no-removed')
 
 if (!baseRef) {
   throw new Error(
@@ -123,6 +127,10 @@ const diff = (from, to) => {
       '--no-index',
       `--src-prefix=${baseLabel}/`,
       '--dst-prefix=',
+
+      // Optionally exclude files only present in the base build
+      ...(ignoreRemoved ? ['--diff-filter=d'] : []),
+
       relative(paths.root, from),
       relative(paths.root, to),
       '--',
@@ -144,7 +152,7 @@ const diff = (from, to) => {
  * Summarise a diff as counts of added, changed and removed files.
  *
  * @param {string} diffText - The diff output to summarise
- * @returns {{added: number, changed: number, removed: number}}
+ * @returns {{added: number, changed: number, removed: number}} - diff stats
  */
 const summarise = (diffText) => {
   const files = (diffText.match(/^diff --git /gm) || []).length

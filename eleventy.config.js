@@ -2,7 +2,7 @@ const { dirname, join } = require('path')
 
 const nunjucks = require('nunjucks')
 
-const { navigation: navConfig } = require('./config')
+const { navigation: navConfig, paths } = require('./config')
 const { ignoredPaths, migratedPaths } = require('./lib/eleventy/migrated.js')
 const { buildNavigation } = require('./lib/eleventy/navigation.js')
 const { compileStylesheets } = require('./lib/eleventy/sass.js')
@@ -45,10 +45,22 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addCollection('navigation', buildNavigation(navConfig))
 
-  // Copy page assets (images etc.) referenced by markdown content
-  eleventyConfig.addPassthroughCopy(
-    'src-11ty/**/*.{png,jpg,jpeg,svg,gif,webp,mp4}'
-  )
+  // Only build migrated pages.
+  for (const ignored of ignoredPaths()) {
+    eleventyConfig.ignores.add(`src/${ignored}`)
+  }
+
+  // Copy page assets
+  for (const migrated of migratedPaths) {
+    const dir = dirname(migrated)
+
+    // Only copy assets from subdirectories
+    if (dir !== '.') {
+      eleventyConfig.addPassthroughCopy(
+        `src/${dir}/**/*.{png,jpg,jpeg,svg,gif,webp,mp4}`
+      )
+    }
+  }
 
   // Compile Sass
   eleventyConfig.on('eleventy.before', async ({ directories }) => {
