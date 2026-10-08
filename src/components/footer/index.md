@@ -3,7 +3,7 @@ title: GOV.UK footer
 description: The footer provides copyright, licensing and other information about your service and department
 section: Components
 aliases: privacy notice, accessibility statement, terms and conditions
-backlogIssueId: 96
+discussionId: 6053
 layout: layout-pane.njk
 ---
 

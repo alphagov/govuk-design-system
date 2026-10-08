@@ -3,7 +3,7 @@ title: Images
 description: Only use images if there’s a real user need
 section: Styles
 theme: Visual elements
-backlogIssueId: 70
+discussionId: 6013
 layout: layout-pane.njk
 showPageNav: true
 order: 13

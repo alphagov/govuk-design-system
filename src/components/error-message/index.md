@@ -3,7 +3,7 @@ title: Error message
 description: When there's a validation error, use an error message to explain what went wrong and how to fix it
 section: Components
 aliases: validation message
-backlogIssueId: 47
+discussionId: 6065
 layout: layout-pane.njk
 ---
 

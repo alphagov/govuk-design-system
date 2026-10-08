@@ -2,7 +2,7 @@
 title: Lists
 description: Use lists to make blocks of text easier to read, and to break information into manageable chunks.
 section: Styles
-backlogIssueId: 64
+discussionId: 6027
 theme: Typography
 layout: layout-pane.njk
 showPageNav: true

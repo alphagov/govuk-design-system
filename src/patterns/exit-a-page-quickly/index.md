@@ -4,7 +4,7 @@ description: Give users a way to quickly and safely exit a service, website or a
 section: Patterns
 theme: Help users to…
 aliases:
-backlogIssueId: 213
+discussionId: 2923
 layout: layout-pane.njk
 ---
 

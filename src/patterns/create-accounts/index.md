@@ -4,7 +4,7 @@ description: Help users create an account for your service
 section: Patterns
 theme: Help users to…
 aliases:
-backlogIssueId: 41
+discussionId: 6106
 layout: layout-pane.njk
 ---
 

@@ -3,7 +3,7 @@ title: Back link
 description: Use the back link component to help users go back to the previous page in a multi-page transaction
 section: Components
 aliases: return link, back button
-backlogIssueId: 32
+discussionId: 6081
 layout: layout-pane.njk
 ---
 

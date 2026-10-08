@@ -3,7 +3,7 @@ title: GOV.UK header
 description: The GOV.UK header shows users that they are on GOV.UK
 section: Components
 aliases: GOV.UK masthead
-backlogIssueId: 97
+discussionId: 6003
 layout: layout-pane.njk
 ---
 

@@ -4,7 +4,7 @@ description: Contact a department or service team
 section: Patterns
 theme: Help users to…
 aliases:
-backlogIssueId: 10
+discussionId: 6116
 layout: layout-pane.njk
 ---
 

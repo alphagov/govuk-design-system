@@ -3,7 +3,7 @@ title: Tag
 description: The Tag component indicates the status of something, such as an item on a task list or a phase banner
 section: Components
 aliases: chip, badge, flag, token
-backlogIssueId: 62
+discussionId: 6046
 layout: layout-pane.njk
 ---
 
