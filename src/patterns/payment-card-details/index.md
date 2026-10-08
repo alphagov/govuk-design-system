@@ -4,7 +4,7 @@ description: How to ask users for their payment card details
 section: Patterns
 theme: Ask users for…
 aliases:
-backlogIssueId: 80
+discussionId: 6040
 layout: layout-pane.njk
 ---
 

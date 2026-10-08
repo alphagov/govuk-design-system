@@ -3,7 +3,7 @@ title: Accordion
 description: The accordion component lets users show and hide sections of related content on a page
 section: Components
 aliases:
-backlogIssueId: 1
+discussionId: 6119
 layout: layout-pane.njk
 ---
 

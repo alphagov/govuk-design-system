@@ -3,7 +3,7 @@ title: Error summary
 description: Use an error summary when there is a validation error
 section: Components
 aliases:
-backlogIssueId: 46
+discussionId: 6252
 layout: layout-pane.njk
 ---
 

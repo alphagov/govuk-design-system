@@ -3,7 +3,7 @@ title: Button
 description: Use the button component to help users carry out an action
 section: Components
 aliases:
-backlogIssueId: 34
+discussionId: 6094
 layout: layout-pane.njk
 ---
 

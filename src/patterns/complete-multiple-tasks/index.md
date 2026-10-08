@@ -4,7 +4,7 @@ description: Task lists help users understand tasks involved in completing a tra
 section: Patterns
 theme: Help users to…
 aliases:
-backlogIssueId: 72
+discussionId: 6251
 layout: layout-pane.njk
 ---
 

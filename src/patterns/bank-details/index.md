@@ -4,7 +4,7 @@ description: How to ask users for their bank details
 section: Patterns
 theme: Ask users for…
 aliases:
-backlogIssueId: 149
+discussionId: 5979
 layout: layout-pane.njk
 ---
 

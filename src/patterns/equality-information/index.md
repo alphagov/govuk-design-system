@@ -4,7 +4,7 @@ description: This pattern explains how to ask users for equality information
 section: Patterns
 theme: Ask users for…
 aliases: protected characteristics, ethnic group, diversity, demographic, age, disability, marriage, civil partnership, religion, sex, gender identity, sexual orientation
-backlogIssueId: 180
+discussionId: 5999
 layout: layout-pane.njk
 ---
 

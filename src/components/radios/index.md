@@ -3,7 +3,7 @@ title: Radios
 description: Let users select a single option from a list using the radios component
 section: Components
 aliases: radio buttons, option buttons
-backlogIssueId: 59
+discussionId: 6055
 layout: layout-pane.njk
 ---
 

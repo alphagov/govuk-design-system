@@ -4,7 +4,7 @@ description: Pause the user journey to give them important information
 section: Patterns
 theme: Pages
 aliases:
-backlogIssueId: 27
+discussionId: 6109
 layout: layout-pane.njk
 ---
 

@@ -3,7 +3,7 @@ title: Text input
 description: Help users enter information with the text input component
 section: Components
 aliases: text box, text field, input field, text entry box
-backlogIssueId: 51
+discussionId: 6070
 layout: layout-pane.njk
 ---
 

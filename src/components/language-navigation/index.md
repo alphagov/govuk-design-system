@@ -3,7 +3,7 @@ title: Language navigation
 description: The Language navigation component helps users choose and switch between languages when using a service.
 section: Components
 aliases: Language selector, Language switcher
-backlogIssueId: 285
+discussionId: 5939
 layout: layout-pane.njk
 status:
   type: Trial

@@ -3,7 +3,7 @@ title: Textarea
 description: Help users provide detailed information using the textarea component
 section: Components
 aliases: multi-line text box, multi-line text field
-backlogIssueId: 65
+discussionId: 6071
 layout: layout-pane.njk
 ---
 
