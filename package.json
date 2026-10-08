@@ -17,7 +17,7 @@
     "build": "cross-env NODE_ENV=production node tasks/build.js",
     "build:11ty": "cross-env NODE_ENV=development eleventy",
     "start:11ty": "cross-env NODE_ENV=development eleventy --serve --port=3001",
-    "diff": "npm run build && node tasks/diff.mjs",
+    "diff": "node tasks/diff.mjs",
     "serve": "cross-env NODE_ENV=production DEBUG=build* node tasks/serve.js",
     "start": "cross-env NODE_ENV=development DEBUG=build* node tasks/start.js",
     "pretest": "npm run build",

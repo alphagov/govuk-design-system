@@ -7,12 +7,18 @@ import { paths } from '../config/index.js'
 /**
  * Diff the compiled build files between a base ref and the current working tree.
  *
+ * Pass `11ty` as the second argument to compare against the 11ty build
+ * (build-11ty) instead of a fresh Metalsmith build.
+ *
  * @example
- *   npm run diff main
+ *   npm run diff main          # main (Metalsmith) → working tree (Metalsmith)
+ *   npm run diff main 11ty     # main (Metalsmith) → working tree (11ty)
  */
 
-const [baseRef] = process.argv.slice(2)
+const [baseRef, target] = process.argv.slice(2)
 const output = join(paths.root, 'build.diff')
+
+const is11ty = target === '11ty'
 
 if (!baseRef) {
   throw new Error(
@@ -31,7 +37,7 @@ const base = {
 
 const current = {
   checkout: paths.root,
-  buildDir: join(paths.root, 'build')
+  buildDir: join(paths.root, is11ty ? 'build-11ty' : 'build')
 }
 
 /**
@@ -163,8 +169,17 @@ try {
     installDependencies(base.checkout)
     build(base.checkout)
 
-    // We assume we've already installed dependencies for the current working tree.
-    build(current.checkout)
+    if (is11ty) {
+      // Compare against the existing 11ty build
+      if (!existsSync(current.buildDir)) {
+        throw new Error(
+          'build-11ty does not exist. Run `npm run build:11ty` first'
+        )
+      }
+    } else {
+      // We assume we've already installed dependencies for the current working tree.
+      build(current.checkout)
+    }
 
     const diffText = diff(base.buildDir, current.buildDir)
     writeFileSync(output, diffText)
