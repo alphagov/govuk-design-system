@@ -37,7 +37,7 @@ If you work in government, find us on the [#govuk-design-system Slack channel](h
       alt: "Github issue illustration.",
       title: "Discuss and give feedback"
     }) %}
-Tell us your experience using our components and patterns. Look for the ‘Help improve this page’ section at the end of each page to see its issue discussion, or [see a list of all discussions](https://github.com/alphagov/govuk-design-system-backlog/issues).
+Tell us your experience using our components and patterns. Look for the ‘Help improve this page’ section at the end of each page to see it's discussion page, or [see the discussions on GitHub](https://github.com/alphagov/govuk-design-system/discussions).
     {% endcall %}
   </div>
   <div class="govuk-grid-column-full govuk-grid-column-one-half-from-desktop">
