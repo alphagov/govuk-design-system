@@ -6,7 +6,7 @@
   {# Only render breadcrumbs on pages that aren't the homepage. #}
   {% if not isHomepage() %}
     {{ govukBreadcrumbs({
-      items: getAncestorPages(permalink)
+      items: getAncestorPages(pagePath)
     }) }}
   {% endif %}
 {% endblock %}
@@ -14,7 +14,7 @@
 {# We want the homepage to bypass the width container but it still needs a main #}
 {% block container %}
   <main id="main-content">
-  {{ contents | safe }}
+  {{ (contents or content) | safe }}
   </main>
 {% endblock %}
 

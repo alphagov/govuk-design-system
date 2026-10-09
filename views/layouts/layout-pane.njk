@@ -16,7 +16,7 @@
   <div class="app-split-pane__content">
     {{ govukBreadcrumbs({
       classes: "app-breadcrumbs",
-      items: getAncestorPages(permalink)
+      items: getAncestorPages(pagePath)
     }) }}
     <main id="main-content" class="app-content" role="main">
       <h1 class="govuk-heading-xl {%- if status %} govuk-!-margin-bottom-5{% endif %}">
@@ -68,7 +68,7 @@
           {% include "_nunjucks-intro.njk" %}
         {% endif %}
 
-        {{ contents | safe }}
+        {{ (contents or content) | safe }}
       </div>
 
       {# No JS fallback to show overview #}

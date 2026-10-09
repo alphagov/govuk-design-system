@@ -1,4 +1,7 @@
 build/
+build-11ty/
+build.diff
+.tmp/
 node_modules/
 *.log
 .DS_Store

@@ -19,7 +19,7 @@
 {% endblock %}
 
 {% block container %}
-  {{ contents | safe }}
+  {{ (contents or content) | safe }}
 {% endblock %}
 {% block bodyEnd %}
   <script type="module" src="{{ getFingerprint('/javascripts/application-example.js') }}"></script>

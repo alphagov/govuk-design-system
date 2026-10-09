@@ -5,12 +5,12 @@
 {% block containerStart %}
   {{ govukBreadcrumbs({
     classes: "app-breadcrumbs",
-    items: getAncestorPages(permalink)
+    items: getAncestorPages(pagePath)
   }) }}
 {% endblock %}
 
 {% block content %}
-  {{ contents | safe }}
+  {{ (contents or content) | safe }}
 {% endblock %}
 
 {% block govukFooter %}

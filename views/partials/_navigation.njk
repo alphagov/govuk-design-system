@@ -16,7 +16,7 @@ service navigation component. #}
     {% set subNavHtml %}
       <template>{{ mobileNavigation({
         item: item,
-        pagePermalink: permalink
+        pagePermalink: pagePath
       }) }}</template>
     {% endset %}
   {% endif %}
@@ -24,8 +24,8 @@ service navigation component. #}
   {%- set navLinks = (navLinks.push({
     href: '/' + item.url + '/',
     html: item.label + subNavHtml,
-    current: true if permalink and (permalink == item.url) else false,
-    active: true if permalink and item | isActive(permalink) else false,
+    current: true if pagePath and (pagePath == item.url) else false,
+    active: true if pagePath and item | isActive(pagePath) else false,
     attributes: {
       "data-module": "app-mobile-navigation-section"
     }
