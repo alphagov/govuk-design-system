@@ -24,7 +24,7 @@ ignoreInSitemap: true
   "data-test": "My value",
   "data-other": "report:details"
 } %}
-{% set containerClasses = "app-width-container" %}
+{% set containerClasses = "app-container-class" %}
 {% set mainClasses = "app-main-class" %}
 
 {% block pageTitle %}{{ title }} – Example - GOV.UK Design System{% endblock %}
@@ -126,7 +126,6 @@ ignoreInSitemap: true
 
 {% block govukFooter %}
   {{ govukFooter({
-    containerClasses: "app-width-container",
     meta: {
       items: [
         {
