@@ -43,6 +43,6 @@ Make the link text short and descriptive so users can quickly work out if they n
 
 ## Research on this component
 
-There is [evidence that some users avoid clicking the link to show more details](https://github.com/alphagov/govuk-design-system-backlog/issues/44#issuecomment-629122091), as they think it will take them away from the page.
+There is [evidence that some users avoid clicking the link to show more details](https://github.com/alphagov/govuk-design-system/discussions/6095#discussioncomment-18812380), as they think it will take them away from the page.
 
 There are [concerns that some users of voice assist software will not be able to interact with the component](https://github.com/alphagov/govuk-design-system/discussions/6095#discussioncomment-18812377). Some software might require the user to specifically refer to the link to show more details as a button in order to interact with it.
