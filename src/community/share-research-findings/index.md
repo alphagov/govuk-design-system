@@ -32,14 +32,14 @@ In addition, remember that all the information on GitHub is open to the public. 
 
 ### Share findings publicly on GitHub
 
-You can find our [list of discussions on GitHub](https://github.com/orgs/alphagov/projects/43/views/1). There are 2 tabs, each showing a list of discussion pages about:
+You can find discussions on GitHub about:
 
-- things already in the Design System
-- things we could add in the future
+- [things already in the Design System](https://github.com/alphagov/govuk-design-system/discussions/categories/published-in-the-gov-uk-design-system)
+- [things we could add in the future](https://github.com/alphagov/govuk-design-system/discussions/categories/community-backlog)
 
 Feedback on both is useful to us. You’ll need to [create a GitHub account](https://github.com/join) to add comments.
 
-Select the thing you want to share findings about. If what you’re looking for is not on the list, read about [how to propose a component or pattern](/community/propose-a-component-or-pattern/).
+Select the thing you want to share findings about. If what you’re looking for has not been discussed, read about [how to propose a component or pattern](/community/propose-a-component-or-pattern/).
 
 Once you’ve selected the right discussion, use the template below to add your findings.
 
