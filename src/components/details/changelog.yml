@@ -1,7 +1,7 @@
 - date: 2018-06-21
   version: 1.0.0
   description: Component introduced.
-- date: 2018-07-18
+- date: 2018-07-17
   version: 1.1.1
   description: |
     Fixed component not removing bottom margin from contained elements.

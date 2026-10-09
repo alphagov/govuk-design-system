@@ -20,7 +20,7 @@
     Removed name-based width logic.
 
     Changed `name` option to `namePrefix`.
-- date: 2018-09-19
+- date: 2018-11-19
   version: 2.4.0
   description: Added option to set classes on component's form group.
 - date: 2019-01-31
@@ -52,6 +52,6 @@
 - date: 2026-01-14
   version: 5.14.0
   description: Fixed inputs shifting alignment on iOS 18.
-- date: 2026-07-26
+- date: 2026-07-16
   version: 6.4.0
   description: Added ability to pass `day`, `month`, `year`, `error` and `values` options to customise individual inputs.
