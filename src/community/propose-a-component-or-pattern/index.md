@@ -17,7 +17,7 @@ Follow the steps to propose a component or pattern for the Design System.
 
 Check if someone else has already suggested your idea or something similar in the [discussions on GitHub](https://github.com/alphagov/govuk-design-system/discussions/categories/community-backlog).
 
-If your idea has been discussed, go into the discussion and comment. Say you need the component or pattern, and share any examples or evidence you have to support the proposal.
+If your idea already has a discussion topic, upvote the topic instead of creating a new one. You can also leave a comment with any examples or evidence you have to support the proposal.
 
 If you'd like to work on it, read how to [develop a component or pattern](/community/develop-a-component-or-pattern/).
 
