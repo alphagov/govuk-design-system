@@ -229,4 +229,4 @@ We’re looking for feedback about any of these areas:
 - how you create and choose images to use in your service
 - how you implement images (for frontend performance)
 
-Give us your feedback and examples by [posting a comment on the ‘Images’ discussion on GitHub](https://github.com/alphagov/govuk-design-system-backlog/issues/70).
+Give us your feedback and examples by [posting a comment on the ‘Images’ discussion on GitHub](https://github.com/alphagov/govuk-design-system/discussions/6013).
