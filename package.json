@@ -95,7 +95,7 @@
     "postcss-markdown": "^2.0.0",
     "postcss-scss": "^4.0.9",
     "prettier": "^3.9.9",
-    "puppeteer": "^25.12.0",
+    "puppeteer": "^25.13.0",
     "rollup": "^4.64.3",
     "sass": "^1.105.1",
     "sitemap": "^9.0.1",
