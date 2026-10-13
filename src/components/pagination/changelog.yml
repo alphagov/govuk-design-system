@@ -12,7 +12,7 @@
 - date: 2023-12-08
   version: 5.0.0
   description: Changed the default `aria-label` attribute to be "Pagination" instead of "results".
-- date: 2024-04-26
+- date: 2024-03-26
   version: 5.3.0
   description: Removed redundant `role` attribute from containing `nav` element.
 - date: 2024-08-09
