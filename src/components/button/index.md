@@ -6,9 +6,7 @@ aliases:
 backlogIssueId: 34
 layout: layout-pane.njk
 ---
-[Guidance](/gov.uk)
-[History](/gov.uk)
-[Macros](/gov.uk)
+[Guidance](/gov.uk) [History](/gov.uk) [Macros](/gov.uk)
 
 On this page
 [When to use this component](#when-to-use-this-component)
