@@ -19,7 +19,7 @@ Last updated 15 October 2026.
 
 We recently added change history pages to most of our components. We're working to have change history pages for all components.
 
-[SUMMARY OF PROTOTYPE EXPLORATION AND MAINTAIN WORK]
+We’ve released GOV.UK Frontend v6.6.0, which includes improvements to how the [Character count component](/components/character-count/) works, along with some minor fixes.
 
 In August 2026, we released GOV.UK Frontend v6.5.0, which adds the [Feedback component](/components/feedback/) to help you gather feedback from your users and the [Language navigation component](/components/language-navigation/) to let your users switch between languages your service offers.
 
@@ -30,9 +30,6 @@ Both these components have been released as trial components, using our new [com
 We've started to:
 
 - carry out an accessibility audit of GOV.UK Frontend
-- explore how we can more easily communicate the change history of our components
-
-[MORE CURRENT WORK]
 
 ## Future plans
 
