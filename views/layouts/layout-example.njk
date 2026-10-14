@@ -30,7 +30,7 @@
 
 {% block container %}
   {% block body %}
-    {{ contents | safe }}
+    {{ (contents or content) | safe }}
   {% endblock %}
 {% endblock %}
 

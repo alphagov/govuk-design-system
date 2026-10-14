@@ -14,11 +14,11 @@
       <h1 class="govuk-heading-xl">This page has been archived</h1>
 
       <div class="app-prose-scope">
-        {{ contents | safe}}
+        {{ (contents or content) | safe}}
         <p>
           You can also
           <a
-            href="https://webarchive.nationalarchives.gov.uk/*/https://design-system.service.gov.uk/{{ permalink }}"
+            href="https://webarchive.nationalarchives.gov.uk/*/https://design-system.service.gov.uk/{{ pagePath }}"
           >check for previous versions of this page in the UK Government Web Archive</a>.
         </p>
       </div>
