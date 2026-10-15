@@ -58,7 +58,9 @@ If you're asking more than one question on the page, do not set the contents of 
 
 In some cases it may be more helpful to show a word count. For example, if your question requires a longer answer.
 
-Do this by setting `data-maxwords` in the component markup. For example, `data-maxwords="150"` will set a word limit of 150.
+Do this by setting `data-count-type="words"` and then `data-maxlength` in the component markup.
+
+For example, for a word limit of 150 set these options as: `data-count-type="words" data-maxlength="150"`.
 
 {{ example({ group: "components", item: "character-count", example: "word-count", html: true, nunjucks: true, open: false }) }}
 
