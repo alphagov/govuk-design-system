@@ -1,7 +1,5 @@
-### 27 August 2026: We’ve released GOV.UK Frontend v6.5.0
+### 15 October 2026: We’ve released GOV.UK Frontend v6.6.0
 
-This release adds the [Feedback component](/components/feedback/) to help you gather feedback from your users and the [Language navigation component](/components/language-navigation/) to let your users switch between languages your service offers.
+This release includes improvements to how the [Character count component](/components/character-count/) works, along with some minor fixes.
 
-Both these components have been released as 'Trial' components, using our new [component lifecycle statuses](/community/component-lifecycle-statuses/). See each component’s guidance page to learn how you can help us move them to ‘Stable’ status.
-
-[Read the release notes for v6.5.0 on GitHub](https://github.com/alphagov/govuk-frontend/releases/tag/v6.5.0) to see what’s changed or [see our latest updates on the What's new page](/community/whats-new/).
+[Read the release notes for v6.6.0 on GitHub](https://github.com/alphagov/govuk-frontend/releases/tag/v6.6.0) to see what’s changed or [see our latest updates on the What's new page](/community/whats-new/).
