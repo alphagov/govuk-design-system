@@ -38,8 +38,9 @@ jobs:
         with:
           script: |
             const { getFileSiblings } = await import('${{ github.workspace }}/.github/workflows/scripts/index.mjs')
-            const files = ${{ steps.get-deleted-pages.outputs.result }}
-            return getFileSiblings(files, ${{ github.workspace }}, 'index.md', 'changelog.yml')
+            const files = ${{ steps.get-changed-things.outputs.result }}
+            console.log(files.split(','))
+            return getFileSiblings(files.split(','), '${{ github.workspace }}', 'index.md', 'changelog.yml')
 
       - name: Post a comment on the PR if a page has changed but that page's changelog hasn't
         if: steps.pages-with-changelogs.outputs.result != 'false' && steps.get-changed-things.outputs.result != 'false'
@@ -49,17 +50,16 @@ jobs:
           script: |
             const { prepareCommentBody, comment } = await import('${{ github.workspace }}/.github/workflows/scripts/index.mjs')
             const files = ${{ steps.pages-with-changelogs.outputs.result }}
+            const outro = `Please ensure that you add a changelog entry, if your change warrants a new entry.
+
+            Read our [guidance on change history maintenance](https://gov-uk.atlassian.net/wiki/spaces/GDS/pages/5773131777/How+to+add+changelog+entries) for details on how ot write new changelog entries and if a change to a page warrants a new entry.`
+
             const commentBody = prepareCommentBody(
-              'It looks like this pull request makes a change to one or more pages but doesn't update those page's changelogs:',
+              "It looks like this pull request makes a change to one or more pages but doesn't update those page's changelogs:",
               files.split(','),
-              `Please ensure that you add a changelog entry, if your change warrants a new entry.
+              outro)
 
-              Read our [guidance on change history maintenance](https://gov-uk.atlassian.net/wiki/spaces/GDS/pages/5773131777/How+to+add+changelog+entries) for details on how ot write new changelog entries and if a change to a page warrants a new entry.`
-            )
-
-            await comment(
-              { github, context },
+            await comment({ github, context },
               ${{ github.event.pull_request.number }},
               'pages-changed-without-changelog-change',
-              commentBody
-            )
+              commentBody)

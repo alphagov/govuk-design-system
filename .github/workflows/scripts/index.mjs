@@ -12,25 +12,23 @@ export function getFilesFromDiff(pattern, status) {
 }
 
 export function getFileSiblings(files, parentDir, child, sibling) {
-  const childFiles = files.filter(
-    (file) =>
-      file.endsWith(child) &&
-      existsSync(`${parentDir}/${getFileDirectory(file)}/${sibling}`)
-  )
+  const childFiles = files.filter((file) => {
+    const dir = file.split('/')
+    dir.pop()
 
-  return childFiles.length
-    ? childFiles
-        .map((file) => [
-          file,
-          files.find(
-            (subfile) => subfile === `${getFileDirectory(file)}/${sibling}`
-          )
-        ])
-        .join(',')
-    : false
+    const siblingPath = `${dir.join('/')}/${sibling}`
+
+    return (
+      file.endsWith(child) &&
+      existsSync(`${parentDir}/${siblingPath}`) &&
+      !files.find((subfile) => subfile === siblingPath)
+    )
+  })
+
+  return childFiles.length ? childFiles.join(',') : false
 }
 
-export async function prepareCommentBody(intro = '', files = [], outro = '') {
+export function prepareCommentBody(intro = '', files = [], outro = '') {
   let commentBody = ''
 
   if (intro) {
@@ -40,25 +38,29 @@ export async function prepareCommentBody(intro = '', files = [], outro = '') {
   if (files.length) {
     let filesList = ''
 
-    for (const file of files.split(',')) {
-      if (file[1]) {
-        filesList = `${filesList}
-        - ${file[0]}`
-      }
+    for (const file of files) {
+      filesList = outdent`
+      ${filesList}
+      - ${file}
+      `
     }
 
-    commentBody = `${commentBody}
+    commentBody = outdent`
+    ${commentBody}
 
-    ${filesList}`
-
-    if (outro) {
-      commentBody = `${commentBody}
-
-      ${outro}`
-    }
-
-    return commentBody
+    ${filesList}
+    `
   }
+
+  if (outro) {
+    commentBody = outdent`
+    ${commentBody}
+
+    ${outro}
+    `
+  }
+
+  return commentBody
 }
 
 export async function comment(
@@ -110,12 +112,6 @@ function processDiffTxt() {
         status
       }
     })
-}
-
-function getFileDirectory(file) {
-  const dir = file.split('/')
-  dir.pop()
-  return dir.join('/')
 }
 
 async function getComment({ github, context }, issueNumber, marker) {

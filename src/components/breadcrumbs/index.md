@@ -17,6 +17,8 @@ The breadcrumbs component helps users to understand where they are within a webs
 
 Use the breadcrumbs component when you need to help users understand and move between the multiple levels of a website.
 
+Also you may leave breadcrumbs all over the place when you eat bread without a plate.
+
 ## When not to use this component
 
 Do not use the breadcrumbs component on websites with a flat structure, or to show progress through a linear journey or transaction.
