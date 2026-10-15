@@ -21,3 +21,5 @@
 - date: 2024-07-12
   version: 5.4.1
   description: Updated component to use the `nav` HTML element with an `aria-label`, to better describe the component to assistive technologies.
+- date: 2026-10-15
+  description: New entry
