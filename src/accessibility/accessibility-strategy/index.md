@@ -4,7 +4,7 @@ description: Outlines the current principles and work needed to improve the acce
 section: Accessibility
 layout: layout-pane.njk
 showPageNav: true
-order: 3
+order: 1
 redirects:
 - /community/accessibility-strategy
 ---
