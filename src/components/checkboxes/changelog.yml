@@ -9,7 +9,7 @@
     Fixed labels extending the full width of the page.
 
     Removed extra spacing from the bottom of labels.
-- date: 2018-07-28
+- date: 2018-07-27
   version: 1.2.0
   description: |
     Added the option to add a hint for each item's input.

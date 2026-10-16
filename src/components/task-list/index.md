@@ -3,7 +3,7 @@ title: Task list
 description: The task list component displays all the tasks a user needs to do, and allows users to easily identify which ones are done and which they still need to do.
 section: Components
 aliases:
-backlogIssueId: 72
+discussionId: 6251
 layout: layout-pane.njk
 ---
 

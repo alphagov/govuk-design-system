@@ -1,0 +1,29 @@
+- date: 2018-06-21
+  version: 1.0.0
+  description: Component introduced.
+- date: 2018-09-10
+  version: 2.0.0
+  description: Fixed textarea being resizable beyond container bounds by only allowing vertical resizing.
+- date: 2018-09-19
+  version: 2.4.0
+  description: Added option to set classes on component's form group.
+- date: 2018-10-25
+  description: |
+    Added advice on breaking complex, open-ended questions into multiple simple questions.
+
+    Added a link to the [Character count](/components/character-count/) component for guidance on limiting the number of characters a user enters.
+- date: 2019-01-31
+  version: 2.6.0
+  description: Added `autocomplete` parameter to help meet the WCAG 2.1 criterion [Identify Input Purpose](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html).
+- date: 2020-07-29
+  version: 3.8.0
+  description: |
+    Added `spellcheck` parameter.
+
+    Updated component's border thickness when in the error state.
+- date: 2023-04-20
+  version: 4.6.0
+  description: Added `disabled` parameter and updated disabled styles.
+- date: 2025-03-04
+  version: 5.9.0
+  description: Changed component `id` attribute to be based on `name` parameter by default.

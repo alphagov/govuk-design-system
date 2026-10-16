@@ -15,7 +15,7 @@
 - date: 2023-01-31
   version: 4.5.0
   description: Fixed chevrons not scaling with text size.
-- date: 2023-06-06
+- date: 2023-07-06
   version: 4.7.0
   description: Added inverse appearance modifier.
 - date: 2024-07-12

@@ -3,7 +3,7 @@ title: Tabs
 description: Tabs can be a helpful way of letting users quickly switch between related information
 section: Components
 aliases:
-backlogIssueId: 100
+discussionId: 6045
 layout: layout-pane.njk
 ---
 

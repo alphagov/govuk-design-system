@@ -77,6 +77,9 @@ updates:
       # Dependabot keeps `@types` dependencies in sync with updated packages,
       # but as far as we can tell this doesn't work for node itself.
       - dependency-name: '@types/node'
+      # Until we can prioritise addressing the changes of Babel 8
+      - dependency-name: '@babel/*'
+        update-types: ['version-update:semver-major']
 
     # Schedule run every Monday, local time
     schedule:

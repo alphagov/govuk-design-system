@@ -4,7 +4,7 @@ description: Tell users about the cookies you’re setting on their device and l
 section: Patterns
 theme: Pages
 aliases: Privacy settings, Cookie settings, tracking settings
-backlogIssueId: 13
+discussionId: 6111
 layout: layout-pane.njk
 ---
 

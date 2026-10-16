@@ -3,7 +3,7 @@ title: Notification banner
 description: Use a notification banner to tell the user about something they need to know about, but that’s not directly related to the page content
 section: Components
 aliases: alert, warning, success message, important message, flash message
-backlogIssueId: 2
+discussionId: 6121
 layout: layout-pane.njk
 ---
 

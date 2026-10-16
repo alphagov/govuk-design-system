@@ -4,7 +4,7 @@ description: Identifying users when they sign in
 section: Patterns
 theme: Help users to…
 aliases: 2FA, MFA, multi-factor authentication, security code, telephone number, phone number, text message, two-factor authentication
-backlogIssueId: 25
+discussionId: 6112
 layout: layout-pane.njk
 ---
 

@@ -3,7 +3,7 @@ title: Breadcrumbs
 description: Help users orientate themselves and navigate pages within a hierarchical structure
 section: Components
 aliases: navigation path, cookie crumb
-backlogIssueId: 33
+discussionId: 6108
 layout: layout-pane.njk
 ---
 

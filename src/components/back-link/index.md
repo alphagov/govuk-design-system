@@ -3,7 +3,7 @@ title: Back link
 description: Use the back link component to help users go back to the previous page in a multi-page transaction
 section: Components
 aliases: return link, back button
-backlogIssueId: 32
+discussionId: 6081
 layout: layout-pane.njk
 ---
 
@@ -61,4 +61,4 @@ However, in the case of the back link we've not seen this to be an issue for act
 
 This issue does not affect WCAG compliance.
 
-If your service has tested pages with back links with screen reader users and have any insight into how it was used, [share your findings with us](https://github.com/alphagov/govuk-design-system-backlog/issues/32). We're particularly interested in understanding how easily the component can be found inside and outside of landmarks.
+If your service has tested pages with back links with screen reader users and have any insight into how it was used, [share your findings with us](https://github.com/alphagov/govuk-design-system/discussions/6081). We're particularly interested in understanding how easily the component can be found inside and outside of landmarks.

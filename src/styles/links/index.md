@@ -2,7 +2,7 @@
 title: Links
 description: Use links to navigate between pages
 section: Styles
-backlogIssueId: 64
+discussionId: 6027
 theme: Typography
 layout: layout-pane.njk
 showPageNav: true

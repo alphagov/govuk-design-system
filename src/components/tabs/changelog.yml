@@ -35,7 +35,7 @@
     Fixed tab selection breaking when there is additional HTML inside a tab.
 
     Fixed keyboard navigation bug in Internet Explorer 8.
-- date: 2018-07-17
+- date: 2020-01-21
   version: 3.5.0
   description: Fixed component JavaScript throwing errors in Internet Explorer 8.
 - date: 2021-12-16

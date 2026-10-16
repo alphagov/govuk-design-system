@@ -3,7 +3,7 @@ title: Service navigation
 description: Service navigation helps users understand that they’re using your service and lets them navigate around your service
 section: Components
 aliases: Primary navigation
-backlogIssueId: 76
+discussionId: 6062
 layout: layout-pane.njk
 ---
 

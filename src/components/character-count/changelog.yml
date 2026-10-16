@@ -63,3 +63,6 @@
 - date: 2025-05-15
   version: 5.10.1
   description: Added error border colour when rendered with error message.
+- date: 2026-10-15
+  version: 6.6.0
+  description: Added `countType` option to allow more accurate counting.

@@ -4,7 +4,7 @@ description: Let users check their answers before submitting information to a se
 section: Patterns
 theme: Help users to…
 aliases:
-backlogIssueId: 36
+discussionId: 6105
 layout: layout-pane.njk
 ---
 

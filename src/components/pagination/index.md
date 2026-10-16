@@ -3,7 +3,7 @@ title: Pagination
 description: Help users navigate collections of numbered pages like search results
 section: Components
 aliases:
-backlogIssueId: 77
+discussionId: 6007
 layout: layout-pane.njk
 ---
 

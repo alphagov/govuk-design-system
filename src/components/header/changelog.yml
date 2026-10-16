@@ -101,7 +101,7 @@
     Removed the fallback crown logo PNG.
 
     Removed deprecated govuk-header__navigation--no-service-name class.
-- date: 2024-01-24
+- date: 2024-01-11
   description: |
     Added guidance on not making the Header component or header elements ‘sticky’ on the user's screen in order to comply with WCAG 2.2.
 

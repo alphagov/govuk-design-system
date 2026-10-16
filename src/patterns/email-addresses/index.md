@@ -4,7 +4,7 @@ description: Help users enter a valid email address
 section: Patterns
 theme: Ask users for…
 aliases:
-backlogIssueId: 45
+discussionId: 6100
 layout: layout-pane.njk
 ---
 

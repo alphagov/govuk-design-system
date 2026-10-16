@@ -3,7 +3,7 @@ title: Button
 description: Use the button component to help users carry out an action
 section: Components
 aliases:
-backlogIssueId: 34
+discussionId: 6094
 layout: layout-pane.njk
 ---
 
@@ -125,4 +125,4 @@ In the case of slow connections, aim to give the user information about what’s
 
 ## Research on this component
 
-Testing on GOV.UK has shown that [using green as the colour of start buttons improved click-through rates](https://github.com/alphagov/govuk-design-system-backlog/issues/34#issuecomment-699537400).
+Testing on GOV.UK has shown that [using green as the colour of start buttons improved click-through rates](https://github.com/alphagov/govuk-design-system/discussions/6094#discussioncomment-18812390).

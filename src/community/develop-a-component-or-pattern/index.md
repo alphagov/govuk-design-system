@@ -7,11 +7,11 @@ layout: layout-pane.njk
 order: 4
 ---
 
-The Design System team focuses on developing [prioritised components and patterns](/community/upcoming-components-patterns/) with the community. However, anyone can choose to work on something from the [list of discussions on GitHub](https://github.com/orgs/alphagov/projects/43/views/2).
+The Design System team focuses on developing [prioritised components and patterns](/community/upcoming-components-patterns/) with the community. However, anyone can choose to work on something from the [discussions on GitHub](https://github.com/alphagov/govuk-design-system/discussions/categories/community-backlog).
 
-If you see something you'd like to work on, join the discussion in the contribution's issue page or email the Design System team at <govuk-design-system-support@digital.cabinet-office.gov.uk>.
+If you see something you'd like to work on, join the discussion in the contribution's discussion page or email the Design System team at <govuk-design-system-support@digital.cabinet-office.gov.uk>.
 
-If you have an idea for a new component or pattern that’s not already on the list, [see how to propose a component or pattern](/community/propose-a-component-or-pattern/).
+If you have an idea for a new component or pattern that’s not already discussed, [see how to propose a component or pattern](/community/propose-a-component-or-pattern/).
 
 ## Plan your work with the Design System team
 
@@ -25,7 +25,7 @@ During the meeting, the team will help you to:
 - discuss any support you might need
 - identify a contact for you to work with in the Design System team
 
-If you’re happy to go ahead, the team will assign you to the issue as a contributor.
+If you’re happy to go ahead, the team will assign you to the contribution.
 
 ## Research and develop your contribution
 

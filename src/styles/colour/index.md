@@ -4,7 +4,7 @@ description: Always use the GOV.UK colour palette
 section: Styles
 theme: Visual elements
 aliases: palette
-backlogIssueId: 38
+discussionId: 6102
 layout: layout-pane.njk
 order: 12
 ---

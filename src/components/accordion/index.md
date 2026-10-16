@@ -3,7 +3,7 @@ title: Accordion
 description: The accordion component lets users show and hide sections of related content on a page
 section: Components
 aliases:
-backlogIssueId: 1
+discussionId: 6119
 layout: layout-pane.njk
 ---
 
@@ -121,7 +121,7 @@ Disabling controls is normally confusing for users. If there is no content for a
 
 We updated this component in December 2021 to solve an accessibility issue where the buttons and section labels might be mistaken for links.
 
-[Read about the research and development that went into improving the accordion component](https://github.com/alphagov/govuk-design-system-backlog/issues/1#issuecomment-995675898).
+[Read about the research and development that went into improving the accordion component](https://github.com/alphagov/govuk-design-system/discussions/6119#discussioncomment-18813142).
 
 The team made sure the component is accessible, for example that users can interact with it using just the keyboard.
 
@@ -139,6 +139,6 @@ We want to hear about any user research done in this area so we can identify pot
 
 Adding a summary line with more than a few short words will likely make the button text too long, particularly for users of screen readers.
 
-We need to better understand when service teams use summary lines and how this affects users of screen readers. [Share your findings and research with us](https://github.com/alphagov/govuk-design-system-backlog/issues/1).
+We need to better understand when service teams use summary lines and how this affects users of screen readers. [Share your findings and research with us](https://github.com/alphagov/govuk-design-system/discussions/6119).
 
 We want to get feedback to inform us what to do next.

@@ -2,7 +2,7 @@
 title: Type scale
 description: The type scale underpins all of the text styles on GOV.UK
 section: Styles
-backlogIssueId: 64
+discussionId: 6027
 theme: Typography
 layout: layout-pane.njk
 order: 6
