@@ -9,6 +9,14 @@ order: 10
 
 See our latest releases and updates.
 
+## October 2026
+
+We’ve released GOV.UK Frontend v6.6.0
+
+This release includes improvements to how the [Character count component](/components/character-count/) works, along with some minor fixes.
+
+Read the [full release notes](https://github.com/alphagov/govuk-frontend/releases/tag/v6.6.0) to see what’s changed.
+
 ## August 2026
 
 We’ve released GOV.UK Frontend v6.5.0.

@@ -4,7 +4,7 @@ description: This is a page that tells someone a service is unavailable. It shou
 section: Patterns
 theme: Pages
 aliases: "503"
-backlogIssueId: 124
+discussionId: 6030
 layout: layout-pane.njk
 ---
 

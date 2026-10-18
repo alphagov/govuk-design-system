@@ -4,7 +4,7 @@ description: A starting point for your digital service on GOV.UK
 section: Patterns
 theme: Pages
 aliases:
-backlogIssueId: 171
+discussionId: 5986
 layout: layout-pane.njk
 ---
 
@@ -50,11 +50,11 @@ Step by step navigation is displayed in 2 ways.
 
 1. On the right hand sidebar of content pages that are part of the step by step navigation.
 
-   ![A screenshot showing an example of the step by step as a sidebar](step-by-step-sidebar.png)
+![A screenshot showing an example of the step by step as a sidebar](step-by-step-sidebar.png)
 
 2. As a standalone page.
 
-   ![A screenshot showing an example of the step by step navigation pattern](step-by-step-standalone-page.png)
+![A screenshot showing an example of the step by step navigation pattern](step-by-step-standalone-page.png)
 
 You can use [install the 'Step By Step' plugin](https://prototype-kit.service.gov.uk/install-and-use-plugins/) in the GOV.UK Prototype Kit to prototype a step by step.
 

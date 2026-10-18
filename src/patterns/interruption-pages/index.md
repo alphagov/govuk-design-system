@@ -3,8 +3,8 @@ title: Interruption pages
 description: Pause the user journey to give them important information
 section: Patterns
 theme: Pages
-aliases: 
-backlogIssueId: 27
+aliases:
+discussionId: 6109
 layout: layout-pane.njk
 ---
 
@@ -67,4 +67,4 @@ Guidance in this pattern is based on:
 
 We’d like to get more input from service teams to help us further improve this pattern.
 
-See our [‘Interruption card’ discussion on GitHub](https://github.com/alphagov/govuk-design-system-backlog/issues/27) to see some of the areas we're interested in learning more about.
+See our [‘Interruption card’ discussion on GitHub](https://github.com/alphagov/govuk-design-system/discussions/6109) to see some of the areas we're interested in learning more about.

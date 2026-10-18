@@ -3,7 +3,7 @@ title: Images
 description: Only use images if there’s a real user need
 section: Styles
 theme: Visual elements
-backlogIssueId: 70
+discussionId: 6013
 layout: layout-pane.njk
 showPageNav: true
 order: 13
@@ -229,4 +229,4 @@ We’re looking for feedback about any of these areas:
 - how you create and choose images to use in your service
 - how you implement images (for frontend performance)
 
-Give us your feedback and examples by [posting a comment on the ‘Images’ discussion on GitHub](https://github.com/alphagov/govuk-design-system-backlog/issues/70).
+Give us your feedback and examples by [posting a comment on the ‘Images’ discussion on GitHub](https://github.com/alphagov/govuk-design-system/discussions/6013).

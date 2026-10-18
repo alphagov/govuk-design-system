@@ -3,7 +3,7 @@ title: Cookie banner
 description: Allow users to accept or reject cookies which are not essential to making your service work.
 section: Components
 aliases: Cookies banner, consent banner, GDPR banner, tracking banner, analytics banner
-backlogIssueId: 12
+discussionId: 6113
 layout: layout-pane.njk
 ---
 

@@ -3,7 +3,7 @@ title: Panel
 description: Use the Panel component to display important information in within confirmation and interruption pages
 section: Components
 aliases: confirmation box, results box, reference number, application complete, application number, interruption panel
-backlogIssueId: 55
+discussionId: 6050
 layout: layout-pane.njk
 ---
 

@@ -4,7 +4,7 @@ description: Create a starting point for your digital service on GOV.UK
 section: Patterns
 theme: Help users to…
 aliases: start page, start pages
-backlogIssueId: 111
+discussionId: 6038
 layout: layout-pane.njk
 ---
 

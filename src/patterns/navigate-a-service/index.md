@@ -4,7 +4,7 @@ description: Help users know they’re using your service and navigate around it
 section: Patterns
 theme: Help users to…
 aliases:
-backlogIssueId: 76
+discussionId: 6062
 layout: layout-pane.njk
 ---
 

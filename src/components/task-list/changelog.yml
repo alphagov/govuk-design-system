@@ -1,0 +1,6 @@
+- date: 2023-12-08
+  version: 5.0.0
+  description: Component introduced.
+- date: 2024-08-09
+  version: 5.5.0
+  description: Fixed task list rows being rendered when no content was provided for them.

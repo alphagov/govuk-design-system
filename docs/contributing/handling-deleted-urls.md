@@ -29,12 +29,14 @@ You should use archiving when you have consciously removed a page or section or 
 
 1. Go to our [netlify.toml file](../../netlify.toml)
 2. Under the comment `# Redirect pages that have moved` add the following:
-   ```plaintext
-   [[redirects]]
-      from = "/your/old/url/"
-      to = "/your/new/url/"
-      status = 301
-   ```
+
+```plaintext
+[[redirects]]
+  from = "/your/old/url/"
+  to = "/your/new/url/"
+  status = 301
+```
+
 3. Test that the URL is working correctly by creating a PR and testing the redirect in the netlify preview
 
 ## Creating an archive page
@@ -50,14 +52,15 @@ Along with the pull request to delete or rename the URL you want to change, you 
 1. If the URL being archived is from a folder with an `index.md` file, you will need to replace the folder with a `.md file` of the same name - for example `/juggling/index.md` becomes `juggling.md`.
 2. In the file you want to archive, keep it in the same location, but replace the contents with the following code:
 
-   ```plaintext
-   ---
-   title: {Title of the page you are archiving}
-   layout: layout-archived.njk
-   ignoreInSitemap: true
-   ---
-   ```
+```plaintext
+---
+title: {Title of the page you are archiving}
+layout: layout-archived.njk
+ignoreInSitemap: true
+---
+```
 
 3. Below the new metadata you’ve added, write some brief content explaining to users that you have archived or renamed the page. As a minimum, you should include:
-   - why the page has been archived
-   - the new location of the current or updated information
+
+- why the page has been archived
+- the new location of the current or updated information

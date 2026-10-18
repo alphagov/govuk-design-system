@@ -4,7 +4,7 @@ description: This is a page that tells someone there is something wrong with the
 section: Patterns
 theme: Pages
 aliases: "500"
-backlogIssueId: 129
+discussionId: 6024
 layout: layout-pane.njk
 ---
 

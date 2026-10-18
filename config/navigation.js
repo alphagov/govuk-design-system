@@ -1,7 +1,7 @@
 /**
  * Navigation menu items
  *
- * @type {{sections: NavigationItem[], subpages: NavigationItem[]}}
+ * @type {{sections: NavigationItem[], subpages: SubpageItem[]}}
  */
 const config = {
   // Top level sections of the website
@@ -35,7 +35,13 @@ const config = {
   subpages: [
     {
       label: 'History',
-      url: 'history'
+      url: 'history',
+      pageTitle: 'Change history'
+    },
+    {
+      label: 'Use with Nunjucks',
+      url: 'nunjucks',
+      pageTitle: 'Nunjucks macro options'
     }
   ]
 }
@@ -58,4 +64,11 @@ module.exports = config
  * @property {string[]} [headings] - Markdown extracted headings (optional)
  * @property {string} [order] - Menu item sort order (optional)
  * @property {string} [theme] - Menu heading to group by (optional)
+ */
+
+/**
+ * @typedef {object} SubpageItem
+ * @property {string} label - Navigation item text
+ * @property {string} url - URL path without leading slash
+ * @property {string} pageTitle - Title used on page, without parent names eg: the component name
  */

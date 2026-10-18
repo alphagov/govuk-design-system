@@ -3,7 +3,7 @@ title: Character count
 description: Tell users how many characters or words they can enter into a textarea
 section: Components
 aliases: word count
-backlogIssueId: 67
+discussionId: 6043
 layout: layout-pane.njk
 ---
 
@@ -58,7 +58,9 @@ If you're asking more than one question on the page, do not set the contents of 
 
 In some cases it may be more helpful to show a word count. For example, if your question requires a longer answer.
 
-Do this by setting `data-maxwords` in the component markup. For example, `data-maxwords="150"` will set a word limit of 150.
+Do this by setting `data-count-type="words"` and then `data-maxlength` in the component markup.
+
+For example, for a word limit of 150 set these options as: `data-count-type="words" data-maxlength="150"`.
 
 {{ example({ group: "components", item: "character-count", example: "word-count", html: true, nunjucks: true, open: false }) }}
 
@@ -104,7 +106,7 @@ For example, ‘Summary must be 400 characters or less’.
 
 In 2017, the Government Digital Service (GDS) [developed and tested this component](https://github.com/alphagov/govuk-design-system/wiki/Character-count-testing-and-user-research) in a prototype of the ‘Apply for a temporary event notice’ service. During this research, the component was tested with 17 users, including those with low digital skills and users with disabilities.
 
-In 2022, the GOV.UK Design System team [updated the component to make it more accessible](https://github.com/alphagov/govuk-design-system-backlog/issues/67#issuecomment-1131719459), stopping the character count being announced twice by some screenreaders.
+In 2022, the GOV.UK Design System team [updated the component to make it more accessible](https://github.com/alphagov/govuk-design-system/discussions/6043#discussioncomment-18811500), stopping the character count being announced twice by some screenreaders.
 
 ### Known issues and gaps
 

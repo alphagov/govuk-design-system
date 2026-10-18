@@ -110,7 +110,7 @@ When we start new work, we’ll choose from this list of priorities first.
 
 ## Other components and patterns
 
-Browse our [list of discussions on GitHub](https://github.com/orgs/alphagov/projects/43/views/1) to find patterns and components that other teams have shared. Any examples, use cases and research you can share would be very valuable for other teams in government looking for guidance or inspiration.
+Search the [discussions on GitHub](https://github.com/alphagov/govuk-design-system/discussions/categories/community-backlog) to find patterns and components that other teams have shared. Any examples, use cases and research you can share would be very valuable for other teams in government looking for guidance or inspiration.
 
 If you can’t find what you’re looking for, you can [propose a component or pattern](/community/propose-a-component-or-pattern/).
 

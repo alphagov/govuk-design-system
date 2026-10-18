@@ -1,5 +1,6 @@
 ---
 title: Feedback change history
+parent: Feedback
 layout: layout-pane.njk
 ---
 

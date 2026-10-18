@@ -6,6 +6,7 @@
 {# If the theme ends in '…', then we nest the caption inside the H1 so that the
   H1 becomes e.g. 'Ask users for dates'. Otherwise, we put it before the H1. #}
 {% set includeThemeInPageHeading = theme and "…" in theme %}
+{% set currentSubpage = getCurrentSubpage() %}
 
 {% block container %}
 <div class="app-split-pane app-width-container app-container-wrapper">
@@ -19,12 +20,16 @@
     }) }}
     <main id="main-content" class="app-content" role="main">
       <h1 class="govuk-heading-xl {%- if status %} govuk-!-margin-bottom-5{% endif %}">
-        {% if includeThemeInPageHeading %}
+        {% if includeThemeInPageHeading or currentSubpage %}
         <span class="govuk-caption-xl">
+          {% if includeThemeInPageHeading %}
           {{ theme | replace("…", "") }}
+          {% elif currentSubpage %}
+          {{ parent }}
+          {% endif %}
         </span>
         {% endif %}
-        {{ title }}
+        {{ currentSubpage.pageTitle if currentSubpage else title }}
       </h1>
 
       {# Status callout #}
@@ -39,7 +44,7 @@
             {% for subpage in subpages %}
               <li class="app-page-navigation__item">
                 <a class="govuk-link" href="/{{ permalink }}/{{ subpage.url}}/">
-                  {{ subpage.label }}
+                  {{ subpage.label }}<span class="govuk-visually-hidden"> for {{ subitem.label }}</span>
                 </a>
               </li>
             {% endfor %}
@@ -59,6 +64,10 @@
       {% endif %}
 
       <div class="app-prose-scope">
+        {% if currentSubpage and currentSubpage.url == 'nunjucks' %}
+          {% include "_nunjucks-intro.njk" %}
+        {% endif %}
+
         {{ contents | safe }}
       </div>
 

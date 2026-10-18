@@ -1,32 +1,10 @@
 @use "pkg:govuk-frontend/base" as *;
 
-.app-options {
-  margin-bottom: govuk-spacing(2);
-  padding: 0;
-
-  @include govuk-media-query($from: tablet) {
-    margin-bottom: govuk-spacing(3);
-  }
-}
-
-.app-options__table {
-  max-width: 38em;
-
-  @include govuk-media-query(mobile) {
-    table-layout: fixed;
-
-    .govuk-table__header,
-    .govuk-table__cell {
-      padding-right: govuk-spacing(2);
-
-      // Automatic wrapping for unbreakable option names
-      overflow-wrap: break-word;
-    }
-  }
-}
-
-.app-options__limit-table-cell {
-  @include govuk-media-query(mobile) {
-    width: 29%;
+// Specific styling for Nunjucks options table option 'Name' column to give
+// Nunjucks option names some space in the table without getting squashed by
+// the descriptions.
+.app-options-table__header {
+  @include govuk-media-query($from: mobile) {
+    width: 30%;
   }
 }

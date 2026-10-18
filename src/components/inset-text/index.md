@@ -3,7 +3,7 @@ title: Inset text
 description: Use the inset text component to differentiate a block of text from the content that surrounds it
 section: Components
 aliases: highlighted text, callout
-backlogIssueId: 136
+discussionId: 5993
 layout: layout-pane.njk
 ---
 

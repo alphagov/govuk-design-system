@@ -4,7 +4,7 @@ description: Help users enter a valid phone number
 section: Patterns
 theme: Ask users for…
 aliases: phone numbers, telephone
-backlogIssueId: 101
+discussionId: 6023
 layout: layout-pane.njk
 redirects:
 - /patterns/telephone-numbers

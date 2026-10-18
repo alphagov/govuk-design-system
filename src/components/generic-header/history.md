@@ -1,5 +1,6 @@
 ---
 title: Generic header change history
+parent: Generic header
 layout: layout-pane.njk
 ---
 
