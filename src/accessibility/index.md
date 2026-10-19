@@ -17,6 +17,10 @@ Using the GOV.UK Design System in a service does not immediately make that servi
 
 [Our accessibility statement](/accessibility-statement/) helps not just end users but also service teams to understand how accessibile GOV.UK Frontend, its documentation website and this website are.
 
+## Addressing accessibility issues
+
+Find out how to investigate [accessibility issues in your service](/accessibility/address-issues/) and work out the best way to address them.
+
 ## Accessibility in the Service Manual
 
 The [Accessibility and assisted digital guidance in the Service Manual](https://www.gov.uk/service-manual/helping-people-to-use-your-service) outlines what you need to know and what you need to do to ensure your service is accessible.
