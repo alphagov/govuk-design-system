@@ -15,6 +15,8 @@ The accordion component lets users show and hide sections of related content on 
 
 ## When to use this component
 
+This is a content change
+
 Only use an accordion if there's evidence it’s helpful for the user to:
 
 - see an overview of multiple, related sections of content
