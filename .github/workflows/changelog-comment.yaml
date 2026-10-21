@@ -55,7 +55,7 @@ jobs:
             const { prepareCommentBody, comment } = await import('${{ github.workspace }}/.github/workflows/scripts/index.mjs')
             const outro = `Keeping a page's change history up to date means we know when the page changed and what changed. Not every change to a page warrants a new change history entry.
 
-            Read our [guidance on change history maintenance (internal to team)](https://gov-uk.atlassian.net/wiki/spaces/GDS/pages/5773131777/How+to+add+changelog+entries) for details on how ot write new changelog entries and if a change to a page warrants a new entry.
+            Read our [guidance on change history maintenance (internal to team)](https://gov-uk.atlassian.net/wiki/spaces/GDS/pages/5773131777/How+to+add+changelog+entries) for details on how to write new changelog entries and if a change to a page warrants a new entry.
 
             If you are an external contributor, the team can help you with this.`
 
