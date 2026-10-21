@@ -1,7 +1,8 @@
 name: Check changelog updated
 
 on:
-  pull_request:
+  workflow_call:
+  workflow_dispatch:
 
 jobs:
   changelog_change_comment:

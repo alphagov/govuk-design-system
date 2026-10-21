@@ -79,3 +79,14 @@ jobs:
       - name: Task warnings
         if: steps.task.outcome == 'failure'
         run: echo "::warning title=${{ matrix.task.description }} task failed::Check has been temporarily ignored"
+
+  check-changelog-updates:
+    name: Check changelog updates
+    needs: [build]
+
+    permissions:
+      contents: read
+      pull-requests: write
+    # Run existing "Changelog comment" workflow
+    # (after only install has been cached)
+    uses: ./.github/workflows/changelog-comment.yaml
