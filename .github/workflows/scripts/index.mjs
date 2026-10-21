@@ -22,7 +22,15 @@ export function getFilesFromDiff(glob, status) {
     (change) => matchesGlob(change.fileName, glob) && change.status === status
   )
 
-  return files.length ? files.map((change) => change.fileName) : false
+  if (files.length) {
+    console.log('Matched workflow against the following name-statuses:')
+    console.log(files)
+
+    return files.map((change) => change.fileName)
+  } else {
+    console.log('No files matched.')
+    return false
+  }
 }
 
 /**
@@ -59,7 +67,14 @@ export function getFilesWithUnchangedSiblings(
     )
   })
 
-  return childFiles.length ? childFiles : false
+  if (childFiles.length) {
+    console.log('Found the following files with unchanged siblings:')
+    console.log(childFiles)
+    return childFiles
+  } else {
+    console.log('No unchanged siblings found')
+    return false
+  }
 }
 
 /**
