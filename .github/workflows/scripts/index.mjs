@@ -18,6 +18,9 @@ export function getFilesFromDiff(glob, status) {
   const changes = processDiffTxt()
   const globbedFiles = globSync(glob)
 
+  console.log(changes)
+  console.log(globbedFiles)
+
   const files = changes.filter(
     (change) =>
       !!globbedFiles.find((file) => file === change.fileName) &&
