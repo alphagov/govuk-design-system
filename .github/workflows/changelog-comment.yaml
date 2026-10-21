@@ -26,8 +26,8 @@ jobs:
       - name: Build
         uses: ./.github/workflows/actions/install-and-build
 
-      - name: Generate name-status diff
-        run: git diff --name-status ${{ github.event.pull_request.base.sha }} ${{ github.sha }} > diff.txt
+      - name: Generate diff
+        uses: ./.github/workflows/actions/generate-diff
 
       - name: Get changed pages and changelogs
         id: get-changed-things
