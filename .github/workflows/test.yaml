@@ -90,3 +90,14 @@ jobs:
     # Run existing "Changelog comment" workflow
     # (after only install has been cached)
     uses: ./.github/workflows/changelog-comment.yaml
+
+  check-deleted-pages:
+    name: Check deleted pages
+    needs: [build]
+
+    permissions:
+      contents: read
+      pull-requests: write
+    # Run existing "Deleted pages comment" workflow
+    # (after only install has been cached)
+    uses: ./.github/workflows/deleted-pages-comment.yaml
