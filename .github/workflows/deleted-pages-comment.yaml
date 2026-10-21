@@ -55,7 +55,7 @@ jobs:
             const { prepareCommentBody, comment } = await import('${{ github.workspace }}/.github/workflows/scripts/index.mjs')
             let outro = "If you have not already done so, please read our documentation on [handling deleted URLs](https://github.com/alphagov/govuk-design-system/blob/main/docs/contributing/handling-deleted-urls.md) and ensure the above deleted pages are handled properly."
 
-            if (${{ steps.get-netlify-toml.outputs.result }} == 'false') {
+            if (!${{ steps.get-netlify-toml.outputs.result }}) {
               outro = `There has also been no change detected to netlify.toml config file, meaning no redirects have been setup for any deleted pages.
 
               ${outro}`
