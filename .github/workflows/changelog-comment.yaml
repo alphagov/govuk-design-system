@@ -1,0 +1,70 @@
+name: Check changelog updated
+
+on:
+  pull_request:
+
+jobs:
+  changelog_change_comment:
+    name: Changelog change comment
+    runs-on: 'ubuntu-24.04'
+    permissions:
+      contents: read
+      pull-requests: write
+
+    # Skip workflows other than PRs such as merges to `main` but
+    # also when token write permissions are unavailable on forks
+    if: ${{ github.event.pull_request && !github.event.pull_request.head.repo.fork }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7.0.1
+        # Need to set fetch depth to 0 to get access to the base sha for
+        # generating the name status diff
+        with:
+          fetch-depth: 0
+
+      - name: Build
+        uses: ./.github/workflows/actions/install-and-build
+
+      - name: Generate name-status diff
+        run: git diff --name-status ${{ github.event.pull_request.base.sha }} ${{ github.sha }} > diff.txt
+
+      - name: Get changed pages and changelogs
+        id: get-changed-things
+        uses: actions/github-script@v9.0.0
+        with:
+          script: |
+            const { getFilesFromDiff } = await import('${{ github.workspace }}/.github/workflows/scripts/index.mjs')
+            return getFilesFromDiff('src/**/+(index.md|changelog.yml)', 'M')
+
+      - name: Compare pages and changelogs to check if all page changes have an equivalent changelog change
+        if: steps.get-changed-things.outputs.result != 'false'
+        id: pages-with-changelogs
+        uses: actions/github-script@v9.0.0
+        with:
+          script: |
+            const { getFilesWithUnchangedSiblings } = await import('${{ github.workspace }}/.github/workflows/scripts/index.mjs')
+            return getFilesWithUnchangedSiblings(${{ steps.get-changed-things.outputs.result }}, '${{ github.workspace }}', 'index.md', 'changelog.yml')
+
+      - name: Post a comment on the PR if a page has changed but that page's changelog hasn't
+        if: steps.pages-with-changelogs.outputs.result != 'false' && steps.get-changed-things.outputs.result != 'false'
+        id: post-comment
+        uses: actions/github-script@v9.0.0
+        with:
+          script: |
+            const { prepareCommentBody, comment } = await import('${{ github.workspace }}/.github/workflows/scripts/index.mjs')
+            const outro = `Keeping a page's change history up to date means we know when the page changed and what changed. Not every change to a page warrants a new change history entry.
+
+            Read our [guidance on change history maintenance (internal to team)](https://gov-uk.atlassian.net/wiki/spaces/GDS/pages/5773131777/How+to+add+changelog+entries) for details on how ot write new changelog entries and if a change to a page warrants a new entry.
+
+            If you are an external contributor, the team can help you with this.`
+
+            const commentBody = prepareCommentBody(
+              "It looks like this pull request makes a change to one or more pages but doesn't update those page's change histories (changelog.yml):",
+              ${{ steps.pages-with-changelogs.outputs.result }},
+              outro)
+
+            await comment({ github, context },
+              ${{ github.event.pull_request.number }},
+              'pages-changed-without-changelog-change',
+              commentBody)
