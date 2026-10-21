@@ -1,0 +1,17 @@
+name: Generate diff
+
+runs:
+  using: composite
+
+  steps:
+    - name: Restore diff
+      uses: actions/cache@v6.1.0
+      id: diff-cache
+      with:
+        key: diff-cache-${{ runner.os }}-${{ github.sha }}
+        path: diff.txt
+
+    - name: Generate name-status diff
+      if: steps.diff-cache.outputs.cache-hit != 'true'
+      shell: bash
+      run: git diff --name-status ${{ github.event.pull_request.base.sha }} ${{ github.sha }} > diff.txt

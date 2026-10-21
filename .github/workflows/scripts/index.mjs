@@ -1,4 +1,5 @@
-import { existsSync, globSync, readFileSync } from 'fs'
+import { existsSync, readFileSync } from 'fs'
+import { matchesGlob } from 'path'
 
 import outdent from 'outdent'
 
@@ -16,12 +17,9 @@ import outdent from 'outdent'
 export function getFilesFromDiff(glob, status) {
   // Assumes a name status diff text file has already been generated
   const changes = processDiffTxt()
-  const globbedFiles = globSync(glob)
 
   const files = changes.filter(
-    (change) =>
-      !!globbedFiles.find((file) => file === change.fileName) &&
-      change.status === status
+    (change) => matchesGlob(change.fileName, glob) && change.status === status
   )
 
   return files.length ? files.map((change) => change.fileName) : false
