@@ -1,0 +1,78 @@
+name: Check changelog updated
+
+on:
+  workflow_call:
+  workflow_dispatch:
+
+jobs:
+  changelog_change_comment:
+    name: Deleted pages
+    runs-on: 'ubuntu-24.04'
+    permissions:
+      contents: read
+      pull-requests: write
+
+    # Skip workflows other than PRs
+    if: ${{ github.event.pull_request }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7.0.1
+        # Need to set fetch depth to 0 to get access to the base sha for
+        # generating the name status diff
+        with:
+          fetch-depth: 0
+
+      - name: Build
+        uses: ./.github/workflows/actions/install-and-build
+
+      - name: Generate diff
+        uses: ./.github/workflows/actions/generate-diff
+
+      - name: Get deleted pages
+        id: get-deleted-pages
+        uses: actions/github-script@v9.0.0
+        with:
+          script: |
+            const { getFilesFromDiff } = await import('${{ github.workspace }}/.github/workflows/scripts/index.mjs')
+            return getFilesFromDiff('src/**/index.md', 'D')
+
+      - name: Get netlify.toml status
+        if: steps.get-deleted-pages.outputs.result != 'false'
+        id: get-netlify-toml
+        uses: actions/github-script@v9.0.0
+        with:
+          script: |
+            const { getFilesFromDiff } = await import('${{ github.workspace }}/.github/workflows/scripts/index.mjs')
+            return getFilesFromDiff('netlify.toml', 'M')
+
+      - name: Post a comment on the PR if a page has been deleted
+        # Only attempt to post a comment if the PR is not a fork and therefore
+        # won't have permission to post comments
+        if: steps.get-deleted-pages.outputs.result != 'false' && !github.event.pull_request.head.repo.fork
+        id: post-comment
+        uses: actions/github-script@v9.0.0
+        with:
+          script: |
+            const { prepareCommentBody, comment } = await import('${{ github.workspace }}/.github/workflows/scripts/index.mjs')
+            let outro = "If you have not already done so, please read our documentation on [handling deleted URLs](https://github.com/alphagov/govuk-design-system/blob/main/docs/contributing/handling-deleted-urls.md) and ensure the above deleted pages are handled properly."
+
+            if (!${{ steps.get-netlify-toml.outputs.result }}) {
+              outro = `There has also been no change detected to netlify.toml config file, meaning no redirects have been setup for any deleted pages.
+
+              ${outro}`
+            }
+
+            const commentBody = prepareCommentBody(
+              "It looks like this pull request deletes one or more pages:",
+              ${{ steps.get-deleted-pages.outputs.result }},
+              outro)
+
+            await comment({ github, context },
+              ${{ github.event.pull_request.number }},
+              'pages-deleted-without-redirect',
+              commentBody)
+
+      - name: Explicitly fail if there are deleted pages and no netlify.toml changes
+        if: steps.get-deleted-pages.outputs.result != 'false' && steps.get-netlify-toml.outputs.result == 'false'
+        run: exit 1

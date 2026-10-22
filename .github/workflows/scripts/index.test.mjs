@@ -39,20 +39,36 @@ describe('Github action helpers', () => {
       jest.mocked(fs.readFileSync).mockReturnValue(`
         M       ${mockFilesList[0]}
         M       ${mockFilesList[1]}
+        M       ${mockFilesList[2]}
+        D       ${mockFilesList[3]}
       `)
-
-      jest.mocked(fs.globSync).mockReturnValue(mockFilesList)
     })
 
     it('gets files from a name status diff based on a pattern and a status letter', () => {
-      expect(getFilesFromDiff('*', 'M')).toEqual([
+      expect(getFilesFromDiff('**', 'M')).toEqual([
+        mockFilesList[0],
+        mockFilesList[1],
+        mockFilesList[2]
+      ])
+    })
+
+    it('gets only specific files from a name status diff based on the pattern', () => {
+      expect(getFilesFromDiff('**/breadcrumbs/**', 'M')).toEqual([
         mockFilesList[0],
         mockFilesList[1]
       ])
     })
 
-    it('returns `false` if none of the files match the passed status letter', () => {
-      expect(getFilesFromDiff('*', 'D')).toEqual(false)
+    it('gets only specific files from a name status diff based on the status', () => {
+      expect(getFilesFromDiff('**', 'D')).toEqual([mockFilesList[3]])
+    })
+
+    it('returns `false` if nothing matches the pattern', () => {
+      expect(getFilesFromDiff('**/pizza/**', 'M')).toEqual(false)
+    })
+
+    it('returns `false` if nothing matches the status', () => {
+      expect(getFilesFromDiff('**', 'A')).toEqual(false)
     })
   })
 

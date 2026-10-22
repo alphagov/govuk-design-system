@@ -1,4 +1,5 @@
-import { existsSync, globSync, readFileSync } from 'fs'
+import { existsSync, readFileSync } from 'fs'
+import { matchesGlob } from 'path'
 
 import outdent from 'outdent'
 
@@ -16,15 +17,20 @@ import outdent from 'outdent'
 export function getFilesFromDiff(glob, status) {
   // Assumes a name status diff text file has already been generated
   const changes = processDiffTxt()
-  const globbedFiles = globSync(glob)
 
   const files = changes.filter(
-    (change) =>
-      !!globbedFiles.find((file) => file === change.fileName) &&
-      change.status === status
+    (change) => matchesGlob(change.fileName, glob) && change.status === status
   )
 
-  return files.length ? files.map((change) => change.fileName) : false
+  if (files.length) {
+    console.log('Matched workflow against the following name-statuses:')
+    console.log(files)
+
+    return files.map((change) => change.fileName)
+  } else {
+    console.log('No files matched.')
+    return false
+  }
 }
 
 /**
@@ -61,7 +67,14 @@ export function getFilesWithUnchangedSiblings(
     )
   })
 
-  return childFiles.length ? childFiles : false
+  if (childFiles.length) {
+    console.log('Found the following files with unchanged siblings:')
+    console.log(childFiles)
+    return childFiles
+  } else {
+    console.log('No unchanged siblings found')
+    return false
+  }
 }
 
 /**
