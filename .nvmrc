@@ -1,6 +1,8 @@
-24
-# When updating this version, remember to update:
-# - the 'engines' fields in the `package.json` file
-# - `package-lock.json` by running `npm install`
-# - the `[node]` section of the `.browserslistrc` file
-# - the `@types/node` package
+24.22
+# When updating the Node version, do the following:
+# - run `nvm use` to update your local version of Node
+# - run `npm pkg set "engines.node"="^$(node -v | cut -c2- )"` to update the 'engines' field in the root `package.json`
+# - run `npm install @types/node@<MAJOR>` to update types. NOTE: Currently this buggily hoists the package to `dependencies`.
+#   This is fixed/overwritten by the next step.
+# - run `npm install` to update `package-lock.json`
+# - check the `[node]` section of the various `.browserslistrc` files of the project match the major version
