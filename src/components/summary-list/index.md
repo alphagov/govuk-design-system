@@ -58,6 +58,24 @@ If you’re showing a mix of rows (where some rows include actions and some do n
 
 {{ example({ group: "components", item: "summary-list", example: "mixed-actions", html: true, nunjucks: true, open: false }) }}
 
+## Numbers in a summary list
+
+When displaying rows of numbers, you can optionally align the numbers to the right.
+
+{{ example({ group: "components", item: "summary-list", example: "numbers", html: true, nunjucks: true, open: false }) }}
+
+## Custom column widths
+
+You can use the [width override classes](/styles/layout/#width-override-classes) to set the width of summary list columns.
+
+{{ example({ group: "components", item: "summary-list", example: "column-widths", html: true, nunjucks: true, open: false }) }}
+
+If the [width override classes](/styles/layout/#width-override-classes) do not meet your needs you can create your own width classes and apply them to the cells in the summary list. These can be added using the `classes` option in the Nunjucks macro or adding the class directly to the individual elements within `govuk-summary-list__row` as below.
+
+To learn more about this, read guidance on [extending and modifying components in production](/get-started/extending-and-modifying-components/).
+
+{{ example({ group: "components", item: "summary-list", example: "column-widths-custom-classes", html: true, nunjucks: true, open: false }) }}
+
 ### Removing the borders
 
 The summary list includes separating borders to help users by joining the information on each row and its action together.
