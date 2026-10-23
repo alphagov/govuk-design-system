@@ -5,6 +5,7 @@ on:
 
   push:
     branches:
+      - main
       - 'feature/**'
       - 'v[0-9]'
 
