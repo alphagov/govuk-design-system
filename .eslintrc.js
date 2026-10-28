@@ -12,7 +12,7 @@ module.exports = {
     {
       extends: [
         'eslint:recommended',
-        'plugin:import/recommended',
+        'plugin:import-x/recommended',
         'plugin:jsdoc/recommended-typescript-flavor',
         'plugin:n/recommended',
         'plugin:promise/recommended',
@@ -28,10 +28,10 @@ module.exports = {
       parserOptions: {
         ecmaVersion: 'latest'
       },
-      plugins: ['import', 'jsdoc', 'n', 'promise'],
+      plugins: ['import-x', 'jsdoc', 'n', 'promise'],
       rules: {
         // Check import or require statements are A-Z ordered
-        'import/order': [
+        'import-x/order': [
           'error',
           {
             alphabetize: { order: 'asc' },
@@ -87,7 +87,7 @@ module.exports = {
       // Extensions required for ESM import
       files: ['**/*.mjs'],
       rules: {
-        'import/extensions': [
+        'import-x/extensions': [
           'error',
           'always',
           {
