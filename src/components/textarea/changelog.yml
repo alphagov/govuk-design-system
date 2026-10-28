@@ -4,7 +4,7 @@
 - date: 2018-09-10
   version: 2.0.0
   description: Fixed textarea being resizable beyond container bounds by only allowing vertical resizing.
-- date: 2018-09-19
+- date: 2018-11-19
   version: 2.4.0
   description: Added option to set classes on component's form group.
 - date: 2018-10-25
