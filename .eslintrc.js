@@ -107,7 +107,8 @@ module.exports = {
     {
       files: ['**/*.test.{cjs,js,mjs}'],
       env: {
-        jest: true
+        jest: true,
+        browser: true
       },
       globals: {
         page: 'readonly',
