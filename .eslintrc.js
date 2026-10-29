@@ -74,7 +74,10 @@ module.exports = {
 
         // Automatically use template strings
         'no-useless-concat': 'error',
-        'prefer-template': 'error'
+        'prefer-template': 'error',
+
+        'no-unused-vars': ['error', { args: 'none' }],
+        'no-redeclare': ['error', { builtinGlobals: false }]
       },
       settings: {
         jsdoc: {
