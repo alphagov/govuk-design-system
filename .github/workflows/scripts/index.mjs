@@ -1,7 +1,7 @@
 import { existsSync, readFileSync } from 'fs'
 import { matchesGlob } from 'path'
 
-import outdent from 'outdent'
+import { outdent } from 'outdent'
 
 /**
  * Returns files from a name status diff that match the passed regex pattern and

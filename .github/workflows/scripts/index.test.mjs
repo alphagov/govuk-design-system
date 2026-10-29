@@ -1,6 +1,6 @@
 import fs from 'fs'
 
-import outdent from 'outdent'
+import { outdent } from 'outdent'
 
 import {
   getFilesFromDiff,
