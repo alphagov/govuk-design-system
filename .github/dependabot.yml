@@ -22,7 +22,6 @@ updates:
         patterns:
           - 'eslint'
           - 'eslint-*'
-          - 'standard'
           - 'stylelint'
           - 'stylelint-*'
           - 'typescript'
