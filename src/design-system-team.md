@@ -29,7 +29,6 @@ If you want to contact the team you can [get in touch via email or Slack](/conta
 - Hazal Arpalikli – Senior Interaction Designer
 - Kam Nijjar – Associate Delivery Manager
 - Kim 'beeps' Grey – Senior Frontend Developer
-- Lamiece Hassan – User Researcher
 - Lewis Darlow – Interaction Designer
 - Lou Knowles – Delivery Manager
 - Mia Allers – Senior Graphic Designer
