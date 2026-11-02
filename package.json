@@ -41,7 +41,7 @@
     "lunr": "^2.3.9"
   },
   "devDependencies": {
-    "@axe-core/puppeteer": "^4.13.0",
+    "@axe-core/puppeteer": "^4.14.0",
     "@babel/core": "^7.29.7",
     "@babel/preset-env": "^7.29.7",
     "@metalsmith/in-place": "^5.0.0",
@@ -94,7 +94,7 @@
     "postcss-markdown": "^2.0.0",
     "postcss-scss": "^4.0.9",
     "prettier": "^3.9.9",
-    "puppeteer": "^25.13.0",
+    "puppeteer": "^25.16.0",
     "rollup": "^4.64.3",
     "sass": "^1.107.0",
     "sitemap": "^9.0.1",
