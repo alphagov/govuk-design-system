@@ -93,7 +93,7 @@
     "outdent": "^0.8.0",
     "postcss-markdown": "^2.0.0",
     "postcss-scss": "^4.0.9",
-    "prettier": "^3.9.9",
+    "prettier": "^3.9.10",
     "puppeteer": "^25.16.0",
     "rollup": "^4.66.0",
     "sass": "^1.107.0",
