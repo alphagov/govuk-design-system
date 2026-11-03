@@ -93,8 +93,7 @@ export default defineConfig([
         {
           args: 'none'
         }
-      ],
-      'no-redeclare': ['error', { builtinGlobals: false }]
+      ]
     },
     settings: {
       jsdoc: {
