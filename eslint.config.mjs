@@ -137,8 +137,9 @@ export default defineConfig([
       JsdocConfigs['flat/recommended-typescript-flavor']
     ],
     rules: {
-      // Babel transpiles ES2020 class fields
+      // Babel transpiles ES2020 class and static fields
       'es-x/no-class-fields': 'off',
+      'es-x/no-class-static-fields': 'off',
 
       // Babel transpiles optional catch binding
       'es-x/no-optional-catch-binding': 'off',
