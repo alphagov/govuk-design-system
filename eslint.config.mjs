@@ -4,6 +4,7 @@ import JsConfigs from '@eslint/js'
 import MarkdownPlugin from '@eslint/markdown'
 import { defineConfig, globalIgnores, includeIgnoreFile } from 'eslint/config'
 import PrettierConfig from 'eslint-config-prettier'
+import ESXPlugin from 'eslint-plugin-es-x'
 import { configs as ImportXConfigs } from 'eslint-plugin-import-x'
 import { configs as JsdocConfigs } from 'eslint-plugin-jsdoc'
 import NodePlugin from 'eslint-plugin-n'
@@ -115,7 +116,50 @@ export default defineConfig([
     }
   },
   {
-    files: ['**/*.test.{cjs,js,mjs}'],
+    // Specifically target our client js
+    files: ['src/javascripts/**/*.mjs'],
+    ignores: ['**/*.test.mjs'],
+    languageOptions: {
+      globals: {
+        ...globals.browser
+      },
+      parserOptions: { ecmaVersion: 'latest' }
+    },
+    extends: [
+      // Peg at ES2015 to adhere to our browser support model for client js
+      ESXPlugin.configs['restrict-to-es2015'],
+      JsdocConfigs['flat/recommended-typescript-flavor']
+    ],
+    rules: {
+      // Babel transpiles ES2020 class fields
+      'es-x/no-class-fields': 'off',
+
+      // JSDoc blocks are mandatory in source code
+      'jsdoc/require-jsdoc': [
+        'error',
+        {
+          enableFixer: false,
+          require: {
+            ClassDeclaration: true,
+            ClassExpression: true,
+            FunctionExpression: true,
+            MethodDefinition: true
+          }
+        }
+      ],
+
+      // JSDoc @param required in (mandatory) blocks but
+      // @param description is necessary in source code
+      'jsdoc/require-param-description': 'warn',
+      'jsdoc/require-param': 'error'
+    }
+  },
+  {
+    files: [
+      '**/*.test.{cjs,js,mjs}',
+      '**/__tests__/**/*.{cjs,js,mjs}',
+      '**/jest/**/*.{cjs,js,mjs}'
+    ],
     languageOptions: {
       globals: {
         page: 'readonly',
