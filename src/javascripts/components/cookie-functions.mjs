@@ -86,7 +86,7 @@ export function getConsentCookie() {
   if (consentCookie) {
     try {
       consentCookieObj = JSON.parse(consentCookie)
-    } catch (error) {
+    } catch {
       return null
     }
   } else {

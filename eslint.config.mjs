@@ -87,7 +87,13 @@ export default defineConfig([
       'no-useless-concat': 'error',
       'prefer-template': 'error',
 
-      'no-unused-vars': ['error', { args: 'none' }],
+      // Give unused vars a pass on method arguments
+      'no-unused-vars': [
+        'error',
+        {
+          args: 'none'
+        }
+      ],
       'no-redeclare': ['error', { builtinGlobals: false }]
     },
     settings: {
@@ -133,6 +139,9 @@ export default defineConfig([
     rules: {
       // Babel transpiles ES2020 class fields
       'es-x/no-class-fields': 'off',
+
+      // Babel transpiles optional catch binding
+      'es-x/no-optional-catch-binding': 'off',
 
       // JSDoc blocks are mandatory in source code
       'jsdoc/require-jsdoc': [
