@@ -1,6 +1,8 @@
+import { fileURLToPath } from 'url'
+
 import JsConfigs from '@eslint/js'
 import MarkdownPlugin from '@eslint/markdown'
-import { defineConfig } from 'eslint/config'
+import { defineConfig, globalIgnores, includeIgnoreFile } from 'eslint/config'
 import PrettierConfig from 'eslint-config-prettier'
 import { configs as ImportXConfigs } from 'eslint-plugin-import-x'
 import { configs as JsdocConfigs } from 'eslint-plugin-jsdoc'
@@ -8,17 +10,14 @@ import NodePlugin from 'eslint-plugin-n'
 import PromisePlugin from 'eslint-plugin-promise'
 import globals from 'globals'
 
-export default defineConfig([
-  // TODO: replace below ignorePatterns with new ESLint ignore setup using
-  // globalIgnores and includeIgnoreFile
-  // ignorePatterns: [
-  //   '**/fixtures/build/**',
+const gitignorePath = [fileURLToPath(new URL('.gitignore', import.meta.url))]
 
-  //   // Enable dotfile linting
-  //   '!.*',
-  //   'node_modules',
-  //   'node_modules/.*'
-  // ],
+export default defineConfig([
+  globalIgnores([
+    // Enable dotfile linting
+    '!.*'
+  ]),
+  includeIgnoreFile(gitignorePath, { gitignoreResolution: true }),
   {
     extends: [
       ImportXConfigs['flat/recommended'],
