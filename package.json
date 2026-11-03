@@ -64,6 +64,7 @@
     "editorconfig-checker": "^7.0.0",
     "eslint": "^10.13.0",
     "eslint-config-prettier": "^10.1.8",
+    "eslint-config-xo": "^7.0.0",
     "eslint-plugin-es-x": "^10.1.0",
     "eslint-plugin-import-x": "^4.17.1",
     "eslint-plugin-jsdoc": "^65.4.2",
@@ -107,7 +108,7 @@
     "stylelint-config-gds": "^3.0.0",
     "stylelint-order": "^8.1.1",
     "tap-mocha-reporter": "^5.0.4",
-    "typescript": "^7.0.2"
+    "typescript": "^6.0.3"
   },
   "optionalDependencies": {
     "@jest/environment": "^30.0.5",
