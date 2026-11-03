@@ -1,9 +1,10 @@
-import { fileURLToPath } from 'url'
+import { fileURLToPath } from 'node:url'
 
 import JsConfigs from '@eslint/js'
 import MarkdownPlugin from '@eslint/markdown'
 import { defineConfig, globalIgnores, includeIgnoreFile } from 'eslint/config'
 import PrettierConfig from 'eslint-config-prettier'
+import xoConfig from 'eslint-config-xo'
 import ESXPlugin from 'eslint-plugin-es-x'
 import { configs as ImportXConfigs } from 'eslint-plugin-import-x'
 import { configs as JsdocConfigs } from 'eslint-plugin-jsdoc'
@@ -19,6 +20,18 @@ export default defineConfig([
     '!.*'
   ]),
   includeIgnoreFile(gitignorePath, { gitignoreResolution: true }),
+  {
+    extends: [
+      ...xoConfig({
+        space: true,
+        semicolon: false,
+        prettier: 'compat'
+      })
+    ],
+    rules: {
+      // Rules we'll keep disabled after XO review to go here
+    }
+  },
   {
     extends: [
       ImportXConfigs['flat/recommended'],
