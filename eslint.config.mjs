@@ -6,6 +6,7 @@ import { configs as ImportXConfigs } from 'eslint-plugin-import-x'
 import { configs as JsdocConfigs } from 'eslint-plugin-jsdoc'
 import NodePlugin from 'eslint-plugin-n'
 import PromisePlugin from 'eslint-plugin-promise'
+import globals from 'globals'
 
 export default defineConfig([
   // TODO: replace below ignorePatterns with new ESLint ignore setup using
@@ -36,8 +37,8 @@ export default defineConfig([
       // https://github.com/eslint/eslint-plugin-markdown#advanced-configuration
       '**/*.md/*.{cjs,js,mjs}'
     ],
-    parserOptions: {
-      ecmaVersion: 'latest'
+    languageOptions: {
+      parserOptions: { ecmaVersion: 'latest' }
     },
     rules: {
       // Check import or require statements are A-Z ordered
@@ -116,14 +117,14 @@ export default defineConfig([
   },
   {
     files: ['**/*.test.{cjs,js,mjs}'],
-    env: {
-      jest: true,
-      browser: true
-    },
-    globals: {
-      page: 'readonly',
-      browser: 'readonly',
-      jestPuppeteer: 'readonly'
+    languageOptions: {
+      globals: {
+        page: 'readonly',
+        browser: 'readonly',
+        jestPuppeteer: 'readonly',
+        ...globals.jest,
+        ...globals.browser
+      }
     }
   },
   {
@@ -134,8 +135,10 @@ export default defineConfig([
   {
     // Assume markdown `*.md` JavaScript code blocks use browser globals
     files: ['**/*.md/*.{cjs,js,mjs}'],
-    env: {
-      browser: true
+    languageOptions: {
+      globals: {
+        ...globals.browser
+      }
     }
   },
   {
