@@ -23,6 +23,8 @@ There are 2 ways to use the phase banner component. You can use HTML or, if you 
 
 Use an alpha banner when your service is in alpha, and a beta banner if your service is in private or public beta.
 
+Only use an alpha banner on prototypes. If people are using your service for real, for example to apply for something, it’s in beta and should show a beta banner. [Find out how the alpha phase works](https://www.gov.uk/service-manual/agile-delivery/how-the-alpha-phase-works) in the GOV.UK Service Manual.
+
 Show the Phase banner inside the `<header>` element, directly after either:
 
 - the [Service navigation component](/components/service-navigation/)
