@@ -1,0 +1,290 @@
+{
+  "document": {
+    "main": "readonly",
+    "upgrade": null
+  },
+  "navigator": {
+    "main": "readonly",
+    "upgrade": false
+  },
+  "window": {
+    "main": "readonly",
+    "upgrade": null
+  },
+  "AbortController": {
+    "main": false,
+    "upgrade": null
+  },
+  "AbortSignal": {
+    "main": false,
+    "upgrade": null
+  },
+  "atob": {
+    "main": false,
+    "upgrade": null
+  },
+  "Blob": {
+    "main": false,
+    "upgrade": null
+  },
+  "BroadcastChannel": {
+    "main": false,
+    "upgrade": null
+  },
+  "btoa": {
+    "main": false,
+    "upgrade": null
+  },
+  "Buffer": {
+    "main": false,
+    "upgrade": null
+  },
+  "ByteLengthQueuingStrategy": {
+    "main": false,
+    "upgrade": null
+  },
+  "clearImmediate": {
+    "main": false,
+    "upgrade": null
+  },
+  "clearInterval": {
+    "main": false,
+    "upgrade": null
+  },
+  "clearTimeout": {
+    "main": false,
+    "upgrade": null
+  },
+  "CloseEvent": {
+    "main": false,
+    "upgrade": null
+  },
+  "CompressionStream": {
+    "main": false,
+    "upgrade": null
+  },
+  "console": {
+    "main": false,
+    "upgrade": null
+  },
+  "CountQueuingStrategy": {
+    "main": false,
+    "upgrade": null
+  },
+  "crypto": {
+    "main": false,
+    "upgrade": null
+  },
+  "Crypto": {
+    "main": false,
+    "upgrade": null
+  },
+  "CryptoKey": {
+    "main": false,
+    "upgrade": null
+  },
+  "CustomEvent": {
+    "main": false,
+    "upgrade": null
+  },
+  "DecompressionStream": {
+    "main": false,
+    "upgrade": null
+  },
+  "DOMException": {
+    "main": false,
+    "upgrade": null
+  },
+  "Event": {
+    "main": false,
+    "upgrade": null
+  },
+  "EventTarget": {
+    "main": false,
+    "upgrade": null
+  },
+  "fetch": {
+    "main": false,
+    "upgrade": null
+  },
+  "File": {
+    "main": false,
+    "upgrade": null
+  },
+  "FormData": {
+    "main": false,
+    "upgrade": null
+  },
+  "global": {
+    "main": false,
+    "upgrade": null
+  },
+  "Headers": {
+    "main": false,
+    "upgrade": null
+  },
+  "MessageChannel": {
+    "main": false,
+    "upgrade": null
+  },
+  "MessageEvent": {
+    "main": false,
+    "upgrade": null
+  },
+  "MessagePort": {
+    "main": false,
+    "upgrade": null
+  },
+  "Navigator": {
+    "main": false,
+    "upgrade": null
+  },
+  "performance": {
+    "main": false,
+    "upgrade": null
+  },
+  "Performance": {
+    "main": false,
+    "upgrade": null
+  },
+  "PerformanceEntry": {
+    "main": false,
+    "upgrade": null
+  },
+  "PerformanceMark": {
+    "main": false,
+    "upgrade": null
+  },
+  "PerformanceMeasure": {
+    "main": false,
+    "upgrade": null
+  },
+  "PerformanceObserver": {
+    "main": false,
+    "upgrade": null
+  },
+  "PerformanceObserverEntryList": {
+    "main": false,
+    "upgrade": null
+  },
+  "PerformanceResourceTiming": {
+    "main": false,
+    "upgrade": null
+  },
+  "process": {
+    "main": false,
+    "upgrade": null
+  },
+  "queueMicrotask": {
+    "main": false,
+    "upgrade": null
+  },
+  "ReadableByteStreamController": {
+    "main": false,
+    "upgrade": null
+  },
+  "ReadableStream": {
+    "main": false,
+    "upgrade": null
+  },
+  "ReadableStreamBYOBReader": {
+    "main": false,
+    "upgrade": null
+  },
+  "ReadableStreamBYOBRequest": {
+    "main": false,
+    "upgrade": null
+  },
+  "ReadableStreamDefaultController": {
+    "main": false,
+    "upgrade": null
+  },
+  "ReadableStreamDefaultReader": {
+    "main": false,
+    "upgrade": null
+  },
+  "Request": {
+    "main": false,
+    "upgrade": null
+  },
+  "Response": {
+    "main": false,
+    "upgrade": null
+  },
+  "setImmediate": {
+    "main": false,
+    "upgrade": null
+  },
+  "setInterval": {
+    "main": false,
+    "upgrade": null
+  },
+  "setTimeout": {
+    "main": false,
+    "upgrade": null
+  },
+  "structuredClone": {
+    "main": false,
+    "upgrade": null
+  },
+  "SubtleCrypto": {
+    "main": false,
+    "upgrade": null
+  },
+  "TextDecoder": {
+    "main": false,
+    "upgrade": null
+  },
+  "TextDecoderStream": {
+    "main": false,
+    "upgrade": null
+  },
+  "TextEncoder": {
+    "main": false,
+    "upgrade": null
+  },
+  "TextEncoderStream": {
+    "main": false,
+    "upgrade": null
+  },
+  "TransformStream": {
+    "main": false,
+    "upgrade": null
+  },
+  "TransformStreamDefaultController": {
+    "main": false,
+    "upgrade": null
+  },
+  "URL": {
+    "main": false,
+    "upgrade": null
+  },
+  "URLSearchParams": {
+    "main": false,
+    "upgrade": null
+  },
+  "WebAssembly": {
+    "main": false,
+    "upgrade": null
+  },
+  "WebSocket": {
+    "main": false,
+    "upgrade": null
+  },
+  "WritableStream": {
+    "main": false,
+    "upgrade": null
+  },
+  "WritableStreamDefaultController": {
+    "main": false,
+    "upgrade": null
+  },
+  "WritableStreamDefaultWriter": {
+    "main": false,
+    "upgrade": null
+  },
+  "Intl": {
+    "main": false,
+    "upgrade": null
+  }
+}
