@@ -25,4 +25,4 @@
 - date: 2026-07-17
   description: Replaced previous feedback link and guidance with recommendation to use the [Feedback](/components/feedback/) component to collect user feedback on your service.
 - date: 2026-11-04
-  description: Added guidance to only use the alpha banner on prototypes, and to use the beta banner once people are using the service for real.
+  description: Clarified that the alpha banner is for prototypes, and to use the beta banner once people use your service to do real tasks.

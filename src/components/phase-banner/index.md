@@ -17,13 +17,13 @@ Use the phase banner component to show users your service is still being worked 
 
 Services hosted on a service.gov.uk domain must use the phase banner until they pass a live assessment.
 
+Use an alpha banner on prototypes. Once people use your service to do real tasks, such as applying for something, it’s in private or public beta, so use a beta banner.
+
+Find out [how the alpha phase works](https://www.gov.uk/service-manual/agile-delivery/how-the-alpha-phase-works) and [how the beta phase works](https://www.gov.uk/service-manual/agile-delivery/how-the-beta-phase-works) in the GOV.UK Service Manual.
+
 ## How it works
 
 There are 2 ways to use the phase banner component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
-
-Use an alpha banner when your service is in alpha, and a beta banner if your service is in private or public beta.
-
-Only use an alpha banner on prototypes. If people are using your service for real, for example to apply for something, it’s in beta and should show a beta banner. [Find out how the alpha phase works](https://www.gov.uk/service-manual/agile-delivery/how-the-alpha-phase-works) in the GOV.UK Service Manual.
 
 Show the Phase banner inside the `<header>` element, directly after either:
 
