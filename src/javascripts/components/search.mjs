@@ -1,4 +1,3 @@
-/* global XMLHttpRequest */
 import accessibleAutocomplete from 'accessible-autocomplete'
 import { Component } from 'govuk-frontend'
 import lunr from 'lunr'

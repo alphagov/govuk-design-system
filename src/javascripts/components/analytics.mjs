@@ -1,3 +1,4 @@
+/* eslint-disable-next-line jsdoc/ts-ban-ts-comment */
 // @ts-nocheck
 
 // eslint-disable-next-line jsdoc/require-jsdoc
