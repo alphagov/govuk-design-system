@@ -8,7 +8,7 @@ const { headless } = jestPuppeteerConfig.launch
  *
  * @type {import('@jest/types').Config.InitialOptions}
  */
-export default {
+const jestConfig = {
   preset: 'jest-puppeteer',
 
   // Reduce CPU usage during project test runs
@@ -39,3 +39,5 @@ export default {
   // Ignore built fixtures during `--watch` and node_modules folders
   watchPathIgnorePatterns: ['fixtures/build', '/node_modules/']
 }
+
+export default jestConfig
