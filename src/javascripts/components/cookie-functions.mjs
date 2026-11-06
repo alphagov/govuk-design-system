@@ -126,7 +126,9 @@ export function setConsentCookie(options) {
 
   // Merge current cookie preferences and new preferences
   for (const option in options) {
-    cookieConsent[option] = options[option]
+    if (Object.prototype.hasOwnProperty.call(options, option)) {
+      cookieConsent[option] = options[option]
+    }
   }
 
   // Essential cookies cannot be deselected, ignore this cookie type
@@ -251,10 +253,12 @@ function userAllowsCookie(cookieName) {
   }
 
   for (const category in COOKIE_CATEGORIES) {
-    const cookiesInCategory = COOKIE_CATEGORIES[category]
+    if (Object.prototype.hasOwnProperty.call(COOKIE_CATEGORIES, category)) {
+      const cookiesInCategory = COOKIE_CATEGORIES[category]
 
-    if (cookiesInCategory.indexOf(cookieName) !== '-1') {
-      return userAllowsCookieCategory(category, cookiePreferences)
+      if (cookiesInCategory.indexOf(cookieName) !== '-1') {
+        return userAllowsCookieCategory(category, cookiePreferences)
+      }
     }
   }
 

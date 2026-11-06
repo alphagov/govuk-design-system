@@ -162,7 +162,9 @@ const attributesForHidingButton = {
  */
 function setAttributes($element, attributes) {
   for (const attributeName in attributes) {
-    $element.setAttribute(attributeName, attributes[attributeName])
+    if (Object.prototype.hasOwnProperty.call(attributes, attributeName)) {
+      $element.setAttribute(attributeName, attributes[attributeName])
+    }
   }
 }
 

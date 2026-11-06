@@ -166,7 +166,10 @@ export default defineConfig([
       // JSDoc @param required in (mandatory) blocks but
       // @param description is necessary in source code
       'jsdoc/require-param-description': 'warn',
-      'jsdoc/require-param': 'error'
+      'jsdoc/require-param': 'error',
+
+      // Can't use Object.hasOwn as this is only available in ES2022
+      'prefer-object-has-own': 'off'
     }
   },
   {
