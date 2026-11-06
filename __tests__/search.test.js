@@ -1,7 +1,7 @@
 const { goTo, getProperty, typeText } = require('./helpers/puppeteer.js')
 
 // Regex that can be used to match on fingerprinted search index files
-const isSearchIndex = /.*\/search-index(-[0-9a-f]{32})?.json$/
+const isSearchIndex = /.*\/search-index(-[0-9a-f]{32})?.json$/v
 
 describe('Site search', () => {
   let $module
@@ -55,7 +55,7 @@ describe('Site search', () => {
 
     // Regex with word boundary, in our case words that begin with 'd'
     for (const result of resultsArray) {
-      expect(result).toMatch(/\bd\w*/)
+      expect(result).toMatch(/\bd\w*/v)
     }
 
     expect.assertions()
@@ -76,7 +76,7 @@ describe('Site search', () => {
 
     // Regex with word boundary, in our case words that begin with 'd'
     for (const result of resultsArray) {
-      expect(result).toMatch(/\bd\w*/)
+      expect(result).toMatch(/\bd\w*/v)
     }
 
     expect.assertions()

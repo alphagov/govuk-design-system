@@ -169,7 +169,10 @@ export default defineConfig([
       'jsdoc/require-param': 'error',
 
       // Can't use Object.hasOwn as this is only available in ES2022
-      'prefer-object-has-own': 'off'
+      'prefer-object-has-own': 'off',
+
+      // RegExp 'v' flag is only available in ES2024
+      'require-unicode-regexp': 'off'
     }
   },
   {
