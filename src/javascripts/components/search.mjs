@@ -123,9 +123,7 @@ class Search extends Component {
       })
     })
 
-    searchResults = lunrSearchResults.map((result) => {
-      return documentStore[result.ref]
-    })
+    searchResults = lunrSearchResults.map((result) => documentStore[result.ref])
     searchCallback(searchResults)
   }
 
@@ -190,9 +188,9 @@ class Search extends Component {
      * @returns {string[]} - Search words starting with query
      */
     function startsWithFilter(words, query) {
-      return words.filter((word) => {
-        return word.trim().toLowerCase().indexOf(query.toLowerCase()) === 0
-      })
+      return words.filter(
+        (word) => word.trim().toLowerCase().indexOf(query.toLowerCase()) === 0
+      )
     }
 
     // Add rest of the data here to build the item
