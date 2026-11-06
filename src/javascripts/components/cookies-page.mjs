@@ -138,7 +138,7 @@ class CookiesPage extends Component {
 
     this.$successNotification.focus()
 
-    // scroll to the top of the page
+    // Scroll to the top of the page
     window.scrollTo(0, 0)
   }
 

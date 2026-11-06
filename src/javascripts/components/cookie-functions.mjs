@@ -35,7 +35,7 @@ const COOKIE_CATEGORIES = {
  * this will be ignored.
  */
 const DEFAULT_COOKIE_CONSENT = {
-  analytics: null // tracks if has been asked at all
+  analytics: null // Tracks if has been asked at all
 }
 
 /**

@@ -53,7 +53,7 @@ describe('Site search', () => {
         results.map((result) => result.firstChild.textContent.toLowerCase())
     )
 
-    // regex with word boundary, in our case words that begin with 'd'
+    // Regex with word boundary, in our case words that begin with 'd'
     for (const result of resultsArray) {
       expect(result).toMatch(/\b[d]\w*/)
     }
@@ -64,7 +64,7 @@ describe('Site search', () => {
   it('returns results that contain aliases that start with the letter "d"', async () => {
     await typeText($searchInput, 'd')
 
-    // only get results where a match was found in the alias
+    // Only get results where a match was found in the alias
     const resultsArray = await page.$$eval(
       '.app-site-search__option:has(.app-site-search__aliases)',
       (results) =>
@@ -74,7 +74,7 @@ describe('Site search', () => {
         )
     )
 
-    // regex with word boundary, in our case words that begin with 'd'
+    // Regex with word boundary, in our case words that begin with 'd'
     for (const result of resultsArray) {
       expect(result).toMatch(/\b[d]\w*/)
     }

@@ -29,7 +29,7 @@ class ExamplePage {
    * @returns {false | undefined} Returns false for examples without forms
    */
   preventFormSubmission($form) {
-    // we should only have one form per example
+    // We should only have one form per example
     if (!$form) {
       return false
     }
