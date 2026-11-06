@@ -99,6 +99,15 @@ describe('Site search', () => {
     expect(url.pathname).toBe('/components/details/')
   })
 
+  it('returns the "Links" page as the first result when searching for "link"', async () => {
+    await typeText($searchInput, 'link')
+
+    const $searchOptions = await $module.$$('.app-site-search__option')
+    await expect(getProperty($searchOptions[0], 'textContent')).resolves.toBe(
+      'Links, in Styles'
+    )
+  })
+
   it('shows user a message that the index has failed to download', async () => {
     await page.setRequestInterception(true)
 
