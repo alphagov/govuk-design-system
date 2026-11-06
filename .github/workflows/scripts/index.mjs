@@ -107,7 +107,7 @@ export function prepareCommentBody(intro, files, outro) {
 /**
  * Post a comment to a PR in github
  *
- * @param {{github: object, context: object}} - - The Github action context object
+ * @param {{github: object, context: object}} githubContext - The Github action context object
  * @param {number} issueNumber - Number of PR to post comment to
  * @param {string} marker - The marker to identify the comment
  * @param {string} bodyText - The text of the comment
@@ -168,7 +168,7 @@ function processDiffTxt() {
 
 /**
  *
- * @param {{github: object, context: object}} - - The Github action context object
+ * @param {{github: object, context: object}} githubContext - The Github action context object
  * @param {number} issueNumber - Number of PR to post comment to
  * @param {string} marker - The marker to identify the comment
  * @returns {Promise<object | undefined>} GitHub comment, or undefined if no comment found

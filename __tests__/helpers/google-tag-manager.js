@@ -2,8 +2,8 @@
  * Mocks requests to Google Tag Manager so our tests are not impacted by
  * possible errors in third party scripts
  *
- * @param {import('puppeteer').HTTPRequest} interceptedRequest
- * @returns
+ * @param {import('puppeteer').HTTPRequest} interceptedRequest - Puppeteer intercepted request object
+ * @returns {void} - Continuation of intercepted request
  */
 function mockGoogleTagManagerScript(interceptedRequest) {
   if (interceptedRequest.isInterceptResolutionHandled()) return
