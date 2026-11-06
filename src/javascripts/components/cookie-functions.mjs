@@ -35,7 +35,7 @@ const COOKIE_CATEGORIES = {
  * this will be ignored.
  */
 const DEFAULT_COOKIE_CONSENT = {
-  analytics: null // tracks if has been asked at all
+  analytics: null // Tracks if has been asked at all
 }
 
 /**
@@ -64,6 +64,7 @@ export function Cookie(name, value, options) {
       if (typeof options === 'undefined') {
         options = { days: 30 }
       }
+
       setCookie(name, value, options)
     }
   } else {
@@ -125,7 +126,9 @@ export function setConsentCookie(options) {
 
   // Merge current cookie preferences and new preferences
   for (const option in options) {
-    cookieConsent[option] = options[option]
+    if (Object.prototype.hasOwnProperty.call(options, option)) {
+      cookieConsent[option] = options[option]
+    }
   }
 
   // Essential cookies cannot be deselected, ignore this cookie type
@@ -250,10 +253,12 @@ function userAllowsCookie(cookieName) {
   }
 
   for (const category in COOKIE_CATEGORIES) {
-    const cookiesInCategory = COOKIE_CATEGORIES[category]
+    if (Object.prototype.hasOwnProperty.call(COOKIE_CATEGORIES, category)) {
+      const cookiesInCategory = COOKIE_CATEGORIES[category]
 
-    if (cookiesInCategory.indexOf(cookieName) !== '-1') {
-      return userAllowsCookieCategory(category, cookiePreferences)
+      if (cookiesInCategory.indexOf(cookieName) !== '-1') {
+        return userAllowsCookieCategory(category, cookiePreferences)
+      }
     }
   }
 
@@ -275,10 +280,12 @@ function getCookie(name) {
     while (cookie.charAt(0) === ' ') {
       cookie = cookie.substring(1, cookie.length)
     }
+
     if (cookie.indexOf(nameEQ) === 0) {
       return decodeURIComponent(cookie.substring(nameEQ.length))
     }
   }
+
   return null
 }
 
@@ -294,15 +301,18 @@ function setCookie(name, value, options) {
     if (typeof options === 'undefined') {
       options = {}
     }
+
     let cookieString = `${name}=${value}; path=/`
     if (options.days) {
       const date = new Date()
       date.setTime(date.getTime() + options.days * 24 * 60 * 60 * 1000)
       cookieString = `${cookieString}; expires=${date.toUTCString()}`
     }
+
     if (document.location.protocol === 'https:') {
       cookieString = `${cookieString}; Secure`
     }
+
     document.cookie = cookieString
   }
 }

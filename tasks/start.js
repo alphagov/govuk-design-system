@@ -1,12 +1,14 @@
-const { watch } = require('fs')
-const { dirname, join } = require('path')
+const process = require('process')
+
+const { watch } = process.getBuiltinModule('fs')
+const { dirname, join } = process.getBuiltinModule('path')
 
 const browserSync = require('browser-sync')
 const slash = require('slash')
 
-const { browsersync: browserSyncConfig, paths } = require('../config') // specify paths to main working directories
+const { browsersync: browserSyncConfig, paths } = require('../config') // Specify paths to main working directories
 const nunjucksTransformer = require('../lib/jstransformer-nunjucks')
-const metalsmith = require('../lib/metalsmith') // configured static site generator
+const metalsmith = require('../lib/metalsmith') // Configured static site generator
 
 let bs
 let nunjucksWatcher
@@ -25,6 +27,7 @@ function setupNunjucksWatcher() {
       if (!filename || !filename.endsWith('.njk')) {
         return
       }
+
       nunjucksTransformer.resetCache()
     }
   )

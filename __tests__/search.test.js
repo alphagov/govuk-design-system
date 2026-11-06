@@ -1,7 +1,7 @@
 const { goTo, getProperty, typeText } = require('./helpers/puppeteer.js')
 
 // Regex that can be used to match on fingerprinted search index files
-const isSearchIndex = /.*\/search-index(-[0-9a-f]{32})?.json$/
+const isSearchIndex = /.*\/search-index(-[0-9a-f]{32})?.json$/v
 
 describe('Site search', () => {
   let $module
@@ -53,9 +53,9 @@ describe('Site search', () => {
         results.map((result) => result.firstChild.textContent.toLowerCase())
     )
 
-    // regex with word boundary, in our case words that begin with 'd'
+    // Regex with word boundary, in our case words that begin with 'd'
     for (const result of resultsArray) {
-      expect(result).toMatch(/\b[d]\w*/)
+      expect(result).toMatch(/\bd\w*/v)
     }
 
     expect.assertions()
@@ -64,7 +64,7 @@ describe('Site search', () => {
   it('returns results that contain aliases that start with the letter "d"', async () => {
     await typeText($searchInput, 'd')
 
-    // only get results where a match was found in the alias
+    // Only get results where a match was found in the alias
     const resultsArray = await page.$$eval(
       '.app-site-search__option:has(.app-site-search__aliases)',
       (results) =>
@@ -74,9 +74,9 @@ describe('Site search', () => {
         )
     )
 
-    // regex with word boundary, in our case words that begin with 'd'
+    // Regex with word boundary, in our case words that begin with 'd'
     for (const result of resultsArray) {
-      expect(result).toMatch(/\b[d]\w*/)
+      expect(result).toMatch(/\bd\w*/v)
     }
 
     expect.assertions()
@@ -153,11 +153,11 @@ describe('Site search', () => {
 
     // Get the active focused element to compare with the actual expected input.
     const $activeElement = await page.evaluate(() => document.activeElement)
-    const $searchInput = await page.evaluate(() =>
+    const $expectedSearchInput = await page.evaluate(() =>
       document.querySelector('.app-site-search__input')
     )
 
-    expect($activeElement).toEqual($searchInput)
+    expect($activeElement).toEqual($expectedSearchInput)
   })
 
   describe('tracking', () => {

@@ -7,6 +7,7 @@ import { getConsentCookie, setConsentCookie } from './cookie-functions.mjs'
  */
 class CookiesPage extends Component {
   static moduleName = 'app-cookies-page'
+
   /**
    * @param {Element} $module - HTML element
    */
@@ -15,7 +16,7 @@ class CookiesPage extends Component {
 
     const $cookieForm = this.$root.querySelector('.js-cookies-page-form')
     if (!($cookieForm instanceof HTMLFormElement)) {
-      return this
+      return
     }
 
     this.$cookieForm = $cookieForm
@@ -32,7 +33,7 @@ class CookiesPage extends Component {
       !$cookieFormFieldsets.length ||
       !($cookieFormButton instanceof HTMLButtonElement)
     ) {
-      return this
+      return
     }
 
     this.$cookieFormFieldsets = $cookieFormFieldsets
@@ -137,7 +138,7 @@ class CookiesPage extends Component {
 
     this.$successNotification.focus()
 
-    // scroll to the top of the page
+    // Scroll to the top of the page
     window.scrollTo(0, 0)
   }
 

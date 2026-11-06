@@ -20,11 +20,11 @@ class BackToTop extends Component {
       // If there's no support fallback to regular behaviour
       // Since JavaScript is enabled we can remove the default hidden state
       this.$root.classList.remove('app-back-to-top--hidden')
-      return this
+      return
     }
 
     if (!$footer || !$subNav) {
-      return this
+      return
     }
 
     let footerIsIntersecting = false
@@ -40,6 +40,7 @@ class BackToTop extends Component {
       if (footerEntry) {
         footerIsIntersecting = footerEntry.isIntersecting
       }
+
       if (subNavEntry) {
         subNavIsIntersecting = subNavEntry.isIntersecting
         subNavIntersectionRatio = subNavEntry.intersectionRatio

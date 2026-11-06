@@ -1,7 +1,7 @@
-const metalsmith = require('../lib/metalsmith') // configured static site generator
+const metalsmith = require('../lib/metalsmith') // Configured static site generator
 
 // build to destination directory
-metalsmith.build(function (err, files) {
+metalsmith.build((err, files) => {
   if (err) {
     throw err
   }

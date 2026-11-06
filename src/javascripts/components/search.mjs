@@ -30,7 +30,7 @@ const DEBOUNCE_TIME_TO_WAIT = () => {
   // our tests do not run very slowly.
   // @ts-expect-error Property does not exist on window
   const timeout = window.__SITE_SEARCH_TRACKING_TIMEOUT
-  return typeof timeout !== 'undefined' ? timeout : 2000 // milliseconds
+  return typeof timeout !== 'undefined' ? timeout : 2000 // Milliseconds
 }
 
 /**
@@ -38,6 +38,7 @@ const DEBOUNCE_TIME_TO_WAIT = () => {
  */
 class Search extends Component {
   static moduleName = 'app-search'
+
   /**
    * @param {Element} $module - HTML element
    */
@@ -63,7 +64,7 @@ class Search extends Component {
 
     const $input = this.$root.querySelector('.app-site-search__input')
     if (!$input) {
-      return this
+      return
     }
 
     // Ensure if the user stops using the search that we do not send tracking events
@@ -122,9 +123,7 @@ class Search extends Component {
       })
     })
 
-    searchResults = lunrSearchResults.map((result) => {
-      return documentStore[result.ref]
-    })
+    searchResults = lunrSearchResults.map((result) => documentStore[result.ref])
     searchCallback(searchResults)
   }
 
@@ -152,7 +151,7 @@ class Search extends Component {
    * @param {SearchResult} result - Search result
    */
   handleOnConfirm(result) {
-    const permalink = result.permalink
+    const { permalink } = result
 
     if (!permalink) {
       return
@@ -189,9 +188,9 @@ class Search extends Component {
      * @returns {string[]} - Search words starting with query
      */
     function startsWithFilter(words, query) {
-      return words.filter((word) => {
-        return word.trim().toLowerCase().indexOf(query.toLowerCase()) === 0
-      })
+      return words.filter(
+        (word) => word.trim().toLowerCase().indexOf(query.toLowerCase()) === 0
+      )
     }
 
     // Add rest of the data here to build the item

@@ -42,12 +42,10 @@ describe('MobileNavigationSection', () => {
 
         for (const $serviceNavigationItem of $serviceNavigationItems) {
           const [linkLabel, buttonLabel] =
-            await $serviceNavigationItem.evaluate((el) => {
-              return [
-                el.querySelector('a').textContent,
-                el.querySelector('button')?.textContent
-              ]
-            })
+            await $serviceNavigationItem.evaluate((el) => [
+              el.querySelector('a').textContent,
+              el.querySelector('button')?.textContent
+            ])
 
           expect(buttonLabel.trim()).toBe(linkLabel.trim())
         }
@@ -101,7 +99,7 @@ describe('MobileNavigationSection', () => {
           '.govuk-service-navigation__item'
         )
 
-        // await jestPuppeteer.debug();
+        // Await jestPuppeteer.debug();
 
         for (const $serviceNavigationItem of $serviceNavigationItems) {
           const [

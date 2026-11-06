@@ -212,6 +212,7 @@ class AppTabs extends Component {
     if ($desktopTabContainer) {
       return $desktopTabContainer.querySelector(`[aria-controls="${panelId}"]`)
     }
+
     return null
   }
 

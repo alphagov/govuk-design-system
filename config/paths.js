@@ -1,4 +1,6 @@
-const { join, resolve } = require('path')
+const process = require('process')
+
+const { join, resolve } = process.getBuiltinModule('path')
 
 // Repository root directory
 const rootPath = resolve(__dirname, '../')

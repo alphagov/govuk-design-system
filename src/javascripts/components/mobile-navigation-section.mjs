@@ -75,6 +75,7 @@ class MobileNavigationSection extends Component {
       // @ts-expect-error Property 'addListener' does not exist
       this.mql.addListener(() => this.setHiddenStates())
     }
+
     this.setHiddenStates()
 
     // Finally, get ready for user interactions
@@ -125,6 +126,7 @@ class MobileNavigationSection extends Component {
       if (this.expanded) {
         this.$subnav.removeAttribute('hidden')
       }
+
       removeAttributes(this.$button, Object.keys(attributesForHidingButton))
     } else {
       this.$root.parentElement.classList.remove(
@@ -160,7 +162,9 @@ const attributesForHidingButton = {
  */
 function setAttributes($element, attributes) {
   for (const attributeName in attributes) {
-    $element.setAttribute(attributeName, attributes[attributeName])
+    if (Object.prototype.hasOwnProperty.call(attributes, attributeName)) {
+      $element.setAttribute(attributeName, attributes[attributeName])
+    }
   }
 }
 

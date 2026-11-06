@@ -63,7 +63,7 @@ class CookieBanner extends ConfigurableComponent {
       !($cookieConfirmationReject instanceof HTMLElement) ||
       !$cookieBannerHideButtons.length
     ) {
-      return this
+      return
     }
 
     this.$acceptButton = $acceptButton
@@ -150,7 +150,6 @@ class CookieBanner extends ConfigurableComponent {
   static defaults = {
     cookieCategory: 'analytics'
   }
-
   static schema = {
     properties: {
       cookieCategory: { type: 'string' }
