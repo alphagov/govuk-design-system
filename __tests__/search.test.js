@@ -153,11 +153,11 @@ describe('Site search', () => {
 
     // Get the active focused element to compare with the actual expected input.
     const $activeElement = await page.evaluate(() => document.activeElement)
-    const $searchInput = await page.evaluate(() =>
+    const $expectedSearchInput = await page.evaluate(() =>
       document.querySelector('.app-site-search__input')
     )
 
-    expect($activeElement).toEqual($searchInput)
+    expect($activeElement).toEqual($expectedSearchInput)
   })
 
   describe('tracking', () => {

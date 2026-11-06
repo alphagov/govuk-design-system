@@ -134,11 +134,19 @@ export async function comment(
   `
 
   // Find GitHub issue comment with marker `<!-- Example -->`
-  const comment = await getComment({ github, context }, issueNumber, marker)
+  const existingComment = await getComment(
+    { github, context },
+    issueNumber,
+    marker
+  )
 
   // Update exist GitHub issue comment or create a new one
-  await (comment?.id
-    ? issues.updateComment({ ...parameters, body, comment_id: comment.id })
+  await (existingComment?.id
+    ? issues.updateComment({
+        ...parameters,
+        body,
+        comment_id: existingComment.id
+      })
     : issues.createComment({ ...parameters, body }))
 }
 
