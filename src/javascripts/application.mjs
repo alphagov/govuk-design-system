@@ -1,5 +1,3 @@
-/* eslint-disable no-new */
-
 import {
   createAll,
   Button,
