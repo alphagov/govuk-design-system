@@ -172,4 +172,24 @@ describe('Cookies page', () => {
     await expect(getProperty($radioYesAnalytics, 'checked')).resolves.toBe(true)
     await expect(getProperty($radioNoAnalytics, 'checked')).resolves.toBe(false)
   })
+
+  describe('on small screens', () => {
+    beforeEach(async () => {
+      await page.setViewport({ width: 320, height: 640 })
+      await page.reload()
+    })
+
+    afterEach(async () => {
+      await page.setViewport({ width: 800, height: 600 })
+    })
+
+    it('fits the essential cookies table within the page', async () => {
+      const [tableWidth, containerWidth] = await page.$eval(
+        '.app-cookies-page .govuk-table',
+        ($table) => [$table.offsetWidth, $table.parentElement.clientWidth]
+      )
+
+      expect(tableWidth).toBeLessThanOrEqual(containerWidth)
+    })
+  })
 })
