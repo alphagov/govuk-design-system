@@ -12,7 +12,7 @@ class ExamplePage {
       !($module instanceof Document) ||
       !document.body.classList.contains('govuk-frontend-supported')
     ) {
-      return this
+      return
     }
 
     this.$module = $module
