@@ -1,5 +1,7 @@
-const { watch } = require('fs')
-const { dirname, join } = require('path')
+const process = require('process')
+
+const { watch } = process.getBuiltinModule('fs')
+const { dirname, join } = process.getBuiltinModule('path')
 
 const browserSync = require('browser-sync')
 const slash = require('slash')
