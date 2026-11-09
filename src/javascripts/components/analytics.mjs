@@ -55,7 +55,7 @@ export function stripPossiblePII(string) {
     '[REDACTED POSTCODE]'
   )
   string = string.replace(
-    /^\s*[A-Za-z]{2}(?:\s*\d\s*){6}[A-Za-z]?\s*$/g,
+    /^\s*[a-z]{2}(?:\s*\d\s*){6}[a-z]?\s*$/gi,
     '[REDACTED NI NUMBER]'
   )
   // If someone has typed in a number it's likely not related so redact it

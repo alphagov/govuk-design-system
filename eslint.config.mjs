@@ -258,7 +258,6 @@ export default defineConfig([
       'regexp/no-super-linear-move': 'off',
       'regexp/no-unused-capturing-group': 'off',
       'regexp/prefer-named-capture-group': 'off',
-      'regexp/use-ignore-case': 'off',
       'require-unicode-regexp': 'off',
       'unicorn/better-dom-traversing': 'off',
       'unicorn/class-reference-in-static-methods': 'off',
