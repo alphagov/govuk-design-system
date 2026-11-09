@@ -51,7 +51,7 @@ export function stripPossiblePII(string) {
   // Regexes copied from GTM variable 'JS - Remove PII from Hit Payload'
   string = string.replace(/[^\s=/?&]+(?:@|%40)[^\s=/?&]+/g, '[REDACTED EMAIL]')
   string = string.replace(
-    /\b[a-pr-uwyz][a-hj-z]?[0-9][0-9a-hjkmnpr-y]?(?:[\s+]|%20)*[0-9](?!refund)[abd-hjlnpq-z]{2,3}\b/gi,
+    /\b[a-pr-uwyz][a-hj-z]?[0-9][0-9a-hjkmnpr-y]?(?:[\s+]|%20)*[0-9](?!refund)[abd-hjlnp-z]{2,3}\b/gi,
     '[REDACTED POSTCODE]'
   )
   string = string.replace(
