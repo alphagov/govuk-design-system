@@ -49,13 +49,13 @@ export function addToDataLayer(payload) {
 export function stripPossiblePII(string) {
   // Try to detect emails, postcodes, and NI numbers, and redact them.
   // Regexes copied from GTM variable 'JS - Remove PII from Hit Payload'
-  string = string.replace(/[^\s=/?&]+(?:@|%40)[^\s=/?&]+/g, '[REDACTED EMAIL]')
+  string = string.replace(/[^\s&/=?]+(?:@|%40)[^\s&/=?]+/g, '[REDACTED EMAIL]')
   string = string.replace(
     /\b[a-pr-uwyz][a-hj-z]?[0-9][0-9a-hjkmnpr-y]?(?:[\s+]|%20)*[0-9](?!refund)[abd-hjlnp-z]{2,3}\b/gi,
     '[REDACTED POSTCODE]'
   )
   string = string.replace(
-    /^\s*[a-zA-Z]{2}(?:\s*\d\s*){6}[a-zA-Z]?\s*$/g,
+    /^\s*[A-Za-z]{2}(?:\s*\d\s*){6}[A-Za-z]?\s*$/g,
     '[REDACTED NI NUMBER]'
   )
   // If someone has typed in a number it's likely not related so redact it
