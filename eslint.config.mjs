@@ -284,7 +284,6 @@ export default defineConfig([
       'unicorn/no-negated-condition': 'off',
       'unicorn/no-unnecessary-parameters': 'off',
       'unicorn/no-unsafe-string-replacement': 'off',
-      'unicorn/no-useless-else': 'off',
       'unicorn/no-useless-template-literals': 'off',
       'unicorn/numeric-separators-style': 'off',
       'unicorn/operator-assignment': 'off',
