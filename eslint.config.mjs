@@ -282,7 +282,6 @@ export default defineConfig([
       'unicorn/no-for-each': 'off',
       'unicorn/no-global-object-property-assignment': 'off',
       'unicorn/no-negated-condition': 'off',
-      'unicorn/no-typeof-undefined': 'off',
       'unicorn/no-unnecessary-parameters': 'off',
       'unicorn/no-unsafe-string-replacement': 'off',
       'unicorn/no-useless-else': 'off',
