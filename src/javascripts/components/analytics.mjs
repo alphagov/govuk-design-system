@@ -1,6 +1,8 @@
 /* eslint-disable-next-line jsdoc/ts-ban-ts-comment */
 // @ts-nocheck
 
+/* eslint-disable max-params */
+
 // eslint-disable-next-line jsdoc/require-jsdoc
 export function loadAnalytics() {
   if (!window.ga || !window.ga.loaded) {
@@ -23,6 +25,8 @@ export function loadAnalytics() {
     })(window, document, 'script', 'dataLayer', 'GTM-53XG2JT')
   }
 }
+
+/* eslint-enable max-params */
 
 /**
  * Push to Google Analytics

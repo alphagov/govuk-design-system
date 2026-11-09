@@ -1,9 +1,10 @@
-import { fileURLToPath } from 'url'
+import { fileURLToPath } from 'node:url'
 
 import JsConfigs from '@eslint/js'
 import MarkdownPlugin from '@eslint/markdown'
 import { defineConfig, globalIgnores, includeIgnoreFile } from 'eslint/config'
 import PrettierConfig from 'eslint-config-prettier'
+import xoConfig from 'eslint-config-xo'
 import ESXPlugin from 'eslint-plugin-es-x'
 import { configs as ImportXConfigs } from 'eslint-plugin-import-x'
 import { configs as JsdocConfigs } from 'eslint-plugin-jsdoc'
@@ -19,6 +20,18 @@ export default defineConfig([
     '!.*'
   ]),
   includeIgnoreFile(gitignorePath, { gitignoreResolution: true }),
+  {
+    extends: [
+      ...xoConfig({
+        space: true,
+        semicolon: false,
+        prettier: 'compat'
+      })
+    ],
+    rules: {
+      // Rules we'll keep disabled after XO review to go here
+    }
+  },
   {
     extends: [
       ImportXConfigs['flat/recommended'],
@@ -177,6 +190,11 @@ export default defineConfig([
         ...globals.jest,
         ...globals.browser
       }
+    },
+    rules: {
+      // Because of `describe` and `it`, we need to be a bit looser on nesting
+      // in tests
+      'max-nested-callbacks': 'off'
     }
   },
   {
@@ -195,5 +213,139 @@ export default defineConfig([
   },
   {
     extends: [PrettierConfig]
+  },
+  {
+    rules: {
+      // XO rules that our code breaks and we still need to review
+      '@eslint-community/eslint-comments/require-description': 'off',
+      '@html-eslint/head-order': 'off',
+      '@html-eslint/require-button-type': 'off',
+      '@html-eslint/require-meta-description': 'off',
+      '@html-eslint/require-meta-viewport': 'off',
+      '@html-eslint/require-open-graph-protocol': 'off',
+      '@html-eslint/sort-attrs': 'off',
+      '@stylistic/lines-between-class-members': 'off',
+      '@stylistic/padding-line-between-statements': 'off',
+      '@stylistic/spaced-comment': 'off',
+      '@typescript-eslint/no-useless-default-assignment': 'off',
+      '@typescript-eslint/prefer-nullish-coalescing': 'off',
+      '@typescript-eslint/strict-boolean-expressions': 'off',
+      'arrow-body-style': 'off',
+      camelcase: 'off',
+      'capitalized-comments': 'off',
+      'func-names': 'off',
+      'guard-for-in': 'off',
+      'import-x/no-anonymous-default-export': 'off',
+      'import-x/no-unassigned-import': 'off',
+      'jsdoc/require-asterisk-prefix': 'off',
+      'n/prefer-global/buffer': 'off',
+      'n/prefer-global/process': 'off',
+      'n/prefer-process-get-builtin-module': 'off',
+      'n/prefer-promises/fs': 'off',
+      'new-cap': 'off',
+      'no-await-in-loop': 'off',
+      'no-constructor-return': 'off',
+      'no-else-return': 'off',
+      'no-implicit-coercion': 'off',
+      'no-multi-assign': 'off',
+      'no-shadow': 'off',
+      null: 'off',
+      'object-shorthand': 'off',
+      'package-json/dependency-version-range': 'off',
+      'package-json/no-package-manager-engines': 'off',
+      'package-json/no-short-flags-in-scripts': 'off',
+      'package-json/prefer-engines-range': 'off',
+      'package-json/prefer-shorthand': 'off',
+      'package-json/prefer-type-module': 'off',
+      'package-json/sort-properties': 'off',
+      'prefer-arrow-callback': 'off',
+      'prefer-destructuring': 'off',
+      'prefer-object-spread': 'off',
+      'regexp/letter-case': 'off',
+      'regexp/no-super-linear-backtracking': 'off',
+      'regexp/no-super-linear-move': 'off',
+      'regexp/no-unused-capturing-group': 'off',
+      'regexp/no-useless-character-class': 'off',
+      'regexp/no-useless-flag': 'off',
+      'regexp/prefer-d': 'off',
+      'regexp/prefer-named-capture-group': 'off',
+      'regexp/prefer-range': 'off',
+      'regexp/sort-character-class-elements': 'off',
+      'regexp/strict': 'off',
+      'regexp/use-ignore-case': 'off',
+      'require-unicode-regexp': 'off',
+      'unicorn/better-dom-traversing': 'off',
+      'unicorn/class-reference-in-static-methods': 'off',
+      'unicorn/consistent-boolean-name': 'off',
+      'unicorn/consistent-class-member-order': 'off',
+      'unicorn/consistent-conditional-object-spread': 'off',
+      'unicorn/default-export-style': 'off',
+      'unicorn/dom-node-dataset': 'off',
+      'unicorn/explicit-length-check': 'off',
+      'unicorn/filename-case': 'off',
+      'unicorn/import-style': 'off',
+      'unicorn/logical-assignment-operators': 'off',
+      'unicorn/max-nested-calls': 'off',
+      'unicorn/name-replacements': 'off',
+      'unicorn/new-for-builtins': 'off',
+      'unicorn/no-anonymous-default-export': 'off',
+      'unicorn/no-array-callback-reference': 'off',
+      'unicorn/no-array-reduce': 'off',
+      'unicorn/no-array-sort': 'off',
+      'unicorn/no-asterisk-prefix-in-documentation-comments': 'off',
+      'unicorn/no-computed-property-existence-check': 'off',
+      'unicorn/no-declarations-before-early-exit': 'off',
+      'unicorn/no-document-cookie': 'off',
+      'unicorn/no-duplicate-loops': 'off',
+      'unicorn/no-for-each': 'off',
+      'unicorn/no-for-loop': 'off',
+      'unicorn/no-global-object-property-assignment': 'off',
+      'unicorn/no-immediate-mutation': 'off',
+      'unicorn/no-negated-condition': 'off',
+      'unicorn/no-typeof-undefined': 'off',
+      'unicorn/no-unnecessary-parameters': 'off',
+      'unicorn/no-unsafe-string-replacement': 'off',
+      'unicorn/no-useless-else': 'off',
+      'unicorn/no-useless-template-literals': 'off',
+      'unicorn/numeric-separators-style': 'off',
+      'unicorn/operator-assignment': 'off',
+      'unicorn/prefer-add-event-listener': 'off',
+      'unicorn/prefer-array-flat-map': 'off',
+      'unicorn/prefer-array-some': 'off',
+      'unicorn/prefer-boolean-return': 'off',
+      'unicorn/prefer-classlist-toggle': 'off',
+      'unicorn/prefer-combined-guards': 'off',
+      'unicorn/prefer-continue': 'off',
+      'unicorn/prefer-date-now': 'off',
+      'unicorn/prefer-default-parameters': 'off',
+      'unicorn/prefer-dom-node-append': 'off',
+      'unicorn/prefer-dom-node-html-methods': 'off',
+      'unicorn/prefer-dom-node-remove': 'off',
+      'unicorn/prefer-early-return': 'off',
+      'unicorn/prefer-global-this': 'off',
+      'unicorn/prefer-location-assign': 'off',
+      'unicorn/prefer-module': 'off',
+      'unicorn/prefer-native-coercion-functions': 'off',
+      'unicorn/prefer-node-protocol': 'off',
+      'unicorn/prefer-number-coercion': 'off',
+      'unicorn/prefer-query-selector': 'off',
+      'unicorn/prefer-scoped-selector': 'off',
+      'unicorn/prefer-set-has': 'off',
+      'unicorn/prefer-simple-condition-first': 'off',
+      'unicorn/prefer-simple-sort-comparator': 'off',
+      'unicorn/prefer-split-limit': 'off',
+      'unicorn/prefer-spread': 'off',
+      'unicorn/prefer-string-replace-all': 'off',
+      'unicorn/prefer-string-slice': 'off',
+      'unicorn/prefer-structured-clone': 'off',
+      'unicorn/prefer-ternary': 'off',
+      'unicorn/prefer-toggle-attribute': 'off',
+      'unicorn/prefer-unary-minus': 'off',
+      'unicorn/require-array-sort-compare': 'off',
+      'unicorn/require-css-escape': 'off',
+      'unicorn/single-line-block-comment-style': 'off',
+      'unicorn/text-encoding-identifier-case': 'off',
+      'unicorn/throw-new-error': 'off'
+    }
   }
 ])
