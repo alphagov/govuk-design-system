@@ -23,7 +23,7 @@ class ScrollContainer extends Component {
     Component.checkSupport()
 
     if (!('ResizeObserver' in window)) {
-      throw Error('Browser does not support ResizeObserver')
+      throw new Error('Browser does not support ResizeObserver')
     }
   }
 

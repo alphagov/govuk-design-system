@@ -20,7 +20,7 @@ class CookieBanner extends ConfigurableComponent {
     super.checkSupport()
 
     if (CookieBanner.onCookiesPage()) {
-      throw Error('Cancelled initialisation as on cookie page')
+      throw new Error('Cancelled initialisation as on cookie page')
     }
   }
 

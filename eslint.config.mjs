@@ -270,7 +270,6 @@ export default defineConfig([
       'unicorn/logical-assignment-operators': 'off',
       'unicorn/max-nested-calls': 'off',
       'unicorn/name-replacements': 'off',
-      'unicorn/new-for-builtins': 'off',
       'unicorn/no-anonymous-default-export': 'off',
       'unicorn/no-array-callback-reference': 'off',
       'unicorn/no-array-reduce': 'off',
