@@ -47,19 +47,17 @@ class BackToTop extends Component {
       }
 
       // If the subnav or the footer not visible then fix the back to top link to follow the user
-      if (subNavIsIntersecting || footerIsIntersecting) {
-        this.$root.classList.remove('app-back-to-top--fixed')
-      } else {
-        this.$root.classList.add('app-back-to-top--fixed')
-      }
+      this.$root.classList.toggle(
+        'app-back-to-top--fixed',
+        !(subNavIsIntersecting || footerIsIntersecting)
+      )
 
       // If the subnav is visible but you can see it all at once, then a back to top link is likely not as useful.
       // We hide the link but make it focusable for screen readers users who might still find it useful.
-      if (subNavIsIntersecting && subNavIntersectionRatio === 1) {
-        this.$root.classList.add('app-back-to-top--hidden')
-      } else {
-        this.$root.classList.remove('app-back-to-top--hidden')
-      }
+      this.$root.classList.toggle(
+        'app-back-to-top--hidden',
+        subNavIsIntersecting && subNavIntersectionRatio === 1
+      )
     })
 
     observer.observe($footer)
