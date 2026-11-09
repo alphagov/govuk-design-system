@@ -285,7 +285,6 @@ export default defineConfig([
       'unicorn/no-unnecessary-parameters': 'off',
       'unicorn/no-unsafe-string-replacement': 'off',
       'unicorn/no-useless-template-literals': 'off',
-      'unicorn/numeric-separators-style': 'off',
       'unicorn/operator-assignment': 'off',
       'unicorn/prefer-add-event-listener': 'off',
       'unicorn/prefer-array-flat-map': 'off',
