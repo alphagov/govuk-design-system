@@ -219,7 +219,6 @@ export default defineConfig([
       // XO rules that our code breaks and we still need to review
       '@eslint-community/eslint-comments/require-description': 'off',
       '@html-eslint/head-order': 'off',
-      '@html-eslint/require-button-type': 'off',
       '@html-eslint/require-meta-description': 'off',
       '@html-eslint/require-meta-viewport': 'off',
       '@html-eslint/require-open-graph-protocol': 'off',
