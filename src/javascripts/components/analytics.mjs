@@ -12,7 +12,7 @@ export function loadAnalytics() {
     ;(function (w, d, s, l, i) {
       w[l] = w[l] || []
       w[l].push({
-        'gtm.start': new Date().getTime(),
+        'gtm.start': Date.now(),
         event: 'gtm.js'
       })
 

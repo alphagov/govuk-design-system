@@ -291,7 +291,6 @@ export default defineConfig([
       'unicorn/prefer-array-some': 'off',
       'unicorn/prefer-combined-guards': 'off',
       'unicorn/prefer-continue': 'off',
-      'unicorn/prefer-date-now': 'off',
       'unicorn/prefer-default-parameters': 'off',
       'unicorn/prefer-dom-node-append': 'off',
       'unicorn/prefer-dom-node-html-methods': 'off',
