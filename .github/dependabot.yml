@@ -65,11 +65,7 @@ updates:
           - '@types/jest'
           - '@types/jest-*'
 
-    # Ignore eslint and is plugins for now
-    # the time they all get compatible with each other
     ignore:
-      - dependency-name: 'eslint-*'
-      - dependency-name: 'eslint'
       # iframe-resizer has switched to GPL licence in v5
       # so we need to avoid upgrading to their next major version
       - dependency-name: 'iframe-resizer'
