@@ -40,6 +40,7 @@ class BackToTop extends Component {
       if (footerEntry) {
         footerIsIntersecting = footerEntry.isIntersecting
       }
+
       if (subNavEntry) {
         subNavIsIntersecting = subNavEntry.isIntersecting
         subNavIntersectionRatio = subNavEntry.intersectionRatio

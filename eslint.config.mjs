@@ -223,7 +223,6 @@ export default defineConfig([
       '@html-eslint/require-meta-viewport': 'off',
       '@html-eslint/require-open-graph-protocol': 'off',
       '@html-eslint/sort-attrs': 'off',
-      '@stylistic/padding-line-between-statements': 'off',
       '@stylistic/spaced-comment': 'off',
       '@typescript-eslint/no-useless-default-assignment': 'off',
       '@typescript-eslint/prefer-nullish-coalescing': 'off',

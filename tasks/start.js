@@ -25,6 +25,7 @@ function setupNunjucksWatcher() {
       if (!filename || !filename.endsWith('.njk')) {
         return
       }
+
       nunjucksTransformer.resetCache()
     }
   )
