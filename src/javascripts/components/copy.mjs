@@ -25,7 +25,6 @@ class Copy extends Component {
     super($module)
 
     this.$pre = this.$root.querySelector('pre')
-    // TODO: Throw once GOV.UK Frontend exports its errors
 
     /** @type {number | null} */
     this.resetTimeoutId = null
