@@ -153,7 +153,7 @@ class Search extends Component {
    * @param {SearchResult} result - Search result
    */
   handleOnConfirm(result) {
-    const permalink = result.permalink
+    const { permalink } = result
 
     if (!permalink) {
       return

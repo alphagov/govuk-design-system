@@ -252,7 +252,6 @@ export default defineConfig([
       'package-json/prefer-shorthand': 'off',
       'package-json/prefer-type-module': 'off',
       'package-json/sort-properties': 'off',
-      'prefer-destructuring': 'off',
       'prefer-object-spread': 'off',
       'regexp/letter-case': 'off',
       'regexp/no-super-linear-backtracking': 'off',
