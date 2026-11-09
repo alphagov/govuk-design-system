@@ -184,5 +184,5 @@ async function getComment({ github, context }, issueNumber, marker) {
   })
 
   // Find first match for marker
-  return comments.find(({ body }) => !!body?.includes(marker))
+  return comments.find(({ body }) => Boolean(body?.includes(marker)))
 }
