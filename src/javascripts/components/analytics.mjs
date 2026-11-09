@@ -59,7 +59,7 @@ export function stripPossiblePII(string) {
     '[REDACTED NI NUMBER]'
   )
   // If someone has typed in a number it's likely not related so redact it
-  string = string.replace(/[0-9]+/g, '[REDACTED NUMBER]')
+  string = string.replace(/\d+/g, '[REDACTED NUMBER]')
   return string
 }
 

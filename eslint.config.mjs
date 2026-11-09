@@ -32,7 +32,9 @@ export default defineConfig([
       // The rules is stylistic and makes some arrow functions less readable,
       // even with its `as-needed` config, so we'll leave it off and trust
       // human eye
-      'arrow-body-style': 'off'
+      'arrow-body-style': 'off',
+      // `[0-9]` is easier ot understand at a glance than `\d`
+      'regexp/prefer-d': 'off'
     }
   },
   {
@@ -255,7 +257,6 @@ export default defineConfig([
       'regexp/no-super-linear-backtracking': 'off',
       'regexp/no-super-linear-move': 'off',
       'regexp/no-unused-capturing-group': 'off',
-      'regexp/prefer-d': 'off',
       'regexp/prefer-named-capture-group': 'off',
       'regexp/prefer-range': 'off',
       'regexp/sort-character-class-elements': 'off',
