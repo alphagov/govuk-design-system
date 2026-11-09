@@ -255,7 +255,6 @@ export default defineConfig([
       'regexp/no-super-linear-backtracking': 'off',
       'regexp/no-super-linear-move': 'off',
       'regexp/no-unused-capturing-group': 'off',
-      'regexp/no-useless-flag': 'off',
       'regexp/prefer-d': 'off',
       'regexp/prefer-named-capture-group': 'off',
       'regexp/prefer-range': 'off',
