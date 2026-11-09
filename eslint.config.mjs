@@ -245,7 +245,6 @@ export default defineConfig([
       'no-multi-assign': 'off',
       'no-shadow': 'off',
       null: 'off',
-      'object-shorthand': 'off',
       'package-json/dependency-version-range': 'off',
       'package-json/no-package-manager-engines': 'off',
       'package-json/no-short-flags-in-scripts': 'off',
