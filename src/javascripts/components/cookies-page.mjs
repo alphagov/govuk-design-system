@@ -7,6 +7,7 @@ import { getConsentCookie, setConsentCookie } from './cookie-functions.mjs'
  */
 class CookiesPage extends Component {
   static moduleName = 'app-cookies-page'
+
   /**
    * @param {Element} $module - HTML element
    */

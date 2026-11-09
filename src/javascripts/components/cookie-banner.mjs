@@ -150,7 +150,6 @@ class CookieBanner extends ConfigurableComponent {
   static defaults = {
     cookieCategory: 'analytics'
   }
-
   static schema = {
     properties: {
       cookieCategory: { type: 'string' }

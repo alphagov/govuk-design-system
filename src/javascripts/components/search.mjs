@@ -38,6 +38,7 @@ const DEBOUNCE_TIME_TO_WAIT = () => {
  */
 class Search extends Component {
   static moduleName = 'app-search'
+
   /**
    * @param {Element} $module - HTML element
    */
