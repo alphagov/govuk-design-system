@@ -271,8 +271,7 @@ function userAllowsCookie(cookieName) {
 function getCookie(name) {
   const nameEQ = `${name}=`
   const cookies = document.cookie.split(';')
-  for (let i = 0, len = cookies.length; i < len; i++) {
-    let cookie = cookies[i]
+  for (let cookie of cookies) {
     while (cookie.charAt(0) === ' ') {
       cookie = cookie.substring(1, cookie.length)
     }

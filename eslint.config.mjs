@@ -280,7 +280,6 @@ export default defineConfig([
       'unicorn/no-document-cookie': 'off',
       'unicorn/no-duplicate-loops': 'off',
       'unicorn/no-for-each': 'off',
-      'unicorn/no-for-loop': 'off',
       'unicorn/no-global-object-property-assignment': 'off',
       'unicorn/no-immediate-mutation': 'off',
       'unicorn/no-negated-condition': 'off',
