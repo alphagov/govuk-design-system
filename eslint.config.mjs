@@ -289,7 +289,6 @@ export default defineConfig([
       'unicorn/prefer-add-event-listener': 'off',
       'unicorn/prefer-array-flat-map': 'off',
       'unicorn/prefer-array-some': 'off',
-      'unicorn/prefer-boolean-return': 'off',
       'unicorn/prefer-classlist-toggle': 'off',
       'unicorn/prefer-combined-guards': 'off',
       'unicorn/prefer-continue': 'off',
