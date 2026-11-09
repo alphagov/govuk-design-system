@@ -230,7 +230,6 @@ export default defineConfig([
       '@typescript-eslint/prefer-nullish-coalescing': 'off',
       '@typescript-eslint/strict-boolean-expressions': 'off',
       camelcase: 'off',
-      'capitalized-comments': 'off',
       'func-names': 'off',
       'guard-for-in': 'off',
       'import-x/no-anonymous-default-export': 'off',

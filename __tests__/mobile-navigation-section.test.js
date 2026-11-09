@@ -101,7 +101,7 @@ describe('MobileNavigationSection', () => {
           '.govuk-service-navigation__item'
         )
 
-        // await jestPuppeteer.debug();
+        // Await jestPuppeteer.debug();
 
         for (const $serviceNavigationItem of $serviceNavigationItems) {
           const [
