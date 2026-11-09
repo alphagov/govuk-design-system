@@ -263,7 +263,6 @@ export default defineConfig([
       'unicorn/class-reference-in-static-methods': 'off',
       'unicorn/consistent-boolean-name': 'off',
       'unicorn/consistent-class-member-order': 'off',
-      'unicorn/consistent-conditional-object-spread': 'off',
       'unicorn/default-export-style': 'off',
       'unicorn/dom-node-dataset': 'off',
       'unicorn/explicit-length-check': 'off',

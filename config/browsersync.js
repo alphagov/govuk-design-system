@@ -8,9 +8,9 @@ const ports = require('./ports')
 
 module.exports = {
   // Bind to localhost only by default
-  ...(process.env.ALLOW_EXTERNAL_CONNECTIONS === 'true'
-    ? {}
-    : { listen: 'localhost' }),
+  ...(process.env.ALLOW_EXTERNAL_CONNECTIONS !== 'true' && {
+    listen: 'localhost'
+  }),
 
   // Configure port
   port: ports.preview,
