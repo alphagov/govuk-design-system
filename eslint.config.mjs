@@ -265,7 +265,6 @@ export default defineConfig([
       'unicorn/consistent-class-member-order': 'off',
       'unicorn/default-export-style': 'off',
       'unicorn/dom-node-dataset': 'off',
-      'unicorn/explicit-length-check': 'off',
       'unicorn/filename-case': 'off',
       'unicorn/import-style': 'off',
       'unicorn/logical-assignment-operators': 'off',

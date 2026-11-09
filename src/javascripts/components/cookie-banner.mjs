@@ -61,7 +61,7 @@ class CookieBanner extends ConfigurableComponent {
       !($cookieMessage instanceof HTMLElement) ||
       !($cookieConfirmationAccept instanceof HTMLElement) ||
       !($cookieConfirmationReject instanceof HTMLElement) ||
-      !$cookieBannerHideButtons.length
+      $cookieBannerHideButtons.length === 0
     ) {
       return this
     }

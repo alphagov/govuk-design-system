@@ -22,7 +22,7 @@ export function getFilesFromDiff(glob, status) {
     (change) => matchesGlob(change.fileName, glob) && change.status === status
   )
 
-  if (files.length) {
+  if (files.length > 0) {
     console.log('Matched workflow against the following name-statuses:')
     console.log(files)
 
@@ -67,7 +67,7 @@ export function getFilesWithUnchangedSiblings(
     )
   })
 
-  if (childFiles.length) {
+  if (childFiles.length > 0) {
     console.log('Found the following files with unchanged siblings:')
     console.log(childFiles)
     return childFiles
