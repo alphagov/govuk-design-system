@@ -29,7 +29,10 @@ export default defineConfig([
       })
     ],
     rules: {
-      // Rules we'll keep disabled after XO review to go here
+      // The rules is stylistic and makes some arrow functions less readable,
+      // even with its `as-needed` config, so we'll leave it off and trust
+      // human eye
+      'arrow-body-style': 'off'
     }
   },
   {
@@ -226,7 +229,6 @@ export default defineConfig([
       '@typescript-eslint/no-useless-default-assignment': 'off',
       '@typescript-eslint/prefer-nullish-coalescing': 'off',
       '@typescript-eslint/strict-boolean-expressions': 'off',
-      'arrow-body-style': 'off',
       camelcase: 'off',
       'capitalized-comments': 'off',
       'func-names': 'off',
