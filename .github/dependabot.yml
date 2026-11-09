@@ -65,11 +65,7 @@ updates:
           - '@types/jest'
           - '@types/jest-*'
 
-    # Ignore eslint and is plugins for now
-    # the time they all get compatible with each other
     ignore:
-      - dependency-name: 'eslint-*'
-      - dependency-name: 'eslint'
       # iframe-resizer has switched to GPL licence in v5
       # so we need to avoid upgrading to their next major version
       - dependency-name: 'iframe-resizer'
@@ -79,6 +75,10 @@ updates:
       # Until we can prioritise addressing the changes of Babel 8
       - dependency-name: '@babel/*'
         update-types: ['version-update:semver-major']
+      # `typescript-eslint` doesn't yet support TypeScript 7
+      # so we need to hold off a major bump for TypeScript
+      - dependency-name: 'typescript'
+        versions: ['version-update:semver-major']
 
     # Schedule run every Monday, local time
     schedule:
