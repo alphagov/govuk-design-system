@@ -27,10 +27,10 @@ export function getFilesFromDiff(glob, status) {
     console.log(files)
 
     return files.map((change) => change.fileName)
-  } else {
-    console.log('No files matched.')
-    return false
   }
+
+  console.log('No files matched.')
+  return false
 }
 
 /**
@@ -71,10 +71,10 @@ export function getFilesWithUnchangedSiblings(
     console.log('Found the following files with unchanged siblings:')
     console.log(childFiles)
     return childFiles
-  } else {
-    console.log('No unchanged siblings found')
-    return false
   }
+
+  console.log('No unchanged siblings found')
+  return false
 }
 
 /**
