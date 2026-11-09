@@ -190,6 +190,11 @@ export default defineConfig([
         ...globals.jest,
         ...globals.browser
       }
+    },
+    rules: {
+      // Because of `describe` and `it`, we need to be a bit looser on nesting
+      // in tests
+      'max-nested-callbacks': 'off'
     }
   },
   {
