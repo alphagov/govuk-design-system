@@ -55,7 +55,7 @@ describe('Site search', () => {
 
     // Regex with word boundary, in our case words that begin with 'd'
     for (const result of resultsArray) {
-      expect(result).toMatch(/\b[d]\w*/)
+      expect(result).toMatch(/\bd\w*/)
     }
 
     expect.assertions()
@@ -76,7 +76,7 @@ describe('Site search', () => {
 
     // Regex with word boundary, in our case words that begin with 'd'
     for (const result of resultsArray) {
-      expect(result).toMatch(/\b[d]\w*/)
+      expect(result).toMatch(/\bd\w*/)
     }
 
     expect.assertions()
