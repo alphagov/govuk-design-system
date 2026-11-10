@@ -279,7 +279,6 @@ export default defineConfig([
       'func-names': 'off',
       'guard-for-in': 'off',
       'jsdoc/require-asterisk-prefix': 'off',
-      'n/prefer-global/buffer': 'off',
       'n/prefer-global/process': 'off',
       'n/prefer-process-get-builtin-module': 'off',
       'n/prefer-promises/fs': 'off',
