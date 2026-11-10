@@ -251,6 +251,17 @@ export default defineConfig([
     }
   },
   {
+    // Allow anonymous default exports for config files and test fixtures
+    files: [
+      '**/*.config.{cjs,js,mjs}',
+      '**/.*.{cjs,js,mjs}',
+      '**/fixtures/**/*.{cjs,js,mjs}'
+    ],
+    rules: {
+      'import-x/no-anonymous-default-export': 'off'
+    }
+  },
+  {
     extends: [PrettierConfig]
   },
   {
@@ -267,7 +278,6 @@ export default defineConfig([
       camelcase: 'off',
       'func-names': 'off',
       'guard-for-in': 'off',
-      'import-x/no-anonymous-default-export': 'off',
       'import-x/no-unassigned-import': 'off',
       'jsdoc/require-asterisk-prefix': 'off',
       'n/prefer-global/buffer': 'off',
