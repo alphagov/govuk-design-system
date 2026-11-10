@@ -34,7 +34,10 @@ export default defineConfig([
       // human eye
       'arrow-body-style': 'off',
       // `[0-9]` is easier ot understand at a glance than `\d`
-      'regexp/prefer-d': 'off'
+      'regexp/prefer-d': 'off',
+      // `append()` is just shy of our browser support, only being available in
+      // Edge in v17 when our browser support currently extends back to v16
+      'unicorn/prefer-dom-node-append': 'off'
     }
   },
   {
@@ -292,7 +295,6 @@ export default defineConfig([
       'unicorn/prefer-combined-guards': 'off',
       'unicorn/prefer-continue': 'off',
       'unicorn/prefer-default-parameters': 'off',
-      'unicorn/prefer-dom-node-append': 'off',
       'unicorn/prefer-dom-node-html-methods': 'off',
       'unicorn/prefer-dom-node-remove': 'off',
       'unicorn/prefer-early-return': 'off',
