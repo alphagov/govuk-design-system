@@ -278,7 +278,6 @@ export default defineConfig([
       camelcase: 'off',
       'func-names': 'off',
       'guard-for-in': 'off',
-      'import-x/no-unassigned-import': 'off',
       'jsdoc/require-asterisk-prefix': 'off',
       'n/prefer-global/buffer': 'off',
       'n/prefer-global/process': 'off',
