@@ -188,7 +188,10 @@ export default defineConfig([
 
       // As well as conflicting with `es-x/no-global-this`, `window.*` is easier
       // to understand at a glance compared to `globalThis.*`
-      'unicorn/prefer-global-this': 'off'
+      'unicorn/prefer-global-this': 'off',
+
+      // `replaceAll()` doesn't meet our browser support
+      'unicorn/prefer-string-replace-all': 'off'
     }
   },
   {
@@ -310,7 +313,6 @@ export default defineConfig([
       'unicorn/prefer-simple-condition-first': 'off',
       'unicorn/prefer-simple-sort-comparator': 'off',
       'unicorn/prefer-spread': 'off',
-      'unicorn/prefer-string-replace-all': 'off',
       'unicorn/prefer-string-slice': 'off',
       'unicorn/prefer-structured-clone': 'off',
       'unicorn/prefer-ternary': 'off',
