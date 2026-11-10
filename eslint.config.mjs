@@ -119,6 +119,15 @@ export default defineConfig([
         {
           args: 'none'
         }
+      ],
+
+      // Retain single line JSDoc typing comments
+      'unicorn/single-line-block-comment-style': [
+        'error',
+        'multiline',
+        {
+          ignore: ['^@']
+        }
       ]
     },
     settings: {
@@ -320,7 +329,6 @@ export default defineConfig([
       'unicorn/prefer-ternary': 'off',
       'unicorn/prefer-toggle-attribute': 'off',
       'unicorn/require-array-sort-compare': 'off',
-      'unicorn/single-line-block-comment-style': 'off',
       'unicorn/text-encoding-identifier-case': 'off',
       'unicorn/throw-new-error': 'off'
     }
