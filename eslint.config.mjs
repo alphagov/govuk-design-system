@@ -309,7 +309,6 @@ export default defineConfig([
       'unicorn/prefer-scoped-selector': 'off',
       'unicorn/prefer-simple-condition-first': 'off',
       'unicorn/prefer-simple-sort-comparator': 'off',
-      'unicorn/prefer-split-limit': 'off',
       'unicorn/prefer-spread': 'off',
       'unicorn/prefer-string-replace-all': 'off',
       'unicorn/prefer-string-slice': 'off',

@@ -157,7 +157,7 @@ function processDiffTxt() {
       // Get rid of stray spaces to avoid pain when processing this map later
       .map((change) => {
         // The status letter and file path are split by a tab character
-        const [status, fileName] = change.trim().split(/\s+/)
+        const [status, fileName] = change.trim().split(/\s+/, 2)
         return {
           fileName,
           status
