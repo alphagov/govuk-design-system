@@ -14,7 +14,7 @@ class Copy extends Component {
     Component.checkSupport()
 
     if (!ClipboardJS.isSupported()) {
-      throw Error('ClipboardJS not supported in this browser')
+      throw new Error('ClipboardJS not supported in this browser')
     }
   }
 

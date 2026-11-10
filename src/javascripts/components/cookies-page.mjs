@@ -30,7 +30,7 @@ class CookiesPage extends Component {
     )
 
     if (
-      !$cookieFormFieldsets.length ||
+      $cookieFormFieldsets.length === 0 ||
       !($cookieFormButton instanceof HTMLButtonElement)
     ) {
       return this

@@ -34,7 +34,10 @@ export default defineConfig([
       // human eye
       'arrow-body-style': 'off',
       // `[0-9]` is easier ot understand at a glance than `\d`
-      'regexp/prefer-d': 'off'
+      'regexp/prefer-d': 'off',
+      // `append()` is just shy of our browser support, only being available in
+      // Edge in v17 when our browser support currently extends back to v16
+      'unicorn/prefer-dom-node-append': 'off'
     }
   },
   {
@@ -263,16 +266,13 @@ export default defineConfig([
       'unicorn/class-reference-in-static-methods': 'off',
       'unicorn/consistent-boolean-name': 'off',
       'unicorn/consistent-class-member-order': 'off',
-      'unicorn/consistent-conditional-object-spread': 'off',
       'unicorn/default-export-style': 'off',
       'unicorn/dom-node-dataset': 'off',
-      'unicorn/explicit-length-check': 'off',
       'unicorn/filename-case': 'off',
       'unicorn/import-style': 'off',
       'unicorn/logical-assignment-operators': 'off',
       'unicorn/max-nested-calls': 'off',
       'unicorn/name-replacements': 'off',
-      'unicorn/new-for-builtins': 'off',
       'unicorn/no-anonymous-default-export': 'off',
       'unicorn/no-array-callback-reference': 'off',
       'unicorn/no-array-reduce': 'off',
@@ -283,27 +283,18 @@ export default defineConfig([
       'unicorn/no-document-cookie': 'off',
       'unicorn/no-duplicate-loops': 'off',
       'unicorn/no-for-each': 'off',
-      'unicorn/no-for-loop': 'off',
       'unicorn/no-global-object-property-assignment': 'off',
-      'unicorn/no-immediate-mutation': 'off',
       'unicorn/no-negated-condition': 'off',
-      'unicorn/no-typeof-undefined': 'off',
       'unicorn/no-unnecessary-parameters': 'off',
       'unicorn/no-unsafe-string-replacement': 'off',
-      'unicorn/no-useless-else': 'off',
       'unicorn/no-useless-template-literals': 'off',
-      'unicorn/numeric-separators-style': 'off',
       'unicorn/operator-assignment': 'off',
       'unicorn/prefer-add-event-listener': 'off',
       'unicorn/prefer-array-flat-map': 'off',
       'unicorn/prefer-array-some': 'off',
-      'unicorn/prefer-boolean-return': 'off',
-      'unicorn/prefer-classlist-toggle': 'off',
       'unicorn/prefer-combined-guards': 'off',
       'unicorn/prefer-continue': 'off',
-      'unicorn/prefer-date-now': 'off',
       'unicorn/prefer-default-parameters': 'off',
-      'unicorn/prefer-dom-node-append': 'off',
       'unicorn/prefer-dom-node-html-methods': 'off',
       'unicorn/prefer-dom-node-remove': 'off',
       'unicorn/prefer-early-return': 'off',

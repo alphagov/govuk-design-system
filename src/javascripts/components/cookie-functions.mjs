@@ -56,12 +56,12 @@ const DEFAULT_COOKIE_CONSENT = {
  * @returns {string | null | undefined} - Returns value when setting or deleting
  */
 export function Cookie(name, value, options) {
-  if (typeof value !== 'undefined') {
+  if (value !== undefined) {
     if (value === false || value === null) {
       deleteCookie(name)
     } else {
       // Default expiry date of 30 days
-      if (typeof options === 'undefined') {
+      if (options === undefined) {
         options = { days: 30 }
       }
 
@@ -271,8 +271,7 @@ function userAllowsCookie(cookieName) {
 function getCookie(name) {
   const nameEQ = `${name}=`
   const cookies = document.cookie.split(';')
-  for (let i = 0, len = cookies.length; i < len; i++) {
-    let cookie = cookies[i]
+  for (let cookie of cookies) {
     while (cookie.charAt(0) === ' ') {
       cookie = cookie.substring(1, cookie.length)
     }
@@ -294,7 +293,7 @@ function getCookie(name) {
  */
 function setCookie(name, value, options) {
   if (userAllowsCookie(name)) {
-    if (typeof options === 'undefined') {
+    if (options === undefined) {
       options = {}
     }
 

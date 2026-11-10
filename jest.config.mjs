@@ -28,7 +28,7 @@ export default {
   reporters: ['default', 'github-actions'],
 
   // Test timeout increased (5s to 15s)
-  testTimeout: 15000,
+  testTimeout: 15_000,
 
   // Enable Babel transforms until Jest supports ESM
   // See: https://jestjs.io/docs/ecmascript-modules

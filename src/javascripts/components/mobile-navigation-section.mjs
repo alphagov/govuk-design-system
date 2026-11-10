@@ -17,7 +17,7 @@ class MobileNavigationSection extends Component {
         '--govuk-breakpoint-tablet'
       )
     ) {
-      throw Error(
+      throw new Error(
         'GOV.UK Frontend tablet breakpoint custom property is not available'
       )
     }

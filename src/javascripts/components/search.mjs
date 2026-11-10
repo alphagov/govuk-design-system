@@ -30,7 +30,7 @@ const DEBOUNCE_TIME_TO_WAIT = () => {
   // our tests do not run very slowly.
   // @ts-expect-error Property does not exist on window
   const timeout = window.__SITE_SEARCH_TRACKING_TIMEOUT
-  return typeof timeout !== 'undefined' ? timeout : 2000 // Milliseconds
+  return timeout !== undefined ? timeout : 2000 // Milliseconds
 }
 
 /**
@@ -207,7 +207,7 @@ class Search extends Component {
       const matchedWords = startsWithFilter(words, searchQuery)
 
       // Only show a matching alias if there are no matches in the title
-      if (!matchedWords.length && result.aliases) {
+      if (matchedWords.length === 0 && result.aliases) {
         const aliases = result.aliases.split(', ')
 
         // Aliases containing words that start with the query
@@ -217,12 +217,12 @@ class Search extends Component {
             searchQuery
           )
 
-          return aliasWordsMatched.length
+          return aliasWordsMatched.length > 0
             ? aliasesFiltered.concat([alias])
             : aliasesFiltered
         }, [])
 
-        if (matchedAliases.length) {
+        if (matchedAliases.length > 0) {
           const aliasesContainer = document.createElement('span')
           aliasesContainer.className = 'app-site-search__aliases'
           aliasesContainer.textContent = matchedAliases.join(', ')
