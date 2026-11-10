@@ -37,7 +37,10 @@ export default defineConfig([
       'regexp/prefer-d': 'off',
       // `append()` is just shy of our browser support, only being available in
       // Edge in v17 when our browser support currently extends back to v16
-      'unicorn/prefer-dom-node-append': 'off'
+      'unicorn/prefer-dom-node-append': 'off',
+      // `getHTML()` and `setHTML()` are still very new and not within the scope
+      // of our browser support
+      'unicorn/prefer-dom-node-html-methods': 'off'
     }
   },
   {
@@ -295,7 +298,6 @@ export default defineConfig([
       'unicorn/prefer-combined-guards': 'off',
       'unicorn/prefer-continue': 'off',
       'unicorn/prefer-default-parameters': 'off',
-      'unicorn/prefer-dom-node-html-methods': 'off',
       'unicorn/prefer-dom-node-remove': 'off',
       'unicorn/prefer-early-return': 'off',
       'unicorn/prefer-global-this': 'off',
