@@ -280,7 +280,6 @@ export default defineConfig([
       'guard-for-in': 'off',
       'jsdoc/require-asterisk-prefix': 'off',
       'n/prefer-process-get-builtin-module': 'off',
-      'n/prefer-promises/fs': 'off',
       'new-cap': 'off',
       'no-await-in-loop': 'off',
       'no-constructor-return': 'off',
