@@ -298,7 +298,6 @@ export default defineConfig([
       'unicorn/prefer-combined-guards': 'off',
       'unicorn/prefer-continue': 'off',
       'unicorn/prefer-default-parameters': 'off',
-      'unicorn/prefer-dom-node-remove': 'off',
       'unicorn/prefer-early-return': 'off',
       'unicorn/prefer-global-this': 'off',
       'unicorn/prefer-location-assign': 'off',

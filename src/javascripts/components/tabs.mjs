@@ -96,7 +96,7 @@ class AppTabs extends Component {
       $button.addEventListener('click', (event) => this.onClick(event))
       // ...and replace the anchor with the button
       $tab.parentElement.appendChild($button)
-      $tab.parentElement.removeChild($tab)
+      $tab.remove()
     })
 
     // Replace the value of $mobileTabs with the new buttons
