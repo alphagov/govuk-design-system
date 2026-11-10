@@ -1,5 +1,5 @@
-import { existsSync, readFileSync } from 'fs'
-import { matchesGlob } from 'path'
+import { existsSync, readFileSync } from 'node:fs'
+import { matchesGlob } from 'node:path'
 
 import { outdent } from 'outdent'
 

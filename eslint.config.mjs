@@ -304,7 +304,6 @@ export default defineConfig([
       'unicorn/prefer-default-parameters': 'off',
       'unicorn/prefer-early-return': 'off',
       'unicorn/prefer-module': 'off',
-      'unicorn/prefer-node-protocol': 'off',
       'unicorn/prefer-number-coercion': 'off',
       'unicorn/prefer-query-selector': 'off',
       'unicorn/prefer-scoped-selector': 'off',
