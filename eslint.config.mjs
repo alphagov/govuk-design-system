@@ -128,6 +128,16 @@ export default defineConfig([
         {
           ignore: ['^@']
         }
+      ],
+
+      // We don't want spaced comments for sourcemap URLs as they require a
+      // comment format of `//#` without spaces
+      '@stylistic/spaced-comment': [
+        'error',
+        'always',
+        {
+          markers: ['#']
+        }
       ]
     },
     settings: {
