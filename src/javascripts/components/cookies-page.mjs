@@ -7,6 +7,7 @@ import { getConsentCookie, setConsentCookie } from './cookie-functions.mjs'
  */
 class CookiesPage extends Component {
   static moduleName = 'app-cookies-page'
+
   /**
    * @param {Element} $module - HTML element
    */
@@ -137,7 +138,7 @@ class CookiesPage extends Component {
 
     this.$successNotification.focus()
 
-    // scroll to the top of the page
+    // Scroll to the top of the page
     window.scrollTo(0, 0)
   }
 

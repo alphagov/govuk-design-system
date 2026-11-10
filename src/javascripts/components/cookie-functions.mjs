@@ -35,7 +35,7 @@ const COOKIE_CATEGORIES = {
  * this will be ignored.
  */
 const DEFAULT_COOKIE_CONSENT = {
-  analytics: null // tracks if has been asked at all
+  analytics: null // Tracks if has been asked at all
 }
 
 /**
@@ -64,6 +64,7 @@ export function Cookie(name, value, options) {
       if (typeof options === 'undefined') {
         options = { days: 30 }
       }
+
       setCookie(name, value, options)
     }
   } else {
@@ -275,10 +276,12 @@ function getCookie(name) {
     while (cookie.charAt(0) === ' ') {
       cookie = cookie.substring(1, cookie.length)
     }
+
     if (cookie.indexOf(nameEQ) === 0) {
       return decodeURIComponent(cookie.substring(nameEQ.length))
     }
   }
+
   return null
 }
 
@@ -294,15 +297,18 @@ function setCookie(name, value, options) {
     if (typeof options === 'undefined') {
       options = {}
     }
+
     let cookieString = `${name}=${value}; path=/`
     if (options.days) {
       const date = new Date()
       date.setTime(date.getTime() + options.days * 24 * 60 * 60 * 1000)
       cookieString = `${cookieString}; expires=${date.toUTCString()}`
     }
+
     if (document.location.protocol === 'https:') {
       cookieString = `${cookieString}; Secure`
     }
+
     document.cookie = cookieString
   }
 }

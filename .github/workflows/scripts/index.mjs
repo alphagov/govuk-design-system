@@ -27,10 +27,10 @@ export function getFilesFromDiff(glob, status) {
     console.log(files)
 
     return files.map((change) => change.fileName)
-  } else {
-    console.log('No files matched.')
-    return false
   }
+
+  console.log('No files matched.')
+  return false
 }
 
 /**
@@ -71,10 +71,10 @@ export function getFilesWithUnchangedSiblings(
     console.log('Found the following files with unchanged siblings:')
     console.log(childFiles)
     return childFiles
-  } else {
-    console.log('No unchanged siblings found')
-    return false
   }
+
+  console.log('No unchanged siblings found')
+  return false
 }
 
 /**
@@ -156,7 +156,7 @@ function processDiffTxt() {
       .split('\n')
       // Get rid of stray spaces to avoid pain when processing this map later
       .map((change) => {
-        // the status letter and file path are split by a tab character
+        // The status letter and file path are split by a tab character
         const [status, fileName] = change.trim().split(/\s+/)
         return {
           fileName,
@@ -184,5 +184,5 @@ async function getComment({ github, context }, issueNumber, marker) {
   })
 
   // Find first match for marker
-  return comments.find(({ body }) => !!body?.includes(marker))
+  return comments.find(({ body }) => Boolean(body?.includes(marker)))
 }

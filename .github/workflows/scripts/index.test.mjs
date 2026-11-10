@@ -76,8 +76,8 @@ describe('Github action helpers', () => {
     beforeEach(() => {
       jest
         .mocked(fs.existsSync)
-        .mockImplementation(
-          (file) => !!mockFilesystem.find((mockFile) => mockFile === file)
+        .mockImplementation((file) =>
+          Boolean(mockFilesystem.find((mockFile) => mockFile === file))
         )
     })
 

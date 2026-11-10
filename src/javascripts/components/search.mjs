@@ -30,7 +30,7 @@ const DEBOUNCE_TIME_TO_WAIT = () => {
   // our tests do not run very slowly.
   // @ts-expect-error Property does not exist on window
   const timeout = window.__SITE_SEARCH_TRACKING_TIMEOUT
-  return typeof timeout !== 'undefined' ? timeout : 2000 // milliseconds
+  return typeof timeout !== 'undefined' ? timeout : 2000 // Milliseconds
 }
 
 /**
@@ -38,6 +38,7 @@ const DEBOUNCE_TIME_TO_WAIT = () => {
  */
 class Search extends Component {
   static moduleName = 'app-search'
+
   /**
    * @param {Element} $module - HTML element
    */
@@ -152,7 +153,7 @@ class Search extends Component {
    * @param {SearchResult} result - Search result
    */
   handleOnConfirm(result) {
-    const permalink = result.permalink
+    const { permalink } = result
 
     if (!permalink) {
       return

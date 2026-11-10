@@ -53,7 +53,7 @@ For example, if you want to override the button component you could do the follo
 
 ```html
 <div class="app-interruption-card">
-  <button class="govuk-button">
+  <button type="submit" class="govuk-button">
     Inverse button
   </button>
 </div>
@@ -114,7 +114,7 @@ For example, if you wanted to override the button component you could do the fol
 
 ```html
 <div class="app-interruption-card">
-  <button class="govuk-button app-button--inverse">
+  <button type="submit" class="govuk-button app-button--inverse">
     Inverse button
   </button>
 </div>

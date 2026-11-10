@@ -51,7 +51,7 @@ async function getProperty($element, propertyName) {
  * @returns {Promise<boolean>} Element visibility
  */
 async function isVisible($element) {
-  return !!(await $element.boundingBox())
+  return Boolean(await $element.boundingBox())
 }
 
 /**

@@ -29,7 +29,10 @@ export default defineConfig([
       })
     ],
     rules: {
-      // Rules we'll keep disabled after XO review to go here
+      // The rules is stylistic and makes some arrow functions less readable,
+      // even with its `as-needed` config, so we'll leave it off and trust
+      // human eye
+      'arrow-body-style': 'off'
     }
   },
   {
@@ -219,20 +222,14 @@ export default defineConfig([
       // XO rules that our code breaks and we still need to review
       '@eslint-community/eslint-comments/require-description': 'off',
       '@html-eslint/head-order': 'off',
-      '@html-eslint/require-button-type': 'off',
       '@html-eslint/require-meta-description': 'off',
       '@html-eslint/require-meta-viewport': 'off',
       '@html-eslint/require-open-graph-protocol': 'off',
       '@html-eslint/sort-attrs': 'off',
-      '@stylistic/lines-between-class-members': 'off',
-      '@stylistic/padding-line-between-statements': 'off',
-      '@stylistic/spaced-comment': 'off',
       '@typescript-eslint/no-useless-default-assignment': 'off',
       '@typescript-eslint/prefer-nullish-coalescing': 'off',
       '@typescript-eslint/strict-boolean-expressions': 'off',
-      'arrow-body-style': 'off',
       camelcase: 'off',
-      'capitalized-comments': 'off',
       'func-names': 'off',
       'guard-for-in': 'off',
       'import-x/no-anonymous-default-export': 'off',
@@ -245,12 +242,9 @@ export default defineConfig([
       'new-cap': 'off',
       'no-await-in-loop': 'off',
       'no-constructor-return': 'off',
-      'no-else-return': 'off',
-      'no-implicit-coercion': 'off',
       'no-multi-assign': 'off',
       'no-shadow': 'off',
       null: 'off',
-      'object-shorthand': 'off',
       'package-json/dependency-version-range': 'off',
       'package-json/no-package-manager-engines': 'off',
       'package-json/no-short-flags-in-scripts': 'off',
@@ -258,9 +252,6 @@ export default defineConfig([
       'package-json/prefer-shorthand': 'off',
       'package-json/prefer-type-module': 'off',
       'package-json/sort-properties': 'off',
-      'prefer-arrow-callback': 'off',
-      'prefer-destructuring': 'off',
-      'prefer-object-spread': 'off',
       'regexp/letter-case': 'off',
       'regexp/no-super-linear-backtracking': 'off',
       'regexp/no-super-linear-move': 'off',
