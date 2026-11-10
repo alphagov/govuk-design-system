@@ -166,6 +166,15 @@ export default defineConfig([
     }
   },
   {
+    files: ['**/*.{cjs,js}'],
+    rules: {
+      // CommonJS file use `require` for importing so we don't need to force
+      // them to use `process.getBuiltinModule` instead of it like an ES Module
+      // would need to
+      'n/prefer-process-get-builtin-module': 'off'
+    }
+  },
+  {
     // Specifically target our client js
     files: ['src/javascripts/**/*.mjs'],
     ignores: ['**/*.test.mjs'],
@@ -279,7 +288,6 @@ export default defineConfig([
       'func-names': 'off',
       'guard-for-in': 'off',
       'jsdoc/require-asterisk-prefix': 'off',
-      'n/prefer-process-get-builtin-module': 'off',
       'new-cap': 'off',
       'no-await-in-loop': 'off',
       'no-constructor-return': 'off',
