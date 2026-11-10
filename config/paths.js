@@ -1,4 +1,4 @@
-const { join, resolve } = require('path')
+const { join, resolve } = require('node:path')
 
 // Repository root directory
 const rootPath = resolve(__dirname, '../')

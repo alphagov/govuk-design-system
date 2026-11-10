@@ -9,16 +9,16 @@ jest.mock('../src/javascripts/components/analytics')
 
 describe('Cookie settings', () => {
   beforeEach(() => {
-    window.GDS_CONSENT_COOKIE_VERSION = 2
+    globalThis.GDS_CONSENT_COOKIE_VERSION = 2
   })
 
   afterEach(() => {
     // Delete test cookies
     const cookies = document.cookie.split(';')
     cookies.forEach((cookie) => {
-      const name = cookie.split('=')[0]
+      const name = cookie.split('=', 1)[0]
       document.cookie = `${name}=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/`
-      document.cookie = `${name}=;expires=Thu, 01 Jan 1970 00:00:00 GMT;domain=${window.location.hostname};path=/`
+      document.cookie = `${name}=;expires=Thu, 01 Jan 1970 00:00:00 GMT;domain=${location.hostname};path=/`
     })
   })
 

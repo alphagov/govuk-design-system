@@ -1,5 +1,5 @@
-const { watch } = require('fs')
-const { dirname, join } = require('path')
+const { watch } = require('node:fs')
+const { dirname, join } = require('node:path')
 
 const browserSync = require('browser-sync')
 const slash = require('slash')

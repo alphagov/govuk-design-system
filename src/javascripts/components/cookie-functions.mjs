@@ -14,14 +14,14 @@
 
 import { loadAnalytics } from './analytics.mjs'
 
-/* Name of the cookie to save users cookie preferences to. */
+// Name of the cookie to save users cookie preferences to.
 const CONSENT_COOKIE_NAME = 'design_system_cookies_policy'
 
-/* Google Analytics tracking IDs for preview and live environments. */
+// Google Analytics tracking IDs for preview and live environments.
 const TRACKING_PREVIEW_ID = '8F2EMQL51V'
 const TRACKING_LIVE_ID = 'GHT8W0QGD9'
 
-/* Users can (dis)allow different groups of cookies. */
+// Users can (dis)allow different groups of cookies.
 const COOKIE_CATEGORIES = {
   analytics: ['_ga', `_ga_${TRACKING_PREVIEW_ID}`, `_ga_${TRACKING_LIVE_ID}`],
   essential: ['design_system_cookies_policy']

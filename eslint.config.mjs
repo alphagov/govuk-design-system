@@ -37,7 +37,12 @@ export default defineConfig([
       'regexp/prefer-d': 'off',
       // `append()` is just shy of our browser support, only being available in
       // Edge in v17 when our browser support currently extends back to v16
-      'unicorn/prefer-dom-node-append': 'off'
+      'unicorn/prefer-dom-node-append': 'off',
+      // `getHTML()` and `setHTML()` are still very new and not within the scope
+      // of our browser support
+      'unicorn/prefer-dom-node-html-methods': 'off',
+      // `CSS.escape` isn't supported by Edge 16-18
+      'unicorn/require-css-escape': 'off'
     }
   },
   {
@@ -114,6 +119,15 @@ export default defineConfig([
         {
           args: 'none'
         }
+      ],
+
+      // Retain single line JSDoc typing comments
+      'unicorn/single-line-block-comment-style': [
+        'error',
+        'multiline',
+        {
+          ignore: ['^@']
+        }
       ]
     },
     settings: {
@@ -181,7 +195,14 @@ export default defineConfig([
       // JSDoc @param required in (mandatory) blocks but
       // @param description is necessary in source code
       'jsdoc/require-param-description': 'warn',
-      'jsdoc/require-param': 'error'
+      'jsdoc/require-param': 'error',
+
+      // As well as conflicting with `es-x/no-global-this`, `window.*` is easier
+      // to understand at a glance compared to `globalThis.*`
+      'unicorn/prefer-global-this': 'off',
+
+      // `replaceAll()` doesn't meet our browser support
+      'unicorn/prefer-string-replace-all': 'off'
     }
   },
   {
@@ -295,33 +316,20 @@ export default defineConfig([
       'unicorn/prefer-combined-guards': 'off',
       'unicorn/prefer-continue': 'off',
       'unicorn/prefer-default-parameters': 'off',
-      'unicorn/prefer-dom-node-html-methods': 'off',
-      'unicorn/prefer-dom-node-remove': 'off',
       'unicorn/prefer-early-return': 'off',
-      'unicorn/prefer-global-this': 'off',
-      'unicorn/prefer-location-assign': 'off',
       'unicorn/prefer-module': 'off',
-      'unicorn/prefer-native-coercion-functions': 'off',
-      'unicorn/prefer-node-protocol': 'off',
       'unicorn/prefer-number-coercion': 'off',
       'unicorn/prefer-query-selector': 'off',
       'unicorn/prefer-scoped-selector': 'off',
-      'unicorn/prefer-set-has': 'off',
       'unicorn/prefer-simple-condition-first': 'off',
       'unicorn/prefer-simple-sort-comparator': 'off',
-      'unicorn/prefer-split-limit': 'off',
       'unicorn/prefer-spread': 'off',
-      'unicorn/prefer-string-replace-all': 'off',
       'unicorn/prefer-string-slice': 'off',
       'unicorn/prefer-structured-clone': 'off',
       'unicorn/prefer-ternary': 'off',
       'unicorn/prefer-toggle-attribute': 'off',
-      'unicorn/prefer-unary-minus': 'off',
       'unicorn/require-array-sort-compare': 'off',
-      'unicorn/require-css-escape': 'off',
-      'unicorn/single-line-block-comment-style': 'off',
-      'unicorn/text-encoding-identifier-case': 'off',
-      'unicorn/throw-new-error': 'off'
+      'unicorn/text-encoding-identifier-case': 'off'
     }
   }
 ])
