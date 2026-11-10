@@ -184,7 +184,11 @@ export default defineConfig([
       // JSDoc @param required in (mandatory) blocks but
       // @param description is necessary in source code
       'jsdoc/require-param-description': 'warn',
-      'jsdoc/require-param': 'error'
+      'jsdoc/require-param': 'error',
+
+      // As well as conflicting with `es-x/no-global-this`, `window.*` is easier
+      // to understand at a glance compared to `globalThis.*`
+      'unicorn/prefer-global-this': 'off'
     }
   },
   {
@@ -299,7 +303,6 @@ export default defineConfig([
       'unicorn/prefer-continue': 'off',
       'unicorn/prefer-default-parameters': 'off',
       'unicorn/prefer-early-return': 'off',
-      'unicorn/prefer-global-this': 'off',
       'unicorn/prefer-location-assign': 'off',
       'unicorn/prefer-module': 'off',
       'unicorn/prefer-native-coercion-functions': 'off',

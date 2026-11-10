@@ -163,14 +163,14 @@ describe('Site search', () => {
   describe('tracking', () => {
     it('should track if there are no results', async () => {
       await page.evaluate(() => {
-        window.__SITE_SEARCH_TRACKING_TIMEOUT = 0
+        globalThis.__SITE_SEARCH_TRACKING_TIMEOUT = 0
       })
 
       await $searchInput.focus()
       await typeText($searchInput, 'lorem ipsum')
 
       const GoogleTagManagerDataLayer = await page.evaluate(
-        () => window.dataLayer
+        () => globalThis.dataLayer
       )
 
       expect(GoogleTagManagerDataLayer).toEqual(
@@ -194,7 +194,7 @@ describe('Site search', () => {
 
     it('should track if there are results', async () => {
       await page.evaluate(() => {
-        window.__SITE_SEARCH_TRACKING_TIMEOUT = 0
+        globalThis.__SITE_SEARCH_TRACKING_TIMEOUT = 0
       })
 
       await $searchInput.focus()
@@ -202,7 +202,7 @@ describe('Site search', () => {
 
       const $searchOptions = await $module.$$('.app-site-search__option')
       const GoogleTagManagerDataLayer = await page.evaluate(
-        () => window.dataLayer
+        () => globalThis.dataLayer
       )
 
       // Find layer that has the impressions to test.
@@ -255,7 +255,7 @@ describe('Site search', () => {
       await page.keyboard.press('Enter')
 
       const GoogleTagManagerDataLayer = await page.evaluate(
-        () => window.dataLayer
+        () => globalThis.dataLayer
       )
 
       expect(GoogleTagManagerDataLayer).toEqual(
@@ -290,14 +290,14 @@ describe('Site search', () => {
 
     it('should block personally identifable information emails', async () => {
       await page.evaluate(() => {
-        window.__SITE_SEARCH_TRACKING_TIMEOUT = 0
+        globalThis.__SITE_SEARCH_TRACKING_TIMEOUT = 0
       })
 
       await $searchInput.focus()
       await typeText($searchInput, 'user@example.com')
 
       const GoogleTagManagerDataLayer = await page.evaluate(
-        () => window.dataLayer
+        () => globalThis.dataLayer
       )
 
       expect(GoogleTagManagerDataLayer).toEqual(
@@ -313,14 +313,14 @@ describe('Site search', () => {
 
     it('should block personally identifable information numbers', async () => {
       await page.evaluate(() => {
-        window.__SITE_SEARCH_TRACKING_TIMEOUT = 0
+        globalThis.__SITE_SEARCH_TRACKING_TIMEOUT = 0
       })
 
       await $searchInput.focus()
       await typeText($searchInput, '079460999')
 
       const GoogleTagManagerDataLayer = await page.evaluate(
-        () => window.dataLayer
+        () => globalThis.dataLayer
       )
 
       expect(GoogleTagManagerDataLayer).toEqual(
