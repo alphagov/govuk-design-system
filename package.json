@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@axe-core/puppeteer": "^4.14.0",
-    "@babel/core": "^7.29.7",
+    "@babel/core": "^7.29.13",
     "@babel/preset-env": "^7.29.7",
     "@eslint/js": "^10.0.1",
     "@eslint/markdown": "^8.0.3",
