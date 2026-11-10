@@ -307,7 +307,6 @@ export default defineConfig([
       'unicorn/prefer-number-coercion': 'off',
       'unicorn/prefer-query-selector': 'off',
       'unicorn/prefer-scoped-selector': 'off',
-      'unicorn/prefer-set-has': 'off',
       'unicorn/prefer-simple-condition-first': 'off',
       'unicorn/prefer-simple-sort-comparator': 'off',
       'unicorn/prefer-split-limit': 'off',
