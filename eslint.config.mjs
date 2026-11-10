@@ -303,7 +303,6 @@ export default defineConfig([
       'unicorn/prefer-continue': 'off',
       'unicorn/prefer-default-parameters': 'off',
       'unicorn/prefer-early-return': 'off',
-      'unicorn/prefer-location-assign': 'off',
       'unicorn/prefer-module': 'off',
       'unicorn/prefer-native-coercion-functions': 'off',
       'unicorn/prefer-node-protocol': 'off',

@@ -160,7 +160,7 @@ class Search extends Component {
     }
 
     trackConfirm(searchQuery, searchResults, result)
-    window.location.href = `/${permalink}`
+    window.location.assign(`/${permalink}`)
   }
 
   /**
