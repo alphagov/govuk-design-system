@@ -1,7 +1,10 @@
 /* eslint-disable-next-line jsdoc/ts-ban-ts-comment */
 // @ts-nocheck
 
-/* eslint-disable max-params */
+/* eslint-disable max-params --
+ * `loadAnalytics` is vendor code so we don't want to edit it too much as this
+ * may have unintended consequences
+ **/
 
 // eslint-disable-next-line jsdoc/require-jsdoc
 export function loadAnalytics() {
