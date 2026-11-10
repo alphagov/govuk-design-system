@@ -40,7 +40,9 @@ export default defineConfig([
       'unicorn/prefer-dom-node-append': 'off',
       // `getHTML()` and `setHTML()` are still very new and not within the scope
       // of our browser support
-      'unicorn/prefer-dom-node-html-methods': 'off'
+      'unicorn/prefer-dom-node-html-methods': 'off',
+      // `CSS.escape` isn't supported by Edge 16-18
+      'unicorn/require-css-escape': 'off'
     }
   },
   {
@@ -318,7 +320,6 @@ export default defineConfig([
       'unicorn/prefer-ternary': 'off',
       'unicorn/prefer-toggle-attribute': 'off',
       'unicorn/require-array-sort-compare': 'off',
-      'unicorn/require-css-escape': 'off',
       'unicorn/single-line-block-comment-style': 'off',
       'unicorn/text-encoding-identifier-case': 'off',
       'unicorn/throw-new-error': 'off'
