@@ -329,8 +329,7 @@ export default defineConfig([
       'unicorn/prefer-ternary': 'off',
       'unicorn/prefer-toggle-attribute': 'off',
       'unicorn/require-array-sort-compare': 'off',
-      'unicorn/text-encoding-identifier-case': 'off',
-      'unicorn/throw-new-error': 'off'
+      'unicorn/text-encoding-identifier-case': 'off'
     }
   }
 ])
