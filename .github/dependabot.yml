@@ -78,7 +78,7 @@ updates:
       # `typescript-eslint` doesn't yet support TypeScript 7
       # so we need to hold off a major bump for TypeScript
       - dependency-name: 'typescript'
-        versions: ['version-update:semver-major']
+        update-types: ['version-update:semver-major']
 
     # Schedule run every Monday, local time
     schedule:
