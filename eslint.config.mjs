@@ -317,7 +317,6 @@ export default defineConfig([
       'unicorn/prefer-structured-clone': 'off',
       'unicorn/prefer-ternary': 'off',
       'unicorn/prefer-toggle-attribute': 'off',
-      'unicorn/prefer-unary-minus': 'off',
       'unicorn/require-array-sort-compare': 'off',
       'unicorn/require-css-escape': 'off',
       'unicorn/single-line-block-comment-style': 'off',
