@@ -284,7 +284,6 @@ export default defineConfig([
       'no-constructor-return': 'off',
       'no-multi-assign': 'off',
       'no-shadow': 'off',
-      null: 'off',
       'regexp/no-super-linear-backtracking': 'off',
       'regexp/no-super-linear-move': 'off',
       'regexp/no-unused-capturing-group': 'off',
