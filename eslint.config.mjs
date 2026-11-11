@@ -21,6 +21,11 @@ export default defineConfig([
   ]),
   includeIgnoreFile(gitignorePath, { gitignoreResolution: true }),
   {
+    // XO offers a set of opinionated best practices that nudge us towards
+    // modern JavaScript. We need to adjust of couple of their rules to suit
+    // our browser support or improve legibility.
+    // Configuration: https://github.com/xojs/eslint-config-xo/blob/main/index.js
+    name: 'govuk-design-system-xo',
     extends: [
       ...xoConfig({
         space: true,
@@ -46,14 +51,26 @@ export default defineConfig([
     }
   },
   {
+    // General rules targeting all JavaScript files (including examples in Markdown)
+    name: 'govuk-design-system-js',
     extends: [
+      // Keep our imports tidy and make sure they import existing modules
+      // https://github.com/un-ts/eslint-plugin-import-x/blob/master/src/config/recommended.ts
       ImportXConfigs['flat/recommended'],
+      // Keep our JSDoc tidy
+      // https://github.com/gajus/eslint-plugin-jsdoc/blob/a7ad52a76373a162c0f1e90302ddf47f0bfd21e9/src/index.js#L437
       JsdocConfigs['flat/recommended-typescript-flavor'],
+      // Node best practices
       // We use a mix of Common and Modules so use this config to avoid clashing
       // import styles. This config merges the module and cjs recommended configs,
       // which themselves import the node plugin's recommended config.
+      // https://github.com/eslint-community/eslint-plugin-n/blob/6e1353be12a49ca570b750eb7386215d881ee6a3/lib/index.js#L39
       NodePlugin.configs['flat/mixed-esm-and-cjs'],
+      // Best practices for using `Promise`
+      // https://github.com/eslint-community/eslint-plugin-promise/blob/main/index.js#L3
       PromisePlugin.configs['flat/recommended'],
+      // Recommended JavaScript rules
+      // https://github.com/eslint/eslint/blob/main/packages/js/src/configs/eslint-recommended.js
       JsConfigs.configs.recommended
     ],
     files: [
@@ -148,9 +165,12 @@ export default defineConfig([
     }
   },
   {
-    // Extensions required for ESM import
+    // Rules for ES modules
+    name: 'govuk-design-system-mjs',
     files: ['**/*.mjs'],
     rules: {
+      // Require extension in the paths used for `import` so that files can be
+      // loaded by browsers directly
       'import-x/extensions': [
         'error',
         'always',
@@ -166,6 +186,8 @@ export default defineConfig([
     }
   },
   {
+    // Rules for common js and plain js files
+    name: 'govuk-design-system-common-js',
     files: ['**/*.{cjs,js}'],
     rules: {
       // CommonJS file use `require` for importing so we don't need to force
@@ -175,9 +197,10 @@ export default defineConfig([
     }
   },
   {
-    // Specifically target our client js
+    // Rules for code that will run in the browser
+    name: 'govuk-design-system-browser-js',
     files: ['src/javascripts/**/*.mjs'],
-    ignores: ['**/*.test.mjs'],
+    ignores: ['**/*.test.mjs'], // Test files don't run in the browser
     languageOptions: {
       globals: {
         ...globals.browser
@@ -185,7 +208,8 @@ export default defineConfig([
       parserOptions: { ecmaVersion: 'latest' }
     },
     extends: [
-      // Peg at ES2015 to adhere to our browser support model for client js
+      // Ensure we don't use syntaxes that do not match our browser support
+      // https://github.com/eslint-community/eslint-plugin-es-x/blob/master/lib/configs/flat/restrict-to-es2015.ts
       ESXPlugin.configs['restrict-to-es2015'],
       JsdocConfigs['flat/recommended-typescript-flavor']
     ],
@@ -225,6 +249,8 @@ export default defineConfig([
     }
   },
   {
+    // Rules for test files
+    name: 'govuk-design-system-tests',
     files: [
       '**/*.test.{cjs,js,mjs}',
       '**/__tests__/**/*.{cjs,js,mjs}',
@@ -246,12 +272,15 @@ export default defineConfig([
     }
   },
   {
+    // Enable markdown parser for `.md` files
+    name: 'govuk-design-system-parse-markdown',
     files: ['**/*.md'],
     extends: [MarkdownPlugin.configs.recommended],
     processor: 'markdown/markdown'
   },
   {
     // Assume markdown `*.md` JavaScript code blocks use browser globals
+    name: 'govuk-design-system-markdown-javascript-examples',
     files: ['**/*.md/*.{cjs,js,mjs}'],
     languageOptions: {
       globals: {
@@ -261,6 +290,7 @@ export default defineConfig([
   },
   {
     // Allow anonymous default exports for config files and test fixtures
+    name: 'govuk-design-system-configs-fixtures',
     files: [
       '**/*.config.{cjs,js,mjs}',
       '**/.*.{cjs,js,mjs}',
@@ -271,11 +301,16 @@ export default defineConfig([
     }
   },
   {
+    // IMPORTANT: Keep after the other configuration objects and apply to all
+    // files so we don't risk re-enabling rules that conflict with Prettier.
+    // Disable rules that conflict with Prettier formatting
+    name: 'govuk-design-system-prettier',
     extends: [PrettierConfig]
   },
   {
+    // XO rules that our code breaks and we still need to review
+    name: 'govuk-design-system-xo-migration',
     rules: {
-      // XO rules that our code breaks and we still need to review
       camelcase: 'off',
       'func-names': 'off',
       'guard-for-in': 'off',
