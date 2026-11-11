@@ -54,7 +54,8 @@ class Copy extends Component {
    * @param {import('clipboard').Event} event - Clipboard event
    */
   successAction(event) {
-    this.$button.textContent = this.$status.textContent = 'Code copied'
+    this.$button.textContent = 'Code copied'
+    this.$status.textContent = 'Code copied'
     // Reset button after 5 seconds
     this.resetAction(event, 5000)
   }

@@ -282,7 +282,6 @@ export default defineConfig([
       'new-cap': 'off',
       'no-await-in-loop': 'off',
       'no-constructor-return': 'off',
-      'no-multi-assign': 'off',
       'no-shadow': 'off',
       'regexp/no-super-linear-backtracking': 'off',
       'regexp/no-super-linear-move': 'off',
