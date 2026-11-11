@@ -281,7 +281,6 @@ export default defineConfig([
       'guard-for-in': 'off',
       'new-cap': 'off',
       'no-await-in-loop': 'off',
-      'no-constructor-return': 'off',
       'no-shadow': 'off',
       'regexp/no-super-linear-backtracking': 'off',
       'regexp/no-super-linear-move': 'off',
