@@ -128,6 +128,16 @@ export default defineConfig([
         {
           ignore: ['^@']
         }
+      ],
+
+      // We don't want spaced comments for sourcemap URLs as they require a
+      // comment format of `//#` without spaces
+      '@stylistic/spaced-comment': [
+        'error',
+        'always',
+        {
+          markers: ['#']
+        }
       ]
     },
     settings: {
@@ -153,6 +163,15 @@ export default defineConfig([
           }
         }
       ]
+    }
+  },
+  {
+    files: ['**/*.{cjs,js}'],
+    rules: {
+      // CommonJS file use `require` for importing so we don't need to force
+      // them to use `process.getBuiltinModule` instead of it like an ES Module
+      // would need to
+      'n/prefer-process-get-builtin-module': 'off'
     }
   },
   {
@@ -241,43 +260,31 @@ export default defineConfig([
     }
   },
   {
+    // Allow anonymous default exports for config files and test fixtures
+    files: [
+      '**/*.config.{cjs,js,mjs}',
+      '**/.*.{cjs,js,mjs}',
+      '**/fixtures/**/*.{cjs,js,mjs}'
+    ],
+    rules: {
+      'import-x/no-anonymous-default-export': 'off'
+    }
+  },
+  {
     extends: [PrettierConfig]
   },
   {
     rules: {
       // XO rules that our code breaks and we still need to review
-      '@eslint-community/eslint-comments/require-description': 'off',
-      '@html-eslint/head-order': 'off',
-      '@html-eslint/require-meta-description': 'off',
-      '@html-eslint/require-meta-viewport': 'off',
-      '@html-eslint/require-open-graph-protocol': 'off',
-      '@html-eslint/sort-attrs': 'off',
-      '@typescript-eslint/no-useless-default-assignment': 'off',
-      '@typescript-eslint/prefer-nullish-coalescing': 'off',
-      '@typescript-eslint/strict-boolean-expressions': 'off',
       camelcase: 'off',
       'func-names': 'off',
       'guard-for-in': 'off',
-      'import-x/no-anonymous-default-export': 'off',
-      'import-x/no-unassigned-import': 'off',
-      'jsdoc/require-asterisk-prefix': 'off',
-      'n/prefer-global/buffer': 'off',
-      'n/prefer-global/process': 'off',
-      'n/prefer-process-get-builtin-module': 'off',
-      'n/prefer-promises/fs': 'off',
       'new-cap': 'off',
       'no-await-in-loop': 'off',
       'no-constructor-return': 'off',
       'no-multi-assign': 'off',
       'no-shadow': 'off',
       null: 'off',
-      'package-json/dependency-version-range': 'off',
-      'package-json/no-package-manager-engines': 'off',
-      'package-json/no-short-flags-in-scripts': 'off',
-      'package-json/prefer-engines-range': 'off',
-      'package-json/prefer-shorthand': 'off',
-      'package-json/prefer-type-module': 'off',
-      'package-json/sort-properties': 'off',
       'regexp/no-super-linear-backtracking': 'off',
       'regexp/no-super-linear-move': 'off',
       'regexp/no-unused-capturing-group': 'off',
@@ -329,7 +336,33 @@ export default defineConfig([
       'unicorn/prefer-ternary': 'off',
       'unicorn/prefer-toggle-attribute': 'off',
       'unicorn/require-array-sort-compare': 'off',
-      'unicorn/text-encoding-identifier-case': 'off'
+      'unicorn/text-encoding-identifier-case': 'off',
+
+      // The following only trigger for files not currently targeted by our
+      // linting config. Removing them won't trigger failures if you run
+      // `npm run lint:js` but will fail if you run `npx eslint .`. When
+      // reviewing, consider if they should be included in our linting before
+      // removing.
+
+      // ./src/__canary__.html
+      '@html-eslint/head-order': 'off',
+      '@html-eslint/require-meta-description': 'off',
+      '@html-eslint/require-meta-viewport': 'off',
+      '@html-eslint/require-open-graph-protocol': 'off',
+      '@html-eslint/sort-attrs': 'off',
+      // ./src/global.d.ts
+      '@typescript-eslint/no-useless-default-assignment': 'off',
+      '@typescript-eslint/prefer-nullish-coalescing': 'off',
+      '@typescript-eslint/strict-boolean-expressions': 'off',
+      'jsdoc/require-asterisk-prefix': 'off',
+      // ./package.json
+      'package-json/dependency-version-range': 'off',
+      'package-json/no-package-manager-engines': 'off',
+      'package-json/no-short-flags-in-scripts': 'off',
+      'package-json/prefer-engines-range': 'off',
+      'package-json/prefer-shorthand': 'off',
+      'package-json/prefer-type-module': 'off',
+      'package-json/sort-properties': 'off'
     }
   }
 ])

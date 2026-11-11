@@ -1,3 +1,5 @@
+const { env } = require('node:process')
+
 const ports = require('./ports')
 
 /**
@@ -8,7 +10,7 @@ const ports = require('./ports')
 
 module.exports = {
   // Bind to localhost only by default
-  ...(process.env.ALLOW_EXTERNAL_CONNECTIONS !== 'true' && {
+  ...(env.ALLOW_EXTERNAL_CONNECTIONS !== 'true' && {
     listen: 'localhost'
   }),
 

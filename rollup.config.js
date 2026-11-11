@@ -1,3 +1,5 @@
+const { env } = require('node:process')
+
 const babel = require('@rollup/plugin-babel')
 const commonjs = require('@rollup/plugin-commonjs')
 const resolve = require('@rollup/plugin-node-resolve')
@@ -18,7 +20,7 @@ module.exports = defineConfig({
 
       // Output plugins
       plugins: [
-        process.env.NODE_ENV !== 'development' &&
+        env.NODE_ENV !== 'development' &&
           terser({
             format: { comments: false },
 

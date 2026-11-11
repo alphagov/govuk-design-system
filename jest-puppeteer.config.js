@@ -1,3 +1,5 @@
+const { env } = require('node:process')
+
 const { ports } = require('./config')
 
 /**
@@ -15,7 +17,7 @@ module.exports = {
      *
      * {@link https://developer.chrome.com/articles/new-headless/}
      */
-    headless: process.env.HEADLESS !== 'false'
+    headless: env.HEADLESS !== 'false'
   },
 
   /**

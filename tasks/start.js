@@ -1,4 +1,4 @@
-const { watch } = require('node:fs')
+const { watch } = require('node:fs/promises')
 const { dirname, join } = require('node:path')
 
 const browserSync = require('browser-sync')

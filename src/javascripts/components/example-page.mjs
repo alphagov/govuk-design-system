@@ -1,3 +1,7 @@
+/* eslint-disable import-x/no-unassigned-import --
+ * We just want the content window js here but this file doesn't have an export,
+ * so we need to import it unassigned so it just runs.s
+ **/
 import 'iframe-resizer/js/iframeResizer.contentWindow.js'
 
 /**
