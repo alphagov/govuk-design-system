@@ -284,7 +284,6 @@ export default defineConfig([
     rules: {
       // XO rules that our code breaks and we still need to review
       camelcase: 'off',
-      'func-names': 'off',
       'guard-for-in': 'off',
       'new-cap': 'off',
       'no-await-in-loop': 'off',
