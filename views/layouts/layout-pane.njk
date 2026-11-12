@@ -71,8 +71,11 @@
         {{ contents | safe }}
       </div>
 
-      {# No JS fallback to show overview #}
-      {% if showSubNav %}
+      {% if showCategoryStatuses %}
+        {# Show child pages with lifecycle statuses #}
+        {% include "_status-table.njk" %}
+      {% elif showSubNav %}
+        {# Show child pages as list #}
         {% include "_category-nav.njk" %}
       {% endif %}
 

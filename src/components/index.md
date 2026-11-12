@@ -2,6 +2,7 @@
 layout: layout-pane.njk
 title: Components
 showSubNav: true
+showCategoryStatuses: true
 ---
 
 Components are reusable parts of a user interface. Using pre-built, core elements allows government teams to build consistent services.
