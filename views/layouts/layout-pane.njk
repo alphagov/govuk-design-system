@@ -32,15 +32,40 @@
         {{ currentSubpage.pageTitle if currentSubpage else title }}
       </h1>
 
+      <style>
+        .app-sub-page-nav__wrapper {
+          border-bottom: 1px solid var(--govuk-border-colour);
+          padding-bottom: 13px;
+          margin-top: -10px;
+        }
+        .app-sub-page-nav {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          display: inline-flex;
+          gap: 30px;
+
+          a {
+            padding-bottom: 10px;
+          }
+
+          [aria-current="page"] {
+              font-weight: bold;
+              border-bottom: 4px solid var(--govuk-brand-colour);
+          }
+        }
+      </style>
+      {% include "_subpage-nav.njk" %}
+
       {# Status callout #}
       {% set statusTag = (status.type if status.type else status) | slugify if status %}
       {%- if statusTag == "trial" %}
         {{ statusCallout(status) }}
       {%- endif %}
 
-      {% if showPageNav or (subpages | length) %}
+      {% if showPageNav %}
         <ul class="app-page-navigation">
-          {% if (subpages | length) %}
+          {# {% if (subpages | length) %}
             {% for subpage in subpages %}
               <li class="app-page-navigation__item">
                 <a class="govuk-link" href="/{{ permalink }}/{{ subpage.url}}/">
@@ -48,7 +73,7 @@
                 </a>
               </li>
             {% endfor %}
-          {% endif %}
+          {% endif %} #}
           {% if showPageNav %}
             {% for heading in headings %}
               {% if heading.depth == 2 %}
