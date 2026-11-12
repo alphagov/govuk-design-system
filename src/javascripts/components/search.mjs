@@ -64,7 +64,7 @@ class Search extends Component {
 
     const $input = this.$root.querySelector('.app-site-search__input')
     if (!$input) {
-      return this
+      return
     }
 
     // Ensure if the user stops using the search that we do not send tracking events
