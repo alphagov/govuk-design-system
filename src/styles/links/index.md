@@ -1,6 +1,7 @@
 ---
 title: Links
 description: Use links to navigate between pages
+aliases: link
 section: Styles
 discussionId: 6027
 theme: Typography
