@@ -17,7 +17,14 @@ const gitignorePath = [fileURLToPath(new URL('.gitignore', import.meta.url))]
 export default defineConfig([
   globalIgnores([
     // Enable dotfile linting
-    '!.*'
+    '!.*',
+    // The canary file is only used in reporting if the website is down or not.
+    // We don't care about linting it
+    'src/__canary__.html',
+    // Used to specify govuk-frontend's component types to circumvent ts errors.
+    // We don't care about linting this as a typescript file, so ignore so to
+    // not trigger failures from @eslint-typescript or jsdoc
+    'src/global.d.ts'
   ]),
   includeIgnoreFile(gitignorePath, { gitignoreResolution: true }),
   {
@@ -344,17 +351,6 @@ export default defineConfig([
       // reviewing, consider if they should be included in our linting before
       // removing.
 
-      // ./src/__canary__.html
-      '@html-eslint/head-order': 'off',
-      '@html-eslint/require-meta-description': 'off',
-      '@html-eslint/require-meta-viewport': 'off',
-      '@html-eslint/require-open-graph-protocol': 'off',
-      '@html-eslint/sort-attrs': 'off',
-      // ./src/global.d.ts
-      '@typescript-eslint/no-useless-default-assignment': 'off',
-      '@typescript-eslint/prefer-nullish-coalescing': 'off',
-      '@typescript-eslint/strict-boolean-expressions': 'off',
-      'jsdoc/require-asterisk-prefix': 'off',
       // ./package.json
       'package-json/dependency-version-range': 'off',
       'package-json/no-package-manager-engines': 'off',
