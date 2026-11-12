@@ -2,17 +2,22 @@
   {% set entries = getChangelog({
     group: params.group,
     item: params.item,
+    combinedChangelog: params.combinedChangelog,
     limit: params.limit if params.limit
   }) %}
   {% set guidanceOnly = params.guidanceOnly or params.group == "patterns" %}
 
   {# Keep track of the previous row's date so we can hide repeated dates. #}
   {% set previousDate = null %}
+  {% set previousComponent = null %}
 
   <table class="govuk-table app-changelog-table">
     <thead class="govuk-table__thead">
       <tr class="govuk-table__row">
         <th class="govuk-table__header" scope="col">Date</th>
+        {% if params.combinedChangelog %}
+        <th class="govuk-table__header" scope="col">Component</th>
+        {% endif %}
         {%- if not guidanceOnly %}
           <th class="govuk-table__header" scope="col">Changed</th>
         {%- endif %}
@@ -26,6 +31,11 @@
           <td class="govuk-table__cell app-changelog-table__date {%- if date == previousDate %} app-changelog-table__date--merged{% endif %}">
             {{ date }}
           </td>
+          {% if params.combinedChangelog %}
+          <td class="govuk-table__cell">
+            {{ entry.item }}
+          </td>
+          {% endif %}
           {%- if not guidanceOnly %}
             <td class="govuk-table__cell">
               {%- if entry.version %}
