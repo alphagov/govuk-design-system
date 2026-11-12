@@ -35,8 +35,6 @@ Read more about [why and how to set legends as headings](/get-started/labels-leg
 
 Make sure that any example dates you use in hint text are valid for the question being asked.
 
-Accept month names written out in full or abbreviated form (for example, ‘january’ or ‘jan’) as some users may enter months in this way.
-
 There are 2 ways to use the date input component. You can use HTML or, if you’re using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
 
 {{ example({ group: "components", item: "date-input", example: "default", html: true, nunjucks: true, open: false, size: "s", titleSuffix: "second" }) }}
@@ -91,13 +89,45 @@ Say ‘[whatever it is] must include a [whatever is missing]’.<br>
 
 For example, ‘Date of birth must include a month’, ‘Date of birth must include a day and month’ or ‘Year must include 4 numbers’.
 
-#### If the date entered cannot be correct
+Consider that a user might intentionally leave part of the date blank because they do not know the exact day, or they remember the day and month but not the year. Could you provide more help to these users?
 
-For example, ‘13’ in the month field cannot be correct.<br>
+#### If the day, month or year cannot be correct
 
-Highlight the day, month or year field with the incorrect information. Or highlight the date as a whole if there’s incorrect information in more than one field, or it's not clear which field is incorrect.<br>
+Accept all unambiguous inputs.
 
-Say ‘[Whatever it is] must be a real date’. For example, ‘Date of birth must be a real date’.
+For day, accept:
+- the numbers 1 to 31
+- single digits with a leading zero, 01 to 09
+- ordinals, 1st, 2nd, ... 31st
+- ordinals written, first, second, ... thirty-first
+
+For month, accept:
+- the numbers 1 to 12
+- single digits with a leading zero, 01 to 09
+- English long month names, January, February ... December
+- English short month names, Jan, Feb, ... Dec
+
+For day ordinals, and month names, accept any case. For example, 'jan', 'JAN', 'Jan'.
+
+For year, accept any 4 digits.
+
+If day cannot be correct but month and year can, say: ‘Day must be a number between 1 and 31’
+If month cannot be correct, by day and year can, say: ‘Month must be a number between 1 and 12’
+If year cannot be correct, but day and month can, say: ‘Year must include 4 numbers’
+
+If more than one of day, month and year cannot be correct, then combine the error messages. For example, if day and month cannot be correct, but year can say: ‘Day must be a number between 1 and 31. Month must be a number between 1 and 12.’
+
+If day, month and year all cannot be correct, say: ‘Day must be a number between 1 and 31. Month must be a number between 1 and 12. Year must include 4 numbers.’
+
+Highlight the day, month or year fields with the information that cannot be correct.
+
+#### If the date as a whole does not exist
+
+If the month is April, June, September, November, then check the day is between 1 and 30. If not, say ‘Day must be a number between 1 and 30 for [month]’. Highlight the day and month.
+
+If the month is February and the year is a leap year, then check the day is between 1 and 29. If not, say ‘Day must be a number between 1 and 29 for February [year]’.  Highlight the date input as a whole.
+
+If the month is February and the year is not a leap year, then check the day is between 1 and 28. If not, say ‘Day must be a number between 1 and 28 for February [year]’.  Highlight the date input as a whole.
 
 #### If the date is in the future when it needs to be in the past
 
@@ -129,11 +159,15 @@ Highlight the date input as a whole.<br>
 
 Say ‘[whatever it is] must be the same as or after [date and optional description]’. For example, ‘The date your course ends must be the same as or after 1 September 2017 when you started the course’.
 
+Consider that the other date, in this example 1 September 2017, might be wrong instead. If this is possible, provide help to users to change this date too.
+
 #### If the date must be after another date
 
 Highlight the date input as a whole.<br>
 
 Say ‘[whatever it is] must be after [date and optional description]’. For example, ‘The day your course ends must be after 1 September 2017’.
+
+Consider that the other date, in this example 1 September 2017, might be wrong instead. If this is possible, provide help to users to change this date too.
 
 #### If the date must be the same as or before another date
 
@@ -141,17 +175,23 @@ Highlight the date input as a whole.<br>
 
 Say ‘[whatever it is] must be the same as or before [date and optional description]’. For example, ‘The date of Gordon’s last exam must be the same as or before 31 August 2017 when they left school’.
 
+Consider that the other date, in this example 31 August 2017, might be wrong instead. If this is possible, provide help to users to change this date too.
+
 #### If the date must be before another date
 
 Highlight the date input as a whole.<br>
 
 Say ‘[whatever it is] must be before [date and optional description]’. For example, ‘The date of Gordon’s last exam must be the same as or before 31 August 2017’.
 
+Consider that the other date, in this example 31 August 2017, might be wrong instead. If this is possible, provide help to users to change this date too.
+
 #### If the date must be between two dates
 
 Highlight the date input as a whole.<br>
 
 Say ‘[whatever it is] must be between [date] and [date and optional description]’. For example, ‘The date your contract started must be between 1 September 2017 and 30 September 2017 when you were self-employed’.
+
+Consider that these dates, in this example 1 September 2017 and 30 September 2017, might be wrong instead. If this is possible, provide help to users to change these dates too.
 
 ## Research on this component
 
