@@ -319,7 +319,6 @@ export default defineConfig([
     name: 'govuk-design-system-xo-migration',
     rules: {
       camelcase: 'off',
-      'func-names': 'off',
       'guard-for-in': 'off',
       'new-cap': 'off',
       'no-await-in-loop': 'off',
