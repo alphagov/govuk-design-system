@@ -21,18 +21,23 @@ class ExampleFrame extends Component {
 
     // Initialise asap for eager iframes or browsers which don't support lazy loading
     if (!('loading' in this.$root) || this.$root.loading !== 'lazy') {
-      return iFrameResize({ scrolling: 'omit' }, this.$root)
+      this.initIFrameResizer()
+    } else {
+      this.$root.addEventListener('load', this.initIFrameResizer)
     }
+  }
 
-    this.$root.addEventListener('load', () => {
-      try {
-        iFrameResize({ scrolling: 'omit' }, this.$root)
-      } catch (error) {
-        if (error instanceof Error) {
-          console.error(error.message)
-        }
+  /**
+   * Initialise iFrame Resizer
+   */
+  initIFrameResizer() {
+    try {
+      iFrameResize({ scrolling: 'omit' }, this.$root)
+    } catch (error) {
+      if (error instanceof Error) {
+        console.error(error.message)
       }
-    })
+    }
   }
 }
 

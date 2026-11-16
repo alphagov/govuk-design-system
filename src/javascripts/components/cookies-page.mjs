@@ -16,7 +16,7 @@ class CookiesPage extends Component {
 
     const $cookieForm = this.$root.querySelector('.js-cookies-page-form')
     if (!($cookieForm instanceof HTMLFormElement)) {
-      return this
+      return
     }
 
     this.$cookieForm = $cookieForm
@@ -33,7 +33,7 @@ class CookiesPage extends Component {
       $cookieFormFieldsets.length === 0 ||
       !($cookieFormButton instanceof HTMLButtonElement)
     ) {
-      return this
+      return
     }
 
     this.$cookieFormFieldsets = $cookieFormFieldsets

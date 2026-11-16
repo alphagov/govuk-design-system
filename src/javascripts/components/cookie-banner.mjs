@@ -63,7 +63,7 @@ class CookieBanner extends ConfigurableComponent {
       !($cookieConfirmationReject instanceof HTMLElement) ||
       $cookieBannerHideButtons.length === 0
     ) {
-      return this
+      return
     }
 
     this.$acceptButton = $acceptButton
