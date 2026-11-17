@@ -1,0 +1,38 @@
+
+{# Sub-page navigation e.g. History page #}
+{% for item in navigation %}
+{% if permalink and item | isActive(permalink) %}
+{% if item.items %}
+    {% for theme, items in item.items | groupby("theme") %}
+    {% for subitem in items %}
+        {%- set isPageOrSubpage = (subitem.url == permalink) or subitem | isActive(permalink) %}
+        {% if (subitem.headings or (subitem.subpages | length)) and isPageOrSubpage %}
+        {% if (subitem.subpages | length) %}
+        <div class="
+            govuk-!-font-size-19
+            govuk-!-margin-bottom-5
+            app-sub-page-nav__wrapper
+        ">
+        <ul class="app-sub-page-nav">
+            <li class="app-sub-page-nav__item">
+            <a class="app-sub-page-nav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/{{ subitem.url }}"{% if subitem.url == permalink %} aria-current="page"{% endif %}>
+                Guidance
+            </a>
+            </li>
+            {% for subpage in subitem.subpages %}
+                {% set subpageUrl = subitem.url + '/' + subpage.url %}
+                <li class="app-sub-page-nav__item">
+                <a class="app-sub-page-nav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/{{ subpageUrl }}/"{% if subpageUrl == permalink %} aria-current="page"{% endif %}>
+                    {{ subpage.label }}<span class="govuk-visually-hidden"> for {{ subitem.label }}</span>
+                </a>
+                </li>
+            {% endfor %}
+        </ul>
+        </div>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    {% endfor %}
+{% endif %}
+{% endif %}
+{% endfor %}
