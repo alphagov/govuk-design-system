@@ -112,6 +112,8 @@ This example shows you how to enable the improved File upload component:
 
 JavaScript creates the improved version of the component out of the input (`<input type="file">`) and then hides the input from the user. The improved version consists of a `<button>` with a few `<span>` elements inside.
 
+In addition to hiding the underlying input any associated `id` attribute to have a `-input` suffix, e.g. `fileupload-input`.  Any custom JavaScript will need to be updated.
+
 Some HTML attributes applied to the input might not work or work differently.
 
 These attributes must stay in the original input since they're used by the button:
