@@ -1,5 +1,5 @@
 module.exports = {
-  extends: 'stylelint-config-gds/scss',
+  extends: 'stylelint-config-gds/scss.js',
   ignoreFiles: ['**/?(.)*.{cjs,js,mjs}', 'build/**/*'],
   overrides: [
     {
