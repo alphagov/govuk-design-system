@@ -104,9 +104,9 @@
     "slash": "^3.0.0",
     "slug": "^9.1.0",
     "smartypants": "^0.2.2",
-    "stylelint": "^17.16.0",
-    "stylelint-config-gds": "^3.0.0",
-    "stylelint-order": "^8.1.2",
+    "stylelint": "^18.0.0",
+    "stylelint-config-gds": "github:alphagov/stylelint-config-gds#308db0648db674337b11c275af95e5421842bf9d",
+    "stylelint-order": "^8.1.3",
     "tap-mocha-reporter": "^5.0.4",
     "typescript": "^6.0.3"
   },
