@@ -79,6 +79,9 @@ updates:
       # so we need to hold off a major bump for TypeScript
       - dependency-name: 'typescript'
         update-types: ['version-update:semver-major']
+      # `stylelint-config-gds` is not yet compatible with Stylelint 18
+      - dependency-name: 'stylelint'
+        update-types: ['version-update:semver-major']
 
     # Schedule run every Monday, local time
     schedule:
