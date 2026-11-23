@@ -18,13 +18,17 @@ updates:
         patterns:
           - '@babel/*'
 
-      lint:
+      eslint:
         patterns:
           - 'eslint'
           - 'eslint-*'
+          - '@eslint/*'
+          - 'typescript'
+
+      stylelint:
+        patterns:
           - 'stylelint'
           - 'stylelint-*'
-          - 'typescript'
 
       metalsmith:
         patterns:
