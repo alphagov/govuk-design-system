@@ -1,13 +1,13 @@
 /**
  * Config
  */
-const browsersync = require('./dev-server')
+const devServer = require('./dev-server')
 const navigation = require('./navigation')
 const paths = require('./paths')
 const ports = require('./ports')
 
 module.exports = {
-  browsersync,
+  devServer,
   navigation,
   paths,
   ports
