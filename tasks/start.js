@@ -1,14 +1,14 @@
 const { watch } = require('fs')
 const { dirname, join } = require('path')
 
-const browserSync = require('browser-sync')
 const slash = require('slash')
 
-const { browsersync: browserSyncConfig, paths } = require('../config') // specify paths to main working directories
+const { paths } = require('../config') // specify paths to main working directories
+const { createDevServer } = require('../lib/dev-server')
 const nunjucksTransformer = require('../lib/jstransformer-nunjucks')
 const metalsmith = require('../lib/metalsmith') // configured static site generator
 
-let bs
+let server
 let nunjucksWatcher
 
 // Watch for changes to the views directory. These templates are cached by the
@@ -46,27 +46,23 @@ metalsmith
     }
 
     if (metalsmith.watch()) {
-      if (bs) {
+      if (server) {
         return
       }
 
       setupNunjucksWatcher()
 
-      // Setup synchronised browser testing
-      bs = browserSync.create()
-
-      bs.init({
-        ...browserSyncConfig,
-
+      // Setup live reloading local server
+      const devServer = createDevServer({
         // Configure output to watch for reloads
-        files: [
+        watch: [
           join(paths.public, '**/*.html'),
           join(paths.public, 'javascripts/**/*.js'),
           join(paths.public, 'stylesheets/**/*.css')
-        ],
-
-        // Serve files from directory
-        server: paths.public
+        ].map(slash)
       })
+
+      server = devServer.server
+      server.serve(devServer.port)
     }
   })

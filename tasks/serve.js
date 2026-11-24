@@ -1,24 +1,8 @@
-const browserSync = require('browser-sync').create()
+const { createDevServer } = require('../lib/dev-server')
 
-const { browsersync: browserSyncConfig, paths } = require('../config')
+const { server, port } = createDevServer({
+  // Serve static files only, without injecting the live reload script
+  liveReload: false
+})
 
-browserSync.init(
-  {
-    ...browserSyncConfig,
-
-    // Disable BrowserStack UI
-    ui: false,
-
-    // Serve files from directory
-    server: paths.public
-  },
-  (err, bs) => {
-    if (err) {
-      console.error('Encountered an error starting the local server:', err)
-    } else {
-      console.log(
-        `Server started at http://localhost:${bs.options.get('port')}`
-      )
-    }
-  }
-)
+server.serve(port)
