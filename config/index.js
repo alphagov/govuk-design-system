@@ -1,7 +1,7 @@
 /**
  * Config
  */
-const browsersync = require('./browsersync')
+const browsersync = require('./dev-server')
 const navigation = require('./navigation')
 const paths = require('./paths')
 const ports = require('./ports')
