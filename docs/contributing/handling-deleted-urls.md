@@ -25,19 +25,20 @@ You should use archiving when you have consciously removed a page or section or 
 
 ## Creating a redirect
 
-301 redirects can be created via [netlify's redirect config options](https://docs.netlify.com/routing/redirects/). To do this:
+301 redirects for pages that have moved are generated automatically during the build into [Netlify's `_redirects` file](https://docs.netlify.com/manage/routing/redirects/overview/) by [our redirects plugin](../../lib/redirects/index.js). To create a redirect:
 
-1. Go to our [netlify.toml file](../../netlify.toml)
-2. Under the comment `# Redirect pages that have moved` add the following:
+1. Open the file for the page at its new location
+2. Add a `redirects` list with the previous URL (or URLs) to the page's frontmatter:
 
 ```plaintext
-[[redirects]]
-  from = "/your/old/url/"
-  to = "/your/new/url/"
-  status = 301
+---
+title: {Title of the page that has moved}
+redirects:
+- /your/old/url
+---
 ```
 
-3. Test that the URL is working correctly by creating a PR and testing the redirect in the netlify preview
+3. Test that the URL is working correctly by creating a PR and testing the redirect in the Netlify preview
 
 ## Creating an archive page
 
