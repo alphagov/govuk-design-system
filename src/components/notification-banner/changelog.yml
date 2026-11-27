@@ -16,3 +16,5 @@
 - date: 2022-08-09
   version: 4.3.0
   description: Added the ability to pass the `html` parameter using [Nunjucks call syntax](https://mozilla.github.io/nunjucks/templating.html#call).
+- date: 2026-11-03
+  description: Updated the summary to make clear that you can use a notification banner to tell the user about the outcome of something they’ve just done.

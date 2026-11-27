@@ -1,6 +1,6 @@
 ---
 title: Notification banner
-description: Use a notification banner to tell the user about something they need to know about, but that’s not directly related to the page content
+description: Use a notification banner to tell the user about something they need to know about, such as a problem affecting the service or the outcome of something they’ve just done
 section: Components
 aliases: alert, warning, success message, important message, flash message
 discussionId: 6121
@@ -9,7 +9,7 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 
-Use a notification banner to tell the user about something they need to know about, but that’s not directly related to the page content.
+Use a notification banner to tell the user about something they need to know about, such as a problem affecting the service or the outcome of something they’ve just done.
 
 {{ example({ group: "components", item: "notification-banner", example: "default", html: true, nunjucks: true, open: false, size: "s", loading: "eager" }) }}
 
